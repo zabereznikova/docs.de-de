@@ -1,0 +1,2717 @@
+<Type Name="TextBoxBase" FullName="System.Windows.Forms.TextBoxBase">
+  <TypeSignature Language="C#" Value="public abstract class TextBoxBase : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextBoxBase extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TextBoxBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("TextChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.TextBoxBaseDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Grundfunktionen, die von allen Textsteuerelementen erforderlich.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert die Kernfunktionen von Steuerelementen für die Textbearbeitung, z. B. <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.RichTextBox>. Dazu gehören Textauswahl, **Zwischenablage** Funktionalität mehrzeiliges Textfeld-Steuerelement-Unterstützung und viele Ereignisse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um ein mehrzeiliges erstellen <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Sie in der Regel erben nicht von <see cref="T:System.Windows.Forms.TextBoxBase" />. Um eine eigene Klasse des Text-Steuerelement zu erstellen, erben Sie von <see cref="T:System.Windows.Forms.TextBox" /> oder <see cref="T:System.Windows.Forms.RichTextBox" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptsTab">
+      <MemberSignature Language="C#" Value="public bool AcceptsTab { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptsTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.AcceptsTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob in einem mehrzeiligen Textfeld-Steuerelement beim Drücken der TAB-TASTE ein Tabstoppzeichen in das Steuerelement eingegeben wird oder der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge gesetzt wird, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn Benutzer in einem mehrzeiligen Textfeld mit der TAB-Taste die Registerkarten eingeben können; <see langword="false" /> Wenn durch Drücken der TAB-Taste den Fokus. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> Eigenschaft muss zudem sein `true` So rufen Sie ein Tabstoppzeichen in das Steuerelement ab.  
+  
+ Wenn die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A> -Eigenschaftensatz auf `true`, die Benutzer muss drücken STRG + TAB, um den Fokus auf das nächste Steuerelement in der Aktivierreihenfolge.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um ein mehrzeiliges erstellen <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsTabChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AcceptsTabChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AcceptsTabChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.AcceptsTabChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.AcceptsTab" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.AcceptsTabChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.AcceptsTabChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#241](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#241)]
+ [!code-vb[System.Windows.Forms.EventExamples#241](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#241)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.AppendText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, um den aktuellen Inhalt des Textfelds angefügt werden soll.</param>
+        <summary>Fügt Text an den aktuellen Text eines Textfelds.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode Hinzufügen von Text zu den vorhandenen Text in das Steuerelement mit dem Verkettungsoperator (+) zum Verketten von Text verwenden, um die <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TextBoxBase.AppendText%2A> Methode und die <xref:System.Windows.Forms.TextBoxBase.TextLength%2A> Eigenschaft so kopieren Sie Text aus einer <xref:System.Windows.Forms.TextBox> in eine andere. Dieses Beispiel benötigen Sie, dass zwei <xref:System.Windows.Forms.TextBox> -Steuerelemente Namens, `textBox1` und `textBox2`, auf einem Formular hinzugefügten `textBox1` Text zugewiesen seine <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft.  
+  
+ [!code-cpp[TextBoxBase.AppendText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TextBoxBase.AppendText/CPP/form1.cpp#1)]
+ [!code-csharp[TextBoxBase.AppendText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TextBoxBase.AppendText/CS/form1.cs#1)]
+ [!code-vb[TextBoxBase.AppendText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TextBoxBase.AppendText/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Höhe des Steuerelements automatisch angepasst wird, wenn die dem Steuerelement zugewiesene Schriftart geändert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Höhe des Steuerelements automatisch anpasst, wenn die Schriftart geändert wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Windows.Forms.TextBoxBase.AutoSize%2A> Eigenschaft, um `true` für eine <xref:System.Windows.Forms.TextBox>, wenn die <xref:System.Windows.Forms.Control.Font%2A> Änderungen, die <xref:System.Windows.Forms.TextBox> ein- bzw. ausgeblendet der <xref:System.Windows.Forms.Control.Height%2A> größer oder kleiner aufgenommen. Die <xref:System.Windows.Forms.Control.Width%2A> von der <xref:System.Windows.Forms.TextBox> wird nicht geändert.  
+  
+ Wenn Sie möchten die Größe des Steuerelements ändern, wie der Benutzer Text eingibt, können Sie eine <xref:System.Windows.Forms.RichTextBox> steuern und verwenden seiner <xref:System.Windows.Forms.RichTextBox.ContentsResized> Ereignis, um dessen Größe ändern.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird davon ausgegangen, dass ein Formular mit Textfeldern, zwei Schaltflächen und click-Ereignisse für jede der Schaltflächen. Das Beispiel veranschaulicht die <xref:System.Windows.Forms.TextBoxBase.AutoSize%2A> Eigenschaft durch Festlegen auf `true` für ein Textfeld und `false` für die anderen. Wenn Sie eine Schaltfläche klicken, werden die Textfelder mit einem kleineren Text gefüllt, und wenn Sie auf die Schaltfläche "Sonstige" werden die Textfelder mit größeren Text aufgefüllt. Das Textfeld, weist das <xref:System.Windows.Forms.TextBoxBase.AutoSize%2A> festgelegt `true` wird erweitert, in der Höhe der größeren Text aufzunehmen. Die Breite wird nicht geändert.  
+  
+ [!code-csharp[SystemWindowsFormsAutoSize#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemWindowsFormsAutoSize/CS/Form1.cs#1)]
+ [!code-vb[SystemWindowsFormsAutoSize#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemWindowsFormsAutoSize/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-501)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Hintergrundfarbe des Steuerelements ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , der den Hintergrund des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.TextBoxBase.BackColor%2A> Eigenschaft, die die Hintergrundfarbe des Textsteuerelements in das Farbschema der Formulare blend geändert.  
+  
+ Um die Farbe des Texts im Steuerelement zu ändern, verwenden die <xref:System.Windows.Forms.TextBoxBase.ForeColor%2A> Eigenschaft. Beim Festlegen der <xref:System.Windows.Forms.TextBoxBase.BackColor%2A> Eigenschaft des Textsteuerelements, stellen Sie sicher, dass die Farbe, die Sie auswählen, nicht den Text des Steuerelements ausgeblendet kann. Beispielsweise, wenn die <xref:System.Windows.Forms.TextBoxBase.BackColor%2A> und <xref:System.Windows.Forms.TextBoxBase.ForeColor%2A> Eigenschaften festgelegt `Color.Black`, der Text im Textfeld-Steuerelement ist nicht sichtbar.  
+  
+ Diese Eigenschaft möglicherweise überschrieben, wenn die <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft von der <xref:System.Windows.Forms.TextBoxBase> festgelegt ist, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Das Hintergrundbild für das Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.BackgroundImage" />-Eigenschaft ändert. Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ImageLayout" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.BackgroundImageLayout" />-Eigenschaft ändert. Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Rahmentyp des Textfeld-Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.BorderStyle" /> , der die Rahmenart des Textfeld-Steuerelement darstellt. Die Standardeinstellung ist <see langword="Fixed3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.TextBoxBase.BorderStyle%2A> Eigenschaft Flatfile rahmenlose Steuerelemente zusätzlich das Standardsteuerelement dreidimensionalen zu erstellen.  
+  
+> [!NOTE]
+>  Die abgeleitete Klasse <xref:System.Windows.Forms.RichTextBox>, unterstützt nicht die `BorderStyle.FixedSingle` Stil. Dieses Format bewirkt, dass die <xref:System.Windows.Forms.BorderStyle> verwenden die `BorderStyle.Fixed3D` stattdessen formatieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um ein Textfeld, das Erstellen, die Text mit 20 Punkt Arial mit einer gemeinsamen Linie ordnungsgemäß angezeigt werden können. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBoxBase.PreferredHeight%2A> -Eigenschaft können Sie die entsprechenden Höhe des Steuerelements nach der Schriftart zu bestimmen und <xref:System.Windows.Forms.TextBoxBase.BorderStyle%2A> dem Steuerelement zugewiesen wurden.  
+  
+ [!code-cpp[Classic TextBoxBase.BorderStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.BorderStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.BorderStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.BorderStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.BorderStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.BorderStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Ein Wert, der nicht innerhalb des Bereichs der gültigen Werte für die Enumeration ist wurde der Eigenschaft zugewiesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BorderStyleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BorderStyleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.BorderStyleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.BorderStyle" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.BorderStyleChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.BorderStyleChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#242](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#242)]
+ [!code-vb[System.Windows.Forms.EventExamples#242](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#242)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanEnableIme">
+      <MemberSignature Language="C#" Value="protected override bool CanEnableIme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanEnableIme" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.CanEnableIme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="P:System.Windows.Forms.Control.ImeMode" />-Eigenschaft auf einen aktiven Wert festgelegt werden kann, um IME-Unterstützung zu aktivieren.</summary>
+        <value>
+          <see langword="false" />Wenn die <see cref="P:System.Windows.Forms.TextBoxBase.ReadOnly" /> Eigenschaft ist <see langword="true" /> oder wenn diese <see cref="T:System.Windows.Forms.TextBoxBase" /> "Class" ist mit einer Maske Kennwort festgelegt ist, andernfalls <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUndo">
+      <MemberSignature Language="C#" Value="public bool CanUndo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUndo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.CanUndo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Benutzer in einem Textfeld-Steuerelement den vorherigen Vorgang rückgängig machen kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Benutzer den vorhergehenden Vorgang in einem Textfeld-Steuerelement rückgängig machen kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode zurückgibt `true`, Sie erreichen die <xref:System.Windows.Forms.TextBoxBase.Undo%2A> Methode in einem Textfeld, das den letzten Vorgang rückgängig machen. Können Sie diese Methode in der <xref:System.Windows.Forms.MenuItem.Popup> -Ereignis für ein <xref:System.Windows.Forms.MenuItem>, oder in Code, der den Zustand der Schaltflächen auf verwaltet eine <xref:System.Windows.Forms.ToolBar> aktivieren oder deaktivieren die Möglichkeit, den vorherigen Vorgang in einem Textfeld-Steuerelement rückgängig zu machen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.CanUndo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.CanUndo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.CanUndo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.CanUndo Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.CanUndo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.CanUndo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht den gesamten Text aus dem Textfeld-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um den Inhalt des Steuerelements anstatt zuzuweisen. Löschen der <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft eine leere Zeichenfolge.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Control.TextChanged> Ereignis. Der Code im Ereignishandler schränkt die Daten in Zahlen. Nach Text im Steuerelement eingegeben wurde, bestimmt der Code auf, wenn der eingegebene Text eine Zahl ist. Wenn der Text keine Zahl ist, löscht der Code den Text aus dem Steuerelement und ein <xref:System.Windows.Forms.MessageBox> wird angezeigt, damit dem Benutzer benachrichtigt werden, dass nur Zahlen akzeptiert werden. Im Beispiel erfordert, dass eine `Boolean` Variable mit dem Namen `flag` und ein <xref:System.Windows.Forms.TextBox> -Steuerelement namens `textBox1` außerhalb dieser Methode definiert sind. In diesem Beispiel wird veranschaulicht, wie eine Flagvariable eine Ereigniskette im Vermeiden der <xref:System.Windows.Forms.Control.TextChanged> Ereignis.  
+  
+ [!code-cpp[Classic TextBoxBase.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearUndo">
+      <MemberSignature Language="C#" Value="public void ClearUndo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearUndo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.ClearUndo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Informationen über den letzten Vorgang aus dem Rückgängig-Puffer für das Textfeld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um zu verhindern, dass einen Rückgängig-Vorgang wiederholen, basierend auf den Zustand der Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Textfeld geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.TextBoxBase.Click> Ereignis. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.TextBox> -Steuerelement namens TextBox1. Dieses Beispiel benötigen Sie, dass die Ereignisbehandlungsmethode zugeordnet wurde die <xref:System.Windows.Forms.TextBoxBase.Click> Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.TextBoxBaseScrolling#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TextBoxBaseScrolling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TextBoxBaseScrolling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kopiert die aktuelle Auswahl in das Textfeld auf die **Zwischenablage**.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, anstatt die <xref:System.Windows.Forms.Clipboard> -Klasse, zum Kopieren von Text in das Textfeld und das Einfügen in die **Zwischenablage**.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Handle für das Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verschiebt die aktuelle Auswahl in das Textfeld auf die **Zwischenablage**.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur Text im Textfeld Ausschneiden, wenn der Text im Steuerelement ausgewählt ist. Sie können diese Methode verwenden, anstatt die <xref:System.Windows.Forms.Clipboard> -Klasse, zum Kopieren von Text in das Textfeld und verschoben werden sollen, die **Zwischenablage**.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCursor">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Cursor DefaultCursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor DefaultCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.DefaultCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardcursor für das Steuerelement ab oder legt ihn fest.</summary>
+        <value>Ein Objekt vom Typ <see cref="T:System.Windows.Forms.Cursor" />, das den aktuellen Standardcursor darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie <xref:System.Windows.Forms.TextBoxBase.DefaultCursor%2A> so konfigurieren Sie einen Standardcursor für das Steuerelement. Dies ist effizienter als den Cursor im Konstruktor des Steuerelements festlegen, und durch das automatische Unterstützung bestimmter cursorspezifischen Designer-Funktionen erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardgröße des Steuerelements ab.</summary>
+        <value>Die Standard-<see cref="T:System.Drawing.Size" /> des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeselectAll">
+      <MemberSignature Language="C#" Value="public void DeselectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeselectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.DeselectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass der Wert, der die <see cref="P:System.Windows.Forms.TextBoxBase.SelectionLength" /> Eigenschaft ist 0 (null), sodass keine Zeichen im Steuerelement ausgewählt werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Steuerelement zeichnen in einem Puffer erfolgt, bevor das Steuerelement angezeigt wird. Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>
+          <see langword="true" />um doppelte Pufferung für das Steuerelement zu implementieren; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-513)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vordergrundfarbe des Steuerelements ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die Vordergrundfarbe des Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.TextBoxBase.ForeColor%2A> Eigenschaft, die die Farbe des Texts im Steuerelement den Text der andere Steuerelemente auf dem Formular entsprechend geändert. Sie können auch diese Eigenschaft verwenden, um ein bestimmtes Textfeld markieren, das einen ungültigen Wert enthält.  
+  
+ Um die Hintergrundfarbe des Steuerelements ändern, verwenden Sie die <xref:System.Windows.Forms.TextBoxBase.BackColor%2A> Eigenschaft. Beim Festlegen der <xref:System.Windows.Forms.TextBoxBase.ForeColor%2A> Eigenschaft des Textsteuerelements, stellen Sie sicher, dass die Farbe, die Sie auswählen, nicht den Text des Steuerelements ausgeblendet kann. Beispielsweise, wenn die <xref:System.Windows.Forms.TextBoxBase.ForeColor%2A> und <xref:System.Windows.Forms.TextBoxBase.BackColor%2A> Eigenschaften festgelegt `Color.Black`, der Text im Textfeld-Steuerelement ist nicht sichtbar.  
+  
+ Diese Eigenschaft möglicherweise überschrieben, wenn die <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft von der <xref:System.Windows.Forms.TextBoxBase> festgelegt ist, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharFromPosition">
+      <MemberSignature Language="C#" Value="public virtual char GetCharFromPosition (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char GetCharFromPosition(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.GetCharFromPosition(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">Die Position, von der aus das nächststehende Zeichen gesucht werden soll.</param>
+        <summary>Ruft das Zeichen ab, das der angegebenen Position im Steuerelement am nächsten liegt.</summary>
+        <returns>Das Zeichen an der angegebenen Position.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Speicherort, in angegeben der `pt` Parameter ist außerhalb des Clientbereichs des Steuerelements, das erste Zeichen der Zeichenfolge, die im angegebenen Punkt am nächsten `pt` wird zurückgegeben. Sie können diese Methode verwenden, um zu bestimmen, welche Zeichen in der Nähe von einem bestimmten Zeitpunkt innerhalb des Steuerelements befinden. Sie können diesen Wert dann verwenden, zum Ausführen von Vorgängen für den Text an dieser Stelle.  
+  
+> [!NOTE]
+>  Wenn der angegebenen Position in der `pt` Parameter befindet sich auf der rechten Seite des Clientbereichs des Steuerelements, das letzte Zeichen der Zeichenfolge, die im angegebenen Punkt am nächsten `pt` zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharIndexFromPosition">
+      <MemberSignature Language="C#" Value="public virtual int GetCharIndexFromPosition (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetCharIndexFromPosition(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.GetCharIndexFromPosition(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">Die zu suchende Position.</param>
+        <summary>Ruft den Index des Zeichens ab, das sich am nächsten zur angegebenen Position befindet.</summary>
+        <returns>Der nullbasierte Zeichenindex an der angegebenen Position.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Zeichenindex, die im angegebenen Position am nächsten liegt die `pt` Parameter. Der Zeichenindex ist ein nullbasierter Index des Texts im Steuerelement, einschließlich Leerzeichen. Sie können diese Methode verwenden, um festzustellen, in dem im Text der Benutzer die Maus veranlasst die Maus Koordinaten an diese Methode übergeben wurde. Dies kann nützlich sein, wenn Aufgaben ausführen, wenn der Benutzer den Mauszeiger auf ein Wort im Text des Steuerelements gezeigt werden soll.  
+  
+> [!IMPORTANT]
+>  Wenn die angegebene Position nicht im Clientrechteck des Steuerelements ist oder hinter dem letzten Zeichen in das Steuerelement ist, ist der Rückgabewert der Index des letzten Zeichens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstCharIndexFromLine">
+      <MemberSignature Language="C#" Value="public int GetFirstCharIndexFromLine (int lineNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetFirstCharIndexFromLine(int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.GetFirstCharIndexFromLine(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineNumber">Die Zeile, für die der Index des ersten Zeichens abgerufen werden soll.</param>
+        <summary>Ruft den Index des ersten Zeichens einer bestimmten Zeile ab.</summary>
+        <returns>Der nullbasierte Index des ersten Zeichens in der angegebenen Zeile.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zeilennummern in das Textfeld beginnt mit 0 (null). Wenn die `lineNumber` -Parameters ist größer als die letzte Zeile in das Textfeld <xref:System.Windows.Forms.TextBoxBase.GetFirstCharIndexFromLine%2A> gibt-1 zurück.  
+  
+ <xref:System.Windows.Forms.TextBoxBase.GetFirstCharIndexFromLine%2A>Gibt den ersten Zeichenindex einer physischen Zeile zurück. Die physische Zeile ist die angezeigte Zeile, nicht die zugewiesene Zeile. Die Anzahl der angezeigten Zeilen kann größer als die Anzahl der zugewiesenen Zeilen aufgrund Zeilenumbruch sein. Z. B., wenn Sie zwei lange Zeilen Zuweisen einer <xref:System.Windows.Forms.RichTextBox> steuern und festlegen, <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> zu `true`, führen Sie die zwei langen zugewiesenen Zeilen in vier physische (oder Zeilen angezeigt).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert, der die <paramref name="lineNumber" /> Parameter ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstCharIndexOfCurrentLine">
+      <MemberSignature Language="C#" Value="public int GetFirstCharIndexOfCurrentLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetFirstCharIndexOfCurrentLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.GetFirstCharIndexOfCurrentLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Index des ersten Zeichens der aktuellen Zeile ab.</summary>
+        <returns>Der nullbasierte Zeichenindex in der aktuellen Zeile.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineFromCharIndex">
+      <MemberSignature Language="C#" Value="public virtual int GetLineFromCharIndex (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetLineFromCharIndex(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.GetLineFromCharIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die zu suchende Zeichenindexposition.</param>
+        <summary>Ruft die Zeilennummer der angegebenen Zeichenposition innerhalb des Steuerelementtexts ab.</summary>
+        <returns>Die nullbasierte Nummer der Zeile, in der sich der Zeichenindex befindet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Methode können Sie die Nummer der Zeile, die basierend auf der im angegebenen Zeichenindex bestimmen die `index` Parameters der Methode. Die erste Zeile des Texts im Steuerelement gibt den Wert 0 (null) zurück. Die <xref:System.Windows.Forms.TextBoxBase.GetLineFromCharIndex%2A> Methode gibt die Anzahl der physischen Zeile zurück, wo befindet sich das indizierte Zeichen innerhalb des Steuerelements. Z. B. wenn ein Teil des Texts in der ersten logischen Zeile umbrochen wird die nächste Zeile die <xref:System.Windows.Forms.TextBoxBase.GetLineFromCharIndex%2A> -Methode gibt 1 zurück, wenn das Zeichen am angegebenen Zeichenindex auf die zweite physische Zeile umbrochen wurde. Wenn <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> festgelegt ist, um `false`, kein Teil der Zeile zur nächsten umbrochen wird und die Methode gibt 0 für den Index des angegebenen Zeichens zurück. Sie können diese Methode verwenden, um zu bestimmen, welche Zeile ein bestimmten Zeichenindex in befindet. Beispielsweise nach dem Aufruf der <xref:System.Windows.Forms.RichTextBox.Find%2A> Methode zum Suchen nach Text, erhalten Sie den Zeichenindex, an dem die Suchergebnisse gefunden werden. Sie können diese Methode aufrufen, mit der Zeichenindex zurückgegebenes die <xref:System.Windows.Forms.RichTextBox.Find%2A> Methode, um zu bestimmen, welcher Zeile das Wort wurde gefunden.  
+  
+> [!NOTE]
+>  Wenn in der Zeichenindex angegeben der `index` Parameter werden über die Anzahl der Zeilen im Steuerelement enthaltene verfügbaren ist, wird die Nummer der letzte Zeile zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPositionFromCharIndex">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Point GetPositionFromCharIndex (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Drawing.Point GetPositionFromCharIndex(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.GetPositionFromCharIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Zeichens, für das die Position abgerufen werden soll.</param>
+        <summary>Ruft die Position innerhalb des Steuerelements am angegebenen Zeichenindex ab.</summary>
+        <returns>Die Position des angegebenen Zeichens im Clientrechteck des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode können Sie bestimmen, in dem sich ein bestimmter Zeichenindex im Steuerelement befindet. Sie können diese Methode für Aufgaben wie das Anzeigen von Elementen oder die Hilfeinformationen Informationen zum Kontextmenü für ein Wort im Steuerelement verwenden. Z. B. Wenn Sie ein Menü mit Optionen für den Benutzer angezeigt wird, wenn der Benutzer mit der rechten Maustaste auf ein Wort im Steuerelement klickt. wollten, können diese Methode bestimmen die Position des Worts zur korrekten Darstellung einer <xref:System.Windows.Forms.ContextMenu> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideSelection">
+      <MemberSignature Language="C#" Value="public bool HideSelection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.HideSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der markierte Text im Textfeld-Steuerelement hervorgehoben bleibt, nachdem das Steuerelement den Fokus verloren hat, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn der ausgewählte Text nicht angezeigt wird hervorgehoben, wenn das Textfeld-Steuerelement den Fokus verliert. <see langword="false" />, wenn der ausgewählte Text hervorgehoben bleibt, wenn das Textfeld-Steuerelement den Fokus verliert. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, zu Text in einem Textfeld-Steuerelement hervorgehoben, während ein anderes Formular oder Dialogfeld den Fokus, z. B. ein Dialogfeld für die Rechtschreibprüfung aus hat.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TextBoxBase.HideSelection%2A> Eigenschaft. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Rufen Sie die `InitializeTextBox` -Methode im Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.TextBoxBaseScrolling#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.TextBoxBaseScrolling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.TextBoxBaseScrolling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideSelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler HideSelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HideSelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.HideSelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.HideSelection" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.HideSelectionChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.HideSelectionChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#245](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#245)]
+ [!code-vb[System.Windows.Forms.EventExamples#245](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#245)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeBase">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode ImeModeBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeModeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.ImeModeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Eingabe-Editor (IME) Modus eines Steuerelements fest.</summary>
+        <value>Der IME-Modus des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInputKey">
+      <MemberSignature Language="C#" Value="protected override bool IsInputKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsInputKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.IsInputKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der Tastenwerte.</param>
+        <summary>Bestimmt, ob es sich bei der angegebenen Taste um eine normale Eingabetaste handelt oder um eine Sondertaste, für die eine Vorverarbeitung erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Taste eine normale Eingabetaste ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBoxBase.IsInputKey%2A> -Methode zurückkehrt `true` bei der `keyData` Parameter enthält die <xref:System.Windows.Forms.Keys.Tab> Wert und die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A> Eigenschaft ist `true`. <xref:System.Windows.Forms.TextBoxBase.IsInputKey%2A>Gibt `false` Wenn `keyData` enthält sowohl <xref:System.Windows.Forms.Keys.Tab> und <xref:System.Windows.Forms.Keys.Control>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lines">
+      <MemberSignature Language="C#" Value="public string[] Lines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Lines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.Lines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StringArrayEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Textzeilen in einem Textfeld-Steuerelement.</summary>
+        <value>Ein Array mit Zeichenfolgen, das den Text in einem Textfeld-Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element im Array wird eine Textzeile in das Textfeld-Steuerelement. Wenn die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> des Textfeld-Steuerelement ist-Eigenschaftensatz auf `true` und ein neue Zeilenumbruchzeichen im Text angezeigt wird, der Text nach dem neue Zeilenumbruchzeichen wird ein neues Element im Array hinzugefügt und in einer eigenen Zeile angezeigt.  
+  
+> [!NOTE]
+>  Standardmäßig ist die Auflistung der Zeilen eine schreibgeschützte Kopie der Zeilen in der <xref:System.Windows.Forms.TextBox>. Verwenden Sie zum Abrufen einer Auflistung der Zeilen ähnlich dem folgenden Code ein:`textBox1.Lines = new string[] { "abcd" };`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um alle Textzeichenfolgen in einem mehrzeiligen Textfeld-Steuerelement zu extrahieren und zeigt sie mithilfe der <xref:System.Diagnostics.Debug.WriteLine%2A?displayProperty=nameWithType> Methode. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement erstellt wurde, mit dem Namen `textBox1`, und, die sie mit Textzeilen gefüllt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.Lines Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.Lines Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.Lines Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.Lines Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.Lines Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.Lines Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public virtual int MaxLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(32767)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl an Zeichen ab, die Benutzer in das Textfeld-Steuerelement eingeben oder einfügen können, oder legt diese fest.</summary>
+        <value>Die Anzahl der Zeichen, die in das Steuerelement eingegeben werden können. Der Standardwert ist 32767.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um die Länge des Texts im Steuerelement für Werte wie Postleitzahlen und Telefonnummern eingegeben zu beschränken oder beschränken Sie die Länge des Texts, die eingegeben werden, wenn die Daten in einer Datenbank eingegeben werden. Sie können den Text in das Steuerelement eingegeben werden, auf die maximale Länge des entsprechenden Felds in der Datenbank einschränken.  
+  
+> [!NOTE]
+>  Im Code können Sie den Wert der Festlegen der <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft ein Wert, der eine Länge größer als der angegebene Wert ist die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft. Diese Eigenschaft wirkt sich nur auf Text in das Steuerelement zur Laufzeit eingegeben werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel verwendet die abgeleitete Klasse <xref:System.Windows.Forms.TextBox>, um ein Textfeld zu erstellen, die verwendet wird, um ein Kennwort zu übernehmen. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> Eigenschaft so ändern Sie alle Zeichen in Großbuchstaben eingegeben und die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft, um die Länge des Kennworts auf acht Zeichen beschränkt. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBox.TextAlign%2A> Eigenschaft zur Mitte des Kennworts in der <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ [!code-cpp[Classic TextBoxBase.MaxLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.MaxLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.MaxLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.MaxLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.MaxLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.MaxLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert der Eigenschaft zugewiesen ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="public bool Modified { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Modified" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.Modified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dass das Textfeld-Steuerelement geändert wurde, indem der Benutzer seit der Erstellung des Steuerelements oder dessen Inhalt zuletzt festgelegt wurden.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt des Steuerelements geändert wurden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um festzustellen, ob der Benutzer den Inhalt des Textfeld-Steuerelement geändert hat. Sie können diese Eigenschaft auch festlegen, im Code, um anzugeben, dass das Textfeld-Steuerelement von der Anwendung geändert wurden. Diese Eigenschaft kann durch Überprüfung und Speichern von Daten-Methoden verwendet werden, um festzustellen, ob Änderungen in einem Textfeld-Steuerelement vorgenommen wurden, damit der geänderte Inhalt überprüft oder gespeichert werden können.  
+  
+ Wenn Sie ändern die <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft programmgesteuert die <xref:System.Windows.Forms.TextBoxBase.Modified%2A> Eigenschaft wiederhergestellt `false`. Dies löst keine der <xref:System.Windows.Forms.TextBoxBase.ModifiedChanged> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.Control.TextChanged> -Ereignis für eine <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um festzustellen, den Inhalt der <xref:System.Windows.Forms.TextBox> Steuerelement wurden geändert, da das Steuerelement mit Daten gefüllt wurde. Das Beispiel verwendet eine Zeichenfolge, um den ursprünglichen Inhalt des Steuerelements zu speichern, und vergleicht ihn mit den Inhalt der <xref:System.Windows.Forms.TextBox> zu bestimmen, ob der Inhalt geändert wurde. Wenn der Inhalt geändert haben, die <xref:System.Windows.Forms.TextBoxBase.Modified%2A> -Eigenschaftensatz auf `true`. Andernfalls wird zurückgesetzt, um `false`. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> -Steuerelement namens `textBox1` erstellt wurde und dass eine `String` Variable mit dem Namen `originalText` erstellt wurden, um den ursprünglichen Text für speichern die <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ [!code-cpp[Classic TextBoxBase.Modified Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.Modified Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.Modified Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.Modified Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.Modified Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.Modified Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ModifiedChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ModifiedChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.ModifiedChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.Modified" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ändern die <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft programmgesteuert die <xref:System.Windows.Forms.TextBoxBase.Modified%2A> Eigenschaft wiederhergestellt `false`. Dies löst keine der <xref:System.Windows.Forms.TextBoxBase.ModifiedChanged> Ereignis.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.ModifiedChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.ModifiedChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#246](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#246)]
+ [!code-vb[System.Windows.Forms.EventExamples#246](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#246)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn mit der Maus auf das Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.RichTextBox> Steuerelement löst kein <xref:System.Windows.Forms.TextBoxBase.Click> Ereignis mit der rechten Maustaste klickt. Die <xref:System.Windows.Forms.TextBoxBase.MouseClick> Ereignis bietet funktionell gleichwertig.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.MouseClick> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.MouseClick> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#244](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#244)]
+ [!code-vb[System.Windows.Forms.EventExamples#244](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#244)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiline">
+      <MemberSignature Language="C#" Value="public virtual bool Multiline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Multiline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.Multiline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dies ein mehrzeiliges Textfeld-Steuerelement ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement ein mehrzeiliges Textfeld-Steuerelement ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein mehrzeiliges Textfeld können Sie mehr als eine Zeile des Texts im Steuerelement angezeigt. Wenn die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> -Eigenschaftensatz auf `true`, im mehrzeiligen Textfeld eingegebene Text wird umbrochen, in die nächste Zeile im Steuerelement. Wenn die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> -Eigenschaftensatz auf `false`, in mehrzeiligen Textfeld-Steuerelement eingegebene Text wird in der gleichen Zeile angezeigt werden, bis ein Zeilenumbruchzeichen eingegeben wird.  
+  
+ Im folgenden können als neue Zeilenumbruchzeichen verwendet werden:  
+  
+-   <xref:System.Environment.NewLine%2A?displayProperty=nameWithType>  
+  
+-   ControlChars.CrLf  
+  
+-   VbCrLf (nur Visual Basic)  
+  
+ Hinzufügen von Bildlaufleisten in einen Text-Feld mit der <xref:System.Windows.Forms.TextBox.ScrollBars%2A> -Eigenschaft horizontale bzw. vertikale Bildlaufleisten angezeigt. Dies ermöglicht es dem Benutzer einen Bildlauf durch den Text, die die Abmessungen des Steuerelements überschreitet.  
+  
+> [!NOTE]
+>  Da der Standardwert der <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> Eigenschaft `false`, die Standardgröße des eine <xref:System.Windows.Forms.TextBox> werden in Übereinstimmung mit den Schriftgrad, selbst wenn Sie die Größe der <xref:System.Windows.Forms.TextBox>. Zum Abrufen einer einheitlichen Größe für Ihre <xref:System.Windows.Forms.TextBox>legen seine <xref:System.Windows.Forms.TextBox.Multiline%2A> Eigenschaft `true`.  
+  
+> [!NOTE]
+>  Auf Japanisch Betriebssystemen, wenn die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> -Eigenschaftensatz auf `true`wird durch das Festlegen der <xref:System.Windows.Forms.TextBox.PasswordChar%2A> zeigt die Eigenschaft den Text des Kennworts, also die Systemsicherheit gefährden. Legen Sie daher in japanischen Betriebssystemen die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> Eigenschaft, um `false` , wenn Sie festlegen, die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird festgelegt, um `false` abgeleiteten Sie standardmäßig für alle Klassen, mit Ausnahme von der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ Für eine <xref:System.Windows.Forms.RichTextBox> -Steuerelement, das <xref:System.Windows.Forms.RichTextBox.Multiline%2A?displayProperty=nameWithType> Eigenschaft wirkt sich auf, und zwar unabhängig davon, ob das Steuerelement automatisch angepasst wird, wie folgt:  
+  
+-   Wenn <xref:System.Windows.Forms.RichTextBox.AutoSize%2A?displayProperty=nameWithType> festgelegt ist, um `true` und <xref:System.Windows.Forms.RichTextBox.Multiline%2A?displayProperty=nameWithType> festgelegt ist, um `true`, <xref:System.Windows.Forms.RichTextBox> wird nicht automatisch angepasst.  
+  
+-   Wenn <xref:System.Windows.Forms.RichTextBox.AutoSize%2A?displayProperty=nameWithType> festgelegt ist, um `true` und <xref:System.Windows.Forms.RichTextBox.Multiline%2A?displayProperty=nameWithType> festgelegt ist, um `false`, <xref:System.Windows.Forms.RichTextBox> automatisch angepasst wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um ein mehrzeiliges erstellen <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultilineChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MultilineChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MultilineChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.MultilineChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.Multiline" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.MultilineChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.MultilineChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#247](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#247)]
+ [!code-vb[System.Windows.Forms.EventExamples#247](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#247)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAcceptsTabChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAcceptsTabChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAcceptsTabChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnAcceptsTabChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TextBoxBase.AcceptsTabChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBoxBase.OnAcceptsTabChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBoxBase.OnAcceptsTabChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBoxBase.OnAcceptsTabChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBorderStyleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnBorderStyleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBorderStyleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnBorderStyleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TextBoxBase.BorderStyleChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBoxBase.OnBorderStyleChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBoxBase.OnBorderStyleChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBoxBase.OnBorderStyleChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.FontChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHideSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHideSelectionChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHideSelectionChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnHideSelectionChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Auslösen der <see cref="E:System.Windows.Forms.TextBoxBase.HideSelectionChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBoxBase.OnHideSelectionChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBoxBase.OnHideSelectionChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBoxBase.OnHideSelectionChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnModifiedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnModifiedChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnModifiedChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnModifiedChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TextBoxBase.ModifiedChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBoxBase.OnModifiedChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBoxBase.OnModifiedChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBoxBase.OnModifiedChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseUp" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMultilineChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnMultilineChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMultilineChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnMultilineChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TextBoxBase.MultilineChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBoxBase.OnMultilineChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBoxBase.OnMultilineChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBoxBase.OnMultilineChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaddingChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPaddingChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaddingChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnPaddingChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Diese Methode ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReadOnlyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnReadOnlyChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnReadOnlyChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnReadOnlyChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TextBoxBase.ReadOnlyChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBoxBase.OnReadOnlyChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBoxBase.OnReadOnlyChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBoxBase.OnReadOnlyChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.TextChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft ist für diese Klasse nicht relevant.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Padding" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement neu gezeichnet wird. Dieses Ereignis ist für diese Klasse nicht relevant.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public void Paste ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Paste() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.Paste" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ersetzt die aktuelle Auswahl in das Textfeld mit dem Inhalt der **Zwischenablage**.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBoxBase.Paste%2A> -Methode wird Text nur in das Steuerelement eingefügt werden, wenn im Text gespeichert ist die **Zwischenablage**.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für das Lesen aus der **Zwischenablage**. Zugeordnete Enumeration: die <see langword="AllClipboard" /> Wert <see cref="T:System.Security.Permissions.UIPermissionClipboard" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredHeight">
+      <MemberSignature Language="C#" Value="public int PreferredHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.PreferredHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die bevorzugte Höhe für ein Textfeld.</summary>
+        <value>Die bevorzugte Höhe eines Textfelds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Eigenschaft zurückgegebene Größe basiert auf den Schriftschnitt Höhe und Rahmen des Textfelds. Sie können diese Eigenschaft verwenden, bestimmen die geeignete Größe des Textfelds, um sicherzustellen, dass der Text im Steuerelement ordnungsgemäß angezeigt wird. Der von dieser Eigenschaft zurückgegebene Wert wird in Pixel.  
+  
+ Der Wert des <xref:System.Windows.Forms.TextBoxBase.PreferredHeight%2A> stellt die minimale Höhe im Textfeld benötigen, um eine einzelne Textzeile ohne clipping des Texts am oberen oder unteren anzuzeigen. Dieser Wert ist gleich, ob die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> -Eigenschaftensatz auf `true` oder `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Ein <see cref="T:System.Windows.Forms.Message" />, übergeben als Verweis, der die zu verarbeitende fenstermeldung darstellt.</param>
+        <param name="keyData">Eines der <see cref="T:System.Windows.Forms.Keys" /> Werte, die zu verarbeitende Tastenkombination darstellen.</param>
+        <summary>Verarbeitet eine Befehlstaste.</summary>
+        <returns>
+          <see langword="true" />Wenn die Befehlstaste vom Steuerelement verarbeitet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessDialogKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.ProcessDialogKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte, die die zu verarbeitende Taste darstellen.</param>
+        <summary>Verarbeitet eine Tastatureingabe im Dialogfeld.</summary>
+        <returns>
+          <see langword="true" />, wenn die Taste vom Steuerelement verarbeitet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Text im Textfeld schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Textfeld schreibgeschützt ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um `true`, den Inhalt des Steuerelements können nicht vom Benutzer zur Laufzeit geändert werden. Mit dieser Eigenschaft `true`, Sie können weiterhin legen Sie den Wert von der <xref:System.Windows.Forms.TextBoxBase.Text%2A> -Eigenschaft im Code. Sie können diese Funktion verwenden, anstatt das Deaktivieren des Steuerelements mit der <xref:System.Windows.Forms.Control.Enabled%2A> -Eigenschaft auf die zu kopierenden Inhalte zu ermöglichen und QuickInfos angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ReadOnlyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ReadOnlyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBoxBase.ReadOnlyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBoxBase.ReadOnly" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBoxBase.ReadOnlyChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.TextBoxBase>, z. B. eine <xref:System.Windows.Forms.TextBox> oder <xref:System.Windows.Forms.TextBoxBase>. Geben Sie den Namen der Instanz `TextBoxBase1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBoxBase.ReadOnlyChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#248](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#248)]
+ [!code-vb[System.Windows.Forms.EventExamples#248](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#248)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToCaret">
+      <MemberSignature Language="C#" Value="public void ScrollToCaret ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToCaret() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.ScrollToCaret" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf durch den Inhalt des Steuerelements bis zur aktuellen Caretposition durch.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht Ihnen, den Bildlauf durch den Inhalt des Steuerelements, bis die Einfügemarke innerhalb des sichtbaren Bereichs des Steuerelements wird. Wenn die Einfügemarke unterhalb des sichtbaren Bereichs des Steuerelements positioniert ist die <xref:System.Windows.Forms.TextBoxBase.ScrollToCaret%2A> -Methode wird der Inhalt des Steuerelements einen Bildlauf durch, bis das Caretzeichen am unteren Rand des Steuerelements sichtbar ist. Wenn die Einfügemarke über den sichtbaren Bereich des Steuerelements positioniert ist, verschiebt diese Methode den Inhalt des Steuerelements bis Einfügemarke am oberen Rand des Steuerelements sichtbar ist. Sie können diese Methode in einem mehrzeiligen Textfeld verwenden, um sicherzustellen, dass der aktuelle Text Einstiegspunkt in den sichtbaren Bereich des Steuerelements ist.  
+  
+> [!NOTE]
+>  Diese Methode hat keine Auswirkung, wenn das Steuerelement nicht den Fokus besitzt, oder wenn die Einfügemarke sich bereits in den sichtbaren Bereich des Steuerelements befindet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Keys> Enumeration und die <xref:System.Windows.Forms.TextBoxBase.ScrollToCaret%2A> Methode, um sicherzustellen, dass die Einfügemarke, dargestellt durch das Caretzeichen immer auf dem Bildschirm sichtbar ist, nach dem Drücken der EINGABETASTE. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.TextBox> -Steuerelement namens `TextBox1` und ein <xref:System.Windows.Forms.RichTextBox> -Steuerelement namens `RichTextBox1`. Dieses Beispiel benötigen Sie, dass die Ereignisbehandlungsmethode zugeordnet wurde die <xref:System.Windows.Forms.Control.KeyDown> Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.TextBoxBaseScrolling#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TextBoxBaseScrolling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TextBoxBaseScrolling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextBoxBaseScrolling/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.Select(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">Die Position des ersten Zeichens in der aktuellen Textmarkierung im Textfeld.</param>
+        <param name="length">Die Anzahl der zu markierenden Zeichen.</param>
+        <summary>Wählt einen Textbereich im Textfeld aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Startposition auf das erste Zeichen im Text des Steuerelements festlegen möchten, legen Sie die `start` Parameter auf 0. Sie können diese Methode verwenden, wählen Sie eine Teilzeichenfolge des Texts an, z. B. wenn durch den Text des Steuerelements suchen und Ersetzen von Informationen.  
+  
+> [!NOTE]
+>  Die Einfügemarke in einem Textfeld können Sie programmgesteuert verschieben, durch Festlegen der `start` Parameter an die Position in das Textfeld, in dem Sie die Einfügemarke zu verschieben, und legen Sie soll, die `length` Parameter auf einen Wert von 0 (null). Das Textfeld muss in der Reihenfolge für die Einfügemarke zu verschiebenden markiert sein.  
+  
+> [!NOTE]
+>  Wenn diese Methode ohne Parameter aufgerufen wird, wird eine alternative Methode verwendet. Diese alternative Methode erbt von der <xref:System.Windows.Forms.Control> Klasse. Beim Aufruf legt den Eingabefokus auf das Steuerelement und wählt den Inhalt des Steuerelements. Weitere Informationen finden Sie unter der Methode <xref:System.Windows.Forms.Control.Select%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um den Inhalt des Steuerelements für die Instanz des Worts "Fuchs" zu suchen. Wenn gefunden, der Code das Wort in das Steuerelement mit wählt die <xref:System.Windows.Forms.TextBoxBase.Select%2A> Methode. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> mit dem Namen `textBox1` erstellt wurde und die zugehörige <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft enthält den Satz "der schnelle braune Hund springt über den faulen Fuchs."  
+  
+ [!code-cpp[Classic TextBoxBase.Select Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.Select Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.Select Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.Select Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.Select Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.Select Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert, der die <paramref name="start" /> Parameter ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public void SelectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.SelectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert den gesamten Text im Textfeld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht Ihnen, wählen Sie den gesamten Text im Steuerelement. Verwenden Sie diese Methode in Verbindung mit der <xref:System.Windows.Forms.TextBoxBase.Cut%2A> Methode, wofür Text ausgewählt werden, in das Steuerelement, um den gesamten Inhalt des Steuerelements auszuschneiden und in die **Zwischenablage**.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um festzustellen, ob Text im Steuerelement ausgewählt ist. Wenn kein Text ausgewählt ist, wird ein Aufruf ausgelöst, um die <xref:System.Windows.Forms.TextBoxBase.SelectAll%2A> Methode vor dem Kopieren den Inhalt des Steuerelements auf die **Zwischenablage**. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> wurde erstellt benannte `textBox1`.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectAll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectAll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectAll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectAll Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectAll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectAll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedText">
+      <MemberSignature Language="C#" Value="public virtual string SelectedText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.SelectedText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den derzeitig markierten Text im Steuerelement angibt, oder legt diesen fest.</summary>
+        <value>Eine Zeichenfolge, die den derzeitig markierten Text im Textfeld darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Ändern des Texts in das Textfeld aktuell ausgewählten Text zuweisen. Wenn Sie im Textfeld aktuell kein Text ausgewählt ist, gibt diese Eigenschaft eine Zeichenfolge der Länge 0 (null) zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectedText Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectedText Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectedText Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectedText Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectedText Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectedText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionLength">
+      <MemberSignature Language="C#" Value="public virtual int SelectionLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.SelectionLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Zeichen, die in das Textfeld.</summary>
+        <value>Die Anzahl der Zeichen, die in das Textfeld.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um festzustellen, ob alle Zeichen in das Textfeld-Steuerelement gerade ausgewählt sind, vor dem Ausführen von Vorgängen für den ausgewählten Text. Wenn der Wert des der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> auf einen Wert, der größer ist als die Anzahl der Zeichen im Text des Steuerelements den Wert der Eigenschaft festgelegt ist die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> -Eigenschaft auf die gesamte Länge des Texts im Steuerelement minus dem Wert von der festgelegtist<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>Eigenschaft (wenn ein Wert, für angegeben wird die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft).  
+  
+> [!NOTE]
+>  Die Einfügemarke in einem Textfeld können Sie programmgesteuert verschieben, durch Festlegen der <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> auf die Position innerhalb des Textfelds an die Einfügemarke zu verschieben, und legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft auf einen Wert von 0 (null). Das Textfeld muss in der Reihenfolge für die Einfügemarke zu verschiebenden markiert sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zugewiesene Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public int SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausgangspunkt des Texts im Textfeld ausgewählt.</summary>
+        <value>Die Anfangsposition des Texts im Textfeld ausgewählt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Text im Steuerelement ausgewählt ist, gibt diese Eigenschaft die Einfügemarke oder Einfügemarke, für den neuen Text an. Wenn Sie diese Eigenschaft auf eine Position hinter der Länge des Texts im Steuerelement festlegen, wird die Startposition der Auswahl nach dem letzten Zeichen platziert werden. Wenn Sie Text in das Textfeld-Steuerelement ausgewählt ist, das Ändern dieser Eigenschaft möglicherweise verringern Sie den Wert von der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft. Wenn der restliche Text im Steuerelement nach der Position angegeben die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> -Eigenschaft muss kleiner als der Wert des der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> -Eigenschaft, der Wert der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> -Eigenschaft automatisch verringert. Der Wert, der die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft löst nie eine Erhöhung der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft.  
+  
+ Sie können die Auswahl in einem Textfeld programmgesteuert verschieben, durch Festlegen der <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> und <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaften.  
+  
+ Die Einfügemarke in einem Textfeld können Sie programmgesteuert verschieben, durch Festlegen der <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> auf die Position innerhalb des Textfelds an die Einfügemarke zu verschieben, und legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft auf einen Wert von 0 (null).  
+  
+ Die <xref:System.Windows.Forms.TextBox> muss markiert sein, in der Reihenfolge für die Einfügemarke verschoben werden soll. Können Sie festlegen, die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox> also <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> ermöglicht es der <xref:System.Windows.Forms.Control.Focus%2A> erste.  
+  
+   
+  
+## Examples  
+ **Beispiel 1**  
+  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ **Beispiel 2**  
+  
+ Im folgenden Beispiel wird die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox> also <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> ermöglicht es der <xref:System.Windows.Forms.Control.Focus%2A> erste.  
+  
+ [!code-csharp[SystemWindowsFormsTextBoxBase#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemWindowsFormsTextBoxBase/CS/Form1.cs#1)]
+ [!code-vb[SystemWindowsFormsTextBoxBase#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemWindowsFormsTextBoxBase/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der zugewiesene Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der neue <see cref="P:System.Windows.Forms.Control.Left" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="y">Der neue <see cref="P:System.Windows.Forms.Control.Top" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="width">Der neue <see cref="P:System.Windows.Forms.Control.Width" />-Eigenschaftswert des Steuerelements.</param>
+        <param name="height">Nicht verwendet.</param>
+        <param name="specified">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.BoundsSpecified" />-Werte.</param>
+        <summary>Legt die angegebenen Begrenzungen der <see cref="T:System.Windows.Forms.TextBoxBase" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBoxBase> steuern verwendet der <xref:System.Windows.Forms.TextBoxBase.PreferredHeight%2A> Eigenschaft, um die Grenzen festzulegen, wenn die <xref:System.Windows.Forms.TextBoxBase.AutoSize%2A> Eigenschaft ist `true` und <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> Eigenschaft ist `false`.  
+  
+ In der Regel die Parameter, die die Grenzen, die nicht in enthalten entsprechen den `specified` Parameter sich ihre aktuellen Werte übergeben werden. Z. B. die <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, oder die <xref:System.Drawing.Point.X%2A> oder <xref:System.Drawing.Point.Y%2A> Eigenschaften der <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft mit einem Verweis auf die aktuelle Instanz des Steuerelements übergeben werden kann. Alle übergebenen Werte werden jedoch berücksichtigt, und klicken Sie auf das Steuerelement angewendet.  
+  
+ Die `specified` Parameter darstellt, die Elemente der Steuerelemente <xref:System.Windows.Forms.Control.Bounds%2A> von der Anwendung geändert. Angenommen, Sie ändern die <xref:System.Windows.Forms.Control.Size%2A> des Steuerelements, das `specified` Parameterwert ist die `Size` Wert <xref:System.Windows.Forms.BoundsSpecified>. Jedoch wenn die <xref:System.Windows.Forms.Control.Size%2A> wird angepasst, als Antwort auf die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft festgelegt wird, die `specified` Parameterwert ist die `None` Wert <xref:System.Windows.Forms.BoundsSpecified>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TextBoxBase.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TextBoxBase.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" /> Methode, um die Grenzen des Steuerelements ändern zu erzwingen. Abgeleitete Klassen können Größe Einschränkungen beim Hinzufügen der <see cref="M:System.Windows.Forms.TextBoxBase.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortcutsEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool ShortcutsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShortcutsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.ShortcutsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die definierten Tastenkombinationen aktiviert sind, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />um die Tastenkombinationen zu aktivieren; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled%2A> Eigenschaft aktivieren oder deaktivieren die folgenden Tastenkombinationen und das Steuerelement-Kontextmenü:  
+  
+-   STRG+Z  
+  
+-   STRG+E  
+  
+-   STRG+C  
+  
+-   STRG+Y   
+  
+-   STRG+X  
+  
+-   STRG+RÜCKTASTE  
+  
+-   STRG+V  
+  
+-   STRG+ENTF  
+  
+-   STRG+A  
+  
+-   UMSCHALT + ENTF  
+  
+-   STRG+L  
+  
+-   UMSCHALT + EINFG  
+  
+-   STRG+R  
+  
+ Sie können diese Eigenschaft zum Angeben anderer Tastenkombinationen überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Text im Textfeld fest.</summary>
+        <value>Der im Steuerelement angezeigte Text.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um mehrere Textzeilen in einem Textfeld anzuzeigen, legen die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> Eigenschaft `true`. Verwenden Sie zum Lesen oder Festlegen des Texts von einem mehrzeiligen Textfeld, das <xref:System.Windows.Forms.TextBoxBase.Lines%2A> Eigenschaft. Die Größe des Texts, die in eingegeben werden, kann die <xref:System.Windows.Forms.RichTextBox> Steuerelement wird nur durch den verfügbaren Arbeitsspeicher des Systems beschränkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um ein mehrzeiliges erstellen <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextLength">
+      <MemberSignature Language="C#" Value="public virtual int TextLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.TextLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des Texts im Steuerelement ab.</summary>
+        <value>Die Anzahl der Zeichen im Text des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, bestimmen die Anzahl der Zeichen in einer Zeichenfolge für Aufgaben wie das Suchen nach bestimmten Textzeichenfolgen im Text des Steuerelements, in denen Kenntnisse der Gesamtzahl der Zeichen erforderlich ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.TextBoxBase.AppendText%2A> Methode und die <xref:System.Windows.Forms.TextBoxBase.TextLength%2A> Eigenschaft so kopieren Sie Text aus einer <xref:System.Windows.Forms.TextBox> in eine andere. Dieses Beispiel benötigen Sie, dass zwei <xref:System.Windows.Forms.TextBox> -Steuerelemente Namens, `textBox1` und `textBox2`, auf einem Formular hinzugefügten `textBox1` Text zugewiesen seine <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft.  
+  
+ [!code-cpp[TextBoxBase.AppendText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TextBoxBase.AppendText/CPP/form1.cpp#1)]
+ [!code-csharp[TextBoxBase.AppendText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TextBoxBase.AppendText/CS/form1.cs#1)]
+ [!code-vb[TextBoxBase.AppendText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TextBoxBase.AppendText/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das <see cref="T:System.Windows.Forms.TextBoxBase" />-Steuerelement darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.TextBoxBase" /> darstellt. Die Zeichenfolge enthält den Typ und die <see cref="T:System.Windows.Forms.TextBoxBase" />-Eigenschaft des Steuerelements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public void Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Macht die letzte Bearbeitung des Textfelds rückgängig.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird die zuletzt rückgängig **Zwischenablage** oder Text Änderungsvorgangs in das Textfeld-Steuerelement ausgeführt werden, wenn die <xref:System.Windows.Forms.TextBoxBase.CanUndo%2A> -Eigenschaft gibt `true`.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.TextBoxBase.Undo%2A> -Methode funktioniert nicht mit der <xref:System.Windows.Forms.Control.KeyPress> oder <xref:System.Windows.Forms.Control.TextChanged> Ereignisse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse. Er bietet <xref:System.Windows.Forms.MenuItem.Click> Ereignishandler für <xref:System.Windows.Forms.MenuItem> Objekte, die ausführen Ausschneiden, kopieren und einfügen und Rückgängigvorgänge. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.TextBox> Steuerelement namens `textBox1` erstellt wurde.  
+  
+ [!code-cpp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.SelectionLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.SelectionLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBoxBase.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Die zu verarbeitende Windows-<see cref="T:System.Windows.Forms.Message" />.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WordWrap">
+      <MemberSignature Language="C#" Value="public bool WordWrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WordWrap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBoxBase.WordWrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob ein mehrzeiliges Textfeld-Steuerelement automatisch auf den Anfang der nächsten Zeile bei Bedarf ein Zeilenumbruch.</summary>
+        <value>
+          <see langword="true" />Wenn die mehrzeiligen Textfeld-Steuerelement Wörter umschließt; <see langword="false" /> , wenn das Textfeld-Steuerelement automatisch führt einen horizontalen Bildlauf bei der Benutzer über den rechten Rand des Steuerelements eingibt. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft, um festgelegt wird `true`, horizontale Bildlaufleisten werden nicht angezeigt, unabhängig von der <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Einstellung der Eigenschaft.  
+  
+> [!NOTE]
+>  In der abgeleiteten Klasse <xref:System.Windows.Forms.TextBox>, Text innerhalb des Steuerelements wird unabhängig von der Einstellung der Eigenschaft dieser Eigenschaft immer umbrochen, es sei denn, die <xref:System.Windows.Forms.TextBox.TextAlign%2A> -Eigenschaftensatz auf `HorizontalAlignment.Left`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Windows.Forms.TextBox>, eine abgeleitete Klasse, um ein mehrzeiliges erstellen <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBoxBase.AcceptsTab Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBoxBase.AcceptsTab Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,76 @@
+<Type Name="GradientSpreadMethod" FullName="System.Windows.Media.GradientSpreadMethod">
+  <TypeSignature Language="C#" Value="public enum GradientSpreadMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GradientSpreadMethod extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GradientSpreadMethod" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie den Farbverlauf außerhalb des Farbverlaufspinsels Farbverlaufsvektors oder Leerzeichen gezeichnet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt die verfügbaren Spread-Methoden und deren Auswirkung auf <xref:System.Windows.Media.LinearGradientBrush> und <xref:System.Windows.Media.RadialGradientBrush>. Die rote Linie gibt den Farbverlauf Speicherplatz an. Ein <xref:System.Windows.Media.LinearGradientBrush> definiert einen Farbverlauf Namespace mit dessen <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Eigenschaften. Ein <xref:System.Windows.Media.RadialGradientBrush> definiert einen Farbverlauf Namespace mit dessen <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, und <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> Eigenschaften.  
+  
+ ![Unterschiedliche GradientSpread-Einstellungen](~/add/media/img-mmgraphics-gradientspread.png "unterschiedliche GradientSpread-Einstellungen")  
+Farbverlauf Spread-Methoden  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Pad">
+      <MemberSignature Language="C#" Value="Pad" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.GradientSpreadMethod Pad = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientSpreadMethod.Pad" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientSpreadMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert. Die Werte der Farbe am Ende des Farbverlaufsvektors füllen den verbleibenden Speicherplatz.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reflect">
+      <MemberSignature Language="C#" Value="Reflect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.GradientSpreadMethod Reflect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientSpreadMethod.Reflect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientSpreadMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Verlauf wird in umgekehrter Richtung wiederholt, bis der Speicherplatz gefüllt ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeat">
+      <MemberSignature Language="C#" Value="Repeat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.GradientSpreadMethod Repeat = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.GradientSpreadMethod.Repeat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GradientSpreadMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Farbverlauf wird in der ursprünglichen Richtung wiederholt, bis der Speicherplatz gefüllt ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="ISafeSerializationData" FullName="System.Runtime.Serialization.ISafeSerializationData">
+  <TypeSignature Language="C#" Value="public interface ISafeSerializationData" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISafeSerializationData" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ISafeSerializationData" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Serialisierung von benutzerdefinierten Ausnahmedaten in sicherheitstransparentem Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In vorherigen Versionen-abgeleiteter Framework 4.0, wurde Serialisierung von benutzerdefinierten Daten in einem Sicherheitstransparenter Code erreicht, indem die <xref:System.Exception.GetObjectData%2A> Methode. Beginnend mit .NET Framework 4.0, ist diese Methode mit markiert die <xref:System.Security.SecurityCriticalAttribute> Attribut, das Ausführung in sicherheitstransparentem Code verhindert. Um das Problem zu umgehen, implementieren die <xref:System.Runtime.Serialization.ISafeSerializationData> Schnittstelle und Hinzufügen von benutzerdefinierten Daten, wie im folgenden Beispiel gezeigt.  
+  
+ Die <xref:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization%2A> Methode wird nach der Serialisierung aufgerufen, und verwendet die <xref:System.Runtime.Serialization.SafeSerializationEventArgs> zum Wiederherstellen der benutzerdefinierten Daten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel enthält eine Implementierung der <xref:System.Runtime.Serialization.ISafeSerializationData> -Schnittstelle, die verwendet wird, um benutzerdefinierte Daten zu speichern, das serialisiert wird.  
+  
+ [!code-csharp[ISafeSerializationData#1](~/samples/snippets/csharp/VS_Snippets_CFX/isafeserializationdata/cs/source.cs#1)]
+ [!code-vb[ISafeSerializationData#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/isafeserializationdata/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompleteDeserialization">
+      <MemberSignature Language="C#" Value="public void CompleteDeserialization (object deserialized);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CompleteDeserialization(object deserialized) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deserialized" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="deserialized">Ein Objekt, das den Zustand der Instanz enthält.</param>
+        <summary>Diese Methode wird aufgerufen, wenn die Instanz deserialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Zustandsobjekt befindet sich in eine private Variable, die in der Implementierung definiert die <xref:System.Runtime.Serialization.ISafeSerializationData> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel stellt den Status der Ausnahme nach dem zu deserialisierenden wieder her.  
+  
+ [!code-csharp[ISafeSerializationData#2](~/samples/snippets/csharp/VS_Snippets_CFX/isafeserializationdata/cs/source.cs#2)]
+ [!code-vb[ISafeSerializationData#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/isafeserializationdata/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

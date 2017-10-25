@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.Adapters">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.Adapters" /> -Namespace enthält die Basisklassen für Steuerelementadapter und Seitenadapter. Diese Adapter können Sie um die Zustände Lebenszyklus von Seiten und Steuerelemente zu überschreiben. Dies ist hilfreich, wenn Sie ein Steuerelement Markup oder Verhalten für neue Markupstandards oder für bestimmte Browser ändern möchten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter?displayProperty=nameWithType>-Klasse erbt von der <xref:System.Web.UI.Adapters.ControlAdapter>-Klasse. Die <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.Adapters.MenuAdapter?displayProperty=nameWithType> Klassen erben von der <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

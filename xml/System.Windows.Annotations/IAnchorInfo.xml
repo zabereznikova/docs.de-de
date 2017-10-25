@@ -1,0 +1,118 @@
+<Type Name="IAnchorInfo" FullName="System.Windows.Annotations.IAnchorInfo">
+  <TypeSignature Language="C#" Value="public interface IAnchorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAnchorInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.IAnchorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Funktionen für den Abgleich von Anmerkungen mit der entsprechenden kommentierte Objekte bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo>eingeführt der [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] Version 3.5.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Betrachten Sie eine einfaches Dokument Reader-Anwendung, die eine Kommentarbereich verfügt über ein. Der Kommentarbereich ist möglicherweise ein Listenfeld, das den Text aus einer Liste von Anmerkungen anzeigt, die mit einem Dokument verankert sind. Wenn der Benutzer ein Element im Listenfeld auswählt, zeigt die Anwendung den Abschnitt im Dokument, mit dem das entsprechende Anmerkungsobjekt verankert ist.  
+  
+ Im folgende Beispiel wird veranschaulicht, wie den Ereignishandler eines solchen Listenfelds implementiert, die als Kommentarbereich dient:  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anchor">
+      <MemberSignature Language="C#" Value="public System.Windows.Annotations.AnnotationResource Anchor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Annotations.AnnotationResource Anchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.IAnchorInfo.Anchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anker der Anmerkung ab.</summary>
+        <value>Der Anker, der aufgelöst wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo.Anchor%2A>eingeführt der [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] Version 3.5.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotation">
+      <MemberSignature Language="C#" Value="public System.Windows.Annotations.Annotation Annotation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Annotations.Annotation Annotation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.IAnchorInfo.Annotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Anmerkungsobjekt ab.</summary>
+        <value>Annotation-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo.Annotation%2A>eingeführt der [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] Version 3.5.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedAnchor">
+      <MemberSignature Language="C#" Value="public object ResolvedAnchor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ResolvedAnchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.IAnchorInfo.ResolvedAnchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das die Position in der Struktur darstellt, in dem die <see cref="P:System.Windows.Annotations.IAnchorInfo.Anchor" /> aufgelöst wird.</summary>
+        <value>Das Objekt, das die Position in der Struktur darstellt, in dem die <see cref="P:System.Windows.Annotations.IAnchorInfo.Anchor" /> aufgelöst wird. Der Typ wird durch den Typ des Objekts, mit Anmerkungen angegeben. Kurznotiz notiert und im Datenfluss hervorgehoben oder fixierter Dokumente immer behoben werden, um eine <see cref="T:System.Windows.Annotations.TextAnchor" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.IAnchorInfo.ResolvedAnchor%2A>eingeführt der [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] Version 3.5.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Betrachten Sie eine einfaches Dokument Reader-Anwendung, die eine Kommentarbereich verfügt über ein. Der Kommentarbereich ist möglicherweise ein Listenfeld, das den Text aus einer Liste von Anmerkungen anzeigt, die mit einem Dokument verankert sind. Wenn der Benutzer ein Element im Listenfeld auswählt, zeigt die Anwendung den Abschnitt im Dokument, mit dem das entsprechende Anmerkungsobjekt verankert ist.  
+  
+ Im folgende Beispiel wird veranschaulicht, wie den Ereignishandler eines solchen Listenfelds implementiert, die als Kommentarbereich dient:  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

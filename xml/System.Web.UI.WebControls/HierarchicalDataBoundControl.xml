@@ -1,0 +1,408 @@
+<Type Name="HierarchicalDataBoundControl" FullName="System.Web.UI.WebControls.HierarchicalDataBoundControl">
+  <TypeSignature Language="C#" Value="public abstract class HierarchicalDataBoundControl : System.Web.UI.WebControls.BaseDataBoundControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HierarchicalDataBoundControl extends System.Web.UI.WebControls.BaseDataBoundControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseDataBoundControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als Basisklasse für alle in ASP.NET Version 2.0 vorliegenden datengebundenen Steuerelemente, in denen die Daten in hierarchischer Form angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse ist die Basisklasse für ASP.NET-Steuerelemente, die Abrufen von Daten aus einer hierarchischen ASP.NET Datenquellen-Steuerelements und Elemente der Benutzeroberfläche des Steuerelements binden, um die Daten für die Anzeige verwendet. Die <xref:System.Web.UI.WebControls.TreeView> und <xref:System.Web.UI.WebControls.Menu> Klassen ableiten <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl>.  
+  
+ Entwickler von Seiten verwenden Sie nicht die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse direkt; stattdessen wird, Steuerelemente, die von dieser Klasse ableiten.  
+  
+ Entwickler von Steuerelementen erweitern dieser Klasse, um datengebundene Steuerelemente erstellen, die mit Klassen, die implementieren die <xref:System.Web.UI.IHierarchicalDataSource> Schnittstelle und abgeleitete Klassen die <xref:System.Web.UI.HierarchicalDataSourceControl> und <xref:System.Web.UI.HierarchicalDataSourceView> Klassen. Beim Ableiten einer Klasse von der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse außer Kraft, indem die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding%2A> Methode binden Sie die Elemente der Benutzeroberfläche des Steuerelements an Daten, die abgerufen, indem die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetData%2A> Methode. In den meisten Fällen die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding%2A> Methode ist die einzige Methode, die Sie in der abgeleiteten Klasse überschrieben werden.  
+  
+ Für ASP.NET 2.0 von datengebundenen Steuerelementen die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformSelect%2A> Methode ist das Äquivalent der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> -Methode aufgerufen, um Daten zur Laufzeit binden. Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformSelect%2A> Methodenaufrufe der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetData%2A> und <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Ableiten einer Klasse von der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse, um ein benutzerdefiniertes datengebundene Steuerelement zu erstellen. Die `GeneologyTree` -Steuerelement rendert eine `pre` HTML-Abschnitt mit einem Textstruktur für die Daten aus einem zugeordneten Datenquellen-Steuerelement abgerufen.  
+  
+ [!code-csharp[Samples.AspNet.GeneologyTree#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/geneologytree.cs#2)]
+ [!code-vb[Samples.AspNet.GeneologyTree#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/geneologytree.vb#2)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die `GeneologyTree` -Steuerelement, im vorherigen Beispiel definiert, und binden Sie es an ein <xref:System.Web.UI.WebControls.XmlDataSource> Steuerelement.  
+  
+ [!code-aspx-csharp[Samples.AspNet.GeneologyTree#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/rootviewcs.aspx#1)]
+ [!code-aspx-vb[Samples.AspNet.GeneologyTree#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/rootviewvb.aspx#1)]  
+  
+ Die Datei geneology.xml zugegriffen im Codebeispiel enthält die folgenden Daten.  
+  
+```  
+<family>  
+  <member title="great-grandfather">  
+    <member title="grandfather" >  
+      <member title="child" />  
+      <member title="father" >  
+         <member title="son" />  
+      </member>  
+    </member>  
+  </member>  
+</family>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HierarchicalDataBoundControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public override string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.UI.HierarchicalDataSourceControl))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der ID des Steuerelements, aus dem das datengebundene Steuerelement seine Liste mit Datenelementen abruft.</summary>
+        <value>Die ID eines Steuerelements, die die Datenquelle darstellt, aus der das datengebundene Steuerelement seine Daten abruft. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.HierarchicalDataSourceView GetData (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.HierarchicalDataSourceView GetData(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">Der hierarchische Pfad der abzurufenden Ansicht.</param>
+        <summary>Ruft eine <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> -Objekt, das datengebundene Steuerelement, die zum Ausführen von Datenvorgängen verwendet.</summary>
+        <returns>Die <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> -Objekt, das datengebundene Steuerelement, die zum Ausführen von Datenvorgängen verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetData%2A> Methode ruft eine <xref:System.Web.UI.HierarchicalDataSourceView> Objekt aus der zugeordneten Datenquellen-Steuerelements durch Aufrufen der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetDataSource%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetData%2A> Methode wird aufgerufen, um das Abrufen der <xref:System.Web.UI.HierarchicalDataSourceView> Objekt aus der zugeordneten Datenquellen-Steuerelements und wie die <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A?displayProperty=nameWithType> Methode wird aufgerufen, um die Daten abzurufen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.GeneologyTree#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/geneologytree.cs#4)]
+ [!code-vb[Samples.AspNet.GeneologyTree#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/geneologytree.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> konnten nicht abgerufen werden für den angegebenen <paramref name="viewPath" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSource">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.IHierarchicalDataSource GetDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.IHierarchicalDataSource GetDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalDataSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.IHierarchicalDataSource" /> , der das datengebundene Steuerelement zugeordnet ist, sofern vorhanden.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.IHierarchicalDataSource" /> Instanz, die durch identifiziert die Datenquelle repräsentiert, die <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataSourceID" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetData%2A> Methodenaufrufe der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.GetDataSource%2A> Methode intern.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Datenquellen-Steuerelement durch identifiziert die <see cref="P:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID" /> Eigenschaft ist im aktuellen Container nicht vorhanden.  
+  
+ \- oder –  
+  
+ Datenquellensteuerelement durch identifiziert die <see cref="P:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID" /> Eigenschaft implementiert nicht die <see cref="T:System.Web.UI.IHierarchicalDataSource" /> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkAsDataBound">
+      <MemberSignature Language="C#" Value="protected void MarkAsDataBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void MarkAsDataBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.MarkAsDataBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Zustand des Steuerelements im Ansichtszustand als erfolgreich an Daten gebunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das datengebundene Steuerelement verwaltet einen Wert im Ansichtszustand, der angibt, ob es derzeit an Daten gebunden ist. Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.MarkAsDataBound%2A> Methode legt den Wert auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDataPropertyChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataPropertyChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnDataPropertyChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn eines Identifikation der Basis-Datenquelleneigenschaften geändert wird, um das datengebundene Steuerelement auf dessen Daten erneut zu binden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnDataPropertyChanged%2A> Methode wird aufgerufen, wenn die <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> oder <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> jederzeit nach der Seite wird geändert, <xref:System.Web.UI.Control.PreRender> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein datengebundenes Steuerelement aufrufen kann, die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnDataPropertyChanged%2A> Methode, wenn eine Eigenschaft, die eine Datenquelle identifiziert geändert wird, nachdem das datengebundene Steuerelement initialisiert ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.GeneologyTree#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/geneologytree.cs#3)]
+ [!code-vb[Samples.AspNet.GeneologyTree#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/geneologytree.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnDataSourceChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses, das <see cref="T:System.Web.UI.IHierarchicalDataSource" /> Objekt.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="T:System.Web.UI.IHierarchicalDataSource" /> -Instanz, die mit löst das datengebundene Steuerelement funktioniert die <see cref="E:System.Web.UI.IDataSource.DataSourceChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse behandelt die <xref:System.Web.UI.IHierarchicalDataSource.DataSourceChanged> Ereignis als festzulegen der <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A> Eigenschaft `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Behandelt die <see cref="E:System.Web.UI.Control.Load" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> behandelt das Load-Ereignis Festlegen der <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A> Eigenschaft `true` ist die HTTP-Anforderung kein Postback.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPagePreLoad">
+      <MemberSignature Language="C#" Value="protected override void OnPagePreLoad (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPagePreLoad(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnPagePreLoad(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das <see cref="T:System.Web.UI.Page" />, das das Ereignis ausgelöst hat.</param>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Legt initialisierten Zustand des datengebundenen Steuerelements fest, bevor das Steuerelement geladen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.OnPagePreLoad%2A> legt die <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A> Eigenschaft `true` in Fällen, in denen die HTTP-Anforderung ist ein Postback und Ansichtszustand aktiviert ist jedoch das datengebundene Steuerelement noch nicht gebunden wurde. Dieses Szenario ist mit Steuerelementen wie z. B. <xref:System.Web.UI.WebControls.Wizard> und <xref:System.Web.UI.WebControls.MultiView> , in denen die Sichtbarkeit des Steuerelements zur Laufzeit geändert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected virtual void PerformDataBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PerformDataBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse Daten aus der Datenquelle an das Steuerelement gebunden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode anstelle der <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> Methode beim Ableiten eines datengebundenen Steuerelements aus der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse. Platzieren des Steuerelements Datenbindungsfunktionen Logik in <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding%2A> behält die <xref:System.Web.UI.Control.DataBinding> und <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBound> Ereignisse in der falschen Reihenfolge ausgelöst wird.  
+  
+ Während die Base <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> -Klasse bietet keine spezielle Implementierung für diese Methode die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformSelect%2A> Methode, um die Werte für alle Benutzeroberflächen-Steuerelemente an Daten zu binden, die durch abgerufenen die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformSelect%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformDataBinding%2A> Methode in einer Klasse abgeleitet <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl>. Die `GeneologyTree` Steuerelement durchläuft die <xref:System.Web.UI.IHierarchicalEnumerable> und <xref:System.Web.UI.IHierarchyData> Objekte abgerufen, aus der zugeordneten <xref:System.Web.UI.HierarchicalDataSourceView>, und erstellt eine Text-Struktur für die Daten, die sie, um gebunden ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.GeneologyTree#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/geneologytree.cs#4)]
+ [!code-vb[Samples.AspNet.GeneologyTree#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/geneologytree.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSelect">
+      <MemberSignature Language="C#" Value="protected override void PerformSelect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformSelect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformSelect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Daten aus der zugeordneten Datenquelle ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.PerformSelect%2A> Methode aufgerufen wird, nachdem die Daten abgerufen werden, um Daten auf Elemente des datengebundenen Steuerelements binden,. Abgeleitete Typen überschreiben diese Methode zum Abrufen von Daten nur dann, wenn die standardmäßige Implementierung nicht geeignet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateDataSource">
+      <MemberSignature Language="C#" Value="protected override void ValidateDataSource (object dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateDataSource(object dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.HierarchicalDataBoundControl.ValidateDataSource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Ein Objekt, das zum Festlegen der <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSource" /> Eigenschaft.</param>
+        <summary>Stellt sicher, dass das Objekt, dem an ein datengebundenes Steuerelement gebunden ist, mit denen sie arbeiten kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.ValidateDataSource%2A> Methode wird aufgerufen, nur in der <xref:System.Web.UI.WebControls.BaseDataBoundControl> Mutator (Setter)-Klasse für die <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse überprüft den Typ des Objekts, das für die festgelegt wurde die <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> Eigenschaft, um sicherzustellen, dass er eine Instanz von der <xref:System.Web.UI.IHierarchicalEnumerable> oder <xref:System.Web.UI.IHierarchicalDataSource> Schnittstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="dataSource" />ist kein <see langword="null" /> und implementiert weder die <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> noch die <see cref="T:System.Web.UI.IHierarchicalDataSource" /> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

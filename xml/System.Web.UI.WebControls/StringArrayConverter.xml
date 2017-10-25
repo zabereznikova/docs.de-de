@@ -1,0 +1,162 @@
+<Type Name="StringArrayConverter" FullName="System.Web.UI.WebControls.StringArrayConverter">
+  <TypeSignature Language="C#" Value="public class StringArrayConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringArrayConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.StringArrayConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter zum Konvertieren von einer Zeichenfolge mit durch Trennzeichen getrennten Werten in und aus einem Array von Zeichenfolgen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.StringArrayConverter> -Klasse konvertiert eine Zeichenfolge mit durch Trennzeichen getrennten Werten, in und aus einem Array von Zeichenfolgen. Diese Klasse stellt die <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertTo%2A> und <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertFrom%2A> Methoden, die typkonvertierungen ausführen.  
+  
+ Dieser Typkonverter zur Entwurfszeit Umgebungen wird von Geben Sie Werte für die Anzeige in der Eigenschaftenraster-Steuerelement für einen angegebenen Typ.  
+  
+> [!NOTE]
+>  Sie sollten einen Typkonverter nie direkt zugreifen. Rufen Sie stattdessen den entsprechenden Konverter mithilfe der <xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType> Klasse. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter> Basisklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringArrayConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.StringArrayConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.StringArrayConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Sie sollten einen Typkonverter nie direkt zugreifen. Rufen Sie stattdessen den entsprechenden Konverter mithilfe einer <xref:System.ComponentModel.TypeDescriptor> Objekt. Weitere Informationen finden Sie in den Beispielen in <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.StringArrayConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das einen Formatierungskontext, die verwendet werden kann bereitstellt, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Dieser Parameter oder Eigenschaften dieses Parameters können gleich <see langword="null" /> sein.</param>
+        <param name="sourceType">Die zu konvertierende <see cref="T:System.Type" />.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.UI.WebControls.StringArrayConverter" /> kann den angegebenen Quelltyp in ein Array von Zeichenfolgen zu konvertieren.</summary>
+        <returns>
+          <see langword="true" />Wenn der Konverter den Vorgang ausführen kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.StringArrayConverter.CanConvertFrom%2A> Methode bestimmt, ob die <xref:System.Web.UI.WebControls.StringArrayConverter> können vom angegebene Objekt konvertieren `sourceType` auf ein Array von Zeichenfolgen. Verwenden Sie diese Methode vor dem Aufruf der <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertFrom%2A> Methode zum Durchführen der Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.StringArrayConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das einen Formatierungskontext, die verwendet werden kann bereitstellt, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Dieser Parameter oder Eigenschaften dieses Parameters können gleich <see langword="null" /> sein.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" />-Objekt. Wenn <see langword="null" />, die aktuelle Kultur verwendet.</param>
+        <param name="value">Die zu konvertierende <see cref="T:System.Object" />.</param>
+        <summary>Konvertiert die angegebene durch Trennzeichen getrennte Zeichenfolge in ein Array von Zeichenfolgen.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die das konvertierte darstellt <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertFrom%2A> -Methode analysiert ein Objekt, das eine durch Trennzeichen getrennte Zeichenfolge in ein Array von Zeichenfolgen darstellt. Vor dem Aufrufen dieser Methode können Sie rufen die <xref:System.Web.UI.WebControls.StringArrayConverter.CanConvertFrom%2A> Methode, um zu bestimmen, ob das angegebene Objekt von `value` in ein Array von Zeichenfolgen konvertiert werden kann.  
+  
+ Um ein Array von Zeichenfolgen in eine durch Trennzeichen getrennte Zeichenfolge zu konvertieren, verwenden die <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertTo%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">Die Konvertierung kann nicht ausgeführt werden, da <paramref name="value" /> ist keine Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.StringArrayConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das einen Formatierungskontext, die verwendet werden kann bereitstellt, um zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Dieser Parameter oder Eigenschaften dieses Parameters können gleich <see langword="null" /> sein.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" />-Objekt. Wenn <see langword="null" />, die aktuelle Kultur verwendet.</param>
+        <param name="value">Die zu konvertierende <see cref="T:System.Object" />.</param>
+        <param name="destinationType">Die <see cref="T:System.Type" /> konvertieren <c>Wert</c> an.</param>
+        <summary>Konvertiert ein Array von Zeichenfolgen in eine Zeichenfolge mit durch Trennzeichen getrennten Werten.</summary>
+        <returns>Ein <see cref="T:System.Object" /> Instanz, die das konvertierte steht <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertTo%2A> Methode konvertiert ein Array von Zeichenfolgen in eine durch Trennzeichen getrennte Zeichenfolge.  
+  
+ Um eine durch Trennzeichen getrennte Zeichenfolge in ein Array von Zeichenfolgen zu konvertieren, verwenden die <xref:System.Web.UI.WebControls.StringArrayConverter.ConvertFrom%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+          <paramref name="destinationType" /> ist nicht vom Typ <see cref="T:System.String" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

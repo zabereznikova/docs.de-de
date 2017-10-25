@@ -1,0 +1,207 @@
+<Type Name="ObjectParameter" FullName="System.Data.Objects.ObjectParameter">
+  <TypeSignature Language="C#" Value="public sealed class ObjectParameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectParameter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Abfrageparameter dar, der an eine Objektabfrage übergeben wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt einen Abfrageparameter dar, der an eine <xref:System.Data.Objects.ObjectQuery%601> oder eine Abfrage-Generator-Methode übergeben wird. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ Objektparameter bestehen aus einem Namen, einem Typ und einem Wert.  
+  
+ Diese Klasse kann nicht vererbt werden. Weitere Informationen finden Sie unter <xref:System.Data.Objects.ObjectParameterCollection>.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden der Auflistung neue Parameter hinzugefügt. Die <xref:System.Data.Objects.ObjectParameterCollection> wird durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_parameters)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_parameters)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectParameter (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameter.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters. Dieser Name sollte nur den tatsächlichen Namen und nicht die Parametermarkierung "@" enthalten, die in [!INCLUDE[esql](~/includes/esql-md.md)]-Anweisungen verwendet wird. Das erste Zeichen des Ausdrucks muss ein Buchstabe sein. Alle folgenden Zeichen im Ausdruck müssen Buchstaben, Zahlen oder Unterstriche (_) sein.</param>
+        <param name="value">Der Anfangswert (und dementsprechend der Typ) des Parameters.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.ObjectParameter" />-Klasse mit dem angegebenen Namen und Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt aus dem angegebenen Namen und Wert einen Parameter. Der Typ des Parameters wird aus dem Wert hergeleitet.  
+  
+ Nach dem Hinzufügen zur <xref:System.Data.Objects.ObjectParameterCollection> kann der Parametername nicht mehr geändert werden. Der Parameterwert kann über die <xref:System.Data.Objects.ObjectParameter.Value%2A>-Eigenschaft geändert werden. Nach dem Kompilieren der Abfrage kann der Wert nicht mehr geändert werden. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden der Auflistung neue Parameter hinzugefügt. Die <xref:System.Data.Objects.ObjectParameterCollection> wird durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_parameters)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_parameters)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn der Wert eines Arguments NULL ist.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn der Wert des name-Arguments ungültig ist. Parameternamen müssen mit einem Buchstaben beginnen und können nur Buchstaben, Zahlen und Unterstriche enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectParameter (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameter.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters. Dieser Name sollte nur den tatsächlichen Namen und nicht die Parametermarkierung "@" enthalten, die in den [!INCLUDE[esql](~/includes/esql-md.md)]-Anweisungen verwendet wird. Das erste Zeichen des Ausdrucks muss ein Buchstabe sein. Alle folgenden Zeichen im Ausdruck müssen Buchstaben, Zahlen oder Unterstriche (_) sein.</param>
+        <param name="type">Der CLR-Typ (Common Language Runtime) des Parameters.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.ObjectParameter" />-Klasse mit dem angegebenen Namen und Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Instanziieren kann der Parametername nicht mehr geändert werden. Der Parameterwert kann über die <xref:System.Data.Objects.ObjectParameter.Value%2A>-Eigenschaft festgelegt oder geändert werden. Nach dem Kompilieren der Abfrage kann der Wert nicht mehr geändert werden. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn der Wert eines Arguments NULL ist.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn der Wert des name-Arguments ungültig ist. Parameternamen müssen mit einem Buchstaben beginnen und können nur Buchstaben, Zahlen und Unterstriche enthalten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameter.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Parameternamen ab, der nur über einen Konstruktor festgelegt werden kann.</summary>
+        <value>Der Parametername, der nur über einen Konstruktor festgelegt werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Instanziieren kann der Parametername nicht mehr geändert werden. Der Parameterwert kann über die <xref:System.Data.Objects.ObjectParameter.Value%2A>-Eigenschaft festgelegt oder geändert werden. Nach dem Kompilieren der Abfrage kann der Wert nicht mehr geändert werden. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden der Auflistung neue Parameter hinzugefügt. Die <xref:System.Data.Objects.ObjectParameterCollection> wird durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_parameters)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_parameters)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public Type ParameterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ParameterType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameter.ParameterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Parametertyp ab.</summary>
+        <value>Der <see cref="T:System.Type" /> des Parameters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Parametername kann nur über einen Konstruktor festgelegt werden.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden der Auflistung neue Parameter hinzugefügt. Die <xref:System.Data.Objects.ObjectParameterCollection> wird durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_parameters)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_parameters)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Parameterwert ab oder legt diesen fest.</summary>
+        <value>Der Parameterwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Kompilieren der Abfrage kann der Wert nicht mehr geändert werden. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ Wenn der neue Wert nicht kompatibel mit dem im Konstruktor deklarierten Typ ist, kann möglicherweise eine Laufzeitausnahme ausgelöst werden. Der Anbieter muss ermitteln, ob der Wert mit dem deklarierten Typ kompatibel ist. Wenn der ursprüngliche Typ beispielsweise <xref:System.Int32> und der neue Wert <xref:System.Guid> ist, wird möglicherweise eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden der Auflistung neue Parameter hinzugefügt. Die <xref:System.Data.Objects.ObjectParameterCollection> wird durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_parameters)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Parameters](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_parameters)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

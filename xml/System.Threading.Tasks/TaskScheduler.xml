@@ -1,0 +1,690 @@
+<Type Name="TaskScheduler" FullName="System.Threading.Tasks.TaskScheduler">
+  <TypeSignature Language="C#" Value="public abstract class TaskScheduler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TaskScheduler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskScheduler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Id={Id}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Threading.Tasks.TaskScheduler/SystemThreadingTasks_TaskSchedulerDebugView))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Objekt dar, das die Einreihung von Aufgaben in Threads auf niedriger Ebene behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Threading.Tasks.TaskScheduler> Klasse stellt einen Aufgabenplaner. Durch einen Aufgabenplaner wird sichergestellt, dass die Arbeit einer Aufgabe schließlich ausgeführt wird.  
+  
+ Der standardmäßige Taskplaner basiert auf dem .NET Framework 4-Threadpool, der Arbeitsübernahme für Lastenausgleich und Threadeinfügung/-deaktivierung für maximalen Durchsatz ermöglicht und für eine gute Gesamtleistung sorgt. Dies ist für die meisten Szenarien in der Regel ausreichend.  
+  
+ Die <xref:System.Threading.Tasks.TaskScheduler> Klasse dient auch als Erweiterungspunkt für alle anpassbaren Planungslogik.  Dies schließt die Mechanismen, z. B. einen Task für die Ausführung und wie geplante Aufgaben zu planen, Debugger verfügbar gemacht werden sollen. Wenn Sie spezielle Funktionen benötigen, können Sie einen benutzerdefinierten Planer erstellen und ihn für bestimmte Aufgaben oder Abfragen aktivieren.  
+  
+ In diesem Thema:  
+[Der standardmäßige Aufgabenplaner und der Threadpool](#Default)  
+ [Der globalen Warteschlange im Vergleich zu lokalen Warteschlangen](#Queues)  
+ [Arbeitsübernahme](#Stealing)  
+ [Lang ausgeführte Aufgaben](#LongRunning)  
+ [Aufgabeninlining](#Inlining)  
+[Angeben eines Synchronisierungskontexts](#Sync)  
+  
+<a name="Default"></a>   
+## <a name="the-default-task-scheduler-and-the-thread-pool"></a>Der standardmäßige Aufgabenplaner und der Threadpool  
+ Der Standardplaner für die Task Parallel Library und PLINQ verwendet das .NET Framework-Threadpool, der dargestellt wird, indem Sie die <xref:System.Threading.ThreadPool> -Klasse, um die Warteschlange und Ausführen des Arbeitselements. Verwendet die Informationen, die vom bereitgestellt wird, der Threadpool dem <xref:System.Threading.Tasks.Task> Typ, um den differenzierten Parallelismus (kurzlebige Arbeitseinheiten), den Parallele Aufgaben und Abfragen oft darstellen effizient zu unterstützen.  
+  
+<a name="Queues"></a>   
+### <a name="the-global-queue-vs-local-queues"></a>Der globalen Warteschlange im Vergleich zu lokalen Warteschlangen  
+ Der Threadpool behält verarbeiten (Warteschlange) für Threads in jeder Anwendungsdomäne eine globale FIFO-Reihenfolge (First-in-First-Out). Wenn ein Programm aufruft, die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> (oder <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType>) Methode, die Arbeit in dieser freigegebenen Warteschlange abgelegt und schließlich Deduplizierung in der Warteschlange im nächsten Thread, der verfügbar wird. Beginnend mit .NET Framework 4, diese Warteschlange wurde verbessert, um einen sperrenfreien Algorithmus zu verwenden, die ähnelt der <xref:System.Collections.Concurrent.ConcurrentQueue%601> Klasse. Mithilfe dieser sperrenfreien Implementierung verbringt die Threadpool weniger Zeit, wenn Deduplizierung die Warteschlange gestellt und Arbeitsaufgaben. Dieser Leistungsvorteil steht auf alle Programme, die den Threadpool zu verwenden.  
+  
+ Aufgaben der obersten Ebene, bei denen es sich um Aufgaben handelt, die nicht im Kontext einer anderen Aufgabe erstellt werden, werden wie jede andere Arbeitsaufgabe in der globalen Warteschlange abgelegt. Geschachtelte oder untergeordnete Aufgaben, die im Kontext einer anderen Aufgabe erstellt werden, werden hingegen anders behandelt. Ein untergeordnetes Element oder eine geschachtelte Aufgabe wird in einer lokalen Warteschlange abgelegt, die speziell für den Thread vorgesehen ist, in dem die übergeordnete Aufgabe ausgeführt wird. Die übergeordnete Aufgabe ist möglicherweise eine Aufgabe der obersten Ebene. Es kann sich jedoch auch um das untergeordnete Element einer anderen Aufgabe handeln. Wenn dieser Thread für weitere Arbeitsvorgänge bereit ist, wird zuerst eine Suche in der lokalen Warteschlange ausgeführt. Wenn darin Arbeitselemente warten, kann darauf schnell zugegriffen werden. Die lokalen Warteschlangen erfolgt in der Last in, First Out (LIFO)-Prinzip Cacheort beizubehalten und Konflikte zu minimieren. Weitere Informationen zu untergeordneten und geschachtelten Aufgaben finden Sie unter [angefügte und getrennte untergeordnete Aufgaben](~/docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+  
+ Die Verwendung von lokalen Warteschlangen nicht nur reduziert Druck auf die globale Warteschlange, sondern nutzt auch den Ort der Daten. Arbeitsaufgaben in der lokalen Warteschlange häufig Verweis-Datenstrukturen, die im Arbeitsspeicher physisch nahe beieinander liegen. In diesen Fällen sind die Daten bereits im Cache, nachdem die erste Aufgabe ausgeführt wurde, sodass schnell zugegriffen werden kann. Beide [Parallel LINQ (PLINQ)](~/docs/standard/parallel-programming/parallel-linq-plinq.md) und die <xref:System.Threading.Tasks.Parallel> -Klasse werden extensiv geschachtelte und untergeordnete Aufgaben verwendet und deutliche geschwindigkeitssteigerungen mithilfe der lokalen Warteschlangen.  
+  
+<a name="Stealing"></a>   
+### <a name="work-stealing"></a>Arbeitsübernahme  
+ Beginnend mit .NET Framework 4, Funktionen der Threadpool einen Arbeitsübernahme-Algorithmus, um sicherzustellen, dass keine Threads im Ruhezustand sind im Leerlauf, während die anderen noch Arbeitsvorgänge in ihre Warteschlangen. Wenn ein Threadpoolthread zusätzliche Arbeit übernehmen kann, wird zuerst am Anfang der lokalen Warteschlange, anschließend in der globalen Warteschlange und zuletzt in den lokalen Warteschlangen anderer Threads gesucht. Wenn ein Arbeitselement in der lokalen Warteschlange eines anderen Threads gefunden wird, wird zunächst Heuristik angewendet, um sicherzustellen, dass die Arbeit effizient ausgeführt werden kann. Wenn dies möglich ist, Warteschlange wird entfernt die Arbeitsaufgabe am Ende aus der (in FIFO-Reihenfolge). Dadurch werden Konflikte in jeder lokalen Warteschlange verringert und der Datenort beibehalten. Dank dieser Architektur kann die Thread-Pool des Lastenausgleichs effizienter arbeiten als in früheren Versionen war.  
+  
+<a name="LongRunning"></a>   
+### <a name="long-running-tasks"></a>Lang ausgeführte Aufgaben  
+ Unter Umständen möchten Sie ausdrücklich verhindern, dass eine Aufgabe in einer lokalen Warteschlange abgelegt wird. Sie wissen möglicherweise z. B., dass eine bestimmte Arbeitsaufgabe für eine relativ lange Zeit ausgeführt wird und daher wahrscheinlich alle anderen Arbeitsaufgaben in der lokalen Warteschlange blockiert. In diesem Fall können Sie die <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType>-Option angeben, die den Planer darauf hinweist, dass u. U. ein weiterer Thread für die Aufgabe erforderlich ist, damit der Fortschritt anderer Threads oder Arbeitsaufgaben in der lokalen Warteschlange nicht blockiert wird. Mit dieser Option vermeiden Sie den Threadpool vollständig, einschließlich der globalen und lokalen Warteschlangen.  
+  
+<a name="Inlining"></a>   
+### <a name="task-inlining"></a>Aufgabeninlining  
+ In einigen Fällen ein <xref:System.Threading.Tasks.Task> wird gewartet, es kann ausgeführt werden synchron für den Thread, der den Wartevorgang ausführt. Dies verbessert die Leistung von entfällt die Notwendigkeit einen zusätzlichen Thread, und verwenden Sie stattdessen des vorhandenen Threads verwendet, der andernfalls blockiert worden wäre. Um Fehler aufgrund des Wiedereintritts zu verhindern, tritt Aufgabeninlining nur auf, wenn das Wartevorgangsziel in der lokalen Warteschlange des relevanten Threads gefunden wird.  
+  
+<a name="Sync"></a>   
+## <a name="specifying-a-synchronization-context"></a>Angeben eines Synchronisierungskontexts  
+ Sie können mit der <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode angeben, dass eine Aufgabe für die Ausführung in einem bestimmten Thread geplant werden soll. Dies ist in Frameworks wie Windows Forms und Windows Presentation Foundation hilfreich, wo der Zugriff auf Benutzeroberflächenobjekte oftmals auf Code beschränkt ist, der in dem Thread ausgeführt wird, in dem das Benutzeroberflächenobjekt erstellt wurde.  
+  
+ Im folgenden Beispiel wird die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> Methode in einer Windows Presentation Foundation (WPF)-app zum Planen eines Tasks auf dem gleichen Thread, der auf das Steuerelement der Benutzeroberfläche (UI) erstellt wurde.   Das Beispiel erstellt ein Mosaik von Bildern, die nach dem Zufallsprinzip aus einem angegebenen Verzeichnis ausgewählt werden. Die WPF-Objekte werden zum Laden und die Bildgröße. Die unformatierten Pixel werden dann an eine Aufgabe, die verwendet übergeben einer <xref:System.Threading.Tasks.Parallel.For%2A> Schleife, um die Pixeldaten in einem großen Single-Byte-Array zu schreiben. Keine Synchronisierung ist erforderlich, da keine zwei Kacheln die gleichen Arrayelemente belegen. Die Kacheln können auch in beliebiger Reihenfolge geschrieben werden, da ihre Position unabhängig von anderen Kacheln berechnet wird. Große Array wird dann an die Aufgabe übergeben, die im UI-Thread ausgeführt wird, in die Pixeldaten in eines Bildsteuerelements geladen werden.  
+  
+ Das Beispiel verschiebt Daten aus den UI-Thread, ändert sie mithilfe von parallelen Schleifen und <xref:System.Threading.Tasks.Task> Objekte, und übergibt diese an eine Aufgabe, die auf den UI-Thread ausgeführt wird. Dieser Ansatz ist hilfreich, wenn Sie keine der Task Parallel Library verwenden, um Vorgänge auszuführen, die nicht von der WPF-API unterstützt werden oder nicht schnell genug sind. So erstellen Sie ein Image Mosaik in WPF eine andere Möglichkeit ist die Verwendung einer <xref:System.Windows.Controls.WrapPanel?displayProperty=nameWithType> steuern und Bilder hinzuzufügen. Die <xref:System.Windows.Controls.WrapPanel> Positionierung der Kacheln behandelt. Dieser Arbeit kann jedoch nur auf den UI-Thread ausgeführt werden.  
+  
+ [!code-csharp[TPL_SyncContext#01](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_synccontext/cs/mainwindow.xaml.cs#01)]
+ [!code-vb[TPL_SyncContext#01](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_synccontext/vb/MainWindow.xaml.vb#01)]  
+  
+ Um das Beispiel zu erstellen, erstellen Sie ein WPF-Anwendungsprojekt in Visual Studio, und weisen Sie ihr einen Namen Ihrer Wahl. Führen Sie dann folgende Schritte aus:  
+  
+1.  Ziehen Sie in der Entwurfsansicht ein <xref:System.Windows.Controls.Image> -Steuerelement aus der **Toolbox** auf die Entwurfsoberfläche. Geben Sie im XAML-Ansicht die horizontale Ausrichtung als "Left". Die Größe spielt keine Rolle, da das Steuerelement wird zur Laufzeit dynamisch geändert werden. Akzeptieren Sie den Standardnamen, "image".  
+  
+2.  Ziehen Sie eine <xref:System.Windows.Controls.Button> -Steuerelement aus der **Toolbox** auf der linken unteren Teil des Anwendungsfensters. Doppelklicken Sie auf die Schaltfläche zum Hinzufügen einer <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler. Geben Sie im XAML-Ansicht der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft der Schaltfläche als "Mosaik erstellen", und geben Sie die horizontale Ausrichtung als "Left". Akzeptieren Sie den Standardnamen "button".  
+  
+3.  Ersetzen Sie den gesamten Inhalt der Datei "MainWindow.Xaml.cs" oder "MainWindow.Xaml.vb" durch den Code aus diesem Beispiel. Stellen Sie sicher, dass der Name des Arbeitsbereichs auf den Projektnamen übereinstimmt.  
+  
+4.  Im Beispiel liest JPEG-Bilder aus einem Verzeichnis namens C:\Users\Public\Pictures\Sample Bilder\\. Erstellen Sie das Verzeichnis und versehen Sie einige Images oder ändern Sie den Pfad zu einem anderen Verzeichnis zu verweisen, die Bilder enthält.  
+  
+ In diesem Beispiel weist einige Einschränkungen. Beispielsweise werden nur 32-Bit pro Pixel Bilder unterstützt. vom Bildern in andere Formate beschädigt sind die <xref:System.Windows.Media.Imaging.BitmapImage> Objekt während des Vorgangs Größenänderung von Fenstern annimmt. Darüber hinaus müssen die Quellbilder alle größer als die Größe der Kacheln sein. Als weitere Übung können Sie Funktionen zur Behandlung von mehreren Pixelformate und Dateigrößen hinzufügen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel stammt aus dem [Beispiele zur parallelen Programmierung mit .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) auf der MSDN Code Gallery-Website.  Erstellen ein benutzerdefinierten Taskplaners, das die Anzahl der Threads, die von der Anwendung verwendeten beschränkt. Anschließend startet dieser zwei Sätze von Aufgaben, und zeigt Informationen über die Aufgabe sowie den Thread, in dem der Task ausgeführt wird.  
+  
+ [!code-csharp[TPL_Schedulers#02](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_schedulers/cs/limitex1.cs#02)]
+ [!code-vb[TPL_Schedulers#02](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_schedulers/vb/module2.vb#02)]  
+  
+ Darüber hinaus mehrere Beispiel Aufgabenplaner befinden sich auf Code Gallery zur Verfügung: [Beispiele zur parallelen Programmierung mit .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717).  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle Member des abstrakten <see cref="T:System.Threading.Tasks.TaskScheduler" /> Typs sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskScheduler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert das <see cref="T:System.Threading.Tasks.TaskScheduler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.TaskScheduler Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.Tasks.TaskScheduler Current" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Threading.Tasks.TaskScheduler" /> der aktuell ausgeführten Aufgabe zugeordnet.</summary>
+        <value>Gibt die <see cref="T:System.Threading.Tasks.TaskScheduler" /> der aktuell ausgeführten Aufgabe zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht von innerhalb einer Aufgabe aufgerufen <xref:System.Threading.Tasks.TaskScheduler.Current%2A> gibt zurück, die <xref:System.Threading.Tasks.TaskScheduler.Default%2A> Planer.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Threading.Tasks.TaskScheduler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.TaskScheduler Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.Tasks.TaskScheduler Default" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die standardmäßige <see cref="T:System.Threading.Tasks.TaskScheduler" /> -Instanz, die von .NET Framework bereitgestellt wird.</summary>
+        <value>Gibt die standardmäßige <see cref="T:System.Threading.Tasks.TaskScheduler" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Aufgabenplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromCurrentSynchronizationContext">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.TaskScheduler FromCurrentSynchronizationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.TaskScheduler FromCurrentSynchronizationContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen <see cref="T:System.Threading.Tasks.TaskScheduler" />, der dem aktuellen <see cref="T:System.Threading.SynchronizationContext" /> zugeordnet ist.</summary>
+        <returns>Ein dem aktuellen <see cref="T:System.Threading.SynchronizationContext" /> gemäß Vorgabe durch den <see cref="P:System.Threading.SynchronizationContext.Current" /> zugeordneter <see cref="T:System.Threading.Tasks.TaskScheduler" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Threading.Tasks.Task> Instanzen in der Warteschlange für das zurückgegebene Zeitplan wird ausgeführt durch einen Aufruf von der <xref:System.Threading.SynchronizationContext.Post%2A> -Methode für diesen Kontext.  
+  
+ Weitere Informationen finden Sie unter [Aufgabenplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle SynchronizationContext kann nicht als TaskScheduler verwendet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScheduledTasks">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&gt; GetScheduledTasks ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Threading.Tasks.Task&gt; GetScheduledTasks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.GetScheduledTasks" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Debugger Unterstützung, generiert nur ein aufzählbares Objekt von <see cref="T:System.Threading.Tasks.Task" /> Instanzen derzeit in der Warteschlange auf den Planer darauf warten, ausgeführt werden.</summary>
+        <returns>Ein aufzählbares Element, die einen Debugger derzeit durchlaufen die Aufgaben können in der Warteschlange für diesen Planer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse <xref:System.Threading.Tasks.TaskScheduler> implementiert diese Methode, um die Integration in Debugger zu unterstützen. Diese Methode wird von .NET Framework nur aufgerufen werden, wenn der Debugger Zugriff auf die Daten anfordert. Das aufzählbare Objekt zurückgegeben wird durchlaufen, indem Sie die Hilfsprogramme für den Zugriff auf die Aufgaben Debuggen derzeit in der Warteschlange für diesen Planer, wodurch der Debugger eine Darstellung dieser Informationen in der Benutzeroberfläche bereitzustellen.  
+  
+ Es ist wichtig zu beachten, dass, wenn diese Methode aufgerufen wird, alle anderen Threads im Prozess eingefroren werden. Aus diesem Grund ist es wichtig, um Synchronisierung mit anderen Threads zu vermeiden, die zu einer Blockierung führen können. Wenn Synchronisierung erforderlich ist und kann die Sperre in dieser Methode werden, sollten Sie eine Ausnahme auslösen, damit der Debugger nicht hängen bleibt. Das folgende Beispiel zeigt einen möglichen Ansatz in c#:  
+  
+```  
+protected override IEnumerable<Task> GetScheduledTasks()  
+{  
+    bool lockTaken = false;  
+    try  
+    {  
+        Monitor.TryEnter(_syncObj, ref lockTaken);  
+        if (lockTaken)  
+        {  
+            return _tasks.ToArray();  
+        }  
+        else throw new NotSupportedException();  
+    }  
+    finally  
+    {  
+    if (lockTaken) Monitor.Exit(_syncObj);  
+    }}  
+```  
+  
+ Darüber hinaus müssen diese Methode und das zurückgegebene aufzählbare Element nicht global sichtbaren Zustand ändern.  
+  
+ Die zurückgegebene aufzählbare darf nie null sein. Wenn aktuell keine Tasks in der Warteschlange vorhanden sind, sollte stattdessen ein leeres aufzählbares Element zurückgegeben werden.  
+  
+ Entwickler, die benutzerdefinierte Debugger implementieren diese Methode sollte nicht direkt aufrufen, aber die interne Wrappermethode die zu verwendende `GetScheduledTasksForDebugger` stattdessen: `internal Task[] GetScheduledTasksForDebugger()`. Dieser Wrappermethode gibt ein Array von Aufgaben anstatt ein aufzählbares Element zurück. Verwenden Sie zum Abrufen einer Liste der aktive Planer die interne Methode `internal static TaskScheduler[] GetTaskSchedulersForDebugger()`. Diese statische Methode gibt ein Array aller aktiven <xref:System.Threading.Tasks.TaskScheduler> Instanzen. Anschließend können Sie `GetScheduledTasksForDebugger` auf jede Planerinstanz zum Abrufen der Liste der geplanten Aufgaben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Dieses Zeitplanungsmodul kann eine Liste der Aufgaben in der Warteschlange zu diesem Zeitpunkt zu generieren.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die eindeutige ID für diese <see cref="T:System.Threading.Tasks.TaskScheduler" />.</summary>
+        <value>Gibt die eindeutige ID für diesen <see cref="T:System.Threading.Tasks.TaskScheduler" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Aufgabenplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumConcurrencyLevel">
+      <MemberSignature Language="C#" Value="public virtual int MaximumConcurrencyLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumConcurrencyLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.MaximumConcurrencyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt der maximale nebenläufigkeitsebene an diese <see cref="T:System.Threading.Tasks.TaskScheduler" /> unterstützen kann.</summary>
+        <value>Gibt eine ganze Zahl, die die maximale nebenläufigkeitsebene darstellt. Gibt zurück, der Standardplaner <see cref="F:System.Int32.MaxValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Aufgabenplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueTask">
+      <MemberSignature Language="C#" Value="protected abstract void QueueTask (System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void QueueTask(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.QueueTask(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+      </Parameters>
+      <Docs>
+        <param name="task">Die <see cref="T:System.Threading.Tasks.Task" /> in die Warteschlange gestellt werden.</param>
+        <summary>Warteschlangen ein <see cref="T:System.Threading.Tasks.Task" /> auf den Planer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse <xref:System.Threading.Tasks.TaskScheduler> implementiert diese Methode, um die Aufgaben, die auf den Planer geplant akzeptieren.  
+  
+ Eine typische Implementierung würde die Aufgabe in eine interne Datenstruktur speichern, die von Threads gewartet werden würde, die diese Aufgaben zu einem Zeitpunkt in der Zukunft ausführen würden.  
+  
+ Diese Methode ist nur zum Aufrufen durch .NET Framework vorgesehen und sollte nicht direkt von der abgeleiteten Klasse aufgerufen werden. Dies ist für die Erhaltung der Konsistenz des Systems erforderlich.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="task" />-Argument ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDequeue">
+      <MemberSignature Language="C#" Value="protected virtual bool TryDequeue (System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryDequeue(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryDequeue(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+      </Parameters>
+      <Docs>
+        <param name="task">Die <see cref="T:System.Threading.Tasks.Task" /> , aus der Warteschlange entfernt werden.</param>
+        <summary>Versucht, die aus der Warteschlange entfernen einer <see cref="T:System.Threading.Tasks.Task" /> , die zuvor in die Warteschlange für diesen Planer.</summary>
+        <returns>Eine boolesche, die angibt, ob die <paramref name="task" /> Argument wurde erfolgreich aus der Warteschlange entfernt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Aufgabenplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ Ausführen dieser Methode kann einer finally-block; aus diesem Grund sollte zurückgegeben so schnell wie möglich so, dass alle Ressourcen, z. B. <xref:System.Threading.CancellationTokenRegistration> Objekte zeitnah beseitigt werden können.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="task" />-Argument ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryExecuteTask">
+      <MemberSignature Language="C#" Value="protected bool TryExecuteTask (System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool TryExecuteTask(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryExecuteTask(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+      </Parameters>
+      <Docs>
+        <param name="task">Ein <see cref="T:System.Threading.Tasks.Task" /> Objekt, das ausgeführt werden.</param>
+        <summary>Versucht, führen Sie die bereitgestellten <see cref="T:System.Threading.Tasks.Task" /> in diesem Zeitplanungsmodul.</summary>
+        <returns>Ein boolescher Wert true, d. h. wenn <paramref name="task" /> wurde erfolgreich ausgeführt, false, wenn sie nicht der Fall war. Eine häufige Ursache für Fehler bei der Ausführung ist, dass die Aufgabe zuvor ausgeführt wurde oder wird gerade von einem anderen Thread ausgeführt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Scheduler-Implementierungen sind im Lieferumfang <xref:System.Threading.Tasks.Task> Instanzen entweder durch auszuführenden der <xref:System.Threading.Tasks.TaskScheduler.QueueTask%2A> Methode oder die <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline%2A> Methode. Wenn der Planer zum Ausführen der angegebenen Aufgabe geeignete hält <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTask%2A> sollte dazu verwendet werden. TryExecuteTask behandelt alle Aspekte beim Ausführen einer Aufgabe, einschließlich Aktionsaufruf, Ausnahmebehandlung, Zustandsverwaltung und Lebenszyklus-Steuerelement.  
+  
+ <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTask%2A>muss nur für Aufgaben, die für diesen Planer bereitgestellt werden, von der .NET Framework-Infrastruktur verwendet werden. Es sollte nicht verwendet werden, zum Ausführen von beliebiger Aufgaben, die durch benutzerdefinierte Mechanismen abgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="task" /> nicht diesem Zeitplanungsmodul zugeordnet ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryExecuteTaskInline">
+      <MemberSignature Language="C#" Value="protected abstract bool TryExecuteTaskInline (System.Threading.Tasks.Task task, bool taskWasPreviouslyQueued);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryExecuteTaskInline(class System.Threading.Tasks.Task task, bool taskWasPreviouslyQueued) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+        <Parameter Name="taskWasPreviouslyQueued" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="task">Die <see cref="T:System.Threading.Tasks.Task" /> ausgeführt werden.</param>
+        <param name="taskWasPreviouslyQueued">Ein boolescher Wert, wobei angegeben wird, unabhängig davon, ob eine Aufgabe bereits Warteschlange wurde. Wenn dieser Parameter auf "true" ist, klicken Sie dann der Vorgang möglicherweise zuvor (geplant) in die Warteschlange gestellt haben; Wenn "false", klicken Sie dann der Vorgang bekannt ist nicht in die Warteschlange gestellt wurden, und dieser Aufruf erfolgt um den Task Inline ausführt, ohne die queuing es.</param>
+        <summary>Bestimmt, ob der bereitgestellte <see cref="T:System.Threading.Tasks.Task" /> kann in diesem Aufruf synchron ausgeführt werden und wenn dies möglich ist, führt ihn aus.</summary>
+        <returns>Ein boolescher Wert, der angibt, ob die Aufgabe Inline ausgeführt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse <xref:System.Threading.Tasks.TaskScheduler> implementiert diese Funktion, um die Inlineausführung einer Aufgabe in einem Thread zu unterstützen, einen Wartevorgang auf das Taskobjekt initiiert. Inline-Ausführung ist optional, und die Anforderung wird möglicherweise zurückgewiesen, indem Sie "false" zurückgeben. Allerdings weitere Aufgaben können inline gesetzt werden, desto bessere der Planer kann skaliert werden. Tatsächlich kann ein Zeitplanungsmodul, Inlines zu wenig zu Deadlocks sein. Eine richtige Implementierung sollten sicherstellen, dass eine Anforderung, die unter den Richtlinien, die vom Planer garantiert ausgeführt können erfolgreich Inline. Z. B. sollten ein Planer einen dedizierten Thread zum Ausführen von Tasks verwendet wird, alle inlining Anforderungen von diesem Thread aus erfolgreich.  
+  
+ Wenn ein Planer für die Inlineausführung entscheidet, sollten sie dies tun, durch Aufrufen der Basis TaskScheduler <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTask%2A> Methode mit dem bereitgestellten Taskobjekt des Rückgabewerts. Außerdem kann es werden entsprechende für den Planer eine Inline-Aufgabe aus seiner internen Datenstrukturen entfernen, wenn er entscheidet, die inlining Anforderung berücksichtigt. Beachten Sie jedoch, dass unter bestimmten Umständen ein Planer Inline zu setzen eine Aufgabe aufgefordert werden kann, die mit nicht zuvor bereitgestellt wurde die <xref:System.Threading.Tasks.TaskScheduler.QueueTask%2A> Methode.  
+  
+ Der abgeleitete Planer ist dafür verantwortlich, dass Sie sicher, dass der aufrufende Thread eignet sich zum Ausführen der angegebenen Aufgabe so weit wie die eigene Planung und Ausführungsrichtlinien betrifft.  
+  
+ Weitere Informationen finden Sie unter [Aufgabenplaner](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="task" />-Argument ist null.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="task" /> bereits ausgeführt wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnobservedTaskException">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt; UnobservedTaskException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt; UnobservedTaskException" />
+      <MemberSignature Language="DocId" Value="E:System.Threading.Tasks.TaskScheduler.UnobservedTaskException" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, kurz bevor eine nicht überwachte Ausnahme eines Tasks, bei dem ein Fehler aufgetreten ist, eine Ausnahmeausweitungsrichtlinie auslöst, was standardmäßig den Prozess beenden würde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis zu Anwendungsfehler domänenweite bietet einen Mechanismus zum ausweitungsrichtlinien Ausnahme zu verhindern (d. h. wird standardmäßig der Prozess beendet wird) auslöst.  
+  
+ Für Entwickler zum Schreiben von asynchronem Code auf Grundlage der Aufgaben, erleichtern die [!INCLUDE[net_v45](~/includes/net-v45-md.md)] ändert das Standardverhalten für die Ausnahme für nicht überwachte Ausnahmen. Zwar immer noch nicht überwachte Ausnahmen auslösen der <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> Ausnahme, der Prozess wird standardmäßig nicht beendet. Stattdessen wird die Ausnahme von der Laufzeit behandelt, nach dem das Ereignis ausgelöst wird, unabhängig davon, ob ein Ereignishandler für die Ausnahme berücksichtigt. Dieses Verhalten kann konfiguriert werden. Beginnend mit der [!INCLUDE[net_v45](~/includes/net-v45-md.md)], können Sie das Konfigurationselement, um das Verhalten des wiederherzustellen die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] und den Prozess zu beenden:  
+  
+```xml  
+<configuration>   
+   <runtime>   
+      <ThrowUnobservedTaskExceptions enabled="true"/>   
+   </runtime>   
+</configuration>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

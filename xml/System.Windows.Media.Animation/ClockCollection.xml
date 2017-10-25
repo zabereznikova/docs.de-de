@@ -1,0 +1,358 @@
+<Type Name="ClockCollection" FullName="System.Windows.Media.Animation.ClockCollection">
+  <TypeSignature Language="C#" Value="public class ClockCollection : System.Collections.Generic.ICollection&lt;System.Windows.Media.Animation.Clock&gt;, System.Collections.Generic.IEnumerable&lt;System.Windows.Media.Animation.Clock&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClockCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Animation.Clock&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Media.Animation.Clock&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ClockCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Windows.Media.Animation.Clock&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Media.Animation.Clock&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine geordnete Auflistung von <see cref="T:System.Windows.Media.Animation.Clock" />-Objekten dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Media.Animation.Clock item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Windows.Media.Animation.Clock item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Add(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das hinzuzufügende Objekt.</param>
+        <summary>Fügt ein neues <see cref="T:System.Windows.Media.Animation.Clock" /> Objekt am Ende dieses <see cref="T:System.Windows.Media.Animation.ClockCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus diesem <see cref="T:System.Windows.Media.Animation.ClockCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Media.Animation.Clock item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Windows.Media.Animation.Clock item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Contains(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu suchende Objekt.</param>
+        <summary>Gibt an, ob die <see cref="T:System.Windows.Media.Animation.ClockCollection" /> enthält die angegebene <see cref="T:System.Windows.Media.Animation.Clock" /> Objekt.</summary>
+        <returns>**"true"** Wenn <paramref name="item" /> gefunden wird; andernfalls, **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Windows.Media.Animation.Clock[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Windows.Media.Animation.Clock[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.CopyTo(System.Windows.Media.Animation.Clock[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Windows.Media.Animation.Clock[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Zielarray.</param>
+        <param name="index">Die nullbasierte Indexposition, an der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die <see cref="T:System.Windows.Media.Animation.Clock" /> Objekte dieses <see cref="T:System.Windows.Media.Animation.ClockCollection" /> in ein Array von Uhren, die an der angegebenen Indexposition ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in dieser <see cref="T:System.Windows.Media.Animation.ClockCollection" />.</summary>
+        <value>Die Anzahl der Elemente in dieser Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dieser Instanz verglichen werden soll.</param>
+        <summary>Gibt an, ob diese Instanz mit dem angegebenen Objekt identisch ist.</summary>
+        <returns>**"true"** Wenn <paramref name="obj" /> an diese Instanz gleich ist; andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Media.Animation.ClockCollection objA, System.Windows.Media.Animation.ClockCollection objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(class System.Windows.Media.Animation.ClockCollection objA, class System.Windows.Media.Animation.ClockCollection objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Equals(System.Windows.Media.Animation.ClockCollection,System.Windows.Media.Animation.ClockCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Windows.Media.Animation.ClockCollection" />
+        <Parameter Name="objB" Type="System.Windows.Media.Animation.ClockCollection" />
+      </Parameters>
+      <Docs>
+        <param name="objA">Der erste zu vergleichende Wert.</param>
+        <param name="objB">Der zweite zu vergleichende Wert.</param>
+        <summary>Gibt an, ob die beiden angegebenen <see cref="T:System.Windows.Media.Animation.ClockCollection" /> Auflistungen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="objA" /> und <paramref name="objB" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen 32-Bit-Ganzzahl mit Vorzeichen Hashcode dieser Instanz darstellt.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Windows.Media.Animation.ClockCollection" /> schreibgeschützt ist.</summary>
+        <value>**"true"** Wenn diese Instanz schreibgeschützt ist, andernfalls **"false"**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Clock this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Clock Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition auf.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Animation.Clock" /> an der angegebenen Indexposition befindet.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Animation.Clock" /> Objekt am angegebenen <paramref name="index" /> Position.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.Animation.ClockCollection objA, System.Windows.Media.Animation.ClockCollection objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Windows.Media.Animation.ClockCollection objA, class System.Windows.Media.Animation.ClockCollection objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.op_Equality(System.Windows.Media.Animation.ClockCollection,System.Windows.Media.Animation.ClockCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Windows.Media.Animation.ClockCollection" />
+        <Parameter Name="objB" Type="System.Windows.Media.Animation.ClockCollection" />
+      </Parameters>
+      <Docs>
+        <param name="objA">Das erste zu vergleichende Objekt.</param>
+        <param name="objB">Das zweite zu vergleichende Objekt.</param>
+        <summary>Überladener Operator, der zwei <see cref="T:System.Windows.Media.Animation.ClockCollection" /> Sammlungen auf Gleichheit.</summary>
+        <returns>**"true"** Wenn <paramref name="objA" /> und <paramref name="objB" /> gleich sind; andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.Animation.ClockCollection objA, System.Windows.Media.Animation.ClockCollection objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Windows.Media.Animation.ClockCollection objA, class System.Windows.Media.Animation.ClockCollection objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.op_Inequality(System.Windows.Media.Animation.ClockCollection,System.Windows.Media.Animation.ClockCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Windows.Media.Animation.ClockCollection" />
+        <Parameter Name="objB" Type="System.Windows.Media.Animation.ClockCollection" />
+      </Parameters>
+      <Docs>
+        <param name="objA">Das erste zu vergleichende Objekt.</param>
+        <param name="objB">Das zweite zu vergleichende Objekt.</param>
+        <summary>Überladener Operator, der zwei <see cref="T:System.Windows.Media.Animation.ClockCollection" /> Sammlungen auf Ungleichheit.</summary>
+        <returns>**"true"** Wenn <paramref name="objA" /> und <paramref name="objB" /> nicht gleich sind; andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Windows.Media.Animation.Clock item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Windows.Media.Animation.Clock item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Remove(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Objekt.</param>
+        <summary>Entfernt die angegebene <see cref="T:System.Windows.Media.Animation.Clock" /> aus der <see cref="T:System.Windows.Media.Animation.ClockCollection" />.</summary>
+        <returns>**"true"** Wenn <paramref name="item" /> wurde erfolgreich entfernt wurde, andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Windows.Media.Animation.Clock&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Windows.Media.Animation.Clock&gt; IEnumerable&lt;Clock&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Media.Animation.Clock&gt; System.Collections.Generic.IEnumerable&lt;System.Windows.Media.Animation.Clock&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.System#Collections#Generic#IEnumerable&lt;System#Windows#Media#Animation#Clock&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Media.Animation.Clock&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Media.Animation.ClockCollection>-Instanz in eine <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Media.Animation.ClockCollection>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ Beispiel  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

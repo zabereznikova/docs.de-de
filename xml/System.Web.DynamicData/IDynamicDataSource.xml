@@ -1,0 +1,199 @@
+<Type Name="IDynamicDataSource" FullName="System.Web.DynamicData.IDynamicDataSource">
+  <TypeSignature Language="C#" Value="public interface IDynamicDataSource : System.Web.UI.IDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDynamicDataSource implements class System.Web.UI.IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.IDynamicDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Datenquelle für ein Dynamic Data-Steuerelement dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoGenerateWhereClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateWhereClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateWhereClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.AutoGenerateWhereClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.DynamicData.IDynamicDataSource" /> Steuerelement dynamisch erstellt eine <see langword="Where" /> Klausel basierend auf Werten, die definiert, der <see cref="P:System.Web.DynamicData.IDynamicDataSource.WhereParameters" /> Auflistung.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellen-Steuerelement erstellt die <see langword="Where" /> Klausel dynamisch ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public Type ContextType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der <see cref="T:System.Data.Linq.DataContext" />-Klasse ab.</summary>
+        <value>Der Typ der Klasse zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDelete">
+      <MemberSignature Language="C#" Value="public bool EnableDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.EnableDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenquellensicht die Möglichkeit zum Löschen von Zeilen unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellenansicht unterstützt die Fähigkeit zum Löschen von Zeilen. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInsert">
+      <MemberSignature Language="C#" Value="public bool EnableInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.EnableInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenquellensicht die Möglichkeit zum Einfügen von Zeilen unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellenansicht unterstützt die Möglichkeit zum Einfügen von Zeilen. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUpdate">
+      <MemberSignature Language="C#" Value="public bool EnableUpdate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.EnableUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenquellensicht die Fähigkeit zum Aktualisieren von Zeilen unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Ansicht die Möglichkeit zum Aktualisieren von Zeilen unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="public string EntitySetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Entitätenmenge.</summary>
+        <value>Der Name der Entität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der <xref:System.Web.UI.WebControls.LinqDataSource> -Klasse, diese Eigenschaft ist mit dem Namen `TableName`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.DynamicData.DynamicValidatorEventArgs&gt; Exception;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.DynamicData.DynamicValidatorEventArgs&gt; Exception" />
+      <MemberSignature Language="DocId" Value="E:System.Web.DynamicData.IDynamicDataSource.Exception" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.DynamicData.DynamicValidatorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Feld "Daten" nicht überprüft werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public string Where { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Where" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.Where" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Bedingung angibt, die für einen Eintrag in der abgerufenen Daten aufgenommen werden "true" sein muss eine <see langword="Where" /> Klausel.</summary>
+        <value>Der Wert, der zum Erstellen der <see langword="Where" /> Klausel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die spezifische Syntax für die `Where` Klausel hängt von der Datenquelle, die verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhereParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection WhereParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection WhereParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.IDynamicDataSource.WhereParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Parametern, die zum Erstellen einer <see langword="Where" /> Klausel.</summary>
+        <value>Eine Auflistung mit den Parametern an, die von dieser Eigenschaft verwendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

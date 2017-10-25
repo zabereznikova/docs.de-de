@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.MemoryMappedFiles">
+  <Docs>
+    <summary>Die <see cref="N:System.IO.MemoryMappedFiles" /> -Namespace stellt Klassen bereit, für die Verwendung einer Speicherabbilddatei, die den Inhalt einer Datei dem logischen Adressbereich einer Anwendung zuordnet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

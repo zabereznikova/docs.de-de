@@ -1,0 +1,692 @@
+<Type Name="IdnMapping" FullName="System.Globalization.IdnMapping">
+  <TypeSignature Language="C#" Value="public sealed class IdnMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IdnMapping extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.IdnMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt die Verwendung von nicht-ASCII-Zeichen für Internetdomänennamen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Internetdomänennamen besteht aus einem oder mehreren Teilen, die Domäne namensbezeichnungen, durch die Bezeichnungstrennzeichen getrennt. Beispielsweise besteht aus der Domäne "www.proseware.com" der Bezeichnungen, "Www", "Proseware" und "com", die durch Punkte getrennt. Standard Domänennamen bestehen aus der angegebenen Zeichen in der US-ASCII-(oder lateinischen) Zeichenbereich, U + 0021 bis U + 007E. Erleichterung Internetzugriff in Kulturen, die nicht die US-ASCII-Zeichensatz der Internationalisierung Domain Names in Applications (IDNA) verwenden, wurde Standard 2003 die Einbindung von Unicode-Zeichen außerhalb des Bereichs der US-ASCII-Zeichen unterstützen angenommen. Allerdings weiterhin Namenserver und domänennamensauflösung abhängig von Zeichen innerhalb des Bereichs der US-ASCII-Zeichen.  
+  
+ Das IDNA-Verfahren verwendet Punycode, um ein internationaler Domänenname zugeordnet werden, der Unicode-Zeichen außerhalb des US-ASCII-Zeichen an, von Domain Name System unterstützten Bereichs der US-ASCII-Zeichen enthält. Das IDNA-Verfahren wird verwendet, um nur Domänennamen, nicht über das Internet übertragen Daten konvertieren.  
+  
+> [!IMPORTANT]
+>  In der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <xref:System.Globalization.IdnMapping> Klasse unterstützt unterschiedliche Versionen des IDNA-Standards, je nach Betriebssystem verwendet:  
+>   
+>  -   Bei der Ausführung unter [!INCLUDE[win8](~/includes/win8-md.md)], unterstützt die Version 2008 des IDNA-Standards gemäß [RFC 5891: Internationalized Domain Names in Applications (IDNA): Protokoll](http://go.microsoft.com/fwlink/?LinkId=231875).  
+> -   Wenn in früheren Versionen von Windows-Betriebssystem ausgeführt wird, unterstützt die 2003-Version des Standards gemäß [RFC 3490: Internationalisierung Domain Names in Applications (IDNA)](http://go.microsoft.com/fwlink/?LinkId=158110).  
+>   
+>  Finden Sie unter [Unicode-technische Standard #46: IDNA Kompatibilität Verarbeitung](http://go.microsoft.com/fwlink/?LinkId=232459) für die Unterschiede in der Darstellung dieser Standards bestimmte Gruppen von Zeichen behandelt.  
+  
+ Die <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> Methode normalisiert einen Domänennamen, konvertiert der normalisierten Namens in eine Darstellung, die anzeigbaren Unicode-Zeichen in der US-ASCII-Codepunktbereich (U + 0020 bis U + 007E) besteht, und stellt eine ASCII-kompatible Codierung (ACE) Präfix voran (" Xn--") zu jeder Bezeichnung. Die <xref:System.Globalization.IdnMapping.GetUnicode%2A?displayProperty=nameWithType> Methode stellt der Domäne namensbezeichnungen konvertiert, indem die <xref:System.Globalization.IdnMapping.GetAscii%2A> Methode.  
+  
+ Wenn die zu konvertierende Zeichenfolge die Bezeichnungstrennzeichen enthält Zeichen IDEOGRAFISCHEN vollständige Beendigung (U + 3002), volle Breite um vollständige Beendigung (U + FF0E) und IDEOGRAFISCHEN Punkt halber Breite (U + FF61), die <xref:System.Globalization.IdnMapping.GetAscii%2A> -Methode konvertiert diese in das Label-Trennzeichen vollständige Beendigung (Punkt, U + 002E). Die <xref:System.Globalization.IdnMapping.GetUnicode%2A> -Methode, wird das ursprüngliche Bezeichnung Trennzeichen jedoch nicht wiederhergestellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode, um ein Array von konvertieren die internationale Domänennamen in Punycode. Die <xref:System.Globalization.IdnMapping.GetUnicode%2A> Methode klicken Sie dann den Punycode-Domänennamen an den ursprünglichen Domänennamen konvertiert, aber ersetzt die ursprüngliche Bezeichnungstrennzeichen mit der Bezeichnungstrennzeichen.  
+  
+ [!code-csharp[System.Globalization.IdnMapping.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.idnmapping.class/cs/conversion1.cs#1)]
+ [!code-vb[System.Globalization.IdnMapping.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.idnmapping.class/vb/conversion1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdnMapping ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Globalization.IdnMapping" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Globalization.IdnMapping.AllowUnassigned%2A?displayProperty=nameWithType> und <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A?displayProperty=nameWithType> Eigenschaften werden initialisiert, um `false`. Eine kleine Teilmenge von ASCII-Zeichen als A-Z, 0-9, Bindestrich (-) Zeichen (U + 002D), und das Punktzeichen (.) sind in der Domänennamen zulässig, aber nicht zugewiesene Unicode-Codepunkte sind keine.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowUnassigned">
+      <MemberSignature Language="C#" Value="public bool AllowUnassigned { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowUnassigned" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.IdnMapping.AllowUnassigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob nicht zugewiesene Unicode-Codepunkte, in Operationen, die von Mitgliedern des aktuellen verwendet werden <see cref="T:System.Globalization.IdnMapping" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn nicht zugewiesene Codepunkte in Vorgängen verwendet werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein registrierter Domänenname darf keine nicht zugewiesenen Codepunkte enthalten. Daher ist der Standardwert von der <xref:System.Globalization.IdnMapping.AllowUnassigned%2A> Eigenschaft ist `false`. Die IDNA-Spezifikation lässt nicht zugewiesene Codepunkte nur in Abfragen für übereinstimmende Zeichenfolgen (d. h. in der Domäne Namenssuche). Weitere Informationen zur Verwendung des nicht zugewiesenen Codepunkte Domänennamen finden Sie unter [RFC 3454, "Vorbereitung von internationaler Zeichenfolgen (Stringprep)"](http://go.microsoft.com/fwlink/?LinkId=231873) und [RFC 5891, "Internationalized Domain Names in Applications ( IDNA): Protokoll "](http://go.microsoft.com/fwlink/?LinkId=231875).  
+  
+> [!IMPORTANT]
+>  Wenn die <xref:System.Globalization.IdnMapping.AllowUnassigned%2A> Eigenschaft ist `false`, das Verhalten der Eigenschaft zugeordnet, die auf das zugrunde liegende Betriebssystem abhängig ist. Auf [!INCLUDE[win8](~/includes/win8-md.md)]die <xref:System.Globalization.IdnMapping> -Klasse IDNA 2008, basierend auf den Standard Unicode 6.0 entspricht. In früheren Versionen von Windows die <xref:System.Globalization.IdnMapping> Klasse basiert auf IDNA 2003, basierend auf Unicode-3.* X*. Manche Codepunkte zu, die nicht zugewiesene IDNA 2003 waren Zeichen zugewiesen wurden, und sind in 2008 des IDNA unterstützt. Beispielsweise wurde U + 0221 in Unicode 4.0 eingeführt. Auf [!INCLUDE[win8](~/includes/win8-md.md)], wird er als codiert "Xn – 6la". In früheren Versionen von Windows, löst eine <xref:System.ArgumentException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, mit dem aktuellen Objekt verglichen werden soll.</param>
+        <summary>Gibt an, ob ein angegebenes Objekt und das aktuelle <see cref="T:System.Globalization.IdnMapping" /> Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt von der <paramref name="obj" /> Parameter abgeleitet <see cref="T:System.Globalization.IdnMapping" /> und seine <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAscii">
+      <MemberSignature Language="C#" Value="public string GetAscii (string unicode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAscii(string unicode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetAscii(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unicode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="unicode">Die Zeichenfolge zu konvertieren, besteht aus mindestens Domäne namensbezeichnungen ab, die mit der Bezeichnungstrennzeichen getrennt.</param>
+        <summary>Codiert eine Zeichenfolge von Domain namensbezeichnungen, die von Unicode-Zeichen in eine Zeichenfolge der anzeigbaren Unicode-Zeichen im Bereich von US-ASCII-Zeichen bestehen. Die Zeichenfolge wird gemäß des IDNA-Standards formatiert.</summary>
+        <returns>Die Entsprechung der Zeichenfolge gemäß dem <paramref name="unicode" /> Parameter, bestehend aus anzeigbaren Unicode-Zeichen in der US-ASCII-Zeichenbereich (U + 0020 bis U + 007E) und formatiert entsprechend des IDNA-Standards.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `unicode` Parameter gibt eine Zeichenfolge mit mindestens Bezeichnungen, die gültige Unicode-Zeichen bestehen. Die Bezeichnungen werden durch die Bezeichnungstrennzeichen getrennt. Die `unicode` Parameter darf nicht mit der Bezeichnungstrennzeichen beginnen, kann jedoch enthalten und optional mit einem Trennzeichen enden. Die Bezeichnungstrennzeichen sind vollständige Beendigung (Punkt, U + 002E), IDEOGRAFISCHER beenden (U + 3002), volle Breite um vollständige Beendigung (U + FF0E) und IDEOGRAFISCHEN Punkt (halber Breite U + FF61). Beispielsweise besteht aus der Domäne "www.adatum.com" der Bezeichnungen, "Www", "Adatum" und "com", die durch Punkte getrennt.  
+  
+ Eine Bezeichnung darf keine der folgenden Zeichen enthalten:  
+  
+-   Unicode-Steuerzeichen von U + 0001 bis U + 001F und U + 007F.  
+  
+-   Nicht zugewiesene Unicode-Zeichen, d. h., wenn der Wert der <xref:System.Globalization.IdnMapping.AllowUnassigned%2A> Eigenschaft ist `false`.  
+  
+-   Nicht standardmäßige Zeichen der US-ASCII-Zeichenbereich, z. B. den Speicherplatz (U + 0020), Ausrufezeichen MARKIERT (U + 0021), und arbeitet mit einer GERINGEN (U + 005F)-Zeile-Zeichen, wenn der Wert des der <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> Eigenschaft ist `true`.  
+  
+-   Zeichen, die in einer bestimmten Version des IDNA-Standards unzulässig sind. Weitere Informationen zu unzulässigen Zeichen finden Sie unter [RFC 3454: Vorbereiten von Zeichenfolgen ' Internationalized ' ("Stringprep")](http://go.microsoft.com/fwlink/?LinkId=231873) für IDNA-2003 und [RFC 5982 nur: die Unicode-Codepunkten und Internationalized Domain Names für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=231877) für 2008 des IDNA.  
+  
+ Die <xref:System.Globalization.IdnMapping.GetAscii%2A> -Methode konvertiert alle Bezeichnungstrennzeichen vollständige Beendigung (Punkt, U + 002E).  
+  
+ Wenn `unicode` enthält keine Zeichen außerhalb der US-ASCII-Zeichenbereich und keine Zeichen innerhalb des Bereichs der US-ASCII-Zeichen sind nicht zulässig, der Methodenrückgabe `unicode` unverändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%29> Methode, um ein Array von konvertieren die internationale Domänennamen in Punycode, also eine codierte entspricht, der Zeichen im Bereich von US-ASCII-Zeichen besteht. Die <xref:System.Globalization.IdnMapping.GetUnicode%28System.String%29> Methode klicken Sie dann den Punycode-Domänennamen wieder in den ursprünglichen Domänennamen konvertiert, aber ersetzt die ursprüngliche Bezeichnungstrennzeichen mit der Bezeichnungstrennzeichen.  
+  
+ [!code-csharp[System.Globalization.IdnMapping.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.idnmapping.class/cs/conversion1.cs#1)]
+ [!code-vb[System.Globalization.IdnMapping.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.idnmapping.class/vb/conversion1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="unicode" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="unicode" />Ungültige basieren auf der <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften und des IDNA-Standards.</exception>
+        <block subset="none" type="usage">
+          <para>In der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <see cref="T:System.Globalization.IdnMapping" /> Klasse unterstützt unterschiedliche Versionen des IDNA-Standards, je nach Betriebssystem verwendet:  
+  
+-   Bei der Ausführung unter [!INCLUDE[win8](~/includes/win8-md.md)], unterstützt die Version 2008 des IDNA-Standards gemäß [RFC 5891: Internationalized Domain Names in Applications (IDNA): Protokoll](http://go.microsoft.com/fwlink/?LinkId=231875).  
+  
+-   Wenn in früheren Versionen von Windows-Betriebssystem ausgeführt wird, unterstützt die 2003-Version des Standards gemäß [RFC 3490: Internationalisierung Domain Names in Applications (IDNA)](http://go.microsoft.com/fwlink/?LinkId=158110).  
+  
+ Finden Sie unter [Unicode-technische Standard #46: IDNA Kompatibilität Verarbeitung](http://go.microsoft.com/fwlink/?LinkId=232459) für die Unterschiede in der Darstellung dieser Standards bestimmte Gruppen von Zeichen behandelt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAscii">
+      <MemberSignature Language="C#" Value="public string GetAscii (string unicode, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAscii(string unicode, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetAscii(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unicode" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="unicode">Die Zeichenfolge zu konvertieren, besteht aus mindestens Domäne namensbezeichnungen ab, die mit der Bezeichnungstrennzeichen getrennt.</param>
+        <param name="index">Eine nullbasierte Offset in <c>Unicode</c> , die den Anfang der Teilzeichenfolge konvertieren angibt. Der Konvertierungsvorgang wird fortgesetzt, bis zum Ende der <c>Unicode</c> Zeichenfolge.</param>
+        <summary>Codiert eine Teilzeichenfolge des Domain namensbezeichnungen, die Unicode-Zeichen außerhalb des Bereichs der US-ASCII-Zeichen enthalten. Die Teilzeichenfolge in einer Zeichenfolge anzeigbaren Unicode-Zeichen im Bereich von US-ASCII-Zeichen konvertiert wird und gemäß des IDNA-Standards formatiert ist.</summary>
+        <returns>Die Entsprechung der Teilzeichenfolge, die gemäß der <paramref name="unicode" /> und <paramref name="index" /> , bestehend aus anzeigbaren Unicode-Zeichen in der US-ASCII-Zeichenbereich (U + 0020 bis U + 007E) und formatiert entsprechend des IDNA-Standards.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `unicode` und `index` Parameter definieren eine Teilzeichenfolge eine oder mehrere Bezeichnungen, die gültige Unicode-Zeichen bestehen. Die Bezeichnungen werden durch die Bezeichnungstrennzeichen getrennt. Das erste Zeichen der Teilzeichenfolge darf nicht mit der Bezeichnungstrennzeichen beginnen kann, jedoch enthalten und optional mit einem Trennzeichen enden. Die Bezeichnungstrennzeichen sind vollständige Beendigung (Punkt, U + 002E), IDEOGRAFISCHER beenden (U + 3002), volle Breite um vollständige Beendigung (U + FF0E) und IDEOGRAFISCHEN Punkt (halber Breite U + FF61). Beispielsweise besteht aus der Domäne "www.adatum.com" der Bezeichnungen, "Www", "Adatum" und "com", die durch Punkte getrennt.  
+  
+ Eine Bezeichnung darf keine der folgenden Zeichen enthalten:  
+  
+-   Unicode-Steuerzeichen von U + 0001 bis U + 001F und U + 007F.  
+  
+-   Nicht zugewiesene Unicode-Zeichen, abhängig vom Wert der <xref:System.Globalization.IdnMapping.AllowUnassigned%2A> Eigenschaft.  
+  
+-   Nicht standardmäßige Zeichen der US-ASCII-Zeichenbereich, z. B. den Speicherplatz (U + 0020), Ausrufezeichen MARKIERT (U + 0021), und Niedrig (U + 005F) unverändert, abhängig vom Wert der <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> Eigenschaft.  
+  
+-   Zeichen, die in einer bestimmten Version des IDNA-Standards unzulässig sind. Weitere Informationen zu unzulässigen Zeichen finden Sie unter [RFC 3454: Vorbereiten von Zeichenfolgen ' Internationalized ' ("Stringprep")](http://go.microsoft.com/fwlink/?LinkId=231873) für IDNA-2003 und [RFC 5982 nur: die Unicode-Codepunkten und Internationalized Domain Names für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=231877) für 2008 des IDNA.  
+  
+ Die <xref:System.Globalization.IdnMapping.GetAscii%2A> -Methode konvertiert alle Bezeichnungstrennzeichen vollständige Beendigung (Punkt, U + 002E).  
+  
+ Wenn `unicode` enthält keine Zeichen außerhalb der US-ASCII-Zeichenbereich und keine Zeichen innerhalb des Bereichs der US-ASCII-Zeichen sind nicht zulässig, der Methodenrückgabe `unicode` unverändert.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel entfernt den lokalen Anteil und der @-Zeichen aus einer e-Mail-Adresse und übergibt den resultierenden Domänennamen auf die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%29> Methode, um eine Punycode-Domänennamen erstellen, einen codierten entspricht, die in der US-ASCII-Zeichen enthält Zeichenbereich. Die <xref:System.Globalization.IdnMapping.GetUnicode%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode klicken Sie dann den Punycode-Domänennamen wieder in den ursprünglichen Domänennamen konvertiert, aber ersetzt die ursprüngliche Bezeichnungstrennzeichen mit der Bezeichnungstrennzeichen.  
+  
+ [!code-csharp[System.Globalization.IdnMapping.GetAscii#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.idnmapping.getascii/cs/conversion1a.cs#2)]
+ [!code-vb[System.Globalization.IdnMapping.GetAscii#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.idnmapping.getascii/vb/conversion1a.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="unicode" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als die Länge von <paramref name="unicode" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="unicode" />Ungültige basieren auf der <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften und des IDNA-Standards.</exception>
+        <block subset="none" type="usage">
+          <para>In der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <see cref="T:System.Globalization.IdnMapping" /> Klasse unterstützt unterschiedliche Versionen des IDNA-Standards, je nach Betriebssystem verwendet:  
+  
+-   Bei der Ausführung unter [!INCLUDE[win8](~/includes/win8-md.md)], unterstützt die Version 2008 des IDNA-Standards gemäß [RFC 5891: Internationalized Domain Names in Applications (IDNA): Protokoll](http://go.microsoft.com/fwlink/?LinkId=231875).  
+  
+-   Wenn in früheren Versionen von Windows-Betriebssystem ausgeführt wird, unterstützt die 2003-Version des Standards gemäß [RFC 3490: Internationalisierung Domain Names in Applications (IDNA)](http://go.microsoft.com/fwlink/?LinkId=158110).  
+  
+ Finden Sie unter [Unicode-technische Standard #46: IDNA Kompatibilität Verarbeitung](http://go.microsoft.com/fwlink/?LinkId=232459) für die Unterschiede in der Darstellung dieser Standards bestimmte Gruppen von Zeichen behandelt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAscii">
+      <MemberSignature Language="C#" Value="public string GetAscii (string unicode, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAscii(string unicode, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetAscii(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unicode" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="unicode">Die Zeichenfolge zu konvertieren, besteht aus mindestens Domäne namensbezeichnungen ab, die mit der Bezeichnungstrennzeichen getrennt.</param>
+        <param name="index">Eine nullbasierte Offset in <c>Unicode</c> , die den Anfang der Teilzeichenfolge angibt.</param>
+        <param name="count">Die Anzahl der zu konvertierenden Zeichen in der Teilzeichenfolge, die an der angegebenen Position beginnt <c>Index</c> in der <c>Unicode</c> Zeichenfolge.</param>
+        <summary>Codiert die angegebene Anzahl von Zeichen in einer Teilzeichenfolge des Domain namensbezeichnungen, die Unicode-Zeichen außerhalb des Bereichs der US-ASCII-Zeichen enthalten. Die Teilzeichenfolge in einer Zeichenfolge anzeigbaren Unicode-Zeichen im Bereich von US-ASCII-Zeichen konvertiert wird und gemäß des IDNA-Standards formatiert ist.</summary>
+        <returns>Die Entsprechung der Teilzeichenfolge, die gemäß der <paramref name="unicode" />, <paramref name="index" />, und <paramref name="count" /> , bestehend aus anzeigbaren Unicode-Zeichen in der US-ASCII-Zeichenbereich (U + 0020 bis U + 007E) und formatiert entsprechend des IDNA-Standards.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Unicode`, `index`, und `count` Parameter definieren eine Teilzeichenfolge eine oder mehrere Bezeichnungen, die gültige Unicode-Zeichen bestehen. Die Bezeichnungen werden durch die Bezeichnungstrennzeichen getrennt. Das erste Zeichen der Teilzeichenfolge darf nicht mit der Bezeichnungstrennzeichen beginnen kann, jedoch enthalten und optional mit einem Trennzeichen enden. Die Bezeichnungstrennzeichen sind vollständige Beendigung (Punkt, U + 002E), IDEOGRAFISCHER beenden (U + 3002), volle Breite um vollständige Beendigung (U + FF0E) und IDEOGRAFISCHEN Punkt (halber Breite U + FF61). Beispielsweise besteht aus der Domäne "www.adatum.com" der Bezeichnungen, "Www", "Adatum" und "com", die durch Punkte getrennt.  
+  
+ Eine Bezeichnung darf keine der folgenden Zeichen enthalten:  
+  
+-   Unicode-Steuerzeichen von U + 0001 bis U + 001F und U + 007F.  
+  
+-   Nicht zugewiesene Unicode-Zeichen, abhängig vom Wert der <xref:System.Globalization.IdnMapping.AllowUnassigned%2A> Eigenschaft.  
+  
+-   Nicht standardmäßige Zeichen der US-ASCII-Zeichenbereich, z. B. den Speicherplatz (U + 0020), Ausrufezeichen MARKIERT (U + 0021), und Niedrig (U + 005F) unverändert, abhängig vom Wert der <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> Eigenschaft.  
+  
+-   Zeichen, die in einer bestimmten Version des IDNA-Standards unzulässig sind. Weitere Informationen zu unzulässigen Zeichen finden Sie unter [RFC 3454: Vorbereiten von Zeichenfolgen ' Internationalized ' ("Stringprep")](http://go.microsoft.com/fwlink/?LinkId=231873) für IDNA-2003 und [RFC 5982 nur: die Unicode-Codepunkten und Internationalized Domain Names für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=231877) für 2008 des IDNA.  
+  
+ Die <xref:System.Globalization.IdnMapping.GetAscii%2A> -Methode konvertiert alle Bezeichnungstrennzeichen vollständige Beendigung (Punkt, U + 002E). Wenn die Teilzeichenfolge keine Zeichen außerhalb des US-ASCII-Zeichen enthält und keine Zeichen innerhalb des Bereichs der US-ASCII-Zeichen sind nicht zulässig, gibt die Methode die Teilzeichenfolge unverändert zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode, um ein internationaler Domänenname auf einen Domänennamen zu konvertieren, die Einhaltung des IDNA-Standards entspricht. Die <xref:System.Globalization.IdnMapping.GetUnicode%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode klicken Sie dann den standardisierte Domänennamen wieder in den ursprünglichen Domänennamen konvertiert, aber ersetzt die ursprüngliche Bezeichnungstrennzeichen mit der Bezeichnungstrennzeichen.  
+  
+ [!code-csharp[IdnMapping.GetX#1](~/samples/snippets/csharp/VS_Snippets_CLR/IdnMapping.GetX/CS/getx.cs#1)]
+ [!code-vb[IdnMapping.GetX#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IdnMapping.GetX/VB/getx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="unicode" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als die Länge von <paramref name="unicode" />.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist größer als die Länge des <paramref name="unicode" /> minus <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="unicode" />Ungültige basieren auf der <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften und des IDNA-Standards.</exception>
+        <block subset="none" type="usage">
+          <para>In der [!INCLUDE[net_v45](~/includes/net-v45-md.md)]die <see cref="T:System.Globalization.IdnMapping" /> Klasse unterstützt unterschiedliche Versionen des IDNA-Standards, je nach Betriebssystem verwendet:  
+  
+-   Bei der Ausführung unter [!INCLUDE[win8](~/includes/win8-md.md)], unterstützt die Version 2008 des IDNA-Standards gemäß [RFC 5891: Internationalized Domain Names in Applications (IDNA): Protokoll](http://go.microsoft.com/fwlink/?LinkId=231875).  
+  
+-   Wenn in früheren Versionen von Windows-Betriebssystem ausgeführt wird, unterstützt die 2003-Version des Standards gemäß [RFC 3490: Internationalisierung Domain Names in Applications (IDNA)](http://go.microsoft.com/fwlink/?LinkId=158110).  
+  
+ Finden Sie unter [Unicode-technische Standard #46: IDNA Kompatibilität Verarbeitung](http://go.microsoft.com/fwlink/?LinkId=232459) für die Unterschiede in der Darstellung dieser Standards bestimmte Gruppen von Zeichen behandelt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode für diese <see cref="T:System.Globalization.IdnMapping" /> Objekt.</summary>
+        <returns>Einer der vier 32-Bit-Konstanten mit Vorzeichen in den Eigenschaften von abgeleitete ein <see cref="T:System.Globalization.IdnMapping" /> Objekt.  Der Rückgabewert besitzt keine besondere Bedeutung und eignet sich nicht für die Verwendung in einem Code-Hashalgorithmus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Globalization.IdnMapping.GetHashCode%2A> Methode, wenn Ihre Anwendung benötigt, um einen sinnvollen Code Hashalgorithmus zu implementieren.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird davon ausgegangen, dass eine einzelne Zeichenfolge mehrere e-Mail-Adressen, die durch Leerzeichen getrennt enthalten kann. Entfernt den lokalen Anteil und der @-Zeichen aus jeder e-Mail-Adresse ein, und übergibt den resultierenden Domänennamen auf die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%29> oder <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode, um eine Punycode-Domänennamen zu erstellen. Die <xref:System.Globalization.IdnMapping.GetUnicode%28System.String%2CSystem.Int32%2CSystem.Int32%29> Methode Punycode-Domänennamen dann wieder in den ursprünglichen Domänennamen konvertiert.  
+  
+ [!code-csharp[System.Globalization.IdnMapping.GetAscii#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.idnmapping.getascii/cs/conversion1b.cs#3)]
+ [!code-vb[System.Globalization.IdnMapping.GetAscii#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.idnmapping.getascii/vb/conversion1b.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicode">
+      <MemberSignature Language="C#" Value="public string GetUnicode (string ascii);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetUnicode(string ascii) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetUnicode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ascii" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ascii">Die zu decodierende Zeichenfolge, eine oder mehrere Bezeichnungen in codierten gemäß des IDNA-Standards US-ASCII-Zeichenbereich (U + 0020 bis U + 007E) besteht.</param>
+        <summary>Decodiert eine Zeichenfolge ein oder mehrere Domänen namensbezeichnungen, gemäß des IDNA-Standards, in eine Zeichenfolge von Unicode-Zeichen codiert.</summary>
+        <returns>Die Unicode-Entsprechung des IDNA-Teilzeichenfolge, die gemäß der <paramref name="ascii" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Domänennamen Bezeichnungen und Bezeichnungstrennzeichen finden Sie unter den Hinweisen für die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%29> Methode, um ein Array von konvertieren die internationale Domänennamen in Punycode. Die <xref:System.Globalization.IdnMapping.GetUnicode%28System.String%29> Methode klicken Sie dann den Punycode-Domänennamen wieder in den ursprünglichen Domänennamen konvertiert, aber ersetzt die ursprüngliche Bezeichnungstrennzeichen mit der Bezeichnungstrennzeichen.  
+  
+ [!code-csharp[System.Globalization.IdnMapping.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.idnmapping.class/cs/conversion1.cs#1)]
+ [!code-vb[System.Globalization.IdnMapping.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.idnmapping.class/vb/conversion1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ascii" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ascii" />Ungültige basieren auf der <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften und des IDNA-Standards.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicode">
+      <MemberSignature Language="C#" Value="public string GetUnicode (string ascii, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetUnicode(string ascii, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetUnicode(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ascii" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ascii">Die zu decodierende Zeichenfolge, eine oder mehrere Bezeichnungen in codierten gemäß des IDNA-Standards US-ASCII-Zeichenbereich (U + 0020 bis U + 007E) besteht.</param>
+        <param name="index">Eine nullbasierte Offset in <c>Ascii</c> , die den Anfang der Teilzeichenfolge, die zu decodierende angibt. Der Decodierungsvorgang fortgesetzt wird, an das Ende der <c>Ascii</c> Zeichenfolge.</param>
+        <summary>Decodiert eine Teilzeichenfolge des eine oder mehrere Domänen namensbezeichnungen, gemäß des IDNA-Standards, in eine Zeichenfolge von Unicode-Zeichen codiert.</summary>
+        <returns>Die Unicode-Entsprechung des IDNA-Teilzeichenfolge, die gemäß der <paramref name="ascii" /> und <paramref name="index" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Domänennamen Bezeichnungen und Bezeichnungstrennzeichen finden Sie unter den Hinweisen für die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ascii" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als die Länge von <paramref name="ascii" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ascii" />Ungültige basieren auf der <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften und des IDNA-Standards.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicode">
+      <MemberSignature Language="C#" Value="public string GetUnicode (string ascii, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetUnicode(string ascii, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.IdnMapping.GetUnicode(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ascii" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ascii">Die zu decodierende Zeichenfolge, eine oder mehrere Bezeichnungen in codierten gemäß des IDNA-Standards US-ASCII-Zeichenbereich (U + 0020 bis U + 007E) besteht.</param>
+        <param name="index">Eine nullbasierte Offset in <c>Ascii</c> , die den Anfang der Teilzeichenfolge angibt.</param>
+        <param name="count">Die Anzahl der zu konvertierenden Zeichen in der Teilzeichenfolge, die an der angegebenen Position beginnt <c>Index</c> in der <c>Ascii</c> Zeichenfolge.</param>
+        <summary>Decodiert eine Teilzeichenfolge mit einer angegebenen Länge, die eine oder mehrere Domänen namensbezeichnungen, gemäß des IDNA-Standards, in eine Zeichenfolge von Unicode-Zeichen codiert enthält.</summary>
+        <returns>Die Unicode-Entsprechung des IDNA-Teilzeichenfolge, die gemäß der <paramref name="ascii" />, <paramref name="index" />, und <paramref name="count" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Domänennamen Bezeichnungen und Bezeichnungstrennzeichen finden Sie unter den Hinweisen für die <xref:System.Globalization.IdnMapping.GetAscii%28System.String%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ascii" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> oder <paramref name="count" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als die Länge von <paramref name="ascii" />.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist größer als die Länge des <paramref name="ascii" /> minus <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ascii" />Ungültige basieren auf der <see cref="P:System.Globalization.IdnMapping.AllowUnassigned" /> und <see cref="P:System.Globalization.IdnMapping.UseStd3AsciiRules" /> Eigenschaften und des IDNA-Standards.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseStd3AsciiRules">
+      <MemberSignature Language="C#" Value="public bool UseStd3AsciiRules { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseStd3AsciiRules" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.IdnMapping.UseStd3AsciiRules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Standard- oder weniger strenge Benennungskonventionen, in Operationen, die von Mitgliedern des aktuellen verwendet werden <see cref="T:System.Globalization.IdnMapping" /> Objekt.</summary>
+        <value>
+          <see langword="true" />Wenn Standardbenennungskonventionen in Vorgängen verwendet werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Domänennamen, die standardmäßige Benennungsregeln führen Sie eine bestimmte Teilmenge der Zeichen im Bereich von US-ASCII-Zeichen bestehen aus. Die Zeichen werden die Buchstaben A bis Z, die Ziffern 0 bis 9, Bindestrich (-)-Zeichen (U + 002D) und das Punktzeichen (.). Die Groß-/Kleinschreibung der Zeichen ist nicht signifikant. Gelockerte Benennungskonventionen ermöglicht die Verwendung von einer breiteren Bereich ASCII Zeichen, einschließlich des Speicherplatzes-Zeichen (U + 0020), das Ausrufezeichen Zeichen (U + 0021) und den Unterstrich-Zeichen (U + 005F). Wenn <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> ist `true`, stehen nur die Standardzeichen in eine Bezeichnung zurückgegebenes die <xref:System.Globalization.IdnMapping.GetAscii%2A> Methode.  
+  
+ Standardmäßig wird der Wert des der <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> Eigenschaft ist `false`, und eine erweiterte Teilmenge von ASCII-Zeichen in eine Bezeichnung zulässig ist.  
+  
+> [!NOTE]
+>  Die <xref:System.Globalization.IdnMapping> Klasse verbietet die Verwendung der darstellbare Zeichen U + 0000 bis U + 001F und U + 007F im Domänennamen "Bezeichnungen" unabhängig von der Einstellung der <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> Eigenschaft. Dieses Verbot reduziert das Risiko von Angriffen wie spoofing Name.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die URLs, die Zeichen im ASCII-Bereich von U + 0000 bis U + 007F enthalten generiert, und übergibt sie an der <xref:System.Globalization.IdnMapping.GetAscii%28System.String%29> Methode zweier <xref:System.Globalization.IdnMapping> Objekte. Ein Objekt hat seine <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> -Eigenschaftensatz auf `true`, und das andere Objekt festgelegt `false`. Die Ausgabe zeigt die Zeichen, die ungültig sind bei der <xref:System.Globalization.IdnMapping.UseStd3AsciiRules%2A> Eigenschaft `true` jedoch gültig, wenn er sich `false`.  
+  
+ [!code-csharp[System.Globalization.IdnMapping.UseStd3AsciiRules#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.idnmapping.usestd3asciirules/cs/usestd3asciirules1.cs#1)]
+ [!code-vb[System.Globalization.IdnMapping.UseStd3AsciiRules#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.idnmapping.usestd3asciirules/vb/usestd3asciirules1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,46 @@
+<Type Name="SiteMapResolveEventHandler" FullName="System.Web.SiteMapResolveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate System.Web.SiteMapNode SiteMapResolveEventHandler(object sender, SiteMapResolveEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SiteMapResolveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SiteMapResolveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.SiteMapResolveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Web.SiteMapNode</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, einer Instanz von der <see cref="T:System.Web.SiteMapProvider" /> Klasse.</param>
+    <param name="e">Ein <see cref="T:System.Web.SiteMapResolveEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.SiteMapProvider.SiteMapResolve" /> -Ereignis für eine bestimmte Instanz der <see cref="T:System.Web.SiteMapProvider" /> oder statische <see cref="T:System.Web.SiteMap" /> Klasse.</summary>
+    <returns>Die <see cref="T:System.Web.SiteMapNode" /> , die das Ergebnis stellt die <see cref="T:System.Web.SiteMapResolveEventHandler" /> Vorgang.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die statische <xref:System.Web.SiteMap> -Klasse verfügbar macht die <xref:System.Web.SiteMap.SiteMapResolve> Ereignis des Standardanbieters Website zuordnen.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Web.SiteMap.SiteMapResolve> Ereignis auf einer ASP.NET-Webseite so ändern Sie den Ziel-URLs, die von einem Standort Navigation-Steuerelement angezeigt werden, z. B. die <xref:System.Web.UI.WebControls.SiteMapPath> Steuerelement. In diesem Beispiel wird die aktuelle Seite eine Post-Seite in einem online Bulletin Boards oder Forum. Um aussagekräftigere Rendern angefügt Websitenavigation, die URLs der Knoten, die vom Navigationssteuerelement angezeigt werden mit Abfragezeichenfolgen, die an den Kontext relevant sind.  
+  
+> [!NOTE]
+>  Es ist sicherer, die Zugriff auf die <xref:System.Web.SiteMap.CurrentNode%2A> Eigenschaft innerhalb der <xref:System.Web.SiteMapResolveEventHandler> Klasse. Die Website-Navigation ASP.NET-Infrastruktur schützt vor unendliche Rekursion in diesem Fall ein.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

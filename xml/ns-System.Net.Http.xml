@@ -1,0 +1,57 @@
+<Namespace Name="System.Net.Http">
+  <Docs>
+    <summary>Die <see cref="N:System.Net.Http" /> -Namespace stellt eine Programmierschnittstelle für moderne HTTP-Anwendungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Http> Namespace wurde entwickelt, um Folgendes bereitzustellen:  
+  
+1.  HTTP-Client-Komponenten, die Benutzer von modernen Webdiensten über HTTP zu ermöglichen.  
+  
+2.  HTTP-Komponenten, die verwendet werden können von Clients und Servern (HTTP-Header und Nachrichten, zum Beispiel). Dies bietet ein konsistentes Programmiermodell auf dem Client und der Serverseite für moderne Webdienste über HTTP.  
+  
+ Die <xref:System.Net.Http> Namespace und den zugehörigen <xref:System.Net.Http.Headers> Namespace stellen die folgenden Komponenten:  
+  
+1.  <xref:System.Net.Http.HttpClient>– die primäre Klasse, die zum Senden und Empfangen von Anforderungen über HTTP verwendet.  
+  
+2.  <xref:System.Net.Http.HttpRequestMessage>und <xref:System.Net.Http.HttpResponseMessage> -HTTP-Nachrichten gemäß der Definition in RFC 2616 durch die IETF.  
+  
+3.  <xref:System.Net.Http.Headers.HttpHeaders>-HTTP-Header, wie in RFC 2616 durch die IETF definiert.  
+  
+4.  <xref:System.Net.Http.HttpClientHandler>-HTTP Handler für die Erzeugung von HTTP-Antwortnachrichten verantwortlich ist.  
+  
+ Es gibt verschiedene HTTP-Nachricht verarbeitet, die verwendet werden können. Dazu gehören die folgenden.  
+  
+1.  <xref:System.Net.Http.DelegatingHandler>– Eine Klasse verwendet, um einen Handler in einer Kette Handler eingebunden.  
+  
+2.  <xref:System.Net.Http.HttpMessageHandler>– Eine einfache Klasse ableiten, die am häufigsten verwendeten Anforderungen für die meisten Anwendungen unterstützt.  
+  
+3.  <xref:System.Net.Http.HttpClientHandler>-Eine Klasse, die am Ende der Kette Handler ausgeführt wird, der die HTTP-Transport-Vorgänge behandelt.  
+  
+4.  <xref:System.Net.Http.WebRequestHandler>– Ein Specialty-Klasse, die am Ende der Kette Handlerklasse arbeitet, die HTTP-Transport-Vorgänge mit Optionen behandelt, die speziell für die <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> Objekt.  
+  
+ Der Inhalt einer HTTP-Nachricht entspricht, in den Entitätstext in RFC 2616 definiert.  
+  
+ Für HTTP-Inhalt kann eine Reihe von Klassen verwendet werden. Dazu gehören die folgenden.  
+  
+1.  <xref:System.Net.Http.ByteArrayContent>-HTTP-Inhalt basierend auf ein Bytearray.  
+  
+2.  <xref:System.Net.Http.FormUrlEncodedContent>-Name/Wert-Tupel HTTP-Inhalt codiert Application/X-www-form-urlencoded MIME-Typ verwenden.  
+  
+3.  <xref:System.Net.Http.MultipartContent>-HTTP Inhalt, die serialisiert werden mithilfe der Multipart / * inhaltstypspecification.  
+  
+4.  <xref:System.Net.Http.MultipartFormDataContent>-HTTP Inhalt codiert mithilfe des Multipart/Form-Data-MIME-Typs.  
+  
+5.  <xref:System.Net.Http.StreamContent>-HTTP-Inhalt basierend auf einem Datenstrom.  
+  
+6.  <xref:System.Net.Http.StringContent>-HTTP-Inhalt auf der Grundlage einer Zeichenfolge.  
+  
+ Wenn eine app mithilfe der <xref:System.Net.Http> und <xref:System.Net.Http.Headers> Namespaces beabsichtigt, um große Mengen von Daten (50 MB oder mehr) herunterzuladen, und klicken Sie dann die app sollte diese Downloads Streamen und verwenden Sie nicht standardmäßige Pufferung. Wenn die standardmäßige Pufferung verwendet wird die Auslastung des Speichers erhalten sehr groß, was potenziell im Wesentlichen zu einer Beeinträchtigung der Leistung.  
+  
+ Klassen in der <xref:System.Net.Http> und <xref:System.Net.Http.Headers> Namespaces können verwendet werden, um Windows Store-apps oder desktop-apps zu entwickeln. Bei Verwendung in einer Windows Store-app-Klassen in der <xref:System.Net.Http> und <xref:System.Net.Http.Headers> Namespaces werden von Netzwerk Feature "Benutzerisolation", Teil des Sicherheitsmodells Anwendung verwendeten beeinflusst die [!INCLUDE[win8](~/includes/win8-md.md)]. In der app-Manifest für Windows Store-Apps für das System den Netzwerkzugriff von einer Windows Store-app müssen die entsprechenden Funktionen aktiviert werden. Weitere Informationen finden Sie unter der [Netzwerk Isolation für Windows Store-Apps](~/docs/framework/network-programming/network-isolation-for-windows-store-apps.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

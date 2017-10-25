@@ -1,0 +1,143 @@
+<Type Name="SecurityCriticalAttribute" FullName="System.Security.SecurityCriticalAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SecurityCriticalAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityCriticalAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityCriticalAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Field | System.AttributeTargets.Interface | System.AttributeTargets.Delegate, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass Code oder eine Assembly sicherheitsrelevante Vorgänge ausführt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sicherheitsrelevante Vorgänge sind Aktionen, die Codezugriffssicherheit, z. B. die Erhöhung von Berechtigungen, über die Unterdrückung von sicherheitsüberprüfungen für den Code-Zugriff mit Auswirkungen auf die <xref:System.Security.CodeAccessPermission.Assert%2A> -Methode, die aufrufende unsicherem verwalteten Code und So weiter. Entweder die <xref:System.Security.SecurityCriticalAttribute> Attribut oder die <xref:System.Security.SecuritySafeCriticalAttribute> Attribut muss auf der Code als sicherheitskritisch Operationen angewendet werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.SecurityCriticalAttribute> entspricht einem Verknüpfungsaufruf für volle Vertrauenswürdigkeit. Ein Typ oder Member gekennzeichnet, mit der <xref:System.Security.SecurityCriticalAttribute> kann nur von voll vertrauenswürdigem Code; aufgerufen werden keine bestimmten Berechtigungen fordern. Er kann nicht von teilweise vertrauenswürdigem Code aufgerufen werden.  
+  
+ Anwenden der <xref:System.Security.SecurityCriticalAttribute> auf die Assembly auf die Assembly als sicherheitstransparent Assembly identifiziert. Die gesamte Assembly kann ermittelt werden als kritisch durch Festlegen den Bereichsparameter <xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityCriticalAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityCriticalAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.SecurityCriticalAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityCriticalAttribute (System.Security.SecurityCriticalScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.SecurityCriticalScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityCriticalAttribute.#ctor(System.Security.SecurityCriticalScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Security.SecurityCriticalScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Einer der Enumerationswerte, der den Bereich des Attributs angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.SecurityCriticalAttribute" /> Klasse mit dem angegebenen Bereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird für die Kompatibilität mit der .NET Framework 2.0-Transparenzmodell bereitgestellt. Es gilt nicht für die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]. Weitere Informationen finden Sie unter [Sicherheitstransparenter Code, Ebene 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityCriticalScope Scope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.SecurityCriticalScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Security.SecurityCriticalAttribute.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("SecurityCriticalScope is only used for .NET 2.0 transparency compatibility.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityCriticalScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bereich für das Attribut ab.</summary>
+        <value>Einer der Enumerationswerte, der den Bereich des Attributs angibt. Die Standardeinstellung ist <see cref="F:System.Security.SecurityCriticalScope.Explicit" />, was bedeutet, dass das Attribut nur für das unmittelbare Ziel gilt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

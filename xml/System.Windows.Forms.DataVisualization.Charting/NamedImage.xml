@@ -1,0 +1,160 @@
+<Type Name="NamedImage" FullName="System.Windows.Forms.DataVisualization.Charting.NamedImage">
+  <TypeSignature Language="C#" Value="public class NamedImage : System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamedImage extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt benannte Bilder, und im rowsetcache der <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Klasse stellt ein Bild, das ist nützlich, wenn ein Image mit einer bestimmten zeichnen Routine dynamisch erstellt wird, verfügt über einen eindeutigen Namen und dann als Bild für eine der Eigenschaften des angegebenen der <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage.Name%2A> Eigenschaft bestimmt den eindeutigen Namen einer <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt. Die <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage.Image%2A> -Eigenschaft bestimmt das zugeordnete Bild, das alle von .NET Framework abgeleitetes Objekt sein kann <xref:System.Drawing.Image> Klasse.  
+  
+ Wenn eine der Eigenschaften des Image der <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement festgelegt, indem eine `string` Wert, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Images%2A> Auflistungseigenschaft wird zuerst überprüft, um zu bestimmen, ob ein Bild mit dem angegebenen Namen vorhanden ist. Wenn kein übereinstimmendes <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt gefunden wird, wird dieses Image verwendet wird. Wenn kein übereinstimmendes <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt nicht gefunden wurde, wird der `string` Wert wird als eine URL, Bildressourcenname oder Bildpfad behandelt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.NamedImage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedImage (string name, System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.NamedImage.#ctor(System.String,System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des benannten Bilds. Verwenden Sie diesen Namen, wenn ein benanntes Bild in eines der Bildeigenschaften festlegen.</param>
+        <param name="image">Das zugehörige Abbild des benannten Bilds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" /> Klasse mit dem angegebenen Namen des benannten Abbilds und das zugeordnete Bild.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.NamedImage.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt nicht verwaltete und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.NamedImage.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild von einer <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" /> Objekt.</summary>
+        <value>Die Bildkomponente ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" /> Objekt. Dadurch kann jedes Objekt, das von .NET Framework abgeleitet sein <see cref="T:System.Drawing.Image" /> Klasse, zum Beispiel ein <see cref="T:System.Drawing.Bitmap" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage.Image%2A> Eigenschaft bestimmt, welche Bilds in einen <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt.  
+  
+ Verwendung <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekte für dynamisch erstellte Images, die dann zu einem Diagramm zugewiesen werden können Bild-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.NamedImage.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den eindeutigen Namen einer <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" /> Objekt.</summary>
+        <value>Ein <see langword="string" /> Wert, der den eindeutigen Namen einer <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" /> Objekt in der <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft identifiziert eine <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> -Objekt, das in gespeichert ist die <xref:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection>. Dieser Name muss eindeutig sein, oder eine Ausnahme wird ausgelöst, wenn das Objekt der Auflistung hinzugefügt wird.  
+  
+ Verwendung <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekte für dynamisch erstellte Images, die dann zu einem Diagramm zugewiesen werden können Bild-Eigenschaft.  
+  
+ Dies <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage.Name%2A> Eigenschaftswert wird verwendet, wenn Sie eine Diagramm Image-Eigenschaft, um festgelegt eine <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt.  
+  
+ Wenn eine der Eigenschaften des der <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Steuerelement festgelegt, indem eine `string` Wert, der <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Images%2A> Auflistungseigenschaft – vom Typ <xref:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection>– wird zuerst überprüft werden, um zu bestimmen, ob ein Bild mit dem angegebenen Namen vorhanden ist. Wenn kein übereinstimmendes <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt gefunden wird, wird dieses Image verwendet wird. Wenn kein übereinstimmendes <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> Objekt nicht gefunden wurde, wird der `string` Wert wird als eine URL, Bildressourcenname oder Bildpfad behandelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

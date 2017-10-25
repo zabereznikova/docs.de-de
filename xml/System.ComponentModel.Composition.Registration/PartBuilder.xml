@@ -1,0 +1,536 @@
+<Type Name="PartBuilder" FullName="System.ComponentModel.Composition.Registration.PartBuilder">
+  <TypeSignature Language="C#" Value="public class PartBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PartBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Registration.PartBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Regel für einen Satz von übereinstimmenden Typen mit Managed Extensibility Framework (MEF) Attribute ergänzen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder AddMetadata (string name, Func&lt;Type,object&gt; itemFunc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder AddMetadata(string name, class System.Func`2&lt;class System.Type, object&gt; itemFunc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.AddMetadata(System.String,System.Func{System.Type,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="itemFunc" Type="System.Func&lt;System.Type,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Metadatenschlüssel.</param>
+        <param name="itemFunc">Eine Funktion, die den Metadatenwert, erhält den Zieltyp zurückgibt.</param>
+        <summary>Metadaten und die passenden Typen hinzugefügt.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder AddMetadata (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder AddMetadata(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.AddMetadata(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Metadatenschlüssel.</param>
+        <param name="value">Der Wert der Metadaten.</param>
+        <summary>Metadaten und die passenden Typen hinzugefügt.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder Export ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder Export() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.Export" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die übereinstimmenden Typen exportiert werden sollen.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder Export (Action&lt;System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder Export(class System.Action`1&lt;class System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.Export(System.Action{System.ComponentModel.Composition.Registration.ExportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.ComponentModel.Composition.Registration.ExportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="exportConfiguration">Ein Objekt, das Konfigurationsinformationen für den Export enthält. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt an, dass übereinstimmenden Typen exportiert werden sollen, und stellt Konfigurationsinformationen für die resultierende Exporte bereit.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder Export&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder Export&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.Export``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <summary>Gibt an, dass die übereinstimmenden Typen exportiert werden sollen, indem Sie mithilfe des angegebenen Vertragstyps.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder Export&lt;T&gt; (Action&lt;System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder Export&lt;T&gt;(class System.Action`1&lt;class System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.Export``1(System.Action{System.ComponentModel.Composition.Registration.ExportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.ComponentModel.Composition.Registration.ExportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="exportConfiguration">Ein Objekt, das Konfigurationsinformationen für den Export enthält. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt an, dass übereinstimmenden Typen exportiert werden sollen, mit dem angegebenen Vertragstyp und für die resultierende Exporte Konfigurationsangaben.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportInterfaces">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportInterfaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportInterfaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportInterfaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass alle Schnittstellen der übereinstimmenden Typen exportiert werden sollen.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportInterfaces">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportInterfaces (Predicate&lt;Type&gt; interfaceFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportInterfaces(class System.Predicate`1&lt;class System.Type&gt; interfaceFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportInterfaces(System.Predicate{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceFilter" Type="System.Predicate&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceFilter">Ein Prädikat, das einen Satz von Schnittstellen angibt.</param>
+        <summary>Gibt einen Satz von Schnittstellen für die passenden Typen, die exportiert werden sollen.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht exportieren <xref:System.IDisposable> oder <xref:System.ComponentModel.Composition.IPartImportsSatisfiedNotification> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="interfaceFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportInterfaces">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportInterfaces (Predicate&lt;Type&gt; interfaceFilter, Action&lt;Type,System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportInterfaces(class System.Predicate`1&lt;class System.Type&gt; interfaceFilter, class System.Action`2&lt;class System.Type, class System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportInterfaces(System.Predicate{System.Type},System.Action{System.Type,System.ComponentModel.Composition.Registration.ExportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceFilter" Type="System.Predicate&lt;System.Type&gt;" />
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Type,System.ComponentModel.Composition.Registration.ExportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceFilter">Ein Prädikat, das einen Satz von Schnittstellen angibt.</param>
+        <param name="exportConfiguration">Ein Objekt, das Konfigurationsinformationen für den Export enthält. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt einen Satz von Schnittstellen für die passenden Typen, die exportiert werden sollen, und stellt Konfigurationsinformationen für die resultierende Exporte bereit.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht exportieren <xref:System.IDisposable> oder <xref:System.ComponentModel.Composition.IPartImportsSatisfiedNotification> Objekte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="interfaceFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <summary>Gibt einen Satz von Eigenschaften, die exportiert werden, sollten auf die passenden Typen an.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <param name="exportConfiguration">Ein Objekt, das Konfigurationsinformationen für den Export enthält. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die exportiert werden sollen, und stellt Konfigurationsinformationen für diese Exporte bereit.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties``1(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die exportiert werden sollen, mit dem angegebenen Vertragstyp.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ExportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ExportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.ComponentModel.Composition.Registration.ExportBuilder&gt; exportConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ExportProperties``1(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="exportConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ExportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <param name="exportConfiguration">Ein Objekt, das Konfigurationsinformationen für den Export enthält. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die exportiert werden sollen, mit dem angegebenen Vertragstyp und Konfigurationsinformationen für die resultierende Exporte bereitstellt.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ImportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ImportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die importiert werden soll.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ImportProperties (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder&gt; importConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ImportProperties(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.ComponentModel.Composition.Registration.ImportBuilder&gt; importConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="importConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <param name="importConfiguration">Ein Objekt, das Konfigurationsinformationen zu importieren. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die als Importe markiert werden soll, und enthält Konfigurationsinformationen für die resultierende Importe.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ImportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ImportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties``1(System.Predicate{System.Reflection.PropertyInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die markiert werden soll, wie mithilfe des angegebenen Vertragstyps importiert.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportProperties&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder ImportProperties&lt;T&gt; (Predicate&lt;System.Reflection.PropertyInfo&gt; propertyFilter, Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder&gt; importConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder ImportProperties&lt;T&gt;(class System.Predicate`1&lt;class System.Reflection.PropertyInfo&gt; propertyFilter, class System.Action`2&lt;class System.Reflection.PropertyInfo, class System.ComponentModel.Composition.Registration.ImportBuilder&gt; importConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.ImportProperties``1(System.Predicate{System.Reflection.PropertyInfo},System.Action{System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyFilter" Type="System.Predicate&lt;System.Reflection.PropertyInfo&gt;" />
+        <Parameter Name="importConfiguration" Type="System.Action&lt;System.Reflection.PropertyInfo,System.ComponentModel.Composition.Registration.ImportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ des Vertrags.</typeparam>
+        <param name="propertyFilter">Ein Prädikat, das einen Satz von Eigenschaften angibt.</param>
+        <param name="importConfiguration">Ein Objekt, das Konfigurationsinformationen zu importieren. Der Standardwert ist <see langword="null" />.</param>
+        <summary>Gibt einen Satz von Eigenschaften auf die passenden Typen, die mit dem angegebenen Vertragstyp importiert und Konfigurationsangaben für die resultierende Importe markiert werden soll.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyFilter" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectConstructor">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder SelectConstructor (Func&lt;System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo&gt; constructorFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder SelectConstructor(class System.Func`2&lt;class System.Reflection.ConstructorInfo[], class System.Reflection.ConstructorInfo&gt; constructorFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.SelectConstructor(System.Func{System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorFilter" Type="System.Func&lt;System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="constructorFilter">Eine Funktion, die aus einem Satz von Konstruktoren einen Konstruktor auswählt.</param>
+        <summary>Gibt den Konstruktor, der übereinstimmenden Typen als eine importierende Konstruktor verwenden soll.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="constructorFilter" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="constructorFilter" /> gibt <see langword="null" /> zurück.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="constructorFilter" />Gibt einen Konstruktor, der nicht mit dem Zieltyp verknüpft ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectConstructor">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder SelectConstructor (Func&lt;System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo&gt; constructorFilter, Action&lt;System.Reflection.ParameterInfo,System.ComponentModel.Composition.Registration.ImportBuilder&gt; importConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder SelectConstructor(class System.Func`2&lt;class System.Reflection.ConstructorInfo[], class System.Reflection.ConstructorInfo&gt; constructorFilter, class System.Action`2&lt;class System.Reflection.ParameterInfo, class System.ComponentModel.Composition.Registration.ImportBuilder&gt; importConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.SelectConstructor(System.Func{System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo},System.Action{System.Reflection.ParameterInfo,System.ComponentModel.Composition.Registration.ImportBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorFilter" Type="System.Func&lt;System.Reflection.ConstructorInfo[],System.Reflection.ConstructorInfo&gt;" />
+        <Parameter Name="importConfiguration" Type="System.Action&lt;System.Reflection.ParameterInfo,System.ComponentModel.Composition.Registration.ImportBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="constructorFilter">Eine Funktion, die aus einem Satz von Konstruktoren einen Konstruktor auswählt.</param>
+        <param name="importConfiguration">Ein Objekt, das Konfigurationsinformationen für den Import von Konstruktor enthält. Die Standardeinstellung ist <see langword="null" />.</param>
+        <summary>Gibt den Konstruktor, der übereinstimmenden Typen als eine importierende Konstruktor verwenden soll, und enthält Konfigurationsinformationen für die resultierende importieren.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="constructorFilter" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="constructorFilter" /> gibt <see langword="null" /> zurück.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="constructorFilter" />Gibt einen Konstruktor, der nicht mit dem Zieltyp verknüpft ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCreationPolicy">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.PartBuilder SetCreationPolicy (System.ComponentModel.Composition.CreationPolicy creationPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.PartBuilder SetCreationPolicy(valuetype System.ComponentModel.Composition.CreationPolicy creationPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.PartBuilder.SetCreationPolicy(System.ComponentModel.Composition.CreationPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.PartBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="creationPolicy" Type="System.ComponentModel.Composition.CreationPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="creationPolicy">Die Erstellungsrichtlinie.</param>
+        <summary>Gibt die Erstellungsrichtlinie für den Abgleich von Typen an.</summary>
+        <returns>Das aktuelle Objekt zu verketten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
