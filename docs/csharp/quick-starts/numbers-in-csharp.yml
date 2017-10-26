@@ -1,6 +1,6 @@
 ### YamlMime:YamlDocument
 documentType: Tutorial
-title: '<span data-ttu-id="91cac-101">Zahlen in C#</span><span class="sxs-lookup"><span data-stu-id="91cac-101">Numbers in C#</span></span>'
+title: 'Zahlen in C#'
 metadata:
   title: '<span data-ttu-id="91cac-102">Zahlen in C#</span><span class="sxs-lookup"><span data-stu-id="91cac-102">Numbers in C#</span></span>'
   description: '<span data-ttu-id="91cac-103">In diesem Tutorial zu numerischen Typen verwenden Sie Ihren Browser, um sich interaktiv mit C# vertraut zu machen.</span><span class="sxs-lookup"><span data-stu-id="91cac-103">In this tutorial about numeric types, you''ll use your browser to learn C# interactively.</span></span> <span data-ttu-id="91cac-104">Sie schreiben direkt im Browser einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes.</span><span class="sxs-lookup"><span data-stu-id="91cac-104">You''re going to write C# code and see the results of compiling and running your code directly in the browser.</span></span>'

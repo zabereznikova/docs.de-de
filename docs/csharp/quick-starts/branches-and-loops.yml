@@ -1,6 +1,6 @@
 ### YamlMime:YamlDocument
 documentType: Tutorial
-title: <span data-ttu-id="a4c57-101">Verzweigungen und Schleifen</span><span class="sxs-lookup"><span data-stu-id="a4c57-101">Branches and loops</span></span>
+title: Verzweigungen und Schleifen
 metadata:
   title: <span data-ttu-id="a4c57-102">Verzweigungen und Schleifen</span><span class="sxs-lookup"><span data-stu-id="a4c57-102">Branches and loops</span></span>
   description: '<span data-ttu-id="a4c57-103">In diesem Tutorial zu Verzweigungen und Schleifen verwenden Sie Ihren Browser, um sich interaktiv mit C# vertraut zu machen.</span><span class="sxs-lookup"><span data-stu-id="a4c57-103">In this tutorial about branches and loops, you''ll use your browser to learn C# interactively.</span></span> <span data-ttu-id="a4c57-104">Sie schreiben direkt im Browser einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes.</span><span class="sxs-lookup"><span data-stu-id="a4c57-104">You''re going to write C# code and see the results of compiling and running your code directly in the browser.</span></span>'
