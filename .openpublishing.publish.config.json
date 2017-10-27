@@ -116,7 +116,8 @@
   "Targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
-    }
+  }, 
+  "non_published_copy_file_search_pattern": "*.md" 
   },
   "dependent_packages": [
     {
