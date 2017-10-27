@@ -90,7 +90,15 @@
       "branch_mapping": {
         "live": "live",
         "master": "master"
-      }
+      },
+     {
+       "path_to_root": "dotnet-xref",
+       "url": "https://github.com/MicrosoftDocs/dotnet-xref",
+       "branch": "live",
+       "branch_mapping": {
+         "master": "master",
+         "live": "live"
+       }
     }
   ],
   "branch_target_mapping": {
