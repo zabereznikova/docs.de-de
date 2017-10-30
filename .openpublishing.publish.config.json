@@ -90,6 +90,7 @@
       "branch_mapping": {
         "live": "live",
         "master": "master"
+       }
       },
      {
        "path_to_root": "dotnet-xref",
@@ -99,7 +100,7 @@
          "master": "master",
          "live": "live"
        }
-    }
+      }
   ],
   "branch_target_mapping": {
     "live": [
