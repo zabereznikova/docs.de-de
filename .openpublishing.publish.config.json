@@ -94,6 +94,10 @@
     }
   ],
   "branch_target_mapping": {
+    "IntSen_Test": [
+      "Publish",
+      "Intellisense"
+    ],
     "live": [
       "Publish",
       "Pdf"
