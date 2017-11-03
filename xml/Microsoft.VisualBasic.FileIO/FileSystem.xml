@@ -303,7 +303,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="destinationDirectoryName" />oder <paramref name="sourceDirectoryName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das Quellverzeichnis ist nicht vorhanden.</exception>
