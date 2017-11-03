@@ -162,7 +162,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="destinationDirectoryName" />oder <paramref name="sourceDirectoryName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das Quellverzeichnis ist nicht vorhanden.</exception>
@@ -222,7 +222,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="destinationDirectoryName" />oder <paramref name="sourceDirectoryName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das Quellverzeichnis ist nicht vorhanden.</exception>
@@ -286,7 +286,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="destinationDirectoryName" />oder <paramref name="sourceDirectoryName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das Quellverzeichnis ist nicht vorhanden.</exception>
@@ -348,7 +348,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="destinationDirectoryName" />oder <paramref name="sourceDirectoryName" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das Quellverzeichnis ist nicht vorhanden.</exception>
@@ -1013,7 +1013,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. Es verfügt über einen nachgestellten Schrägstrich, in dem eine Datei angegeben werden muss. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. Es verfügt über einen nachgestellten Schrägstrich, in dem eine Datei angegeben werden muss. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           Der <paramref name="file" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.PathTooLongException">Der Pfad überschreitet die vom System definierte maximale Länge.</exception>
@@ -1079,7 +1079,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. Es verfügt über einen nachgestellten Schrägstrich, in dem eine Datei angegeben werden muss. oder es handelt sich um einen Gerätepfad (beginnt mit \\ \\.\\).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. Es verfügt über einen nachgestellten Schrägstrich, in dem eine Datei angegeben werden muss. oder es handelt sich um einen Gerätepfad (beginnt mit \\\\.\\).</exception>
         <exception cref="T:System.ArgumentNullException">
           Der <paramref name="file" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.PathTooLongException">Der Pfad überschreitet die vom System definierte maximale Länge.</exception>
@@ -1248,7 +1248,7 @@
  ]]></format>
         </remarks>
         <altCompliant cref="None." />
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit <c> \\.\< / c &gt;).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit <c>\\.\</c>).</exception>
         <exception cref="T:System.ArgumentNullException">
           Der <paramref name="directory" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene Verzeichnis ist nicht vorhanden.</exception>
