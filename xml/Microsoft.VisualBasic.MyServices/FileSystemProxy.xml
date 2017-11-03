@@ -1318,7 +1318,7 @@
  ]]></format>
         </remarks>
         <altCompliant cref="None." />
-        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit <c> \\.\< / c &gt;).</exception>
+        <exception cref="T:System.ArgumentException">Der Pfad ist für eine der folgenden Gründe ungültig: Es ist eine Zeichenfolge der Länge 0 (null); Er enthält nur Leerzeichen. Er enthält ungültige Zeichen. oder es handelt sich um einen Gerätepfad (beginnt mit <c>\\.\</c>).</exception>
         <exception cref="T:System.ArgumentNullException">
           Der <paramref name="directory" /> ist <see langword="Nothing" /> oder eine leere Zeichenfolge.</exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">Das angegebene Verzeichnis ist nicht vorhanden.</exception>
