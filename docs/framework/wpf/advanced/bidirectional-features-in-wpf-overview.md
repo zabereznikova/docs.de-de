@@ -215,7 +215,7 @@ Im Gegensatz zu anderen Entwicklungsplattformen bietet [!INCLUDE[TLA2#tla_wincli
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod>: Die Ersetzungsmethode wird auf Grundlage der <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=fullName>\-Eigenschaft der Zahlenkultur bestimmt.  Dies ist die Standardeinstellung.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod>: Gibt an, dass die Ziffern vom Kontext abhängen, wenn die Zahlenkultur Arabisch oder Farsi ist.  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod>: Gibt an, dass die Ziffern vom Kontext abhängen, wenn die Zahlenkultur Arabisch oder Persisch ist.  
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod>: Zahlen werden immer als europäische Ziffern gerendert.  
   
