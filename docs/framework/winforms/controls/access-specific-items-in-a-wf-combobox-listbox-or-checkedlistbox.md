@@ -1,43 +1,47 @@
 ---
-title: "Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox-Steuerelement [Windows Forms], Zugreifen auf Elemente"
-  - "Kombinationsfelder, Zugreifen auf Elemente"
-  - "ComboBox-Steuerelement [Windows Forms], Zugreifen auf Elemente"
-  - "Listenfelder, Zugreifen auf Elemente"
-  - "ListBox-Steuerelement [Windows Forms], Zugreifen auf Elemente"
-  - "ListBox-Steuerelement [Windows Forms], Zurückgeben von Elementinformationen"
+title: "Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows&#160;Forms
-Eine der grundlegenden Tasks ist das Zugreifen auf spezifische Elemente in Kombinationsfeldern, Listenfeldern oder aktivierten Listenfeldern von Windows Forms.  Sie können programmgesteuert bestimmen, welches Element sich an einer gegebenen Position in der Liste befindet.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
+Zugreifen auf bestimmte Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe. Er ermöglicht es Ihnen, programmgesteuert festzustellen, was in der Liste, an einer beliebigen angegebenen Position befindet.  
   
-### So greifen Sie auf ein spezifisches Element zu  
+### <a name="to-access-a-specific-item"></a>Auf ein bestimmtes Element zugreifen.  
   
-1.  Fragen Sie die `Items` \-Auflistung mithilfe des Indizes des jeweiligen Elements ab:  
+1.  Abfrage der `Items` Auflistung über den Index eines bestimmten Elements:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ Eine der grundlegenden Tasks ist das Zugreifen auf spezifische Elemente in Kombi
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ Eine der grundlegenden Tasks ist das Zugreifen auf spezifische Elemente in Kombi
        }  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [Steuerelemente in Windows Forms zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

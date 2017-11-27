@@ -1,53 +1,56 @@
 ---
-title: "Vorgehensweise: Verwenden von &quot;Svcutil.exe&quot; zum Exportieren von Metadaten aus kompiliertem Dienstcode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Verwenden von "Svcutil.exe" zum Exportieren von Metadaten aus kompiliertem Dienstcode'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 444fab903683b952d1a8c312c3f6032be880da68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Verwenden von &quot;Svcutil.exe&quot; zum Exportieren von Metadaten aus kompiliertem Dienstcode
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Vorgehensweise: Verwenden von "Svcutil.exe" zum Exportieren von Metadaten aus kompiliertem Dienstcode
 "Svcutil.exe" kann Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys wie folgt exportieren:  
   
--   Zum Exportieren von Metadaten für alle kompilierten Dienstverträge für eine Assemblygruppe mithilfe von "Svcutil.exe" geben Sie die Assemblys als Eingabeparameter an.Dies ist das Standardverhalten.  
+-   Zum Exportieren von Metadaten für alle kompilierten Dienstverträge für eine Assemblygruppe mithilfe von "Svcutil.exe" geben Sie die Assemblys als Eingabeparameter an. Dies ist das Standardverhalten.  
   
--   Zum Exportieren von Metadaten für einen kompilierten Dienst mithilfe von "Svcutil.exe" geben Sie die Dienstassembly bzw. \-assemblys als Eingabeparameter an.Sie müssen die `/serviceName`\-Option verwenden, um den Konfigurationsnamen des Diensts anzugeben, den Sie exportieren möchten."Svcutil.exe" lädt die Konfigurationsdatei für die angegebene ausführbare Assembly automatisch.  
+-   Zum Exportieren von Metadaten für einen kompilierten Dienst mithilfe von "Svcutil.exe" geben Sie die Dienstassembly bzw. -assemblys als Eingabeparameter an. Sie müssen die `/serviceName`-Option verwenden, um den Konfigurationsnamen des Diensts anzugeben, den Sie exportieren möchten. "Svcutil.exe" lädt die Konfigurationsdatei für die angegebene ausführbare Assembly automatisch.  
   
--   Um alle Datenvertragstypen innerhalb einer Assemblygruppe zu exportieren, verwenden Sie die `/dataContractOnly`\-Option.  
+-   Um alle Datenvertragstypen innerhalb einer Assemblygruppe zu exportieren, verwenden Sie die `/dataContractOnly`-Option.  
   
 > [!NOTE]
->  Zum Angeben von Dateipfaden zu abhängigen Assemblys verwenden Sie die `/reference`\-Option.  
+>  Zum Angeben von Dateipfaden zu abhängigen Assemblys verwenden Sie die `/reference`-Option.  
   
-### So exportieren Sie Metadaten für kompilierte Dienstverträge  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a>So exportieren Sie Metadaten für kompilierte Dienstverträge  
   
 1.  Kompilieren Sie die Dienstvertragsimplementierungen in eine oder mehrere Klassenbibliotheken.  
   
 2.  Führen Sie "Svcutil.exe" auf den kompilierten Assemblys aus.  
   
     > [!NOTE]
-    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`\-Schalter verwenden.  
+    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
     ```  
     svcutil.exe Contracts.dll  
     ```  
   
-### So exportieren Sie Metadaten füreinen kompilierten Dienst  
+### <a name="to-export-metadata-for-a-compiled-service"></a>So exportieren Sie Metadaten füreinen kompilierten Dienst  
   
 1.  Kompilieren Sie die Dienstimplementierung in eine ausführbare Assembly.  
   
 2.  Erstellen Sie eine Konfigurationsdatei für die ausführbare Dienstdatei, und fügen Sie eine Dienstkonfiguration hinzu.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.serviceModel>  
@@ -60,30 +63,30 @@ caps.handback.revision: 8
     </configuration>  
     ```  
   
-3.  Zum Angeben des Konfigurationsnamen des Diensts führen Sie "Svcutil.exe" für die kompilierte ausführbare Dienstdatei mithilfe des `/serviceName`\-Schalters aus.  
+3.  Zum Angeben des Konfigurationsnamen des Diensts führen Sie "Svcutil.exe" für die kompilierte ausführbare Dienstdatei mithilfe des `/serviceName`-Schalters aus.  
   
     > [!NOTE]
-    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`\-Schalter verwenden.  
+    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### So exportieren Sie Metadaten für kompilierte Datenverträge  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a>So exportieren Sie Metadaten für kompilierte Datenverträge  
   
 1.  Kompilieren Sie die Datenvertragsimplementierungen in eine oder mehrere Klassenbibliotheken.  
   
-2.  Führen Sie "Svcutil.exe" für die kompilierten Assemblys mithilfe des `/dataContract`\-Schalters aus, um anzugeben, dass nur Metadaten für Datenverträge generiert werden sollen.  
+2.  Führen Sie "Svcutil.exe" für die kompilierten Assemblys mithilfe des `/dataContract`-Schalters aus, um anzugeben, dass nur Metadaten für Datenverträge generiert werden sollen.  
   
     > [!NOTE]
-    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`\-Schalter verwenden.  
+    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie Metadaten für eine einfache Dienstimplementierung und \-konfiguration generiert werden.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie Metadaten für eine einfache Dienstimplementierung und -konfiguration generiert werden.  
   
  So exportieren Sie Metadaten für den Dienstvertrag  
   
@@ -167,9 +170,8 @@ public class MyService : IPersonFinder
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Siehe auch  
- [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
+## <a name="see-also"></a>Siehe auch  
+ [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

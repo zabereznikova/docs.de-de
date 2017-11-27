@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71634018e42ad66fdd2d03d0b0d496394cde801e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange-MDA
 Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird durch eines der folgenden zwei Probleme aktiviert:  
@@ -50,7 +43,7 @@ Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird
   
 ## <a name="cause"></a>Ursache  
   
--   Der Thread wurde zuvor in einen anderen COM-Apartmentzustand initialisiert. Beachten Sie, dass ein Apartmentzustand eines Threads explizit oder implizit festgelegt werden kann. Zu den expliziten Vorgängen zählen die <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName>-Eigenschaft und die <xref:System.Threading.Thread.SetApartmentState%2A>- und <xref:System.Threading.Thread.TrySetApartmentState%2A>-Methoden. Ein Thread, der mit der <xref:System.Threading.Thread.Start%2A>-Methode erstellt wurde, wird implizit auf <xref:System.Threading.ApartmentState.MTA> festgelegt, wenn <xref:System.Threading.Thread.SetApartmentState%2A> vor dem Start des Threads aufgerufen wird. Der Hauptthread der Anwendung wird ebenfalls implizit auf <xref:System.Threading.ApartmentState.MTA> initialisiert, sofern das <xref:System.STAThreadAttribute>-Attribut für die Hauptmethode angegeben ist.  
+-   Der Thread wurde zuvor in einen anderen COM-Apartmentzustand initialisiert. Beachten Sie, dass ein Apartmentzustand eines Threads explizit oder implizit festgelegt werden kann. Zu den expliziten Vorgängen zählen die <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Threading.Thread.SetApartmentState%2A>- und <xref:System.Threading.Thread.TrySetApartmentState%2A>-Methoden. Ein Thread, der mit der <xref:System.Threading.Thread.Start%2A>-Methode erstellt wurde, wird implizit auf <xref:System.Threading.ApartmentState.MTA> festgelegt, wenn <xref:System.Threading.Thread.SetApartmentState%2A> vor dem Start des Threads aufgerufen wird. Der Hauptthread der Anwendung wird ebenfalls implizit auf <xref:System.Threading.ApartmentState.MTA> initialisiert, sofern das <xref:System.STAThreadAttribute>-Attribut für die Hauptmethode angegeben ist.  
   
 -   Die `CoUninitialize`-Methode (oder die `CoInitializeEx`-Methode) wird mit einem anderen Parallelitätsmodell für den Thread aufgerufen.  
   
@@ -93,7 +86,6 @@ namespace ApartmentStateMDA
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
-

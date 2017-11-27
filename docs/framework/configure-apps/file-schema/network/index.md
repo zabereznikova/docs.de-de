@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
 - sending data, network configuration elements
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a101b3d6ebf1c884bce08077a1138a4ab6376d1f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ca4a0000d85c8fbac9a723beeda51f9c7886ed8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-settings-schema"></a>Netzwerkeinstellungsschema
 Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem Internet hergestellt werden. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<system.Net>-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -46,7 +39,7 @@ Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem
 |[\<defaultProxy>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Gibt den Proxyserver an, der für HTTP-Anforderungen an das Internet verwendet wird.|  
 |[\<mailSettings>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Enthält Einstellungen für E-Mail-Sendeoptionen.|  
 |[\<requestCaching>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Gibt die Module an, die zum Anfordern von Informationen von Internethosts verwendet werden.|  
-|[\<requestCaching>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=fullName>-Namespace.|  
+|[\<requestCaching>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.|  
 |[\<webRequestModules>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module an, die zum Anfordern von Informationen von Internethosts verwendet werden.|  
   
  URI-Einstellungen geben an, wie .NET Framework Webadressen behandelt, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<Uri>-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  
@@ -58,6 +51,5 @@ Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem
 |[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Configuring Internet Applications (Konfigurieren von Internetanwendungen)](../../../../../docs/framework/network-programming/configuring-internet-applications.md)   
+ [Konfigurieren von Internetanwendungen](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-

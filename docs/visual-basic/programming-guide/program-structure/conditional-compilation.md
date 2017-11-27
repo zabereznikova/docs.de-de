@@ -1,83 +1,77 @@
 ---
-title: "Conditional Compilation in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conditional compilation, about conditional compilation"
-  - "compilation, conditional"
+title: Bedingte Kompilierung in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- conditional compilation [Visual Basic], about conditional compilation
+- compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Conditional Compilation in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Bei der *bedingten Kompilierung* werden besondere Codeblöcke in einem Programm selektiv kompiliert, während andere ignoriert werden.  
+# <a name="conditional-compilation-in-visual-basic"></a>Bedingte Kompilierung in Visual Basic
+In *bedingte Kompilierung*, selektiv bestimmter Codeblöcke in einem Programm kompiliert werden, während andere ignoriert werden.  
   
- Sie kann beispielsweise eingesetzt werden, wenn Sie Debuganweisungen schreiben möchten, die die Geschwindigkeit verschiedener Herangehensweisen an ein und dieselbe Programmieraufgabe vergleichen, oder eine Anwendung für mehrere Sprachen lokalisieren möchten.  Bedingte Kompilierungsanweisungen sind so konzipiert, dass sie nicht zur Laufzeit, sondern während der Kompilierung durchgeführt werden können.  
+ Sie möchten z. B. Schreiben Debuggen von Anweisungen, die die Geschwindigkeit des unterschiedliche Ansätze zur gleichen Programmiertask, oder Sie vergleichen kann eine Anwendung für mehrere Sprachen lokalisieren möchten. Anweisungen für die bedingte Kompilierung dienen während der Zeitpunkt der Kompilierung nicht zur Laufzeit ausgeführt.  
   
- Sie geben Codeblöcke an, die mit der `#If...Then...#Else`\-Direktive bedingt kompiliert werden sollen.  Um beispielsweise Versionen einer Anwendung aus demselben Quellcode in französischer und deutscher Sprache zu erstellen, müssen Sie plattformspezifische Codesegmente unter Verwendung der vordefinierten Konstanten `FrenchVersion` und `GermanVersion` in `#If...Then`\-Anweisungen einbetten.  Dies wird im folgenden Beispiel veranschaulicht:  
+ Sie kennzeichnen die Codeblöcke mit bedingt kompiliert werden die `#If...Then...#Else` Richtlinie. Z. B. Französisch und Deutsch-Sprache erstellen Versionen der gleichen Anwendung aus dem Quellcode, die Sie plattformspezifischen Codesegmente im einbetten `#If...Then` Anweisungen, die mithilfe der definierten Konstanten `FrenchVersion` und `GermanVersion`. Im folgende Beispiel wird veranschaulicht, wie:  
   
  [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
- Wenn Sie den Wert der `FrenchVersion`\-Konstanten für bedingte Kompilierung während der Kompilierung auf `True` festlegen, wird der bedingte Code für die französische Version kompiliert.  Wenn Sie den Wert der `GermanVersion`\-Konstanten auf `True` festlegen, verwendet der Compiler die deutsche Version.  Wenn keine der Konstanten auf `True` festgelegt wurde, wird der Code aus dem letzten `Else`\-Block ausgeführt.  
+ Wenn Sie den Wert der Festlegen der `FrenchVersion` Konstante für bedingte Kompilierung zu `True` zum Zeitpunkt der Kompilierung wird der bedingte Code für die französische Version kompiliert. Wenn Sie den Wert der Festlegen der `GermanVersion` zu Konstante `True`, verwendet der Compiler die deutsche Version. Wenn keine, um festgelegt ist `True`, den Code in den letzten `Else` -Block ausgeführt.  
   
 > [!NOTE]
->  Die automatische Vervollständigung funktioniert beim Bearbeiten von Code und beim Verwenden von bedingten Kompilierungsdirektiven nicht, wenn der Code nicht Bestandteil der aktuellen Verzweigung ist.  
+>  Automatische Vervollständigung wird not-Funktion beim Bearbeiten von code und bedingten Kompilierungsdirektiven verwenden, wenn der Code nicht Teil des aktuellen Branch ist.  
   
-## Deklarieren von bedingten Kompilierungskonstanten  
- Für die Festlegung bedingter Kompilierungskonstanten gibt es drei Möglichkeiten:  
+## <a name="declaring-conditional-compilation-constants"></a>Deklarieren von Konstanten für die bedingte Kompilierung  
+ Sie können die Konstanten für die bedingte Kompilierung in eine von drei Arten festlegen:  
   
--   Im **Projekt\-Designer**  
+-   In der **Projekt-Designer**  
   
--   Bei Verwendung des Befehlszeilencompilers in der Befehlszeile  
+-   In der Befehlszeile, die bei Verwendung des Befehlszeilencompilers  
   
--   Im Code  
+-   Im code  
   
- Bedingte Kompilierungskonstanten verfügen über einen bestimmten Gültigkeitsbereich und können nicht vom Standardcode aus aufgerufen werden.  Der Gültigkeitsbereich einer bedingten Kompilierungskonstante ist davon abhängig, wie sie eingerichtet wurde.  In der folgenden Tabelle werden die Gültigkeitsbereiche von Konstanten aufgelistet, die jeweils mit einer der oben genannten Möglichkeiten deklariert wurden.  
+ Bedingte Kompilierungskonstanten haben einen bestimmten Gültigkeitsbereich und können nicht aus der Standardcode zugegriffen werden. Der Bereich, der eine Konstante für bedingte Kompilierung ist abhängig von die Möglichkeit, die sie festgelegt ist. Die folgende Tabelle enthält den Bereich der Konstanten, die mit jeder der drei oben genannten Methoden deklariert werden.  
   
-|||  
-|-|-|  
-|Festlegung der Konstante|Gültigkeitsbereich der Konstante|  
-|**Projekt\-Designer**|Öffentlich für alle Dateien des Projekts|  
-|Befehlszeile|Öffentlich für alle Dateien, die an den Befehlszeilencompiler übergeben wurden|  
-|`#Const`\-Anweisung im Code|Privat für die Datei, in der sie deklariert wurde|  
+|Wie Konstante festgelegt wird|Umfang der Konstante|  
+|---|---|  
+|**Projekt-Designer**|Öffentlich für alle Dateien im Projekt|  
+|Über die Befehlszeile|Öffentlich für alle Dateien, die für den Befehlszeilencompiler übergeben|  
+|`#Const`die Anweisung im code|Für die Datei, in der sie deklariert ist, privat|  
   
-||  
-|-|  
-|So legen Sie Konstanten im Projekt\-Designer fest|  
-|-   Bevor Sie die ausführbare Datei erstellen, müssen Sie im **Projekt\-Designer** Konstanten festlegen. Folgen Sie hierfür den unter [Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67) angegebenen Schritten.|  
+|So legen Sie Konstanten in den Projekt-Designer fest|  
+|---|  
+|-Bevor die ausführbare Datei erstellen, legen Sie Konstanten in der **Projekt-Designer** gemäß den Schritten [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties).|  
   
-||  
-|-|  
-|So legen Sie in der Befehlszeile Konstanten fest|  
-|-   Verwenden Sie den **\/d**\-Schalter, um bedingte Kompilierungskonstanten einzugeben \(siehe folgendes Beispiel\):<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Zwischen dem **\/d**\-Schalter und der ersten Konstanten muss kein Leerzeichen stehen.  Weitere Informationen finden Sie unter [\/define](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Befehlszeilendeklarationen überschreiben die im **Projekt\-Designer** eingegebenen Deklarationen, löschen diese jedoch nicht.  Die im **Projekt\-Designer** festgelegten Argumente bleiben für spätere Kompilierungen wirksam.<br />     Wenn Konstanten in den Code selbst geschrieben werden, gibt es keine strengen Regeln bezüglich ihrer Platzierung, da ihr Gültigkeitsbereich das gesamte Modul umfasst, in dem sie deklariert wurden.|  
+|Konstanten in der Befehlszeile festlegen|  
+|---|  
+|– Verwenden Sie die **/d** Switch Konstanten für die bedingte Kompilierung wie im folgenden Beispiel eingeben:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Kein Speicherplatz ist erforderlich, zwischen den **/d** Switch und das erste Konstante. Weitere Informationen finden Sie unter [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Befehlszeile-Deklarationen überschreiben eingegebenen Deklarationen der **Projekt-Designer**, aber nicht gelöscht werden können. Legen Sie die Argumente **Projekt-Designer** bleiben für nachfolgende Kompilierungen wirksam.<br />     Wenn Konstanten im Code selbst schreiben, sind es keine strenge Regeln hinsichtlich ihrer Platzierung seit deren Bereich das gesamte Modul ist in dem sie deklariert werden.|  
   
-||  
-|-|  
-|So legen Sie Konstanten im Code fest|  
-|-   Fügen Sie die Konstanten in den Deklarationsblock des Moduls ein, in dem sie verwendet werden.  Dadurch bleibt der Code geordnet und ist leichter zu lesen.|  
+|Um Konstanten im Code festgelegt werden.|  
+|---|  
+|-Fügen Sie die Konstanten in der Deklarationsblock des Moduls, in dem sie verwendet werden. Dadurch wird Ihr Code organisiert und leichter lesbar bleibt.|  
   
-## Verwandte Themen  
+## <a name="related-topics"></a>Verwandte Themen  
   
-|||  
-|-|-|  
 |Titel|Beschreibung|  
-|[Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Gibt Möglichkeiten dafür vor, wie Sie den Code so gestalten können, dass er einfacher zu lesen und zu verwalten ist.|  
+|---|---|  
+|[Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Enthält Vorschläge für erleichtert die Ihren Code lesen und zu verwalten.|  
   
-## Verweis  
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)  
+## <a name="reference"></a>Verweis  
+ [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)  
   
- [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else-Anweisungen](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [\/define](../../../visual-basic/reference/command-line-compiler/define.md)
+ [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

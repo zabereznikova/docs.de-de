@@ -1,80 +1,82 @@
 ---
-title: "&lt;remove&gt;-Element f&#252;r webRequestModules (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove>-Element, webRequestModules"
-  - "<webRequestModules>, remove-Element"
-  - "remove-Element, webRequestModules"
-  - "webRequestModules, remove-Element"
+title: '&lt;Entfernen Sie&gt; WebRequestModules (Network Settings)-Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- remove element, webRequestModules
+- webRequestModules, remove element
+- <remove> element, webRequestModules
+- <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 43f0d30f8c18c4755f31d0c851c773207bc15b78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;remove&gt;-Element f&#252;r webRequestModules (Netzwerkeinstellungen)
-Entfernt eine benutzerdefinierte Webanforderung aus der Anwendung.  
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Entfernen Sie&gt; WebRequestModules (Network Settings)-Element
+Entfernt ein benutzerdefiniertes Web-Request-Modul aus der Anwendung an.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<WebRequestModules >  
+\<Entfernen >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <remove   
-  name = "URI prefix"   
+```xml  
+<remove   
+  prefix="URI prefix"   
 />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|`name`|Das URI\-Präfix für von diesem Webanforderungsmodul behandelte Anforderungen.|  
+|**Attribut**|**Beschreibung**|  
+|-------------------|---------------------|  
+|`prefix`|Das URI-Präfix für Anforderungen, die von dieser Anforderung Webmodul behandelt werden soll.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die zum Anfordern von Informationen von Netzwerkhosts verwendeten Module an.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen von Netzwerkhosts anfordern.|  
   
-## Hinweise  
- Das `remove`\-Element entfernt das registrierte Webanforderungsmodul für das angegebene URI\-Präfix.  
+## <a name="remarks"></a>Hinweise  
+ Die `remove` -Element entfernt die registrierte Webmodul für die Anforderung für das angegebene URI-Präfix.  
   
- Der Wert für das `prefix`\-Attribut sollten die ersten Zeichen einer gültigen URI sein – z. B. "http" oder "http:\/\/www.contoso.com".  
+ Der Wert für die `prefix` Attribut muss die ersten Zeichen ein gültiger URI – z. B. "http" oder "http://www.contoso.com".  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird das bereits vorhandene Webanforderungsmodul für HTTP entfernt und dann ein neues, benutzerdefiniertes Webanforderungsmodul für HTTP\-Anforderungen an www.contoso.com registriert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel entfernt die vorhandene Anforderung Webmodul für HTTP und registriert dann ein neue benutzerdefiniertes Web Anforderung-Modul für HTTP-Anforderungen an www.contoso.com.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
-      <remove prefix = "http">  
+      <remove prefix="http">  
       <add prefix="http"  
            type="System.Net.HttpRequestCreator, System, Version=2.0.3600.0,  
            Culture=neutral, PublicKeyToken=b77a5c561934e089"  
@@ -84,6 +86,6 @@ Entfernt eine benutzerdefinierte Webanforderung aus der Anwendung.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.WebRequest>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.WebRequest>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

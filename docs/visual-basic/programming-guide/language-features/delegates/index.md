@@ -1,45 +1,27 @@
 ---
 title: Delegaten (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="delegates-visual-basic"></a>Delegaten (Visual Basic)
-Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktionszeigern sind [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Delegaten jedoch ein Verweistyp basierend auf der Klasse <xref:System.Delegate?displayProperty=fullName>. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.  
+Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktionszeigern sind [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Delegaten jedoch ein Verweistyp basierend auf der Klasse <xref:System.Delegate?displayProperty=nameWithType>. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.  
   
 ## <a name="delegates-and-events"></a>Delegaten und Ereignisse  
  Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht die dynamische Zuordnung von Ereignishandlern zu Ereignissen, indem ein Delegat für Sie erstellt wird, wenn Sie die `AddHandler`-Anweisung verwenden. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.  
@@ -91,4 +73,3 @@ Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typ
 |[Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Veranschaulicht, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.|  
 |[Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Beschreibt, wie Subs und Funktionen Delegaten oder Handlern zugewiesen werden können, auch wenn deren Signaturen nicht identisch sind.|  
 |[Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)|Stellt eine Übersicht über Ereignisse in Visual Basic bereit.|
-

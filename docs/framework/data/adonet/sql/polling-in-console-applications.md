@@ -1,32 +1,36 @@
 ---
-title: "Abrufe in Konsolenanwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Abrufen in Konsolenanwendungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Abrufe in Konsolenanwendungen
-Mithilfe asynchroner Vorgänge in ADO.NET können Sie zeitaufwändige Datenbankvorgänge in einem Thread initiieren, während andere Aufgaben in einem anderen Thread ausgeführt werden.  In den meisten Szenarien gelangen Sie jedoch schließlich an einen Punkt, an dem die Anwendung nicht weiter ausgeführt werden kann, bis der Datenbankvorgang abgeschlossen ist.  In solchen Fällen kann durch Abrufen des asynchronen Vorgangs ermittelt werden, ob der Vorgang abgeschlossen ist oder nicht.  
+# <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen
+Mithilfe asynchroner Vorgänge in ADO.NET können Sie zeitaufwändige Datenbankvorgänge in einem Thread initiieren, während andere Aufgaben in einem anderen Thread ausgeführt werden. In den meisten Szenarien gelangen Sie jedoch schließlich an einen Punkt, an dem die Anwendung nicht weiter ausgeführt werden kann, bis der Datenbankvorgang abgeschlossen ist. In solchen Fällen kann durch Abrufen des asynchronen Vorgangs ermittelt werden, ob der Vorgang abgeschlossen ist oder nicht.  
   
- Mithilfe der <xref:System.IAsyncResult.IsCompleted%2A>\-Eigenschaft kann der Status des Vorgangs \(abgeschlossen oder nicht\) festgestellt werden.  
+ Mithilfe der <xref:System.IAsyncResult.IsCompleted%2A>-Eigenschaft kann der Status des Vorgangs (abgeschlossen oder nicht) festgestellt werden.  
   
-## Beispiel  
- Mit der folgenden Konsolenanwendung werden Daten innerhalb der **AdventureWorks**\-Beispieldatenbank unter Verwendung eines asynchronen Vorgangs aktualisiert.  Zum Emulieren eines Vorgangs mit langer Laufzeit wird in diesem Beispiel eine WAITFOR\-Anweisung im Befehlstext eingefügt.  In der Regel wird eine verlangsamte Ausführung der Befehle nicht beabsichtigt. In diesem Fall vereinfacht eine solche Vorgehensweise jedoch die Veranschaulichung asynchronen Verhaltens.  
+## <a name="example"></a>Beispiel  
+ Die folgende Konsolenanwendung aktualisiert die Daten innerhalb der **AdventureWorks** Beispieldatenbank, die Verwendung eines asynchronen Vorgangs. Zum Emulieren eines Vorgangs mit langer Laufzeit wird in diesem Beispiel eine WAITFOR-Anweisung im Befehlstext eingefügt. In der Regel wird eine verlangsamte Ausführung der Befehle nicht beabsichtigt. In diesem Fall vereinfacht eine solche Vorgehensweise jedoch die Veranschaulichung asynchronen Verhaltens.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## Siehe auch  
- [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

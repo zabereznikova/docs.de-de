@@ -1,71 +1,73 @@
 ---
-title: "&lt;shadowCopyVerifyByTimestamp&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<shadowCopyTimeStampVerification>-Element"
-  - "shadowCopyTimeStampVerification-Element"
+title: '&lt;ShadowCopyVerifyByTimestamp&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <shadowCopyTimeStampVerification> element
+- shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 261962819e9b2b37682a13bffb53d2912a660566
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;shadowCopyVerifyByTimestamp&gt;-Element
-Gibt an, ob das Schattenkopieren das in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] eingeführte Standardstartverhalten verwenden soll oder verwendet das Startverhalten der früheren Versionen von .NET Framework.  
+# <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;ShadowCopyVerifyByTimestamp&gt; Element
+Gibt an, ob die Schattenkopiefunktion das in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] eingeführte Standardstartverhalten verwendet oder auf das Startverhalten früherer Versionen von .NET Framework zurückgreift.  
   
-## Syntax  
+ \<Konfiguration >-Element  
+\<Common Language Runtime >-Element  
+\<ShadowCopyVerifyByTimestamp >-Element  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <shadowCopyVerifyByTimestamp enabled="true|false" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob Anwendungsdomänen, die Schattenkopien verwenden, beim Starten Assemblyzeitstempel vergleichen, um zu bestimmen, ob eine Assembly vor dem Schattenkopieren der Assembly aktualisiert wurde.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob Anwendungsdomänen, die Schattenkopiefunktion verwenden Assembly Zeitstempel, beim Starten vergleichen zu bestimmen, ob eine Assembly aktualisiert wurde, bevor Sie die Assembly für die Schattenkopiefunktion.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|true|Bei Start werden nur Assemblys kopiert, die aktualisiert wurden, nachdem sie zuletzt in das Schattenkopieverzeichnis kopiert wurden.  Dies ist der Standard für [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
-|false|Setzt auf das Startverhalten \(alle Dateien beim Start kopieren\) der früheren Versionen von .NET Framework zurück.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|true|Beim Start kopiert wird nur für Assemblys, die aktualisiert wurden, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden. Dies ist die Standardeinstellung für die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
+|false|Wird auf das Startverhalten vorheriger Versionen von .NET Framework, dem wurde so kopieren Sie alle Dateien beim Start.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Mit dem [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] beginnend, sind Assemblys nur Schattenkopien, wenn ihre Zeitstempel angeben, dass sie sich geändert haben, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden.  Dies verbessert Startzeiten für zahlreiche Anwendungen, die Schattenkopien verwenden \(siehe [Erstellen von Schattenkopien von Assemblys](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)\).  Anwendungen, die einen hohen Prozentsatz und eine Häufigkeit von Assemblyaktualisierungen haben, profitieren könnten möglicherweise nicht von dieser Änderung im Verhalten.  In diesem Fall können Sie dieses Element verwenden, um das Verhalten der früheren Versionen des .NET Framework wiederherstellen.  
+## <a name="remarks"></a>Hinweise  
+ Beginnend mit der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], Assemblys sind Schattenkopien nur, wenn ihre Zeitstempel angeben, dass sie geändert wurden, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden. Dies verbessert die Startzeiten für viele Anwendungen, die von Schattenkopien zu verwenden, wie in beschrieben [von Schattenkopien von Assemblys](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Anwendungen, die einen hohen Prozentsatz und die Häufigkeit der Assemblyaktualisierungen verfügen möglicherweise nicht von dieser Änderung im Verhalten profitieren. In diesem Fall können Sie dieses Element verwenden, um das Verhalten von früheren Versionen von .NET Framework wiederherzustellen.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie das Startverhalten des Schattenkopierens in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] deaktiviert und auf das Startverhalten vorheriger Versionen von .NET Framework gesetzt wird.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie das standardmäßige Startverhalten der Schattenkopiefunktion Deaktivieren der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], und kehren Sie zu das Startverhalten vorheriger Versionen von .NET Framework.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <shadowCopyVerifyByTimestamp enabled="false" />  
@@ -73,7 +75,7 @@ Gibt an, ob das Schattenkopieren das in [!INCLUDE[net_v40_long](../../../../../i
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Erstellen von Schattenkopien von Assemblys](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

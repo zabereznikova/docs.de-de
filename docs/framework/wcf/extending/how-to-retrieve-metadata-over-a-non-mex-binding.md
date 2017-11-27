@@ -1,29 +1,32 @@
 ---
-title: "Vorgehensweise: Abrufen von Metadaten &#252;ber eine Nicht-MEX-Bindung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Abrufen von Metadaten über eine Nicht-MEX-Bindung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f214c45ea09c96d5cb77646f31b7c53338761621
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Abrufen von Metadaten &#252;ber eine Nicht-MEX-Bindung
-In diesem Thema wird beschrieben, wie Metadaten über eine Nicht\-MEX\-Bindung von einem MEX\-Endpunkt abgerufen werden.In diesem Beispiel basiert der Code auf dem [Benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)\-Beispiel.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Vorgehensweise: Abrufen von Metadaten über eine Nicht-MEX-Bindung
+In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von einem MEX-Endpunkt abgerufen werden. Der Code in diesem Beispiel basiert auf der [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Beispiel.  
   
-### So rufen Sie Metadaten über eine Nicht\-MEX\-Bindung ab  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>So rufen Sie Metadaten über eine Nicht-MEX-Bindung ab  
   
-1.  Bestimmen Sie die vom MEX\-Endpunkt verwendete Bindung.Für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienste können Sie die MEX\-Bindung ermitteln, indem Sie die Konfigurationsdatei des Diensts aufrufen.In diesem Fall wird die MEX\-Bindung in der folgenden Dienstkonfiguration definiert.  
+1.  Bestimmen Sie die vom MEX-Endpunkt verwendete Bindung. Für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste können Sie die MEX-Bindung ermitteln, indem Sie die Konfigurationsdatei des Diensts aufrufen. In diesem Fall wird die MEX-Bindung in der folgenden Dienstkonfiguration definiert.  
   
-    ```  
+    ```xml  
     <services>  
         <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
                 behaviorConfiguration="CalculatorServiceBehavior">  
@@ -55,9 +58,9 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht\-MEX\-Bindung v
      </bindings>  
     ```  
   
-2.  Konfigurieren Sie in der Clientkonfigurationsdatei die gleiche benutzerdefinierte Bindung.Hier definiert der Client auch ein `clientCredentials`\-Verhalten, um ein Zertifikat bereitzustellen, das beim Abrufen von Metadaten vom MEX\-Endpunkt für die Authentifizierung am Dienst verwendet wird.Wenn Sie "Svcutil.exe" zum Anfordern von Metadaten über eine benutzerdefinierte Bindung verwenden, sollten Sie die MEX\-Endpunktkonfiguration der Konfigurationsdatei für "Svcutil.exe" \(Svcutil.exe.config\) hinzufügen. Der Name der Endpunktkonfiguration sollte dann mit dem URI\-Schema der MEX\-Endpunktadresse übereinstimmen, wie im folgenden Code dargestellt:  
+2.  Konfigurieren Sie in der Clientkonfigurationsdatei die gleiche benutzerdefinierte Bindung. Hier definiert der Client auch ein `clientCredentials`-Verhalten, um ein Zertifikat bereitzustellen, das beim Abrufen von Metadaten vom MEX-Endpunkt für die Authentifizierung am Dienst verwendet wird. Wenn Sie "Svcutil.exe" zum Anfordern von Metadaten über eine benutzerdefinierte Bindung verwenden, sollten Sie die MEX-Endpunktkonfiguration der Konfigurationsdatei für "Svcutil.exe" (Svcutil.exe.config) hinzufügen. Der Name der Endpunktkonfiguration sollte dann mit dem URI-Schema der MEX-Endpunktadresse übereinstimmen, wie im folgenden Code dargestellt:  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <client>  
         <endpoint name="http"  
@@ -90,7 +93,7 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht\-MEX\-Bindung v
     </system.serviceModel>  
     ```  
   
-3.  Erstellen Sie einen `MetadataExchangeClient`, und rufen Sie `GetMetadata` auf.Dazu stehen zwei Methoden zur Verfügung: Sie können die benutzerdefinierte Bindung in der Konfiguration angeben oder die benutzerdefinierte Bindung im Code, wie im folgenden Beispiel gezeigt:  
+3.  Erstellen Sie einen `MetadataExchangeClient`, und rufen Sie `GetMetadata` auf. Dazu stehen zwei Methoden zur Verfügung: Sie können die benutzerdefinierte Bindung in der Konfiguration angeben oder die benutzerdefinierte Bindung im Code, wie im folgenden Beispiel gezeigt:  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -121,14 +124,14 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht\-MEX\-Bindung v
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  Erstellen Sie ein `WsdlImporter`\-Element, und rufen Sie `ImportAllEndpoints` auf, wie im folgenden Code gezeigt.  
+4.  Erstellen Sie ein `WsdlImporter`-Element, und rufen Sie `ImportAllEndpoints` auf, wie im folgenden Code gezeigt.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  An diesem Punkt verfügen Sie über eine Auflistung von Dienstendpunkten.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Importieren von Metadaten finden Sie unter [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  An diesem Punkt verfügen Sie über eine Auflistung von Dienstendpunkten. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Importieren von Metadaten, finden Sie unter [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)

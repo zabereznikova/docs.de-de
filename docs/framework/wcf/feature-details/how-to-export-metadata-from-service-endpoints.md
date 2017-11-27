@@ -1,39 +1,45 @@
 ---
-title: "Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d076878f31d162713feaecc0a92c2f6f534897b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten
 In diesem Thema wird erklärt, wie Sie Metadaten aus Dienstendpunkten exportieren.  
   
-### So exportieren Sie Metadaten aus Dienstendpunkten  
+### <a name="to-export-metadata-from-service-endpoints"></a>So exportieren Sie Metadaten aus Dienstendpunkten  
   
-1.  Erstellen Sie ein neues Visual Studio\-Konsolenanwendungsprojekt.  Fügen Sie den in den folgenden Schritten gezeigten Code der erzeugten Datei "Program.cs" innerhalb der main\(\)\-Methode hinzu.  
+1.  Erstellen Sie ein neues Visual Studio-Konsolenanwendungsprojekt. Fügen Sie den in den folgenden Schritten gezeigten Code der erzeugten Datei "Program.cs" innerhalb der main()-Methode hinzu.  
   
 2.  Erstellen Sie eine <xref:System.ServiceModel.Description.WsdlExporter>.  
   
      [!code-csharp[S_UEWsdlExporter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#1)]
      [!code-vb[S_UEWsdlExporter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#1)]  
   
-3.  Legen Sie die <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A>\-Eigenschaft auf einen der <xref:System.ServiceModel.Description.PolicyVersion>\-Enumerationswerte fest.  In diesem Beispiel wird der Wert auf <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> festgelegt. Dies entspricht der WS\-Richtlinie 1.5.  
+3.  Legen Sie die <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A>-Eigenschaft auf einen der <xref:System.ServiceModel.Description.PolicyVersion>-Enumerationswerte fest. In diesem Beispiel wird der Wert auf <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> festgelegt. Dies entspricht der WS-Richtlinie 1.5.  
   
      [!code-csharp[S_UEWsdlExporter#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#2)]
      [!code-vb[S_UEWsdlExporter#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#2)]  
   
-4.  Erstellen Sie ein Array mit <xref:System.ServiceModel.Description.ServiceEndpoint>\-Objekten.  
+4.  Erstellen Sie ein Array mit <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten.  
   
      [!code-csharp[S_UEWsdlExporter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#3)]
      [!code-vb[S_UEWsdlExporter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#3)]  
@@ -48,18 +54,18 @@ In diesem Thema wird erklärt, wie Sie Metadaten aus Dienstendpunkten exportiere
      [!code-csharp[S_UEWsdlExporter#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#5)]
      [!code-vb[S_UEWsdlExporter#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#5)]  
   
-7.  Sie können die Metadaten jetzt verwenden, beispielsweise indem Sie sie mithilfe eines Aufrufs der <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29>\-Methode in eine Datei schreiben.  
+7.  Sie können die Metadaten jetzt verwenden, beispielsweise indem Sie sie mithilfe eines Aufrufs der <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29>-Methode in eine Datei schreiben.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Unten ist die vollständige Codeauflistung für dieses Beispiel angegeben.  
   
  [!code-csharp[S_UEWsdlExporter#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#0)]
  [!code-vb[S_UEWsdlExporter#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#0)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Verweisen Sie beim Kompilieren der Datei "Program.cs" auf "System.ServiceModel.dll".  
   
-## Siehe auch  
- [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)   
- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

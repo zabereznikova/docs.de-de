@@ -1,32 +1,35 @@
 ---
-title: "Hilfeseite zum WCF-Web-HTTP-Dienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Hilfeseite zum WCF-Web-HTTP-Dienst
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 96c54320c77de766f00bde1e560eb5b0f0df2671
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Hilfeseite zum WCF-Web-HTTP-Dienst
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF\-WEB\-HTTP\-Dienste bereit.Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs\- und Antwortformate sowie Schemas aufgeführt.Diese Funktionalität ist standardmäßig deaktiviert.Wenn ein Benutzer auf einen WCF\-WEB\-HTTP\-Dienst zugreift und an das Ende der URL den Zusatz "\/Help" anhängt \(z. B. "http:\/\/localhost:8000\/Customers\/Help"\), wird eine Hilfeseite angezeigt, die folgender Seite ähnelt.  
+# <a name="wcf-web-http-service-help-page"></a>Hilfeseite zum WCF-Web-HTTP-Dienst
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Wenn ein Benutzer auf einen WCF-WEB-HTTP-Dienst zugreift und an das Ende der URL den Zusatz "/Help" anhängt (z. B. "http://localhost:8000/Customers/Help"), wird eine Hilfeseite angezeigt, die folgender Seite ähnelt.  
   
- ![WCF REST&#45;Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.png "WCFRESTHELPPAGEMAIN")  
+ ![WCF REST-Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
- Benutzer können dann auf alle Methoden klicken, die auf der Hilfeseite aufgeführt sind. Außerdem wird für den jeweiligen Vorgang eine Seite angezeigt, die weitere Informationen zur Methode enthält, beispielsweise Nachrichtenformate und Beispielantworten.Das folgende Bild ist ein Beispiel für eine Hilfeseite einer Methode.  
+ Benutzer können dann auf alle Methoden klicken, die auf der Hilfeseite aufgeführt sind. Außerdem wird für den jeweiligen Vorgang eine Seite angezeigt, die weitere Informationen zur Methode enthält, beispielsweise Nachrichtenformate und Beispielantworten. Das folgende Bild ist ein Beispiel für eine Hilfeseite einer Methode.  
   
- ![WCF REST&#45;Hilfeseitendetails](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.png "WCFRESTHELPPAGEDETAIL2")  
+ ![WCF REST-Hilfeseitendetails](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
-## Verwenden der WCF\-Web\-HTTP\-Hilfeseite  
- Die WCF\-WEB\-HTTP\-Hilfeseite zeigt für jeden Vorgang eine kurze Beschreibung an, sofern Sie mithilfe von <xref:System.ComponentModel.DescriptionAttribute> eine Beschreibung angegeben haben.Dieses Attribut verwendet eine Zeichenfolge, die eine kurze Beschreibung des Vorgangs enthält, auf den es angewendet wird.Der folgende Code veranschaulicht z. B., wie Sie <xref:System.ComponentModel.DescriptionAttribute> verwenden, um eine kurze Beschreibung bereitzustellen.  
+## <a name="using-the-wcf-web-http-help-page"></a>Verwenden der WCF-Web-HTTP-Hilfeseite  
+ Die WCF-WEB-HTTP-Hilfeseite zeigt für jeden Vorgang eine kurze Beschreibung an, sofern Sie mithilfe von <xref:System.ComponentModel.DescriptionAttribute> eine Beschreibung angegeben haben. Dieses Attribut verwendet eine Zeichenfolge, die eine kurze Beschreibung des Vorgangs enthält, auf den es angewendet wird. Der folgende Code veranschaulicht z. B., wie Sie <xref:System.ComponentModel.DescriptionAttribute> verwenden, um eine kurze Beschreibung bereitzustellen.  
   
 ```  
 [OperationContract]  
@@ -35,9 +38,9 @@ caps.handback.revision: 11
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- Um die WCF\-WEB\-HTTP\-Hilfeseite zu aktivieren, müssen Sie den Endpunkten des Diensts ein Endpunktverhalten hinzufügen.Dies kann per Konfiguration oder im Code erfolgen.Um die WCF\-WEB\-HTTP\-Hilfeseite per Konfiguration zu aktivieren, fügen Sie ein Endpunktverhalten mit einem `<webHttp>`\-Element hinzu, legen `enableHelp` auf `true` fest und fügen einen Endpunkt hinzu, für den Sie die Verwendung des Endpunktverhaltens konfigurieren.Dies ist im folgenden Konfigurationscode veranschaulicht.  
+ Um die WCF-WEB-HTTP-Hilfeseite zu aktivieren, müssen Sie den Endpunkten des Diensts ein Endpunktverhalten hinzufügen. Dies kann per Konfiguration oder im Code erfolgen. Um die WCF-WEB-HTTP-Hilfeseite per Konfiguration zu aktivieren, fügen Sie ein Endpunktverhalten mit einem `<webHttp>`-Element hinzu, legen `enableHelp` auf `true` fest und fügen einen Endpunkt hinzu, für den Sie die Verwendung des Endpunktverhaltens konfigurieren. Dies ist im folgenden Konfigurationscode veranschaulicht.  
   
-```  
+```xml  
 <endpointBehaviors>  
    <behavior name="RESTEndpointBehavior">  
       <webHttp enableHelp="true"/>  
@@ -52,7 +55,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Um die WCF\-Web\-HTTP\-Hilfeseite im Code zu aktivieren, fügen Sie einen Dienstendpunkt hinzu, fügen der Endpunkteinstellung <xref:System.ServiceModel.Description.WebHttpBehavior> hinzu und legen  <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A> auf `true` fest.Dies wird im folgenden Code veranschaulicht.  
+ Um die WCF-Web HTTP-Hilfeseite im Code zu aktivieren, fügen Sie einen Dienstendpunkt hinzu, und fügen eine <xref:System.ServiceModel.Description.WebHttpBehavior> die Endpunkt-Einstellung <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` auf `true`. Dies wird im folgenden Code veranschaulicht.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -63,12 +66,12 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- Die Hilfeseite verfügt über das Format XHTML mit Markup, das die verschiedenen Teile der Seite identifiziert.Dies ermöglicht Clients den programmgesteuerten Zugriff auf die Seite, indem <xref:System.Xml.Linq.XElement> oder andere XLinq\-APIs verwendet werden.  
+ Die Hilfeseite verfügt über das Format XHTML mit Markup, das die verschiedenen Teile der Seite identifiziert. Dies ermöglicht Clients den programmgesteuerten Zugriff auf die Seite, indem <xref:System.Xml.Linq.XElement> oder andere XLinq-APIs verwendet werden.  
   
-## Auf der WCF\-Web\-HTTP\-Hilfeseite für Dienste verwendete Schemas  
- Die folgenden Schemas werden auf der WCF\-Web\-HTTP\-Hilfeseite für Dienste verwendet.  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>Auf der WCF-Web-HTTP-Hilfeseite für Dienste verwendete Schemas  
+ Die folgenden Schemas werden auf der WCF-Web-HTTP-Hilfeseite für Dienste verwendet.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="anyType" nillable="true" type="xs:anyType" />  
@@ -245,7 +248,6 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
   </xs:complexType>  
   <xs:element name="ArrayOfQName" nillable="true" type="tns:ArrayOfQName" />  
 </xs:schema>  
-  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Schema für die Datenvertragsserialisierung finden Sie unter [Datenvertrags\-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]die Serialisierung datenvertragsschema finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

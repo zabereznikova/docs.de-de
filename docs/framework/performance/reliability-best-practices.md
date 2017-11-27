@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,16 +45,15 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c3f93e90c330881ec5002b820569b27416e049a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reliability-best-practices"></a>Empfohlene Vorgehensweisen für die Zuverlässigkeit
 Die folgenden Zuverlässigkeitsregeln sind auf SQL Server ausgerichtet, jedoch gelten sie auch für jede hostbasierte Serveranwendung. Es ist äußerst wichtig, dass es bei Servern wie SQL Server zu keinem Ressourcenverlust kommt und dass diese nicht zum Absturz gebracht werden.  Dies kann jedoch nicht erreicht werden, indem Zurücksetzungscode für jede Methode geschrieben wird, die den Zustand eines Objekts ändert.  Das Ziel ist nicht, 100 Prozent zuverlässigen verwalteten Code zu schreiben, der mit Zurücksetzungscode nach Fehlern an einer beliebigen Stelle wiederhergestellt wird.  Das wäre eine schwierige Aufgabe mit wenig Aussicht auf Erfolg.  Die Common Language Runtime (CLR) kann keine ausreichend starken Garantien für verwalteten Code bereitstellen, um das Schreiben von perfektem Code möglich zu machen.  Beachten Sie, dass SQL Server im Gegensatz zu ASP.NET nur einen Prozess verwendet, der nicht wiederverwendet werden kann, ohne dass eine Datenbank für eine unzumutbar lange Zeit außer Betrieb genommen wird.  
@@ -96,7 +94,7 @@ Die folgenden Zuverlässigkeitsregeln sind auf SQL Server ausgerichtet, jedoch g
   
  Die meisten Klassen, die derzeit über einen Finalizer zum einfachen Bereinigen eines Betriebssystemhandles verfügen, werden den Finalizer nicht mehr benötigen. Stattdessen wird sich der Finalizer in der abgeleiteten <xref:System.Runtime.InteropServices.SafeHandle>-Klasse befinden.  
   
- Beachten Sie, dass <xref:System.Runtime.InteropServices.SafeHandle> kein Ersatz für <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> ist.  Es bestehen immer noch potenzielle Vorteile im Hinblick auf Ressourcenkonflikte und Leistung gegenüber dem expliziten Löschen von Betriebssystemressourcen.  Beachten Sie aber, dass `finally`-Blöcke, die Ressourcen explizit löschen, möglicherweise nicht vollständig ausgeführt werden.  
+ Beachten Sie, dass <xref:System.Runtime.InteropServices.SafeHandle> kein Ersatz für <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> ist.  Es bestehen immer noch potenzielle Vorteile im Hinblick auf Ressourcenkonflikte und Leistung gegenüber dem expliziten Löschen von Betriebssystemressourcen.  Beachten Sie aber, dass `finally`-Blöcke, die Ressourcen explizit löschen, möglicherweise nicht vollständig ausgeführt werden.  
   
  <xref:System.Runtime.InteropServices.SafeHandle> ermöglicht es Ihnen, Ihre eigene <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode zu implementieren, die Anweisungen zum Freigeben des Handles ausführt. Beispiele für derartige Anweisungen sind das Übergeben des Zustands an eine Routine zur Freigabe von Betriebssystemhandles oder das Freigeben von mehreren Handles in einer Schleife.  Die CLR garantiert, dass diese Methode ausgeführt wird.  Es liegt in der Verantwortung des Erstellers der <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Implementierung, sicherzustellen, dass das Handle in allen Fällen freigegeben wird. Wird dies nicht sichergestellt, geht das Handle verloren, was oft dazu führt, dass native Ressourcen verloren gehen, die dem Handle zugewiesen sind. Daher ist es wichtig, abgeleitete <xref:System.Runtime.InteropServices.SafeHandle>-Klassen so zu strukturieren, dass die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Implementierung nicht die Zuordnung von Ressourcen erfordert, die zum Zeitpunkt des Aufrufs möglicherweise nicht verfügbar sind. Beachten Sie, dass es zulässig ist, Methoden aufzurufen, die möglicherweise innerhalb der Implementierung von <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> fehlschlagen, vorausgesetzt, Ihr Code kann mit solchen Fehlern umgehen und die Vereinbarung zum Freigeben des nativen Handles erfüllen. Für das Debuggen verfügt <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> über einen Rückgabewert vom Typ <xref:System.Boolean>, der auf `false` gesetzt werden kann, wenn ein schwerwiegender Fehler auftritt, der die Freigabe der Ressource verhindert. Auf diese Weise wird der MDA [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) aktiviert, um im aktivierten Zustand bei der Identifizierung des Problems zu helfen. Er wirkt sich auf keine andere Weise auf die Laufzeit aus. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> wird nicht erneut für die dieselbe Ressource aufgerufen, und daher geht das Handle verloren.  
   
@@ -289,6 +287,5 @@ public static MyClass SingletonProperty
  Hierdurch wird der Just-In-Time-Compiler angewiesen, den gesamten Code im finally-Block vorzubereiten, bevor der `try`-Block ausgeführt wird. So wird sichergestellt, dass der Code im finally-Block erstellt wird und in allen Fällen ausführbar ist. Es ist nicht ungewöhnlich, dass in einem CER ein leerer `try`-Block verwendet wird. Die Verwendung eines CER schützt vor asynchronen Threadabbrüchen und Ausnahmen bei unzureichendem Speicherplatz. Unter <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> finden Sie einen CER, der zusätzlich Stapelüberläufe in überaus komplexem Code behandelt.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server Programming and Host Protection Attributes (SQL Server-Programmierung und Hostschutzattribute)](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
-

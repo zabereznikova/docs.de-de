@@ -1,42 +1,45 @@
 ---
-title: "Gewusst wie: Ermitteln der von einem Encoder unterst&#252;tzten Parameter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Encoderparameter, Bestimmen von unterstützten"
+title: "Gewusst wie: Ermitteln der von einem Encoder unterstützten Parameter"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e041434e9ace24618dbdc45341a0e8468721c3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ermitteln der von einem Encoder unterst&#252;tzten Parameter
-Sie können Bildparameter wie Qualitätsstufe und Komprimierungsebene anpassen, müssen gleichzeitig jedoch wissen, welche Parameter von einem bestimmten Bildencoder unterstützt werden.  Über die <xref:System.Drawing.Image>\-Klasse wird die <xref:System.Drawing.Image.GetEncoderParameterList%2A>\-Methode bereitgestellt, sodass Sie ermitteln können, welche Bildparameter für einen bestimmten Encoder unterstützt werden.  Sie geben den Encoder mit einer GUID an.  Die <xref:System.Drawing.Image.GetEncoderParameterList%2A>\-Methode gibt ein Array von <xref:System.Drawing.Imaging.EncoderParameter>\-Objekten zurück.  
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Gewusst wie: Ermitteln der von einem Encoder unterstützten Parameter
+Sie können Parameter, z. B. Qualität und der Komprimierung anpassen, aber Sie müssen wissen, welche Parameter, die einen angegebenen Bildencoder unterstützt werden. Die <xref:System.Drawing.Image> -Klasse stellt die <xref:System.Drawing.Image.GetEncoderParameterList%2A> Methode, damit Sie bestimmen können, welche Parameter für einen bestimmten Encoder unterstützt werden. Sie geben den Encoder mit einer GUID. Die <xref:System.Drawing.Image.GetEncoderParameterList%2A> Methode gibt ein Array von <xref:System.Drawing.Imaging.EncoderParameter> Objekte.  
   
-## Beispiel  
- Im folgenden Beispielcode werden die unterstützten Parameter für den JPEG\-Encoder ausgegeben.  Verwenden Sie die Liste der Parameterkategorien und zugehörigen GUIDs aus der Übersicht der <xref:System.Drawing.Imaging.Encoder>\-Klasse, um die Kategorie der einzelnen Parameter zu ermitteln.  
+## <a name="example"></a>Beispiel  
+ Der folgende Beispielcode gibt die unterstützten Parameter für den JPEG-Encoder. Verwenden Sie die Liste der Parameterkategorien und zugehörigen GUIDs in der <xref:System.Drawing.Imaging.Encoder> Übersicht über die Klasse aus, um die Kategorie für jeden Parameter zu bestimmen.  
   
  [!code-csharp[UsingImageEncodersDecoders#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#3)]
  [!code-vb[UsingImageEncodersDecoders#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#3)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Eine Windows Forms\-Anwendung  
+-   Eine Windows Forms-Anwendung  
   
--   <xref:System.Windows.Forms.PaintEventArgs>, ein Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+-   Ein <xref:System.Windows.Forms.PaintEventArgs>, einen Parameter des <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Siehe auch  
- [Gewusst wie: Auflisten installierter Encoder](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [Bitmaptypen](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)   
- [Verwenden von Bildencodern und \-decodern in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>Siehe auch  
+ [Gewusst wie: Auflisten installierter Encoder](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Typen von Bitmaps](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [Verwenden von Bildencodern und -decodern in Managed GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

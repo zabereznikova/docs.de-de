@@ -1,25 +1,28 @@
 ---
-title: "Referenz f&#252;r Ablaufverfolgungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Referenz für Ablaufverfolgungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e86953d250002b0cc630e864f79cddd221cdd03
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Referenz f&#252;r Ablaufverfolgungen
+# <a name="traces-reference"></a>Referenz für Ablaufverfolgungen
 In diesem Abschnitt sind alle von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] generierten Ablaufverfolgungen aufgeführt.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  `Administration`  
   
  [System.ServiceModel.Administration.WmiPut](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-administration-wmiput.md)  
@@ -78,7 +81,7 @@ In diesem Abschnitt sind alle von [!INCLUDE[indigo1](../../../../../includes/ind
   
  [System.Runtime.Serialization.XsdExportError](../../../../../docs/framework/wcf/diagnostics/tracing/system-runtime-serialization-xsdexporterror.md)  
   
- [System.Runtime.Serialization.XsdExportError](../../../../../docs/framework/wcf/diagnostics/tracing/system-runtime-serialization-xsdimporterror.md)  
+ [System.Runtime.Serialization.XsdImportError](../../../../../docs/framework/wcf/diagnostics/tracing/system-runtime-serialization-xsdimporterror.md)  
   
  [System.Runtime.Serialization.XsdExportAnnotationFailed](../../../../../docs/framework/wcf/diagnostics/tracing/system-runtime-serialization-xsdexportannotationfailed.md)  
   

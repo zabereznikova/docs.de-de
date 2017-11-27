@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -37,16 +32,15 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-addressing"></a>IPv6-Adressierung
 Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund für solch einen großen Adressbereich ist das Unterteilen der verfügbaren Adressen in eine Hierarchie von Routingdomänen, die die Topologie des Internets widerspiegeln. Ein weiterer Grund ist das Zuordnen der Adressen des Netzwerkadapters (oder der Netzwerkschnittstellen), die Geräte mit dem Netzwerk verbinden. IPv6 verfügt über die inhärente Funktion, Adressen auf ihrer niedrigsten Ebene aufzulösen, bei der es sich um die Ebene der Netzwerkschnittstelle handelt. Weiterhin verfügt es über Funktionen zur automatischen Konfiguration.  
@@ -88,6 +82,5 @@ Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund
  Im Allgemeinen verfügt der Knoten immer über eine verbindungslokale Adresse. Er kann auch über eine standortlokale Adresse und eine oder mehrere globale Adressen verfügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Internet Protocol Version 6 (Internetprotokoll Version 6)](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)
-

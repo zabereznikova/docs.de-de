@@ -1,68 +1,72 @@
 ---
-title: "&lt;nameEntry&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<nameEntry>-Element"
-  - "nameEntry-Element"
+title: '&lt;NameEntry&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry
+helpviewer_keywords:
+- <nameEntry> element
+- nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 507c71b5c13deeb7c1a81b6a4dd9604c3bd919f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;nameEntry&gt;-Element
-Ordnet einen Klassennamen einem angezeigten Algorithmusnamen zu, wodurch eine Klasse viele angezeigte Namen aufweisen kann.  
+# <a name="ltnameentrygt-element"></a>&lt;NameEntry&gt; Element
+Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann eine Klasse über viele Anzeigenamen verfügen.  
   
-## Syntax  
+ \<configuration>  
+\<"mscorlib" >  
+\<CryptographySettings >  
+\<CryptoNameMapping >  
+\<NameEntry >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|**name**|Erforderliches Attribut.<br /><br /> Gibt den angezeigten Namen des Algorithmus an, den die Kryptografieklasse implementiert.|  
-|**class**|Erforderliches Attribut.<br /><br /> Gibt den Wert des **name** \-Attribut im [\<cryptoClass\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)\-Element an.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Anzeigenamen des Algorithmus, den die Kryptografieklasse implementiert.|  
+|**class**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** Attribut in der [ \<CryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) Element.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`system.web`|Gibt das Stammelement für den ASP.NET\-Konfigurationsabschnitt an.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|`system.web`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
-## Hinweise  
- Das **name**\-Attribut kann der Name einer der abstrakten Klassen im <xref:System.Security.Cryptography>\-Namespace sein.  Wenn die **Create**\-Methode in einer abstrakten Kryptografieklasse aufgerufen wird, wird der Name der abstrakten Klasse an die [Security.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic)\-Methode übergeben.  **CreateFromName** gibt eine Instanz des Typs zurück, der durch das **class**\-Attribut angegeben wird.  Wenn das **name**\-Attribut ein Kurzname ist, z. B. RSA, können Sie den Namen beim Aufrufen der **CreateFromName**\-Methode verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Die **Namen** Attribut kann den Namen einer abstrakten Klassen der <xref:System.Security.Cryptography> Namespace. Beim Aufrufen der **erstellen** Methode in einer abstrakten Kryptografieklasse, Name der abstrakten Klasse wird zum Übergeben der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> Methode. **CreateFromName** gibt eine Instanz des Typs, angegeben durch die **Klasse** Attribut. Wenn die **Namen** -Attribut ist ein Kurzname wie z. B. RSA, können Sie diesen Namen beim Aufrufen der **CreateFromName** Methode.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie das Element **\<nameEntry\>**, um eine mehr zu verweisen verwendet und die Laufzeit zu konfigurieren.  Sie können dann die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName>\-Methode übergeben und mithilfe der <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>\-Methode ein `MyCryptoRSAClass`\-Objekt zurückgeben.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die  **\<NameEntry >** Element auf eine kryptografischen Klasse verweisen und die Laufzeit zu konfigurieren. Sie können dann die Zeichenfolge "RSA" übergeben, um die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode und die Verwendung der <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> -Methode zur Rückgabe einer `MyCryptoRSAClass` Objekt.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -81,8 +85,8 @@ Ordnet einen Klassennamen einem angezeigten Algorithmusnamen zu, wodurch eine Kl
 </configuration>  
 ```  
   
-## Siehe auch  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema für Kryptografieeinstellungen](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)  
  [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

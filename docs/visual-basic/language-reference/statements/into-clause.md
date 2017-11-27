@@ -1,35 +1,33 @@
 ---
-title: "Into Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Into keyword"
+title: Into-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 73e120acbbc29aa3c3086c478c9842848e5db33b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Into Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt die Aggregatfunktionen oder Gruppierungen für eine Auflistung an.  
+# <a name="into-clause-visual-basic"></a>Into-Klausel (Visual Basic)
+Bezeichnet die Aggregatfunktionen oder Gruppierungen zu einer Auflistung anwenden.  
   
-## Hinweise  
- Das `Each`\-Schlüsselwort wird in den folgenden Kontexten verwendet:  
+## <a name="remarks"></a>Hinweise  
+ Die `Each` -Schlüsselwort wird in den folgenden Kontexten verwendet:  
   
- [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
- [Group By\-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [Group By-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md)  
   
- [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## Siehe auch  
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

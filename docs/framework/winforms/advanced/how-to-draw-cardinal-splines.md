@@ -1,58 +1,64 @@
 ---
-title: "Gewusst wie: Zeichnen von kardinalen Splines | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kardinale Splinekurven, Zeichnen"
-  - "Zeichnen, Kardinale Splinekurven"
-  - "Grafiken, Kardinale Splinekurven"
+title: 'Gewusst wie: Zeichnen von kardinalen Splines'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cardinal splines [Windows Forms], drawing
+- drawing [Windows Forms], cardinal splines
+- graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c47ff269cb1c367abee0be197fdc80485fb37b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zeichnen von kardinalen Splines
-Bei einem kardinalen Spline handelt es sich um eine Kurve, die glatt durch eine vorgegebene Anzahl von Punkten verläuft.  Um einen kardinalen Spline zu zeichnen, erstellen Sie ein <xref:System.Drawing.Graphics>\-Objekt und übergeben die Adresse eines Punktearrays an die <xref:System.Drawing.Graphics.DrawCurve%2A>\-Methode.  
+# <a name="how-to-draw-cardinal-splines"></a>Gewusst wie: Zeichnen von kardinalen Splines
+Eine cardinal-Splinekurve ist eine Kurve, die einen bestimmten Satz von Punkten gleichmäßig zu durchlaufen. Um eine cardinal-Splinekurve zu zeichnen, erstellen Sie eine <xref:System.Drawing.Graphics> Objekts und übergeben Sie die Adresse des ein Array von Punkten um die <xref:System.Drawing.Graphics.DrawCurve%2A> Methode.  
   
-### Zeichnen eines glockenförmigen kardinalen Splines  
+### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Zeichnen eines Bell geformten kardinalen Splines  
   
--   Im folgenden Beispiel wird ein glockenförmiger kardinaler Spline gezeichnet, der durch fünf vorgegebene Punkte verläuft.  In der folgenden Abbildung sind die Kurve und die fünf Punkte dargestellt.  
+-   Im folgende Beispiel zeichnet eine Bell geformten cardinal-Splinekurve, die fünf festgelegten Punkt durchlaufen. Die folgende Abbildung zeigt die Kurve und fünf Punkte.  
+  
+     ![Kardinaler Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
-### Zeichnen eines geschlossenen kardinalen Splines  
+### <a name="drawing-a-closed-cardinal-spline"></a>Zeichnen eines geschlossenen kardinalen Splines  
   
--   Verwenden Sie die <xref:System.Drawing.Graphics.DrawClosedCurve%2A>\-Methode der <xref:System.Drawing.Graphics>\-Klasse, um einen geschlossenen kardinalen Spline zu zeichnen.  In einem geschlossenen kardinalen Spline wird die Kurve über den letzten Punkt im Array hinaus fortgesetzt; dieser wird mit dem ersten Punkt im Array verbunden.  Im folgenden Beispiel wird ein geschlossener kardinaler Spline gezeichnet, der durch sechs vorgegebene Punkte verläuft.  In der folgenden Abbildung ist der geschlossene Spline mit seinen sechs Punkten dargestellt.  
+-   Verwenden der <xref:System.Drawing.Graphics.DrawClosedCurve%2A> Methode der <xref:System.Drawing.Graphics> Klasse eine geschlossene cardinal-Splinekurve gezeichnet werden soll. In einer geschlossenen cardinal-Splinekurve die Kurve wird fortgesetzt, bis der letzte Punkt im Array und eine Verbindung herstellt, mit dem ersten Punkt im Array. Im folgende Beispiel zeichnet eine geschlossene cardinal-Splinekurve, die sechs festgelegten Punkt durchlaufen. Die folgende Abbildung zeigt die geschlossene Splinekurve zusammen mit den sechs Punkten.  
   
  ![Kardinaler Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### Ändern der Krümmung eines kardinalen Splines  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a>Ändern der Krümmung eines kardinalen Splines  
   
--   Ändern Sie die Krümmung eines kardinalen Splines, indem Sie ein Spannungsargument an die <xref:System.Drawing.Graphics.DrawCurve%2A>\-Methode übergeben.  Im folgenden Beispiel werden drei kardinale Splines gezeichnet, die durch dieselben Punkte verlaufen.  In der folgenden Abbildung sind die drei Splinekurven mit den entsprechenden Spannungswerten dargestellt.  Wenn die Spannung gleich 0 ist, werden die Punkte durch gerade Linien verbunden.  
+-   Ändern Sie die Möglichkeit, eine cardinal-Splinekurve durch Übergeben eines Arguments Spannung, Kurven, die <xref:System.Drawing.Graphics.DrawCurve%2A> Methode. Im folgende Beispiel werden drei kardinale Splines, die den gleichen Satz von Punkten durchlaufen gezeichnet. Die folgende Abbildung zeigt die drei Splines zusammen mit ihren Spannungswerten. Beachten Sie, dass bei die Spannung 0 ist, die Punkte durch gerade Linien verbunden sind.  
   
  ![Kardinaler Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
-## Kompilieren des Codes  
- Die vorangehenden Beispiele sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Siehe vorstehende Beispiele sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
-## Siehe auch  
- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Erstellen und Zeichnen von Kurven](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

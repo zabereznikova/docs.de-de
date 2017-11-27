@@ -1,75 +1,76 @@
 ---
-title: "&lt;webRequestModules&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#webRequestModules"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<webRequestModules>-Element"
-  - "webRequestModules-Element"
+title: '&lt;WebRequestModules&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#webRequestModules
+helpviewer_keywords:
+- webRequestModules element
+- <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ac20d3da42b150734abbbd36c4ec9fc2e60b6216
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;webRequestModules&gt;-Element (Netzwerkeinstellungen)
-Gibt die zum Anfordern von Informationen von Netzwerkhosts verwendeten Module an.  
+# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;WebRequestModules&gt; -Element (Netzwerkeinstellungen)
+Gibt die Module zu verwenden, um Informationen von Netzwerkhosts anfordern.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<WebRequestModules >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <webRequestModules>   
+```xml  
+<webRequestModules>   
 </webRequestModules>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
  Keine.  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Fügt der Anwendung eine benutzerdefinierte Webanforderung hinzu.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Entfernt alle registrierten Webanforderungsmodule aus der Anwendung.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Entfernt eine benutzerdefinierte Webanforderung aus der Anwendung.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Fügt eine benutzerdefinierte Webmodul der Anforderung an die Anwendung an.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Entfernt alle registrierten Anforderung Webmodule aus der Anwendung an.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Entfernt ein benutzerdefiniertes Web-Request-Modul aus der Anwendung an.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie .NET Framework eine Verbindung mit dem Netzwerk herstellt.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
-## Hinweise  
- Das `webRequestModules`\-Element registriert Nachfolger der <xref:System.Net.WebRequest>\-Klasse, um Informationsanforderungen bearbeiten, Hosts nicht LAN.  Webanforderungen müssen die <xref:System.Net.IWebRequestCreate>\-Schnittstelle implementieren.  
+## <a name="remarks"></a>Hinweise  
+ Die `webRequestModules` Element registriert Nachfolger der <xref:System.Net.WebRequest> -Klasse zur Verarbeitung von Anforderungen für Objektinformationen zu Hosts im Netzwerk. Anforderung Webmodule implementieren müssen die <xref:System.Net.IWebRequestCreate> Schnittstelle.  
   
- .NET Framework enthält Webanforderungsmodule für URIs, die mit **http:\/\/**, **https:\/\/** und **file:\/\/** beginnen.  Sie können die Standardmodule nur durch Registrieren eines benutzerdefinierten Moduls in der Konfigurationsdatei überschreiben.  
+ .NET Framework enthält die Anforderung Webmodule für URIs, die mit http://, https:// und file:// beginnen. Sie können die Standardmodule nur durch Registrieren eines benutzerdefinierten Moduls in der Konfigurationsdatei überschreiben.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird das HTTP\-Standardmodul registriert.  Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird die Standard-HTTP-Modul registriert. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -82,7 +83,7 @@ Gibt die zum Anfordern von Informationen von Netzwerkhosts verwendeten Module an
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.IWebRequestCreate>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.IWebRequestCreate>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

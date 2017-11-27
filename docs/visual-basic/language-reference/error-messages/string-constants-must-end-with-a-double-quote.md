@@ -1,35 +1,33 @@
 ---
-title: "String constants must end with a double quote | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30648"
-  - "bc30648"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30648"
+title: "Zeichenfolgenliterale müssen mit einem doppelten Anführungszeichen enden."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30648
+- bc30648
+helpviewer_keywords: BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 02f8c127f35a511c9f8529078e5c1eaedda2cfae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# String constants must end with a double quote
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Zeichenfolgenliterale müssen mit Anführungszeichen anfangen und enden.  
+# <a name="string-constants-must-end-with-a-double-quote"></a>Zeichenfolgenliterale müssen mit einem doppelten Anführungszeichen enden.
+Zeichenfolgenkonstanten müssen beginnen und enden mit Anführungszeichen ein.  
   
- **Fehler\-ID:** BC30648  
+ **Fehler-ID:** BC30648  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Stellen Sie sicher, dass das Zeichenfolgenliteral mit einem Anführungszeichen \("\) endet.  Beim Einfügen von Werten aus anderen Text\-Editoren sollten Sie darauf achten, dass es sich beim eingefügten Zeichen um ein gültiges Anführungszeichen und kein anderes ähnliches Zeichen handelt, z. B. typografische Anführungszeichen \(" oder "\) oder zwei einfache Anführungszeichen \(''\).  
+-   Stellen Sie sicher, dass das Zeichenfolgenliteral mit einem Anführungszeichen (") beendet. Wenn Sie Werte aus anderen Text-Editoren einfügen, stellen Sie sicher, das eingefügte Zeichen ein gültiges Anführungszeichen und nicht eines der Zeichen, die, wie z. B. "intelligenter" oder "geschweiften" Anführungszeichen ähneln ("oder") oder zwei einfache Anführungszeichen (").  
   
-## Siehe auch  
- [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zeichenfolgen](../../../visual-basic/programming-guide/language-features/strings/index.md)

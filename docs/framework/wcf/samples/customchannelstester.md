@@ -1,31 +1,34 @@
 ---
-title: "CustomChannelsTester | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomChannelsTester
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d915d567a5918060ab5e7592d4cd49384249ab9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# CustomChannelsTester
-Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefinierten Channelimplementierungen mit einem Satz vordefinierter Dienstverträge verwenden können.  Sie können einen Satz von Dienstverträgen auswählen und diesen mithilfe einer XML\-Datei an das Tool übergeben.  Anschließend generiert das Tool den Dienst und den Client, die die benutzerdefinierten Channelimplementierungen während des Nachrichtenaustauschs ausführen.  
+# <a name="customchannelstester"></a>CustomChannelsTester
+Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefinierten Channelimplementierungen mit einem Satz vordefinierter Dienstverträge verwenden können. Sie können einen Satz von Dienstverträgen auswählen und diesen mithilfe einer XML-Datei an das Tool übergeben. Anschließend generiert das Tool den Dienst und den Client, die die benutzerdefinierten Channelimplementierungen während des Nachrichtenaustauschs ausführen.  
   
-### So erstellen Sie das Tool  
+### <a name="to-build-the-tool"></a>So erstellen Sie das Tool  
   
-1.  Befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Projektmappe zu erstellen.  
+1.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Während der Erstellung der Projektmappe werden drei Dateien generiert: "CustomChannelsTester.exe", "TestSpec.xml" und "SampleRun.cmd".  Die Datei "SampleRun.cmd" verfügt über eine Beispielbefehlszeile, die veranschaulicht, wie dieses Tool zum Testen des [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)\-Beispiels verwendet wird.  
+2.  Während der Erstellung der Projektmappe werden drei Dateien generiert: "CustomChannelsTester.exe", "TestSpec.xml" und "SampleRun.cmd". Die Datei "samplerun.cmd" hat eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
-### So führen Sie das Tool aus  
+### <a name="to-run-the-tool"></a>So führen Sie das Tool aus  
   
 -   Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
@@ -33,7 +36,7 @@ Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefini
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     Die Verwendung der `/binding`\-Option ist erforderlich.  
+     Die Verwendung der `/binding`-Option ist erforderlich.  
   
      `/dll` ist erforderlich, wenn die "Bindung" keine vom System und von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bereitgestellte Bindung ist.  
   
@@ -43,9 +46,9 @@ Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefini
   
      Der Client und der Server werden ausgeführt und die Ergebnisse zurückgegeben.  
   
-     Folgendes ist der Beispiel\-XML\-Code für die Beschreibung der Testspezifikationen \(testspec.xml\):  
+     Folgendes ist der Beispiel-XML-Code für die Beschreibung der Testspezifikationen (testspec.xml):  
   
-    ```  
+    ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
@@ -76,4 +79,4 @@ Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefini
     </TestSpec>  
     ```  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

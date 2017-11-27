@@ -1,63 +1,71 @@
 ---
-title: "&lt;resolver&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;Konfliktlöser&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5734a985c4941a12be5032c254a75987f2074da6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;resolver&gt;
-Gibt einen Peerresolver an, der zum Auflösen einer Peermesh\-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.  
+# <a name="ltresolvergt"></a>&lt;Konfliktlöser&gt;
+Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Bindungen >  
+\<NetPeerBinding >  
+\<Binden von >  
+\<Konfliktlöser >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <resolver mode="Auto/Custom/Pnrp"  
    referralPolicy="DoNotShare/Service/Share">  
 </resolver>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|`mode`|Eine Zeichenfolge, die angibt, ob die diesem Dienst zugeordnete Peerresolverinstanz PNRP\-spezifisch ist, ein benutzerdefinierter Resolver ist oder automatisch festgelegt wird.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.|  
-|`referralPolicy`|Eine Zeichenfolge, die angibt, wie Verweise unter Peers freigegeben werden.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.|  
+|---------------|-----------------|  
+|`mode`|Eine Zeichenfolge, die angibt, ob die diesem Dienst zugeordnete Peerresolverinstanz PNRP-spezifisch ist, ein benutzerdefinierter Resolver ist oder automatisch festgelegt wird. Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.|  
+|`referralPolicy`|Eine Zeichenfolge, die angibt, wie Verweise unter Peers freigegeben werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.|  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Kopfzeilen\>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Bindung\>](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsfähigkeiten von [\<netPeerTcpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|-------------|-----------------|  
+|[\<Header >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.|  
   
-## Hinweise  
- Ein Peernamensresolver ist ein Ermittlungsdienst, der von Peerkanälen zum Suchen von Peerknoten in einem Peermesh verwendet wird.  Außerdem wird er verwendet, um einen Knoten in einem Peermesh zu registrieren, wodurch der Peerknoten erkannt und im Peermesh verfügbar wird.  Weitere Informationen über Peerresolver finden Sie unter [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-## Siehe auch  
- <xref:System.ServiceModel.PeerResolver>   
- <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>   
- <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>   
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>   
- <xref:System.ServiceModel.Configuration.PeerResolverElement>   
- [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)   
- [Adding a Custom Resolver to a PeerChannel Application](http://msdn.microsoft.com/de-de/12aa3787-2962-439c-ad27-46523c8b0419)
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<Binden von >](../../../../../docs/framework/misc/binding.md)|Definiert alle bindungsmöglichkeiten der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+  
+## <a name="remarks"></a>Hinweise  
+ Ein Peernamensresolver ist ein Ermittlungsdienst, der von Peerkanälen zum Suchen von Peerknoten in einem Peermesh verwendet wird. Außerdem wird er verwendet, um einen Knoten in einem Peermesh zu registrieren, wodurch der Peerknoten erkannt und im Peermesh verfügbar wird. Weitere Informationen zu PeerResolver, finden Sie unter [PeerResolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.PeerResolver>  
+ <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>  
+ <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>  
+ <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
+ <xref:System.ServiceModel.Configuration.PeerResolverElement>  
+ [PeerResolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [Hinzufügen eines benutzerdefinierten Konfliktlösers zu einer PeerChannel-Anwendung](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)

@@ -1,46 +1,51 @@
 ---
-title: "Gewusst wie: &#196;ndern der Gr&#246;&#223;e oder Platzierung eines Bildes zur Laufzeit (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], PictureBox-Steuerelement"
-  - "Bilder [Windows Forms], Steuern der Positionierung in PictureBox-Steuerelementen [Windows Forms]"
-  - "PictureBox-Steuerelement [Windows Forms], Bildgröße und -ausrichtung"
-  - "Bilder, Steuern der Positionierung in PictureBox-Steuerelementen [Windows Forms]"
+title: "Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], controlling placement in PictureBox control [Windows Forms]
+- examples [Windows Forms], PictureBox control
+- PictureBox control [Windows Forms], picture size and alignment
+- pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df67871b0b133297a6f53ff9e4a42c7630a5f56d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#196;ndern der Gr&#246;&#223;e oder Platzierung eines Bildes zur Laufzeit (Windows&#160;Forms)
-Wenn Sie das Windows Forms\-Steuerelement <xref:System.Windows.Forms.PictureBox> auf einem Formular verwenden, können Sie die <xref:System.Windows.Forms.PictureBox.SizeMode%2A>\-Eigenschaft wie folgt festlegen:  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit (Windows Forms)
+Bei Verwendung von Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement eines Formulars, können Sie festlegen der <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft darauf:  
   
--   Die obere linke Bildecke wird auf die obere linke Ecke des Steuerelements ausgerichtet.  
+-   Richten Sie das Bild oben links mit der linken oberen Ecke des Steuerelements  
   
--   Das Bild wird innerhalb des Steuerelements zentriert.  
+-   Zentrieren Sie das Bild innerhalb des Steuerelements  
   
--   Die Größe des Steuerelements wird an die Größe des Bildes angepasst.  
+-   Passen Sie die Größe des Steuerelements auf dem Bild anzupassen, die angezeigt  
   
--   Das Bild wird in Anpassung an die Größe des jeweiligen Steuerelements gedehnt.  
+-   Stretch-Bild angezeigt wird, um das Steuerelement eingepasst werden  
   
- Durch das Dehnen von Bildern kann die Bildqualität \(besonders bei Verwendung des Bitmap\-Formats\) gemindert werden.  Metadateien sind besser für das Dehnen von Bildern geeignet, da sie aus einer Auflistung von Grafikanweisungen bestehen, die das Bild während der Laufzeit aufbauen.  
+ Strecken ein Bild (vor allem eine Bitmap-Format), kann ein Verlust Bildqualität erzeugen. Metadateien, die Listen von Graphics-Anweisungen zum Darstellen von Bildern zur Laufzeit sind, sind besser geeignet als Bitmaps sind Strecken.  
   
-### So legen Sie die SizeMode\-Eigenschaft zur Laufzeit fest  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>Die SizeMode-Eigenschaft zur Laufzeit festgelegt  
   
-1.  Legen Sie <xref:System.Windows.Forms.PictureBox.SizeMode%2A> auf <xref:System.Windows.Forms.PictureBoxSizeMode> \(Standardwert\), <xref:System.Windows.Forms.PictureBoxSizeMode>, <xref:System.Windows.Forms.PictureBoxSizeMode> oder <xref:System.Windows.Forms.PictureBoxSizeMode> fest.  <xref:System.Windows.Forms.PictureBoxSizeMode> bedeutet, dass das Bild in der linken oberen Ecke des Steuerelements platziert wird. Wenn das Bild größer als das Steuerelement ist, werden sein unterer und rechter Rand abgeschnitten.  <xref:System.Windows.Forms.PictureBoxSizeMode> bedeutet, dass das Bild im Steuerelement zentriert wird. Wenn das Bild größer als das Steuerelement ist, werden die äußeren Ränder des Bilds abgeschnitten.  <xref:System.Windows.Forms.PictureBoxSizeMode> bedeutet, dass die Größe des Steuerelements an die Größe des Bilds angepasst wird.  <xref:System.Windows.Forms.PictureBoxSizeMode> bedeutet das Gegenteil, nämlich dass die Größe des Bildes an die Größe des Steuerelements angepasst wird.  
+1.  Legen Sie <xref:System.Windows.Forms.PictureBox.SizeMode%2A> auf <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (Standard), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, oder <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>bedeutet, dass das Bild in der linken oberen Ecke befindet. Wenn das Bild größer als das Steuerelement ist, werden die unteren und rechten Rand abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>bedeutet, dass das Bild im Steuerelement zentriert wird. Wenn das Bild größer als das Steuerelement ist, werden das Bild äußeren Kanten abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>bedeutet, dass die Größe des Steuerelements auf die Größe des Bilds angepasst wird. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>ist das Gegenteil und bedeutet, dass die Größe des Bilds an die Größe des Steuerelements angepasst wird.  
   
-     Im unten stehenden Beispiel wurde als Speicherort für das Bild der Ordner **Eigene Dateien** festgelegt.  Dieser Speicherort wird verwendet, weil vorausgesetzt werden kann, dass die meisten Computer mit einem Windows\-Betriebssystem über dieses Verzeichnis verfügen.  Auf diese Weise können auch Benutzer mit minimalen Systemzugriffsberechtigungen die Anwendung sicher ausführen.  Im unten stehenden Beispiel wird davon ausgegangen, dass einem Formular bereits ein <xref:System.Windows.Forms.PictureBox>\-Steuerelement hinzugefügt wurde.  
+     Im folgenden Beispiel wird der Pfad für den Speicherort des Bilds Festlegen der Ordner "Eigene Dokumente". Dies geschieht, da Sie davon ausgehen können, die meisten Computer das Windows-Betriebssystem ausgeführt werden, dieses Verzeichnis enthält. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement bereits hinzugefügt.  
   
     ```vb  
     Private Sub StretchPic()  
@@ -54,7 +59,6 @@ Wenn Sie das Windows Forms\-Steuerelement <xref:System.Windows.Forms.PictureBox>
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ Wenn Sie das Windows Forms\-Steuerelement <xref:System.Windows.Forms.PictureBox>
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Image.gif")  
     }  
-  
     ```  
   
     ```cpp  
@@ -89,9 +92,9 @@ Wenn Sie das Windows Forms\-Steuerelement <xref:System.Windows.Forms.PictureBox>
        }  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.PictureBox>   
- [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [Übersicht über das PictureBox\-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [Gewusst wie: Festlegen von Bildern zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
- [PictureBox\-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.PictureBox>  
+ [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Übersicht über das PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Gewusst wie: Festlegen von Bildern zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ [PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

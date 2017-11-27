@@ -1,47 +1,51 @@
 ---
-title: "Unterst&#252;tzung f&#252;r Abfragen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Unterstützung für Abfragen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d4f338f9ae5cc6967885d0518eb573d9f9535fc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Unterst&#252;tzung f&#252;r Abfragen
-Der SQL\-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf.Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen.Die folgende Liste enthält einige dieser bekannten Eigenschaften:  
+# <a name="support-for-queries"></a>Unterstützung für Abfragen
+Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf. Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen. Die folgende Liste enthält einige dieser bekannten Eigenschaften:  
   
--   **Site Name.** Der Name der Website, die den Dienst enthält.  
+-   **Name der Website.** Der Name der Website, die den Dienst enthält.  
   
--   **Relative Application Path.** Der Pfad der Anwendung relativ zur Website.  
+-   **Relativen Pfad.** Der Pfad der Anwendung relativ zur Website.  
   
--   **Relative Service Path.** Der Pfad des Diensts relativ zur Anwendung.  
+-   **Relativen Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
   
--   **Service Name.** Der Name des Diensts.  
+-   **Service Name.** Name des Diensts.  
   
--   **Service Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
+-   **Dienst-Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
   
--   **Current Machine.**  
+-   **Aktuellen Computer.**  
   
--   **Last Machine**.Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.  
+-   **Letzte Computer**. Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.  
   
 > [!NOTE]
->  Für selbst gehostete Szenarios mit dem Workflowdiensthost werden nur die letzten vier Eigenschaften aufgefüllt.Für Workflowanwendungsszenarios wird nur die letzte Eigenschaft aufgefüllt.  
+>  Für selbst gehostete Szenarios mit dem Workflowdiensthost werden nur die letzten vier Eigenschaften aufgefüllt. Für Workflowanwendungsszenarios wird nur die letzte Eigenschaft aufgefüllt.  
   
- Die Workflowlaufzeit stellt Werte für die ersten drei Eigenschaften bereit.Der Workflowdiensthost gibt den Wert für die Eigenschaft **Suspend Reason** an.Der SQL\-Workflowinstanzspeicher selbst gibt Werte für die Eigenschaft **Last Updated Machine** an.  
+ Die Workflowlaufzeit stellt Werte für die ersten drei Eigenschaften bereit. Der Workflowdiensthost gibt den Wert für die **Suspend Reason** Eigenschaft. Der SQL-Workflowinstanzspeicher selbst gibt Werte für die **Last Updated Machine** Eigenschaft.  
   
- Der SQL\-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten.Weitere Informationen zu benutzerdefinierten Heraufstufungen finden Sie unter [Erweiterbarkeit des Speichers](../../../docs/framework/windows-workflow-foundation//store-extensibility.md).  
+ Der SQL-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten. Weitere Informationen zu benutzerdefinierten Werbeaktionen, finden Sie unter [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
   
-## Ansichten  
- Der Instanzspeicher enthält die folgenden Ansichten.Weitere Informationen finden Sie unter [Persistenzdatenbankschema](../../../docs/framework/windows-workflow-foundation//persistence-database-schema.md).  
+## <a name="views"></a>Ansichten  
+ Der Instanzspeicher enthält die folgenden Ansichten. Finden Sie unter [Persistenzdatenbankschema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) Weitere Details.  
   
-### Die Ansicht "Instances"  
+### <a name="the-instances-view"></a>Die Ansicht "Instances"  
  Die Ansicht "Instances" enthält die folgenden Felder:  
   
 1.  **Id**  
@@ -74,7 +78,7 @@ Der SQL\-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im 
   
 15. **EncodingOption**  
   
-16. **ReadWritePrimitiveDataProperties**  
+16. **"Readwriteprimitivedataproperties"-Spalte**  
   
 17. **WriteOnlyPrimitiveDataProperties**  
   
@@ -82,7 +86,7 @@ Der SQL\-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im 
   
 19. **WriteOnlyComplexDataProperties**  
   
-### Die Ansicht "ServiceDeployments"  
+### <a name="the-servicedeployments-view"></a>Die Ansicht "ServiceDeployments"  
  Die Ansicht "ServiceDeployments" enthält die folgenden Felder:  
   
 1.  **SiteName**  
@@ -91,17 +95,17 @@ Der SQL\-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im 
   
 3.  **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4.  **Dienstname**  
   
 5.  **ServiceNamespace**  
   
-### Die Ansicht "InstancePromotedProperties"  
- Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder.Nähere Informationen zu höher gestuften Eigenschaften finden Sie im Thema [Erweiterbarkeit des Speichers](../../../docs/framework/windows-workflow-foundation//store-extensibility.md).  
+### <a name="the-instancepromotedproperties-view"></a>Die Ansicht "InstancePromotedProperties"  
+ Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder. Ausführliche Informationen zum höher gestuften Eigenschaften finden Sie unter der [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) Thema.  
   
-1.  **InstanceId**  
+1.  **Instanz-ID**  
   
 2.  **EncodingOption**  
   
-3.  **PromotionName**  
+3.  **Mit dem PromotionName**  
   
-4.  **Value\#** \(ein Wertebereich von **Value1** bis **Value64**\).
+4.  **Value#** (ein Wertebereich von **Value1** auf **Value64**).

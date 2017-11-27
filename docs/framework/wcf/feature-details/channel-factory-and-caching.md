@@ -1,49 +1,52 @@
 ---
-title: "Kanalfactory und Zwischenspeichern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Kanalfactory und Zwischenspeichern
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 137696547619477dd68ead5ecfa3f3de7af44727
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Kanalfactory und Zwischenspeichern
-WCF\-Clientanwendungen verwenden die <xref:System.ServiceModel.ChannelFactory%601>\-Klasse, um einen Kommunikationskanal mit einem WCF\-Dienst zu erstellen.Das Erstellen von <xref:System.ServiceModel.ChannelFactory%601>\-Instanzen verursacht einigen Mehraufwand, da er die folgenden Vorgänge umfasst:  
+# <a name="channel-factory-and-caching"></a>Kanalfactory und Zwischenspeichern
+WCF-Clientanwendungen verwenden die <xref:System.ServiceModel.ChannelFactory%601>-Klasse, um einen Kommunikationskanal mit einem WCF-Dienst zu erstellen.  Die Erstellung von <xref:System.ServiceModel.ChannelFactory%601>-Instanzen verursacht einigen Mehraufwand, da sie die folgenden Vorgänge umfasst:  
   
--   Erstellen der <xref:System.ServiceModel.Description.ContractDescription>\-Struktur  
+-   Erstellen der <xref:System.ServiceModel.Description.ContractDescription>-Struktur  
   
--   Reflektieren aller erforderlichen CLR\-Typen  
+-   Reflektieren aller erforderlichen CLR-Typen  
   
 -   Erstellen des Kanalstapels  
   
 -   Freigeben von Ressourcen  
   
- Um den Mehraufwand minimieren, kann WCF Kanalfactorys zwischenspeichern, wenn Sie einen WCF\-Clientproxy verwenden.  
+ Um den Mehraufwand zu minimieren, kann WCF Kanalfactorys zwischenspeichern, wenn Sie einen WCF-Clientproxy verwenden.  
   
 > [!TIP]
->  Sie können die Erstellung von Kanalfactorys direkt steuern, wenn Sie die <xref:System.ServiceModel.ChannelFactory%601>\-Klasse direkt verwenden.  
+>  Sie können die Erstellung von Kanalfactorys direkt steuern, wenn Sie die <xref:System.ServiceModel.ChannelFactory%601>-Klasse direkt verwenden.  
   
- Die mit [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generierten WCF\-Clientproxys werden von <xref:System.ServiceModel.ClientBase%601> abgeleitet.<xref:System.ServiceModel.ClientBase%601> definiert eine statische <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>\-Eigenschaft, die das Cachingverhalten der Kanalfactory definiert.Cacheeinstellungen gelten für einen bestimmten Typ.Wenn `ClientBase<ITest>.CacheSettings` beispielsweise auf einen der unten definierten Werte festgelegt wird, wirkt sich das nur auf die Proxy\/ClientBase vom Typ `ITest` aus.Der Cacheeinstellung für eine bestimmte <xref:System.ServiceModel.ClientBase%601> ist unveränderlich, sobald die erste Proxy\/ClientBase\-Instanz erstellt wurde.  
+ Generiert mit WCF-Clientproxys [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) abgeleitet sind <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> definiert eine statische <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>-Eigenschaft, die das Cachingverhalten der Kanalfactory definiert. Cacheeinstellungen gelten für einen bestimmten Typ. Z. B. `ClientBase<ITest>.CacheSettings` auf einen der unten definierten Werte wirken sich nur die Proxy/ClientBase vom Typ `ITest`. Die Cacheeinstellung für eine bestimmte <xref:System.ServiceModel.ClientBase%601> ist unveränderlich, sobald die erste Proxy/ClientBase-Instanz erstellt wurde.  
   
-## Angeben des Cachingverhaltens  
- Das Cachingverhalten wird angegeben, indem die <xref:System.ServiceModel.ClientBase%601.CacheSetting>\-Eigenschaft auf einen der folgenden Werte festgelegt wird.  
+## <a name="specifying-caching-behavior"></a>Angeben des Cachingverhaltens  
+ Das Cachingverhalten wird angegeben, indem die <xref:System.ServiceModel.ClientBase%601.CacheSetting>-Eigenschaft auf einen der folgenden Werte festgelegt wird.  
   
 |Wert der Cacheeinstellung|Beschreibung|  
-|-------------------------------|------------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Alle Instanzen von <xref:System.ServiceModel.ClientBase%601> innerhalb der Anwendungsdomäne können am Caching teilnehmen.Der Entwickler hat ermittelt, dass das Caching keine negativen Auswirkungen auf die Sicherheit hat.Das Caching wird nicht deaktiviert, auch wenn auf "sicherheitsrelevante" Eigenschaften für <xref:System.ServiceModel.ClientBase%601> zugegriffen wird.Die "sicherheitsrelevanten" Eigenschaften von <xref:System.ServiceModel.ClientBase%601> sind <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> und <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
-|<xref:System.ServiceModel.CacheSetting.Default>|Nur Instanzen von <xref:System.ServiceModel.ClientBase%601>, die aus in den Konfigurationsdateien definierten Endpunkten erstellt wurden, nehmen am Caching innerhalb der Anwendungsdomäne teil.Alle Instanzen von <xref:System.ServiceModel.ClientBase%601>, die innerhalb dieser Anwendungsdomäne programmgesteuert erstellt wurden, nehmen nicht am Caching teil.Außerdem wird das Caching für eine Instanz von <xref:System.ServiceModel.ClientBase%601> deaktiviert, sobald auf eine der zugehörigen "sicherheitsrelevanten" Eigenschaften zugegriffen wird.|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Das Caching wird für alle <xref:System.ServiceModel.ClientBase%601>\-Instanzen eines bestimmten Typs innerhalb der betreffenden Anwendungsdomäne deaktiviert.|  
+|-------------------------|-----------------|  
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Alle Instanzen von <xref:System.ServiceModel.ClientBase%601> in der Anwendungsdomäne können am Caching teilnehmen. Der Entwickler hat bestimmt, dass die Sicherheit des Cachings nicht gefährdet wird. Caching wird nicht deaktiviert, auch wenn "sicherheitsrelevante" Eigenschaften für <xref:System.ServiceModel.ClientBase%601> zugegriffen werden. Die Eigenschaften "sicherheitsrelevante" <xref:System.ServiceModel.ClientBase%601> sind <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> und <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
+|<xref:System.ServiceModel.CacheSetting.Default>|Nur Instanzen von <xref:System.ServiceModel.ClientBase%601>, die aus in den Konfigurationsdateien definierten Endpunkten erstellt wurden, nehmen am Caching innerhalb der Anwendungsdomäne teil. Alle Instanzen von <xref:System.ServiceModel.ClientBase%601>, die innerhalb dieser Anwendungsdomäne programmgesteuert erstellt wurden, nehmen nicht am Caching teil. Darüber hinaus caching deaktiviert für eine Instanz von <xref:System.ServiceModel.ClientBase%601> , nachdem die Eigenschaften "sicherheitsrelevante" zugegriffen wird.|  
+|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Das Caching wird für alle <xref:System.ServiceModel.ClientBase%601>-Instanzen eines bestimmten Typs innerhalb der betreffenden Anwendungsdomäne deaktiviert.|  
   
- In den folgenden Codeausschnitten wird die Verwendung der <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>\-Eigenschaft veranschaulicht.  
+ In den folgenden Codeausschnitten wird die Verwendung der <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>-Eigenschaft veranschaulicht.  
   
 ```  
 class Program   
@@ -64,7 +67,6 @@ class Program
 }  
 // Generated by SvcUtil.exe     
 public partial class TestClient : System.ServiceModel.ClientBase, ITest { }  
-  
 ```  
   
  Im obigen Code verwenden alle Instanzen von `TestClient` die gleiche Kanalfactory.  
@@ -78,7 +80,7 @@ class Program
       int i = 1;   
       foreach (string msg in messages)   
       {   
-         using (TestClient proxy = new TestClient (“MyEndpoint”, new EndpointAddress(address)))   
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
          {   
             if (i == 4)   
             {   
@@ -95,7 +97,7 @@ class Program
 public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
 ```  
   
- Im obigen Beispiel würden alle Instanzen von `TestClient` die gleiche Kanalfactory verwenden, mit Ausnahme von \#4.Instanz \#4 würde eine Kanalfactory verwenden, die speziell für diesen Zweck erstellt wird.Diese Einstellung funktioniert für Szenarien, in denen ein bestimmter Endpunkt unterschiedliche Sicherheitseinstellungen anderer Endpunkte desselben Kanalfactorytyps \(in diesem Fall `ITest`\) benötigt.  
+ Im obigen Beispiel verwenden alle Instanzen von `TestClient` die gleiche Kanalfactory, mit Ausnahme von #4. Instanz #4 verwendet eine Kanalfactory, die speziell für diesen Zweck erstellt wird. Diese Einstellung eignet sich für Szenarien, in denen ein bestimmter Endpunkt unterschiedliche Sicherheitseinstellungen anderer Endpunkte desselben Kanalfactorytyps (in diesem Fall `ITest`) benötigt.  
   
 ```  
 class Program   
@@ -105,7 +107,7 @@ class Program
       ClientBase.CacheSettings = CacheSettings.AlwaysOff;   
       foreach (string msg in messages)   
       {   
-         using (TestClient proxy = new TestClient (“MyEndpoint”, new EndpointAddress(address)))   
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
          {   
             proxy.Test(msg);   
          }           
@@ -117,11 +119,11 @@ class Program
 public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
 ```  
   
- Im obigen Beispiel würden alle Instanzen von `TestClient` verschiedene Kanalfactorys verwenden.Dies ist nützlich, wenn jeder Endpunkt verschiedene Sicherheitsanforderungen hat, und das Caching keinen Sinn macht.  
+ Im obigen Beispiel verwenden alle Instanzen von `TestClient` verschiedene Kanalfactorys. Dies ist nützlich, wenn jeder Endpunkt verschiedene Sicherheitsanforderungen hat und das Caching keinen Sinn macht.  
   
-## Siehe auch  
- <xref:System.ServiceModel.ClientBase%601>   
- [Erstellen von Clients](../../../../docs/framework/wcf/building-clients.md)   
- [Clients](../../../../docs/framework/wcf/feature-details/clients.md)   
- [Zugreifen auf Dienste mithilfe eines WCF\-Clients](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.ClientBase%601>  
+ [Erstellen von Clients](../../../../docs/framework/wcf/building-clients.md)  
+ [Clients](../../../../docs/framework/wcf/feature-details/clients.md)  
+ [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  [Vorgehensweise: Verwenden der ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

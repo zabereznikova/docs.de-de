@@ -1,37 +1,43 @@
 ---
-title: "Laden von DataSet-Schemainformationen aus XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Laden von DataSet-Schemainformationen aus XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 09fc69ba6d82fdab5aa03dd3987ec1acdf0be17e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Laden von DataSet-Schemainformationen aus XML
-Das Schema eines <xref:System.Data.DataSet> \(seine Tabellen, Spalten, Beziehungen und Einschränkungen\) kann programmgesteuert definiert, von der **Fill**\-Methode oder der **FillSchema**\-Methode eines <xref:System.Data.Common.DataAdapter> erstellt oder aus einem XML\-Dokument geladen werden.  Zum Laden von **DataSet**\-Schemainformationen aus einem XML\-Dokument können Sie entweder die **ReadXmlSchema**\-Methode oder die **InferXmlSchema**\-Methode des **DataSet** verwenden.  Mit **ReadXmlSchema** können Sie **DataSet**\-Schemainformationen aus dem Dokument mit dem XSD\-Schema \(XML Schema Definition Language\) oder aus einem XML\-Dokument mit einem Inline\-XML\-Schema laden oder herleiten.  **InferXmlSchema** ermöglicht das Herleiten des Schemas aus dem XML\-Dokument, während bestimmte von Ihnen angegebene XML\-Namespaces ignoriert werden.  
+# <a name="loading-dataset-schema-information-from-xml"></a>Laden von DataSet-Schemainformationen aus XML
+Das Schema der eine <xref:System.Data.DataSet> (seine Tabellen, Spalten, Beziehungen und Einschränkungen) können programmgesteuert definiert, erstellt, indem die **füllen** oder **FillSchema** Methoden eine <xref:System.Data.Common.DataAdapter>, oder aus geladen ein XML-Dokument. Beim Laden **DataSet** Schemainformationen aus einem XML-Dokument verwenden Sie entweder die **ReadXmlSchema** oder **InferXmlSchema** Methode der **DataSet**. **ReadXmlSchema** können Sie zum Laden oder herleiten **DataSet** Schemainformationen aus dem Dokument, das Schema für XML Schema Definition Language (XSD) oder ein XML-Dokument mit Inline-XML-Schema enthält. **InferXmlSchema** ermöglicht das Herleiten des Schemas aus der XML-Dokument während bestimmte von Ihnen angegebenen XML-Namespaces ignoriert.  
   
 > [!NOTE]
->  Die Tabellenreihenfolge in einem **DataSet** wird u. U. nicht beibehalten, wenn Sie ein **DataSet**, das unter Verwendung von XSD\-Konstrukten \(wie z. B. geschachtelten Beziehungen\) im Arbeitsspeicher erstellt wurde, mittels Webdiensten oder XML\-Serialisierung übertragen.  Der Empfänger des **DataSet** sollte daher in diesem Fall keine bestimmte Tabellenreihenfolge voraussetzen.  Wenn jedoch das Schema des zu übertragenden **DataSet** nicht im Speicher erstellt, sondern aus XSD\-Dateien gelesen wird, wird die Tabellenreihenfolge immer beibehalten.  
+>  Tabellenreihenfolge in einem **DataSet** möglicherweise nicht beibehalten, wenn Sie zum Übertragen von Webdiensten oder XML-Serialisierung verwenden eine **DataSet** , mithilfe von XSD-Konstrukten (z. B. geschachtelten Beziehungen) im Arbeitsspeicher erstellt wurde. Aus diesem Grund für den Empfänger des der **DataSet** sollten Tabellenreihenfolge in diesem Fall nicht erforderlich. Allerdings Tabellenreihenfolge wird immer beibehalten, wenn das Schema der **DataSet** übertragenen gelesene aus XSD-Dateien, anstatt im Arbeitsspeicher erstellt wird.  
   
-## ReadXmlSchema  
- Sie können die **ReadXmlSchema**\-Methode des **DataSet** verwenden, um das Schema eines **DataSet** ohne Daten aus einem XML\-Dokument zu laden.  **ReadXmlSchema** erstellt ein **DataSet**\-Schema, das mit dem XSD\-Schema \(XML Schema Definition Language\) definiert wird.  
+## <a name="readxmlschema"></a>ReadXmlSchema  
+ Zum Laden des Schemas ein **DataSet** aus einem XML-Dokument ohne Daten zu laden, können Sie die **ReadXmlSchema** Methode der **DataSet**. **ReadXmlSchema** erstellt **DataSet** Schema mithilfe von Schemas für XML Schema Definition Language (XSD) definiert.  
   
- Die **ReadXmlSchema**\-Methode verwendet ein einzelnes Argument. Dabei kann es sich um den Namen einer Datei, einen Stream oder einen **XmlReader** mit dem zu ladenden XML\-Dokument handeln.  Das XML\-Dokument kann nur ein Schema enthalten. Es kann aber auch ein Inlineschema mit XML\-Elementen besitzen, die über Daten verfügen.  Ausführliche Informationen zum Schreiben eines Inlineschemas als XML\-Schema finden Sie unter [Ableiten einer relationalen 'DataSet'\-Struktur aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ Die **ReadXmlSchema** Methode akzeptiert ein einzelnes Argument eines Dateinamens, einen Stream oder eine **XmlReader** mit dem XML-Dokument geladen werden. Das XML-Dokument kann nur ein Schema enthalten. Es kann aber auch ein Inlineschema mit XML-Elementen besitzen, die über Daten verfügen. Informationen über das Schreiben von Inlineschema als XML-Schema finden Sie unter [ableiten relationalen DataSet-Struktur von XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
- Wenn das an **ReadXmlSchema** übergebene XML\-Dokument keine Inlineschemainformationen enthält, leitet **ReadXmlSchema** das Schema von den Elementen im XML\-Dokument ab.  Wenn das **DataSet** bereits ein Schema enthält, wird das aktuelle Schema erweitert, indem neue Tabellen hinzugefügt werden, sofern diese nicht bereits vorhanden sind.  Vorhandenen Tabellen werden keine neuen Spalten hinzugefügt.  Wenn eine hinzuzufügende Spalte bereits im **DataSet** vorhanden, deren Typ aber nicht mit der im XML\-Dokument gefundenen Spalte kompatibel ist, wird eine Ausnahme ausgelöst.  Ausführliche Informationen zum Herleiten eines Schemas aus einem XML\-Dokument durch **ReadXmlSchema** finden Sie unter [Herleiten der relationalen DataSet\-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).  
+ Wenn das XML-Dokument übergeben **ReadXmlSchema** keine Inlineschemainformationen enthält **ReadXmlSchema** das Schema aus den Elementen im XML-Dokument. Wenn die **DataSet** bereits ein Schema enthält, das aktuelle Schema erweitert, indem neue Tabellen hinzugefügt werden, wenn sie nicht bereits vorhanden sind. Vorhandenen Tabellen werden keine neuen Spalten hinzugefügt. Ggf. eine hinzuzufügende Spalte bereits in der **DataSet** aber hat ein inkompatiblen Typ mit der Spalte gefunden, in der XML-Code wird eine Ausnahme ausgelöst. Weitere Informationen dazu, wie **ReadXmlSchema** leitet ein Schema aus einem XML-Dokument, finden Sie unter [Ableiten von relationalen DataSet-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).  
   
- Während **ReadXmlSchema** lediglich das Schema eines **DataSet** lädt oder herleitet, werden mit der **ReadXml**\-Methode des **DataSet** sowohl das Schema als auch die im XML\-Dokument enthaltenen Daten geladen oder hergeleitet.  Weitere Informationen finden Sie unter [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md).  
+ Obwohl **ReadXmlSchema** lädt oder herleitet nur das Schema des eine **DataSet**, die **ReadXml** Methode der **DataSet** lädt oder herleitet, beide Das Schema und die Daten in das XML-Dokument enthalten sind. Weitere Informationen finden Sie unter [beim Laden eines Datasets aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md).  
   
- In den folgenden Codebeispielen wird dargestellt, wie ein **DataSet**\-Schema aus einem XML\-Dokument oder einem XML\-Stream geladen wird.  Im ersten Beispiel wird gezeigt, wie der Dateiname eines XML\-Schemas an die **ReadXmlSchema**\-Methode übergeben wird.  Im zweiten Beispiel wird ein **System.IO.StreamReader** dargestellt.  
+ Die folgenden Codebeispiele zeigen, wie beim Laden einer **DataSet** Schema aus einem XML-Dokument oder den Stream. Im ersten Beispiel wird ein XML-Schema-Dateiname übergeben werden, um die **ReadXmlSchema** Methode. Im zweiten Beispiel wird eine **System.IO.StreamReader**.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -57,12 +63,12 @@ dataSet.ReadXmlSchema(xmlStream);
 xmlStream.Close();  
 ```  
   
-## InferXmlSchema  
- Sie können das **DataSet** auch anweisen, sein Schema mit der **InferXmlSchema**\-Methode des **DataSet** aus einem XML\-Dokument abzuleiten.  **InferXmlSchema** funktioniert wie **ReadXml** zusammen mit einem auf **InferSchema** festgelegten **XmlReadMode** \(lädt Daten und leitet das Schema ab\) und **ReadXmlSchema**, wenn das gelesene Dokument kein Inlineschema enthält.  Allerdings haben Sie mit **InferXmlSchema** zusätzlich die Möglichkeit, bestimmte XML\-Namespaces anzugeben, die beim Herleiten des Schemas ignoriert werden sollen.  **InferXmlSchema** wird mit den folgenden zwei erforderlichen Argumenten verwendet: dem Speicherort des XML\-Dokuments, das durch einen Dateinamen, einen Stream oder einen **XmlReader** angegeben wird, und einem Zeichenfolgenarray aus XML\-Namespaces, die vom Vorgang ignoriert werden sollen.  
+## <a name="inferxmlschema"></a>InferXmlSchema  
+ Sie können auch festlegen, dass die **DataSet** Ableiten von dessen Schema aus einer XML-Dokuments mithilfe der **InferXmlSchema** Methode der **DataSet**. **InferXmlSchema** funktioniert genauso wie **ReadXml** mit einem **XmlReadMode** von **InferSchema** (lädt Daten sowie leitet das Schema ab), und  **ReadXmlSchema** , wenn das gelesene Dokument kein Inlineschema enthält. Allerdings **InferXmlSchema** zusätzlich die Möglichkeit Möglichkeit an bestimmte XML-Namespaces ignoriert werden, wenn das Schema abgeleitet wird. **InferXmlSchema** hat zwei erforderliche Argumente: den Speicherort der XML-Dokuments, angegeben durch einen Dateinamen, einen Stream oder eine **XmlReader**; und ein Zeichenfolgenarray mit XML-Namespaces, die vom Vorgang ignoriert werden.  
   
- Betrachten Sie beispielsweise den folgenden XML\-Code:  
+ Betrachten Sie beispielsweise den folgenden XML-Code:  
   
-```  
+```xml  
 <NewDataSet xmlns:od="urn:schemas-microsoft-com:officedata">  
 <Categories>  
   <CategoryID od:adotype="3">1</CategoryID>   
@@ -77,7 +83,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Aufgrund der Attribute, die für die Elemente im vorhergehenden XML\-Dokument angegeben wurden, würden die **ReadXmlSchema**\-Methode und die **ReadXml**\-Methode \(mit einem auf **InferSchema** festgelegten **XmlReadMode**\) für jedes Element im Dokument Tabellen erstellen: **Categories**, **CategoryID**, **CategoryName**, **Description**, **Products**, **ProductID**, **ReorderLevel** und **Discontinued**.  \(Weitere Informationen finden Sie unter [Herleiten der relationalen DataSet\-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).\) Die geeignetere Vorgehensweise bestünde jedoch darin, zunächst nur die Tabellen **Categories** und **Products** und dann die Spalten **CategoryID**, **CategoryName** und **Description** in der Tabelle **Categories** sowie die Spalten **ProductID**, **ReorderLevel** und **Discontinued** in der Tabelle **Products** zu erstellen.  Damit sichergestellt wird, dass das hergeleitete Schema die in den XML\-Elementen angegebenen Attribute ignoriert, geben Sie mit der **InferXmlSchema**\-Methode an, dass der XML\-Namespace für **officedata** ignoriert werden soll. Dies wird im folgenden Beispiel dargestellt.  
+ Aufgrund der Attribute für die Elemente in der vorhergehenden XML-Dokument sowohl die **ReadXmlSchema** Methode und die **ReadXml** Methode mit einer **XmlReadMode** von **InferSchema** würde Erstellen von Tabellen für jedes Element im Dokument: **Kategorien**, **CategoryID**, **CategoryName**, **Beschreibung**, **Produkte**, **"ProductID"**, **ReorderLevel**, und **nicht mehr unterstützte**. (Weitere Informationen finden Sie unter [Ableiten von relationalen DataSet-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).) Eine besser geeignete Struktur wäre jedoch nur für Erstellung der **Kategorien** und **Produkte** Tabellen, und klicken Sie dann auf Erstellen **CategoryID**, **CategoryName** , und **Beschreibung** Spalten in der **Kategorien** Tabelle und **"ProductID"**, **ReorderLevel**, und **Discontinued** Spalten in der **Produkte** Tabelle. Verwenden, um sicherzustellen, dass das hergeleitete Schema die in der XML-Elementen angegebenen Attribute ignoriert die **InferXmlSchema** Methode, und geben Sie den XML-Namespace für **Officedata** ignoriert werden soll, wie in dargestellt, die folgende.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -89,10 +95,10 @@ DataSet dataSet = new DataSet();
 dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:officedata");  
 ```  
   
-## Siehe auch  
- [Verwenden von XML in einem DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Ableiten einer relationalen 'DataSet'\-Struktur aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)   
- [Herleiten der relationalen DataSet\-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Ableiten von relationalen DataSet-Struktur von XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Ableiten von relationalen DataSet-Struktur von XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Beim Laden eines Datasets aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,70 +1,76 @@
 ---
-title: "System.Transactions-Integration in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.Transactions-Integration in SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2299a974fc9c6af9e5fba0de6e16ab72de8b5e10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.Transactions-Integration in SQL Server
-Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 wurde ein neues Transaktionsframework eingeführt, auf das über den <xref:System.Transactions>\-Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die vollständig in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] integriert ist, einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+# <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions-Integration in SQL Server
+Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 wurde ein neues Transaktionsframework eingeführt, auf das über den <xref:System.Transactions> -Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die vollständig in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]integriert ist, einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- Zusätzlich zu den Erweiterungen bei der Programmierbarkeit können <xref:System.Transactions> und [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zusammenarbeiten, um beim Arbeiten mit Transaktionen Optimierungen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte \(lokale\) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
+ Zusätzlich zu den Erweiterungen bei der Programmierbarkeit können <xref:System.Transactions> und [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zusammenarbeiten, um beim Arbeiten mit Transaktionen Optimierungen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte (lokale) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
   
  Ab [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 unterstützt <xref:System.Data.SqlClient> heraufstufbare Transaktionen beim Arbeiten mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff des Entwicklers.  
   
- Heraufstufbare Transaktionen sind nur verfügbar, wenn der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Datenanbieter für SQL Server \(`SqlClient`\) mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] verwendet wird.  
+ Heraufstufbare Transaktionen sind nur verfügbar, wenn der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (`SqlClient`) mit [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]verwendet wird.  
   
-## Erstellen heraufstufbarer Transaktionen  
- Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Anbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Namespace von <xref:System.Transactions> behandelt werden. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen\-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
+## <a name="creating-promotable-transactions"></a>Erstellen heraufstufbarer Transaktionen  
+ Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im behandelt werden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> Namespace. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
   
 > [!NOTE]
 >  In einem teilweise vertrauenswürdigen Szenario wird die <xref:System.Transactions.DistributedTransactionPermission> benötigt, wenn eine Transaktion zu einer verteilten Transaktion heraufgestuft wird.  
   
-## Szenarien für heraufstufbare Transaktionen  
- Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC \(Microsoft Distributed Transaction Coordinator\) verwaltet, der alle Ressourcen\-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere Form einer <xref:System.Transactions>\-Transaktion, die effektiv die Arbeit auf eine einzelne [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]\-Transaktion delegiert.<xref:System.Transactions>, <xref:System.Data.SqlClient> und [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] koordinieren die Arbeit, die zur Behandlung der Transaktion erforderlich ist, und stufen sie bei Bedarf auf eine vollständig verteilte Transaktion hoch.  
+## <a name="promotable-transaction-scenarios"></a>Szenarien für heraufstufbare Transaktionen  
+ Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC (Microsoft Distributed Transaction Coordinator) verwaltet, der alle Ressourcen-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere Form einer <xref:System.Transactions> -Transaktion, die effektiv die Arbeit auf eine einzelne [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] -Transaktion delegiert. <xref:System.Transactions>, <xref:System.Data.SqlClient>und [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] koordinieren die Arbeit, die zur Behandlung der Transaktion erforderlich ist, und stufen sie bei Bedarf auf eine vollständig verteilte Transaktion hoch.  
   
- Der Vorteil der Verwendung heraufstufbarer Transaktionen besteht darin, dass beim Öffnen einer Verbindung mit einer aktiven <xref:System.Transactions.TransactionScope>\-Transaktion die Transaktion als kompakte Transaktion durchgeführt wird, wenn keine weiteren Verbindungen geöffnet sind und der zusätzliche Mehraufwand einer vollständig verteilten Transaktion vermieden werden kann.  
+ Der Vorteil der Verwendung heraufstufbarer Transaktionen besteht darin, dass beim Öffnen einer Verbindung mit einer aktiven <xref:System.Transactions.TransactionScope> -Transaktion die Transaktion als kompakte Transaktion durchgeführt wird, wenn keine weiteren Verbindungen geöffnet sind und der zusätzliche Mehraufwand einer vollständig verteilten Transaktion vermieden werden kann.  
   
-### Schlüsselwörter für Verbindungszeichenfolgen  
- Die <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>\-Eigenschaft unterstützt ein Schlüsselwort, `Enlist`, das angibt, ob der <xref:System.Data.SqlClient> Transaktionskontexte erkennt, und die Verbindung automatisch in einer verteilten Transaktion einträgt. Wenn `Enlist=true`, wird die Verbindung automatisch im aktuellen Transaktionskontext des öffnenden Threads eingetragen. Wenn `Enlist=false`, interagiert der `SqlClient` nicht mit einer verteilten Transaktion. Der Standardwert für `Enlist` ist "true". Wenn `Enlist` in der Verbindungszeichenfolge nicht angegeben ist, wird die Verbindung automatisch in einer verteilten Transaktion eingetragen, wenn eine solche zum Zeitpunkt des Öffnens der Verbindung erkannt wird.  
+### <a name="connection-string-keywords"></a>Schlüsselwörter für Verbindungszeichenfolgen  
+ Die <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> -Eigenschaft unterstützt ein Schlüsselwort, `Enlist`, das angibt, ob der <xref:System.Data.SqlClient> Transaktionskontexte erkennt, und die Verbindung automatisch in einer verteilten Transaktion einträgt. Wenn `Enlist=true`, wird die Verbindung automatisch im aktuellen Transaktionskontext des öffnenden Threads eingetragen. Wenn `Enlist=false`, interagiert der `SqlClient` nicht mit einer verteilten Transaktion. Der Standardwert für `Enlist` ist "true". Wenn `Enlist` in der Verbindungszeichenfolge nicht angegeben ist, wird die Verbindung automatisch in einer verteilten Transaktion eingetragen, wenn eine solche zum Zeitpunkt des Öffnens der Verbindung erkannt wird.  
   
- Die `Transaction Binding`\-Schlüsselwörter in einer <xref:System.Data.SqlClient.SqlConnection>\-Verbindungszeichenfolge steuern die Zuordnung einer Verbindung mit einer eingetragenen `System.Transactions`\-Transaktion. Diese ist auch verfügbar durch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A>\-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+ Die `Transaction Binding` -Schlüsselwörter in einer <xref:System.Data.SqlClient.SqlConnection> -Verbindungszeichenfolge steuern die Zuordnung einer Verbindung mit einer eingetragenen `System.Transactions` -Transaktion. Diese ist auch verfügbar durch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> -Eigenschaft eines <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
   
  In der folgenden Tabelle sind die möglichen Werte beschrieben.  
   
 |Schlüsselwort|Beschreibung|  
-|-------------------|------------------|  
-|Implicit Unbind|Der Standardwert. Die Verbindung wird von der Transaktion getrennt, wenn diese endet, und wechselt damit zurück in den Autocommit\-Modus.|  
-|Explicit Unbind|Die Verbindung bleibt so lange an die Transaktion gebunden, bis die Transaktion geschlossen wird. Die Verbindung schlägt fehl, wenn die zugehörige Transaktion nicht aktiv ist oder <xref:System.Transactions.Transaction.Current%2A> nicht entspricht.|  
+|-------------|-----------------|  
+|Implicit Unbind|Der Standardwert. Die Verbindung wird von der Transaktion getrennt, wenn diese endet, und wechselt damit zurück in den Autocommit-Modus.|  
+|Explicit Unbind|Die Verbindung bleibt so lange an die Transaktion gebunden, bis die Transaktion geschlossen wird. Die Verbindung schlägt fehl, wenn die zugehörige Transaktion nicht aktiv ist oder <xref:System.Transactions.Transaction.Current%2A>nicht entspricht.|  
   
-## Verwenden von "TransactionScope"  
- Durch die <xref:System.Transactions.TransactionScope>\-Klasse wird ein Codeblock transaktional, indem die Klasse implizit Verbindungen in einer verteilten Transaktion einträgt. Sie müssen die <xref:System.Transactions.TransactionScope.Complete%2A>\-Methode am Ende des <xref:System.Transactions.TransactionScope>\-Blocks vor dem Verlassen aufrufen. Beim Verlassen des Blocks wird die <xref:System.Transactions.TransactionScope.Dispose%2A>\-Methode aufgerufen. Wenn eine Ausnahme aufgerufen wurde, die den Code veranlasst, den Bereich zu verlassen, wird die Transaktion als abgebrochen angesehen.  
+## <a name="using-transactionscope"></a>Verwenden von "TransactionScope"  
+ Durch die <xref:System.Transactions.TransactionScope> -Klasse wird ein Codeblock transaktional, indem die Klasse implizit Verbindungen in einer verteilten Transaktion einträgt. Sie müssen die <xref:System.Transactions.TransactionScope.Complete%2A> -Methode am Ende des <xref:System.Transactions.TransactionScope> -Blocks vor dem Verlassen aufrufen. Beim Verlassen des Blocks wird die <xref:System.Transactions.TransactionScope.Dispose%2A> -Methode aufgerufen. Wenn eine Ausnahme aufgerufen wurde, die den Code veranlasst, den Bereich zu verlassen, wird die Transaktion als abgebrochen angesehen.  
   
- Es wird empfohlen, einen `using`\-Block zu verwenden, um sicherzustellen, dass <xref:System.Transactions.TransactionScope.Dispose%2A> für das <xref:System.Transactions.TransactionScope>\-Objekt aufgerufen wird, wenn der verwendete Block beendet wird. Durch das Fehlschlagen von Commits oder Rollbacks ausstehender Transaktionen kann die Leistung entscheidend beeinträchtigt werden, da das Zeitlimit für <xref:System.Transactions.TransactionScope> eine Minute beträgt. Wenn Sie keine `using`\-Anweisung verwenden, müssen Sie die gesamte Arbeit in einem `Try`\-Block durchführen und die <xref:System.Transactions.TransactionScope.Dispose%2A>\-Methode im `Finally`\-Block explizit aufrufen.  
+ Es wird empfohlen, einen `using` -Block zu verwenden, um sicherzustellen, dass <xref:System.Transactions.TransactionScope.Dispose%2A> für das <xref:System.Transactions.TransactionScope> -Objekt aufgerufen wird, wenn der verwendete Block beendet wird. Durch das Fehlschlagen von Commits oder Rollbacks ausstehender Transaktionen kann die Leistung entscheidend beeinträchtigt werden, da das Zeitlimit für <xref:System.Transactions.TransactionScope> eine Minute beträgt. Wenn Sie keine `using` -Anweisung verwenden, müssen Sie die gesamte Arbeit in einem `Try` -Block durchführen und die <xref:System.Transactions.TransactionScope.Dispose%2A> -Methode im `Finally` -Block explizit aufrufen.  
   
- Wenn innerhalb des <xref:System.Transactions.TransactionScope> eine Ausnahme auftritt, wird die Transaktion als inkonsistent markiert und abgebrochen. Sie wird zurückgesetzt, wenn der <xref:System.Transactions.TransactionScope> verworfen wird. Wenn keine Ausnahme auftritt, werden die beteiligten Transaktionen übernommen.  
-  
-> [!NOTE]
->  Die `TransactionScope`\-Klasse erstellt standardmäßig eine Transaktion mit dem <xref:System.Transactions.Transaction.IsolationLevel%2A>`Serializable`. Je nach Anwendung möchten Sie möglicherweise den Isolationsgrad senken, um Konfliktpotential in Ihrer Anwendung zu vermeiden.  
+ Wenn innerhalb des <xref:System.Transactions.TransactionScope>eine Ausnahme auftritt, wird die Transaktion als inkonsistent markiert und abgebrochen. Sie wird zurückgesetzt, wenn der <xref:System.Transactions.TransactionScope> verworfen wird. Wenn keine Ausnahme auftritt, werden die beteiligten Transaktionen übernommen.  
   
 > [!NOTE]
->  Es wird empfohlen, dass Sie nur Update\-, Einfüge\- und Löschvorgänge in verteilten Transaktionen durchführen, da diese erhebliche Datenbankressorcen beanspruchen. Select\-Anweisungen können Datenbankressourcen unnötigerweise blockieren, und in einigen Szenarien kann es erforderlich sein, Transaktionen für Select\-Vorgänge zu verwenden. Arbeiten, die nicht mit der Datenbank zusammenhängen, sollten außerhalb des Bereichs der Transaktion durchgeführt werden, außer wenn andere transaktive Ressourcen\-Manager verwendet werden. Obwohl eine Ausnahme innerhalb des Bereichs der Transaktion dazu führt, dass die Transaktion keinen Commit ausführt, verfügt die <xref:System.Transactions.TransactionScope>\-Klasse über keine Funktion zum Zurücksetzen von Änderungen, die vom Code außerhalb des Bereichs der Transaktion selbst durchgeführt wurden. Wenn Sie beim Zurücksetzen der Transaktion Maßnahmen ergreifen müssen, müssen Sie Ihre eigene Implementierung der <xref:System.Transactions.IEnlistmentNotification>\-Schnittstelle schreiben und in der Transaktion explizit eintragen.  
+>  Die `TransactionScope` -Klasse erstellt standardmäßig eine Transaktion mit dem <xref:System.Transactions.Transaction.IsolationLevel%2A> `Serializable` . Je nach Anwendung möchten Sie möglicherweise den Isolationsgrad senken, um Konfliktpotential in Ihrer Anwendung zu vermeiden.  
   
-## Beispiel  
+> [!NOTE]
+>  Es wird empfohlen, dass Sie nur Update-, Einfüge- und Löschvorgänge in verteilten Transaktionen durchführen, da diese erhebliche Datenbankressorcen beanspruchen. Select-Anweisungen können Datenbankressourcen unnötigerweise blockieren, und in einigen Szenarien kann es erforderlich sein, Transaktionen für Select-Vorgänge zu verwenden. Arbeiten, die nicht mit der Datenbank zusammenhängen, sollten außerhalb des Bereichs der Transaktion durchgeführt werden, außer wenn andere transaktive Ressourcen-Manager verwendet werden. Obwohl eine Ausnahme innerhalb des Bereichs der Transaktion dazu führt, dass die Transaktion keinen Commit ausführt, verfügt die <xref:System.Transactions.TransactionScope> -Klasse über keine Funktion zum Zurücksetzen von Änderungen, die vom Code außerhalb des Bereichs der Transaktion selbst durchgeführt wurden. Wenn Sie beim Zurücksetzen der Transaktion Maßnahmen ergreifen müssen, müssen Sie Ihre eigene Implementierung der <xref:System.Transactions.IEnlistmentNotification> -Schnittstelle schreiben und in der Transaktion explizit eintragen.  
+  
+## <a name="example"></a>Beispiel  
  Das Arbeiten mit <xref:System.Transactions> setzt einen Verweis auf "System.Transactions.dll" voraus.  
   
- Die folgende Funktion zeigt das Erstellen einer heraufstufbaren Transaktion für zwei verschiedene SQL Server\-Instanzen, die von zwei verschiedenen <xref:System.Data.SqlClient.SqlConnection>\-Objekten dargestellt werden, die ihrerseits von einem <xref:System.Transactions.TransactionScope>\-Block umschlossen sind. Der Code erstellt den <xref:System.Transactions.TransactionScope>\-Block mit einer `using`\-Anweisung und öffnet die erste Verbindung, durch die er automatisch im <xref:System.Transactions.TransactionScope> eingetragen wird. Die Transaktion wird zuerst als kompakte Transaktion und nicht als vollständig verteilte Transaktion eingetragen. Die zweite Verbindung wird nur dann im <xref:System.Transactions.TransactionScope> eingetragen, wenn der Befehl in der ersten Verbindung keine Ausnahme auslöst. Wenn die zweite Verbindung geöffnet wird, wird die Transaktion automatisch auf eine vollständig verteilte Transaktion hochgestuft. Es wird die <xref:System.Transactions.TransactionScope.Complete%2A>\-Methode aufgerufen, die für die Transaktion nur dann einen Commit ausführt, wenn keine Ausnahmen ausgelöst wurden. Wenn an einem beliebigen Punkt im <xref:System.Transactions.TransactionScope>\-Block eine Ausnahme ausgelöst wurde, wird `Complete` nicht aufgerufen, und die verteilte Transaktion wird zurückgenommen, sobald der <xref:System.Transactions.TransactionScope> am Ende seines `using`\-Blocks verfügbar gemacht wird.  
+ Die folgende Funktion zeigt das Erstellen einer heraufstufbaren Transaktion für zwei verschiedene SQL Server-Instanzen, die von zwei verschiedenen <xref:System.Data.SqlClient.SqlConnection> -Objekten dargestellt werden, die ihrerseits von einem <xref:System.Transactions.TransactionScope> -Block umschlossen sind. Der Code erstellt den <xref:System.Transactions.TransactionScope> -Block mit einer `using` -Anweisung und öffnet die erste Verbindung, durch die er automatisch im <xref:System.Transactions.TransactionScope>eingetragen wird. Die Transaktion wird zuerst als kompakte Transaktion und nicht als vollständig verteilte Transaktion eingetragen. Die zweite Verbindung wird nur dann im <xref:System.Transactions.TransactionScope> eingetragen, wenn der Befehl in der ersten Verbindung keine Ausnahme auslöst. Wenn die zweite Verbindung geöffnet wird, wird die Transaktion automatisch auf eine vollständig verteilte Transaktion hochgestuft. Es wird die <xref:System.Transactions.TransactionScope.Complete%2A> -Methode aufgerufen, die für die Transaktion nur dann einen Commit ausführt, wenn keine Ausnahmen ausgelöst wurden. Wenn an einem beliebigen Punkt im <xref:System.Transactions.TransactionScope> -Block eine Ausnahme ausgelöst wurde, wird `Complete` nicht aufgerufen, und die verteilte Transaktion wird zurückgenommen, sobald der <xref:System.Transactions.TransactionScope> am Ende seines `using` -Blocks verfügbar gemacht wird.  
   
 ```csharp  
 // This function takes arguments for the 2 connection strings and commands in order  
@@ -232,6 +238,6 @@ Public Function CreateTransactionScope( _
 End Function  
 ```  
   
-## Siehe auch  
- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

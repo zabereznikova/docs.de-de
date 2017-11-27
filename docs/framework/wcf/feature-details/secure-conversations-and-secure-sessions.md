@@ -1,28 +1,31 @@
 ---
-title: "Sichere Unterhaltungen und sichere Sitzungen. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sichere Unterhaltungen und sichere Sitzungen.
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 6647ef8124279e9fc0b3049beb5c87f887125dfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Sichere Unterhaltungen und sichere Sitzungen.
-Eine Funktion von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist die Fähigkeit, sichere Sitzungen zwischen zwei Endpunkten aufzubauen, die sich gegenseitig authentifizieren und sich auf ein Verfahren zur Verschlüsselung und digitalen Signatur einigen.Der Dienstendpunkt könnte beispielsweise einen Clientendpunkt benötigen, um zur Authentifizierung ein Sicherheitstoken zu senden, das auf einem X.509\-Zertifikat basiert.Sobald der Client authentifiziert ist, gibt der Dienstendpunkt ein Sicherheitskontexttoken \(SCT\) an den Client zurück, das dann verwendet wird, um alle folgenden Nachrichten innerhalb der Sitzung zu sichern.Durch das Einrichten dieser sicheren Sitzung kann der Nachrichtensatz, der zwischen den beiden Endpunkten ausgetauscht wird, effizienter werden, da SCT über einen symmetrischen Schlüssel verfügt.In Bezug auf das Generieren einer digitalen Signatur oder Verschlüsseln eines Datensatzes erfordern asymmetrische Schlüssel, auf denen X.509\-Zertifikate basieren, bedeutend mehr Rechenleistung als symmetrische Schlüssel.  
+# <a name="secure-conversations-and-secure-sessions"></a>Sichere Unterhaltungen und sichere Sitzungen.
+Eine Funktion von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ist die Fähigkeit, sichere Sitzungen zwischen zwei Endpunkten aufzubauen, die sich gegenseitig authentifizieren und sich auf ein Verfahren zur Verschlüsselung und digitalen Signatur einigen. Der Dienstendpunkt könnte beispielsweise einen Clientendpunkt benötigen, um zur Authentifizierung ein Sicherheitstoken zu senden, das auf einem X.509-Zertifikat basiert. Sobald der Client authentifiziert ist, gibt der Dienstendpunkt ein Sicherheitskontexttoken (SCT) an den Client zurück, das dann verwendet wird, um alle folgenden Nachrichten innerhalb der Sitzung zu sichern. Durch das Einrichten dieser sicheren Sitzung kann der Nachrichtensatz, der zwischen den beiden Endpunkten ausgetauscht wird, effizienter werden, da SCT über einen symmetrischen Schlüssel verfügt. In Bezug auf das Generieren einer digitalen Signatur oder Verschlüsseln eines Datensatzes erfordern asymmetrische Schlüssel, auf denen X.509-Zertifikate basieren, bedeutend mehr Rechenleistung als symmetrische Schlüssel.  
   
- Die Bootstrap\-Richtlinie \(die in Abschnitt 6.2.7 des [WS\-SecurityPolicy](http://go.microsoft.com/fwlink/?LinkId=99817)\-Standards definiert ist\) enthält die Nachrichtensicherheitsassertionen, die vor dem RST\/SCT\- und RSTR\/SCT\-Austausch zur Sicherung des Kanals und Authentifizierung des Clients verwendet werden.Bestimmte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Standardbindungen verfügen über eine `Security.Message.EstablishSecurityContext`\-Eigenschaft, welche steuert, ob eine sichere Konversation verwendet wird.Bei Verwendung benutzerdefinierter Bindungen wird der Bootstrap durch die Schachtelung von Sicherheitsbindungselementen angegeben. Hierzu wird entweder in der Konfigurationsdatei [\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) angegeben oder im Code <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A> aufgerufen.  
+ Die bootstrap-Richtlinie (im Abschnitt 6.2.7 definiert die [WS-SecurityPolicy](http://go.microsoft.com/fwlink/?LinkId=99817) standard) die Nachricht Sicherheit Assertionen verwendet, um den Kanal sichern und Authentifizieren des Clients vor der RST/SCT und RSTR/SCT-Austausch enthält. Bestimmte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Standardbindungen verfügen über eine `Security.Message.EstablishSecurityContext`-Eigenschaft, welche steuert, ob eine sichere Konversation verwendet wird. Bei Verwendung von benutzerdefinierten Bindungen sind Bootstrapper durch Schachteln Sicherheitsbindungselemente entweder durch [ \<SecureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) in der Konfigurationsdatei oder durch Aufrufen von <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A> im Code.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Sitzungen finden Sie unter [Verwenden von Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sitzungen, finden Sie unter [mit Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
   
-## Siehe auch  
- [Sitzungen, Instanziierung und Parallelität](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Sitzungen, Instanziierung und Parallelität](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
  [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

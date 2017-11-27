@@ -1,111 +1,108 @@
 ---
-title: "Adding Printable Reports to Visual Studio Applications | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "printing [Visual Studio], reports"
-  - "reports, printing in Visual Studio"
+title: "Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendungen"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- printing [Visual Studio], reports
+- reports [Visual Basic], printing in Visual Studio
 ms.assetid: 93928405-ef41-495e-bce2-9d43d5a7080a
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4ce2a8b12d8202a9f201a82b0d4a571249210d48
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Adding Printable Reports to Visual Studio Applications
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Studio unterstützt eine Reihe von Berichtslösungen, mit denen Sie Ihre Visual Basic\-Anwendungen um umfangreiche Datenberichtsfunktionen ergänzen können.  Sie können Berichte mithilfe von ReportViewer\-Steuerelementen, Crystal Reports oder SQL Server Reporting Services erstellen und hinzufügen.  
+# <a name="adding-printable-reports-to-visual-studio-applications"></a>Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendungen
+Visual Studio unterstützt eine Vielzahl von Lösungen zur einfacheren Datenberichten Visual Basic-Anwendungen hinzufügen. Sie können erstellen und Hinzufügen von Berichten mithilfe von ReportViewer-Steuerelemente, Crystal Reports oder SQL Server Reporting Services.  
   
 > [!NOTE]
->  SQL Server Reporting Services ist dabei Bestandteil von SQL Server 2005, nicht von Visual Studio.  Reporting Services sind nur bei Installation von SQL Server 2005 auf dem System installiert.  
+>  SQL Server Reporting Services ist Teil von SQL Server 2005 anstelle von Visual Studio. Der Reporting Services nicht auf Ihrem System installiert, es sei denn, Sie SQL Server 2005 installiert haben.  
   
-## Übersicht über Microsoft\-Berichterstellungstechnologie in Visual Basic\-Anwendungen  
- Sie können Microsoft\-Berichterstellungstechnologie auf eine der folgenden Arten in Ihrer Anwendung verwenden:  
+## <a name="overview-of-microsoft-reporting-technology-in-visual-basic-applications"></a>Übersicht über die Microsoft-Berichtstechnologie in Visual Basic-Anwendungen  
+ Wählen Sie die folgenden Vorgehensweisen aus eine Microsoft-berichtstechnologie in Ihrer Anwendung verwenden:  
   
--   Fügen Sie einer Visual Basic\-Windows\-Anwendung eine oder mehrere Instanzen eines ReportViewer\-Steuerelements hinzu.  
+-   Fügen Sie eine oder mehrere Instanzen eines ReportViewer-Steuerelements zu einem Visual Basic-Windows-Anwendung hinzu.  
   
--   Integrieren Sie SQL Server Reporting Services programmgesteuert, indem Sie den Berichtsserver\-Webdienst aufrufen.  
+-   Integrieren von SQL Server Reporting Services programmgesteuert durch Aufrufe an die Berichtsserver-Webdienst.  
   
--   Verwenden Sie das ReportViewer\-Steuerelement und Microsoft SQL Server 2005 Reporting Services zusammen, indem Sie das Steuerelement für die Berichtsanzeige und einen Berichtsserver für die Berichtsverarbeitung verwenden.  \(Wenn Sie einen Berichtsserver und das ReportViewer\-Steuerelement zusammen verwenden möchten, müssen Sie die SQL Server 2005\-Version von Reporting Services verwenden.\)  
+-   Verwenden der ReportViewer-Steuerelement und Microsoft SQL Server 2005 Reporting Services zusammen, verwenden das Steuerelement als einen Berichts-Viewer und einem Berichtsserver als eine Berichtsprozessor. (Beachten Sie, dass Sie die SQL Server 2005-Version von Reporting Services verwenden müssen, wenn Sie einen Berichtsserver und das ReportViewer-Steuerelement zusammen verwenden möchten).  
   
-## Verwenden von ReportViewer\-Steuerelementen  
- Berichtsfunktionen lassen sich am einfachsten in eine Visual Basic Windows\-Anwendung einbetten, indem Sie das ReportViewer\-Steuerelement in ein Formular in Ihrer Anwendung einfügen.  Das Steuerelement erweitert Ihre Anwendung direkt um Berichtsfunktionen und stellt einen integrierten Berichts\-Designer bereit, sodass Sie Berichte mit Daten aus allen ADO.NET\-Datenobjekten erstellen können.  Die umfassende API ermöglicht programmgesteuerten Zugriff auf das Steuerelement und die Berichte, sodass Sie Laufzeitfunktionen konfigurieren können.  
+## <a name="using-reportviewer-controls"></a>Verwenden von ReportViewer-Steuerelementen  
+ Die einfachste Möglichkeit zum Einbetten von Berichtsfunktionen in eine Visual Basic-Windows-Anwendung ist ein Formular in Ihrer Anwendung das ReportViewer-Steuerelement hinzu. Das Steuerelement fügt Funktionen direkt in Ihre Anwendung für die berichtsverarbeitung und bietet einen integrierten Berichts-Designer, damit Sie Berichte mit Daten aus jeder ADO.NET Datenobjekt erstellen können. Eine voll ausgestattete API ermöglicht den programmgesteuerten Zugriff auf das Steuerelement und Berichte, sodass Sie Laufzeitfunktionen konfigurieren können.  
   
- ReportViewer stellt in einem einzelnen, frei verteilbaren Datensteuerelement integrierte Verarbeitungs\- und Anzeigefunktionen für Berichte bereit.  ReportViewer\-Steuerelemente empfehlen sich, wenn Sie die folgenden Berichtsfunktionen benötigen:  
+ ReportViewer bietet integrierte berichtsverarbeitung und die Funktion in einem einzelnen, kostenlos erhältliche Datensteuerelement anzeigen. Wählen Sie das ReportViewer-Steuerelemente, wenn Sie die folgenden Berichtsfunktionen benötigen:  
   
--   Berichtsverarbeitung in der Clientanwendung.  Ein verarbeiteter Bericht wird in einem vom Steuerelement bereitgestellten Ansichtsbereich angezeigt.  
+-   Die berichtsverarbeitung in der Clientanwendung. Ein verarbeiteter Bericht wird in einen vom Steuerelement bereitgestellte Ansichtsbereich angezeigt.  
   
--   Datenbindung an ADO.NET\-Datentabellen.  Sie können Berichte erstellen, die dem Steuerelement bereitgestellte <xref:System.Data.DataTable>\-Instanzen verwenden.  Es ist auch eine direkte Bindung an Geschäftsobjekte möglich.  
+-   Datenbindung an ADO.NET Datentabellen. Sie können Berichte erstellen, die nutzen <xref:System.Data.DataTable> Instanzen, die an das Steuerelement bereitgestellt. Sie können auch direkt an Geschäftsobjekte binden.  
   
--   Verteilbare Steuerelemente, die Sie in Ihre Anwendung einschließen können.  
+-   Weiterverteilbare Steuerelemente, die Sie in der Anwendung einschließen können.  
   
--   Laufzeitfunktionen wie Seitennavigation, Drucken, Durchsuchen und Exportformate.  Diese Vorgänge werden durch eine ReportViewer\-Symbolleiste unterstützt.  
+-   Common Language Runtime-Funktionen wie Seitennavigation, drucken, suchen und Exportformate. Eine ReportViewer-Symbolleiste bietet Unterstützung für diese Vorgänge.  
   
- Sie verwenden das ReportViewer\-Steuerelement, indem Sie es aus dem Abschnitt **Daten** in der Visual Studio\-Toolbox auf ein Formular der Visual Basic Windows\-Anwendung ziehen.  
+ Um das ReportViewer-Steuerelement verwenden, können Sie ziehen es aus der **Daten** Teil der Visual Studio-Toolbox auf ein Formular in der Visual Basic-Windows-Anwendung.  
   
-### Erstellen von Berichten in Visual Studio für ReportViewer\-Steuerelemente  
- Um einen Bericht zu erstellen, der in ReportViewer ausgeführt werden kann, fügen Sie dem Projekt eine **Berichtsvorlage** hinzu.  Visual Studio erstellt eine Definitionsdatei für einen Clientbericht \(.rdlc\), fügt diese Datei dem Projekt hinzu, und öffnet im Arbeitsbereich einen integrierten Berichts\-Designer.  
+### <a name="creating-reports-in-visual-studio-for-reportviewer-controls"></a>Erstellen von Berichten in Visual Studio für ReportViewer-Steuerelemente  
+ Um einen Bericht erstellen, die im ReportViewer ausgeführt wird, fügen einen **Bericht** aus, um das Projekt. Visual Studio erstellt eine Client-Berichtsdefinitionsdatei (RDLC), fügt die Datei dem Projekt hinzu und öffnet einen integrierten Berichts-Designer in Visual Studio-Arbeitsbereich.  
   
- Der Berichts\-Designer von Visual Studio ist mit dem **Datenquellenfenster** synchronisiert.  Wenn Sie ein Feld aus dem **Datenquellenfenster** auf einen Bericht ziehen, kopiert der Berichts\-Designer Metadaten zur Datenquelle in die Berichtsdefinitionsdatei.  Mithilfe dieser Metadaten wird vom ReportViewer\-Steuerelement automatisch Datenbindungscode generiert.  
+ Der Visual Studio-Berichts-Designer integriert die **Datenquellen** Fenster. Beim Ziehen eines Felds aus der **Datenquellen** Fenster aus, um den Bericht, den Berichts-Designer Metadaten zu der Datenquelle in der Berichtsdefinitionsdatei kopiert. Diese Metadaten werden vom ReportViewer-Steuerelement zum automatischen Generieren von Code für die Datenbindung verwendet.  
   
- Der Visual Studio\-Report\-Designer bietet keine Berichtsvorschaufunktionen.  Wenn Sie eine Berichtsvorschau anzeigen möchten, führen Sie die Anwendung aus, und zeigen Sie den eingebetteten Bericht an.  
+ Der Visual Studio-Berichts-Designer schließt keine Vorschaufunktion Bericht ein. Vorschau des Berichts, führen Sie die Anwendung und den darin eingebetteten Bericht in der Vorschau anzeigen.  
   
-||  
-|-|  
-|So fügen Sie Ihrer Anwendung einfache Berichtsfunktionen hinzu|  
-|1.  Ziehen Sie ein ReportViewer\-Steuerelement von der Registerkarte **Daten** der **Toolbox** auf das Formular.<br />2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** das Symbol **Bericht** aus, und klicken Sie dann auf **Hinzufügen**.<br />     In der Entwicklungsumgebung wird nun der Berichts\-Designer geöffnet, und dem Projekt wird eine Berichtsdatei \(.rdlc\) hinzugefügt.<br />3.  Ziehen Sie Berichtselemente aus der **Toolbox** auf das Berichtslayout, und ordnen Sie diese nach Ihren Wünschen an.<br />4.  Ziehen Sie Felder aus dem **Datenquellenfenster** auf die Berichtselemente im Berichtslayout.|  
+|Grundlegende Berichtsfunktionen Ihrer Anwendung hinzu|  
+|---|    
+|1.  Ziehen Sie ein ReportViewer-Steuerelement aus der **Daten** auf der Registerkarte die **Toolbox** auf das Formular.<br />2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. In der **neues Element hinzufügen** wählen Sie im Dialogfeld die **Bericht** Symbol, und klicken Sie auf **hinzufügen**.<br />     Der Berichts-Designer wird geöffnet, in der Entwicklungsumgebung, und eine Berichtsdatei (RDLC) wird dem Projekt hinzugefügt.<br />3.  Ziehen Sie Berichtselemente aus der **Toolbox** auf das Berichtslayout und wie gewünscht anordnen.<br />4.  Ziehen Sie Felder aus der **Datenquellen** Fenster aus, um die Berichtselemente im Berichtslayout.|  
   
-## Verwenden von Reporting Services in Visual Basic\-Anwendungen  
- Reporting Services ist eine in SQL Server integrierte serverbasierte Berichterstellungstechnologie.  Reporting Services stellen Zusatzfeatures bereit, die in ReportViewer\-Steuerelementen nicht verfügbar sind.  Reporting Services empfehlen sich, wenn Sie die folgenden Features benötigen:  
+## <a name="using-reporting-services-in-visual-basic-applications"></a>Verwenden von Reporting Services in Visual Basic-Anwendungen  
+ Reporting Services ist eine serverbasierte reporting-Technologie, die mit SQL Server enthalten ist. Reporting Services enthält weitere Funktionen, die in den ReportViewer-Steuerelementen nicht gefunden werden. Wählen Sie die Reporting Services, wenn Sie keines der folgenden Features erforderlich:  
   
--   Dezentralisierte Bereitstellung und serverseitige Berichtsverarbeitung, die bei komplexen oder über einen langen Zeitraum ausgeführten Berichten und umfangreicher Berichterstellung bessere Leistung bietet.  
+-   Bereitstellung für horizontales Skalieren und serverseitige berichtsverarbeitung, die verbesserte Leistung für komplexe oder lang andauernden Berichte und für hohes Volumen berichtsaktivität bereitstellt.  
   
--   Integrierte Daten\- und Berichtsverarbeitung mit Unterstützung benutzerdefinierter Berichtsteuerelemente und Berichtsausgabe in verschiedenen Formaten.  
+-   Integrierte Daten- und berichtsverarbeitung, mit Unterstützung für benutzerdefinierte Berichtssteuerelemente und Rich Ausgabeformate rendern.  
   
--   Geplante Berichtsverarbeitung, sodass Berichte zu einem genauen Zeitpunkt ausgeführt werden können.  
+-   Geplante berichtsverarbeitung, damit Sie beim Ausführen von Berichten exakt angeben können.  
   
--   Berichtsweiterleitung an Abonnenten per E\-Mail oder über freigegebene Dateispeicherorte.  
+-   Abonnenten-basierter berichtsverteilung per E-mail oder an Speicherorte für Dateifreigaben.  
   
--   Ad\-hoc\-Berichterstellung, um Geschäftsbenutzern die bedarfsgerechte Berichterstellung zu ermöglichen.  
+-   Ad-hoc-Berichte, damit geschäftlichen Bereich Berichte erstellen können, je nach Bedarf.  
   
--   Datengesteuerte Abonnements, anhand derer benutzerdefinierte Berichtsausgaben an eine dynamischen Empfängerliste weitergeleitet wird.  
+-   Datengesteuerte Abonnements, die angepasste Berichtsausgabe an eine dynamische Liste von Empfängern weiterleiten.  
   
--   Benutzerdefinierte Erweiterungen für Datenverarbeitung, Berichtszustellung, benutzerdefinierte Authentifizierung und Berichtsdarstellung.  
+-   Benutzerdefinierte Erweiterungen für Datenverarbeitung, Berichtsübermittlung, benutzerdefinierte Authentifizierung und Berichtsrendering.  
   
- Der Berichtsserver wird als Webdienst implementiert.  Der Anwendungscode muss Aufrufe des Webdiensts enthalten, um auf Berichte und andere Metadaten zugreifen zu können.  Der Webdienst stellt einen vollständig programmgesteuerten Zugriff auf eine Berichtsserverinstanz bereit.  
+ Der Berichtsserver wird als Webdienst implementiert. Der Anwendungscode muss Aufrufe an den Webdienst den Zugriff auf Berichte und andere Metadaten enthalten. Der Web-Dienst bietet vollständige programmgesteuerten Zugriff auf eine Berichtsserverinstanz.  
   
- Da es sich bei Reporting Services um eine webbasierte Berichtstechnologie handelt, werden die Berichte im Standard\-Viewer im HTML\-Format ausgegeben.  Wenn die Berichte nicht standardmäßig im HTML\-Format dargestellt werden sollen, müssen Sie für Ihre Anwendung einen eigenen Berichts\-Viewer schreiben.  
+ Reporting Services eine webbasierte reporting Technologie handelt, wird die Standard-Viewer Berichte, die gerendert werden im HTML-Format. Wenn Sie nicht HTML als das Standardpräsentationsformat für den Bericht verwenden möchten, müssen Sie einen benutzerdefinierten Berichts-Viewer für Ihre Anwendung zu schreiben.  
   
-### Erstellen von Berichten für Reporting Services in Visual Studio  
- Zum Erstellen von Berichten, die auf einem Berichtsserver ausgeführt werden, müssen Sie in Visual Studio über Business Intelligence Development Studio \(in SQL Server 2005 enthalten\) Berichtsdefinitionsdateien \(.rdl\) erstellen.  
+### <a name="creating-reports-in-visual-studio-for-reporting-services"></a>Erstellen von Berichten in Visual Studio für Reporting Services  
+ Zum Erstellen von Berichten, die auf einem Berichtsserver ausgeführt werden, erstellen Sie Berichtsdefinitionen (RDL)-Dateien in Visual Studio über Business Intelligence Development Studio, die in SQL Server 2005 enthalten ist.  
   
 > [!NOTE]
->  Für die Verwendung von SQL Server Reporting Services und Business Intelligence Development Studio muss SQL Server 2005 installiert sein.  
+>  Sie müssen SQL Server 2005 installiert, damit SQL Server Reporting Services und Business Intelligence Development Studio verwendet haben.  
   
- Business Intelligence Development Studio fügt spezielle, für die SQL Server\-Komponenten bestimmte Projektvorlagen hinzu.  Zum Erstellen von Berichten können Sie aus den Vorlagen **Berichtsserverprojekt** oder **Berichtsserverprojekt\-Assistent** auswählen.  Sie können Datenquellenverbindungen und Abfragen für unterschiedliche Datenquellentypen angeben, z. B. SQL Server, Oracle, Analysis Services, XML und SQL Server Integration Services.  Auf den Registerkarten **Daten**, **Layout** und **Vorschau** im Arbeitsbereich können Sie Daten definieren, ein Berichtslayout erstellen und den Bericht in der Vorschau anzeigen.  
+ Business Intelligence Development Studio fügt Projektvorlagen, die spezifisch für SQL Server-Komponenten sind. Zum Erstellen von Berichten können Sie aus der **Berichtsserverprojekt** oder **Berichtsserverprojekt-Assistent** Vorlagen. Sie können datenquellenverbindungen und Abfragen zu einer Vielzahl von Datentypen, einschließlich SQL Server, Oracle, Analysis Services, XML und SQL Server Integration Services angeben. Ein **Daten** Registerkarte **Layout** Registerkarte und **Vorschau** Registerkarte ermöglichen es Ihnen, Daten definieren, ein Berichtslayout erstellen und den Bericht in den gleichen Arbeitsbereich in der Vorschau anzeigen.  
   
- Die für das Steuerelement oder den Berichtsserver erstellten Berichtsdefinitionen können in beiden Technologien wiederverwendet werden.  
+ Berichtsdefinitionen, die Sie für das Steuerelement oder dem Berichtsserver erstellen, können in beiden Technologie wiederverwendet werden.  
   
-||  
-|-|  
-|So erstellen Sie einen Bericht, der auf einem Berichtsserver ausgeführt wird|  
-|1.  Wählen Sie im Menü **Datei** den Befehl **Neu** aus.<br />     Das Dialogfeld **Neues Projekt** wird angezeigt.<br />2.  Klicken Sie im Bereich **Projekttypen** auf **Business Intelligence\-Projekte**.<br />3.  Wählen Sie im Bereich Vorlagen **Berichtsserverprojekt** oder **Berichtsserverprojekt\-Assistent** aus.|  
+|Zum Erstellen eines Berichts, das auf einem Berichtsserver ausgeführt wird.|  
+|---|    
+|1.  Auf der **Datei** Menü wählen **neu**.<br />     Das Dialogfeld **Neues Projekt** wird angezeigt.<br />2.  In der **-Projekttypen** Bereich, klicken Sie auf **Business Intelligence-Projekte**.<br />3.  Wählen Sie im Vorlagenbereich **Berichtsserverprojekt** oder **Berichtsserverprojekt-Assistent**.|  
   
-## Verwenden von ReportViewer\-Steuerelementen mit SQL Server Reporting Services  
- ReportViewer\-Steuerelemente und SQL Server 2005 Reporting Services können zusammen in der gleichen Anwendung verwendet werden.  
+## <a name="using-reportviewer-controls-and-sql-server-reporting-services-together"></a>Verwenden von ReportViewer-Steuerelemente und SQLServer Reporting Services  
+ Die ReportViewer-Steuerelemente und SQL Server 2005 Reporting Services können zusammen in derselben Anwendung verwendet werden.  
   
--   Das ReportViewer\-Steuerelement stellt einen Viewer bereit, in dem die Berichte in der Anwendung angezeigt werden.  
+-   Das ReportViewer-Steuerelement stellt einen Viewer, der zum Anzeigen von Berichten in der Anwendung verwendet wird.  
   
--   Reporting Services stellt die Berichte bereit und führt die gesamte Verarbeitung auf einem Remoteserver aus.  
+-   Reporting Services stellt die Berichte bereit und führt die gesamte Verarbeitung auf einem Remoteserver.  
   
- Das ReportViewer\-Steuerelement kann so konfiguriert werden, dass die auf einem Reporting Services\-Remoteberichtsserver gespeicherten und verarbeiteten Berichte angezeigt werden.  Diese Konfiguration wird als *Remoteverarbeitungsmodus* bezeichnet.  Im Remoteverarbeitungsmodus fordert das Steuerelement einen auf einem Remoteberichtsserver gespeicherten Bericht an.  Der Berichtsserver führt die gesamte Berichtsverarbeitung, Datenverarbeitung und das Berichtsrendering aus.  Anschließend wird ein vollständiger, gerenderter Bericht an das Steuerelement zurückgegeben und im Ansichtsbereich angezeigt.  
+ Das ReportViewer-Steuerelement kann für das Anzeigen von Berichten, die gespeichert und verarbeitet werden auf einem Remoteserver Reporting Services-Berichtsserver konfiguriert werden. Diese Art von Konfiguration heißt *Remoteverarbeitungsmodus*. Im Remoteverarbeitungsmodus fordert das Steuerelement einen Bericht, der auf einem Remoteberichtsserver gespeichert ist. Der Berichtsserver führt alle berichtsverarbeitung, die Datenverarbeitung und Rendern von Berichten. Ein nicht mehr benötigen, gerenderter Bericht wird an das Steuerelement zurückgegeben und im Ansichtsbereich angezeigt.  
   
- Auf dem Berichtsserver ausgeführte Berichte unterstützen zusätzliche Exportformate, weisen eine andere Implementierung der Berichtsparametrisierung auf und verwenden die vom Berichtsserver unterstützten Datenquellentypen. Der Zugriff erfolgt über die auf dem Berichtsserver eingerichtete rollenbasierte Autorisierung.  
+ Berichte, die auf einen Report Server unterstützen zusätzliche ausgeführt Exportformate, verfügen über einen anderen Bericht Parametrisierung-Implementierung, verwenden Sie die Datenquellentypen, die vom Berichtsserver unterstützt werden und erfolgt über das rollenbasierte Autorisierungsmodell auf die Berichtsserver.  
   
- Wenn Sie den Remoteverarbeitungsmodus verwenden möchten, müssen Sie beim Konfigurieren des ReportViewer\-Steuerelements die URL und den Pfad zu einem Serverbericht angeben.
+ Um den Remoteverarbeitungsmodus verwenden zu können, geben Sie die URL und den Pfad zu einem Serverbericht, beim Konfigurieren des ReportViewer-Steuerelements.

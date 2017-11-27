@@ -1,27 +1,29 @@
 ---
-title: "Gruppieren von Nachrichten in der Warteschlange einer Sitzung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Warteschlangen [WCF]. Gruppieren von Nachrichten"
+title: Gruppieren von Nachrichten in der Warteschlange einer Sitzung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gruppieren von Nachrichten in der Warteschlange einer Sitzung
+# <a name="grouping-queued-messages-in-a-session"></a>Gruppieren von Nachrichten in der Warteschlange einer Sitzung
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt eine Sitzung bereit, mit der verwandte Nachrichten gruppiert und von einer empfangenden Anwendung verarbeitet werden können. Die Nachrichten in einer Sitzung müssen Teil der gleichen Transaktion sein. Da alle Nachrichten Teil der gleichen Transaktion sind, wird die gesamte Sitzung zurückgesetzt, wenn eine Nachricht nicht verarbeitet werden kann. Sitzungen weisen ähnliche Verhaltensweisen bezüglich Warteschlangen für unzustellbare Nachrichten und Warteschlangen für potenziell schädliche Nachrichten auf. Die Time to Live (TTL)-Eigenschaft einer Bindung in der Warteschlange, die für Sitzungen konfiguriert wurde, wird auf die gesamte Sitzung angewendet. Wenn nur ein Teil der Nachrichten in der Sitzung vor Ablauf der TTL gesendet wird, wird die gesamte Sitzung in der Warteschlange für unzustellbare Nachrichten abgelegt. Analog wird ggf. die gesamte Sitzung in der Warteschlange für potenziell schädliche Nachrichten abgelegt, wenn Nachrichten in einer Sitzung nicht von der Anwendungswarteschlange an eine Anwendung gesendet werden können.  
   
 ## <a name="message-grouping-example"></a>Beispiel für das Gruppieren von Nachrichten  
@@ -31,13 +33,13 @@ caps.handback.revision: 30
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>So richten Sie einen Dienstvertrag für Sitzungen ein  
   
-1.  Definieren Sie einen Dienstvertrag, der eine Sitzung erfordert. Tun Sie dies mit der <xref:System.ServiceModel.OperationContractAttribute> Attribut, und geben:  
+1.  Definieren Sie einen Dienstvertrag, der eine Sitzung erfordert. Verwenden Sie dazu das <xref:System.ServiceModel.OperationContractAttribute>-Attribut, und geben Sie Folgendes an:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Markieren Sie die Vorgänge im Vertrag als unidirektional, da von diesen Methoden nichts zurückgegeben wird. Dies erfolgt mit der <xref:System.ServiceModel.OperationContractAttribute> Attribut, und geben:  
+2.  Markieren Sie die Vorgänge im Vertrag als unidirektional, da von diesen Methoden nichts zurückgegeben wird. Verwenden Sie dazu das <xref:System.ServiceModel.OperationContractAttribute>-Attribut, und geben Sie Folgendes an:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
@@ -49,17 +51,17 @@ caps.handback.revision: 30
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Jeder Dienstvorgang erfordert eine Transaktion. Geben Sie mit der <xref:System.ServiceModel.OperationBehaviorAttribute> Attribut. Der Vorgang, mit dem die Transaktion abgeschlossen wird, sollte auch `TransactionAutoComplete` auf `true` festlegen.  
+4.  Jeder Dienstvorgang erfordert eine Transaktion. Verwenden Sie das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut für die Angabe. Der Vorgang, mit dem die Transaktion abgeschlossen wird, sollte auch `TransactionAutoComplete` auf `true` festlegen.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Konfigurieren Sie einen Endpunkt, der die vom System bereitgestellte `NetProfileMsmqBinding`-Bindung verwendet.  
+5.  Konfigurieren Sie einen Endpunkt, der die vom System bereitgestellte `NetMsmqBinding`-Bindung verwendet.  
   
 6.  Erstellen Sie eine Transaktionswarteschlange mit <xref:System.Messaging>. Sie können die Warteschlange auch mit Message Queuing (MSMQ) oder MMC erstellen. Erstellen Sie in diesem Fall eine Transaktionswarteschlange.  
   
-7.  Erstellen Sie einen Host für den Dienst mithilfe von <xref:System.ServiceModel.ServiceHost>.  
+7.  Erstellen Sie mit <xref:System.ServiceModel.ServiceHost> einen Host für den Dienst.  
   
 8.  Öffnen Sie den Diensthost, um den Dienst verfügbar zu machen.  
   
@@ -93,5 +95,5 @@ caps.handback.revision: 30
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)   
+ [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Nachrichtenwarteschlangen (Übersicht)](../../../../docs/framework/wcf/feature-details/queues-overview.md)

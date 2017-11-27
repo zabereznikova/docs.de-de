@@ -1,50 +1,51 @@
 ---
-title: "&#196;nderungsbenachrichtigung in der Windows Forms-Datenbindung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, Hinzufügen von Änderungsbenachrichtigungen für die Datenbindung"
-  - "Windows Forms, Datenbindung"
+title: "Änderungsbenachrichtigung in der Windows Forms-Datenbindung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, data binding
+- Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#196;nderungsbenachrichtigung in der Windows Forms-Datenbindung
-Die *Änderungsbenachrichtigung* ist einer der wichtigsten Bestandteile der Windows Forms\-Datenbindung.  Um sicherzustellen, dass die Datenquelle und die gebundenen Steuerelemente immer über aktuelle Daten verfügen, müssen Sie die Änderungsbenachrichtigung für die Datenbindung hinzufügen.  Der Hauptzweck liegt darin, dass gebundene Steuerelemente über Änderungen an der zugehörigen Datenquelle benachrichtigt werden und die Datenquelle über Änderungen benachrichtigt wird, die an den gebundenen Eigenschaften eines Steuerelements vorgenommen wurden.  
+# <a name="change-notification-in-windows-forms-data-binding"></a>Änderungsbenachrichtigung in der Windows Forms-Datenbindung
+Einer der wichtigsten Konzepte des Windows Forms-Datenbindung ist *änderungsbenachrichtigung*. Um sicherzustellen, dass die Datenquelle und gebundenen Steuerelementen immer die aktuellsten Daten haben, müssen Sie die änderungsbenachrichtigung für die Datenbindung hinzufügen. Insbesondere sollen, stellen Sie sicher, dass gebundene Steuerelemente Änderungen benachrichtigt werden, die mit ihrer Datenquelle vorgenommen wurden, und die Datenquelle an die gebundenen Eigenschaften eines Steuerelements vorgenommenen Änderungen benachrichtigt.  
   
- Je nach der Art der Datenbindung gibt es unterschiedliche Arten der Änderungsbenachrichtigung:  
+ Es gibt verschiedene Arten von änderungsbenachrichtigungen, abhängig von der Art der Datenbindung:  
   
--   Einfache Bindung, bei der eine einzelne Steuerelementeigenschaft an eine einzelne Instanz eines Objekts gebunden wird.  
+-   Einfache Bindung, in dem eine einzelne Steuerelementeigenschaft an eine einzelne Instanz eines Objekts gebunden ist.  
   
--   Listenbasierte Bindung, bei der eine einzelne Steuerelementeigenschaft an die Eigenschaft eines Elements in einer Liste oder eine Steuerelementeigenschaft an eine Liste von Objekten gebunden wird.  
+-   Listenbasierte Bindung, z. eine einzelne Steuerelementeigenschaft an die Eigenschaft eines Elements in einer Liste oder einer Steuerelementeigenschaft gebunden b., die an eine Liste der Objekte gebunden werden.  
   
- Darüber hinaus müssen Sie beim Erstellen von Windows Forms\-Steuerelementen, die für Datenbindung vorgesehen sind, das *PropertyName*Changed\-Muster auf die Steuerelemente anwenden, sodass Änderungen an den gebundenen Eigenschaften eines Steuerelements an die Datenquelle weitergegeben werden.  
+ Darüber hinaus, wenn Sie Windows Forms-Steuerelemente, die Sie für die Datenbindung verwenden möchten erstellen, Sie müssen Anwenden der *PropertyName*Muster für die Steuerelemente so geändert, dass Änderungen an der gebundenen Eigenschaft eines Steuerelements an weitergegeben werden die die Datenquelle.  
   
-## Änderungsbenachrichtigung für einfache Bindung  
- Bei einfacher Bindung müssen Geschäftsobjekte Änderungsbenachrichtigung bereitstellen, wenn sich der Wert einer gebundenen Eigenschaft ändert.  Hierfür müssen Sie für jede Eigenschaft des Geschäftsobjekts ein *PropertyName*Changed\-Ereignis verfügbar machen und die Geschäftsobjekte mit <xref:System.Windows.Forms.BindingSource> oder der bevorzugten Methode an Steuerelemente binden, in der die Geschäftsobjekte die <xref:System.ComponentModel.INotifyPropertyChanged>\-Schnittstelle implementieren und ein <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>\-Ereignis auslösen, sobald sich der Wert einer Eigenschaft ändert.  Weitere Informationen finden Sie unter [Gewusst wie: Implementieren der INotifyPropertyChanged\-Schnittstelle](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md).  Wenn Sie Objekte verwenden, die die <xref:System.ComponentModel.INotifyPropertyChanged>\-Schnittstelle implementieren, müssen Sie zum Binden des Objekts an ein Steuerelement nicht die <xref:System.Windows.Forms.BindingSource> verwenden, sondern sollten stattdessen besser die <xref:System.Windows.Forms.BindingSource> verwenden.  
+## <a name="change-notification-for-simple-binding"></a>Änderungsbenachrichtigung für die einfache Bindung  
+ Einfache Bindung müssen Geschäftsobjekte änderungsbenachrichtigung verliehen wird bei Änderung des Werts einer Eigenschaft gebunden. Hierzu können Sie durch das Verfügbarmachen von einer *PropertyName*Changed-Ereignis für jede Eigenschaft das Geschäftsobjekt einer und binden das Geschäftsobjekt auf Steuerelemente mit den <xref:System.Windows.Forms.BindingSource> oder die bevorzugte Methode, in dem das Geschäftsobjekt implementiert, die <xref:System.ComponentModel.INotifyPropertyChanged> -Schnittstelle und löst eine <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> Ereignis aus, wenn der Wert einer Eigenschaft ändert. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren der INotifyPropertyChanged-Schnittstelle](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md). Bei Verwendung von Objekten, implementieren die <xref:System.ComponentModel.INotifyPropertyChanged> -Schnittstelle, Sie müssen keine verwenden die <xref:System.Windows.Forms.BindingSource> zum Binden des Objekts an ein Steuerelement, während mit der <xref:System.Windows.Forms.BindingSource> wird empfohlen.  
   
-## Änderungsbenachrichtigung für listenbasierte Bindung  
- In Windows Forms beruht die Bereitstellung von Informationen über Eigenschaftenänderungen \(Änderung eines Listenelement\-Eigenschaftswerts\) und Listenänderungen \(Löschen oder Hinzufügen eines Elements aus bzw. zur Liste\) an gebundene Steuerelemente auf einer gebundenen Liste.  Listen, die für Datenbindung verwendet werden, müssen daher die <xref:System.ComponentModel.IBindingList> implementieren, die beide Arten der Änderungsbenachrichtigung bereitstellt.  Die <xref:System.ComponentModel.BindingList%601> ist eine generische Implementierung der <xref:System.ComponentModel.IBindingList> und ist für die Verwendung mit Windows Forms\-Datenbindung vorgesehen.  Sie können eine <xref:System.ComponentModel.BindingList%601> mit einem Geschäftsobjekttyp erstellen, der <xref:System.ComponentModel.INotifyPropertyChanged> implementiert, und die Liste konvertiert die <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>\-Ereignisse automatisch in <xref:System.ComponentModel.IBindingList.ListChanged>\-Ereignisse.  Wenn die gebundene Liste keine <xref:System.ComponentModel.IBindingList> ist, müssen Sie die Liste der Objekte mithilfe der <xref:System.Windows.Forms.BindingSource>\-Komponente an Windows Forms\-Steuerelemente binden.  Die <xref:System.Windows.Forms.BindingSource>\-Komponente stellt, ähnlich wie die <xref:System.ComponentModel.BindingList%601>, eine Konvertierung von Eigenschaften zu Listen bereit.  Weitere Informationen finden Sie unter [Gewusst wie: Auslösen von Änderungsbenachrichtigungen mithilfe von "BindingSource" und der "INotifyPropertyChanged"\-Schnittstelle](../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md).  
+## <a name="change-notification-for-list-based-binding"></a>Änderungsbenachrichtigung für listenbasierte Bindung  
+ Windows Forms, hängt von einer gebundenen Liste-Eigenschaftenänderung bereitstellen (ein Liste-Eigenschaftswert ändert) und Liste geändert (ein Element gelöscht oder zur Liste hinzugefügt) Informationen an Steuerelemente gebunden. Aus diesem Grund müssen Listen, die für die Datenbindung verwendet implementieren die <xref:System.ComponentModel.IBindingList>, stellt auf beide Arten von änderungsbenachrichtigungen. Die <xref:System.ComponentModel.BindingList%601> ist eine generische Implementierung der <xref:System.ComponentModel.IBindingList> und dient zur Verwendung mit Windows Forms-Datenbindung. Können Sie erstellen eine <xref:System.ComponentModel.BindingList%601> , enthält einen Geschäftstyp für das Objekt, das implementiert <xref:System.ComponentModel.INotifyPropertyChanged> und die Liste wird automatisch konvertiert die <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> Ereignisse <xref:System.ComponentModel.IBindingList.ListChanged> Ereignisse. Ist die Liste der gebundene kein <xref:System.ComponentModel.IBindingList>, müssen Sie die Liste der Objekte für Windows Forms-Steuerelemente binden, indem die <xref:System.Windows.Forms.BindingSource> Komponente. Die <xref:System.Windows.Forms.BindingSource> Komponente gebe Eigenschaftenliste-Konvertierung ähnlich dem Konzept der <xref:System.ComponentModel.BindingList%601>. Weitere Informationen finden Sie unter [wie: Auslösen von Änderungsbenachrichtigungen mithilfe der BindingSource und der INotifyPropertyChanged-Schnittstelle](../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md).  
   
-## Änderungsbenachrichtigung für benutzerdefinierte Steuerelemente  
- Für das Steuerelement müssen Sie für jede Eigenschaft, die an Daten gebunden werden soll, ein *PropertyName*Changed\-Ereignis verfügbar machen.  Die Änderungen an der Steuerelementeigenschaft werden dann an die gebundene Datenquelle weitergegeben.  Weitere Informationen finden Sie unter [Gewusst wie: Anwenden des PropertyNameChanged\-Musters](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+## <a name="change-notification-for-custom-controls"></a>Änderungsbenachrichtigung für benutzerdefinierte Steuerelemente  
+ Schließlich von der Seite des Steuerelements verfügbar machen eine *PropertyName*Changed-Ereignis für jede Eigenschaft, die an Daten gebunden werden soll. Die Änderungen an der Steuerelementeigenschaft werden dann an die gebundene Datenquelle weitergegeben werden. Weitere Informationen finden Sie unter [wie: Anwenden des PropertyNameChanged-Musters](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
   
-## Siehe auch  
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.ComponentModel.INotifyPropertyChanged>   
- <xref:System.ComponentModel.BindingList%601>   
- [Datenbindung in Web Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [Von Windows Forms unterstützte Datenquellen](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)   
- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.ComponentModel.INotifyPropertyChanged>  
+ <xref:System.ComponentModel.BindingList%601>  
+ [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Von Windows Forms unterstützte Datenquellen](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

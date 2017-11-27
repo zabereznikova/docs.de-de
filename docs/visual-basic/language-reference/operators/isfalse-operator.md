@@ -1,43 +1,41 @@
 ---
-title: "IsFalse Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.isfalse"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "AndAlso operator"
-  - "IsFalse operator"
+title: IsFalse-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.isfalse
+helpviewer_keywords:
+- AndAlso operator [Visual Basic]
+- IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d85fc51a75f82c65cf226b8239a8eee6585bd18a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# IsFalse Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Bestimmt, ob ein Ausdruck `False` ist.  
+# <a name="isfalse-operator-visual-basic"></a>IsFalse-Operator (Visual Basic)
+Bestimmt, ob ein Ausdruck ist `False`.  
   
- Sie können `IsFalse` im Code nicht explizit aufrufen, aber der Visual Basic\-Compiler kann mithilfe dieses Operators aus `AndAlso`\-Klauseln Code generieren.  Wenn Sie eine Klasse oder Struktur definieren und dann eine Variable dieses Typs in einer `AndAlso`\-Klausel verwenden, müssen Sie `IsFalse` für diese Klasse oder Struktur definieren.  
+ Sie können nicht aufrufen `IsFalse` explizit in Code, jedoch in Visual Basic Compiler können sie zum Generieren von Code aus `AndAlso` Klauseln. Wenn Sie eine Klasse oder Struktur definieren und verwenden Sie eine Variable dieses Typs in eine `AndAlso` -Klausel, müssen Sie definieren `IsFalse` für diese Klasse oder Struktur.  
   
- Der Compiler betrachtet den Operator `IsFalse` und den Operator `IsTrue` als *zueinander passendes Paar*.  Wenn Sie einen dieser beiden Operatoren definieren, müssen Sie daher auch den anderen definieren.  
+ Der Compiler betrachtet die `IsFalse` und `IsTrue` Operatoren als eine *zueinander passendes Paar*. Dies bedeutet, dass wenn Sie eine von ihnen definieren, Sie auch die anderen Knoten definieren müssen.  
   
 > [!NOTE]
->  Der Operator `IsFalse` kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definieren kann, wenn sein Operand den Typ dieser Klasse oder Struktur aufweist.  Wenn Sie diesen Operator im Code auf eine solche Klasse oder Struktur anwenden, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Die `IsFalse` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn Operanden den Typ der betreffenden Klasse oder Struktur hat. Wenn im Code dieser Operator auf eine solche Klasse oder Struktur verwendet, achten Sie darauf, dass Sie dessen neu definierten Verhalten verstehen. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Beispiel  
- Im folgenden Codebeispiel wird das Gerüst für eine Struktur definiert, das Definitionen für den Operator `IsFalse` und den Operator `IsTrue` enthält.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird definiert, den Überblick über eine Struktur, die Definitionen für die `IsFalse` und `IsTrue` Operatoren.  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
   
-## Siehe auch  
- [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   
- [How to: Define an Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md)
+## <a name="see-also"></a>Siehe auch  
+ [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [Gewusst wie: Definieren eines Operators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [AndAlso-Operator](../../../visual-basic/language-reference/operators/andalso-operator.md)

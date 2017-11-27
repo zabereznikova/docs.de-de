@@ -1,53 +1,54 @@
 ---
-title: "Verwenden eines Stiftes zum Zeichnen von Linien und Formen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zeichnen"
-  - "Beispiele [Windows Forms], Zeichnen von Linien und Formen"
-  - "Beispiele [Windows Forms], Stifte"
-  - "Stifte"
+title: Verwenden eines Stiftes zum Zeichnen von Linien und Formen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verwenden eines Stiftes zum Zeichnen von Linien und Formen
-Mithilfe der `Pen`\-Objekte in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können Sie Liniensegmente, Kurven und Umrisse von Formen zeichnen.  In diesem Abschnitt ist der Begriff *Linie* synonym für all diese Elemente, es sei denn, es wird ausdrücklich darauf hingewiesen, dass es sich um ein Liniensegment handelt.  Legen Sie die Eigenschaften eines Stiftes fest, um Farbe, Stärke, Ausrichtung und Stil der Linien zu steuern, die mit diesem Stift gezeichnet werden.  
+# <a name="using-a-pen-to-draw-lines-and-shapes"></a>Verwenden eines Stiftes zum Zeichnen von Linien und Formen
+Verwendung [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` Objekte Liniensegmente, Kurven und Umrisse von Formen gezeichnet werden soll. In diesem Abschnitt *Zeile* bezieht sich auf alle von diesen, sofern angegeben, um nur ein Liniensegment bedeuten. Legen Sie die Eigenschaften eines Stiftes zum Steuern der Farbe, Breite, Ausrichtung und die Art des mit diesem Stift gezeichneten Linien verwendet werden.  
   
-## In diesem Abschnitt  
- [Gewusst wie: Verwenden eines Stiftes zum Zeichnen von Linien](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Gewusst wie: Verwenden eines Stifts zum Zeichnen von Linien](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
  Erläutert das Zeichnen von Linien.  
   
- [Gewusst wie: Verwenden eines Stiftes zum Zeichnen von Rechtecken](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
- Beschreibt das Zeichnen von Rechtecken.  
+ [Gewusst wie: Verwenden eines Stifts zum Zeichnen von Rechtecken](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
+ Beschreibt, wie zum Zeichnen von Rechtecken.  
   
- [Gewusst wie: Festlegen von Stiftbreite und \-ausrichtung](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
- Erläutert das Ändern von Breite und Ausrichtung eines `Pen`\-Objekts.  
+ [Gewusst wie: Festlegen von Stiftbreite und -ausrichtung](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
+ Erläutert, wie die Breite und die Ausrichtung des Ändern einer `Pen` Objekt.  
   
  [Gewusst wie: Zeichnen einer Linie mit Linienenden](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
- Beschreibt das Hinzufügen von Linienenden beim Zeichnen einer Linie.  
+ Beschreibt, wie Hinzufügen von Linienenden beim Zeichnen einer Linie.  
   
  [Gewusst wie: Verknüpfen von Linien](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
- Veranschaulicht das Verknüpfen von zwei Linien.  
+ Zeigt, wie Sie zwei Zeilen verknüpfen.  
   
  [Gewusst wie: Zeichnen einer benutzerdefinierten gestrichelten Linie](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
- Beschreibt das Zeichnen einer gestrichelten Linie.  
+ Beschreibt, wie eine gestrichelte Linie zu zeichnen.  
   
  [Gewusst wie: Zeichnen einer mit einer Textur ausgefüllten Linie](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
- Erläutert das Zeichnen einer mit einer Textur ausgefüllten Linie.  
+ Es wird erläutert, wie eine Textur ausgefüllten Linie zu zeichnen.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing.Pen>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.

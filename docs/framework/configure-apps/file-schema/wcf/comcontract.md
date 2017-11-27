@@ -1,28 +1,33 @@
 ---
-title: "&lt;comContract&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;comContract&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b22c8d0b72d4dfc63eb5fa9afa073f993f75418e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;comContract&gt;
-Gibt einen Dienstvertrag für die COM\+\-Integration an.  
+# <a name="ltcomcontractgt"></a>&lt;comContract&gt;
+Gibt einen Dienstvertrag für die COM+-Integration an.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<ComContracts >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <comContracts>  
   <comContract  
       contract="string"  
@@ -48,36 +53,36 @@ Gibt einen Dienstvertrag für die COM\+\-Integration an.
 </comContracts>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|Vertrag \(Contract\)|Eine Zeichenfolge, die den Vertragstyp enthält.|  
+|---------------|-----------------|  
+|Vertrag (Contract)|Eine Zeichenfolge, die den Vertragstyp enthält.|  
 |Name|Eine Zeichenfolge, die den Vertragsnamen enthält.|  
 |namespace|Eine Zeichenfolge, die den Vertragsnamespace enthält.|  
-|requiresSession|Ein boolescher Wert, der angibt, ob der Vertrag nur für sitzungsbasierte Bindungen verwendet werden kann.  Bei der Initialisierung des Diensts wird von der Integrationslaufzeit sichergestellt, dass diese Einstellung mit dem verwendeten Bindungstyp übereinstimmt.  Eine Ausnahme wird generiert, wenn eine oder mehrere Bindungen für den Vertrag miteinander in Konflikt stehen.  Wenn die Eigenschaft `false` ist, ein Einwegkanal verwendet wird und \[out\]\-Parameter vorhanden sind, wird ebenfalls eine Ausnahme generiert.|  
+|requiresSession|Ein boolescher Wert, der angibt, ob der Vertrag nur für sitzungsbasierte Bindungen verwendet werden kann. Bei der Initialisierung des Diensts wird von der Integrationslaufzeit sichergestellt, dass diese Einstellung mit dem verwendeten Bindungstyp übereinstimmt. Eine Ausnahme wird generiert, wenn eine oder mehrere Bindungen für den Vertrag miteinander in Konflikt stehen. Wenn die Eigenschaft `false` ist, ein Einwegkanal verwendet wird und [out]-Parameter vorhanden sind, wird ebenfalls eine Ausnahme generiert.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
+|-------------|-----------------|  
 |persistableTypes|Alle dauerhaften Typen.|  
-|userDefinedTypes|Eine Auflistung benutzerdefinierter Typen \(UDT\), die im Dienstvertrag verwendet werden soll.|  
-|exposedMethods|Eine Auflistung von COM\+\-Methoden, die verfügbar gemacht werden, wenn die Schnittstelle für eine COM\+\-Komponente als Webdienst bereitgestellt wird.|  
+|userDefinedTypes|Eine Auflistung benutzerdefinierter Typen (UDT), die im Dienstvertrag verwendet werden soll.|  
+|exposedMethods|Eine Auflistung von COM+-Methoden, die verfügbar gemacht werden, wenn die Schnittstelle für eine COM+-Komponente als Webdienst bereitgestellt wird.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|comContracts|Enthält eine Auflistung von `comContract`\-Elementen.|  
+|-------------|-----------------|  
+|comContracts|Enthält eine Auflistung von `comContract`-Elementen.|  
   
-## Hinweise  
- Die COM\+\-Integrationsdienstverträge sind aktuell auf den Namespace 'http:\/\/tempuri.org' beschränkt, und der Vertragsname wird von der unterstützenden COM\-Schnittstelle abgeleitet.  Sie können Alternativen aber angeben, indem Sie den `comContracts`\-Abschnitt und das `comContract`\-Element in der Konfigurationsdatei verwenden.  Sie können beispielsweise folgende Konfiguration zum Angeben des Namespaces, des Vertragsnamens, der benutzerdefinierten Typen und anderer Einstellungen für einen Dienstvertrag verwenden.  
+## <a name="remarks"></a>Hinweise  
+ COM+-integrationsdienstverträge sind aktuell auf den Namespace "http://tempuri.org" beschränkt und Vertragsname wird von der unterstützenden COM-Schnittstelle abgeleitet. Sie können Alternativen aber angeben, indem Sie den `comContracts`-Abschnitt und das `comContract`-Element in der Konfigurationsdatei verwenden. Sie können beispielsweise folgende Konfiguration zum Angeben des Namespaces, des Vertragsnamens, der benutzerdefinierten Typen und anderer Einstellungen für einen Dienstvertrag verwenden.  
   
-```  
+```xml  
 <comContracts>  
   <comContract  
       contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
@@ -95,10 +100,10 @@ Gibt einen Dienstvertrag für die COM\+\-Integration an.
   
  Wenn der Dienst initialisiert wird, werden die angegebenen Namespaces und Vertragsnamen auf die generierten Dienstbeschreibungen angewendet.  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>   
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>   
- <xref:System.ServiceModel.Configuration.ComContractElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [Integrieren von COM\+\-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Vorgehensweise: Konfigurieren von COM\+\-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComContractElement>  
+ [\<ComContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [Integrieren von COM+-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

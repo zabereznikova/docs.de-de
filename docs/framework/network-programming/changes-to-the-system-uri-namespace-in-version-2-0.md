@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Änderungen am System.Uri-Namespace in Version 2.0
-Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=fullName>-Klasse vorgenommen. Diese Änderungen korrigierten falsches Verhalten, verbesserten die Verwendbarkeit und Sicherheit.  
+Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=nameWithType>-Klasse vorgenommen. Diese Änderungen korrigierten falsches Verhalten, verbesserten die Verwendbarkeit und Sicherheit.  
   
 ## <a name="obsolete-and-deprecated-members"></a>Veraltete Member  
  Konstruktoren:  
@@ -85,5 +79,4 @@ Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=fullName>-
 -   Die URI-Pfadkomprimierung wird repariert, sodass ein fehlerhafter URI das Dateisystem oberhalb des Stammverzeichnisses nicht durchlaufen kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>

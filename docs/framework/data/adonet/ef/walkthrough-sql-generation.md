@@ -1,23 +1,26 @@
 ---
-title: "Exemplarische Vorgehensweise: SQL-Generierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Exemplarische Vorgehensweise: SQL-Generierung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8c19c459bf3b62b7e1d7e2917e09717c246e728c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Exemplarische Vorgehensweise: SQL-Generierung
-Dieses Thema veranschaulicht die SQL\-Generierung im [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616).  Die folgende Entity SQL\-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
+# <a name="walkthrough-sql-generation"></a>Exemplarische Vorgehensweise: SQL-Generierung
+In diesem Thema wird veranschaulicht, wie die SQL-Generierung in erfolgt die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616). Die folgende Entity SQL-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -89,7 +92,7 @@ DbQueryCommandTree
           |_Var(Join4).Join3.Extent3.ProductID  
 ```  
   
- In diesem Thema wird beschrieben, wie diese Ausgabebefehlsstruktur in die folgenden SQL\-Anweisungen übersetzt wird.  
+ In diesem Thema wird beschrieben, wie diese Ausgabebefehlsstruktur in die folgenden SQL-Anweisungen übersetzt wird.  
   
 ```  
 SELECT   
@@ -112,56 +115,56 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## Erste Phase der SQL\-Generierung: Zugriff auf die Ausdrucksstruktur  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Erste Phase der SQL-Generierung: Zugriff auf die Ausdrucksstruktur  
  Die folgende Abbildung veranschaulicht den leeren Anfangszustand des Besuchers.  In diesem Thema werden nur die für die Erläuterung der exemplarischen Vorgehensweise relevanten Eigenschaften dargestellt.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5\-4fb9\-4bc3\-8589\-d566512d9703")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
- Wird auf den Projektknoten zugegriffen, wird VisitInputExpression über seine Eingabe \(Join4\) aufgerufen. Dadurch wird der Zugriff auf Join4 durch die Methode VisitJoinExpression ausgelöst.  Da dies ein Join auf oberster Ebene ist, gibt IsParentAJoin **false** zurück. Es wird ein neues SqlSelectStatement \(SelectStatement0\) erstellt und auf dem SELECT\-Anweisungsstapel abgelegt.  Außerdem wird ein neuer Bereich \(scope0\) in der Symboltabelle eingetragen.  Vor dem Zugriff auf die erste \(linke\) Eingabe des Joins wird "true" auf dem IsParentAJoin\-Stapel abgelegt.  Bevor der Zugriff auf Join1, der linken Eingabe von Join4, erfolgt, entspricht der Zustand des Besuchers dem in der nächsten Abbildung dargestellten Zustand.  
+ Wird auf den Projektknoten zugegriffen, wird VisitInputExpression über seine Eingabe (Join4) aufgerufen. Dadurch wird der Zugriff auf Join4 durch die Methode VisitJoinExpression ausgelöst. Da dies ein Join auf oberster Ebene ist, gibt IsParentAJoin false zurück. Es wird ein neues SqlSelectStatement (SelectStatement0) erstellt und auf dem SELECT-Anweisungsstapel abgelegt. Außerdem wird ein neuer Bereich (scope0) in der Symboltabelle eingetragen. Vor dem Zugriff auf die erste (linke) Eingabe des Joins wird "true" auf dem IsParentAJoin-Stapel abgelegt. Bevor der Zugriff auf Join1, der linken Eingabe von Join4, erfolgt, entspricht der Zustand des Besuchers dem in der nächsten Abbildung dargestellten Zustand.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f\-6166\-44ea\-8e74\-c5001d5d5d79")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
- Wenn die Joinzugriffsmethode über Join4 aufgerufen wird, hat IsParentAJoin den Wert **true**. Daher verwendet sie die aktuelle SELECT\-Anweisung SelectStatement0 erneut.  Es wird ein neuer Bereich \(scope1\) eingetragen.  Bevor der Zugriff auf sein linkes untergeordnetes Element \(Extent1\) erfolgt, wird ein weiterer Wert **true** auf dem IsParentAJoin\-Stapel abgelegt.  
+ Wenn die Joinzugriffsmethode über Join4 aufgerufen wird, hat IsParentAJoin den Wert true. Daher verwendet sie die aktuelle SELECT-Anweisung SelectStatement0 erneut. Es wird ein neuer Bereich (scope1) eingetragen. Bevor der Zugriff auf sein linkes untergeordnetes Element (Extent1) erfolgt, wird ein weiterer Wert true auf dem IsParentAJoin-Stapel abgelegt.  
   
- Wenn auf Extent1 zugegriffen wird, weil IsParentAJoin **true** zurückgibt, wird ein SqlBuilder zurückgegeben, der "\[dbo\].\[Products\]" enthält.  Die Steuerung wird an die Methode zurückgegeben, die auf Join4 zugreift.  Ein Eintrag von IsParentAJoin wird ausgelesen, und ProcessJoinInputResult wird aufgerufen. Diese Methode fügt das Ergebnis des Zugriffs auf Extent1 an die FROM\-Klausel von SelectStatement0 an.  Es wird ein neues From\-Symbol \(symbol\_Extent1\) für den Eingabebindungsnamen "Extent1" erstellt, das den FromExtents von SelectStatement0 hinzugefügt wird. Außerdem werden "AS" und symbol\_Extent1 an die FROM\-Klausel angefügt.  AllExtentNames wird ein neuer Eintrag mit dem Wert 0 für "Extent1" hinzugefügt.  Dem aktuellen Bereich in der Symboltabelle wird ein neuer Eintrag hinzugefügt, um "Extent1" seinem Symbol symbol\_Extent1 zuzuordnen.  Symbol\_Extent1 wird außerdem den AllJoinExtents der SqlSelectStatement\-Anweisung hinzugefügt.  
+ Wenn auf Extent1 zugegriffen wird, weil IsParentAJoin true zurückgibt, wird ein SqlBuilder zurückgegeben, der "[dbo].[Products]" enthält. Die Steuerung wird an die Methode zurückgegeben, die auf Join4 zugreift. Ein Eintrag von IsParentAJoin wird ausgelesen, und ProcessJoinInputResult wird aufgerufen. Diese Methode fügt das Ergebnis des Zugriffs auf Extent1 an die FROM-Klausel von SelectStatement0 an. Es wird ein neues From-Symbol (symbol_Extent1) für den Eingabebindungsnamen "Extent1" erstellt, das den FromExtents von SelectStatement0 hinzugefügt wird. Außerdem werden "AS" und symbol_Extent1 an die FROM-Klausel angefügt. AllExtentNames wird ein neuer Eintrag mit dem Wert 0 für "Extent1" hinzugefügt. Dem aktuellen Bereich in der Symboltabelle wird ein neuer Eintrag hinzugefügt, um "Extent1" seinem Symbol symbol_Extent1 zuzuordnen. Symbol_Extent1 wird außerdem den AllJoinExtents der SqlSelectStatement-Anweisung hinzugefügt.  
   
- Bevor der Zugriff auf die rechte Eingabe von Join1 erfolgt, wird der FROM\-Klausel von SelectStatement0 "LEFT OUTER JOIN" hinzugefügt.  Da die rechte Eingabe ein Scan\-Ausdruck ist, wird der Wert **true** erneut auf dem IsParentAJoin\-Stapel abgelegt.  Der Zustand vor dem Zugriff auf die rechte Eingabe wird in der nächsten Abbildung dargestellt.  
+ Bevor der Zugriff auf die rechte Eingabe von Join1 erfolgt, wird der FROM-Klausel von SelectStatement0 "LEFT OUTER JOIN" hinzugefügt. Da die rechte Eingabe ein Scan-Ausdruck ist, wird der Wert true erneut auf dem IsParentAJoin-Stapel abgelegt. Der Zustand vor dem Zugriff auf die rechte Eingabe wird in der nächsten Abbildung dargestellt.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b\-7ff6\-4836\-b209\-e16166304fdc")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
   
- Die rechte Eingabe wird auf die gleiche Weise wie die linke Eingabe verarbeitet.  Der Zustand nach dem Zugriff auf die rechte Eingabe wird in der nächsten Abbildung dargestellt.  
+ Die rechte Eingabe wird auf die gleiche Weise wie die linke Eingabe verarbeitet. Der Zustand nach dem Zugriff auf die rechte Eingabe wird in der nächsten Abbildung dargestellt.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99\-7256\-4c63\-aaa9\-c2d13f18a3d8")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Im nächsten Schritt wird "false" auf dem IsParentAJoin\-Stapel abgelegt, und die Joinbedingung "Var\(Extent1\).CategoryID \=\= Var\(Extent2\).CategoryID" wird verarbeitet.  Var\(Extent1\) wird nach einer Suche in der Symboltabelle in \<symbol\_Extent1\> aufgelöst.  Da die Instanz in ein einfaches Symbol aufgelöst wird, wird als Ergebnis der Verarbeitung von Var\(Extent1\).CategoryID ein SqlBuilder mit \<symbol1\>."CategoryID" zurückgegeben.  Auf ähnliche Weise wird die andere Seite des Vergleichs verarbeitet. Das Ergebnis des Zugriffs auf die Joinbedingung wird an die FROM\-Klausel von SelectStatement1 angefügt, und der Wert "false" wird vom IsParentAJoin\-Stapel ausgelesen.  
+ Im nächsten Schritt wird "false" auf dem IsParentAJoin-Stapel abgelegt, und die Joinbedingung "Var(Extent1).CategoryID == Var(Extent2).CategoryID" wird verarbeitet. Var(Extent1) wird nach einer Suche in der Symboltabelle in <symbol_Extent1> aufgelöst. Da die Instanz in einem einfachen Symbol als Ergebnis der Verarbeitung Var(Extent1) aufgelöst wird. CategoryID, ein SqlBuilder mit \<symbol1 >. " CategoryID"zurückgegeben. Auf ähnliche Weise wird die andere Seite des Vergleichs verarbeitet. Das Ergebnis des Zugriffs auf die Joinbedingung wird an die FROM-Klausel von SelectStatement1 angefügt, und der Wert "false" wird vom IsParentAJoin-Stapel ausgelesen.  
   
  Damit wurde Join1 vollständig verarbeitet, und aus der Symboltabelle wird ein Bereich ausgelesen.  
   
- Die Steuerung wird zur Verarbeitung von Join4, dem übergeordneten Element von Join1, zurückgegeben.  Da das untergeordnete Element die SELECT\-Anweisung wiederverwendet hat, werden die Join1\-Blöcke durch ein einzelnes Joinsymbol \<joinSymbol\_Join1\> ersetzt.  Außerdem wird der Symboltabelle ein neuer Eintrag hinzugefügt, um \<joinSymbol\_Join1\> Join1 zuzuordnen.  
+ Die Steuerung wird zur Verarbeitung von Join4, dem übergeordneten Element von Join1, zurückgegeben. Da das untergeordnete Element die SELECT-Anweisung wiederverwendet hat, werden die Join1-Blöcke durch ein einzelnes Joinsymbol <joinSymbol_Join1> ersetzt. Außerdem wird der Symboltabelle ein neuer Eintrag hinzugefügt, um <joinSymbol_Join1> Join1 zuzuordnen.  
   
- Der nächste zu verarbeitende Knoten ist Join3, das zweite untergeordnete Element von Join4.  Da es sich um ein rechtes untergeordnetes Element handelt, wird "false" auf dem IsParentAJoin\-Stapel abgelegt.  Der Zustand des Besuchers zu diesem Zeitpunkt wird in der nächsten Abbildung veranschaulicht.  
+ Der nächste zu verarbeitende Knoten ist Join3, das zweite untergeordnete Element von Join4. Da es sich um ein rechtes untergeordnetes Element handelt, wird "false" auf dem IsParentAJoin-Stapel abgelegt. Der Zustand des Besuchers zu diesem Zeitpunkt wird in der nächsten Abbildung veranschaulicht.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3\-fcdd\-4649\-9089\-24385be7e423")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Für Join3 gibt IsParentAJoin **false** zurück und muss ein neues SqlSelectStatement \(SelectStatement1\) starten und auf dem Stapel ablegen.  Die Verarbeitung wird wie bei den vorherigen Joins weiter ausgeführt. Es wird ein neuer Bereich auf dem Stapel abgelegt, und die untergeordneten Elemente werden verarbeitet.  Das linke untergeordnete Element ist ein Block \(Extent3\), und das rechte untergeordnete Element ist ein Join \(Join2\), der ebenfalls ein neues SqlSelectStatement starten muss: SelectStatement2.  Die untergeordneten Elemente von Join2 sind auch Blöcke und werden in SelectStatement2 aggregiert.  
+ Für Join3 gibt IsParentAJoin false zurück und muss ein neues SqlSelectStatement (SelectStatement1) starten und auf dem Stapel ablegen. Die Verarbeitung wird wie bei den vorherigen Joins weiter ausgeführt. Es wird ein neuer Bereich auf dem Stapel abgelegt, und die untergeordneten Elemente werden verarbeitet. Das linke untergeordnete Element ist ein Block (Extent3), und das rechte untergeordnete Element ist ein Join (Join2), der ebenfalls ein neues SqlSelectStatement starten muss: SelectStatement2. Die untergeordneten Elemente von Join2 sind auch Blöcke und werden in SelectStatement2 aggregiert.  
   
- Der Zustand des Besuchers direkt nach dem Zugriff auf Join2, jedoch vor seiner Nachbearbeitung \(ProcessJoinInputResult\), wird in der nächsten Abbildung dargestellt:  
+ Der Zustand des Besuchers direkt nach dem Zugriff auf Join2, jedoch vor seiner Nachbearbeitung (ProcessJoinInputResult), wird in der nächsten Abbildung dargestellt:  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f\-8b09\-4c99\-b411\-40af239c3c4d")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
- In der vorherigen Abbildung wird SelectStatement2 als nicht typisiert dargestellt, da es zwar vom Stapel ausgelesen wurde, jedoch noch nicht vom übergeordneten Element nachbearbeitet wurde.  Es muss dem FROM\-Teil des übergeordneten Elements hinzugefügt werden, ist jedoch ohne SELECT\-Klausel keine vollständige SQL\-Anweisung.  Daher werden die Standardspalten \(alle von ihren Eingaben erzeugten Spalten\) zu diesem Zeitpunkt der Select\-Liste durch die AddDefaultColumns\-Methode hinzugefügt.  AddDefaultColumns durchläuft die Symbole in FromExtents und fügt alle im Bereich enthaltenen Spalten für jedes Symbol hinzu.  Bei einem einfachen Symbol überprüft die Methode den Symboltyp, um alle zugehörigen hinzuzufügenden Eigenschaften abzurufen.  Außerdem füllt sie das AllColumnNames\-Wörterbuch mit den Spaltennamen.  Das abgeschlossene SelectStatement2 wird an die FROM\-Klausel von SelectStatement1 angefügt.  
+ In der vorherigen Abbildung wird SelectStatement2 als nicht typisiert dargestellt, da es zwar vom Stapel ausgelesen wurde, jedoch noch nicht vom übergeordneten Element nachbearbeitet wurde. Es muss dem FROM-Teil des übergeordneten Elements hinzugefügt werden, ist jedoch ohne SELECT-Klausel keine vollständige SQL-Anweisung. Daher werden die Standardspalten (alle von ihren Eingaben erzeugten Spalten) zu diesem Zeitpunkt der Select-Liste durch die AddDefaultColumns-Methode hinzugefügt. AddDefaultColumns durchläuft die Symbole in FromExtents und fügt alle im Bereich enthaltenen Spalten für jedes Symbol hinzu. Bei einem einfachen Symbol überprüft die Methode den Symboltyp, um alle zugehörigen hinzuzufügenden Eigenschaften abzurufen. Außerdem füllt sie das AllColumnNames-Wörterbuch mit den Spaltennamen. Das abgeschlossene SelectStatement2 wird an die FROM-Klausel von SelectStatement1 angefügt.  
   
- Danach wird ein neues Joinsymbol erstellt, um Join2 darzustellen. Es wird als geschachtelter Join gekennzeichnet und den AllJoinExtents von SelectStatement1 sowie der Symboltabelle hinzugefügt.  Jetzt muss die Joinbedingung von Join3, "Var\(Extent3\).OrderID \= Var\(Join2\).Extent4.OrderID", verarbeitet werden.  Die Verarbeitung der linken Seite ähnelt der Joinbedingung von Join1.  Die Verarbeitung der rechten Seite, "Var\(Join2\).Extent4.OrderID", erfolgt jedoch auf andere Weise, da der Join vereinfacht werden muss.  
+ Danach wird ein neues Joinsymbol erstellt, um Join2 darzustellen. Es wird als geschachtelter Join gekennzeichnet und den AllJoinExtents von SelectStatement1 sowie der Symboltabelle hinzugefügt.  Jetzt muss die Joinbedingung von Join3, "Var(Extent3).OrderID = Var(Join2).Extent4.OrderID", verarbeitet werden. Die Verarbeitung der linken Seite ähnelt der Joinbedingung von Join1. Die Verarbeitung der rechten Seite, "Var(Join2).Extent4.OrderID", erfolgt jedoch auf andere Weise, da der Join vereinfacht werden muss.  
   
- Die nächste Abbildung zeigt den Zustand des Besuchers direkt vor der Verarbeitung des DbPropertyExpression "Var\(Join2\).Extent4.OrderID".  
+ Die nächste Abbildung zeigt den Zustand des Besuchers direkt vor der Verarbeitung des DbPropertyExpression "Var(Join2).Extent4.OrderID".  
   
- Beachten Sie, wie auf "Var\(Join2\).Extent4.OrderID" zugegriffen wird.  Zuerst wird auf die Instanzeigenschaft "Var\(Join2\).Extent4" zugegriffen, bei der es sich um eine weitere DbPropertyExpression handelt, die zunächst auf ihre Instanz "Var\(Join2\)" zugreift.  Im obersten Bereich in der Symboltabelle wird "Join2" zu \<joinSymbol\_join2\> aufgelöst.  Beachten Sie, dass in der Zugriffsmethode für DbPropertyExpression bei der Verarbeitung von "Var\(Join2\).Extent4" ein Joinsymbol zurückgegeben wird, wenn auf die Instanz zugegriffen wird und eine Vereinfachung erforderlich ist.  
+ Beachten Sie, wie auf "Var(Join2).Extent4.OrderID" zugegriffen wird. Zuerst wird auf die Instanzeigenschaft "Var(Join2).Extent4" zugegriffen, bei der es sich um eine weitere DbPropertyExpression handelt, die zunächst auf ihre Instanz "Var(Join2)" zugreift. Im obersten Bereich in der Symboltabelle wird "Join2" zu <joinSymbol_join2> aufgelöst. Beachten Sie, dass in der Zugriffsmethode für DbPropertyExpression bei der Verarbeitung von "Var(Join2).Extent4" ein Joinsymbol zurückgegeben wird, wenn auf die Instanz zugegriffen wird und eine Vereinfachung erforderlich ist.  
   
- Da es sich um einen verschachtelten Join handelt, wird die Eigenschaft "Extent4" im NameToExtent\-Wörterbuch des Joinsymbols gesucht, in \<symbol\_Extent4\> aufgelöst und ein neues SymbolPair\(\<joinSymbol\_join2\>, \<symbol\_Extent4\>\) zurückgegeben.  Da von der Verarbeitung der Instanz von "Var\(Join2\).Extent4.OrderID" ein Symbolpaar zurückgegeben wird, wird die Eigenschaft "OrderID" vom ColumnPart dieses Symbolpaars \(\<symbol\_Extent4\>\) aufgelöst, der über eine Liste der Spalten des Blocks verfügt, den er darstellt.  Daher wird "Var\(Join2\).Extent4.OrderID" zu { \<joinSymbol\_Join2\>, ".", \<symbol\_OrderID\>} aufgelöst.  
+ Da es sich um einen verschachtelten Join handelt, wird die Eigenschaft "Extent4" im NameToExtent-Wörterbuch des Joinsymbols gesucht, in <symbol_Extent4> aufgelöst und ein neues SymbolPair(<joinSymbol_join2>, <symbol_Extent4>) zurückgegeben. Da von der Verarbeitung der Instanz von "Var(Join2).Extent4.OrderID" ein Symbolpaar zurückgegeben wird, wird die Eigenschaft "OrderID" vom ColumnPart dieses Symbolpaars (<symbol_Extent4>) aufgelöst, der über eine Liste der Spalten des Blocks verfügt, den er darstellt. Daher wird "Var(Join2).Extent4.OrderID" zu { <joinSymbol_Join2>, ".", <symbol_OrderID>} aufgelöst.  
   
- Die Joinbedingung von Join4 wird auf ähnliche Weise verarbeitet.  Die Steuerung wird an die VisitInputExpression\-Methode zurück übergeben, die das oberste Projekt verarbeitet hat.  Wenn Sie die FromExtents des zurückgegebenen SelectStatement0 betrachten, können Sie feststellen, dass die Eingabe als Join identifiziert wird, die ursprünglichen Blöcke entfernt werden und diese durch einen neuen Block, der nur das Joinsymbol enthält, ersetzt werden.  Die Symboltabelle wird ebenfalls aktualisiert, und danach wird der Projektionsteil des Projekts verarbeitet.  Das Auflösen der Eigenschaften und das Vereinfachen der Joinblöcke erfolgt wie oben beschrieben.  
+ Die Joinbedingung von Join4 wird auf ähnliche Weise verarbeitet. Die Steuerung wird an die VisitInputExpression-Methode zurück übergeben, die das oberste Projekt verarbeitet hat. Wenn Sie die FromExtents des zurückgegebenen SelectStatement0 betrachten, können Sie feststellen, dass die Eingabe als Join identifiziert wird, die ursprünglichen Blöcke entfernt werden und diese durch einen neuen Block, der nur das Joinsymbol enthält, ersetzt werden. Die Symboltabelle wird ebenfalls aktualisiert, und danach wird der Projektionsteil des Projekts verarbeitet. Das Auflösen der Eigenschaften und das Vereinfachen der Joinblöcke erfolgt wie oben beschrieben.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9\-ea2e\-40ae\-accc\-a10e18e28b81")  
+ ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
   
  Schließlich wird das folgende SqlSelectStatement erzeugt:  
   
@@ -199,12 +202,12 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### Zweite Phase der SQL\-Generierung: Generieren des Zeichenfolgenbefehls  
- In der zweiten Phase werden tatsächliche Namen für die Symbole erzeugt, und wir konzentrieren uns nur auf die Symbole, die Spalten mit dem Namen "OrderID" darstellen, da in diesem Fall ein Konflikt gelöst werden muss.  Diese werden im SqlSelectStatement hervorgehoben.  Beachten Sie, dass die in der Abbildung verwendeten Suffixe nur dazu verwendet werden, hervorzuheben, dass es sich um unterschiedliche Instanzen handelt. Damit sollen keine neuen Namen dargestellt werden, da die endgültigen Namen \(die sich möglicherweise von den ursprünglichen Namen unterscheiden\) zu diesem Zeitpunkt noch nicht zugewiesen wurden.  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Zweite Phase der SQL-Generierung: Generieren des Zeichenfolgenbefehls  
+ In der zweiten Phase werden tatsächliche Namen für die Symbole erzeugt, und wir konzentrieren uns nur auf die Symbole, die Spalten mit dem Namen "OrderID" darstellen, da in diesem Fall ein Konflikt gelöst werden muss. Diese werden im SqlSelectStatement hervorgehoben. Beachten Sie, dass die in der Abbildung verwendeten Suffixe nur dazu verwendet werden, hervorzuheben, dass es sich um unterschiedliche Instanzen handelt. Damit sollen keine neuen Namen dargestellt werden, da die endgültigen Namen (die sich möglicherweise von den ursprünglichen Namen unterscheiden) zu diesem Zeitpunkt noch nicht zugewiesen wurden.  
   
- Das erste Symbol, das umbenannt werden muss, ist \<symbol\_OrderID\>.  Als neuer Name wird "OrderID1" zugewiesen. 1 wird als zuletzt verwendetes Suffix für "OrderID" gekennzeichnet, und das Symbol wird als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist.  Danach wird die erste Verwendung von \<symbol\_OrderID\_2\> festgestellt.  Es wird umbenannt, sodass das nächste verfügbare Suffix \("OrderID2"\) verwendet wird. Das Symbol wird wieder als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist, damit es bei der nächsten Verwendung nicht umbenannt wird.  Mit \<symbol\_OrderID\_3\> wird auf dieselbe Weise verfahren.  
+ Das erste Symbol, das umbenannt werden muss, ist <symbol_OrderID>. Als neuer Name wird "OrderID1" zugewiesen. 1 wird als zuletzt verwendetes Suffix für "OrderID" gekennzeichnet, und das Symbol wird als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist. Danach wird die erste Verwendung von <symbol_OrderID_2> festgestellt. Es wird umbenannt, sodass das nächste verfügbare Suffix ("OrderID2") verwendet wird. Das Symbol wird wieder als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist, damit es bei der nächsten Verwendung nicht umbenannt wird. Mit <symbol_OrderID_3> wird auf dieselbe Weise verfahren.  
   
- Am Ende der zweiten Phase wird die endgültige SQL\-Anweisung generiert.  
+ Am Ende der zweiten Phase wird die endgültige SQL-Anweisung generiert.  
   
-## Siehe auch  
- [SQL\-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Siehe auch  
+ [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

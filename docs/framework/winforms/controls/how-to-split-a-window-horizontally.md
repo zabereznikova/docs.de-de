@@ -1,37 +1,41 @@
 ---
-title: "Gewusst wie: Horizontales Teilen eines Fensters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer-Steuerelement [Windows Forms], Horizontale Aufteilung"
-  - "Splitterfenster, Ändern der Aufteilungsausrichtung"
-  - "Splitterfenster, Horizontal"
-  - "Fenster, Teilen horizontal"
+title: 'Gewusst wie: Horizontales Teilen eines Fensters'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], horizontal splitter
+- splitter windows [Windows Forms], changing splitter orientation
+- splitter windows [Windows Forms], horizontal
+- windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02133cc38221b23ea1e2b14bfd0bbcf1987ab532
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Horizontales Teilen eines Fensters
-Im folgenden Codebeispiel wird der Splitter generiert, der das <xref:System.Windows.Forms.SplitContainer>\-Steuerelement horizontal teilt.  
+# <a name="how-to-split-a-window-horizontally"></a>Gewusst wie: Horizontales Teilen eines Fensters
+Im folgenden Codebeispiel wird der Splitter generiert, durch die dividiert das <xref:System.Windows.Forms.SplitContainer> Steuerelement Horizontal.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A>\-Eigenschaft des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements bestimmt die Richtung des Splitters, nicht die des Steuerelements.  
+>  Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft von der <xref:System.Windows.Forms.SplitContainer> Steuerelement bestimmt die Richtung des Splitters, nicht des Steuerelements selbst.  
   
-### So teilen Sie ein Fenster horizontal  
+### <a name="to-split-a-window-horizontally"></a>Um ein Fenster horizontal teilen  
   
-1.  Legen Sie innerhalb einer Prozedur die <xref:System.Windows.Forms.SplitContainer.Orientation%2A>\-Eigenschaft des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements auf <xref:System.Windows.Forms.Orientation> fest.  
+1.  Innerhalb einer Prozedur Festlegen der <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft von der <xref:System.Windows.Forms.SplitContainer> die Steuerung an <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -44,7 +48,6 @@ Im folgenden Codebeispiel wird der Splitter generiert, der das <xref:System.Wind
         splitContainer1.Orientation = Orientation.Horizontal  
         Controls.Add(splitContainer1)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -62,6 +65,6 @@ Im folgenden Codebeispiel wird der Splitter generiert, der das <xref:System.Wind
     }  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer\-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

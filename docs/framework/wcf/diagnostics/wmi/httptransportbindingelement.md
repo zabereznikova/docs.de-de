@@ -1,25 +1,28 @@
 ---
-title: "HttpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b1542406caf9bb3684ccf2d97ed441f1dc3d0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# HttpTransportBindingElement
+# <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class HttpTransportBindingElement : TransportBindingElement  
@@ -39,101 +42,101 @@ class HttpTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## Methoden  
- Die HttpTransportBindingElement\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die HttpTransportBindingElement-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die HttpTransportBindingElement\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die HttpTransportBindingElement-Klasse verfügt über die folgenden Eigenschaften:  
   
-### AllowCookies  
- Datentyp: Boolescher Wert  
+### <a name="allowcookies"></a>AllowCookies  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob der Client Cookies akzeptiert und bei zukünftigen Anfragen weiterleitet.  
   
-### Authentifizierungsschemas  
- Datentyp: Zeichenfolge  
+### <a name="authenticationscheme"></a>Authentifizierungsschemas  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Das Authentifizierungsschema, das zum Authentifizieren von Clientanforderungen verwendet wird, die von einem HTTP\-Listener verarbeitet werden.  
+ Das Authentifizierungsschema, das zum Authentifizieren von Clientanforderungen verwendet wird, die von einem HTTP-Listener verarbeitet werden.  
   
-### BypassProxyOnLocal  
+### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob Proxys für lokale Adressen ignoriert werden.  
   
-### HostNameComparisonMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Ein Wert, der angibt, ob der Hostname zum Erreichen des Diensts bei übereinstimmendem URI verwendet wird.  
+ Ein Wert, der angibt, ob der Hostname zum Erreichen des Dienstes bei übereinstimmendem URI verwendet wird.  
   
-### KeepAliveEnabled  
+### <a name="keepaliveenabled"></a>KeepAliveEnabled  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Bei Aktivierung werden HTTP\-Verbindungen unabhängig von der Aktivitätsebene beibehalten.  
+ Bei Aktivierung werden HTTP-Verbindungen unabhängig von der Aktivitätsebene beibehalten.  
   
-### MaxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Größe des Pufferpools.  
   
-### ProxyAddress  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="proxyaddress"></a>ProxyAddress  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Ein URI, der die Adresse des Proxys enthält, der für HTTP\-Anforderungen verwendet werden soll.  
+ Ein URI, der die Adresse des Proxys enthält, der für HTTP-Anforderungen verwendet werden soll.  
   
-### ProxyAuthenticationScheme  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="proxyauthenticationscheme"></a>ProxyAuthenticationScheme  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Das Authentifizierungsschema, das zum Authentifizieren von Clientanforderungen verwendet wird, die von einem HTTP\-Proxy verarbeitet werden.  
+ Das Authentifizierungsschema, das zum Authentifizieren von Clientanforderungen verwendet wird, die von einem HTTP-Proxy verarbeitet werden.  
   
-### Bereich  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="realm"></a>Bereich  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Authentifizierungsbereich.  
   
-### TransferMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="transfermode"></a>TransferMode  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob Meldungen bei einer Anforderung oder Antwort gepuffert oder per Stream übertragen werden.  
   
-### UnsafeConnectionNtlmAuthentication  
+### <a name="unsafeconnectionntlmauthentication"></a>UnsafeConnectionNtlmAuthentication  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob die Freigabe nicht sicherer Verbindungen auf dem Server aktiviert ist.  
   
-### UseDefaultWebProxy  
+### <a name="usedefaultwebproxy"></a>UseDefaultWebProxy  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob die Proxyeinstellungen auf dem Computer anstatt der benutzerspezifischen Einstellungen verwendet werden sollen.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

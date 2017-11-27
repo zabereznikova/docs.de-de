@@ -1,27 +1,33 @@
 ---
-title: "&#39;AcceptChanges&#39; und &#39;RejectChanges&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "\"AcceptChanges\" und \"RejectChanges\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6ac64fee869ce58413e799f4217f009ef6ae91a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;AcceptChanges&#39; und &#39;RejectChanges&#39;
-Nach Sie sichergestellt haben, dass die Änderungen an den Daten in einer <xref:System.Data.DataTable> korrekt sind, können Sie die Änderungen mithilfe der <xref:System.Data.DataRow.AcceptChanges%2A>\-Methode der <xref:System.Data.DataRow>, der <xref:System.Data.DataTable> oder des <xref:System.Data.DataSet> übernehmen. Dadurch werden die **Current**\-Zeilenwerte auf **Original**\-Werte festgelegt, und die **RowState**\-Eigenschaft wird auf **Unchanged** festgelegt.  Durch Übernehmen oder Ablehnen der Änderungen werden jegliche **RowError**\-Informationen gelöscht, und die **HasErrors** Eigenschaft wird auf **false** festgelegt.  Das Übernehmen oder Zurückweisen von Änderungen kann sich auch auf das Update von Daten in der Datenquelle auswirken.  Weitere Informationen finden Sie unter [Aktualisieren von Datenquellen mit DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+# <a name="acceptchanges-and-rejectchanges"></a>"AcceptChanges" und "RejectChanges"
+Nach der Überprüfung der Genauigkeit von Änderungen an Daten in eine <xref:System.Data.DataTable>, können Sie akzeptieren, die Änderungen mithilfe der <xref:System.Data.DataRow.AcceptChanges%2A> Methode der <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, oder <xref:System.Data.DataSet>, festzulegen der **aktuelle** Zeile Werte verwendet werden die **ursprünglichen** Werte und legt die **RowState** Eigenschaft **Unchanged**. Übernehmen oder Zurückweisen von Änderungen löscht jegliche **RowError** Informationen und legt die **HasErrors** Eigenschaft **"false"**. Das Übernehmen oder Zurückweisen von Änderungen kann sich auch auf das Update von Daten in der Datenquelle auswirken. Weitere Informationen finden Sie unter [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- Wenn für die **DataTable** Fremdschlüsseleinschränkungen vorhanden sind, werden Änderungen, die mit **AcceptChanges** und **RejectChanges** übernommen oder zurückgewiesen wurden, gemäß der **ForeignKeyConstraint.AcceptRejectRule** an die untergeordneten Zeilen der **DataRow** weitergegeben.  Weitere Informationen finden Sie unter ['DataTable'\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Wenn auf foreign Key-Einschränkungen vorhanden sind die **DataTable**, Änderungen akzeptiert oder abgelehnt hat, mithilfe von **AcceptChanges** und **RejectChanges** werden an die untergeordneten Zeilen der weitergegeben **DataRow** gemäß der **DataRow**. Weitere Informationen finden Sie unter [DataTable-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
- Im folgenden Beispiel werden Zeilen mit Fehlern gesucht, die Fehler ggf. behoben und die Zeilen, in denen die Fehler nicht behoben werden können, zurückgewiesen.  Beachten Sie, dass der **RowError**\-Wert für behobene Fehler auf eine leere Zeichenfolge zurückgesetzt wird, was dazu führt, dass für die **HasErrors**\-Eigenschaft **false** festgelegt wird.  Wenn alle Zeilen mit Fehlern aufgelöst oder zurückgewiesen wurden, wird **AcceptChanges** aufgerufen, um alle Änderungen für die gesamte **DataTable** zu übernehmen.  
+ Im folgenden Beispiel werden Zeilen mit Fehlern gesucht, die Fehler ggf. behoben und die Zeilen, in denen die Fehler nicht behoben werden können, zurückgewiesen. Beachten Sie, dass für Fehler behobene der **RowError** Wert wird auf eine leere Zeichenfolge zurückgesetzt verursacht die **HasErrors** Eigenschaft festgelegt werden, um **"false"**. Wenn alle Zeilen mit Fehlern aufgelöst oder abgelehnt wird, wurden **AcceptChanges** wird aufgerufen, um alle Änderungen für die gesamte akzeptieren **DataTable**.  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -39,7 +45,6 @@ If workTable.HasErrors Then
 End If  
   
 workTable.AcceptChanges()  
-  
 ```  
   
 ```csharp  
@@ -61,9 +66,9 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

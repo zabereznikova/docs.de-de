@@ -1,64 +1,65 @@
 ---
-title: "BackgroundWorker-Komponente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Asynchrones Muster"
-  - "Hintergrundvorgänge"
-  - "Hintergrundaufgaben"
-  - "BackgroundWorker-Komponente"
-  - "Komponenten [Windows Forms], Asynchron"
-  - "Formulare, Hintergrundvorgänge"
-  - "Formulare, Multithreading"
-  - "Threading [Windows Forms], Hintergrundvorgänge"
+title: BackgroundWorker-Komponente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BackgroundWorker component
+- background tasks
+- Asynchronous Pattern
+- forms [Windows Forms], multithreading
+- components [Windows Forms], asynchronous
+- forms [Windows Forms], background operations
+- threading [Windows Forms], background operations
+- background operations
 ms.assetid: bef7b0ab-ce57-475a-a2d6-fb8a702a9417
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cbcbc786c19ad1af74114915b0fd0689d466fcbe
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# BackgroundWorker-Komponente
-Mithilfe der `BackgroundWorker`\-Komponente kann ein Vorgang in einem Formular oder Steuerelement asynchron ausgeführt werden.  
+# <a name="backgroundworker-component"></a>BackgroundWorker-Komponente
+Die `BackgroundWorker` ermöglicht es einem Formular oder Steuerelement einen Vorgang asynchron ausgeführt.  
   
-## In diesem Abschnitt  
- [Übersicht über die BackgroundWorker\-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- Beschreibt die `BackgroundWorker`\-Komponente, die es Ihnen ermöglicht, zeitaufwendige Vorgänge \("im Hintergrund"\) in einem anderen Thread als dem primären UI\-Thread der Anwendung asynchron auszuführen.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über die BackgroundWorker-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
+ Beschreibt die `BackgroundWorker` Komponente, die die Fähigkeit zur Ausführung von zeitaufwändiger Operations asynchron ("im Hintergrund") in einem Thread, der sich vom primären UI-Thread der Anwendung enthält.  
   
  [Exemplarische Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- Veranschaulicht die Verwendung der `BackgroundWorker`\-Komponente im Designer, um einen zeitaufwendigen Vorgang in einem separaten Thread auszuführen.  
+ Veranschaulicht, wie die `BackgroundWorker` Komponente im Designer, um einen zeitaufwändigen Vorgang in einem separaten Thread auszuführen.  
   
  [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- Veranschaulicht die Verwendung der `BackgroundWorker`\-Komponente, um einen zeitaufwendigen Vorgang in einem separaten Thread auszuführen.  
+ Veranschaulicht, wie die `BackgroundWorker` Komponente, um einen zeitaufwändigen Vorgang in einem separaten Thread auszuführen.  
   
  [Exemplarische Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
- Erstellt eine Anwendung mithilfe des Designers, der mathematische Berechnungen asynchron ausführt.  
+ Erstellt eine Anwendung mithilfe des Designers, die mathematische Berechnungen asynchron ist.  
   
- [Gewusst wie: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- Erstellt eine Anwendung, die mathematische Berechnungen asynchron ausführt.  
+ [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ Erstellt eine Anwendung, die mathematische Berechnungen asynchron ist.  
   
  [Gewusst wie: Downloaden einer Datei im Hintergrund](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
- Veranschaulicht die Verwendung der `BackgroundWorker`\-Komponente, um eine Datei in einem separaten Thread herunterzuladen.  
+ Veranschaulicht, wie die `BackgroundWorker` Komponente zum Herunterladen einer Datei auf einem separaten Thread.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.ComponentModel.BackgroundWorker>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
  <xref:System.ComponentModel.RunWorkerCompletedEventArgs>  
- Beschreibt den Typ, der Daten für das <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>\-Ereignis enthält.  
+ Beschreibt den Typ, der Daten für die <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> Ereignis.  
   
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
- Beschreibt den Typ, der Daten für das <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>\-Ereignis enthält.  
+ Beschreibt den Typ, der Daten für die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignis.  
   
-## Verwandte Abschnitte  
- [Event\-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- Beschreibt, wie das asynchrone Muster die Vorteile von Multithreadanwendungen verfügbar macht, während zahlreiche komplexere Aspekte des Multithreaddesigns im Hintergrund ablaufen.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ Beschreibt, wie das asynchrone Muster die Vorteile von Multithreadanwendungen zur Verfügung und gleichzeitig viele komplexe Aspekte des Multithreaddesigns verbirgt.

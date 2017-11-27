@@ -1,35 +1,38 @@
 ---
-title: "Fl&#252;chtige Kommunikation unter Verwendung von Warteschlangen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Flüchtige Kommunikation unter Verwendung von Warteschlangen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a7e6bb57245e9877fe337b86a03565d0197b0084
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Fl&#252;chtige Kommunikation unter Verwendung von Warteschlangen
-In diesem Beispiel wird veranschaulicht, wie eine flüchtige Kommunikation unter Verwendung von Warteschlangen über Message Queuing \(MSMQ\)\-Transport durchgeführt wird.In diesem Beispiel wird <xref:System.ServiceModel.NetMsmqBinding> verwendet.Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
+# <a name="volatile-queued-communication"></a>Flüchtige Kommunikation unter Verwendung von Warteschlangen
+In diesem Beispiel wird veranschaulicht, wie eine flüchtige Kommunikation unter Verwendung von Warteschlangen über Message Queuing (MSMQ)-Transport durchgeführt wird. In diesem Beispiel wird <xref:System.ServiceModel.NetMsmqBinding> verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
   
 > [!NOTE]
->  Die Setupprozedur und die Erstellungsanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst.Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet.Der Dienst empfängt Nachrichten aus der Warteschlange.Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
+ In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
   
- Wenn Sie eine Nachricht ohne Zusicherungen senden, sendet MSMQ nur nach dem Best\-Effort\-Prinzip, im Gegensatz zu Exactly Once\-Zusicherungen, bei denen MSMQ sicherstellt, dass die Nachricht zugestellt wird, oder Sie benachrichtigt werden, falls sie nicht zugestellt werden kann.  
+ Wenn Sie eine Nachricht ohne Zusicherungen senden, sendet MSMQ nur nach dem Best-Effort-Prinzip, im Gegensatz zu Exactly Once-Zusicherungen, bei denen MSMQ sicherstellt, dass die Nachricht zugestellt wird, oder Sie benachrichtigt werden, falls sie nicht zugestellt werden kann.  
   
- In bestimmten Szenarios senden Sie eventuell eine flüchtige Nachricht ohne Zusicherungen über eine Warteschlange, wenn eine schnelle Zustellung wichtiger ist, als Nachrichten zu verlieren.Flüchtige Nachrichten bleiben nach einem Absturz des Warteschlangen\-Managers nicht erhalten.Wenn es daher zu einem Absturz des Warteschlangen\-Managers kommt, bleibt die nicht transaktionale Warteschlange zum Speichern von flüchtigen Nachrichten erhalten, die Nachrichten selbst jedoch nicht, da sie nicht auf dem Datenträger gespeichert werden.  
+ In bestimmten Szenarios senden Sie eventuell eine flüchtige Nachricht ohne Zusicherungen über eine Warteschlange, wenn eine schnelle Zustellung wichtiger ist, als Nachrichten zu verlieren. Flüchtige Nachrichten bleiben nach einem Absturz des Warteschlangen-Managers nicht erhalten. Wenn es daher zu einem Absturz des Warteschlangen-Managers kommt, bleibt die nicht transaktionale Warteschlange zum Speichern von flüchtigen Nachrichten erhalten, die Nachrichten selbst jedoch nicht, da sie nicht auf dem Datenträger gespeichert werden.  
   
 > [!NOTE]
->  Sie können keine flüchtigen Nachrichten ohne Zusicherungen innerhalb des Bereichs einer Transaktion mit MSMQ senden.Sie müssen außerdem eine nicht transaktionale Warteschlange erstellen, um flüchtige Nachrichten zu senden.  
+>  Sie können keine flüchtigen Nachrichten ohne Zusicherungen innerhalb des Bereichs einer Transaktion mit MSMQ senden. Sie müssen außerdem eine nicht transaktionale Warteschlange erstellen, um flüchtige Nachrichten zu senden.  
   
  Bei dem Dienstvertrag in diesem Beispiel handelt es sich um `IStockTicker`. Hier werden unidirektionale Dienste definiert, die für die Verwendung mit Warteschlangen am besten geeignet sind.  
   
@@ -40,7 +43,6 @@ public interface IStockTicker
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-  
 ```  
   
  Der Dienstvorgang zeigt das Aktientickersymbol und den Preis an, wie im folgenden Beispielcode dargestellt:  
@@ -54,10 +56,9 @@ public class StockTickerService : IStockTicker
      }  
      …  
 }  
-  
 ```  
   
- Der Dienst ist selbst gehostet.Bei Verwendung des MSMQ\-Transports muss die Warteschlange im Voraus erstellt werden.Dies kann manuell erfolgen oder mithilfe eines Codes.In diesem Beispiel enthält der Dienst Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um die Warteschlange gegebenenfalls zu erstellen.Der Warteschlangenname wird aus der Konfigurationsdatei gelesen.Die Basisadresse wird vom [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) verwendet, um den Proxy für den Dienst zu generieren.  
+ Der Dienst ist selbst gehostet. Bei Verwendung des MSMQ-Transports muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist, und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen. Die Basisadresse wird verwendet, durch die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) auf den Proxy für den Dienst zu generieren.  
   
 ```  
 // Host the service within this EXE console application.  
@@ -86,17 +87,16 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-  
 ```  
   
- Der MSMQ\-Warteschlangenname wird im appSettings\-Abschnitt der Konfigurationsdatei angegeben.Der Endpunkt für den Dienst wird im Abschnitt system.serviceModel der Konfigurationsdatei definiert und gibt die `netMsmqBinding`\-Bindung an.  
+ Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt system.serviceModel der Konfigurationsdatei definiert und gibt die `netMsmqBinding`-Bindung an.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt \(.\) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet, wenn eine Warteschlange mithilfe von <xref:System.Messaging> erstellt wird.Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Endpunkt gibt ein net.msmq:\-Schema an und verwendet "localhost" als lokalen Computer sowie Schrägstriche im Pfad.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet, wenn eine Warteschlange mithilfe von <xref:System.Messaging> erstellt wird. Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunkt gibt ein net.msmq:-Schema an und verwendet "localhost" als lokalen Computer sowie Schrägstriche im Pfad.  
   
  Die Zusicherungen und die Dauerhaftigkeit oder Flüchtigkeit von Nachrichten werden ebenfalls in der Konfiguration angegeben.  
   
-```  
+```xml  
 <appSettings>  
   <!-- use appSetting to configure MSMQ queue name -->  
   <add key="queueName" value=".\private$\ServiceModelSamplesVolatile" />  
@@ -125,7 +125,6 @@ public static void Main()
   </bindings>  
   ...  
 </system.serviceModel>  
-  
 ```  
   
  Da im Beispiel Nachrichten in der Warteschlange mithilfe einer nicht transaktionalen Warteschlange gesendet werden, können keine transaktiven Nachrichten an die Warteschlagen gesendet werden.  
@@ -145,10 +144,9 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Client\- und Dienstaktivitäten sowohl im Dienst\- als auch Clientkonsolenfenster angezeigt.Sie können sehen, wie der Dienst Nachrichten vom Client empfängt.Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen.Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Client empfängt.  
+ Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, wie der Dienst Nachrichten vom Client empfängt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen. Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen. Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.  
   
 ```  
 The service is ready.  
@@ -166,21 +164,21 @@ Stock Tick zzz8:43.32
 Stock Tick zzz9:43.3  
 ```  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Wenn Sie das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend ausführen möchten, folgen Sie den unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert.Es gibt zwei relevante Eigenschaften für die MSMQ\-Transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` In der Standardeinstellung ist der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene ist auf `Sign` festgelegt.Damit MSMQ die Authentifizierungs\- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory\-Integrationsoption für MSMQ muss installiert sein.Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
+ Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für die MSMQ-transportsicherheit <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene festgelegt ist, um `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
   
-### So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory\-Integration verfügt  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory-Integration verfügt  
   
-1.  Wenn Ihr Computer nicht zu einer Domäne gehört oder auf ihm keine Active Directory\-Integration installiert ist, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` festlegen, wie im folgenden Beispiel für einen Konfigurationscode gezeigt.  
+1.  Wenn Ihr Computer nicht zu einer Domäne gehört oder auf ihm keine Active Directory-Integration installiert ist, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` festlegen, wie im folgenden Beispiel für einen Konfigurationscode gezeigt.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <services>  
           <service name="Microsoft.ServiceModel.Samples.StockTickerService"  
@@ -223,21 +221,20 @@ Stock Tick zzz9:43.3
         </behaviors>  
   
       </system.serviceModel>  
-  
     ```  
   
 2.  Ändern Sie die Konfiguration sowohl auf dem Server als auch auf dem Client, bevor Sie das Beispiel ausführen.  
   
     > [!NOTE]
-    >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> und der `Message`\-Sicherheit auf `None`.  
+    >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> und der `Message`-Sicherheit auf `None`.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

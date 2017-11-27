@@ -1,77 +1,84 @@
 ---
-title: "Vorgehensweise: Erstellen eines Flussdiagrammworkflows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Erstellen eines Flussdiagrammworkflows'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 570e51c3b9c8ee227a9c5688fc7caa1b4a0d9c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines Flussdiagrammworkflows
-Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden.In diesem Thema wird Schritt für Schritt die Erstellung eines Workflows erläutert, der integrierte Aktivitäten wie die <xref:System.Activities.Statements.Flowchart>\-Aktivität sowie benutzerdefinierte Aktivitäten aus dem vorherigen Thema [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) verwendet.Der Workflow erstellt ein Spiel, das Zahlen errät.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Vorgehensweise: Erstellen eines Flussdiagrammworkflows
+Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt Sie durch Erstellen eines Workflows, die sowohl integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.Flowchart> Aktivität und den benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen Sie eine Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
   
 > [!NOTE]
->  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab.Um dieses Thema verwenden zu können, müssen Sie zuerst [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) abschließen.  
+>  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie zuerst ausführen [Vorgehensweise: Erstellen Sie eine Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Um eine abgeschlossene Version des Lernprogramms herunterzuladen, informieren Sie sich unter [Windows Workflow Foundation \(WF45\) – Lernprogramm "Erste Schritte"](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
   
-### So erstellen Sie den Workflow  
+### <a name="to-create-the-workflow"></a>So erstellen Sie den Workflow  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **NumberGuessWorkflowActivities**, und wählen Sie **Hinzufügen** und dann **Neues Element** aus.  
+1.  Mit der rechten Maustaste **NumberGuessWorkflowActivities** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Element**.  
   
-2.  Wählen Sie im Knoten **Gemeinsame Elemente** unter **Installiert** die Option **Workflow** aus.Wählen Sie in der Liste **Workflow** die Option **Aktivität** aus.  
+2.  In der **installiert**, **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Aktivität** aus der **Workflow** Liste.  
   
-3.  Geben Sie im Feld **Name** den Namen `FlowchartNumberGuessWorkflow`ein, und klicken Sie auf **Hinzufügen**.  
+3.  Typ `FlowchartNumberGuessWorkflow` in der **Namen** Feld, und klicken Sie auf **hinzufügen**.  
   
-4.  Ziehen Sie eine **Flowchart**\-Aktivität aus dem Abschnitt **Flowchart** der **Toolbox**, und legen Sie sie auf der Entwurfsoberfläche des Workflows auf der Bezeichnung **Aktivität hier ablegen** ab.  
+4.  Ziehen Sie eine **Flussdiagramm** Aktivität aus der **Flussdiagramm** im Abschnitt der **Toolbox** und legen ihn auf die **Aktivität hier ablegen** Bezeichnung auf die die Entwurfsoberfläche des Workflows.  
   
-### So erstellen Sie die Workflowvariablen und \-argumente  
+### <a name="to-create-the-workflow-variables-and-arguments"></a>So erstellen Sie die Workflowvariablen und -argumente  
   
-1.  Doppelklicken Sie im **Projektmappen\-Explorer**auf **FlowchartNumberGuessWorkflow.xaml**, um den Workflow im Designer anzuzeigen, falls er nicht bereits angezeigt wird.  
+1.  Doppelklicken Sie auf **FlowchartNumberGuessWorkflow.xaml** in **Projektmappen-Explorer** um den Workflow im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.  
   
-2.  Klicken Sie links unten im Workflow\-Designer auf die Schaltfläche **Argumente**, um den Bereich **Argumente** anzuzeigen.  
+2.  Klicken Sie auf **Argumente** in der unteren linken Seite im Workflow-Designer zum Anzeigen der **Argumente** Bereich.  
   
 3.  Klicken Sie auf **Argument erstellen**.  
   
-4.  Geben Sie `MaxNumber` im Feld **Name** ein, wählen Sie aus der Dropdownliste **Richtung** die Richtung **In** und aus der Dropdownliste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+4.  Typ `MaxNumber` in der **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
   
 5.  Klicken Sie auf **Argument erstellen**.  
   
-6.  Geben Sie in das Feld **Name**, das unter dem neu hinzugefügten Argument `MaxNumber` angezeigt wird, `Turns` ein. Wählen Sie aus der Dropdownliste **Richtung** die Richtung **Out** und aus der Dropdownliste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE.  
+6.  Typ `Turns` in der **Namen** Feld, das unterhalb der neu hinzugefügten `MaxNumber` Argument die Option **Out** aus der **Richtung** Dropdown-Liste  **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE.  
   
-7.  Klicken Sie links unten im Aktivitäts\-Designer auf die Schaltfläche **Argumente**, um den Bereich **Argumente** zu schließen.  
+7.  Klicken Sie auf **Argumente** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Argumente** Bereich.  
   
-8.  Klicken Sie links unten im Workflow\-Designer auf **Variablen**, um den Bereich **Variablen** anzuzeigen.  
+8.  Klicken Sie auf **Variablen** in der unteren linken Seite im Workflow-Designer zum Anzeigen der **Variablen** Bereich.  
   
-9. Klicken Sie auf **Variable erstellen**.  
+9. Klicken Sie auf **erstellen Variable**.  
   
     > [!TIP]
-    >  Wenn das Feld **Variable erstellen** nicht angezeigt wird, klicken Sie auf der Oberfläche des Workflow\-Designers auf die <xref:System.Activities.Statements.Flowchart>\-Aktivität, um sie auszuwählen.  
+    >  Wenn kein **Variable erstellen** angezeigt wird, klicken Sie auf die <xref:System.Activities.Statements.Flowchart> Aktivität auf der workflowdesigneroberfläche, um es auszuwählen.  
   
-10. Geben Sie `Guess` im Feld **Name** ein, wählen Sie aus der Dropdownliste **Variablentyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.  
+10. Typ `Guess` in der **Namen** wählen Sie im **Int32** aus der **Variablentyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.  
   
-11. Klicken Sie auf **Variable erstellen**.  
+11. Klicken Sie auf **erstellen Variable**.  
   
-12. Geben Sie `Target` im Feld **Name** ein, wählen Sie aus der Dropdownliste **Variablentyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.  
+12. Typ `Target` in der **Namen** wählen Sie im **Int32** aus der **Variablentyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.  
   
-13. Klicken Sie links unten im Aktivitäts\-Designer auf **Variablen**, um den Bereich **Variablen** zu schließen.  
+13. Klicken Sie auf **Variablen** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Variablen** Bereich.  
   
-### So fügen Sie die Workflowaktivitäten hinzu  
+### <a name="to-add-the-workflow-activities"></a>So fügen Sie die Workflowaktivitäten hinzu  
   
-1.  Ziehen Sie eine **Assign**\-Aktivität aus dem Abschnitt **Primitive** der **Toolbox**, und zeigen Sie auf den Knoten **Start**, der sich am oberen Rand des Flussdiagramms befindet.Wenn sich die **Assign**\-Aktivität über dem Knoten **Start** befindet, werden drei Dreiecke um den Knoten **Start** angezeigt.Legen Sie die **Assign**\-Aktivität auf dem Dreieck ab, das sich direkt unterhalb des Knotens **Start** befindet.Dadurch werden die beiden Elemente verknüpft und die **Assign**\-Aktivität als erste Aktivität im Flussdiagramm festgelegt.  
+1.  Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und zeigen sie auf die **starten** Knoten, die am oberen Rand ist die Flussdiagramm. Wenn die **zuweisen** Aktivität liegt über der **starten** Knoten drei Dreiecke um den **starten** Knoten. Löschen der **zuweisen** Aktivität auf dem Dreieck ab, das direkt unterhalb der **starten** Knoten. Dadurch werden die beiden Elemente miteinander verknüpfen und bezieht sich auf die **zuweisen** Aktivität als erste Aktivität im Flussdiagramm.  
   
     > [!NOTE]
-    >  Aktivitäten können auch als Startaktivität im Workflow angegeben werden, indem Sie die Aktivität manuell mit dem Startknoten verknüpfen.Hierzu zeigen Sie auf den Knoten **Start**, klicken auf eines der Rechtecke, die angezeigt werden, wenn sich der Mauszeiger über dem Knoten **Start** befindet, ziehen die Verbindungslinie auf die gewünschte Aktivität herunter und legen sie auf einem der angezeigten Rechtecke ab.Sie können eine Aktivität auch als Startaktivität festlegen, indem Sie mit der rechten Maustaste darauf klicken und **Als Startknoten festlegen** auswählen.  
+    >  Aktivitäten können auch als Startaktivität im Workflow angegeben werden, indem Sie die Aktivität manuell mit dem Startknoten verknüpfen. Zeigen Sie dazu mit der Maus auf die **starten** Knoten, klicken Sie auf eines der Rechtecke, die angezeigt werden, wenn sich der Mauszeiger die **starten** Knoten, und ziehen Sie die Verbindungslinie auf die gewünschte Aktivität herunter und legen es auf einem der der angezeigten Rechtecke ab. Sie können auch festlegen, und die Aktivität als Startaktivität durch Rechtsklick auf die It und Auswahl **als Startknoten festlegen**.  
   
-2.  Geben Sie `Target` im Feld **To** und den folgenden Ausdruck im Feld **C\#\-Ausdruck eingeben** oder **VB\-Ausdruck eingeben** ein.  
+2.  Typ `Target` in der **auf** Feld und den folgenden Ausdruck in der **Geben Sie eine C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,11 +89,11 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     ```  
   
     > [!TIP]
-    >  Wenn das Fenster **Toolbox** nicht sichtbar ist, wählen Sie im Menü **Ansicht** die Option **Toolbox** aus.  
+    >  Wenn die **Toolbox** Fenster nicht angezeigt wird, wählen Sie **Toolbox** aus der **Ansicht** Menü.  
   
-3.  Ziehen Sie eine **Prompt**\-Aktivität aus dem Abschnitt **NumberGuessWorkflowActivities** der **Toolbox**, legen Sie sie unterhalb der **Assign**\-Aktivität aus dem vorherigen Schritt ab, und verbinden Sie die **Prompt**\-Aktivität mit der **Assign**\-Aktivität.Es gibt drei Möglichkeiten, die beiden Aktivitäten zu verbinden.Die erste Methode besteht darin, sie zu verbinden, während Sie die **Prompt**\-Aktivität im Workflow ablegen.Zeigen Sie, während Sie die **Prompt**\-Aktivität auf den Workflow ziehen, auf die **Assign**\-Aktivität, und legen Sie diese auf einem der vier Dreiecke ab, die angezeigt werden, wenn sich die **Prompt**\-Aktivität über der **Assign**\-Aktivität befindet.Die zweite Methode besteht darin, die **Prompt**\-Aktivität auf dem Workflow am gewünschten Ort abzulegen.Anschließend zeigen Sie auf die **Assign**\-Aktivität und ziehen eines der angezeigten Rechtecke nach unten auf die **Prompt**\-Aktivität.Ziehen Sie die Maus, sodass sich die Verbindungslinie von der **Assign**\-Aktivität mit einem der Rechtecke der **Prompt**\-Aktivität verbindet, und lassen Sie die Maustaste los.Der dritte Weg ist der ersten Methode sehr ähnlich, außer dass Sie die **Prompt**\-Aktivität nicht aus der **Toolbox** ziehen, sondern von ihrer Position auf der Entwurfsoberfläche des Workflows über die **Assign**\-Aktivität bewegen und auf einem der angezeigten Dreiecke ablegen.  
+3.  Ziehen Sie eine **Prompt** Aktivität aus der **NumberGuessWorkflowActivities** im Abschnitt der **Toolbox**, legen Sie sie unterhalb der **zuweisen** Aktivität aus dem vorherigen Schritt ab, und verbinden die **Prompt** Aktivität, um die **zuweisen** Aktivität. Es gibt drei Möglichkeiten, die beiden Aktivitäten zu verbinden. Die erste Möglichkeit besteht, um sie zu verbinden, wie Sie löschen die **Prompt** -Aktivität im Workflow. Wie Sie ziehen die **Prompt** Aktivität für den Workflow, zeigen sie auf die **zuweisen** Aktivität, und legen ihn auf einem der vier Dreiecke ab, die angezeigt werden die **Prompt** Aktivität liegt über dem **zuweisen** Aktivität. Die zweite Möglichkeit ist zum Löschen der **Prompt** -Aktivität auf dem Workflow am gewünschten Ort. Klicken Sie dann den Mauszeiger über die **zuweisen** Aktivität, und ziehen Sie eines der Rechtecke, die nach unten, um die **Prompt** Aktivität. Ziehen Sie die Maus, sodass die Verbindungslinie von der **zuweisen** Aktivität eine Verbindung mit einem der Rechtecke der der **Prompt** Aktivität, und lassen Sie die Maustaste los. Der dritte Weg ist vergleichbar mit der ersten Methode, außer dass ziehen die **Prompt** Aktivität aus der **Toolbox**, ziehen Sie es von ihrer Position auf der Workflowentwurfsoberfläche, zeigen sie auf die  **Weisen Sie** Aktivität, und auf einem der angezeigten Dreiecke ablegen.  
   
-4.  Geben Sie im Eigenschaftenfenster für die **Prompt**\-Aktivität im Feld mit dem Eigenschaftswert **BookmarkName** den Begriff `"EnterGuess"` einschließlich der Anführungszeichen ein.Geben Sie im Feld mit dem Eigenschaftswert **Result** den Begriff `Guess` ein, und geben Sie den folgenden Ausdruck im Eigenschaftsfeld **Text** ein.  
+4.  In der **Fenster "Eigenschaften"** für die **Prompt** -Aktivität `"EnterGuess"` einschließlich der Anführungszeichen in der **BookmarkName** Feld mit dem Eigenschaftswert. Typ `Guess` in der **Ergebnis** Eigenschaft Wert im Feld, und geben Sie den folgenden Ausdruck in der **Text** Eigenschaftenfeld.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -97,13 +104,13 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     ```  
   
     > [!TIP]
-    >  Klicken Sie im Menü **Ansicht** auf **Eigenschaftenfenster**, falls das Fenster **Eigenschaften** nicht angezeigt wird.  
+    >  Wenn die **Fenster "Eigenschaften"** wird nicht angezeigt werden, wählen Sie **Fenster "Eigenschaften"** aus der **Ansicht** Menü.  
   
-5.  Ziehen Sie eine **Assign**\-Aktivität aus dem Abschnitt **Primitive** der **Toolbox**, und verbinden Sie diese mit einer der im vorherigen Schritt beschriebenen Methoden, sodass sie sich unterhalb der **Prompt**\-Aktivität befindet.  
+5.  Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und verbinden Sie diese mit einer der Methoden, die im vorherigen Schritt beschrieben wird, sodass sie sich unterhalb der befindet **Prompt** Aktivität.  
   
-6.  Geben Sie `Turns` im Feld **To** und `Turns + 1` im Feld **C\#\-Ausdruck eingeben** oder **VB\-Ausdruck eingeben** ein.  
+6.  Typ `Turns` in der **auf** Feld und `Turns + 1` in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.  
   
-7.  Ziehen Sie in der Toolbox eine **FlowDecision** aus dem Abschnitt **Flowchart**, und verbinden Sie sie, sodass sie sich unterhalb der **Assign**\-Aktivität befindet.Geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Condition** ein.  
+7.  Ziehen Sie eine **FlowDecision** aus der **Flussdiagramm** Teil der **Toolbox** und verbinden Sie ihn unten die **zuweisen** Aktivität. In der **Fenster "Eigenschaften"**, geben Sie den folgenden Ausdruck in der **Bedingung** Feld mit dem Eigenschaftswert.  
   
     ```vb  
     Guess = Target  
@@ -113,50 +120,50 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     Guess == Target  
     ```  
   
-8.  Ziehen Sie eine weitere **FlowDecision**\-Aktivität aus der Toolbox, und legen Sie diese unter der ersten Aktivität ab.Verbinden Sie die zwei Aktivitäten über Ziehen und Ablegen vom Rechteck mit der Bezeichnung **False** der obersten **FlowDecision**\-Aktivität zum Rechteck über der zweiten **FlowDecision**\-Aktivität.  
+8.  Ziehen Sie ein weiteres **FlowDecision** Aktivität aus der **Toolbox** und legen Sie es unterhalb der ersten Aktivität. Verbinden Sie die beiden Aktivitäten durch Ziehen zwischen dem Rechteck mit der Bezeichnung **"false"** am oberen Rand **FlowDecision** -Aktivität zum Rechteck am oberen Rand der zweiten **FlowDecision**Aktivität.  
   
     > [!TIP]
-    >  Wenn die Bezeichnungen **True** und **False** nicht für **FlowDecision** angezeigt werden, zeigen Sie mit der Maus auf **FlowDecision**.  
+    >  Wenn Sie nicht sehen die **"true"** und **"false"** "Bezeichnungen" auf die **FlowDecision**, zeigen Sie mit der Maus auf die **FlowDecision**.  
   
-9. Klicken Sie auf die zweite **FlowDecision**\-Aktivität, um diese auszuwählen.Geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Condition** ein.  
+9. Klicken Sie auf die zweite **FlowDecision** Aktivität, um es auszuwählen. In der **Fenster "Eigenschaften"**, geben Sie den folgenden Ausdruck in der **Bedingung** Feld mit dem Eigenschaftswert.  
   
-    ```vb-c#  
+    ```
     Guess < Target  
     ```  
   
-10. Ziehen Sie in der Toolbox zwei **WriteLine**\-Aktivitäten aus dem Abschnitt **Primitive**, und legen Sie sie nebeneinander unter den zwei **FlowDecision**\-Aktivitäten ab.Verbinden Sie die **True**\-Aktion der untersten **FlowDecision**\-Aktivität mit der **WriteLine**\-Aktivität ganz links und die **False**\-Aktion mit der **WriteLine**\-Aktivität ganz rechts.  
+10. Ziehen Sie zwei **WriteLine** Aktivitäten aus der **primitive** Teil der **Toolbox** und ablegen, damit sie nebeneinander unter den zwei sind **FlowDecision**  Aktivitäten. Verbinden der **"true"** -Aktion der untersten **FlowDecision** Aktivität, um die am weitesten links stehende **WriteLine** Aktivität, und die **"false"** Aktion aus, um die ganz rechts **WriteLine** Aktivität.  
   
-11. Klicken Sie auf die **WriteLine**\-Aktivität ganz links, um sie auszuwählen, und geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Text** ein.  
+11. Klicken Sie auf die am weitesten links stehende **WriteLine** Aktivität, um es auszuwählen, und geben Sie den folgenden Ausdruck in der **Text** Eigenschaftswert Feld der **Fenster "Eigenschaften"**.  
   
-    ```vb-c#  
+    ```
     "Your guess is too low."  
     ```  
   
-12. Verbinden Sie **WriteLine** mit der linken Seite der **Prompt**\-Aktivität, die sich darüber befindet.  
+12. Verbinden der **WriteLine** auf der linken Seite des der **Prompt** Aktivität, die jeweils darüber liegt.  
   
-13. Klicken Sie auf die **WriteLine**\-Aktivität ganz rechts, um sie auszuwählen, und geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Text** ein.  
+13. Klicken Sie auf der äußersten rechten **WriteLine** Aktivität, um es auszuwählen, und geben Sie den folgenden Ausdruck in der **Text** Eigenschaftswert Feld der **Fenster "Eigenschaften"**.  
   
-    ```vb-c#  
+    ```
     "Your guess is too high."  
     ```  
   
-14. Verbinden Sie **WriteLine**\-Aktivität mit der rechten Seite der **Prompt**\-Aktivität, die sich darüber befindet.  
+14. Verbinden der **WriteLine** Aktivität rechts neben der **Prompt** Aktivität darüber.  
   
      Im folgenden Beispiel wird der abgeschlossene Workflow dargestellt.  
   
-     ![Abgeschlossene Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     ![Windows Workflow Foundation abgeschlossen](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
   
-### So erstellen Sie den Workflow  
+### <a name="to-build-the-workflow"></a>So erstellen Sie den Workflow  
   
-1.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+1.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-     Informationen zum Ausführen des Workflows finden Sie im nächsten Thema, [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).Wenn Sie den Schritt [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) bereits mit einer anderen Workflowart ausgeführt haben und ihn mit dem Flussdiagramm\-Workflow aus diesem Schritt ausführen möchten, gehen Sie direkt zum Abschnitt [So erstellen und führen Sie die Anwendung aus](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md#BKMK_ToRunTheApplication) unter [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) über.  
+     Anweisungen zum Ausführen des Workflows finden Sie unter dem nächsten Thema [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Wenn Sie bereits abgeschlossen haben die [wie: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) Schritt mit einem anderen Format des Workflows und möchten sie mit dem Flussdiagramm-Workflow aus diesen Schritt ausführen, fahren Sie mit der [zum Erstellen und Ausführen der Anwendung](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)Abschnitt [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
-## Siehe auch  
- <xref:System.Activities.Statements.Flowchart>   
- <xref:System.Activities.Statements.FlowDecision>   
- [Windows Workflow Foundation\-Programmierung](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [Entwerfen von Workflows](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [Lernprogramm 'Erste Schritte'](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)   
- [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Activities.Statements.Flowchart>  
+ <xref:System.Activities.Statements.FlowDecision>  
+ [Windows Workflow Foundation-Programmierung](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [Entwerfen von Workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [Tutorial mit ersten Schritten](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

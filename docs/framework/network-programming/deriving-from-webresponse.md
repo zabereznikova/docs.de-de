@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Deriving from WebResponse
+helpviewer_keywords: Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 627e5170dbf33b9b42ec7e46e77e6ff2fa874463
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3f732f60afeba71d26391ba5fb6484ab7562654a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webresponse"></a>Ableiten von WebResponse
 Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die grundlegenden Methoden und Eigenschaften bereitstellt, mit denen eine protokollspezifische Antwort erstellt wird, die in das austauschbare Protokollmodell von .NET Framework passt. Anwendungen, die die <xref:System.Net.WebRequest>-Klasse zur Datenanforderung von Ressourcen verwenden, erhalten die Antworten in Form einer **WebResponse**. Protokollspezifische **WebResponse**-Nachfolger müssen die abstrakten Member der **WebResponse**-Klasse implementieren.  
   
- **WebResponse**-Nachfolger werden durch die zugeordnete **WebRequest**-Klasse erstellt. <xref:System.Net.HttpWebResponse>-Instanzen werden beispielsweise nur durch Aufrufen von <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=fullName> oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=fullName> erstellt. Jede **WebResponse** enthält das Ergebnis einer Anforderung an eine Ressource und sollte nicht wiederverwendet werden.  
+ **WebResponse**-Nachfolger werden durch die zugeordnete **WebRequest**-Klasse erstellt. <xref:System.Net.HttpWebResponse>-Instanzen werden beispielsweise nur durch Aufrufen von <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=nameWithType> erstellt. Jede **WebResponse** enthält das Ergebnis einer Anforderung an eine Ressource und sollte nicht wiederverwendet werden.  
   
 ## <a name="contentlength-property"></a>ContentLength-Eigenschaft  
  Die <xref:System.Net.WebResponse.ContentLength%2A>-Eigenschaft gibt die Anzahl der Datenbytes an, die auf dem Datenstrom verfügbar sind, der von der <xref:System.Net.WebResponse.GetResponseStream%2A>-Methode zurückgegeben wird. Die **ContentLength**-Eigenschaft gibt weder die Anzahl der Bytes der vom Server zurückgegebenen Headerinformationen noch die der Metadateninformationen an. Sie gibt nur die Anzahl der Datenbytes der angeforderten Ressource selbst an.  
@@ -40,13 +33,13 @@ Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die
 ## <a name="headers-property"></a>Header-Eigenschaft  
  Die <xref:System.Net.WebResponse.Headers%2A>-Eigenschaft enthält eine beliebige Auflistung von Name-Wert-Paaren der Metadaten, die der Antwort zugeordnet sind. Alle für das Protokoll erforderlichen Metadaten, die als Name-Wert-Paar ausgedrückt werden, können in die **Header**-Eigenschaft aufgenommen werden.  
   
- Sie müssen die **Header**-Eigenschaft nicht verwenden, um die Header-Metadaten zu nutzen. Protokollspezifische Metadaten können als Eigenschaften verfügbar gemacht werden. So macht die <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=fullName>-Eigenschaft z.B. den **Last-Modified**-HTTP-Header verfügbar. Wenn Sie die Header-Metadaten als Eigenschaft verfügbar machen, sollten Sie nicht zulassen, dass die gleiche Eigenschaft die **Header**-Eigenschaft verwendet.  
+ Sie müssen die **Header**-Eigenschaft nicht verwenden, um die Header-Metadaten zu nutzen. Protokollspezifische Metadaten können als Eigenschaften verfügbar gemacht werden. So macht die <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=nameWithType>-Eigenschaft z.B. den **Last-Modified**-HTTP-Header verfügbar. Wenn Sie die Header-Metadaten als Eigenschaft verfügbar machen, sollten Sie nicht zulassen, dass die gleiche Eigenschaft die **Header**-Eigenschaft verwendet.  
   
 ## <a name="responseuri-property"></a>ResponseUri-Eigenschaft  
  Die <xref:System.Net.WebResponse.ResponseUri%2A>-Eigenschaft enthält den URI der Ressource, die die Antwort eigentlich bereitgestellt hat. Für Protokolle, die keine Umleitung unterstützen, ist **ResponseUri** identisch mit der <xref:System.Net.WebRequest.RequestUri%2A>-Eigenschaft der **WebRequest**, von der die Antwort erstellt wurde. Unterstützt das Protokoll das Umleiten der Anforderung, enthält **ResponseUri** den URI der Antwort.  
   
 ## <a name="close-method"></a>Close-Methode  
- Die <xref:System.Net.WebResponse.Close%2A>-Methode schließt alle von der Anforderung und der Antwort erstellten Verbindungen und bereinigt die Ressourcen, die von der Antwort verwendet wurden. Die **Close**-Methode schließt alle von der Antwort verwendeten Streaminstanzen. Sie löst jedoch keine Ausnahme aus, wenn der Antwortstream zuvor durch einen Aufruf der <xref:System.IO.Stream.Close%2A?displayProperty=fullName>-Methode geschlossen wurde.  
+ Die <xref:System.Net.WebResponse.Close%2A>-Methode schließt alle von der Anforderung und der Antwort erstellten Verbindungen und bereinigt die Ressourcen, die von der Antwort verwendet wurden. Die **Close**-Methode schließt alle von der Antwort verwendeten Streaminstanzen. Sie löst jedoch keine Ausnahme aus, wenn der Antwortstream zuvor durch einen Aufruf der <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>-Methode geschlossen wurde.  
   
 ## <a name="getresponsestream-method"></a>GetResponseStream-Methode  
  Die <xref:System.Net.WebResponse.GetResponseStream%2A>-Methode gibt einen Datenstrom zurück, der die Antwort der angeforderten Ressource enthält. Der Antwortstream enthält nur die von der Ressource zurückgegebenen Daten. In der Antwort enthaltene Header oder Metadaten sollten aus der Antwort entfernt und der Anwendung über protokollspezifische Eigenschaften oder über die **Header**-Eigenschaft verfügbar gemacht werden.  
@@ -54,9 +47,8 @@ Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die
  Die von der **GetResponseStream**-Methode zurückgegebene Streaminstanz ist im Besitz der Anwendung und kann geschlossen werden, ohne **WebResponse** zu schließen. Konventionsgemäß wird durch Aufrufen der **WebResponse.Close**-Methode auch der von **GetResponse** zurückgegebene Datenstrom geschlossen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebResponse>   
- <xref:System.Net.HttpWebResponse>   
- <xref:System.Net.FileWebResponse>   
- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebResponse>  
+ <xref:System.Net.HttpWebResponse>  
+ <xref:System.Net.FileWebResponse>  
+ [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Deriving from WebRequest (Ableiten von WebRequest)](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-

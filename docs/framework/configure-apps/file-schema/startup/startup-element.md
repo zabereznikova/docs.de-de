@@ -1,87 +1,88 @@
 ---
-title: "&lt;startup&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#startup"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<startup>-Element"
-  - "Containertags, <startup>-Element"
-  - "startup-Element"
+title: '&lt;Start&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#startup
+helpviewer_keywords:
+- container tags, <startup> element
+- <startup> element
+- startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-caps.latest.revision: 19
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: bd2356845c76e81ce2efe87bdf247de293d6115d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;startup&gt;-Element
-Gibt Common Language Runtime\-Startinformationen an.  
+# <a name="ltstartupgt-element"></a>&lt;Start&gt; Element
+Gibt die common Language Runtime-Startinformationen.  
   
-## Syntax  
+ \<configuration>  
+\<Start >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <startup useLegacyV2RuntimeActivationPolicy="true|false" >   
 </startup>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`useLegacyV2RuntimeActivationPolicy`|Optionales Attribut.<br /><br /> Gibt an, ob die [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]\-Laufzeitaktivierungsrichtlinie aktiviert oder die [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]\-Aktivierungsrichtlinie verwendet werden soll.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`useLegacyV2RuntimeActivationPolicy`|Optionales Attribut.<br /><br /> Gibt an, ob die [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] Runtime Aktivierungsrichtlinie oder zur Verwendung der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] Aktivierungsrichtlinie.|  
   
-## useLegacyV2RuntimeActivationPolicy\-Attribut  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`true`|Aktivieren Sie die [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]\-Laufzeitaktivierungsrichtlinie für die gewählte Laufzeit, die ältere Laufzeitaktivierungstechniken \(z. B. die [](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)CorBindToRuntimeEx\-Funktion\) an die Laufzeit bindet, die aus der Konfigurationsdatei ausgewählt wurde, anstatt sie auf CLR\-Version 2.0 zu begrenzen.  Daher, wenn CLR\-Version 4 oder höher von der Konfigurationsdatei gewählt ist, werden Gemischter\-Modus\-Assemblys, die mit früheren Versionen von .NET Framework erstellt wurden, mit der gewählten Version der CLR geladen.  Das Festlegen dieses Werts verhindert, dass CLR\-Version 1.1 oder CLR\-Version 2.0 in den gleichen Prozess lädt, und deaktiviert effektiv die prozessinterne Parallelfunktion.|  
-|`false`|Verwenden Sie die Standardaktivierungsrichtlinie für [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] und höher, wodurch ältere Laufzeitaktivierungstechniken zum Laden der CLR\-Version 1.1 oder 2.0 in den Prozess ermöglicht werden.  Das Festlegen dieses Werts verhindert Assemblys im gemischten Modus am Laden in .NET Framework 4 oder höher, es sei denn, sie mit .NET Framework 4 oder höher erstellt wurden.  Dies ist der Standardwert.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`true`|Aktivieren Sie [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] Aktivierung Laufzeitrichtlinie für die ausgewählte Runtime legacylaufzeit Aktivierung Techniken gebunden ist (z. B. der [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) für die Laufzeit, die aus der Konfigurationsdatei anstelle von ausgewählt Capping diese auf CLR, Version 2.0. Wenn CLR-Version 4 oder höher aus der Konfigurationsdatei ausgewählt wird, werden im gemischten Modus Assemblys, die mit früheren Versionen von .NET Framework erstellt daher mit der ausgewählten Version der CLR geladen. Wenn dieser Wert verhindert, dass CLR, Version 1.1 oder CLR, Version 2.0 Laden in den gleichen Prozess, die in-Process-Seite-an-Seite-Funktion effektiv deaktiviert.|  
+|`false`|Verwenden Sie die Standardrichtlinie für die Aktivierung für die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] und später ist das ermöglichen legacylaufzeit Aktivierung Techniken, mit denen CLR, Version 1.1 oder 2.0 in den Prozess zu laden. Das Festlegen dieses Werts wird verhindert, dass im gemischten Modus Assemblys vor dem Laden in .NET Framework 4 oder höher, es sei denn, sie mit .NET Framework 4 oder höher erstellt wurden. Dies ist der Standardwert.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<requiredRuntime\>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Gibt an, dass die Anwendung lediglich Version 1.0 der Common Language Runtime unterstützt.  Anwendungen, die mit der Laufzeitversion 1.1 oder höher erstellt wurden, sollten die **\<supportedRuntime\>**\-Element verwenden.|  
-|[\<supportedRuntime\>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|Gibt an, welche Versionen der Common Language Runtime von der Anwendung unterstützt werden.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Mit der Common Language Runtime-Version 1.1 oder höher entwickelte Anwendungen sollten verwenden die  **\<SupportedRuntime >** Element.|  
+|[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|Gibt an, welche Versionen der Common Language Runtime von der Anwendung unterstützt werden.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
-## Hinweise  
- Das **\<supportedRuntime\>**\-Element sollte von allen Anwendungen verwendet werden, die mit Version 1.1 oder einer höheren Version der Laufzeit erstellt wurden.  Anwendungen, die nur Version 1.0 der Laufzeit unterstützen, müssen das **\<requiredRuntime\>**\-Element verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Die  **\<SupportedRuntime >** -Element sollte von allen Anwendungen, die mit Version 1.1 oder höher der Runtime erstellt verwendet werden. Anwendungen, die nur Version 1.0 der Laufzeit unterstützen müssen verwenden die  **\<RequiredRuntime >** Element.  
   
- Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostetes, ignoriert das **\<startup\>**\-Element und seine untergeordneten Elemente.  
+ Der Startcode für eine in Microsoft Internet Explorer gehostete Anwendung ignoriert die  **\<Start >** Element und seine untergeordneten Elemente.  
   
-## Das useLegacyV2RuntimeActivationPolicy\-Attribut  
- Dieses Attribut ist hilfreich, wenn Ihre Anwendung ältere Aktivierungspfade verwendet, z. B. die [CorBindToRuntimeEx\-Funktion](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten, dass diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren, oder wenn Ihre Anwendung mit [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] erstellt wurde, aber eine Abhängigkeit von einer Gemischter\-Modus\-Assembly hat, die mit einer früheren Version von .NET Framework erstellt wurde.  Legen Sie in diesen Szenarien das Attribut auf `true` fest.  
+## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>Das Attribut useLegacyV2RuntimeActivationPolicy  
+ Dieses Attribut ist hilfreich, wenn Ihre Anwendung legacy-Aktivierungspfade,, wie z. B. verwendet die [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren, oder wenn die Anwendung erstellt mit dem [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , enthält jedoch eine Abhängigkeit auf eine im gemischten Modus-Assembly, die mit einer früheren Version von .NET Framework erstellt. Legen Sie in jenen Szenarien kann das Attribut auf `true`.  
   
 > [!NOTE]
->  Das Festlegen des Attributs auf `true` verhindert, dass CLR\-Version 1.1 oder CLR\-Version 2.0 in den gleichen Prozess lädt, und deaktiviert effektiv die prozessinterne Parallelfunktion \(siehe [Side\-by\-Side Execution for COM Interop](http://msdn.microsoft.com/de-de/4302318c-3586-49bf-8620-b9a39cdf4a32)\).  
+>  Wenn das Attribut auf `true` verhindert CLR, Version 1.1 oder CLR, Version 2.0 lädt in den gleichen Prozess, die in-Process-Seite-an-Seite-Funktion effektiv deaktiviert (finden Sie unter [Side-by-Side-Ausführung für COM-Interop](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht, wie Sie die Runtimeversion in einer Konfigurationsdatei angeben.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie die Common Language Runtime-Version in einer Konfigurationsdatei angegeben.  
   
-```  
+```xml  
 <!-- When used with version 1.0 of the .NET Framework runtime -->  
 <configuration>  
    <startup>  
@@ -97,9 +98,9 @@ Gibt Common Language Runtime\-Startinformationen an.
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Starteinstellungen](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<PaveOver\> Specifying Which Runtime Version to Use](http://msdn.microsoft.com/de-de/c376208d-980d-42b4-865b-fbe0d9cc97c2)   
- [Side\-by\-Side Execution for COM Interop](http://msdn.microsoft.com/de-de/4302318c-3586-49bf-8620-b9a39cdf4a32)   
+## <a name="see-also"></a>Siehe auch  
+ [Startup Settings Schema (Schema für Starteinstellungen)](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<PaveOver> Specifying Which Runtime Version to Use (Festlegen der zu verwendenden Runtimeversion)](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [Seite-an-Seite-Ausführung für COM-Interop](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [Prozessinterne parallele Ausführung](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

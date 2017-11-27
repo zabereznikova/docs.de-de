@@ -1,32 +1,28 @@
 ---
-title: 'Gewusst wie: Suchen eines einzelnen Nachfolgers mit der Descendants-Methode (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Suchen ein einzelnes Nachfolgers mit der Descendants-Methode (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74d4dd0b805a5ea2c189cb89bcaeca3f4cac1268
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Gewusst wie: Suchen eines einzelnen Nachfolgers mit der Descendants-Methode (Visual Basic)
-Sie können die <xref:System.Xml.Linq.XContainer.Descendants%2A>Achsenmethode schnell Schreiben von Code zum Suchen nach einem einzelnen eindeutig benannten Element.</xref:System.Xml.Linq.XContainer.Descendants%2A> Diese Technik ist besonders nützlich, wenn Sie einen bestimmten Nachfolger mit einem bestimmten Namen ermitteln möchten. Schreiben Sie Code, navigieren Sie zum gewünschten Element könnte, aber es ist häufig schneller und einfacher zu schreiben den Code mit der <xref:System.Xml.Linq.XContainer.Descendants%2A>Achse.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Vorgehensweise: Suchen ein einzelnes Nachfolgers mit der Descendants-Methode (Visual Basic)
+Mit der <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achsenmethode können Sie schnell Code zum Suchen nach einem einzelnen eindeutig benannten Element schreiben. Diese Technik ist besonders nützlich, wenn Sie einen bestimmten Nachfolger mit einem bestimmten Namen ermitteln möchten. Sie könnten den Code zwar so schreiben, dass eine Navigation zum gewünschten Element erfolgt, es ist aber häufig schneller und einfacher, den Code mit der <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achse zu schreiben.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die <xref:System.Linq.Enumerable.First%2A>Standardabfrageoperator.</xref:System.Linq.Enumerable.First%2A>  
+ In diesem Beispiel wird der <xref:System.Linq.Enumerable.First%2A>-Standardabfrageoperator verwendet.  
   
 ```vb  
 Dim root As XElement = _  

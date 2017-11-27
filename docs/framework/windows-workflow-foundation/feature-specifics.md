@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
 ms.openlocfilehash: 1e7a223248b574e30c266c3c9ac66bf317f1d19f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Windows Workflow Foundation eine Reihe von Funktionen hinzugefügt. In diesem Dokument wird eine Reihe neuer Funktionen beschrieben. Darüber hinaus enthält das Dokument detaillierte Informationen zu den Szenarien, in denen sie möglicherweise nützlich sind.  
@@ -353,7 +352,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
     1.  Das Standardprofil wird verwendet.  
   
-    2.  Öffnen Sie die Ereignisanzeige, und aktivieren Sie den analysekanal im folgenden Knoten: **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows **, **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**.  
+    2.  Öffnen Sie die Ereignisanzeige, und aktivieren Sie den analysekanal im folgenden Knoten: **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows** , **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**.  
   
     3.  Führen Sie den Workflowdienst aus.  
   
@@ -373,4 +372,3 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
 2.  Beispiele: [Persistenz](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
 3.  Konzeptionelle Dokumentation: [SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
-

@@ -1,25 +1,28 @@
 ---
-title: "Warteschlange hat Nachrichten gel&#246;scht | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Warteschlange hat Nachrichten gelöscht"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2125e32b-837c-4de9-ac02-750ad8f7472f
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0ab55c5c1e5823610b1b9c5dacbbe5b90dc36e5d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Warteschlange hat Nachrichten gel&#246;scht
+# <a name="queue-dropped-messages"></a>Warteschlange hat Nachrichten gelöscht
 Zählername: In der Warteschlange stehende gelöschte Nachrichten.  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Anzahl von Nachrichten, die vom Wartenschlangentransport in diesem Dienst gelöscht werden.  
   
- Weitere Informationen zum Löschen von Nachrichten finden Sie unter [Behandlung nicht verarbeitbarer Nachrichten](http://go.microsoft.com/fwlink/?LinkId=96233).
+ Finden Sie unter [verarbeitbarer Behandlung von](http://go.microsoft.com/fwlink/?LinkId=96233) für Weitere Informationen zu bei Nachrichten gelöscht werden.

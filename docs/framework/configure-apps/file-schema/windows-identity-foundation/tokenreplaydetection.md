@@ -1,58 +1,66 @@
 ---
-title: "&lt;tokenReplayDetection&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;tokenReplayDetection&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
-caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f95d200f74621a40d2987acf68bc554df8d17ab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;tokenReplayDetection&gt;
-Aktiviert Tokens wiedergaben Auflistungserkennung und gibt die Ablaufzeit für das Token an.  
+# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+Tokenwiedergabeerkennung aktiviert, und gibt die Ablaufzeit für Token.  
   
-## Syntax  
+ \<system.identityModel >  
+\<IdentityConfiguration >  
+\<TokenReplayDetection >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
-    </tokenReplayDetection>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
+    </tokenReplayDetection>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Typ  
+## <a name="type"></a>Typ  
  <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement>  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|enabled|Ein Wert, der angibt, ob Token Erkennung wiedergeben, ist aktiviert. „True“ Tokens wiedergaben Auflistungserkennung aktivieren.|  
-|expirationPeriod|<xref:System.TimeSpan>, der die maximale Dauer angibt, nach der ein Element als aus dem Cache abgelaufen und entfernt wird.  Weitere Informationen zum Erstellen <xref:System.TimeSpan>\-Werte finden Sie unter angibt [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).|  
+|---------------|-----------------|  
+|enabled|Ein Wert, der angibt, ob tokenwiederholungen aktiviert ist. "true", um Token zu aktivieren replay-Erkennung.|  
+|expirationPeriod|Ein <xref:System.TimeSpan> , die angibt, dass der maximale Zeitspanne, bevor ein Element betrachtet wird, ist abgelaufen und aus dem Cache entfernt.  Weitere Informationen zum Angeben der <xref:System.TimeSpan> -Werte finden Sie in [Timespan Werte](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
-### Untergeordnete Elemente  
- None  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die Identität von Einstellungen auf Dienstebene auf.|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt Konfiguration für eine Auflistung von Sicherheitstoken Ereignishandler bereit.|  
+|-------------|-----------------|  
+|[\<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt an, Service Level identitätseinstellungen.|  
+|[\<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Ermöglicht die Konfiguration für eine Auflistung der Tokenhandler.|  
   
-## Hinweise  
- Ein Element kann `<tokenReplayDetection>` auf dem Servicelevel unter dem `<identityConfiguration>`\-Element oder in der Auflistung der Klassenhandler Sicherheitstoken angegeben werden, die unter dem Element `<securityTokenHandlerConfiguration>`.  Einstellungen für eine Auflistung von Token für die überschreiben, die auf dem Dienst angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Ein `<tokenReplayDetection>` Element angegeben werden kann, auf Dienstebene unter der `<identityConfiguration>` Element oder auf die Sicherheitsstufe für die Auflistung von Tokenhandler unter der `<securityTokenHandlerConfiguration>` Element. Einstellungen für eine Sammlung Tokenhandler außer Kraft für den Dienst angegeben.  
   
- Der Typ des Tokens besitzt wiedergaben das [\<tokenReplayCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)\-Element angegeben.
+ Der Typ des Caches aufbewahrungsdateu wird angegeben, durch die [ \<TokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) Element.

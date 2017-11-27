@@ -1,40 +1,31 @@
 ---
-title: 'Gewusst wie: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Gewusst wie: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic)
 Es kann vorkommen, dass Sie willkürlich große XML-Dateien lesen und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  
   
- Eine Möglichkeit besteht darin, Ihre Anwendung mithilfe von <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> schreiben Allerdings möchten Sie verwenden [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen die XML-Struktur. Bei Verwendung von  können Sie eine eigene benutzerdefinierte Achsenmethode schreiben. Weitere Informationen finden Sie unter [Gewusst wie: Schreiben einer LINQ to XML-Achsenmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Zu diesem Zweck können Sie die Anwendung mit <xref:System.Xml.XmlReader> schreiben. Es empfiehlt sich aber häufig, zum Abfragen der XML-Struktur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zu verwenden. Bei Verwendung von  können Sie eine eigene benutzerdefinierte Achsenmethode schreiben. Weitere Informationen finden Sie unter [wie: Schreiben einer LINQ to XML-Axis-Methode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
- Um eine eigene Achsenmethode zu schreiben, Schreiben Sie eine kleine Methode, verwendet die <xref:System.Xml.XmlReader>Knoten zu lesen, bis einer der Knoten erreicht die Sie interessieren.</xref:System.Xml.XmlReader> Anschließend ruft die Methode <xref:System.Xml.Linq.XNode.ReadFrom%2A>, die Lesen aus der <xref:System.Xml.XmlReader>und ein XML-Fragment instanziiert.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> Sie können dann LINQ-Abfragen für die benutzerdefinierte Achsenmethode schreiben.  
+ Zum Schreiben einer eigenen Achsenmethode müssen Sie zunächst eine kleine Methode schreiben, die mit dem <xref:System.Xml.XmlReader> Knoten so lange liest, bis sie zu einem der Knoten gelangt, die Sie interessieren. Die Methode ruft dann die <xref:System.Xml.Linq.XNode.ReadFrom%2A>-Methode auf, die aus dem <xref:System.Xml.XmlReader> liest und ein XML-Fragment instanziiert. Sie können dann LINQ-Abfragen für die benutzerdefinierte Achsenmethode schreiben.  
   
- Streamingverfahren eignen sich vor allem für Situationen, bei denen Sie das Quelldokument nur einmal verarbeiten müssen und bei denen die Elemente in der Reihenfolge verarbeitet werden können, in der sie im Dokument auftreten. Einige Standardabfrageoperatoren, wie z. B. <xref:System.Linq.Enumerable.OrderBy%2A>, durchlaufen ihre Quelle, erfassen alle Daten, Sortieren sie und geben schließlich das erste Element in der Sequenz.</xref:System.Linq.Enumerable.OrderBy%2A> Beachten Sie, dass Sie bei der Verwendung eines Abfrageoperators, der seine Quelle vor der Rückgabe des ersten Elements materialisiert, keine minimale Speicherbeanspruchung aufrechterhalten können.  
+ Streamingverfahren eignen sich vor allem für Situationen, bei denen Sie das Quelldokument nur einmal verarbeiten müssen und bei denen die Elemente in der Reihenfolge verarbeitet werden können, in der sie im Dokument auftreten. Einige Standardabfrageoperatoren, wie <xref:System.Linq.Enumerable.OrderBy%2A>, durchlaufen ihre Quelle, erfassen alle Daten, sortieren sie und geben dann das erste Element in der Sequenz zurück. Beachten Sie, dass Sie bei der Verwendung eines Abfrageoperators, der seine Quelle vor der Rückgabe des ersten Elements materialisiert, keine minimale Speicherbeanspruchung aufrechterhalten können.  
   
 ## <a name="example"></a>Beispiel  
  Manchmal wird das Problem noch ein wenig interessanter. Im folgenden XML-Dokument muss der Benutzer Ihrer benutzerdefinierten Achsenmethode auch die Namen der Kunden kennen, zu denen die einzelnen Elemente gehören.  
@@ -250,4 +241,3 @@ End Class
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

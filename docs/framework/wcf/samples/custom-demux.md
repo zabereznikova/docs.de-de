@@ -1,23 +1,26 @@
 ---
-title: "Benutzerdefinierter Demux | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierter Demux
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: 41
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7c74648a249ec833f2b0fc8b8f5eea9247dc364
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Benutzerdefinierter Demux
-In diesem Beispiel wird veranschaulicht, wie MSMQ\-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienste, die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> verwenden, nicht auf die Verwendung eines einzigen Dienstvorgangs beschränkt sind, wie in den Beispielen [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) dargestellt.  
+# <a name="custom-demux"></a>Benutzerdefinierter Demux
+In diesem Beispiel wird veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dienste, bei denen <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> besteht keine Einschränkung auf die Verwendung eines einzigen Dienstvorgangs aus, wie in der [Message Queuing Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) und [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiele.  
   
  Der Dienst ist in diesem Beispiel eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt.  
   
@@ -37,7 +40,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- Eine MSMQ\-Nachricht besitzt keinen Aktionsheader.  Es ist nicht möglich, Vorgangsverträgen unterschiedliche MSMQ\-Nachrichten automatisch zuzuordnen.  Deshalb kann es nur einen Vorgangsvertrag geben.  Um diese Einschränkung zu umgehen, implementiert der Dienst die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>\-Methode der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>\-Schnittstelle.  Die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>\-Methode ermöglicht dem Dienst, einem bestimmten Dienstvorgang einen bestimmten Nachrichtenheader zuzuordnen.  In diesem Beispiel wird den Dienstvorgängen der Bezeichnungsheader der Nachricht zugeordnet.  Der `Name`\-Parameter des Vorgangsvertrags legt fest, welcher Dienstvorgang für eine bestimmte Nachrichtenbezeichnung weitergeleitet werden muss.  Wenn der Bezeichnungsheader der Nachricht z. B. "SubmitPurchaseOrder" enthält, wird der "SubmitPurchaseOrder"\-Dienstvorgang aufgerufen.  
+ Eine MSMQ-Nachricht besitzt keinen Aktionsheader. Es ist nicht möglich, Vorgangsverträgen unterschiedliche MSMQ-Nachrichten automatisch zuzuordnen. Deshalb kann es nur einen Vorgangsvertrag geben. Um diese Einschränkung zu umgehen, implementiert der Dienst die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>-Methode der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Schnittstelle. Die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>-Methode ermöglicht dem Dienst, einem bestimmten Dienstvorgang einen bestimmten Nachrichtenheader zuzuordnen. In diesem Beispiel wird den Dienstvorgängen der Bezeichnungsheader der Nachricht zugeordnet. Der `Name`-Parameter des Vorgangsvertrags legt fest, welcher Dienstvorgang für eine bestimmte Nachrichtenbezeichnung weitergeleitet werden muss. Wenn der Bezeichnungsheader der Nachricht z. B. "SubmitPurchaseOrder" enthält, wird der "SubmitPurchaseOrder"-Dienstvorgang aufgerufen.  
   
 ```  
 public class OperationSelector : IDispatchOperationSelector  
@@ -50,7 +53,7 @@ public class OperationSelector : IDispatchOperationSelector
 }  
 ```  
   
- Der Dienst muss die <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29>\-Methode der <xref:System.ServiceModel.Description.IContractBehavior>\-Schnittstelle implementieren, wie im folgenden Beispielcode dargestellt.  Diese wendet den benutzerdefinierten `OperationSelector` auf die Dienstframework\-Dispatchlaufzeit an.  
+ Der Dienst muss die <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29>-Methode der <xref:System.ServiceModel.Description.IContractBehavior>-Schnittstelle implementieren, wie im folgenden Beispielcode dargestellt. Diese wendet den benutzerdefinierten `OperationSelector` auf die Dienstframework-Dispatchlaufzeit an.  
   
 ```  
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
@@ -59,7 +62,7 @@ void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, Se
 }  
 ```  
   
- Eine Nachricht muss den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> des Verteilers durchlaufen, bevor die Vorgangsauswahl erreicht wird.  Standardmäßig wird eine Nachricht zurückgewiesen, wenn ihre Aktion auf keinem der vom Dienst implementierten Verträge gefunden werden kann.  Um diese Prüfung zu vermeiden, implementieren wir ein <xref:System.ServiceModel.Description.IEndpointBehavior> namens `MatchAllFilterBehavior`, das es allen Nachrichten ermöglicht, den `ContractFilter` zu passieren, indem der <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> folgendermaßen angewendet wird.  
+ Eine Nachricht muss den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> des Verteilers durchlaufen, bevor die Vorgangsauswahl erreicht wird. Standardmäßig wird eine Nachricht zurückgewiesen, wenn ihre Aktion auf keinem der vom Dienst implementierten Verträge gefunden werden kann. Um diese Prüfung zu vermeiden, implementieren wir ein <xref:System.ServiceModel.Description.IEndpointBehavior> namens `MatchAllFilterBehavior`, das es allen Nachrichten ermöglicht, den `ContractFilter` zu passieren, indem der <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> folgendermaßen angewendet wird.  
   
 ```  
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
@@ -68,7 +71,7 @@ public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispa
 }  
 ```  
   
- Wenn der Dienst eine Nachricht empfängt, wird der entsprechende Dienstvorgang mithilfe der Informationen im Bezeichnungsheader verteilt.  Der Nachrichtentext wird in ein `PurchaseOrder`\-Objekt deserialisiert, wie im folgenden Beispielcode dargestellt.  
+ Wenn der Dienst eine Nachricht empfängt, wird der entsprechende Dienstvorgang mithilfe der Informationen im Bezeichnungsheader verteilt. Der Nachrichtentext wird in ein `PurchaseOrder`-Objekt deserialisiert, wie im folgenden Beispielcode dargestellt.  
   
 ```  
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -81,7 +84,7 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
 }  
 ```  
   
- Der Dienst ist selbst gehostet.  Bei der Verwendung von MSMQ muss die Warteschlange im Voraus erstellt werden.  Dies kann manuell erfolgen oder mithilfe eines Codes.  In diesem Beispiel enthält der Dienst einen Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist und um die Warteschlange gegebenenfalls zu erstellen.  Der Warteschlangenname wird aus der Konfigurationsdatei gelesen.  
+ Der Dienst ist selbst gehostet. Bei der Verwendung von MSMQ muss die Warteschlange im Voraus erstellt werden. Dies kann manuell erfolgen oder mithilfe eines Codes. In diesem Beispiel enthält der Dienst einen Code, um zu überprüfen, ob die Warteschlange bereits vorhanden ist und um die Warteschlange gegebenenfalls zu erstellen. Der Warteschlangenname wird aus der Konfigurationsdatei gelesen.  
   
 ```  
 public static void Main()  
@@ -113,17 +116,16 @@ public static void Main()
 }  
 ```  
   
- Der MSMQ\-Warteschlangenname wird im appSettings\-Abschnitt der Konfigurationsdatei angegeben.  
+ Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben.  
   
 > [!NOTE]
->  Im Warteschlangennamen wird ein Punkt \(.\) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet.  Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Endpunktadresse gibt ein msmq.formatname\-Schema an, und für den lokalen Computer wird localhost verwendet.  Dem Schema folgt eine ordnungsgemäß entsprechend den Namens\- und Adressierungsrichtlinien des MSMQ\-Formats formatierte Warteschlangenadresse.  
+>  Im Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunktadresse gibt ein msmq.formatname-Schema an, und für den lokalen Computer wird localhost verwendet. Dem Schema folgt eine ordnungsgemäß entsprechend den Namens- und Adressierungsrichtlinien des MSMQ-Formats formatierte Warteschlangenadresse.  
   
-```  
+```xml  
 <appSettings>  
     <!-- Use appSetting to configure the MSMQ queue name. -->  
     <add key="queueName" value=".\private$\Orders" />  
 </appSettings>  
-  
 ```  
   
 > [!NOTE]
@@ -160,31 +162,31 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist.  Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt.  Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ\-Warteschlangen\-Manager erstellen.  Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
+2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
   
-    1.  Öffnen Sie Server\-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  Öffnen Sie Server-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Erweitern Sie die Registerkarte **Features**.  
+    2.  Erweitern Sie die **Funktionen** Registerkarte.  
   
-    3.  Klicken Sie mit der rechten Maustaste auf **Private Meldungswarteschlangen**, und klicken Sie anschließend auf **Neu** und **Private Warteschlange**.  
+    3.  Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.  
   
-    4.  Aktivieren Sie das Kontrollkästchen **Transaktional**.  
+    4.  Überprüfen Sie die **transaktional** Feld.  
   
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen der neuen Warteschlange ein.  
+    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange.  
   
-3.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-4.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, folgen Sie den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### So führen Sie das Beispiel computerübergreifend aus  
+### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1.  Kopieren Sie die Dienstprogrammdateien aus dem Ordner \\service\\bin\\ \(unterhalb des sprachspezifischen Ordners\) auf den Dienstcomputer.  
+1.  Kopieren Sie die Dienstprogrammdateien aus dem Ordner \service\bin\ (unterhalb des sprachspezifischen Ordners) auf den Dienstcomputer.  
   
-2.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \\client\\bin\\ \(unterhalb des sprachspezifischen Ordners\) auf den Clientcomputer.  
+2.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
   
 3.  Ändern Sie in der Datei Client.exe.config den Wert von orderQueueName, und geben Sie anstelle von "." den Namen des Dienstcomputers an.  
   
@@ -193,14 +195,14 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 5.  Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## Siehe auch  
- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143)

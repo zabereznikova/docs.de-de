@@ -1,45 +1,43 @@
 ---
-title: "Out of memory (Visual Basic Compiler Error) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc2004"
-  - "bc2004"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC2004"
+title: "Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc2004
+- bc2004
+helpviewer_keywords: BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d6cf270002eac63badd8ceff28c4b8b57af0ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Out of memory (Visual Basic Compiler Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Es war mehr Arbeitsspeicher erforderlich als verfügbar.  
+# <a name="out-of-memory-visual-basic-compiler-error"></a>Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)
+Es war mehr Arbeitsspeicher erforderlich als verfügbar ist.  
   
- **Fehler\-ID:** BC2004  
+ **Fehler-ID:** BC2004  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Schließen Sie nicht benötigte Anwendungen, Dokumente und Quelldateien.  
+-   Schließen Sie nicht benötigte Anwendungen, Dokumente und Quelldateien an.  
   
--   Entfernen Sie nicht benötigte Steuerelemente und Formulare, sodass weniger Elemente geladen werden.  
+-   Vermeiden Sie unnötige-Steuerelementen und-Formularen damit weniger gleichzeitig geladen werden  
   
--   Verringern Sie die Anzahl der `Public`\-Variablen.  
+-   Reduzieren Sie die Anzahl der `Public` Variablen.  
   
--   Überprüfen Sie den verfügbaren Speicherplatz.  
+-   Überprüfen Sie die verfügbaren Speicherplatz.  
   
--   Vergrößern Sie das verfügbare RAM durch Installation von zusätzlichem Arbeitsspeicher oder durch Neubelegen von Arbeitsspeicher.  
+-   Den verfügbaren Arbeitsspeicher durch Installation von zusätzlichem Arbeitsspeicher oder neuzuweisung von Arbeitsspeicher zu erhöhen.  
   
--   Stellen Sie sicher, dass Arbeitsspeicher freigegeben wird, wenn er nicht mehr benötigt wird.  
+-   Stellen Sie sicher, dass der Arbeitsspeicher wird freigegeben, wenn es nicht mehr benötigt wird.  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 442970c8253147313a38e1a1518219a96ec41945
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Typ an.  
@@ -54,9 +52,9 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.|  
 |`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.|  
 |`Serialize`|Serialisierung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.|  
-|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>-Klasse verwendet.|  
-|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>-Klasse verwendet.|  
-|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>-Klasse verwendet.|  
+|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.|  
+|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>-Klasse verwendet.|  
+|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.|  
 |`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.|  
 |`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
 |`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.|  
@@ -65,7 +63,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*type_name*|Der Typname. Wenn dieses `<TypeInstantiation>`-Element das untergeordnete Element eines [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)-, [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- oder eines anderen `<TypeInstantiation>`-Elements ist, können *type_name*-Elemente den Namen des Typs ohne dessen Namespace enthalten. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten. Der Typname wird nicht ergänzt. Für ein <xref:System.Collections.Generic.List%601?displayProperty=fullName>-Objekt könnte das `<TypeInstantiation>`-Element z. B. wie folgt aussehen:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Der Typname. Wenn dieses `<TypeInstantiation>`-Element das untergeordnete Element eines [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)-, [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- oder eines anderen `<TypeInstantiation>`-Elements ist, können *type_name*-Elemente den Namen des Typs ohne dessen Namespace enthalten. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten. Der Typname wird nicht ergänzt. Für ein <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Objekt könnte das `<TypeInstantiation>`-Element z. B. wie folgt aussehen:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Arguments-Attribut  
   
@@ -113,7 +111,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Nach der Kompilierung mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette löst das Beispiel eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme in der Zeile aus, die die <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName>-Methode aufruft. Sie können die Ausnahme eliminieren und die erforderlichen Metadaten bereitstellen, indem Sie folgendes `<TypeInstantiation>`-Element in der Laufzeitdirektivendatei hinzufügen:  
+ Nach der Kompilierung mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette löst das Beispiel eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme in der Zeile aus, die die <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>-Methode aufruft. Sie können die Ausnahme eliminieren und die erforderlichen Metadaten bereitstellen, indem Sie folgendes `<TypeInstantiation>`-Element in der Laufzeitdirektivendatei hinzufügen:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -127,7 +125,6 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 092f6f4544e308dae45636f447f75100512a916a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ad367a14373487698cd13c710998f1a5e6ccb7cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF-Konfigurationsschemakonventionen
 In diesem Thema werden Konventionen erläutert, die in den Themen zur Konfiguration von Windows Identity Foundation (WIF) verwendet werden, sowie einige allgemeine Funktionen und Attribute beschrieben, die in den Abschnitten [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) und [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) verwendet werden.  
@@ -56,6 +54,5 @@ In diesem Thema werden Konventionen erläutert, die in den Themen zur Konfigurat
  Benutzerdefinierte Typen müssen aus dem angegebenen Typ abgeleitet werden und einen `public`-Standardkonstruktor (0-Argument) bereitstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)   
+ [\<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)  
  [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
-

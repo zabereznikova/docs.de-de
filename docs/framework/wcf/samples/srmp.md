@@ -1,60 +1,63 @@
 ---
-title: "SRMP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SRMP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d42c6f19091703242a730cb40495cfb073631682
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# SRMP
-In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing \(MSMQ\) über HTTP durchgeführt wird.  
+# <a name="srmp"></a>SRMP
+In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing (MSMQ) über HTTP durchgeführt wird.  
   
- In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst.  Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet.  Der Dienst empfängt Nachrichten aus der Warteschlange.  Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
+ In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
   
- MSMQ aktiviert die Verwendung des HTTP \(einschließlich der Verwendung des HTTPS\), um Nachrichten an eine Warteschlange zu senden.  In diesem Beispiel veranschaulichen wir die Verwendung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Warteschlangenkommunikation und wie Nachrichten über HTTP gesendet werden.  MSMQ verwendet ein Protokoll namens SRMP, das ein SOAP\-basiertes Protokoll für Kommunikation über HTTP ist.  
+ MSMQ aktiviert die Verwendung des HTTP (einschließlich der Verwendung des HTTPS), um Nachrichten an eine Warteschlange zu senden. In diesem Beispiel veranschaulichen wir die Verwendung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Warteschlangenkommunikation und wie Nachrichten über HTTP gesendet werden. MSMQ verwendet ein Protokoll namens SRMP, das ein SOAP-basiertes Protokoll für Kommunikation über HTTP ist.  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Stellen Sie vor dem Ausführen des Beispiels in **Windows\-Komponenten hinzufügen\/entfernen** sicher, dass MSMQ mit HTTP\-Unterstützung installiert ist.  Die Installation der HTTP\-Unterstützung installiert automatisch Internetinformationsdienste \(IIS\) und fügt die Protokollunterstützung in IIS für MSMQ hinzu.  
+4.  Vor dem Ausführen des Beispiels in **Windows-Komponenten hinzufügen/entfernen**, stellen Sie sicher, dass MSMQ installiert ist mit HTTP-Unterstützung. Die Installation der HTTP-Unterstützung installiert automatisch Internetinformationsdienste (IIS) und fügt die Protokollunterstützung in IIS für MSMQ hinzu.  
   
-5.  Wenn Sie sichergehen möchten, dass HTTP für die Kommunikation verwendet wird, können Sie MSMQ aktivieren, um eine Ausführung im geschützten Modus zu erreichen.  Hierdurch wird sichergestellt, dass keine Nachrichten an Warteschlangen, die auf dem Computer gehostet werden, durch Nicht\-HTTP\-Transporte empfangen werden können.  
+5.  Wenn Sie sichergehen möchten, dass HTTP für die Kommunikation verwendet wird, können Sie MSMQ aktivieren, um eine Ausführung im geschützten Modus zu erreichen. Hierdurch wird sichergestellt, dass keine Nachrichten an Warteschlangen, die auf dem Computer gehostet werden, durch Nicht-HTTP-Transporte empfangen werden können.  
   
 6.  Nachdem Sie MSMQ ausgewählt haben, um im geschützten Modus auszuführen, erfordert der Computer auf [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] einen Neustart.  
   
 7.  Führen Sie den Dienst aus.  
   
-8.  Führen Sie den Client aus.  Ändern Sie die Endpunktadresse so, dass diese auf den Computernamen oder die IP\-Adresse anstelle von "localhost" verweist.  Der Client sendet eine Nachricht und wird beendet.  
+8.  Führen Sie den Client aus. Ändern Sie die Endpunktadresse so, dass diese auf den Computernamen oder die IP-Adresse anstelle von "localhost" verweist. Der Client sendet eine Nachricht und wird beendet.  
   
-## Anforderungen  
- Zum Ausführen dieses Beispiels muss IIS zusätzlich zu MSMQ sowohl auf dem Dienst\- als auch auf dem Clientcomputer installiert sein.  
+## <a name="requirements"></a>Anforderungen  
+ Zum Ausführen dieses Beispiels muss IIS zusätzlich zu MSMQ sowohl auf dem Dienst- als auch auf dem Clientcomputer installiert sein.  
   
-## Veranschaulicht  
- Dieses Beispiel veranschaulicht das Senden von Nachrichten in einer Warteschlange in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mithilfe von MSMQ über HTTP.  Dies wird auch als SRMP\-Messaging bezeichnet.  Wenn eine in der Warteschlange befindliche Nachricht gesendet wird, überträgt MSMQ auf dem sendenden Computer die Nachrichten über TCP\- oder HTTP\-Transport an den empfangenden Warteschlangen\-Manager.  Indem er SRMP auswählt, gibt der Benutzer die Auswahl von HTTP als Transport für Warteschlangenübertragung an.  SRMP Secure aktiviert die Verwendung von HTTPS.  
+## <a name="demonstrates"></a>Veranschaulicht  
+ Dieses Beispiel veranschaulicht das Senden von Nachrichten in einer Warteschlange in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mithilfe von MSMQ über HTTP. Dies wird auch als SRMP-Messaging bezeichnet. Wenn eine in der Warteschlange befindliche Nachricht gesendet wird, überträgt MSMQ auf dem sendenden Computer die Nachrichten über TCP- oder HTTP-Transport an den empfangenden Warteschlangen-Manager. Indem er SRMP auswählt, gibt der Benutzer die Auswahl von HTTP als Transport für Warteschlangenübertragung an. SRMP Secure aktiviert die Verwendung von HTTPS.  
   
-## Beispiel  
- Der Beispielcode basiert auf dem durchgeführten Beispiel.  Wie über SRMP eine Nachricht zu einer Warteschlange gesendet und wie eine Nachricht aus einer Warteschlange empfangen wird, entspricht dem Senden und Empfangen von Nachrichten mithilfe eines systemeigenen Protokolls.  
+## <a name="example"></a>Beispiel  
+ Der Beispielcode basiert auf dem durchgeführten Beispiel. Wie über SRMP eine Nachricht zu einer Warteschlange gesendet und wie eine Nachricht aus einer Warteschlange empfangen wird, entspricht dem Senden und Empfangen von Nachrichten mithilfe eines systemeigenen Protokolls.  
   
- Die Konfiguration für den Client wird geändert, um die Auswahl des Warteschlangen\-Übertragungsprotokolls anzugeben.  Das Warteschlangen\-Übertragungsprotokoll kann systemeigen, SRMP oder SrmpSecure sein.  Standardmäßig ist das Übertragungsprotokoll systemeigen.  Der Client und der Dienst legen in diesem Beispiel in der Konfiguration die Verwendung von SRMP fest.  
+ Die Konfiguration für den Client wird geändert, um die Auswahl des Warteschlangen-Übertragungsprotokolls anzugeben. Das Warteschlangen-Übertragungsprotokoll kann systemeigen, SRMP oder SrmpSecure sein. Standardmäßig ist das Übertragungsprotokoll systemeigen. Der Client und der Dienst legen in diesem Beispiel in der Konfiguration die Verwendung von SRMP fest.  
   
- Bei SRMP gibt es Einschränkungen in Bezug auf die Transportsicherheit.  Die Standard\-MSMQ\-Transportsicherheit erfordert Active Directory. Daher müssen sich der sendende und der empfangende Warteschlangen\-Manager auf der gleichen Windows\-Domäne befinden.  Dies ist beim Senden von Nachrichten über die HTTP\-Grenze nicht möglich.  Auf diese Weise funktioniert die Standardtransportsicherheit nicht.  Die Transportsicherheit muss auf Zertifikat \(Certificate\) festgelegt werden, wenn Transportsicherheit gewünscht wird.  Nachrichtensicherheit kann auch genutzt werden, um die Nachricht zu schützen.  In diesem Beispiel werden sowohl Transport\- als auch Nachrichtensicherheit ausgeschaltet, um SRMP\-Messaging zu illustrieren.  
+ Bei SRMP gibt es Einschränkungen in Bezug auf die Transportsicherheit. Die Standard-MSMQ-Transportsicherheit erfordert Active Directory. Daher müssen sich der sendende und der empfangende Warteschlangen-Manager auf der gleichen Windows-Domäne befinden. Dies ist beim Senden von Nachrichten über die HTTP-Grenze nicht möglich. Auf diese Weise funktioniert die Standardtransportsicherheit nicht. Die Transportsicherheit muss auf Zertifikat (Certificate) festgelegt werden, wenn Transportsicherheit gewünscht wird. Nachrichtensicherheit kann auch genutzt werden, um die Nachricht zu schützen. In diesem Beispiel werden sowohl Transport- als auch Nachrichtensicherheit ausgeschaltet, um SRMP-Messaging zu illustrieren.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   
@@ -95,12 +98,12 @@ OrderDetails
 ```  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

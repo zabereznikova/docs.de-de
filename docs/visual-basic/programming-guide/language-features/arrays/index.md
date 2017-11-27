@@ -1,45 +1,25 @@
 ---
 title: Arrays in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Array
-dev_langs:
-- VB
+f1_keywords: vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 04deeccd19fd4edb3f2c88310d660eedf5c707d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
 Arrays sind Gruppen von Werten, die logisch miteinander verknüpft sind, z. B. die Anzahl der Schüler in jeder Jahrgangsstufe einer Grundschule.  Hilfe zu Arrays in Visual Basic for Applications (VBA) finden Sie in der [Sprachreferenz](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
@@ -257,11 +237,11 @@ Dim prices(3, 4, 5) As Long
 ##  <a name="BKMK_ArrayTypes"></a> Arraytypen und andere Typen  
  Jedes Array besitzt einen Datentyp, der jedoch nicht mit dem Datentyp seiner Elemente identisch ist. Es gibt keinen universellen Datentyp, der sich für alle Arrays eignet. Stattdessen wird der Datentyp eines Arrays durch die Anzahl der Dimensionen (den *Rang*) des Arrays bestimmt, sowie durch den Datentyp der Elemente im Array. Die Datentypen zweier Arrayvariablen werden nur dann als gleich betrachtet, wenn die Arrayvariablen den gleichen Rang aufweisen und ihre Elemente den gleichen Datentyp aufweisen. Die Länge der Dimensionen in einem Array haben keinerlei Auswirkungen auf den Arraydatentyp.  
   
- Jedes Array erbt aus der <xref:System.Array?displayProperty=fullName>-Klasse. Sie können eine Variable des Typs `Array` deklarieren, ein Array des Typs `Array` können Sie jedoch nicht erstellen. Die [ReDim-Anweisung](../../../../visual-basic/language-reference/statements/redim-statement.md) kann nicht für eine Variable verwendet werden, die mit dem Typ `Array` deklariert ist. Aus diesen Gründen und zur Gewährleistung der Typsicherheit empfiehlt es sich, jedes Array als bestimmten Typ zu deklarieren ( `Integer` im vorhergehenden Beispiel).  
+ Jedes Array erbt aus der <xref:System.Array?displayProperty=nameWithType>-Klasse. Sie können eine Variable des Typs `Array` deklarieren, ein Array des Typs `Array` können Sie jedoch nicht erstellen. Die [ReDim-Anweisung](../../../../visual-basic/language-reference/statements/redim-statement.md) kann nicht für eine Variable verwendet werden, die mit dem Typ `Array` deklariert ist. Aus diesen Gründen und zur Gewährleistung der Typsicherheit empfiehlt es sich, jedes Array als bestimmten Typ zu deklarieren ( `Integer` im vorhergehenden Beispiel).  
   
  Sie können den Datentyp eines Arrays oder seiner Elemente auf verschiedene Arten ermitteln.  
   
--   Sie können die <xref:System.Object.GetType%2A?displayProperty=fullName> -Methode für die Variable aufrufen, um ein <xref:System.Type> -Objekt für den Laufzeittyp der Variable zu erhalten. Das <xref:System.Type> -Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.  
+-   Sie können die <xref:System.Object.GetType%2A?displayProperty=nameWithType> -Methode für die Variable aufrufen, um ein <xref:System.Type> -Objekt für den Laufzeittyp der Variable zu erhalten. Das <xref:System.Type> -Objekt stellt in seinen Eigenschaften und Methoden umfassende Informationen bereit.  
   
 -   Sie können die Variable an die <xref:Microsoft.VisualBasic.Information.TypeName%2A> -Funktion übergeben, um den Namen des Laufzeittyps als `String` zu erhalten.  
   
@@ -278,12 +258,12 @@ Dim prices(3, 4, 5) As Long
   
  Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.  
   
- Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=fullName> -Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
+ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
   
  Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird mit der generischen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klasse <xref:System.Collections.Generic.List%601?displayProperty=fullName> eine Listenauflistung mit `Customer`-Objekten erstellt.  
+ Im folgenden Beispiel wird mit der generischen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klasse <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> eine Listenauflistung mit `Customer`-Objekten erstellt.  
   
  [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
   
@@ -300,7 +280,6 @@ Dim prices(3, 4, 5) As Long
 |[Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|Erörtert einige allgemeine Probleme, die beim Arbeiten mit Arrays auftreten.|  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Array>   
- [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)   
+ <xref:System.Array>  
+ [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [ReDim-Anweisung](../../../../visual-basic/language-reference/statements/redim-statement.md)
-

@@ -1,49 +1,50 @@
 ---
-title: "ColorDialog-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farbe (Dialogfeld)"
-  - "ColorDialog-Komponente"
-  - "Farben, Dialogfeld"
+title: "ColorDialog-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColorDialog component
+- colors [Windows Forms], dialog box
+- color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: db5604002deed73f6fcbfcd4d33d46fac8cd7243
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# ColorDialog-Komponente (Windows&#160;Forms)
-Die <xref:System.Windows.Forms.ColorDialog>\-Komponente in Windows Forms ist ein vordefiniertes Dialogfeld, das es Benutzern ermöglicht, eine Farbe aus einer Palette auszuwählen und dieser Palette benutzerdefinierte Farben hinzuzufügen.  Es entspricht dem Dialogfeld, das in anderen Windows\-basierten Anwendungen zur Farbauswahl angezeigt wird.  Verwenden Sie es als einfache Lösung in Ihrer Windows\-basierten Anwendung, anstatt ein eigenes Dialogfeld zu konfigurieren.  
+# <a name="colordialog-component-windows-forms"></a>ColorDialog-Komponente (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.ColorDialog> Komponente ist ein vorkonfiguriertes Dialogfeld, das den Benutzer um eine Farbe aus einer Palette auszuwählen und Hinzufügen von benutzerdefinierten Farben zu dieser Palette ermöglicht. Es entspricht dem Dialogfeld, das in anderen Windows-basierten Anwendungen zur Farbauswahl angezeigt wird. Verwenden Sie es in Ihrer auf Windows basierenden Anwendung als einfache Lösung, anstatt ein eigenes Dialogfeld zu konfigurieren.  
   
-## In diesem Abschnitt  
- [Übersicht über die ColorDialog\-Komponente](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte der <xref:System.Windows.Forms.ColorDialog>\-Komponente vor, die das Anzeigen eines vordefinierten Dialogfelds ermöglicht, mit dem Benutzer Farben aus einer Palette auswählen können.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über die ColorDialog-Komponente](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ Stellt die allgemeinen Konzepte von der <xref:System.Windows.Forms.ColorDialog> -Komponente, die Anzeige eines vorkonfigurierten Dialogfelds, die von Benutzern Sie können Farben aus einer Palette auswählen können.  
   
- [Gewusst wie: Ändern der Darstellung der ColorDialog\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
- Erläutert unter anderem das Ändern der für den Benutzer verfügbaren Farben  
+ [Gewusst wie: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
+ Erläutert das Ändern der für den Benutzer verfügbaren Farben und andere Eigenschaften.  
   
- [Gewusst wie: Anzeigen einer Farbpalette mit der ColorDialog\-Komponente](../../../../docs/framework/winforms/controls/how-to-show-a-color-palette-with-the-colordialog-component.md)  
- Erläutert das Auswählen einer Farbe zur Laufzeit mithilfe einer Instanz der <xref:System.Windows.Forms.ColorDialog>\-Komponente.  
+ [Gewusst wie: Anzeigen einer Farbpalette mit der ColorDialog-Komponente](../../../../docs/framework/winforms/controls/how-to-show-a-color-palette-with-the-colordialog-component.md)  
+ Erläutert, wie eine Farbe zur Laufzeit mithilfe einer Instanz von aus dem <xref:System.Windows.Forms.ColorDialog> Komponente.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Steuerelemente, die in Windows Forms verwendet werden können](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.  
+ Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- [ColorDialog\-Klasse](frlrfSystemWindowsFormsColorDialogClassTopic)  
- Stellt Referenzinformationen über die <xref:System.Windows.Forms.ColorDialog>\-Klasse und ihre Member zur Verfügung  
+ <xref:System.Windows.Forms.ColorDialog>  
+ Enthält Referenzinformationen zur <xref:System.Windows.Forms.ColorDialog>-Klasse und zu ihren Membern.  
   
- [Erforderlicher Code für Windows Forms\-Dialogfelder](vbtchEssentialCodeForWindowsFormsDialogBoxes)  
- Erläutert Steuerelemente und Komponenten von Windows Forms\-Dialogfeldern sowie den Code, der zum Ausführen ihrer grundlegenden Funktionen erforderlich ist.  
+ [Erforderlicher Code für Windows Forms-Dialogfelder](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
+ Beschreibt die Dialogfeldsteuerelemente und Komponenten von Windows Forms sowie den Code, der zum Ausführen ihrer grundlegenden Funktionen erforderlich ist.  
   
- [Dialogfeld\-Steuerelemente und \-Komponenten](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Listet eine Gruppe von Steuerelementen auf, mit deren Hilfe Benutzer Standardinteraktionen mit der Anwendung oder dem System ausführen können.
+ [Dialogfeld-Steuerelemente und -Komponenten](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ Listet eine Gruppe von Steuerelementen und Komponenten auf, mit deren Hilfe Benutzer Standardinteraktionen mit der Anwendung oder dem System ausführen können.

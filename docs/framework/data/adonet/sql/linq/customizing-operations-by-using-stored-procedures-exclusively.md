@@ -1,32 +1,38 @@
 ---
-title: "Anpassen von Operationen durch ausschlie&#223;liche Verwendung von gespeicherten Prozeduren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Anpassen von Operationen durch ausschließliche Verwendung von gespeicherten Prozeduren"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 075565570d8dccc9ebd41d4a8d56014f8bb0f039
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Anpassen von Operationen durch ausschlie&#223;liche Verwendung von gespeicherten Prozeduren
+# <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Anpassen von Operationen durch ausschließliche Verwendung von gespeicherten Prozeduren
 Der Zugriff auf Daten nur mit gespeicherten Prozeduren ist ein gängiges Szenario.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Beschreibung  
- Sie können das Beispiel in [Anpassen von Operationen durch Verwenden gespeicherter Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) modifizieren, indem Sie die erste Abfrage \(die zu einer Ausführung von dynamischem SQL führt\) durch einen Methodenaufruf ersetzen, der eine gespeicherte Prozedur umschließt.  
+### <a name="description"></a>Beschreibung  
+ Sie können das Beispiel in [anpassen Operations By Using Stored Procedures](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) nach und Ersetzen Sie auch die erste Abfrage (wodurch dynamische SQL-Ausführung) durch den Aufruf einer Methode, die eine gespeicherte Prozedur dient als Wrapper.  
   
- Gehen Sie wie im folgenden Beispiel von der `CustomersByCity`\-Methode aus.  
+ Gehen Sie wie im folgenden Beispiel von der `CustomersByCity`-Methode aus.  
   
-### Code  
+### <a name="code"></a>Code  
  [!code-csharp[DLinqOverrideDefaultSproc#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#4)]
  [!code-vb[DLinqOverrideDefaultSproc#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/northwind.vb#4)]  
   
@@ -35,5 +41,5 @@ Der Zugriff auf Daten nur mit gespeicherten Prozeduren ist ein gängiges Szenari
  [!code-csharp[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#5)]
  [!code-vb[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#5)]  
   
-## Siehe auch  
- [Aufgaben des Entwicklers beim Überschreiben des Standardverhaltens](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a>Siehe auch  
+ [Aufgaben der Entwickler beim Überschreiben von Standardverhalten](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

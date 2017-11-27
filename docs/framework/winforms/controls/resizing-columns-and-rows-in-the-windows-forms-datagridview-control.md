@@ -1,53 +1,54 @@
 ---
-title: "Gr&#246;&#223;enanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Spalten [Windows Forms], Größenänderung in Datenblättern"
-  - "Datenblätter, Größenänderung von Spalten und Zeilen"
-  - "DataGridView-Steuerelement [Windows Forms], Größenanpassung von Zeilen und Spalten"
+title: "Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], sizing rows and columns
+- columns [Windows Forms], resizing in grids
+- data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gr&#246;&#223;enanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms
-Das `DataGridView`\-Steuerelement stellt zahlreiche Optionen bereit, mit denen das Größenanpassungsverhalten seiner Spalten und Zeilen angepasst werden kann.  Die Größenänderung von `DataGridView`\-Zellen basiert normalerweise nicht auf deren Inhalt.  Stattdessen wird jeder Anzeigewert, der über die Zelle hinausgeht, abgeschnitten.  Wenn der Inhalt als Zeichenfolge dargestellt werden kann, wird er von der Zelle in einer QuickInfo angezeigt.  
+# <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms
+Die `DataGridView` Steuerelement bietet zahlreiche Optionen für das Größenanpassungsverhalten seiner Spalten und Zeilen. In der Regel `DataGridView` Größe Zellen nicht basierend auf deren Inhalt. Stattdessen schneiden sie ausnahmslos anzeigen, die größer als die Zelle ist. Wenn der Inhalt als Zeichenfolge angezeigt werden kann, durch die Zelle in einer QuickInfo angezeigt.  
   
- Der Benutzer kann standardmäßig Zeilen\-, Spalten\- und Headerunterteiler mit der Maus ziehen, um weitere Informationen anzuzeigen.  Darüber hinaus kann ein Benutzer auch auf einen Unterteiler doppelklicken, um die Größe des damit verknüpften Zeilen\-, Spalten\- oder Headerbands auf der Grundlage des Inhalts automatisch zu ändern.  
+ Standardmäßig können Benutzer ziehen, Zeilen-, Spalten- und Header Trennblättern mit der Maus, um weitere Informationen anzuzeigen. Benutzer können auch einen Unterteiler automatisch die zugehörige Zeilen-, Spalten- oder Header Band an dessen Inhalt angepasst Größe doppelklicken.  
   
- Das `DataGridView`\-Steuerelement umfasst Eigenschaften, Methoden und Ereignisse, mit deren Hilfe Sie alle diese benutzergesteuerten Verhaltensweisen anpassen oder deaktivieren können.  Darüber hinaus können Sie die Größe von Zeilen, Spalten und Headern programmgesteuert an deren Inhalt anpassen oder so konfigurieren, dass sie ihre Größe automatisch ändern, sobald sich der Inhalt ändert.  Sie können die Spalten auch so konfigurieren, dass die verfügbare Breite des Steuerelements automatisch entsprechend festgelegter Proportionen aufgeteilt wird.  
+ Die `DataGridView` gesteuert, Eigenschaften, Methoden und Ereignisse, mit denen Sie alle diese benutzergesteuerten Verhaltensweisen anpassen oder deaktivieren. Darüber hinaus können Sie programmgesteuert Größe Zeilen, Spalten und Header an ihren Inhalt angepasst, oder Sie können konfigurieren, um automatisch selbst angepasst werden, sobald Sie ihren Inhalt ändern. Sie können auch konfigurieren, dass Spalten, um die verfügbare Breite des Steuerelements in acht Proportionen automatisch zu unterteilen, die Sie angeben.  
   
-## In diesem Abschnitt  
- [Größenänderungsoptionen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen für die Größenanpassung bei Zeilen, Spalten und Headern.  Enthält auch ausführliche Informationen zu Eigenschaften und Methoden für die Größenanpassung sowie Szenarien zur allgemeinen Verwendung.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt die Optionen für die größenanpassung von Zeilen, Spalten und Header. Außerdem enthält Details zum Sizing-bezogene Eigenschaften und Methoden, und beschreibt allgemeine Verwendungsszenarien.  
   
- [Spaltenfüllmodus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- Enthält eine ausführliche Beschreibung des Spaltenfüllmodus und bietet Beispielcode, um den Spaltenfüllmodus und andere Modi in verschiedenen Szenarien durchzuspielen.  
+ [Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ Spaltenfüllmodus im Detail beschreibt und enthält Beispielcode, die Sie zum Experimentieren mit anderen Modi "und" Spaltenfüllmodus verwenden können.  
   
- [Gewusst wie: Festlegen der Größenanpassungsmodi des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie die Größenanpassungsmodi für allgemeine Zwecke konfiguriert werden.  
+ [Gewusst wie: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie der Größenanpassungsmodi für allgemeine Zwecke zu konfigurieren.  
   
- [Gewusst wie: Programmgesteuertes Anpassen der Zellengröße an den Inhalt im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
- Stellt Beispielcode bereit, den Sie verwenden können, um Szenarien der programmgesteuerten Größenanpassung durchzuspielen.  
+ [Gewusst wie: Programmgesteuertes Anpassen der Zellengröße an den Inhalt im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ Enthält Beispielcode, die Sie zum Experimentieren mit programmgesteuerten größenanpassung verwenden können.  
   
- [Gewusst wie: Automatisches Anpassen der Zellengröße bei Änderungen des Inhalts im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
- Stellt Beispielcode bereit, den Sie verwenden können, um Szenarien für die automatischen Größenanpassungsmodi durchzuspielen.  
+ [Gewusst wie: Automatisches Anpassen der Zellengröße bei Änderungen des Inhalts im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ Enthält Beispielcode, die Sie zum Experimentieren mit Modi zur Größenänderung verwenden können.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
- Enthält die Referenzdokumentation zum <xref:System.Windows.Forms.DataGridView>\-Steuerelement.  
+ Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
-## Siehe auch  
- [DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

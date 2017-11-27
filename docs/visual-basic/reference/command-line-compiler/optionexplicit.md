@@ -1,46 +1,28 @@
 ---
-title: / optionexplicit | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: /optionexplicit
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- /optionexplicit
-dev_langs:
-- VB
+f1_keywords: /optionexplicit
 helpviewer_keywords:
 - /optionexplicit compiler option [Visual Basic]
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfdad72c21b7886f9ea8a2d46e7c457087e7049d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1cfdb94ebafa7d6a14253aeb59ab98b3a953fe4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="optionexplicit"></a>/optionexplicit
-Bewirkt, dass der Compiler Fehler meldet, wenn Variablen nicht deklariert werden, bevor sie verwendet werden.  
+Bewirkt, dass der Compiler gemeldet, wenn keine Variablen deklariert werden, bevor sie verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,29 +32,29 @@ Bewirkt, dass der Compiler Fehler meldet, wenn Variablen nicht deklariert werden
   
 ## <a name="arguments"></a>Argumente  
  `+` &#124; `-`  
- Optional. Geben Sie `/optionexplicit+` explizite Deklaration von Variablen erforderlich ist. Die `/optionexplicit+` Option ist die Standardeinstellung und entspricht der `/optionexplicit`. Die `/optionexplicit-` Option ermöglicht die implizite Deklaration von Variablen.  
+ Dies ist optional. Geben Sie `/optionexplicit+` explizite Deklaration von Variablen erforderlich ist. Die `/optionexplicit+` Option ist die Standardeinstellung und entspricht dem `/optionexplicit`. Die `/optionexplicit-` Option ermöglicht die implizite Deklaration von Variablen.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die Quellcodedatei enthält eine [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md), überschreibt die Anweisung die `/optionexplicit` Befehlszeilencompiler-Einstellung.  
   
 ### <a name="to-set-optionexplicit-in-the-visual-studio-ide"></a>/ Optionexplicit in der Visual Studio-IDE festlegen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
   
-2.  Klicken Sie auf die **Kompilieren** Registerkarte.  
+2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
   
 3.  Ändern Sie den Wert in der **Option Explicit** Feld.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code wird kompiliert, wenn `/optionexplicit-` verwendet wird.  
+ Im folgende Code wird kompiliert, wenn `/optionexplicit-` verwendet wird.  
   
- [!code-vb[VbVbalrCompiler&5;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
+ [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)   
- [/ optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)   
- [/ optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
- [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [VB-Standard, Projekte, Dialogfeld „Optionen“](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+ [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -1,45 +1,46 @@
 ---
-title: "FolderBrowserDialog-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Durchsuchen von Ordnern"
-  - "Verzeichnisse [Windows Forms], Browsen"
-  - "FolderBrowserDialog-Komponente [Windows Forms]"
-  - "Ordner [Windows Forms], Browsen"
+title: "FolderBrowserDialog-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- folders [Windows Forms], browsing
+- FolderBrowserDialog component [Windows Forms]
+- browsing folders
+- directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aa2da4bdc593296ff72251284bc04eb8552c999f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# FolderBrowserDialog-Komponente (Windows&#160;Forms)
-Die `FolderBrowserDialog`\-Komponente von Windows Forms zeigt eine Oberfläche an, in der Benutzer nach Ordnern suchen, diese auswählen und neue Ordner erstellen können.  Sie bildet eine Ergänzung zur [OpenFileDialog\-Komponente](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)\-Komponente, die zum Suchen und Auswählen von Dateien dient.  
+# <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog-Komponente (Windows Forms)
+Windows Forms `FolderBrowserDialog` Komponente zeigt eine Schnittstelle mit dem Benutzer können durchsuchen, und wählen Sie einen Ordner oder ein neues erstellen. Es ist eine Ergänzung der [OpenFileDialog-Komponente](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) -Komponente, die zum Durchsuchen und Auswählen von Dateien verwendet wird.  
   
-## In diesem Abschnitt  
- [Übersicht über die FolderBrowserDialog\-Komponente \(Windows Forms\)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- Erläutert die Verwendung dieses Steuerelements sowie seine wichtigsten Features und Eigenschaften.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Gewusst wie: Auswählen von Ordnern mit der FolderBrowserDialog\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- Erläutert das programmgesteuerte Extrahieren des ausgewählten Ordners aus dem Dialogfeld sowie die Arbeit mit anderen, optionalen Eigenschaften der Komponente.  
+ [Gewusst wie: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ Erläutert das programmgesteuert Extrahieren des ausgewählten Ordners im Dialogfeld sowie einige andere, optionalen Eigenschaften der Komponente verwenden.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
-## Verwandte Abschnitte  
- [Dialogfelder in Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
- Bietet eine Liste von Tasks für Dialogfelder, von denen häufig Registerkarten angezeigt werden.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Dialogfelder in Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ Enthält eine Liste von Aufgaben für Dialogfelder, von denen häufig Registerkarten angezeigt werden.  
   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

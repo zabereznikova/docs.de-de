@@ -1,42 +1,39 @@
 ---
-title: "Gewusst wie: Erstellen von in Modell- und Zuordnungsdateien eingebetteten Ressourcen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: 'Gewusst wie: Bereitstellen von Modell- und Zuordnungsdateien als eingebettete Ressourcen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 98fb3ada369279a34ed08110644aabcbbe72a501
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von in Modell- und Zuordnungsdateien eingebetteten Ressourcen
-Mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Modell\- und Zuordnungsdatendateien als in eine Anwendung eingebettete Ressourcen bereitgestellt werden.  Die Assembly mit den eingebetteten Modell\- und Zuordnungsdatendateien muss in derselben Anwendungsdomäne geladen werden wie die Entitätsverbindung.  Weitere Informationen finden Sie unter [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  Die [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]\-Tools betten standardmäßig die Modell\- und Zuordnungsdateien ein. Wenn Sie die Modell\- und Zuordnungsdateien manuell definieren, verwenden Sie diese Prozedur, um sicherzustellen, dass die Dateien als eingebettete Ressourcen zusammen mit einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]\-Anwendung bereitgestellt werden.  
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Gewusst wie: Bereitstellen von Modell- und Zuordnungsdateien als eingebettete Ressourcen
+Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ermöglicht es Ihnen, Modell- und Zuordnungsdateien als eingebettete Ressourcen einer Anwendung bereitstellen. Die Assembly mit den eingebetteten Modell- und Zuordnungsdatendateien muss in derselben Anwendungsdomäne geladen werden wie die Entitätsverbindung. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/ef/connection-strings.md). Standardmäßig betten die [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]-Tools die Modell- und Zuordnungsdateien ein. Wenn Sie die Modell- und Zuordnungsdateien manuell definieren, verwenden Sie diese Prozedur, um sicherzustellen, dass die Dateien als eingebettete Ressourcen zusammen mit einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung bereitgestellt werden.  
   
 > [!NOTE]
->  Wiederholen Sie diese Prozedur, wenn Modell\- und Zuordnungsdateien geändert werden, um eingebettete Ressourcen beizubehalten.  
+>  Wiederholen Sie diese Prozedur, wenn Modell- und Zuordnungsdateien geändert werden, um eingebettete Ressourcen beizubehalten.  
   
-### So betten Sie Modell\- und Zuordnungsdateien ein  
+### <a name="to-embed-model-and-mapping-files"></a>So betten Sie Modell- und Zuordnungsdateien ein  
   
-1.  Wählen Sie im **Projektmappen\-Explorer** die konzeptionelle \(CSDL\) Datei aus.  
+1.  In **Projektmappen-Explorer**, wählen Sie die konzeptionelle (CSDL) Datei.  
   
-2.  Legen Sie im Bereich **Eigenschaften** die Option **Buildvorgang** auf **Eingebettete Ressource** fest.  
+2.  In der **Eigenschaften** Bereich festgelegt **Buildvorgang** auf **eingebettete Ressource**.  
   
-3.  Wiederholen Sie die Schritte 1 und 2 für die SSDL\-Speicherdatei und die MSL\-Zuordnungsdatei.  
+3.  Wiederholen Sie die Schritte 1 und 2 für die SSDL-Speicherdatei und die MSL-Zuordnungsdatei.  
   
-4.  Doppelklicken Sie im **Projektmappen\-Explorer** auf die Datei **App.config**, und ändern Sie anschließend den `Metadata`\-Parameter des `connectionString`\-Attributs unter Verwendung eines der folgenden Formate:  
+4.  In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei "App.config", und ändern Sie die `Metadata` Parameter in der `connectionString` Attribut basierend auf einem der folgenden Formate:  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   
@@ -46,13 +43,13 @@ Mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Model
   
      Weitere Informationen finden Sie unter [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
   
-## Beispiel  
- Die folgende Verbindungszeichenfolge verweist auf eingebettete Modell\- und Zuordnungsdateien für das [AdventureWorks Sales\-Modell](http://msdn.microsoft.com/de-de/f16cd988-673f-4376-b034-129ca93c7832).  Diese Verbindungszeichenfolge wird in der Datei **App.config** des Projekts gespeichert.  
+## <a name="example"></a>Beispiel  
+ Die folgende Verbindungszeichenfolge verweist auf eingebettete Modell- und Zuordnungsdateien für die [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Diese Verbindungszeichenfolge wird in der Datei App.config des Projekts gespeichert.  
   
   
   
-## Siehe auch  
- [Modellieren und Zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)   
- [Vorgehensweise: Definieren der Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)   
- [Gewusst wie: Erstellen einer EntityConnection\-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/de-de/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>Siehe auch  
+ [Modellieren und zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
+ [Vorgehensweise: Definieren der Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
+ [Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

@@ -1,68 +1,78 @@
 ---
-title: "&lt;x509SecurityTokenHandlerRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;x509SecurityTokenHandlerRequirement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
-caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 66d4e0d6a121f807f5f372b3f39577b0bb3c4ca6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;x509SecurityTokenHandlerRequirement&gt;
-Stellt optionale Konfiguration für die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>\-Klasse oder \-abgeleiteten Klassen bereit.  
+# <a name="ltx509securitytokenhandlerrequirementgt"></a>&lt;x509SecurityTokenHandlerRequirement&gt;
+Bietet optionale Konfiguration für die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> abgeleiteten Klassen.  
   
-## Syntax  
+ \<system.identityModel >  
+\<IdentityConfiguration >  
+\<SecurityTokenHandlers >  
+\<add>  
+\<x509SecurityTokenHandlerRequirement >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
-        <x509SecurityTokenHandlerRequirement>  
-          mapToWindows=xs:boolean  
-          certificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
-          certificateValidator="Namespace.Class, Assembly"  
-          revocationMode="NoCheck||Offline||Online"  
-          trustedStoreLocation="CurrentUser||LocalMachine"  
-        </x509SecurityTokenHandlerRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
+        <x509SecurityTokenHandlerRequirement>  
+          mapToWindows=xs:boolean  
+          certificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
+          certificateValidator="Namespace.Class, Assembly"  
+          revocationMode="NoCheck||Offline||Online"  
+          trustedStoreLocation="CurrentUser||LocalMachine"  
+        </x509SecurityTokenHandlerRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribut|Description|  
-|--------------|-----------------|  
-|certificateValidationMode|Ein <xref:System.ServiceModel.Security.X509CertificateValidationMode>\-Wert, der den Validierungsmodus angibt, das für das X.509\-Zertifikat zu verwenden.  Der Standardwert ist "PeerOrChainTrust".|  
-|mapToWindows|Gibt an, ob der Tokenhandler durch das Token zu einem Windows\-Konto zuordnen soll, indem er den eingehenden UPN\-Anspruch verwendet.  Der Standardwert ist "false".|  
-|revocationMode|Ein <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>\-Wert, der den Sperrungsmodus angibt, das für das X.509\-Zertifikat zu verwenden.  Der Standardwert ist "Online".|  
-|trustedStoreLocation|Ein Wert, der den <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509\-Zertifikatspeicher angibt.  Der Standardwert ist "LocalMachine".|  
-|certificateValidator|Ein benutzerdefinierter Typ, der von <xref:System.IdentityModel.Selectors.X509CertificateValidator> abgeleitet.  Wenn das `certificateValidationMode`\-Attribut "Custom" ist, wird eine Instanz dieses Typs für Ausstellerzertifikatsvalidierung verwendet.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|certificateValidationMode|Ein <xref:System.ServiceModel.Security.X509CertificateValidationMode> Wert, der angibt, den Validierungsmodus für das x. 509-Zertifikat verwenden. Der Standardwert ist "PeerOrChainTrust".|  
+|mapToWindows|Gibt an, ob der Tokenhandler das validierende Token eine Windows-Konto zugeordnet werden sollen eingehenden Anspruch der UPN mit. Der Standardwert ist "false".|  
+|revocationMode|Ein <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Wert, der angibt, den Sperrmodus, der für das x. 509-Zertifikat verwendet. Der Standardwert lautet "Online".|  
+|trustedStoreLocation|Ein <xref:System.Security.Cryptography.X509Certificates.StoreLocation> Wert, der den x. 509-Zertifikatspeicher angibt. Der Standardwert ist "LocalMachine".|  
+|certificateValidator|Ein benutzerdefinierter Typ, die abgeleitet <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Wenn die `certificateValidationMode` Attribut ist "Custom", eine Instanz dieses Typs für die Überprüfung Aussteller des Zertifikats verwendet wurde.|  
   
-### Untergeordnete Elemente  
- Kein  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|Description|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Fügt den angegebenen Sicherheitstokenhandler der Tokenhandlerauflistung hinzu.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Fügt den angegebenen Sicherheits-Tokenhandler der Tokenhandler Auflistung hinzu.|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
     <x509SecurityTokenHandlerRequirement mapToWindows="true"   
                                          certificateValidationMode="PeerOrChainTrust"   

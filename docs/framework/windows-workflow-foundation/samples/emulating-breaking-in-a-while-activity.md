@@ -1,34 +1,38 @@
 ---
-title: "Emulierungsunterbrechung in einer While-Aktivit&#228;t | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Emulierungsunterbrechung in einer While-Aktivität"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4417f4225200f01f23d753f6b7aa52ebc69cab4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Emulierungsunterbrechung in einer While-Aktivit&#228;t
+# <a name="emulating-breaking-in-a-while-activity"></a>Emulierungsunterbrechung in einer While-Aktivität
 In diesem Beispiel wird veranschaulicht, wie der Schleifenmechanismus der folgenden Aktivitäten unterbrochen werden kann: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> und <xref:System.Activities.Statements.ParallelForEach%601>.  
   
  Dies ist hilfreich, da [!INCLUDE[wf](../../../../includes/wf-md.md)] keine Aktivität zur Unterbrechung der Ausführung dieser Schleifen umfasst.  
   
-## Szenario  
- In dem Beispiel wird der erste zuverlässige Anbieter in einer Liste von Anbietern \(Instanzen der `Vendor`\-Klasse\) gesucht.Jeder Anbieter verfügt über eine `ID`, einen `Name` und einen numerischen Zuverlässigkeitswert, der bestimmt, wie verlässlich der Anbieter ist.In dem Beispiel wird eine benutzerdefinierte Aktivität mit dem Namen `FindReliableVendor` erstellt, die zwei Eingabeparameter \(eine Liste mit Anbietern und einem minimalen Zuverlässigkeitswert\) empfängt und den ersten Anbieter der Liste zurückgibt, der eine Entsprechung für die angegebenen Kriterien darstellt.  
+## <a name="scenario"></a>Szenario  
+ In dem Beispiel wird der erste zuverlässige Anbieter in einer Liste von Anbietern (Instanzen der `Vendor`-Klasse) gesucht. Jeder Anbieter verfügt über eine `ID`, einen `Name` und einen numerischen Zuverlässigkeitswert, der bestimmt, wie verlässlich der Anbieter ist. In dem Beispiel wird eine benutzerdefinierte Aktivität mit dem Namen `FindReliableVendor` erstellt, die zwei Eingabeparameter (eine Liste mit Anbietern und einem minimalen Zuverlässigkeitswert) empfängt und den ersten Anbieter der Liste zurückgibt, der eine Entsprechung für die angegebenen Kriterien darstellt.  
   
-## Unterbrechen einer Schleife  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] umfasst keine Aktivität zur Unterbrechung einer Schleife.In dem Codebeispiel wird die Unterbrechung einer Schleife durch Verwendung einer <xref:System.Activities.Statements.If>\-Aktivität und mehreren Variablen erzielt.Im Beispiel wird die <xref:System.Activities.Statements.While>\-Aktivität unterbrochen, sobald die `reliableVendor`\-Variable einem anderen Wert als `null` zugewiesen wird.  
+## <a name="breaking-a-loop"></a>Unterbrechen einer Schleife  
+ [!INCLUDE[wf](../../../../includes/wf-md.md)] umfasst keine Aktivität zur Unterbrechung einer Schleife. In dem Codebeispiel wird die Unterbrechung einer Schleife durch Verwendung einer <xref:System.Activities.Statements.If>-Aktivität und mehreren Variablen erzielt. Im Beispiel wird die <xref:System.Activities.Statements.While>-Aktivität unterbrochen, sobald die `reliableVendor`-Variable einem anderen Wert als `null` zugewiesen wird.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie eine while\-Schleife unterbrochen wird.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine while-Schleife unterbrochen wird.  
   
 ```csharp  
-// Iterates while the “i” variable is lower than the size of the list   
+// Iterates while the "i" variable is lower than the size of the list   
 // and any reliable Vendor is found.        
 new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(env) == null)  
 {  
@@ -67,24 +71,23 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
         }  
     }  
 }  
-  
 ```  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
 1.  Öffnen Sie die Projektmappendatei "EmulatingBreakInWhile" in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+3.  Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

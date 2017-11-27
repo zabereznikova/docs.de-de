@@ -1,28 +1,35 @@
 ---
-title: "&lt;userDefinedType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;für userDefinedType&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0baac8dc6a9899261a490a257dbae0e7eb4d2ced
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;userDefinedType&gt;
-Stellt einen benutzerdefinierten Typ \(UDT\) dar, der in den Dienstvertrag eingeschlossen werden soll.  
+# <a name="ltuserdefinedtypegt"></a>&lt;für userDefinedType&gt;
+Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingeschlossen werden soll.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<ComContracts >  
+\<ComContract >  
+\<UserDefinedTypes >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <comContracts>  
   <comContract>  
       <userDefinedTypes>  
@@ -36,35 +43,35 @@ Stellt einen benutzerdefinierten Typ \(UDT\) dar, der in den Dienstvertrag einge
 </comContracts>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|`name`|Ein optionales Attribut, das eine Zeichenfolge enthält, die den lesbaren Namen des Typs angibt.  Dieses wird nicht von der Laufzeit verwendet, sondern hilft einem Reader bei der Typunterscheidung.|  
-|`TypeDefID`|Eine GUID\-Zeichenfolge, mit der der spezifische UDT\-Typ in der registrierten Typbibliothek identifiziert wird.|  
-|`TypeLibID`|Eine GUID\-Zeichenfolge, die die registrierte Typbibliothek angibt, mit der der Typ definiert wird.|  
+|---------------|-----------------|  
+|`name`|Ein optionales Attribut, das eine Zeichenfolge enthält, die den lesbaren Namen des Typs angibt. Dieses wird nicht von der Laufzeit verwendet, sondern hilft einem Reader bei der Typunterscheidung.|  
+|`TypeDefID`|Eine GUID-Zeichenfolge, mit der der spezifische UDT-Typ in der registrierten Typbibliothek identifiziert wird.|  
+|`TypeLibID`|Eine GUID-Zeichenfolge, die die registrierte Typbibliothek angibt, mit der der Typ definiert wird.|  
 |`TypeLibVersion`|Eine Zeichenfolge, die die Version der Typbibliothek angibt, mit der der Typ definiert wird.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|`userDefinedTypes`|Eine Auflistung von `userDefinedType`\-Elementen.|  
+|-------------|-----------------|  
+|`userDefinedTypes`|Eine Auflistung von `userDefinedType`-Elementen.|  
   
-## Hinweise  
- Durch Überprüfen der Typbibliothek werden von der Laufzeit der COM\+\-Integration Dienste erstellt.  Wenn COM\+\-Komponenten Methoden enthalten, die einen VARIANT übergeben, können die tatsächlichen Typen, die vor der Laufzeit übergeben werden sollen, vom System nicht bestimmt werden.  Aus diesem Grund tritt beim Versuch, einen benutzerdefinierten Typ in einem VARIANT zu übergeben, ein Fehler auf, da der Typ für die Serialisierung nicht bekannt ist.  
+## <a name="remarks"></a>Hinweise  
+ Durch Überprüfen der Typbibliothek werden von der Laufzeit der COM+-Integration Dienste erstellt. Wenn COM+-Komponenten Methoden enthalten, die einen VARIANT übergeben, können die tatsächlichen Typen, die vor der Laufzeit übergeben werden sollen, vom System nicht bestimmt werden. Aus diesem Grund tritt beim Versuch, einen benutzerdefinierten Typ in einem VARIANT zu übergeben, ein Fehler auf, da der Typ für die Serialisierung nicht bekannt ist.  
   
- Sie können jedoch der Konfigurationsdatei die UDTs hinzufügen, sodass diese als bekannte Typen im entsprechenden Dienstvertrag eingefügt werden können, um das Problem zu umgehen.  Voraussetzung hierfür ist eine eindeutige Identifizierung des UDT und der Verträge, d.&\#160;h. der ursprünglich verwendeten COM\-Schnittstelle.  
+ Sie können jedoch der Konfigurationsdatei die UDTs hinzufügen, sodass diese als bekannte Typen im entsprechenden Dienstvertrag eingefügt werden können, um das Problem zu umgehen. Voraussetzung hierfür ist eine eindeutige Identifizierung des UDT und der Verträge, d.&#160;h. der ursprünglich verwendeten COM-Schnittstelle.  
   
- Im folgenden Beispiel wird veranschaulicht, wie dem \<`userDefinedTypes`\>\-Abschnitt der Konfigurationsdatei zwei spezifische UDTs hinzugefügt werden.  
+ Im folgenden Beispiel wird veranschaulicht, wie dem <`userDefinedTypes`>-Abschnitt der Konfigurationsdatei zwei spezifische UDTs hinzugefügt werden.  
   
-```  
+```xml  
 <comContracts>  
   <comContract  
       contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
@@ -94,10 +101,10 @@ Stellt einen benutzerdefinierten Typ \(UDT\) dar, der in den Dienstvertrag einge
   
  Beim Initialisieren des Diensts werden die angegebenen Typen von der Integrationslaufzeit gesucht und der Auflistung der bekannten Typen für die angegebenen Verträge hinzugefügt.  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>   
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>   
- <xref:System.ServiceModel.Configuration.ComUdtElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [Integrieren von COM\+\-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Vorgehensweise: Konfigurieren von COM\+\-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
+ <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComUdtElement>  
+ [\<ComContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [Integrieren von COM+-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

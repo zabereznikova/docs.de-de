@@ -1,31 +1,29 @@
 ---
-title: "Argument not optional (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID449"
-dev_langs: 
-  - "VB"
+title: Das Argument ist nicht optional (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 91cc5bc90e226a36f4afe6ccc250dfe28ead5b5b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Argument not optional (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Argumentanzahl und \-typen müssen mit der erwarteten Anzahl bzw. den erwarteten Typen übereinstimmen.  Es gibt zwei Möglichkeiten: Die Anzahl der Argumente ist falsch, oder es wurde ein nicht optionales Argument ausgelassen.  Ein Argument kann nur dann in einem Aufruf einer benutzerdefinierten Prozedur ausgelassen werden, wenn es in der Prozedurdefinition als `Optional` deklariert wurde.  
+# <a name="argument-not-optional-visual-basic"></a>Das Argument ist nicht optional (Visual Basic)
+Die Anzahl und Typen von Argumenten müssen die erwarteten übereinstimmen. Es wird eine falsche Anzahl von Argumenten oder ein ausgelassenes Argument ist nicht optional. Ein Argument kann nur von einem Aufruf einer benutzerdefinierten Prozedur ausgelassen werden, wenn sie deklariert wurde `Optional` in der Prozedurdefinition ab.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Geben Sie alle notwendigen Argumente an.  
+1.  Geben Sie alle erforderlichen Argumente.  
   
-2.  Stellen Sie sicher, dass nur optionale Argumente ausgelassen wurden.  Andernfalls geben Sie das Argument entweder im Aufruf an oder deklarieren den Parameter in der Definition als `Optional`.  
+2.  Stellen Sie sicher, dass optionale Argumente ausgelassen wurden. Wenn sie nicht sind, geben Sie das Argument im Aufruf oder deklarieren Sie den Parameter `Optional` in der Definition.  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

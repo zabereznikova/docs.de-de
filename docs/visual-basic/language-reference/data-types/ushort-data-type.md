@@ -1,59 +1,80 @@
 ---
-title: "UShort Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ushort"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "numbers, whole"
-  - "literal type characters, US"
-  - "whole numbers"
-  - "integral data types"
-  - "integer numbers"
-  - "numbers, integer"
-  - "integers, data types"
-  - "integers, types"
-  - "data types [Visual Basic], integral"
-  - "UShort data type"
-  - "US literal type characters"
+title: UShort-Datentyp (Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ushort
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- literal type characters [Visual Basic], US
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- UShort data type
+- US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 513e8ce4694788d33c5aa14e34b95e88b6d37ff1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# UShort Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="ushort-data-type-visual-basic"></a>UShort-Datentyp (Visual Basic)
 
-Enthält 16\-Bit\-\(2\-Byte\-\)Ganzzahlen ohne Vorzeichen im Wertebereich von 0 bis 65.535.  
+Enthält, die 16-Bit (2-Byte)-Ganzzahlen ohne Vorzeichen im Bereich von 0 bis 65.535.  
   
-## Hinweise  
- Verwenden Sie den `UShort`\-Datentyp für Binärdaten, die für `Byte` zu groß sind.  
+## <a name="remarks"></a>Hinweise
+
+ Verwenden der `UShort` -Datentyp zu groß für Binärdaten enthalten `Byte`.  
   
- Der Standardwert von `UShort` ist 0 \(null\).  
+ Der Standardwert von `UShort` lautet 0.  
+
+# <a name="literal-assignments"></a>Literal Zuweisungen
+
+Sie können deklarieren und Initialisieren einer `UShort` Variable, indem ein decimal Literal, einen hexadezimalen Literalwert ein oktales Literal Vorlagenkörpers oder (beginnend mit Visual Basic 2017) ein binäres Literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `UShort` befindet – sprich, wenn es kleiner als <xref:System.UInt16.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt16.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+
+Im folgenden Beispiel Ganzzahlen 65,034, die als dezimale, hexadezimale, dargestellt sind gleich und binäre Literale zugewiesen sind `UShort` Werte.
   
-## Programmiertipps  
+[!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
+
+> [!NOTE]
+> Verwenden Sie das Präfix `&h` oder `&H` zur Angabe einer hexadezimalen Literalwert, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix zu bezeichnen `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
+
+Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffer Trennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel dargestellt.
+
+[!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
+
+Numerische Literale zählen auch die `US` oder `us` [-Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `UShort` -Datentyp, wie im folgenden Beispiel gezeigt.
+
+```vb
+Dim number = &H035826us
+```
+
+## <a name="programming-tips"></a>Tipps für die Programmierung
   
--   **Negative Zahlen.** Da `UShort` ein Typ ohne Vorzeichen ist, kann er keine negativen Zahlen darstellen.  Wenn Sie den unären Minusoperator \(`-`\) in einem Ausdruck verwenden, der vom Typ `UShort` ist, wandelt Visual Basic den Ausdruck zunächst in den `Integer`\-Typ um.  
+-   **Negative Zahlen.** Da `UShort` ein Typ ohne Vorzeichen ist es nicht darstellen kann eine negative Zahl. Bei Verwendung der unäres minus (`-`) Operator auf einen Ausdruck, der ausgewertet wird, um geben `UShort`, konvertiert den Ausdruck, der Visual Basic `Integer` erste.  
   
--   **CLS\-Kompatibilität.** Der `UShort`\-Datentyp ist nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\), d. h. CLS\-kompatibler Code kann keine Komponente verwenden, die diesen Datentyp nutzt.  
+-   **CLS-Kompatibilität.** Die `UShort` Datentyp ist nicht Teil der [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), d. h. CLS-kompatiblem Code kann keine Komponente verwenden, die verwendet werden.
   
--   **Erweiterung.** Der `UShort`\-Datentyp wird zu `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` und `Double` erweitert.  Dies bedeutet, dass Sie `UShort` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
+-   **Widening.** Die `UShort` -Datentyp zu `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `UShort` keinem dieser Typen ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Durch Anhängen der Literaltypzeichen `US` an ein Literal wird der `UShort`\-Datentyp erzwungen.  `UShort` hat kein Typkennzeichen.  
+-   **Typzeichen.** Anhängen des Literaltypzeichens `US` an ein Literal wird der `UShort` -Datentyp. `UShort`verfügt über keine Typkennzeichen aus.  
   
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt16?displayProperty=fullName>\-Struktur.  
+-   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt16?displayProperty=nameWithType>-Struktur.  
   
-## Siehe auch  
- <xref:System.UInt16>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [How to: Call a Windows Function that Takes Unsigned Types](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.UInt16>  
+ [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

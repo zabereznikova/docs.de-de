@@ -1,26 +1,30 @@
 ---
-title: "Auflistungsaktivit&#228;ten in WF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Auflistungsaktivitäten in WF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f1feb09c67051c1e99ac199adc20fe6ca4d6e4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Auflistungsaktivit&#228;ten in WF
-Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet.  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden.  `ExistsInCollection` und `RemoveFromCollectio`n verfügen über <xref:System.Activities.OutArgument%601> vom Typ <xref:System.Boolean>, das das Ergebnis angibt.  
+# <a name="collection-activities-in-wf"></a>Auflistungsaktivitäten in WF
+Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection`und `RemoveFromCollection` haben eine <xref:System.Activities.OutArgument%601> des Typs <xref:System.Boolean>, das das Ergebnis angibt.  
   
 > [!IMPORTANT]
 >  Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.  
   
-## Auflistungsaktivitäten  
+## <a name="collection-activities"></a>Auflistungsaktivitäten  
   
 |||  
 |-|-|  
@@ -29,8 +33,8 @@ Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem 
 |<xref:System.Activities.Statements.ExistsInCollection%601>|Gibt `true` zurück, wenn ein Element in einer Auflistung vorhanden ist.|  
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Entfernt ein Element aus einer angegebenen Auflistung und gibt `true` zurück, wenn das Element erfolgreich entfernt wurde.|  
   
-## Verwenden von Auflistungsaktivitäten  
- Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde.  Die verwendete Auflistung ist ein <xref:System.Collections.Generic.List%E2%80%991>\-Objekt von <xref:System.String>\-Objekten mit dem Namen `fruitList`.  
+## <a name="using-collection-activities"></a>Verwenden von Auflistungsaktivitäten  
+ Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde. Die verwendete Auflistung ist eine <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` von <xref:System.String> Objekte, die mit dem Namen `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -85,7 +89,6 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
 ```xaml  
@@ -229,7 +232,6 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
  Die oben erwähnten Codebeispiele können auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> anstelle von <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.  
@@ -287,10 +289,9 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
-```  
+```xml  
 <Sequence  
    xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -431,8 +432,7 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
-## Siehe auch  
- [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -1,49 +1,55 @@
 ---
-title: "Umgang mit &#39;DataAdapter&#39;-Ereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Behandeln von DataAdapter-Ereignissen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b6ca32ac1b0af1f290a9c2b2e33c51efa7a3b149
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Umgang mit &#39;DataAdapter&#39;-Ereignissen
-Der ADO.NET\-<xref:System.Data.Common.DataAdapter> macht drei Ereignisse verfügbar, mit denen Sie auf Änderungen der Daten der Datenquelle reagieren können.  In der folgenden Tabelle finden Sie eine Beschreibung dieser `DataAdapter`\-Ereignisse.  
+# <a name="handling-dataadapter-events"></a>Behandeln von DataAdapter-Ereignissen
+Der ADO.NET-<xref:System.Data.Common.DataAdapter> macht drei Ereignisse verfügbar, mit denen Sie auf Änderungen der Daten der Datenquelle reagieren können. In der folgenden Tabelle finden Sie eine Beschreibung dieser `DataAdapter`-Ereignisse.  
   
 |Ereignis|Beschreibung|  
-|--------------|------------------|  
-|`RowUpdating`|Es wird gerade ein Aktualisierungs\-, Einfüge\- oder Löschvorgang für eine Zeile eingeleitet \(durch Aufrufen einer der `Update`\-Methoden\).|  
-|`RowUpdated`|Ein Update\-, Einfüge\- oder Löschvorgang für eine Zeile ist abgeschlossen \(durch Aufrufen einer der `Update`\-Methoden\).|  
-|`FillError`|Während eines `Fill`\-Vorgangs ist ein Fehler aufgetreten.|  
+|-----------|-----------------|  
+|`RowUpdating`|Es wird gerade ein Aktualisierungs-, Einfüge- oder Löschvorgang für eine Zeile eingeleitet (durch Aufrufen einer der `Update`-Methoden).|  
+|`RowUpdated`|Ein Update-, Einfüge- oder Löschvorgang für eine Zeile ist abgeschlossen (durch Aufrufen einer der `Update`-Methoden).|  
+|`FillError`|Während eines `Fill`-Vorgangs ist ein Fehler aufgetreten.|  
   
-## RowUpdating und RowUpdated  
- `RowUpdating` wird ausgelöst, bevor ein Update einer Zeile des <xref:System.Data.DataSet>\-Objekts in der Datenquelle verarbeitet wurde.  `RowUpdated` wird ausgelöst, nachdem ein Update einer Zeile des `DataSet`\-Objekts in der Datenquelle verarbeitet wurde.  Folglich können Sie mit dem `RowUpdating`\-Ereignis das Verhalten von Updates ändern, bevor sie vorgenommen werden, zusätzliche Behandlungsoptionen beim Auftreten eines Updates anbieten, einen Verweis auf eine aktualisierte Zeile beibehalten, das aktuelle Update abbrechen und es für die spätere Verarbeitung in einem Stapelverarbeitungsprozess einplanen usw.  `RowUpdated` ist hilfreich bei der Reaktion auf Fehler und Ausnahmen, die während des Updates auftreten.  Sie können dem `DataSet` Fehlerinformationen, eine Wiederholungslogik u. a. m. hinzufügen.  
+## <a name="rowupdating-and-rowupdated"></a>RowUpdating und RowUpdated  
+ `RowUpdating` wird ausgelöst, bevor ein Update einer Zeile des <xref:System.Data.DataSet>-Objekts in der Datenquelle verarbeitet wurde. `RowUpdated` wird ausgelöst, nachdem ein Update einer Zeile des `DataSet`-Objekts in der Datenquelle verarbeitet wurde. Folglich können Sie mit dem `RowUpdating`-Ereignis das Verhalten von Updates ändern, bevor sie vorgenommen werden, zusätzliche Behandlungsoptionen beim Auftreten eines Updates anbieten, einen Verweis auf eine aktualisierte Zeile beibehalten, das aktuelle Update abbrechen und es für die spätere Verarbeitung in einem Stapelverarbeitungsprozess einplanen usw. `RowUpdated` ist hilfreich bei der Reaktion auf Fehler und Ausnahmen, die während des Updates auftreten. Sie können dem `DataSet` Fehlerinformationen, eine Wiederholungslogik u. a. m. hinzufügen.  
   
- Die Argumente <xref:System.Data.Common.RowUpdatingEventArgs> und <xref:System.Data.Common.RowUpdatedEventArgs>, die an die Ereignisse `RowUpdating` und `RowUpdated` übergeben werden, enthalten Folgendes: eine `Command`\-Eigenschaft, die auf das `Command`\-Objekt verweist, das zur Ausführung des Updates verwendet wird, eine `Row`\-Eigenschaft, die auf das `DataRow`\-Objekt verweist, dass die aktualisierten Informationen enthält, eine `StatementType`\-Eigenschaft zur Angabe der auszuführenden Updatestypen, die `TableMapping`, sofern zutreffend, und den `Status` des Vorgangs.  
+ Die Argumente <xref:System.Data.Common.RowUpdatingEventArgs> und <xref:System.Data.Common.RowUpdatedEventArgs>, die an die Ereignisse `RowUpdating` und `RowUpdated` übergeben werden, enthalten Folgendes: eine `Command`-Eigenschaft, die auf das `Command`-Objekt verweist, das zur Ausführung des Updates verwendet wird, eine `Row`-Eigenschaft, die auf das `DataRow`-Objekt verweist, dass die aktualisierten Informationen enthält, eine `StatementType`-Eigenschaft zur Angabe der auszuführenden Updatestypen, die `TableMapping`, sofern zutreffend, und den `Status` des Vorgangs.  
   
- Mit der `Status`\-Eigenschaft können Sie ermitteln, ob während des Vorgangs ein Fehler aufgetreten ist, und gegebenenfalls die Aktionen für die aktuellen und die resultierenden Zeilen steuern.  Wenn das Ereignis eintritt, entspricht die `Status`\-Eigenschaft entweder `Continue` oder `ErrorsOccurred`.  In der folgenden Tabelle sind die Werte dargestellt, die Sie für die `Status`\-Eigenschaft festlegen können, um nachfolgende Aktionen während des Updates zu steuern.  
+ Mit der `Status`-Eigenschaft können Sie ermitteln, ob während des Vorgangs ein Fehler aufgetreten ist, und gegebenenfalls die Aktionen für die aktuellen und die resultierenden Zeilen steuern. Wenn das Ereignis eintritt, entspricht die `Status`-Eigenschaft entweder `Continue` oder `ErrorsOccurred`. In der folgenden Tabelle sind die Werte dargestellt, die Sie für die `Status`-Eigenschaft festlegen können, um nachfolgende Aktionen während des Updates zu steuern.  
   
 |Status|Beschreibung|  
-|------------|------------------|  
+|------------|-----------------|  
 |`Continue`|Setzt den Aktualisierungsvorgang fort.|  
 |`ErrorsOccurred`|Bricht den Updatevorgang ab und löst eine Ausnahme aus.|  
 |`SkipCurrentRow`|Ignoriert die aktuelle Zeile und setzt den Aktualisierungsvorgang fort.|  
 |`SkipAllRemainingRows`|Bricht den Aktualisierungsvorgang ab, löst jedoch keine Ausnahme aus.|  
   
- Durch das Festlegen der `Status`\-Eigenschaft auf `ErrorsOccurred` wird eine Ausnahme ausgelöst.  Welche Ausnahme ausgelöst wird, können Sie steuern, indem Sie für die `Errors`\-Eigenschaft die gewünschte Ausnahme angeben.  Wenn Sie einen der anderen Werte für `Status` verwenden, wird keine Ausnahme ausgelöst.  
+ Durch das Festlegen der `Status`-Eigenschaft auf `ErrorsOccurred` wird eine Ausnahme ausgelöst. Welche Ausnahme ausgelöst wird, können Sie steuern, indem Sie für die `Errors`-Eigenschaft die gewünschte Ausnahme angeben. Wenn Sie einen der anderen Werte für `Status` verwenden, wird keine Ausnahme ausgelöst.  
   
- Sie können auch die `ContinueUpdateOnError`\-Eigenschaft verwenden, um Fehler für aktualisierte Zeilen zu behandeln.  Wenn für `DataAdapter.ContinueUpdateOnError` der Wert `true` angegeben ist und das Updates einer Zeile eine Ausnahme auslöst, wird der Text der Ausnahme in die `RowError`\-Information der entsprechenden Zeile aufgenommen. Die Verarbeitung wird fortgesetzt, ohne dass eine Ausnahme ausgelöst wird.  Auf diese Weise können Sie auf Fehler reagieren, wenn `Update` abgeschlossen wurde. Dagegen können Sie beim `RowUpdated`\-Ereignis auf den Fehler reagieren, sobald er festgestellt wird.  
+ Sie können auch die `ContinueUpdateOnError`-Eigenschaft verwenden, um Fehler für aktualisierte Zeilen zu behandeln. Wenn für `DataAdapter.ContinueUpdateOnError` der Wert `true` angegeben ist und das Updates einer Zeile eine Ausnahme auslöst, wird der Text der Ausnahme in die `RowError`-Information der entsprechenden Zeile aufgenommen. Die Verarbeitung wird fortgesetzt, ohne dass eine Ausnahme ausgelöst wird. Auf diese Weise können Sie auf Fehler reagieren, wenn `Update` abgeschlossen wurde. Dagegen können Sie beim `RowUpdated`-Ereignis auf den Fehler reagieren, sobald er festgestellt wird.  
   
- Im folgenden Codebeispiel wird dargestellt, wie Ereignishandler hinzugefügt und entfernt werden.  Der `RowUpdating`\-Ereignishandler schreibt ein Protokoll aller gelöschten Datensätze und versieht die Löschvorgangaufzeichnungen jeweils mit einem Timestamp.  Der `RowUpdated`\-Ereignishandler fügt der `RowError`\-Eigenschaft der Zeile im `DataSet` Fehlerinformationen hinzu, unterdrückt die Ausnahme und setzt den Verarbeitungsvorgang fort \(entspricht dem Verhalten von `ContinueUpdateOnError` \= `true`\).  
+ Im folgenden Codebeispiel wird dargestellt, wie Ereignishandler hinzugefügt und entfernt werden. Der `RowUpdating`-Ereignishandler schreibt ein Protokoll aller gelöschten Datensätze und versieht die Löschvorgangaufzeichnungen jeweils mit einem Timestamp. Die `RowUpdated` -Ereignishandler fügt Informationen an die `RowError` -Eigenschaft der Zeile in der `DataSet`unterdrückt die Ausnahme und setzt die Verarbeitung fort (entspricht dem Verhalten von `ContinueUpdateOnError`  =  `true`).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -128,21 +134,21 @@ protected static void OnRowUpdated(
 }  
 ```  
   
-## FillError  
- Der `DataAdapter` gibt das `FillError`\-Ereignis aus, wenn während des `Fill`\-Vorgangs ein Fehler auftritt.  Dieser Fehlertyp tritt auf, wenn die Daten in der hinzugefügten Zeile nicht ohne Präzisionsverlust in einen .NET Framework\-Typ konvertiert werden konnten.  
+## <a name="fillerror"></a>FillError  
+ Der `DataAdapter` gibt das `FillError`-Ereignis aus, wenn während des `Fill`-Vorgangs ein Fehler auftritt. Dieser Fehlertyp tritt auf, wenn die Daten in der hinzugefügten Zeile nicht ohne Präzisionsverlust in einen .NET Framework-Typ konvertiert werden konnten.  
   
- Wenn während eines `Fill`\-Vorgangs ein Fehler auftritt, wird der `DataTable` die aktuelle Zeile nicht hinzugefügt.  Mit dem `FillError`\-Ereignis können Sie den Fehler auflösen und die Zeile hinzufügen oder die betreffende Zeile ignorieren und den `Fill`\-Vorgang fortsetzen.  
+ Wenn während eines `Fill`-Vorgangs ein Fehler auftritt, wird der `DataTable` die aktuelle Zeile nicht hinzugefügt. Mit dem `FillError`-Ereignis können Sie den Fehler auflösen und die Zeile hinzufügen oder die betreffende Zeile ignorieren und den `Fill`-Vorgang fortsetzen.  
   
- Die an das `FillError`\-Ereignis übergebenen `FillErrorEventArgs` können mehrere Eigenschaften enthalten, mit denen Sie auf Fehler reagieren und diese auflösen können.  In der folgenden Tabelle werden die Eigenschaften des `FillErrorEventArgs`\-Objekts dargestellt.  
+ Die an das `FillErrorEventArgs`-Ereignis übergebenen `FillError` können mehrere Eigenschaften enthalten, mit denen Sie auf Fehler reagieren und diese auflösen können. In der folgenden Tabelle werden die Eigenschaften des `FillErrorEventArgs`-Objekts dargestellt.  
   
 |Eigenschaft|Beschreibung|  
-|-----------------|------------------|  
+|--------------|-----------------|  
 |`Errors`|Die `Exception`, die aufgetreten ist.|  
-|`DataTable`|Das `DataTable`\-Objekt, das ausgefüllt wurde, als der Fehler auftrat.|  
-|`Values`|Ein Array aus Objekten, das die Werte der beim Eintreten des Fehlers hinzugefügten Zeile enthält.  Die Ordinalzahlverweise des `Values`\-Arrays entsprechen den Ordinalzahlverweisen der Spalten der hinzugefügten Zeile.  So ist z. B. `Values[0]` der Wert, der als erste Spalte der Zeile hinzugefügt wurde.|  
-|`Continue`|Sie können festlegen, ob eine Ausnahme ausgelöst werden soll oder nicht.  Durch das Festlegen der `Continue`\-Eigenschaft auf `false` wird der aktuelle `Fill`\-Vorgang angehalten, und es wird eine Ausnahme ausgelöst.  Durch das Festlegen der `Continue`\-Eigenschaft auf `true` wird der `Fill`\-Vorgang trotz des Fehlers fortgesetzt.|  
+|`DataTable`|Das `DataTable`-Objekt, das ausgefüllt wurde, als der Fehler auftrat.|  
+|`Values`|Ein Array aus Objekten, das die Werte der beim Eintreten des Fehlers hinzugefügten Zeile enthält. Die Ordinalzahlverweise des `Values`-Arrays entsprechen den Ordinalzahlverweisen der Spalten der hinzugefügten Zeile. So ist z. B. `Values[0]` der Wert, der als erste Spalte der Zeile hinzugefügt wurde.|  
+|`Continue`|Sie können festlegen, ob eine Ausnahme ausgelöst werden soll oder nicht. Durch das Festlegen der `Continue`-Eigenschaft auf `false` wird der aktuelle `Fill`-Vorgang angehalten, und es wird eine Ausnahme ausgelöst. Durch das Festlegen der `Continue`-Eigenschaft auf `true` wird der `Fill`-Vorgang trotz des Fehlers fortgesetzt.|  
   
- Im folgenden Codebeispiel wird ein Ereignishandler für das `DataAdapter`\-Ereignis `FillError` hinzugefügt.  Im `FillError`\-Ereigniscode bestimmt das Beispiel, ob die Möglichkeit von Präzisionsverlust besteht, und bietet die Chance, auf die Ausnahme zu reagieren.  
+ Im folgenden Codebeispiel wird ein Ereignishandler für das `FillError`-Ereignis `DataAdapter` hinzugefügt. Im `FillError`-Ereigniscode bestimmt das Beispiel, ob die Möglichkeit von Präzisionsverlust besteht, und bietet die Chance, auf die Ausnahme zu reagieren.  
   
 ```vb  
 AddHandler adapter.FillError, New FillErrorEventHandler( _  
@@ -190,9 +196,9 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## Siehe auch  
- [DataAdapter und DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Behandeln von DataSet\-Ereignissen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)   
- [Behandlung von DataTable\-Ereignissen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)   
- [Ereignisse](../../../../docs/standard/events/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
+ [Behandeln von DataTable-Ereignissen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [Ereignisse](../../../../docs/standard/events/index.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

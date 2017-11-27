@@ -1,26 +1,29 @@
 ---
-title: "Kernkommunikation: Hilfsprogramme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Kernkommunikation: Hilfsprogramme'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9e4f873-e26a-4ed1-9766-3541082dc999
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f3579931f80766fb28fb7f15d5285510318ed087
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Kernkommunikation: Hilfsprogramme
-In diesem Thema sind alle von den Kernkommunikations\-Hilfsprogrammen generierten Ausnahmen aufgeführt.  
+# <a name="core-communications-utilities"></a>Kernkommunikation: Hilfsprogramme
+In diesem Thema sind alle von den Kernkommunikations-Hilfsprogrammen generierten Ausnahmen aufgeführt.  
   
-## Ausnahmeliste  
+## <a name="exception-list"></a>Ausnahmeliste  
   
 |Ressourcencode|Ressourcenzeichenfolge|  
-|--------------------|----------------------------|  
-|AsyncObjectAlreadyEnded|Die End\-Methode wurde für dieses asynchrone Ergebnisobjekt bereits aufgerufen.|
+|-------------------|---------------------|  
+|AsyncObjectAlreadyEnded|Die End-Methode wurde für dieses asynchrone Ergebnisobjekt bereits aufgerufen.|

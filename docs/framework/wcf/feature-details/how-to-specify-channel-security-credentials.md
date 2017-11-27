@@ -1,26 +1,29 @@
 ---
-title: "Vorgehensweise: Angeben von Anmeldeinformationen f&#252;r Kanalsicherheit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Angeben von Anmeldeinformationen f&#252;r Kanalsicherheit
-Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermöglicht COM-Anwendungen das Aufrufen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten. Die meisten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste fordern vom Client die Angabe von Anmeldeinformationen für Authentifizierung und Autorisierung. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client können diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angegeben werden. Beim Aufrufen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst aus einer COM-Anwendung können Sie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle zum Angeben von Anmeldeinformationen. In diesem Thema wird veranschaulicht verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle.  
+# <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
+Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermöglicht COM-Anwendungen das Aufrufen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten. Die meisten [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste fordern vom Client die Angabe von Anmeldeinformationen für Authentifizierung und Autorisierung. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client können diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angegeben werden. Beim Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts von einer COM-Anwendung kann die <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle zum Angeben von Anmeldeinformationen verwendet werden. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionalität in Visual Studio-Umgebung.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionen in der Visual Studio-Umgebung.  
   
  In diesem Artikel verwendet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst definiert, der [Nachrichtensicherheitsbeispiel](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
@@ -30,9 +33,9 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
   
 2.  Öffnen Sie das Nachrichtensicherheitsprojekt.  
   
-3.  Hinzufügen `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` an die `ICalculator` Schnittstellendefinition.  
+3.  Hinzufügen `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` auf die `ICalculator` Schnittstellendefinition.  
   
-4.  Hinzufügen `bindingNamespace=``http://Microsoft.ServiceModel.Samples` die Endpunkt-Tag in der App.config-Datei für den Dienst.  
+4.  Hinzufügen `bindingNamespace=``http://Microsoft.ServiceModel.Samples` dem endpunkttag in der Datei App.config für den Dienst.  
   
 5.  Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (), um die Funktion des Diensts zu überprüfen.  
   
@@ -57,7 +60,7 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
   
 7.  Führen Sie die Visual Basic-Anwendung aus, und überprüfen Sie die Ergebnisse.  
   
-     Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> oder <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> kann auch verwendet werden, anstelle von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> um das Clientzertifikat festzulegen:  
+     Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> oder <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> können anstelle von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> verwendet werden, um das Clientzertifikat festzulegen:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -98,7 +101,7 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
 4.  Führen Sie die Visual Basic-Anwendung aus, und überprüfen Sie die Ergebnisse. Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an.  
   
     > [!NOTE]
-    >  Die im Dienstmoniker in diesem Beispiel angegebene Bindung wurde in WSHttpBinding_ICalculator geändert. Beachten Sie, dass Sie einen gültigen Benutzernamen und ein Kennwort im Aufruf von angeben müssen <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
+    >  Die im Dienstmoniker in diesem Beispiel angegebene Bindung wurde in WSHttpBinding_ICalculator geändert. Zudem müssen beim Aufruf von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> ein gültiger Benutzername und ein Kennwort angegeben werden.  
   
 ### <a name="to-specify-windows-credentials"></a>So geben Sie Windows-Anmeldeinformationen an:  
   
@@ -128,9 +131,9 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
   
 ### <a name="to-specify-an-issue-token"></a>So geben Sie ein Problemtoken an:  
   
-1.  Problemtoken werden nur für Anwendungen, die verbundene Sicherheit verwenden, eingesetzt. Weitere Informationen zu verbundener Sicherheit finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) und [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1.  Problemtoken werden nur für Anwendungen, die verbundene Sicherheit verwenden, eingesetzt. Weitere Informationen zu verbundene Sicherheit, finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) und [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-     Im folgende Visual Basic-Codebeispiel veranschaulicht das Aufrufen der <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> Methode:  
+     Im folgenden Visual Basic-Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>-Methode aufgerufen wird:  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -142,11 +145,11 @@ Der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmoniker ermög
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Weitere Informationen zu den Parametern für diese Methode finden Sie unter <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
+     Weiter Informationen zu den Parametern für diese Methode finden Sie unter <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)   
- [Gewusst wie: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [Gewusst wie: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
+ [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [Vorgehensweise: Konfigurieren Sie Anmeldeinformationen in einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

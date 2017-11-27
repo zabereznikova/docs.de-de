@@ -1,77 +1,83 @@
 ---
-title: "&lt;webSocketSettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;webSocketSettings&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2714b27916a47ae8e002ea857c93377736c4eff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;webSocketSettings&gt;
-Ein Konfigurationselement zum Angeben von WebSocket\-Einstellungen.  
+# <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
+Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.  
   
-## Syntax  
+\<System. ServiceModel >  
+\<Bindungen >  
+\<NetHttpBinding >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <netHttpBinding>  
-   <binding>   
-       <webSocketSettings createNotificationOnConnection="boolean"  
-                              disablePayloadMasking="boolean"  
-                              keepAliveInterval="TimeSpan"  
-                              maxPendingConnections="Integer"  
-                              receiveBufferSize="Integer"  
-                              sendBufferSize="Integer"  
-                              subProtocol="String"  
-                              transportUsage="WhenDuplex/Always/Never"/>  
-   </binding>  
+  <binding>   
+    <webSocketSettings createNotificationOnConnection="boolean" 
+                       disablePayloadMasking="boolean" 
+                       keepAliveInterval="TimeSpan" 
+                       maxPendingConnections="Integer" 
+                       receiveBufferSize="Integer" 
+                       sendBufferSize="Integer" 
+                       subProtocol="String" 
+                       transportUsage="WhenDuplex/Always/Never"/>
+  </binding>  
 </netHttpBinding>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
+|---------------|-----------------|  
 |createNotificationOnConnection|Gibt an, ob eine Benachrichtigung bei Zustandekommen einer Verbindung gesendet wird.|  
-|disablePayloadMasking|Gibt an, ob die WebSocket\-Maske deaktiviert ist.|  
-|keepAliveInterval|Gibt das Keep\-Alive\-Intervall an.|  
+|disablePayloadMasking|Gibt an, ob die WebSocket-Maske deaktiviert ist.|  
+|keepAliveInterval|Gibt das Keep-Alive-Intervall an.|  
 |maxPendingConnections|Gibt die maximale Anzahl von Verbindungen an, die im Dienst zum Verteilen bereitstehen.|  
 |receiveBufferSize|Gibt die Größe des Empfangspuffers an.|  
 |sendBufferSize|Gibt die Größe des Sendepuffers an.|  
-|subProtocol|Gibt das WebSocket\-Unterprotokoll an.|  
+|subProtocol|Gibt das WebSocket-Unterprotokoll an.|  
 |transportUsage|Gibt an, wann WebSockets verwendet wird.|  
   
-## transportUsage\-Attribut  
+## <a name="transportusage-attribute"></a>transportUsage-Attribut  
   
 |Wert|Beschreibung|  
-|----------|------------------|  
-|WhenDuplex|Verwendet das WebSocket\-Protokoll bei einem Duplexvertrag.|  
-|Always|Verwendet immer das WebSocket\-Protokoll unabhängig vom Vertrag.|  
-|Nie|Verwendet niemals das WebSocket\-Protokoll.|  
+|-----------|-----------------|  
+|WhenDuplex|Verwendet das WebSocket-Protokoll bei einem Duplexvertrag.|  
+|Always|Verwendet immer das WebSocket-Protokoll unabhängig vom Vertrag.|  
+|Nie|Verwendet niemals das WebSocket-Protokoll.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|\<netHttpBinding\>|Gibt das NetHttpBinding\-Element an.|  
+|-------------|-----------------|  
+|\<NetHttpBinding >|Gibt das NetHttpBinding-Element an.|  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung des \<webSocketSettings\>\-Elements veranschaulicht.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die \<WebSocketSettings > Element.  
   
 ```xml  
 <netHttpBinding>  
@@ -89,12 +95,12 @@ Ein Konfigurationselement zum Angeben von WebSocket\-Einstellungen.
       </netHttpBinding>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)

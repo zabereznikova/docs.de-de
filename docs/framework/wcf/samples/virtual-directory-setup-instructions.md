@@ -1,69 +1,69 @@
 ---
-title: "Anleitung zum Einrichten eines virtuellen Verzeichnisses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-caps.latest.revision: 36
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 36
+caps.latest.revision: "36"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b727f391abfeb1112de1b6cde3ceb564d3860974
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Anleitung zum Einrichten eines virtuellen Verzeichnisses
-Für die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Beispiele ist die Nutzung eines gemeinsamen virtuellen Verzeichnisses mit dem Namen servicemodelsamples vorgesehen, das dem Ordner %SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples zugeordnet ist.  
+# <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
+Für die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele ist die Nutzung eines gemeinsamen virtuellen Verzeichnisses mit dem Namen servicemodelsamples vorgesehen, das dem Ordner %SystemDrive%\inetpub\wwwroot\servicemodelsamples zugeordnet ist.  
   
 > [!NOTE]
->  % SystemDrive% ist normalerweise C: oder D:, abhängig von dem Laufwerk, auf dem Internetinformationsdienste \(IIS\) installiert ist.  
+>  % SystemDrive% ist normalerweise C: oder D:, abhängig von dem Laufwerk, auf dem Internetinformationsdienste (IIS) installiert ist.  
   
- Zum Erstellen des virtuellen Verzeichnisses können Sie die Dateien Setupvroot.bat und Cleanupvroot.bat aus [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausführen.Wenn Sie es vorziehen, das virtuelle Verzeichnis manuell zu erstellen, gehen Sie wie folgt vor.  
+ Sie können die Dateien Setupvroot.bat und Cleanupvroot.bat aus ausführen, die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) beim Erstellen des virtuellen Verzeichnisses. Wenn Sie es vorziehen, das virtuelle Verzeichnis manuell zu erstellen, gehen Sie wie folgt vor.  
   
-## Prozeduren  
+## <a name="procedures"></a>Verfahren  
   
-#### So erstellen Sie ein virtuelles Verzeichnis in IIS 7.0 oder 7.5  
+#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>So erstellen Sie ein virtuelles Verzeichnis in IIS 7.0 oder 7.5  
   
-1.  Klicken Sie im Menü **Start** auf **Ausführen**, und geben Sie **inetmgr** ein, um das MMC\-Snap\-In Internetinformationsdienste \(IIS\) zu öffnen.  
+1.  Aus der **starten** Menü klicken Sie auf **ausführen**, geben Sie dann **Inetmgr** auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
   
-2.  Erweitern Sie im linken Bereich den Knoten mit dem Namen des Computers und dann den Knoten **Sites**.  
+2.  Klicken Sie im linken Bereich, erweitern Sie den Knoten mit dem Namen des Computers, und erweitern Sie dann die **Sites** Knoten.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Standardwebsite**, und wählen Sie anschließend **Anwendung hinzufügen** aus, um das Fenster **Anwendung hinzufügen** zu öffnen.  
+3.  Mit der rechten Maustaste **Default Web Site**, und wählen Sie dann **Anwendung hinzufügen** So öffnen die **hinzufügen Anwendungsfenster**.  
   
-4.  Geben Sie in diesem Fenster `servicemodelsamples` als Alias für das virtuelle Verzeichnis ein, das Sie erstellen.  
+4.  Geben Sie im Fenster `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
   
-5.  Erstellen Sie das folgende Verzeichnis: %SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples.  
+5.  Erstellen Sie das folgende Verzeichnis: %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-6.  Legen Sie den physischen Pfad auf %SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples fest.Die meisten der WCF\-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
+6.  Legen Sie den physischen Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest.  Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
   
-7.  Klicken Sie auf **OK**.Die Webanwendung wird für die WCF\-Beispiele erstellt.  
+7.  Klicken Sie auf **OK**. Die Webanwendung wird für die WCF-Beispiele erstellt.  
   
     > [!NOTE]
-    >  Sie müssen diesen Vorgang nur einmal ausführen, da für alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Beispiele dieselbe Webanwendung mit dem Namen servicemodelsamples verwendet wird.  
+    >  Sie müssen diesen Vorgang nur einmal ausführen, da für alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele dieselbe Webanwendung mit dem Namen servicemodelsamples verwendet wird.  
   
     > [!NOTE]
     >  In dieser Dokumentation werden die Begriffe `virtual directory` und `Web application` als Synonyme behandelt.  
   
-     Nachdem Sie das virtuelle Verzeichnis erstellt haben, müssen Sie die entsprechenden Eigenschaften einstellen, um das Ausführen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensten zu ermöglichen.Details finden Sie weiter unten.  
+     Nachdem Sie das virtuelle Verzeichnis erstellt haben, müssen Sie die entsprechenden Eigenschaften einstellen, um das Ausführen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten zu ermöglichen. Details finden Sie weiter unten.  
   
-#### So erstellen Sie ein virtuelles Verzeichnis in IIS 5.1 oder 6.0  
+#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>So erstellen Sie ein virtuelles Verzeichnis in IIS 5.1 oder 6.0  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie `start inetmgr` ein, um das MMC\-Snap\-In Internetinformationsdienste \(IIS\) zu öffnen.  
+1.  Öffnen Sie ein Eingabeaufforderungsfenster und geben `start inetmgr` auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
   
-2.  Erweitern Sie im linken Bildschirmbereich den Knoten mit dem Namen des Computers und dann den Knoten **Websites**.  
+2.  Klicken Sie im linken Bereich, erweitern Sie den Knoten mit dem Namen des Computers, und erweitern Sie dann die **Websites** Knoten.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Standardwebsite**, und wählen Sie **Neu \> Virtuelles Verzeichnis**, um den Assistenten zum Erstellen eines virtuellen Verzeichnisses zu öffnen.  
+3.  Mit der rechten Maustaste **Default Web Site** , und wählen Sie **neue virtuelle Verzeichnis** zum Öffnen des Assistenten Erstellen eines virtuellen Verzeichnisses.  
   
-4.  Geben Sie im Assistenten `servicemodelsamples` als Alias für das virtuelle Verzeichnis ein, das Sie erstellen.  
+4.  Geben Sie im Assistenten `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
   
-5.  Legen Sie den Pfad auf %SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples fest.Die meisten der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
+5.  Legen Sie den Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest. Die meisten der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
   
 6.  Klicken Sie auf **Weiter**.  
   
@@ -71,134 +71,134 @@ Für die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Beispiele ist 
   
     -   **Lesen**  
   
-    -   **Skripts ausführen \(z. B. ASP\)**  
+    -   **Ausführen von Skripts (z. B. ASP)**  
   
-8.  Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen**, um die Ausführung des Assistenten abzuschließen.  
+8.  Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
   
     > [!NOTE]
-    >  Sie müssen diesen Vorgang nur einmal ausführen, da für alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Beispiele dasselbe virtuelle Verzeichnis mit dem Namen servicemodelsamples verwendet wird.  
+    >  Sie müssen diesen Vorgang nur einmal ausführen, da für alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiele dasselbe virtuelle Verzeichnis mit dem Namen servicemodelsamples verwendet wird.  
   
-#### So stellen Sie zusätzliche Eigenschaften für das virtuelle Verzeichnis in IIS 7.0 oder 7.5 ein  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Zum Festlegen von Eigenschaften der zusätzlich ein virtuelles Verzeichnis in IIS 7.0 oder 7.5  
   
-1.  Klicken Sie auf den Knoten servicemodelsamples.Unten im Fenster sind zwei Ansichten aufgelistet.Wählen Sie die Ansicht **Features** aus, wenn diese nicht bereits ausgewählt ist.  
+1.  Klicken Sie auf den Knoten servicemodelsamples. Unten im Fenster sind zwei Ansichten aufgelistet. Wählen Sie **Ansicht "Features"** , wenn er nicht bereits ausgewählt ist.  
   
-2.  Doppelklicken Sie auf den Eintrag für **Verzeichnis durchsuchen**.  
+2.  Doppelklicken Sie auf den Eintrag für **Verzeichnissuche**.  
   
-3.  Wählen Sie im Aktionsbereich die Option **Aktivieren** aus.So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
+3.  Wählen Sie im Aktionsbereich die **aktivieren** Option. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
- Zum Schluss müssen Sie die Sicherheitseigenschaften des Ordners servicemodelsamples so einstellen, dass andere darauf zugreifen können.Details finden Sie weiter unten.  
+ Zum Schluss müssen Sie die Sicherheitseigenschaften des Ordners servicemodelsamples so einstellen, dass andere darauf zugreifen können. Details finden Sie weiter unten.  
   
-#### So legen Sie zusätzliche Eigenschaften für das virtuelle Verzeichnis in IIS 5.1 oder 6.0 fest  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>So legen Sie zusätzliche Eigenschaften für das virtuelle Verzeichnis in IIS 5.1 oder 6.0 fest  
   
-1.  Klicken Sie mit der rechten Maustaste auf den Knoten servicemodelsamples, und klicken Sie anschließend auf **Eigenschaften**.  
+1.  Mit der rechten Maustaste des Knotens Servicemodelsamples, und klicken Sie dann auf **Eigenschaften**.  
   
 2.  Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
     -   **Lesen**  
   
-    -   **Protokollieren von Besuchen**  
+    -   **Besuche protokollieren**  
   
-    -   **Indizieren dieser Ressource**  
+    -   **Ressource indizieren**  
   
-3.  Aktivieren Sie das Kontrollkästchen **Verzeichnis durchsuchen**.So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
+3.  Wählen Sie die **Verzeichnissuche** Kontrollkästchen. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
-#### So stellen Sie die Sicherheitseigenschaften des Ordners in IIS 7.0 oder 7.5 ein  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>So legen Sie die Sicherheitseigenschaften des Ordners in IIS 7.0 oder 7.5 fest  
   
-1.  Navigieren Sie zu %SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples.  
+1.  Navigieren Sie zu %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner servicemodelsamples, und klicken Sie auf **Freigeben** oder auf **Freigeben für**.  
+2.  Mit der rechten Maustaste in des Ordners Servicemodelsamples, und klicken Sie auf **Freigabe** oder **freigeben für**.  
   
-3.  Klicken Sie auf den Dropdownpfeil links neben der Schaltfläche **Hinzufügen**.  
+3.  Klicken Sie auf den Pfeil links neben der **hinzufügen** Schaltfläche.  
   
-4.  Wählen Sie die Option **Suchen**.Das Fenster **Benutzer oder Gruppen auswählen** wird geöffnet.  
+4.  Wählen Sie die **suchen** Eintrag. Die **Benutzer oder Gruppen auswählen** Fenster wird geöffnet.  
   
-5.  Klicken Sie auf **Erweitert**.  
+5.  Klicken Sie auf **erweiterte**.  
   
-6.  Klicken Sie auf **Speicherorte**.Das Fenster **Speicherorte** wird geöffnet.  
+6.  Klicken Sie auf **Speicherorte**. Die **Speicherorte** Fenster ist jetzt geöffnet.  
   
-7.  Wählen Sie den Eintrag für den verwendeten Computer aus.Achten Sie darauf, den lokalen Computer und keinen Eintrag für Domänen oder Netzwerke auszuwählen.Wenn Sie den Computer ausgewählt haben, klicken Sie auf **OK**.  
+7.  Wählen Sie den Eintrag für den verwendeten Computer aus. Achten Sie darauf, den lokalen Computer und keinen Eintrag für Domänen oder Netzwerke auszuwählen. Nachdem Sie die Computer ausgewählt haben, klicken Sie auf **OK**.  
   
-8.  Klicken Sie auf **Suche starten**.Als Suchergebnisse werden Objekte angezeigt, die mit dem lokalen Computer verknüpft sind.  
+8.  Klicken Sie auf **Jetzt suchen**. Als Suchergebnisse werden Objekte angezeigt, die mit dem lokalen Computer verknüpft sind.  
   
-9. Suchen Sie in der Spalte **Name \(RDN\)** den Eintrag **IIS\_IUSRS**.Wählen Sie diesen Eintrag aus, und klicken Sie auf **OK**, um das Fenster mit den Suchergebnissen zu schließen.  
+9. Suchen der **IIS_IUSRS** Eintrag in der **Namen (Relative Distinguished Name)** Spalte. Wählen Sie diesen Eintrag, und klicken Sie auf **OK** Ergebnisfenster schließen die Suche.  
   
-10. Klicken Sie auf **OK**, um das Fenster **Benutzer oder Gruppen auswählen** zu schließen.  
+10. Klicken Sie auf **OK** schließen die **Benutzer oder Gruppen auswählen** Fenster.  
   
-11. Klicken Sie auf **Freigeben**, um die Änderungen zu übernehmen.  
+11. Klicken Sie auf **Freigabe** damit die Änderungen beibehalten.  
   
-12. Nachdem Sie alle Änderungen vorgenommen haben, klicken Sie auf **Fertig**, um das Fenster **Dateifreigabe** zu schließen.  
+12. Nachdem die Änderungen so aktivieren Sie die Freigabe abgeschlossen sind, klicken Sie auf **Fertig** schließen die **Dateifreigabe** Fenster.  
   
-#### So stellen Sie die Sicherheitseigenschaften des Ordners in IIS 5.1 oder 6.0 ein  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>So stellen Sie die Sicherheitseigenschaften des Ordners in IIS 5.1 oder 6.0 ein  
   
-1.  Navigieren Sie zu %SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples.  
+1.  Navigieren Sie zu %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **servicemodelsamples**, und klicken Sie dann auf **Freigabe und Sicherheit**.  
+2.  Mit der rechten Maustaste die **Servicemodelsamples** Ordner, und klicken Sie dann auf **Freigabe und Sicherheit.**  
   
-3.  Klicken Sie auf die Registerkarte **Sicherheit**.  
+3.  Klicken Sie auf die Registerkarte **Sicherheit** .  
   
-4.  Wenn Sie IIS 6.0 verwenden, überprüfen Sie, ob im Feld **Gruppen\- oder Benutzernamen** der Eintrag **Internetgastkonto** vorhanden ist.  
+4.  Bei Verwendung von IIS 6.0, in der **Gruppen-oder Benutzernamen** Feld überprüfen, ob **Internetgastkonto** aufgeführt ist.  
   
      Falls der Eintrag nicht vorhanden ist:  
   
-    1.  Klicken Sie auf **Start** und anschließend auf **Systemsteuerung**.  
+    1.  Klicken Sie auf **starten** , und klicken Sie dann auf **Systemsteuerung**.  
   
-    2.  Wenn das Symbol **Benutzerkonten** nicht angezeigt wird, klicken Sie auf **Zur Kategorieansicht wechseln**.  
+    2.  Wenn Sie nicht sehen die **Benutzerkonten** Symbol, klicken Sie auf **zur Kategorieansicht wechseln**.  
   
-    3.  Klicken Sie auf das Symbol **Benutzerkonten**.  
+    3.  Klicken Sie auf die **Benutzerkonten** Symbol.  
   
-    4.  Klicken Sie unter "oder ein Systemsteuerungssymbol" auf **Benutzerkonten**.  
+    4.  Klicken Sie unter ", oder wählen Sie ein Symbol" Systemsteuerung "," klicken Sie auf **Benutzerkonten**.  
   
-    5.  Klicken Sie im Dialogfeld **Benutzerkonten** auf die Registerkarte **Erweitert**.  
+    5.  In der **Benutzerkonten** (Dialogfeld), klicken Sie auf die **erweitert** Registerkarte.  
   
-    6.  Klicken Sie auf **Erweitert**.  
+    6.  Klicken Sie auf **erweiterte**.  
   
-    7.  Klicken Sie im Dialogfeld **Lokale Benutzer und Gruppen** auf den Ordner **Benutzer**, um ihn zu erweitern.  
+    7.  In der **lokale Benutzer und Gruppen** (Dialogfeld), klicken Sie zum Erweitern der **Benutzer** Ordner.  
   
-    8.  Doppelklicken Sie im rechten Bildschirmbereich auf **Internetgastkonto**.  
+    8.  Doppelklicken Sie im rechten Bereich auf **Internetgastkonto**.  
   
-    9. Kopieren Sie im Dialogfeld **Eigenschaften** den Namen, der als Internetgastkonto verwendet wird.Standardmäßig beginnt der Name mit "USR\_", gefolgt von dem Namen des Computers.  
+    9. In der **Eigenschaften** (Dialogfeld), die Kopie wird der Name als Internetgastkonto verwendet. Standardmäßig beginnt der Name mit "USR_", gefolgt von dem Namen des Computers.  
   
-    10. Schließen Sie das Dialogfeld **Eigenschaften**.  
+    10. Schließen der **Eigenschaften** (Dialogfeld).  
   
-    11. Schließen Sie das Dialogfeld **Lokale Benutzer und Gruppen**.  
+    11. Schließen der **lokale Benutzer und Gruppen** (Dialogfeld).  
   
-    12. Schließen Sie das Dialogfeld **Benutzerkonten**.  
+    12. Schließen der **Benutzerkonten** (Dialogfeld).  
   
-    13. Schließen Sie das andere Dialogfeld **Benutzerkonten**.  
+    13. Schließen Sie das andere **Benutzerkonten** (Dialogfeld).  
   
-    14. Klicken Sie im Dialogfeld **Eigenschaften von servicemodelsamples** auf der Registerkarte **Sicherheit** auf die Schaltfläche **Hinzufügen**.  
+    14. In der **Eigenschaften von Servicemodelsamples** Dialogfeld auf die **Sicherheit** auf **hinzufügen**.  
   
-    15. Geben Sie den Namen des Computers gefolgt von einem umgekehrten Schrägstrich ein, und fügen Sie dann den Namen des Internetbenutzerkontos ein, z. B. myMachineName\\%InternetGuestAccountName%  
+    15. Geben Sie den Namen des Computers gefolgt von einem umgekehrten Schrägstrich ein, und fügen Sie den Namen des Internetbenutzerkontos, z. B. MyMachineName\\"% InternetGuestAccountName"  
   
-    16. Klicken Sie auf **Namen überprüfen**, um den Namen zu überprüfen.Gültige Namen werden in Großbuchstaben und unterstrichen angezeigt.  
+    16. Klicken Sie auf **Namen überprüfen** um das Hinzufügen zu überprüfen. Gültige Namen werden in Großbuchstaben und unterstrichen angezeigt.  
   
-5.  Wenn Sie IIS 6.0 verwenden, müssen Sie außerdem überprüfen, ob im Feld **Gruppen\- oder Benutzernamen** der Eintrag NETZWERKDIENST vorhanden ist.  
+5.  Für IIS 6.0 auch überprüfen Sie, ob Netzwerkdienst wird die **Gruppen-oder Benutzernamen** Feld.  
   
      Wenn NETZWERKDIENST nicht vorhanden ist:  
   
     1.  Klicken Sie auf **Hinzufügen**.  
   
-    2.  Geben Sie im Dialogfeld **Benutzer oder Gruppen auswählen** den Namen des Computers gefolgt von einem umgekehrten Schrägstrich ein.  
+    2.  In der **Benutzer oder Gruppen auswählen** Geben Sie im Dialogfeld der Namen des Computers einen umgekehrten Schrägstrich.  
   
-    3.  Geben Sie nach dem Schrägstrich service ein \(ohne Leerzeichen\).  
+    3.  Typ **Service** nach dem umgekehrten Schrägstrich (ohne Leerzeichen).  
   
     4.  Klicken Sie auf **Namen überprüfen**.  
   
-    5.  Wenn mehrere Namen gefunden wurden, wählen Sie **NETZWERKDIENST** aus, und klicken Sie auf **OK**.  
+    5.  Wenn mehrere Namen gefunden werden, wählen Sie **Netzwerkdienst** , und klicken Sie auf **OK**.  
   
-    6.  Klicken Sie auf **OK**, um das Dialogfeld **Benutzer oder Gruppen auswählen** zu schließen.  
+    6.  Klicken Sie auf **OK** schließen die **Benutzer oder Gruppen auswählen** (Dialogfeld).  
   
-6.  Wenn Sie Windows XP SP2 mit IIS 5.1 verwenden, überprüfen Sie, ob im Feld **Gruppen\- oder Benutzernamen** die Einträge Internetgastkonto und ASPNET vorhanden sind.  
+6.  Wenn Sie Windows XP SP2 mit IIS 5.1 verwenden, überprüfen Sie, ob Internetgastkonto und ASPNET vorhanden sind die **Gruppen-oder Benutzernamen** Feld.  
   
-     Beachten Sie, dass der ASPNET\-Benutzer möglicherweise der integrierten Sicherheitsgruppe **Benutzer** zugewiesen ist.Wenn dies der Fall ist und die Gruppe **Benutzer** im Dialogfeld aufgelistet wird, müssen Sie diese nicht als separates Element der Liste der zugelassenen Benutzer hinzufügen.  
+     Beachten Sie, dass das ASPNET-Benutzer ein Mitglied der integrierten **Benutzer** Sicherheitsgruppe. Wenn dies der Fall ist, dann wird bei der **Benutzer** Gruppe im Dialogfeld aufgeführt ist, müssen Sie nicht als separates Element der Liste der zugelassenen Benutzer hinzufügen.  
   
-     So prüfen Sie, ob ASPNET Teil der Sicherheitsgruppe **Benutzer** ist:  
+     Zum Überprüfen, ob ASPNET Teil ist die **Benutzer** Sicherheitsgruppe:  
   
-    1.  Klicken Sie im Menü **Start** auf **Systemsteuerung**.  
+    1.  Auf der **starten** Menü klicken Sie auf **Systemsteuerung**.  
   
-    2.  Klicken Sie auf das Symbol **Benutzerkonten**.  
+    2.  Klicken Sie auf die **Benutzerkonten** Symbol.  
   
-    3.  Überprüfen Sie in der Spalte **Gruppe**, ob **ASPNET** der Wert "Benutzer" zugewiesen ist.  
+    3.  In der **Gruppe** Spalte, überprüfen Sie, ob der Wert für **ASPNET** ist "Benutzer".  
   
-## Siehe auch  
- [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

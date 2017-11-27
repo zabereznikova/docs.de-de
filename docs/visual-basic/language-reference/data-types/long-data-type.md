@@ -1,64 +1,82 @@
 ---
-title: "Long Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Long"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, &"
-  - "numbers, whole"
-  - "whole numbers"
-  - "integral data types"
-  - "& identifier type character"
-  - "integer numbers"
-  - "literal type characters, L"
-  - "numbers, integer"
-  - "integers, data types"
-  - "L literal type character"
-  - "integers, types"
-  - "Long keyword"
-  - "data types [Visual Basic], integral"
-  - "data types [Visual Basic], assigning"
-  - "Long data type"
+title: Long-Datentyp (Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Long
+helpviewer_keywords:
+- identifier type characters [Visual Basic], &
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- '& identifier type character'
+- integer numbers
+- literal type characters [Visual Basic], L
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- L literal type character [Visual Basic]
+- integers [Visual Basic], types
+- Long keyword [Visual Basic]
+- data types [Visual Basic], integral
+- data types [Visual Basic], assigning
+- Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Long Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="long-data-type-visual-basic"></a>Long-Datentyp (Visual Basic)
 
-Speichert 64\-Bit\-\(8\-Byte\-\)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von \-9.223.372.036.854.775.808 bis einschließlich 9.223.372.036.854.775.807 \(9,2... E\+18\) bewegen.  
+Speichert signierte 64-Bit (8 Byte) ganze Zahlen im Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 (9.2... E + 18).  
   
-## Hinweise  
- Verwenden Sie den `Long`\-Datentyp zum Speichern ganzer Zahlen, die für den `Integer`\-Datentyp zu groß sind.  
+## <a name="remarks"></a>Hinweise
+
+ Verwenden der `Long` -Datentyp, um ganze Zahlen enthalten, die zu groß für sind die `Integer` -Datentyp.  
   
- Der Standardwert von `Long` ist 0 \(null\).  
+ Der Standardwert von `Long` lautet 0.
+
+## <a name="literal-assignments"></a>Literal Zuweisungen 
+
+Sie können deklarieren und Initialisieren einer `Long` Variable, indem ein decimal Literal, einen hexadezimalen Literalwert ein oktales Literal Vorlagenkörpers oder (beginnend mit Visual Basic 2017) ein binäres Literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Long` befindet – sprich, wenn es kleiner als <xref:System.Int64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+
+Im folgenden Beispiel werden Ganzzahlen wie 4294967296, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `Long`-Werten zugewiesen.
   
-## Programmiertipps  
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
+
+> [!NOTE]
+> Verwenden Sie das Präfix `&h` oder `&H` zur Angabe einer hexadezimalen Literalwert, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix zu bezeichnen `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
+
+Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffer Trennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel dargestellt.
+
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
+
+Numerische Literale zählen auch die `L` [-Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `Long` -Datentyp, wie im folgenden Beispiel gezeigt.
+
+```vb
+Dim number = &H0FAC0326L
+```
+
+## <a name="programming-tips"></a>Tipps für die Programmierung
+
+-   **Interop-Überlegungen.** Wenn Sie Komponenten für .NET Framework, z. B. Automatisierungs- oder COM-Objekte nicht geschrieben anbinden, müssen Sie beachten, dass `Long` verfügt über eine andere Datenbreite (32 Bit) in anderen Umgebungen. Wenn Sie eine 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `Integer` anstelle von `Long` im neuen Visual Basic-Code.  
   
--   **Interop\-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden \(z. B. Automatisierungs\- oder COM\-Objekte\), müssen Sie beachten, dass `Long` in anderen Umgebungen eine andere Datenbreite hat \(32 Bit\).  Wenn Sie ein 32\-Bit\-Argument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic\-Code als `Integer` und nicht als `Long`.  
+-   **Widening.** Die `Long` -Datentyp zu `Decimal`, `Single`, oder `Double`. Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
   
-     Darüber hinaus unterstützt die Automatisierung keine 64\-Bit\-Ganzzahlen unter Windows 95, Windows 98, Windows Me oder Windows 2000.  Sie können unter diesen Betriebssystemen kein `Long`\-Argument in Visual Basic an eine Automatisierungskomponente übergeben.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`-Datentyp erzwungen.  
   
--   **Erweiterung.** Der `Long`\-Datentyp wird zu `Decimal`, `Single` oder `Double` erweitert.  Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
-  
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`\-Datentyp erzwungen.  Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`\-Datentyp erzwungen.  
-  
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=fullName>\-Struktur.  
-  
-## Siehe auch  
- <xref:System.Int64>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=nameWithType>-Struktur.  
+
+## <a name="see-also"></a>Siehe auch
+
+<xref:System.Int64>[-Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+[Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
+[Short-Datentyp](../../../visual-basic/language-reference/data-types/short-data-type.md)   
+[Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+[Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
+[Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

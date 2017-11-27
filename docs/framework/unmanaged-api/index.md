@@ -1,72 +1,75 @@
 ---
-title: "Referenz zur nicht verwalteten API | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Common Language Runtime, die nicht verwaltete APIs"
-  - "Common Language Runtime und nicht verwaltete APIs"
-  - "Systemeigene API – Referenz [.NET Framework]"
-  - "Nicht verwaltete API – Referenz [.NET Framework]"
+title: Referenz zur nicht verwalteten API
+ms.custom: 
+ms.date: 11/06/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- runtime, unmanaged APIs
+- common language runtime, unmanaged APIs
+- native API reference [.NET Framework]
+- unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
+ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/15/2017
 ---
-# Referenz zur nicht verwalteten API
+# <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  
   
-## In diesem Abschnitt  
- [Häufige Datentypen](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
- Führt häufig verwendete Datentypen auf, im Besonderen für unverwaltete Profilerstellungs\- und Debug\-APIs.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Allgemeine Datentypen](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
+ Führt häufig verwendete Datentypen auf, im Besonderen für unverwaltete Profilerstellungs- und Debug-APIs.  
   
- [ALink](../../../ml/index.xml)  
- Beschreibt die ALink\-API, die die Erstellung von .NET Framework\-Assemblys und ungebundenen Modulen unterstützt.  
+ [ALink-Tool](../../../docs/framework/unmanaged-api/alink/index.md)  
+ Beschreibt die ALink-API, die die Erstellung von .NET Framework-Assemblys und ungebundenen Modulen unterstützt.  
   
- [Authenticode](../../../ml/index.xml)  
- Unterstützt das Authenticode\-Modul zu XrML\-Lizenzerstellung und Verifizierung.  
+ [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
+ Unterstützt das Authenticode-Modul zu XrML-Lizenzerstellung und Verifizierung.  
   
  [Konstanten](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Beschreibt die Konstanten, die in CorSym.idl definiert werden.  
   
- [Benutzerdefinierte Schnittstellenattribute](http://msdn.microsoft.com/de-de/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
- Beschreibt benutzerdefinierte Schnittstellenattribute des Component Object Model \(COM\).  
+ [Benutzerdefinierte Schnittstellenattribute](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ Beschreibt benutzerdefinierte Schnittstellenattribute des Component Object Model (COM).  
   
- [Debuggen](../../../ml/index.xml)  
- Beschreibt die Debug\-API, die es dem Debugger ermöglicht, Code zu debuggen, der in der CLR\-Umgebung \(Common Language Runtime\) ausgeführt wird.  
+ [Debuggen](../../../docs/framework/unmanaged-api/debugging/index.md)  
+ Beschreibt die Debug-API, die es dem Debugger ermöglicht, Code zu debuggen, der in der CLR-Umgebung (Common Language Runtime) ausgeführt wird.  
   
- [Diagnosesymbolspeicher](../../../ml/index.xml)  
- Beschreibt die Diagnosesymbolspeicher\-API, mit der ein Compiler Symbolinformationen generieren kann, die von einem Debugger verwendet werden.  
+ [Diagnosesymbolspeicher](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
+ Beschreibt die Diagnosesymbolspeicher-API, mit der ein Compiler Symbolinformationen generieren kann, die von einem Debugger verwendet werden.  
   
- [Fusion](../../../ml/index.xml)  
- Beschreibt die Fusion\-API, über die ein Laufzeithost auf die Eigenschaften der Ressourcen einer Anwendung zugreifen kann, um die richtigen Versionen dieser Ressourcen für die Anwendung zu suchen.  
+ [Fusion](../../../docs/framework/unmanaged-api/fusion/index.md)  
+ Beschreibt die Fusion-API, über die ein Laufzeithost auf die Eigenschaften der Ressourcen einer Anwendung zugreifen kann, um die richtigen Versionen dieser Ressourcen für die Anwendung zu suchen.  
   
- [Hosting](../../../ml/index.xml)  
- Beschreibt die Hosting\-API, die nicht verwaltete Hosts aktiviert, um die CLR in ihre Anwendungen zu integrieren.  
+ [Hosting](../../../docs/framework/unmanaged-api/hosting/index.md)  
+ Beschreibt die Hosting-API, die nicht verwaltete Hosts aktiviert, um die CLR in ihre Anwendungen zu integrieren.  
   
- [Metadaten](../../../ml/index.xml)  
- Beschreibt die Metadaten\-API, die einem Client \(z. B. einem Compiler\) die Generierung oder den Zugriff auf Komponentenmetadaten ermöglicht, ohne dass die Typen von der Common Language Runtime \(CLR\) geladen werden.  
+ [Metadaten](../../../docs/framework/unmanaged-api/metadata/index.md)  
+ Beschreibt die Metadaten-API, die einem Client (z. B. einem Compiler) die Generierung oder den Zugriff auf Komponentenmetadaten ermöglicht, ohne dass die Typen von der Common Language Runtime (CLR) geladen werden.  
   
- [Profilerstellung](../../../ml/index.xml)  
- Beschreibt die Profilerstellungs\-API, die es einem Profiler ermöglicht, die Ausführung eines Programms durch die Common Language Runtime \(CLR\) zu überwachen.  
+ [Profilerstellung](../../../docs/framework/unmanaged-api/profiling/index.md)  
+ Beschreibt die Profilerstellungs-API, die es einem Profiler ermöglicht, die Ausführung eines Programms durch die Common Language Runtime (CLR) zu überwachen.  
   
- [Starke Namen](../../../ml/index.xml)  
+ [Starke Namen](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
  Beschreibt die API für starke Namen, die einem Client ermöglicht, die starke Namenssignierung für Assemblys zu verwalten.  
+
+ [Leistungsindikatoren und WMI](wmi/index.md)  
+ Beschreibt die APIs, die Aufrufe von Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Bibliotheken zu umschließen.
   
- [Tlbexp\-Hilfsfunktionen](../../../ml/index.xml)  
- Beschreibt die beiden Hilfsfunktionen und eine Schnittstelle, die vom Typbibliothekexporter \(Tlbexp.exe\) bei der Konvertierung von Assemblys in Typbibliotheken verwendet werden.  
+ [Tlbexp-Hilfsfunktionen](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ Beschreibt die beiden Hilfsfunktionen und eine Schnittstelle, die vom Typbibliothekexporter (Tlbexp.exe) bei der Konvertierung von Assemblys in Typbibliotheken verwendet werden.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
   
- [Weiterführende Informationen für .NET Framework](http://msdn.microsoft.com/de-de/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Weiterführende Informationen zu .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)

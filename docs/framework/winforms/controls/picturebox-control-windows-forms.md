@@ -1,47 +1,48 @@
 ---
-title: "PictureBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Image-Steuerelemente [Windows Forms]"
-  - "Bilder [Windows Forms], Hinzufügen zu PictureBox-Steuerelementen"
-  - "PictureBox-Steuerelement [Windows Forms]"
+title: "PictureBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PictureBox control [Windows Forms]
+- image controls [Windows Forms]
+- images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0438ff11577e74d7de0b0ca30abab74fcab953e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# PictureBox-Steuerelement (Windows&#160;Forms)
-Das `PictureBox`\-Steuerelement in Windows Forms wird zum Anzeigen von Grafiken im Bitmap\-, GIF\-, JPEG\-, Metadatei\- oder Symbolformat verwendet.  
+# <a name="picturebox-control-windows-forms"></a>PictureBox-Steuerelement (Windows Forms)
+Windows Forms `PictureBox` Steuerelement wird verwendet, um die Anzeige von Grafiken in Bitmap, GIF, JPEG, Metadatei oder Symbol-Format.  
   
-## In diesem Abschnitt  
- [Übersicht über das PictureBox\-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- Erläutert die Verwendung dieses Steuerelements sowie seine wichtigsten Features und Eigenschaften.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über das PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
  [Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- Erläutert die Funktionsweise der <xref:System.Windows.Forms.PictureBox.SizeMode%2A>\-Eigenschaft und ihre Einrichtung.  
+ Erklärt den Zweck der <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft wird und wie sie festgelegt.  
   
  [Gewusst wie: Festlegen von Bildern zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- Beschreibt das Anzeigen und Löschen eines Bilds zur Laufzeit.  
+ Beschreibt das Anzeigen und Löschen eines Bildes zur Laufzeit.  
   
  [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- Beschreibt das Laden und Anzeigen von Bildern in einem Formular zur Entwurfszeit.  
+ Beschreibt das Laden und Anzeigen eines Bilds auf einem Formular zur Entwurfszeit.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.PictureBox>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

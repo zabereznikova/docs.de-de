@@ -1,43 +1,49 @@
 ---
-title: "Anzeigen von Daten in einer &#39;DataTable&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anzeigen von Daten in einer "DataTable"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Anzeigen von Daten in einer &#39;DataTable&#39;
-Mithilfe der **Rows**\-Auflistung und der **Columns**\-Auflistung der **DataTable** können Sie auf die Inhalte einer <xref:System.Data.DataTable> zugreifen.  Sie können auch die <xref:System.Data.DataTable.Select%2A>\-Methode verwenden, um Teilmengen der Daten in einer **DataTable** gemäß bestimmten Kriterien einschließlich Suchkriterien, Sortierreihenfolge und Zeilenstatus zurückzugeben.  Außerdem können Sie die <xref:System.Data.DataRowCollection.Find%2A>\-Methode der **DataRowCollection** verwenden, wenn Sie mithilfe eines Primärschlüsselwerts nach einer bestimmten Zeile suchen.  
+# <a name="viewing-data-in-a-datatable"></a>Anzeigen von Daten in einer "DataTable"
+Sie erreichen den Inhalt des eine <xref:System.Data.DataTable> mithilfe der **Zeilen** und **Spalten** Sammlungen von der **DataTable**. Sie können auch die <xref:System.Data.DataTable.Select%2A> -Methode zum Zurückgeben von Teilmengen der Daten in einer **DataTable** gemäß bestimmten Kriterien einschließlich Suchkriterien, Sortierreihenfolge und Zeilenstatus. Darüber hinaus können Sie die <xref:System.Data.DataRowCollection.Find%2A> Methode der **DataRowCollection** bei der Suche nach einer bestimmten Zeile einen primären Schlüsselwert verwenden.  
   
- Die **Select**\-Methode des **DataTable**\-Objekts gibt eine Gruppe von <xref:System.Data.DataRow>\-Objekten zurück, die den angegebenen Kriterien entsprechen.  **Select** verwendet optionale Argumente eines Filterausdrucks, eines Sortierausdrucks und von **DataViewRowState**.  Der Filterausdruck gibt anhand von **DataColumn**\-Werten \(z. B. `LastName = 'Smith'`\) an, welche Zeilen zurückgegeben werden sollen.  Der Sortierausdruck folgt den Standard\-SQL\-Konventionen für die Anordnung von Spalten, z. B. `LastName ASC, FirstName ASC`.  Informationen zu Regeln für das Schreiben von Ausdrücken finden Sie in der Beschreibung der <xref:System.Data.DataColumn.Expression%2A>\-Eigenschaft der **DataColumn**\-Klasse.  
+ Die **wählen** Methode der **DataTable** Objekt gibt eine Menge von <xref:System.Data.DataRow> Objekte, die den angegebenen Kriterien entsprechen. **Wählen Sie** verwendet optionale Argumente eines Filterausdrucks, Sortierausdrucks und **"DataViewRowState"**. Der Filterausdruck gibt, welche Zeilen basierend auf zurückzugebenden **DataColumn** Werte, z. B. `LastName = 'Smith'`. Der Sortierausdruck folgt den Standard-SQL-Konventionen für die Anordnung von Spalten, z. B. `LastName ASC, FirstName ASC`. Regeln zum Schreiben von Ausdrücken finden Sie unter der <xref:System.Data.DataColumn.Expression%2A> Eigenschaft von der **DataColumn** Klasse.  
   
 > [!TIP]
->  Wenn Sie die **Select**\-Methode einer **DataTable** mehrmals aufrufen möchten, können Sie eine Leistungssteigerung erzielen, indem Sie zuerst eine <xref:System.Data.DataView> für die **DataTable** erstellen.  Durch das Erstellen der **DataView** werden die Zeilen der Tabelle indiziert.  Die **Select**\-Methode nutzt dann diesen Index, wodurch die Zeit zum Generieren des Abfrageergebnisses deutlich verkürzt wird.  Weitere Informationen zum Erstellen einer **DataView** für eine **DataTable** finden Sie unter [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+>  Wenn Sie eine Anzahl von Aufrufen zum Ausführen der **wählen** Methode eine **DataTable**, können Sie die Leistung erhöhen, indem Sie zunächst eine <xref:System.Data.DataView> für die **DataTable**. Erstellen der **"DataView"** die Zeilen der Tabelle indiziert. Die **wählen** Methode anschließend Hintergrundverarbeitungsmodus, die indiziert werden, erheblich reduziert die Zeit, um das Abfrageergebnis zu erzeugen. Weitere Informationen zum Erstellen einer **"DataView"** für eine **DataTable**, finden Sie unter ["DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- Die **Select**\-Methode bestimmt anhand eines <xref:System.Data.DataViewRowState>, welche Version der Zeilen angezeigt oder bearbeitet werden soll.  In der folgenden Tabelle werden die möglichen **DataViewRowState**\-Enumerationswerte aufgeführt.  
+ Die **wählen** Methode bestimmt, welche Version der Zeilen, die angezeigt oder bearbeitet anhand einer <xref:System.Data.DataViewRowState>. Die folgende Tabelle beschreibt die möglichen **"DataViewRowState"** Enumerationswerte.  
   
-|"DataViewRowState"\-Wert|Beschreibung|  
-|------------------------------|------------------|  
+|"DataViewRowState"-Wert|Beschreibung|  
+|----------------------------|-----------------|  
 |**CurrentRows**|Aktuelle Zeilen, einschließlich nicht geänderter, hinzugefügter und geänderter Zeilen.|  
-|**Deleted**|Eine gelöschte Zeile.|  
-|**ModifiedCurrent**|Eine aktuelle Version, die eine geänderte Version der ursprünglichen Daten darstellt.  \(Siehe **ModifiedOriginal**.\)|  
-|**ModifiedOriginal**|Die ursprüngliche Version aller geänderten Zeilen.  Die aktuelle Version kann über **ModifiedCurrent** abgerufen werden.|  
-|**Added**|Eine neue Zeile.|  
+|**Gelöscht**|Eine gelöschte Zeile.|  
+|**ModifiedCurrent**|Eine aktuelle Version, die eine geänderte Version der ursprünglichen Daten darstellt. (Siehe **ModifiedOriginal**.)|  
+|**ModifiedOriginal**|Die ursprüngliche Version aller geänderten Zeilen. Die aktuelle Version ist verfügbar mit **ModifiedCurrent**.|  
+|**Hinzugefügt**|Eine neue Zeile.|  
 |**Keine**|Keine|  
 |**OriginalRows**|Ursprüngliche Zeilen, einschließlich nicht geänderter und gelöschter Zeilen.|  
-|**Unchanged**|Eine nicht geänderte Zeile.|  
+|**Unverändert**|Eine nicht geänderte Zeile.|  
   
- Im folgenden Beispiel wird das **DataSet**\-Objekt gefiltert, sodass nur Zeilen angezeigt werden, deren **DataViewRowState** auf **CurrentRows** festgelegt ist.  
+ Im folgenden Beispiel die **DataSet** Objekt gefiltert, sodass nur Zeilen, deren Arbeit mit **"DataViewRowState"** festgelegt ist, um **CurrentRows**.  
   
 ```vb  
 Dim column As DataColumn  
@@ -65,7 +71,6 @@ Else
     Console.WriteLine(vbTab & rowState)  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -91,7 +96,7 @@ else
 }  
 ```  
   
- Mithilfe der **Select**\-Methode können Zeilen mit abweichenden **RowState**\-Werten oder Feldwerten zurückgegeben werden.  Im folgenden Beispiel wird ein **DataRow**\-Array zurückgegeben, das auf alle gelöschten Zeilen verweist, und es wird ein anderes **DataRow**\-Array zurückgegeben, das auf alle Zeilen \(geordnet nach **CustLName**\) verweist, in denen die **CustID**\-Spalte größer als 5 ist.  Weitere Informationen zum Anzeigen von Informationen in der Zeile **Deleted** finden Sie unter [Zeilenstatus und Zeilenversion](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Die **wählen** Methode kann verwendet werden, um Zeilen mit abweichenden zurückgeben **RowState** -Werten oder Feldwerten. Das folgende Beispiel gibt eine **DataRow** Array, das alle Zeilen verweist, wurde gelöscht, und eine andere **DataRow** Array, das alle Zeilen verweist, geordnet nach **CustLName**, wobei die **CustID** Spalte ist größer als 5. Informationen zum Anzeigen der Informationen in den **gelöschte** Zeile, finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -100,7 +105,6 @@ Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowSta
 ' Retrieve rows where CustID > 5, and order by CustLName.  
 Dim custRows() As DataRow = workTable.Select( _  
     "CustID > 5", "CustLName ASC")  
-  
 ```  
   
 ```csharp  
@@ -112,11 +116,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataViewRowState>   
- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Zeilenstatus und Zeilenversion](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataViewRowState>  
+ [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

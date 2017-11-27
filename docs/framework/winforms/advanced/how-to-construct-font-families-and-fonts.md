@@ -1,60 +1,64 @@
 ---
-title: "Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Schriftartfamilien, Erstellen"
-  - "Schriftarten, Erstellen"
+title: 'Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- font families [Windows Forms], constructing
+- fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 066cf358e43dabb3b952b32ecec34ca77c6e8c38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten
-In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] werden Schriftarten, die dasselbe Schriftbild, aber unterschiedliche Schriftschnitte haben, in Schriftfamilien zusammengefasst.  Die Schriftfamilie "Arial" enthält beispielsweise die folgenden Schriftarten:  
+# <a name="how-to-construct-font-families-and-fonts"></a>Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Schriftarten mit dem gleichen Schriftart, aber unterschiedliche Stile gruppiert in Schriftartfamilien. Die Schriftart Arial Familie enthält beispielsweise die folgenden Schriftarten:  
   
--   Arial Normal  
+-   Arial reguläre  
   
--   Arial Fett  
+-   Arial fett  
   
--   Arial Kursiv  
+-   Arial kursiv  
   
--   Arial Fett Kursiv  
+-   Arial Bold Italic  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] setzt diese Familien aus vier Schriftschnitten zusammen: Normal, Fett, Kursiv und Fett kursiv.  Adjektive wie *Narrow* und *Rounded* werden nicht als Schriftschnitte bezeichnet, sondern sind vielmehr Bestandteil des Familiennamens.  Arial Narrow ist beispielsweise eine Schriftfamilie mit folgendem Inhalt:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]vier Stile Familien verwendet: Normal, fett, kursiv und fett kursiv. Adjektive wie z. B. *eingrenzen* und *gerundet* Stile; werden nicht berücksichtigt werden Teil des Namens der Familie. Arial Narrow ist beispielsweise eine Schriftfamilie mit den folgenden Elementen:  
   
--   Arial Narrow Normal  
+-   Arial Schmal reguläre  
   
--   Arial Narrow Fett  
+-   Arial Schmal Fett  
   
--   Arial Narrow Kursiv  
+-   Arial Schmal kursiv  
   
--   Arial Narrow Fett Kursiv  
+-   Arial Schmal Fett Kursiv  
   
- Bevor Sie mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Text zeichnen können, müssen Sie ein <xref:System.Drawing.FontFamily>\-Objekt und ein <xref:System.Drawing.Font>\-Objekt erstellen.  Durch das <xref:System.Drawing.FontFamily>\-Objekt wird die Schriftart \(z. B. Arial\) festgelegt, während das <xref:System.Drawing.Font>\-Objekt Schriftgrad, Schriftschnitt und Einheiten bestimmt.  
+ Bevor Sie mit Text zeichnen können [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], müssen Sie erstellen eine <xref:System.Drawing.FontFamily> Objekt und ein <xref:System.Drawing.Font> Objekt. Die <xref:System.Drawing.FontFamily> Objekt angibt (z. B. Arial), Schriftart und die <xref:System.Drawing.Font> Objekt gibt an, die Größe, den Stil und die Einheiten.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Arial\-Schriftart mit dem Schriftschnitt "Normal" und einem Schriftgrad von 16 Pixel erstellt.  Im folgenden Code ist das erste an den <xref:System.Drawing.Font.%23ctor%2A>\-Konstruktor übergebene Argument das <xref:System.Drawing.FontFamily>\-Objekt.  Durch das zweite Argument wird der Schriftgrad der Schriftart festgelegt; dieser wird in Einheiten gemessen, die durch das vierte Argument vorgegeben werden.  Durch das dritte Argument wird der Schriftschnitt identifiziert.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt einen Schriftschnitt Schriftart Arial mit einer Größe von 16 Pixel. Im folgenden Code wird das erste Argument übergeben, um die <xref:System.Drawing.Font.%23ctor%2A> Konstruktor ist die <xref:System.Drawing.FontFamily> Objekt. Das zweite Argument gibt die Größe der Schriftart an, gemessen in Einheiten, die durch das vierte Argument identifiziert. Das dritte Argument gibt den Stil.  
   
- <xref:System.Drawing.GraphicsUnit> ist ein Member der <xref:System.Drawing.GraphicsUnit>\-Enumeration, und <xref:System.Drawing.FontStyle> ist ein Member der <xref:System.Drawing.FontStyle>\-Enumeration.  
+ <xref:System.Drawing.GraphicsUnit.Pixel>ist ein Mitglied der <xref:System.Drawing.GraphicsUnit> Enumeration und <xref:System.Drawing.FontStyle.Regular> ist ein Mitglied der <xref:System.Drawing.FontStyle> Enumeration.  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs>`e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
-## Siehe auch  
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

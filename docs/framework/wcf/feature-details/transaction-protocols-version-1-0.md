@@ -1,154 +1,157 @@
 ---
-title: "Transaktionsprotokolle, Version 1.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transaktionsprotokolle, Version 1.0
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95bf16a4e243d82b9b8fe83b306284335ae0bd16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Transaktionsprotokolle, Version 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Version 1 implementiert Version 1.0 der Protokolle WS\-Atomic Transaction und WS\-Coordination.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] über die Version 1.1 finden Sie unter [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+# <a name="transaction-protocols-version-10"></a>Transaktionsprotokolle, Version 1.0
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Version 1 implementiert Version 1.0 der Protokolle WS-Atomic Transaction und WS-Coordination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Version 1.1, finden Sie unter [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
-|Spezifikation\/Dokument|Link|  
+|Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|WS\-Coordination|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-coordination\/|  
-|WS\-AtomicTransaction|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-atomictransaction\/|  
+|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
+|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
- Die Interoperabilität für diese Protokolle ist für zwei Ebenen erforderlich: zwischen Anwendungen und zwischen Transaktions\-Managern \(siehe folgende Abbildung\).In den Spezifikationen werden die Nachrichtenformate und der Nachrichtenaustausch für beide Interoperabilitätsebenen ausführlich beschrieben.Bestimmte Sicherheits\- und Zuverlässigkeitsstufen sowie Codierungen gelten für einen Austausch von Anwendung zu Anwendung wie bei einem normalen Anwendungsaustausch.Für eine erfolgreiche Interoperabilität zwischen den Transaktions\-Managern ist eine Einigung auf eine bestimmte Bindung erforderlich, weil diese in der Regel nicht vom Benutzer konfiguriert wird.  
+ Die Interoperabilität für diese Protokolle ist für zwei Ebenen erforderlich: zwischen Anwendungen und zwischen Transaktions-Managern (siehe folgende Abbildung). In den Spezifikationen werden die Nachrichtenformate und der Nachrichtenaustausch für beide Interoperabilitätsebenen ausführlich beschrieben. Bestimmte Sicherheits- und Zuverlässigkeitsstufen sowie Codierungen gelten für einen Austausch von Anwendung zu Anwendung wie bei einem normalen Anwendungsaustausch. Für eine erfolgreiche Interoperabilität zwischen den Transaktions-Managern ist eine Einigung auf eine bestimmte Bindung erforderlich, weil diese in der Regel nicht vom Benutzer konfiguriert wird.  
   
- In diesem Thema wird die Verbindung der WS\-AtomicTransaction \(WS\-AT\)\-Spezifikation und der Sicherheitsfunktion beschrieben. Außerdem wird die für eine Kommunikation zwischen den Transaktions\-Managern verwendete sichere Bindung beschrieben.Der in diesem Dokument beschriebene Ansatz wurde erfolgreich mit anderen Implementierungen von WS\-AT und WS\-Coordination getestet, u. a. IBM, IONA und Sun Microsystems.  
+ In diesem Thema wird die Verbindung der WS-AtomicTransaction (WS-AT)-Spezifikation und der Sicherheitsfunktion beschrieben. Außerdem wird die für eine Kommunikation zwischen den Transaktions-Managern verwendete sichere Bindung beschrieben. Der in diesem Dokument beschriebene Ansatz wurde erfolgreich mit anderen Implementierungen von WS-AT und WS-Coordination getestet, u.&#160;a. IBM, IONA und Sun Microsystems.  
   
- In der folgenden Abbildung wird die Interoperabilität zwischen zwei Transaktions\-Managern beschrieben, Transaktions\-Manager 1 und Transaktions\-Manager 2, sowie zwischen zwei Anwendungen, Anwendung 1 und Anwendung 2.  
+ In der folgenden Abbildung wird die Interoperabilität zwischen zwei Transaktions-Managern beschrieben, Transaktions-Manager 1 und Transaktions-Manager 2, sowie zwischen zwei Anwendungen, Anwendung 1 und Anwendung 2.  
   
- ![Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "Transaktionsergebnis")  
   
- Betrachten Sie ein typisches WS\-Coordination\/WS\-AtomicTransaction\-Szenario mit einem Initiator \(I\) und einem Teilnehmer \(P\).Sowohl Initiator als auch Teilnehmer verfügen über Transaktions\-Manager \(ITM und PTM\).In diesem Thema wird das Zweiphasen\-Commit als 2PC bezeichnet.  
+ Betrachten Sie ein typisches WS-Coordination/WS-Atomic-Transaktionsszenario mit einem Initiator (I) und einem Teilnehmer (P). Sowohl Initiator als auch Teilnehmer verfügen über Transaktions-Manager (ITM und PTM). In diesem Thema wird das Zweiphasen-Commit als 2PC bezeichnet.  
   
 |||  
 |-|-|  
-|1.CreateCoordinationContext|12.Anwendungsnachrichtenantwort|  
-|2.CreateCoordinationContextResponse|13.Commit \(Abschluss\)|  
-|3.Register \(Abschluss\)|14.Prepare \(2PC\)|  
-|4.RegisterResponse|15.Prepare \(2PC\)|  
-|5.Anwendungsnachricht|16.Prepared \(2PC\)|  
-|6.CreateCoordinationContext mit Kontext|17.Prepared \(2PC\)|  
-|7.Register \(Durable\)|18.Commit ausgeführt \(Abschluss\)|  
-|8.RegisterResponse|19.Commit \(2PC\)|  
-|9.CreateCoordinationContextResponse|20.Commit \(2PC\)|  
-|10.Register \(Durable\)|21.Commit ausgeführt \(2PC\)|  
-|11.RegisterResponse|22.Commit ausgeführt \(2PC\)|  
+|1. CreateCoordinationContext|12. Anwendungsnachrichtenantwort|  
+|2. CreateCoordinationContextResponse|13. Commit (Abschluss)|  
+|3. Register (Abschluss)|14. Prepare (2PC)|  
+|4. RegisterResponse|15. Prepare (2PC)|  
+|5. Anwendungsnachricht|16. Prepared (2PC)|  
+|6. CreateCoordinationContext mit Kontext|17. Prepared (2PC)|  
+|7. Register (Durable)|18. Commit ausgeführt (Abschluss)|  
+|8. RegisterResponse|19. Commit (2PC)|  
+|9. CreateCoordinationContextResponse|20. Commit (2PC)|  
+|10. Register (Durable)|21. Commit ausgeführt (2PC)|  
+|11. RegisterResponse|22. Commit ausgeführt (2PC)|  
   
- In diesem Dokument wird die Verbindung der WS\-AtomicTransaction \(WS\-AT\)\-Spezifikation und der Sicherheitsfunktion beschrieben. Außerdem wird die für eine Kommunikation zwischen den Transaktions\-Managern verwendete sichere Bindung beschrieben.Der in diesem Dokument beschriebene Ansatz wurde erfolgreich mit anderen Implementierungen von WS\-AT und WS\-Coordination getestet.  
+ In diesem Dokument wird die Verbindung der WS-AtomicTransaction (WS-AT)-Spezifikation und der Sicherheitsfunktion beschrieben. Außerdem wird die für eine Kommunikation zwischen den Transaktions-Managern verwendete sichere Bindung beschrieben. Der in diesem Dokument beschriebene Ansatz wurde erfolgreich mit anderen Implementierungen von WS-AT und WS-Coordination getestet.  
   
  In der Abbildung und in der Tabelle werden vier Nachrichtenklassen vom Standpunkt der Sicherheit dargestellt:  
   
--   Aktivierungsnachrichten \(CreateCoordinationContext und CreateCoordinationContextResponse\).  
+-   Aktivierungsnachrichten (CreateCoordinationContext und CreateCoordinationContextResponse).  
   
--   Registrierungsnachrichten \(Register und RegisterResponse\)  
+-   Registrierungsnachrichten (Register und RegisterResponse)  
   
--   Protokollnachrichten \(Prepare, Rollback, Commit, Aborted usw.\).  
+-   Protokollnachrichten (Prepare, Rollback, Commit, Aborted usw.).  
   
 -   Anwendungsnachrichten.  
   
- Die ersten drei Nachrichten werden als Transaktions\-Manager\-Nachrichten betrachtet, deren Bindungskonfiguration weiter unten in diesem Thema unter "Anwendungsnachrichtenaustausch" behandelt wird.Bei der vierten Klasse von Nachrichten handelt es sich um Nachrichten von Anwendung zu Anwendung, die weiter unten in diesem Thema im Abschnitt "Nachrichtenbeispiele" beschrieben werden.In diesem Abschnitt werden die für jede dieser Klassen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendeten Protokollbindungen beschrieben.  
+ Die ersten drei Nachrichten werden als Transaktions-Manager-Nachrichten betrachtet, deren Bindungskonfiguration weiter unten in diesem Thema unter "Anwendungsnachrichtenaustausch" behandelt wird. Bei der vierten Klasse von Nachrichten handelt es sich um Nachrichten von Anwendung zu Anwendung, die weiter unten in diesem Thema im Abschnitt "Nachrichtenbeispiele" beschrieben werden. In diesem Abschnitt werden die für jede dieser Klassen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendeten Protokollbindungen beschrieben.  
   
- Die folgenden XML\-Namespaces und zugeordneten Präfixe werden in diesem Thema verwendet.  
+ Die folgenden XML-Namespaces und zugeordneten Präfixe werden in diesem Thema verwendet.  
   
-|Präfix|Namespace\-URI|  
-|------------|--------------------|  
-|s11|http:\/\/schemas.xmlsoap.org\/soap\/envelope|  
-|wsa|http:\/\/www.w3.org\/2004\/08\/addressing|  
-|wscoor|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wscoor|  
-|wsat|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wsat|  
-|t|http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust|  
-|o|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.0.xsd|  
-|xsd|http:\/\/www.w3.org\/2001\/XMLSchema|  
+|Präfix|Namespace-URI|  
+|------------|-------------------|  
+|s11|http://schemas.xmlsoap.org/soap/envelope (möglicherweise in englischer Sprache)|  
+|wsa|http://www.w3.org/2004/08/Addressing|  
+|wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
+|wsat|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
+|t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
+|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
+|xsd|http://www.w3.org/2001/XMLSchema|  
   
-## Transaktions\-Manager\-Bindungen  
- R1001: Transaktions\-Manager müssen SOAP 1.1 und WS\-Adressierung 2004\/08 für den WS\-AtomicTransaction\- und den WS\-Coordination\-Nachrichtenaustausch verwenden.  
+## <a name="transaction-manager-bindings"></a>Transaktions-Manager-Bindungen  
+ R1001: Transaktions-Manager müssen SOAP&#160;1.1 und WS-Adressierung&#160;2004/08 für den WS-AtomicTransaction- und den WS-Coordination-Nachrichtenaustausch verwenden.  
   
  Anwendungsnachrichten werden nicht auf diese Bindungen eingeschränkt und werden später beschrieben.  
   
-### HTTPS\-Bindungen des Transaktions\-Managers  
- Die HTTPS\-Bindung des Transaktions\-Managers richtet sich lediglich nach der Transportsicherheit, um Sicherheit zu gewährleisten und eine Vertrauenswürdigkeit zwischen den einzelnen Absender\-Empfänger\-Paaren in der Transaktionsstruktur herzustellen.  
+### <a name="transaction-manager-https-binding"></a>HTTPS-Bindungen des Transaktions-Managers  
+ Die HTTPS-Bindung des Transaktions-Managers richtet sich lediglich nach der Transportsicherheit, um Sicherheit zu gewährleisten und eine Vertrauenswürdigkeit zwischen den einzelnen Absender-Empfänger-Paaren in der Transaktionsstruktur herzustellen.  
   
-#### HTTPS\-Transportkonfiguration  
- X.509\-Zertifikate werden verwendet, um eine Transaktions\-Manager\-Identität herzustellen.Die Client\/Server\-Authentifizierung ist erforderlich, und die Client\/Server\-Autorisierung wird als Implementierungsdetail beibehalten:  
+#### <a name="https-transport-configuration"></a>HTTPS-Transportkonfiguration  
+ X.509-Zertifikate werden verwendet, um eine Transaktions-Manager-Identität herzustellen. Die Client/Server-Authentifizierung ist erforderlich, und die Client/Server-Autorisierung wird als Implementierungsdetail beibehalten:  
   
--   R1111: Über die Verbindung vorgestellte X.509\-Zertifikate müssen einen Antragstellernamen aufweisen, der dem vollqualifizierten Domänennamen \(FQDN\) des sendenden Computers entspricht.  
+-   R1111: Über die Verbindung vorgestellte X.509-Zertifikate müssen einen Antragstellernamen aufweisen, der dem vollqualifizierten Domänennamen (FQDN) des sendenden Computers entspricht.  
   
--   B1112: DNS muss zwischen den einzelnen Absender\-Empfänger\-Paaren im System funktionieren, damit eine Prüfung der X.509\-Antragstellernamen erfolgreich ist.  
+-   B1112: DNS muss zwischen den einzelnen Absender-Empfänger-Paaren im System funktionieren, damit eine Prüfung der X.509-Antragstellernamen erfolgreich ist.  
   
-#### Bindungskonfiguration von Aktivierung und Registrierung  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfordert Anforderungs\-\/Antwort\-Duplexbindung mit Korrelation über HTTPS.\(Weitere Informationen über Korrelation und Beschreibungen der Anforderungs\-\/Antwortnachrichten\-Austauschmuster finden Sie unter WS\-AtomicTransaction, Abschnitt 8.\)  
+#### <a name="activation-and-registration-binding-configuration"></a>Bindungskonfiguration von Aktivierung und Registrierung  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfordert Anforderungs-/Antwort-Duplexbindung mit Korrelation über HTTPS. (Weitere Informationen über Korrelation und Beschreibungen der Anforderungs-/Antwortnachrichten-Austauschmuster finden Sie unter WS-AtomicTransaction, Abschnitt 8.)  
   
-#### Bindungskonfiguration des 2PC\-Protokolls  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt unidirektionale \(Datagramm\) Nachrichten über HTTPS.Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
+#### <a name="2pc-protocol-binding-configuration"></a>Bindungskonfiguration des 2PC-Protokolls  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt unidirektionale (Datagramm-) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
   
- B2131: Implementierungen müssen `wsa:ReferenceParameters` unterstützen, wie in der WS\-Adressierung beschrieben, um eine Korrelation von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-2PC\-Nachrichten zu erreichen.  
+ B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` wie beschrieben in WS-Adressierung Korrelation von erzielen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]des 2PC-Nachrichten.  
   
-### Gemischte Sicherheitsbindung des Transaktions\-Managers  
- Hierbei handelt es sich um eine alternative Bindung \(gemischter Modus\), die die Transportsicherheit kombiniert mit dem WS\-Coordination Issued Token\-Modell zu Identitätserstellungszwecken verwendet.Aktivierung und Registrierung sind die einzigen Elemente, die sich zwischen den beiden Bindungen unterscheiden.  
+### <a name="transaction-manager-mixed-security-binding"></a>Gemischte Sicherheitsbindung des Transaktions-Managers  
+ Dies ist eine alternative Bindung, verwendet transportsicherheit kombiniert mit dem WS-Coordination Issued Token-Modell zu identitätserstellungszwecken (Gemischter Modus).  Aktivierung und Registrierung sind die einzigen Elemente, die sich zwischen den beiden Bindungen unterscheiden.  
   
-#### HTTPS\-Transportkonfiguration  
- X.509\-Zertifikate werden verwendet, um eine Transaktions\-Manager\-Identität herzustellen.Die Client\/Server\-Authentifizierung ist erforderlich, und die Client\/Server\-Autorisierung wird als Implementierungsdetail beibehalten:  
+#### <a name="https-transport-configuration"></a>HTTPS-Transportkonfiguration  
+ X.509-Zertifikate werden verwendet, um eine Transaktions-Manager-Identität herzustellen. Die Client/Server-Authentifizierung ist erforderlich, und die Client/Server-Autorisierung wird als Implementierungsdetail beibehalten:  
   
-#### Bindungskonfiguration von Aktivierungsnachrichten  
- Aktivierungsnachrichten nehmen in der Regel nicht an der Interoperabilität teil, da sie normalerweise zwischen einer Anwendung und dem lokalen Transaktions\-Manager auftreten.  
+#### <a name="activation-message-binding-configuration"></a>Bindungskonfiguration von Aktivierungsnachrichten  
+ Aktivierungsnachrichten nehmen in der Regel nicht an der Interoperabilität teil, da sie normalerweise zwischen einer Anwendung und dem lokalen Transaktions-Manager auftreten.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet eine Duplex\-HTTPS\-Bindung \(beschrieben in [Messagingprotokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\) für Aktivierungsnachrichten.Anforderungs\- und Antwortnachrichten werden mithilfe von WS\-Addressing 2004\/08 korreliert.  
+ B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] duplexbindung HTTPS verwendet (beschrieben [Messaging-Protokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) für Aktivierungsnachrichten. Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
- In der WS\-AtomicTransaction\-Spezifikation, Abschnitt 8, werden die Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
+ In der WS-AtomicTransaction-Spezifikation, Abschnitt 8, werden die Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
   
--   R1222: Beim Eingang eines `CreateCoordinationContext` muss der Koordinator ein `SecurityContextToken` mit zugewiesenem geheimen `STx` ausgeben.Dieses Token wird entsprechend der WS\-Trust\-Spezifikation in einem `t:IssuedTokens`\-Header zurückgegeben.  
+-   R1222: Beim Eingang eines `CreateCoordinationContext` muss der Koordinator ein `SecurityContextToken` mit zugewiesenem geheimen `STx` ausgeben. Dieses Token wird entsprechend der WS-Trust-Spezifikation in einem `t:IssuedTokens`-Header zurückgegeben.  
   
--   R1223: Falls die Aktivierung innerhalb eines bereits vorhandenen Koordinationskontexts stattfindet, muss der `t:IssuedTokens`\-Header, bei dem `SecurityContextToken` dem bereits vorhandenem Kontext zugewiesen ist, in der `CreateCoordinationContext`\-Nachricht fließen.  
+-   R1223: Falls die Aktivierung innerhalb eines bereits vorhandenen Koordinationskontexts stattfindet, muss der `t:IssuedTokens`-Header, bei dem `SecurityContextToken` dem bereits vorhandenem Kontext zugewiesen ist, in der `CreateCoordinationContext`-Nachricht fließen.  
   
- Ein neuer `t:IssuedTokens`\-Header sollte zum Anfügen an die ausgehende `wscoor:CreateCoordinationContextResponse` \-Nachricht generiert werden.  
+ Ein neues `t:IssuedTokens` Header generiert werden soll, zum Anfügen an den ausgehenden `wscoor:CreateCoordinationContextResponse` Nachricht.  
   
-#### Bindungskonfiguration von Registrierungsnachrichten  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet eine Duplex\-HTTPS\-Bindung \(beschrieben in [Messagingprotokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\).Anforderungs\- und Antwortnachrichten werden mithilfe von WS\-Addressing 2004\/08 korreliert.  
+#### <a name="registration-message-binding-configuration"></a>Bindungskonfiguration von Registrierungsnachrichten  
+ B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] duplexbindung HTTPS verwendet (beschrieben [Messaging-Protokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
- In der WS\-AtomicTransaction\-Spezifikation, Abschnitt 8, werden weitere Details zur Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
+ In der WS-AtomicTransaction-Spezifikation, Abschnitt 8, werden weitere Details zur Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
   
- R1232: Ausgehende `wscoor:Register`\-Nachrichten müssen den in [Sicherheitsprotokolle](../../../../docs/framework/wcf/feature-details/security-protocols.md) beschriebenen `IssuedTokenOverTransport`\-Authentifizierungsmodus verwenden.  
+ R1232: Ausgehende `wscoor:Register` Nachrichten verwenden müssen die `IssuedTokenOverTransport` Authentifizierungsmodus in beschriebenen [Sicherheitsprotokolle](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- Das `wsse:Timestamp`\-Element muss mit dem ausgegebenen `SecurityContextToken``STx` signiert werden.Diese Signatur ist Beweis für den Besitz des einer bestimmten Transaktion zugewiesenen Tokens und wird für die Authentifizierung einer Teilnehmerliste während der Transaktion verwendet.Die RegistrationResponse\-Nachricht wird über HTTPS zurückgesendet.  
+ Die `wsse:Timestamp` Element muss signiert sein, mit der `SecurityContextToken``STx` ausgegeben. Diese Signatur ist Beweis für den Besitz des einer bestimmten Transaktion zugewiesenen Tokens und wird für die Authentifizierung einer Teilnehmerliste während der Transaktion verwendet. Die RegistrationResponse-Nachricht wird über HTTPS zurückgesendet.  
   
-#### Bindungskonfiguration des 2PC\-Protokolls  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt unidirektionale \(Datagramm\-\) Nachrichten über HTTPS.Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
+#### <a name="2pc-protocol-binding-configuration"></a>Bindungskonfiguration des 2PC-Protokolls  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt unidirektionale (Datagramm-) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
   
- B2131: Implementierungen müssen `wsa:ReferenceParameters` unterstützen, wie in der WS\-Adressierung beschrieben, um eine Korrelation von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-2PC\-Nachrichten zu erreichen.  
+ B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` wie beschrieben in WS-Adressierung Korrelation von erzielen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]des 2PC-Nachrichten.  
   
-## Austausch von Anwendungsnachrichten  
+## <a name="application-message-exchange"></a>Austausch von Anwendungsnachrichten  
  In Anwendungen können beliebige Bindungen für Nachrichten verwendet werden, die von Anwendung zu Anwendung gesendet werden, solange die Bindung die folgenden Sicherheitsanforderungen erfüllt:  
   
--   R2001: Nachrichten von Anwendung zu Anwendung müssen im Nachrichtenheader den `t:IssuedTokens`\-Header zusammen mit `CoordinationContext` aufweisen.  
+-   R2001: Nachrichten von Anwendung zu Anwendung müssen im Nachrichtenheader den `t:IssuedTokens`-Header zusammen mit `CoordinationContext` aufweisen.  
   
 -   R2002: Integrität und Vertraulichkeit von `t:IssuedToken` müssen bereitgestellt werden.  
   
- Der `CoordinationContext`\-Header enthält `wscoor:Identifier`.Während die Definition von `xsd:AnyURI` die Verwendung der absoluten und relativen URIs zulässt, unterstützt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lediglich `wscoor:Identifiers`, wobei es sich um absolute URIs handelt.  
+ Der `CoordinationContext`-Header enthält `wscoor:Identifier`. Während die Definition von `xsd:AnyURI` die Verwendung der absoluten und relativen URIs zulässt, unterstützt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lediglich `wscoor:Identifiers`, wobei es sich um absolute URIs handelt.  
   
- Falls es sich bei `wscoor:Identifier` von `wscoor:CoordinationContext` um einen relativen URI handelt, werden von den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Transaktionsdiensten Fehler gemeldet.  
+ Falls es sich bei `wscoor:Identifier` von `wscoor:CoordinationContext` um einen relativen URI handelt, werden von den [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Transaktionsdiensten Fehler gemeldet.  
   
-## Nachrichtenbeispiele  
+## <a name="message-examples"></a>Nachrichtenbeispiele  
   
-### CreateCoordinationContext\-Anforderungs\-\/Antwortmeldungen  
- Die folgenden Nachrichten folgen einem Anforderungs\-\/Antwort\-Muster.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext-Anforderungs-/Antwortmeldungen  
+ Die folgenden Nachrichten folgen einem Anforderungs-/Antwortmuster.  
   
-#### CreateCoordinationContext  
+#### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wscoor/CreateCoordinationContext</Action>  
@@ -170,12 +173,11 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContext>  
   </s:Body>  
 </s11:Envelope>  
-  
 ```  
   
-#### CreateCoordinationContextResponse  
+#### <a name="createcoordinationcontextresponse"></a>CreateCoordinationContextResponse  
   
-```  
+```xml  
 <s:Envelope>  
   <!-- Data below is shown in the clear for  
        illustration purposes only. -->  
@@ -253,15 +255,14 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContextResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Registrierungsnachrichten  
+### <a name="registration-messages"></a>Registrierungsnachrichten  
  Bei den folgenden Nachrichten handelt es sich um Registrierungsnachrichten.  
   
-#### Register  
+#### <a name="register"></a>Register  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
@@ -318,12 +319,11 @@ caps.handback.revision: 3
     </wscoor:Register>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-#### Register Response  
+#### <a name="register-response"></a>Register Response  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>  
@@ -355,15 +355,14 @@ caps.handback.revision: 3
     </wscoor:RegisterResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Zweiphasen\-Commit\-Protokollnachrichten  
- Die folgende Nachricht bezieht sich auf das Zweiphasen\-Commit\-Protokoll \(2PC\).  
+### <a name="two-phase-commit-protocol-messages"></a>Zweiphasen-Commit-Protokollnachrichten  
+ Die folgende Nachricht bezieht sich auf das Zweiphasen-Commit-Protokoll (2PC).  
   
-#### Commit  
+#### <a name="commit"></a>Commit  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
@@ -382,15 +381,14 @@ caps.handback.revision: 3
     <wsat:Commit />  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Anwendungsnachrichten  
+### <a name="application-messages"></a>Anwendungsnachrichten  
  Bei den folgenden Nachrichten handelt es sich um Anwendungsnachrichten.  
   
-#### Anwendungsnachrichtenanforderung  
+#### <a name="application-message-request"></a>Anwendungsnachrichtenanforderung  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
 <!-- Addressing headers, all signed-->  

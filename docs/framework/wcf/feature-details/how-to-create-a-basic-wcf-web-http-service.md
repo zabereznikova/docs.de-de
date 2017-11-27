@@ -1,45 +1,51 @@
 ---
-title: "Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8352c7761447322d1ddf8381be145e38d6b7df8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Webendpunkt verfügbar macht.Webendpunkte senden Daten über XML oder JSON; es gibt keinen SOAP\-Umschlag.Dieses Thema veranschaulicht, wie ein solcher Endpunkt verfügbar gemacht wird.  
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht Ihnen die Erstellung eines Diensts, der einen Webendpunkt verfügbar macht. Webendpunkte senden Daten über XML oder JSON; es gibt keinen SOAP-Umschlag. Dieses Thema veranschaulicht, wie ein solcher Endpunkt verfügbar gemacht wird.  
   
 > [!NOTE]
->  Ein Webendpunkt kann nur dadurch gesichert werden, dass er mithilfe der Transportsicherheit über HTTPS verfügbar gemacht wird.Bei Verwendung der nachrichtenbasierten Sicherheit werden die Sicherheitsinformationen in der Regel in SOAP\-Header gestellt. Und da die an Nicht\-SOAP\-Endpunkte gesendeten Nachrichten keinen SOAP\-Umschlag enthalten, gibt es keinen Ort, an den die Sicherheitsinformationen gestellt werden können, sodass Sie sich auf die Transportsicherheit verlassen müssen.  
+>  Ein Webendpunkt kann nur dadurch gesichert werden, dass er mithilfe der Transportsicherheit über HTTPS verfügbar gemacht wird. Bei Verwendung der nachrichtenbasierten Sicherheit werden die Sicherheitsinformationen in der Regel in SOAP-Header gestellt. Und da die an Nicht-SOAP-Endpunkte gesendeten Nachrichten keinen SOAP-Umschlag enthalten, gibt es keinen Ort, an den die Sicherheitsinformationen gestellt werden können, sodass Sie sich auf die Transportsicherheit verlassen müssen.  
   
-### So erstellen Sie einen Webendpunkt  
+### <a name="to-create-a-web-endpoint"></a>So erstellen Sie einen Webendpunkt  
   
-1.  Definieren Sie einen Dienstvertrag mit einer Schnittstelle, die mit den Attributen <xref:System.ServiceModel.Web.WebInvokeAttribute>, <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.ServiceContractAttribute> gekennzeichnet ist.  
+1.  Definieren Sie einen Dienstvertrag mit einer Schnittstelle, die mit den Attributen <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> und <xref:System.ServiceModel.Web.WebGetAttribute> gekennzeichnet ist.  
   
      [!code-csharp[htBasicService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#0)]
      [!code-vb[htBasicService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]  
   
     > [!NOTE]
-    >  Standardmäßig ordnet <xref:System.ServiceModel.Web.WebInvokeAttribute> dem Vorgang POST\-Aufrufe zu.Sie können jedoch die HTTP\-Methode \(z. B. HEAD, PUT oder DELETE\), die dem Vorgang zugeordnet werden soll, mit dem "method\="\-Parameter angeben.<xref:System.ServiceModel.Web.WebGetAttribute> besitzt keinen "method\="\-Parameter und ordnet dem Dienstvorgang nur GET\-Aufrufe zu.  
+    >  Standardmäßig ordnet <xref:System.ServiceModel.Web.WebInvokeAttribute> dem Vorgang POST-Aufrufe zu. Sie können jedoch die HTTP-Methode (z. B. HEAD, PUT oder DELETE), die dem Vorgang zugeordnet werden soll, mit dem "method="-Parameter angeben. <xref:System.ServiceModel.Web.WebGetAttribute> besitzt keinen "method="-Parameter und ordnet dem Dienstvorgang nur GET-Aufrufe zu.  
   
 2.  Implementieren Sie den Dienstvertrag.  
   
      [!code-csharp[htBasicService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#1)]
      [!code-vb[htBasicService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#1)]  
   
-### So hosten Sie den Dienst  
+### <a name="to-host-the-service"></a>So hosten Sie den Dienst  
   
-1.  Erstellen Sie ein <xref:System.ServiceModel.Web.WebServiceHost>\-Objekt.  
+1.  Erstellen eines <xref:System.ServiceModel.Web.WebServiceHost>-Objekts  
   
      [!code-csharp[htBasicService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]  
@@ -50,15 +56,15 @@ caps.handback.revision: 26
      [!code-vb[htBasicService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]  
   
     > [!NOTE]
-    >  Wenn Sie keinen Endpunkt hinzufügen, erstellt <xref:System.ServiceModel.Web.WebServiceHost> automatisch einen Standardendpunkt.<xref:System.ServiceModel.Web.WebServiceHost> fügt auch <xref:System.ServiceModel.Description.WebHttpBehavior> hinzu und deaktiviert die HTTP\-Hilfeseite und die GET\-Funktion der Web Services Description Language \(WSDL\), damit der Metadatenendpunkt nicht in Konflikt mit dem standardmäßigen HTTP\-Endpunkt gerät.  
+    >  Wenn Sie keinen Endpunkt hinzufügen, erstellt <xref:System.ServiceModel.Web.WebServiceHost> automatisch einen Standardendpunkt. <xref:System.ServiceModel.Web.WebServiceHost> fügt auch <xref:System.ServiceModel.Description.WebHttpBehavior> hinzu und deaktiviert die HTTP-Hilfeseite und die GET-Funktion der Web Services Description Language (WSDL), damit der Metadatenendpunkt nicht in Konflikt mit dem standardmäßigen HTTP-Endpunkt gerät.  
     >   
-    >  Wenn Sie einen Nicht\-SOAP\-Endpunkt mit der URL "" hinzufügen, wird bei dem Versuch, einen Vorgang an dem Endpunkt aufzurufen, ein unerwartetes Verhalten ausgelöst.Dies liegt daran, dass der Lausch\-URI des Endpunkts mit dem URI der Hilfeseite \(die Seite, die angezeigt wird, wenn Sie zur Basisadresse eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensts wechseln\) identisch ist.  
+    >  Wenn Sie einen Nicht-SOAP-Endpunkt mit der URL "" hinzufügen, wird bei dem Versuch, einen Vorgang an dem Endpunkt aufzurufen, ein unerwartetes Verhalten ausgelöst. Dies liegt daran, dass der Lausch-URI des Endpunkts mit dem URI der Hilfeseite (die Seite, die angezeigt wird, wenn Sie zur Basisadresse eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts wechseln) identisch ist.  
   
      Sie können eine der folgenden Aktionen ausführen, um dies zu verhindern:  
   
-    -   Geben Sie für einen Nicht\-SOAP\-Endpunkt immer einen nicht leeren URI an.  
+    -   Geben Sie für einen Nicht-SOAP-Endpunkt immer einen nicht leeren URI an.  
   
-    -   Deaktivieren Sie die Hilfeseite.Dies kann durch den folgenden Code erreicht werden:  
+    -   Deaktivieren Sie die Hilfeseite. Dies kann durch den folgenden Code erreicht werden:  
   
      [!code-csharp[htBasicService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]  
@@ -68,23 +74,23 @@ caps.handback.revision: 26
      [!code-csharp[htBasicService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]  
   
-     In diesem Beispiel wird das Hosten eines Webdiensts mit einer Konsolenanwendung veranschaulicht.Sie können einen solchen Dienst auch innerhalb von IIS hosten.Geben Sie dazu, wie im folgenden Code veranschaulicht, die <xref:System.ServiceModel.Activation.WebServiceHostFactory>\-Klasse in einer SVC\-Datei an.  
+     In diesem Beispiel wird das Hosten eines Webdiensts mit einer Konsolenanwendung veranschaulicht. Sie können einen solchen Dienst auch innerhalb von IIS hosten. Geben Sie dazu, wie im folgenden Code veranschaulicht, die <xref:System.ServiceModel.Activation.WebServiceHostFactory>-Klasse in einer SVC-Datei an.  
   
     ```  
-    <%ServiceHost   
-        language=c#  
-        Debug="true"  
-        Service="Microsoft.Samples.Service"  
-        Factory=System.ServiceModel.Activation.WebServiceHostFactory%>  
+          <%ServiceHost   
+    language=c#  
+    Debug="true"  
+    Service="Microsoft.Samples.Service"  
+    Factory=System.ServiceModel.Activation.WebServiceHostFactory%>  
     ```  
   
-### So rufen Sie Dienstvorgänge auf, die GET in Internet Explorer zugeordnet werden  
+### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>So rufen Sie Dienstvorgänge auf, die GET in Internet Explorer zugeordnet werden  
   
-1.  Öffnen Sie Internet Explorer, geben Sie "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ein, und drücken Sie die EINGABETASTE.Die URL enthält die Basisadresse des Diensts \("http:\/\/localhost:8000\/"\), die relative Adresse des Endpunkts \(""\), den aufzurufenden Dienstvorgang \("EchoWithGet"\) und ein Fragezeichen, gefolgt von einer Liste der benannten Parameter, die durch ein kaufmännisches Und \(&\) getrennt sind.  
+1.  Öffnen Sie Internet Explorer, und geben "`http://localhost:8000/EchoWithGet?s=Hello, world!`", und drücken Sie die EINGABETASTE. Die URL enthält die Basisadresse des Diensts ("http://localhost:8000/"), die relative Adresse des Endpunkts (""), den aufzurufenden Dienstvorgang ("EchoWithGet") und ein Fragezeichen, gefolgt von einer Liste der benannten Parameter, die durch ein kaufmännisches Und (&) getrennt sind.  
   
-### So rufen Sie Dienstvorgänge in Code auf  
+### <a name="to-call-service-operations-in-code"></a>So rufen Sie Dienstvorgänge in Code auf  
   
-1.  Erstellen Sie eine Instanz von <xref:System.ServiceModel.Web.WebChannelFactory> innerhalb eines `using`\-Blocks.  
+1.  Erstellen Sie eine Instanz des <!--zz <xref:System.ServiceModel.Web.WebChannelFactory>--> `System.ServiceModel.Web.WebChannelFactory` innerhalb einer `using` Block.  
   
      [!code-csharp[htBasicService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]  
@@ -104,20 +110,19 @@ caps.handback.revision: 26
      [!code-csharp[htBasicService#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Unten ist die vollständige Codeauflistung für dieses Beispiel angegeben.  
   
  [!code-csharp[htBasicService#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]
  [!code-vb[htBasicService#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#10)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Verweisen Sie beim Kompilieren der Datei Service.cs auf System.ServiceModel.dll und System.ServiceModel.Web.dll.  
   
-## Siehe auch  
- <xref:System.ServiceModel.WebHttpBinding>   
- <xref:System.ServiceModel.Web.WebGetAttribute>   
- <xref:System.ServiceModel.Web.WebInvokeAttribute>   
- <xref:System.ServiceModel.Web.WebServiceHost>   
- <xref:System.ServiceModel.Web.WebChannelFactory>   
- <xref:System.ServiceModel.Description.WebHttpBehavior>   
- [WCF\-Web\-HTTP\-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.WebHttpBinding>  
+ <xref:System.ServiceModel.Web.WebGetAttribute>  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+ <xref:System.ServiceModel.Web.WebServiceHost>  
+ <xref:System.ServiceModel.Description.WebHttpBehavior>  
+ [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

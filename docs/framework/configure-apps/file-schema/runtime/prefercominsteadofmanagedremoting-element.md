@@ -1,77 +1,79 @@
 ---
-title: "&lt;PreferComInsteadOfManagedRemoting&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<PreferComInsteadOfManagedRemoting>-Element"
-  - "PreferComInsteadOfManagedRemoting-Element"
+title: '&lt;PreferComInsteadOfManagedRemoting&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <PreferComInsteadOfManagedRemoting> element
+- PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;PreferComInsteadOfManagedRemoting&gt;-Element
-Gibt an, ob die Laufzeit COM\-Interop anstelle von Remoting für Aufrufe über Anwendungsdomänengrenzen hinweg verwendet.  
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; Element
+Gibt an, ob die Laufzeit COM-Interop anstelle von Remoting für alle Aufrufe über Anwendungsdomänengrenzen hinweg verwendet werden.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<PreferComInsteadOfManagedRemoting >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit zwischen Anwendungsdomänengrenzen COM\-Interop anstelle von Remoting verwendet.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime, COM-Interop anstelle von Remoting über Anwendungsdomänengrenzen hinweg verwendet werden.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`false`|Die Laufzeit verwendet Remoting zwischen Anwendungsdomänengrenzen.  Dies ist der Standardwert.|  
-|`true`|Die Laufzeit verwendet COM\-Interop zwischen Anwendungsdomänengrenzen.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`false`|Die Common Language Runtime wird Remoting über Anwendungsdomänengrenzen hinweg verwendet werden. Dies ist die Standardeinstellung.|  
+|`true`|Die Common Language Runtime wird COM-Interop über Anwendungsdomänengrenzen hinweg verwendet werden.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Wenn Sie das `enabled`\-Attribut auf `true` festlegen, zeigt die Laufzeit folgendes Verhalten:  
+## <a name="remarks"></a>Hinweise  
+ Beim Festlegen der `enabled` -Attribut `true`, die Common Language Runtime verhält sich wie folgt:  
   
--   Die Laufzeit ruft [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) nicht [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md) für eine Schnittstelle auf, wenn eine [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003)\-Schnittstelle über eine COM\-Schnittstelle in die Domäne eintritt.  Stattdessen wird ein [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) \(RCW\) um das Objekt erstellt.  
+-   Die Common Language Runtime nicht aufgerufen [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) für eine [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) Schnittstelle, wenn ein [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) Schnittstelle wechselt in die Domäne über eine COM-Schnittstelle. Stattdessen erstellt er eine [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) um das Objekt.  
   
--   Wenn ein `QueryInterface`\-Aufruf für die [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md)\-Schnittstelle eines [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) \(CCW\) empfangen wird, der in dieser Domäne erstellt wurde, gibt die Laufzeit E\_NOINTERFACE zurück.  
+-   Die Common Language Runtime wird E_NOINTERFACE zurückgegeben, bei Erhalt des eine `QueryInterface` rufen Sie für eine [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) Schnittstelle für eine beliebige [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW), die in dieser Domäne erstellt wurde.  
   
- Diese zwei Verhaltensweisen stellen sicher, dass alle Aufrufe über COM\-Schnittstellen zwischen verwalteten Objekten über Anwendungsdomänengrenzen hinweg COM und COM\-Interop anstelle von Remoting verwenden.  
+ Diese zwei Verhaltensweisen stellen Sie sicher, dass alle Aufrufe über COM-Schnittstellen zwischen verwalteten Objekten über Anwendung Domäne Grenzen verwenden COM- und COM-Interop anstelle von Remoting.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie angegeben wird, dass die Laufzeit COM\-Interop über Isolationsgrenzen hinweg verwenden soll:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel veranschaulicht angeben, dass die Common Language Runtime für COM-Interop-hinweg Isolation:  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <PreferComInsteadOfManagedRemoting enabled="true"/>  
@@ -79,6 +81,6 @@ Gibt an, ob die Laufzeit COM\-Interop anstelle von Remoting für Aufrufe über A
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

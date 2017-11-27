@@ -1,51 +1,51 @@
 ---
-title: "Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Zeichnen"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Rendern"
-  - "OnPaint-Methode"
-  - "Benutzersteuerelemente [Windows Forms], Zeichnen"
+title: Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], rendering
+- custom controls [Windows Forms], painting
+- user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
-Das benutzerdefinierte Zeichnen von Steuerelementen stellt eine der vielen anspruchsvollen Aufgaben dar, die durch .NET Framework vereinfacht werden.  Beim Erstellen eines benutzerdefinierten Steuerelements bestehen viele Möglichkeiten zu seiner grafischen Darstellung.  Wenn ein Steuerelement erstellt wird, das von `Control` erbt, muss Code bereitgestellt werden. Damit wird dem Steuerelement ermöglicht, seine grafische Darstellung zu rendern.  Wenn ein Benutzersteuerelement durch Erben von `UserControl` erstellt oder von einem der Steuerelemente in Windows Forms geerbt wird, darf die standardmäßige Grafikdarstellung überschrieben werden, um eigenen Grafikcode bereitzustellen.  Wenn für die einzelnen Steuerelemente eines erstellten `UserControl` benutzerdefiniertes Rendern bereitgestellt werden soll, sind die Optionen etwas eingeschränkter. Es stehen jedoch weiterhin zahlreiche Grafikfunktionen für die Steuerelemente und Anwendungen zur Verfügung.  
+# <a name="custom-control-painting-and-rendering"></a>Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
+Benutzerdefiniertes Zeichnen von Steuerelementen ist einer der zahlreichen komplizierten Aufgaben, die leicht, von .NET Framework. Wenn Sie ein benutzerdefiniertes Steuerelement zu erstellen, stehen Ihnen viele Optionen zur grafischen Darstellung des Steuerelements. Wenn Sie ein Steuerelement erstellen, die von erben die `Control`, müssen Sie Code, der das Steuerelement zum Rendern der grafischen Darstellung ermöglicht bereitstellen. Wenn Sie ein Benutzersteuerelement erstellen durch Erben von der `UserControl`, oder erben werden aus einer Windows Forms-Steuerelemente, können Sie außer Kraft setzen die standardmäßige grafische Darstellung und fügen Sie eigenen Code Grafiken. Wenn Sie benutzerdefiniertes Rendering für die konstituierenden Steuerelemente bereitstellen möchten eine `UserControl` Sie erstellen, die Optionen eingeschränkt werden, aber weiterhin eine Breite Palette von grafischen Möglichkeiten für Steuerelemente und Anwendungen zu ermöglichen.  
   
-## In diesem Abschnitt  
- [Wiedergeben eines Windows Forms\-Steuerelements](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- Zeigt das Programmieren der Logik, durch die ein Steuerelement angezeigt wird.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Wiedergeben eines Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ Veranschaulicht das Programmieren der Logik, die ein Steuerelement angezeigt.  
   
  [Benutzerdefinierte Steuerelemente](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
- Bietet eine Übersicht über die Schritte, die in das Schreiben und Überschreiben von Code zum Rendern des Steuerelements einbezogen sind.  
+ Bietet einen Überblick über die Schritte zum Schreiben und überschreiben Code zum Rendern des Steuerelements.  
   
  [Konstituierende Steuerelemente](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- Beschreibt, wie benutzerdefinierter Code zum Rendern konstituierender Steuerelemente in Benutzersteuerelementen und Formularen implementiert wird.  
+ Beschreibt, wie benutzerdefinierte Renderingcodes für konstituierende Steuerelemente in Ihrer Benutzersteuerelementen und-Formularen implementieren.  
   
  [Gewusst wie: Ausblenden des Steuerelements zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
- Veranschaulicht die Verwendung der <xref:System.Windows.Forms.Control.Visible%2A>\-Eigenschaft zum Ausblenden und Anzeigen eines Steuerelements.  
+ Zeigt, wie die <xref:System.Windows.Forms.Control.Visible%2A> Eigenschaft aus-und Einblenden eines Steuerelements.  
   
  [Gewusst wie: Verwenden eines transparenten Hintergrunds für ein Steuerelement](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- Veranschaulicht die Verwendung der <xref:System.Windows.Forms.Control.SetStyle%2A>\-Methode zum Erstellen einer Hintergrundfarbe, die nicht transparent, transparent oder teilweise transparent ist.  
+ Zeigt, wie die <xref:System.Windows.Forms.Control.SetStyle%2A> Methode, um eine Hintergrundfarbe zu erstellen, die nicht transparenten, transparent oder teilweise transparent ist.  
   
  [Rendering von Steuerelementen mit visuellen Stilen](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- Veranschaulicht, wie Steuerelemente mit visuellen Stilen in Betriebssystemen gerendert werden, die diese unterstützen.  
+ Zeigt, wie zum Rendern von Steuerelementen mit visuellen Stilen in Betriebssystemen, die sie unterstützen.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Control>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
@@ -53,11 +53,11 @@ Das benutzerdefinierte Zeichnen von Steuerelementen stellt eine der vielen anspr
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- Beschreibt diese Methode.  
+ Wird diese Methode beschrieben.  
   
-## Verwandte Abschnitte  
- [Gewusst wie: Erstellen von Graphics\-Objekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Stellt die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]\-Grafikfunktionalität aus einer Visual Studio\-Perspektive vor und enthält Links zu weiteren Informationen.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Gewusst wie: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ Führt [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Grafikfunktionen aus einer Visual Studio-Perspektive und enthält Links zu weiteren Informationen.  
   
- [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  Beschreibt die Arten von benutzerdefinierten Steuerelementen, die Sie erstellen können.

@@ -1,25 +1,28 @@
 ---
-title: "AppDomainInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AppDomainInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97818cf1fc6fa1c59b8b0eeaab69a73b21360151
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# AppDomainInfo
+# <a name="appdomaininfo"></a>AppDomainInfo
 Anwendungsdomäneninformationen  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AppDomainInfo  
@@ -39,98 +42,98 @@ class AppDomainInfo
 };  
 ```  
   
-## Methoden  
- Die AppDomainInfo\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die AppDomainInfo-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die AppDomainInfo\-Klasse hat die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die AppDomainInfo-Klasse hat die folgenden Eigenschaften:  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die ID der Anwendungsdomäne.  
   
-### IsDefault  
+### <a name="isdefault"></a>IsDefault  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob die Anwendungsdomäne die Standardanwendungsdomäne ist.  
   
-### LogMalformedMessages  
+### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Datentyp: Boolesch  
   
- Zugriffstyp: Lesen\/Schreiben  
+ Zugriffstyp: Lesen/Schreiben  
   
  Ein Wert, der angibt, ob fehlerhafte Nachrichten protokolliert werden.  
   
-### LogMessagesAtServiceLevel  
+### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Datentyp: Boolesch  
   
- Zugriffstyp: Lesen\/Schreiben  
+ Zugriffstyp: Lesen/Schreiben  
   
- Ein Wert, der angibt, ob Nachrichten auf Dienstebene \(vor Verschlüsselung und transportbezogenen Transformationen\) verfolgt werden.  
+ Ein Wert, der angibt, ob Nachrichten auf Dienstebene (vor Verschlüsselung und transportbezogenen Transformationen) verfolgt werden.  
   
-### LogMessagesAtTransportLevel  
+### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Datentyp: Boolesch  
   
- Zugriffstyp: Lesen\/Schreiben  
+ Zugriffstyp: Lesen/Schreiben  
   
  Ein Wert, der angibt, ob Nachrichten auf der Transportebene verfolgt werden.  
   
-### MessageLoggingTraceListeners  
- Datentyp: TraceListener\-Array  
+### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
+ Datentyp: TraceListener-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Sammlungsablaufverfolgungslistener, die die Ablaufverfolgungsquelle System.Wmi.MessageLogging abhören.  
   
-### Name  
- Datentyp: Zeichenfolge  
+### <a name="name"></a>Name  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Name der Anwendungsdomäne.  
   
-### PerformanceCounters  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="performancecounters"></a>PerformanceCounters  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Umfang der aktiven Leistungsindikatoren in der Anwendungsdomäne.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Prozess\-ID.  
+ Die Prozess-ID.  
   
-### ServiceConfigPath  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="serviceconfigpath"></a>ServiceConfigPath  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Pfad zur Konfiguration des Dienstes.  
   
-### TraceLevel  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="tracelevel"></a>TraceLevel  
+ Datentyp: string (Zeichenfolge)  
   
- Zugriffstyp: Lesen\/Schreiben  
+ Zugriffstyp: Lesen/Schreiben  
   
  Die Ablaufverfolgungsebene der Ablaufverfolgungsquelle System.Wmi.  
   
-### ServiceModelTraceListeners  
- Datentyp: TraceListener\-Array  
+### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
+ Datentyp: TraceListener-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
- Eine Listener\-Sammlung aus der Ablaufverfolgungsquelle System.ServiceModel.  
+ Eine Listener-Sammlung aus der Ablaufverfolgungsquelle System.ServiceModel.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|MOF|Deklariert in Servicemodel.mof|  
-|---------|------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|
+|MOF|Deklariert in Servicemodel.mof.|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|

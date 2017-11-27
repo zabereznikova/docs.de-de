@@ -1,38 +1,35 @@
 ---
-title: "Number of indices exceeds the number of dimensions of the indexed array | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30106"
-  - "vbc30106"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30106"
+title: "Die Indexanzahl ist größer als die Anzahl der Dimensionen des indizierten Arrays."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30106
+- vbc30106
+helpviewer_keywords: BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8fdf031734d441daca2073925f6d45d6ba9f1f52
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Number of indices exceeds the number of dimensions of the indexed array
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Die Anzahl der Indizes, die für den Zugriff auf ein Arrayelement verwendet wird, muss mit dem Rang des Arrays genau übereinstimmen, d. h. mit der Anzahl der dafür deklarierten Dimensionen.  
+# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Die Indexanzahl ist größer als die Anzahl der Dimensionen des indizierten Arrays.
+Die Indexanzahl, die für den Zugriff auf ein Arrayelement verwendet wird, muss mit dem Rang des Arrays identisch sein, d. h. die Anzahl der für das Array deklarierten Dimensionen.  
   
- **Fehler\-ID:** BC30106  
+ **Fehler-ID:** BC30106  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Entfernen Sie Indizes aus dem Arrayverweis, bis die gesamte Anzahl an Indizes mit dem Rang des Arrays übereinstimmt.  Beispiele:  
+-   Entfernen Sie Indizes aus der Arrayverweis als, bis die gesamte Anzahl an Indizes den Rang des Arrays entspricht. Zum Beispiel:  
   
-    ```  
-    [Visual Basic]  
+    ```vb  
     Dim gameBoard(3, 3) As String  
   
     ' Incorrect code. The array has two dimensions.  
@@ -44,5 +41,5 @@ Die Anzahl der Indizes, die für den Zugriff auf ein Arrayelement verwendet wird
     gameBoard(1, 0) = "O"  
     ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)

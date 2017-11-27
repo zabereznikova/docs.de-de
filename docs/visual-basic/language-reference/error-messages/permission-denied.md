@@ -1,34 +1,32 @@
 ---
-title: "Permission denied (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID70"
-dev_langs: 
-  - "VB"
+title: Berechtigung verweigert (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c5d7965ebd42cb3e56d66966d035be9ba3d3957c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Permission denied (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Es wurde versucht, auf einen schreibgeschützten Datenträger zu schreiben oder auf eine gesperrte Datei zuzugreifen.  
+# <a name="permission-denied-visual-basic"></a>Berechtigung verweigert (Visual Basic)
+Es wurde in einem schreibgeschützten Datenträger zu schreiben oder auf eine gesperrte Datei zuzugreifen versucht.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Wenn eine schreibgeschützte Datei geöffnet werden soll, ändern Sie das Schreibschutzattribut der Datei.  
+1.  Um eine Datei schreibgeschützt öffnen, ändern Sie das Schreibschutzattribut der Datei.  
   
-2.  Stellen Sie sicher, dass die Datei nicht durch einen anderen Prozess gesperrt wurde, und warten Sie mit dem Öffnen der Datei, bis sie von dem anderen Prozess freigegeben wurde.  
+2.  Stellen Sie sicher, dass die Datei nicht von einem anderen Prozess gesperrt hat, und warten Sie zum Öffnen der Datei, bis die andere Prozess, diesen freigibt.  
   
-3.  Um auf die Registrierung zuzugreifen, prüfen Sie, ob Ihre Benutzerberechtigungen diese Art des Zugriffs auf die Registrierung einschließen.  
+3.  Für den Zugriff auf die Registrierung, überprüfen Sie, dass Ihre Benutzerberechtigungen dieser Typ von Registrierungszugriff umfassen.  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

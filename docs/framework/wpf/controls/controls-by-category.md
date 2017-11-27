@@ -1,28 +1,30 @@
 ---
-title: "Kategorien von Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelemente, Aufgelistet nach Kategorien"
+title: Kategorien von Steuerelementen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Kategorien von Steuerelementen
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Steuerelemente können in verschiedene Kategorien gruppiert werden.  Diese Kategorien sind für die Auswahl des geeigneten Steuerelements für Ihr Szenario hilfreich, da sie angeben, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
+# <a name="controls-by-category"></a>Kategorien von Steuerelementen
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Steuerelemente können logisch in verschiedene Kategorien gruppiert werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
   
-## Layout  
- Layoutsteuerelemente werden zum Verwalten der Größe, Dimensionen, Position und Anordnung untergeordneter Elemente verwendet.  
+## <a name="layout"></a>Layout  
+ Layout-Steuerelemente werden zum Verwalten von Größe, Dimensionen, Position und Anordnung von untergeordneten Elementen verwendet.  
   
 -   <xref:System.Windows.Controls.Border>  
   
@@ -62,14 +64,14 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
-## Schaltflächen  
- Schaltflächen sind eines der grundlegendsten Elemente der Benutzeroberfläche.  Wenn ein Benutzer auf eine Schaltfläche klickt, führen Anwendungen in der Regel eine Aufgabe im <xref:System.Windows.Controls.Primitives.ButtonBase.Click>\-Ereignis aus.  
+## <a name="buttons"></a>Schaltflächen  
+ Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen in der Regel ausführen eine Aufgabe in der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.  
   
 -   <xref:System.Windows.Controls.Button>  
   
 -   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## Datenanzeige  
+## <a name="data-display"></a>Datenanzeige  
  Steuerelemente für die Datenanzeige werden verwendet, um Informationen aus einer Datenquelle anzuzeigen.  
   
 -   <xref:System.Windows.Controls.DataGrid>  
@@ -78,15 +80,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TreeView>  
   
-## Anzeige und Auswahl des Datums  
- Datumssteuerelemente werden verwendet, um Kalenderinformationen anzuzeigen und auszuwählen.  
+## <a name="date-display-and-selection"></a>Datumsanzeige und -auswahl  
+ Datumssteuerelemente werden verwendet, um Kalenderdaten anzuzeigen und auszuwählen.  
   
 -   <xref:System.Windows.Controls.Calendar>  
   
 -   <xref:System.Windows.Controls.DatePicker>  
   
-## Menüs  
- In Menüs werden verwandte Aktionen gruppiert, oder es wird Zugriff auf Kontexthilfe bereitgestellt.  
+## <a name="menus"></a>Menüs  
+ Menüs werden verwendet, um verwandte Aktionen zu gruppieren oder kontextbezogene Hilfe anzubieten.  
   
 -   <xref:System.Windows.Controls.ContextMenu>  
   
@@ -94,8 +96,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolBar>  
   
-## Auswahl  
- Mithilfe von Auswahlsteuerelementen können Benutzer eine oder mehrere Optionen auswählen.  
+## <a name="selection"></a>Auswahl  
+ Auswahlsteuerelemente werden verwendet, damit Benutzer eine oder mehrere Optionen auswählen können.  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -107,8 +109,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.Slider>  
   
-## Navigation  
- Navigationssteuerelemente verbessern und erweitern die Anwendungsnavigation mithilfe von Zielframes oder Registerkarten.  
+## <a name="navigation"></a>Navigation  
+ Navigationssteuerelemente verbessern oder erweitern die Anwendungsnavigation mithilfe von Zielframes oder Registerkarten.  
   
 -   <xref:System.Windows.Controls.Frame>  
   
@@ -120,8 +122,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TabControl>  
   
-## Dialogfelder  
- Dialogfelder bieten gezielte Unterstützung für allgemeine Szenarien der Benutzerinteraktion, wie z. B. das Drucken.  
+## <a name="dialog-boxes"></a>Dialogfelder  
+ Dialogfelder bieten gezielte Unterstützung für allgemeine Szenarios der Benutzerinteraktion wie z.B. Drucken.  
   
 -   <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -129,8 +131,8 @@ caps.handback.revision: 17
   
 -   <xref:Microsoft.Win32.SaveFileDialog>  
   
-## Benutzerinformationen  
- Steuerelemente für Benutzerinformationen stellen Kontextfeedback bereit oder bieten Erklärungen zur Benutzeroberfläche einer Anwendung.  Der Benutzer kann in der Regel nicht mit diesen Steuerelementen interagieren.  
+## <a name="user-information"></a>Benutzerinformationen  
+ Steuerelemente für Benutzerinformationen bieten kontextbezogenes Feedback oder verdeutlichen die Benutzeroberfläche einer Anwendung. Der Benutzer kann in der Regel nicht mit diesen Steuerelementen interagieren.  
   
 -   <xref:System.Windows.Controls.AccessText>  
   
@@ -146,8 +148,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolTip>  
   
-## Dokumente  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält mehrere spezialisierte Steuerelemente zum Anzeigen von Dokumenten.  Diese Steuerelemente optimieren die Leseerfahrung basierend auf dem gewünschten Benutzerszenario.  
+## <a name="documents"></a>Dokumente  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält mehrere spezialisierte Steuerelemente zum Anzeigen von Dokumenten. Diese Steuerelemente optimieren das Leseerlebnis basierend auf dem Zielbenutzerszenario.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -159,8 +161,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## Eingabe  
- Eingabesteuerelemente ermöglichen dem Benutzer, Text und anderen Inhalt einzugeben.  
+## <a name="input"></a>Eingabe  
+ Eingabesteuerelemente ermöglichen dem Benutzer die Eingabe von Text und anderem Inhalt.  
   
 -   <xref:System.Windows.Controls.TextBox>  
   
@@ -168,8 +170,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.PasswordBox>  
   
-## Medien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umfasst eine integrierte Unterstützung für das Hosten von Audio\- und Videoinhalt sowie [Codecs](GTMT) für die gängigsten Bildformate.  
+## <a name="media"></a>Medien  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält integrierte Unterstützung für das Hosten von Audio- und Videoinhalt sowie [Codecs] für die gängigsten Bildformate.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -177,12 +179,12 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## Freihandeingaben  
- Freihandeingaben\-Steuerelemente bieten eine integrierte Unterstützung für [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]\-Features, z. B. das Vornehmen und Anzeigen von Freihandeingaben.  
+## <a name="digital-ink"></a>Freihandeingaben  
+ Steuerelemente für Freihandeingaben bieten integrierte Unterstützung für [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]-Funktionen wie Anzeigen und Eingeben von Freihandeingaben.  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Steuerelementbibliothek](../../../../docs/framework/wpf/controls/control-library.md)

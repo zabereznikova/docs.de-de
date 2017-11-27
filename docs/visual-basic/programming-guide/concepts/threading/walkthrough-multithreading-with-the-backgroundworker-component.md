@@ -1,71 +1,63 @@
 ---
-title: Multithreading mit der BackgroundWorker-Komponente (Visual Basic) | Microsoft-Dokumentation
+title: Multithreading mit der BackgroundWorker-Komponente (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (Visual Basic)
-Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multithreadanwendung erstellt, die eine Textdatei nach Vorkommen eines Worts durchsucht. Es veranschaulicht:  
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windows Forms-Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht. Folgendes wird veranschaulicht:  
   
--   Definieren einer Klasse mit einer Methode, die aufgerufen werden kann, indem die <xref:System.ComponentModel.BackgroundWorker>Komponente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Definieren einer Klasse mit einer Methode, die von der <xref:System.ComponentModel.BackgroundWorker>-Komponente aufgerufen werden kann  
   
--   Behandlung von Ereignissen, die ausgelöst wird, indem die <xref:System.ComponentModel.BackgroundWorker>Komponente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Behandlung von Ereignissen, die von der <xref:System.ComponentModel.BackgroundWorker>-Komponente ausgelöst werden  
   
--   Starten einer <xref:System.ComponentModel.BackgroundWorker>Komponente eine Methode auszuführen.</xref:System.ComponentModel.BackgroundWorker>  
+-   Starten einer <xref:System.ComponentModel.BackgroundWorker>-Komponente zum Ausführen einer Methode  
   
--   Implementieren einer `Cancel` Schaltfläche, die beendet der <xref:System.ComponentModel.BackgroundWorker>Komponente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Implementieren einer `Cancel`-Schaltfläche, die die <xref:System.ComponentModel.BackgroundWorker>-Komponente beendet  
   
 ### <a name="to-create-the-user-interface"></a>So erstellen Sie die Benutzeroberfläche  
   
-1.  Öffnen Sie ein neues Windows Forms-Anwendung von Visual Basic-Projekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
+1.  Öffnen Sie ein neues Visual Basic Windows Forms-Anwendungsprojekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
   
-2.  Fügen Sie zwei Schaltflächen und vier Textfelder hinzu `Form1`.  
+2.  Fügen Sie zwei Schaltflächen und vier Textfelder zu `Form1` hinzu.  
   
-3.  Benennen Sie die Objekte, wie in der folgenden Tabelle dargestellt.  
+3.  Benennen Sie die Objekte wie in der folgenden Tabelle gezeigt.  
   
     |Objekt|Eigenschaft|Einstellung|  
     |------------|--------------|-------------|  
-    |Erste Schaltfläche|`Name`, `Text`|Start und Start|  
-    |Zweite Schaltfläche|`Name`, `Text`|"Abbrechen", "Abbrechen"|  
-    |Erste Textfeld|`Name`, `Text`|SourceFile, ""|  
-    |Zweite Textfeld|`Name`, `Text`|CompareString, ""|  
-    |Dritte Textfeld|`Name`, `Text`|WordsCounted, "0"|  
-    |Vierte Textfeld|`Name`, `Text`|LinesCounted "0"|  
+    |Erste Schaltfläche|`Name`, `Text`|Start, Start|  
+    |Zweite Schaltfläche|`Name`, `Text`|Abbrechen, Abbrechen|  
+    |Erstes Textfeld|`Name`, `Text`|SourceFile, ""|  
+    |Zweites Textfeld|`Name`, `Text`|CompareString, „“|  
+    |Drittes Textfeld|`Name`, `Text`|WordsCounted, „0“|  
+    |Viertes Textfeld|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  Fügen Sie eine Bezeichnung neben jedem Textfeld hinzu. Legen Sie die `Text` -Eigenschaft für jede Bezeichnung wie in der folgenden Tabelle dargestellt.  
+4.  Fügen Sie neben jedem Textfeld eine Bezeichnung hinzu. Legen Sie die Eigenschaft `Text` für jede Bezeichnung fest wie in der folgenden Tabelle gezeigt.  
   
     |Objekt|Eigenschaft|Einstellung|  
     |------------|--------------|-------------|  
     |Erste Bezeichnung|`Text`|Quelldatei|  
     |Zweite Bezeichnung|`Text`|Zeichenfolge vergleichen|  
-    |Dritte Bezeichnung|`Text`|Wörter|  
-    |Vierte Bezeichnung|`Text`|Zeilen gezählt|  
+    |Dritte Bezeichnung|`Text`|Abgleich von Wörtern|  
+    |Vierte Bezeichnung|`Text`|Gezählte Zeilen|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Erstellen eine BackgroundWorker-Komponente und die zugehörigen Ereignisse abonnieren  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>So erstellen Sie eine BackgroundWorker-Komponente und abonnieren deren Ereignisse  
   
-1.  Hinzufügen einer <xref:System.ComponentModel.BackgroundWorker>-Komponente aus der **Komponenten** Teil der **ToolBox** in das Formular.</xref:System.ComponentModel.BackgroundWorker> Es wird im Komponentenfach des Formulars angezeigt.  
+1.  Fügen Sie dem Formular über den Abschnitt **Komponenten** im **Werkzeugkasten** eine <xref:System.ComponentModel.BackgroundWorker>-Komponente hinzu. Sie wird in der Komponentenleiste des Formulars angezeigt.  
   
 2.  Legen Sie die folgenden Eigenschaften für das BackgroundWorker1-Objekt.  
   
@@ -76,11 +68,11 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multi
   
 ### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>So definieren Sie die Methode, die in einem separaten Thread ausgeführt wird  
   
-1.  Aus der **Projekt** Menü wählen **Klasse hinzufügen** eine Klasse zum Projekt hinzufügen. Die **neues Element hinzufügen** Dialogfeld wird angezeigt.  
+1.  Wählen Sie im Menü **Projekt** **Klasse hinzufügen** aus, um eine Klasse zum Projekt hinzuzufügen. Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
-2.  Wählen Sie **Klasse** aus, und geben Sie `Words.vb` in das Feld Name ein.  
+2.  Wählen Sie **Klasse** aus dem Fenster „Vorlagen“ aus, und geben Sie `Words.vb` in das Namensfeld ein.  
   
-3.  Klicken Sie auf **Hinzufügen**. Die `Words` -Klasse wird angezeigt.  
+3.  Klicken Sie auf **Hinzufügen**. Die `Words`-Klasse wird angezeigt.  
   
 4.  Fügen Sie der `Words` -Klasse folgenden Code hinzu:  
   
@@ -171,9 +163,9 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multi
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>So behandeln Sie Ereignisse aus dem thread  
+### <a name="to-handle-events-from-the-thread"></a>So behandeln Sie Ereignisse aus dem Thread  
   
--   Fügen Sie auf dem Hauptformular die folgenden Ereignishandler hinzu:  
+-   Fügen Sie dem Hauptformular die folgenden Ereignishandler hinzu:  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,9 +197,9 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multi
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>So starten und rufen einen neuen Thread ausgeführt wird, die WordCount-Methode  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>So starten und rufen Sie einen neuen Thread auf, der die WordCount-Methode ausführt  
   
-1.  Fügen Sie die folgenden Verfahren, mit dem Programm:  
+1.  Fügen Sie dem Programm die folgenden Verfahren hinzu:  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multi
     End Sub  
     ```  
   
-2.  Rufen Sie die `StartThread` Methode aus der `Start` Schaltfläche im Formular:  
+2.  Rufen Sie die `StartThread`-Methode über die `Start`-Schaltfläche im Formular auf:  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multi
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Eine Schaltfläche zum Abbrechen zu implementieren, die den Thread beendet wird.  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>So implementieren Sie eine Schaltfläche „Abbrechen“, die den Thread beendet  
   
--   Rufen Sie die `StopThread` Prozedur aus der `Click` -Ereignishandler für die `Cancel` Schaltfläche.  
+-   Rufen Sie die Prozedur `StopThread` aus dem Ereignishandler `Click` für die Schaltfläche `Cancel` auf.  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -261,30 +253,30 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie eine Windows Forms-Multi
     ```  
   
 ## <a name="testing"></a>Test  
- Sie können nun testen die Anwendung, um sicherzustellen, dass sie ordnungsgemäß funktioniert.  
+ Sie können die Anwendung jetzt testen, um die korrekte Ausführung sicherzustellen.  
   
 #### <a name="to-test-the-application"></a>So testen Sie die Anwendung  
   
 1.  Drücken Sie F5, um die Anwendung auszuführen.  
   
-2.  Wenn das Formular angezeigt wird, geben Sie den Dateipfad für die Datei, die Sie in testen möchten die `sourceFile` Feld. Vorausgesetzt, dass die Testdatei mit der Bezeichnung Test.txt, geben Sie beispielsweise C:\Test.txt.  
+2.  Wenn das Formular angezeigt wird, geben Sie den Dateipfad für die Datei ein, die Sie im Feld `sourceFile` testen möchten. Nehmen wir z.B. an, dass Ihre Testdatei den Namen „Test.txt“ hat; geben Sie „C:\Test.txt“ ein.  
   
-3.  Geben Sie in das zweite Textfeld ein Wort oder Ausdruck für die Anwendung, die in der Datei gesucht.  
+3.  Geben Sie im zweiten Textfeld ein Wort oder einen Satz für die Anwendung ein, nach der Sie im Textfeld suchen möchten.  
   
-4.  Klicken Sie auf die Schaltfläche `Start`. Die `LinesCounted` Schaltfläche inkrementieren sofort beginnen soll. Die Anwendung zeigt die Meldung "Zählen abgeschlossen", danach.  
+4.  Klicken Sie auf die Schaltfläche `Start`. Die Schaltfläche `LinesCounted` sollte sofort mit dem Inkrementieren beginnen. Die Anwendung zeigt die Benachrichtigung „Finished Counting“ (Berechnung abgeschlossen) an, wenn der Vorgang abgeschlossen ist.  
   
-#### <a name="to-test-the-cancel-button"></a>So testen Sie die Schaltfläche "Abbrechen"  
+#### <a name="to-test-the-cancel-button"></a>So testen Sie die Schaltfläche „Abbrechen“  
   
-1.  Drücken Sie F5, um die Anwendung zu starten, und geben die Datei und die Suchliste Word wie im vorherigen Verfahren beschrieben. Stellen Sie sicher, dass die von Ihnen ausgewählte Datei ist groß genug, um sicherzustellen, dass Sie Zeit haben, den Vorgang abzubrechen, bevor er abgeschlossen ist.  
+1.  Drücken Sie F5, um die Anwendung zu starten, und geben Sie den Dateinamen und das Suchwort ein, wie in der vorherigen Prozedur beschrieben. Stellen Sie sicher, dass die von Ihnen ausgewählte Datei groß genug ist, um sicherzustellen, dass Sie Zeit haben, den Vorgang abzubrechen, bevor er abgeschlossen ist.  
   
-2.  Klicken Sie auf die `Start` Schaltfläche, um die Anwendung zu starten.  
+2.  Klicken Sie auf die Schaltfläche `Start`, um die Anwendung zu starten.  
   
-3.  Klicken Sie auf die Schaltfläche `Cancel`. Die Anwendung sollte Zählvorgang sofort beenden.  
+3.  Klicken Sie auf die Schaltfläche `Cancel`. Die Anwendung sollte den Zählvorgang sofort beenden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Diese Anwendung enthält eine grundlegende Fehlerbehandlung. Es erkennt leere Suchzeichenfolgen. Sie können dieses Programm robuster machen, durch die Behandlung andere Fehler, z. B. Überschreitung der maximalen Anzahl von Wörtern oder Zeilen, die gezählt werden können.  
+ Diese Anwendung enthält eine grundlegende Fehlerbehandlung. Sie erkennt leere Suchbegriffe. Sie können dieses Programm stabiler machen, indem Sie andere Fehler behandeln, z.B. das Überschreiten der maximalen Anzahl von Wörtern oder Linien, die gezählt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Exemplarische Vorgehensweise: Erstellen einer einfachen Multithreadkomponente mit Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Exemplarische Vorgehensweise: Erstellen einer einfachen Multithreadkomponente mit Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

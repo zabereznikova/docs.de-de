@@ -1,74 +1,76 @@
 ---
-title: "&lt;sharedListeners&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sharedListeners>-Element"
-  - "Listener"
-  - "Freigegebene Listener"
-  - "sharedListeners-Element"
-  - "Ablaufverfolgungslistener, <sharedListeners>-Element"
+title: '&lt;SharedListeners&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners
+helpviewer_keywords:
+- <sharedListeners> element
+- listeners
+- shared listeners
+- trace listeners, <sharedListeners> element
+- sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7ab96ad43248517dca99bff176be7edfab8d3ced
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sharedListeners&gt;-Element
-Enthält Listener, auf die jedes source\- bzw. trace\-Element verweisen kann.  Diese Listener empfangen standardmäßig keine Ablaufverfolgung und können zur Laufzeit nicht abgerufen werden.  Listener, die als freigegeben gekennzeichnet sind, können anhand des Namens zu Quellen oder Ablaufverfolgungen hinzugefügt werden.  
+# <a name="ltsharedlistenersgt-element"></a>&lt;SharedListeners&gt; Element
+Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.  Diese Listener ablaufverfolgungen in der Standardeinstellung nicht gesendet, und es ist nicht möglich, diese Listener zur Laufzeit abrufen. Listener als freigegebene Listener Quellen oder ablaufverfolgungen namentlich hinzugefügt werden können.  
   
-## Syntax  
+ \<configuration>  
+\<System.Diagnostics >  
+\<SharedListeners >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <sharedListeners>   
   <add>...</add>  
 </sharedListeners>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
  Keine.  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Fügt der `sharedListeners`\-Auflistung einen Listener hinzu.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`Configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`system.diagnostics`|Gibt das Stammelement für den ASP.NET\-Konfigurationsabschnitt an.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`Configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|`system.diagnostics`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
-## Hinweise  
- Ein Listener wird beim Hinzufügen zu einer freigegebenen Listener\-Auflistung noch nicht aktiv.  Er muss darüber hinaus einer Ablaufverfolgungsquelle oder einer Ablaufverfolgung hinzugefügt werden, indem er der `Listeners`\-Auflistung des entsprechenden Ablaufverfolgungselements hinzugefügt wird.  Die in .NET Framework enthaltenen Listenerklassen sind von der <xref:System.Diagnostics.TraceListener>\-Klasse abgeleitet.  
+## <a name="remarks"></a>Hinweise  
+ Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung ist keinen aktiven Listener erleichtern. Es muss immer noch eine Ablaufverfolgungsquelle oder einer Ablaufverfolgung hinzugefügt werden, durch Hinzufügen zu der `Listeners` Auflistung für das Trace-Element. Die Listenerklassen in .NET Framework abgeleitet werden, aus der <xref:System.Diagnostics.TraceListener> Klasse.  
   
- Dieses Element kann in der Computerkonfigurationsdatei \(**Machine.config**\) und in der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie der `Listeners`\-Auflistung für die <xref:System.Diagnostics.TraceSource>\-Klasse und die <xref:System.Diagnostics.Trace>\-Klasse mithilfe des `<sharedListeners>`\-Elements der Listener `console` hinzugefügt wird.  Der Ablaufverfolgungslistener für die Konsole gibt Ablaufverfolgungsinformationen durch Aufrufen von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace> an die Konsole aus.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die `<sharedListeners>` Element an den Listener hinzufügen `console` auf die `Listeners` Auflistung für beide die <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> Klassen. Die Konsolen-Ablaufverfolgungslistener Schreibt Ablaufverfolgungsinformationen in die Konsole durch Aufrufe von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace>.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sharedListeners>  
@@ -96,7 +98,7 @@ Enthält Listener, auf die jedes source\- bzw. trace\-Element verweisen kann.  D
 </configuration></system.diagnostics>   
 ```  
   
-## Siehe auch  
- <xref:System.Diagnostics.TraceListener>   
- [Schema für Ablaufverfolgungs\- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Diagnostics.TraceListener>  
+ [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
