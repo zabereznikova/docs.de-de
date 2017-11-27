@@ -1,57 +1,62 @@
 ---
-title: "Sortieren und Filtern von Daten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sortieren und Filtern von Daten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 01c09d94fd3224e8fd875b7f6eea06b2d2c35cca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Sortieren und Filtern von Daten
-Die <xref:System.Data.DataView> stellt mehrere Methoden zum Sortieren und Filtern von Daten in einer <xref:System.Data.DataTable> bereit:  
+# <a name="sorting-and-filtering-data"></a><span data-ttu-id="41d5b-102">Sortieren und Filtern von Daten</span><span class="sxs-lookup"><span data-stu-id="41d5b-102">Sorting and Filtering Data</span></span>
+<span data-ttu-id="41d5b-103">Die <xref:System.Data.DataView> stellt mehrere Methoden zum Sortieren und Filtern von Daten in einer <xref:System.Data.DataTable> bereit:</span><span class="sxs-lookup"><span data-stu-id="41d5b-103">The <xref:System.Data.DataView> provides several ways of sorting and filtering data in a <xref:System.Data.DataTable>:</span></span>  
   
--   Mit der <xref:System.Data.DataView.Sort%2A>\-Eigenschaft können Sie einzelne oder mehrere Sortierreihenfolgen für Spalten angeben und die Parameter ASC \(ascending \= aufsteigend\) und DESC \(descending \= absteigend\) einfügen.  
+-   <span data-ttu-id="41d5b-104">Mit der <xref:System.Data.DataView.Sort%2A>-Eigenschaft können Sie einzelne oder mehrere Sortierreihenfolgen für Spalten angeben und die Parameter ASC (ascending = aufsteigend) und DESC (descending = absteigend) einfügen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-104">You can use the <xref:System.Data.DataView.Sort%2A> property to specify single or multiple column sort orders and include ASC (ascending) and DESC (descending) parameters.</span></span>  
   
--   Sie können mithilfe der <xref:System.Data.DataView.ApplyDefaultSort%2A>\-Eigenschaft automatisch eine Sortierreihenfolge in aufsteigender Reihenfolge auf Grundlage der Primärschlüsselspalte bzw. \-spalten der Tabelle erstellen.  <xref:System.Data.DataView.ApplyDefaultSort%2A> ist nur gültig, wenn die **Sort**\-Eigenschaft ein NULL\-Verweis oder eine leere Zeichenfolge ist für die Tabelle ein Primärschlüssel definiert ist.  
+-   <span data-ttu-id="41d5b-105">Sie können mithilfe der <xref:System.Data.DataView.ApplyDefaultSort%2A>-Eigenschaft automatisch eine Sortierreihenfolge in aufsteigender Reihenfolge auf Grundlage der Primärschlüsselspalte bzw. -spalten der Tabelle erstellen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-105">You can use the <xref:System.Data.DataView.ApplyDefaultSort%2A> property to automatically create a sort order, in ascending order, based on the primary key column or columns of the table.</span></span> <span data-ttu-id="41d5b-106"><xref:System.Data.DataView.ApplyDefaultSort%2A>nur gültig, wenn die **sortieren** Eigenschaft ist ein null-Verweis oder eine leere Zeichenfolge ist, und wenn die Tabelle einen Primärschlüssel definiert.</span><span class="sxs-lookup"><span data-stu-id="41d5b-106"><xref:System.Data.DataView.ApplyDefaultSort%2A> only applies when the **Sort** property is a null reference or an empty string, and when the table has a primary key defined.</span></span>  
   
--   Mit der <xref:System.Data.DataView.RowFilter%2A>\-Eigenschaft können Sie Teilmengen von Zeilen angeben, die auf den Spaltenwerten basieren.  Ausführliche Informationen zu gültigen Ausdrücken für die **RowFilter**\-Eigenschaft finden Sie in den Referenzinformationen für die <xref:System.Data.DataColumn.Expression%2A>\-Eigenschaft der <xref:System.Data.DataColumn>\-Klasse.  
+-   <span data-ttu-id="41d5b-107">	Mit der <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft können Sie Teilmengen von Zeilen angeben, die auf den Spaltenwerten basieren.</span><span class="sxs-lookup"><span data-stu-id="41d5b-107">You can use the <xref:System.Data.DataView.RowFilter%2A> property to specify subsets of rows based on their column values.</span></span> <span data-ttu-id="41d5b-108">Weitere Informationen zu gültigen Ausdrücken für die **RowFilter** -Eigenschaft, finden Sie in den Referenzinformationen für die <xref:System.Data.DataColumn.Expression%2A> Eigenschaft von der <xref:System.Data.DataColumn> Klasse.</span><span class="sxs-lookup"><span data-stu-id="41d5b-108">For details about valid expressions for the **RowFilter** property, see the reference information for the <xref:System.Data.DataColumn.Expression%2A> property of the <xref:System.Data.DataColumn> class.</span></span>  
   
-     Wenn Sie die Ergebnisse einer bestimmten Abfrage von Daten zurückgeben möchten, anstatt eine dynamische Ansicht von einer Teilmenge von Daten zu erhalten, verwenden Sie die <xref:System.Data.DataView.Find%2A>\-Methode oder die <xref:System.Data.DataView.FindRows%2A>\-Methode der **DataView**, denn sie sind für diesen Zweck besser geeignet als die **RowFilter**\-Eigenschaft.  Wenn Sie die **RowFilter**\-Eigenschaft festlegen, wird der Index für die Daten neu erstellt, wodurch zusätzlicher Verwaltungsmehraufwand für die Anwendung entsteht und die Leistung verringert wird.  Die **RowFilter**\-Eigenschaft wird am besten in einer datengebundenen Anwendung verwendet, in der ein gebundenes Steuerelement gefilterte Ergebnisse anzeigt.  Die Methoden **Find** und **FindRows** nutzen den aktuellen Index, ohne dass der Index neu erstellt werden muss.  Weitere Informationen zu den Methoden **Find** und **FindRows** finden Sie unter [Suchen nach Zeilen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+     <span data-ttu-id="41d5b-109">Wunsch zurückzugeben, verwenden Sie die Ergebnisse einer bestimmten Abfrage von Daten, eine dynamische Ansicht einer Teilmenge der Daten, die <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> Methoden die **"DataView"** um optimale Leistung zu erzielen statt Festlegen der **RowFilter** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="41d5b-109">If you want to return the results of a particular query on the data, as opposed to providing a dynamic view of a subset of the data, use the <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> methods of the **DataView** to achieve best performance rather than setting the **RowFilter** property.</span></span> <span data-ttu-id="41d5b-110">Festlegen der **RowFilter** Eigenschaft erstellt den Index für die Daten, Verwaltungsmehraufwand für die Anwendung und die arbeitsgeschwindigkeit neu.</span><span class="sxs-lookup"><span data-stu-id="41d5b-110">Setting the **RowFilter** property rebuilds the index for the data, adding overhead to your application and decreasing performance.</span></span> <span data-ttu-id="41d5b-111">Die **RowFilter** -Eigenschaft wird am besten verwendet in einer datengebundenen Anwendung ein gebundenes Steuerelement gefilterte Ergebnisse anzeigt.</span><span class="sxs-lookup"><span data-stu-id="41d5b-111">The **RowFilter** property is best used in a data-bound application where a bound control displays filtered results.</span></span> <span data-ttu-id="41d5b-112">Die **suchen** und **FindRows** Methoden nutzen den aktuellen Index, ohne dass der Index neu erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="41d5b-112">The **Find** and **FindRows** methods leverage the current index without requiring the index to be rebuilt.</span></span> <span data-ttu-id="41d5b-113">Weitere Informationen zu den **suchen** und **FindRows** Methoden, finden Sie unter [Suchen nach Zeilen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).</span><span class="sxs-lookup"><span data-stu-id="41d5b-113">For more information about the **Find** and **FindRows** methods, see [Finding Rows](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).</span></span>  
   
--   Mit der <xref:System.Data.DataView.RowStateFilter%2A>\-Eigenschaft können Sie festlegen, welche Zeilenversionen Sie anzeigen möchten.  Die **DataView** verwaltet implizit, welche Zeilenversion, abhängig vom **RowState** der zugrunde liegenden Zeile, verfügbar gemacht werden soll.  Wenn z. B. der **RowStateFilter** auf **DataViewRowState.Deleted** festgelegt ist, macht die **DataView** die **Original**\-Zeilenversion aller **Deleted**\-Zeilen verfügbar, da keine **Current**\-Zeilenversion vorliegt.  Mit der **RowVersion**\-Eigenschaft der **DataRowView** können Sie bestimmen, welche Zeilenversion einer Zeile verfügbar gemacht wird.  
+-   <span data-ttu-id="41d5b-114">Mit der <xref:System.Data.DataView.RowStateFilter%2A>-Eigenschaft können Sie festlegen, welche Zeilenversionen Sie anzeigen möchten.</span><span class="sxs-lookup"><span data-stu-id="41d5b-114">You can use the <xref:System.Data.DataView.RowStateFilter%2A> property to specify which row versions to view.</span></span> <span data-ttu-id="41d5b-115">Die **"DataView"** verwaltet implizit, welche Zeilenversion verfügbar machen, abhängig von der **RowState** der zugrunde liegenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="41d5b-115">The **DataView** implicitly manages which row version to expose depending upon the **RowState** of the underlying row.</span></span> <span data-ttu-id="41d5b-116">Z. B. wenn die **RowStateFilter** auf festgelegt ist **DataViewRowState.Deleted**, **"DataView"** macht die **ursprünglichen** -Zeilenversion der alle **gelöschte** Zeilen, da es ist keine **aktuelle** Zeilenversion.</span><span class="sxs-lookup"><span data-stu-id="41d5b-116">For example, if the **RowStateFilter** is set to **DataViewRowState.Deleted**, the **DataView** exposes the **Original** row version of all **Deleted** rows because there is no **Current** row version.</span></span> <span data-ttu-id="41d5b-117">Können Sie bestimmen, welche Zeilenversion einer Zeile mit verfügbar gemacht wird die **RowVersion** Eigenschaft von der **DataRowView**.</span><span class="sxs-lookup"><span data-stu-id="41d5b-117">You can determine which row version of a row is being exposed by using the **RowVersion** property of the **DataRowView**.</span></span>  
   
-     In der folgenden Tabelle sind die Optionen für **DataViewRowState** enthalten.  
+     <span data-ttu-id="41d5b-118">Die folgende Tabelle zeigt die Optionen für **"DataViewRowState"**.</span><span class="sxs-lookup"><span data-stu-id="41d5b-118">The following table shows the options for **DataViewRowState**.</span></span>  
   
-    |"DataViewRowState"\-Optionen|Beschreibung|  
-    |----------------------------------|------------------|  
-    |**CurrentRows**|Die **Current**\-Zeilenversion von allen Zeilen mit dem Status **Unchanged**, **Added** und **Modified**.  Dies ist die Standardeinstellung.|  
-    |**Added**|Die **Current**\-Zeilenversion von allen **Added**\-Zeilen.|  
-    |**Deleted**|Die **Original**\-Zeilenversion von allen **Deleted**\-Zeilen.|  
-    |**ModifiedCurrent**|Die **Current**\-Zeilenversion von allen **Modified**\-Zeilen.|  
-    |**ModifiedOriginal**|Die **Original**\-Zeilenversion von allen **Modified**\-Zeilen.|  
-    |**Keine**|Keine Zeilen.|  
-    |**OriginalRows**|Die **Original**\-Zeilenversion von allen Zeilen mit dem Status **Unchanged**, **Modified** und **Deleted**.|  
-    |**Unchanged**|Die **Current**\-Zeilenversion von allen **Unchanged**\-Zeilen.|  
+    |<span data-ttu-id="41d5b-119">"DataViewRowState"-Optionen</span><span class="sxs-lookup"><span data-stu-id="41d5b-119">DataViewRowState options</span></span>|<span data-ttu-id="41d5b-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="41d5b-120">Description</span></span>|  
+    |------------------------------|-----------------|  
+    |<span data-ttu-id="41d5b-121">**CurrentRows**</span><span class="sxs-lookup"><span data-stu-id="41d5b-121">**CurrentRows**</span></span>|<span data-ttu-id="41d5b-122">Die **aktuelle** -Zeilenversion von allen **Unchanged**, **Added**, und **"geändert"** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-122">The **Current** row version of all **Unchanged**, **Added**, and **Modified** rows.</span></span> <span data-ttu-id="41d5b-123">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="41d5b-123">This is the default.</span></span>|  
+    |<span data-ttu-id="41d5b-124">**Hinzugefügt**</span><span class="sxs-lookup"><span data-stu-id="41d5b-124">**Added**</span></span>|<span data-ttu-id="41d5b-125">Die **aktuelle** -Zeilenversion von allen **Added** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-125">The **Current** row version of all **Added** rows.</span></span>|  
+    |<span data-ttu-id="41d5b-126">**Gelöscht**</span><span class="sxs-lookup"><span data-stu-id="41d5b-126">**Deleted**</span></span>|<span data-ttu-id="41d5b-127">Die **ursprünglichen** -Zeilenversion von allen **gelöschte** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-127">The **Original** row version of all **Deleted** rows.</span></span>|  
+    |<span data-ttu-id="41d5b-128">**ModifiedCurrent**</span><span class="sxs-lookup"><span data-stu-id="41d5b-128">**ModifiedCurrent**</span></span>|<span data-ttu-id="41d5b-129">Die **aktuelle** -Zeilenversion von allen **"geändert"** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-129">The **Current** row version of all **Modified** rows.</span></span>|  
+    |<span data-ttu-id="41d5b-130">**ModifiedOriginal**</span><span class="sxs-lookup"><span data-stu-id="41d5b-130">**ModifiedOriginal**</span></span>|<span data-ttu-id="41d5b-131">Die **ursprünglichen** -Zeilenversion von allen **"geändert"** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-131">The **Original** row version of all **Modified** rows.</span></span>|  
+    |<span data-ttu-id="41d5b-132">**Keine**</span><span class="sxs-lookup"><span data-stu-id="41d5b-132">**None**</span></span>|<span data-ttu-id="41d5b-133">Keine Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-133">No rows.</span></span>|  
+    |<span data-ttu-id="41d5b-134">**OriginalRows**</span><span class="sxs-lookup"><span data-stu-id="41d5b-134">**OriginalRows**</span></span>|<span data-ttu-id="41d5b-135">Die **ursprünglichen** -Zeilenversion von allen **Unchanged**, **"geändert"**, und **gelöschte** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-135">The **Original** row version of all **Unchanged**, **Modified**, and **Deleted** rows.</span></span>|  
+    |<span data-ttu-id="41d5b-136">**Unverändert**</span><span class="sxs-lookup"><span data-stu-id="41d5b-136">**Unchanged**</span></span>|<span data-ttu-id="41d5b-137">Die **aktuelle** -Zeilenversion von allen **Unchanged** Zeilen.</span><span class="sxs-lookup"><span data-stu-id="41d5b-137">The **Current** row version of all **Unchanged** rows.</span></span>|  
   
- Weitere Informationen zu Zeilenzuständen und Zeilenversionen finden Sie unter [Zeilenstatus und Zeilenversion](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ <span data-ttu-id="41d5b-138">Weitere Informationen zum Zeilenstatus und Zeilenversionen finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="41d5b-138">For more information about row states and row versions, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
- Im folgenden Codebeispiel wird eine Ansicht erstellt, die alle Produkte anzeigt, bei denen die Anzahl der Einheiten im Lager kleiner als oder gleich der Neusortierungsebene ist, wobei zuerst nach der Lieferanten\-ID und dann nach dem Produktnamen sortiert wird.  
+ <span data-ttu-id="41d5b-139">Im folgenden Codebeispiel wird eine Ansicht erstellt, die alle Produkte anzeigt, bei denen die Anzahl der Einheiten im Lager kleiner als oder gleich der Neusortierungsebene ist, wobei zuerst nach der Lieferanten-ID und dann nach dem Produktnamen sortiert wird.</span><span class="sxs-lookup"><span data-stu-id="41d5b-139">The following code example creates a view that shows all the products where the number of units in stock is less than or equal to the reorder level, sorted first by supplier ID and then by product name.</span></span>  
   
 ```vb  
 Dim prodView As DataView = New DataView(prodDS.Tables("Products"), _  
    "UnitsInStock <= ReorderLevel", _  
    "SupplierID, ProductName", _  
    DataViewRowState.CurrentRows)  
-  
 ```  
   
 ```csharp  
@@ -61,10 +66,10 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
    DataViewRowState.CurrentRows);  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataViewRowState>   
- <xref:System.Data.DataColumn.Expression%2A?displayProperty=fullName>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="41d5b-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="41d5b-140">See Also</span></span>  
+ <xref:System.Data.DataViewRowState>  
+ <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [<span data-ttu-id="41d5b-141">DataViews</span><span class="sxs-lookup"><span data-stu-id="41d5b-141">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="41d5b-142">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="41d5b-142">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

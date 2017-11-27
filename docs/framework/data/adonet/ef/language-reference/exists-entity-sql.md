@@ -1,56 +1,55 @@
 ---
-title: "EXISTS (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: EXISTS (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a8e483124205d986ad7a44b47815ed6aa2845744
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# EXISTS (Entity SQL)
-Bestimmt, ob eine Auflistung leer ist.  
+# <a name="exists-entity-sql"></a><span data-ttu-id="308ab-102">EXISTS (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="308ab-102">EXISTS (Entity SQL)</span></span>
+<span data-ttu-id="308ab-103">Bestimmt, ob eine Auflistung leer ist.</span><span class="sxs-lookup"><span data-stu-id="308ab-103">Determines if a collection is empty.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="308ab-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="308ab-104">Syntax</span></span>  
   
 ```  
-  
-[NOT] EXISTS (expression)  
+[NOT] EXISTS ( expression )  
 ```  
   
-## Argumente  
+## <a name="arguments"></a><span data-ttu-id="308ab-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="308ab-105">Arguments</span></span>  
  `expression`  
- Jeder gültige Ausdruck, der eine Auflistung zurückgibt.  
+ <span data-ttu-id="308ab-106">Jeder gültige Ausdruck, der eine Auflistung zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="308ab-106">Any valid expression that returns a collection.</span></span>  
   
- NOT  
- Gibt an, dass das Ergebnis von EXISTS negiert werden soll.  
+ <span data-ttu-id="308ab-107">NOT</span><span class="sxs-lookup"><span data-stu-id="308ab-107">NOT</span></span>  
+ <span data-ttu-id="308ab-108">Gibt an, dass das Ergebnis von EXISTS negiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="308ab-108">Specifies that the result of EXISTS be negated.</span></span>  
   
-## Rückgabewert  
- `true`, wenn die Auflistung nicht leer ist, andernfalls `false`.  
+## <a name="return-value"></a><span data-ttu-id="308ab-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="308ab-109">Return Value</span></span>  
+ <span data-ttu-id="308ab-110">`true`, wenn die Auflistung nicht leer ist, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="308ab-110">`true` if the collection is not empty; otherwise, `false`.</span></span>  
   
-## Hinweise  
- EXISTS ist einer der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Mengenoperatoren. Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Mengenoperatoren werden von links nach rechts ausgewertet. Informationen zur Rangfolge der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Mengenoperatoren finden Sie unter [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+## <a name="remarks"></a><span data-ttu-id="308ab-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="308ab-111">Remarks</span></span>  
+ <span data-ttu-id="308ab-112">
+          EXISTS[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist einer der -Mengenoperatoren.</span><span class="sxs-lookup"><span data-stu-id="308ab-112">EXISTS is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="308ab-113">Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="308ab-113">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="308ab-114">Informationen zur Rangfolge der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Mengenoperatoren, finden Sie unter [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="308ab-114">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
   
-## Beispiel  
- Die folgende Entity SQL\-Abfrage verwendet den EXISTS\-Operator, um festzustellen, ob die Auflistung leer ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"\-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+## <a name="example"></a><span data-ttu-id="308ab-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="308ab-115">Example</span></span>  
+ <span data-ttu-id="308ab-116">Die folgende Entity SQL-Abfrage verwendet den EXISTS-Operator, um festzustellen, ob die Auflistung leer ist.</span><span class="sxs-lookup"><span data-stu-id="308ab-116">The following Entity SQL query uses the EXISTS operator to determine whether the collection is empty.</span></span> <span data-ttu-id="308ab-117">Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell.</span><span class="sxs-lookup"><span data-stu-id="308ab-117">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="308ab-118">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="308ab-118">To compile and run this query, follow these steps:</span></span>  
   
-1.  Verwenden Sie das Verfahren unter [Vorgehensweise: Ausführen einer Abfrage, die StructuralType\-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="308ab-119">Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="308ab-119">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery`\-Methode:  
+2.  <span data-ttu-id="308ab-120">Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="308ab-120">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
-## Siehe auch  
- [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="308ab-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="308ab-121">See Also</span></span>  
+ [<span data-ttu-id="308ab-122">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="308ab-122">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

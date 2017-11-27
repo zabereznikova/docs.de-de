@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21922b4d-9a83-45cb-a6fc-5b1c2f9a2c17
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0c9569582f0235cc7c0c022cc5545372799677bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
-System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased  
+# <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a><span data-ttu-id="5e120-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="5e120-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>
+<span data-ttu-id="5e120-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="5e120-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>  
   
-## Beschreibung  
- ComPlus: Freigegebene Instanz.  
+## <a name="description"></a><span data-ttu-id="5e120-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5e120-104">Description</span></span>  
+ <span data-ttu-id="5e120-105">ComPlus: Freigegebene Instanz.</span><span class="sxs-lookup"><span data-stu-id="5e120-105">ComPlus: Released instance.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5e120-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5e120-106">See Also</span></span>  
+ [<span data-ttu-id="5e120-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="5e120-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5e120-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="5e120-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5e120-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="5e120-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

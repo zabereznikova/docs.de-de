@@ -1,60 +1,66 @@
 ---
-title: "M&#246;glichkeiten von LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Möglichkeiten von LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 26d20a220f1d88cee0b577d112048c8bb0e84285
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# M&#246;glichkeiten von LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt alle wichtigen Funktionen, die Sie als SQL\-Entwickler erwarten würden. Sie können Informationen abfragen und Informationen in Tabellen einfügen, aktualisieren und löschen.  
+# <a name="what-you-can-do-with-linq-to-sql"></a><span data-ttu-id="7c3a9-102">Möglichkeiten von LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="7c3a9-102">What You Can Do With LINQ to SQL</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="7c3a9-103"> unterstützt alle wichtigen Funktionen, die Sie als SQL-Entwickler erwarten würden.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-103"> supports all the key capabilities you would expect as a SQL developer.</span></span> <span data-ttu-id="7c3a9-104">Sie können Informationen abfragen und Informationen in Tabellen einfügen, aktualisieren und löschen.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-104">You can query for information, and insert, update, and delete information from tables.</span></span>  
   
-## Auswählen  
- Die Auswahl \(*Projektion*\) wird erreicht, indem eine [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]\-Abfrage in einer beliebigen Programmiersprache verfasst und zum Abrufen der Ergebnisse ausgeführt wird.[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Operationen in die entsprechenden SQL\-Operationen, die bekannt sind. Weitere Informationen finden Sie unter [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+## <a name="selecting"></a><span data-ttu-id="7c3a9-105">Auswählen</span><span class="sxs-lookup"><span data-stu-id="7c3a9-105">Selecting</span></span>  
+ <span data-ttu-id="7c3a9-106">Die Auswahl (*Projektion*) wird erreicht, indem eine [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] -Abfrage in einer beliebigen Programmiersprache verfasst und zum Abrufen der Ergebnisse ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-106">Selecting (*projection*) is achieved by just writing a [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] query in your own programming language, and then executing that query to retrieve the results.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="7c3a9-107"> übersetzt die Operationen in die entsprechenden SQL-Operationen, die bekannt sind.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-107"> itself translates all the necessary operations into the necessary SQL operations that you are familiar with.</span></span> <span data-ttu-id="7c3a9-108">Weitere Informationen finden Sie unter [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).</span><span class="sxs-lookup"><span data-stu-id="7c3a9-108">For more information, see [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).</span></span>  
   
- Im folgenden Beispiel werden die Firmennamen von Kunden aus London abgerufen und im Konsolenfenster dargestellt.  
+ <span data-ttu-id="7c3a9-109">Im folgenden Beispiel werden die Firmennamen von Kunden aus London abgerufen und im Konsolenfenster dargestellt.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-109">In the following example, the company names of customers from London are retrieved and displayed in the console window.</span></span>  
   
  [!code-csharp[DLinqGettingStarted#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#1)]
  [!code-vb[DLinqGettingStarted#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#1)]  
   
-## Einfügen  
- Zum Ausführen eines SQL\-`Insert` können Sie einfach dem erstellten Objektmodell Objekte hinzufügen und <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> aufrufen.  
+## <a name="inserting"></a><span data-ttu-id="7c3a9-110">Einfügen</span><span class="sxs-lookup"><span data-stu-id="7c3a9-110">Inserting</span></span>  
+ <span data-ttu-id="7c3a9-111">Zum Ausführen eines SQL- `Insert`können Sie einfach dem erstellten Objektmodell Objekte hinzufügen und <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext>aufrufen.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-111">To execute a SQL `Insert`, just add objects to the object model you have created, and call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> on the <xref:System.Data.Linq.DataContext>.</span></span>  
   
- Im folgenden Beispiel werden ein Kunde und Informationen zu diesem in die `Customers`\-Tabelle eingefügt \(mithilfe von <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>\).  
+ <span data-ttu-id="7c3a9-112">Im folgenden Beispiel werden ein Kunde und Informationen zu diesem in die `Customers` -Tabelle eingefügt (mithilfe von <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>).</span><span class="sxs-lookup"><span data-stu-id="7c3a9-112">In the following example, a new customer and information about the customer is added to the `Customers` table by using <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>.</span></span>  
   
  [!code-csharp[DLinqGettingStarted#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#2)]
  [!code-vb[DLinqGettingStarted#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#2)]  
   
-## Wird aktualisiert  
- Zum Aktualisieren eines Datenbankeintrags mit `Update`, rufen Sie zuerst das Element ab und bearbeiten es direkt im Objektmodell. Nachdem Sie das Objekt geändert haben, rufen Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> auf, um die Datenbank zu aktualisieren.  
+## <a name="updating"></a><span data-ttu-id="7c3a9-113">Wird aktualisiert</span><span class="sxs-lookup"><span data-stu-id="7c3a9-113">Updating</span></span>  
+ <span data-ttu-id="7c3a9-114">Zum Aktualisieren eines Datenbankeintrags mit `Update` , rufen Sie zuerst das Element ab und bearbeiten es direkt im Objektmodell.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-114">To `Update` a database entry, first retrieve the item and edit it directly in the object model.</span></span> <span data-ttu-id="7c3a9-115">Nachdem Sie das Objekt geändert haben, rufen Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> auf, um die Datenbank zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-115">After you have modified the object, call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> on the <xref:System.Data.Linq.DataContext> to update the database.</span></span>  
   
- Im folgenden Beispiel werden alle Kunden aus London abgerufen. Dann wird der Name des Orts von „London“ in „London \- Metro“ geändert. Schließlich wird <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen, um die Änderungen an die Datenbank zu senden.  
+ <span data-ttu-id="7c3a9-116">Im folgenden Beispiel werden alle Kunden aus London abgerufen.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-116">In the following example, all customers who are from London are retrieved.</span></span> <span data-ttu-id="7c3a9-117">Dann wird der Name des Orts von „London“ in „London - Metro“ geändert.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-117">Then the name of the city is changed from "London" to "London - Metro".</span></span> <span data-ttu-id="7c3a9-118">Schließlich wird <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen, um die Änderungen an die Datenbank zu senden.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-118">Finally, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> is called to send the changes to the database.</span></span>  
   
  [!code-csharp[DLinqGettingStarted#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#3)]
  [!code-vb[DLinqGettingStarted#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#3)]  
   
-## Wird gelöscht  
- Wenn Sie ein Element löschen möchten \(`Delete`\), entfernen Sie dieses aus der entsprechenden Auflistung, und rufen Sie dann <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> auf, um die Änderung zu bestätigen.  
+## <a name="deleting"></a><span data-ttu-id="7c3a9-119">Wird gelöscht</span><span class="sxs-lookup"><span data-stu-id="7c3a9-119">Deleting</span></span>  
+ <span data-ttu-id="7c3a9-120">Wenn Sie ein Element löschen möchten ( `Delete` ), entfernen Sie dieses aus der entsprechenden Auflistung, und rufen Sie dann <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> auf, um die Änderung zu bestätigen.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-120">To `Delete` an item, remove the item from the collection to which it belongs, and then call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> on the <xref:System.Data.Linq.DataContext> to commit the change.</span></span>  
   
 > [!NOTE]
->  Kaskadierte Löschvorgänge werden von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Bedingungen gelten, lesen Sie [Vorgehensweise: Löschen von Zeilen aus der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="7c3a9-121">kaskadierte Löschvorgänge werden nicht erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-121"> does not recognize cascade-delete operations.</span></span> <span data-ttu-id="7c3a9-122">Wenn Sie eine Zeile in einer Tabelle löschen möchten, verfügt, Einschränkungen, finden Sie unter [Vorgehensweise: Löschen von Zeilen aus der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).</span><span class="sxs-lookup"><span data-stu-id="7c3a9-122">If you want to delete a row in a table that has constraints against it, see [How to: Delete Rows From the Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).</span></span>  
   
- Im folgenden Beispiel wird der Kunde mit der `CustomerID``98128` aus der Datenbank abgerufen. Nach dem Bestätigen des Abrufs wird <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> aufgerufen, um das Objekt aus der Auflistung zu entfernen. Schließlich wird <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen, um die Löschung an die Datenbank weiterzuleiten.  
+ <span data-ttu-id="7c3a9-123">Im folgenden Beispiel wird der Kunde mit der `CustomerID` `98128` aus der Datenbank abgerufen.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-123">In the following example, the customer who has `CustomerID` of `98128` is retrieved from the database.</span></span> <span data-ttu-id="7c3a9-124">Nach dem Bestätigen des Abrufs wird <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> aufgerufen, um das Objekt aus der Auflistung zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-124">Then, after confirming that the customer row was retrieved, <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> is called to remove that object from the collection.</span></span> <span data-ttu-id="7c3a9-125">Schließlich wird <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen, um die Löschung an die Datenbank weiterzuleiten.</span><span class="sxs-lookup"><span data-stu-id="7c3a9-125">Finally, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> is called to forward the deletion to the database.</span></span>  
   
  [!code-csharp[DLinqGettingStarted#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#4)]
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
-## Siehe auch  
- [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)   
- [Das LINQ to SQL\-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)   
- [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="7c3a9-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7c3a9-126">See Also</span></span>  
+ [<span data-ttu-id="7c3a9-127">Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="7c3a9-127">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [<span data-ttu-id="7c3a9-128">Die LINQ to SQL-Objektmodell</span><span class="sxs-lookup"><span data-stu-id="7c3a9-128">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [<span data-ttu-id="7c3a9-129">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="7c3a9-129">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

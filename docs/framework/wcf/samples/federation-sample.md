@@ -1,40 +1,43 @@
 ---
-title: "Verbundbeispiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verbundbeispiel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b66bf65ba6165902eb90191a262f2715424d8b7e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verbundbeispiel
-Dieses Beispiel veranschaulicht die Verbundsicherheit.  
+# <a name="federation-sample"></a><span data-ttu-id="92a2c-102">Verbundbeispiel</span><span class="sxs-lookup"><span data-stu-id="92a2c-102">Federation Sample</span></span>
+<span data-ttu-id="92a2c-103">Dieses Beispiel veranschaulicht die Verbundsicherheit.</span><span class="sxs-lookup"><span data-stu-id="92a2c-103">This sample demonstrates federated security.</span></span>  
   
-## Beispieldetails  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet Unterstützung für die Bereitstellung von Verbundsicherheitsarchitekturen durch `wsFederationHttpBinding`.Die `wsFederationHttpBinding` bietet eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von HTTP als den zugrunde liegenden Transportmechanismus für die Anforderungs\-Antwort\-Kommunikation umfasst, während Text und XML als Übertragungsformate für die Codierung verwendet werden.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Verbund in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).  
+## <a name="sample-details"></a><span data-ttu-id="92a2c-104">Beispieldetails</span><span class="sxs-lookup"><span data-stu-id="92a2c-104">Sample Details</span></span>  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="92a2c-105"> bietet Unterstützung für die Bereitstellung von Verbundsicherheitsarchitekturen durch `wsFederationHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="92a2c-105"> provides support for deploying federated security architectures through the `wsFederationHttpBinding`.</span></span> <span data-ttu-id="92a2c-106">Die `wsFederationHttpBinding` bietet eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von HTTP als den zugrunde liegenden Transportmechanismus für die Anforderungs-Antwort-Kommunikation umfasst, während Text und XML als Übertragungsformate für die Codierung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="92a2c-106">The `wsFederationHttpBinding` provides a secure, reliable, and interoperable binding that involves the use of HTTP as the underlying transport mechanism for request/reply communication, and Text/XML as the wire format for encoding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="92a2c-107">Verbund in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], finden Sie unter [Verbund](../../../../docs/framework/wcf/feature-details/federation.md).</span><span class="sxs-lookup"><span data-stu-id="92a2c-107"> Federation in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
   
- Das Szenario besteht aus 4 Einheiten:  
+ <span data-ttu-id="92a2c-108">Das Szenario besteht aus 4 Einheiten:</span><span class="sxs-lookup"><span data-stu-id="92a2c-108">The scenario is made up of 4 pieces:</span></span>  
   
--   BookStore\-Dienst  
+-   <span data-ttu-id="92a2c-109">BookStore-Dienst</span><span class="sxs-lookup"><span data-stu-id="92a2c-109">BookStore service</span></span>  
   
--   BookStore STS  
+-   <span data-ttu-id="92a2c-110">BookStore STS</span><span class="sxs-lookup"><span data-stu-id="92a2c-110">BookStore STS</span></span>  
   
--   HomeRealm STS  
+-   <span data-ttu-id="92a2c-111">HomeRealm STS</span><span class="sxs-lookup"><span data-stu-id="92a2c-111">HomeRealm STS</span></span>  
   
--   BookStore\-Client  
+-   <span data-ttu-id="92a2c-112">BookStore-Client</span><span class="sxs-lookup"><span data-stu-id="92a2c-112">BookStore Client</span></span>  
   
- Der BookStore\-Dienst unterstützt zwei Vorgänge: `BrowseBooks` und `BuyBook`.Es lässt anonymen Zugriff auf den `BrowseBooks`\-Vorgang zu, aber erfordert authentifizierten Zugriff, um auf den `BuyBooks`\-Vorgang zuzugreifen.Die Authentifizierung hat das Format eines Tokens, das von BookStore STS ausgegeben wird.Die Konfigurationsdatei zum BookStore\-Dienst verweist Clients mit `wsFederationHttpBinding` auf BookStore STS.  
+ <span data-ttu-id="92a2c-113">Der BookStore-Dienst unterstützt zwei Vorgänge: `BrowseBooks` und `BuyBook`.</span><span class="sxs-lookup"><span data-stu-id="92a2c-113">The BookStore service supports two operations, `BrowseBooks` and `BuyBook`.</span></span> <span data-ttu-id="92a2c-114">Es lässt anonymen Zugriff auf den `BrowseBooks`-Vorgang zu, aber erfordert authentifizierten Zugriff, um auf den `BuyBooks`-Vorgang zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="92a2c-114">It allows anonymous access to the `BrowseBooks` operation, but requires authenticated access to access the `BuyBooks` operation.</span></span> <span data-ttu-id="92a2c-115">Die Authentifizierung hat das Format eines Tokens, das von BookStore STS ausgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="92a2c-115">The authentication takes the form of a token issued by the BookStore STS.</span></span> <span data-ttu-id="92a2c-116">Die Konfigurationsdatei zum BookStore-Dienst verweist Clients mit `wsFederationHttpBinding` auf BookStore STS.</span><span class="sxs-lookup"><span data-stu-id="92a2c-116">The configuration file for the BookStore Service points clients to the BookStore STS using the `wsFederationHttpBinding`.</span></span>  
   
-```  
+```xml  
 <wsFederationHttpBinding>  
 <!-- This is the Service binding for the BuyBooks endpoint. It redirects clients to the BookStore STS -->  
     <binding name='BuyBookBinding'>  
@@ -52,9 +55,9 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
 </wsFederationHttpBinding>  
 ```  
   
- BookStore STS erfordert dann, dass Clients mit einem von HomeRealm STS ausgegebenen Token authentifiziert werden.Die Konfigurationsdatei für BookStore STS verweist dann Clients mit `wsFederationHttpBinding` auf HomeRealm STS.  
+ <span data-ttu-id="92a2c-117">BookStore STS erfordert dann, dass Clients mit einem von HomeRealm STS ausgegebenen Token authentifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="92a2c-117">The BookStore STS then requires that clients authenticate using a token issued by the HomeRealm STS.</span></span> <span data-ttu-id="92a2c-118">Die Konfigurationsdatei für BookStore STS verweist dann Clients mit `wsFederationHttpBinding` auf HomeRealm STS.</span><span class="sxs-lookup"><span data-stu-id="92a2c-118">Again, the configuration file for the BookStore STS points clients to the HomeRealm STS using the `wsFederationHttpBinding`.</span></span>  
   
-```  
+```xml  
 <wsFederationHttpBinding>  
  <!-- This is the binding for the clients requesting tokens from this STS. It redirects clients to the HomeRealm STS -->  
     <binding name='BookStoreSTSBinding'>  
@@ -72,56 +75,56 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
 </wsFederationHttpBinding>  
 ```  
   
- Die Sequenz von Ereignissen beim Zugriff auf den `BuyBook`\-Vorgang lautet wie folgt:  
+ <span data-ttu-id="92a2c-119">Die Sequenz von Ereignissen beim Zugriff auf den `BuyBook`-Vorgang lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="92a2c-119">The sequence of events when accessing the `BuyBook` operation is as follows:</span></span>  
   
-1.  Der Client wird mit Windows\-Anmeldeinformationen bei HomeRealm STS authentifiziert.  
+1.  <span data-ttu-id="92a2c-120">Der Client wird mit Windows-Anmeldeinformationen bei HomeRealm STS authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-120">The client authenticates to the HomeRealm STS using Windows credentials.</span></span>  
   
-2.  HomeRealm STS gibt ein Token aus, das verwendet werden kann, um bei BookStore STS authentifiziert zu werden.  
+2.  <span data-ttu-id="92a2c-121">HomeRealm STS gibt ein Token aus, das verwendet werden kann, um bei BookStore STS authentifiziert zu werden.</span><span class="sxs-lookup"><span data-stu-id="92a2c-121">The HomeRealm STS issues a token that can be used to authenticate to the BookStore STS.</span></span>  
   
-3.  Der Client wird bei BookStore STS mit einem von HomeRealm STS ausgegebenen Token authentifiziert.  
+3.  <span data-ttu-id="92a2c-122">Der Client wird bei BookStore STS mit einem von HomeRealm STS ausgegebenen Token authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-122">The client authenticates to the BookStore STS using the token issued by the HomeRealm STS.</span></span>  
   
-4.  BookStore STS gibt ein Token aus, das verwendet werden kann, um beim BookStore\-Dienst authentifiziert zu werden.  
+4.  <span data-ttu-id="92a2c-123">BookStore STS gibt ein Token aus, das verwendet werden kann, um beim BookStore-Dienst authentifiziert zu werden.</span><span class="sxs-lookup"><span data-stu-id="92a2c-123">The BookStore STS issues a token that can be used to authenticate to the BookStore Service.</span></span>  
   
-5.  Der Client wird beim BookStore\-Dienst mit einem von BookStore STS ausgegebenen Token authentifiziert.  
+5.  <span data-ttu-id="92a2c-124">Der Client wird beim BookStore-Dienst mit einem von BookStore STS ausgegebenen Token authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-124">The client authenticates to the BookStore service using the token issued by the BookStore STS.</span></span>  
   
-6.  Der Client greift auf den `BuyBook`\-Vorgang zu.  
+6.  <span data-ttu-id="92a2c-125">Der Client greift auf den `BuyBook`-Vorgang zu.</span><span class="sxs-lookup"><span data-stu-id="92a2c-125">The client accesses the `BuyBook` operation.</span></span>  
   
- In den folgenden Anweisungen finden Sie Informationen zum Einrichten und Ausführen dieses Beispiels.  
+ <span data-ttu-id="92a2c-126">In den folgenden Anweisungen finden Sie Informationen zum Einrichten und Ausführen dieses Beispiels.</span><span class="sxs-lookup"><span data-stu-id="92a2c-126">See the following instructions about how to set up and run this sample.</span></span>  
   
 > [!NOTE]
->  Sie müssen über Schreibberechtigungen für das Verzeichnis **wwwroot** verfügen, um dieses Beispiel auszuführen.  
+>  <span data-ttu-id="92a2c-127">Sie benötigen Schreibzugriff auf die **"Wwwroot"** Verzeichnis zum Ausführen dieses Beispiels.</span><span class="sxs-lookup"><span data-stu-id="92a2c-127">You must have Write permissions to the **wwwroot** directory to run this sample.</span></span>  
   
-#### So können Sie das Beispiel einrichten, erstellen und ausführen  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="92a2c-128">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="92a2c-128">To set up, build, and run the sample</span></span>  
   
-1.  Öffnen Sie das SDK\-Befehlsfenster.Führen Sie im Beispielpfad die Datei "Setup.bat" aus.Dadurch werden die erforderlichen virtuellen Verzeichnisse für das Beispiel erstellt und die erforderlichen Zertifikate mit entsprechenden Berechtigungen installiert.  
-  
-    > [!NOTE]
-    >  Die Batchdatei Setup.bat ist dafür ausgelegt, von einer Windows SDK\-Eingabeaufforderung ausgeführt zu werden.Die MSSDK\-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist.Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK\-Eingabeaufforderung festgelegt.Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] müssen Sie sicherstellen, dass IIS 6.0\-Verwaltungskompatibilität installiert ist, da das Setup die IIS\-Administratorskripts verwendet.Das Ausführen des Setupskripts über [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordert Administratorrechte.  
-  
-2.  Öffnen Sie die Datei FederationSample.sln in Visual Studio, und wählen Sie im Menü **Erstellen** die Option **Projektmappe erstellen** aus.Dadurch werden die allgemeinen Projektdateien, der Bookstore\-Dienst, Bookstore\-STS und HomeRealm STS erstellt und in IIS bereitgestellt.Auf diese Weise wird auch die Buchhandlungsclientanwendung erstellt, und die ausführbare Datei "BookStoreClient.exe" wird im Ordner "FederationSample\\BookStoreClient\\bin\\Debug" gespeichert.  
-  
-3.  Doppelklicken Sie auf "BookStoreClient.exe".Das Fenster "BookStoreClient" wird angezeigt.  
-  
-4.  Sie können die in der Buchhandlung verfügbaren Bücher durchsuchen, indem Sie auf **Bücher durchsuchen** klicken.  
-  
-5.  Um ein bestimmtes Buch zu kaufen, wählen Sie das Buch in der Liste aus, und klicken Sie auf **Buch kaufen**.Die Anwendung startet und wird mit der Windows\-Authentifizierung beim HomeRealm\-Sicherheitstokendienst authentifiziert.  
-  
-     Das Beispiel ist so konfiguriert, dass Benutzern der Kauf von Büchern ermöglicht wird, die $15 oder weniger kosten.Wenn versucht wird, Bücher zu kaufen, die mehr als $15 kosten, erhält der Client vom BookStore\-Dienst eine Nachricht vom Typ Zugriff verweigert.  
+1.  <span data-ttu-id="92a2c-129">Öffnen Sie das SDK-Befehlsfenster.</span><span class="sxs-lookup"><span data-stu-id="92a2c-129">Open the SDK command window.</span></span> <span data-ttu-id="92a2c-130">Führen Sie im Beispielpfad die Datei "Setup.bat" aus.</span><span class="sxs-lookup"><span data-stu-id="92a2c-130">In the sample path, run Setup.bat.</span></span> <span data-ttu-id="92a2c-131">Dadurch werden die erforderlichen virtuellen Verzeichnisse für das Beispiel erstellt und die erforderlichen Zertifikate mit entsprechenden Berechtigungen installiert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-131">This creates the virtual directories required for the sample and installs the required certificates with appropriate permissions.</span></span>  
   
     > [!NOTE]
-    >  Im Beispiel wird der Kreditrahmen des Benutzers nach einem Kauf nicht aktualisiert.Sie können immer wieder Bücher innerhalb des Kreditrahmens \(fest\) des Benutzers kaufen.  
+    >  <span data-ttu-id="92a2c-132">Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden.</span><span class="sxs-lookup"><span data-stu-id="92a2c-132">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="92a2c-133">Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist.</span><span class="sxs-lookup"><span data-stu-id="92a2c-133">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="92a2c-134">Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt.</span><span class="sxs-lookup"><span data-stu-id="92a2c-134">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span> <span data-ttu-id="92a2c-135">Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] müssen Sie sicherstellen, dass IIS 6.0-Verwaltungskompatibilität installiert ist, da das Setup die IIS-Administratorskripts verwendet.</span><span class="sxs-lookup"><span data-stu-id="92a2c-135">On [!INCLUDE[wv](../../../../includes/wv-md.md)], you must ensure that IIS 6.0 Management Compatibility is installed because the set up uses IIS administrator scripts.</span></span> <span data-ttu-id="92a2c-136">Das Ausführen des Setupskripts über [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordert Administratorrechte.</span><span class="sxs-lookup"><span data-stu-id="92a2c-136">Running the set-up script on [!INCLUDE[wv](../../../../includes/wv-md.md)] requires administrator privileges.</span></span>  
   
-#### So führen Sie eine Bereinigung durch  
+2.  <span data-ttu-id="92a2c-137">Öffnen Sie die Datei FederationSample.sln in Visual Studio, und wählen Sie **Projektmappe** aus der **erstellen** Menü.</span><span class="sxs-lookup"><span data-stu-id="92a2c-137">Open FederationSample.sln in Visual Studio and select **Build Solution** from the **Build** menu.</span></span> <span data-ttu-id="92a2c-138">Dadurch werden die allgemeinen Projektdateien, der Bookstore-Dienst, Bookstore-STS und HomeRealm STS erstellt und in IIS bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="92a2c-138">This builds the common project files, Bookstore service, Bookstore STS, HomeRealm STS, and deploys them in IIS.</span></span> <span data-ttu-id="92a2c-139">Auf diese Weise wird auch die Buchhandlungsclientanwendung erstellt, und die ausführbare Datei "BookStoreClient.exe" wird im Ordner "FederationSample\BookStoreClient\bin\Debug" gespeichert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-139">This also builds the Bookstore client application and places the executable BookStoreClient.exe in the FederationSample\BookStoreClient\bin\Debug folder.</span></span>  
   
-1.  Führen Sie die Datei Cleanup.bat aus.Dadurch werden die virtuellen Verzeichnisse, die beim Setup erstellt wurden, gelöscht, und auch die beim Setup installierten Zertifikate werden entfernt.  
+3.  <span data-ttu-id="92a2c-140">Doppelklicken Sie auf "BookStoreClient.exe".</span><span class="sxs-lookup"><span data-stu-id="92a2c-140">Double-click BookStoreClient.exe.</span></span> <span data-ttu-id="92a2c-141">Das Fenster "BookStoreClient" wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="92a2c-141">The BookStoreClient window is displayed.</span></span>  
+  
+4.  <span data-ttu-id="92a2c-142">Sie können die in der Buchhandlung verfügbaren Bücher durchsuchen, indem Sie auf **Bücher Durchsuchen**.</span><span class="sxs-lookup"><span data-stu-id="92a2c-142">You can browse the books available in the bookstore by clicking **Browse Books**.</span></span>  
+  
+5.  <span data-ttu-id="92a2c-143">Um ein bestimmtes Buch zu kaufen, wählen Sie das Buch in der Liste aus, und klicken Sie auf **Buch kaufen**.</span><span class="sxs-lookup"><span data-stu-id="92a2c-143">To purchase a particular book, select the book in the list and click **Buy Book**.</span></span> <span data-ttu-id="92a2c-144">Die Anwendung startet und wird mit der Windows-Authentifizierung beim HomeRealm-Sicherheitstokendienst authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-144">The application starts up and authenticates using Windows authentication with the HomeRealm Security Token Service.</span></span>  
+  
+     <span data-ttu-id="92a2c-145">Das Beispiel ist so konfiguriert, dass Benutzern der Kauf von Büchern ermöglicht wird, die $15 oder weniger kosten.</span><span class="sxs-lookup"><span data-stu-id="92a2c-145">The sample is configured to allow users to purchase books that cost $15 or less.</span></span> <span data-ttu-id="92a2c-146">Wenn versucht wird, Bücher zu kaufen, die mehr als $15 kosten, erhält der Client vom BookStore-Dienst eine Nachricht vom Typ Zugriff verweigert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-146">Attempting to buy books that cost more than $15 results in the client getting an Access Denied message from the Book Store Service.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="92a2c-147">Im Beispiel wird der Kreditrahmen des Benutzers nach einem Kauf nicht aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-147">The sample does not update the user’s credit limit after a purchase.</span></span> <span data-ttu-id="92a2c-148">Sie können immer wieder Bücher innerhalb des Kreditrahmens (fest) des Benutzers kaufen.</span><span class="sxs-lookup"><span data-stu-id="92a2c-148">You can repeatedly purchase books within the user’s (fixed) credit limit.</span></span>  
+  
+#### <a name="to-clean-up"></a><span data-ttu-id="92a2c-149">So führen Sie eine Bereinigung durch</span><span class="sxs-lookup"><span data-stu-id="92a2c-149">To clean up</span></span>  
+  
+1.  <span data-ttu-id="92a2c-150">Führen Sie die Datei Cleanup.bat aus.</span><span class="sxs-lookup"><span data-stu-id="92a2c-150">Run Cleanup.bat.</span></span> <span data-ttu-id="92a2c-151">Dadurch werden die virtuellen Verzeichnisse, die beim Setup erstellt wurden, gelöscht, und auch die beim Setup installierten Zertifikate werden entfernt.</span><span class="sxs-lookup"><span data-stu-id="92a2c-151">This deletes the virtual directories that were created during set up and also removes the certificates installed during setup.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="92a2c-152">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="92a2c-152">The samples may already be installed on your machine.</span></span> <span data-ttu-id="92a2c-153">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="92a2c-153">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="92a2c-154">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="92a2c-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="92a2c-155">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="92a2c-155">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="92a2c-156">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="92a2c-156">See Also</span></span>

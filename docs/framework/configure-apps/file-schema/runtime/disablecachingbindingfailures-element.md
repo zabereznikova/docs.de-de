@@ -1,84 +1,86 @@
 ---
-title: "&lt;disableCachingBindingFailures&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableCachingBindingFailures>-Element"
-  - "Assemblys [.NET Framework], Zwischenspeichern von Bindungsfehlern"
-  - "Zwischenspeichern von Assemblybindungsfehlern"
-  - "disableCachingBindingFailures-Element"
+title: '&lt;DisableCachingBindingFailures&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures
+helpviewer_keywords:
+- assemblies [.NET Framework],caching binding failures
+- caching assembly binding failures
+- <disableCachingBindingFailures> element
+- disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 25d504afd7945718f08dd5f2bf92d7ea33037a11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;disableCachingBindingFailures&gt;-Element
-Gibt an, ob die Zwischenspeicherung von Bindungsfehlern, die auftreten, da die Assembly durch Überprüfen nicht gefunden wurde, deaktiviert werden soll.  
+# <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="ee766-102">&lt;DisableCachingBindingFailures&gt; Element</span><span class="sxs-lookup"><span data-stu-id="ee766-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
+<span data-ttu-id="ee766-103">Gibt an, ob das Zwischenspeichern von Assemblybindungsfehlern, die auftreten, da die Assembly nicht, durch die Überprüfung gefunden wurde zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ee766-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="ee766-104">\<Konfiguration >-Element</span><span class="sxs-lookup"><span data-stu-id="ee766-104">\<configuration> Element</span></span>  
+<span data-ttu-id="ee766-105">\<Common Language Runtime >-Element</span><span class="sxs-lookup"><span data-stu-id="ee766-105">\<runtime> Element</span></span>  
+<span data-ttu-id="ee766-106">\<DisableCachingBindingFailures ></span><span class="sxs-lookup"><span data-stu-id="ee766-106">\<disableCachingBindingFailures></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ee766-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="ee766-107">Syntax</span></span>  
+  
+```xml  
 <disableCachingBindingFailures enabled="0|1"/>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ee766-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="ee766-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ee766-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="ee766-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="ee766-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="ee766-110">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob die Zwischenspeicherung von Bindungsfehlern, die auftreten, da die Assembly durch Überprüfen nicht gefunden wurde, deaktiviert werden soll.|  
+|<span data-ttu-id="ee766-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="ee766-111">Attribute</span></span>|<span data-ttu-id="ee766-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ee766-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="ee766-113">enabled</span><span class="sxs-lookup"><span data-stu-id="ee766-113">enabled</span></span>|<span data-ttu-id="ee766-114">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="ee766-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="ee766-115">Gibt an, ob das Zwischenspeichern von Assemblybindungsfehlern, die auftreten, da die Assembly nicht, durch die Überprüfung gefunden wurde zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ee766-115">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a><span data-ttu-id="ee766-116">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="ee766-116">enabled Attribute</span></span>  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|0|Zwischenspeichern von Assemblybindungsfehlern, die auftreten, weil die Assembly durch Überprüfen nicht gefunden wurde, nicht deaktivieren.  Dies ist das standardmäßige Bindungsverhalten, das mit .NET Framework, Version 2.0, beginnt.|  
-|1|Zwischenspeichern von Assemblybindungsfehlern deaktivieren, die auftreten, weil die Assembly durch Überprüfen nicht gefunden wurde.  Diese Einstellung stellt das Bindungsverhalten von .NET Framework, Version 1.1, wieder her.|  
+|<span data-ttu-id="ee766-117">Wert</span><span class="sxs-lookup"><span data-stu-id="ee766-117">Value</span></span>|<span data-ttu-id="ee766-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ee766-118">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="ee766-119">0</span><span class="sxs-lookup"><span data-stu-id="ee766-119">0</span></span>|<span data-ttu-id="ee766-120">Deaktivieren Sie nicht das Zwischenspeichern von Assemblybindungsfehlern, die auftreten, da die Assembly durch die Überprüfung nicht gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="ee766-120">Do not disable the caching of binding failures that occur because the assembly was not found by probing.</span></span> <span data-ttu-id="ee766-121">Dies ist das Standardverhalten-Bindung beginnend mit .NET Framework, Version 2.0.</span><span class="sxs-lookup"><span data-stu-id="ee766-121">This is the default binding behavior starting with the .NET Framework version 2.0.</span></span>|  
+|<span data-ttu-id="ee766-122">1</span><span class="sxs-lookup"><span data-stu-id="ee766-122">1</span></span>|<span data-ttu-id="ee766-123">Deaktivieren Sie das Zwischenspeichern von Assemblybindungsfehlern, die auftreten, da die Assembly durch die Überprüfung nicht gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="ee766-123">Disable the caching of binding failures that occur because the assembly was not found by probing.</span></span> <span data-ttu-id="ee766-124">Diese Einstellung zurücksetzt, das Bindungsverhalten von .NET Framework, Version 1.1.</span><span class="sxs-lookup"><span data-stu-id="ee766-124">This setting reverts to the binding behavior of the .NET Framework version 1.1.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="ee766-125">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ee766-125">Child Elements</span></span>  
+ <span data-ttu-id="ee766-126">Keine</span><span class="sxs-lookup"><span data-stu-id="ee766-126">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="ee766-127">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ee766-127">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
+|<span data-ttu-id="ee766-128">Element</span><span class="sxs-lookup"><span data-stu-id="ee766-128">Element</span></span>|<span data-ttu-id="ee766-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ee766-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ee766-130">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="ee766-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ee766-131">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="ee766-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Hinweise  
- Ab .NET Framework, Version 2.0, besteht das Standardverhalten zum Laden von Assemblys im Zwischenspeichern von Bindungs\- und Ladefehlern.  Das heißt, wenn der Versuch, eine Assembly zu laden, nicht erfolgreich war, führen anschließende Anforderungen zum Laden derselben Assembly sofort zu einem Fehler, ohne dass versucht wird, die Assembly zu finden.  Dieses Element deaktiviert das Standardverhalten für Bindungsfehler, die auftreten, da die Assembly nicht im Überprüfungspfad gefunden werden konnte.  Diese Fehler lösen <xref:System.IO.FileNotFoundException> aus.  
+## <a name="remarks"></a><span data-ttu-id="ee766-132">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ee766-132">Remarks</span></span>  
+ <span data-ttu-id="ee766-133">Beginnend mit .NET Framework, Version 2.0, ist das Standardverhalten für das Laden von Assemblys zum Zwischenspeichern aller binden und Laden von Fehlern.</span><span class="sxs-lookup"><span data-stu-id="ee766-133">Starting with the .NET Framework version 2.0, the default behavior for loading assemblies is to cache all binding and loading failures.</span></span> <span data-ttu-id="ee766-134">D. h., wenn ein Versuch zum Laden einer Assembly fehlschlägt, fehlschlagen, nachfolgende Anforderungen zum Laden der gleichen Assembly sofort ohne jeder Versuch, die Assembly gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="ee766-134">That is, if an attempt to load an assembly fails, subsequent requests to load the same assembly fail immediately, without any attempt to locate the assembly.</span></span> <span data-ttu-id="ee766-135">Dieses Element deaktiviert das Standardverhalten zum Binden von Fehlern, die auftreten, da die Assembly nicht im Überprüfungspfad gefunden werden konnte.</span><span class="sxs-lookup"><span data-stu-id="ee766-135">This element disables that default behavior for binding failures that occur because the assembly could not be found in the probing path.</span></span> <span data-ttu-id="ee766-136">Diese Fehler auslösen <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="ee766-136">These failures throw <xref:System.IO.FileNotFoundException>.</span></span>  
   
- Einige Bindungs\- und Ladefehler sind durch dieses Element nicht betroffen. Sie werden immer zwischengespeichert.  Diese Fehler können auftreten, da die Assembly gefunden, jedoch nicht geladen wurde.  Sie lösen <xref:System.BadImageFormatException> oder <xref:System.IO.FileLoadException> aus.  Die folgende Liste enthält einige Beispiele für derartige Fehler.  
+ <span data-ttu-id="ee766-137">Einige binden und Laden von Fehlern sind nicht betroffen von diesem Element und immer zwischengespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="ee766-137">Some binding and loading failures are not affected by this element, and are always cached.</span></span> <span data-ttu-id="ee766-138">Diese Fehler auftreten, da die Assembly wurde gefunden, aber nicht geladen werden konnte.</span><span class="sxs-lookup"><span data-stu-id="ee766-138">These failures occur because the assembly was found but could not be loaded.</span></span> <span data-ttu-id="ee766-139">Sie lösen <xref:System.BadImageFormatException> oder <xref:System.IO.FileLoadException>.</span><span class="sxs-lookup"><span data-stu-id="ee766-139">They throw <xref:System.BadImageFormatException> or <xref:System.IO.FileLoadException>.</span></span> <span data-ttu-id="ee766-140">Die folgende Liste enthält einige Beispiele für solche Fehler.</span><span class="sxs-lookup"><span data-stu-id="ee766-140">The following list includes some examples of such failures.</span></span>  
   
--   Wenn Sie versuchen, eine Datei zu laden, bei der es sich um keine gültige Assembly handelt, schlagen nachfolgende Versuche, die Assembly zu laden, fehl, auch wenn die ungültige Datei durch die richtige Assembly ersetzt wird.  
+-   <span data-ttu-id="ee766-141">Wenn Sie versuchen, Sie laden eine Datei ist keine gültige Assembly, nachfolgende Versuche zum Laden der Assembly schlägt fehl, selbst wenn die ungültige Datei durch die richtige Assembly ersetzt wird.</span><span class="sxs-lookup"><span data-stu-id="ee766-141">If you attempt to load a file is not a valid assembly, subsequent attempts to load the assembly will fail even if the bad file is replaced with the correct assembly.</span></span>  
   
--   Wenn Sie versuchen, eine Assembly zu laden, die durch das Dateisystem gesperrt ist, schlagen nachfolgende Versuche, die Assembly zu laden, fehl, und zwar auch nach der Freigabe der Assembly durch das Dateisystem.  
+-   <span data-ttu-id="ee766-142">Wenn Sie versuchen, eine Assembly zu laden, die durch das Dateisystem gesperrt ist, schlagen nachfolgende Versuche zum Laden der Assembly fehl, auch nachdem die Assembly vom Dateisystem freigegeben wird.</span><span class="sxs-lookup"><span data-stu-id="ee766-142">If you attempt to load an assembly that is locked by the file system, subsequent attempts to load the assembly will fail even after the assembly is released by the file system.</span></span>  
   
--   Wenn sich mindestens eine Version der Assembly, die Sie laden möchten, im Suchpfad befindet, aber die konkrete Version, die Sie anfordern, darin nicht enthalten ist, schlagen nachfolgende Versuche, die Version zu laden, fehl, auch wenn die richtige Version in den Suchpfad verschoben wird.  
+-   <span data-ttu-id="ee766-143">Wenn eine oder mehrere Versionen der Assembly, die Sie laden möchten befindet sich in der Überprüfungspfad, aber die auf die angeforderte Version nicht untereinander ist, fehl nachfolgende Versuche, diese Version zu laden, auch wenn die richtige Version in den Suchpfad verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="ee766-143">If one or more versions of the assembly that you are attempting to load is in the probing path, but the specific version you are requesting is not among them, subsequent attempts to load that version will fail even if the correct version is moved into the probing path.</span></span>  
   
-## Beispiel  
- Im folgenden Codebeispiel wird gezeigt, wie das Zwischenspeichern von Assemblybindungsfehlern, die auftreten, deaktiviert wird, da die Assembly durch Überprüfen nicht gefunden wurde.  
+## <a name="example"></a><span data-ttu-id="ee766-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ee766-144">Example</span></span>  
+ <span data-ttu-id="ee766-145">Im folgende Beispiel veranschaulicht das Zwischenspeichern von Assemblybindungsfehlern, die auftreten, da die Assembly nicht, durch die Überprüfung gefunden wurde zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ee766-145">The following example shows how to disable the caching of assembly binding failures that occur because the assembly was not found by probing.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableCachingBindingFailures enabled="1" />  
@@ -86,7 +88,7 @@ Gibt an, ob die Zwischenspeicherung von Bindungsfehlern, die auftreten, da die A
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="ee766-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ee766-146">See Also</span></span>  
+ [<span data-ttu-id="ee766-147">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="ee766-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="ee766-148">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="ee766-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ee766-149">So sucht Common Language Runtime nach Assemblys</span><span class="sxs-lookup"><span data-stu-id="ee766-149">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

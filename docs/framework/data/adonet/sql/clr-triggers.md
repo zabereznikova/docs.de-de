@@ -1,30 +1,33 @@
 ---
-title: "CLR-Trigger | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CLR-Auslöser"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7c0f93a5c4e515db937945d374ee7cbe8d9b3cf8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# CLR-Trigger
-Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die während der Ausführung eines Sprachereignisses automatisch ausgeführt wird.  Aufgrund der Integration der .NET Framework\-CLR \(Common Language Runtime\) in Microsoft SQL Server können Sie mit allen .NET Framework\-Sprachen CLR\-Trigger erstellen.  
+# <a name="clr-triggers"></a><span data-ttu-id="859c0-102">CLR-Auslöser</span><span class="sxs-lookup"><span data-stu-id="859c0-102">CLR Triggers</span></span>
+<span data-ttu-id="859c0-103">Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die während der Ausführung eines Sprachereignisses automatisch ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="859c0-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="859c0-104">Aufgrund der Integration der .NET Framework-CLR (Common Language Runtime) in Microsoft SQL Server können Sie mit allen .NET Framework-Sprachen CLR-Trigger erstellen.</span><span class="sxs-lookup"><span data-stu-id="859c0-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
   
- Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
+ <span data-ttu-id="859c0-105">Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.</span><span class="sxs-lookup"><span data-stu-id="859c0-105">For more detailed information, see the version of SQL Server Books Online for the version of SQL Server you are using.</span></span>  
   
- **SQL Server\-Onlinedokumentation**  
+ <span data-ttu-id="859c0-106">**SQL Server Books Online (SQL Server-Onlinedokumentation)**</span><span class="sxs-lookup"><span data-stu-id="859c0-106">**SQL Server Books Online**</span></span>  
   
-1.  [CLR\-Auslöser](http://go.microsoft.com/fwlink/?LinkId=115397)  
+1.  [<span data-ttu-id="859c0-107">CLR-Trigger</span><span class="sxs-lookup"><span data-stu-id="859c0-107">CLR Triggers</span></span>](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
-## Siehe auch  
- [Creating SQL Server 2005 Objects In Managed Code](http://msdn.microsoft.com/de-de/5358a825-e19b-49aa-8214-674ce5fed1da)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="859c0-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="859c0-108">See Also</span></span>  
+ [<span data-ttu-id="859c0-109">Erstellen von SQL Server 2005-Objekte In verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="859c0-109">Creating SQL Server 2005 Objects In Managed Code</span></span>](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [<span data-ttu-id="859c0-110">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="859c0-110">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

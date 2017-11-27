@@ -1,77 +1,81 @@
 ---
-title: "Absolute Verz&#246;gerung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Absolute Verzögerung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ee847a48955e3914d3e0d9a04228c6bc79d7fa70
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Absolute Verz&#246;gerung
-Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in einer Workflowanwendung mithilfe von permanenten Zeitgebern bis zu einem angegebenen Zeitpunkt \(<xref:System.DateTime>\).Dies unterscheidet sich von der Verwendung der integrierten <xref:System.Activities.Statements.Delay>\-Aktivität, da ein Vorgang hierdurch nur für eine bestimmte Zeitspanne \(<xref:Sysem.TimeSpan>\) bzw. eine Anzahl von Minuten\/Sekunden verzögert werden kann.  
+# <a name="absolute-delay"></a><span data-ttu-id="39570-102">Absolute Verzögerung</span><span class="sxs-lookup"><span data-stu-id="39570-102">Absolute Delay</span></span>
+<span data-ttu-id="39570-103">Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in einer Workflowanwendung mithilfe von permanenten Zeitgebern bis zu einem angegebenen Zeitpunkt (<xref:System.DateTime>).</span><span class="sxs-lookup"><span data-stu-id="39570-103">The main scenario for this sample is to delay until a specified <xref:System.DateTime> using durable timers in a workflow application.</span></span> <span data-ttu-id="39570-104">Dies unterscheidet sich von der Verwendung der integrierten <xref:System.Activities.Statements.Delay>-Aktivität, da ein Vorgang hierdurch nur für eine bestimmte Zeitspanne (<xref:System.TimeSpan>) bzw. eine Anzahl von Minuten/Sekunden verzögert werden kann.</span><span class="sxs-lookup"><span data-stu-id="39570-104">This is different from using the built-in <xref:System.Activities.Statements.Delay> activity as this will only allow you to delay for a given <xref:System.TimeSpan> (or number of minutes/seconds).</span></span>  
   
- In der Praxis kann diese Unterscheidung beispielsweise in den folgenden Fällen relevant sein:  
+ <span data-ttu-id="39570-105">In der Praxis kann diese Unterscheidung beispielsweise in den folgenden Fällen relevant sein:</span><span class="sxs-lookup"><span data-stu-id="39570-105">Some real-life scenarios in which you may want to make this distinction include the following:</span></span>  
   
-1.  Sie möchten das Senden einer E\-Mail um 30 Sekunden verzögern, um sicherzustellen, dass Sie keine Fehler gemacht haben.  
+1.  <span data-ttu-id="39570-106">Sie möchten das Senden einer E-Mail um 30 Sekunden verzögern, um sicherzustellen, dass Sie keine Fehler gemacht haben.</span><span class="sxs-lookup"><span data-stu-id="39570-106">You want to delay sending a mail for 30 seconds to make sure you didn’t make any errors.</span></span>  
   
-2.  Sie machen Überstunden und möchten das Senden der E\-Mails bis zu Beginn der normalen Geschäftszeit \(z. B. 8:00\) verzögern.  
+2.  <span data-ttu-id="39570-107">Sie machen Überstunden und möchten das Senden der E-Mails bis zu Beginn der normalen Geschäftszeit (z. B. 8:00) verzögern.</span><span class="sxs-lookup"><span data-stu-id="39570-107">You are working overtime and want to delay all of your mails until normal business hours (such as 8 am).</span></span>  
   
-## Veranschaulicht  
+## <a name="demonstrates"></a><span data-ttu-id="39570-108">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="39570-108">Demonstrates</span></span>  
   
-1.  <xref:System.Activities.Statements.DurableTimerExtension> zum Implementieren einer absoluten Verzögerung  
+1.  <span data-ttu-id="39570-109"><xref:System.Activities.Statements.DurableTimerExtension> zum Implementieren einer absoluten Verzögerung</span><span class="sxs-lookup"><span data-stu-id="39570-109"><xref:System.Activities.Statements.DurableTimerExtension> for implementing Absolute Delay</span></span>  
   
-2.  Einrichten von Persistenz mit <xref:System.Activities.WorkflowApplication> für permanente Zeitgeber  
+2.  <span data-ttu-id="39570-110">Einrichten von Persistenz mit <xref:System.Activities.WorkflowApplication> für permanente Zeitgeber</span><span class="sxs-lookup"><span data-stu-id="39570-110">Setting up persistence using <xref:System.Activities.WorkflowApplication> for Durable Timers</span></span>  
   
-3.  Verwenden von <xref:System.Activities.NativeActivity%601> zum Einsetzen von Erweiterungspunkten  
+3.  <span data-ttu-id="39570-111">Verwenden von <xref:System.Activities.NativeActivity%601> zum Einsetzen von Erweiterungspunkten</span><span class="sxs-lookup"><span data-stu-id="39570-111">Use of <xref:System.Activities.NativeActivity%601> for using Extensibility points</span></span>  
   
-4.  Verwenden von <xref:System.Activities.CodeActivity%601> in der SendEmail\-Aktivität  
+4.  <span data-ttu-id="39570-112">Verwenden von <xref:System.Activities.CodeActivity%601> in der SendEmail-Aktivität</span><span class="sxs-lookup"><span data-stu-id="39570-112">Use of <xref:System.Activities.CodeActivity%601> in the SendEmail activity</span></span>  
   
 5.  <xref:System.Activities.Statements.Delay>  
   
-6.  Nur\-XAML\-Workflow  
+6.  <span data-ttu-id="39570-113">Nur-XAML-Workflow</span><span class="sxs-lookup"><span data-stu-id="39570-113">XAML-only workflow</span></span>  
   
- In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Aktivität erstellt wird, die einen <xref:System.DateTime> und permanente Zeitgeber zum Erfassen der Verzögerungsdauer beinhaltet.Wenn Sie permanente Zeitgeber verwenden, müssen Sie mithilfe von <xref:System.Activities.NativeActivity> ein Lesezeichen erstellen, da Sie dieses Lesezeichen bei der Zeitgebererweiterung registrieren müssen.In diesem Beispiel wird die `OnTimerExpired`\-Methode aufgerufen, wenn der permanente Zeitgeber abläuft.Stellen Sie sicher, dass Sie die Zeitgebererweiterung dem <xref:System.Activities.NativeActivity%601.CacheMetadata%2A>\-Ereignis hinzufügen, um sicherzustellen, dass diese Informationen der Laufzeit bereitgestellt werden.Das einzige andere Implementierungsdetail ist, dass Sie eine Logik für die Konvertierung von <xref:System.DateTime> in <xref:Sysem.TimeSpan> implementieren müssen, da permanente Zeitgeber nur einen <xref:System.DateTime> umfassen.Beachten Sie, dass hierdurch ein kleiner Genauigkeitsfehler entsteht.  
+ <span data-ttu-id="39570-114">In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Aktivität erstellt wird, die einen <xref:System.DateTime> und permanente Zeitgeber zum Erfassen der Verzögerungsdauer beinhaltet.</span><span class="sxs-lookup"><span data-stu-id="39570-114">This sample demonstrates how to create a custom activity which takes in a <xref:System.DateTime> and uses durable timers to register the delay duration.</span></span> <span data-ttu-id="39570-115">Wenn Sie permanente Zeitgeber verwenden, müssen Sie mithilfe von <xref:System.Activities.NativeActivity> ein Lesezeichen erstellen, da Sie dieses Lesezeichen bei der Zeitgebererweiterung registrieren müssen.</span><span class="sxs-lookup"><span data-stu-id="39570-115">When using durable timers, you must use a <xref:System.Activities.NativeActivity> to create a bookmark, as you will need to register this bookmark with the timer extension.</span></span> <span data-ttu-id="39570-116">In diesem Beispiel wird die `OnTimerExpired`-Methode aufgerufen, wenn der permanente Zeitgeber abläuft.</span><span class="sxs-lookup"><span data-stu-id="39570-116">In this sample, when the durable timer expires, the `OnTimerExpired` method will be called.</span></span> <span data-ttu-id="39570-117">Stellen Sie sicher, dass Sie die Zeitgebererweiterung dem <xref:System.Activities.NativeActivity%601.CacheMetadata%2A>-Ereignis hinzufügen, um sicherzustellen, dass diese Informationen der Laufzeit bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="39570-117">Make sure that you are adding the timer extension in the <xref:System.Activities.NativeActivity%601.CacheMetadata%2A> event to ensure you are providing the runtime with this information.</span></span> <span data-ttu-id="39570-118">Das einzige andere Implementierungsdetail ist, dass Sie eine Logik für die Konvertierung von <xref:System.DateTime> in <xref:System.TimeSpan> implementieren müssen, da permanente Zeitgeber nur einen <xref:System.DateTime> umfassen.</span><span class="sxs-lookup"><span data-stu-id="39570-118">The only other implementation detail is that you will need to implement logic to convert from <xref:System.DateTime> to <xref:System.TimeSpan>, as durable timers only take in a <xref:System.DateTime>.</span></span> <span data-ttu-id="39570-119">Beachten Sie, dass hierdurch ein kleiner Genauigkeitsfehler entsteht.</span><span class="sxs-lookup"><span data-stu-id="39570-119">Do note that there is a small lapse in accuracy by doing</span></span>  
   
 > [!NOTE]
->  Durch das Konvertieren von <xref:System.DateTime> in <xref:Sysem.TimeSpan> wird ein kleiner Genauigkeitsverlust verursacht.  
+>  <span data-ttu-id="39570-120">Durch das Konvertieren von <xref:System.DateTime> in <xref:System.TimeSpan> wird ein kleiner Genauigkeitsverlust verursacht.</span><span class="sxs-lookup"><span data-stu-id="39570-120">There is a small loss of accuracy by converting from <xref:System.DateTime> to <xref:System.TimeSpan>.</span></span>  
   
- In diesem Beispiel wird auch veranschaulicht, wie die Persistenz für <xref:System.Activities.WorkflowApplication> aktiviert wird.Für dieses spezielle Beispiel werden permanente Zeitgeber verwendet. Die Workflowdaten werden während der Leerlaufzeit in die Persistenzdatenbank entladen, während auf das Ablaufen des Zeitgebers gewartet wird.Diese Implementierung kann auch für andere Persistenzaktionen verwendet werden.In diesem Beispiel wird veranschaulicht, wie die Persistenzverbindungszeichenfolge mit SQL Server eingerichtet und der Instanzspeicher erstellt wird, um die Daten für Workflowinstanzen beizubehalten.Mit einer bereitgestellten Logik wird festlegt, wie der Workflow fortgesetzt wird, sobald ein Ereignis ausgelöst wird, das die Workflowinstanz ausführbar macht.  
+ <span data-ttu-id="39570-121">In diesem Beispiel wird auch veranschaulicht, wie die Persistenz für <xref:System.Activities.WorkflowApplication> aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="39570-121">This sample also demonstrates how to turn on persistence for a <xref:System.Activities.WorkflowApplication>.</span></span> <span data-ttu-id="39570-122">Für dieses spezielle Beispiel werden permanente Zeitgeber verwendet. Die Workflowdaten werden während der Leerlaufzeit in die Persistenzdatenbank entladen, während auf das Ablaufen des Zeitgebers gewartet wird.</span><span class="sxs-lookup"><span data-stu-id="39570-122">For this particular sample, we will be using durable timers in which the workflow data will be unloaded into the persistence database during the idle time while waiting for timer to expire.</span></span> <span data-ttu-id="39570-123">Diese Implementierung kann auch für andere Persistenzaktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="39570-123">This implementation can also be used for other persistence actions.</span></span> <span data-ttu-id="39570-124">In diesem Beispiel wird veranschaulicht, wie die Persistenzverbindungszeichenfolge mit SQL Server eingerichtet und der Instanzspeicher erstellt wird, um die Daten für Workflowinstanzen beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="39570-124">This sample shows how to set up the persistence connection string with SQL Server, and how to create the instance store in order to persist the data for workflow instances.</span></span> <span data-ttu-id="39570-125">Mit einer bereitgestellten Logik wird festlegt, wie der Workflow fortgesetzt wird, sobald ein Ereignis ausgelöst wird, das die Workflowinstanz ausführbar macht.</span><span class="sxs-lookup"><span data-stu-id="39570-125">Logic is provided on how to resume the workflow once an event is raised which makes the workflow instance runnable.</span></span>  
   
- Wenn Sie dieses Beispiel schrittweise durchlaufen, können Sie erkennen, zu welchem Zeitpunkt die integrierte Verzögerung beginnt und endet. Nach dem Ende der Verzögerung wird eine E\-Mail\-Nachricht gesendet.Ab diesem Punkt wird die AbsoluteDelay\-Aktivität bis zum angegebenen Zeitpunkt \(<xref:System.DateTime>\) oder für 0 Sekunden angehalten, wenn der <xref:System.DateTime> abgelaufen ist. Nach dem Ablauf des Zeitgebers wird eine E\-Mail gesendet.Dies veranschaulicht die zwei verschiedenen Anwendungsfälle der integrierten <xref:System.Activities.Statements.Delay>\-Funktionen im Vergleich zum Verwenden einer AbsoluteDelay\-Aktivität.  
+ <span data-ttu-id="39570-126">Wenn Sie dieses Beispiel schrittweise durchlaufen, können Sie erkennen, zu welchem Zeitpunkt die integrierte Verzögerung beginnt und endet. Nach dem Ende der Verzögerung wird eine E-Mail-Nachricht gesendet.</span><span class="sxs-lookup"><span data-stu-id="39570-126">As you step through this sample, you will see the time in which the built-in delay begins and completes, which in turn will cause an e-mail message to be sent.</span></span> <span data-ttu-id="39570-127">Ab diesem Punkt wird die AbsoluteDelay-Aktivität bis zum angegebenen Zeitpunkt (<xref:System.DateTime>) oder für 0 Sekunden angehalten, wenn der <xref:System.DateTime> abgelaufen ist. Nach dem Ablauf des Zeitgebers wird eine E-Mail gesendet.</span><span class="sxs-lookup"><span data-stu-id="39570-127">From there, the AbsoluteDelay activity will halt until a specified <xref:System.DateTime> (or 0 seconds if the <xref:System.DateTime> has expired) which in turn will send out an email upon expiration.</span></span> <span data-ttu-id="39570-128">Dies veranschaulicht die zwei verschiedenen Anwendungsfälle der integrierten <xref:System.Activities.Statements.Delay>-Funktionen im Vergleich zum Verwenden einer AbsoluteDelay-Aktivität.</span><span class="sxs-lookup"><span data-stu-id="39570-128">This will show the two different use cases of the built-in <xref:System.Activities.Statements.Delay> functionality versus using an AbsoluteDelay activity.</span></span>  
   
-#### So können Sie das Beispiel einrichten, erstellen und ausführen  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="39570-129">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="39570-129">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie SQL Server Express \(oder höher\) auf dem Computer installiert haben.  
+1.  <span data-ttu-id="39570-130">Stellen Sie sicher, dass Sie SQL Server Express (oder höher) auf dem Computer installiert haben.</span><span class="sxs-lookup"><span data-stu-id="39570-130">Ensure you have SQL Server Express (or higher) installed on your machine</span></span>  
   
-2.  Führen Sie "setup.cmd" \(aus "WF\/Basic\/Dienste\/AbsoluteDelay\/CS"\) in einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]\-Eingabeaufforderung aus, um die AbsoluteDelaySampleDB\-Datenbank, das Persistenzschema die Persistenzlogik zu erstellen.  
+2.  <span data-ttu-id="39570-131">Führen Sie "setup.cmd" (aus "WF/Basic/Dienste/AbsoluteDelay/CS") in einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung aus, um die AbsoluteDelaySampleDB-Datenbank, das Persistenzschema die Persistenzlogik zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="39570-131">Run setup.cmd (from WF/Basic/Services/AbsoluteDelay/CS) in a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt to create the AbsoluteDelaySampleDB database, create the persistence schema and create the persistence logic.</span></span>  
   
-3.  Öffnen Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+3.  <span data-ttu-id="39570-132">Öffnen Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39570-132">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-4.  Geben Sie die Dauer in der Delay\-Aktivität an.  
+4.  <span data-ttu-id="39570-133">Geben Sie die Dauer in der Delay-Aktivität an.</span><span class="sxs-lookup"><span data-stu-id="39570-133">Specify the Duration in the Delay activity.</span></span>  
   
-5.  Geben Sie die Ablaufzeit \(ExpirationTime\) in der AbsoluteDelay\-Aktivität an.  
+5.  <span data-ttu-id="39570-134">Geben Sie die Ablaufzeit (ExpirationTime) in der AbsoluteDelay-Aktivität an.</span><span class="sxs-lookup"><span data-stu-id="39570-134">Specify the ExpirationTime in the AbsoluteDelay activity.</span></span>  
   
-6.  Aktualisieren Sie die Felder "SendMailTo", "SendMailFrom", "SendMailSubject", "SendMailBody" und "SmtpHost" in der SendMail\-Aktivität.  
+6.  <span data-ttu-id="39570-135">Aktualisieren Sie die Felder "SendMailTo", "SendMailFrom", "SendMailSubject", "SendMailBody" und "SmtpHost" in der SendMail-Aktivität.</span><span class="sxs-lookup"><span data-stu-id="39570-135">Update the SendMailTo, SendMailFrom, SendMailSubject, SendMailBody, and SmtpHost fields in the SendMail activity.</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie keinen gültigen SMTP\-Host eingeben, löst die Anwendung eine SMTP\-Ausnahme aus.  
+    >  <span data-ttu-id="39570-136">Wenn Sie keinen gültigen SMTP-Host eingeben, löst die Anwendung eine SMTP-Ausnahme aus.</span><span class="sxs-lookup"><span data-stu-id="39570-136">If you do not enter a valid SMTP host, the application will throw a SMTP exception.</span></span>  
   
-7.  Klicken Sie zum Erstellen der Projektmappe im Menü **Erstellen** auf **Projektmappe erstellen**.  
+7.  <span data-ttu-id="39570-137">Erstellen Sie die Projektmappe durch Auswahl **erstellen**, **Projektmappe**.</span><span class="sxs-lookup"><span data-stu-id="39570-137">Build the solution by selecting **Build**, **Build Solution**.</span></span>  
   
-8.  Drücken Sie F5, um die Projektmappe auszuführen.  
+8.  <span data-ttu-id="39570-138">Führen Sie die Projektmappe durch Drücken von **F5**.</span><span class="sxs-lookup"><span data-stu-id="39570-138">Run the solution by pressing **F5**.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="39570-139">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="39570-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="39570-140">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="39570-140">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="39570-141">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="39570-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="39570-142">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="39570-142">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

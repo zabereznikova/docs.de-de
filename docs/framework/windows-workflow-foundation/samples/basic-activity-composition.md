@@ -1,40 +1,44 @@
 ---
-title: "Grundlegende Aktivit&#228;tserstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Grundlegende Aktivitätserstellung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c283a1a7-1245-4ecd-8072-206c1b4ca379
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6f1c94a276cf2e76d595a22c5c930614818bbf2b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Grundlegende Aktivit&#228;tserstellung
-In diesem Beispiel wird veranschaulicht, wie benutzerdefinierte Aktivitäten und vom System bereitgestellte Aktivitäten so zusammengesetzt werden, dass weitere benutzerdefinierte Aktivitäten entstehen.  
+# <a name="basic-activity-composition"></a><span data-ttu-id="b7b0b-102">Grundlegende Aktivitätserstellung</span><span class="sxs-lookup"><span data-stu-id="b7b0b-102">Basic Activity Composition</span></span>
+<span data-ttu-id="b7b0b-103">In diesem Beispiel wird veranschaulicht, wie benutzerdefinierte Aktivitäten und vom System bereitgestellte Aktivitäten so zusammengesetzt werden, dass weitere benutzerdefinierte Aktivitäten entstehen.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-103">This sample demonstrates how to compose custom activities and system-provided activities to build more custom activities.</span></span>  
   
- Der Workflow, der die Survey\-Aktivität verwendet, plant die Umfrage mit einer Liste von Fragen, und gibt dann die erhaltenen Antworten aus.  
+ <span data-ttu-id="b7b0b-104">Der Workflow, der die Survey-Aktivität verwendet, plant die Umfrage mit einer Liste von Fragen, und gibt dann die erhaltenen Antworten aus.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-104">The workflow using the Survey activity schedules the Survey with a list of questions, and then outputs the responses received.</span></span>  
   
-## Beispieldetails  
- Das Beispiel verwendet drei benutzerdefinierte Aktivitäten.`ReadLine` ist eine einfache <xref:System.Activities.NativeActivity>\<string\>, die <xref:System.Activities.Bookmark> erstellt, wenn dieses geplant ist, und anschließend `Return`<xref:System.Activities.OutArgument%601> auf den Wert festlegt, mit dem <xref:System.Activities.Bookmark> fortgesetzt wird.`Prompt` ist eine <xref:System.Activities.Activity%601>\<string\>, die eine <xref:System.Activities.InArgument%601>\<string\> mit dem Namen `Text` akzeptiert und die Benutzerantwort in der `Result`<xref:System.Activities.OutArgument%601>\<string\> zurückgibt.Die `Prompt`\-Aktivität verwendet die <xref:System.Activities.Statements.Sequence>\-Aktivität und die <xref:System.Activities.Statements.WriteLine>\-Aktivität, die im Lieferumfang von .NET Framework enthalten sind, von .NET Framework, und integriert auch die benutzerdefinierte `ReadLine`\-Aktivität zum Abrufen von Benutzereingaben.Die letzte benutzerdefinierte Aktivität ist die `Survey`\-Aktivität.Es handelt sich um eine <xref:System.Activities.Activity>\<ICollection\<\-Zeichenfolge\>\>.Diese Aktivität akzeptiert eine <xref:System.Activities.InArgument%601>\<IEnumerable\<\-Zeichenfolge\>\> mit dem Namen `Questions` und füllt das out\-Argument für `Result` mit den Antworten auf.Die `Survey`\-Aktivität verwendet <xref:System.Activities.Statements.ForEach>, <xref:System.Activities.Statements.Sequence> und <xref:System.Activities.Statements.AddToCollection%601> von .NET Framework und verwendet die `Prompt`\-Aktivität, um die Fragen der Umfrage zu stellen und die Antworten abzurufen.  
+## <a name="sample-details"></a><span data-ttu-id="b7b0b-105">Beispieldetails</span><span class="sxs-lookup"><span data-stu-id="b7b0b-105">Sample Details</span></span>  
+ <span data-ttu-id="b7b0b-106">Das Beispiel verwendet drei benutzerdefinierte Aktivitäten.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-106">This sample uses three custom activities.</span></span> <span data-ttu-id="b7b0b-107">`ReadLine`Zeigt eine einfache <xref:System.Activities.NativeActivity> \<Zeichenfolge > erstellt eine <xref:System.Activities.Bookmark> nach Zeitplan und dann legt die `Return` <xref:System.Activities.OutArgument%601> auf den Wert mit dem der <xref:System.Activities.Bookmark> fortgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-107">`ReadLine` is a simple <xref:System.Activities.NativeActivity>\<string> that creates a <xref:System.Activities.Bookmark> when scheduled, and then sets the `Return`<xref:System.Activities.OutArgument%601> to the value with which the <xref:System.Activities.Bookmark> is resumed.</span></span> <span data-ttu-id="b7b0b-108">`Prompt`ist ein <xref:System.Activities.Activity%601> \<Zeichenfolge >, akzeptiert eine <xref:System.Activities.InArgument%601>< Zeichenfolge\> mit dem Namen `Text` und den Benutzer zurückgegeben, die Antwort in den `Result` <xref:System.Activities.OutArgument%601> \<Zeichenfolge >.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-108">`Prompt` is an <xref:System.Activities.Activity%601>\<string> that takes an <xref:System.Activities.InArgument%601><string\> named `Text` and returns the users response in the `Result`<xref:System.Activities.OutArgument%601>\<string>.</span></span> <span data-ttu-id="b7b0b-109">Die `Prompt`-Aktivität verwendet die <xref:System.Activities.Statements.Sequence>-Aktivität und die <xref:System.Activities.Statements.WriteLine>-Aktivität, die im Lieferumfang von .NET Framework enthalten sind, von .NET Framework, und integriert auch die benutzerdefinierte `ReadLine`-Aktivität zum Abrufen von Benutzereingaben.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-109">The `Prompt` activity uses the <xref:System.Activities.Statements.Sequence> and <xref:System.Activities.Statements.WriteLine> activities that ship as part of the .NET Framework, and also incorporates the custom `ReadLine` activity for getting user input.</span></span> <span data-ttu-id="b7b0b-110">Die letzte benutzerdefinierte Aktivität ist die `Survey`-Aktivität.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-110">The last custom activity is the `Survey` activity.</span></span> <span data-ttu-id="b7b0b-111">Es ist ein <xref:System.Activities.Activity>< ICollection\<Zeichenfolge >>.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-111">It is an <xref:System.Activities.Activity><ICollection\<string>>.</span></span>  <span data-ttu-id="b7b0b-112">Diese Aktivität akzeptiert eine <xref:System.Activities.InArgument%601>< IEnumerable < Zeichenfolge\>> mit dem Namen `Questions` und füllt die `Result` out-Argument mit den Antworten.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-112">This activity takes an <xref:System.Activities.InArgument%601><IEnumerable<string\>> named `Questions` and populates the `Result` out argument with the responses.</span></span> <span data-ttu-id="b7b0b-113">Die `Survey`-Aktivität verwendet <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Sequence> und <xref:System.Activities.Statements.AddToCollection%601> von .NET Framework und verwendet die `Prompt`-Aktivität, um die Fragen der Umfrage zu stellen und die Antworten abzurufen.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-113">The `Survey` activity uses <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Sequence> and <xref:System.Activities.Statements.AddToCollection%601> from the .NET Framework and employs the `Prompt` activity for asking the survey questions and getting responses.</span></span>  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b7b0b-114">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="b7b0b-114">To set up, build, and run the sample</span></span>  
   
-1.  Öffnen Sie die Beispielprojektmappe **BasicActivityComposition.sln** in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="b7b0b-115">Öffnen der **BasicActivityComposition.sln** -Beispielprojektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b7b0b-115">Open the **BasicActivityComposition.sln** sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Erstellen Sie die Projektmappe, und führen Sie sie aus.  
+2.  <span data-ttu-id="b7b0b-116">Erstellen Sie die Projektmappe, und führen Sie sie aus.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-116">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="b7b0b-117">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b7b0b-118">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-118">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="b7b0b-119">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b7b0b-120">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-120">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Composite\ActivityComposition`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="b7b0b-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b7b0b-121">See Also</span></span>

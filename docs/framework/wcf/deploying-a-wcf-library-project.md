@@ -1,27 +1,30 @@
 ---
-title: "Bereitstellen eines WCF-Bibliotheksprojekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Bereitstellen eines WCF-Bibliotheksprojekts
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 04567b0b06ef5c8f105e866e150bfaa221d64057
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Bereitstellen eines WCF-Bibliotheksprojekts
-In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Dienstbibliotheksprojekt bereitstellen.  
+# <a name="deploying-a-wcf-library-project"></a><span data-ttu-id="01edc-102">Bereitstellen eines WCF-Bibliotheksprojekts</span><span class="sxs-lookup"><span data-stu-id="01edc-102">Deploying a WCF Library Project</span></span>
+<span data-ttu-id="01edc-103">In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienstbibliotheksprojekt bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="01edc-103">This topic describes how you can deploy a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Library Project.</span></span>  
   
-## Bereitstellen einer WCF\-Dienstbibliothek  
- Eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Dienstbibliothek ist eine Dynamic Link Library \(DLL\).Als solche kann sie nicht eigenständig ausgeführt werden.Sie muss vielmehr in einer Hostumgebung bereitgestellt werden.Weitere Informationen über diesen Prozess finden Sie unter [Hosten und Verwenden von WCF\-Diensten](http://go.microsoft.com/fwlink/?LinkId=99932) \(Seite ist möglicherweise nur in englischer Sprache verfügbar\).  
+## <a name="deploying-a-wcf-service-library"></a><span data-ttu-id="01edc-104">Bereitstellen einer WCF-Dienstbibliothek</span><span class="sxs-lookup"><span data-stu-id="01edc-104">Deploying a WCF Service Library</span></span>  
+ <span data-ttu-id="01edc-105">Eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliothek ist eine Dynamic Link Library (DLL).</span><span class="sxs-lookup"><span data-stu-id="01edc-105">A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library is a dynamic-link library (DLL).</span></span> <span data-ttu-id="01edc-106">Als solche kann sie nicht eigenständig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="01edc-106">As such, it cannot be executed on its own.</span></span> <span data-ttu-id="01edc-107">Sie muss vielmehr in einer Hostumgebung bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="01edc-107">It needs to be deployed into a hosting environment.</span></span> <span data-ttu-id="01edc-108">Weitere Informationen zu diesem Vorgang finden Sie unter [Hosting und Verwenden von WCF-Webdiensten](http://go.microsoft.com/fwlink/?LinkId=99932).</span><span class="sxs-lookup"><span data-stu-id="01edc-108">For more information about this process, see [Hosting and Consuming WCF Services](http://go.microsoft.com/fwlink/?LinkId=99932).</span></span>  
   
- Eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Dienstbibliothek kann wie jeder andere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Dienst bereitgestellt werden.Beachten Sie jedoch, dass [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] die Konfiguration für DLLs nicht unterstützt.<xref:System.Configuration> unterstützt eine Konfigurationsdatei pro Anwendungsdomäne.Das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Dienstbibliotheksprojekt umgeht diese Beschränkung, indem es während der Entwicklung die Datei app.config für die Bibliothek bereitstellt.Die Datei app.config wird nach der Bereitstellung jedoch nicht erkannt.  
+ <span data-ttu-id="01edc-109">Eine [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliothek kann wie jeder andere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="01edc-109">A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library can be deployed like any other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="01edc-110">Beachten Sie jedoch, dass [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] die Konfiguration für DLLs nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="01edc-110">However, be aware that [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] does not support configuration for DLLs.</span></span> <span data-ttu-id="01edc-111"><xref:System.Configuration> unterstützt eine Konfigurationsdatei pro Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="01edc-111"><xref:System.Configuration> supports one configuration file per app-domain.</span></span> <span data-ttu-id="01edc-112">Das [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienstbibliotheksprojekt umgeht diese Beschränkung, indem es während der Entwicklung die Datei app.config für die Bibliothek bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="01edc-112">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library project alleviates this limitation by providing an App.config file for the library during development.</span></span> <span data-ttu-id="01edc-113">Die Datei app.config wird nach der Bereitstellung jedoch nicht erkannt.</span><span class="sxs-lookup"><span data-stu-id="01edc-113">However, the App.config file is not recognized after deployment.</span></span>  
   
- Sie müssen den Konfigurationscode in die von der Hostumgebung erkannte Konfigurationsdatei ziehen.Für das Selbsthosting sollten Sie den Inhalt der Datei app.config in die Datei app.config der ausführbaren Hostingdatei kopieren.Wenn Sie IIS zum Hosten Ihres Diensts einsetzen, sollten Sie den Inhalt der Datei app.config in die Datei web.config des virtuellen Verzeichnisses kopieren.
+ <span data-ttu-id="01edc-114">Sie müssen den Konfigurationscode in die von der Hostumgebung erkannte Konfigurationsdatei ziehen.</span><span class="sxs-lookup"><span data-stu-id="01edc-114">You have to move your configuration code into the configuration file recognized by your hosting environment.</span></span> <span data-ttu-id="01edc-115">Für das Selbsthosting sollten Sie den Inhalt der Datei app.config in die Datei app.config der ausführbaren Hostingdatei kopieren.</span><span class="sxs-lookup"><span data-stu-id="01edc-115">For self-hosting, you should copy the contents of the App.config file into the App.config file of the hosting executable.</span></span> <span data-ttu-id="01edc-116">Wenn Sie IIS zum Hosten Ihres Diensts einsetzen, sollten Sie den Inhalt der Datei app.config in die Datei web.config des virtuellen Verzeichnisses kopieren.</span><span class="sxs-lookup"><span data-stu-id="01edc-116">If you use IIS to host your service, you should copy the contents of the App.config file into the Web.config file of the virtual directory.</span></span>

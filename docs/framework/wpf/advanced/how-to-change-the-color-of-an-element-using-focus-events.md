@@ -1,39 +1,45 @@
 ---
-title: "Gewusst wie: &#196;ndern der Farbe eines Elements mithilfe von Fokusereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Farben von Elementen, Ändern"
-  - "Elemente, Ändern der Farbe von"
-  - "Fokusereignisse, Ändern der Elementfarbe für"
+title: "Gewusst wie: Ändern der Farbe eines Elements mithilfe von Fokusereignissen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- focus events [WPF], changing element color for
+- colors of elements [WPF], changing
+- elements [WPF], changing color of
 ms.assetid: 7e246802-3625-47a7-ae9d-c8a2a40fd040
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 64b1b788ddebe77704a7d34f31ad82b10da34a5a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: &#196;ndern der Farbe eines Elements mithilfe von Fokusereignissen
-Dieses Beispiel zeigt, wie Sie die Farbe eines Elements ändern, wenn es den Fokus erhält bzw. verliert, indem Sie die Ereignisse <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus> verwenden.  
+# <a name="how-to-change-the-color-of-an-element-using-focus-events"></a><span data-ttu-id="4775d-102">Gewusst wie: Ändern der Farbe eines Elements mithilfe von Fokusereignissen</span><span class="sxs-lookup"><span data-stu-id="4775d-102">How to: Change the Color of an Element Using Focus Events</span></span>
+<span data-ttu-id="4775d-103">In diesem Beispiel wird gezeigt, wie die Farbe eines Elements ändern, wenn er erhält und verliert den Fokus mit der <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus> Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="4775d-103">This example shows how to change the color of an element when it gains and loses focus by using the <xref:System.Windows.UIElement.GotFocus> and <xref:System.Windows.UIElement.LostFocus> events.</span></span>  
   
- Dieses Beispiel besteht aus einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Datei und einer Code\-Behind\-Datei.  
+ <span data-ttu-id="4775d-104">In diesem Beispiel besteht aus einem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und eine Code-Behind-Datei.</span><span class="sxs-lookup"><span data-stu-id="4775d-104">This example consists of a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code-behind file.</span></span>  
   
-## Beispiel  
- Der folgende [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]\-Code erstellt die Benutzeroberfläche, die aus zwei <xref:System.Windows.Controls.Button>\-Objekten besteht, und fügt Ereignishandler für die Ereignisse <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus> an die <xref:System.Windows.Controls.Button>\-Objekte an.  
+## <a name="example"></a><span data-ttu-id="4775d-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4775d-105">Example</span></span>  
+ <span data-ttu-id="4775d-106">Die folgenden [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] erstellt die Benutzeroberfläche, die aus zwei <xref:System.Windows.Controls.Button> -Objekte und fügt der Ereignishandler für die <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus> Ereignisse an die <xref:System.Windows.Controls.Button> Objekte.</span><span class="sxs-lookup"><span data-stu-id="4775d-106">The following [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] creates the user interface, which consists of two <xref:System.Windows.Controls.Button> objects, and attaches event handlers for the <xref:System.Windows.UIElement.GotFocus> and <xref:System.Windows.UIElement.LostFocus> events to the <xref:System.Windows.Controls.Button> objects.</span></span>  
   
- [!code-xml[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml#gotlostfocussamplexaml)]  
+ [!code-xaml[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml#gotlostfocussamplexaml)]  
   
- Der folgende Code\-Behind erstellt die Ereignishandler <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus>.  Wenn <xref:System.Windows.Controls.Button> den Tastaturfokus erhält, wird der <xref:System.Windows.Controls.Control.Background%2A> von <xref:System.Windows.Controls.Button> in die Farbe Rot geändert.  Wenn <xref:System.Windows.Controls.Button> den Tastaturfokus verliert, wird der <xref:System.Windows.Controls.Control.Background%2A> von <xref:System.Windows.Controls.Button> in die Farbe Weiß geändert.  
+ <span data-ttu-id="4775d-107">Der folgende Code-behind erstellt die <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="4775d-107">The following code behind creates the <xref:System.Windows.UIElement.GotFocus> and <xref:System.Windows.UIElement.LostFocus> event handlers.</span></span>  <span data-ttu-id="4775d-108">Wenn die <xref:System.Windows.Controls.Button> Tastaturfokus erhält, die <xref:System.Windows.Controls.Control.Background%2A> von der <xref:System.Windows.Controls.Button> in Rot geändert wird.</span><span class="sxs-lookup"><span data-stu-id="4775d-108">When the <xref:System.Windows.Controls.Button> gains keyboard focus, the <xref:System.Windows.Controls.Control.Background%2A> of the <xref:System.Windows.Controls.Button> is changed to red.</span></span>  <span data-ttu-id="4775d-109">Wenn die <xref:System.Windows.Controls.Button> den Tastaturfokus verliert, der <xref:System.Windows.Controls.Control.Background%2A> von der <xref:System.Windows.Controls.Button> nicht wieder in Weiß geändert wird.</span><span class="sxs-lookup"><span data-stu-id="4775d-109">When the <xref:System.Windows.Controls.Button> loses keyboard focus, the <xref:System.Windows.Controls.Control.Background%2A> of the <xref:System.Windows.Controls.Button> is changed back to white.</span></span>  
   
  [!code-csharp[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml.cs#gotlostfocussampleeventhandlers)]
  [!code-vb[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/VisualBasic/Window1.xaml.vb#gotlostfocussampleeventhandlers)]  
   
-## Siehe auch  
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4775d-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4775d-110">See Also</span></span>  
+ [<span data-ttu-id="4775d-111">Übersicht über die Eingabe</span><span class="sxs-lookup"><span data-stu-id="4775d-111">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)

@@ -1,55 +1,59 @@
 ---
-title: "Aktivit&#228;tsstruktur&#252;berpr&#252;fung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aktivitätsstrukturüberprüfung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5a93b2d46dee3aab963e7ec97618661435e18def
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Aktivit&#228;tsstruktur&#252;berpr&#252;fung
-Die Aktivitätsstrukturüberprüfung wird von Workflowanwendungsautoren verwendet, um die von der Anwendung gehosteten Workflows zu überprüfen.<xref:System.Activities.WorkflowInspectionServices> ermöglicht die Suche nach bestimmten untergeordneten Aktivitäten in Workflows, die Auflistung einzelner Aktivitäten und ihrer Eigenschaften sowie die Zwischenspeicherung von Laufzeitmetadaten der Aktivitäten zu einem bestimmten Zeitpunkt.Dieses Thema bietet eine Übersicht über <xref:System.Activities.WorkflowInspectionServices> und die Verwendung zur Überprüfung einer Aktivitätsstruktur.  
+# <a name="activity-tree-inspection"></a><span data-ttu-id="c6253-102">Aktivitätsstrukturüberprüfung</span><span class="sxs-lookup"><span data-stu-id="c6253-102">Activity Tree Inspection</span></span>
+<span data-ttu-id="c6253-103">Die Aktivitätsstrukturüberprüfung wird von Workflowanwendungsautoren verwendet, um die von der Anwendung gehosteten Workflows zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="c6253-103">Activity tree inspection is used by workflow application authors to inspect the workflows hosted by the application.</span></span> <span data-ttu-id="c6253-104"><xref:System.Activities.WorkflowInspectionServices> ermöglicht die Suche nach bestimmten untergeordneten Aktivitäten in Workflows, die Auflistung einzelner Aktivitäten und ihrer Eigenschaften sowie die Zwischenspeicherung von Laufzeitmetadaten der Aktivitäten zu einem bestimmten Zeitpunkt.</span><span class="sxs-lookup"><span data-stu-id="c6253-104">By using <xref:System.Activities.WorkflowInspectionServices>, workflows can be searched for specific child activities, individual activities and their properties can be enumerated, and runtime metadata of the activities can be cached at a specific time.</span></span> <span data-ttu-id="c6253-105">Dieses Thema bietet eine Übersicht über <xref:System.Activities.WorkflowInspectionServices> und die Verwendung zur Überprüfung einer Aktivitätsstruktur.</span><span class="sxs-lookup"><span data-stu-id="c6253-105">This topic provides an overview of <xref:System.Activities.WorkflowInspectionServices> and how to use it to inspect an activity tree.</span></span>  
   
-## Verwenden von WorkflowInspectionServices  
- Die <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>\-Methode wird verwendet, um alle Aktivitäten in der angegebenen Aktivitätsstruktur aufzulisten.<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> gibt ein aufzählbares Element zurück, das alle Aktivitäten in der Struktur umfasst, darunter untergeordnete Elemente, Delegathandler, variable Standardwerte und Argumentausdrücke.Im folgenden Beispiel wird eine Workflowdefinition mithilfe der Elemente <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine> und Ausdrücken erstellt.Nachdem die Workflowdefinition erstellt wurde, wird sie aufgerufen. Anschließend wird die `InspectActivity`\-Methode aufgerufen.  
+## <a name="using-workflowinspectionservices"></a><span data-ttu-id="c6253-106">Verwenden von WorkflowInspectionServices</span><span class="sxs-lookup"><span data-stu-id="c6253-106">Using WorkflowInspectionServices</span></span>  
+ <span data-ttu-id="c6253-107">Die <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>-Methode wird verwendet, um alle Aktivitäten in der angegebenen Aktivitätsstruktur aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="c6253-107">The <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> method is used to enumerate all of the activities in the specified activity tree.</span></span> <span data-ttu-id="c6253-108"><xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> gibt ein aufzählbares Element zurück, das alle Aktivitäten in der Struktur umfasst, darunter untergeordnete Elemente, Delegathandler, variable Standardwerte und Argumentausdrücke.</span><span class="sxs-lookup"><span data-stu-id="c6253-108"><xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> returns an enumerable that touches all activities within the tree including children, delegate handlers, variable defaults, and argument expressions.</span></span> <span data-ttu-id="c6253-109">Im folgenden Beispiel wird eine Workflowdefinition mithilfe der Elemente <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine> und Ausdrücken erstellt.</span><span class="sxs-lookup"><span data-stu-id="c6253-109">In the following example, a workflow definition is created by using a <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine>, and expressions.</span></span> <span data-ttu-id="c6253-110">Nachdem die Workflowdefinition erstellt wurde, wird sie aufgerufen. Anschließend wird die `InspectActivity`-Methode aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="c6253-110">After the workflow definition is created, it is invoked and then the `InspectActivity` method is called.</span></span>  
   
  [!code-csharp[CFX_WorkflowApplicationExample#45](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#45)]  
   
- Zur Auflistung der Aktivitäten wird <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> für die Stammaktivität und dann erneut rekursiv für jede zurückgegebene Aktivität aufgerufen.Im folgenden Beispiel wird das <xref:System.Activities.Activity.DisplayName%2A>\-Objekt von den einzelnen Aktivitäten und Ausdrücken in der Aktivitätsstruktur in die Konsole geschrieben.  
+ <span data-ttu-id="c6253-111">Zur Auflistung der Aktivitäten wird <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> für die Stammaktivität und dann erneut rekursiv für jede zurückgegebene Aktivität aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="c6253-111">To enumerate the activities, the <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> is called on the root activity, and again recursively on each returned activity.</span></span> <span data-ttu-id="c6253-112">Im folgenden Beispiel wird das <xref:System.Activities.Activity.DisplayName%2A>-Objekt von den einzelnen Aktivitäten und Ausdrücken in der Aktivitätsstruktur in die Konsole geschrieben.</span><span class="sxs-lookup"><span data-stu-id="c6253-112">In the following example, the <xref:System.Activities.Activity.DisplayName%2A> of each activity and expression in the activity tree is written to the console.</span></span>  
   
  [!code-csharp[CFX_WorkflowApplicationExample#46](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#46)]  
   
- Mit diesem Beispielcode wird die folgende Ausgabe erzeugt.  
+ <span data-ttu-id="c6253-113">Mit diesem Beispielcode wird die folgende Ausgabe erzeugt.</span><span class="sxs-lookup"><span data-stu-id="c6253-113">This sample code provides the following output.</span></span>  
   
- **Listenelement 1**   
-**Listenelement 2**   
-**Listenelement 3**   
-**Listenelement 4**   
-**Listenelement 5**   
-**Der Auflistung hinzugefügte Elemente.**   
-**Sequenz**   
- **Literal\<List\<String\>\>**   
- **While**   
- **AddToCollection\<String\>**   
- **VariableValue\<ICollection\<String\>\>**   
- **LambdaValue\<String\>**   
- **LocationReferenceValue\<List\<String\>\>**   
- **LambdaValue\<Boolean\>**   
- **LocationReferenceValue\<List\<String\>\>**   
- **ForEach\<String\>**   
- **VariableValue\<IEnumerable\<String\>\>**   
- **WriteLine**   
- **DelegateArgumentValue\<String\>**   
- **Sequenz**   
- **WriteLine**   
- **Literal\<String\>**  Um eine bestimmte Aktivität abzurufen, statt alle Aktivitäten aufzulisten, wird <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> verwendet.Sowohl mit <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> als auch mit <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> wird die Zwischenspeicherung von Metadaten ausgeführt, wenn `WorkflowInspectionServices.CacheMetadata` zuvor nicht aufgerufen wurde.Wenn <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> aufgerufen wurde, basiert <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> auf den vorhandenen Metadaten.Falls also seit dem letzten Aufruf von <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> Strukturänderungen vorgenommen wurden, kann <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> zu unerwarteten Ergebnissen führen.Wenn nach dem Aufruf von <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> Änderungen am Workflow vorgenommen wurden, können Metadaten durch Aufrufen der <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>\-Methode erneut zwischengespeichert werden.Das Zwischenspeichern von Metadaten wird im nächsten Abschnitt erläutert.  
+ <span data-ttu-id="c6253-114">**List-Item 1**</span><span class="sxs-lookup"><span data-stu-id="c6253-114">**List Item 1**</span></span>  
+<span data-ttu-id="c6253-115">**List-Item 2** </span><span class="sxs-lookup"><span data-stu-id="c6253-115">**List Item 2** </span></span>  
+<span data-ttu-id="c6253-116">**List-Item 3** </span><span class="sxs-lookup"><span data-stu-id="c6253-116">**List Item 3** </span></span>  
+<span data-ttu-id="c6253-117">**Listenelement 4** </span><span class="sxs-lookup"><span data-stu-id="c6253-117">**List Item 4** </span></span>  
+<span data-ttu-id="c6253-118">**Listenelement 5** </span><span class="sxs-lookup"><span data-stu-id="c6253-118">**List Item 5** </span></span>  
+<span data-ttu-id="c6253-119">**Elemente, die zur Auflistung hinzugefügt werden.** </span><span class="sxs-lookup"><span data-stu-id="c6253-119">**Items added to collection.** </span></span>  
+<span data-ttu-id="c6253-120">**Sequenz** </span><span class="sxs-lookup"><span data-stu-id="c6253-120">**Sequence** </span></span>  
+ <span data-ttu-id="c6253-121">**Literal < Liste\<Zeichenfolge >>**</span><span class="sxs-lookup"><span data-stu-id="c6253-121">**Literal<List\<String>>**</span></span>  
+ <span data-ttu-id="c6253-122">**While**</span><span class="sxs-lookup"><span data-stu-id="c6253-122">**While**</span></span>  
+ <span data-ttu-id="c6253-123">**AddToCollection\<Zeichenfolge >**</span><span class="sxs-lookup"><span data-stu-id="c6253-123">**AddToCollection\<String>**</span></span>  
+ <span data-ttu-id="c6253-124">**VariableValue < ICollection\<Zeichenfolge >>**</span><span class="sxs-lookup"><span data-stu-id="c6253-124">**VariableValue<ICollection\<String>>**</span></span>  
+ <span data-ttu-id="c6253-125">**LambdaValue\<Zeichenfolge >**</span><span class="sxs-lookup"><span data-stu-id="c6253-125">**LambdaValue\<String>**</span></span>  
+ <span data-ttu-id="c6253-126">**LocationReferenceValue < Liste\<Zeichenfolge >>**</span><span class="sxs-lookup"><span data-stu-id="c6253-126">**LocationReferenceValue<List\<String>>**</span></span>  
+ <span data-ttu-id="c6253-127">**LambdaValue\<booleschen >**</span><span class="sxs-lookup"><span data-stu-id="c6253-127">**LambdaValue\<Boolean>**</span></span>  
+ <span data-ttu-id="c6253-128">**LocationReferenceValue < Liste\<Zeichenfolge >>**</span><span class="sxs-lookup"><span data-stu-id="c6253-128">**LocationReferenceValue<List\<String>>**</span></span>  
+ <span data-ttu-id="c6253-129">**ForEach\<Zeichenfolge >**</span><span class="sxs-lookup"><span data-stu-id="c6253-129">**ForEach\<String>**</span></span>  
+ <span data-ttu-id="c6253-130">**VariableValue < IEnumerable\<Zeichenfolge >>**</span><span class="sxs-lookup"><span data-stu-id="c6253-130">**VariableValue<IEnumerable\<String>>**</span></span>  
+ <span data-ttu-id="c6253-131">**WriteLine**</span><span class="sxs-lookup"><span data-stu-id="c6253-131">**WriteLine**</span></span>  
+ <span data-ttu-id="c6253-132">**DelegateArgumentValue\<Zeichenfolge >**</span><span class="sxs-lookup"><span data-stu-id="c6253-132">**DelegateArgumentValue\<String>**</span></span>  
+ <span data-ttu-id="c6253-133">**Sequenz**</span><span class="sxs-lookup"><span data-stu-id="c6253-133">**Sequence**</span></span>  
+ <span data-ttu-id="c6253-134">**WriteLine**</span><span class="sxs-lookup"><span data-stu-id="c6253-134">**WriteLine**</span></span>  
+ <span data-ttu-id="c6253-135">**Literal\<Zeichenfolge >** zum Abrufen einer bestimmten Aktivität anstatt alle Aktivitäten, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c6253-135">**Literal\<String>**  To retrieve a specific activity instead of enumerating all of the activities, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> is used.</span></span> <span data-ttu-id="c6253-136">Sowohl mit <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> als auch mit <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> wird die Zwischenspeicherung von Metadaten ausgeführt, wenn `WorkflowInspectionServices.CacheMetadata` zuvor nicht aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="c6253-136">Both <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> and <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> perform metadata caching if `WorkflowInspectionServices.CacheMetadata` has not been previously called.</span></span> <span data-ttu-id="c6253-137">Wenn <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> aufgerufen wurde, basiert <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> auf den vorhandenen Metadaten.</span><span class="sxs-lookup"><span data-stu-id="c6253-137">If <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> has been called then <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> is based on the existing metadata.</span></span> <span data-ttu-id="c6253-138">Falls also seit dem letzten Aufruf von <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> Strukturänderungen vorgenommen wurden, kann <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> zu unerwarteten Ergebnissen führen.</span><span class="sxs-lookup"><span data-stu-id="c6253-138">Therefore, if tree changes have been made since the last call to <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> might give unexpected results.</span></span> <span data-ttu-id="c6253-139">Wenn Änderungen an den Workflow nach dem Aufruf vorgenommen wurden <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, Metadaten kann erneut zwischengespeichert werden, durch Aufrufen der <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="c6253-139">If changes have been made to the workflow after calling <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, metadata can be re-cached by calling the <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> method.</span></span> <span data-ttu-id="c6253-140">Das Zwischenspeichern von Metadaten wird im nächsten Abschnitt erläutert.</span><span class="sxs-lookup"><span data-stu-id="c6253-140">Caching metadata is discussed in the next section.</span></span>  
   
-### Zwischenspeichern von Metadaten  
- Durch die Zwischenspeicherung der Metadaten für eine Aktivität wird eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität erstellt und validiert.Metadaten werden standardmäßig von der Laufzeit zwischengespeichert, wenn eine Aktivität zur Ausführung vorbereitet wird.Wenn ein Workflowhostautor die Metadaten für eine Aktivität oder eine Aktivitätsstruktur vorher zwischenspeichern möchte, um beispielsweise den gesamten Aufwand im Voraus zu erfassen, kann <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> verwendet werden, um die Metadaten zu dem gewünschten Zeitpunkt zwischenzuspeichern.
+### <a name="caching-metadata"></a><span data-ttu-id="c6253-141">Zwischenspeichern von Metadaten</span><span class="sxs-lookup"><span data-stu-id="c6253-141">Caching Metadata</span></span>  
+ <span data-ttu-id="c6253-142">Durch die Zwischenspeicherung der Metadaten für eine Aktivität wird eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität erstellt und validiert.</span><span class="sxs-lookup"><span data-stu-id="c6253-142">Caching the metadata for an activity builds and validates a description of the activity’s arguments, variables, child activities, and activity delegates.</span></span> <span data-ttu-id="c6253-143">Metadaten werden standardmäßig von der Laufzeit zwischengespeichert, wenn eine Aktivität zur Ausführung vorbereitet wird.</span><span class="sxs-lookup"><span data-stu-id="c6253-143">Metadata, by default, is cached by the runtime when an activity is prepared for execution.</span></span> <span data-ttu-id="c6253-144">Wenn ein Workflowhostautor die Metadaten für eine Aktivität oder eine Aktivitätsstruktur vorher zwischenspeichern möchte, um beispielsweise den gesamten Aufwand im Voraus zu erfassen, kann <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> verwendet werden, um die Metadaten zu dem gewünschten Zeitpunkt zwischenzuspeichern.</span><span class="sxs-lookup"><span data-stu-id="c6253-144">If a workflow host author wants to cache the metadata for an activity or activity tree before this, for example to take all of the cost upfront, then <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> can be used to cache the metadata at the desired time.</span></span>

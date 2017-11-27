@@ -5,172 +5,169 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="method-etw-events"></a>ETW-Methodenereignisse
-<a name="top"></a> Diese Ereignisse sammeln Informationen, die für Methoden spezifisch sind. Die Nutzlast dieser Ereignisse ist für die Symbolauflösung erforderlich. Darüber hinaus bieten diese Ereignisse hilfreiche Informationen, beispielsweise, wie oft eine Methode aufgerufen wurde.  
+# <a name="method-etw-events"></a><span data-ttu-id="56f0d-102">ETW-Methodenereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-102">Method ETW Events</span></span>
+<span data-ttu-id="56f0d-103"><a name="top"></a> Diese Ereignisse sammeln Informationen, die für Methoden spezifisch sind.</span><span class="sxs-lookup"><span data-stu-id="56f0d-103"><a name="top"></a> These events collect information that is specific to methods.</span></span> <span data-ttu-id="56f0d-104">Die Nutzlast dieser Ereignisse ist für die Symbolauflösung erforderlich.</span><span class="sxs-lookup"><span data-stu-id="56f0d-104">The payload of these events is required for symbol resolution.</span></span> <span data-ttu-id="56f0d-105">Darüber hinaus bieten diese Ereignisse hilfreiche Informationen, beispielsweise, wie oft eine Methode aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="56f0d-105">In addition, these events provide helpful information such as the number of times a method was called.</span></span>  
   
- Alle Methodenereignisse verfügen über die Ebene "Information (4)". Alle ausführlichen Methodenereignisse verfügen über die Ebene "Ausführlich (5)".  
+ <span data-ttu-id="56f0d-106">Alle Methodenereignisse verfügen über die Ebene "Information (4)".</span><span class="sxs-lookup"><span data-stu-id="56f0d-106">All method events have a level of "Informational (4)".</span></span> <span data-ttu-id="56f0d-107">Alle ausführlichen Methodenereignisse verfügen über die Ebene "Ausführlich (5)".</span><span class="sxs-lookup"><span data-stu-id="56f0d-107">All method verbose events have a level of "Verbose (5)".</span></span>  
   
- Alle Methodenereignisse werden unter dem Laufzeitanbieter vom Schlüsselwort `JITKeyword` (0x10) oder dem Schlüsselwort `NGenKeyword` (0x20) bzw. unter dem Rundownanbieter von `JitRundownKeyword` (0x10) oder `NGENRundownKeyword` (0x20) ausgelöst.  
+ <span data-ttu-id="56f0d-108">Alle Methodenereignisse werden unter dem Laufzeitanbieter vom Schlüsselwort `JITKeyword` (0x10) oder dem Schlüsselwort `NGenKeyword` (0x20) bzw. unter dem Rundownanbieter von `JitRundownKeyword` (0x10) oder `NGENRundownKeyword` (0x20) ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="56f0d-108">All method events are raised by the `JITKeyword` (0x10) keyword or the `NGenKeyword` (0x20) keyword under the runtime provider, or `JitRundownKeyword` (0x10) or `NGENRundownKeyword` (0x20) under the rundown provider.</span></span>  
   
- Die CLR-Methodenereignisse werden weiter in Folgendes unterteilt:  
+ <span data-ttu-id="56f0d-109">Die CLR-Methodenereignisse werden weiter in Folgendes unterteilt:</span><span class="sxs-lookup"><span data-stu-id="56f0d-109">CLR method events are further subdivided into the following:</span></span>  
   
--   [CLR-Methodenereignisse](#clr_method_events)  
+-   [<span data-ttu-id="56f0d-110">CLR-Methodenereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-110">CLR Method Events</span></span>](#clr_method_events)  
   
--   [CLR-Methodenmarkerereignisse](#clr_method_marker_events)  
+-   [<span data-ttu-id="56f0d-111">CLR-Methodenmarkerereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-111">CLR Method Marker Events</span></span>](#clr_method_marker_events)  
   
--   [Ausführliche CLR-Methodenereignisse](#clr_method_verbose_events)  
+-   [<span data-ttu-id="56f0d-112">Ausführliche CLR-Methodenereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-112">CLR Method Verbose Events</span></span>](#clr_method_verbose_events)  
   
--   [MethodJittingStarted-Ereignis](#methodjittingstarted_event)  
+-   [<span data-ttu-id="56f0d-113">MethodJittingStarted-Ereignis</span><span class="sxs-lookup"><span data-stu-id="56f0d-113">MethodJittingStarted Event</span></span>](#methodjittingstarted_event)  
   
 <a name="clr_method_events"></a>   
-## <a name="clr-method-events"></a>CLR-Methodenereignisse  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+## <a name="clr-method-events"></a><span data-ttu-id="56f0d-114">CLR-Methodenereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-114">CLR Method Events</span></span>  
+ <span data-ttu-id="56f0d-115">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-115">The following table shows the keyword and level.</span></span> <span data-ttu-id="56f0d-116">(Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="56f0d-116">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|<span data-ttu-id="56f0d-117">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="56f0d-117">Keyword for raising the event</span></span>|<span data-ttu-id="56f0d-118">Ebene</span><span class="sxs-lookup"><span data-stu-id="56f0d-118">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10)-Laufzeitanbieter|Information (4)|  
-|`NGenKeyword` (0x20)-Laufzeitanbieter|Information (4)|  
-|`JitRundownKeyword` (0x10)-Rundownanbieter|Information (4)|  
-|`NGENRundownKeyword` (0x20)-Rundownanbieter|Information (4)|  
+|<span data-ttu-id="56f0d-119">`JITKeyword` (0x10)-Laufzeitanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-119">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="56f0d-120">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-120">Informational (4)</span></span>|  
+|<span data-ttu-id="56f0d-121">`NGenKeyword` (0x20)-Laufzeitanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-121">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="56f0d-122">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-122">Informational (4)</span></span>|  
+|<span data-ttu-id="56f0d-123">`JitRundownKeyword` (0x10)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-123">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="56f0d-124">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-124">Informational (4)</span></span>|  
+|<span data-ttu-id="56f0d-125">`NGENRundownKeyword` (0x20)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-125">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="56f0d-126">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-126">Informational (4)</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisinformationen an.  
+ <span data-ttu-id="56f0d-127">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-127">The following table shows the event information.</span></span>  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|<span data-ttu-id="56f0d-128">Ereignis</span><span class="sxs-lookup"><span data-stu-id="56f0d-128">Event</span></span>|<span data-ttu-id="56f0d-129">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="56f0d-129">Event ID</span></span>|<span data-ttu-id="56f0d-130">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-130">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoad_V1`|136|Wird ausgelöst, wenn eine Methode Just-in-Time geladen (JIT-geladen) oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden diese Version nicht für Methodenladevorgänge. JIT-Hilfen verwenden nie diese Version.|  
-|`MethodUnLoad_V1`|137|Wird ausgelöst, wenn ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden nie diese Version für das Entladen von Methoden.|  
-|`MethodDCStart_V1`|137|Listet Methoden während eines Startrundowns auf.|  
-|`MethodDCEnd_V1`|138|Listet Methoden während eines Endrundowns auf.|  
+|`MethodLoad_V1`|<span data-ttu-id="56f0d-131">136</span><span class="sxs-lookup"><span data-stu-id="56f0d-131">136</span></span>|<span data-ttu-id="56f0d-132">Wird ausgelöst, wenn eine Methode Just-in-Time geladen (JIT-geladen) oder ein NGEN-Image geladen wird.</span><span class="sxs-lookup"><span data-stu-id="56f0d-132">Raised when a method is just-in-time loaded (JIT-loaded) or an NGEN image is loaded.</span></span> <span data-ttu-id="56f0d-133">Dynamische und generische Methoden verwenden diese Version nicht für Methodenladevorgänge.</span><span class="sxs-lookup"><span data-stu-id="56f0d-133">Dynamic and generic methods do not use this version for method loads.</span></span> <span data-ttu-id="56f0d-134">JIT-Hilfen verwenden nie diese Version.</span><span class="sxs-lookup"><span data-stu-id="56f0d-134">JIT helpers never use this version.</span></span>|  
+|`MethodUnLoad_V1`|<span data-ttu-id="56f0d-135">137</span><span class="sxs-lookup"><span data-stu-id="56f0d-135">137</span></span>|<span data-ttu-id="56f0d-136">Wird ausgelöst, wenn ein Modul entladen oder eine Anwendungsdomäne zerstört wird.</span><span class="sxs-lookup"><span data-stu-id="56f0d-136">Raised when a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="56f0d-137">Dynamische Methoden verwenden nie diese Version für das Entladen von Methoden.</span><span class="sxs-lookup"><span data-stu-id="56f0d-137">Dynamic methods never use this version for method unloads.</span></span>|  
+|`MethodDCStart_V1`|<span data-ttu-id="56f0d-138">137</span><span class="sxs-lookup"><span data-stu-id="56f0d-138">137</span></span>|<span data-ttu-id="56f0d-139">Listet Methoden während eines Startrundowns auf.</span><span class="sxs-lookup"><span data-stu-id="56f0d-139">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEnd_V1`|<span data-ttu-id="56f0d-140">138</span><span class="sxs-lookup"><span data-stu-id="56f0d-140">138</span></span>|<span data-ttu-id="56f0d-141">Listet Methoden während eines Endrundowns auf.</span><span class="sxs-lookup"><span data-stu-id="56f0d-141">Enumerates methods during an end rundown.</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisdaten an.  
+ <span data-ttu-id="56f0d-142">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-142">The following table shows the event data.</span></span>  
   
-|Feldname|Datentyp|Beschreibung|  
+|<span data-ttu-id="56f0d-143">Feldname</span><span class="sxs-lookup"><span data-stu-id="56f0d-143">Field name</span></span>|<span data-ttu-id="56f0d-144">Datentyp</span><span class="sxs-lookup"><span data-stu-id="56f0d-144">Data type</span></span>|<span data-ttu-id="56f0d-145">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-145">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Der eindeutige Bezeichner einer Methode. Bei JIT-Hilfsmethoden wird dies auf die Startadresse der Methode festgelegt.|  
-|ModuleID|win:UInt64|Der Bezeichner des Moduls, zu dem diese Methode gehört (0 für JIT-Hilfen).|  
-|MethodStartAddress|win:UInt64|Die Startadresse der Methode.|  
-|MethodSize|win:UInt32|Die Größe der Methode.|  
-|MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|  
-|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Codemethode (andernfalls systemeigener NGEN-Imagecode).<br /><br /> 0x8: Hilfsmethode.|  
-|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+|<span data-ttu-id="56f0d-146">MethodID</span><span class="sxs-lookup"><span data-stu-id="56f0d-146">MethodID</span></span>|<span data-ttu-id="56f0d-147">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-147">win:UInt64</span></span>|<span data-ttu-id="56f0d-148">Der eindeutige Bezeichner einer Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-148">Unique identifier of a method.</span></span> <span data-ttu-id="56f0d-149">Bei JIT-Hilfsmethoden wird dies auf die Startadresse der Methode festgelegt.</span><span class="sxs-lookup"><span data-stu-id="56f0d-149">For JIT helper methods, this is set to the start address of the method.</span></span>|  
+|<span data-ttu-id="56f0d-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="56f0d-150">ModuleID</span></span>|<span data-ttu-id="56f0d-151">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-151">win:UInt64</span></span>|<span data-ttu-id="56f0d-152">Der Bezeichner des Moduls, zu dem diese Methode gehört (0 für JIT-Hilfen).</span><span class="sxs-lookup"><span data-stu-id="56f0d-152">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="56f0d-153">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="56f0d-153">MethodStartAddress</span></span>|<span data-ttu-id="56f0d-154">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-154">win:UInt64</span></span>|<span data-ttu-id="56f0d-155">Die Startadresse der Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-155">Start address of the method.</span></span>|  
+|<span data-ttu-id="56f0d-156">MethodSize</span><span class="sxs-lookup"><span data-stu-id="56f0d-156">MethodSize</span></span>|<span data-ttu-id="56f0d-157">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-157">win:UInt32</span></span>|<span data-ttu-id="56f0d-158">Die Größe der Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-158">Size of the method.</span></span>|  
+|<span data-ttu-id="56f0d-159">MethodToken</span><span class="sxs-lookup"><span data-stu-id="56f0d-159">MethodToken</span></span>|<span data-ttu-id="56f0d-160">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-160">win:UInt32</span></span>|<span data-ttu-id="56f0d-161">0 für dynamische Methoden und JIT-Hilfen.</span><span class="sxs-lookup"><span data-stu-id="56f0d-161">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="56f0d-162">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="56f0d-162">MethodFlags</span></span>|<span data-ttu-id="56f0d-163">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-163">win:UInt32</span></span>|<span data-ttu-id="56f0d-164">0x1: Dynamische Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-164">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="56f0d-165">0x2: Generische Methode</span><span class="sxs-lookup"><span data-stu-id="56f0d-165">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="56f0d-166">0x4: JIT-kompilierte Codemethode (andernfalls systemeigener NGEN-Imagecode).</span><span class="sxs-lookup"><span data-stu-id="56f0d-166">0x4: JIT-compiled code method (otherwise NGEN native image code).</span></span><br /><br /> <span data-ttu-id="56f0d-167">0x8: Hilfsmethode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-167">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="56f0d-168">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="56f0d-168">ClrInstanceID</span></span>|<span data-ttu-id="56f0d-169">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="56f0d-169">win:UInt16</span></span>|<span data-ttu-id="56f0d-170">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="56f0d-170">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Zurück nach oben](#top)  
+ [<span data-ttu-id="56f0d-171">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="56f0d-171">Back to top</span></span>](#top)  
   
 <a name="clr_method_marker_events"></a>   
-## <a name="clr-method-marker-events"></a>CLR-Methodenmarkerereignisse  
- Diese Ereignisse werden nur unter dem Rundownanbieter ausgelöst. Sie bezeichnen das Ende der Methodenenumeration während eines Start- oder Endrundowns. (Das heißt, sie werden ausgelöst, wenn eins der Schlüsselwörter `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`oder `AppDomainResourceManagementRundownKeyword` aktiviert wird.)  
+## <a name="clr-method-marker-events"></a><span data-ttu-id="56f0d-172">CLR-Methodenmarkerereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-172">CLR Method Marker Events</span></span>  
+ <span data-ttu-id="56f0d-173">Diese Ereignisse werden nur unter dem Rundownanbieter ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="56f0d-173">These events are raised only under the rundown provider.</span></span> <span data-ttu-id="56f0d-174">Sie bezeichnen das Ende der Methodenenumeration während eines Start- oder Endrundowns.</span><span class="sxs-lookup"><span data-stu-id="56f0d-174">They signify the end of method enumeration during a start or end rundown.</span></span> <span data-ttu-id="56f0d-175">(Das heißt, sie werden ausgelöst, wenn eins der Schlüsselwörter `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`oder `AppDomainResourceManagementRundownKeyword` aktiviert wird.)</span><span class="sxs-lookup"><span data-stu-id="56f0d-175">(That is, they are raised when the `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`, or `AppDomainResourceManagementRundownKeyword` keyword is enabled.)</span></span>  
   
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+ <span data-ttu-id="56f0d-176">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-176">The following table shows the keyword and level.</span></span>  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|<span data-ttu-id="56f0d-177">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="56f0d-177">Keyword for raising the event</span></span>|<span data-ttu-id="56f0d-178">Ebene</span><span class="sxs-lookup"><span data-stu-id="56f0d-178">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementRundownKeyword` (0x800)-Rundownanbieter|Information (4)|  
-|`JitRundownKeyword` (0x10)-Rundownanbieter|Information (4)|  
-|`NGENRundownKeyword` (0x20)-Rundownanbieter|Information (4)|  
+|<span data-ttu-id="56f0d-179">`AppDomainResourceManagementRundownKeyword` (0x800)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-179">`AppDomainResourceManagementRundownKeyword` (0x800) rundown provider</span></span>|<span data-ttu-id="56f0d-180">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-180">Informational (4)</span></span>|  
+|<span data-ttu-id="56f0d-181">`JitRundownKeyword` (0x10)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-181">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="56f0d-182">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-182">Informational (4)</span></span>|  
+|<span data-ttu-id="56f0d-183">`NGENRundownKeyword` (0x20)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-183">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="56f0d-184">Information (4)</span><span class="sxs-lookup"><span data-stu-id="56f0d-184">Informational (4)</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisinformationen an.  
+ <span data-ttu-id="56f0d-185">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-185">The following table shows the event information.</span></span>  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|<span data-ttu-id="56f0d-186">Ereignis</span><span class="sxs-lookup"><span data-stu-id="56f0d-186">Event</span></span>|<span data-ttu-id="56f0d-187">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="56f0d-187">Event ID</span></span>|<span data-ttu-id="56f0d-188">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-188">Desciption</span></span>|  
 |-----------|--------------|----------------|  
-|`DCStartInit_V1`|147|Wird vor dem Start der Enumeration während eines Startrundowns gesendet.|  
-|`DCStartComplete_V1`|145|Wird am Ende der Enumeration während eines Startrundowns gesendet.|  
-|`DCEndInit_V1`|148|Wird vor dem Start der Enumeration während eines Endrundowns gesendet.|  
-|`DCEndComplete_V1`|146|Wird am Ende der Enumeration während eines Endrundowns gesendet.|  
+|`DCStartInit_V1`|<span data-ttu-id="56f0d-189">147</span><span class="sxs-lookup"><span data-stu-id="56f0d-189">147</span></span>|<span data-ttu-id="56f0d-190">Wird vor dem Start der Enumeration während eines Startrundowns gesendet.</span><span class="sxs-lookup"><span data-stu-id="56f0d-190">Sent before the start of the enumeration during a start rundown.</span></span>|  
+|`DCStartComplete_V1`|<span data-ttu-id="56f0d-191">145</span><span class="sxs-lookup"><span data-stu-id="56f0d-191">145</span></span>|<span data-ttu-id="56f0d-192">Wird am Ende der Enumeration während eines Startrundowns gesendet.</span><span class="sxs-lookup"><span data-stu-id="56f0d-192">Sent at the end of the enumeration during a start rundown.</span></span>|  
+|`DCEndInit_V1`|<span data-ttu-id="56f0d-193">148</span><span class="sxs-lookup"><span data-stu-id="56f0d-193">148</span></span>|<span data-ttu-id="56f0d-194">Wird vor dem Start der Enumeration während eines Endrundowns gesendet.</span><span class="sxs-lookup"><span data-stu-id="56f0d-194">Sent before the start of the enumeration during an end rundown.</span></span>|  
+|`DCEndComplete_V1`|<span data-ttu-id="56f0d-195">146</span><span class="sxs-lookup"><span data-stu-id="56f0d-195">146</span></span>|<span data-ttu-id="56f0d-196">Wird am Ende der Enumeration während eines Endrundowns gesendet.</span><span class="sxs-lookup"><span data-stu-id="56f0d-196">Sent at the end of the enumeration during an end rundown.</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisdaten an.  
+ <span data-ttu-id="56f0d-197">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-197">The following table shows the event data.</span></span>  
   
-|Feldname|Datentyp|Beschreibung|  
+|<span data-ttu-id="56f0d-198">Feldname</span><span class="sxs-lookup"><span data-stu-id="56f0d-198">Field name</span></span>|<span data-ttu-id="56f0d-199">Datentyp</span><span class="sxs-lookup"><span data-stu-id="56f0d-199">Data type</span></span>|<span data-ttu-id="56f0d-200">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-200">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+|<span data-ttu-id="56f0d-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="56f0d-201">ClrInstanceID</span></span>|<span data-ttu-id="56f0d-202">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="56f0d-202">win:UInt16</span></span>|<span data-ttu-id="56f0d-203">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="56f0d-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Zurück nach oben](#top)  
+ [<span data-ttu-id="56f0d-204">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="56f0d-204">Back to top</span></span>](#top)  
   
 <a name="clr_method_verbose_events"></a>   
-## <a name="clr-method-verbose-events"></a>Ausführliche CLR-Methodenereignisse  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+## <a name="clr-method-verbose-events"></a><span data-ttu-id="56f0d-205">Ausführliche CLR-Methodenereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-205">CLR Method Verbose Events</span></span>  
+ <span data-ttu-id="56f0d-206">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-206">The following table shows the keyword and level.</span></span>  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|<span data-ttu-id="56f0d-207">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="56f0d-207">Keyword for raising the event</span></span>|<span data-ttu-id="56f0d-208">Ebene</span><span class="sxs-lookup"><span data-stu-id="56f0d-208">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10)-Laufzeitanbieter|Ausführlich (5)|  
-|`NGenKeyword` (0x20)-Laufzeitanbieter|Ausführlich (5)|  
-|`JitRundownKeyword` (0x10)-Rundownanbieter|Ausführlich (5)|  
-|`NGENRundownKeyword` (0x20)-Rundownanbieter|Ausführlich (5)|  
+|<span data-ttu-id="56f0d-209">`JITKeyword` (0x10)-Laufzeitanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-209">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="56f0d-210">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-210">Verbose (5)</span></span>|  
+|<span data-ttu-id="56f0d-211">`NGenKeyword` (0x20)-Laufzeitanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-211">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="56f0d-212">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-212">Verbose (5)</span></span>|  
+|<span data-ttu-id="56f0d-213">`JitRundownKeyword` (0x10)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-213">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="56f0d-214">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-214">Verbose (5)</span></span>|  
+|<span data-ttu-id="56f0d-215">`NGENRundownKeyword` (0x20)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-215">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="56f0d-216">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-216">Verbose (5)</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisinformationen an.  
+ <span data-ttu-id="56f0d-217">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-217">The following table shows the event information.</span></span>  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|<span data-ttu-id="56f0d-218">Ereignis</span><span class="sxs-lookup"><span data-stu-id="56f0d-218">Event</span></span>|<span data-ttu-id="56f0d-219">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="56f0d-219">Event ID</span></span>|<span data-ttu-id="56f0d-220">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-220">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoadVerbose_V1`|143|Wird ausgelöst, wenn eine Methode JIT-geladen oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden immer diese Version für das Laden von Methoden. JIT-Hilfen verwenden immer diese Version.|  
-|`MethodUnLoadVerbose_V1`|144|Wird ausgelöst, wenn eine dynamische Methode zerstört, ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden immer diese Version für das Entladen von Methoden.|  
-|`MethodDCStartVerbose_V1`|141|Listet Methoden während eines Startrundowns auf.|  
-|`MethodDCEndVerbose_V1`|142|Listet Methoden während eines Endrundowns auf.|  
+|`MethodLoadVerbose_V1`|<span data-ttu-id="56f0d-221">143</span><span class="sxs-lookup"><span data-stu-id="56f0d-221">143</span></span>|<span data-ttu-id="56f0d-222">Wird ausgelöst, wenn eine Methode JIT-geladen oder ein NGEN-Image geladen wird.</span><span class="sxs-lookup"><span data-stu-id="56f0d-222">Raised when a method is JIT-loaded or an NGEN image is loaded.</span></span> <span data-ttu-id="56f0d-223">Dynamische und generische Methoden verwenden immer diese Version für das Laden von Methoden.</span><span class="sxs-lookup"><span data-stu-id="56f0d-223">Dynamic and generic methods always use this version for method loads.</span></span> <span data-ttu-id="56f0d-224">JIT-Hilfen verwenden immer diese Version.</span><span class="sxs-lookup"><span data-stu-id="56f0d-224">JIT helpers always use this version.</span></span>|  
+|`MethodUnLoadVerbose_V1`|<span data-ttu-id="56f0d-225">144</span><span class="sxs-lookup"><span data-stu-id="56f0d-225">144</span></span>|<span data-ttu-id="56f0d-226">Wird ausgelöst, wenn eine dynamische Methode zerstört, ein Modul entladen oder eine Anwendungsdomäne zerstört wird.</span><span class="sxs-lookup"><span data-stu-id="56f0d-226">Raised when a dynamic method is destroyed, a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="56f0d-227">Dynamische Methoden verwenden immer diese Version für das Entladen von Methoden.</span><span class="sxs-lookup"><span data-stu-id="56f0d-227">Dynamic methods always use this version for method unloads.</span></span>|  
+|`MethodDCStartVerbose_V1`|<span data-ttu-id="56f0d-228">141</span><span class="sxs-lookup"><span data-stu-id="56f0d-228">141</span></span>|<span data-ttu-id="56f0d-229">Listet Methoden während eines Startrundowns auf.</span><span class="sxs-lookup"><span data-stu-id="56f0d-229">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEndVerbose_V1`|<span data-ttu-id="56f0d-230">142</span><span class="sxs-lookup"><span data-stu-id="56f0d-230">142</span></span>|<span data-ttu-id="56f0d-231">Listet Methoden während eines Endrundowns auf.</span><span class="sxs-lookup"><span data-stu-id="56f0d-231">Enumerates methods during an end rundown.</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisdaten an.  
+ <span data-ttu-id="56f0d-232">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-232">The following table shows the event data.</span></span>  
   
-|Feldname|Datentyp|Beschreibung|  
+|<span data-ttu-id="56f0d-233">Feldname</span><span class="sxs-lookup"><span data-stu-id="56f0d-233">Field name</span></span>|<span data-ttu-id="56f0d-234">Datentyp</span><span class="sxs-lookup"><span data-stu-id="56f0d-234">Data type</span></span>|<span data-ttu-id="56f0d-235">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-235">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Der eindeutige Bezeichner der Methode. Bei JIT-Hilfsmethoden wird dies auf die Startadresse der Methode festgelegt.|  
-|ModuleID|win:UInt64|Der Bezeichner des Moduls, zu dem diese Methode gehört (0 für JIT-Hilfen).|  
-|MethodStartAddress|win:UInt64|Die Startadresse.|  
-|MethodSize|win:UInt32|Die Länge der Methode.|  
-|MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|  
-|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Methode (andernfalls von NGen.exe generiert)<br /><br /> 0x8: Hilfsmethode.|  
-|MethodNameSpace|win:UnicodeString|Der vollständige Namespacename, der der Methode zugeordnet ist.|  
-|MethodName|win:UnicodeString|Der vollständige Klassenname, der der Methode zugeordnet ist.|  
-|MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|  
-|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+|<span data-ttu-id="56f0d-236">MethodID</span><span class="sxs-lookup"><span data-stu-id="56f0d-236">MethodID</span></span>|<span data-ttu-id="56f0d-237">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-237">win:UInt64</span></span>|<span data-ttu-id="56f0d-238">Der eindeutige Bezeichner der Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-238">Unique identifier of the method.</span></span> <span data-ttu-id="56f0d-239">Bei JIT-Hilfsmethoden wird dies auf die Startadresse der Methode festgelegt.</span><span class="sxs-lookup"><span data-stu-id="56f0d-239">For JIT helper methods, set to the start address of the method.</span></span>|  
+|<span data-ttu-id="56f0d-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="56f0d-240">ModuleID</span></span>|<span data-ttu-id="56f0d-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-241">win:UInt64</span></span>|<span data-ttu-id="56f0d-242">Der Bezeichner des Moduls, zu dem diese Methode gehört (0 für JIT-Hilfen).</span><span class="sxs-lookup"><span data-stu-id="56f0d-242">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="56f0d-243">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="56f0d-243">MethodStartAddress</span></span>|<span data-ttu-id="56f0d-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-244">win:UInt64</span></span>|<span data-ttu-id="56f0d-245">Die Startadresse.</span><span class="sxs-lookup"><span data-stu-id="56f0d-245">Start address.</span></span>|  
+|<span data-ttu-id="56f0d-246">MethodSize</span><span class="sxs-lookup"><span data-stu-id="56f0d-246">MethodSize</span></span>|<span data-ttu-id="56f0d-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-247">win:UInt32</span></span>|<span data-ttu-id="56f0d-248">Die Länge der Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-248">Method length.</span></span>|  
+|<span data-ttu-id="56f0d-249">MethodToken</span><span class="sxs-lookup"><span data-stu-id="56f0d-249">MethodToken</span></span>|<span data-ttu-id="56f0d-250">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-250">win:UInt32</span></span>|<span data-ttu-id="56f0d-251">0 für dynamische Methoden und JIT-Hilfen.</span><span class="sxs-lookup"><span data-stu-id="56f0d-251">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="56f0d-252">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="56f0d-252">MethodFlags</span></span>|<span data-ttu-id="56f0d-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-253">win:UInt32</span></span>|<span data-ttu-id="56f0d-254">0x1: Dynamische Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-254">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="56f0d-255">0x2: Generische Methode</span><span class="sxs-lookup"><span data-stu-id="56f0d-255">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="56f0d-256">0x4: JIT-kompilierte Methode (andernfalls von NGen.exe generiert)</span><span class="sxs-lookup"><span data-stu-id="56f0d-256">0x4: JIT-compiled method (otherwise, generated by NGen.exe)</span></span><br /><br /> <span data-ttu-id="56f0d-257">0x8: Hilfsmethode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-257">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="56f0d-258">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="56f0d-258">MethodNameSpace</span></span>|<span data-ttu-id="56f0d-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="56f0d-259">win:UnicodeString</span></span>|<span data-ttu-id="56f0d-260">Der vollständige Namespacename, der der Methode zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="56f0d-260">Full namespace name associated with the method.</span></span>|  
+|<span data-ttu-id="56f0d-261">MethodName</span><span class="sxs-lookup"><span data-stu-id="56f0d-261">MethodName</span></span>|<span data-ttu-id="56f0d-262">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="56f0d-262">win:UnicodeString</span></span>|<span data-ttu-id="56f0d-263">Der vollständige Klassenname, der der Methode zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="56f0d-263">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="56f0d-264">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="56f0d-264">MethodSignature</span></span>|<span data-ttu-id="56f0d-265">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="56f0d-265">win:UnicodeString</span></span>|<span data-ttu-id="56f0d-266">Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).</span><span class="sxs-lookup"><span data-stu-id="56f0d-266">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="56f0d-267">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="56f0d-267">ClrInstanceID</span></span>|<span data-ttu-id="56f0d-268">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="56f0d-268">win:UInt16</span></span>|<span data-ttu-id="56f0d-269">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="56f0d-269">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Zurück nach oben](#top)  
+ [<span data-ttu-id="56f0d-270">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="56f0d-270">Back to top</span></span>](#top)  
   
 <a name="methodjittingstarted_event"></a>   
-## <a name="methodjittingstarted-event"></a>MethodJittingStarted-Ereignis  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
+## <a name="methodjittingstarted-event"></a><span data-ttu-id="56f0d-271">MethodJittingStarted-Ereignis</span><span class="sxs-lookup"><span data-stu-id="56f0d-271">MethodJittingStarted Event</span></span>  
+ <span data-ttu-id="56f0d-272">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-272">The following table shows the keyword and level.</span></span>  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
+|<span data-ttu-id="56f0d-273">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="56f0d-273">Keyword for raising the event</span></span>|<span data-ttu-id="56f0d-274">Ebene</span><span class="sxs-lookup"><span data-stu-id="56f0d-274">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10)-Laufzeitanbieter|Ausführlich (5)|  
-|`NGenKeyword` (0x20)-Laufzeitanbieter|Ausführlich (5)|  
-|`JitRundownKeyword` (0x10)-Rundownanbieter|Ausführlich (5)|  
-|`NGENRundownKeyword` (0x20)-Rundownanbieter|Ausführlich (5)|  
+|<span data-ttu-id="56f0d-275">`JITKeyword` (0x10)-Laufzeitanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-275">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="56f0d-276">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-276">Verbose (5)</span></span>|  
+|<span data-ttu-id="56f0d-277">`NGenKeyword` (0x20)-Laufzeitanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-277">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="56f0d-278">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-278">Verbose (5)</span></span>|  
+|<span data-ttu-id="56f0d-279">`JitRundownKeyword` (0x10)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-279">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="56f0d-280">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-280">Verbose (5)</span></span>|  
+|<span data-ttu-id="56f0d-281">`NGENRundownKeyword` (0x20)-Rundownanbieter</span><span class="sxs-lookup"><span data-stu-id="56f0d-281">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="56f0d-282">Ausführlich (5)</span><span class="sxs-lookup"><span data-stu-id="56f0d-282">Verbose (5)</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisinformationen an.  
+ <span data-ttu-id="56f0d-283">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-283">The following table shows the event information.</span></span>  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|<span data-ttu-id="56f0d-284">Ereignis</span><span class="sxs-lookup"><span data-stu-id="56f0d-284">Event</span></span>|<span data-ttu-id="56f0d-285">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="56f0d-285">Event ID</span></span>|<span data-ttu-id="56f0d-286">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-286">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJittingStarted`|145|Wird ausgelöst, wenn eine Methode JIT-kompiliert wird.|  
+|`MethodJittingStarted`|<span data-ttu-id="56f0d-287">145</span><span class="sxs-lookup"><span data-stu-id="56f0d-287">145</span></span>|<span data-ttu-id="56f0d-288">Wird ausgelöst, wenn eine Methode JIT-kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="56f0d-288">Raised when a method is being JIT-compiled.</span></span>|  
   
- Die folgende Tabelle zeigt die Ereignisdaten an.  
+ <span data-ttu-id="56f0d-289">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="56f0d-289">The following table shows the event data.</span></span>  
   
-|Feldname|Datentyp|Beschreibung|  
+|<span data-ttu-id="56f0d-290">Feldname</span><span class="sxs-lookup"><span data-stu-id="56f0d-290">Field name</span></span>|<span data-ttu-id="56f0d-291">Datentyp</span><span class="sxs-lookup"><span data-stu-id="56f0d-291">Data type</span></span>|<span data-ttu-id="56f0d-292">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56f0d-292">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Der eindeutige Bezeichner der Methode.|  
-|ModuleID|win:UInt64|Der Bezeichner des Moduls, zu dem diese Methode gehört.|  
-|MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|  
-|MethodILSize|win:UInt32|Die Größe der Microsoft Intermediate Language (MSIL) für die Methode, die JIT-kompiliert wird.|  
-|MethodNameSpace|win:UnicodeString|Der vollständige Klassenname, der der Methode zugeordnet ist.|  
-|MethodName|win:UnicodeString|Der Name der Methode.|  
-|MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|  
-|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
+|<span data-ttu-id="56f0d-293">MethodID</span><span class="sxs-lookup"><span data-stu-id="56f0d-293">MethodID</span></span>|<span data-ttu-id="56f0d-294">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-294">win:UInt64</span></span>|<span data-ttu-id="56f0d-295">Der eindeutige Bezeichner der Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-295">Unique identifier of the method.</span></span>|  
+|<span data-ttu-id="56f0d-296">ModuleID</span><span class="sxs-lookup"><span data-stu-id="56f0d-296">ModuleID</span></span>|<span data-ttu-id="56f0d-297">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="56f0d-297">win:UInt64</span></span>|<span data-ttu-id="56f0d-298">Der Bezeichner des Moduls, zu dem diese Methode gehört.</span><span class="sxs-lookup"><span data-stu-id="56f0d-298">Identifier of the module to which this method belongs.</span></span>|  
+|<span data-ttu-id="56f0d-299">MethodToken</span><span class="sxs-lookup"><span data-stu-id="56f0d-299">MethodToken</span></span>|<span data-ttu-id="56f0d-300">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-300">win:UInt32</span></span>|<span data-ttu-id="56f0d-301">0 für dynamische Methoden und JIT-Hilfen.</span><span class="sxs-lookup"><span data-stu-id="56f0d-301">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="56f0d-302">MethodILSize</span><span class="sxs-lookup"><span data-stu-id="56f0d-302">MethodILSize</span></span>|<span data-ttu-id="56f0d-303">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="56f0d-303">win:UInt32</span></span>|<span data-ttu-id="56f0d-304">Die Größe der Microsoft Intermediate Language (MSIL) für die Methode, die JIT-kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="56f0d-304">The size of the Microsoft intermediate language (MSIL) for the method that is being JIT-compiled.</span></span>|  
+|<span data-ttu-id="56f0d-305">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="56f0d-305">MethodNameSpace</span></span>|<span data-ttu-id="56f0d-306">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="56f0d-306">win:UnicodeString</span></span>|<span data-ttu-id="56f0d-307">Der vollständige Klassenname, der der Methode zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="56f0d-307">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="56f0d-308">MethodName</span><span class="sxs-lookup"><span data-stu-id="56f0d-308">MethodName</span></span>|<span data-ttu-id="56f0d-309">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="56f0d-309">win:UnicodeString</span></span>|<span data-ttu-id="56f0d-310">Der Name der Methode.</span><span class="sxs-lookup"><span data-stu-id="56f0d-310">Name of the method.</span></span>|  
+|<span data-ttu-id="56f0d-311">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="56f0d-311">MethodSignature</span></span>|<span data-ttu-id="56f0d-312">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="56f0d-312">win:UnicodeString</span></span>|<span data-ttu-id="56f0d-313">Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).</span><span class="sxs-lookup"><span data-stu-id="56f0d-313">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="56f0d-314">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="56f0d-314">ClrInstanceID</span></span>|<span data-ttu-id="56f0d-315">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="56f0d-315">win:UInt16</span></span>|<span data-ttu-id="56f0d-316">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="56f0d-316">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="56f0d-317">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56f0d-317">See Also</span></span>  
+ [<span data-ttu-id="56f0d-318">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="56f0d-318">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

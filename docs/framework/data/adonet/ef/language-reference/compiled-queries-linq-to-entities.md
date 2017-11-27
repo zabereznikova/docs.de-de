@@ -1,82 +1,84 @@
 ---
-title: "Kompilierte Abfragen (LINQ to Entities) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Kompilierte Abfragen (LINQ to Entities)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: de490bac737520ffef5899c8515322c72b2a1144
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Kompilierte Abfragen (LINQ to Entities)
-Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen ausführt, kann in vielen Fällen die Leistung gesteigert werden, indem die Abfrage einmal kompiliert und anschließend mehrmals mit verschiedenen Parametern ausgeführt wird.  So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird.  Für derartige Aufgaben unterstützt LINQ to Entities die Verwendung kompilierter Abfragen.  
+# <a name="compiled-queries--linq-to-entities"></a><span data-ttu-id="fb778-102">Kompilierte Abfragen (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="fb778-102">Compiled Queries  (LINQ to Entities)</span></span>
+<span data-ttu-id="fb778-103">Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen ausführt, kann in vielen Fällen die Leistung gesteigert werden, indem die Abfrage einmal kompiliert und anschließend mehrmals mit verschiedenen Parametern ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="fb778-103">When you have an application that executes structurally similar queries many times in the Entity Framework, you can frequently increase performance by compiling the query one time and executing it several times with different parameters.</span></span> <span data-ttu-id="fb778-104">So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="fb778-104">For example, an application might have to retrieve all the customers in a particular city; the city is specified at runtime by the user in a form.</span></span> <span data-ttu-id="fb778-105">Für derartige Aufgaben unterstützt LINQ to Entities die Verwendung kompilierter Abfragen.</span><span class="sxs-lookup"><span data-stu-id="fb778-105">LINQ to Entities supports using compiled queries for this purpose.</span></span>  
   
- Ab .NET Framework 4.5 werden LINQ\-Abfragen automatisch zwischengespeichert.  Sie können jedoch weiterhin kompilierte LINQ\-Abfragen verwenden, um diesen Aufwand in späteren Ausführungen zu reduzieren. Kompilierte Abfragen können effizienter als LINQ\-Abfragen sein, die automatisch zwischengespeichert werden.  Beachten Sie, dass LINQ to Entities\-Abfragen, die den `Enumerable.Contains`\-Operator auf Auflistungen im Arbeitsspeicher anwenden, nicht automatisch zwischengespeichert werden.  Darüber hinaus ist das Parametrisieren von Auflistungen im Arbeitsspeicher in kompilierten LINQ\-Abfragen nicht zulässig.  
+ <span data-ttu-id="fb778-106">Ab .NET Framework 4.5 werden LINQ-Abfragen automatisch zwischengespeichert.</span><span class="sxs-lookup"><span data-stu-id="fb778-106">Starting with the .NET Framework 4.5, LINQ queries are cached automatically.</span></span> <span data-ttu-id="fb778-107">Sie können jedoch weiterhin kompilierte LINQ-Abfragen verwenden, um diesen Aufwand in späteren Ausführungen zu reduzieren. Kompilierte Abfragen können effizienter als LINQ-Abfragen sein, die automatisch zwischengespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="fb778-107">However, you can still use compiled LINQ queries to reduce this cost in later executions and compiled queries can be more efficient than LINQ queries that are automatically cached.</span></span> <span data-ttu-id="fb778-108">Beachten Sie, dass LINQ to Entities-Abfragen, die den `Enumerable.Contains`-Operator auf Auflistungen im Arbeitsspeicher anwenden, nicht automatisch zwischengespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="fb778-108">Note that LINQ to Entities queries that apply the `Enumerable.Contains` operator to in-memory collections are not automatically cached.</span></span> <span data-ttu-id="fb778-109">Darüber hinaus ist das Parametrisieren von Auflistungen im Arbeitsspeicher in kompilierten LINQ-Abfragen nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="fb778-109">Also parameterizing in-memory collections in compiled LINQ queries is not allowed.</span></span>  
   
- Die <xref:System.Data.Objects.CompiledQuery>\-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung.  Diese Klasse enthält eine `Compile`\-Methode einer <xref:System.Data.Objects.CompiledQuery> mit mehreren Überladungen.  Rufen Sie die `Compile`\-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen.  Die mit einem <xref:System.Data.Objects.ObjectContext> und Parameterwerten ausgestatteten `Compile`\-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt \(z. B. eine <xref:System.Linq.IQueryable%601>\-Instanz\).  Die Abfrage wird nur einmal während der ersten Ausführung kompiliert.  Die für die Abfrage zur Kompilierungszeit festgelegten Zusammenführungsoptionen können später nicht geändert werden.  Nachdem die Abfrage kompiliert ist, können Sie nur Parameter mit einem primitiven Typ angeben. Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern.  Weitere Informationen finden Sie unter [Entity Framework\-Zusammenführungsoptionen und kompilierte Abfragen](http://go.microsoft.com/fwlink/?LinkId=199591).  
+ <span data-ttu-id="fb778-110">Die <xref:System.Data.Objects.CompiledQuery>-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung.</span><span class="sxs-lookup"><span data-stu-id="fb778-110">The <xref:System.Data.Objects.CompiledQuery> class provides compilation and caching of queries for reuse.</span></span> <span data-ttu-id="fb778-111">Diese Klasse enthält eine <xref:System.Data.Objects.CompiledQuery>-Methode einer `Compile` mit mehreren Überladungen.</span><span class="sxs-lookup"><span data-stu-id="fb778-111">Conceptually, this class contains a <xref:System.Data.Objects.CompiledQuery>'s `Compile` method with several overloads.</span></span> <span data-ttu-id="fb778-112">Rufen Sie die `Compile`-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="fb778-112">Call the `Compile` method to create a new delegate to represent the compiled query.</span></span> <span data-ttu-id="fb778-113">Die mit einem `Compile` und Parameterwerten ausgestatteten <xref:System.Data.Objects.ObjectContext>-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt (z. B. eine <xref:System.Linq.IQueryable%601>-Instanz).</span><span class="sxs-lookup"><span data-stu-id="fb778-113">The `Compile` methods, provided with a <xref:System.Data.Objects.ObjectContext> and parameter values, return a delegate that produces some result (such as an <xref:System.Linq.IQueryable%601> instance).</span></span> <span data-ttu-id="fb778-114">Die Abfrage wird nur einmal während der ersten Ausführung kompiliert.</span><span class="sxs-lookup"><span data-stu-id="fb778-114">The query compiles once during only the first execution.</span></span> <span data-ttu-id="fb778-115">Die für die Abfrage zur Kompilierungszeit festgelegten Zusammenführungsoptionen können später nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="fb778-115">The merge options set for the query at the time of the compilation cannot be changed later.</span></span> <span data-ttu-id="fb778-116">Nachdem die Abfrage kompiliert ist, können Sie nur Parameter mit einem primitiven Typ angeben. Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern.</span><span class="sxs-lookup"><span data-stu-id="fb778-116">Once the query is compiled you can only supply parameters of primitive type but you cannot replace parts of the query that would change the generated SQL.</span></span> <span data-ttu-id="fb778-117">Weitere Informationen finden Sie unter [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](http://go.microsoft.com/fwlink/?LinkId=199591)</span><span class="sxs-lookup"><span data-stu-id="fb778-117">For more information, see [Entity Framework Merge Options and Compiled Queries](http://go.microsoft.com/fwlink/?LinkId=199591)</span></span>  
   
- Der [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]\-Abfrageausdruck, der von der `Compile`\-Methode der <xref:System.Data.Objects.CompiledQuery> kompiliert wird, wird durch einen der generischen `Func`\-Delegaten, z. B. <xref:System.Func%605>, dargestellt.  Der Abfrageausdruck kann höchstens einen `ObjectContext`\-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln.  Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen.  Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.  
+ <span data-ttu-id="fb778-118">Die [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfrageausdruck, der <xref:System.Data.Objects.CompiledQuery>des `Compile` Methode kompiliert wird durch eine der generischen repräsentiert `Func` Delegaten, z. B. <xref:System.Func%605>.</span><span class="sxs-lookup"><span data-stu-id="fb778-118">The [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query expression that the <xref:System.Data.Objects.CompiledQuery>'s `Compile` method compiles is represented by one of the generic `Func` delegates, such as <xref:System.Func%605>.</span></span> <span data-ttu-id="fb778-119">Der Abfrageausdruck kann höchstens einen `ObjectContext`-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln.</span><span class="sxs-lookup"><span data-stu-id="fb778-119">At most, the query expression can encapsulate an `ObjectContext` parameter, a return parameter, and 16 query parameters.</span></span> <span data-ttu-id="fb778-120">Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen.</span><span class="sxs-lookup"><span data-stu-id="fb778-120">If more than 16 query parameters are required, you can create a structure whose properties represent query parameters.</span></span> <span data-ttu-id="fb778-121">Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.</span><span class="sxs-lookup"><span data-stu-id="fb778-121">You can then use the properties on the structure in the query expression after you set the properties.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen <xref:System.Decimal>\-Eingabeparameter akzeptiert und eine Auftragssequenz zurückgibt, in der der fällige Gesamtbetrag 200,00 US\-Dollar oder mehr beträgt:  
+## <a name="example"></a><span data-ttu-id="fb778-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-122">Example</span></span>  
+ <span data-ttu-id="fb778-123">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen <xref:System.Decimal>-Eingabeparameter akzeptiert und eine Auftragssequenz zurückgibt, in der der fällige Gesamtbetrag 200,00 US-Dollar oder mehr beträgt:</span><span class="sxs-lookup"><span data-stu-id="fb778-123">The following example compiles and then invokes a query that accepts a <xref:System.Decimal> input parameter and returns a sequence of orders where the total due is greater than or equal to $200.00:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die eine <xref:System.Data.Objects.ObjectQuery%601>\-Instanz zurückgibt:  
+## <a name="example"></a><span data-ttu-id="fb778-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-124">Example</span></span>  
+ <span data-ttu-id="fb778-125">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die eine <xref:System.Data.Objects.ObjectQuery%601>-Instanz zurückgibt:</span><span class="sxs-lookup"><span data-stu-id="fb778-125">The following example compiles and then invokes a query that returns an <xref:System.Data.Objects.ObjectQuery%601> instance:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die den Durchschnitt der Produktlistenpreise als <xref:System.Decimal>\-Wert zurückgibt:  
+## <a name="example"></a><span data-ttu-id="fb778-126">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-126">Example</span></span>  
+ <span data-ttu-id="fb778-127">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die den Durchschnitt der Produktlistenpreise als <xref:System.Decimal>-Wert zurückgibt:</span><span class="sxs-lookup"><span data-stu-id="fb778-127">The following example compiles and then invokes a query that returns the average of the product list prices as a <xref:System.Decimal> value:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery3_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, der ein <xref:System.String>\-Eingabeparameter übergeben wird und die einen `Contact` zurückgibt, dessen E\-Mail\-Adresse mit der angegebenen Zeichenfolge beginnt:  
+## <a name="example"></a><span data-ttu-id="fb778-128">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-128">Example</span></span>  
+ <span data-ttu-id="fb778-129">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, der ein <xref:System.String>-Eingabeparameter übergeben wird und die einen `Contact` zurückgibt, dessen E-Mail-Adresse mit der angegebenen Zeichenfolge beginnt:</span><span class="sxs-lookup"><span data-stu-id="fb778-129">The following example compiles and then invokes a query that accepts a <xref:System.String> input parameter and then returns a `Contact` whose e-mail address starts with the specified string:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, der ein <xref:System.DateTime>\-Eingabeparameter und ein <xref:System.Decimal>\-Eingabeparameter übergeben wird und die eine Sequenz von Aufträgen zurückgibt, in denen das Auftragsdatum nach dem 3. März 2008 liegt und der fällige Gesamtbetrag weniger als 300,00 Dollar beträgt:  
+## <a name="example"></a><span data-ttu-id="fb778-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-130">Example</span></span>  
+ <span data-ttu-id="fb778-131">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, der ein <xref:System.DateTime>-Eingabeparameter und ein <xref:System.Decimal>-Eingabeparameter übergeben wird und die eine Sequenz von Aufträgen zurückgibt, in denen das Auftragsdatum nach dem 3. März 2008 liegt und der fällige Gesamtbetrag weniger als 300,00 Dollar beträgt:</span><span class="sxs-lookup"><span data-stu-id="fb778-131">The following example compiles and then invokes a query that accepts <xref:System.DateTime> and <xref:System.Decimal> input parameters and returns a sequence of orders where the order date is later than March 8, 2003, and the total due is less than $300.00:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, der ein <xref:System.DateTime>\-Eingabeparameter übergeben wird und die eine Sequenz von Aufträgen zurückgibt, in denen das Bestelldatum nach dem 8. März 2004 liegt:  Diese Abfrage gibt die Bestellinformationen als Sequenz anonymer Typen zurück.  Anonyme Typen werden vom Compiler abgeleitet, sodass in der `Compile`\-Methode von <xref:System.Data.Objects.CompiledQuery> keine Typenparameter angegeben werden können. Der Typ wird in der Abfrage selbst definiert.  
+## <a name="example"></a><span data-ttu-id="fb778-132">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-132">Example</span></span>  
+ <span data-ttu-id="fb778-133">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, der ein <xref:System.DateTime>-Eingabeparameter übergeben wird und die eine Sequenz von Aufträgen zurückgibt, in denen das Bestelldatum nach dem 8. März 2004 liegt:</span><span class="sxs-lookup"><span data-stu-id="fb778-133">The following example compiles and then invokes a query that accepts a <xref:System.DateTime> input parameter and returns a sequence of orders where the order date is later than March 8, 2004.</span></span> <span data-ttu-id="fb778-134">Diese Abfrage gibt die Bestellinformationen als Sequenz anonymer Typen zurück.</span><span class="sxs-lookup"><span data-stu-id="fb778-134">This query returns the order information as a sequence of anonymous types.</span></span> <span data-ttu-id="fb778-135">Anonyme Typen werden vom Compiler abgeleitet, sodass in der <xref:System.Data.Objects.CompiledQuery>-Methode von `Compile` keine Typenparameter angegeben werden können. Der Typ wird in der Abfrage selbst definiert.</span><span class="sxs-lookup"><span data-stu-id="fb778-135">Anonymous types are inferred by the compiler, so you cannot specify type parameters in the <xref:System.Data.Objects.CompiledQuery>'s `Compile` method and the type is defined in the query itself.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen Eingabeparameter mit einer benutzerdefinierten Struktur akzeptiert und eine Sequenz von Aufträgen zurückgibt.  Die Struktur definiert die Abfrageparameter für Startdatum, Enddatum und den fälligen Gesamtbetrag. Die Abfrage gibt die zwischen dem 3. und 8. März 2003 versendeten Bestellungen mit einem fälligen Gesamtbetrag von über 700,00 US\-Dollar zurück.  
+## <a name="example"></a><span data-ttu-id="fb778-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fb778-136">Example</span></span>  
+ <span data-ttu-id="fb778-137">Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen Eingabeparameter mit einer benutzerdefinierten Struktur akzeptiert und eine Sequenz von Aufträgen zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="fb778-137">The following example compiles and then invokes a query that accepts a user-defined structure input parameter and returns a sequence of orders.</span></span> <span data-ttu-id="fb778-138">Die Struktur definiert die Abfrageparameter für Startdatum, Enddatum und den fälligen Gesamtbetrag. Die Abfrage gibt die zwischen dem 3. und 8. März 2003 versendeten Bestellungen mit einem fälligen Gesamtbetrag von über 700,00 US-Dollar zurück.</span><span class="sxs-lookup"><span data-stu-id="fb778-138">The structure defines start date, end date, and total due query parameters, and the query returns orders shipped between March 3 and March 8, 2003 with a total due greater than $700.00.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery7)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery7)]  
   
- Die Struktur, die die Abfrageparameter definiert:  
+ <span data-ttu-id="fb778-139">Die Struktur, die die Abfrageparameter definiert:</span><span class="sxs-lookup"><span data-stu-id="fb778-139">The structure that defines the query parameters:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## Siehe auch  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)   
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)   
- [Entity Framework\-Zusammenführungsoptionen und kompilierte Abfragen](http://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a><span data-ttu-id="fb778-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fb778-140">See Also</span></span>  
+ [<span data-ttu-id="fb778-141">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="fb778-141">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="fb778-142">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="fb778-142">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [<span data-ttu-id="fb778-143">Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen</span><span class="sxs-lookup"><span data-stu-id="fb778-143">Entity Framework Merge Options and Compiled Queries</span></span>](http://go.microsoft.com/fwlink/?LinkId=199591)

@@ -1,57 +1,58 @@
 ---
-title: "&#220;bersicht &#252;ber Grafiken (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, Windows Forms"
-  - "Grafiken"
-  - "Grafiken, Windows Forms"
-  - "Windows Forms, GDI+"
-  - "Windows Forms, Grafiken"
+title: "Übersicht über Grafiken (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, graphics
+- Windows Forms, GDI+
+- graphics [Windows Forms], Windows Forms
+- GDI+, Windows Forms
+- graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08ded27d60bdfcd9b9b1de4ba719c2f5b6018df1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# &#220;bersicht &#252;ber Grafiken (Windows&#160;Forms)
-Graphics Device Interface[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ist ein, der Programmierer können, geräteunabhängige Anwendungen zu schreiben.  Die Dienste von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] werden über eine Gruppe verwalteter Klassen verfügbar gemacht.  
+# <a name="graphics-overview-windows-forms"></a><span data-ttu-id="bc73b-102">Übersicht über Grafiken (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="bc73b-102">Graphics Overview (Windows Forms)</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="bc73b-103">wird einem Graphics Device Interface, die Programmierern geräteunabhängige Anwendungen schreiben können.</span><span class="sxs-lookup"><span data-stu-id="bc73b-103"> is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="bc73b-104">Die Dienste der [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] werden über eine Reihe verwalteter Klassen verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="bc73b-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über Grafiken](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
- Enthält eine allgemeine Einführung in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="bc73b-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="bc73b-105">In This Section</span></span>  
+ [<span data-ttu-id="bc73b-106">Übersicht über Grafiken</span><span class="sxs-lookup"><span data-stu-id="bc73b-106">Overview of Graphics</span></span>](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
+ <span data-ttu-id="bc73b-107">Stellt eine allgemeine Einführung in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bc73b-107">Provides a general introduction to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [Drei Kategorien von Grafikdiensten](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- Beschreibt die drei Kategorien, aus denen die Programmierung mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] besteht.  
+ [<span data-ttu-id="bc73b-108">Drei Kategorien von Grafikdiensten</span><span class="sxs-lookup"><span data-stu-id="bc73b-108">Three Categories of Graphics Services</span></span>](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
+ <span data-ttu-id="bc73b-109">Beschreibt die drei Kategorien, aus denen Programmierung mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bc73b-109">Describes the three categories that make up programming with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [Struktur der grafischen Oberfläche](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
- Beschreibt die Schnittstelle für verwaltete Klassen von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [<span data-ttu-id="bc73b-110">Struktur der grafischen Oberfläche</span><span class="sxs-lookup"><span data-stu-id="bc73b-110">Structure of the Graphics Interface</span></span>](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
+ <span data-ttu-id="bc73b-111">Beschreibt die Schnittstelle für verwaltete Klassen von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bc73b-111">Describes the managed class interface of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="bc73b-112">Verweis</span><span class="sxs-lookup"><span data-stu-id="bc73b-112">Reference</span></span>  
  <xref:System.Drawing>  
- Bietet Zugriff auf grundlegende Grafikfunktionen von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ <span data-ttu-id="bc73b-113">Ermöglicht den Zugriff auf die grundlegenden [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Grafikfunktionen.</span><span class="sxs-lookup"><span data-stu-id="bc73b-113">Provides access to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] basic graphics functionality.</span></span>  
   
  <xref:System.Drawing.Drawing2D>  
- Bietet erweiterte zweidimensionale Funktionen und Vektorgrafikfunktionen.  
+ <span data-ttu-id="bc73b-114">Stellt erweiterte Funktionen für zweidimensionale Grafiken und Vektorgrafiken bereit.</span><span class="sxs-lookup"><span data-stu-id="bc73b-114">Provides advanced two-dimensional and vector graphics functionality.</span></span>  
   
  <xref:System.Drawing.Imaging>  
- Bietet erweiterte Grafikfunktionen von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ <span data-ttu-id="bc73b-115">Stellt erweiterte [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Bildfunktionen bereit.</span><span class="sxs-lookup"><span data-stu-id="bc73b-115">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imaging functionality.</span></span>  
   
  <xref:System.Drawing.Text>  
- Bietet erweiterte Typografiefunktionen von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ <span data-ttu-id="bc73b-116">Stellt erweiterte [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Typografiefunktionen bereit.</span><span class="sxs-lookup"><span data-stu-id="bc73b-116">Provides advanced [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] typography functionality.</span></span>  
   
  <xref:System.Drawing.Printing>  
- Stellt Dienste für das Drucken bereit.  
+ <span data-ttu-id="bc73b-117">Stellt die Print-bezogene Dienste bereit.</span><span class="sxs-lookup"><span data-stu-id="bc73b-117">Provides print-related services.</span></span>  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Stellt Funktionen zum Zeichnen und Messen von Text in [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bereit.
+ <span data-ttu-id="bc73b-118">Bietet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Text zeichnen und Messen der Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="bc73b-118">Provides [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] text drawing and measuring functionality.</span></span>

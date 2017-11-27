@@ -1,57 +1,61 @@
 ---
-title: "Vertrauensebenen f&#252;r Sicherheit beim Zugriff auf Ressourcen  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d4cefe74b745eb4a1c71124176985c548f9b1244
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vertrauensebenen f&#252;r Sicherheit beim Zugriff auf Ressourcen 
-In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen eingeschränkt wird, die <xref:System.Transactions> verfügbar macht.  
+# <a name="security-trust-levels-in-accessing-resources"></a><span data-ttu-id="cbee7-102">Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen</span><span class="sxs-lookup"><span data-stu-id="cbee7-102">Security Trust Levels in Accessing Resources</span></span>
+<span data-ttu-id="cbee7-103">In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen eingeschränkt wird, die <xref:System.Transactions> verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="cbee7-103">This topic discusses how access is restricted on the types of resources that <xref:System.Transactions> exposes.</span></span>  
   
- Es gibt drei Hauptvertrauensebenen für <xref:System.Transactions>.Die Vertrauensebenen werden basierend auf den Ressourcentypen definiert, die <xref:System.Transactions> verfügbar macht, und auf der Grundlage der Vertrauensebene, die für den Zugriff auf diese Ressourcen erforderlich sein soll.Die Ressourcen, auf die <xref:System.Transactions> Zugriff gewährt, sind Systemspeicher, freigegebene prozessübergreifende Ressourcen und systemweite Ressourcen.Die Ebenen sind:  
+ <span data-ttu-id="cbee7-104">Es gibt drei Hauptvertrauensebenen für <xref:System.Transactions>.</span><span class="sxs-lookup"><span data-stu-id="cbee7-104">There are three main levels of trust for <xref:System.Transactions>.</span></span> <span data-ttu-id="cbee7-105">Die Vertrauensebenen werden basierend auf den Ressourcentypen definiert, die <xref:System.Transactions> verfügbar macht, und auf der Grundlage der Vertrauensebene, die für den Zugriff auf diese Ressourcen erforderlich sein soll.</span><span class="sxs-lookup"><span data-stu-id="cbee7-105">The trust levels are defined based on the types of resources that <xref:System.Transactions> exposes, and the level of trust that should be required to access those resources.</span></span> <span data-ttu-id="cbee7-106">Die Ressourcen, auf die <xref:System.Transactions> Zugriff gewährt, sind Systemspeicher, freigegebene prozessübergreifende Ressourcen und systemweite Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="cbee7-106">The resources that <xref:System.Transactions> provides access to are system memory, shared process wide resources, and system wide resources.</span></span> <span data-ttu-id="cbee7-107">Die Ebenen sind:</span><span class="sxs-lookup"><span data-stu-id="cbee7-107">The levels are:</span></span>  
   
--   **AllowPartiallyTrustedCallers** \(APTCA\) für Anwendungen, die Transaktionen innerhalb einer einzelnen Anwendungsdomäne verwenden  
+-   <span data-ttu-id="cbee7-108">**AllowPartiallyTrustedCallers** (APTCA) für Anwendungen, die mithilfe von Transaktionen in einer einzelnen Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="cbee7-108">**AllowPartiallyTrustedCallers** (APTCA) for applications using transactions within a single application domain.</span></span>  
   
--   **DistributedTransactionPermission** \(DTP\) für Anwendungen, die verteilte Transaktionen verwenden  
+-   <span data-ttu-id="cbee7-109">**Von DistributedTransactionPermission** (DTP) für Anwendungen, die verteilte Transaktionen verwenden.</span><span class="sxs-lookup"><span data-stu-id="cbee7-109">**DistributedTransactionPermission** (DTP) for applications using distributed transactions.</span></span>  
   
--   Volle Vertrauenswürdigkeit für dauerhafte Ressourcen, Konfigurationsverwaltungsanwendungen und Legacy\-Interop\-Anwendungen  
+-   <span data-ttu-id="cbee7-110">Volle Vertrauenswürdigkeit für dauerhafte Ressourcen, Konfigurationsverwaltungsanwendungen und Legacy-Interop-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="cbee7-110">Full trust for durable resources, configuration management applications, and legacy interop applications.</span></span>  
   
 > [!NOTE]
->  Sie sollten keine Eintragungsschnittstelle mit Identitätswechselkontexten aufrufen.  
+>  <span data-ttu-id="cbee7-111">Sie sollten keine Eintragungsschnittstelle mit Identitätswechselkontexten aufrufen.</span><span class="sxs-lookup"><span data-stu-id="cbee7-111">You should not call any of the enlistment interfaces with impersonated contexts.</span></span>  
   
-## Vertrauensebenen  
+## <a name="trust-levels"></a><span data-ttu-id="cbee7-112">Vertrauensebenen</span><span class="sxs-lookup"><span data-stu-id="cbee7-112">Trust Levels</span></span>  
   
-### APTCA \(teilweise vertrauenswürdig\)  
- Die <xref:System.Transactions>\-Assembly kann von teilweise vertrauenswürdigem Code aufgerufen werden, da sie mit dem **AllowPartiallyTrustedCallers**\-Attribut \(APTCA\) markiert ist.Dieses Attribut entfernt im Wesentlichen die implizite <xref:System.Security.Permissions.SecurityAction> für den **FullTrust**\-Berechtigungssatz, die andernfalls für jede öffentlich zugängliche Methode jeden Typs eingerichtet ist.Für einige Typen und Member sind allerdings weiterhin stärkere Berechtigungen erforderlich.  
+### <a name="aptca-partial-trust"></a><span data-ttu-id="cbee7-113">APTCA (teilweise vertrauenswürdig)</span><span class="sxs-lookup"><span data-stu-id="cbee7-113">APTCA (Partial Trust)</span></span>  
+ <span data-ttu-id="cbee7-114">Die <xref:System.Transactions> Assembly kann von teilweise vertrauenswürdigem Code aufgerufen werden, da er mit gekennzeichnet wurde die **AllowPartiallyTrustedCallers** -Attribut (APTCA).</span><span class="sxs-lookup"><span data-stu-id="cbee7-114">The <xref:System.Transactions> assembly can be called by partially trusted code because it has been marked with the **AllowPartiallyTrustedCallers** attribute (APTCA).</span></span> <span data-ttu-id="cbee7-115">Dieses Attribut entfernt im Wesentlichen die implizite <xref:System.Security.Permissions.SecurityAction.LinkDemand> für die **FullTrust** Berechtigungssatz ist andernfalls automatisch für jede öffentlich zugängliche Methode jeden Typs eingefügt.</span><span class="sxs-lookup"><span data-stu-id="cbee7-115">This attribute essentially removes the implicit <xref:System.Security.Permissions.SecurityAction.LinkDemand> for the **FullTrust** permission set that is otherwise automatically placed on each publicly accessible method in each type.</span></span> <span data-ttu-id="cbee7-116">Für einige Typen und Member sind allerdings weiterhin stärkere Berechtigungen erforderlich.</span><span class="sxs-lookup"><span data-stu-id="cbee7-116">However, some types and members still require stronger permissions.</span></span>  
   
- Das APTCA\-Attribut ermöglicht es Anwendungen, Transaktionen in teilweiser Vertrauenswürdigkeit innerhalb einer einzelnen Anwendungsdomäne zu verwenden.Dadurch ist die Verwendung nicht eskalierter Transaktionen und flüchtiger Eintragungen möglich, die zur Fehlerbehandlung verwendet werden können.Ein Beispiel dafür sind eine Transaktions\-Hashtabelle und eine Anwendung, die sie verwendet.Daten können mit einer einzigen Transaktion der Hashtabelle hinzugefügt oder aus ihr entfernt werden.Wird später ein Rollback für diese Transaktion ausgeführt, können alle Änderungen, die im Rahmen dieser Transaktion an der Hashtabelle vorgenommen wurden, wieder rückgängig gemacht werden.  
+ <span data-ttu-id="cbee7-117">Das APTCA-Attribut ermöglicht es Anwendungen, Transaktionen in teilweiser Vertrauenswürdigkeit innerhalb einer einzelnen Anwendungsdomäne zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="cbee7-117">The APTCA attribute enables applications to use transactions in partial trust within a single application domain.</span></span> <span data-ttu-id="cbee7-118">Dadurch ist die Verwendung nicht eskalierter Transaktionen und flüchtiger Eintragungen möglich, die zur Fehlerbehandlung verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="cbee7-118">This enables non-escalated transactions and volatile enlistments that can be used for error handling.</span></span> <span data-ttu-id="cbee7-119">Ein Beispiel dafür sind eine Transaktions-Hashtabelle und eine Anwendung, die sie verwendet.</span><span class="sxs-lookup"><span data-stu-id="cbee7-119">One example of this is a transacted hash table and an application that uses it.</span></span> <span data-ttu-id="cbee7-120">Daten können mit einer einzigen Transaktion der Hashtabelle hinzugefügt oder aus ihr entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="cbee7-120">Data can be added to and removed from the hash table under a single transaction.</span></span> <span data-ttu-id="cbee7-121">Wird später ein Rollback für diese Transaktion ausgeführt, können alle Änderungen, die im Rahmen dieser Transaktion an der Hashtabelle vorgenommen wurden, wieder rückgängig gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="cbee7-121">If the transaction is later rolled back, all of the changes made to the hash table under that transaction can be undone.</span></span>  
   
-### DistributedTransactionPermission \(DTP\)  
- Wenn eine <xref:System.Transactions>\-Transaktion zur Verwaltung durch MSDTC eskaliert wird, fordert <xref:System.Transactions> die <xref:System.Transactions.DistributedTransactionPermission> \(DTP\) auf, die verteilte Transaktion zu erstellen.Das bedeutet, dass dem Code, der für die Eskalation der Transaktion verantwortlich ist \(beispielsweise durch Serialisierung oder zusätzliche dauerhafte Eintragungen\), DTP erteilt werden muss.Der Code, der ursprünglich die <xref:System.Transactions>\-Transaktion erstellt hat, muss diese Berechtigung nicht unbedingt besitzen.  
+### <a name="distributedtransactionpermission-dtp"></a><span data-ttu-id="cbee7-122">DistributedTransactionPermission (DTP)</span><span class="sxs-lookup"><span data-stu-id="cbee7-122">DistributedTransactionPermission (DTP)</span></span>  
+ <span data-ttu-id="cbee7-123">Wenn eine <xref:System.Transactions>-Transaktion zur Verwaltung durch MSDTC eskaliert wird, fordert <xref:System.Transactions> die <xref:System.Transactions.DistributedTransactionPermission> (DTP) auf, die verteilte Transaktion zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="cbee7-123">When a <xref:System.Transactions> transaction is escalated to be managed by MSDTC, <xref:System.Transactions> demands the <xref:System.Transactions.DistributedTransactionPermission> (DTP) to create the distributed transaction.</span></span> <span data-ttu-id="cbee7-124">Das bedeutet, dass dem Code, der für die Eskalation der Transaktion verantwortlich ist (beispielsweise durch Serialisierung oder zusätzliche dauerhafte Eintragungen), DTP erteilt werden muss.</span><span class="sxs-lookup"><span data-stu-id="cbee7-124">This means that the code that causes the transaction to be escalated (such as through serialization or additional durable enlistments) would need to be granted DTP.</span></span> <span data-ttu-id="cbee7-125">Der Code, der ursprünglich die <xref:System.Transactions>-Transaktion erstellt hat, muss diese Berechtigung nicht unbedingt besitzen.</span><span class="sxs-lookup"><span data-stu-id="cbee7-125">The code that originally created the <xref:System.Transactions> transaction does not necessarily need to possess this permission.</span></span>  
   
-### FullTrust\-Linkaufrufe  
- Diese Berechtigungsstufe ist dazu gedacht, die Anwendungen zu beschränken, die in dauerhafte Ressourcen schreiben.Bei einem Fehler muss die Anwendung in der Lage sein, die Verbindung zum Transaktions\-Manager wiederherzustellen, um das Endergebnis der Transaktion in Erfahrung zu bringen und dauerhafte Daten aktualisieren zu können.Dieser Anwendungstyp wird als dauerhafter Quellen\-Manager bezeichnet.Ein klassisches Beispiel für diesen Anwendungstyp ist SQL.  
+### <a name="fulltrust-link-demands"></a><span data-ttu-id="cbee7-126">FullTrust-Linkaufrufe</span><span class="sxs-lookup"><span data-stu-id="cbee7-126">FullTrust Link Demands</span></span>  
+ <span data-ttu-id="cbee7-127">Diese Berechtigungsstufe ist dazu gedacht, die Anwendungen zu beschränken, die in dauerhafte Ressourcen schreiben.</span><span class="sxs-lookup"><span data-stu-id="cbee7-127">This permission level is intended to restrict applications that are writing to durable resources.</span></span> <span data-ttu-id="cbee7-128">Bei einem Fehler muss die Anwendung in der Lage sein, die Verbindung zum Transaktions-Manager wiederherzustellen, um das Endergebnis der Transaktion in Erfahrung zu bringen und dauerhafte Daten aktualisieren zu können.</span><span class="sxs-lookup"><span data-stu-id="cbee7-128">Upon failure, the application needs to be able to recover with the transaction manager to determine the final outcome of the transaction, so that it can update permanent data.</span></span> <span data-ttu-id="cbee7-129">Dieser Anwendungstyp wird als dauerhafter Quellen-Manager bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="cbee7-129">This type of application is known as a durable source manager.</span></span> <span data-ttu-id="cbee7-130">Ein klassisches Beispiel für diesen Anwendungstyp ist SQL.</span><span class="sxs-lookup"><span data-stu-id="cbee7-130">A classic example of this type of application is SQL.</span></span>  
   
- Um die Wiederherstellung zu ermöglichen, ist dieser Anwendungstyp in der Lage, Systemressourcen permanent zu belegen.Das liegt daran, dass sich der wiederherstellungsfähige Transaktions\-Manager Transaktionen, für die ein Commit ausgeführt wurde, so lange merken muss, bis er bestätigen kann, dass alle Ressourcen\-Manager, die an der Transaktion teilnehmen, Kenntnis über das Ergebnis erhalten haben.Daher benötigt dieser Anwendungstyp volle Vertrauenswürdigkeit und sollte erst nach Erteilung dieser Vertrauensebene ausgeführt werden.  
+ <span data-ttu-id="cbee7-131">Um die Wiederherstellung zu ermöglichen, ist dieser Anwendungstyp in der Lage, Systemressourcen permanent zu belegen.</span><span class="sxs-lookup"><span data-stu-id="cbee7-131">To enable recovery, this type of application has the ability to permanently consume system resources.</span></span> <span data-ttu-id="cbee7-132">Das liegt daran, dass sich der wiederherstellungsfähige Transaktions-Manager Transaktionen, für die ein Commit ausgeführt wurde, so lange merken muss, bis er bestätigen kann, dass alle Ressourcen-Manager, die an der Transaktion teilnehmen, Kenntnis über das Ergebnis erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="cbee7-132">This is because the recoverable transaction manager must remember transactions that have committed until it can confirm that all durable resource managers that are participating in the transaction have received the outcome.</span></span> <span data-ttu-id="cbee7-133">Daher benötigt dieser Anwendungstyp volle Vertrauenswürdigkeit und sollte erst nach Erteilung dieser Vertrauensebene ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="cbee7-133">Therefore, this type of application requires full trust and should not be run unless that level of trust has been granted.</span></span>  
   
- Weitere Informationen zu permanenten Eintragungen und zur Wiederherstellung finden Sie in den Themen [Eintragen von Ressourcen als Teilnehmer an einer Transaktion ](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) und [Durchführen einer Wiederherstellung ](../../../../docs/framework/data/transactions/performing-recovery.md).  
+ <span data-ttu-id="cbee7-134">Weitere Informationen zu dauerhaften Eintragungen und Wiederherstellung finden Sie unter der [Ressourcen als Teilnehmer in einer Transaktion eintragen](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) und [Wiederherstellung ausführen](../../../../docs/framework/data/transactions/performing-recovery.md) Themen.</span><span class="sxs-lookup"><span data-stu-id="cbee7-134">For more information on durable enlistments and recovery, see the [Enlisting Resources as Participants in a Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) and [Performing Recovery](../../../../docs/framework/data/transactions/performing-recovery.md) topics.</span></span>  
   
- Anwendungen, die Legacy\-Interop\-Aufgaben mit COM\+ ausführen, benötigen ebenfalls die volle Vertrauenswürdigkeit.  
+ <span data-ttu-id="cbee7-135">Anwendungen, die Legacy-Interop-Aufgaben mit COM+ ausführen, benötigen ebenfalls die volle Vertrauenswürdigkeit.</span><span class="sxs-lookup"><span data-stu-id="cbee7-135">Applications that perform legacy interop work with COM+ are also required to have full trust.</span></span>  
   
- Es folgt eine Liste von Typen und Membern, die nicht von teilweise vertrauenswürdigem Code aufgerufen werden können, da sie mit dem deklarativen Sicherheitsattribut **FullTrust** ausgestattet sind:  
+ <span data-ttu-id="cbee7-136">Im folgenden werden eine Liste von Typen und Member nicht aufgerufen werden kann von teilweise vertrauenswürdigem Code, da sie mit ergänzt werden die **FullTrust** deklarative Sicherheitsattribut:</span><span class="sxs-lookup"><span data-stu-id="cbee7-136">The following is a list of types and members that are not callable by partially trusted code because they are decorated with the **FullTrust** declarative security attribute:</span></span>  
   
  `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
   
--   <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>  
+-   <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>  
   
 -   <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>  
   
@@ -67,4 +71,4 @@ In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen ei
   
 -   <xref:System.Transactions.TransactionScope.%23ctor%28System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Transactions.EnterpriseServicesInteropOption%29>  
   
- Lediglich der direkte Aufrufer muss über den **FullTrust**\-Berechtigungssatz verfügen, um die weiter oben aufgeführten Typen und Methoden zu verwenden.
+ <span data-ttu-id="cbee7-137">Nur der unmittelbaren Aufrufer besitzen muss die **FullTrust** Berechtigungssatz für die oben genannten Typen oder Methoden verwenden.</span><span class="sxs-lookup"><span data-stu-id="cbee7-137">Only the immediate caller is required to possess the **FullTrust** permission set to use the above types or methods.</span></span>

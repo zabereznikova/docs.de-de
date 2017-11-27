@@ -1,58 +1,62 @@
 ---
-title: "DataRow-L&#246;schung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "\"DataRow\"-Löschung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f9eb89d711cbf66f3b6816e597c14359be1f3639
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# DataRow-L&#246;schung
-Es gibt zwei Methoden zum Löschen eines <xref:System.Data.DataRow>\-Objekts aus einem <xref:System.Data.DataTable>\-Objekt: die **Remove**\-Methode des <xref:System.Data.DataRowCollection>\-Objekts und die <xref:System.Data.DataRow.Delete%2A>\-Methode des **DataRow**\-Objekts.  Während die <xref:System.Data.DataRowCollection.Remove%2A>\-Methode eine **DataRow** aus der **DataRowCollection** löscht, wird die Zeile mit der <xref:System.Data.DataRow.Delete%2A>\-Methode lediglich zum Löschen markiert.  Das eigentliche Löschen erfolgt, wenn die Anwendung die **AcceptChanges**\-Methode aufruft.  Mithilfe von <xref:System.Data.DataRow.Delete%2A> können Sie programmgesteuert überprüfen, welche Zeilen zum Löschen markiert sind, bevor Sie sie tatsächlich entfernen.  Wenn eine Zeile zum Löschen markiert ist, wird deren <xref:System.Data.DataRow.RowState%2A>\-Eigenschaft auf <xref:System.Data.DataRow.Delete%2A> festgelegt.  
+# <a name="datarow-deletion"></a><span data-ttu-id="48c3e-102">"DataRow"-Löschung</span><span class="sxs-lookup"><span data-stu-id="48c3e-102">DataRow Deletion</span></span>
+<span data-ttu-id="48c3e-103">Stehen zwei Methoden, die Sie löschen können eine <xref:System.Data.DataRow> -Objekt aus einer <xref:System.Data.DataTable> Objekt: der **entfernen** Methode der <xref:System.Data.DataRowCollection> -Objekt, und die <xref:System.Data.DataRow.Delete%2A> Methode der **DataRow**Objekt.</span><span class="sxs-lookup"><span data-stu-id="48c3e-103">There are two methods you can use to delete a <xref:System.Data.DataRow> object from a <xref:System.Data.DataTable> object: the **Remove** method of the <xref:System.Data.DataRowCollection> object, and the <xref:System.Data.DataRow.Delete%2A> method of the **DataRow** object.</span></span> <span data-ttu-id="48c3e-104">Während der <xref:System.Data.DataRowCollection.Remove%2A> -Methode löscht eine **DataRow** aus der **DataRowCollection**, die <xref:System.Data.DataRow.Delete%2A> Methode nur die Zeile zum Löschen markiert.</span><span class="sxs-lookup"><span data-stu-id="48c3e-104">Whereas the <xref:System.Data.DataRowCollection.Remove%2A> method deletes a **DataRow** from the **DataRowCollection**, the <xref:System.Data.DataRow.Delete%2A> method only marks the row for deletion.</span></span> <span data-ttu-id="48c3e-105">Das eigentliche löschen erfolgt, wenn die Anwendung aufruft, die **AcceptChanges** Methode.</span><span class="sxs-lookup"><span data-stu-id="48c3e-105">The actual removal occurs when the application calls the **AcceptChanges** method.</span></span> <span data-ttu-id="48c3e-106">Mithilfe von <xref:System.Data.DataRow.Delete%2A> können Sie programmgesteuert überprüfen, welche Zeilen zum Löschen markiert sind, bevor Sie sie tatsächlich entfernen.</span><span class="sxs-lookup"><span data-stu-id="48c3e-106">By using <xref:System.Data.DataRow.Delete%2A>, you can programmatically check which rows are marked for deletion before actually removing them.</span></span> <span data-ttu-id="48c3e-107">Wenn eine Zeile zum Löschen markiert ist, wird deren <xref:System.Data.DataRow.RowState%2A>-Eigenschaft auf <xref:System.Data.DataRow.Delete%2A> festgelegt.</span><span class="sxs-lookup"><span data-stu-id="48c3e-107">When a row is marked for deletion, its <xref:System.Data.DataRow.RowState%2A> property is set to <xref:System.Data.DataRow.Delete%2A>.</span></span>  
   
- Beim Durchlaufen eines <xref:System.Data.DataRowCollection>\-Objekts sollten weder <xref:System.Data.DataRow.Delete%2A> noch <xref:System.Data.DataRowCollection.Remove%2A> in einer foreach\-Schleife aufgerufen werden.  Der Auflistungszustand wird durch <xref:System.Data.DataRow.Delete%2A> und <xref:System.Data.DataRowCollection.Remove%2A> nicht geändert.  
+ <span data-ttu-id="48c3e-108">Beim Durchlaufen eines <xref:System.Data.DataRow.Delete%2A>-Objekts sollten weder <xref:System.Data.DataRowCollection.Remove%2A> noch <xref:System.Data.DataRowCollection> in einer foreach-Schleife aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="48c3e-108">Neither <xref:System.Data.DataRow.Delete%2A> nor <xref:System.Data.DataRowCollection.Remove%2A> should be called in a foreach loop while iterating through a <xref:System.Data.DataRowCollection> object.</span></span> <span data-ttu-id="48c3e-109">Der Auflistungszustand wird durch <xref:System.Data.DataRow.Delete%2A> und <xref:System.Data.DataRowCollection.Remove%2A> nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="48c3e-109"><xref:System.Data.DataRow.Delete%2A> nor <xref:System.Data.DataRowCollection.Remove%2A> modify the state of the collection.</span></span>  
   
- Bei Verwendung eines <xref:System.Data.DataSet> oder einer **DataTable** in Verbindung mit einem **DataAdapter** und einer relationalen Datenquelle entfernen Sie die Zeile mithilfe der **Delete**\-Methode der **DataRow**.  Mit der **Delete**\-Methode wird die Zeile als **Deleted** im **DataSet** oder in der **DataTable** markiert, aber sie wird nicht entfernt.  Wenn stattdessen der **DataAdapter** eine als **Deleted** markierte Zeile vorfindet, führt er die **DeleteCommand**\-Methode aus, um die Zeile in der Datenquelle zu löschen.  Anschließend kann die Zeile mit der **AcceptChanges**\-Methode dauerhaft entfernt werden.  Wenn Sie zum Löschen der Zeile **Remove** verwenden, wird die Zeile zwar vollständig aus der Tabelle entfernt, vom **DataAdapter** jedoch nicht aus der Datenquelle gelöscht.  
+ <span data-ttu-id="48c3e-110">Bei Verwendung einer <xref:System.Data.DataSet> oder **DataTable** in Verbindung mit einer **"DataAdapter"** und einer relationalen Datenquelle verwenden die **löschen** Methode der  **DataRow** zum Entfernen der Zeile.</span><span class="sxs-lookup"><span data-stu-id="48c3e-110">When using a <xref:System.Data.DataSet> or **DataTable** in conjunction with a **DataAdapter** and a relational data source, use the **Delete** method of the **DataRow** to remove the row.</span></span> <span data-ttu-id="48c3e-111">Die **löschen** Methode markiert die Zeile als **gelöschte** in der **DataSet** oder **DataTable** jedoch nicht entfernt.</span><span class="sxs-lookup"><span data-stu-id="48c3e-111">The **Delete** method marks the row as **Deleted** in the **DataSet** or **DataTable** but does not remove it.</span></span> <span data-ttu-id="48c3e-112">Stattdessen, wenn die **"DataAdapter"** als markierte Zeile stößt **gelöschte**, führt er seine **DeleteCommand** Methode, um die Zeile in der Datenquelle zu löschen.</span><span class="sxs-lookup"><span data-stu-id="48c3e-112">Instead, when the **DataAdapter** encounters a row marked as **Deleted**, it executes its **DeleteCommand** method to delete the row at the data source.</span></span> <span data-ttu-id="48c3e-113">Die Zeile kann dann dauerhaft entfernt mithilfe der **AcceptChanges** Methode.</span><span class="sxs-lookup"><span data-stu-id="48c3e-113">The row can then be permanently removed using the **AcceptChanges** method.</span></span> <span data-ttu-id="48c3e-114">Bei Verwendung von **entfernen** um die Zeile zu löschen, wird die Zeile entfernt, vollständig aus der Tabelle, aber die **"DataAdapter"** löscht die Zeile in der Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="48c3e-114">If you use **Remove** to delete the row, the row is removed entirely from the table, but the **DataAdapter** will not delete the row at the data source.</span></span>  
   
- Die **Remove**\-Methode der **DataRowCollection** akzeptiert eine **DataRow** als Argument und entfernt sie aus der Auflistung, wie im folgenden Beispiel dargestellt.  
+ <span data-ttu-id="48c3e-115">Die **entfernen** Methode der **DataRowCollection** nimmt eine **DataRow** als Argument und entfernt es aus der Auflistung, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="48c3e-115">The **Remove** method of the **DataRowCollection** takes a **DataRow** as an argument and removes it from the collection, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
-  
 ```  
   
 ```csharp  
 workTable.Rows.Remove(workRow);  
 ```  
   
- Im Gegensatz dazu zeigt das folgende Beispiel, wie Sie die **Delete**\-Methode für eine **DataRow** aufrufen, um deren **RowState** auf **Deleted** zu ändern.  
+ <span data-ttu-id="48c3e-116">Im Gegensatz dazu das folgende Beispiel veranschaulicht das Aufrufen der **löschen** Methode auf eine **DataRow** so ändern Sie die **RowState** auf **gelöschte** .</span><span class="sxs-lookup"><span data-stu-id="48c3e-116">In contrast, the following example demonstrates how to call the **Delete** method on a **DataRow** to change its **RowState** to **Deleted**.</span></span>  
   
 ```vb  
 workRow.Delete  
-  
 ```  
   
 ```csharp  
 workRow.Delete();  
 ```  
   
- Wenn eine Zeile zum Löschen markiert ist und Sie die **AcceptChanges**\-Methode des **DataTable**\-Objekts aufrufen, wird die Zeile aus der **DataTable** entfernt.  	Im Gegensatz dazu wird beim Aufrufen von **RejectChanges** der **RowState** der Zeile wiederhergestellt, der gültig war, bevor die Zeile als **Deleted** markiert wurde.  
+ <span data-ttu-id="48c3e-117">Wenn eine Zeile zum Löschen markiert ist, und Sie rufen die **AcceptChanges** Methode der **DataTable** -Objekt, aus der Zeile entfernt die **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="48c3e-117">If a row is marked for deletion and you call the **AcceptChanges** method of the **DataTable** object, the row is removed from the **DataTable**.</span></span> <span data-ttu-id="48c3e-118">Im Gegensatz dazu sind beim Aufrufen **RejectChanges**, **RowState** der Zeile wird zurückgesetzt, bevor als markiert war **gelöschte**.</span><span class="sxs-lookup"><span data-stu-id="48c3e-118">In contrast, if you call **RejectChanges**, the **RowState** of the row reverts to what it was before being marked as **Deleted**.</span></span>  
   
 > [!NOTE]
->  Wenn der **RowState** einer **DataRow** **Added** lautet, in dem Sinne, dass sie gerade der Tabelle hinzugefügt wurde, und dann als **Deleted** markiert wurde, wird sie aus der Tabelle entfernt.  
+>  <span data-ttu-id="48c3e-119">Wenn die **RowState** von einer **DataRow** ist **Added**, d. h. sie hat gerade der Tabelle hinzugefügt wurde, und wird dann als markiert **gelöschte**, ist aus der Tabelle entfernt.</span><span class="sxs-lookup"><span data-stu-id="48c3e-119">If the **RowState** of a **DataRow** is **Added**, meaning it has just been added to the table, and it is then marked as **Deleted**, it is removed from the table.</span></span>  
   
-## Siehe auch  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataRowCollection>   
- <xref:System.Data.DataTable>   
- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="48c3e-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48c3e-120">See Also</span></span>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataRowCollection>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="48c3e-121">Bearbeiten von Daten in einer "DataTable"</span><span class="sxs-lookup"><span data-stu-id="48c3e-121">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="48c3e-122">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="48c3e-122">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

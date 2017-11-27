@@ -1,40 +1,46 @@
 ---
-title: "Gewusst wie: Anpassen des Datenbindungsverhaltens (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, Anpassen"
-  - "WCF Data Services, Datenbindung"
+title: 'Gewusst wie: Anpassen des Datenbindungsverhaltens (WCF Data Services)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, customizing
+- WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1ee72c905ab6df222d256eeeeb2a59579e82923b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Gewusst wie: Anpassen des Datenbindungsverhaltens (WCF Data Services)
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie benutzerdefinierte Logik angeben, die von der <xref:System.Data.Services.Client.DataServiceCollection%601> aufgerufen wird, wenn ein Objekt hinzugefügt oder aus der Bindungsauflistung entfernt wird oder wenn eine Eigenschaftenänderung erkannt wird.  Diese benutzerdefinierte Logik wird als Methoden bereitgestellt, auf die als <xref:System.Func%602>\-Delegaten verwiesen wird, die den Wert `false` zurückgeben, wenn das Standardverhalten selbst dann ausgeführt werden soll, wenn die benutzerdefinierte Methode abgeschlossen wird und `true`, wenn die nachfolgende Verarbeitung des Ereignisses gestoppt werden soll.  
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a><span data-ttu-id="12a8f-102">Gewusst wie: Anpassen des Datenbindungsverhaltens (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="12a8f-102">How to: Customize Data Binding Behaviors (WCF Data Services)</span></span>
+<span data-ttu-id="12a8f-103">Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie benutzerdefinierte Logik angeben, die von der <xref:System.Data.Services.Client.DataServiceCollection%601> aufgerufen wird, wenn ein Objekt hinzugefügt oder aus der Bindungsauflistung entfernt wird oder wenn eine Eigenschaftenänderung erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="12a8f-103">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can supply custom logic that is called by the <xref:System.Data.Services.Client.DataServiceCollection%601> when an object is added or removed from the binding collection or when a property change is detected.</span></span> <span data-ttu-id="12a8f-104">Diese benutzerdefinierte Logik wird als Methoden bereitgestellt, auf die verwiesen wird als <xref:System.Func%602> Delegaten, die einen Wert zurückgeben `false` Wenn das Standardverhalten sollten weiterhin ausgeführt werden, wenn die benutzerdefinierte Methode abgeschlossen hat und `true` bei der Verarbeitung der nachfolgenden der Ereignis sollte beendet werden.</span><span class="sxs-lookup"><span data-stu-id="12a8f-104">This custom logic is provided as methods, referenced as <xref:System.Func%602> delegates, that return a value of `false` when the default behavior should still be performed when the custom method completes and `true` when subsequent processing of the event should be stopped.</span></span>  
   
- In den Beispielen in diesem Thema werden benutzerdefinierte Methoden für die Parameter `entityChanged` und `entityCollectionChanged` von <xref:System.Data.Services.Client.DataServiceCollection%601> angegeben.  In den Beispielen in diesem Thema werden der Northwind\-Beispieldatendienst und automatisch generierte Clientdatendienstklassen verwendet.  Dieser Dienst und die Clientdatenklassen werden erstellt, wenn Sie den [WCF Data Services\-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) ausführen.  
+ <span data-ttu-id="12a8f-105">In den Beispielen in diesem Thema werden benutzerdefinierte Methoden für die Parameter `entityChanged` und `entityCollectionChanged` von <xref:System.Data.Services.Client.DataServiceCollection%601> angegeben.</span><span class="sxs-lookup"><span data-stu-id="12a8f-105">The examples in this topic supply custom methods for both the `entityChanged` and `entityCollectionChanged` parameters of <xref:System.Data.Services.Client.DataServiceCollection%601>.</span></span> <span data-ttu-id="12a8f-106">In den Beispielen in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Clientdatendienstklassen verwendet.</span><span class="sxs-lookup"><span data-stu-id="12a8f-106">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="12a8f-107">Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="12a8f-107">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## Beispiel  
- Die folgende Code\-Behind\-Seite für die XAML\-Datei erstellt eine <xref:System.Data.Services.Client.DataServiceCollection%601>\-Instanz mit benutzerdefinierten Methoden, die aufgerufen werden, wenn Änderungen an Daten auftreten, die an die Bindungssammlung gebunden sind.  Wenn das <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged>\-Ereignis eintritt, verhindert die angegebene Methode, dass ein aus der Bindungsauflistung entferntes Element aus dem Datendienst gelöscht wird.  Wenn das <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged>\-Ereignis eintritt, wird der `ShipDate`\-Wert überprüft, um sicherzustellen, dass keine Änderungen an bereits ausgelieferten Bestellungen vorgenommen werden.  
+## <a name="example"></a><span data-ttu-id="12a8f-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="12a8f-108">Example</span></span>  
+ <span data-ttu-id="12a8f-109">Die folgende Code-Behind-Seite für die XAML-Datei erstellt eine <xref:System.Data.Services.Client.DataServiceCollection%601>-Instanz mit benutzerdefinierten Methoden, die aufgerufen werden, wenn Änderungen an Daten auftreten, die an die Bindungssammlung gebunden sind.</span><span class="sxs-lookup"><span data-stu-id="12a8f-109">The following code-behind page for the XAML file creates a <xref:System.Data.Services.Client.DataServiceCollection%601> with custom methods that are called when changes occur to data that is bound to the binding collection.</span></span> <span data-ttu-id="12a8f-110">Wenn das <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged>-Ereignis eintritt, verhindert die angegebene Methode, dass ein aus der Bindungsauflistung entferntes Element aus dem Datendienst gelöscht wird.</span><span class="sxs-lookup"><span data-stu-id="12a8f-110">When the <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> event occurs, the supplied method prevents an item that has been removed from the binding collection from being deleted from the data service.</span></span> <span data-ttu-id="12a8f-111">Wenn das <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged>-Ereignis eintritt, wird der `ShipDate`-Wert überprüft, um sicherzustellen, dass keine Änderungen an bereits ausgelieferten Bestellungen vorgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="12a8f-111">When the <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged> event occurs, the `ShipDate` value is validated to ensure that changes are not made to orders that have already shipped.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#wpfdatabindingcustom)]
  [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#wpfdatabindingcustom)]
  [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#wpfdatabindingcustom)]  
   
-## Beispiel  
- Mit dem folgenden XAML\-Code wird das Fenster für das vorherige Beispiel definiert.  
+## <a name="example"></a><span data-ttu-id="12a8f-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="12a8f-112">Example</span></span>  
+ <span data-ttu-id="12a8f-113">Mit dem folgenden XAML-Code wird das Fenster für das vorherige Beispiel definiert.</span><span class="sxs-lookup"><span data-stu-id="12a8f-113">The following XAML defines the window for the previous example.</span></span>  
   
- [!code-xml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
+ [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
-## Siehe auch  
- [WCF Data Services\-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="12a8f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12a8f-114">See Also</span></span>  
+ [<span data-ttu-id="12a8f-115">WCF Data Services-Clientbibliothek</span><span class="sxs-lookup"><span data-stu-id="12a8f-115">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

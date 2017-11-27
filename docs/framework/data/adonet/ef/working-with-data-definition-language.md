@@ -1,25 +1,31 @@
 ---
-title: "Arbeiten mit der Datendefinitionssprache | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Arbeiten mit der Datendefinitionssprache
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d65fb17796339f38be59b64e550d7ec77336083d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Arbeiten mit der Datendefinitionssprache
-Ab Version 4 von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] unterstützt [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] DDL \(Datendefinitionssprache\).  Dadurch wird das Erstellen oder Löschen einer Datenbankinstanz auf Grundlage der Verbindungszeichenfolge und der Metadaten des Speichermodells \(SSDL\) ermöglicht.  
+# <a name="working-with-data-definition-language"></a><span data-ttu-id="101a7-102">Arbeiten mit der Datendefinitionssprache</span><span class="sxs-lookup"><span data-stu-id="101a7-102">Working with Data Definition Language</span></span>
+<span data-ttu-id="101a7-103">Beginnend mit der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Version 4 der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Datendefinitionssprache (DDL) unterstützt.</span><span class="sxs-lookup"><span data-stu-id="101a7-103">Starting with the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data definition language (DDL).</span></span> <span data-ttu-id="101a7-104">Dadurch wird das Erstellen oder Löschen einer Datenbankinstanz auf Grundlage der Verbindungszeichenfolge und der Metadaten des Speichermodells (SSDL) ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="101a7-104">This allows you to create or delete a database instance based on the connection string and the metadata of the storage (SSDL) model.</span></span>  
   
- Die folgenden Methoden für den <xref:System.Data.Objects.ObjectContext> verwenden die Verbindungszeichenfolge und den SSDL\-Inhalt, um Folgendes durchzuführen: Erstellen oder Löschen der Datenbank, Überprüfen, ob die Datenbank vorhanden ist, und Anzeigen des generierten DDL\-Skripts:  
+ <span data-ttu-id="101a7-105">Die folgenden Methoden für den <xref:System.Data.Objects.ObjectContext> verwenden die Verbindungszeichenfolge und den SSDL-Inhalt, um Folgendes durchzuführen: Erstellen oder Löschen der Datenbank, Überprüfen, ob die Datenbank vorhanden ist, und Anzeigen des generierten DDL-Skripts:</span><span class="sxs-lookup"><span data-stu-id="101a7-105">The following methods on the <xref:System.Data.Objects.ObjectContext> use the connection string and the SSDL content to accomplish the following: create or delete the database, check whether the database exists, and view the generated DDL script:</span></span>  
   
 -   <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
   
@@ -30,29 +36,29 @@ Ab Version 4 von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.m
 -   <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
->  Beim Ausführen der DDL\-Befehle wird von ausreichenden Berechtigungen ausgegangen.  
+>  <span data-ttu-id="101a7-106">Beim Ausführen der DDL-Befehle wird von ausreichenden Berechtigungen ausgegangen.</span><span class="sxs-lookup"><span data-stu-id="101a7-106">Executing the DDL commands assumes sufficient permissions.</span></span>  
   
- Die oben aufgeführten Methoden delegieren die meiste Arbeit an den zugrunde liegenden ADO.NET\-Datenanbieter.  Der Anbieter ist dafür verantwortlich, dass die zum Generieren von Datenbankobjekten verwendete Namenskonvention mit den zur Abfrage und Aktualisierung verwendeten Konventionen konsistent ist.  
+ <span data-ttu-id="101a7-107">Die oben aufgeführten Methoden delegieren die meiste Arbeit an den zugrunde liegenden ADO.NET-Datenanbieter.</span><span class="sxs-lookup"><span data-stu-id="101a7-107">The methods previously listed delegate most of the work to the underlying ADO.NET data provider.</span></span> <span data-ttu-id="101a7-108">Der Anbieter ist dafür verantwortlich, dass die zum Generieren von Datenbankobjekten verwendete Namenskonvention mit den zur Abfrage und Aktualisierung verwendeten Konventionen konsistent ist.</span><span class="sxs-lookup"><span data-stu-id="101a7-108">It is the provider’s responsibility to ensure that the naming convention used to generate database objects is consistent with conventions used for querying and updates.</span></span>  
   
- Im folgenden Beispiel wird dargestellt, wie die Datenbank auf Grundlage des vorhandenen Modells generiert wird.  Außerdem wird ein neues Entitätsobjekt dem Objektkontext hinzugefügt und in der Datenbank gespeichert.  
+ <span data-ttu-id="101a7-109">Im folgenden Beispiel wird dargestellt, wie die Datenbank auf Grundlage des vorhandenen Modells generiert wird.</span><span class="sxs-lookup"><span data-stu-id="101a7-109">The following example shows you how to generate the database based on the existing model.</span></span> <span data-ttu-id="101a7-110">Außerdem wird ein neues Entitätsobjekt dem Objektkontext hinzugefügt und in der Datenbank gespeichert.</span><span class="sxs-lookup"><span data-stu-id="101a7-110">It also adds a new entity object to the object context and then saves it to the database.</span></span>  
   
-## Verfahren  
+## <a name="procedures"></a><span data-ttu-id="101a7-111">Verfahren</span><span class="sxs-lookup"><span data-stu-id="101a7-111">Procedures</span></span>  
   
-#### So definieren Sie eine Datenbank auf Grundlage des vorhandenen Modells  
+#### <a name="to-define-a-database-based-on-the-existing-model"></a><span data-ttu-id="101a7-112">So definieren Sie eine Datenbank auf Grundlage des vorhandenen Modells</span><span class="sxs-lookup"><span data-stu-id="101a7-112">To define a database based on the existing model</span></span>  
   
-1.  Erstellen Sie eine Konsolenanwendung.  
+1.  <span data-ttu-id="101a7-113">Erstellen Sie eine Konsolenanwendung.</span><span class="sxs-lookup"><span data-stu-id="101a7-113">Create a console application.</span></span>  
   
-2.  Fügen Sie der Anwendung ein vorhandenes Modell hinzu.  
+2.  <span data-ttu-id="101a7-114">Fügen Sie der Anwendung ein vorhandenes Modell hinzu.</span><span class="sxs-lookup"><span data-stu-id="101a7-114">Add an existing model to your application.</span></span>  
   
-    1.  Fügen Sie ein leeres Modell mit dem Namen `SchoolModel` hinzu.  Informationen zur Erstellung eines leeren Modells finden Sie im Thema [How to: Create a New .edmx File](http://msdn.microsoft.com/de-de/beb8189e-e51c-4051-839c-9902c224abf2).  
+    1.  <span data-ttu-id="101a7-115">Fügen Sie ein leeres Modell mit dem Namen `SchoolModel`.</span><span class="sxs-lookup"><span data-stu-id="101a7-115">Add an empty model named `SchoolModel`.</span></span> <span data-ttu-id="101a7-116">Um ein leeres Modell erstellen, finden Sie unter der [Vorgehensweise: Erstellen Sie eine neue EDMX-Datei](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) Thema.</span><span class="sxs-lookup"><span data-stu-id="101a7-116">To create an empty model, see the [How to: Create a New .edmx File](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) topic.</span></span>  
   
-     Die Datei **SchoolModel.edmx** wird dem Projekt hinzugefügt.  
+     <span data-ttu-id="101a7-117">Die Datei SchoolModel.edmx wird dem Projekt hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="101a7-117">The SchoolModel.edmx file is added to your project.</span></span>  
   
-    1.  Kopieren Sie den konzeptionellen Inhalt, den Speicherinhalt und den Zuordnungsinhalt für das Modell "School" aus dem Thema [School Model](http://msdn.microsoft.com/de-de/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
+    1.  <span data-ttu-id="101a7-118">Kopieren Sie den konzeptionellen, Speicher und Zuordnen von Inhalt für das Modell "School" aus der [Modell ' School '](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) Thema.</span><span class="sxs-lookup"><span data-stu-id="101a7-118">Copy the conceptual, storage, and mapping content for the School model from the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) topic.</span></span>  
   
-    2.  Öffnen Sie die Datei **SchoolModel.edmx**, und fügen Sie den Inhalt zwischen den `edmx:Runtime`\-Tags ein.  
+    2.  <span data-ttu-id="101a7-119">Öffnen Sie die Datei SchoolModel.edmx`edmx:Runtime`, und fügen Sie den Inhalt zwischen den -Tags ein.</span><span class="sxs-lookup"><span data-stu-id="101a7-119">Open the SchoolModel.edmx file and paste the content within the `edmx:Runtime` tags.</span></span>  
   
-3.  Fügen Sie der Hauptfunktion den folgenden Code hinzu.  Im Code werden die Verbindungszeichenfolge mit dem Datenbankserver initialisiert, das DDL\-Skript angezeigt, die Datenbank erstellt, dem Kontext eine neue Entität hinzugefügt und die Änderungen in der Datenbank gespeichert.  
+3.  <span data-ttu-id="101a7-120">Fügen Sie der Hauptfunktion den folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="101a7-120">Add the following code to your main function.</span></span> <span data-ttu-id="101a7-121">Im Code werden die Verbindungszeichenfolge mit dem Datenbankserver initialisiert, das DDL-Skript angezeigt, die Datenbank erstellt, dem Kontext eine neue Entität hinzugefügt und die Änderungen in der Datenbank gespeichert.</span><span class="sxs-lookup"><span data-stu-id="101a7-121">The code initializes the connection string to your database server, views the DDL script, creates the database, adds a new entity to the context, and saves the changes to the database.</span></span>  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

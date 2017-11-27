@@ -1,30 +1,32 @@
 ---
-title: "&lt;Verhalten&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Verhalten&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b38b27a7b196026e2ff873c7748ed46b96ba9b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Verhalten&gt;
-Dieses Element definiert zwei untergeordnete Auflistungen mit dem Namen `endpointBehaviors` und `serviceBehaviors`.  Jede Auflistung definiert von Endpunkten und Diensten verwendete Verhaltenselemente.  Jedes Verhaltenselement wird durch seinen eindeutigen `name` identifiziert.  Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.  Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhalten finden Sie unter [Vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="ltbehaviorsgt"></a><span data-ttu-id="51807-102">&lt;Verhalten&gt;</span><span class="sxs-lookup"><span data-stu-id="51807-102">&lt;behaviors&gt;</span></span>
+<span data-ttu-id="51807-103">Dieses Element definiert zwei untergeordnete Auflistungen mit dem Namen `endpointBehaviors` und `serviceBehaviors`.</span><span class="sxs-lookup"><span data-stu-id="51807-103">This element defines two child collections named `endpointBehaviors` and `serviceBehaviors`.</span></span>  <span data-ttu-id="51807-104">Jede Auflistung definiert von Endpunkten und Diensten verwendete Verhaltenselemente.</span><span class="sxs-lookup"><span data-stu-id="51807-104">Each collection defines behavior elements consumed by endpoints and services respectively.</span></span> <span data-ttu-id="51807-105">Jedes Verhaltenselement wird durch seinen eindeutigen `name` identifiziert.</span><span class="sxs-lookup"><span data-stu-id="51807-105">Each behavior element is identified by its unique `name` attribute.</span></span> <span data-ttu-id="51807-106">Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="51807-106">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="51807-107">Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="51807-107">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
- \<system.ServiceModel\>  
+ <span data-ttu-id="51807-108">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="51807-108">\<system.ServiceModel></span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="51807-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="51807-109">Syntax</span></span>  
   
-```  
-  
+```xml  
 <behaviors>  
    <serviceBehaviors>  
    </serviceBehaviors>  
@@ -33,36 +35,36 @@ Dieses Element definiert zwei untergeordnete Auflistungen mit dem Namen `endpoin
 </behaviors>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="51807-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="51807-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="51807-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="51807-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
- Keine  
+### <a name="attributes"></a><span data-ttu-id="51807-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="51807-112">Attributes</span></span>  
+ <span data-ttu-id="51807-113">Keine</span><span class="sxs-lookup"><span data-stu-id="51807-113">None</span></span>  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="51807-114">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="51807-114">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<endpointBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Dieser Konfigurationsabschnitt stellt alle für einen bestimmten Endpunkt definierten Verhalten dar.|  
-|[\<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|Dieser Konfigurationsabschnitt stellt alle für einen bestimmten Dienst definierten Verhalten dar.|  
+|<span data-ttu-id="51807-115">Element</span><span class="sxs-lookup"><span data-stu-id="51807-115">Element</span></span>|<span data-ttu-id="51807-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="51807-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="51807-117">\<EndpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="51807-117">\<endpointBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|<span data-ttu-id="51807-118">Dieser Konfigurationsabschnitt stellt alle für einen bestimmten Endpunkt definierten Verhalten dar.</span><span class="sxs-lookup"><span data-stu-id="51807-118">This configuration section represents all the behaviors defined for a specific endpoint.</span></span>|  
+|[<span data-ttu-id="51807-119">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="51807-119">\<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|<span data-ttu-id="51807-120">Dieser Konfigurationsabschnitt stellt alle für einen bestimmten Dienst definierten Verhalten dar.</span><span class="sxs-lookup"><span data-stu-id="51807-120">This configuration section represents all the behaviors defined for a specific service.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="51807-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="51807-121">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<system.serviceModel\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Das Stammelement aller Windows Communication Foundation \(WCF\)\-Konfigurationselemente.|  
+|<span data-ttu-id="51807-122">Element</span><span class="sxs-lookup"><span data-stu-id="51807-122">Element</span></span>|<span data-ttu-id="51807-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="51807-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="51807-124">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="51807-124">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|<span data-ttu-id="51807-125">Das Stammelement aller Windows Communication Foundation (WCF)-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="51807-125">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
   
-## Hinweise  
- Sie können das `<remove>`\-Element verwenden, um ein bestimmtes Verhalten aus der Auflistung zu entfernen.  Geben Sie hierzu im `name`\-Attribut des `<remove>`\-Elements den Namen des zu entfernenden Verhaltens an.  Sie können auch das `<clear>`\-Element verwenden, um sicherzustellen, dass eine Verhaltensauflistung zu Beginn leer ist, indem Sie den gesamten Inhalt der Auflistung entfernen.  
+## <a name="remarks"></a><span data-ttu-id="51807-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="51807-126">Remarks</span></span>  
+ <span data-ttu-id="51807-127">Sie können das `<remove>`-Element verwenden, um ein bestimmtes Verhalten aus der Auflistung zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="51807-127">You can use the `<remove>` element to remove a particular behavior from the collection.</span></span> <span data-ttu-id="51807-128">Geben Sie hierzu im `name`-Attribut des `<remove>`-Elements den Namen des zu entfernenden Verhaltens an.</span><span class="sxs-lookup"><span data-stu-id="51807-128">To do so, simply supply the name of the behavior to remove in the `name` attribute of the `<remove>` element.</span></span>  <span data-ttu-id="51807-129">Sie können auch das `<clear>`-Element verwenden, um sicherzustellen, dass eine Verhaltensauflistung zu Beginn leer ist, indem Sie den gesamten Inhalt der Auflistung entfernen.</span><span class="sxs-lookup"><span data-stu-id="51807-129">You can also use the `<clear>` element to insure that a behavior collection starts empty by clearing out all the content of the collection.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.BehaviorsSection>   
- <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>   
- <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>   
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>   
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>   
- [Konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)   
- [Konfigurieren von Clientverhalten](../../../../../docs/framework/wcf/configuring-client-behaviors.md)   
- [Angeben des Clientlaufzeitverhaltens](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)   
- [Angeben des Dienstlaufzeitverhaltens](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)   
- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="51807-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51807-130">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.BehaviorsSection>  
+ <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>  
+ <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
+ <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
+ <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
+ [<span data-ttu-id="51807-131">Konfigurieren und Erweitern der Laufzeit mit Verhalten</span><span class="sxs-lookup"><span data-stu-id="51807-131">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
+ [<span data-ttu-id="51807-132">Konfigurieren von Clientverhalten</span><span class="sxs-lookup"><span data-stu-id="51807-132">Configuring Client Behaviors</span></span>](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
+ [<span data-ttu-id="51807-133">Angeben des Clientlaufzeitverhaltens</span><span class="sxs-lookup"><span data-stu-id="51807-133">Specifying Client Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [<span data-ttu-id="51807-134">Angeben des Dienstlaufzeitverhaltens</span><span class="sxs-lookup"><span data-stu-id="51807-134">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  
+ [<span data-ttu-id="51807-135">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="51807-135">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

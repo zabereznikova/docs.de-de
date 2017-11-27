@@ -1,34 +1,38 @@
 ---
-title: "Erneutes Hosten von Designern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erneutes Hosten von Designern
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 888282d10be9840817274e0fed36b3cb1cf6da32
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erneutes Hosten von Designern
-Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das Hosting des Entwurfszeichnungsbereichs des Workflows in einer benutzerdefinierten Anwendung bezieht.Die Hostinganwendung, mit der die meisten Personen vertraut sind, ist Visual Studio, es gibt jedoch eine Reihe von Szenarien, in denen das Anzeigen des Workflow\-Designers in einer Anwendung hilfreich sein kann:  
+# <a name="designer-rehosting"></a><span data-ttu-id="1a46c-102">Erneutes Hosten von Designern</span><span class="sxs-lookup"><span data-stu-id="1a46c-102">Designer ReHosting</span></span>
+<span data-ttu-id="1a46c-103">Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das Hosting des Entwurfszeichnungsbereichs des Workflows in einer benutzerdefinierten Anwendung bezieht.</span><span class="sxs-lookup"><span data-stu-id="1a46c-103">Designer rehosting is a common scenario that refers to hosting the workflow design canvas inside of a custom application.</span></span> <span data-ttu-id="1a46c-104">Die Hostinganwendung, mit der die meisten Personen vertraut sind, ist Visual Studio, es gibt jedoch eine Reihe von Szenarien, in denen das Anzeigen des Workflow-Designers in einer Anwendung hilfreich sein kann:</span><span class="sxs-lookup"><span data-stu-id="1a46c-104">The hosting application most people are familiar with is Visual Studio, however there are a number of scenarios where showing the workflow designer in an application may be useful:</span></span>  
   
--   Das Überwachen von Anwendungen \(die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen\).  
+-   <span data-ttu-id="1a46c-105">Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).</span><span class="sxs-lookup"><span data-stu-id="1a46c-105">Monitoring applications (allowing an end user to visualize the process, as well as runtime data about the process such as the currently active state, aggregate execution time data, or other information about an instance of the workflow).</span></span>  
   
--   Anwendungen, die es einem Benutzer ermöglichen, den Prozess mit einem beschränkten Satz von Aktivitäten anzupassen.  
+-   <span data-ttu-id="1a46c-106">Anwendungen, die es einem Benutzer ermöglichen, den Prozess mit einem beschränkten Satz von Aktivitäten anzupassen.</span><span class="sxs-lookup"><span data-stu-id="1a46c-106">Applications that allow a user to customize the process with a limited set of activities.</span></span>  
   
- Zur Unterstützung dieser Anwendungstypen wird der Workflow\-Designer als Bestandteil von .NET Framework ausgeliefert und kann in einer WPF\-Anwendung oder in einer WinForms\-Anwendung mit dem entsprechenden WPF\-Hostingcode gehostet werden.Dieses Beispiel veranschaulicht Folgendes:  
+ <span data-ttu-id="1a46c-107">Zur Unterstützung dieser Anwendungstypen wird der Workflow-Designer als Bestandteil von .NET Framework ausgeliefert und kann in einer WPF-Anwendung oder in einer WinForms-Anwendung mit dem entsprechenden WPF-Hostingcode gehostet werden.</span><span class="sxs-lookup"><span data-stu-id="1a46c-107">To support these types of applications, the workflow designer ships inside the .NET Framework, and can be hosted inside a WPF application, or in a WinForms application with the appropriate WPF hosting code.</span></span> <span data-ttu-id="1a46c-108">Dieses Beispiel veranschaulicht Folgendes:</span><span class="sxs-lookup"><span data-stu-id="1a46c-108">This sample demonstrates:</span></span>  
   
--   Erneutes Hosten des Workflow\-Designers  
+-   <span data-ttu-id="1a46c-109">Erneutes Hosten des Workflow-Designers</span><span class="sxs-lookup"><span data-stu-id="1a46c-109">Rehosting the WF designer.</span></span>  
   
--   Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.  
+-   <span data-ttu-id="1a46c-110">Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.</span><span class="sxs-lookup"><span data-stu-id="1a46c-110">Using the rehosted toolbox and property grid as well.</span></span>  
   
-## Erneutes Hosten des Workflow\-Designers  
- In diesem Beispiel wird veranschaulicht, wie das WPF\-Layout so erstellt wird, dass es den Designer enthält, wie im folgenden Rasterlayout dargestellt \(der Toolboxcode wurde aus Platzgründen weggelassen\).Beachten Sie die Benennung der Rahmen, die den Designer und das Eigenschaftenraster enthalten.  
+## <a name="rehosting-the-designer"></a><span data-ttu-id="1a46c-111">Erneutes Hosten des Workflow-Designers</span><span class="sxs-lookup"><span data-stu-id="1a46c-111">Rehosting the designer</span></span>  
+ <span data-ttu-id="1a46c-112">In diesem Beispiel wird veranschaulicht, wie das WPF-Layout so erstellt wird, dass es den Designer enthält, wie im folgenden Rasterlayout dargestellt (der Toolboxcode wurde aus Platzgründen weggelassen).</span><span class="sxs-lookup"><span data-stu-id="1a46c-112">This sample shows how to create the WPF layout to contain the designer, seen in the following grid layout (Toolbox code omitted for space concerns).</span></span> <span data-ttu-id="1a46c-113">Beachten Sie die Benennung der Rahmen, die den Designer und das Eigenschaftenraster enthalten.</span><span class="sxs-lookup"><span data-stu-id="1a46c-113">Note the naming of the borders which contain the designer and property grid.</span></span>  
   
 ```xaml  
 <Grid>  
@@ -43,10 +47,9 @@ Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das 
     <Border Grid.Column="1" Name="DesignerBorder"/>  
     <Border Grid.Column="2" Name="PropertyBorder"/>  
 </Grid>  
-  
 ```  
   
- Im Beispiel wird dann der Designer erstellt und seine primäre <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> und <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> dem entsprechenden Container in der Benutzeroberfläche zugeordnet.Im folgenden Beispiel gibt es einige zusätzliche Codezeilen, die einer Erläuterung bedürfen.Der <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A>\-Aufruf ist erforderlich, um die Standardaktivitätsdesigner für die Aktivitäten zuzuordnen, die im Lieferumfang von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] enthalten sind.<xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> wird aufgerufen, um das zu bearbeitende WF\-Element zu übergeben.Schließlich werden die <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> \(primärer Zeichnungsbereich\) und die <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> \(Eigenschaftenraster\) auf der Benutzeroberfläche platziert.  
+ <span data-ttu-id="1a46c-114">Im Beispiel wird dann der Designer erstellt und seine primäre <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> und <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> dem entsprechenden Container in der Benutzeroberfläche zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="1a46c-114">Next the sample creates the designer, and associates its primary <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> with the appropriate container in the user interface.</span></span> <span data-ttu-id="1a46c-115">Im folgenden Beispiel gibt es einige zusätzliche Codezeilen, die einer Erläuterung bedürfen.</span><span class="sxs-lookup"><span data-stu-id="1a46c-115">There are a few additional lines of code in the following example that merit some explanation.</span></span> <span data-ttu-id="1a46c-116">Der <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A>-Aufruf ist erforderlich, um die Standardaktivitätsdesigner für die Aktivitäten zuzuordnen, die im Lieferumfang von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="1a46c-116">The <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> call is required to associate the default activity designers for the activities shipped with [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="1a46c-117"><xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> wird aufgerufen, um das zu bearbeitende WF-Element zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="1a46c-117"><xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> is called to pass in the WF item to be edited.</span></span> <span data-ttu-id="1a46c-118">Schließlich werden die <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primärer Zeichnungsbereich) und die <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Eigenschaftenraster) auf der Benutzeroberfläche platziert.</span><span class="sxs-lookup"><span data-stu-id="1a46c-118">Finally, the <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primary canvas) and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (property grid) are placed onto the user interface surface.</span></span>  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -61,11 +64,10 @@ protected override void OnInitialized(EventArgs e)
    DesignerBorder.Child = wd.View;  
    PropertyBorder.Child = wd.PropertyInspectorView;  
 }  
-  
 ```  
   
-## Verwenden der neu gehosteten Toolbox  
- In diesem Beispiel wird das neu gehostete Toolboxsteuerelement deklarativ in XAML verwendet.Beachten Sie, dass in Code ein Typ an den <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>\-Konstruktor übergeben werden kann.  
+## <a name="using-the-rehosted-toolbox"></a><span data-ttu-id="1a46c-119">Verwenden der neu gehosteten Toolbox</span><span class="sxs-lookup"><span data-stu-id="1a46c-119">Using the rehosted toolbox</span></span>  
+ <span data-ttu-id="1a46c-120">In diesem Beispiel wird das neu gehostete Toolboxsteuerelement deklarativ in XAML verwendet.</span><span class="sxs-lookup"><span data-stu-id="1a46c-120">This sample uses the rehosted toolbox control declaratively in XAML.</span></span> <span data-ttu-id="1a46c-121">Beachten Sie, dass in Code ein Typ an den <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>-Konstruktor übergeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="1a46c-121">Note that in code, one can pass a type to the <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> constructor.</span></span>  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -117,24 +119,23 @@ protected override void OnInitialized(EventArgs e)
         <Border Grid.Column="2" Name="PropertyBorder"/>  
     </Grid>  
 </Window>  
-  
 ```  
   
-#### Verwenden des Beispiels  
+#### <a name="using-the-sample"></a><span data-ttu-id="1a46c-122">Verwenden des Beispiels</span><span class="sxs-lookup"><span data-stu-id="1a46c-122">Using the sample</span></span>  
   
-1.  Öffnen Sie die Projektmappe DesignerRehosting.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="1a46c-123">Öffnen Sie die Projektmappe DesignerRehosting.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1a46c-123">Open the DesignerRehosting.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
+2.  <span data-ttu-id="1a46c-124">Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="1a46c-124">Press F5 to compile and run the application.</span></span>  
   
-3.  Eine WPF\-Anwendung beginnt mit einem neu gehosteten Designer.  
+3.  <span data-ttu-id="1a46c-125">Eine WPF-Anwendung beginnt mit einem neu gehosteten Designer.</span><span class="sxs-lookup"><span data-stu-id="1a46c-125">A WPF application starts with a rehosted designer.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie den Vorgang fortsetzen.  
+>  <span data-ttu-id="1a46c-126">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="1a46c-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1a46c-127">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="1a46c-127">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="1a46c-128">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="1a46c-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1a46c-129">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="1a46c-129">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="1a46c-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1a46c-130">See Also</span></span>

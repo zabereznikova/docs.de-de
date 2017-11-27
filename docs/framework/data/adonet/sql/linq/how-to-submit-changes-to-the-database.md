@@ -1,44 +1,50 @@
 ---
-title: "Vorgehensweise: &#220;bergeben von &#196;nderungen an die Datenbank | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Übergeben von Änderungen an die Datenbank"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 039eaac26833651fbd82dc1a69a31f394c1464c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: &#220;bergeben von &#196;nderungen an die Datenbank
-Unabhängig von der Anzahl der Änderungen an Ihren Objekten erfolgen diese Änderungen nur an den Replikaten im Arbeitsspeicher.  Sie haben die eigentlichen Daten in der Datenbank nicht verändert.  Ihre Änderungen werden erst dann zum Server gesendet, wenn Sie explizit <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> aufrufen.  
+# <a name="how-to-submit-changes-to-the-database"></a><span data-ttu-id="1a347-102">Gewusst wie: Übergeben von Änderungen an die Datenbank</span><span class="sxs-lookup"><span data-stu-id="1a347-102">How to: Submit Changes to the Database</span></span>
+<span data-ttu-id="1a347-103">Unabhängig von der Anzahl der Änderungen an Ihren Objekten erfolgen diese Änderungen nur an den Replikaten im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="1a347-103">Regardless of how many changes you make to your objects, changes are made only to in-memory replicas.</span></span> <span data-ttu-id="1a347-104">Sie haben die eigentlichen Daten in der Datenbank nicht verändert.</span><span class="sxs-lookup"><span data-stu-id="1a347-104">You have made no changes to the actual data in the database.</span></span> <span data-ttu-id="1a347-105">Ihre Änderungen werden erst dann zum Server gesendet, wenn Sie explizit <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> aufrufen.</span><span class="sxs-lookup"><span data-stu-id="1a347-105">Your changes are not transmitted to the server until you explicitly call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> on the <xref:System.Data.Linq.DataContext>.</span></span>  
   
- Bei diesem Aufruf versucht der <xref:System.Data.Linq.DataContext>, die Änderungen in entsprechende SQL\-Befehle zu übersetzen.  Sie können Ihre eigene, benutzerdefinierte Logik verwenden, um diese Aktionen zu überschreiben. Die Reihenfolge der Übergabe wird jedoch durch einen Dienst des <xref:System.Data.Linq.DataContext> koordiniert, der als *Änderungsprozessor* bezeichnet wird.  Die Ereignisse finden in der folgenden Reihenfolge statt:  
+ <span data-ttu-id="1a347-106">Bei diesem Aufruf versucht der <xref:System.Data.Linq.DataContext>, die Änderungen in entsprechende SQL-Befehle zu übersetzen.</span><span class="sxs-lookup"><span data-stu-id="1a347-106">When you make this call, the <xref:System.Data.Linq.DataContext> tries to translate your changes into equivalent SQL commands.</span></span> <span data-ttu-id="1a347-107">Können Sie Ihre eigene Logik verwenden um diese Aktionen zu überschreiben, aber die Reihenfolge der Übergabe wird durch einen Dienst des orchestriert die <xref:System.Data.Linq.DataContext> bekannt als die *ändern Prozessor*.</span><span class="sxs-lookup"><span data-stu-id="1a347-107">You can use your own custom logic to override these actions, but the order of submission is orchestrated by a service of the <xref:System.Data.Linq.DataContext> known as the *change processor*.</span></span> <span data-ttu-id="1a347-108">Die Ereignisse finden in der folgenden Reihenfolge statt:</span><span class="sxs-lookup"><span data-stu-id="1a347-108">The sequence of events is as follows:</span></span>  
   
-1.  Wenn Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen, prüft [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] den Satz unbekannter Objekte, um zu ermitteln, ob diesen neue Instanzen hinzugefügt wurden.  Ist dies der Fall, werden diese Instanzen dem Satz verfolgter Objekte hinzugefügt.  
+1.  <span data-ttu-id="1a347-109">Wenn Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen, prüft [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] den Satz unbekannter Objekte, um zu ermitteln, ob diesen neue Instanzen hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="1a347-109">When you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] examines the set of known objects to determine whether new instances have been attached to them.</span></span> <span data-ttu-id="1a347-110">Ist dies der Fall, werden diese Instanzen dem Satz verfolgter Objekte hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1a347-110">If they have, these new instances are added to the set of tracked objects.</span></span>  
   
-2.  Alle Objekte mit ausstehenden Änderungen werden in eine Objektsequenz gegliedert, die auf den Abhängigkeiten zwischen den Objekten basiert.  Objekte, deren Änderungen von anderen Objekten abhängen, werden nach ihren Abhängigkeiten eingeordnet.  
+2.  <span data-ttu-id="1a347-111">Alle Objekte mit ausstehenden Änderungen werden in eine Objektsequenz gegliedert, die auf den Abhängigkeiten zwischen den Objekten basiert.</span><span class="sxs-lookup"><span data-stu-id="1a347-111">All objects that have pending changes are ordered into a sequence of objects based on the dependencies between them.</span></span> <span data-ttu-id="1a347-112">Objekte, deren Änderungen von anderen Objekten abhängen, werden nach ihren Abhängigkeiten eingeordnet.</span><span class="sxs-lookup"><span data-stu-id="1a347-112">Objects whose changes depend on other objects are sequenced after their dependencies.</span></span>  
   
-3.  Direkt vor der Übergabe der eigentlichen Änderungen startet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Transaktion, um die Reihe einzelner Befehle zu kapseln.  
+3.  <span data-ttu-id="1a347-113">Direkt vor der Übergabe der eigentlichen Änderungen startet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Transaktion, um die Reihe einzelner Befehle zu kapseln.</span><span class="sxs-lookup"><span data-stu-id="1a347-113">Immediately before any actual changes are transmitted, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] starts a transaction to encapsulate the series of individual commands.</span></span>  
   
-4.  Die Änderungen an den Objekten werden nacheinander in SQL\-Befehle übersetzt und an den Server gesendet.  
+4.  <span data-ttu-id="1a347-114">Die Änderungen an den Objekten werden nacheinander in SQL-Befehle übersetzt und an den Server gesendet.</span><span class="sxs-lookup"><span data-stu-id="1a347-114">The changes to the objects are translated one by one to SQL commands and sent to the server.</span></span>  
   
- Zu diesem Zeitpunkt führen Fehler, die von der Datenbank erkannt werden, zum Stoppen der Übergabe, und eine Ausnahme wird ausgelöst.  Alle Änderungen an der Datenbank werden rückgängig gemacht, als ob keine Übergabe stattgefunden hätte.  Der <xref:System.Data.Linq.DataContext> verfügt weiterhin über eine vollständige Aufzeichnung aller Änderungen.  Daher können Sie versuchen, das Problem zu beheben und <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wie im folgenden Codebeispiel erneut aufrufen.  
+ <span data-ttu-id="1a347-115">Zu diesem Zeitpunkt führen Fehler, die von der Datenbank erkannt werden, zum Stoppen der Übergabe, und eine Ausnahme wird ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="1a347-115">At this point, any errors detected by the database cause the submission process to stop, and an exception is raised.</span></span> <span data-ttu-id="1a347-116">Alle Änderungen an der Datenbank werden rückgängig gemacht, als ob keine Übergabe stattgefunden hätte.</span><span class="sxs-lookup"><span data-stu-id="1a347-116">All changes to the database are rolled back as if no submissions ever occurred.</span></span> <span data-ttu-id="1a347-117">Der <xref:System.Data.Linq.DataContext> verfügt weiterhin über eine vollständige Aufzeichnung aller Änderungen.</span><span class="sxs-lookup"><span data-stu-id="1a347-117">The <xref:System.Data.Linq.DataContext> still has a full recording of all changes.</span></span> <span data-ttu-id="1a347-118">Daher können Sie versuchen, das Problem zu beheben und <xref:System.Data.Linq.DataContext.SubmitChanges%2A> wie im folgenden Codebeispiel erneut aufrufen.</span><span class="sxs-lookup"><span data-stu-id="1a347-118">You can therefore try to correct the problem and call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> again, as in the code example that follows.</span></span>  
   
-## Beispiel  
- Wird die Transaktion rund um die Übergabe erfolgreich abgeschlossen, akzeptiert der <xref:System.Data.Linq.DataContext> die Änderungen an den Objekten, indem er die Informationen zur Änderungsverfolgung ignoriert.  
+## <a name="example"></a><span data-ttu-id="1a347-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1a347-119">Example</span></span>  
+ <span data-ttu-id="1a347-120">Wird die Transaktion rund um die Übergabe erfolgreich abgeschlossen, akzeptiert der <xref:System.Data.Linq.DataContext> die Änderungen an den Objekten, indem er die Informationen zur Änderungsverfolgung ignoriert.</span><span class="sxs-lookup"><span data-stu-id="1a347-120">When the transaction around the submission is completed successfully, the <xref:System.Data.Linq.DataContext> accepts the changes to the objects by ignoring the change-tracking information.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#1)]
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
-## Siehe auch  
- [Vorgehensweise: Erkennen und Auflösen von Übergabekonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)   
- [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)   
- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
- [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a><span data-ttu-id="1a347-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1a347-121">See Also</span></span>  
+ [<span data-ttu-id="1a347-122">Vorgehensweise: erkennen und Auflösen von Übergabekonflikten</span><span class="sxs-lookup"><span data-stu-id="1a347-122">How to: Detect and Resolve Conflicting Submissions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
+ [<span data-ttu-id="1a347-123">Vorgehensweise: Verwalten von Änderungskonflikten</span><span class="sxs-lookup"><span data-stu-id="1a347-123">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
+ [<span data-ttu-id="1a347-124">Downloading Sample Databases (Herunterladen von Beispieldatenbanken)</span><span class="sxs-lookup"><span data-stu-id="1a347-124">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="1a347-125">Vornehmen und übergeben von Datenänderungen</span><span class="sxs-lookup"><span data-stu-id="1a347-125">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

@@ -1,36 +1,40 @@
 ---
-title: "Auflistungsaktivit&#228;ten in WF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Auflistungsaktivitäten in WF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f1feb09c67051c1e99ac199adc20fe6ca4d6e4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Auflistungsaktivit&#228;ten in WF
-Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet.  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden.  `ExistsInCollection` und `RemoveFromCollectio`n verfügen über <xref:System.Activities.OutArgument%601> vom Typ <xref:System.Boolean>, das das Ergebnis angibt.  
+# <a name="collection-activities-in-wf"></a><span data-ttu-id="5fe99-102">Auflistungsaktivitäten in WF</span><span class="sxs-lookup"><span data-stu-id="5fe99-102">Collection Activities in WF</span></span>
+<span data-ttu-id="5fe99-103">Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet.</span><span class="sxs-lookup"><span data-stu-id="5fe99-103">Collection activities are used to work with collection objects in a workflow.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="5fe99-104"> verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden.</span><span class="sxs-lookup"><span data-stu-id="5fe99-104"> has system-provided activities for adding and removing items from a collection, testing for the existence of an item in a collection, and clearing a collection.</span></span> <span data-ttu-id="5fe99-105">`ExistsInCollection`und `RemoveFromCollection` haben eine <xref:System.Activities.OutArgument%601> des Typs <xref:System.Boolean>, das das Ergebnis angibt.</span><span class="sxs-lookup"><span data-stu-id="5fe99-105">`ExistsInCollection` and `RemoveFromCollection` have an <xref:System.Activities.OutArgument%601> of type <xref:System.Boolean>, which indicates the result.</span></span>  
   
 > [!IMPORTANT]
->  Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.  
+>  <span data-ttu-id="5fe99-106">Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.</span><span class="sxs-lookup"><span data-stu-id="5fe99-106">If a collection activity is executed before setting the underlying collection object, an <xref:System.InvalidOperationException> is thrown and the activity faults.</span></span>  
   
-## Auflistungsaktivitäten  
+## <a name="collection-activities"></a><span data-ttu-id="5fe99-107">Auflistungsaktivitäten</span><span class="sxs-lookup"><span data-stu-id="5fe99-107">Collection activities</span></span>  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.AddToCollection%601>|Fügt einer angegebenen Auflistung ein Element hinzu.|  
-|<xref:System.Activities.Statements.ClearCollection%601>|Entfernt alle Elemente aus einer angegebenen Auflistung.|  
-|<xref:System.Activities.Statements.ExistsInCollection%601>|Gibt `true` zurück, wenn ein Element in einer Auflistung vorhanden ist.|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|Entfernt ein Element aus einer angegebenen Auflistung und gibt `true` zurück, wenn das Element erfolgreich entfernt wurde.|  
+|<xref:System.Activities.Statements.AddToCollection%601>|<span data-ttu-id="5fe99-108">Fügt einer angegebenen Auflistung ein Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="5fe99-108">Adds an item to a specified collection.</span></span>|  
+|<xref:System.Activities.Statements.ClearCollection%601>|<span data-ttu-id="5fe99-109">Entfernt alle Elemente aus einer angegebenen Auflistung.</span><span class="sxs-lookup"><span data-stu-id="5fe99-109">Clears all items from a specified collection.</span></span>|  
+|<xref:System.Activities.Statements.ExistsInCollection%601>|<span data-ttu-id="5fe99-110">Gibt `true` zurück, wenn ein Element in einer Auflistung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="5fe99-110">Returns `true` if an item exists in a collection.</span></span>|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|<span data-ttu-id="5fe99-111">Entfernt ein Element aus einer angegebenen Auflistung und gibt `true` zurück, wenn das Element erfolgreich entfernt wurde.</span><span class="sxs-lookup"><span data-stu-id="5fe99-111">Removes an item from a specified collection and returns `true` if the item was successfully removed.</span></span>|  
   
-## Verwenden von Auflistungsaktivitäten  
- Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde.  Die verwendete Auflistung ist ein <xref:System.Collections.Generic.List%E2%80%991>\-Objekt von <xref:System.String>\-Objekten mit dem Namen `fruitList`.  
+## <a name="using-collection-activities"></a><span data-ttu-id="5fe99-112">Verwenden von Auflistungsaktivitäten</span><span class="sxs-lookup"><span data-stu-id="5fe99-112">Using collection activities</span></span>  
+ <span data-ttu-id="5fe99-113">Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde.</span><span class="sxs-lookup"><span data-stu-id="5fe99-113">The following code example demonstrates how to interact with a collection declared as a workflow variable.</span></span> <span data-ttu-id="5fe99-114">Die verwendete Auflistung ist eine <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` von <xref:System.String> Objekte, die mit dem Namen `fruitList`.</span><span class="sxs-lookup"><span data-stu-id="5fe99-114">The collection used is a <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List`  of <xref:System.String> objects named `fruitList`.</span></span>  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -85,7 +89,6 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
 ```xaml  
@@ -229,10 +232,9 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
- Die oben erwähnten Codebeispiele können auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> anstelle von <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.  
+ <span data-ttu-id="5fe99-115">Die oben erwähnten Codebeispiele können auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> anstelle von <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="5fe99-115">The above code samples can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601></span></span>  
   
 ```  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -287,10 +289,9 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
-```  
+```xml  
 <Sequence  
    xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -431,8 +432,7 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
-## Siehe auch  
- [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a><span data-ttu-id="5fe99-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5fe99-116">See Also</span></span>  
+ [<span data-ttu-id="5fe99-117">Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code</span><span class="sxs-lookup"><span data-stu-id="5fe99-117">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

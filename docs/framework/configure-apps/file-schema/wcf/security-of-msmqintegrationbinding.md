@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; von &lt;msmqIntegrationBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; von &lt;msmqIntegrationBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9bca2fea17ecb0a2acbafed9f6093b7103a1adc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; von &lt;msmqIntegrationBinding&gt;
-Definiert die Transportsicherheitseinstellungen für den Message Queuing \(MSMQ\)\-Integrationskanal.  
+# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="a27f6-102">&lt;security&gt; von &lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="a27f6-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
+<span data-ttu-id="a27f6-103">Definiert die Transportsicherheitseinstellungen für den Message Queuing (MSMQ)-Integrationskanal.</span><span class="sxs-lookup"><span data-stu-id="a27f6-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="a27f6-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a27f6-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a27f6-105">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="a27f6-105">\<bindings></span></span>  
+<span data-ttu-id="a27f6-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="a27f6-106">msmqIntegrationBinding</span></span>  
+<span data-ttu-id="a27f6-107">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="a27f6-107">\<binding></span></span>  
+<span data-ttu-id="a27f6-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="a27f6-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a27f6-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="a27f6-109">Syntax</span></span>  
   
+```xml  
 <msmqIntegrationBinding>  
    <binding>   
        <security mode="None/Transport">  
@@ -38,36 +46,36 @@ Definiert die Transportsicherheitseinstellungen für den Message Queuing \(MSMQ\
 </msmqIntegrationBinding>   
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a27f6-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="a27f6-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="a27f6-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="a27f6-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="a27f6-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="a27f6-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|Modus|Gibt den Sicherheitstyp an, der Integrität, Vertraulichkeit und Authentifizierung mit dem Message Queuing\-Integrationskanal steuert.  Folgende Werte sind gültig:<br /><br /> -   None: Die Sicherheit wird deaktiviert.<br />-   Transport: Schutz und Authentifizierung werden vom Transport bereitgestellt.  Dies bezieht sich auf die Nachrichtensicherheit zwischen beiden Warteschlangen\-Managern.  Es besteht keine Sicherheit zwischen der Anwendung und dem Warteschlangen\-Manager.  Vorhandene Msmq\-Anwendungen sind mit diesem Typ des Sicherheitsmodus funktional äquivalent.<br /><br /> Der Standardwert ist `Transport`.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|<span data-ttu-id="a27f6-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="a27f6-113">Attribute</span></span>|<span data-ttu-id="a27f6-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a27f6-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="a27f6-115">Modus</span><span class="sxs-lookup"><span data-stu-id="a27f6-115">mode</span></span>|<span data-ttu-id="a27f6-116">Gibt den Sicherheitstyp an, der Integrität, Vertraulichkeit und Authentifizierung mit dem Message Queuing-Integrationskanal steuert.</span><span class="sxs-lookup"><span data-stu-id="a27f6-116">Specifies the type of security that controls integrity, confidentiality and authentication with the Message Queuing integration channel.</span></span> <span data-ttu-id="a27f6-117">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="a27f6-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="a27f6-118">-"None": Die Sicherheit wird deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="a27f6-118">-   None: This disables security.</span></span><br /><span data-ttu-id="a27f6-119">-Transport: Schutz und Authentifizierung werden vom Transport bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="a27f6-119">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="a27f6-120">Dies bezieht sich auf die Nachrichtensicherheit zwischen beiden Warteschlangen-Managern.</span><span class="sxs-lookup"><span data-stu-id="a27f6-120">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="a27f6-121">Es besteht keine Sicherheit zwischen der Anwendung und dem Warteschlangen-Manager.</span><span class="sxs-lookup"><span data-stu-id="a27f6-121">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="a27f6-122">Vorhandene Msmq-Anwendungen sind mit diesem Typ des Sicherheitsmodus funktional äquivalent.</span><span class="sxs-lookup"><span data-stu-id="a27f6-122">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><br /> <span data-ttu-id="a27f6-123">Der Standardwert ist `Transport`.</span><span class="sxs-lookup"><span data-stu-id="a27f6-123">The default value is `Transport`.</span></span> <span data-ttu-id="a27f6-124">Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="a27f6-124">This attribute is of type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="a27f6-125">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="a27f6-125">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Definiert die Sicherheitseinstellungen für Message Queuing\-Integration und \-Transport.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|<span data-ttu-id="a27f6-126">Element</span><span class="sxs-lookup"><span data-stu-id="a27f6-126">Element</span></span>|<span data-ttu-id="a27f6-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a27f6-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a27f6-128">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="a27f6-128">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|<span data-ttu-id="a27f6-129">Definiert die Sicherheitseinstellungen für Message Queuing-Integration und -Transport.</span><span class="sxs-lookup"><span data-stu-id="a27f6-129">Defines the security settings for the Message Queuing integration transport.</span></span> <span data-ttu-id="a27f6-130">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="a27f6-130">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="a27f6-131">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="a27f6-131">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Bindung\>](../../../../../docs/framework/misc/binding.md)|Das Bindungselement von [\<msmqIntegrationBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
+|<span data-ttu-id="a27f6-132">Element</span><span class="sxs-lookup"><span data-stu-id="a27f6-132">Element</span></span>|<span data-ttu-id="a27f6-133">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a27f6-133">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a27f6-134">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="a27f6-134">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="a27f6-135">Das Bindungselement, das von der [ \<MsmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span><span class="sxs-lookup"><span data-stu-id="a27f6-135">The binding element of the [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>|  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>   
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>   
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>   
- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)   
- [\<msmqIntegrationBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+## <a name="see-also"></a><span data-ttu-id="a27f6-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a27f6-136">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
+ [<span data-ttu-id="a27f6-137">Warteschlangen in WCF</span><span class="sxs-lookup"><span data-stu-id="a27f6-137">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="a27f6-138">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="a27f6-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="a27f6-139">Bindungen</span><span class="sxs-lookup"><span data-stu-id="a27f6-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a27f6-140">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="a27f6-140">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="a27f6-141">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="a27f6-141">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="a27f6-142">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="a27f6-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="a27f6-143">\<MsmqIntegrationBinding ></span><span class="sxs-lookup"><span data-stu-id="a27f6-143">\<msmqIntegrationBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

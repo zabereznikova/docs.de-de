@@ -1,37 +1,39 @@
 ---
-title: "Verwenden von WS-AtomicTransaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WS-AT-Protokoll [WCF]"
+title: Verwenden von WS-AtomicTransaction
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7046add86f1255b222640912be02c08b98cb9cae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verwenden von WS-AtomicTransaction
-WS\-AtomicTransaction \(WS\-AT\) ist ein interoperables Transaktionsprotokoll.Mit diesem Protokoll können Sie verteilte Transaktionen unter Verwendung von Webdienstnachrichten übergeben und interoperativ zwischen heterogenen Transaktionsinfrastrukturen koordinieren.WS\-AT verwendet das Zwei\-Phasen\-Commitprotokoll, um eine unteilbare Ausgabe zwischen verteilten Anwendungen, Transaktions\-Managern und Ressourcen\-Managern zu erzielen.  
+# <a name="using-ws-atomictransaction"></a><span data-ttu-id="97196-102">Verwenden von WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="97196-102">Using WS-AtomicTransaction</span></span>
+<span data-ttu-id="97196-103">WS-Atomic-Transaktion (WS-AT) ist ein interoperables Transaktionsprotokoll.</span><span class="sxs-lookup"><span data-stu-id="97196-103">WS-AtomicTransaction (WS-AT) is an interoperable transaction protocol.</span></span> <span data-ttu-id="97196-104">Mit diesem Protokoll können Sie verteilte Transaktionen unter Verwendung von Webdienstnachrichten übergeben und interoperativ zwischen heterogenen Transaktionsinfrastrukturen koordinieren.</span><span class="sxs-lookup"><span data-stu-id="97196-104">It enables you to flow distributed transactions by using Web service messages, and coordinate in an interoperable manner between heterogeneous transaction infrastructures.</span></span> <span data-ttu-id="97196-105">WS-AT verwendet das Zwei-Phasen-Commitprotokoll, um eine unteilbare Ausgabe zwischen verteilten Anwendungen, Transaktions-Managern und Ressourcen-Managern zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="97196-105">WS-AT uses the two-phase commit protocol to drive an atomic outcome between distributed applications, transaction managers, and resource managers.</span></span>  
   
- Die von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zur Verfügung gestellte WS\-AT\-Implementierung umfasst einen im Transaktions\-Manager von Microsoft Distributed Transaction Coordinator \(MSDTC\) integrierten Protokolldienst.Mit WS\-AT können [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendungen Transaktionen an andere Anwendungen übergeben, einschließlich interoperabler Webdienste, die mit der Technologie von Fremdanbietern erstellt wurden.  
+ <span data-ttu-id="97196-106">Die von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zur Verfügung gestellte WS-AT-Implementierung umfasst einen im Transaktions-Manager von Microsoft Distributed Transaction Coordinator (MSDTC) integrierten Protokolldienst.</span><span class="sxs-lookup"><span data-stu-id="97196-106">The WS-AT implementation [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides includes a protocol service built into the Microsoft Distributed Transaction Coordinator (MSDTC) transaction manager.</span></span> <span data-ttu-id="97196-107">Mit WS-AT können [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen Transaktionen an andere Anwendungen übergeben, einschließlich interoperabler Webdienste, die mit der Technologie von Fremdanbietern erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="97196-107">Using WS-AT, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications can flow transactions to other applications, including interoperable Web services built using third-party technology.</span></span>  
   
- Beim Übergeben einer Transaktion zwischen einer Clientanwendung und einer Serveranwendung wird das verwendete Transaktionsprotokoll anhand der Bindung bestimmt, die der Server an dem vom Client ausgewählten Endpunkt verfügbar macht.Einige vom System zur Verfügung gestellte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Bindungen geben standardmäßig das `OleTransactions`\-Protokoll als Transaktionsweitergabeformat an, während andere standardmäßig WS\-AT angeben.Sie können die Auswahl des Transaktionsprotokolls in einer vorhandenen Bindung auch programmgesteuert ändern.  
+ <span data-ttu-id="97196-108">Beim Übergeben einer Transaktion zwischen einer Clientanwendung und einer Serveranwendung wird das verwendete Transaktionsprotokoll anhand der Bindung bestimmt, die der Server an dem vom Client ausgewählten Endpunkt verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="97196-108">When flowing a transaction between a client application and a server application, the transaction protocol used is determined by the binding that the server exposes on the endpoint the client selected.</span></span> <span data-ttu-id="97196-109">Einige vom System zur Verfügung gestellte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Bindungen geben standardmäßig das `OleTransactions`-Protokoll als Transaktionsweitergabeformat an, während andere standardmäßig WS-AT angeben.</span><span class="sxs-lookup"><span data-stu-id="97196-109">Some [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] system-provided bindings default to specifying the `OleTransactions` protocol as the transaction propagation format, while others default to specifying WS-AT.</span></span> <span data-ttu-id="97196-110">Sie können die Auswahl des Transaktionsprotokolls in einer vorhandenen Bindung auch programmgesteuert ändern.</span><span class="sxs-lookup"><span data-stu-id="97196-110">You can also programmatically modify the choice of transaction protocol inside a given binding.</span></span>  
   
- Die Protokollauswahl beeinflusst Folgendes:  
+ <span data-ttu-id="97196-111">Die Protokollauswahl beeinflusst Folgendes:</span><span class="sxs-lookup"><span data-stu-id="97196-111">The choice of protocol influences:</span></span>  
   
--   Das Format der Nachrichtenheader, das zur Weitergabe der Transaktion vom Client an den Server verwendet wird.  
+-   <span data-ttu-id="97196-112">Das Format der Nachrichtenheader, das zur Weitergabe der Transaktion vom Client an den Server verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="97196-112">The format of the message headers used to flow the transaction from client to server.</span></span>  
   
--   Das Netzwerkprotokoll, mit dem das Zwei\-Phasen\-Commitprotokoll zwischen dem Transaktions\-Manager des Clients und der Transaktion des Servers ausgeführt wird, um das Ergebnis der Transaktion aufzulösen.  
+-   <span data-ttu-id="97196-113">Das Netzwerkprotokoll, mit dem das Zwei-Phasen-Commitprotokoll zwischen dem Transaktions-Manager des Clients und der Transaktion des Servers ausgeführt wird, um das Ergebnis der Transaktion aufzulösen.</span><span class="sxs-lookup"><span data-stu-id="97196-113">The network protocol used to run the two-phase commit protocol between the client's transaction manager and the server's transaction, in order to resolve the outcome of the transaction.</span></span>  
   
- Wenn Server und Client mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geschrieben werden, müssen Sie kein WS\-AT verwenden.Sie können stattdessen die Standardeinstellungen von `NetTcpBinding` mit aktiviertem `TransactionFlow`\-Attribut verwenden. Dieses nutzt dann stattdessen das `OleTransactions`\-Protokoll.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).Andernfalls müssen Sie bei der Weitergabe von Transaktionen an Webdienste, die mit der Technologie von Fremdanbietern erstellt wurden, WS\-AT verwenden.  
+ <span data-ttu-id="97196-114">Wenn Server und Client mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geschrieben werden, müssen Sie kein WS-AT verwenden.</span><span class="sxs-lookup"><span data-stu-id="97196-114">If the server and client are written using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], you do not need to use WS-AT.</span></span> <span data-ttu-id="97196-115">Sie können stattdessen die Standardeinstellungen von `NetTcpBinding` mit aktiviertem `TransactionFlow`-Attribut verwenden. Dieses nutzt dann stattdessen das `OleTransactions`-Protokoll.</span><span class="sxs-lookup"><span data-stu-id="97196-115">Instead, you can use the default settings of `NetTcpBinding` with the `TransactionFlow` attribute enabled, which will use the `OleTransactions` protocol instead.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="97196-116">[ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="97196-116"> [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span> <span data-ttu-id="97196-117">Andernfalls müssen Sie bei der Weitergabe von Transaktionen an Webdienste, die mit der Technologie von Fremdanbietern erstellt wurden, WS-AT verwenden.</span><span class="sxs-lookup"><span data-stu-id="97196-117">Otherwise, if you are flowing transactions to Web services built on third-party technologies, you must use WS-AT.</span></span>  
   
-## Siehe auch  
- [Konfigurieren der WS\-AtomicTransaction\-Unterstützung](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a><span data-ttu-id="97196-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97196-118">See Also</span></span>  
+ [<span data-ttu-id="97196-119">Konfigurieren der WS-AtomicTransaction-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="97196-119">Configuring WS-Atomic Transaction Support</span></span>](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

@@ -1,61 +1,66 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Suchfunktionen zu einem ListView-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Listenansichten, Aktivieren von Suchvorgängen"
-  - "Listen, Aktivieren von Suchvorgängen"
-  - "ListView-Steuerelement [Windows Forms], Hinzufügen von Suchfunktionen"
-  - "Suchen, Hinzufügen von Suchfunktionen zu ListView-Steuerelementen"
+title: "Gewusst wie: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- lists [Windows Forms], enabling searching
+- list views [Windows Forms], enabling searching
+- ListView control [Windows Forms], adding search capabilities
+- searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fd6c3011b234f9d281a68a51fa8d9ef9d610816c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von Suchfunktionen zu einem ListView-Steuerelement
-Bei der Arbeit mit einer großen Liste von Elementen in einem <xref:System.Windows.Forms.ListView>\-Steuerelement, möchten Sie dem Benutzer häufig Suchfunktionen ermöglichen.  Das <xref:System.Windows.Forms.ListView>\-Steuerelement bietet diese Funktionen auf zwei verschiedene Weisen an: durch Textvergleich und Positionssuche.  
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a><span data-ttu-id="e3d57-102">Gewusst wie: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="e3d57-102">How to: Add Search Capabilities to a ListView Control</span></span>
+<span data-ttu-id="e3d57-103">Häufig bei der Arbeit mit einer langen Liste von Elementen in einem <xref:System.Windows.Forms.ListView> Steuerelement aus, das Sie Suchfunktionen für den Benutzer anbieten möchten.</span><span class="sxs-lookup"><span data-stu-id="e3d57-103">Oftentimes when working with a large list of items in a <xref:System.Windows.Forms.ListView> control, you want to offer search capabilities to the user.</span></span> <span data-ttu-id="e3d57-104">Die <xref:System.Windows.Forms.ListView> Steuerelement bietet diese Funktion auf zwei unterschiedliche Arten: Zuordnen von Text und Speicherort zu suchen.</span><span class="sxs-lookup"><span data-stu-id="e3d57-104">The <xref:System.Windows.Forms.ListView> control offers this capability in two different ways: text matching and location searching.</span></span>  
   
- Mithilfe der <xref:System.Windows.Forms.ListView.FindItemWithText%2A>\-Methode können Sie eine Textsuche in einer <xref:System.Windows.Forms.ListView> in der Listen\- oder Detailansicht anhand einer Suchzeichenfolge und eines Start\- und Endeindex durchführen.  Mithilfe der <xref:System.Windows.Forms.ListView.FindNearestItem%2A>\-Methode können Sie hingegen ein Element in einer <xref:System.Windows.Forms.ListView> in der Symbol\- oder Tile\-Ansicht anhand von X\- und Y\-Koordinaten und einer Suchrichtung suchen.  
+ <span data-ttu-id="e3d57-105">Die <xref:System.Windows.Forms.ListView.FindItemWithText%2A> Methode können Sie einen Text-Suchvorgänge auf eine <xref:System.Windows.Forms.ListView> in der Listen- oder Detailansicht Ansicht anhand einer Suchzeichenfolge und eine optionale Start- und Index endet.</span><span class="sxs-lookup"><span data-stu-id="e3d57-105">The <xref:System.Windows.Forms.ListView.FindItemWithText%2A> method allows you to perform a text search on a <xref:System.Windows.Forms.ListView> in list or details view, given a search string and an optional starting and ending index.</span></span> <span data-ttu-id="e3d57-106">Im Gegensatz dazu die <xref:System.Windows.Forms.ListView.FindNearestItem%2A> Methode ermöglicht das Suchen eines Elements in einer <xref:System.Windows.Forms.ListView> Symbol oder der Kachel bei einem gegebenen Satz von x- und y-Koordinaten und eine Richtung, gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="e3d57-106">In contrast, the <xref:System.Windows.Forms.ListView.FindNearestItem%2A> method allows you to find an item in a <xref:System.Windows.Forms.ListView> in icon or tile view, given a set of x- and y-coordinates and a direction to search.</span></span>  
   
-### So suchen Sie ein Element mithilfe von Text  
+### <a name="to-find-an-item-using-text"></a><span data-ttu-id="e3d57-107">Ein Element mit Text suchen</span><span class="sxs-lookup"><span data-stu-id="e3d57-107">To find an item using text</span></span>  
   
-1.  Erstellen Sie eine <xref:System.Windows.Forms.ListView>, während die <xref:System.Windows.Forms.ListView.View%2A>\-Eigenschaft auf <xref:System.Windows.Forms.View> oder <xref:System.Windows.Forms.View> festgelegt ist, und füllen Sie dann die <xref:System.Windows.Forms.ListView> mit Elementen.  
+1.  <span data-ttu-id="e3d57-108">Erstellen einer <xref:System.Windows.Forms.ListView> mit der <xref:System.Windows.Forms.ListView.View%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.List>, und füllen Sie die <xref:System.Windows.Forms.ListView> mit Elementen.</span><span class="sxs-lookup"><span data-stu-id="e3d57-108">Create a <xref:System.Windows.Forms.ListView> with the <xref:System.Windows.Forms.ListView.View%2A> property set to <xref:System.Windows.Forms.View.Details> or <xref:System.Windows.Forms.View.List>, and then populate the <xref:System.Windows.Forms.ListView> with items.</span></span>  
   
-2.  Rufen Sie die <xref:System.Windows.Forms.ListView.FindItemWithText%2A>\-Methode auf, und übergeben Sie den Text des gesuchten Elements.  
+2.  <span data-ttu-id="e3d57-109">Rufen Sie die <xref:System.Windows.Forms.ListView.FindItemWithText%2A> -Methode auf und übergibt den Text des Elements, das Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="e3d57-109">Call the <xref:System.Windows.Forms.ListView.FindItemWithText%2A> method, passing the text of the item you would like to find.</span></span>  
   
-3.  Im folgenden Codebeispiel wird gezeigt, wie Sie eine einfache <xref:System.Windows.Forms.ListView> erstellen, mit Elementen füllen und anhand der Texteingabe eines Benutzers ein Element in der Liste suchen.  
+3.  <span data-ttu-id="e3d57-110">Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer grundlegenden <xref:System.Windows.Forms.ListView>, weisen Sie ihm Elemente und Texteingaben des Benutzers verwenden, um ein Element in der Liste zu suchen.</span><span class="sxs-lookup"><span data-stu-id="e3d57-110">The following code example demonstrates how to create a basic <xref:System.Windows.Forms.ListView>, populate it with items, and use text input from the user to find an item in the list.</span></span>  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListViewFindItems#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#1)]  
   
-### So suchen Sie ein Element mithilfe von X\- und Y\-Koordinaten  
+### <a name="to-find-an-item-using-x--and-y-coordinates"></a><span data-ttu-id="e3d57-111">Um ein Element mithilfe der x- und y-Koordinaten zu finden.</span><span class="sxs-lookup"><span data-stu-id="e3d57-111">To find an item using x- and y-coordinates</span></span>  
   
-1.  Erstellen Sie eine <xref:System.Windows.Forms.ListView>, während die <xref:System.Windows.Forms.View>\-Eigenschaft auf <xref:System.Windows.Forms.View> oder <xref:System.Windows.Forms.View> festgelegt ist, und füllen Sie dann die <xref:System.Windows.Forms.ListView> mit Elementen.  
+1.  <span data-ttu-id="e3d57-112">Erstellen einer <xref:System.Windows.Forms.ListView> mit der <xref:System.Windows.Forms.View> -Eigenschaftensatz auf <xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>, und füllen Sie die <xref:System.Windows.Forms.ListView> mit Elementen.</span><span class="sxs-lookup"><span data-stu-id="e3d57-112">Create a <xref:System.Windows.Forms.ListView> with the <xref:System.Windows.Forms.View> property set to <xref:System.Windows.Forms.View.SmallIcon> or <xref:System.Windows.Forms.View.LargeIcon>, and then populate the <xref:System.Windows.Forms.ListView> with items.</span></span>  
   
-2.  Rufen Sie die <xref:System.Windows.Forms.ListView.FindNearestItem%2A>\-Methode auf, und übergeben Sie die gewünschten X\- und Y\-Koordinaten und die gewünschte Suchrichtung.  
+2.  <span data-ttu-id="e3d57-113">Rufen Sie die <xref:System.Windows.Forms.ListView.FindNearestItem%2A> -Methode auf und übergibt die gewünschten x- und y-Koordinaten und die Richtung, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="e3d57-113">Call the <xref:System.Windows.Forms.ListView.FindNearestItem%2A> method, passing the desired x- and y-coordinates and the direction you would like to search.</span></span>  
   
-3.  Im folgenden Codebeispiel wird gezeigt, wie eine einfache <xref:System.Windows.Forms.ListView> mit Symbolen erstellt, mit Elementen gefüllt und das <xref:System.Windows.Forms.Control.MouseDown>\-Ereignis erfasst wird, um das nächste Element in Aufwärtsrichtung gesucht wird.  
+3.  <span data-ttu-id="e3d57-114">Im folgenden Codebeispiel wird veranschaulicht, wie beim Erstellen einer grundlegenden Symbols <xref:System.Windows.Forms.ListView>, füllen sie mit Elementen, und zeichnen Sie die <xref:System.Windows.Forms.Control.MouseDown> Ereignis, um das nächste Element in der oben Richtung zu suchen.</span><span class="sxs-lookup"><span data-stu-id="e3d57-114">The following code example demonstrates how to create a basic icon <xref:System.Windows.Forms.ListView>, populate it with items, and capture the <xref:System.Windows.Forms.Control.MouseDown> event to find the nearest item in the up direction.</span></span>  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#2](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ListView>   
- <xref:System.Windows.Forms.ListView.FindItemWithText%2A>   
- <xref:System.Windows.Forms.ListView.FindNearestItem%2A>   
- [ListView\-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
- [Übersicht über das ListView\-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+## <a name="see-also"></a><span data-ttu-id="e3d57-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3d57-115">See Also</span></span>  
+ <xref:System.Windows.Forms.ListView>  
+ <xref:System.Windows.Forms.ListView.FindItemWithText%2A>  
+ <xref:System.Windows.Forms.ListView.FindNearestItem%2A>  
+ [<span data-ttu-id="e3d57-116">ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="e3d57-116">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [<span data-ttu-id="e3d57-117">Übersicht über das ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="e3d57-117">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="e3d57-118">Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e3d57-118">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

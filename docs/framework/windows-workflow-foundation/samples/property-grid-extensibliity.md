@@ -1,45 +1,49 @@
 ---
-title: "Erweiterbarkeit von Eigenschaftenrastern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erweiterbarkeit von Eigenschaftenrastern
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e0df8ed572a0a02147e3bdf45dd880305363e8bd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erweiterbarkeit von Eigenschaftenrastern
-Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktivität im Designer angezeigt wird.Auf diese Weise lassen sich die Bearbeitungsmöglichkeiten optimieren.Dieses Beispiel veranschaulicht die Vorgehensweise.  
+# <a name="property-grid-extensibliity"></a><span data-ttu-id="d9df3-102">Erweiterbarkeit von Eigenschaftenrastern</span><span class="sxs-lookup"><span data-stu-id="d9df3-102">Property Grid Extensibliity</span></span>
+<span data-ttu-id="d9df3-103">Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktivität im Designer angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d9df3-103">A developer can customize the property grid that is displayed when a given activity is selected within the designer.</span></span> <span data-ttu-id="d9df3-104">Auf diese Weise lassen sich die Bearbeitungsmöglichkeiten optimieren.</span><span class="sxs-lookup"><span data-stu-id="d9df3-104">This can be done to create a rich editing experience.</span></span> <span data-ttu-id="d9df3-105">Dieses Beispiel veranschaulicht die Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="d9df3-105">This sample shows how this can be done.</span></span>  
   
-## Veranschaulicht  
- Erweiterbarkeit des Eigenschaftenrasters im Workflow\-Designer.  
+## <a name="demonstrates"></a><span data-ttu-id="d9df3-106">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="d9df3-106">Demonstrates</span></span>  
+ <span data-ttu-id="d9df3-107">Erweiterbarkeit des Eigenschaftenrasters im Workflow-Designer.</span><span class="sxs-lookup"><span data-stu-id="d9df3-107">Workflow designer property grid extensibility.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="d9df3-108">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="d9df3-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d9df3-109">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="d9df3-109">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="d9df3-110">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="d9df3-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d9df3-111">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d9df3-111">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
-## Diskussion  
- Zur Erweiterung des Eigenschaftenrasters stehen Entwicklern Optionen zur Verfügung, mit denen sie die Darstellung des Eigenschaftenraster\-Editors anpassen oder ein Dialogfeld bereitstellen können, das für eine erweiterte Entwurfsoberfläche angezeigt wird.In diesem Beispiel werden zwei verschiedene Editoren veranschaulicht, ein Inline\-Editor und ein Dialog\-Editor.  
+## <a name="discussion"></a><span data-ttu-id="d9df3-112">Diskussion</span><span class="sxs-lookup"><span data-stu-id="d9df3-112">Discussion</span></span>  
+ <span data-ttu-id="d9df3-113">Zur Erweiterung des Eigenschaftenrasters stehen Entwicklern Optionen zur Verfügung, mit denen sie die Darstellung des Eigenschaftenraster-Editors anpassen oder ein Dialogfeld bereitstellen können, das für eine erweiterte Entwurfsoberfläche angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d9df3-113">To extend the property grid, a developer has options to customize the inline appearance of a property grid editor or provide a dialog that appears for a more advanced editing surface.</span></span> <span data-ttu-id="d9df3-114">In diesem Beispiel werden zwei verschiedene Editoren veranschaulicht, ein Inline-Editor und ein Dialog-Editor.</span><span class="sxs-lookup"><span data-stu-id="d9df3-114">There are two different editors demonstrated in this sample; an inline editor and a dialog editor.</span></span>  
   
-## Inline\-Editor  
- Das Beispiel zum Inline\-Editor veranschaulicht Folgendes:  
+## <a name="inline-editor"></a><span data-ttu-id="d9df3-115">Inline-Editor</span><span class="sxs-lookup"><span data-stu-id="d9df3-115">Inline Editor</span></span>  
+ <span data-ttu-id="d9df3-116">Das Beispiel zum Inline-Editor veranschaulicht Folgendes:</span><span class="sxs-lookup"><span data-stu-id="d9df3-116">The inline editor sample demonstrates the following:</span></span>  
   
--   Ein von <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> abgeleiteter Typ wird erstellt.  
+-   <span data-ttu-id="d9df3-117">Ein von <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> abgeleiteter Typ wird erstellt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-117">Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.</span></span>  
   
--   Im Konstruktor wird der <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>\-Wert mit einer [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]\-Datenvorlage festgelegt.Diese kann an eine XAML\-Vorlage gebunden werden, in diesem Beispiel wird jedoch Code zur Initialisierung der Datenbindung verwendet.  
+-   <span data-ttu-id="d9df3-118">Im Konstruktor wird der <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>-Wert mit einer [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]-Datenvorlage festgelegt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-118">In the constructor, the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value is set with a [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] data template.</span></span> <span data-ttu-id="d9df3-119">Diese kann an eine XAML-Vorlage gebunden werden, in diesem Beispiel wird jedoch Code zur Initialisierung der Datenbindung verwendet.</span><span class="sxs-lookup"><span data-stu-id="d9df3-119">This can be bound to a XAML template, but in this sample, code is used to initialize data binding.</span></span>  
   
--   Die Datenvorlage weist einen Datenkontext für den <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>\-Wert des im Eigenschaftenraster gerenderten Elements auf.Beachten Sie beim folgenden Code \(aus der Datei "CustomInlineEditor.cs"\), dass dieser Kontext dann an die `Value`\-Eigenschaft gebunden wird.  
+-   <span data-ttu-id="d9df3-120">Die Datenvorlage weist einen Datenkontext für den <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>-Wert des im Eigenschaftenraster gerenderten Elements auf.</span><span class="sxs-lookup"><span data-stu-id="d9df3-120">The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid.</span></span> <span data-ttu-id="d9df3-121">Beachten Sie beim folgenden Code (aus der Datei "CustomInlineEditor.cs"), dass dieser Kontext dann an die `Value`-Eigenschaft gebunden wird.</span><span class="sxs-lookup"><span data-stu-id="d9df3-121">Note in the following code (from CustomInlineEditor.cs) that this context then binds to the `Value` property.</span></span>  
   
     ```csharp  
     FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));  
@@ -50,10 +54,9 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
     slider.SetValue(Slider.MaximumProperty, 100.0);  
     slider.SetValue(Slider.ValueProperty, sliderBinding);  
     stack.AppendChild(slider);  
-  
     ```  
   
--   Da die Aktivität und der Designer sich in derselben Assembly befinden, erfolgt die Registrierung der Aktivitätsdesignerattribute im statischen Konstruktor der Aktivität, wie im folgenden Beispiel aus der Datei "SimpleCodeActivity.cs" gezeigt.  
+-   <span data-ttu-id="d9df3-122">Da die Aktivität und der Designer sich in derselben Assembly befinden, erfolgt die Registrierung der Aktivitätsdesignerattribute im statischen Konstruktor der Aktivität, wie im folgenden Beispiel aus der Datei "SimpleCodeActivity.cs" gezeigt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-122">Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.</span></span>  
   
     ```  
     static SimpleCodeActivity()  
@@ -63,17 +66,16 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
         builder.AddCustomAttributes(typeof(SimpleCodeActivity), "FileName", new EditorAttribute(typeof(FilePickerEditor), typeof(DialogPropertyValueEditor)));  
         MetadataStore.AddAttributeTable(builder.CreateTable());  
     }  
-  
     ```  
   
-## Dialog\-Editor  
- Das Beispiel zum Dialog\-Editor veranschaulicht Folgendes:  
+## <a name="dialog-editor"></a><span data-ttu-id="d9df3-123">Dialog-Editor</span><span class="sxs-lookup"><span data-stu-id="d9df3-123">Dialog Editor</span></span>  
+ <span data-ttu-id="d9df3-124">Das Beispiel zum Dialog-Editor veranschaulicht Folgendes:</span><span class="sxs-lookup"><span data-stu-id="d9df3-124">The dialog editor sample demonstrates the following:</span></span>  
   
-1.  Ein von <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> abgeleiteter Typ wird erstellt.  
+1.  <span data-ttu-id="d9df3-125">Ein von <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> abgeleiteter Typ wird erstellt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-125">Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.</span></span>  
   
-2.  Der <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>\-Wert im Konstruktor wird mit einer [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]\-Datenvorlage festgelegt.Diese kann in XAML erstellt werden, in diesem Beispiel wird jedoch Code verwendet.  
+2.  <span data-ttu-id="d9df3-126">Der <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>-Wert im Konstruktor wird mit einer [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]-Datenvorlage festgelegt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-126">Sets the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value in the constructor with a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] data template.</span></span> <span data-ttu-id="d9df3-127">Diese kann in XAML erstellt werden, in diesem Beispiel wird jedoch Code verwendet.</span><span class="sxs-lookup"><span data-stu-id="d9df3-127">This can be created in XAML, but in this sample, this is created in code.</span></span>  
   
-3.  Die Datenvorlage weist einen Datenkontext für den <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>\-Wert des im Eigenschaftenraster gerenderten Elements auf.Im folgenden Code wird dieser dann an die `Value`\-Eigenschaft gebunden.Es muss auch ein <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>\-Element eingebunden werden, um die Schaltfläche bereitzustellen, mit der das Dialogfeld in "FilePickerEditor.cs" ausgelöst wird.  
+3.  <span data-ttu-id="d9df3-128">Die Datenvorlage weist einen Datenkontext für den <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>-Wert des im Eigenschaftenraster gerenderten Elements auf.</span><span class="sxs-lookup"><span data-stu-id="d9df3-128">The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid.</span></span> <span data-ttu-id="d9df3-129">Im folgenden Code wird dieser dann an die `Value`-Eigenschaft gebunden.</span><span class="sxs-lookup"><span data-stu-id="d9df3-129">In the following code, this then binds to the `Value` property.</span></span> <span data-ttu-id="d9df3-130">Es muss auch ein <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>-Element eingebunden werden, um die Schaltfläche bereitzustellen, mit der das Dialogfeld in "FilePickerEditor.cs" ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="d9df3-130">It is critical to also include an <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> to provide the button that raises the dialog in FilePickerEditor.cs.</span></span>  
   
     ```  
     this.InlineEditorTemplate = new DataTemplate();  
@@ -96,7 +98,7 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  Überschreibt die <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>\-Methode im Designertyp zur Behandlung der Dialogfeldanzeige.In diesem Beispiel wird ein einfaches <xref:System.Windows.Forms.FileDialog> gezeigt.  
+4.  <span data-ttu-id="d9df3-131">Überschreibt die <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` -Methode im Designertyp zur Behandlung die Anzeige des Dialogfelds zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="d9df3-131">Overrides the <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` method in the designer type to handle the display of the dialog.</span></span> <span data-ttu-id="d9df3-132">In diesem Beispiel wird ein einfaches <xref:System.Windows.Forms.FileDialog> gezeigt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-132">In this sample, a basic <xref:System.Windows.Forms.FileDialog> is shown.</span></span>  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -107,10 +109,9 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
             propertyValue.Value = ofd.FileName;  
         }  
     }  
-  
     ```  
   
-5.  Da die Aktivität und der Designer sich in derselben Assembly befinden, erfolgt die Registrierung der Aktivitätsdesignerattribute im statischen Konstruktor der Aktivität, wie im folgenden Beispiel aus der Datei "SimpleCodeActivity.cs" gezeigt.  
+5.  <span data-ttu-id="d9df3-133">Da die Aktivität und der Designer sich in derselben Assembly befinden, erfolgt die Registrierung der Aktivitätsdesignerattribute im statischen Konstruktor der Aktivität, wie im folgenden Beispiel aus der Datei "SimpleCodeActivity.cs" gezeigt.</span><span class="sxs-lookup"><span data-stu-id="d9df3-133">Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.</span></span>  
   
     ```  
     static SimpleCodeActivity()  
@@ -120,22 +121,21 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
         builder.AddCustomAttributes(typeof(SimpleCodeActivity), "FileName", new EditorAttribute(typeof(FilePickerEditor), typeof(DialogPropertyValueEditor)));  
         MetadataStore.AddAttributeTable(builder.CreateTable());  
     }  
-  
     ```  
   
-## So richten Sie das Beispiel ein, erstellen es und führen es aus  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d9df3-134">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="d9df3-134">To set up, build, and run the sample</span></span>  
   
-1.  Erstellen Sie die Projektmappe, und öffnen Sie dann "Workflow1.xaml".  
+1.  <span data-ttu-id="d9df3-135">Erstellen Sie die Projektmappe, und öffnen Sie dann "Workflow1.xaml".</span><span class="sxs-lookup"><span data-stu-id="d9df3-135">Build the solution, and then open Workflow1.xaml.</span></span>  
   
-2.  Ziehen Sie ein **SimpleCodeActivity**\-Element von der Toolbox auf den Designerzeichnungsbereich.  
+2.  <span data-ttu-id="d9df3-136">Ziehen Sie eine **SimpleCodeActivity** aus der Toolbox auf den designerzeichnungsbereich.</span><span class="sxs-lookup"><span data-stu-id="d9df3-136">Drag a **SimpleCodeActivity** from the toolbox onto the designer canvas.</span></span>  
   
-3.  Klicken Sie auf das **SimpleCodeActivity**\-Element, und öffnen Sie dann das Eigenschaftenraster, das ein Schieberegler\-Steuerelement und ein Dateiauswahl\-Steuerelement enthält.  
+3.  <span data-ttu-id="d9df3-137">Klicken Sie auf die **SimpleCodeActivity** und öffnen Sie dann das Eigenschaftenraster, das ein Schieberegler-Steuerelement und ein Dateiauswahl-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="d9df3-137">Click the **SimpleCodeActivity** and then open the property grid where there is a slider control and a file picking control.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="d9df3-138">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="d9df3-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d9df3-139">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="d9df3-139">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="d9df3-140">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="d9df3-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d9df3-141">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d9df3-141">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

@@ -1,55 +1,56 @@
 ---
-title: "Gewusst wie: Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement von Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "RichTextBox-Steuerelement [Windows Forms], Anzeigen von Bildlaufleisten"
-  - "Bildlaufleisten, Anzeigen in Steuerelementen"
-  - "Textfelder, Anzeigen von Bildlaufleisten"
+title: "Gewusst wie: Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement von Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text boxes [Windows Forms], displaying scroll bars
+- scroll bars [Windows Forms], displaying in controls
+- RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b20c526b27eb185bf79eaf0ace47e5a9fded42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement von Windows&#160;Forms
-In der Standardeinstellung werden im <xref:System.Windows.Forms.RichTextBox>\-Steuerelement von Windows Forms bei Bedarf horizontale und vertikale Schiebeleisten angezeigt.  Für die <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>\-Eigenschaft des <xref:System.Windows.Forms.RichTextBox>\-Steuerelements sind sieben Werte zulässig, die in der unten stehenden Tabelle beschrieben werden.  
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="f1774-102">Gewusst wie: Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f1774-102">How to: Display Scroll Bars in the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="f1774-103">Standardmäßig werden in Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement horizontale und vertikale Bildlaufleisten angezeigt, nach Bedarf.</span><span class="sxs-lookup"><span data-stu-id="f1774-103">By default, the Windows Forms <xref:System.Windows.Forms.RichTextBox> control displays horizontal and vertical scroll bars as necessary.</span></span> <span data-ttu-id="f1774-104">Es gibt sieben mögliche Werte für die <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> Eigenschaft von der <xref:System.Windows.Forms.RichTextBox> -Steuerelement, das in der folgenden Tabelle beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="f1774-104">There are seven possible values for the <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> property of the <xref:System.Windows.Forms.RichTextBox> control, which are described in the table below.</span></span>  
   
-### So zeigen Sie Schiebeleisten in einem RichTextBox\-Steuerelement an  
+### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a><span data-ttu-id="f1774-105">Zum Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f1774-105">To display scroll bars in a RichTextBox control</span></span>  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.RichTextBox.Multiline%2A>\-Eigenschaft `true` fest.  Wenn für die <xref:System.Windows.Forms.RichTextBox.Multiline%2A>\-Eigenschaft `false` festgelegt wurde, werden weder horizontale noch andere Arten von Schiebeleisten angezeigt.  
+1.  <span data-ttu-id="f1774-106">Legen Sie die <xref:System.Windows.Forms.RichTextBox.Multiline%2A>-Eigenschaft auf `true` fest.</span><span class="sxs-lookup"><span data-stu-id="f1774-106">Set the <xref:System.Windows.Forms.RichTextBox.Multiline%2A> property to `true`.</span></span> <span data-ttu-id="f1774-107">Kein Typ der Bildlaufleiste, einschließlich horizontal wird angezeigt, wenn die <xref:System.Windows.Forms.RichTextBox.Multiline%2A> -Eigenschaftensatz auf `false`.</span><span class="sxs-lookup"><span data-stu-id="f1774-107">No type of scroll bar, including horizontal, will display if the <xref:System.Windows.Forms.RichTextBox.Multiline%2A> property is set to `false`.</span></span>  
   
-2.  Legen Sie für die <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>\-Eigenschaft einen geeigneten Wert aus der <xref:System.Windows.Forms.RichTextBoxScrollBars>\-Enumeration fest.  
+2.  <span data-ttu-id="f1774-108">Legen Sie die <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> auf einen geeigneten Wert der Eigenschaft der <xref:System.Windows.Forms.RichTextBoxScrollBars> Enumeration.</span><span class="sxs-lookup"><span data-stu-id="f1774-108">Set the <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> property to an appropriate value of the <xref:System.Windows.Forms.RichTextBoxScrollBars> enumeration.</span></span>  
   
-    |Wert|Beschreibung|  
-    |----------|------------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars> \(Standardwert\)|Zeigt horizontale oder vertikale bzw. horizontale und vertikale Schiebeleisten nur dann an, wenn der Text über die Breite bzw. Höhe des Steuerelements hinausgeht.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars>|Zeigt niemals Schiebeleisten an, unabhängig von der Art der Schiebeleiste.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars>|Zeigt nur dann eine horizontale Schiebeleiste an, wenn der Text über die Breite des Steuerelements hinausgeht.  \(Hierzu muss für die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>\-Eigenschaft der Wert `false` festgelegt werden.\)|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars>|Zeigt nur dann eine vertikale Schiebeleiste an, wenn der Text über die Höhe des Steuerelements hinausgeht.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars>|Zeigt eine horizontale Schiebeleiste an, wenn für die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>\-Eigenschaft `false` festgelegt wurde.  Wenn der Text nicht über die Breite des Steuerelements hinausgeht, wird die Schiebeleiste abgeblendet angezeigt.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars>|Zeigt immer eine vertikale Schiebeleiste an.  Wenn der Text nicht über die Höhe des Steuerelements hinausgeht, wird die Schiebeleiste abgeblendet angezeigt.|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars>|Zeigt immer eine vertikale Schiebeleiste an.  Zeigt eine horizontale Schiebeleiste an, wenn für die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>\-Eigenschaft `false` festgelegt wurde.  Wenn der Text nicht über die Breite bzw. Höhe des Steuerelements hinausgeht, werden die Schiebeleisten abgeblendet angezeigt.|  
+    |<span data-ttu-id="f1774-109">Wert</span><span class="sxs-lookup"><span data-stu-id="f1774-109">Value</span></span>|<span data-ttu-id="f1774-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f1774-110">Description</span></span>|  
+    |-----------|-----------------|  
+    |<span data-ttu-id="f1774-111"><xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (Standardwert)</span><span class="sxs-lookup"><span data-stu-id="f1774-111"><xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (default)</span></span>|<span data-ttu-id="f1774-112">Horizontale oder vertikale Bildlaufleisten angezeigt oder beides, nur, wenn der Text die Breite bzw. Höhe des Steuerelements überschreitet.</span><span class="sxs-lookup"><span data-stu-id="f1774-112">Displays horizontal or vertical scroll bars, or both, only when text exceeds the width or length of the control.</span></span>|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|<span data-ttu-id="f1774-113">Nie zeigt Bildlaufleiste angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f1774-113">Never displays any type of scroll bar.</span></span>|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|<span data-ttu-id="f1774-114">Zeigt eine horizontale Bildlaufleiste nur, wenn der Text die Breite des Steuerelements überschreitet.</span><span class="sxs-lookup"><span data-stu-id="f1774-114">Displays a horizontal scroll bar only when the text exceeds the width of the control.</span></span> <span data-ttu-id="f1774-115">(Damit dies eintritt, die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaft muss festgelegt werden, um `false`.)</span><span class="sxs-lookup"><span data-stu-id="f1774-115">(For this to occur, the <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> property must be set to `false`.)</span></span>|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|<span data-ttu-id="f1774-116">Zeigt eine vertikale Bildlaufleiste nur, wenn der Text der Höhe des Steuerelements überschreitet.</span><span class="sxs-lookup"><span data-stu-id="f1774-116">Displays a vertical scroll bar only when the text exceeds the height of the control.</span></span>|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|<span data-ttu-id="f1774-117">Zeigt eine horizontale Bildlaufleiste bei der <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> -Eigenschaftensatz auf `false`.</span><span class="sxs-lookup"><span data-stu-id="f1774-117">Displays a horizontal scroll bar when the <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> property is set to `false`.</span></span> <span data-ttu-id="f1774-118">Wenn der Text nicht über die Breite des Steuerelements überschreitet die Bildlaufleiste abgeblendet angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f1774-118">The scroll bar appears dimmed when text does not exceed the width of the control.</span></span>|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|<span data-ttu-id="f1774-119">Zeigt immer eine vertikale Bildlaufleiste angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f1774-119">Always displays a vertical scroll bar.</span></span> <span data-ttu-id="f1774-120">Wenn der Text nicht die Länge des Steuerelements überschreitet die Bildlaufleiste abgeblendet angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f1774-120">The scroll bar appears dimmed when text does not exceed the length of the control.</span></span>|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|<span data-ttu-id="f1774-121">Zeigt immer eine vertikale Bildlaufleiste an.</span><span class="sxs-lookup"><span data-stu-id="f1774-121">Always displays a vertical scrollbar.</span></span> <span data-ttu-id="f1774-122">Zeigt eine horizontale Bildlaufleiste bei der <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> -Eigenschaftensatz auf `false`.</span><span class="sxs-lookup"><span data-stu-id="f1774-122">Displays a horizontal scroll bar when the <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> property is set to `false`.</span></span> <span data-ttu-id="f1774-123">Wenn der Text nicht über die Breite bzw. Höhe des Steuerelements überschreitet die Bildlaufleisten abgeblendet angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f1774-123">The scroll bars appear grayed when text does not exceed the width or length of the control.</span></span>|  
   
-3.  Legen Sie die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>\-Eigenschaft auf einen geeigneten Wert fest.  
+3.  <span data-ttu-id="f1774-124">Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>-Eigenschaft einen geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="f1774-124">Set the <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> property to an appropriate value.</span></span>  
   
-    |Wert|Beschreibung|  
-    |----------|------------------|  
-    |`false`|Die Breite des Textes im Steuerelement wird nicht automatisch der Breite des Steuerelements angepasst. Daher wird der Text bis zum Erreichen eines Zeilenumbruchs nach rechts fortgesetzt.  Verwenden Sie diesen Wert, wenn Sie oben den Wert **Horizontal** der **Both** für Schiebeleisten festgelegt haben.|  
-    |`true` \(Standardwert\)|Die Breite des Textes im Steuerelement wird automatisch der Breite des Steuerelements angepasst.  Es wird keine horizontale Schiebeleiste angezeigt.  Verwenden Sie diesen Wert, wenn Sie oben zur Anzeige eines oder mehrerer Absätze den Wert **Vertical** oder **None** für Schiebeleisten festgelegt haben.|  
+    |<span data-ttu-id="f1774-125">Wert</span><span class="sxs-lookup"><span data-stu-id="f1774-125">Value</span></span>|<span data-ttu-id="f1774-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f1774-126">Description</span></span>|  
+    |-----------|-----------------|  
+    |`false`|<span data-ttu-id="f1774-127">Text im Steuerelement wird nicht automatisch angepasst, um die Breite des Steuerelements anzupassen, damit es Bildlauf nach rechts wird erst ein Zeilenumbruch erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="f1774-127">Text in the control is not automatically adjusted to fit the width of the control, so it will scroll to the right until a line break is reached.</span></span> <span data-ttu-id="f1774-128">Verwenden Sie diesen Wert, wenn Sie horizontale Bildlaufleisten oder beides oben ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="f1774-128">Use this value if you chose horizontal scroll bars or both, above.</span></span>|  
+    |<span data-ttu-id="f1774-129">`true` (Standardwert)</span><span class="sxs-lookup"><span data-stu-id="f1774-129">`true` (default)</span></span>|<span data-ttu-id="f1774-130">Text im Steuerelement wird automatisch angepasst, um die Breite des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="f1774-130">Text in the control is automatically adjusted to fit the width of the control.</span></span> <span data-ttu-id="f1774-131">Die horizontale Bildlaufleiste wird nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f1774-131">The horizontal scrollbar will not appear.</span></span> <span data-ttu-id="f1774-132">Verwenden Sie diesen Wert, wenn Sie vertikale Bildlaufleisten oder keine "," oben einen oder mehrere Absätze anzeigen.</span><span class="sxs-lookup"><span data-stu-id="f1774-132">Use this value if you chose vertical scroll bars or none, above, to display one or more paragraphs.</span></span>|  
   
-## Siehe auch  
- <xref:System.Windows.Forms.RichTextBoxScrollBars>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f1774-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f1774-133">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBoxScrollBars>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="f1774-134">RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f1774-134">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="f1774-135">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="f1774-135">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

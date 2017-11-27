@@ -1,56 +1,54 @@
 ---
-title: "IN (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: IN (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 553b2037ef9b1eead3a3f4745d0cb6fdfcde27ff
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# IN (Entity SQL)
-Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.  
+# <a name="in-entity-sql"></a><span data-ttu-id="405ef-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="405ef-102">IN (Entity SQL)</span></span>
+<span data-ttu-id="405ef-103">Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="405ef-103">Determines whether a value matches any value in a collection.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="405ef-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="405ef-104">Syntax</span></span>  
   
 ```  
-  
 value [ NOT ] IN expression  
 ```  
   
-## Argumente  
+## <a name="arguments"></a><span data-ttu-id="405ef-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="405ef-105">Arguments</span></span>  
  `value`  
- Jeder gültige Ausdruck, der den auf Übereinstimmung zu prüfenden Wert zurückgibt.  
+ <span data-ttu-id="405ef-106">Jeder gültige Ausdruck, der den auf Übereinstimmung zu prüfenden Wert zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="405ef-106">Any valid expression that returns the value to match.</span></span>  
   
- \[ NOT \]  
- Legt fest, dass das `Boolean`\-Ergebnis von IN negiert werden soll.  
+ <span data-ttu-id="405ef-107">[ NOT ]</span><span class="sxs-lookup"><span data-stu-id="405ef-107">[ NOT ]</span></span>  
+ <span data-ttu-id="405ef-108">Legt fest, dass das `Boolean`-Ergebnis von IN negiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="405ef-108">Specifies that the `Boolean` result of IN be negated.</span></span>  
   
  `expression`  
- Jeder gültige Ausdruck, der die auf Übereinstimmung zu prüfende Auflistung zurückgibt. Alle Ausdrücke müssen vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ sein wie `value`.  
+ <span data-ttu-id="405ef-109">Jeder gültige Ausdruck, der die auf Übereinstimmung zu prüfende Auflistung zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="405ef-109">Any valid expression that returns the collection to test for a match.</span></span> <span data-ttu-id="405ef-110">Alle Ausdrücke müssen vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ sein wie `value`.</span><span class="sxs-lookup"><span data-stu-id="405ef-110">All expressions must be of the same type or of a common base or derived type as `value`.</span></span>  
   
-## Rückgabewert  
- `true`, wenn der Wert in der Auflistung gefunden wurde, null, wenn der Wert oder die Auflistung NULL ist, anderenfalls `false`. Mit NOT IN wird das Ergebnis von IN negiert.  
+## <a name="return-value"></a><span data-ttu-id="405ef-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="405ef-111">Return Value</span></span>  
+ <span data-ttu-id="405ef-112">`true`, wenn der Wert in der Auflistung gefunden wurde, null, wenn der Wert oder die Auflistung NULL ist, anderenfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="405ef-112">`true` if the value is found in the collection; null if the value is null or the collection is null; otherwise, `false`.</span></span> <span data-ttu-id="405ef-113">Mit NOT IN wird das Ergebnis von IN negiert.</span><span class="sxs-lookup"><span data-stu-id="405ef-113">Using NOT IN negates the results of IN.</span></span>  
   
-## Beispiel  
- Die folgende Entity SQL\-Abfrage verwendet den IN\-Operator, um zu bestimmen, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt. Diese Abfrage beruht auf dem "AdventureWorks Sales"\-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+## <a name="example"></a><span data-ttu-id="405ef-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="405ef-114">Example</span></span>  
+ <span data-ttu-id="405ef-115">Die folgende Entity SQL-Abfrage verwendet den IN-Operator, um zu bestimmen, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="405ef-115">The following Entity SQL query uses the IN operator to determine whether a value matches any value in a collection.</span></span> <span data-ttu-id="405ef-116">Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell.</span><span class="sxs-lookup"><span data-stu-id="405ef-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="405ef-117">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="405ef-117">To compile and run this query, follow these steps:</span></span>  
   
-1.  Verwenden Sie das Verfahren unter [Vorgehensweise: Ausführen einer Abfrage, die StructuralType\-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="405ef-118">Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="405ef-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery`\-Methode:  
+2.  <span data-ttu-id="405ef-119">Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="405ef-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
-## Siehe auch  
- [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="405ef-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="405ef-120">See Also</span></span>  
+ [<span data-ttu-id="405ef-121">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="405ef-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,61 +1,64 @@
 ---
-title: "Vorgehensweise: Erstellen eines LINQ to DataSet-Projekts in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Erstellen eines LINQ to DataSet-Projekts in Visual Studio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 192273c6d364cebe828965ed016eea81135602f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines LINQ to DataSet-Projekts in Visual Studio
-Die unterschiedlichen Arten von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]\-Projekten benötigen bestimmte importierte Namespaces \(Visual Basic\) oder `using`\-Direktiven \(C\#\) und \-Verweise.  Die Mindestanforderung ist ein Verweis auf \<legacyBold\>System.Core.dll\<\/legacyBold\> und eine `using`\-Direktive für <xref:System.Linq>.  Standardmäßig werden diese angegeben, wenn Sie ein neues [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]\-Projekt erstellen.  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] erfordert außerdem einen Verweis auf "System.Data.dll" und "System.Data.DataSetExtensions.dll" sowie eine `Imports`\-Direktive \(Visual Basic\) oder eine `using`\-Direktive \(C\#\).  
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a><span data-ttu-id="3ce8c-102">Gewusst wie: Erstellen eines LINQ to DataSet-Projekts in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="3ce8c-102">How to: Create a LINQ to DataSet Project In Visual Studio</span></span>
+<span data-ttu-id="3ce8c-103">Die unterschiedlichen Arten von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Projekten benötigen bestimmte importierte Namespaces (Visual Basic) oder `using`-Direktiven (C#) und -Verweise.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-103">The different types of [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projects require certain imported namespaces (Visual Basic) or `using` directives (C#) and references.</span></span> <span data-ttu-id="3ce8c-104">Die Mindestanforderung ist ein Verweis auf <legacyBold>System.Core.dll</legacyBold> und eine `using`-Direktive für <xref:System.Linq>.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-104">The minimum requirement is a reference to System.Core.dll and a `using` directive for <xref:System.Linq>.</span></span> <span data-ttu-id="3ce8c-105">Standardmäßig werden diese angegeben, wenn Sie ein neues [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]-Projekt erstellen.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-105">By default, these are supplied if you create a new [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] project.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="3ce8c-106"> erfordert außerdem einen Verweis auf "System.Data.dll" und "System.Data.DataSetExtensions.dll" sowie eine `Imports`-Direktive (Visual Basic) oder eine `using`-Direktive (C#).</span><span class="sxs-lookup"><span data-stu-id="3ce8c-106"> also requires a reference to System.Data.dll and System.Data.DataSetExtensions.dll and an `Imports` (Visual Basic) or `using` (C#) directive.</span></span>  
   
- Wenn Sie ein Projekt aus einer früheren Version von Visual Studio aktualisieren möchten, müssen Sie diese LINQ\-Verweise möglicherweise manuell bereitstellen.  Darüber hinaus muss u. U. auch das Projekt so eingerichtet werden, dass es sich auf .NET Framework 3.5 bezieht.  
+ <span data-ttu-id="3ce8c-107">Wenn Sie ein Projekt aus einer früheren Version von Visual Studio aktualisieren möchten, müssen Sie diese LINQ-Verweise möglicherweise manuell bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-107">If you are upgrading a project from an earlier version of Visual Studio, you might have to supply these LINQ-related references manually.</span></span> <span data-ttu-id="3ce8c-108">Darüber hinaus muss u. U. auch das Projekt so eingerichtet werden, dass es sich auf .NET Framework 3.5 bezieht.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-108">You might also have to manually set the project to target the .NET Framework version 3.5.</span></span>  
   
 > [!NOTE]
->  Wenn Sie über die Eingabeaufforderung erstellen, müssen Sie manuell auf die LINQ\-bezogenen DLLs in `drive`**:**\\Programme\\Reference Assemblies\\Microsoft\\Framework\\v3.5 verweisen.  
+>  <span data-ttu-id="3ce8c-109">Wenn Sie über eine Eingabeaufforderung erstellen, müssen Sie manuell die LINQ-bezogenen DLLs in verweisen `drive` **:**\Programme\Reference Assemblies\Microsoft\Framework\v3.5.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-109">If you are building from a command prompt, you must manually reference the LINQ-related DLLs in `drive`**:**\Program Files\Reference Assemblies\Microsoft\Framework\v3.5.</span></span>  
   
-### So legen Sie .NET Framework 3.5 als Ziel fest  
+### <a name="to-target-the-net-framework-35"></a><span data-ttu-id="3ce8c-110">So legen Sie .NET Framework 3.5 als Ziel fest</span><span class="sxs-lookup"><span data-stu-id="3ce8c-110">To target the .NET Framework 3.5</span></span>  
   
-1.  Erstellen Sie in [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] ein neues Visual Basic\- oder C\#\-Projekt. Sie können auch ein in Visual Studio 2005 erstelltes Visual Basic\- oder C\#\-Projekt öffnen und es mit den angezeigten Schritten in ein [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Projekt umwandeln.  
+1.  <span data-ttu-id="3ce8c-111">Erstellen Sie in [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] ein neues Visual Basic- oder C#-Projekt.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-111">In [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)], create a new Visual Basic or C# project.</span></span> <span data-ttu-id="3ce8c-112">Sie können auch ein in Visual Studio 2005 erstelltes Visual Basic- oder C#-Projekt öffnen und es mit den auf dem Bildschirm angezeigten Schritten in ein [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Projekt umwandeln.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-112">Alternatively, you can open a Visual Basic or C# project that was created in Visual Studio 2005 and follow the prompts to convert it to a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] project.</span></span>  
   
-2.  Klicken Sie bei einem C\#\-Projekt auf das Menü **Projekt** und dann auf **Eigenschaften**.  
+2.  <span data-ttu-id="3ce8c-113">Ein C#-Projekt, klicken Sie auf die **Projekt** Menü, und klicken Sie dann auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-113">For a C# project, click the **Project** menu, and then click **Properties**.</span></span>  
   
-    1.  Wählen Sie auf der Eigenschaftenseite **Anwendung** aus der Dropdownliste **Zielframework** \<legacyBold\>.NET Framework 3.5\<\/legacyBold\> aus.  
+    1.  <span data-ttu-id="3ce8c-114">In der **Anwendung** Eigenschaftenseite, wählen Sie .NET Framework 3.5 in der **Zielframework** Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-114">In the **Application** property page, select .NET Framework 3.5 in the **Target Framework** drop-down list.</span></span>  
   
-3.  Klicken Sie bei einem Visual Basic\-Projekt auf das Menü **Projekt** und dann auf **Eigenschaften**.  
+3.  <span data-ttu-id="3ce8c-115">Ein Visual Basic-Projekt, klicken Sie auf die **Projekt** Menü, und klicken Sie dann auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-115">For a Visual Basic project, click the **Project** menu, and then click **Properties**.</span></span>  
   
-    1.  Klicken Sie auf der Eigenschaftenseite **Kompilieren** auf **Erweiterte Kompilierungsoptionen**, und wählen Sie dann aus der Dropdownliste **Zielframework \(alle Konfigurationen\)** \<legacyBold\>.NET Framework 3.5\<\/legacyBold\> aus.  
+    1.  <span data-ttu-id="3ce8c-116">In der **Kompilieren** auf der Seite klicken Sie auf **Erweiterte Kompilierungsoptionen** und wählen Sie dann auf .NET Framework 3.5 in der **Zielframework (alle Konfigurationen)** Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-116">In the **Compile** property page, click **Advanced Compile Options** and then select .NET Framework 3.5 in the **Target Framework (all configurations)** drop-down list.</span></span>  
   
-4.  Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**, klicken Sie auf die Registerkarte **.NET**, verschieben Sie den Fensterinhalt zum Eintrag **System.Core**, klicken Sie auf ihn, und klicken Sie dann auf **OK**.  
+4.  <span data-ttu-id="3ce8c-117">Auf der **Projekt** Menü klicken Sie auf **Verweis hinzufügen**, klicken Sie auf die **.NET** Registerkarte, führen Sie einen Bildlauf nach unten bis zum **"System.Core"**, klicken Sie darauf, und klicken Sie dann auf  **OK**.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-117">On the **Project** menu, click **Add Reference**, click the **.NET** tab, scroll down to **System.Core**, click it, and then click **OK**.</span></span>  
   
-5.  Fügen Sie Ihrer Quellcodedatei oder Ihrem Projekt eine `using`\-Direktive oder einen importierten Namespace für <xref:System.Linq> hinzu.  
+5.  <span data-ttu-id="3ce8c-118">Fügen Sie Ihrer Quellcodedatei oder Ihrem Projekt eine `using`-Direktive oder einen importierten Namespace für <xref:System.Linq> hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-118">Add a `using` directive or imported namespace for <xref:System.Linq> to your source code file or project.</span></span>  
   
-     Weitere Informationen finden Sie unter [using\-Direktive](../Topic/using%20Directive%20\(C%23%20Reference\).md) oder [Gewusst wie: Hinzufügen oder Entfernen von importierten Namespaces \(Visual Basic\)](../Topic/How%20to:%20Add%20or%20Remove%20Imported%20Namespaces%20\(Visual%20Basic\).md).  
+     <span data-ttu-id="3ce8c-119">Weitere Informationen finden Sie unter [using-Direktive](~/docs/csharp/language-reference/keywords/using-directive.md) oder [wie: Hinzufügen oder Entfernen von importierten Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="3ce8c-119">For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
   
-### So aktivieren Sie die LINQ to DataSet\-Funktionalität  
+### <a name="to-enable-linq-to-dataset-functionality"></a><span data-ttu-id="3ce8c-120">So aktivieren Sie die LINQ to DataSet-Funktionalität</span><span class="sxs-lookup"><span data-stu-id="3ce8c-120">To enable LINQ to DataSet functionality</span></span>  
   
-1.  Führen Sie bei Bedarf die oben genannten Schritte aus, um einen Verweis auf \<legacyBold\>System.Core.dll\<\/legacyBold\> und eine `using`\-Direktive oder einen importierten Namespace für \<legacyBold\>System.Linq\<\/legacyBold\> hinzuzufügen.  
+1.  <span data-ttu-id="3ce8c-121">Führen Sie bei Bedarf die oben genannten Schritte aus, um einen Verweis auf <legacyBold>System.Core.dll</legacyBold> und eine `using`-Direktive oder einen importierten Namespace für <legacyBold>System.Linq</legacyBold> hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-121">If necessary, follow the steps earlier in this topic to add a reference to System.Core.dll and a `using` directive or imported namespace for System.Linq.</span></span>  
   
-2.  Klicken Sie in C\# oder Visual Basic auf das Menü **Projekt** und dann auf **Verweis hinzufügen**.  
+2.  <span data-ttu-id="3ce8c-122">In c# oder Visual Basic, klicken Sie auf die **Projekt** Menü, und klicken Sie dann auf **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-122">In C# or Visual Basic, click the **Project** menu, and then click **Add Reference**.</span></span>  
   
-3.  Klicken Sie im Dialogfeld **Verweis hinzufügen** auf die Registerkarte **.NET**, falls diese nicht bereits angezeigt wird.  Verschieben Sie den Fensterinhalt zu den Einträgen **System.Data** und **System.Data.DataSetExtensions**, und klicken Sie auf sie.  Klicken Sie auf **OK**.  
+3.  <span data-ttu-id="3ce8c-123">In der **Verweis hinzufügen** (Dialogfeld), klicken Sie auf die **.NET** Registerkarte, wenn er nicht bereits angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-123">In the **Add Reference** dialog box, click the **.NET** tab if it is not on top.</span></span> <span data-ttu-id="3ce8c-124">Führen Sie einen Bildlauf nach unten bis zum **"System.Data"** und **System.Data.DataSetExtensions** , und klicken Sie auf sie.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-124">Scroll down to **System.Data** and **System.Data.DataSetExtensions** and click on them.</span></span> <span data-ttu-id="3ce8c-125">Klicken Sie auf die **OK** Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-125">Click the **OK** button.</span></span>  
   
-4.  Fügen Sie Ihrer Quellcodedatei oder Ihrem Projekt eine `using`\-Direktive oder einen importierten Namespace für <xref:System.Data> hinzu.  Weitere Informationen finden Sie unter [using\-Direktive](../Topic/using%20Directive%20\(C%23%20Reference\).md) oder [Gewusst wie: Hinzufügen oder Entfernen von importierten Namespaces \(Visual Basic\)](../Topic/How%20to:%20Add%20or%20Remove%20Imported%20Namespaces%20\(Visual%20Basic\).md).  
+4.  <span data-ttu-id="3ce8c-126">Fügen Sie Ihrer Quellcodedatei oder Ihrem Projekt eine `using`-Direktive oder einen importierten Namespace für <xref:System.Data> hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-126">Add a `using` directive or imported namespace for <xref:System.Data> to your source code file or project.</span></span> <span data-ttu-id="3ce8c-127">Weitere Informationen finden Sie unter [using-Direktive](~/docs/csharp/language-reference/keywords/using-directive.md) oder [wie: Hinzufügen oder Entfernen von importierten Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="3ce8c-127">For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
   
-5.  Fügen Sie für die LINQ to DataSet\-Funktionalität einen Verweis auf \<legacyBold\>System.Data.DataSetExtensions.dll\<\/legacyBold\> hinzu.  Falls noch nicht vorhanden, fügen Sie einen Verweis auf \<legacyBold\>System.Data.dll\<\/legacyBold\> hinzu.  
+5.  <span data-ttu-id="3ce8c-128">Fügen Sie für die LINQ to DataSet-Funktionalität einen Verweis auf <legacyBold>System.Data.DataSetExtensions.dll</legacyBold> hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-128">Add a reference to System.Data.DataSetExtensions.dll for LINQ to Dataset functionality.</span></span> <span data-ttu-id="3ce8c-129">Falls noch nicht vorhanden, fügen Sie einen Verweis auf <legacyBold>System.Data.dll</legacyBold> hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-129">Add a reference to System.Data.dll if it does not already exist.</span></span>  
   
-6.  Fügen Sie bei Bedarf eine `using`\-Direktive oder einen importierten Namespace für `System.Data.Common` bzw. `System.Data.SqlClient` \(je nachdem, wie die Verbindung mit der Datenbank hergestellt wird\) hinzu.  
+6.  <span data-ttu-id="3ce8c-130">Fügen Sie bei Bedarf eine `using`-Direktive oder einen importierten Namespace für `System.Data.Common` bzw. `System.Data.SqlClient` (je nachdem, wie die Verbindung mit der Datenbank hergestellt wird) hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ce8c-130">Optionally, add a `using` directive or imported namespace for `System.Data.Common` or `System.Data.SqlClient`, depending on how you connect to the database.</span></span>  
   
-## Siehe auch  
- [Erste Schritte](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)   
- [Getting Started with LINQ](http://msdn.microsoft.com/de-de/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+## <a name="see-also"></a><span data-ttu-id="3ce8c-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ce8c-131">See Also</span></span>  
+ [<span data-ttu-id="3ce8c-132">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="3ce8c-132">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
+ [<span data-ttu-id="3ce8c-133">Erste Schritte mit LINQ</span><span class="sxs-lookup"><span data-stu-id="3ce8c-133">Getting Started with LINQ</span></span>](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

@@ -1,95 +1,95 @@
 ---
-title: "&#220;bersicht &#252;ber das DataGridView-Steuerelement (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DataGridView"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Gebundene Steuerelemente, DataGridView-Steuerelement"
-  - "Spalten [Windows Forms], DataGridView-Steuerelement"
-  - "Daten [Windows Forms], Navigieren"
-  - "Daten [Windows Forms], Neusortieren"
-  - "Datenbindung, DataGridView-Steuerelement"
-  - "Datenblätter, Informationen über Datenblätter"
-  - "Datenquellen, Binden an das DataGridView-Steuerelement"
-  - "DataGridView-Steuerelement [Windows Forms], Informationen über das DataGridView-Steuerelement"
-  - "DataGridView-Steuerelement [Windows Forms], Datenbindung"
-  - "Datasets [Windows Forms], Binden an das DataGridView-Steuerelement"
-  - "Grid-Steuerelemente [Windows Forms]"
-  - "Raster [Windows Forms]"
-  - "Tabellen [Windows Forms], Binden an das DataGridView-Steuerelement"
-  - "Tabellen [Windows Forms], Anzeigen im DataGridView-Steuerelement"
+title: "Übersicht über das DataGridView-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DataGridView
+helpviewer_keywords:
+- DataGridView control [Windows Forms], about DataGridView control
+- grid controls [Windows Forms]
+- tables [Windows Forms], displaying in DataGridView control
+- tables [Windows Forms], binding to DataGridView control
+- columns [Windows Forms], DataGridView control
+- bound controls [Windows Forms], dataGridView control
+- datasets [Windows Forms], binding to DataGridView control
+- data grids [Windows Forms], about data grids
+- data [Windows Forms], resorting
+- data [Windows Forms], navigating
+- grids [Windows Forms]
+- data binding [Windows Forms], DataGridView control
+- data sources [Windows Forms], binding to DataGridView control
+- DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4209866f63931fb3d80f35e211bd5f9b35ed48bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das DataGridView-Steuerelement (Windows Forms)
+# <a name="datagridview-control-overview-windows-forms"></a><span data-ttu-id="51265-102">Übersicht über das DataGridView-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="51265-102">DataGridView Control Overview (Windows Forms)</span></span>
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das <xref:System.Windows.Forms.DataGrid>\-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="51265-103">Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="51265-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="51265-104">Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="51265-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Mit dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement können Sie Tabellendaten aus vielen unterschiedlichen Datenquellen anzeigen und bearbeiten.  
+ <span data-ttu-id="51265-105">Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie anzeigen und Bearbeiten von Tabellendaten aus vielen unterschiedlichen Datenquellen.</span><span class="sxs-lookup"><span data-stu-id="51265-105">With the <xref:System.Windows.Forms.DataGridView> control, you can display and edit tabular data from many different kinds of data sources.</span></span>  
   
- Das Binden von Daten an das <xref:System.Windows.Forms.DataGridView>\-Steuerelement ist ein unkomplizierter, intuitiver Vorgang und meistens so einfach wie das Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft.  Beim Binden an eine Datenquelle mit mehreren Listen oder Tabellen legen Sie die <xref:System.Windows.Forms.DataGridView.DataMember%2A>\-Eigenschaft auf eine Zeichenfolge fest, die die Liste oder Tabelle angibt, an die gebunden werden soll.  
+ <span data-ttu-id="51265-106">Binden von Daten an die <xref:System.Windows.Forms.DataGridView> -Steuerelement ist einfach und intuitiv, und in vielen Fällen ist es so einfach wie das Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="51265-106">Binding data to the <xref:System.Windows.Forms.DataGridView> control is straightforward and intuitive, and in many cases it is as simple as setting the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property.</span></span> <span data-ttu-id="51265-107">Wenn Sie an eine Datenquelle, die mehrere Listen oder Tabellen enthält binden, legen Sie die <xref:System.Windows.Forms.DataGridView.DataMember%2A> -Eigenschaft in eine Zeichenfolge, die angibt, die Liste oder Tabelle zum Binden an.</span><span class="sxs-lookup"><span data-stu-id="51265-107">When you bind to a data source that contains multiple lists or tables, set the <xref:System.Windows.Forms.DataGridView.DataMember%2A> property to a string that specifies the list or table to bind to.</span></span>  
   
- Da das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das standardmäßige Windows Forms\-Datenbindungsmodell unterstützt, wird es an Instanzen der in der folgenden Liste beschriebenen Klassen gebunden:  
+ <span data-ttu-id="51265-108">Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt das standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit die Bindung an Instanzen von Klassen, die in der folgenden Liste beschrieben:</span><span class="sxs-lookup"><span data-stu-id="51265-108">The <xref:System.Windows.Forms.DataGridView> control supports the standard Windows Forms data binding model, so it will bind to instances of classes described in the following list:</span></span>  
   
--   Alle Klassen, die die <xref:System.Collections.IList>\-Schnittstelle implementieren, einschließlich eindimensionaler Arrays.  
+-   <span data-ttu-id="51265-109">Jede Klasse, implementiert die <xref:System.Collections.IList> -Schnittstelle, einschließlich eindimensionale Arrays.</span><span class="sxs-lookup"><span data-stu-id="51265-109">Any class that implements the <xref:System.Collections.IList> interface, including one-dimensional arrays.</span></span>  
   
--   Alle Klassen, die die <xref:System.ComponentModel.IListSource>\-Schnittstelle implementieren, z. B. die <xref:System.Data.DataTable>\-Klasse und die <xref:System.Data.DataSet>\-Klasse.  
+-   <span data-ttu-id="51265-110">Jede Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle, wie die <xref:System.Data.DataTable> und <xref:System.Data.DataSet> Klassen.</span><span class="sxs-lookup"><span data-stu-id="51265-110">Any class that implements the <xref:System.ComponentModel.IListSource> interface, such as the <xref:System.Data.DataTable> and <xref:System.Data.DataSet> classes.</span></span>  
   
--   Alle Klassen, die die <xref:System.ComponentModel.IBindingList>\-Schnittstelle implementieren, z. B. die <xref:System.ComponentModel.BindingList%601>\-Klasse.  
+-   <span data-ttu-id="51265-111">Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, wie die <xref:System.ComponentModel.BindingList%601> Klasse.</span><span class="sxs-lookup"><span data-stu-id="51265-111">Any class that implements the <xref:System.ComponentModel.IBindingList> interface, such as the <xref:System.ComponentModel.BindingList%601> class.</span></span>  
   
--   Alle Klassen, die die <xref:System.ComponentModel.IBindingListView>\-Schnittstelle implementieren, z. B. die <xref:System.Windows.Forms.BindingSource>\-Klasse.  
+-   <span data-ttu-id="51265-112">Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle, wie die <xref:System.Windows.Forms.BindingSource> Klasse.</span><span class="sxs-lookup"><span data-stu-id="51265-112">Any class that implements the <xref:System.ComponentModel.IBindingListView> interface, such as the <xref:System.Windows.Forms.BindingSource> class.</span></span>  
   
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement unterstützt die Datenbindung an die öffentlichen Eigenschaften der Objekte, die von diesen Schnittstellen zurückgegeben werden, oder an die Eigenschaftenauflistung, die von einer <xref:System.ComponentModel.ICustomTypeDescriptor>\-Schnittstelle zurückgegeben wird, sofern diese für die zurückgegebenen Objekte implementiert wurde.  
+ <span data-ttu-id="51265-113">Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die Datenbindung an die öffentlichen Eigenschaften der Objekte, die diese Schnittstellen zurückgegebenes oder an die Properties-Auflistung, die zurückgegeben werden, indem ein <xref:System.ComponentModel.ICustomTypeDescriptor> -Schnittstelle ein, wenn auf die zurückgegebenen Objekte implementiert.</span><span class="sxs-lookup"><span data-stu-id="51265-113">The <xref:System.Windows.Forms.DataGridView> control supports data binding to the public properties of the objects returned by these interfaces or to the properties collection returned by an <xref:System.ComponentModel.ICustomTypeDescriptor> interface, if implemented on the returned objects.</span></span>  
   
- Normalerweise führen Sie die Bindung an eine <xref:System.Windows.Forms.BindingSource>\-Komponente aus und binden die <xref:System.Windows.Forms.BindingSource>\-Komponente an eine andere Datenquelle oder füllen diese mit Geschäftsobjekten.  Die <xref:System.Windows.Forms.BindingSource>\-Komponente stellt die bevorzugte Datenquelle dar, da mit dieser Datenquelle Bindungen an eine Vielzahl von Datenquellen vorgenommen werden können und zahlreiche Datenbindungsprobleme automatisch behoben werden.  Weitere Informationen finden Sie unter [BindingSource\-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md).  
+ <span data-ttu-id="51265-114">In der Regel eine Bindung an eine <xref:System.Windows.Forms.BindingSource> Komponente und Binden der <xref:System.Windows.Forms.BindingSource> -Komponente an eine andere Datenquelle, oder weisen Sie ihm Geschäftsobjekte.</span><span class="sxs-lookup"><span data-stu-id="51265-114">Typically, you will bind to a <xref:System.Windows.Forms.BindingSource> component and bind the <xref:System.Windows.Forms.BindingSource> component to another data source or populate it with business objects.</span></span> <span data-ttu-id="51265-115">Die <xref:System.Windows.Forms.BindingSource> Komponente ist der bevorzugten Datenquelle aus, weil sie zu einer Vielzahl von Datenquellen binden kann, und kann viele Daten Bindungsprobleme automatisch beheben.</span><span class="sxs-lookup"><span data-stu-id="51265-115">The <xref:System.Windows.Forms.BindingSource> component is the preferred data source because it can bind to a wide variety of data sources and can resolve many data binding issues automatically.</span></span> <span data-ttu-id="51265-116">Weitere Informationen finden Sie unter [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md).</span><span class="sxs-lookup"><span data-stu-id="51265-116">For more information, see [BindingSource Component](../../../../docs/framework/winforms/controls/bindingsource-component.md).</span></span>  
   
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement kann auch im *Ungebunden*\-Modus ohne zugrunde liegenden Datenspeicher verwendet werden.  Ein Codebeispiel, in dem ein ungebundenes <xref:System.Windows.Forms.DataGridView>\-Steuerelement verwendet wird, finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="51265-117">Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann auch verwendet werden, *ungebundenen* Modus ab, wobei keine zugrunde liegenden Datenspeicher.</span><span class="sxs-lookup"><span data-stu-id="51265-117">The <xref:System.Windows.Forms.DataGridView> control can also be used in *unbound* mode, with no underlying data store.</span></span> <span data-ttu-id="51265-118">Ein Codebeispiel, das eine ungebundene verwendet <xref:System.Windows.Forms.DataGridView> steuern, finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="51265-118">For a code example that uses an unbound <xref:System.Windows.Forms.DataGridView> control, see [Walkthrough: Creating an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement ist in hohem Maße konfigurierbar und erweiterbar und stellt zahlreiche Eigenschaften, Methoden und Ereignisse bereit, um sein Aussehen und Verhalten anzupassen.  Zur Anzeige tabellarischer Daten in Windows Forms\-Anwendungen sollten Sie <xref:System.Windows.Forms.DataGridView> den Vorzug vor anderen Steuerelementen geben \(z. B. <xref:System.Windows.Forms.DataGrid>\).  Ob Sie schreibgeschützte Werte in einem kleineren Raster anzeigen oder Benutzern die Bearbeitung einer Tabelle mit Millionen von Datensätzen ermöglichen möchten: das <xref:System.Windows.Forms.DataGridView>\-Steuerelement bietet eine direkt programmierbare, speichereffiziente Lösung.  
+ <span data-ttu-id="51265-119">Die <xref:System.Windows.Forms.DataGridView> -Steuerelement ist hochgradig konfigurierbar und erweiterbar, und bietet viele Eigenschaften, Methoden und Ereignissen, die die Darstellung und Verhalten anpassen.</span><span class="sxs-lookup"><span data-stu-id="51265-119">The <xref:System.Windows.Forms.DataGridView> control is highly configurable and extensible, and it provides many properties, methods, and events to customize its appearance and behavior.</span></span> <span data-ttu-id="51265-120">Wenn Sie Ihre Windows Forms-Anwendung Tabellendaten anzeigen möchten, können Sie verwenden die <xref:System.Windows.Forms.DataGridView> Steuerelement vor anderen (z. B. <xref:System.Windows.Forms.DataGrid>).</span><span class="sxs-lookup"><span data-stu-id="51265-120">When you want your Windows Forms application to display tabular data, consider using the <xref:System.Windows.Forms.DataGridView> control before others (for example, <xref:System.Windows.Forms.DataGrid>).</span></span> <span data-ttu-id="51265-121">Wenn Sie ein Raster mit kleines schreibgeschützte Werte angezeigt werden, oder wenn Sie einen Benutzer so bearbeiten Sie eine Tabelle mit Millionen von Datensätze, aktivieren die <xref:System.Windows.Forms.DataGridView> -Steuerelement mit einer leicht programmierbare, speichereffizienten Lösung bietet.</span><span class="sxs-lookup"><span data-stu-id="51265-121">If you are displaying a small grid of read-only values, or if you are enabling a user to edit a table with millions of records, the <xref:System.Windows.Forms.DataGridView> control will provide you with a readily programmable, memory-efficient solution.</span></span>  
   
-## In diesem Abschnitt  
- [Zusammenfassung der DataGridView\-Steuerelementtechnologie](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
- Bietet eine Zusammenfassung der Konzepte des <xref:System.Windows.Forms.DataGridView>\-Steuerelements sowie der Verwendung verwandter Klassen.  
+## <a name="in-this-section"></a><span data-ttu-id="51265-122">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="51265-122">In This Section</span></span>  
+ [<span data-ttu-id="51265-123">Zusammenfassung der DataGridView-Steuerelementtechnologie</span><span class="sxs-lookup"><span data-stu-id="51265-123">DataGridView Control Technology Summary</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
+ <span data-ttu-id="51265-124">Fasst <xref:System.Windows.Forms.DataGridView> Konzepte und die Verwendung von verwandten Klassen zu steuern.</span><span class="sxs-lookup"><span data-stu-id="51265-124">Summarizes <xref:System.Windows.Forms.DataGridView> control concepts and the use of related classes.</span></span>  
   
- [Architektur des DataGridView\-Steuerelements](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
- Beschreibt die Architektur des <xref:System.Windows.Forms.DataGridView>\-Steuerelements und erläutert die zugehörige Typhierarchie und Vererbungsstruktur.  
+ [<span data-ttu-id="51265-125">Architektur des DataGridView-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="51265-125">DataGridView Control Architecture</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ <span data-ttu-id="51265-126">Beschreibt die Architektur von der <xref:System.Windows.Forms.DataGridView> -Steuerelements und erläutert seine Typstruktur Hierarchie und Vererbung.</span><span class="sxs-lookup"><span data-stu-id="51265-126">Describes the architecture of the <xref:System.Windows.Forms.DataGridView> control, explaining its type hierarchy and inheritance structure.</span></span>  
   
- [Szenarien für das DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
- Beschreibt die häufigsten Szenarien, in denen <xref:System.Windows.Forms.DataGridView>\-Steuerelemente verwendet werden.  
+ [<span data-ttu-id="51265-127">Szenarien für das DataGridView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="51265-127">DataGridView Control Scenarios</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
+ <span data-ttu-id="51265-128">Beschreibt die häufigsten Szenarien, in denen <xref:System.Windows.Forms.DataGridView> Steuerelemente verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="51265-128">Describes the most common scenarios in which <xref:System.Windows.Forms.DataGridView> controls are used.</span></span>  
   
- [Codeverzeichnis für DataGridView\-Steuerelementcode](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
- Enthält Links zu Codebeispielen für verschiedene <xref:System.Windows.Forms.DataGridView>\-Aufgaben in der Dokumentation.  Diese Beispiele sind nach Art der Aufgabe kategorisiert.  
+ [<span data-ttu-id="51265-129">Codeverzeichnis für DataGridView-Steuerelementcode</span><span class="sxs-lookup"><span data-stu-id="51265-129">DataGridView Control Code Directory</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
+ <span data-ttu-id="51265-130">Enthält Links zu Codebeispielen in der Dokumentation für die verschiedenen <xref:System.Windows.Forms.DataGridView> Aufgaben.</span><span class="sxs-lookup"><span data-stu-id="51265-130">Provides links to code examples in the documentation for various <xref:System.Windows.Forms.DataGridView> tasks.</span></span> <span data-ttu-id="51265-131">Diese Beispiele sind nach Art der Aufgabe kategorisiert.</span><span class="sxs-lookup"><span data-stu-id="51265-131">These examples are categorized by task type.</span></span>  
   
-## Verwandte Abschnitte  
- [Spaltentypen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
- Erörtert die Spaltentypen im <xref:System.Windows.Forms.DataGridView>\-Steuerelement in Windows Forms, die zum Anzeigen von Informationen verwendet werden und Benutzern das Ändern oder Hinzufügen von Informationen ermöglichen.  
+## <a name="related-sections"></a><span data-ttu-id="51265-132">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="51265-132">Related Sections</span></span>  
+ [<span data-ttu-id="51265-133">Spaltentypen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51265-133">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="51265-134">Beschreibt die Spaltentypen in Windows Forms <xref:System.Windows.Forms.DataGridView> das Benutzersteuerelement zum Anzeigen von Informationen und ermöglichen Benutzern das Ändern oder Hinzufügen von Daten.</span><span class="sxs-lookup"><span data-stu-id="51265-134">Discusses the column types in the Windows Forms <xref:System.Windows.Forms.DataGridView> control used to display information and allow users to modify or add information.</span></span>  
   
- [Anzeigen von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- Enthält Themen mit Beschreibungen, in denen das Steuerelement entweder manuell oder aus einer externen Datenquelle mit Daten gefüllt wird.  
+ [<span data-ttu-id="51265-135">Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51265-135">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="51265-136">Enthält Themen, in denen beschrieben wird, wie das Steuerelement entweder manuell oder mit Daten aus einer externen Datenquelle gefüllt wird.</span><span class="sxs-lookup"><span data-stu-id="51265-136">Provides topics that describe how to populate the control with data either manually, or from an external data source.</span></span>  
   
- [Anpassen des DataGridView\-Steuerelements von Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- Enthält Themen, in denen das benutzerdefinierte Zeichnen von <xref:System.Windows.Forms.DataGridView>\-Zellen und \-Zeilen sowie das Erstellen abgeleiteter Zell\-, Spalten\- und Zeilentypen beschrieben wird.  
+ [<span data-ttu-id="51265-137">Anpassen des DataGridView-Steuerelements von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51265-137">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="51265-138">Enthält Themen, in denen das benutzerdefinierte Zeichnen von <xref:System.Windows.Forms.DataGridView>-Zellen und Zeilen und das Erstellen von abgeleiteten Zell-, Spalten- und Zeilentypen beschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="51265-138">Provides topics that describe custom painting <xref:System.Windows.Forms.DataGridView> cells and rows, and creating derived cell, column, and row types.</span></span>  
   
- [Leistungsoptimierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- Enthält Themen, in denen der effiziente Einsatz des Steuerelements beschrieben wird, um Leistungsprobleme bei der Arbeit mit großen Datenmengen zu vermeiden.  
+ [<span data-ttu-id="51265-139">Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51265-139">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="51265-140">Enthält Themen, in den erläutert wird, wie das Steuerelement effizient eingesetzt wird, um bei der Arbeit mit großen Datenmengen Leistungsprobleme zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="51265-140">Provides topics that describe how to use the control efficiently to avoid performance problems when working with large amounts of data.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- [DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Standardfunktionalität des DataGridView\-Steuerelements von Windows Forms](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)   
- [Standardbehandlung von Tastatur und Maus im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="51265-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51265-141">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="51265-142">DataGridView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="51265-142">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="51265-143">Standardfunktionalität des DataGridView-Steuerelements von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51265-143">Default Functionality in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="51265-144">Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51265-144">Default Keyboard and Mouse Handling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

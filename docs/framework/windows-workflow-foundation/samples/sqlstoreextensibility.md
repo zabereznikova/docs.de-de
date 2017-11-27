@@ -1,88 +1,92 @@
 ---
-title: "SQLStoreExtensibility | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQLStoreExtensibility
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 111e7aa4164d9fc811ebe3f5efb196df77d1ded0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# SQLStoreExtensibility
-In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuften Eigenschaften im SQL\-Workflowinstanzspeicher veranschaulicht.Beim SQL\-Workflowinstanzspeicher handelt es sich um die SQL\-basierte Implementierung eines Instanzspeichers.Diese ermöglicht einer Instanz das Speichern und Laden von Zuständen in eine bzw. aus einer SQL Server\- oder SQL Server Express\-Datenbank.Die Speichererweiterbarkeitsfunktion ermöglicht es Benutzern, Eigenschaften zu definieren, die im Instanzspeicher gespeichert werden.Diese Eigenschaften werden in einer höher gestuften Eigenschaftenansicht angezeigt, die es Benutzern ermöglicht, sie abzufragen.  
+# <a name="sqlstoreextensibility"></a><span data-ttu-id="4f23f-102">SQLStoreExtensibility</span><span class="sxs-lookup"><span data-stu-id="4f23f-102">SQLStoreExtensibility</span></span>
+<span data-ttu-id="4f23f-103">In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuften Eigenschaften im SQL-Workflowinstanzspeicher veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4f23f-103">This sample demonstrates the use and configuration of promoted properties in the SQL workflow instance store.</span></span> <span data-ttu-id="4f23f-104">Beim SQL-Workflowinstanzspeicher handelt es sich um die SQL-basierte Implementierung eines Instanzspeichers.</span><span class="sxs-lookup"><span data-stu-id="4f23f-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="4f23f-105">Diese ermöglicht einer Instanz das Speichern und Laden von Zuständen in eine bzw. aus einer SQL Server- oder SQL Server Express-Datenbank.</span><span class="sxs-lookup"><span data-stu-id="4f23f-105">It allows an instance to save its state and load its state to and from a SQL Server or SQL Server Express database.</span></span> <span data-ttu-id="4f23f-106">Die Speichererweiterbarkeitsfunktion ermöglicht es Benutzern, Eigenschaften zu definieren, die im Instanzspeicher gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="4f23f-106">The store extensibility feature allows the user to define properties that are stored in the instance store.</span></span> <span data-ttu-id="4f23f-107">Diese Eigenschaften werden in einer höher gestuften Eigenschaftenansicht angezeigt, die es Benutzern ermöglicht, sie abzufragen.</span><span class="sxs-lookup"><span data-stu-id="4f23f-107">These properties are displayed in a promoted properties view that allows the user to query for them.</span></span>  
   
- Dieses Beispiel besteht aus einem Workflow, der einen Zähldienst implementiert.Wenn die Startmethode des Diensts aufgerufen wird, zählt der Dienst von 0 bis 29.Der Zählerwert wird alle zwei Sekunden erhöht.Der Workflow wird nach jeder Erhöhung des Zählerwerts gespeichert.Der aktuelle Zählerwert wird im Instanzspeicher als höher gestufte Eigenschaft gespeichert.  
+ <span data-ttu-id="4f23f-108">Dieses Beispiel besteht aus einem Workflow, der einen Zähldienst implementiert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-108">This sample consists of a workflow that implements a counting service.</span></span> <span data-ttu-id="4f23f-109">Wenn die Startmethode des Diensts aufgerufen wird, zählt der Dienst von 0 bis 29.</span><span class="sxs-lookup"><span data-stu-id="4f23f-109">Once the service's start method is invoked, the service counts from 0 to 29.</span></span> <span data-ttu-id="4f23f-110">Der Zählerwert wird alle zwei Sekunden erhöht.</span><span class="sxs-lookup"><span data-stu-id="4f23f-110">The counter is incremented once every 2 seconds.</span></span> <span data-ttu-id="4f23f-111">Der Workflow wird nach jeder Erhöhung des Zählerwerts gespeichert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-111">After each count, the workflow persists.</span></span> <span data-ttu-id="4f23f-112">Der aktuelle Zählerwert wird im Instanzspeicher als höher gestufte Eigenschaft gespeichert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-112">The current counter value is stored in the instance store as a promoted property.</span></span>  
   
- Der Zählworkflow wird von einem Workflowdiensthost gehostet.Die `Main`\-Methode des Programms führt die folgenden Aktionen aus:  
+ <span data-ttu-id="4f23f-113">Der Zählworkflow wird von einem Workflowdiensthost gehostet.</span><span class="sxs-lookup"><span data-stu-id="4f23f-113">The Counting Workflow is self-hosted by a Workflow Service Host.</span></span> <span data-ttu-id="4f23f-114">Die `Main`-Methode des Programms führt die folgenden Aktionen aus:</span><span class="sxs-lookup"><span data-stu-id="4f23f-114">The program's `Main` method performs the following actions:</span></span>  
   
--   Erstellt eine Instanz des Workflowdiensthosts, der den Zählworkflow hostet und die Endpunkte definiert, an denen der Zählworkflow erreicht werden kann.  
+-   <span data-ttu-id="4f23f-115">Erstellt eine Instanz des Workflowdiensthosts, der den Zählworkflow hostet und die Endpunkte definiert, an denen der Zählworkflow erreicht werden kann.</span><span class="sxs-lookup"><span data-stu-id="4f23f-115">Creates an instance of the Workflow Service Host that hosts the Counting Workflow and defines the endpoints under which the Counting Workflow can be reached.</span></span>  
   
--   Definiert das Verhalten des SQL\-Workflowinstanzspeichers zur Konfiguration des SQL\-Workflowinstanzspeichers.Der Speicher wird angewiesen, `CountStatus` als höher gestufte Eigenschaft zu behandeln.  
+-   <span data-ttu-id="4f23f-116">Definiert das Verhalten des SQL-Workflowinstanzspeichers zur Konfiguration des SQL-Workflowinstanzspeichers.</span><span class="sxs-lookup"><span data-stu-id="4f23f-116">Defines a SQL workflow instance store behavior, which is used to configure the SQL workflow instance store.</span></span> <span data-ttu-id="4f23f-117">Der Speicher wird angewiesen, `CountStatus` als höher gestufte Eigenschaft zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="4f23f-117">The store is instructed to treat `CountStatus` as a promoted property.</span></span>  
   
--   Erstellt einen Client, der die Startmethode des Zählworkflows aufruft.  
+-   <span data-ttu-id="4f23f-118">Erstellt einen Client, der die Startmethode des Zählworkflows aufruft.</span><span class="sxs-lookup"><span data-stu-id="4f23f-118">Creates a client that calls the start method of the counting workflow.</span></span>  
   
- Der Zählvorgang wird bei Programmstart automatisch gestartet.Beachten Sie, dass das Laden der Instanz und die Konfiguration des SQL\-Workflowinstanzspeichers einige Sekunden dauern kann.  
+ <span data-ttu-id="4f23f-119">Der Zählvorgang wird bei Programmstart automatisch gestartet.</span><span class="sxs-lookup"><span data-stu-id="4f23f-119">Once the program is started, the counter automatically starts counting.</span></span> <span data-ttu-id="4f23f-120">Beachten Sie, dass das Laden der Instanz und die Konfiguration des SQL-Workflowinstanzspeichers einige Sekunden dauern kann.</span><span class="sxs-lookup"><span data-stu-id="4f23f-120">Note that it might take a few seconds to load the instance and configure the SQL workflow instance store.</span></span>  
   
- Um den Zählerwert als benutzerdefinierte Eigenschaft höher zu stufen, müssen die folgenden Schritte ausgeführt werden:  
+ <span data-ttu-id="4f23f-121">Um den Zählerwert als benutzerdefinierte Eigenschaft höher zu stufen, müssen die folgenden Schritte ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="4f23f-121">To promote the counter value as a custom property, the following steps must be taken:</span></span>  
   
-1.  Die `CounterStatus`\-Klasse definiert eine Instanzerweiterung mit dem Typ <xref:System.Activities.Persistence.PersistenceParticipant>, der von Aktivitäten verwendet wird, um die Zustandsvariablen anzugeben.`Count` wird als lesegeschützter Wert definiert.Wenn eine Workflowinstanz einen Persistenzpunkt erreicht, speichert die Instanzerweiterung die `Count`\-Eigenschaft in die Persistenzdatensammlung.  
+1.  <span data-ttu-id="4f23f-122">Die `CounterStatus`-Klasse definiert eine Instanzerweiterung mit dem Typ <xref:System.Activities.Persistence.PersistenceParticipant>, der von Aktivitäten verwendet wird, um die Zustandsvariablen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="4f23f-122">The class `CounterStatus` defines an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span> <span data-ttu-id="4f23f-123">`Count` wird als lesegeschützter Wert definiert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-123">`Count` is defined as a write-only value.</span></span> <span data-ttu-id="4f23f-124">Wenn eine Workflowinstanz einen Persistenzpunkt erreicht, speichert die Instanzerweiterung die `Count`-Eigenschaft in die Persistenzdatensammlung.</span><span class="sxs-lookup"><span data-stu-id="4f23f-124">When a workflow instance comes to a persistence point, the instance extension saves the `Count` property into the persistence data collection.</span></span>  
   
-2.  Beim Erstellen des Instanzspeichers wird eine neue Eigenschaft, `CountStatus`, durch die `store.Promote()`\-Methode definiert.  
+2.  <span data-ttu-id="4f23f-125">Beim Erstellen des Instanzspeichers wird eine neue Eigenschaft, `CountStatus`, durch die `store.Promote()`-Methode definiert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-125">When creating the instance store, a new property, `CountStatus`, is defined through the `store.Promote()` method.</span></span>  
   
-3.  Die `SaveCounter`\-Aktivität des Workflows weist den aktuellen Zählerwert dem `Count`\-Statusfeld zu.  
+3.  <span data-ttu-id="4f23f-126">Die `SaveCounter`-Aktivität des Workflows weist den aktuellen Zählerwert dem `Count`-Statusfeld zu.</span><span class="sxs-lookup"><span data-stu-id="4f23f-126">The workflow's `SaveCounter` activity assigns the current counter value to the `Count` status field.</span></span>  
   
-### So verwenden Sie dieses Beispiel  
+### <a name="to-use-this-sample"></a><span data-ttu-id="4f23f-127">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="4f23f-127">To use this sample</span></span>  
   
-1.  Erstellen Sie die Instanzspeicherdatenbank.  
+1.  <span data-ttu-id="4f23f-128">Erstellen Sie die Instanzspeicherdatenbank.</span><span class="sxs-lookup"><span data-stu-id="4f23f-128">Create the instance store database.</span></span>  
   
-    1.  Öffnen Sie eine [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]\-Eingabeaufforderung.  
+    1.  <span data-ttu-id="4f23f-129">Öffnen Sie eine [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="4f23f-129">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
-    2.  Navigieren Sie zum Beispielverzeichnis \("\\WF\\Basic\\Persistence\\SqlStoreExtensibility\\CS"\), und führen Sie "CreateInstanceStore.cmd" an der [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]\-Eingabeaufforderung aus.  
+    2.  <span data-ttu-id="4f23f-130">Navigieren Sie zum Beispielverzeichnis ("\WF\Basic\Persistence\SqlStoreExtensibility\CS"), und führen Sie "CreateInstanceStore.cmd" an der [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung aus.</span><span class="sxs-lookup"><span data-stu-id="4f23f-130">Navigate to the sample directory (\WF\Basic\Persistence\SqlStoreExtensibility\CS) and run CreateInstanceStore.cmd in the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
         > [!WARNING]
-        >  Das Skript "CreateInstanceStore.cmd" versucht, die Datenbank in der Standardinstanz von SQL Server 2008 Express zu erstellen.Wenn Sie die Datenbank in einer anderen Instanz installieren möchten, ändern Sie hierfür das Skript.  
+        >  <span data-ttu-id="4f23f-131">Das Skript "CreateInstanceStore.cmd" versucht, die Datenbank auf der Standardinstanz von SQL Server 2008 Express zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="4f23f-131">The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express.</span></span> <span data-ttu-id="4f23f-132">Wenn Sie die Datenbank auf einer anderen Instanz installieren möchten, ändern Sie hierfür das Skript.</span><span class="sxs-lookup"><span data-stu-id="4f23f-132">If you want to install the database on a different instance, modify the script to do so.</span></span>  
   
-2.  Öffnen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], laden Sie die Projektmappe "SqlStoreExtensibility.sln", und erstellen Sie sie, indem Sie STRG\+UMSCHALT\+B drücken.  
+2.  <span data-ttu-id="4f23f-133">Öffnen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], laden Sie die Projektmappe "SqlStoreExtensibility.sln", und erstellen Sie sie, indem Sie STRG+UMSCHALT+B drücken.</span><span class="sxs-lookup"><span data-stu-id="4f23f-133">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and load the SqlStoreExtensibility.sln solution and build it by pressing CTRL+SHIFT+B.</span></span>  
   
     > [!WARNING]
-    >  Wenn Sie die Datenbank auf einer nicht standardmäßigen Instanz von SQL Server installiert haben, aktualisieren Sie vor dem Erstellen der Projektmappe die Verbindungszeichenfolge im Code.  
+    >  <span data-ttu-id="4f23f-134">Wenn Sie die Datenbank auf einer nicht standardmäßigen Instanz von SQL Server installiert haben, aktualisieren Sie vor dem Erstellen der Projektmappe die Verbindungszeichenfolge im Code.</span><span class="sxs-lookup"><span data-stu-id="4f23f-134">If you installed the database on a non-default instance of SQL Server, update the connection string in the code prior to building the solution.</span></span>  
   
-3.  Führen Sie das Beispiel mit Administratorrechten aus, indem Sie in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] zum Verzeichnis "bin" \("\\WF\\Basic\\Persistence\\SqlStoreExtensibility\\bin\\Debug"\) des Projekts navigieren, mit der rechten Maustaste auf "SqlStoreExtensibility.exe" klicken und **Als Administrator ausführen** auswählen.  
+3.  <span data-ttu-id="4f23f-135">Führen Sie das Beispiel mit Administratorrechten aus, navigieren Sie zur Bin-Verzeichnis des Projekts (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], mit der rechten Maustaste SqlStoreExtensibility.exe und Auswählen von **als ausführen Administrator**.</span><span class="sxs-lookup"><span data-stu-id="4f23f-135">Run the sample with administrator privileges by navigating to the project’s bin directory (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], right-clicking SqlStoreExtensibility.exe and selecting **Run as Administrator**.</span></span>  
   
-### So überprüfen Sie die ordnungsgemäße Funktionsfähigkeit des Beispiels  
+### <a name="to-verify-the-sample-is-working-correctly"></a><span data-ttu-id="4f23f-136">So überprüfen Sie die ordnungsgemäße Funktionsfähigkeit des Beispiels</span><span class="sxs-lookup"><span data-stu-id="4f23f-136">To verify the sample is working correctly</span></span>  
   
-1.  Zeigen Sie den Inhalt der Instanztabelle mithilfe von SQL Server Management Studio an, indem Sie **Datenbanken**, **InstanceStore** und dann **System.ServiceModel.Activities.DurableInstancing.InstanceTable** im Objekt\-Explorer auswählen, mit der rechten Maustaste auf **System.ServiceModel.Activities.DurableInstancing.InstanceTable** klicken und **Oberste 1000 Zeilen auswählen** auswählen.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645).  
+1.  <span data-ttu-id="4f23f-137">Verwenden Sie SQL Server Management Studio zum Anzeigen des Inhalts der instanztabelle dazu **Datenbanken**, **InstanceStore**, und klicken Sie dann  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** im Objekt-Explorer mit der Maustaste **System.ServiceModel.Activities.DurableInstancing.InstanceTable** und auswählen **Wählen Sie die oberste 1000 Zeilen**.</span><span class="sxs-lookup"><span data-stu-id="4f23f-137">Use SQL Server Management Studio to view the contents of the instance table by selecting **Databases**, **InstanceStore**, and then **System.ServiceModel.Activities.DurableInstancing.InstanceTable** in the Object Explorer, right-click **System.ServiceModel.Activities.DurableInstancing.InstanceTable** and select **Select Top 1000 Rows**.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4f23f-138">SQL Server Management Studio finden Sie unter [Einführung in SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)</span><span class="sxs-lookup"><span data-stu-id="4f23f-138"> SQL Server Management Studio, see [Introducing SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)</span></span>  
   
-2.  Achten Sie auf die aufgeführten Workflowinstanzen.  
+2.  <span data-ttu-id="4f23f-139">Achten Sie auf die aufgeführten Workflowinstanzen.</span><span class="sxs-lookup"><span data-stu-id="4f23f-139">Observe the workflow instances listed.</span></span>  
   
-3.  Führen Sie an einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]\-Eingabeaufforderung das Skript "QueryInstanceStore.cmd" aus, das sich im Beispielverzeichnis \("\\WF\\Basic\\Persistence\\SqlStoreExtensibility"\) befindet.  
+3.  <span data-ttu-id="4f23f-140">Führen Sie an einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung das Skript "QueryInstanceStore.cmd" aus, das sich im Beispielverzeichnis ("\WF\Basic\Persistence\SqlStoreExtensibility") befindet.</span><span class="sxs-lookup"><span data-stu-id="4f23f-140">In a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt, run the QueryInstanceStore.cmd script located in the sample directory (\WF\Basic\Persistence\SqlStoreExtensibility).</span></span>  
   
-4.  Achten Sie auf den unter **CountStatus** angezeigten Zählerwert.  
+4.  <span data-ttu-id="4f23f-141">Beobachten der Wert dieses Indikators angezeigt wird, klicken Sie unter **CountStatus**.</span><span class="sxs-lookup"><span data-stu-id="4f23f-141">Observe the counter value displayed under **CountStatus**.</span></span>  
   
-5.  Führen Sie das Skript einige Male aus, um festzustellen, dass sich der **CountStats**\-Wert ändert.  
+5.  <span data-ttu-id="4f23f-142">Führen Sie das Skript einige Male, finden Sie unter der **CountStats** -Wert ändert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-142">Run the script a few times to see the **CountStats** value change.</span></span>  
   
-6.  Drücken Sie die EINGABETASTE, um die Workflowanwendung zu beenden.  
+6.  <span data-ttu-id="4f23f-143">Drücken Sie die EINGABETASTE, um die Workflowanwendung zu beenden.</span><span class="sxs-lookup"><span data-stu-id="4f23f-143">Press ENTER to terminate the workflow application.</span></span>  
   
-### So deinstallieren Sie das Beispiel  
+### <a name="to-uninstall-the-sample"></a><span data-ttu-id="4f23f-144">So installieren Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="4f23f-144">To uninstall the sample</span></span>  
   
-1.  Entfernen Sie die Instanzspeicherdatenbank, indem Sie das Skript "RemoveInstanceStore.cmd" ausführen, das sich im Beispielverzeichnis \("\\WF\\Basic\\Persistence\\SqlStoreExtensibility"\) befindet.  
+1.  <span data-ttu-id="4f23f-145">Entfernen Sie die Instanzspeicherdatenbank, indem Sie das Skript "RemoveInstanceStore.cmd" ausführen, das sich im Beispielverzeichnis ("\WF\Basic\Persistence\SqlStoreExtensibility") befindet.</span><span class="sxs-lookup"><span data-stu-id="4f23f-145">Remove the instance store database by running the RemoveInstanceStore.cmd script located in the sample directory (\WF\Basic\Persistence\SqlStoreExtensibility).</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="4f23f-146">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="4f23f-146">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4f23f-147">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="4f23f-147">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="4f23f-148">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="4f23f-148">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4f23f-149">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="4f23f-149">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
-## Siehe auch  
- [Workflowpersistenz](../../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)   
- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [AppFabric\-Hosting\- und \-Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="4f23f-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4f23f-150">See Also</span></span>  
+ [<span data-ttu-id="4f23f-151">Workflowpersistenz</span><span class="sxs-lookup"><span data-stu-id="4f23f-151">Workflow Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ [<span data-ttu-id="4f23f-152">Workflowdienste</span><span class="sxs-lookup"><span data-stu-id="4f23f-152">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="4f23f-153">AppFabric-Hosting und Persistenzbeispiele</span><span class="sxs-lookup"><span data-stu-id="4f23f-153">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

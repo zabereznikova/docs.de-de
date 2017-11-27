@@ -1,62 +1,65 @@
 ---
-title: "UI Automation Control Patterns for Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, control patterns for clients"
-  - "control patterns, UI Automation clients"
+title: "Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, control patterns for clients
+- control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-caps.latest.revision: 24
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 1d556b3da13b70a0a5e69eb72905e04a01dffa9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Control Patterns for Clients
+# <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="0e65c-102">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="0e65c-102">UI Automation Control Patterns for Clients</span></span>
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework\-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]\-Klassen verwenden möchten, die im <xref:System.Windows.Automation>\-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie auf der Seite zur [Windows\-Automatisierungs\-API: UI\-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="0e65c-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="0e65c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="0e65c-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="0e65c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Diese Übersicht enthält Steuerelementmuster für Benutzeroberflächenautomatisierungs\-Clients. Es sind Informationen dazu enthalten, wie ein Benutzeroberflächenautomatisierungs\-Client Steuerelementmuster nutzen kann, um auf Informationen über die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] zugreifen zu können.  
+ <span data-ttu-id="0e65c-105">Diese Übersicht enthält Steuerelementmuster für Benutzeroberflächenautomatisierungs-Clients.</span><span class="sxs-lookup"><span data-stu-id="0e65c-105">This overview introduces control patterns for UI Automation clients.</span></span> <span data-ttu-id="0e65c-106">Es enthält Informationen, wie ein Benutzeroberflächenautomatisierungs-Client Steuerelementmuster nutzen kann, Informationen über den Zugriff auf die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0e65c-106">It includes information on how a UI Automation client can use control patterns to access information about the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].</span></span>  
   
- Steuerelementmuster bieten eine Möglichkeit zum Kategorisieren und Verfügbarmachen der Funktionalität eines Steuerelements, unabhängig vom Typ des Steuerelements oder vom Erscheinungsbild des Steuerelements. Benutzeroberflächenautomatisierungs\-Clients können ein <xref:System.Windows.Automation.AutomationElement> untersuchen, um festzulegen, welche Steuerelementmuster unterstützt werden und wie das Verhalten des Steuerelements sein wird.  
+ <span data-ttu-id="0e65c-107">Steuerelementmuster bieten eine Möglichkeit zum Kategorisieren und Verfügbarmachen der Funktionalität eines Steuerelements, unabhängig vom Typ des Steuerelements oder vom Erscheinungsbild des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="0e65c-107">Control patterns provide a way to categorize and expose a control's functionality independent of the control type or the appearance of the control.</span></span> <span data-ttu-id="0e65c-108">Benutzeroberflächenautomatisierungs-Clients können überprüfen, ein <xref:System.Windows.Automation.AutomationElement> um festzulegen, welche Steuerelementmuster unterstützt werden und wie das Verhalten des Steuerelements sein.</span><span class="sxs-lookup"><span data-stu-id="0e65c-108">UI Automation clients can examine an <xref:System.Windows.Automation.AutomationElement> to determine which control patterns are supported and be assured of the behavior of the control.</span></span>  
   
- Eine vollständige Liste der Steuerelementmuster finden Sie unter [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ <span data-ttu-id="0e65c-109">Eine vollständige Liste der verfügbaren Steuerelementmuster, finden Sie unter [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span><span class="sxs-lookup"><span data-stu-id="0e65c-109">For a complete list of control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
 <a name="uiautomation_getting_control_patterns"></a>   
-## Abrufen von Steuerelementmustern  
- Clients empfangen ein Steuerelementmuster von einem <xref:System.Windows.Automation.AutomationElement> durch den Aufruf eines <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=fullName> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=fullName>.  
+## <a name="getting-control-patterns"></a><span data-ttu-id="0e65c-110">Abrufen von Steuerelementmustern</span><span class="sxs-lookup"><span data-stu-id="0e65c-110">Getting Control Patterns</span></span>  
+ <span data-ttu-id="0e65c-111">Clients empfangen ein Steuerelementmuster von einem <xref:System.Windows.Automation.AutomationElement> durch den Aufruf eines <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0e65c-111">Clients retrieve a control pattern from an <xref:System.Windows.Automation.AutomationElement> by calling either <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> or <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.</span></span>  
   
- Clients können die <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>\-Methode oder eine einzelne `IsPatternAvailable`\-Eigenschaft \(z. B. <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>\) nutzen, um zu bestimmen, ob ein Muster oder eine Gruppe von Mustern im <xref:System.Windows.Automation.AutomationElement> unterstützt wird. Es ist jedoch effizienter, zu versuchen, das Steuerelementmuster abzurufen und zu prüfen, ob ein `null`\-Verweis vorliegt als die unterstützten Eigenschaften zu überprüfen und das Steuerelementmuster abzurufen, da dies zu weniger prozessübergreifenden Aufrufen führt.  
+ <span data-ttu-id="0e65c-112">Clients können die <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>-Methode oder eine einzelne `IsPatternAvailable`-Eigenschaft (z. B. <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) nutzen, um zu bestimmen, ob ein Muster oder eine Gruppe von Mustern im <xref:System.Windows.Automation.AutomationElement> unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="0e65c-112">Clients can use the <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> method or an individual `IsPatternAvailable` property (for example, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) to determine if a pattern or group of patterns is supported on the <xref:System.Windows.Automation.AutomationElement>.</span></span> <span data-ttu-id="0e65c-113">Es ist jedoch effizienter, zu versuchen, das Steuerelementmuster abzurufen und zu prüfen, ob ein `null`-Verweis vorliegt als die unterstützten Eigenschaften zu überprüfen und das Steuerelementmuster abzurufen, da dies zu weniger prozessübergreifenden Aufrufen führt.</span><span class="sxs-lookup"><span data-stu-id="0e65c-113">However, it is more efficient to attempt to get the control pattern and test for a `null` reference than to check the supported properties and retrieve the control pattern since it results in fewer cross-process calls.</span></span>  
   
- Das folgende Beispiel zeigt den Abruf eines <xref:System.Windows.Automation.TextPattern>\-Steuerelementmusters aus einem <xref:System.Windows.Automation.AutomationElement>.  
+ <span data-ttu-id="0e65c-114">Das folgende Beispiel zeigt den Abruf eines <xref:System.Windows.Automation.TextPattern>-Steuerelementmusters aus einem <xref:System.Windows.Automation.AutomationElement>.</span><span class="sxs-lookup"><span data-stu-id="0e65c-114">The following example demonstrates how to get a <xref:System.Windows.Automation.TextPattern> control pattern from an <xref:System.Windows.Automation.AutomationElement>.</span></span>  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
-## Abrufen von Eigenschaften in Steuerelementmustern  
- Clients können die Eigenschaftswerte in Steuerelementmustern durch Aufrufen von <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=fullName> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=fullName> abrufen und das zurückgegebene Objekt in einen geeigneten Typ umwandeln. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]\-Eigenschaften finden Sie unter [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+## <a name="retrieving-properties-on-control-patterns"></a><span data-ttu-id="0e65c-115">Abrufen von Eigenschaften in Steuerelementmustern</span><span class="sxs-lookup"><span data-stu-id="0e65c-115">Retrieving Properties on Control Patterns</span></span>  
+ <span data-ttu-id="0e65c-116">Clients können die Eigenschaftswerte in Steuerelementmustern durch Aufrufen von <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> abrufen und das zurückgegebene Objekt in einen geeigneten Typ umwandeln.</span><span class="sxs-lookup"><span data-stu-id="0e65c-116">Clients can retrieve the property values on control patterns by calling either <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> or <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> and casting the object returned to an appropriate type.</span></span> <span data-ttu-id="0e65c-117">Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie in [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span><span class="sxs-lookup"><span data-stu-id="0e65c-117">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
- Zusätzlich zu den `GetPropertyValue`\-Methoden können Eigenschaftswerte über die [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]\-Accessoren abgerufen werden, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]\-Eigenschaften in einem Muster zuzugreifen.  
+ <span data-ttu-id="0e65c-118">Zusätzlich zu den `GetPropertyValue`-Methoden können Eigenschaftswerte über die [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]-Accessoren abgerufen werden, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaften in einem Muster zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="0e65c-118">In addition to the `GetPropertyValue` methods, property values can be retrieved through the [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] accessors to access the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties on a pattern.</span></span>  
   
 <a name="uiautomation_with_variable_patterns"></a>   
-## Steuerelemente mit Variablenmustern  
- Einige Steuerelementtypen unterstützen unterschiedliche Muster, abhängig vom entsprechenden Status oder der Art und Weise, wie das Steuerelement verwendet wird. Beispiele für Steuerelemente mit Variablenmustern sind Listenansichten \(Miniaturansichten, Kacheln, Symbole, Liste, Details\), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)]\-Diagramme \(Kreisdiagramm, Liniendiagramm, Balkendiagramm, Zellwert mit einer Formel\), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]\-Dokumentbereich \(Normal, Weblayout, Gliederung, Seitenlayout, Seitenansicht\) und [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]\-Designs.  
+## <a name="controls-with-variable-patterns"></a><span data-ttu-id="0e65c-119">Steuerelemente mit Variablenmustern</span><span class="sxs-lookup"><span data-stu-id="0e65c-119">Controls with Variable Patterns</span></span>  
+ <span data-ttu-id="0e65c-120">Einige Steuerelementtypen unterstützen unterschiedliche Muster, abhängig vom entsprechenden Status oder der Art und Weise, wie das Steuerelement verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0e65c-120">Some control types support different patterns depending on their state or the manner in which the control is being used.</span></span> <span data-ttu-id="0e65c-121">Beispiele für Steuerelemente mit Variablenmustern sind Listenansichten (Miniaturansichten, Kacheln, Symbole, Liste, Details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)]-Diagramme (Kreisdiagramm, Liniendiagramm, Balkendiagramm, Zellwert mit einer Formel), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]-Dokumentbereich (Normal, Weblayout, Gliederung, Seitenlayout, Seitenansicht) und [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]-Designs.</span><span class="sxs-lookup"><span data-stu-id="0e65c-121">Examples of controls that can have variable patterns are list views (thumbnails, tiles, icons, list, details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Charts (Pie, Line, Bar, Cell Value with a formula), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]'s document area (Normal, Web Layout, Outline, Print Layout, Print Preview), and [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] skins.</span></span>  
   
- Steuerelemente, die benutzerdefinierte Steuerelementtypen implementieren, können über einen beliebigen Satz von Steuerelementmustern verfügen, die zur Darstellung der entsprechenden Funktionalität erforderlich sind.  
+ <span data-ttu-id="0e65c-122">Steuerelemente, die benutzerdefinierte Steuerelementtypen implementieren, können über einen beliebigen Satz von Steuerelementmustern verfügen, die zur Darstellung der entsprechenden Funktionalität erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="0e65c-122">Controls implementing custom control types can have any set of control patterns that are needed to represent their functionality.</span></span>  
   
-## Siehe auch  
- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)   
- [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)   
- [Invoke a Control Using UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)   
- [Get the Toggle State of a Check Box Using UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)   
- [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)   
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/de-de/67353f93-7ee2-42f2-ab76-5c078cf6ca16)   
- [TextPattern Search and Selection Sample](http://msdn.microsoft.com/de-de/0a3bca57-8b72-489d-a57c-da85b7a22c7f)   
- [InvokePattern and ExpandCollapsePattern Menu Item Sample](http://msdn.microsoft.com/de-de/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+## <a name="see-also"></a><span data-ttu-id="0e65c-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0e65c-123">See Also</span></span>  
+ [<span data-ttu-id="0e65c-124">Steuerelementmuster für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="0e65c-124">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [<span data-ttu-id="0e65c-125">Textmuster zur Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="0e65c-125">UI Automation Text Pattern</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
+ [<span data-ttu-id="0e65c-126">Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="0e65c-126">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="0e65c-127">Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="0e65c-127">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="0e65c-128">Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients</span><span class="sxs-lookup"><span data-stu-id="0e65c-128">Control Pattern Mapping for UI Automation Clients</span></span>](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="0e65c-129">Einfügen von TextPattern-Text (Beispiel)</span><span class="sxs-lookup"><span data-stu-id="0e65c-129">TextPattern Insert Text Sample</span></span>](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [<span data-ttu-id="0e65c-130">TextPattern-Suche und Auswahl-Beispiel</span><span class="sxs-lookup"><span data-stu-id="0e65c-130">TextPattern Search and Selection Sample</span></span>](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
+ [<span data-ttu-id="0e65c-131">"InvokePattern" und ExpandCollapsePattern-Menü-Element-Beispiel</span><span class="sxs-lookup"><span data-stu-id="0e65c-131">InvokePattern and ExpandCollapsePattern Menu Item Sample</span></span>](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

@@ -1,32 +1,37 @@
 ---
-title: "Gewusst wie: Definieren einer Windows&#160;Forms-Schaltfl&#228;che als &quot;Abbrechen&quot;-Schaltfl&#228;che | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button-Steuerelement [Windows Forms], Definieren als Schaltfläche zum Abbrechen"
-  - "Schaltflächen, Abbrechen (Schaltflächen)"
+title: "Gewusst wie: Definieren einer Windows Forms-Schaltfläche als \"Abbrechen\"-Schaltfläche"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- buttons [Windows Forms], cancel buttons
+- Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bbdf2ec4f2353662f1077b9d95966e0a2ebd316
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Definieren einer Windows&#160;Forms-Schaltfl&#228;che als &quot;Abbrechen&quot;-Schaltfl&#228;che
-Sie können in beliebigen Windows Forms ein <xref:System.Windows.Forms.Button>\-Steuerelement als "Abbrechen"\-Schaltfläche definieren.  Sobald der Benutzer die ESC\-TASTE drückt, wird auf die "Abbrechen"\-Schaltfläche geklickt. Dies geschieht unabhängig davon, auf welchem anderen Steuerelement im Formular sich der Fokus befindet.  Eine solche Schaltfläche ermöglicht es dem Benutzer normalerweise, eine Operation schnell zu beenden, ohne eine Aktion auszuführen.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a><span data-ttu-id="b9f70-102">Gewusst wie: Definieren einer Windows Forms-Schaltfläche als "Abbrechen"-Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="b9f70-102">How to: Designate a Windows Forms Button as the Cancel Button</span></span>
+<span data-ttu-id="b9f70-103">Auf jedem Windows-Formular, legen Sie eine <xref:System.Windows.Forms.Button> Steuerelement die Schaltfläche "Abbrechen" befinden.</span><span class="sxs-lookup"><span data-stu-id="b9f70-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="b9f70-104">Eine Schaltfläche "Abbrechen" geklickt wird, wenn der Benutzer die ESC-Taste drückt, unabhängig davon, die welche anderen Formular auf das Steuerelement den Fokus besitzt.</span><span class="sxs-lookup"><span data-stu-id="b9f70-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="b9f70-105">Eine solche Schaltfläche programmiert wird in der Regel dem Benutzer ermöglichen, schnell einen Vorgang zu beenden, ohne dass auf eine beliebige Aktion.</span><span class="sxs-lookup"><span data-stu-id="b9f70-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  
   
-### So definieren Sie die "Abbrechen"\-Schaltfläche  
+### <a name="to-designate-the-cancel-button"></a><span data-ttu-id="b9f70-106">Die Schaltfläche "Abbrechen" festlegen</span><span class="sxs-lookup"><span data-stu-id="b9f70-106">To designate the cancel button</span></span>  
   
-1.  Legen Sie das entsprechende <xref:System.Windows.Forms.Button>\-Steuerelement als <xref:System.Windows.Forms.Form.CancelButton%2A>\-Eigenschaft des Formulars fest.  
+1.  <span data-ttu-id="b9f70-107">Richten Sie das Formular <xref:System.Windows.Forms.Form.CancelButton%2A> -Eigenschaft auf die entsprechende <xref:System.Windows.Forms.Button> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="b9f70-107">Set the form's <xref:System.Windows.Forms.Form.CancelButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetCancelButton(ByVal myCancelBtn As Button)  
@@ -49,10 +54,10 @@ Sie können in beliebigen Windows Forms ein <xref:System.Windows.Forms.Button>\
        }  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Form.CancelButton%2A>   
- [Übersicht über das Button\-Steuerelement](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Methoden zur Auswahl eines Button\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Gewusst wie: Definieren einer Windows Forms\-Schaltfläche als "Annehmen"\-Schaltfläche](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)   
- [Button\-Steuerelement](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b9f70-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b9f70-108">See Also</span></span>  
+ <xref:System.Windows.Forms.Form.CancelButton%2A>  
+ [<span data-ttu-id="b9f70-109">Übersicht über das Button-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="b9f70-109">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="b9f70-110">Methoden zur Auswahl eines Button-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9f70-110">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="b9f70-111">Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9f70-111">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="b9f70-112">Gewusst wie: Definieren einer Windows Forms-Schaltfläche als „Annehmen“-Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="b9f70-112">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ [<span data-ttu-id="b9f70-113">Button-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="b9f70-113">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

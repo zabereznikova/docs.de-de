@@ -1,40 +1,44 @@
 ---
-title: "ASP.NET-Anwendungen mit &#39;Wait&#39;-Handles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ASP.NET-Anwendungen mit Wait-Handles
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 01244b06085614ea5e36bdde3e3b2fe196c0c0f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# ASP.NET-Anwendungen mit &#39;Wait&#39;-Handles
-Die Rückruf\- und Abrufmodelle für die Behandlung asynchroner Vorgänge sind hilfreich, wenn die Anwendung nur eine asynchrone Operation gleichzeitig verarbeitet.  Die Wait\-Modelle ermöglichen eine flexiblere Verarbeitung mehrerer asynchroner Operationen.  Es gibt zwei Wait\-Modelle, benannt nach den zur Implementierung verwendeten <xref:System.Threading.WaitHandle>\-Methoden: das Wait \(Any\)\-Modell und das Wait \(All\)\-Modell.  
+# <a name="aspnet-applications-using-wait-handles"></a><span data-ttu-id="4cb29-102">ASP.NET-Anwendungen mit Wait-Handles</span><span class="sxs-lookup"><span data-stu-id="4cb29-102">ASP.NET Applications Using Wait Handles</span></span>
+<span data-ttu-id="4cb29-103">Die Rückruf- und Abrufmodelle für die Behandlung asynchroner Vorgänge sind hilfreich, wenn die Anwendung nur eine asynchrone Operation gleichzeitig verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="4cb29-103">The callback and polling models for handling asynchronous operations are useful when your application is processing only one asynchronous operation at a time.</span></span> <span data-ttu-id="4cb29-104">Die Wait-Modelle ermöglichen eine flexiblere Verarbeitung mehrerer asynchroner Operationen.</span><span class="sxs-lookup"><span data-stu-id="4cb29-104">The Wait models provide a more flexible way of processing multiple asynchronous operations.</span></span> <span data-ttu-id="4cb29-105">Es gibt zwei Wait-Modelle, benannt nach den zur Implementierung verwendeten <xref:System.Threading.WaitHandle>-Methoden: das Wait (Any)-Modell und das Wait (All)-Modell.</span><span class="sxs-lookup"><span data-stu-id="4cb29-105">There are two Wait models, named for the <xref:System.Threading.WaitHandle> methods used to implement them: the Wait (Any) model and the Wait (All) model.</span></span>  
   
- Um ein Wait\-Modell zu verwenden, müssen Sie die <xref:System.IAsyncResult.AsyncWaitHandle%2A>\-Eigenschaft des <xref:System.IAsyncResult>\-Objekts verwenden, das von einer der Methoden <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> oder <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> zurückgegeben wurde.  Für die <xref:System.Threading.WaitHandle.WaitAny%2A>\-Methode und die <xref:System.Threading.WaitHandle.WaitAll%2A>\-Methode ist es erforderlich, die <xref:System.Threading.WaitHandle>\-Objekte als Argument zu übergeben, das in einem Array gruppiert wird.  
+ <span data-ttu-id="4cb29-106">Um ein Wait-Modell zu verwenden, müssen Sie die <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Eigenschaft des <xref:System.IAsyncResult>-Objekts verwenden, das von einer der Methoden <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> oder <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="4cb29-106">To use either Wait model, you need to use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> object returned by the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> methods.</span></span> <span data-ttu-id="4cb29-107">Für die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode und die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode ist es erforderlich, die <xref:System.Threading.WaitHandle>-Objekte als Argument zu übergeben, das in einem Array gruppiert wird.</span><span class="sxs-lookup"><span data-stu-id="4cb29-107">The <xref:System.Threading.WaitHandle.WaitAny%2A> and <xref:System.Threading.WaitHandle.WaitAll%2A> methods both require you to send the <xref:System.Threading.WaitHandle> objects as an argument, grouped together in an array.</span></span>  
   
- Beide Wait\-Methoden überwachen die asynchronen Operationen und warten auf die Beendigung.  Die <xref:System.Threading.WaitHandle.WaitAny%2A>\-Methode wartet auf die Beendigung oder das Timeout einer der Operationen.  Wenn bekannt ist, dass eine bestimmte Operation abgeschlossen ist, können Sie die Ergebnisse verarbeiten und dann weiter auf die Beendigung oder das Timeout der nächsten Operation warten.  Die <xref:System.Threading.WaitHandle.WaitAll%2A>\-Methode wartet vor dem Fortfahren auf die Beendigung oder das Timeout aller Prozesse im Array der <xref:System.Threading.WaitHandle>\-Instanzen.  
+ <span data-ttu-id="4cb29-108">Beide Wait-Methoden überwachen die asynchronen Operationen und warten auf die Beendigung.</span><span class="sxs-lookup"><span data-stu-id="4cb29-108">Both Wait methods monitor the asynchronous operations, waiting for completion.</span></span> <span data-ttu-id="4cb29-109">Die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode wartet auf die Beendigung oder das Timeout einer der Operationen. Wenn bekannt ist, dass eine bestimmte Operation abgeschlossen ist, können Sie die Ergebnisse verarbeiten und dann weiter auf die Beendigung oder das Timeout der nächsten Operation warten. Die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode wartet vor dem Fortfahren auf die Beendigung oder das Timeout aller Prozesse im Array der <xref:System.Threading.WaitHandle>-Instanzen.</span><span class="sxs-lookup"><span data-stu-id="4cb29-109">The <xref:System.Threading.WaitHandle.WaitAny%2A> method waits for any of the operations to complete or time out. Once you know a particular operation is complete, you can process its results and then continue waiting for the next operation to complete or time out. The <xref:System.Threading.WaitHandle.WaitAll%2A> method waits for all of the processes in the array of <xref:System.Threading.WaitHandle> instances to complete or time out before continuing.</span></span>  
   
- Der Vorteil der Wait\-Modelle tritt am deutlichsten zutage, wenn mehrere Operationen derselben Länge auf verschiedenen Servern ausgeführt werden müssen, oder wenn der Server leistungsfähig genug ist, um alle Abfragen gleichzeitig zu verarbeiten.  In den hier vorgestellten Beispielen werden von drei Abfragen lange Prozesse emuliert, indem WAITFOR\-Befehle unterschiedlicher Länge an bedeutungslose SELECT\-Abfragen angefügt werden.  
+ <span data-ttu-id="4cb29-110">Der Vorteil der Wait-Modelle tritt am deutlichsten zutage, wenn mehrere Operationen derselben Länge auf verschiedenen Servern ausgeführt werden müssen, oder wenn der Server leistungsfähig genug ist, um alle Abfragen gleichzeitig zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="4cb29-110">The Wait models' benefit is most striking when you need to run multiple operations of some length on different servers, or when your server is powerful enough to process all the queries at the same time.</span></span> <span data-ttu-id="4cb29-111">In den hier vorgestellten Beispielen werden von drei Abfragen lange Prozesse emuliert, indem WAITFOR-Befehle unterschiedlicher Länge an bedeutungslose SELECT-Abfragen angefügt werden.</span><span class="sxs-lookup"><span data-stu-id="4cb29-111">In the examples presented here, three queries emulate long processes by adding WAITFOR commands of varying lengths to inconsequential SELECT queries.</span></span>  
   
-## Beispiel: Wait \(Any\)\-Modell  
- Im folgenden Beispiel wird das Wait \(Any\)\-Modell veranschaulicht.  Nach dem Starten von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAny%2A>\-Methode aufgerufen, die auf die Beendigung einer dieser Prozesse warten soll.  Bei Beendigung jeweils eines Prozesses wird die <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A>\-Methode aufgerufen, und das resultierende <xref:System.Data.SqlClient.SqlDataReader>\-Objekt wird gelesen.  An dieser Stelle füllt eine reale Anwendung einen Teil der Seite wahrscheinlich mit <xref:System.Data.SqlClient.SqlDataReader> auf.  In diesem einfachen Beispiel wird einem Textfeld, das dem Prozess entspricht, der Zeitpunkt der Beendigung des Prozesses hinzugefügt.  In den einzelnen Textfeldern wird somit Folgendes veranschaulicht: Bei jeder Beendigung eines Prozesses wird Code ausgeführt.  
+## <a name="example-wait-any-model"></a><span data-ttu-id="4cb29-112">Beispiel: Wait (Any)-Modell</span><span class="sxs-lookup"><span data-stu-id="4cb29-112">Example: Wait (Any) Model</span></span>  
+ <span data-ttu-id="4cb29-113">Im folgenden Beispiel wird das Wait (Any)-Modell veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4cb29-113">The following example illustrates the Wait (Any) model.</span></span> <span data-ttu-id="4cb29-114">Nach dem Starten von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode aufgerufen, die auf die Beendigung einer dieser Prozesse warten soll.</span><span class="sxs-lookup"><span data-stu-id="4cb29-114">Once three asynchronous processes are started, the <xref:System.Threading.WaitHandle.WaitAny%2A> method is called to wait for the completion of any one of them.</span></span> <span data-ttu-id="4cb29-115">Bei Beendigung jeweils eines Prozesses wird die <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A>-Methode aufgerufen, und das resultierende <xref:System.Data.SqlClient.SqlDataReader>-Objekt wird gelesen.</span><span class="sxs-lookup"><span data-stu-id="4cb29-115">As each process completes, the <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> method is called and the resulting <xref:System.Data.SqlClient.SqlDataReader> object is read.</span></span> <span data-ttu-id="4cb29-116">An dieser Stelle füllt eine reale Anwendung einen Teil der Seite wahrscheinlich mit <xref:System.Data.SqlClient.SqlDataReader> auf.</span><span class="sxs-lookup"><span data-stu-id="4cb29-116">At this point, a real-world application would likely use the <xref:System.Data.SqlClient.SqlDataReader> to populate a portion of the page.</span></span> <span data-ttu-id="4cb29-117">In diesem einfachen Beispiel wird einem Textfeld, das dem Prozess entspricht, der Zeitpunkt der Beendigung des Prozesses hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="4cb29-117">In this simple example, the time the process completed is added to a text box corresponding to the process.</span></span> <span data-ttu-id="4cb29-118">In den einzelnen Textfeldern wird somit Folgendes veranschaulicht: Bei jeder Beendigung eines Prozesses wird Code ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="4cb29-118">Taken together, the times in the text boxes illustrate the point: Code is executed each time a process completes.</span></span>  
   
- Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET\-Websiteprojekt.  Positionieren Sie ein <xref:System.Web.UI.WebControls.Button>\-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>\-Steuerelemente auf der Seite \(übernehmen Sie für jedes Steuerelement den Standardnamen\).  
+ <span data-ttu-id="4cb29-119">Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET-Websiteprojekt.</span><span class="sxs-lookup"><span data-stu-id="4cb29-119">To set up this example, create a new ASP.NET Web Site project.</span></span> <span data-ttu-id="4cb29-120">Positionieren Sie ein <xref:System.Web.UI.WebControls.Button>-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>-Steuerelemente auf der Seite (übernehmen Sie für jedes Steuerelement den Standardnamen).</span><span class="sxs-lookup"><span data-stu-id="4cb29-120">Place a <xref:System.Web.UI.WebControls.Button> control and four <xref:System.Web.UI.WebControls.TextBox> controls on the page (accepting the default name for each control).</span></span>  
   
- Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+ <span data-ttu-id="4cb29-121">Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.</span><span class="sxs-lookup"><span data-stu-id="4cb29-121">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -165,9 +169,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -320,18 +322,16 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## Beispiel: Wait \(All\)\-Modell  
- Im folgenden Beispiel wird das Wait \(All\)\-Modell veranschaulicht.  Nach dem Starten von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAll%2A>\-Methode aufgerufen, die auf die Beendigung oder das Timeout aller Prozesse warten soll.  
+## <a name="example-wait-all-model"></a><span data-ttu-id="4cb29-122">Beispiel: Wait (All)-Modell</span><span class="sxs-lookup"><span data-stu-id="4cb29-122">Example: Wait (All) Model</span></span>  
+ <span data-ttu-id="4cb29-123">Im folgenden Beispiel wird das Wait (All)-Modell veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4cb29-123">The following example illustrates the Wait (All) model.</span></span> <span data-ttu-id="4cb29-124">Nach dem Starten von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode aufgerufen, die auf die Beendigung oder das Timeout aller Prozesse warten soll.</span><span class="sxs-lookup"><span data-stu-id="4cb29-124">Once three asynchronous processes are started, the <xref:System.Threading.WaitHandle.WaitAll%2A> method is called to wait for the processes to complete or time out.</span></span>  
   
- Wie im Beispiel für das Wait \(Any\)\-Modell wird einem Textfeld, das dem Prozess entspricht, der Zeitpunkt der Beendigung des Prozesses hinzugefügt.  Anhand der Angaben in den Textfeldern wird Folgendes veranschaulicht: Code, der auf die <xref:System.Threading.WaitHandle.WaitAny%2A>\-Methode folgt, wird erst nach Beendigung aller Prozesse ausgeführt.  
+ <span data-ttu-id="4cb29-125">Wie im Beispiel für das Wait (Any)-Modell wird einem Textfeld, das dem Prozess entspricht, der Zeitpunkt der Beendigung des Prozesses hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="4cb29-125">Like the example of the Wait (Any) model, the time the process completed is added to a text box corresponding to the process.</span></span> <span data-ttu-id="4cb29-126">Anhand der Angaben in den Textfeldern wird Folgendes veranschaulicht: Code, der auf die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode folgt, wird erst nach Beendigung aller Prozesse ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="4cb29-126">Again, the times in the text boxes illustrate the point: Code following the <xref:System.Threading.WaitHandle.WaitAny%2A> method is executed only after all processes are complete.</span></span>  
   
- Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET\-Websiteprojekt.  Positionieren Sie ein <xref:System.Web.UI.WebControls.Button>\-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>\-Steuerelemente auf der Seite \(übernehmen Sie für jedes Steuerelement den Standardnamen\).  
+ <span data-ttu-id="4cb29-127">Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET-Websiteprojekt.</span><span class="sxs-lookup"><span data-stu-id="4cb29-127">To set up this example, create a new ASP.NET Web Site project.</span></span> <span data-ttu-id="4cb29-128">Positionieren Sie ein <xref:System.Web.UI.WebControls.Button>-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>-Steuerelemente auf der Seite (übernehmen Sie für jedes Steuerelement den Standardnamen).</span><span class="sxs-lookup"><span data-stu-id="4cb29-128">Place a <xref:System.Web.UI.WebControls.Button> control and four <xref:System.Web.UI.WebControls.TextBox> controls on the page (accepting the default name for each control).</span></span>  
   
- Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+ <span data-ttu-id="4cb29-129">Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.</span><span class="sxs-lookup"><span data-stu-id="4cb29-129">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -452,9 +452,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -591,6 +589,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## Siehe auch  
- [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="4cb29-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4cb29-130">See Also</span></span>  
+ [<span data-ttu-id="4cb29-131">Asynchrone Vorgänge</span><span class="sxs-lookup"><span data-stu-id="4cb29-131">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="4cb29-132">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="4cb29-132">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

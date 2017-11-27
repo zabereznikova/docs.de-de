@@ -1,27 +1,29 @@
 ---
-title: "IEnumRAWINPUTDEVIC:Next | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Nächste Methode"
+title: IEnumRAWINPUTDEVIC:Next
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 644a8e724a280a8b23048a381a099acd6e655d2c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# IEnumRAWINPUTDEVIC:Next
-Listet die nächsten `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)\-Strukturen in der Enumeratorliste auf und gibt sie zusammen mit der tatsächlichen Anzahl der aufgelisteten Elemente in `pceltFetched` in `rgelt` zurück.  
+# <a name="ienumrawinputdevicnext"></a><span data-ttu-id="fabcd-102">IEnumRAWINPUTDEVIC:Next</span><span class="sxs-lookup"><span data-stu-id="fabcd-102">IEnumRAWINPUTDEVIC:Next</span></span>
+<span data-ttu-id="fabcd-103">Listet die nächsten `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) Strukturen in der Liste des Enumerators, Rückgabe in `rgelt` zusammen mit der tatsächlichen Anzahl der aufgelisteten Elemente in `pceltFetched`.</span><span class="sxs-lookup"><span data-stu-id="fabcd-103">Enumerates the next `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures in the enumerator's list, returning them in `rgelt` along with the actual number of enumerated elements in `pceltFetched`.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="fabcd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fabcd-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -30,18 +32,18 @@ HRESULT Next(
       [out] ULONG *pceltFetched);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a><span data-ttu-id="fabcd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="fabcd-105">Parameters</span></span>  
  `celt`  
   
- \[in\] Anzahl der [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp)\-Strukturen, die in `rgelt` zurückgegeben werden.  
+ <span data-ttu-id="fabcd-106">[in] Anzahl der [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) Strukturen im zurückgegebenen `rgelt`.</span><span class="sxs-lookup"><span data-stu-id="fabcd-106">[in] Number of [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures returned in `rgelt`.</span></span>  
   
  `rgelt`  
   
- \[out\] Array der Größe "celt" \(oder größer\), um die aufgelisteten RAWINPUTDEVICE\-Strukturen zu empfangen.  
+ <span data-ttu-id="fabcd-107">[out] Array der Größe "celt" (oder größer), um die aufgelisteten RAWINPUTDEVICE-Strukturen zu empfangen.</span><span class="sxs-lookup"><span data-stu-id="fabcd-107">[out] Array of size celt (or larger) to receive enumerated RAWINPUTDEVICE structures.</span></span>  
   
  `pceltFetched`  
   
- \[out\] Zeiger auf die Anzahl der Elemente, die tatsächlich in `rgelt` vorhanden sind.  Der Aufrufer kann in `NULL` übergehen, wenn  `rgelt`eins beträgt.  
+ <span data-ttu-id="fabcd-108">[out] Zeiger auf die Anzahl der Elemente, die tatsächlich in `rgelt` vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="fabcd-108">[out] Pointer to the number of elements actually supplied in `rgelt`.</span></span> <span data-ttu-id="fabcd-109">Der Aufrufer kann in `NULL` übergehen, wenn  `rgelt`eins beträgt. </span><span class="sxs-lookup"><span data-stu-id="fabcd-109">Caller can pass in `NULL` if `rgelt` is one.</span></span>  
   
-## Eigenschaftswert\/Rückgabewert  
- HRESULT: S\_OK, wenn die Anzahl der Elemente `celt` ist. Andernfalls S\_FALSE.
+## <a name="property-valuereturn-value"></a><span data-ttu-id="fabcd-110">Eigenschaftswert/Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="fabcd-110">Property Value/Return Value</span></span>  
+ <span data-ttu-id="fabcd-111">HRESULT: S_OK, wenn die Anzahl der Elemente `celt` ist. Andernfalls S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="fabcd-111">HRESULT: S_OK if the number of elements supplied is `celt`; S_FALSE otherwise.</span></span>

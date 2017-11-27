@@ -1,43 +1,42 @@
 ---
-title: "Eingabezeichensatz (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Eingabezeichensatz (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 691f29a04b1b1f997be501330ec887d6815d7531
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Eingabezeichensatz (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] akzeptiert in UTF\-16 codierte UNICODE\-Zeichen.  
+# <a name="input-character-set-entity-sql"></a><span data-ttu-id="fc689-102">Eingabezeichensatz (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="fc689-102">Input Character Set (Entity SQL)</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fc689-103"> akzeptiert in UTF-16 codierte UNICODE-Zeichen.</span><span class="sxs-lookup"><span data-stu-id="fc689-103"> accepts UNICODE characters encoded in UTF-16.</span></span>  
   
- Zeichenfolgenliterale können jedes in einfache Anführungszeichen eingeschlossene UTF\-16\-Zeichen enthalten.  Beispiel: N'文字列リテラル'.  Beim Vergleich von Zeichenfolgenliteralen werden die ursprünglichen UTF\-16\-Werte verwendet.  Zum Beispiel ist N'ABC' in japanischen und lateinischen Codepages unterschiedlich.  
+ <span data-ttu-id="fc689-104">Zeichenfolgenliterale können jedes in einfache Anführungszeichen eingeschlossene UTF-16-Zeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="fc689-104">String literals can contain any UTF-16 character enclosed in single quotes.</span></span> <span data-ttu-id="fc689-105">Beispiel: N'文字列リテラル'.</span><span class="sxs-lookup"><span data-stu-id="fc689-105">For example, N'文字列リテラル'.</span></span> <span data-ttu-id="fc689-106">Beim Vergleich von Zeichenfolgenliteralen werden die ursprünglichen UTF-16-Werte verwendet.</span><span class="sxs-lookup"><span data-stu-id="fc689-106">When string literals are compared, the original UTF-16 values are used.</span></span> <span data-ttu-id="fc689-107">Zum Beispiel ist N'ABC' in japanischen und lateinischen Codepages unterschiedlich.</span><span class="sxs-lookup"><span data-stu-id="fc689-107">For example, N'ABC' is different in Japanese and Latin codepages.</span></span>  
   
- Kommentare können jedes UTF\-16\-Zeichen enthalten.  
+ <span data-ttu-id="fc689-108">Kommentare können jedes UTF-16-Zeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="fc689-108">Comments can contain any UTF-16 character.</span></span>  
   
- Escapebezeichner können jedes in eckige Klammern eingeschlossene UTF\-16\-Zeichen enthalten.  Beispiel: \[エスケープされた識別子\].  Beim Vergleich von UTF\-16\-Escapebezeichnern wird die Groß\-\/Kleinschreibung nicht beachtet.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] behandelt Buchstaben, die gleich erscheinen, aber von anderen Codepages stammen.  Beispiel: \[ABC\] ist äquivalent zu \[abc\], wenn die entsprechenden Zeichen in der gleichen Codepage enthalten sind.  Stammen die beiden gleichen Bezeichner jedoch aus anderen Codepages, sind sie nicht äquivalent.  
+ <span data-ttu-id="fc689-109">Escapebezeichner können jedes in eckige Klammern eingeschlossene UTF-16-Zeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="fc689-109">Escaped identifiers can contain any UTF-16 character enclosed in square brackets.</span></span> <span data-ttu-id="fc689-110">Beispiel: [エスケープされた識別子].</span><span class="sxs-lookup"><span data-stu-id="fc689-110">For example, [エスケープされた識別子].</span></span> <span data-ttu-id="fc689-111">Beim Vergleich von UTF-16-Escapebezeichnern wird die Groß-/Kleinschreibung nicht beachtet.</span><span class="sxs-lookup"><span data-stu-id="fc689-111">The comparison of UTF-16 escaped identifiers is case insensitive.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fc689-112"> behandelt Buchstaben, die gleich erscheinen, aber von anderen Codepages stammen.</span><span class="sxs-lookup"><span data-stu-id="fc689-112"> treats versions of letters that appear the same but are from different code pages as different characters.</span></span> <span data-ttu-id="fc689-113">Beispielsweise entspricht [ABC] [Abc] Wenn die entsprechenden Zeichen von der gleichen Codepage sind.</span><span class="sxs-lookup"><span data-stu-id="fc689-113">For example, [ABC] is equivalent to [abc] if the corresponding characters are from the same code page.</span></span> <span data-ttu-id="fc689-114">Wenn die beiden gleichen Bezeichner aus unterschiedlichen Codepages sind, sind sie jedoch nicht entspricht.</span><span class="sxs-lookup"><span data-stu-id="fc689-114">However, if the same two identifiers are from different code pages, they are not equivalent.</span></span>  
   
- Jedes UTF\-16\-Leerraumzeichen wird als Leerzeichen aufgefasst.  
+ <span data-ttu-id="fc689-115">Jedes UTF-16-Leerraumzeichen wird als Leerzeichen aufgefasst.</span><span class="sxs-lookup"><span data-stu-id="fc689-115">White space is any UTF-16 white space character.</span></span>  
   
- Jedes normalisierte UTF\-16\-Zeilenumbruchzeichen wird als Zeilenumbruch aufgefasst.  Zum Beispiel werden '\\n' und '\\r\\n' als Zeilenumbruchzeichen aufgefasst, '\\r' jedoch nicht.  
+ <span data-ttu-id="fc689-116">Jedes normalisierte UTF-16-Zeilenumbruchzeichen wird als Zeilenumbruch aufgefasst.</span><span class="sxs-lookup"><span data-stu-id="fc689-116">A newline is any normalized UTF-16 newline character.</span></span> <span data-ttu-id="fc689-117">Zum Beispiel werden '\n' und '\r\n' als Zeilenumbruchzeichen aufgefasst, '\r' jedoch nicht.</span><span class="sxs-lookup"><span data-stu-id="fc689-117">For example, '\n' and '\r\n' are considered newline characters, but '\r' is not a newline character.</span></span>  
   
- Für Schlüsselwörter, Ausdrücke und Interpunktion können alle UTF\-16\-Zeichen verwendet werden, die sich zu lateinischen Zeichen normalisieren lassen.  Zum Beispiel ist **SELECT** in einer japanischen Codepage ein gültiges Schlüsselwort.  
+ <span data-ttu-id="fc689-118">Für Schlüsselwörter, Ausdrücke und Interpunktion können alle UTF-16-Zeichen verwendet werden, die sich zu lateinischen Zeichen normalisieren lassen.</span><span class="sxs-lookup"><span data-stu-id="fc689-118">Keywords, expressions, and punctuation can be any UTF-16 character that normalizes to Latin.</span></span> <span data-ttu-id="fc689-119">Zum Beispiel ist SELECT in einer japanischen Codepage ein gültiges Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="fc689-119">For example, SELECT in a Japanese codepage is a valid keyword.</span></span>  
   
- Schlüsselwörter, Ausdrücke und Interpunktionszeichen können nur lateinische Zeichen sein.  `SELECT` ist in einer japanischen Codepage kein Schlüsselwort.  Bei \+, \-, \*, \/, \=, \(, \), ‘, \[, \] sowie allen anderen nicht angeführten Sprachkonstrukten können nur lateinische Zeichen verwendet werden.  
+ <span data-ttu-id="fc689-120">Schlüsselwörter, Ausdrücke und Interpunktionszeichen können nur lateinische Zeichen sein.</span><span class="sxs-lookup"><span data-stu-id="fc689-120">Keywords, expressions, and punctuation can only be Latin characters.</span></span> <span data-ttu-id="fc689-121">`SELECT` ist in einer japanischen Codepage kein Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="fc689-121">`SELECT` in a Japanese codepage is not a keyword.</span></span> <span data-ttu-id="fc689-122">Bei +, -, *, /, =, (, ), ‘, [, ] sowie allen anderen nicht angeführten Sprachkonstrukten können nur lateinische Zeichen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fc689-122">+, -, *, /, =, (, ), ‘, [, ] and any other language construct not quoted here can only be Latin characters.</span></span>  
   
- Als einfache Bezeichner können nur lateinische Zeichen verwendet werden.  Damit wird Mehrdeutigkeit bei Vergleichen vermieden, da ursprüngliche Werte verglichen werden.  Zum Beispiel wäre ABC in japanischen und lateinischen Codepages unterschiedlich.  
+ <span data-ttu-id="fc689-123">Als einfache Bezeichner können nur lateinische Zeichen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fc689-123">Simple identifiers can only be Latin characters.</span></span> <span data-ttu-id="fc689-124">Damit wird Mehrdeutigkeit bei Vergleichen vermieden, da ursprüngliche Werte verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="fc689-124">This avoids ambiguity during comparison, because original values are compared.</span></span> <span data-ttu-id="fc689-125">Zum Beispiel wäre ABC in japanischen und lateinischen Codepages unterschiedlich.</span><span class="sxs-lookup"><span data-stu-id="fc689-125">For example, ABC would be different in in Japanese and Latin codepages.</span></span>  
   
-## Siehe auch  
- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="fc689-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc689-126">See Also</span></span>  
+ [<span data-ttu-id="fc689-127">Übersicht über Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fc689-127">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

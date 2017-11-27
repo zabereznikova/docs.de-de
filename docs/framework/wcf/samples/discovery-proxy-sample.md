@@ -1,65 +1,68 @@
 ---
-title: "Suchproxy-Beispiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Suchproxybeispiel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f16cf2ffc9e03308ce3b8a5e967c29e624ffd1af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Suchproxy-Beispiel
-In diesem Beispiel wird gezeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können.Dieses Beispiel umfasst drei Projekte:  
+# <a name="discovery-proxy-sample"></a><span data-ttu-id="79128-102">Suchproxybeispiel</span><span class="sxs-lookup"><span data-stu-id="79128-102">Discovery Proxy Sample</span></span>
+<span data-ttu-id="79128-103">In diesem Beispiel wird gezeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können.</span><span class="sxs-lookup"><span data-stu-id="79128-103">This sample shows how to create an implementation of a Discovery proxy to store information about existing services and how clients can query that proxy for information.</span></span> <span data-ttu-id="79128-104">Dieses Beispiel umfasst drei Projekte:</span><span class="sxs-lookup"><span data-stu-id="79128-104">This sample consists of three projects:</span></span>  
   
--   **Dienst**: Ein einfacher [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Rechnerdienst, der sich beim Suchproxy registriert.  
+-   <span data-ttu-id="79128-105">**Dienst**: eine einfache [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rechnerdienst, der sich der beim suchproxy registriert.</span><span class="sxs-lookup"><span data-stu-id="79128-105">**Service**: A simple [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] calculator service that registers itself with the discovery proxy.</span></span>  
   
--   **Suchproxy**: Die Implementierung eines Suchproxydiensts.  
+-   <span data-ttu-id="79128-106">**Suchproxy**: die Implementierung eines suchproxydiensts.</span><span class="sxs-lookup"><span data-stu-id="79128-106">**Discovery Proxy**: The implementation of a discovery proxy service.</span></span>  
   
--   **Client**: Eine WCF\-Clientanwendung, die den Suchproxy aufruft, um nach Diensten zu suchen.  
+-   <span data-ttu-id="79128-107">**Client**: ein WCF-Clientanwendung, die den suchproxy zum Suchen nach Diensten aufruft.</span><span class="sxs-lookup"><span data-stu-id="79128-107">**Client**: A WCF client application that calls the discovery proxy to search for services.</span></span>  
   
-## Veranschaulicht  
- Implementierung eines Suchproxys  
+## <a name="demonstrates"></a><span data-ttu-id="79128-108">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="79128-108">Demonstrates</span></span>  
+ <span data-ttu-id="79128-109">Implementierung eines Suchproxys</span><span class="sxs-lookup"><span data-stu-id="79128-109">Discovery proxy implementation</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="79128-110">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="79128-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="79128-111">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="79128-111">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="79128-112">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="79128-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="79128-113">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="79128-113">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   
-## DiscoveryProxy  
- Im Beispiel wird in der `Main`\-Methode der Datei Program.cs gezeigt, wie ein Dienst des Typs <xref:System.ServiceModel.Discovery.DiscoveryProxy> gehostet wird.Zwei Endpunkte, einer vom Typ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> und einer vom Typ <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>, werden verfügbar gemacht.Beide Endpunkte verwenden TCP als Transport.Der <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> hört den durch den `probeEndpointAddress`\-Parameter festgelegten URI ab. An dieser Stelle können Clients Überprüfungsnachrichten senden, um Daten vom Proxy abzufragen.Der <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> hört den durch den `announcementEndpointAddress`\-Parameter festgelegten URI ab.An dieser Stelle lauscht der Proxy auf Ankündigungen.Wenn eine Onlineankündigung empfangen wird, fügt der Proxy den Dienst zum Cache hinzu, und wenn eine Offlineankündigung empfangen wird, entfernt er den Dienst aus seinem Cache.  
+## <a name="discoveryproxy"></a><span data-ttu-id="79128-114">DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="79128-114">DiscoveryProxy</span></span>  
+ <span data-ttu-id="79128-115">Im Beispiel wird in der `Main`-Methode der Datei Program.cs gezeigt, wie ein Dienst des Typs <xref:System.ServiceModel.Discovery.DiscoveryProxy> gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="79128-115">In the `Main` method of the Program.cs file, the sample shows how a service of type <xref:System.ServiceModel.Discovery.DiscoveryProxy> is hosted.</span></span> <span data-ttu-id="79128-116">Zwei Endpunkte, einer vom Typ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> und einer vom Typ <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>, werden verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="79128-116">It exposes two endpoints, one of type <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> and another of type <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.</span></span> <span data-ttu-id="79128-117">Beide Endpunkte verwenden TCP als Transport.</span><span class="sxs-lookup"><span data-stu-id="79128-117">Both of the endpoints use TCP as a transport.</span></span> <span data-ttu-id="79128-118">Der <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> hört den durch den `probeEndpointAddress`-Parameter festgelegten URI ab. An dieser Stelle können Clients Überprüfungsnachrichten senden, um Daten vom Proxy abzufragen.</span><span class="sxs-lookup"><span data-stu-id="79128-118">The <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> is listening at the URI specified by the `probeEndpointAddress` parameter, this is where clients can send probe messages to query the proxy for its data.</span></span> <span data-ttu-id="79128-119">Der <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> hört den durch den `announcementEndpointAddress`-Parameter festgelegten URI ab.</span><span class="sxs-lookup"><span data-stu-id="79128-119">The <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> is listening at the URI specified by the `announcementEndpointAddress` parameter.</span></span> <span data-ttu-id="79128-120">An dieser Stelle lauscht der Proxy auf Ankündigungen.</span><span class="sxs-lookup"><span data-stu-id="79128-120">This is where the proxy listens to for announcements.</span></span> <span data-ttu-id="79128-121">Wenn eine Onlineankündigung empfangen wird, fügt der Proxy den Dienst zum Cache hinzu, und wenn eine Offlineankündigung empfangen wird, entfernt er den Dienst aus seinem Cache.</span><span class="sxs-lookup"><span data-stu-id="79128-121">When an online announcement is received, the proxy adds the service to its cache and when an offline announcement is received it removes the service from its cache.</span></span>  
   
- Die Datei DiscoveryProxy.cs enthält die <xref:System.ServiceModel.Discovery.DiscoveryProxy>\-Implementierung.Der Proxy muss von der <xref:System.ServiceModel.Discovery.DiscoveryProxyBase>\-Klasse erben und erfordert eine <xref:System.Runtime.Remoting.Messaging.AsyncResult>\-Implementierung.Bei der Instanziierung erstellt der Proxy ein neues <xref:Systems.Collections.Generic.Dictionary%601>, mit dem er bekannte Elemente speichert.  
+ <span data-ttu-id="79128-122">Die Datei DiscoveryProxy.cs enthält die <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Implementierung.</span><span class="sxs-lookup"><span data-stu-id="79128-122">The DiscoveryProxy.cs contains the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="79128-123">Der Proxy muss von der <xref:System.Object>-Klasse erben und erfordert eine <xref:System.Runtime.Remoting.Messaging.AsyncResult>-Implementierung.</span><span class="sxs-lookup"><span data-stu-id="79128-123">The Proxy must inherit from the <xref:System.Object> class and requires an implementation of <xref:System.Runtime.Remoting.Messaging.AsyncResult>.</span></span> <span data-ttu-id="79128-124">Bei der Instanziierung erstellt der Proxy ein neues <xref:System.Collections.Generic.Dictionary%602>, mit dem er bekannte Elemente speichert.</span><span class="sxs-lookup"><span data-stu-id="79128-124">At instantiation, the Proxy creates a new <xref:System.Collections.Generic.Dictionary%602>, which it uses to store elements it knows about.</span></span>  
   
- Die Datei ist in zwei Bereiche, Proxy Cache Methods und Discovery Proxy Implementation, unterteilt.Die im Bereich Proxy Cache Methods enthaltenen Methoden werden verwendet, um das <xref:Systems.Collections.Generic.Dictionary%601> zu aktualisieren, <xref:Systems.Collections.Generic.Dictionary%601>\-Abfragen durchzuführen und die Daten für die Benutzer zu drucken.Im Bereich Discovery Proxy Implementation sind die überschriebenen Methoden enthalten, die für die Ankündigungs\- und Untersuchungsfunktionen erforderlich sind.Sie definieren die Aktionen, die von einem Proxy durchgeführt werden, nachdem eine Onlineankündigung, Offlineankündigung oder Überprüfungsnachricht empfangen wurde.  
+ <span data-ttu-id="79128-125">Die Datei ist in zwei Bereiche, Proxy Cache Methods und Discovery Proxy Implementation, unterteilt.</span><span class="sxs-lookup"><span data-stu-id="79128-125">The file is divided into two regions, Proxy Cache Methods and Discovery Proxy Implementation.</span></span> <span data-ttu-id="79128-126">Die im Bereich Proxy Cache Methods enthaltenen Methoden werden verwendet, um das <xref:System.Collections.Generic.Dictionary%602> zu aktualisieren, <xref:System.Collections.Generic.Dictionary%602>-Abfragen durchzuführen und die Daten für die Benutzer zu drucken.</span><span class="sxs-lookup"><span data-stu-id="79128-126">The Proxy Cache Methods region contains methods used to update the <xref:System.Collections.Generic.Dictionary%602>, perform queries against the <xref:System.Collections.Generic.Dictionary%602>, and print the data for users.</span></span> <span data-ttu-id="79128-127">Im Bereich Discovery Proxy Implementation sind die überschriebenen Methoden enthalten, die für die Ankündigungs- und Untersuchungsfunktionen erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="79128-127">The Discovery Proxy Implementation region contains the overridden methods required for the Announcement and Probe functionality.</span></span> <span data-ttu-id="79128-128">Sie definieren die Aktionen, die von einem Proxy durchgeführt werden, nachdem eine Onlineankündigung, Offlineankündigung oder Überprüfungsnachricht empfangen wurde.</span><span class="sxs-lookup"><span data-stu-id="79128-128">They define the actions taken by a proxy after receiving an Online Announcement, an Offline Announcement, or a Probe message.</span></span>  
   
-## Dienst  
- In der Datei Program.cs im Dienstprojekt wird der gleiche URI für den Ankündigungsendpunkt als Suchproxy verwendet.Das liegt daran, dass der Dienst den Endpunkt zum Senden der Ankündigungen und der Proxy zum Empfangen der Ankündigungen verwendet.Der Dienst verwendet das <xref:System.ServiceModel.Discovery.DiscoveryBehavior> und fügt einen Ankündigungsendpunkt hinzu.  
+## <a name="service"></a><span data-ttu-id="79128-129">Dienst</span><span class="sxs-lookup"><span data-stu-id="79128-129">Service</span></span>  
+ <span data-ttu-id="79128-130">In der Datei Program.cs im Dienstprojekt wird der gleiche URI für den Ankündigungsendpunkt als Suchproxy verwendet.</span><span class="sxs-lookup"><span data-stu-id="79128-130">In the Program.cs file in the Service project, the same URI is used for its announcement endpoint as the discovery proxy.</span></span> <span data-ttu-id="79128-131">Das liegt daran, dass der Dienst den Endpunkt zum Senden der Ankündigungen und der Proxy zum Empfangen der Ankündigungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="79128-131">This is because service uses the endpoint for sending the announcements, while the proxy uses it for receiving them.</span></span> <span data-ttu-id="79128-132">Der Dienst verwendet das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> und fügt einen Ankündigungsendpunkt hinzu.</span><span class="sxs-lookup"><span data-stu-id="79128-132">The service uses the <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> and adds an announcement endpoint to it.</span></span>  
   
-## Client  
- Das Clientprojekt verwendet den gleichen URI für den Überprüfungsendpunkt wie der Proxy.Das liegt daran, dass die Überprüfungen in diesem Szenario auch per Unicast ausdrücklich an den Endpunkt im Proxy gesendet werden.Der Client stellt eine Verbindung mit dieser bekannten Adresse her und führt dann eine Abfrage nach dem Dienst durch.Sobald der Dienst gefunden wurde, wird eine Verbindung zu dem Dienst hergestellt.  
+## <a name="client"></a><span data-ttu-id="79128-133">Client</span><span class="sxs-lookup"><span data-stu-id="79128-133">Client</span></span>  
+ <span data-ttu-id="79128-134">Das Clientprojekt verwendet den gleichen URI für den Überprüfungsendpunkt wie der Proxy.</span><span class="sxs-lookup"><span data-stu-id="79128-134">The Client project uses the same URI for its probe endpoint as the Proxy.</span></span> <span data-ttu-id="79128-135">Das liegt daran, dass die Überprüfungen in diesem Szenario auch per Unicast ausdrücklich an den Endpunkt im Proxy gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="79128-135">This is because the probes in this scenario are also being unicast specifically to the endpoint available on the proxy.</span></span> <span data-ttu-id="79128-136">Der Client stellt eine Verbindung mit dieser bekannten Adresse her und führt dann eine Abfrage nach dem Dienst durch.</span><span class="sxs-lookup"><span data-stu-id="79128-136">The Client connects to this well-known address and then queries it for the service.</span></span> <span data-ttu-id="79128-137">Sobald der Dienst gefunden wurde, wird eine Verbindung zu dem Dienst hergestellt.</span><span class="sxs-lookup"><span data-stu-id="79128-137">Once it has found the service it connects to it.</span></span>  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="79128-138">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="79128-138">To use this sample</span></span>  
   
-1.  Laden Sie die Projektmappe in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], und erstellen Sie das Projekt.  
+1.  <span data-ttu-id="79128-139">Laden Sie die Projektmappe in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], und erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="79128-139">Load the project solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and build the project.</span></span>  
   
-2.  Führen Sie zunächst die unter \[Projektmappenbasisverzeichnis\]\\DiscoveryProxy\\bin\\debug generierte Suchproxyanwendung aus.Der Suchproxy muss zuerst ausgeführt werden, da TCP\-Ankündigungsendpunkte für den Dienst bereit sein müssen, damit die Ankündigungen gesendet werden können.  
+2.  <span data-ttu-id="79128-140">Führen Sie zunächst die unter [Projektmappenbasisverzeichnis]\DiscoveryProxy\bin\debug generierte Suchproxyanwendung aus.</span><span class="sxs-lookup"><span data-stu-id="79128-140">First run the Discovery Proxy application, generated in [solution base directory]\DiscoveryProxy\bin\debug.</span></span> <span data-ttu-id="79128-141">Der Suchproxy muss zuerst ausgeführt werden, da TCP-Ankündigungsendpunkte für den Dienst bereit sein müssen, damit die Ankündigungen gesendet werden können.</span><span class="sxs-lookup"><span data-stu-id="79128-141">The Discovery Proxy must run first because TCP announcement endpoints must be up for the service to send its announcements.</span></span>  
   
-3.  Führen Sie als Nächstes die unter \[Projektmappenbasisverzeichnis\] \\Service\\bin\\debug generierte Dienstanwendung aus.Beim Start sendet der Dienst eine Ankündigung an den Ankündigungsendpunkt des Suchproxys und wird im Cache des Proxys registriert.  
+3.  <span data-ttu-id="79128-142">Führen Sie als Nächstes die unter [Projektmappenbasisverzeichnis] \Service\bin\debug generierte Dienstanwendung aus.</span><span class="sxs-lookup"><span data-stu-id="79128-142">Second, run the service application generated in [solution base directory]\Service\bin\debug.</span></span> <span data-ttu-id="79128-143">Beim Start sendet der Dienst eine Ankündigung an den Ankündigungsendpunkt des Suchproxys und wird im Cache des Proxys registriert.</span><span class="sxs-lookup"><span data-stu-id="79128-143">At start-up, the service sends an announcement to the announcement endpoint of the discovery proxy and is registered in the proxy’s cache.</span></span>  
   
-4.  Führen Sie anschließend die unter \[Projektmappenbasisverzeichnis\] \\Client\\bin\\debug generierte Clientanwendung aus.Der Client führt die Proxyabfrage durch, ruft die Dienstadresse ab und stellt dann eine Verbindung mit dem Dienst her.  
+4.  <span data-ttu-id="79128-144">Führen Sie anschließend die unter [Projektmappenbasisverzeichnis] \Client\bin\debug generierte Clientanwendung aus.</span><span class="sxs-lookup"><span data-stu-id="79128-144">Next, run the client application, generated in [solution base directory]\Client\bin\debug.</span></span> <span data-ttu-id="79128-145">Der Client führt die Proxyabfrage durch, ruft die Dienstadresse ab und stellt dann eine Verbindung mit dem Dienst her.</span><span class="sxs-lookup"><span data-stu-id="79128-145">The client queries the proxy, gets the service address and then connects to the service.</span></span>  
   
-5.  Beenden Sie schließlich den Client, den Dienst und dann den Proxy.Der Proxy muss ausgeführt werden, damit er die Offlineankündigung des Diensts empfangen kann.  
+5.  <span data-ttu-id="79128-146">Beenden Sie schließlich den Client, den Dienst und dann den Proxy.</span><span class="sxs-lookup"><span data-stu-id="79128-146">Lastly, terminate the client, service and then the proxy.</span></span> <span data-ttu-id="79128-147">Der Proxy muss ausgeführt werden, damit er die Offlineankündigung des Diensts empfangen kann.</span><span class="sxs-lookup"><span data-stu-id="79128-147">The proxy must be running for it to receive the service's offline announcement.</span></span>  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="79128-148">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="79128-148">See Also</span></span>

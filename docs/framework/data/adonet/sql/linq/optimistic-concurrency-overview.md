@@ -1,99 +1,102 @@
 ---
-title: "Vollst&#228;ndige Parallelit&#228;t: &#220;bersicht | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vollständige Parallelität: Übersicht"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 52e83f443c0ae74587b4585beb51ddbeb093486a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vollst&#228;ndige Parallelit&#228;t: &#220;bersicht
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Steuerung der vollständigen Parallelität.  In der folgenden Tabelle werden Begriffe beschrieben, die in der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Dokumentation für vollständige Parallelität gelten:  
+# <a name="optimistic-concurrency-overview"></a><span data-ttu-id="da5fa-102">Vollständige Parallelität: Übersicht</span><span class="sxs-lookup"><span data-stu-id="da5fa-102">Optimistic Concurrency: Overview</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="da5fa-103"> unterstützt die Steuerung der vollständigen Parallelität.</span><span class="sxs-lookup"><span data-stu-id="da5fa-103"> supports optimistic concurrency control.</span></span> <span data-ttu-id="da5fa-104">Die folgende Tabelle beschreibt, die auf vollständige Parallelität in gelten [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation:</span><span class="sxs-lookup"><span data-stu-id="da5fa-104">The following table describes terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation:</span></span>  
   
-|Begriffe|Beschreibung|  
-|--------------|------------------|  
-|Parallelität|Die Situation, in der zwei oder mehr Benutzer gleichzeitig versuchen, die gleiche Datenbankzeile zu aktualisieren.|  
-|Parallelitätskonflikt|Die Situation, in der zwei oder mehr Benutzer gleichzeitig versuchen, konkurrierende Werte an eine oder mehrere Datenbankzeilen zu übergeben.|  
-|Parallelitätssteuerung|Die Technik zur Behebung von Parallelitätskonflikten.|  
-|Steuerelement für vollständige Parallelität|Die Technik zur Prüfung, ob andere Transaktionen die Werte in einer Zeile geändert haben, bevor die Übergabe von Änderungen zugelassen wird.<br /><br /> Gegensatz zur *Steuerung der unvollständigen Parallelität*, die den Datensatz sperrt, um Parallelitätskonflikte zu vermeiden.<br /><br /> Die *vollständige*  Steuerung verdankt ihre Bezeichnung der Tatsache, dass sie davon ausgeht, dass ein Konflikt zwischen Transaktionen unwahrscheinlich ist.|  
-|Konfliktlösung|Der Prozess des Aktualisierens eines problematischen Elements durch eine erneute Datenbankabfrage und Ausgleichen der Unterschiede.<br /><br /> Wenn ein Objekt aktualisiert wird, enthält der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Änderungsprotokollierer die folgenden Daten:<br /><br /> -   Die ursprünglich aus der Datenbank abgerufenen Werte, die für die Updateprüfung verwendet wurden.<br />-   Die neuen Datenbankwerte aus der nachfolgenden Abfrage.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ermittelt dann, ob ein Objektkonflikt vorliegt \(d. h., ob sich die Werte von einem oder mehreren Membern geändert haben\).  Liegt ein Objektkonflikt vor, ermittelt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dann, bei welchem Member dieser Konflikt auftritt.<br /><br /> Jeder von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkannte Memberkonflikt wird einer Konfliktliste hinzugefügt.|  
+|<span data-ttu-id="da5fa-105">Begriffe</span><span class="sxs-lookup"><span data-stu-id="da5fa-105">Terms</span></span>|<span data-ttu-id="da5fa-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="da5fa-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="da5fa-107">Parallelität</span><span class="sxs-lookup"><span data-stu-id="da5fa-107">concurrency</span></span>|<span data-ttu-id="da5fa-108">Die Situation, in der zwei oder mehr Benutzer gleichzeitig versuchen, die gleiche Datenbankzeile zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="da5fa-108">The situation in which two or more users at the same time try to update the same database row.</span></span>|  
+|<span data-ttu-id="da5fa-109">Parallelitätskonflikt</span><span class="sxs-lookup"><span data-stu-id="da5fa-109">concurrency conflict</span></span>|<span data-ttu-id="da5fa-110">Die Situation, in der zwei oder mehr Benutzer gleichzeitig versuchen, konkurrierende Werte an eine oder mehrere Datenbankzeilen zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="da5fa-110">The situation in which two or more users at the same time try to submit conflicting values to one or more columns of a row.</span></span>|  
+|<span data-ttu-id="da5fa-111">Parallelitätssteuerung</span><span class="sxs-lookup"><span data-stu-id="da5fa-111">concurrency control</span></span>|<span data-ttu-id="da5fa-112">Die Technik zur Behebung von Parallelitätskonflikten.</span><span class="sxs-lookup"><span data-stu-id="da5fa-112">The technique used to resolve concurrency conflicts.</span></span>|  
+|<span data-ttu-id="da5fa-113">Steuerelement für vollständige Parallelität</span><span class="sxs-lookup"><span data-stu-id="da5fa-113">optimistic concurrency control</span></span>|<span data-ttu-id="da5fa-114">Die Technik zur Prüfung, ob andere Transaktionen die Werte in einer Zeile geändert haben, bevor die Übergabe von Änderungen zugelassen wird.</span><span class="sxs-lookup"><span data-stu-id="da5fa-114">The technique that first investigates whether other transactions have changed values in a row before permitting changes to be submitted.</span></span><br /><br /> <span data-ttu-id="da5fa-115">Im Gegensatz dazu *Steuerung durch eingeschränkte Parallelität*, die den Datensatz, um Parallelitätskonflikte zu vermeiden sperrt.</span><span class="sxs-lookup"><span data-stu-id="da5fa-115">Contrast with *pessimistic concurrency control*, which locks the record to avoid concurrency conflicts.</span></span><br /><br /> <span data-ttu-id="da5fa-116">*Optimistische* Steuerung verdankt Ihre dass ausgeht, dass sie die Wahrscheinlichkeit zu einem Konflikt zwischen Transaktionen unwahrscheinlich ist.</span><span class="sxs-lookup"><span data-stu-id="da5fa-116">*Optimistic* control is so termed because it considers the chances of one transaction interfering with another to be unlikely.</span></span>|  
+|<span data-ttu-id="da5fa-117">Konfliktauflösung</span><span class="sxs-lookup"><span data-stu-id="da5fa-117">conflict resolution</span></span>|<span data-ttu-id="da5fa-118">Der Prozess des Aktualisierens eines problematischen Elements durch eine erneute Datenbankabfrage und Ausgleichen der Unterschiede.</span><span class="sxs-lookup"><span data-stu-id="da5fa-118">The process of refreshing a conflicting item by querying the database again and then reconciling differences.</span></span><br /><br /> <span data-ttu-id="da5fa-119">Wenn ein Objekt aktualisiert wird, enthält der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Änderungsprotokollierer die folgenden Daten:</span><span class="sxs-lookup"><span data-stu-id="da5fa-119">When an object is refreshed, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] change tracker holds the following data:</span></span><br /><br /> <span data-ttu-id="da5fa-120">– Die Werte, die ursprünglich aus der Datenbank abgerufen und verwendet für das Update überprüfen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-120">-   The values originally taken from the database and used for the update check.</span></span><br /><span data-ttu-id="da5fa-121">-Die neuen Datenbankwerte aus der nachfolgenden Abfrage.</span><span class="sxs-lookup"><span data-stu-id="da5fa-121">-   The new database values from the subsequent query.</span></span><br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="da5fa-122"> ermittelt dann, ob ein Objektkonflikt vorliegt (d. h., ob sich die Werte von einem oder mehreren Membern geändert haben).</span><span class="sxs-lookup"><span data-stu-id="da5fa-122"> then determines whether the object is in conflict (that is, whether one or more of its member values has changed).</span></span> <span data-ttu-id="da5fa-123">Wenn das Objekt in Konflikt stehen, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] als Nächstes bestimmt, welche Member in Konflikt stehen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-123">If the object is in conflict, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] next determines which of its members are in conflict.</span></span><br /><br /> <span data-ttu-id="da5fa-124">Jeder von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkannte Memberkonflikt wird einer Konfliktliste hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="da5fa-124">Any member conflict that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] discovers is added to a conflict list.</span></span>|  
   
- Im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Objektmodell tritt ein *Konflikt bei der vollständigen Parallelität* auf, wenn die beiden folgenden Bedingungen eintreten:  
+ <span data-ttu-id="da5fa-125">In der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell ein *Konflikts der vollständigen Parallelität* tritt auf, wenn beide der folgenden Bedingungen zutreffen:</span><span class="sxs-lookup"><span data-stu-id="da5fa-125">In the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, an *optimistic concurrency conflict* occurs when both of the following conditions are true:</span></span>  
   
--   Der Client versucht, Änderungen an die Datenbank zu übergeben.  
+-   <span data-ttu-id="da5fa-126">Der Client versucht, Änderungen an die Datenbank zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="da5fa-126">The client tries to submit changes to the database.</span></span>  
   
--   Ein oder mehrere Werte der Updateprüfung wurden in der Datenbank aktualisiert, seit der Client sie zuletzt gelesen hat.  
+-   <span data-ttu-id="da5fa-127">Ein oder mehrere Werte der Updateprüfung wurden in der Datenbank aktualisiert, seit der Client sie zuletzt gelesen hat.</span><span class="sxs-lookup"><span data-stu-id="da5fa-127">One or more update-check values have been updated in the database since the client last read them.</span></span>  
   
- Die Behebung dieses Konflikts umfasst die Erkennung der Member, bei deren Objekten der Konflikt auftritt. Anschließend wird entschieden, wie weiter vorgegangen wird.  
+ <span data-ttu-id="da5fa-128">Die Behebung dieses Konflikts umfasst die Erkennung der Member, bei deren Objekten der Konflikt auftritt. Anschließend wird entschieden, wie weiter vorgegangen wird.</span><span class="sxs-lookup"><span data-stu-id="da5fa-128">Resolution of this conflict includes discovering which members of the object are in conflict, and then deciding what you want to do about it.</span></span>  
   
 > [!NOTE]
->  Nur die als <xref:System.Data.Linq.Mapping.UpdateCheck> oder <xref:System.Data.Linq.Mapping.UpdateCheck> zugeordneten Member nehmen an Prüfungen der vollständigen Parallelität teil.  Für die als <xref:System.Data.Linq.Mapping.UpdateCheck> gekennzeichneten Member finden keine Prüfungen statt.  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.UpdateCheck>.  
+>  <span data-ttu-id="da5fa-129">Nur die als <xref:System.Data.Linq.Mapping.UpdateCheck.Always> oder <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> zugeordneten Member nehmen an Prüfungen der vollständigen Parallelität teil.</span><span class="sxs-lookup"><span data-stu-id="da5fa-129">Only members mapped as <xref:System.Data.Linq.Mapping.UpdateCheck.Always> or <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participate in optimistic concurrency checks.</span></span> <span data-ttu-id="da5fa-130">Für die als <xref:System.Data.Linq.Mapping.UpdateCheck.Never> gekennzeichneten Member finden keine Prüfungen statt.</span><span class="sxs-lookup"><span data-stu-id="da5fa-130">No check is performed for members marked <xref:System.Data.Linq.Mapping.UpdateCheck.Never>.</span></span> <span data-ttu-id="da5fa-131">Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.UpdateCheck>.</span><span class="sxs-lookup"><span data-stu-id="da5fa-131">For more information, see <xref:System.Data.Linq.Mapping.UpdateCheck>.</span></span>  
   
-## Beispiel  
- Im folgenden Szenario bereitet beispielsweise User1 ein Update vor, indem er eine Zeile aus der Datenbank abruft.  User1 empfängt eine Zeile mit Werten von Alfreds, Maria und Sales.  
+## <a name="example"></a><span data-ttu-id="da5fa-132">Beispiel</span><span class="sxs-lookup"><span data-stu-id="da5fa-132">Example</span></span>  
+ <span data-ttu-id="da5fa-133">Im folgenden Szenario bereitet beispielsweise User1 ein Update vor, indem er eine Zeile aus der Datenbank abruft.</span><span class="sxs-lookup"><span data-stu-id="da5fa-133">For example, in the following scenario, User1 starts to prepare an update by querying the database for a row.</span></span> <span data-ttu-id="da5fa-134">User1 empfängt eine Zeile mit Werten von Alfreds, Maria und Sales.</span><span class="sxs-lookup"><span data-stu-id="da5fa-134">User1 receives a row with values of Alfreds, Maria, and Sales.</span></span>  
   
- User1 möchte den Wert der Manager\-Spalte in Alfred und den Wert der Department\-Spalte in Marketing ändern.  Bevor User1 diese Änderungen übergeben kann, hat User2 Änderungen an der Datenbank vorgenommen.  Damit wurde der Wert der Assistant\-Spalte in Mary und der Wert der Department\-Spalte in Service geändert.  
+ <span data-ttu-id="da5fa-135">User1 möchte den Wert der Manager-Spalte in Alfred und den Wert der Department-Spalte in Marketing ändern.</span><span class="sxs-lookup"><span data-stu-id="da5fa-135">User1 wants to change the value of the Manager column to Alfred and the value of the Department column to Marketing.</span></span> <span data-ttu-id="da5fa-136">Bevor User1 diese Änderungen übergeben kann, hat User2 Änderungen an der Datenbank vorgenommen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-136">Before User1 can submit those changes, User2 has submitted changes to the database.</span></span> <span data-ttu-id="da5fa-137">Damit wurde der Wert der Assistant-Spalte in Mary und der Wert der Department-Spalte in Service geändert.</span><span class="sxs-lookup"><span data-stu-id="da5fa-137">So now the value of the Assistant column has been changed to Mary and the value of the Department column to Service.</span></span>  
   
- Wenn User1 jetzt versucht, Änderungen zu übergeben, schlägt die Übergabe fehl, und eine <xref:System.Data.Linq.ChangeConflictException>\-Ausnahme wird ausgelöst.  Dieser Fall tritt ein, weil die Datenbankwerte der Assistant\-Spalte und der Department\-Spalte nicht den Erwartungen entsprechen.  Bei Membern, die die Assistant\-Spalte und die Department\-Spalte vertreten, tritt ein Konflikt auf.  Die folgende Tabelle fasst diese Situation zusammen.  
+ <span data-ttu-id="da5fa-138">Wenn User1 jetzt versucht, Änderungen zu übergeben, schlägt die Übergabe fehl, und eine <xref:System.Data.Linq.ChangeConflictException>-Ausnahme wird ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="da5fa-138">When User1 now tries to submit changes, the submission fails and a <xref:System.Data.Linq.ChangeConflictException> exception is thrown.</span></span> <span data-ttu-id="da5fa-139">Dieser Fall tritt ein, weil die Datenbankwerte der Assistant-Spalte und der Department-Spalte nicht den Erwartungen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-139">This result occurs because the database values for the Assistant column and the Department column are not those that were expected.</span></span> <span data-ttu-id="da5fa-140">Bei Membern, die die Assistant-Spalte und die Department-Spalte vertreten, tritt ein Konflikt auf.</span><span class="sxs-lookup"><span data-stu-id="da5fa-140">Members representing the Assistant and Department columns are in conflict.</span></span> <span data-ttu-id="da5fa-141">Die folgende Tabelle fasst diese Situation zusammen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-141">The following table summarizes the situation.</span></span>  
   
-||Manager|Assistant|Department|  
+||<span data-ttu-id="da5fa-142">Manager</span><span class="sxs-lookup"><span data-stu-id="da5fa-142">Manager</span></span>|<span data-ttu-id="da5fa-143">Assistant</span><span class="sxs-lookup"><span data-stu-id="da5fa-143">Assistant</span></span>|<span data-ttu-id="da5fa-144">Department</span><span class="sxs-lookup"><span data-stu-id="da5fa-144">Department</span></span>|  
 |------|-------------|---------------|----------------|  
-|Ursprünglicher Zustand|Alfreds|Maria|Sales|  
-|User1|Alfred||Marketing|  
-|User2||Mary|Dienst|  
+|<span data-ttu-id="da5fa-145">Ursprünglicher Zustand</span><span class="sxs-lookup"><span data-stu-id="da5fa-145">Original state</span></span>|<span data-ttu-id="da5fa-146">Alfreds</span><span class="sxs-lookup"><span data-stu-id="da5fa-146">Alfreds</span></span>|<span data-ttu-id="da5fa-147">Maria</span><span class="sxs-lookup"><span data-stu-id="da5fa-147">Maria</span></span>|<span data-ttu-id="da5fa-148">Sales</span><span class="sxs-lookup"><span data-stu-id="da5fa-148">Sales</span></span>|  
+|<span data-ttu-id="da5fa-149">User1</span><span class="sxs-lookup"><span data-stu-id="da5fa-149">User1</span></span>|<span data-ttu-id="da5fa-150">Alfred</span><span class="sxs-lookup"><span data-stu-id="da5fa-150">Alfred</span></span>||<span data-ttu-id="da5fa-151">Marketing</span><span class="sxs-lookup"><span data-stu-id="da5fa-151">Marketing</span></span>|  
+|<span data-ttu-id="da5fa-152">User2</span><span class="sxs-lookup"><span data-stu-id="da5fa-152">User2</span></span>||<span data-ttu-id="da5fa-153">Mary</span><span class="sxs-lookup"><span data-stu-id="da5fa-153">Mary</span></span>|<span data-ttu-id="da5fa-154">Dienst</span><span class="sxs-lookup"><span data-stu-id="da5fa-154">Service</span></span>|  
   
- Sie können Konflikte wie diesen auf verschiedene Weise lösen.  Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ <span data-ttu-id="da5fa-155">Sie können Konflikte wie diesen auf verschiedene Weise lösen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-155">You can resolve conflicts such as this in different ways.</span></span> <span data-ttu-id="da5fa-156">Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="da5fa-156">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
   
-## Checkliste für Konflikterkennung und \-behebung  
- Sie können Konflikte auf jeder Detailebene erkennen und beheben.  Einerseits können Sie alle Konflikte auf eine von drei Arten beheben \(siehe <xref:System.Data.Linq.RefreshMode>\). Hierbei müssen keine weiteren Aspekte berücksichtigt werden.  Andererseits können Sie für jeden Konflikttyp bei jedem Member eine bestimmte Aktion zuweisen.  
+## <a name="conflict-detection-and-resolution-checklist"></a><span data-ttu-id="da5fa-157">Checkliste für Konflikterkennung und -auflösung</span><span class="sxs-lookup"><span data-stu-id="da5fa-157">Conflict Detection and Resolution Checklist</span></span>  
+ <span data-ttu-id="da5fa-158">Sie können Konflikte auf jeder Detailebene erkennen und beheben.</span><span class="sxs-lookup"><span data-stu-id="da5fa-158">You can detect and resolve conflicts at any level of detail.</span></span> <span data-ttu-id="da5fa-159">Einerseits können Sie alle Konflikte auf eine von drei Arten beheben (siehe <xref:System.Data.Linq.RefreshMode>). Hierbei müssen keine weiteren Aspekte berücksichtigt werden.</span><span class="sxs-lookup"><span data-stu-id="da5fa-159">At one extreme, you can resolve all conflicts in one of three ways (see <xref:System.Data.Linq.RefreshMode>) without additional consideration.</span></span> <span data-ttu-id="da5fa-160">Andererseits können Sie für jeden Konflikttyp bei jedem Member eine bestimmte Aktion zuweisen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-160">At the other extreme, you can designate a specific action for each type of conflict on every member in conflict.</span></span>  
   
--   Definieren oder überarbeiten Sie die <xref:System.Data.Linq.Mapping.UpdateCheck>\-Optionen in Ihrem Objektmodell.  
+-   <span data-ttu-id="da5fa-161">Definieren oder überarbeiten Sie die <xref:System.Data.Linq.Mapping.UpdateCheck>-Optionen in Ihrem Objektmodell.</span><span class="sxs-lookup"><span data-stu-id="da5fa-161">Specify or revise <xref:System.Data.Linq.Mapping.UpdateCheck> options in your object model.</span></span>  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Angeben, welche Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     <span data-ttu-id="da5fa-162">Weitere Informationen finden Sie unter [Vorgehensweise: die Elemente angeben Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="da5fa-162">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
--   Im Try\/Catch\-Block Ihres Aufrufs für <xref:System.Data.Linq.DataContext.SubmitChanges%2A> können Sie angeben, zu welchem Zeitpunkt die Ausnahmen ausgelöst werden sollen.  
+-   <span data-ttu-id="da5fa-163">Im Try/Catch-Block Ihres Aufrufs für <xref:System.Data.Linq.DataContext.SubmitChanges%2A> können Sie angeben, zu welchem Zeitpunkt die Ausnahmen ausgelöst werden sollen.</span><span class="sxs-lookup"><span data-stu-id="da5fa-163">In the try/catch block of your call to <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, specify at what point you want exceptions to be thrown.</span></span>  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Zeitpunkts, zu dem Parallelitätsausnahmen ausgelöst werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     <span data-ttu-id="da5fa-164">Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie bei der Parallelitätsausnahmen ausgelöst werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span><span class="sxs-lookup"><span data-stu-id="da5fa-164">For more information, see [How to: Specify When Concurrency Exceptions are Thrown](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span></span>  
   
--   Ermitteln Sie, wie viele Konfliktdetails Sie abrufen möchten, und gestalten Sie den Try\/Catch\-Block entsprechend.  
+-   <span data-ttu-id="da5fa-165">Ermitteln Sie, wie viele Konfliktdetails Sie abrufen möchten, und gestalten Sie den Try/Catch-Block entsprechend.</span><span class="sxs-lookup"><span data-stu-id="da5fa-165">Determine how much conflict detail you want to retrieve, and include code in your try/catch block accordingly.</span></span>  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Entitätskonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) und [Vorgehensweise: Abrufen von Memberkonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     <span data-ttu-id="da5fa-166">Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Entitätskonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) und [Vorgehensweise: Abrufen von Memberkonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span><span class="sxs-lookup"><span data-stu-id="da5fa-166">For more information, see [How to: Retrieve Entity Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) and [How to: Retrieve Member Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span></span>  
   
--   Definieren Sie in Ihrem `try`\-\/`catch`\-Code, wie Sie die verschiedenen ermittelten Konflikte beheben möchten.  
+-   <span data-ttu-id="da5fa-167">Schließen Sie in Ihrem `try` / `catch` code, wie Sie die verschiedenen Konflikte zu lösen Sie ermitteln möchten.</span><span class="sxs-lookup"><span data-stu-id="da5fa-167">Include in your `try`/`catch` code how you want to resolve the various conflicts you discover.</span></span>  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Beheben von Konflikten durch Beibehalten von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Vorgehensweise: Beheben von Konflikten durch Überschreiben von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md) und [Vorgehensweise: Lösen von Konflikten durch Zusammenführen mit Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     <span data-ttu-id="da5fa-168">Weitere Informationen finden Sie unter [wie: Konflikte lösen, indem und Beibehalten von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Vorgehensweise: Konflikte lösen, indem das Überschreiben von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), und [wie: Auflösen von Konflikten durch Zusammenführen mit Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span><span class="sxs-lookup"><span data-stu-id="da5fa-168">For more information, see [How to: Resolve Conflicts by Retaining Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [How to: Resolve Conflicts by Overwriting Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), and [How to: Resolve Conflicts by Merging with Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span></span>  
   
-## LINQ to SQL\-Typen, die Konfliktermittlung und \-behebung unterstützen  
- Zu den Klassen und Funktionen, die die Behebung von Konflikten bei der vollständigen Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen, zählen:  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a><span data-ttu-id="da5fa-169">LINQ an SQL-Typen, die Konfliktermittlung und -auflösung unterstützen</span><span class="sxs-lookup"><span data-stu-id="da5fa-169">LINQ to SQL Types That Support Conflict Discovery and Resolution</span></span>  
+ <span data-ttu-id="da5fa-170">Zu den Klassen und Funktionen, die die Behebung von Konflikten bei der vollständigen Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen, zählen:</span><span class="sxs-lookup"><span data-stu-id="da5fa-170">Classes and features to support the resolution of conflicts in optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] include the following:</span></span>  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=fullName>  
+-   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## Siehe auch  
- [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="da5fa-171">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da5fa-171">See Also</span></span>  
+ [<span data-ttu-id="da5fa-172">Vorgehensweise: Verwalten von Änderungskonflikten</span><span class="sxs-lookup"><span data-stu-id="da5fa-172">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

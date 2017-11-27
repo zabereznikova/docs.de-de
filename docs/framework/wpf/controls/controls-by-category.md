@@ -1,28 +1,30 @@
 ---
-title: "Kategorien von Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelemente, Aufgelistet nach Kategorien"
+title: Kategorien von Steuerelementen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Kategorien von Steuerelementen
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Steuerelemente können in verschiedene Kategorien gruppiert werden.  Diese Kategorien sind für die Auswahl des geeigneten Steuerelements für Ihr Szenario hilfreich, da sie angeben, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
+# <a name="controls-by-category"></a><span data-ttu-id="f3258-102">Kategorien von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="f3258-102">Controls by Category</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="f3258-103">-Steuerelemente können logisch in verschiedene Kategorien gruppiert werden.</span><span class="sxs-lookup"><span data-stu-id="f3258-103"> controls can be logically grouped into several categories.</span></span> <span data-ttu-id="f3258-104">Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="f3258-104">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  
   
-## Layout  
- Layoutsteuerelemente werden zum Verwalten der Größe, Dimensionen, Position und Anordnung untergeordneter Elemente verwendet.  
+## <a name="layout"></a><span data-ttu-id="f3258-105">Layout</span><span class="sxs-lookup"><span data-stu-id="f3258-105">Layout</span></span>  
+ <span data-ttu-id="f3258-106">Layout-Steuerelemente werden zum Verwalten von Größe, Dimensionen, Position und Anordnung von untergeordneten Elementen verwendet.</span><span class="sxs-lookup"><span data-stu-id="f3258-106">Layout controls are used to manage the size, dimensions, position, and arrangement of child elements.</span></span>  
   
 -   <xref:System.Windows.Controls.Border>  
   
@@ -62,15 +64,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
-## Schaltflächen  
- Schaltflächen sind eines der grundlegendsten Elemente der Benutzeroberfläche.  Wenn ein Benutzer auf eine Schaltfläche klickt, führen Anwendungen in der Regel eine Aufgabe im <xref:System.Windows.Controls.Primitives.ButtonBase.Click>\-Ereignis aus.  
+## <a name="buttons"></a><span data-ttu-id="f3258-107">Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="f3258-107">Buttons</span></span>  
+ <span data-ttu-id="f3258-108">Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="f3258-108">Buttons are one of the most basic user interface controls.</span></span> <span data-ttu-id="f3258-109">Anwendungen in der Regel ausführen eine Aufgabe in der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.</span><span class="sxs-lookup"><span data-stu-id="f3258-109">Applications typically perform some task in the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event when a user clicks on them.</span></span>  
   
 -   <xref:System.Windows.Controls.Button>  
   
 -   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## Datenanzeige  
- Steuerelemente für die Datenanzeige werden verwendet, um Informationen aus einer Datenquelle anzuzeigen.  
+## <a name="data-display"></a><span data-ttu-id="f3258-110">Datenanzeige</span><span class="sxs-lookup"><span data-stu-id="f3258-110">Data Display</span></span>  
+ <span data-ttu-id="f3258-111">Steuerelemente für die Datenanzeige werden verwendet, um Informationen aus einer Datenquelle anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="f3258-111">Data display controls are used to show information from a data source.</span></span>  
   
 -   <xref:System.Windows.Controls.DataGrid>  
   
@@ -78,15 +80,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TreeView>  
   
-## Anzeige und Auswahl des Datums  
- Datumssteuerelemente werden verwendet, um Kalenderinformationen anzuzeigen und auszuwählen.  
+## <a name="date-display-and-selection"></a><span data-ttu-id="f3258-112">Datumsanzeige und -auswahl</span><span class="sxs-lookup"><span data-stu-id="f3258-112">Date Display and Selection</span></span>  
+ <span data-ttu-id="f3258-113">Datumssteuerelemente werden verwendet, um Kalenderdaten anzuzeigen und auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="f3258-113">Date controls are used to display and select calendar information.</span></span>  
   
 -   <xref:System.Windows.Controls.Calendar>  
   
 -   <xref:System.Windows.Controls.DatePicker>  
   
-## Menüs  
- In Menüs werden verwandte Aktionen gruppiert, oder es wird Zugriff auf Kontexthilfe bereitgestellt.  
+## <a name="menus"></a><span data-ttu-id="f3258-114">Menüs</span><span class="sxs-lookup"><span data-stu-id="f3258-114">Menus</span></span>  
+ <span data-ttu-id="f3258-115">Menüs werden verwendet, um verwandte Aktionen zu gruppieren oder kontextbezogene Hilfe anzubieten.</span><span class="sxs-lookup"><span data-stu-id="f3258-115">Menus are used to group related actions or to provide contextual assistance.</span></span>  
   
 -   <xref:System.Windows.Controls.ContextMenu>  
   
@@ -94,8 +96,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolBar>  
   
-## Auswahl  
- Mithilfe von Auswahlsteuerelementen können Benutzer eine oder mehrere Optionen auswählen.  
+## <a name="selection"></a><span data-ttu-id="f3258-116">Auswahl</span><span class="sxs-lookup"><span data-stu-id="f3258-116">Selection</span></span>  
+ <span data-ttu-id="f3258-117">Auswahlsteuerelemente werden verwendet, damit Benutzer eine oder mehrere Optionen auswählen können.</span><span class="sxs-lookup"><span data-stu-id="f3258-117">Selection controls are used to enable a user to select one or more options.</span></span>  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -107,8 +109,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.Slider>  
   
-## Navigation  
- Navigationssteuerelemente verbessern und erweitern die Anwendungsnavigation mithilfe von Zielframes oder Registerkarten.  
+## <a name="navigation"></a><span data-ttu-id="f3258-118">Navigation</span><span class="sxs-lookup"><span data-stu-id="f3258-118">Navigation</span></span>  
+ <span data-ttu-id="f3258-119">Navigationssteuerelemente verbessern oder erweitern die Anwendungsnavigation mithilfe von Zielframes oder Registerkarten.</span><span class="sxs-lookup"><span data-stu-id="f3258-119">Navigation controls enhance or extend the application navigation experience by creating targeting frames or tabbed application appearance.</span></span>  
   
 -   <xref:System.Windows.Controls.Frame>  
   
@@ -120,8 +122,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TabControl>  
   
-## Dialogfelder  
- Dialogfelder bieten gezielte Unterstützung für allgemeine Szenarien der Benutzerinteraktion, wie z. B. das Drucken.  
+## <a name="dialog-boxes"></a><span data-ttu-id="f3258-120">Dialogfelder</span><span class="sxs-lookup"><span data-stu-id="f3258-120">Dialog Boxes</span></span>  
+ <span data-ttu-id="f3258-121">Dialogfelder bieten gezielte Unterstützung für allgemeine Szenarios der Benutzerinteraktion wie z.B. Drucken.</span><span class="sxs-lookup"><span data-stu-id="f3258-121">Dialog boxes provide targeted support for common user-interaction scenarios such as printing.</span></span>  
   
 -   <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -129,8 +131,8 @@ caps.handback.revision: 17
   
 -   <xref:Microsoft.Win32.SaveFileDialog>  
   
-## Benutzerinformationen  
- Steuerelemente für Benutzerinformationen stellen Kontextfeedback bereit oder bieten Erklärungen zur Benutzeroberfläche einer Anwendung.  Der Benutzer kann in der Regel nicht mit diesen Steuerelementen interagieren.  
+## <a name="user-information"></a><span data-ttu-id="f3258-122">Benutzerinformationen</span><span class="sxs-lookup"><span data-stu-id="f3258-122">User Information</span></span>  
+ <span data-ttu-id="f3258-123">Steuerelemente für Benutzerinformationen bieten kontextbezogenes Feedback oder verdeutlichen die Benutzeroberfläche einer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="f3258-123">User information controls provide contextual feedback or clarify an application's user interface.</span></span> <span data-ttu-id="f3258-124">Der Benutzer kann in der Regel nicht mit diesen Steuerelementen interagieren.</span><span class="sxs-lookup"><span data-stu-id="f3258-124">The user typically cannot interact with these controls.</span></span>  
   
 -   <xref:System.Windows.Controls.AccessText>  
   
@@ -146,8 +148,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolTip>  
   
-## Dokumente  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält mehrere spezialisierte Steuerelemente zum Anzeigen von Dokumenten.  Diese Steuerelemente optimieren die Leseerfahrung basierend auf dem gewünschten Benutzerszenario.  
+## <a name="documents"></a><span data-ttu-id="f3258-125">Dokumente</span><span class="sxs-lookup"><span data-stu-id="f3258-125">Documents</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="f3258-126"> enthält mehrere spezialisierte Steuerelemente zum Anzeigen von Dokumenten.</span><span class="sxs-lookup"><span data-stu-id="f3258-126"> includes several specialized controls for viewing documents.</span></span> <span data-ttu-id="f3258-127">Diese Steuerelemente optimieren das Leseerlebnis basierend auf dem Zielbenutzerszenario.</span><span class="sxs-lookup"><span data-stu-id="f3258-127">These controls optimize the reading experience, based on the targeted user scenario.</span></span>  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -159,8 +161,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## Eingabe  
- Eingabesteuerelemente ermöglichen dem Benutzer, Text und anderen Inhalt einzugeben.  
+## <a name="input"></a><span data-ttu-id="f3258-128">Eingabe</span><span class="sxs-lookup"><span data-stu-id="f3258-128">Input</span></span>  
+ <span data-ttu-id="f3258-129">Eingabesteuerelemente ermöglichen dem Benutzer die Eingabe von Text und anderem Inhalt.</span><span class="sxs-lookup"><span data-stu-id="f3258-129">Input controls enable the user to input text and other content.</span></span>  
   
 -   <xref:System.Windows.Controls.TextBox>  
   
@@ -168,8 +170,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.PasswordBox>  
   
-## Medien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umfasst eine integrierte Unterstützung für das Hosten von Audio\- und Videoinhalt sowie [Codecs](GTMT) für die gängigsten Bildformate.  
+## <a name="media"></a><span data-ttu-id="f3258-130">Medien</span><span class="sxs-lookup"><span data-stu-id="f3258-130">Media</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="f3258-131"> enthält integrierte Unterstützung für das Hosten von Audio- und Videoinhalt sowie [Codecs] für die gängigsten Bildformate.</span><span class="sxs-lookup"><span data-stu-id="f3258-131"> includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.</span></span>  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -177,12 +179,12 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## Freihandeingaben  
- Freihandeingaben\-Steuerelemente bieten eine integrierte Unterstützung für [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]\-Features, z. B. das Vornehmen und Anzeigen von Freihandeingaben.  
+## <a name="digital-ink"></a><span data-ttu-id="f3258-132">Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="f3258-132">Digital Ink</span></span>  
+ <span data-ttu-id="f3258-133">Steuerelemente für Freihandeingaben bieten integrierte Unterstützung für [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]-Funktionen wie Anzeigen und Eingeben von Freihandeingaben.</span><span class="sxs-lookup"><span data-stu-id="f3258-133">Digital ink controls provide integrated support for [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] features, such as ink viewing and ink input.</span></span>  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## Siehe auch  
- [Steuerelementbibliothek](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a><span data-ttu-id="f3258-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f3258-134">See Also</span></span>  
+ [<span data-ttu-id="f3258-135">Steuerelementbibliothek</span><span class="sxs-lookup"><span data-stu-id="f3258-135">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)

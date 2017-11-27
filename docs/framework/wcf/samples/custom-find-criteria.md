@@ -1,38 +1,41 @@
 ---
-title: "Benutzerdefinierte Suchkriterien | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierte Suchkriterien
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d49661ff91477f2f53d180a10ae1c9b3b632461f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefinierte Suchkriterien
-In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Bereichsübereinstimmung mithilfe von Logik erstellt wird und wie ein benutzerdefinierter Suchdienst implementiert wird.Clients verfeinern mithilfe der Funktionalität für benutzerdefinierte Bereichsübereinstimmungen die vom System bereitgestellten Suchfunktionen der WCF\-Suche und bauen diese zusätzlich aus.In diesem Beispiel wird folgendes Szenario behandelt:  
+# <a name="custom-find-criteria"></a><span data-ttu-id="d7489-102">Benutzerdefinierte Suchkriterien</span><span class="sxs-lookup"><span data-stu-id="d7489-102">Custom Find Criteria</span></span>
+<span data-ttu-id="d7489-103">In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Bereichsübereinstimmung mithilfe von Logik erstellt wird und wie ein benutzerdefinierter Suchdienst implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="d7489-103">This sample demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span> <span data-ttu-id="d7489-104">Clients verfeinern mithilfe der Funktionalität für benutzerdefinierte Bereichsübereinstimmungen die vom System bereitgestellten Suchfunktionen der WCF-Suche und bauen diese zusätzlich aus.</span><span class="sxs-lookup"><span data-stu-id="d7489-104">Clients use custom scope matching functionality to refine and further build on top of the system-provided find functionality of WCF Discovery.</span></span> <span data-ttu-id="d7489-105">In diesem Beispiel wird folgendes Szenario behandelt:</span><span class="sxs-lookup"><span data-stu-id="d7489-105">The scenario this sample covers is as follows:</span></span>  
   
-1.  Ein Client sucht nach einem Rechnerdienst.  
+1.  <span data-ttu-id="d7489-106">Ein Client sucht nach einem Rechnerdienst.</span><span class="sxs-lookup"><span data-stu-id="d7489-106">A client is looking for a calculator service.</span></span>  
   
-2.  Zur Verfeinerung der Suche muss der Client eine Regel für eine benutzerdefinierte Bereichsübereinstimmung verwenden.  
+2.  <span data-ttu-id="d7489-107">Zur Verfeinerung der Suche muss der Client eine Regel für eine benutzerdefinierte Bereichsübereinstimmung verwenden.</span><span class="sxs-lookup"><span data-stu-id="d7489-107">To refine its search, the client must use a custom scope matching rule.</span></span>  
   
-3.  Nach dieser Regel sendet ein Dienst eine Antwort an den Client, wenn sein Endpunkt mit einem der vom Client angegebenen Bereiche übereinstimmt.  
+3.  <span data-ttu-id="d7489-108">Nach dieser Regel sendet ein Dienst eine Antwort an den Client, wenn sein Endpunkt mit einem der vom Client angegebenen Bereiche übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="d7489-108">According to this rule, a service responds back to the client if its endpoint matches any of the scopes specified by the client.</span></span>  
   
-## Veranschaulicht  
+## <a name="demonstrates"></a><span data-ttu-id="d7489-109">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="d7489-109">Demonstrates</span></span>  
   
--   Es wird ein benutzerdefinierter Suchdienst erstellt.  
+-   <span data-ttu-id="d7489-110">Es wird ein benutzerdefinierter Suchdienst erstellt.</span><span class="sxs-lookup"><span data-stu-id="d7489-110">Creating a custom discovery service.</span></span>  
   
--   Es wird eine benutzerdefinierte Bereichsübereinstimmung nach Algorithmus implementiert.  
+-   <span data-ttu-id="d7489-111">Es wird eine benutzerdefinierte Bereichsübereinstimmung nach Algorithmus implementiert.</span><span class="sxs-lookup"><span data-stu-id="d7489-111">Implementing a custom scope match by algorithm.</span></span>  
   
-## Diskussion  
- Der Client sucht nach übereinstimmenden Kriterien für den Typ "OR".Ein Dienst sendet eine Antwort, wenn die Bereiche seiner Endpunkten mit einem der vom Client angegebenen Bereiche übereinstimmen.In diesem Fall sucht der Client nach einem Rechnerdienst mit einem der Bereiche in der folgenden Liste:  
+## <a name="discussion"></a><span data-ttu-id="d7489-112">Diskussion</span><span class="sxs-lookup"><span data-stu-id="d7489-112">Discussion</span></span>  
+ <span data-ttu-id="d7489-113">Der Client sucht nach Übereinstimmungskriterien "OR"-Typ.</span><span class="sxs-lookup"><span data-stu-id="d7489-113">The client is looking for "OR" type matching criteria.</span></span> <span data-ttu-id="d7489-114">Ein Dienst sendet eine Antwort, wenn die Bereiche seiner Endpunkten mit einem der vom Client angegebenen Bereiche übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="d7489-114">A service responds back if the scopes on its endpoints match any of the scopes provided by the client.</span></span> <span data-ttu-id="d7489-115">In diesem Fall sucht der Client nach einem Rechnerdienst mit einem der Bereiche in der folgenden Liste:</span><span class="sxs-lookup"><span data-stu-id="d7489-115">In this case, the client is looking for a calculator service that has any of the scopes in the following list:</span></span>  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -40,39 +43,39 @@ In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Bereichsüb
   
 3.  `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
- Damit dies erzielt werden kann, weist der Client Dienste an, eine Regel für die benutzerdefinierte Bereichsübereinstimmung zu verwenden, indem eine benutzerdefinierte Bereichsübereinstimmung nach URI übergeben wird.Um die benutzerdefinierte Bereichsübereinstimmung zu erleichtern, muss vom Dienst ein benutzerdefinierter Suchdienst verwendet werden, der die Regel für die benutzerdefinierte Bereichsübereinstimmung nachvollziehen kann und die zugehörige Übereinstimmungslogik implementiert.  
+ <span data-ttu-id="d7489-116">Damit dies erzielt werden kann, weist der Client Dienste an, eine Regel für die benutzerdefinierte Bereichsübereinstimmung zu verwenden, indem eine benutzerdefinierte Bereichsübereinstimmung nach URI übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="d7489-116">To accomplish this, the client directs services to use a custom scope matching rule by passing in a custom scope match by URI.</span></span> <span data-ttu-id="d7489-117">Um die benutzerdefinierte Bereichsübereinstimmung zu erleichtern, muss vom Dienst ein benutzerdefinierter Suchdienst verwendet werden, der die Regel für die benutzerdefinierte Bereichsübereinstimmung nachvollziehen kann und die zugehörige Übereinstimmungslogik implementiert.</span><span class="sxs-lookup"><span data-stu-id="d7489-117">To facilitate the custom scope matching, the service must use a custom discovery service that understands the custom scope match rule and implements the associated matching logic.</span></span>  
   
- Öffnen Sie im Clientprojekt die Datei Program.cs.Beachten Sie, dass das `ScopeMatchBy`\-Feld des `FindCriteria`\-Objekts auf einen bestimmten URI festgelegt wird.Dieser Bezeichner wird an den Dienst gesendet.Wenn der Dienst diese Regel nicht versteht, ignoriert er die Suchanforderung des Clients.  
+ <span data-ttu-id="d7489-118">Öffnen Sie im Clientprojekt die Datei Program.cs.</span><span class="sxs-lookup"><span data-stu-id="d7489-118">In the client project, open the Program.cs file.</span></span> <span data-ttu-id="d7489-119">Beachten Sie, dass das `ScopeMatchBy`-Feld des `FindCriteria`-Objekts auf einen bestimmten URI festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="d7489-119">Note that the `ScopeMatchBy` field of the `FindCriteria` object is set to a specific URI.</span></span> <span data-ttu-id="d7489-120">Dieser Bezeichner wird an den Dienst gesendet.</span><span class="sxs-lookup"><span data-stu-id="d7489-120">This identifier is sent to the service.</span></span> <span data-ttu-id="d7489-121">Wenn der Dienst diese Regel nicht versteht, ignoriert er die Suchanforderung des Clients.</span><span class="sxs-lookup"><span data-stu-id="d7489-121">If the service does not understand this rule, it ignores the client’s find request.</span></span>  
   
- Öffnen Sie das Dienstprojekt.Für die Implementierung des benutzerdefinierten Suchdiensts werden drei Dateien verwendet:  
+ <span data-ttu-id="d7489-122">Öffnen Sie das Dienstprojekt.</span><span class="sxs-lookup"><span data-stu-id="d7489-122">Open the service project.</span></span> <span data-ttu-id="d7489-123">Für die Implementierung des benutzerdefinierten Suchdiensts werden drei Dateien verwendet:</span><span class="sxs-lookup"><span data-stu-id="d7489-123">Three files are used to implement the Custom Discovery Service:</span></span>  
   
-1.  **AsyncResult.cs**: Die Implementierung des `AsyncResult`, das für Suchmethoden erforderlich ist.  
+1.  <span data-ttu-id="d7489-124">**AsyncResult.cs**: Dies ist die Implementierung der `AsyncResult` Suchmethoden erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="d7489-124">**AsyncResult.cs**: This is the implementation of the `AsyncResult` that is required by Discovery methods.</span></span>  
   
-2.  **CustomDiscoveryService.cs**: Diese Datei implementiert den benutzerdefinierten Suchdienst.Die Implementierung erweitert die <xref:System.ServiceModel.Discovery.DiscoveryService>\-Klasse und überschreibt die erforderlichen Methoden.Beachten Sie die Implementierung der <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>\-Methode.Die Methode überprüft, ob die benutzerdefinierte Bereichsübereinstimmung der Regel vom Client angegeben wurde.Dabei handelt es sich um den gleichen benutzerdefinierten URI, den der Client zuvor angegeben hat.Wenn die benutzerdefinierte Regel angegeben wird, folgt darauf der Codepfad, mit dem die "OR"\-Übereinstimmungslogik implementiert wird.  
+2.  <span data-ttu-id="d7489-125">**CustomDiscoveryService.cs**: Diese Datei implementiert den benutzerdefinierten Ermittlungsdienst.</span><span class="sxs-lookup"><span data-stu-id="d7489-125">**CustomDiscoveryService.cs**: This file implements the custom discovery service.</span></span> <span data-ttu-id="d7489-126">Die Implementierung erweitert die <xref:System.ServiceModel.Discovery.DiscoveryService>-Klasse und überschreibt die erforderlichen Methoden.</span><span class="sxs-lookup"><span data-stu-id="d7489-126">The implementation extends the <xref:System.ServiceModel.Discovery.DiscoveryService> class and overrides the necessary methods.</span></span> <span data-ttu-id="d7489-127">Beachten Sie die Implementierung der <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="d7489-127">Note the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> method.</span></span> <span data-ttu-id="d7489-128">Die Methode überprüft, ob die benutzerdefinierte Bereichsübereinstimmung der Regel vom Client angegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="d7489-128">The method checks to see whether the custom scope match by rule was specified by the client.</span></span> <span data-ttu-id="d7489-129">Dabei handelt es sich um den gleichen benutzerdefinierten URI, den der Client zuvor angegeben hat.</span><span class="sxs-lookup"><span data-stu-id="d7489-129">This is the same custom URI that the client specified previously.</span></span> <span data-ttu-id="d7489-130">Wenn die benutzerdefinierte Regel angegeben wird, folgt der Codepfad, der mit der "OR"-Übereinstimmungslogik implementiert.</span><span class="sxs-lookup"><span data-stu-id="d7489-130">If the custom rule is specified, the code path that implements the "OR" match logic is followed.</span></span>  
   
-     Diese benutzerdefinierte Logik durchläuft sämtliche Bereiche der einzelnen Endpunkte, über die der Dienst verfügt.Wenn einer der Bereiche des Endpunkts mit einem der vom Client angegebenen Bereiche übereinstimmt, fügt der Suchdienst diesen Endpunkt der Antwort hinzu, die an den Client zurückgesendet wird.  
+     <span data-ttu-id="d7489-131">Diese benutzerdefinierte Logik durchläuft sämtliche Bereiche der einzelnen Endpunkte, über die der Dienst verfügt.</span><span class="sxs-lookup"><span data-stu-id="d7489-131">This custom logic goes through all of the scopes on each of the endpoints that the service has.</span></span> <span data-ttu-id="d7489-132">Wenn einer der Bereiche des Endpunkts mit einem der vom Client angegebenen Bereiche übereinstimmt, fügt der Suchdienst diesen Endpunkt der Antwort hinzu, die an den Client zurückgesendet wird.</span><span class="sxs-lookup"><span data-stu-id="d7489-132">If any of the endpoint's scopes match any of the scopes provided by the client, the discovery service adds that endpoint to the response that is sent back to the client.</span></span>  
   
-3.  **CustomDiscoveryExtension.cs**: Der letzte Schritt bei der Implementierung des Suchdiensts besteht darin, eine Verbindung zwischen der Implementierung des benutzerdefinierten Suchdiensts mit dem Diensthost herzustellen.Die hier verwendete Hilfsklasse ist die `CustomDiscoveryExtension`\-Klasse.Mit dieser Klasse wird die <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>\-Klasse erweitert.Der Benutzer muss die <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>\-Methode überschreiben.In diesem Fall gibt die Methode eine Instanz des benutzerdefinierten Ermittlungsdiensts zurück, der zuvor erstellt wurde.`PublishedEndpoints` ist eine <xref:System.Collections.ObjectModel.ReadOnlyCollection>, die alle dem <xref:System.ServiceModel.ServiceHost> hinzugefügten Anwendungsendpunkte enthält.Der benutzerdefinierte Suchdienst füllt damit seine interne Liste auf.Ein Benutzer kann auch weitere Endpunktmetadaten hinzufügen.  
+3.  <span data-ttu-id="d7489-133">**CustomDiscoveryExtension.cs**: der letzte Schritt in der Implementierung des Suchdiensts wird die Verbindung dieser Implementierung des benutzerdefinierten Suchdiensts mit den Diensthost.</span><span class="sxs-lookup"><span data-stu-id="d7489-133">**CustomDiscoveryExtension.cs**: The last step in implementing the discovery service is to connect this implementation of the custom discover service to the service host.</span></span> <span data-ttu-id="d7489-134">Die hier verwendete Hilfsklasse ist die `CustomDiscoveryExtension`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="d7489-134">The helper class used here is the `CustomDiscoveryExtension` class.</span></span> <span data-ttu-id="d7489-135">Mit dieser Klasse wird die <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>-Klasse erweitert.</span><span class="sxs-lookup"><span data-stu-id="d7489-135">This class extends the <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> class.</span></span> <span data-ttu-id="d7489-136">Der Benutzer muss die <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>-Methode überschreiben.</span><span class="sxs-lookup"><span data-stu-id="d7489-136">The user must override the <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> method.</span></span> <span data-ttu-id="d7489-137">In diesem Fall gibt die Methode eine Instanz des benutzerdefinierten Ermittlungsdiensts zurück, der zuvor erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="d7489-137">In this case, the method returns an instance of the custom discovery service that was created before.</span></span> <span data-ttu-id="d7489-138">`PublishedEndpoints` ist eine <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, die alle dem <xref:System.ServiceModel.ServiceHost> hinzugefügten Anwendungsendpunkte enthält.</span><span class="sxs-lookup"><span data-stu-id="d7489-138">`PublishedEndpoints` is a <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> that contains all of the application endpoints that are added to the <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="d7489-139">Der benutzerdefinierte Suchdienst füllt damit seine interne Liste auf.</span><span class="sxs-lookup"><span data-stu-id="d7489-139">The custom discovery service uses this to populate its internal list.</span></span> <span data-ttu-id="d7489-140">Ein Benutzer kann auch weitere Endpunktmetadaten hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="d7489-140">A user can to add other endpoint metadata as well.</span></span>  
   
- Öffnen Sie als letzten Schritt die Datei Program.cs.Beachten Sie, dass sowohl <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> als auch `CustomDiscoveryExtension` dem Host hinzugefügt werden.Sobald dies erfolgt ist und der Host über einen Endpunkt verfügt, über den Suchmeldungen empfangen werden können, kann der benutzerdefinierte Suchdienst von der Anwendung verwendet werden.  
+ <span data-ttu-id="d7489-141">Öffnen Sie als letzten Schritt die Datei Program.cs.</span><span class="sxs-lookup"><span data-stu-id="d7489-141">Lastly, open Program.cs.</span></span> <span data-ttu-id="d7489-142">Beachten Sie, dass sowohl <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> als auch `CustomDiscoveryExtension` dem Host hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="d7489-142">Note that both the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and `CustomDiscoveryExtension` are added to the host.</span></span> <span data-ttu-id="d7489-143">Sobald dies erfolgt ist und der Host über einen Endpunkt verfügt, über den Suchmeldungen empfangen werden können, kann der benutzerdefinierte Suchdienst von der Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d7489-143">Once this is done and the host has an endpoint over which to receive discovery messages, the application can use the custom discovery service.</span></span>  
   
- Beachten Sie, dass der Client den Dienst ermitteln kann, ohne seine Adresse zu kennen.  
+ <span data-ttu-id="d7489-144">Beachten Sie, dass der Client den Dienst ermitteln kann, ohne seine Adresse zu kennen.</span><span class="sxs-lookup"><span data-stu-id="d7489-144">Observe that the client is able to find the service without knowing its address.</span></span>  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d7489-145">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="d7489-145">To set up, build, and run the sample</span></span>  
   
-1.  Öffnen Sie die Projektmappe, die das Projekt enthält.  
+1.  <span data-ttu-id="d7489-146">Öffnen Sie die Projektmappe, die das Projekt enthält.</span><span class="sxs-lookup"><span data-stu-id="d7489-146">Open the solution that contains the project.</span></span>  
   
-2.  Erstellen Sie das Projekt.  
+2.  <span data-ttu-id="d7489-147">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="d7489-147">Build the project.</span></span>  
   
-3.  Führen Sie die Dienstanwendung aus.  
+3.  <span data-ttu-id="d7489-148">Führen Sie die Dienstanwendung aus.</span><span class="sxs-lookup"><span data-stu-id="d7489-148">Run the service application.</span></span>  
   
-4.  Führen Sie die Clientanwendung aus.  
+4.  <span data-ttu-id="d7489-149">Führen Sie die Clientanwendung aus.</span><span class="sxs-lookup"><span data-stu-id="d7489-149">Run the client application.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="d7489-150">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="d7489-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d7489-151">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="d7489-151">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="d7489-152">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="d7489-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d7489-153">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d7489-153">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

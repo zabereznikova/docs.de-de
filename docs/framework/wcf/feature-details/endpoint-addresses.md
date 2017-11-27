@@ -1,150 +1,152 @@
 ---
-title: "Endpunktadressen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Adressen [WCF]"
-  - "WCF [WCF], Adressen"
-  - "Windows Communication Foundation [WCF], Adressen"
+title: Endpunktadressen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- addresses [WCF]
+- Windows Communication Foundation [WCF], addresses
+- WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 52c5dfd84a55e727e465e2bd6214462fd57c334f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Endpunktadressen
-Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können.Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier \(URI\), der den Speicherort des Endpunkts angibt.Die Endpunktadresse wird im [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Programmierungsmodell durch die <xref:System.ServiceModel.EndpointAddress>\-Klasse dargestellt, die eine optionale <xref:System.ServiceModel.EndpointAddress.Identity%2A>\-Eigenschaft für die Authentifizierung des Endpunkts durch andere Endpunkte, die Nachrichten mit ihm austauschen, sowie einen Satz optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A>\-Eigenschaften enthält, die eventuelle weitere SOAP\-Header definieren, die für das Erreichen des Diensts erforderlich sind.Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren.Die Adresse eines Endpunkts wird während der Übertragung als WS\-Adressierungsendpunktverweis \(Endpoint Reference, EPR\) dargestellt.  
+# <a name="endpoint-addresses"></a><span data-ttu-id="b8cfd-102">Endpunktadressen</span><span class="sxs-lookup"><span data-stu-id="b8cfd-102">Endpoint Addresses</span></span>
+<span data-ttu-id="b8cfd-103">Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-103">Every endpoint has an address associated with it, which is used to locate and identify the endpoint.</span></span> <span data-ttu-id="b8cfd-104">Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-104">This address consists primarily of a Uniform Resource Identifier (URI), which specifies the location of the endpoint.</span></span> <span data-ttu-id="b8cfd-105">Die Endpunktadresse wird im [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Programmierungsmodell durch die <xref:System.ServiceModel.EndpointAddress>-Klasse dargestellt, die eine optionale <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft für die Authentifizierung des Endpunkts durch andere Endpunkte, die Nachrichten mit ihm austauschen, sowie einen Satz optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaften enthält, die eventuelle weitere SOAP-Header definieren, die für das Erreichen des Diensts erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-105">The endpoint address is represented in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programming model by the <xref:System.ServiceModel.EndpointAddress> class, which contains an optional <xref:System.ServiceModel.EndpointAddress.Identity%2A> property that enables the authentication of the endpoint by other endpoints that exchange messages with it, and a set of optional <xref:System.ServiceModel.EndpointAddress.Headers%2A> properties, which define any other SOAP headers required to reach the service.</span></span> <span data-ttu-id="b8cfd-106">Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-106">The optional headers provide additional and more detailed addressing information to identify or interact with the service endpoint.</span></span> <span data-ttu-id="b8cfd-107">Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-107">The address of an endpoint is represented on the wire as a WS-Addressing endpoint reference (EPR).</span></span>  
   
-## URI\-Struktur einer Adresse  
- Der Adress\-URI besteht für die meisten Transporte aus vier Teilen.Der URI http:\/\/www.fabrikam.com:322\/mathservice.svc\/secureEndpoint setzt sich beispielsweise aus folgenden vier Teilen zusammen:  
+## <a name="uri-structure-of-an-address"></a><span data-ttu-id="b8cfd-108">URI-Struktur einer Adresse</span><span class="sxs-lookup"><span data-stu-id="b8cfd-108">URI Structure of an Address</span></span>  
+ <span data-ttu-id="b8cfd-109">Der Adress-URI besteht für die meisten Transporte aus vier Teilen.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-109">The address URI for most transports has four parts.</span></span> <span data-ttu-id="b8cfd-110">Der URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint setzt sich beispielsweise aus folgenden vier Teilen zusammen:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-110">For example, the four parts of the URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint can be itemized as follows:</span></span>  
   
--   Schema: http:  
+-   <span data-ttu-id="b8cfd-111">Schema: http:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-111">Scheme: http:</span></span>  
   
--   Computer: www.fabrikam.com  
+-   <span data-ttu-id="b8cfd-112">Computer: www.fabrikam.com</span><span class="sxs-lookup"><span data-stu-id="b8cfd-112">Machine: www.fabrikam.com</span></span>  
   
--   \(optional\) Anschluss: 322  
+-   <span data-ttu-id="b8cfd-113">(optional) Port: 322</span><span class="sxs-lookup"><span data-stu-id="b8cfd-113">(optional) Port: 322</span></span>  
   
--   Pfad: \/mathservice.svc\/secureEndpoint  
+-   <span data-ttu-id="b8cfd-114">Pfad: /mathservice.svc/secureEndpoint</span><span class="sxs-lookup"><span data-stu-id="b8cfd-114">Path: /mathservice.svc/secureEndpoint</span></span>  
   
-## Definieren einer Adresse für einen Dienst  
- Die Endpunktadresse für einen Dienst kann entweder verbindlich durch Verwenden von Code oder deklarativ durch Konfiguration angegeben werden.Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da sich die Bindungen und die Adressen eines bereitgestellten Diensts normalerweise von denen unterscheiden, die während der Entwicklung des Diensts verwendet wurden.Im Allgemeinen ist es praktischer, Dienstendpunkte nicht mit Code, sondern mit Konfiguration zu definieren.Werden die Bindung und die Adressinformationen nicht in den Code integriert, ist eine Änderung ohne Neukompilierung oder eine erneute Bereitstellung der Anwendung möglich.  
+## <a name="defining-an-address-for-a-service"></a><span data-ttu-id="b8cfd-115">Definieren einer Adresse für einen Dienst</span><span class="sxs-lookup"><span data-stu-id="b8cfd-115">Defining an Address for a Service</span></span>  
+ <span data-ttu-id="b8cfd-116">Die Endpunktadresse für einen Dienst kann entweder imperativ über Code oder deklarativ über die Konfiguration angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-116">The endpoint address for a service can be specified either imperatively using code or declaratively through configuration.</span></span> <span data-ttu-id="b8cfd-117">Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-117">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="b8cfd-118">Im Allgemeinen ist es praktischer, Dienstendpunkte nicht mit Code, sondern mit Konfiguration zu definieren.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-118">Generally, it is more practical to define service endpoints using configuration rather than code.</span></span> <span data-ttu-id="b8cfd-119">Werden die Bindung und die Adressinformationen nicht in den Code integriert, ist eine Änderung ohne Neukompilierung oder eine erneute Bereitstellung der Anwendung möglich.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-119">Keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
-### Definieren einer Adresse in der Konfiguration  
- Verwenden Sie das [\<Endpunkt \(endpoint\)\>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)\-Element, um eine Endpunktadresse in der Konfigurationsdatei zu definieren.Weitere Informationen hierzu sowie ein Beispiel finden Sie unter [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-configuration"></a><span data-ttu-id="b8cfd-120">Definieren einer Adresse in der Konfiguration</span><span class="sxs-lookup"><span data-stu-id="b8cfd-120">Defining an Address in Configuration</span></span>  
+ <span data-ttu-id="b8cfd-121">Verwenden Sie zum Definieren eines Endpunkts in einer Konfigurationsdatei der [ \<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Element.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-121">To define an endpoint in a configuration file, use the [\<endpoint>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="b8cfd-122">Weitere Informationen und ein Beispiel finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="b8cfd-122">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-### Definieren einer Adresse im Code  
- Eine Endpunktadresse kann mit der <xref:System.ServiceModel.EndpointAddress>\-Klasse im Code erstellt werden.Weitere Informationen hierzu sowie ein Beispiel finden Sie unter [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-code"></a><span data-ttu-id="b8cfd-123">Definieren einer Adresse im Code</span><span class="sxs-lookup"><span data-stu-id="b8cfd-123">Defining an Address in Code</span></span>  
+ <span data-ttu-id="b8cfd-124">Eine Endpunktadresse kann mit der <xref:System.ServiceModel.EndpointAddress>-Klasse im Code erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-124">An endpoint address can be created in code with the <xref:System.ServiceModel.EndpointAddress> class.</span></span> <span data-ttu-id="b8cfd-125">Weitere Informationen und ein Beispiel finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="b8cfd-125">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-### Endpunkt in WSDL  
- Eine Endpunktadresse kann auch in WSDL \(Web Services Description Language\) als ein WS\-Addressierungs\-EPR\-Element innerhalb des `wsdl:port`\-Elements des entsprechenden Endpunkts dargestellt werden.Der EPR enthält die Endpunktadresse sowie eventuelle Adresseigenschaften.Weitere Informationen hierzu sowie ein Beispiel finden Sie unter [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="endpoints-in-wsdl"></a><span data-ttu-id="b8cfd-126">Endpunkt in WSDL</span><span class="sxs-lookup"><span data-stu-id="b8cfd-126">Endpoints in WSDL</span></span>  
+ <span data-ttu-id="b8cfd-127">Eine Endpunktadresse kann auch in WSDL (Web Services Description Language) als ein WS-Addressierungs-EPR-Element innerhalb des `wsdl:port`-Elements des entsprechenden Endpunkts dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-127">An endpoint address can also be represented in WSDL as a WS-Addressing EPR element inside the corresponding endpoint's `wsdl:port` element.</span></span> <span data-ttu-id="b8cfd-128">Der EPR enthält die Endpunktadresse sowie eventuelle Adresseigenschaften.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-128">The EPR contains the endpoint's address as well as any address properties.</span></span> <span data-ttu-id="b8cfd-129">Weitere Informationen und ein Beispiel finden Sie unter [angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="b8cfd-129">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-## Unterstützung für mehrere IIS\-Bindungen in .NET Framework 3.5  
- Internetdienstanbieter hosten oftmals viele Anwendungen auf demselben Server und derselben Website, um die Websitedichte zu erhöhen und die Gesamtkosten \(TCO\) zu senken.Diese Anwendungen werden i. d. R. an unterschiedliche Basisadressen gebunden.Eine Internetinformationsdienste\(IIS\)\-Website kann mehrere Anwendungen enthalten.Auf die Anwendungen auf einer Website kann über eine oder mehrere IIS\-Bindungen zugegriffen werden.  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a><span data-ttu-id="b8cfd-130">Mehrere IIS-Unterstützung in .NET Framework 3.5 binden</span><span class="sxs-lookup"><span data-stu-id="b8cfd-130">Multiple IIS Binding Support in .NET Framework 3.5</span></span>  
+ <span data-ttu-id="b8cfd-131">Internetdienstanbieter hosten oftmals viele Anwendungen auf demselben Server und derselben Website, um die Websitedichte zu erhöhen und die Gesamtkosten (TCO) zu senken.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-131">Internet service providers often host many applications on the same server and site to increase the site density and lower total cost of ownership.</span></span> <span data-ttu-id="b8cfd-132">Diese Anwendungen werden i.&#160;d.&#160;R. an unterschiedliche Basisadressen gebunden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-132">These applications are typically bound to different base addresses.</span></span> <span data-ttu-id="b8cfd-133">Eine Internetinformationsdienste(IIS)-Website kann mehrere Anwendungen enthalten.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-133">An Internet Information Services (IIS) Web site can contain multiple applications.</span></span> <span data-ttu-id="b8cfd-134">Auf die Anwendungen auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-134">The applications in a site can be accessed through one or more IIS bindings.</span></span>  
   
- IIS\-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen.Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website.  
+ <span data-ttu-id="b8cfd-135">IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-135">IIS bindings provide two pieces of information: a binding protocol, and binding information.</span></span> <span data-ttu-id="b8cfd-136">Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-136">The binding protocol defines the scheme over which communication occurs, and binding information is the information used to access the site.</span></span>  
   
- Das folgende Beispiel zeigt die Komponenten, die in einer IIS\-Bindung enthalten sein können:  
+ <span data-ttu-id="b8cfd-137">Das folgende Beispiel zeigt die Komponenten, die in einer IIS-Bindung enthalten sein können:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-137">The following example shows the components that can be present in an IIS binding:</span></span>  
   
--   Bindungsprotokoll: HTTP  
+-   <span data-ttu-id="b8cfd-138">Bindungsprotokoll: HTTP</span><span class="sxs-lookup"><span data-stu-id="b8cfd-138">Binding protocol: HTTP</span></span>  
   
--   Bindungsinformationen: IP\-Adresse, Anschluss, Hostheader  
+-   <span data-ttu-id="b8cfd-139">Bindungsinformationen: IP-Adresse, Anschluss, Hostheader</span><span class="sxs-lookup"><span data-stu-id="b8cfd-139">Binding Information: IP Address, Port, Host header</span></span>  
   
- IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt.Vor [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] wurde die Verwendung mehrerer Adressen für ein Schema von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht unterstützt. Wurden dennoch mehrere Adressen angegeben, wurde bei der Aktivierung eine <xref:System.ArgumentException>.  
+ <span data-ttu-id="b8cfd-140">IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-140">IIS can specify multiple bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="b8cfd-141">Vor [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] wurde die Verwendung mehrerer Adressen für ein Schema von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht unterstützt. Wurden dennoch mehrere Adressen angegeben, wurde bei der Aktivierung eine <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-141">Prior to [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] did not support multiple addresses for a schema and, if they were specified, threw a <xref:System.ArgumentException> during activation.</span></span>  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] ermöglicht es Internetdienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
+ <span data-ttu-id="b8cfd-142">[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] ermöglicht es Internetdienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-142">The [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] enables Internet service providers to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
   
- Eine Website kann beispielsweise die folgenden Basisadressen enthalten:  
+ <span data-ttu-id="b8cfd-143">Eine Website kann beispielsweise die folgenden Basisadressen enthalten:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-143">For example, a site could contain the following base addresses:</span></span>  
   
--   http:\/\/payroll.myorg.com\/Service.svc  
+-   <span data-ttu-id="b8cfd-144">http://payroll.myorg.com/Service.svc</span><span class="sxs-lookup"><span data-stu-id="b8cfd-144">http://payroll.myorg.com/Service.svc</span></span>  
   
--   http:\/\/shipping.myorg.com\/Service.svc  
+-   <span data-ttu-id="b8cfd-145">http://shipping.myorg.com/Service.svc</span><span class="sxs-lookup"><span data-stu-id="b8cfd-145">http://shipping.myorg.com/Service.svc</span></span>  
   
- Bei [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] geben Sie in der Konfigurationsdatei auf der AppDomain\-Ebene einen Präfixfilter an.Hierzu verwenden Sie das [\<baseAddressPrefixFilters\>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)\-Element, das eine Liste von Präfixen enthält.Die eingehenden, von IIS angegebenen Basisadressen werden anhand der optionalen Präfixliste gefiltert.Standardmäßig werden alle Adressen übergeben, wenn ein Präfix nicht angegeben ist.Wenn die Präfixergebnisse angegeben werden, wird nur die Basisadresse übergeben, die dem Schema entspricht.  
+ <span data-ttu-id="b8cfd-146">Bei [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] geben Sie in der Konfigurationsdatei auf der AppDomain-Ebene einen Präfixfilter an.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-146">With [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], you specify a prefix filter at the AppDomain level in the configuration file.</span></span> <span data-ttu-id="b8cfd-147">Dazu mit der [ \<BaseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) Element, das eine Liste mit Präfixen enthält.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-147">You do this with the [\<baseAddressPrefixFilters>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, which contains a list of prefixes.</span></span> <span data-ttu-id="b8cfd-148">Die eingehenden, von IIS angegebenen Basisadressen werden anhand der optionalen Präfixliste gefiltert.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-148">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list.</span></span> <span data-ttu-id="b8cfd-149">Standardmäßig werden alle Adressen übergeben, wenn ein Präfix nicht angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-149">By default, when a prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="b8cfd-150">Wenn die Präfixergebnisse angegeben werden, wird nur die Basisadresse übergeben, die dem Schema entspricht.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-150">Specifying the prefix results in only the matching base address for that scheme to be passed through.</span></span>  
   
- Es folgt ein Beispiel für Konfigurationscode, der die Präfixfilter verwendet.  
+ <span data-ttu-id="b8cfd-151">Es folgt ein Beispiel für Konfigurationscode, der die Präfixfilter verwendet.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-151">The following is an example of configuration code that uses the prefix filters.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <serviceHostingEnvironment>  
      <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://payroll.myorg.com:8000"/>  
-        <add prefix="http://shipping.myorg.com:8000"/>  
-    </baseAddressPrefixFilters>  
+        <add prefix="net.tcp://payroll.myorg.com:8000"/>  
+        <add prefix="http://shipping.myorg.com:8000"/>  
+    </baseAddressPrefixFilters>  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- Im vorangehenden Beispiel sind net.tcp:\/\/payroll.myorg.com:8000 und http:\/\/shipping.myorg.com:8000 die einzigen Basisadressen \(für die entsprechenden Schemas\), die übergeben werden.  
+ <span data-ttu-id="b8cfd-152">Im vorangehenden Beispiel sind net.tcp://payroll.myorg.com:8000 und http://shipping.myorg.com:8000 die einzigen Basisadressen (für die entsprechenden Schemas), die übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-152">In the preceding example, net.tcp://payroll.myorg.com:8000 and http://shipping.myorg.com:8000 are the only base addresses, for their respective schemes, which are passed through.</span></span>  
   
- Der `baseAddressPrefixFilter` unterstützt keine Platzhalter.  
+ <span data-ttu-id="b8cfd-153">Der `baseAddressPrefixFilter` unterstützt keine Platzhalter.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-153">The `baseAddressPrefixFilter` does not support wildcards.</span></span>  
   
- Die von IIS angegebenen Basisadressen verfügen möglicherweise über Adressen, die an andere, nicht in der `baseAddressPrefixFilters`\-Liste vorhandene Schemas gebunden sind.Diese Adressen werden nicht herausgefiltert.  
+ <span data-ttu-id="b8cfd-154">Die von IIS angegebenen Basisadressen verfügen möglicherweise über Adressen, die an andere, nicht in der `baseAddressPrefixFilters`-Liste vorhandene Schemas gebunden sind.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-154">The base addresses supplied by IIS may have addresses bound to other schemes not present in `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="b8cfd-155">Diese Adressen werden nicht herausgefiltert.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-155">These addresses are not filtered out.</span></span>  
   
-## Unterstützung für mehrere IIS\-Bindungen in .NET Framework 4 und höher  
- Ab .NET 4 können Sie die Unterstützung für mehrere Bindungen in IIS aktivieren, ohne eine Basisadresse auswählen zu müssen. Legen Sie dazu die Einstellung <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> von <xref:System.ServiceModel.ServiceHostingEnvironment> auf True fest.Die Unterstützung ist auf HTTP\-Protokollschemas begrenzt.  
+## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a><span data-ttu-id="b8cfd-156">Unterstützung für mehrere IIS-Bindungen in .NET Framework 4 und höher</span><span class="sxs-lookup"><span data-stu-id="b8cfd-156">Multiple IIS Binding Support in .NET Framework 4 and later</span></span>  
+ <span data-ttu-id="b8cfd-157">Ab .NET 4 können Sie die Unterstützung für mehrere Bindungen in IIS aktivieren, ohne eine Basisadresse auswählen zu müssen. Legen Sie dazu die Einstellung <xref:System.ServiceModel.ServiceHostingEnvironment> von <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> auf True fest.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-157">Starting in .NET 4, you can enable support for multiple bindings in IIS without having to pick a single base address, by setting <xref:System.ServiceModel.ServiceHostingEnvironment>’s <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> setting to true.</span></span> <span data-ttu-id="b8cfd-158">Die Unterstützung ist auf HTTP-Protokollschemas begrenzt.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-158">This support is limited to HTTP protocol schemes.</span></span>  
   
- Es folgt ein Beispiel für Konfigurationscode, der multipleSiteBindingsEnabled in [\<serviceHostingEnvironment\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) verwendet.  
+ <span data-ttu-id="b8cfd-159">Im folgenden ist ein Beispiel für Konfigurationscode, die bei MultipleSiteBindingsEnabled verwendet [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).</span><span class="sxs-lookup"><span data-stu-id="b8cfd-159">The following is an example of configuration code that uses multipleSiteBindingsEnabled on [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
-  <serviceHostingEnvironment multipleSiteBindingsEnabled=”true” >  
+  <serviceHostingEnvironment multipleSiteBindingsEnabled="true" >  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- Wenn mehrere Websitebindungen mit dieser Einstellung aktiviert wurden, werden alle Einstellungen von baseAddressPrefixFilters sowohl für HTTP\-Protokolle als auch für andere Protokolle ignoriert.  
+ <span data-ttu-id="b8cfd-160">Wenn mehrere Websitebindungen mit dieser Einstellung aktiviert wurden, werden alle Einstellungen von baseAddressPrefixFilters sowohl für HTTP-Protokolle als auch für andere Protokolle ignoriert.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-160">Any baseAddressPrefixFilters settings are ignored, for both HTTP and non-HTTP protocols, when multiple site bindings are enabled using this setting.</span></span>  
   
- Detaillierte Informationen und Beispiele finden Sie unter [Unterstützen mehrerer IIS\-Sitebindungen](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) und <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ <span data-ttu-id="b8cfd-161">Weitere Informationen und Beispiele finden Sie unter [unterstützen mehrerer IIS-Sitebindungen](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) und <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-161">For details and examples, see [Supporting Multiple IIS Site Bindings](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) and <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.</span></span>  
   
-## Erweitern der Adressierung in WCF\-Diensten  
- Das Standardadressierungsmodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensten verwendet den Endpunktadress\-URI für die folgenden Zwecke:  
+## <a name="extending-addressing-in-wcf-services"></a><span data-ttu-id="b8cfd-162">Erweitern der Adressierung in WCF-Diensten</span><span class="sxs-lookup"><span data-stu-id="b8cfd-162">Extending Addressing in WCF Services</span></span>  
+ <span data-ttu-id="b8cfd-163">Das Standardadressierungsmodell von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten verwendet den Endpunktadress-URI für die folgenden Zwecke:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-163">The default addressing model of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services uses the endpoint address URI for the following purposes:</span></span>  
   
--   Um die Abhöradresse des Diensts anzugeben, d. h. den Speicherort, den der Endpunkt auf Nachrichten abhört  
+-   <span data-ttu-id="b8cfd-164">Um die Abhöradresse des Diensts anzugeben, d.&#160;h. den Speicherort, den der Endpunkt auf Nachrichten abhört</span><span class="sxs-lookup"><span data-stu-id="b8cfd-164">To specify the service listening address, the location at which the endpoint listens for messages,</span></span>  
   
--   Um den SOAP\-Adressfilter anzugeben, d. h. die Adresse, die ein Endpunkt als SOAP\-Header erwartet  
+-   <span data-ttu-id="b8cfd-165">Um den SOAP-Adressfilter anzugeben, d.&#160;h. die Adresse, die ein Endpunkt als SOAP-Header erwartet</span><span class="sxs-lookup"><span data-stu-id="b8cfd-165">To specify the SOAP address filter, the address an endpoint expects as a SOAP header.</span></span>  
   
- Die Werte für beide Situationen können separat angegeben werden. Dadurch werden mehrere Adressierungserweiterungen für nützliche Szenarien möglich:  
+ <span data-ttu-id="b8cfd-166">Die Werte für beide Situationen können separat angegeben werden. Dadurch werden mehrere Adressierungserweiterungen für nützliche Szenarien möglich:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-166">The values for each of these purposes can be specified separately, allowing several extensions of addressing that cover useful scenarios:</span></span>  
   
--   SOAP\-Vermittler: Eine von einem Client gesendete Nachricht durchläuft einen oder mehrere zusätzliche Dienste, die die Nachricht verarbeiten, bevor sie ihr endgültiges Ziel erreicht.SOAP\-Vermittler können verschiedene Aufgaben ausführen, z. B. Caching, Routing, Lastenausgleich oder Schemavalidierung für Nachrichten.Dieses Szenario wird durch das Senden von Nachrichten an eine separate physische Adresse erreicht \(`via`\), die auf den Vermittler verweist, anstatt nur an eine logische Adresse \(`wsa:To`\), die auf das endgültige Ziel verweist.  
+-   <span data-ttu-id="b8cfd-167">SOAP-Vermittler: Eine von einem Client gesendete Nachricht durchläuft einen oder mehrere zusätzliche Dienste, die die Nachricht verarbeiten, bevor sie ihr endgültiges Ziel erreicht.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-167">SOAP intermediaries: a message sent by a client traverses one or more additional services that process the message before it reaches its final destination.</span></span> <span data-ttu-id="b8cfd-168">SOAP-Vermittler können verschiedene Aufgaben ausführen, z.&#160;B. Caching, Routing, Lastenausgleich oder Schemavalidierung für Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-168">SOAP intermediaries can perform various tasks, such as caching, routing, load-balancing, or schema validation on the messages.</span></span> <span data-ttu-id="b8cfd-169">Dieses Szenario wird durch das Senden von Nachrichten an eine separate physische Adresse erreicht (`via`), die auf den Vermittler verweist, anstatt nur an eine logische Adresse (`wsa:To`), die auf das endgültige Ziel verweist.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-169">This scenario is accomplished by sending messages to a separate physical address (`via`) that targets the intermediary rather than just to a logical address (`wsa:To`) that targets the ultimate destination.</span></span>  
   
--   Die Abhöradresse des Endpunkts ist ein privater URI und wird auf einen anderen Wert als seine `listenURI`\-Eigenschaft festgelegt.  
+-   <span data-ttu-id="b8cfd-170">Die Abhöradresse des Endpunkts ist ein privater URI und wird auf einen anderen Wert als seine `listenURI`-Eigenschaft festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-170">The listening address of the endpoint is a private URI and is set to a different value than its `listenURI` property.</span></span>  
   
- Nachrichten sollten zunächst an die Transportadresse gesendet werden, die von `via` angegeben wird, bevor sie an eine andere Remoteadresse gesendet werden, die vom `to`\-Parameter angegeben wird und an der sich der Dienst befindet.In den meisten Internetszenarien sind der `via`\-URI der <xref:System.ServiceModel.EndpointAddress.Uri%2A>\-Eigenschaft und die endgültige `to`\-Adresse des Diensts identisch.Eine Unterscheidung zwischen den beiden Adressen ist nur beim manuellen Routing erforderlich.  
+ <span data-ttu-id="b8cfd-171">Nachrichten sollten zunächst an die Transportadresse gesendet werden, die von `via` angegeben wird, bevor sie an eine andere Remoteadresse gesendet werden, die vom `to`-Parameter angegeben wird und an der sich der Dienst befindet.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-171">The transport address that the `via` specifies is the location to which a message should initially be sent on its way to some other remote address specified by the `to` parameter at which the service is located.</span></span> <span data-ttu-id="b8cfd-172">In den meisten Internetszenarien sind der `via`-URI der <xref:System.ServiceModel.EndpointAddress.Uri%2A>-Eigenschaft und die endgültige `to`-Adresse des Diensts identisch.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-172">In most Internet scenarios, the `via` URI is the same as the <xref:System.ServiceModel.EndpointAddress.Uri%2A> property of the final `to` address of the service.</span></span> <span data-ttu-id="b8cfd-173">Eine Unterscheidung zwischen den beiden Adressen ist nur beim manuellen Routing erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-173">You only distinguish between these two addresses when you must do manual routing.</span></span>  
   
-### Adressierungsheader  
- Ein Endpunkt kann neben seinem Basis\-URI von einem oder mehreren SOAP\-Headern adressiert werden.Dies ist beispielsweise in SOAP\-Vermittlerszenarien nützlich, in denen ein Endpunkt es erfordert, dass seine Clients SOAP\-Header einfügen, die sich an Vermittler richten.  
+### <a name="addressing-headers"></a><span data-ttu-id="b8cfd-174">Adressierungsheader</span><span class="sxs-lookup"><span data-stu-id="b8cfd-174">Addressing Headers</span></span>  
+ <span data-ttu-id="b8cfd-175">Ein Endpunkt kann neben seinem Basis-URI von einem oder mehreren SOAP-Headern adressiert werden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-175">An endpoint can be addressed by one or more SOAP headers in addition to its basic URI.</span></span> <span data-ttu-id="b8cfd-176">Dies ist beispielsweise in SOAP-Vermittlerszenarien nützlich, in denen ein Endpunkt es erfordert, dass seine Clients SOAP-Header einfügen, die sich an Vermittler richten.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-176">One set of scenarios where this is useful is a set of SOAP intermediary scenarios where an endpoint requires clients of that endpoint to include SOAP headers targeted at intermediaries.</span></span>  
   
- Sie können benutzerdefinierte Adressheader auf zweierlei Weise definieren – entweder mit Code oder einer Konfiguration:  
+ <span data-ttu-id="b8cfd-177">Sie können benutzerdefinierte Adressheader auf zweierlei Weise definieren &#8211; entweder mit Code oder einer Konfiguration:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-177">You can define custom address headers in two ways—by using either code or configuration:</span></span>  
   
--   Im Code werden benutzerdefinierte Adressheader mithilfe der <xref:System.ServiceModel.Channels.AddressHeader>\-Klasse erstellt und dann bei der Erstellung einer <xref:System.ServiceModel.EndpointAddress> verwendet.  
+-   <span data-ttu-id="b8cfd-178">Im Code werden benutzerdefinierte Adressheader mithilfe der <xref:System.ServiceModel.Channels.AddressHeader>-Klasse erstellt und dann bei der Erstellung einer <xref:System.ServiceModel.EndpointAddress> verwendet.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-178">In code, create custom address headers by using the <xref:System.ServiceModel.Channels.AddressHeader> class, and then used in the construction of an <xref:System.ServiceModel.EndpointAddress>.</span></span>  
   
--   In Konfigurationen werden benutzerdefinierte [\<Kopfzeilen\>](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)[\<endpoint\> als untergeordnete Elemente des](http://msdn.microsoft.com/de-de/13aa23b7-2f08-4add-8dbf-a99f8127c017)\-Elements angegeben.  
+-   <span data-ttu-id="b8cfd-179">In der benutzerdefinierten Konfiguration [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) werden als untergeordnete Elemente des angegebenen der [ \<Endpunkt >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-179">In configuration, custom [\<headers>](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) are specified as children of the [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
- Die Konfiguration ist im Allgemeinen dem Code vorzuziehen, da sie es Ihnen ermöglicht, die Header nach der Bereitstellung zu ändern.  
+ <span data-ttu-id="b8cfd-180">Die Konfiguration ist im Allgemeinen dem Code vorzuziehen, da sie es Ihnen ermöglicht, die Header nach der Bereitstellung zu ändern.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-180">Configuration is generally preferable to code, as it allows you to change the headers after deployment.</span></span>  
   
-### Benutzerdefinierte Abhöradressen  
- Sie können die Abhöradresse auf einen anderen Wert als den URI des Endpunkts festlegen.Das ist in Vermittlerszenarios nützlich, in denen die SOAP\-Adresse, die verfügbar gemacht werden soll, die eines öffentlichen SOAP\-Vermittlers ist, während die Adresse, an der der Endpunkt lauscht, eine private Netzwerkadresse ist.  
+### <a name="custom-listening-addresses"></a><span data-ttu-id="b8cfd-181">Benutzerdefinierte Abhöradressen</span><span class="sxs-lookup"><span data-stu-id="b8cfd-181">Custom Listening Addresses</span></span>  
+ <span data-ttu-id="b8cfd-182">Sie können die Abhöradresse auf einen anderen Wert als den URI des Endpunkts festlegen.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-182">You can set the listening address to a different value than the endpoint’s URI.</span></span> <span data-ttu-id="b8cfd-183">Das ist in Vermittlerszenarios nützlich, in denen die SOAP-Adresse, die verfügbar gemacht werden soll, die eines öffentlichen SOAP-Vermittlers ist, während die Adresse, an der der Endpunkt lauscht, eine private Netzwerkadresse ist.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-183">This is useful in intermediary scenarios where the SOAP address to be exposed is that of a public SOAP intermediary, whereas the address where the endpoint actually listens is a private network address.</span></span>  
   
- Sie können eine benutzerdefinierte Abhöradresse angeben, indem Sie entweder Code oder eine Konfiguration verwenden:  
+ <span data-ttu-id="b8cfd-184">Sie können eine benutzerdefinierte Abhöradresse angeben, indem Sie entweder Code oder eine Konfiguration verwenden:</span><span class="sxs-lookup"><span data-stu-id="b8cfd-184">You can specify a custom listening address by using either code or configuration:</span></span>  
   
--   Im Code geben Sie eine benutzerdefinierte Abhöradresse durch Hinzufügen einer <xref:System.ServiceModel.Description.ClientViaBehavior>\-Klasse zur Verhaltensauflistung des Endpunkts an.  
+-   <span data-ttu-id="b8cfd-185">Im Code geben Sie eine benutzerdefinierte Abhöradresse durch Hinzufügen einer <xref:System.ServiceModel.Description.ClientViaBehavior>-Klasse zur Verhaltensauflistung des Endpunkts an.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-185">In code, specify a custom listening address by adding a <xref:System.ServiceModel.Description.ClientViaBehavior> class to the endpoint’s behavior collection.</span></span>  
   
--   In einer Konfiguration geben Sie eine benutzerdefinierte Lauschadresse mit dem `ListenUri`\-Attribut des [\<endpoint\>](http://msdn.microsoft.com/de-de/13aa23b7-2f08-4add-8dbf-a99f8127c017)\-Elements des Diensts an.  
+-   <span data-ttu-id="b8cfd-186">Geben Sie in der Konfiguration, die eine benutzerdefinierte abhöradresse mit der `ListenUri` Attribut des Diensts [ \<Endpunkt >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-186">In configuration, specify a custom listening address with the `ListenUri` attribute of the service [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
-### Benutzerdefinierter SOAP\-Adressenfilter  
- Der <xref:System.ServiceModel.EndpointAddress.Uri%2A> wird in Verbindung mit einer beliebigen <xref:System.ServiceModel.EndpointAddress.Headers%2A>\-Eigenschaft zur Definition des SOAP\-Adressfilters eines Endpunkts verwendet \(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>\).Standardmäßig prüft dieser Filter, ob eine eingehende Nachricht über einen `To`\-Nachrichtenheader verfügt, der mit dem URI des Endpunkts übereinstimmt, und ob alle erforderlichen Endpunktheader in der Nachricht vorhanden sind.  
+### <a name="custom-soap-address-filter"></a><span data-ttu-id="b8cfd-187">Benutzerdefinierter SOAP-Adressenfilter</span><span class="sxs-lookup"><span data-stu-id="b8cfd-187">Custom SOAP Address Filter</span></span>  
+ <span data-ttu-id="b8cfd-188">Der <xref:System.ServiceModel.EndpointAddress.Uri%2A> wird in Verbindung mit einer beliebigen <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaft zur Definition des SOAP-Adressfilters eines Endpunkts verwendet (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>).</span><span class="sxs-lookup"><span data-stu-id="b8cfd-188">The <xref:System.ServiceModel.EndpointAddress.Uri%2A> is used in conjunction with any <xref:System.ServiceModel.EndpointAddress.Headers%2A> property to define an endpoint’s SOAP address filter (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>).</span></span> <span data-ttu-id="b8cfd-189">Standardmäßig prüft dieser Filter, ob eine eingehende Nachricht über einen `To`-Nachrichtenheader verfügt, der mit dem URI des Endpunkts übereinstimmt, und ob alle erforderlichen Endpunktheader in der Nachricht vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-189">By default, this filter verifies that an incoming message has a `To` message header that matches the endpoint’s URI and that all of the required endpoint headers are present in the message.</span></span>  
   
- In einigen Szenarien empfängt ein Endpunkt alle Nachrichten, die mit dem zugrunde liegenden Transport ankommen, und nicht nur die mit dem entsprechenden `To`\-Header.Um dies zu aktivieren, kann der Benutzer die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>\-Klasse verwenden.  
+ <span data-ttu-id="b8cfd-190">In einigen Szenarien empfängt ein Endpunkt alle Nachrichten, die mit dem zugrunde liegenden Transport ankommen, und nicht nur die mit dem entsprechenden `To`-Header.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-190">In some scenarios, an endpoint receives all messages that arrive on the underlying transport, and not just those with the appropriate `To` header.</span></span> <span data-ttu-id="b8cfd-191">Um dies zu aktivieren, kann der Benutzer die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse verwenden.</span><span class="sxs-lookup"><span data-stu-id="b8cfd-191">To enable this, the user can use the <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> class.</span></span>  
   
-## Siehe auch  
- [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)   
- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="b8cfd-192">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b8cfd-192">See Also</span></span>  
+ [<span data-ttu-id="b8cfd-193">Angeben einer Endpunktadresse</span><span class="sxs-lookup"><span data-stu-id="b8cfd-193">Specifying an Endpoint Address</span></span>](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+ [<span data-ttu-id="b8cfd-194">Dienstidentität und Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="b8cfd-194">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

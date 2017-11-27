@@ -1,70 +1,73 @@
 ---
-title: "&#220;bersicht &#252;ber ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Übersicht über ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber ADO.NET
-ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden.  Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.  
+# <a name="adonet-overview"></a><span data-ttu-id="af3f1-102">Übersicht über ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-102">ADO.NET Overview</span></span>
+<span data-ttu-id="af3f1-103">ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="af3f1-103">ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC.</span></span> <span data-ttu-id="af3f1-104">Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="af3f1-104">Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.</span></span>  
   
- ADO.NET trennt den Datenzugriff von der Datenbearbeitung in einzelne Komponenten, die separat oder zusammen verwendet werden können.  ADO.NET schließt .NET Framework\-Datenanbieter zum Verbinden mit einer Datenbank, zum Ausführen von Befehlen und zum Abrufen von Ergebnissen ein.  Diese Ergebnisse werden entweder direkt verarbeitet oder in einem ADO.NET\-<xref:System.Data.DataSet>\-Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen oder um sie an eine andere Ebene zu übergeben.  Das `DataSet`\-Objekt kann auch unabhängig von einem .NET Framework\-Datenanbieter verwendet werden, um Daten zu verwalten, die für die Anwendung lokal sind oder aus einer XML\-Datenquelle beschafft werden.  
+ <span data-ttu-id="af3f1-105">ADO.NET trennt den Datenzugriff von der Datenbearbeitung in einzelne Komponenten, die separat oder zusammen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="af3f1-105">ADO.NET separates data access from data manipulation into discrete components that can be used separately or in tandem.</span></span> <span data-ttu-id="af3f1-106">ADO.NET schließt .NET Framework-Datenanbieter zum Verbinden mit einer Datenbank, zum Ausführen von Befehlen und zum Abrufen von Ergebnissen ein.</span><span class="sxs-lookup"><span data-stu-id="af3f1-106">ADO.NET includes .NET Framework data providers for connecting to a database, executing commands, and retrieving results.</span></span> <span data-ttu-id="af3f1-107">Diese Ergebnisse werden entweder direkt verarbeitet oder in einem ADO.NET-<xref:System.Data.DataSet>-Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen oder um sie an eine andere Ebene zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="af3f1-107">Those results are either processed directly, placed in an ADO.NET <xref:System.Data.DataSet> object in order to be exposed to the user in an ad hoc manner, combined with data from multiple sources, or passed between tiers.</span></span> <span data-ttu-id="af3f1-108">Das `DataSet`-Objekt kann auch unabhängig von einem .NET Framework-Datenanbieter verwendet werden, um Daten zu verwalten, die für die Anwendung lokal sind oder aus einer XML-Datenquelle beschafft werden.</span><span class="sxs-lookup"><span data-stu-id="af3f1-108">The `DataSet` object can also be used independently of a .NET Framework data provider to manage data local to the application or sourced from XML.</span></span>  
   
- Die ADO.NET\-Klassen befinden sich in \<legacyBold\>System.Data.dll\<\/legacyBold\> und werden in die in \<legacyBold\>System.Xml.dll\<\/legacyBold\> vorhandenen XML\-Klassen integriert.  Beispielcode, der eine Verbindung mit einer Datenbank herstellt, Daten aus dieser Datenbank abruft und diese Daten dann in einem Konsolenfenster anzeigt, finden Sie unter [ADO.NET\-Codebeispiele](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
+ <span data-ttu-id="af3f1-109">Die ADO.NET-Klassen befinden sich in <legacyBold>System.Data.dll</legacyBold> und werden in die in <legacyBold>System.Xml.dll</legacyBold> vorhandenen XML-Klassen integriert.</span><span class="sxs-lookup"><span data-stu-id="af3f1-109">The ADO.NET classes are found in System.Data.dll, and are integrated with the XML classes found in System.Xml.dll.</span></span> <span data-ttu-id="af3f1-110">Beispielcode für die Herstellung einer Datenbank Daten daraus abruft, und zeigt dann die Daten in einem Konsolenfenster finden Sie unter [ADO.NET Codebeispiele](../../../../docs/framework/data/adonet/ado-net-code-examples.md).</span><span class="sxs-lookup"><span data-stu-id="af3f1-110">For sample code that connects to a database, retrieves data from it, and then displays that data in a console window, see [ADO.NET Code Examples](../../../../docs/framework/data/adonet/ado-net-code-examples.md).</span></span>  
   
- ADO.NET enthält Funktionen für Entwickler von verwaltetem Code. Diese Funktionen sind mit den ADO\-Funktionen \(ActiveX Data Objects\) vergleichbar, die von COM\-Entwicklern \(Component Object Model\) verwendet werden.  Wir empfehlen, für den Zugriff auf Daten in Ihren .NET\-Anwendungen statt ADO ADO.NET zu verwenden.  
+ <span data-ttu-id="af3f1-111">ADO.NET enthält Funktionen für Entwickler von verwaltetem Code. Diese Funktionen sind mit den ADO-Funktionen (ActiveX Data Objects) vergleichbar, die von COM-Entwicklern (Component Object Model) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="af3f1-111">ADO.NET provides functionality to developers who write managed code similar to the functionality provided to native component object model (COM) developers by ActiveX Data Objects (ADO).</span></span> <span data-ttu-id="af3f1-112">Wir empfehlen, für den Zugriff auf Daten in Ihren .NET-Anwendungen statt ADO ADO.NET zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="af3f1-112">We recommend that you use ADO.NET, not ADO, for accessing data in your .NET applications.</span></span>  
   
- ADO.NET stellt die direkteste Methode des Datenzugriffs innerhalb von .NET Framework bereit.  Eine Abstraktion auf höherer Ebene, mit der Anwendungen ein konzeptionelles Modell statt des zugrunde liegenden Speichermodells verwenden können, finden Sie unter [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
+ <span data-ttu-id="af3f1-113">ADO.NET stellt die direkteste Methode des Datenzugriffs innerhalb von .NET Framework bereit.</span><span class="sxs-lookup"><span data-stu-id="af3f1-113">ADO.NET provides the most direct method of data access within the .NET Framework.</span></span> <span data-ttu-id="af3f1-114">Eine Abstraktion höherer Ebene, die Clientanwendungen ermöglicht, die für ein konzeptionelles Modell anstelle der zugrunde liegenden Speichermodell funktioniert, finden Sie unter der [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).</span><span class="sxs-lookup"><span data-stu-id="af3f1-114">For a higher-level abstraction that allows applications to work against a conceptual model instead of the underlying storage model, see the [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).</span></span>  
   
- **Informationen zum Datenschutz**: Die Assemblys System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll und System.Data.DataSetExtensions.dll unterscheiden nicht zwischen privaten und nicht\-privaten Daten eines Benutzers.  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert.  Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
+ <span data-ttu-id="af3f1-115">**Datenschutzbestimmungen**: nicht der Fall ist der System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, "System.Data.SqlServerCe.dll" und "System.Data.DataSetExtensions.dll" Assemblys unterscheiden Sie zwischen privaten und nicht-privaten Daten eines Benutzers.</span><span class="sxs-lookup"><span data-stu-id="af3f1-115">**Privacy Statement**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll, and System.Data.DataSetExtensions.dll assemblies do not distinguish between a user's private data and non-private data.</span></span>  <span data-ttu-id="af3f1-116">Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert.</span><span class="sxs-lookup"><span data-stu-id="af3f1-116">These assemblies do not collect, store, or transport any user's private data.</span></span> <span data-ttu-id="af3f1-117">Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.</span><span class="sxs-lookup"><span data-stu-id="af3f1-117">However, third-party applications might collect, store, or transport a user's private data using these assemblies.</span></span>  
   
-## In diesem Abschnitt  
- [ADO.NET\-Architektur](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
- Stellt eine Übersicht der Architektur und der Komponenten von ADO.NET bereit.  
+## <a name="in-this-section"></a><span data-ttu-id="af3f1-118">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="af3f1-118">In This Section</span></span>  
+ [<span data-ttu-id="af3f1-119">ADO.NET-Architektur</span><span class="sxs-lookup"><span data-stu-id="af3f1-119">ADO.NET Architecture</span></span>](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
+ <span data-ttu-id="af3f1-120">Stellt eine Übersicht der Architektur und der Komponenten von ADO.NET bereit.</span><span class="sxs-lookup"><span data-stu-id="af3f1-120">Provides an overview of the architecture and components of ADO.NET.</span></span>  
   
- [Optionen und Richtlinien zur ADO.NET\-Technologie](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
- Beschreibt die in Entity Data Platform enthaltenen Produkte und Technologien.  
+ [<span data-ttu-id="af3f1-121">Optionen und Richtlinien</span><span class="sxs-lookup"><span data-stu-id="af3f1-121">ADO.NET Technology Options and Guidelines</span></span>](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ <span data-ttu-id="af3f1-122">Beschreibt die in Entity Data Platform enthaltenen Produkte und Technologien.</span><span class="sxs-lookup"><span data-stu-id="af3f1-122">Describes the products and technologies included with the Entity Data Platform.</span></span>  
   
- [LINQ und ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- Beschreibt, wie LINQ \(Language Integrated Query\) in ADO.NET implementiert wird, und bietet Links zu entsprechenden Themen.  
+ [<span data-ttu-id="af3f1-123">LINQ und ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-123">LINQ and ADO.NET</span></span>](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ <span data-ttu-id="af3f1-124">Beschreibt, wie LINQ (Language Integrated Query) in ADO.NET implementiert wird, und bietet Links zu entsprechenden Themen.</span><span class="sxs-lookup"><span data-stu-id="af3f1-124">Describes how Language-Integrated Query (LINQ) is implemented in ADO.NET and provides links to relevant topics.</span></span>  
   
- [.NET Framework\-Datenanbieter](../../../../docs/framework/data/adonet/data-providers.md)  
- Stellt eine Übersicht über den Entwurf der .NET Framework\-Datenanbieter und der .NET Framework\-Datenanbieter bereit, die in ADO.NET eingeschlossen sind.  
+ [<span data-ttu-id="af3f1-125">.NET Framework-Datenanbieter</span><span class="sxs-lookup"><span data-stu-id="af3f1-125">.NET Framework Data Providers</span></span>](../../../../docs/framework/data/adonet/data-providers.md)  
+ <span data-ttu-id="af3f1-126">Stellt eine Übersicht über den Entwurf der .NET Framework-Datenanbieter und der .NET Framework-Datenanbieter bereit, die in ADO.NET eingeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="af3f1-126">Provides an overview of the design of the .NET Framework data provider and of the .NET Framework data providers that are included with ADO.NET.</span></span>  
   
- [ADO.NET\-DataSets](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- Stellt eine Übersicht zum `DataSet`\-Entwurf und den Komponenten bereit.  
+ [<span data-ttu-id="af3f1-127">ADO.NET-Datasets</span><span class="sxs-lookup"><span data-stu-id="af3f1-127">ADO.NET DataSets</span></span>](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ <span data-ttu-id="af3f1-128">Stellt eine Übersicht zum `DataSet`-Entwurf und den Komponenten bereit.</span><span class="sxs-lookup"><span data-stu-id="af3f1-128">Provides an overview of the `DataSet` design and components.</span></span>  
   
- [Parallele Ausführung in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
- Erläutert die Unterschiede zwischen den einzelnen ADO.NET\-Versionen und deren Auswirkung auf die parallele Ausführung und die Anwendungskompatibilität.  
+ [<span data-ttu-id="af3f1-129">Seite-an-Seite-Ausführung in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-129">Side-by-Side Execution in ADO.NET</span></span>](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ <span data-ttu-id="af3f1-130">Erläutert die Unterschiede zwischen den einzelnen ADO.NET-Versionen und deren Auswirkung auf die parallele Ausführung und die Anwendungskompatibilität.</span><span class="sxs-lookup"><span data-stu-id="af3f1-130">Discusses differences in ADO.NET versions and their effect on side-by-side execution and application compatibility.</span></span>  
   
- [ADO.NET\-Codebeispiele](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
- Enthält Codebeispiele, die zum Abrufen von Daten ADO.NET\-Datenanbieter verwenden.  
+ [<span data-ttu-id="af3f1-131">ADO.NET-Codebeispiele</span><span class="sxs-lookup"><span data-stu-id="af3f1-131">ADO.NET Code Examples</span></span>](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
+ <span data-ttu-id="af3f1-132">Enthält Codebeispiele, die zum Abrufen von Daten ADO.NET-Datenanbieter verwenden.</span><span class="sxs-lookup"><span data-stu-id="af3f1-132">Provides code samples that retrieve data using the ADO.NET data providers.</span></span>  
   
-## Verwandte Abschnitte  
- [Neues in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Enthält eine Einführung in neue Funktionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="af3f1-133">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="af3f1-133">Related Sections</span></span>  
+ [<span data-ttu-id="af3f1-134">Neues in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-134">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
+ <span data-ttu-id="af3f1-135">Enthält eine Einführung in neue Funktionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="af3f1-135">Introduces features that are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
- [Sichern von ADO.NET\-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Beschreibt sichere Programmiermethoden für ADO.NET.  
+ [<span data-ttu-id="af3f1-136">Sichern von ADO.NET-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="af3f1-136">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ <span data-ttu-id="af3f1-137">Beschreibt sichere Programmiermethoden für ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="af3f1-137">Describes secure coding practices when using ADO.NET.</span></span>  
   
- [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- Beschreibt Datentypzuordnungen zwischen .NET Framework\-Datentypen und den .NET Framework\-Datenanbietern.  
+ [<span data-ttu-id="af3f1-138">Datentypzuordnungen in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-138">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ <span data-ttu-id="af3f1-139">Beschreibt Datentypzuordnungen zwischen .NET Framework-Datentypen und den .NET Framework-Datenanbietern.</span><span class="sxs-lookup"><span data-stu-id="af3f1-139">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
   
- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- Beschreibt das Herstellen von Verbindungen mit einer Datenquelle, das Abrufen von Daten und das Ändern von Daten.  Dazu gehören auch `DataReaders` und `DataAdapters`.  
+ [<span data-ttu-id="af3f1-140">Abrufen und Ändern von Daten in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-140">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ <span data-ttu-id="af3f1-141">Beschreibt das Herstellen von Verbindungen mit einer Datenquelle, das Abrufen von Daten und das Ändern von Daten.</span><span class="sxs-lookup"><span data-stu-id="af3f1-141">Describes how to connect to a data source, retrieve data, and modify data.</span></span> <span data-ttu-id="af3f1-142">Dazu gehören auch `DataReaders` und `DataAdapters`.</span><span class="sxs-lookup"><span data-stu-id="af3f1-142">This includes `DataReaders` and `DataAdapters`.</span></span>  
   
-## Siehe auch  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [Zugreifen auf Daten in Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="af3f1-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af3f1-143">See Also</span></span>  
+ [<span data-ttu-id="af3f1-144">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="af3f1-144">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="af3f1-145">Zugreifen auf Daten in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="af3f1-145">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ [<span data-ttu-id="af3f1-146">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="af3f1-146">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

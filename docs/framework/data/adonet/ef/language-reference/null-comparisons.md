@@ -1,29 +1,31 @@
 ---
-title: "NULL-Vergleiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: NULL-Vergleiche
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# NULL-Vergleiche
-Ein `null`\-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist.  Sie können in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]\-Abfragen auf NULL\-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten bzw. Daten, die nicht den Wert NULL haben, ausgeführt werden.  Die NULL\-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL\-Semantik der Datenquelle.  Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL\-Vergleiche zu behandeln.  Dabei wird jeder Vergleich mit einem NULL\-Wert nicht als `true` oder `false`, sondern als `unknown` ausgewertet.  Oft ist dies eine Implementierung von ANSI\-Nullen, das ist jedoch nicht immer der Fall.  
+# <a name="null-comparisons"></a><span data-ttu-id="3ed27-102">NULL-Vergleiche</span><span class="sxs-lookup"><span data-stu-id="3ed27-102">Null Comparisons</span></span>
+<span data-ttu-id="3ed27-103">Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist.</span><span class="sxs-lookup"><span data-stu-id="3ed27-103">A `null` value in the data source indicates that the value is unknown.</span></span> <span data-ttu-id="3ed27-104">Sie können in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen auf NULL-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten bzw. Daten, die nicht den Wert NULL haben, ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3ed27-104">In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries, you can check for null values so that certain calculations or comparisons are only performed on rows that have valid, or non-null, data.</span></span> <span data-ttu-id="3ed27-105">Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="3ed27-105">CLR null semantics, however, may differ from the null semantics of the data source.</span></span> <span data-ttu-id="3ed27-106">Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="3ed27-106">Most databases use a version of three-valued logic to handle null comparisons.</span></span> <span data-ttu-id="3ed27-107">D. h., dass jeder Vergleich mit einem null-Wert wird nicht ausgewertet `true` oder `false`, ergibt es `unknown`.</span><span class="sxs-lookup"><span data-stu-id="3ed27-107">That is, a comparison against a null value does not evaluate to `true` or `false`, it evaluates to `unknown`.</span></span> <span data-ttu-id="3ed27-108">Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.</span><span class="sxs-lookup"><span data-stu-id="3ed27-108">Often this is an implementation of ANSI nulls, but this is not always the case.</span></span>  
   
- Standardmäßig gibt der NULL\-gleich\-NULL\-Vergleich in SQL Server einen NULL\-Wert zurück.  Im folgenden Beispiel werden die Zeilen, in denen `ShipDate` gleich NULL ist, vom Resultset ausgeschlossen, sodass die [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]\-Anweisung keine Zeilen zurückgeben würde.  
+ <span data-ttu-id="3ed27-109">Standardmäßig gibt der NULL-gleich-NULL-Vergleich in SQL Server einen NULL-Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="3ed27-109">By default in SQL Server, the null-equals-null comparison returns a null value.</span></span> <span data-ttu-id="3ed27-110">Im folgenden Beispiel werden die Zeilen, in denen `ShipDate` gleich NULL ist, vom Resultset ausgeschlossen, sodass die [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]-Anweisung keine Zeilen zurückgeben würde.</span><span class="sxs-lookup"><span data-stu-id="3ed27-110">In the following example, the rows where `ShipDate` is null are excluded from the result set, and the [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] statement would return 0 rows.</span></span>  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -33,26 +35,26 @@ JOIN Sales.SalesOrderDetail o ON o.SalesOrderID = h.SalesOrderID
 WHERE h.ShipDate IS Null  
 ```  
   
- Dies unterscheidet sich sehr von der NULL\-Semantik der CLR, bei der der NULL\-gleich\-NULL\-Vergleich **true** zurückgibt.  
+ <span data-ttu-id="3ed27-111">Dies unterscheidet sich sehr von der NULL-Semantik der CLR, bei der der NULL-gleich-NULL-Vergleich true zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="3ed27-111">This is very different from the CLR null semantics, where the null-equals-null comparison returns true.</span></span>  
   
- Die folgende LINQ\-Abfrage wird in der Semantik der CLR ausgedrückt, wird jedoch in der Datenquelle ausgeführt.  Da nicht gewährleistet ist, dass die CLR\-Semantik von der Datenquelle verarbeitet wird, ist unklar, ob sie sich wie erwartet verhält.  
+ <span data-ttu-id="3ed27-112">Die folgende LINQ-Abfrage wird in der Semantik der CLR ausgedrückt, wird jedoch in der Datenquelle ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3ed27-112">The following LINQ query is expressed in the CLR, but it is executed in the data source.</span></span> <span data-ttu-id="3ed27-113">Da nicht gewährleistet ist, dass die CLR-Semantik von der Datenquelle verarbeitet wird, ist unklar, ob sie sich wie erwartet verhält.</span><span class="sxs-lookup"><span data-stu-id="3ed27-113">Because there is no guarantee that CLR semantics will be honored at the data source, the expected behavior is indeterminate.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#joinonnull)]
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
-## Schlüsselauswahlfunktionen  
- Eine *Schlüsselauswahl* ist eine in den Standardabfrageoperatoren verwendete Funktion zur Extrahierung eines Schlüssels aus einem Element.  In der Schlüsselauswahlfunktion kann ein Ausdruck mit einer Konstante verglichen werden.  Die NULL\-Semantik der CLR wird angewendet, wenn ein Ausdruck mit einer NULL\-Konstante oder zwei NULL\-Konstanten miteinander verglichen werden.  Die NULL\-Semantik des Speichers gilt, wenn zwei Spalten mit NULL\-Werten in der Datenquelle verglichen werden.  Schlüsselauswahlfunktionen sind in vielen der Standardabfrageoperatoren zum Gruppieren und Sortieren zu finden, wie beispielsweise in <xref:System.Linq.Queryable.GroupBy%2A>. Sie werden verwendet, um Schlüssel auszuwählen, nach denen die Abfrageergebnisse sortiert oder gruppiert werden sollen.  
+## <a name="key-selectors"></a><span data-ttu-id="3ed27-114">Schlüsselauswahlfunktionen</span><span class="sxs-lookup"><span data-stu-id="3ed27-114">Key Selectors</span></span>  
+ <span data-ttu-id="3ed27-115">Ein *Schlüsselauswahlfunktion* ist eine Funktion, die in den Standardabfrageoperatoren zum Extrahieren eines Schlüssels aus einem Element verwendet.</span><span class="sxs-lookup"><span data-stu-id="3ed27-115">A *key selector* is a function used in the standard query operators to extract a key from an element.</span></span> <span data-ttu-id="3ed27-116">In der Schlüsselauswahlfunktion kann ein Ausdruck mit einer Konstante verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="3ed27-116">In the key selector function, an expression can be compared with a constant.</span></span> <span data-ttu-id="3ed27-117">Die NULL-Semantik der CLR wird angewendet, wenn ein Ausdruck mit einer NULL-Konstante oder zwei NULL-Konstanten miteinander verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="3ed27-117">CLR null semantics are exhibited if an expression is compared to a null constant or if two null constants are compared.</span></span> <span data-ttu-id="3ed27-118">Die NULL-Semantik des Speichers gilt, wenn zwei Spalten mit NULL-Werten in der Datenquelle verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="3ed27-118">Store null semantics are exhibited if two columns with null values in the data source are compared.</span></span> <span data-ttu-id="3ed27-119">Schlüsselauswahlfunktionen sind in vielen der Standardabfrageoperatoren zum Gruppieren und Sortieren zu finden, wie beispielsweise in <xref:System.Linq.Queryable.GroupBy%2A>. Sie werden verwendet, um Schlüssel auszuwählen, nach denen die Abfrageergebnisse sortiert oder gruppiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="3ed27-119">Key selectors are found in many of the grouping and ordering standard query operators, such as <xref:System.Linq.Queryable.GroupBy%2A>, and are used to select keys by which to order or group the query results.</span></span>  
   
-## NULL\-Eigenschaft eines NULL\-Objekts  
- In [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind die Eigenschaften eines NULL\-Objekts gleich NULL.  Wenn Sie versuchen, in der CLR auf eine Eigenschaft eines NULL\-Objekts zu verweisen, erhalten Sie eine <xref:System.NullReferenceException>.  Wenn eine LINQ\-Abfrage eine Eigenschaft eines NULL\-Objekts einschließt, kann dies zu inkonsistentem Verhalten führen.  
+## <a name="null-property-on-a-null-object"></a><span data-ttu-id="3ed27-120">NULL-Eigenschaft eines NULL-Objekts</span><span class="sxs-lookup"><span data-stu-id="3ed27-120">Null Property on a Null Object</span></span>  
+ <span data-ttu-id="3ed27-121">In [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind die Eigenschaften eines NULL-Objekts gleich NULL.</span><span class="sxs-lookup"><span data-stu-id="3ed27-121">In the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)], the properties of a null object are null.</span></span> <span data-ttu-id="3ed27-122">Wenn Sie versuchen, in der CLR auf eine Eigenschaft eines NULL-Objekts zu verweisen, erhalten Sie eine <xref:System.NullReferenceException>.</span><span class="sxs-lookup"><span data-stu-id="3ed27-122">When you attempt to reference a property of a null object in the CLR, you will receive a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="3ed27-123">Wenn eine LINQ-Abfrage eine Eigenschaft eines NULL-Objekts einschließt, kann dies zu inkonsistentem Verhalten führen.</span><span class="sxs-lookup"><span data-stu-id="3ed27-123">When a LINQ query involves a property of a null object, this can result in inconsistent behavior.</span></span>  
   
- In der folgenden Abfrage wird die Umwandlung in `NewProduct` auf der Ebene der Befehlsstruktur durchgeführt. Das kann dazu führen, dass die `Introduced`\-Eigenschaft NULL sein kann.  Wenn NULL\-Vergleiche in der Datenbank in der Weise definiert wurden, dass der <xref:System.DateTime>\-Vergleich zu **true** ausgewertet wird, wird die Zeile eingeschlossen.  
+ <span data-ttu-id="3ed27-124">In der folgenden Abfrage wird die Umwandlung in `NewProduct` auf der Ebene der Befehlsstruktur durchgeführt. Das kann dazu führen, dass die `Introduced`-Eigenschaft NULL sein kann.</span><span class="sxs-lookup"><span data-stu-id="3ed27-124">For example, in the following query, the cast to `NewProduct` is done in the command tree layer, which might result in the `Introduced` property being null.</span></span> <span data-ttu-id="3ed27-125">Wenn NULL-Vergleiche in der Datenbank in der Weise definiert wurden, dass der <xref:System.DateTime>-Vergleich zu true ausgewertet wird, wird die Zeile eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="3ed27-125">If the database defined null comparisons such that the <xref:System.DateTime> comparison evaluates to true, the row will be included.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#castresultsisnull)]
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
-## Übergeben von NULL\-Auflistungen an Aggregatfunktionen  
- In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] werden beim Übergeben einer Auflistung, die `IQueryable` für eine Aggregatfunktion unterstützt, aggregierte Operationen in der Datenbank ausgeführt.  Zwischen den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde, und einer Abfrage, die in der Datenbank ausgeführt wurde, können Unterschiede bestehen.  Bei einer Abfrage im Arbeitsspeicher gibt die Abfrage 0 \(null\) zurück, wenn keine Übereinstimmungen gefunden werden kann.  Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück.  Wird ein `null`\-Wert an eine LINQ\-Aggregatfunktion übergeben, wird eine Ausnahme ausgelöst.  Wandeln Sie die Typen und die Eigenschaften der Typen, die Abfrageergebnisse empfangen, in NULL\-Werte um, um mögliche `null`\-Werte zu akzeptieren.  
+## <a name="passing-null-collections-to-aggregate-functions"></a><span data-ttu-id="3ed27-126">Übergeben von NULL-Auflistungen an Aggregatfunktionen</span><span class="sxs-lookup"><span data-stu-id="3ed27-126">Passing Null Collections to Aggregate Functions</span></span>  
+ <span data-ttu-id="3ed27-127">In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], wenn Sie eine Auflistung übergeben, die unterstützt `IQueryable` für eine Aggregatfunktion zusammengesetzte Operationen in der Datenbank ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3ed27-127">In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], when you pass a collection that supports `IQueryable` to an aggregate function, aggregate operations are performed at the database.</span></span> <span data-ttu-id="3ed27-128">Es gibt möglicherweise Unterschiede in den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde und eine Abfrage, die in der Datenbank ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="3ed27-128">There might be differences in the results of a query that was performed in-memory and a query that was performed at the database.</span></span> <span data-ttu-id="3ed27-129">Wenn keine Übereinstimmungen vorhanden sind, gibt die Abfrage in einer in-Memory-Abfrage 0 (null) zurück.</span><span class="sxs-lookup"><span data-stu-id="3ed27-129">With an in-memory query, if there are no matches, the query returns zero.</span></span> <span data-ttu-id="3ed27-130">Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück.</span><span class="sxs-lookup"><span data-stu-id="3ed27-130">At the database, the same query returns `null`.</span></span> <span data-ttu-id="3ed27-131">Wenn ein `null` Wert an eine LINQ-Aggregatfunktion übergeben wird, wird eine Ausnahme ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="3ed27-131">If a `null` value is passed to a LINQ aggregate function, an exception will be thrown.</span></span> <span data-ttu-id="3ed27-132">Um mögliche akzeptieren `null` Werte umgewandelt, die Typen und die Eigenschaften der Typen, die Abfrageergebnisse in auf NULL festlegbare Typen zu empfangen.</span><span class="sxs-lookup"><span data-stu-id="3ed27-132">To accept possible `null` values, cast the types and the properties of the types that receive query results to nullable types.</span></span>  
   
-## Siehe auch  
- [Ausdrücke in LINQ to Entities\-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a><span data-ttu-id="3ed27-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ed27-133">See Also</span></span>  
+ [<span data-ttu-id="3ed27-134">Ausdrücke in LINQ to Entities-Abfragen</span><span class="sxs-lookup"><span data-stu-id="3ed27-134">Expressions in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

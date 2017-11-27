@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.CommunicationObjectOpened | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.CommunicationObjectOpened
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 431ccb35-b593-4157-8e4d-f20e579630fd
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6092bd0a4272678c9fc2a714e81eb248c624415c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.CommunicationObjectOpened
-System.ServiceModel.CommunicationObjectOpened  
+# <a name="systemservicemodelcommunicationobjectopened"></a><span data-ttu-id="c98ab-102">System.ServiceModel.CommunicationObjectOpened</span><span class="sxs-lookup"><span data-stu-id="c98ab-102">System.ServiceModel.CommunicationObjectOpened</span></span>
+<span data-ttu-id="c98ab-103">System.ServiceModel.CommunicationObjectOpened</span><span class="sxs-lookup"><span data-stu-id="c98ab-103">System.ServiceModel.CommunicationObjectOpened</span></span>  
   
-## Beschreibung  
- Es wurde ein Kommunikationsobjekt geöffnet.  
+## <a name="description"></a><span data-ttu-id="c98ab-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c98ab-104">Description</span></span>  
+ <span data-ttu-id="c98ab-105">Es wurde ein Kommunikationsobjekt geöffnet.</span><span class="sxs-lookup"><span data-stu-id="c98ab-105">A communication object was opened.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c98ab-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c98ab-106">See Also</span></span>  
+ [<span data-ttu-id="c98ab-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="c98ab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c98ab-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="c98ab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c98ab-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="c98ab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

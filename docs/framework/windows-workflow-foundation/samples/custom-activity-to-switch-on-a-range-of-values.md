@@ -1,29 +1,32 @@
 ---
-title: "Benutzerdefinierte Aktivit&#228;t zum Aktivieren eines Wertebereichs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Benutzerdefinierte Aktivität zum Aktivieren eines Wertebereichs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f2f422c4001c2e6ec46fc796e8dbf1b85e6a2b77
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefinierte Aktivit&#228;t zum Aktivieren eines Wertebereichs
-Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Aktivität, die die Verwendung eines <xref:System.Activities.Statements.Switch%601>\-Elements erweitert, erstellt wird.Eine herkömmliche <xref:System.Activities.Statements.Switch%601>\-Anweisung ermöglicht den auf einem einzelnen Wert basierenden Wechsel.In einigen Szenarios muss eine Aktivität jedoch basierend auf einem Wertebereich einen Wechsel ausführen.Beispiel: Eine Aktivität führt eine Aktion aus, wenn der Wert zwischen 1 und 5 liegt, eine andere Aktion, wenn der Wert zwischen 6 und 10 liegt, und eine Standardaktion für alle anderen Werte.Diese benutzerdefinierte Aktivität ermöglicht genau dieses Szenario.  
+# <a name="custom-activity-to-switch-on-a-range-of-values"></a><span data-ttu-id="43b57-102">Benutzerdefinierte Aktivität zum Aktivieren eines Wertebereichs</span><span class="sxs-lookup"><span data-stu-id="43b57-102">Custom Activity to Switch on a Range of Values</span></span>
+<span data-ttu-id="43b57-103">Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Aktivität, die die Verwendung eines <xref:System.Activities.Statements.Switch%601>-Elements erweitert, erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="43b57-103">This sample demonstrates how to create a custom activity that extends the use of a <xref:System.Activities.Statements.Switch%601>.</span></span> <span data-ttu-id="43b57-104">Eine herkömmliche <xref:System.Activities.Statements.Switch%601>-Anweisung ermöglicht den auf einem einzelnen Wert basierenden Wechsel.</span><span class="sxs-lookup"><span data-stu-id="43b57-104">A conventional <xref:System.Activities.Statements.Switch%601> statement allows switching based upon a single value.</span></span> <span data-ttu-id="43b57-105">In einigen Szenarios muss eine Aktivität jedoch basierend auf einem Wertebereich einen Wechsel ausführen.</span><span class="sxs-lookup"><span data-stu-id="43b57-105">But, there are business scenarios where an activity must switch based upon a range of values.</span></span> <span data-ttu-id="43b57-106">Beispiel: Eine Aktivität führt eine Aktion aus, wenn der Wert zwischen 1 und 5 liegt, eine andere Aktion, wenn der Wert zwischen 6 und 10 liegt, und eine Standardaktion für alle anderen Werte.</span><span class="sxs-lookup"><span data-stu-id="43b57-106">For example, an activity might execute one action when the value being switched upon is between 1 and 5, another action when the value is between 6 and 10, and a default action for all other values.</span></span> <span data-ttu-id="43b57-107">Diese benutzerdefinierte Aktivität ermöglicht genau dieses Szenario.</span><span class="sxs-lookup"><span data-stu-id="43b57-107">This custom activity enables exactly that scenario.</span></span>  
   
-## Die SwitchRange\-Aktivität  
- Die `SwitchRange`\-Aktivität plant eine untergeordnete Aktivität, wenn der Ergebniswert des Ausdrucks innerhalb des Bereichs von einem der `Cases` liegt.  
+## <a name="the-switchrange-activity"></a><span data-ttu-id="43b57-108">Die SwitchRange-Aktivität</span><span class="sxs-lookup"><span data-stu-id="43b57-108">The SwitchRange Activity</span></span>  
+ <span data-ttu-id="43b57-109">Die `SwitchRange`-Aktivität plant eine untergeordnete Aktivität, wenn der Ergebniswert des Ausdrucks innerhalb des Bereichs von einem der `Cases` liegt.</span><span class="sxs-lookup"><span data-stu-id="43b57-109">The `SwitchRange` activity schedules a child activity when the result value of its expression is included within the range of one of its `Cases`.</span></span>  
   
- Das folgende Codebeispiel ist eine benutzerdefinierte Aktivität, die auf Basis eines Wertebereichs einen Wechsel ausführt.  
+ <span data-ttu-id="43b57-110">Das folgende Codebeispiel ist eine benutzerdefinierte Aktivität, die auf Basis eines Wertebereichs einen Wechsel ausführt.</span><span class="sxs-lookup"><span data-stu-id="43b57-110">The following code example is a custom activity that switches based upon a range of values.</span></span>  
   
 ```csharp  
-  
 public sealed class SwitchRange<T> : NativeActivity where T : IComparable  
 {  
    [RequiredArgument]  
@@ -37,20 +40,18 @@ public sealed class SwitchRange<T> : NativeActivity where T : IComparable
 }  
 ```  
   
-|||  
+|<span data-ttu-id="43b57-111">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="43b57-111">Property</span></span>|<span data-ttu-id="43b57-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43b57-112">Description</span></span>|  
 |-|-|  
-|Eigenschaft|Beschreibung|  
-|Ausdruck|Der Ausdruck, der ausgewertet und mit den Wertebereichen in der Cases\-Liste verglichen wird.Das Ergebnis dieses Ausdrucks ist vom Typ "T".|  
-|Cases|Jeder "Fall" besteht aus einem Bereich \(Von\-Bis\) und einer Aktivität \(Text\).Der Ausdruck wird ausgewertet und mit den Wertebereichen verglichen.Wenn das Ergebnis des Ausdrucks innerhalb des Wertebereichs von einem der Fälle liegt, wird die entsprechende Aktivität ausgeführt.|  
-|Default|Die Aktivität, die ausgeführt wird, wenn das Ergebnis mit keinem Fall in der Cases\-Liste übereinstimmt.Wenn Sie diese Eigenschaft auf `null` festlegen, wird keine Aktion ausgeführt.|  
+|<span data-ttu-id="43b57-113">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="43b57-113">Expression</span></span>|<span data-ttu-id="43b57-114">Der Ausdruck, der ausgewertet und mit den Wertebereichen in der Cases-Liste verglichen wird.</span><span class="sxs-lookup"><span data-stu-id="43b57-114">This is the expression to be evaluated and compared against the ranges in the Cases list.</span></span> <span data-ttu-id="43b57-115">Das Ergebnis dieses Ausdrucks ist vom Typ "T".</span><span class="sxs-lookup"><span data-stu-id="43b57-115">The result of the expression is of type T.</span></span>|  
+|<span data-ttu-id="43b57-116">Cases</span><span class="sxs-lookup"><span data-stu-id="43b57-116">Cases</span></span>|<span data-ttu-id="43b57-117">Jeder "Fall" besteht aus einem Bereich (Von-Bis) und einer Aktivität (Text).</span><span class="sxs-lookup"><span data-stu-id="43b57-117">Each case consists of a range (From and To) and an activity (Body).</span></span> <span data-ttu-id="43b57-118">Der Ausdruck wird ausgewertet und mit den Wertebereichen verglichen.</span><span class="sxs-lookup"><span data-stu-id="43b57-118">The expression is evaluated and compared against the ranges.</span></span> <span data-ttu-id="43b57-119">Wenn das Ergebnis des Ausdrucks innerhalb des Wertebereichs von einem der Fälle liegt, wird die entsprechende Aktivität ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="43b57-119">If the result of the expression is within the range of one of the cases, the corresponding activity is executed.</span></span>|  
+|<span data-ttu-id="43b57-120">Standard</span><span class="sxs-lookup"><span data-stu-id="43b57-120">Default</span></span>|<span data-ttu-id="43b57-121">Die Aktivität, die ausgeführt wird, wenn das Ergebnis mit keinem Fall in der Cases-Liste übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="43b57-121">The activity that is executed when no case is matched.</span></span> <span data-ttu-id="43b57-122">Wenn Sie diese Eigenschaft auf `null` festlegen, wird keine Aktion ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="43b57-122">When set to `null`, no action is taken.</span></span>|  
   
-## CaseRange\-Klasse  
- Die `CaseRange`\-Klasse stellt einen Bereich innerhalb einer `SwitchRange`\-Aktivität dar.Jede `CaseRange`\-Instanz enthält einen Wertebereich \(zwischen `From` und `To`\) und eine Aktivität \(`Body`\), die ausgeführt wird, wenn das Ergebnis des Ausdrucks der `SwitchRange`\-Aktivität innerhalb des Wertebereichs liegt.  
+## <a name="caserange-class"></a><span data-ttu-id="43b57-123">CaseRange-Klasse</span><span class="sxs-lookup"><span data-stu-id="43b57-123">CaseRange Class</span></span>  
+ <span data-ttu-id="43b57-124">Die `CaseRange`-Klasse stellt einen Bereich innerhalb einer `SwitchRange`-Aktivität dar.</span><span class="sxs-lookup"><span data-stu-id="43b57-124">The `CaseRange` class represents a range within a `SwitchRange` activity.</span></span> <span data-ttu-id="43b57-125">Jede `CaseRange`-Instanz enthält einen Wertebereich (zwischen `From` und `To`) und eine Aktivität (`Body`), die ausgeführt wird, wenn das Ergebnis des Ausdrucks der `SwitchRange`-Aktivität innerhalb des Wertebereichs liegt.</span><span class="sxs-lookup"><span data-stu-id="43b57-125">Every instance of `CaseRange` contains a range (composed of a `From` and a `To`) and a `Body` activity that is scheduled if the expression in the `SwitchRange` is evaluated within the range.</span></span>  
   
- Das folgende Codebeispiel stellt die Definition der `CaseRange`\-Klasse dar.  
+ <span data-ttu-id="43b57-126">Das folgende Codebeispiel stellt die Definition der `CaseRange`-Klasse dar.</span><span class="sxs-lookup"><span data-stu-id="43b57-126">The following code example is the definition for the `CaseRange` class.</span></span>  
   
 ```  
-  
 public class CaseRange<T> where T : IComparable  
 {  
     public T From { get; set; }  
@@ -62,13 +63,12 @@ public class CaseRange<T> where T : IComparable
 ```  
   
 > [!NOTE]
->  Sowohl die `SwitchRange`\-Klasse als auch die `CaseRange`\-Klasse, die im Beispiel definiert werden, sind generische Klassen, die jeden Typ unterstützen, der `IComparable` implementiert, wie die <xref:System.Activities.Statements.Switch%601>\-Klasse.  
+>  <span data-ttu-id="43b57-127">Sowohl die `SwitchRange`-Klasse als auch die `CaseRange`-Klasse, die im Beispiel definiert werden, sind generische Klassen, die jeden Typ unterstützen, der `IComparable` implementiert, wie die <xref:System.Activities.Statements.Switch%601>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="43b57-127">Both the `SwitchRange` and `CaseRange` classes, which are defined in the sample are generic classes that can work with any type that implements `IComparable`, like the <xref:System.Activities.Statements.Switch%601> class.</span></span>  
   
-## Verwendungsbeispiel  
- Das folgende Codebeispiel zeigt, wie Sie die `SwitchRange`\-Aktivität verwenden.  
+## <a name="sample-usage"></a><span data-ttu-id="43b57-128">Verwendung des Beispiels</span><span class="sxs-lookup"><span data-stu-id="43b57-128">Sample Usage</span></span>  
+ <span data-ttu-id="43b57-129">Das folgende Codebeispiel zeigt, wie Sie die `SwitchRange`-Aktivität verwenden.</span><span class="sxs-lookup"><span data-stu-id="43b57-129">The following code example demonstrates how to use the `SwitchRange` activity.</span></span>  
   
 ```csharp  
-  
 Activity SwitchRange = new SwitchRange<int>  
 {  
     Expression = new InArgument<int>(value),  
@@ -97,21 +97,21 @@ Activity SwitchRange = new SwitchRange<int>
 };  
 ```  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="43b57-130">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="43b57-130">To use this sample</span></span>  
   
-1.  Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "SwitchRange.sln".  
+1.  <span data-ttu-id="43b57-131">Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "SwitchRange.sln".</span><span class="sxs-lookup"><span data-stu-id="43b57-131">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the SwitchRange.sln solution file.</span></span>  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  <span data-ttu-id="43b57-132">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="43b57-132">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+3.  <span data-ttu-id="43b57-133">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="43b57-133">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="43b57-134">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="43b57-134">The samples may already be installed on your machine.</span></span> <span data-ttu-id="43b57-135">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="43b57-135">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="43b57-136">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="43b57-136">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="43b57-137">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="43b57-137">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="43b57-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43b57-138">See Also</span></span>

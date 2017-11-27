@@ -1,82 +1,88 @@
 ---
-title: "Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 01f6ce27a05c11ddf4662609bf98730df5ddfda3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
-In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines durch einen Windows\-Dienst gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Diensts erforderlich sind.Das Szenario wird durch die Hostingoption des verwalteten Windows\-Diensts ermöglicht. Die Option ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst mit langer Laufzeit, der außerhalb der Internetinformationsdienste \(IIS\) in einer sicheren, nicht nachrichtenaktivierten Umgebung gehostet wird.Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert.Diese Hostingoption ist in allen Windows\-Versionen verfügbar.  
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a><span data-ttu-id="650a0-102">Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst</span><span class="sxs-lookup"><span data-stu-id="650a0-102">How to: Host a WCF Service in a Managed Windows Service</span></span>
+<span data-ttu-id="650a0-103">In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines durch einen Windows-Dienst gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="650a0-103">This topic outlines the basic steps required to create a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service that is hosted by a Windows Service.</span></span> <span data-ttu-id="650a0-104">Das Szenario wird durch die Hostingoption des verwalteten Windows-Diensts ermöglicht. Die Option ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst mit langer Laufzeit, der außerhalb der Internetinformationsdienste (IIS) in einer sicheren, nicht nachrichtenaktivierten Umgebung gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="650a0-104">The scenario is enabled by the managed Windows service hosting option that is a long-running [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service hosted outside of Internet Information Services (IIS) in a secure environment that is not message activated.</span></span> <span data-ttu-id="650a0-105">Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert.</span><span class="sxs-lookup"><span data-stu-id="650a0-105">The lifetime of the service is controlled instead by the operating system.</span></span> <span data-ttu-id="650a0-106">Diese Hostingoption ist in allen Windows-Versionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="650a0-106">This hosting option is available in all versions of Windows.</span></span>  
   
- Windows\-Dienste können mit Microsoft.ManagementConsole.SnapIn in Microsoft Management Console \(MMC\) verwaltet und so konfiguriert werden, dass sie beim Systemstart automatisch gestartet werden.Diese Hostingoption registriert die Anwendungsdomäne \(AppDomain\), die einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst als verwalteten Windows\-Dienst hostet, sodass die Prozesslebensdauer des Diensts von den Diensten des Dienststeuerungs\-Managers für Windows gesteuert wird.  
+ <span data-ttu-id="650a0-107">Windows-Dienste können mit Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) verwaltet und so konfiguriert werden, dass sie beim Systemstart automatisch gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="650a0-107">Windows services can be managed with the Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) and can be configured to start up automatically when the system boots up.</span></span> <span data-ttu-id="650a0-108">Diese Hostingoption registriert die Anwendungsdomäne (AppDomain), die einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst als verwalteten Windows-Dienst hostet, sodass die Prozesslebensdauer des Diensts von den Diensten des Dienststeuerungs-Managers für Windows gesteuert wird.</span><span class="sxs-lookup"><span data-stu-id="650a0-108">This hosting option consists of registering the application domain (AppDomain) that hosts a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service as a managed Windows service so that the process lifetime of the service is controlled by the Service Control Manager (SCM) for Windows services.</span></span>  
   
- Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Windows\-Dienstklasse und eine Installerklasse.Die Dienstimplementierungsklasse, `CalculatorService`, ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst.`CalculatorWindowsService` ist ein Windows\-Dienst.Damit sich die Klasse als Windows\-Dienst eignet, erbt sie von `ServiceBase` und implementiert die `OnStart`\-Methode und die `OnStop`\-Methode.In `OnStart` wird <xref:System.ServiceModel.ServiceHost> für den `CalculatorService`\-Typ erstellt und geöffnet.In `OnStop` wird der Dienst beendet und verworfen.Der Host ist außerdem für die Bereitstellung einer Basisadresse für den Diensthost verantwortlich, die in den Anwendungseinstellungen konfiguriert wurde.Durch die Installerklasse, die von <xref:System.Configuration.Install.Installer> erbt, kann das Programm mit dem Tool "Installutil.exe" als Windows\-Dienst installiert werden.  
+ <span data-ttu-id="650a0-109">Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Windows-Dienstklasse und eine Installerklasse.</span><span class="sxs-lookup"><span data-stu-id="650a0-109">The service code includes a service implementation of the service contract, a Windows Service class, and an installer class.</span></span> <span data-ttu-id="650a0-110">Die Dienstimplementierungsklasse, `CalculatorService`, ist ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst.</span><span class="sxs-lookup"><span data-stu-id="650a0-110">The service implementation class, `CalculatorService`, is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="650a0-111">`CalculatorWindowsService` ist ein Windows-Dienst.</span><span class="sxs-lookup"><span data-stu-id="650a0-111">The `CalculatorWindowsService` is a Windows service.</span></span> <span data-ttu-id="650a0-112">Damit sich die Klasse als Windows-Dienst eignet, erbt sie von `ServiceBase` und implementiert die `OnStart`-Methode und die `OnStop`-Methode.</span><span class="sxs-lookup"><span data-stu-id="650a0-112">To qualify as a Windows service, the class inherits from `ServiceBase` and implements the `OnStart` and `OnStop` methods.</span></span> <span data-ttu-id="650a0-113">In `OnStart` wird <xref:System.ServiceModel.ServiceHost> für den `CalculatorService`-Typ erstellt und geöffnet.</span><span class="sxs-lookup"><span data-stu-id="650a0-113">In `OnStart`, a <xref:System.ServiceModel.ServiceHost> is created for the `CalculatorService` type and opened.</span></span> <span data-ttu-id="650a0-114">In `OnStop` wird der Dienst beendet und verworfen.</span><span class="sxs-lookup"><span data-stu-id="650a0-114">In `OnStop`, the service is stopped and disposed.</span></span> <span data-ttu-id="650a0-115">Der Host ist außerdem für die Bereitstellung einer Basisadresse für den Diensthost verantwortlich, die in den Anwendungseinstellungen konfiguriert wurde.</span><span class="sxs-lookup"><span data-stu-id="650a0-115">The host is also responsible for providing a base address to the service host, which has been configured in application settings.</span></span> <span data-ttu-id="650a0-116">Durch die Installerklasse, die von <xref:System.Configuration.Install.Installer> erbt, kann das Programm mit dem Tool "Installutil.exe" als Windows-Dienst installiert werden.</span><span class="sxs-lookup"><span data-stu-id="650a0-116">The installer class, which inherits from <xref:System.Configuration.Install.Installer>, allows the program to be installed as a Windows service by the Installutil.exe tool.</span></span>  
   
-### Erstellen des Diensts und Bereitstellen des Hostcodes  
+### <a name="construct-the-service-and-provide-the-hosting-code"></a><span data-ttu-id="650a0-117">Erstellen des Diensts und Bereitstellen des Hostcodes</span><span class="sxs-lookup"><span data-stu-id="650a0-117">Construct the service and provide the hosting code</span></span>  
   
-1.  Erstellen Sie ein neues Visual Studio\-Konsolenanwendungsprojekt namens "Service".  
+1.  <span data-ttu-id="650a0-118">Erstellen Sie ein neues Visual Studio-Konsolenanwendungsprojekt namens "Service".</span><span class="sxs-lookup"><span data-stu-id="650a0-118">Create a new Visual Studio Console Application project called "Service".</span></span>  
   
-2.  Benennen Sie "Program.cs" in "Service.cs" um.  
+2.  <span data-ttu-id="650a0-119">Benennen Sie "Program.cs" in "Service.cs" um.</span><span class="sxs-lookup"><span data-stu-id="650a0-119">Rename Program.cs to Service.cs.</span></span>  
   
-3.  Ändern Sie den Namespace in "Microsoft.ServiceModel.Samples".  
+3.  <span data-ttu-id="650a0-120">Ändern Sie den Namespace in "Microsoft.ServiceModel.Samples".</span><span class="sxs-lookup"><span data-stu-id="650a0-120">Change the namespace to Microsoft.ServiceModel.Samples.</span></span>  
   
-4.  Fügen Sie Verweise auf die folgenden Assemblys hinzu.  
+4.  <span data-ttu-id="650a0-121">Fügen Sie Verweise auf die folgenden Assemblys hinzu.</span><span class="sxs-lookup"><span data-stu-id="650a0-121">Add references to the following assemblies.</span></span>  
   
-    -   System.ServiceModel.dll  
+    -   <span data-ttu-id="650a0-122">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="650a0-122">System.ServiceModel.dll</span></span>  
   
-    -   System.ServiceProcess.dll  
+    -   <span data-ttu-id="650a0-123">System.ServiceProcess.dll</span><span class="sxs-lookup"><span data-stu-id="650a0-123">System.ServiceProcess.dll</span></span>  
   
-    -   System.Configuration.Install.dll  
+    -   <span data-ttu-id="650a0-124">System.Configuration.Install.dll</span><span class="sxs-lookup"><span data-stu-id="650a0-124">System.Configuration.Install.dll</span></span>  
   
-5.  Fügen Sie der Datei "Service.cs" die folgenden using\-Anweisungen hinzu.  
+5.  <span data-ttu-id="650a0-125">Fügen Sie der Datei "Service.cs" die folgenden using-Anweisungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="650a0-125">Add the following using statements to Service.cs.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]  
   
-6.  Definieren Sie den `ICalculator`\-Dienstvertrag, wie im folgenden Code gezeigt.  
+6.  <span data-ttu-id="650a0-126">Definieren Sie den `ICalculator`-Dienstvertrag, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="650a0-126">Define the `ICalculator` service contract as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]  
   
-7.  Implementieren Sie den Dienstvertrag in einer Klasse namens `CalculatorService`, wie im folgenden Code gezeigt.  
+7.  <span data-ttu-id="650a0-127">Implementieren Sie den Dienstvertrag in einer Klasse namens `CalculatorService`, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="650a0-127">Implement the service contract in a class called `CalculatorService` as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]  
   
-8.  Erstellen Sie eine neue Klasse namens `CalculatorWindowsService`, die von der <xref:System.ServiceProcess.ServiceBase>\-Klasse erbt.Fügen Sie eine lokale Variable namens `serviceHost` hinzu, die auf die <xref:System.ServiceModel.ServiceHost>\-Instanz verweist.Definieren Sie die `Main`\-Methode, die `ServiceBase.Run(new CalculatorWindowsService)` aufruft.  
+8.  <span data-ttu-id="650a0-128">Erstellen Sie eine neue Klasse namens `CalculatorWindowsService`, die von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt.</span><span class="sxs-lookup"><span data-stu-id="650a0-128">Create a new class called `CalculatorWindowsService` that inherits from the <xref:System.ServiceProcess.ServiceBase> class.</span></span> <span data-ttu-id="650a0-129">Fügen Sie eine lokale Variable namens `serviceHost` hinzu, die auf die <xref:System.ServiceModel.ServiceHost>-Instanz verweist.</span><span class="sxs-lookup"><span data-stu-id="650a0-129">Add a local variable called `serviceHost` to reference the <xref:System.ServiceModel.ServiceHost> instance.</span></span> <span data-ttu-id="650a0-130">Definieren Sie die `Main`-Methode, die `ServiceBase.Run(new CalculatorWindowsService)` aufruft.</span><span class="sxs-lookup"><span data-stu-id="650a0-130">Define the `Main` method that calls `ServiceBase.Run(new CalculatorWindowsService)`</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]  
   
-9. Überschreiben Sie die [OnStart\(String\<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>\-Methode, indem Sie eine neue <xref:System.ServiceModel.ServiceHost>\-Instanz erstellen und öffnen, wie im folgenden Code gezeigt.  
+9. <span data-ttu-id="650a0-131">Überschreiben Sie die <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>-Methode, indem Sie eine neue <xref:System.ServiceModel.ServiceHost>-Instanz erstellen und öffnen, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="650a0-131">Override the <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> method by creating and opening a new <xref:System.ServiceModel.ServiceHost> instance as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#4)]
      [!code-vb[c_HowTo_HostInNTService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#4)]  
   
-10. Überschreiben Sie die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>\-Methode, indem Sie <xref:System.ServiceModel.ServiceHost> schließen, wie im folgenden Code gezeigt.  
+10. <span data-ttu-id="650a0-132">Überschreiben Sie die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Methode, indem Sie <xref:System.ServiceModel.ServiceHost> schließen, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="650a0-132">Override the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method closing the <xref:System.ServiceModel.ServiceHost> as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#5)]
      [!code-vb[c_HowTo_HostInNTService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#5)]  
   
-11. Erstellen Sie eine neue Klasse namens `ProjectInstaller`, die von <xref:System.Configuration.Install.Installer> erbt und die mit dem auf `true` festgelegten <xref:System.ComponentModel.RunInstallerAttribute> gekennzeichnet ist.Dies ermöglicht die Installation des Tools "Installutil.exe" durch den Windows\-Dienst.  
+11. <span data-ttu-id="650a0-133">Erstellen Sie eine neue Klasse namens `ProjectInstaller`, die von <xref:System.Configuration.Install.Installer> erbt und die mit dem auf <xref:System.ComponentModel.RunInstallerAttribute> festgelegten `true` gekennzeichnet ist.</span><span class="sxs-lookup"><span data-stu-id="650a0-133">Create a new class called `ProjectInstaller` that inherits from <xref:System.Configuration.Install.Installer> and that is marked with the <xref:System.ComponentModel.RunInstallerAttribute> set to `true`.</span></span> <span data-ttu-id="650a0-134">Dies ermöglicht die Installation des Tools "Installutil.exe" durch den Windows-Dienst.</span><span class="sxs-lookup"><span data-stu-id="650a0-134">This allows the Windows service to be installed by the Installutil.exe tool.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#6)]
      [!code-vb[c_HowTo_HostInNTService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#6)]  
   
-12. Entfernen Sie die `Service`\-Klasse, die beim Erstellen des Projekts generiert wurde.  
+12. <span data-ttu-id="650a0-135">Entfernen Sie die `Service`-Klasse, die beim Erstellen des Projekts generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="650a0-135">Remove the `Service` class that was generated when you created the project.</span></span>  
   
-13. Fügen Sie dem Projekt eine Anwendungskonfigurationsdatei hinzu.Ersetzen Sie den Inhalt der Datei durch das folgende Konfigurations\-XML.  
+13. <span data-ttu-id="650a0-136">Fügen Sie dem Projekt eine Anwendungskonfigurationsdatei hinzu.</span><span class="sxs-lookup"><span data-stu-id="650a0-136">Add an application configuration file to the project.</span></span> <span data-ttu-id="650a0-137">Ersetzen Sie den Inhalt der Datei durch das folgende Konfigurations-XML.</span><span class="sxs-lookup"><span data-stu-id="650a0-137">Replace the contents of the file with the following configuration XML.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -113,33 +119,33 @@ In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erst
     </configuration>  
     ```  
   
-     Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die App.config\-Datei, und wählen Sie **Eigenschaften** aus.Wählen Sie unter **In Ausgabeverzeichnis kopieren** die Option **Kopieren, wenn neuer** aus.  
+     <span data-ttu-id="650a0-138">Klicken Sie mit der mit der rechten Maustaste auf die Datei "App.config" in der **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="650a0-138">Right click the App.config file in the **Solution Explorer** and select **Properties**.</span></span> <span data-ttu-id="650a0-139">Klicken Sie unter **in Ausgabeverzeichnis kopieren** wählen **kopieren, wenn neuer**.</span><span class="sxs-lookup"><span data-stu-id="650a0-139">Under **Copy to Output Directory** select **Copy if Newer**.</span></span>  
   
-     In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben.Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt.Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     <span data-ttu-id="650a0-140">In diesem Beispiel werden die Endpunkte in der Konfigurationsdatei explizit angegeben.</span><span class="sxs-lookup"><span data-stu-id="650a0-140">This example explicitly specifies endpoints in the configuration file.</span></span> <span data-ttu-id="650a0-141">Wenn Sie dem Dienst keine Endpunkte hinzufügen, werden von der Runtime automatisch Standardendpunkte hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="650a0-141">If you do not add any endpoints to the service, the runtime adds default endpoints for you.</span></span> <span data-ttu-id="650a0-142">Da in diesem Beispiel das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> des Diensts auf `true` festgelegt ist, ist für den Dienst auch die Veröffentlichung von Metadaten aktiviert.</span><span class="sxs-lookup"><span data-stu-id="650a0-142">In this example, because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> set to `true`, your service also has publishing metadata enabled.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="650a0-143">Standardendpunkte, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="650a0-143"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-### Installieren Sie den Dienst, und führen Sie ihn aus.  
+### <a name="install-and-run-the-service"></a><span data-ttu-id="650a0-144">Installieren Sie den Dienst, und führen Sie ihn aus.</span><span class="sxs-lookup"><span data-stu-id="650a0-144">Install and run the service</span></span>  
   
-1.  Erstellen Sie die Projektmappe, um `Service.exe` zu erstellen.  
+1.  <span data-ttu-id="650a0-145">Erstellen Sie die Projektmappe, um `Service.exe` zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="650a0-145">Build the solution to create the `Service.exe` executable.</span></span>  
   
-2.  Öffnen Sie das [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis.Geben Sie an der Eingabeaufforderung `installutil bin\service.exe` ein, um den Windows\-Dienst zu installieren.  
+2.  <span data-ttu-id="650a0-146">Öffnen Sie das [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis.</span><span class="sxs-lookup"><span data-stu-id="650a0-146">Open the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt and navigate to the project directory.</span></span> <span data-ttu-id="650a0-147">Geben Sie an der Eingabeaufforderung `installutil bin\service.exe` ein, um den Windows-Dienst zu installieren.</span><span class="sxs-lookup"><span data-stu-id="650a0-147">Type `installutil bin\service.exe` at the command prompt to install the Windows service.</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie die [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung nicht verwenden, stellen Sie sicher, dass sich das `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>`\-Verzeichnis im Systempfad befindet.  
+    >  <span data-ttu-id="650a0-148">Wenn Sie nicht verwenden die [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Befehlszeile verwenden, stellen Sie sicher, dass die `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` Verzeichnis befindet sich im Systempfad.</span><span class="sxs-lookup"><span data-stu-id="650a0-148">If you do not use the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt, make sure that the `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` directory is in the system path.</span></span>  
   
-     Geben Sie an der Eingabeaufforderung `services.msc` ein, um auf den Dienststeuerungs\-Manager \(SCM\) zuzugreifen.Der Windows\-Dienst müsste unter "Dienste" als "WCFWindowsServiceSample" angezeigt werden.Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst kann Clients nur dann antworten, wenn der Windows\-Dienst ausgeführt wird.Um den Dienst zu starten, klicken Sie mit der rechten Maustaste in den Dienststeuerungs\-Manager, und wählen Sie "Starten" aus, oder geben Sie an der Eingabeaufforderung **net start WCFWindowsServiceSample** ein.  
+     <span data-ttu-id="650a0-149">Geben Sie an der Eingabeaufforderung `services.msc` ein, um auf den Dienststeuerungs-Manager (SCM) zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="650a0-149">Type `services.msc` at the command prompt to access the Service Control Manager (SCM).</span></span> <span data-ttu-id="650a0-150">Der Windows-Dienst müsste unter "Dienste" als "WCFWindowsServiceSample" angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="650a0-150">The Windows service should appear in Services as "WCFWindowsServiceSample".</span></span> <span data-ttu-id="650a0-151">Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst kann Clients nur dann antworten, wenn der Windows-Dienst ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="650a0-151">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service can only respond to clients if the Windows service is running.</span></span> <span data-ttu-id="650a0-152">Um den Dienst zu starten, klicken Sie darauf in der SCM, und wählen Sie "Start", oder geben **Net start WCFWindowsServiceSample** an der Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="650a0-152">To start the service, right-click it in the SCM and select "Start", or type **net start WCFWindowsServiceSample** at the command prompt.</span></span>  
   
-3.  Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren.Um den Dienst zu stoppen, klicken Sie mit der rechten Maustaste auf den Dienst im Dienststeuerungs\-Manager, und wählen Sie "Beenden" aus, oder geben Sie an der Eingabeaufforderung **type net stop WCFWindowsServiceSample** ein.Wenn Sie den Windows\-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen.Um den Windows\-Dienst zu deinstallieren, geben Sie an der Eingabeaufforderung **installutil \/u bin\\service.exe** ein.  
+3.  <span data-ttu-id="650a0-153">Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren.</span><span class="sxs-lookup"><span data-stu-id="650a0-153">If you make changes to the service, you must first stop it and uninstall it.</span></span> <span data-ttu-id="650a0-154">Beenden Sie den Dienst, mit der rechten Maustaste in des Diensts im dienststeuerungs-Manager aus, und wählen Sie "Beenden", oder **Geben Sie net Stop WCFWindowsServiceSample** an der Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="650a0-154">To stop the service, right-click the service in the SCM and select "Stop", or **type net stop WCFWindowsServiceSample** at the command prompt.</span></span> <span data-ttu-id="650a0-155">Wenn Sie den Windows-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="650a0-155">Note that if you stop the Windows service and then run a client, an <xref:System.ServiceModel.EndpointNotFoundException> exception occurs when a client attempts to access the service.</span></span> <span data-ttu-id="650a0-156">So deinstallieren Sie Windows-Dienst des Typs **Installutil/u bin\service.exe** an der Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="650a0-156">To uninstall the Windows service type **installutil /u bin\service.exe** at the command prompt.</span></span>  
   
-## Beispiel  
- In Folgenden finden Sie eine vollständige Liste des in diesem Thema verwendeten Codes:  
+## <a name="example"></a><span data-ttu-id="650a0-157">Beispiel</span><span class="sxs-lookup"><span data-stu-id="650a0-157">Example</span></span>  
+ <span data-ttu-id="650a0-158">In Folgenden finden Sie eine vollständige Liste des in diesem Thema verwendeten Codes:</span><span class="sxs-lookup"><span data-stu-id="650a0-158">The following is a complete listing of the code used by this topic.</span></span>  
   
  [!code-csharp[c_HowTo_HostInNTService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#8)]
  [!code-vb[c_HowTo_HostInNTService#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#8)]  
   
- Wie bei der Option für das "Selbsthosting" muss auch bei der Hostumgebung des Windows\-Diensts ein Teil des Hostcodes eine Komponente der Anwendung sein.Der Dienst wird als eine Konsolenanwendung implementiert und enthält seinen eigenen Hostingcode.In anderen Hostumgebungen, z. B. WAS \(Windows Process Activation Service, Windows\-Prozessaktivierungsdienst\) in IIS \(Internet Information Services, Internetinformationsdienste\), müssen Entwickler keinen Hostcode schreiben.  
+ <span data-ttu-id="650a0-159">Wie bei der Option für das "Selbsthosting" muss auch bei der Hostumgebung des Windows-Diensts ein Teil des Hostcodes eine Komponente der Anwendung sein.</span><span class="sxs-lookup"><span data-stu-id="650a0-159">Like the "Self-Hosting" option, the Windows service hosting environment requires that some hosting code be written as part of the application.</span></span> <span data-ttu-id="650a0-160">Der Dienst wird als eine Konsolenanwendung implementiert und enthält seinen eigenen Hostingcode.</span><span class="sxs-lookup"><span data-stu-id="650a0-160">The service is implemented as a console application and contains its own hosting code.</span></span> <span data-ttu-id="650a0-161">In anderen Hostumgebungen, z. B. WAS (Windows Process Activation Service, Windows-Prozessaktivierungsdienst) in IIS (Internet Information Services, Internetinformationsdienste), müssen Entwickler keinen Hostcode schreiben.</span><span class="sxs-lookup"><span data-stu-id="650a0-161">In other hosting environments, such as Windows Process Activation Service (WAS) hosting in Internet Information Services (IIS), it is not necessary for developers to write hosting code.</span></span>  
   
-## Siehe auch  
- [Vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md)   
- [Hosten in einer verwalteten Anwendung](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)   
- [Hosting\-Dienste](../../../../docs/framework/wcf/hosting-services.md)   
- [Windows Server AppFabric\-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="650a0-162">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="650a0-162">See Also</span></span>  
+ [<span data-ttu-id="650a0-163">Vereinfachte Konfiguration</span><span class="sxs-lookup"><span data-stu-id="650a0-163">Simplified Configuration</span></span>](../../../../docs/framework/wcf/simplified-configuration.md)  
+ [<span data-ttu-id="650a0-164">Hosten in einer verwalteten Anwendung</span><span class="sxs-lookup"><span data-stu-id="650a0-164">Hosting in a Managed Application</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [<span data-ttu-id="650a0-165">Hosting-Dienste</span><span class="sxs-lookup"><span data-stu-id="650a0-165">Hosting Services</span></span>](../../../../docs/framework/wcf/hosting-services.md)  
+ [<span data-ttu-id="650a0-166">Windows Server AppFabric-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="650a0-166">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

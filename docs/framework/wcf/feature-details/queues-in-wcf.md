@@ -1,75 +1,77 @@
 ---
-title: "Warteschlangen in Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Warteschlangen [WCF]"
+title: Warteschlangen in Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 279f6094b7e41549a285ac0175c3f949f9d8e7e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Warteschlangen in Windows Communication Foundation
-Die Themen in diesem Abschnitt erläutern die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Unterstützung für Warteschlangen.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt Warteschlangen, indem Microsoft Message Queuing \(vormals MSMQ\) als Transport herangezogen wird. Hierdurch werden die folgenden Szenarien möglich:  
+# <a name="queues-in-windows-communication-foundation"></a><span data-ttu-id="b418f-102">Warteschlangen in Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="b418f-102">Queues in Windows Communication Foundation</span></span>
+<span data-ttu-id="b418f-103">Die Themen in diesem Abschnitt erläutern die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Unterstützung für Warteschlangen.</span><span class="sxs-lookup"><span data-stu-id="b418f-103">The topics in this section discuss [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] support for queues.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b418f-104"> unterstützt Warteschlangen, indem Microsoft Message Queuing (vormals MSMQ) als Transport herangezogen wird. Hierdurch werden die folgenden Szenarien möglich:</span><span class="sxs-lookup"><span data-stu-id="b418f-104"> provides support for queuing by leveraging Microsoft Message Queuing (previously known as MSMQ) as a transport and enables the following scenarios:</span></span>  
   
--   Lose verbundene Anwendungen:Die sendenden Anwendungen können Nachrichten an Warteschlangen senden, unabhängig davon, ob die empfangende Anwendung für die Verarbeitung der Nachricht zur Verfügung steht.Die Warteschlange macht die Verarbeitung unabhängig. So kann die sendende Anwendung Nachrichten mit einer Frequenz an die Warteschlange senden, die unabhängig davon ist, wie schnell die empfangenden Anwendungen die Nachrichten verarbeiten können.Die Gesamtverfügbarkeit des Systems verbessert sich, wenn das Senden von Nachrichten an eine Warteschlange und die Nachrichtenverarbeitung nur lose miteinander verbunden sind.  
+-   <span data-ttu-id="b418f-105">Lose verbundene Anwendungen:</span><span class="sxs-lookup"><span data-stu-id="b418f-105">Loosely coupled applications.</span></span> <span data-ttu-id="b418f-106">Die sendenden Anwendungen können Nachrichten an Warteschlangen senden, unabhängig davon, ob die empfangende Anwendung für die Verarbeitung der Nachricht zur Verfügung steht.</span><span class="sxs-lookup"><span data-stu-id="b418f-106">Sending applications can send messages to queues without needing to know whether the receiving application is available to process the message.</span></span> <span data-ttu-id="b418f-107">Die Warteschlange macht die Verarbeitung unabhängig. So kann die sendende Anwendung Nachrichten mit einer Frequenz an die Warteschlange senden, die unabhängig davon ist, wie schnell die empfangenden Anwendungen die Nachrichten verarbeiten können.</span><span class="sxs-lookup"><span data-stu-id="b418f-107">The queue provides processing independence that allows a sending application to send messages to the queue at a rate that does not depend on how fast the receiving applications can process the messages.</span></span> <span data-ttu-id="b418f-108">Die Gesamtverfügbarkeit des Systems verbessert sich, wenn das Senden von Nachrichten an eine Warteschlange und die Nachrichtenverarbeitung nur lose miteinander verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="b418f-108">Overall system availability increases when sending messages to a queue is not tightly coupled to message processing.</span></span>  
   
--   Fehlerisolierung:Anwendungen, die Nachrichten an eine Warteschlange senden oder Nachrichten empfangen, können fehlschlagen, ohne dass dies Auswirkungen auf die anderen Anwendungen hat.Wenn beispielsweise in der empfangenden Anwendung ein Fehler auftritt, kann die sendende Anwendung trotzdem weiterhin Nachrichten an die Warteschlange senden.Sobald der Empfänger wieder einsatzbereit ist, können die Nachrichten in der Warteschlange verarbeitet werden.Durch die Fehlerisolierung werden Zuverlässigkeit und Verfügbarkeit des Systems insgesamt verbessert.  
+-   <span data-ttu-id="b418f-109">Fehlerisolierung:</span><span class="sxs-lookup"><span data-stu-id="b418f-109">Failure isolation.</span></span> <span data-ttu-id="b418f-110">Anwendungen, die Nachrichten an eine Warteschlange senden oder Nachrichten empfangen, können fehlschlagen, ohne dass dies Auswirkungen auf die anderen Anwendungen hat.</span><span class="sxs-lookup"><span data-stu-id="b418f-110">Applications sending or receiving messages to a queue can fail without affecting each other.</span></span> <span data-ttu-id="b418f-111">Wenn beispielsweise in der empfangenden Anwendung ein Fehler auftritt, kann die sendende Anwendung trotzdem weiterhin Nachrichten an die Warteschlange senden.</span><span class="sxs-lookup"><span data-stu-id="b418f-111">If, for example, the receiving application fails, the sending application can continue to send messages to the queue.</span></span> <span data-ttu-id="b418f-112">Sobald der Empfänger wieder einsatzbereit ist, können die Nachrichten in der Warteschlange verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="b418f-112">When the receiver is up again, it can process the messages from the queue.</span></span> <span data-ttu-id="b418f-113">Durch die Fehlerisolierung werden Zuverlässigkeit und Verfügbarkeit des Systems insgesamt verbessert.</span><span class="sxs-lookup"><span data-stu-id="b418f-113">Failure isolation increases the overall system reliability and availability.</span></span>  
   
--   Lastenausgleich:Sendende Anwendungen können empfangende Anwendungen mit Nachrichten überlasten.Durch Warteschlangen kann ein Ungleichgewicht an gesendeten und verarbeiteten Nachrichten ausgeglichen werden, sodass der Empfänger nicht mit Nachrichten überschwemmt wird.  
+-   <span data-ttu-id="b418f-114">Lastenausgleich:</span><span class="sxs-lookup"><span data-stu-id="b418f-114">Load leveling.</span></span> <span data-ttu-id="b418f-115">Sendende Anwendungen können empfangende Anwendungen mit Nachrichten überlasten.</span><span class="sxs-lookup"><span data-stu-id="b418f-115">Sending applications can overwhelm receiving applications with messages.</span></span> <span data-ttu-id="b418f-116">Durch Warteschlangen kann ein Ungleichgewicht an gesendeten und verarbeiteten Nachrichten ausgeglichen werden, sodass der Empfänger nicht mit Nachrichten überschwemmt wird.</span><span class="sxs-lookup"><span data-stu-id="b418f-116">Queues can manage mismatched message production and consumption rates so that a receiver is not overwhelmed.</span></span>  
   
--   Getrennte Vorgänge:Die Vorgänge des Sendens, Empfangens und Verarbeitens können bei der Kommunikation über Netzwerke mit hoher Latenz oder eingeschränkter Verfügbarkeit, wie dies zum Beispiel bei mobilen Geräten der Fall ist, voneinander getrennt werden.Warteschlangen ermöglichen die Fortsetzung dieser Vorgänge, selbst wenn die Endpunkte nicht erreichbar sind.Sobald die Verbindung wiederhergestellt ist, leitet die Warteschlange die Nachrichten an die empfangende Anwendung weiter.  
+-   <span data-ttu-id="b418f-117">Getrennte Vorgänge:</span><span class="sxs-lookup"><span data-stu-id="b418f-117">Disconnected operations.</span></span> <span data-ttu-id="b418f-118">Die Vorgänge des Sendens, Empfangens und Verarbeitens können bei der Kommunikation über Netzwerke mit hoher Latenz oder eingeschränkter Verfügbarkeit, wie dies zum Beispiel bei mobilen Geräten der Fall ist, voneinander getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="b418f-118">Sending, receiving, and processing operations can become disconnected when communicating over high-latency networks or limited-availability networks, such as in the case of mobile devices.</span></span> <span data-ttu-id="b418f-119">Warteschlangen ermöglichen die Fortsetzung dieser Vorgänge, selbst wenn die Endpunkte nicht erreichbar sind.</span><span class="sxs-lookup"><span data-stu-id="b418f-119">Queues allow these operations to continue, even when the endpoints are disconnected.</span></span> <span data-ttu-id="b418f-120">Sobald die Verbindung wiederhergestellt ist, leitet die Warteschlange die Nachrichten an die empfangende Anwendung weiter.</span><span class="sxs-lookup"><span data-stu-id="b418f-120">When the connection is reestablished, the queue forwards messages to the receiving application.</span></span>  
   
- Wenn Sie die Warteschlangenfunktion in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendung einsetzen möchten, können Sie eine Standardbindung verwenden oder Ihre eigene Bindung erstellen, falls die Standardbindungen Ihre Anforderungen nicht erfüllen.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] über relevante Standardbindungen und ihre Auswahl finden Sie unter [Vorgehensweise: Nachrichtenaustausch mit WCF\-Endpunkten und Message Queuing\-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ <span data-ttu-id="b418f-121">Wenn Sie die Warteschlangenfunktion in einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung einsetzen möchten, können Sie eine Standardbindung verwenden oder Ihre eigene Bindung erstellen, falls die Standardbindungen Ihre Anforderungen nicht erfüllen.</span><span class="sxs-lookup"><span data-stu-id="b418f-121">To use the queues feature in a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, you can use one of the standard bindings, or you can create a custom binding if one of the standard bindings does not satisfy your requirements.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b418f-122">relevante standardbindungen und auswählen, finden Sie in [Vorgehensweise: Exchange-Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).</span><span class="sxs-lookup"><span data-stu-id="b418f-122"> relevant standard bindings and how to choose one, see [How to: Exchange Messages with WCF Endpoints and Message Queuing Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b418f-123">Erstellung benutzerdefinierter Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="b418f-123"> creating custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## In diesem Abschnitt  
- [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- Eine Übersicht über die Konzepte des Message Queuings \(Nachrichtenwarteschlangen\).  
+## <a name="in-this-section"></a><span data-ttu-id="b418f-124">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b418f-124">In This Section</span></span>  
+ [<span data-ttu-id="b418f-125">Nachrichtenwarteschlangen (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="b418f-125">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ <span data-ttu-id="b418f-126">Eine Übersicht über die Konzepte des Message Queuings (Nachrichtenwarteschlangen).</span><span class="sxs-lookup"><span data-stu-id="b418f-126">An overview of message queuing concepts.</span></span>  
   
- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Eine Übersicht über die Warteschlangenunterstützung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="b418f-127">Warteschlangen in WCF</span><span class="sxs-lookup"><span data-stu-id="b418f-127">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ <span data-ttu-id="b418f-128">Eine Übersicht über die Warteschlangenunterstützung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b418f-128">An overview of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queue support.</span></span>  
   
- [Gewusst wie: Austauschen von Nachrichten in einer Warteschlange mit WCD\-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Erläutert die Verwendung der <xref:System.ServiceModel.NetMsmqBinding>\-Klasse für die Kommunikation zwischen einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Client und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst.  
+ [<span data-ttu-id="b418f-129">Vorgehensweise: Exchange in der Warteschlange Nachrichten mit WCF-Endpunkten</span><span class="sxs-lookup"><span data-stu-id="b418f-129">How to: Exchange Queued Messages with WCF Endpoints</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ <span data-ttu-id="b418f-130">Erläutert die Verwendung der <xref:System.ServiceModel.NetMsmqBinding>-Klasse für die Kommunikation zwischen einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst.</span><span class="sxs-lookup"><span data-stu-id="b418f-130">Explains how to use the <xref:System.ServiceModel.NetMsmqBinding> class to communicate between a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [Vorgehensweise: Nachrichtenaustausch mit WCF\-Endpunkten und Message Queuing\-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Erläutert die Verwendung von <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für die Kommunikation zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und Message Queuing\-Anwendungen.  
+ [<span data-ttu-id="b418f-131">Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="b418f-131">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ <span data-ttu-id="b418f-132">Erläutert die Verwendung von <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für die Kommunikation zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und Message Queuing-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="b418f-132">Explains how to use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> to communicate between [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and Message Queuing applications.</span></span>  
   
- [Gruppieren von Nachrichten in der Warteschlange einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- Erläutert, wie Nachrichten in einer Warteschlange gruppiert werden können, um die Verarbeitung zusammengehöriger Nachrichten durch eine einzelne Empfängeranwendung zu erleichtern.  
+ [<span data-ttu-id="b418f-133">Gruppierung in der Warteschlange Nachrichten in einer Sitzung</span><span class="sxs-lookup"><span data-stu-id="b418f-133">Grouping Queued Messages in a Session</span></span>](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ <span data-ttu-id="b418f-134">Erläutert, wie Nachrichten in einer Warteschlange gruppiert werden können, um die Verarbeitung zusammengehöriger Nachrichten durch eine einzelne Empfängeranwendung zu erleichtern.</span><span class="sxs-lookup"><span data-stu-id="b418f-134">Explains how to group messages in a queue to facilitate correlated message processing by a single receiving application.</span></span>  
   
- [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- Erläutert die Batchverarbeitung von Nachrichten in einer Transaktion.  
+ [<span data-ttu-id="b418f-135">Batchverarbeitung von Nachrichten in einer Transaktion</span><span class="sxs-lookup"><span data-stu-id="b418f-135">Batching Messages in a Transaction</span></span>](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ <span data-ttu-id="b418f-136">Erläutert die Batchverarbeitung von Nachrichten in einer Transaktion.</span><span class="sxs-lookup"><span data-stu-id="b418f-136">Explains how to batch messages in a transaction.</span></span>  
   
- [Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- Erläutert die Handhabung von Nachrichtenübertragungen und Sendefehlern mithilfe von Warteschlangen für unzustellbare Nachrichten und beschreibt, wie Nachrichten in der Warteschlange für unzustellbare Nachrichten verarbeitet werden.  
+ [<span data-ttu-id="b418f-137">Behandeln von Nachrichtenübertragungsfehlern mithilfe von unzustellbare Warteschlangen</span><span class="sxs-lookup"><span data-stu-id="b418f-137">Using Dead-Letter Queues to Handle Message Transfer Failures</span></span>](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ <span data-ttu-id="b418f-138">Erläutert die Handhabung von Nachrichtenübertragungen und Sendefehlern mithilfe von Warteschlangen für unzustellbare Nachrichten und beschreibt, wie Nachrichten in der Warteschlange für unzustellbare Nachrichten verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="b418f-138">Explains how to handle message transfer and delivery failures using dead letter queues and how to process messages from the dead letter queue.</span></span>  
   
- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- Erläutert den Umgang mit beschädigten \(nicht verarbeitbaren\) Nachrichten, das heißt Nachrichten, die auch nach der maximalen Anzahl von Versuchen nicht an die Empfängeranwendung gesendet werden konnten.  
+ [<span data-ttu-id="b418f-139">Die Handhabung beschädigter Nachrichten</span><span class="sxs-lookup"><span data-stu-id="b418f-139">Poison Message Handling</span></span>](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ <span data-ttu-id="b418f-140">Erläutert den Umgang mit beschädigten (nicht verarbeitbaren) Nachrichten, das heißt Nachrichten, die auch nach der maximalen Anzahl von Versuchen nicht an die Empfängeranwendung gesendet werden konnten.</span><span class="sxs-lookup"><span data-stu-id="b418f-140">Explains how to handle poison messages (messages that have exceeded the maximum number of delivery attempts to the receiving application).</span></span>  
   
- [Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Bietet eine Übersicht über die Unterschiede bei den Warteschlangenfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zwischen [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ [<span data-ttu-id="b418f-141">Unterschiede bei den Warteschlangenfunktionen in Windows Vista, WindowsServer 2003 und Windows XP</span><span class="sxs-lookup"><span data-stu-id="b418f-141">Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP</span></span>](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ <span data-ttu-id="b418f-142">Bietet eine Übersicht über die Unterschiede bei den Warteschlangenfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zwischen [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b418f-142">Summarizes the differences in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queues feature between [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
- [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- Beschreibt, wie Nachrichten in Warteschlangen mithilfe der Transportsicherheit geschützt werden können.  
+ [<span data-ttu-id="b418f-143">Sichern von Nachrichten mit Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="b418f-143">Securing Messages Using Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ <span data-ttu-id="b418f-144">Beschreibt, wie Nachrichten in Warteschlangen mithilfe der Transportsicherheit geschützt werden können.</span><span class="sxs-lookup"><span data-stu-id="b418f-144">Describes how to use transport security to secure queued messages.</span></span>  
   
- [Sichern von Nachrichten mithilfe der Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- Beschreibt, wie Nachrichten in Warteschlangen mithilfe der Nachrichtensicherheit geschützt werden können.  
+ [<span data-ttu-id="b418f-145">Sichern von Nachrichten unter Verwendung der Nachrichtensicherheit</span><span class="sxs-lookup"><span data-stu-id="b418f-145">Securing Messages Using Message Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ <span data-ttu-id="b418f-146">Beschreibt, wie Nachrichten in Warteschlangen mithilfe der Nachrichtensicherheit geschützt werden können.</span><span class="sxs-lookup"><span data-stu-id="b418f-146">Describes how to use message security to secure queued messages.</span></span>  
   
- [Problembehandlung bei Nachrichtenwarteschlangen](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
- Beschreibt, wie allgemeine Warteschlangenprobleme behoben werden können.  
+ [<span data-ttu-id="b418f-147">Problembehandlung bei Nachrichtenwarteschlangen</span><span class="sxs-lookup"><span data-stu-id="b418f-147">Troubleshooting Queued Messaging</span></span>](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
+ <span data-ttu-id="b418f-148">Beschreibt, wie allgemeine Warteschlangenprobleme behoben werden können.</span><span class="sxs-lookup"><span data-stu-id="b418f-148">Explains how to troubleshoot common queuing problems.</span></span>  
   
- [Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Stellt bewährte Methoden für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Kommunikation unter Verwendung von Warteschlangen vor.  
+ [<span data-ttu-id="b418f-149">Bewährte Methoden für die Warteschlangenkommunikation</span><span class="sxs-lookup"><span data-stu-id="b418f-149">Best Practices for Queued Communication</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ <span data-ttu-id="b418f-150">Stellt bewährte Methoden für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Kommunikation unter Verwendung von Warteschlangen vor.</span><span class="sxs-lookup"><span data-stu-id="b418f-150">Explains best practices for using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queued communication.</span></span>  
   
-## Siehe auch  
- [Message Queuing](http://msdn.microsoft.com/de-de/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a><span data-ttu-id="b418f-151">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b418f-151">See Also</span></span>  
+ [<span data-ttu-id="b418f-152">Message Queuing</span><span class="sxs-lookup"><span data-stu-id="b418f-152">Message Queuing</span></span>](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)

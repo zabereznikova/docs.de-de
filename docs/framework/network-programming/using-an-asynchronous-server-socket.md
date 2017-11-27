@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,23 +23,22 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-an-asynchronous-server-socket"></a>Verwenden eines asynchronen Serversockets
-Asynchrone Serversockets verwenden das asynchrone Programmiermodell von .NET Framework, um Dienstanforderungen über das Netzwerk zu verarbeiten. Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem asynchronen Standardbenennungsmuster von .NET Framework, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Accept%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginAccept%2A>- und <xref:System.Net.Sockets.Socket.EndAccept%2A>-Methoden.  
+# <a name="using-an-asynchronous-server-socket"></a><span data-ttu-id="e6b41-102">Verwenden eines asynchronen Serversockets</span><span class="sxs-lookup"><span data-stu-id="e6b41-102">Using an Asynchronous Server Socket</span></span>
+<span data-ttu-id="e6b41-103">Asynchrone Serversockets verwenden das asynchrone Programmiermodell von .NET Framework, um Dienstanforderungen über das Netzwerk zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="e6b41-103">Asynchronous server sockets use the .NET Framework asynchronous programming model to process network service requests.</span></span> <span data-ttu-id="e6b41-104">Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem asynchronen Standardbenennungsmuster von .NET Framework, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Accept%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginAccept%2A>- und <xref:System.Net.Sockets.Socket.EndAccept%2A>-Methoden.</span><span class="sxs-lookup"><span data-stu-id="e6b41-104">The <xref:System.Net.Sockets.Socket> class follows the standard .NET Framework asynchronous naming pattern; for example, the synchronous <xref:System.Net.Sockets.Socket.Accept%2A> method corresponds to the asynchronous <xref:System.Net.Sockets.Socket.BeginAccept%2A> and <xref:System.Net.Sockets.Socket.EndAccept%2A> methods.</span></span>  
   
- Ein asynchroner Serversocket erfordert, dass eine Methode damit beginnt, Verbindungsanforderungen über das Netzwerk und eine Rückrufmethode anzunehmen, um die Verbindungsanforderungen zu verarbeiten und ebenfalls damit beginnt, Daten aus dem Netzwerk und eine Rückrufmethode zu empfangen, um den Datenempfang zu beenden. Alle diese Methoden werden in diesem Abschnitt weiter erläutert.  
+ <span data-ttu-id="e6b41-105">Ein asynchroner Serversocket erfordert, dass eine Methode damit beginnt, Verbindungsanforderungen über das Netzwerk und eine Rückrufmethode anzunehmen, um die Verbindungsanforderungen zu verarbeiten und ebenfalls damit beginnt, Daten aus dem Netzwerk und eine Rückrufmethode zu empfangen, um den Datenempfang zu beenden.</span><span class="sxs-lookup"><span data-stu-id="e6b41-105">An asynchronous server socket requires a method to begin accepting connection requests from the network, a callback method to handle the connection requests and begin receiving data from the network, and a callback method to end receiving the data.</span></span> <span data-ttu-id="e6b41-106">Alle diese Methoden werden in diesem Abschnitt weiter erläutert.</span><span class="sxs-lookup"><span data-stu-id="e6b41-106">All these methods are discussed further in this section.</span></span>  
   
- Im folgenden Beispiel initialisiert die `StartListening`-Methode den **Socket**, um mit der Annahme der Verbindungsanforderungen über das Netzwerk zu beginnen, und verwendet dann die **BeginAccept**-Methode, um neue Verbindungen anzunehmen. Die Accept-Rückrufmethode wird aufgerufen, wenn eine neue Verbindungsanforderung für den Socket empfangen wird. Dient zum Abrufen der **Socket**-Instanz, die die Verbindung verarbeitet, und den **Socket** an den Thread übergibt, der die Anforderung verarbeitet. Der Accept-Rückrufmethode implementiert den <xref:System.AsyncCallback>-Delegaten. Sie gibt „void“ zurück und nimmt einen einzelnen Parameter vom Typ <xref:System.IAsyncResult>. Das folgende Beispiel ist die Shell einer Accept-Rückrufmethode.  
+ <span data-ttu-id="e6b41-107">Im folgenden Beispiel initialisiert die `StartListening`-Methode den **Socket**, um mit der Annahme der Verbindungsanforderungen über das Netzwerk zu beginnen, und verwendet dann die **BeginAccept**-Methode, um neue Verbindungen anzunehmen.</span><span class="sxs-lookup"><span data-stu-id="e6b41-107">In the following example, to begin accepting connection requests from the network, the method `StartListening` initializes the **Socket** and then uses the **BeginAccept** method to start accepting new connections.</span></span> <span data-ttu-id="e6b41-108">Die Accept-Rückrufmethode wird aufgerufen, wenn eine neue Verbindungsanforderung für den Socket empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="e6b41-108">The accept callback method is called when a new connection request is received on the socket.</span></span> <span data-ttu-id="e6b41-109">Dient zum Abrufen der **Socket**-Instanz, die die Verbindung verarbeitet, und den **Socket** an den Thread übergibt, der die Anforderung verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="e6b41-109">It is responsible for getting the **Socket** instance that will handle the connection and handing that **Socket** off to the thread that will process the request.</span></span> <span data-ttu-id="e6b41-110">Der Accept-Rückrufmethode implementiert den <xref:System.AsyncCallback>-Delegaten. Sie gibt „void“ zurück und nimmt einen einzelnen Parameter vom Typ <xref:System.IAsyncResult>.</span><span class="sxs-lookup"><span data-stu-id="e6b41-110">The accept callback method implements the <xref:System.AsyncCallback> delegate; it returns a void and takes a single parameter of type <xref:System.IAsyncResult>.</span></span> <span data-ttu-id="e6b41-111">Das folgende Beispiel ist die Shell einer Accept-Rückrufmethode.</span><span class="sxs-lookup"><span data-stu-id="e6b41-111">The following example is the shell of an accept callback method.</span></span>  
   
 ```vb  
 Sub acceptCallback(ar As IAsyncResult)  
@@ -55,7 +52,7 @@ void acceptCallback( IAsyncResult ar) {
 }  
 ```  
   
- Die **BeginAccept**-Methode akzeptiert zwei Parameter: einen **AsyncCallback**-Delegaten, der auf die Accept-Rückrufmethode verweist, und ein Objekt, das verwendet wird, um Statusinformationen an die Rückrufmethode zu übergeben. Im folgenden Beispiel wird der überwachende **Socket** durch den *State*-Parameter an die Rückrufmethode übergeben. In diesem Beispiel wird ein **AsyncCallback**-Delegat erstellt und Verbindungen werden aus dem Netzwerk angenommen.  
+ <span data-ttu-id="e6b41-112">Die **BeginAccept**-Methode akzeptiert zwei Parameter: einen **AsyncCallback**-Delegaten, der auf die Accept-Rückrufmethode verweist, und ein Objekt, das verwendet wird, um Statusinformationen an die Rückrufmethode zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="e6b41-112">The **BeginAccept** method takes two parameters, an **AsyncCallback** delegate that points to the accept callback method and an object that is used to pass state information to the callback method.</span></span> <span data-ttu-id="e6b41-113">Im folgenden Beispiel wird der überwachende **Socket** durch den *State*-Parameter an die Rückrufmethode übergeben.</span><span class="sxs-lookup"><span data-stu-id="e6b41-113">In the following example, the listening **Socket** is passed to the callback method through the *state* parameter.</span></span> <span data-ttu-id="e6b41-114">In diesem Beispiel wird ein **AsyncCallback**-Delegat erstellt und Verbindungen werden aus dem Netzwerk angenommen.</span><span class="sxs-lookup"><span data-stu-id="e6b41-114">This example creates an **AsyncCallback** delegate and starts accepting connections from the network.</span></span>  
   
 ```vb  
 listener.BeginAccept( _  
@@ -69,9 +66,9 @@ listener.BeginAccept(
     listener);  
 ```  
   
- Asynchrone Sockets können Threads aus dem Systemthreadpool verwenden, um eingehende Verbindungen zu bearbeiten. Ein Thread ist verantwortlich für das Akzeptieren von Verbindungen, ein anderer Thread wird verwendet, um alle eingehenden Verbindungen zu behandeln, und ein anderer Thread ist verantwortlich für den Empfang von Daten aus der Verbindung. Diese können im selben Thread vorhanden sein, je nachdem, welcher Thread vom Threadpool zugewiesen wird. Im folgenden Beispiel hält die <xref:System.Threading.ManualResetEvent?displayProperty=fullName>-Klasse die Ausführung des Hauptthreads an und signalisiert, wann die Ausführung fortgesetzt werden kann.  
+ <span data-ttu-id="e6b41-115">Asynchrone Sockets können Threads aus dem Systemthreadpool verwenden, um eingehende Verbindungen zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="e6b41-115">Asynchronous sockets use threads from the system thread pool to process incoming connections.</span></span> <span data-ttu-id="e6b41-116">Ein Thread ist verantwortlich für das Akzeptieren von Verbindungen, ein anderer Thread wird verwendet, um alle eingehenden Verbindungen zu behandeln, und ein anderer Thread ist verantwortlich für den Empfang von Daten aus der Verbindung.</span><span class="sxs-lookup"><span data-stu-id="e6b41-116">One thread is responsible for accepting connections, another thread is used to handle each incoming connection, and another thread is responsible for receiving data from the connection.</span></span> <span data-ttu-id="e6b41-117">Diese können im selben Thread vorhanden sein, je nachdem, welcher Thread vom Threadpool zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="e6b41-117">These could be the same thread, depending on which thread is assigned by the thread pool.</span></span> <span data-ttu-id="e6b41-118">Im folgenden Beispiel hält die <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>-Klasse die Ausführung des Hauptthreads an und signalisiert, wann die Ausführung fortgesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e6b41-118">In the following example, the <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> class suspends execution of the main thread and signals when execution can continue.</span></span>  
   
- Das folgende Beispiel zeigt eine asynchrone Methode, die einen asynchronen TCP/IP-Socket auf dem lokalen Computer erstellt und beginnt, Verbindungen zu akzeptieren. Es wird davon ausgegangen, dass ein globaler **ManualResetEvent** mit dem Namen `allDone` existiert, dass die Methode ein Member einer Klasse mit dem Namen `SocketListener` ist, und eine Rückrufmethode namens `acceptCallback` definiert ist.  
+ <span data-ttu-id="e6b41-119">Das folgende Beispiel zeigt eine asynchrone Methode, die einen asynchronen TCP/IP-Socket auf dem lokalen Computer erstellt und beginnt, Verbindungen zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="e6b41-119">The following example shows an asynchronous method that creates an asynchronous TCP/IP socket on the local computer and begins accepting connections.</span></span> <span data-ttu-id="e6b41-120">Es wird davon ausgegangen, dass ein globaler **ManualResetEvent** mit dem Namen `allDone` existiert, dass die Methode ein Member einer Klasse mit dem Namen `SocketListener` ist, und eine Rückrufmethode namens `acceptCallback` definiert ist.</span><span class="sxs-lookup"><span data-stu-id="e6b41-120">It assumes that there is a global **ManualResetEvent** named `allDone`, that the method is a member of a class named `SocketListener`, and that a callback method named `acceptCallback` is defined.</span></span>  
   
 ```vb  
 Public Sub StartListening()  
@@ -136,7 +133,7 @@ public void StartListening() {
 }  
 ```  
   
- Die Accept-Rückrufmethode (`acceptCallback` im vorherigen Beispiel) ist verantwortlich dafür, dass dem Thread der Hauptanwendung signalisiert wird, den Vorgang fortzusetzen, die Verbindung mit dem Client herzustellen, und das asynchrone Lesen der Datenmengen vom Client zu beginnen. Das folgende Beispiel ist der erste Teil einer Implementierung der `acceptCallback`-Methode. Dieser Abschnitt der Methode signalisiert dem Hauptanwendungsthread, dass die Verarbeitung fortgesetzt wird, und stellt die Verbindung mit dem Client her. Es wird ein globales **ManualResetEvent** mit dem Namen `allDone` vorausgesetzt.  
+ <span data-ttu-id="e6b41-121">Die Accept-Rückrufmethode (`acceptCallback` im vorherigen Beispiel) ist verantwortlich dafür, dass dem Thread der Hauptanwendung signalisiert wird, den Vorgang fortzusetzen, die Verbindung mit dem Client herzustellen, und das asynchrone Lesen der Datenmengen vom Client zu beginnen.</span><span class="sxs-lookup"><span data-stu-id="e6b41-121">The accept callback method (`acceptCallback` in the preceding example) is responsible for signaling the main application thread to continue processing, establishing the connection with the client, and starting the asynchronous read of data from the client.</span></span> <span data-ttu-id="e6b41-122">Das folgende Beispiel ist der erste Teil einer Implementierung der `acceptCallback`-Methode.</span><span class="sxs-lookup"><span data-stu-id="e6b41-122">The following example is the first part of an implementation of the `acceptCallback` method.</span></span> <span data-ttu-id="e6b41-123">Dieser Abschnitt der Methode signalisiert dem Hauptanwendungsthread, dass die Verarbeitung fortgesetzt wird, und stellt die Verbindung mit dem Client her.</span><span class="sxs-lookup"><span data-stu-id="e6b41-123">This section of the method signals the main application thread to continue processing and establishes the connection to the client.</span></span> <span data-ttu-id="e6b41-124">Es wird ein globales **ManualResetEvent** mit dem Namen `allDone` vorausgesetzt.</span><span class="sxs-lookup"><span data-stu-id="e6b41-124">It assumes a global **ManualResetEvent** named `allDone`.</span></span>  
   
 ```vb  
 Public Sub acceptCallback(ar As IAsyncResult)  
@@ -160,7 +157,7 @@ public void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- Das Lesen von Daten aus einem Clientsocket erfordert ein Zustandsobjekt, das Werte zwischen asynchronen Aufrufen übergibt. Das folgende Beispiel implementiert ein Zustandsobjekt für den Empfang einer Zeichenfolge vom Remoteclient. Es enthält Felder für den Clientsocket, einen Datenpuffer zum Empfangen von Daten, und ein <xref:System.Text.StringBuilder> für die Erstellung einer Datenzeichenfolge, die vom Client gesendet wurde. Wenn Sie diese Felder in das Statusobjekt platzieren, können ihre Werte über mehrere Aufrufe gespeichert werden, damit Daten aus dem Clientsocket gelesen werden können.  
+ <span data-ttu-id="e6b41-125">Das Lesen von Daten aus einem Clientsocket erfordert ein Zustandsobjekt, das Werte zwischen asynchronen Aufrufen übergibt.</span><span class="sxs-lookup"><span data-stu-id="e6b41-125">Reading data from a client socket requires a state object that passes values between asynchronous calls.</span></span> <span data-ttu-id="e6b41-126">Das folgende Beispiel implementiert ein Zustandsobjekt für den Empfang einer Zeichenfolge vom Remoteclient.</span><span class="sxs-lookup"><span data-stu-id="e6b41-126">The following example implements a state object for receiving a string from the remote client.</span></span> <span data-ttu-id="e6b41-127">Es enthält Felder für den Clientsocket, einen Datenpuffer zum Empfangen von Daten, und ein <xref:System.Text.StringBuilder> für die Erstellung einer Datenzeichenfolge, die vom Client gesendet wurde.</span><span class="sxs-lookup"><span data-stu-id="e6b41-127">It contains fields for the client socket, a data buffer for receiving data, and a <xref:System.Text.StringBuilder> for creating the data string sent by the client.</span></span> <span data-ttu-id="e6b41-128">Wenn Sie diese Felder in das Statusobjekt platzieren, können ihre Werte über mehrere Aufrufe gespeichert werden, damit Daten aus dem Clientsocket gelesen werden können.</span><span class="sxs-lookup"><span data-stu-id="e6b41-128">Placing these fields in the state object allows their values to be preserved across multiple calls to read data from the client socket.</span></span>  
   
 ```vb  
 Public Class StateObject  
@@ -180,9 +177,9 @@ public class StateObject {
 }  
 ```  
   
- Der Abschnitt der `acceptCallback`-Methode, der den Datenempfang aus dem Clientsocket beginnt, initialisiert zunächst eine Instanz der `StateObject`-Klasse und ruft dann die <xref:System.Net.Sockets.Socket.BeginReceive%2A>-Methode zum asynchronen Lesen von Daten aus dem Clientsocket auf.  
+ <span data-ttu-id="e6b41-129">Der Abschnitt der `acceptCallback`-Methode, der den Datenempfang aus dem Clientsocket beginnt, initialisiert zunächst eine Instanz der `StateObject`-Klasse und ruft dann die <xref:System.Net.Sockets.Socket.BeginReceive%2A>-Methode zum asynchronen Lesen von Daten aus dem Clientsocket auf.</span><span class="sxs-lookup"><span data-stu-id="e6b41-129">The section of the `acceptCallback` method that starts receiving the data from the client socket first initializes an instance of the `StateObject` class and then calls the <xref:System.Net.Sockets.Socket.BeginReceive%2A> method to start reading the data from the client socket asynchronously.</span></span>  
   
- Das folgende Beispiel zeigt die vollständige `acceptCallback`-Methode. Es wird davon ausgegangen, dass ein globales **ManualResetEvent** mit dem Namen `allDone,` existiert, dass die `StateObject`-Klasse definiert und die `readCallback`-Methode in einer Klasse mit dem Namen `SocketListener` definiert ist.  
+ <span data-ttu-id="e6b41-130">Das folgende Beispiel zeigt die vollständige `acceptCallback`-Methode.</span><span class="sxs-lookup"><span data-stu-id="e6b41-130">The following example shows the complete `acceptCallback` method.</span></span> <span data-ttu-id="e6b41-131">Es wird davon ausgegangen, dass ein globales **ManualResetEvent** mit dem Namen `allDone,` existiert, dass die `StateObject`-Klasse definiert und die `readCallback`-Methode in einer Klasse mit dem Namen `SocketListener` definiert ist.</span><span class="sxs-lookup"><span data-stu-id="e6b41-131">It assumes that there is a global **ManualResetEvent** named `allDone,` that the `StateObject` class is defined, and that the `readCallback` method is defined in a class named `SocketListener`.</span></span>  
   
 ```vb  
 Public Shared Sub acceptCallback(ar As IAsyncResult)  
@@ -218,9 +215,9 @@ public static void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- Die letzte Methode, die für den asynchronen Socketserver implementiert werden muss, ist die Read-Rückrufmethode, die vom Client gesendete Daten zurückgibt. Wie die Accept-Rückrufmethode, ist die Read-Rückrufmethode ein **AsyncCallback**-Delegat. Diese Methode liest ein oder mehrere Bytes vom Clientsocket in den Datenpuffer und ruft dann die **BeginReceive**-Methode erneut auf, sobald die vom Client gesendeten Daten vollständig sind. Nachdem die gesamte Nachricht vom Client gelesen wurde, wird die Zeichenfolge in der Konsole angezeigt und der Serversocket, der die Verbindung mit dem Client verarbeitet, wird geschlossen.  
+ <span data-ttu-id="e6b41-132">Die letzte Methode, die für den asynchronen Socketserver implementiert werden muss, ist die Read-Rückrufmethode, die vom Client gesendete Daten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="e6b41-132">The final method that needs to be implemented for the asynchronous socket server is the read callback method that returns the data sent by the client.</span></span> <span data-ttu-id="e6b41-133">Wie die Accept-Rückrufmethode, ist die Read-Rückrufmethode ein **AsyncCallback**-Delegat.</span><span class="sxs-lookup"><span data-stu-id="e6b41-133">Like the accept callback method, the read callback method is an **AsyncCallback** delegate.</span></span> <span data-ttu-id="e6b41-134">Diese Methode liest ein oder mehrere Bytes vom Clientsocket in den Datenpuffer und ruft dann die **BeginReceive**-Methode erneut auf, sobald die vom Client gesendeten Daten vollständig sind.</span><span class="sxs-lookup"><span data-stu-id="e6b41-134">This method reads one or more bytes from the client socket into the data buffer and then calls the **BeginReceive** method again until the data sent by the client is complete.</span></span> <span data-ttu-id="e6b41-135">Nachdem die gesamte Nachricht vom Client gelesen wurde, wird die Zeichenfolge in der Konsole angezeigt und der Serversocket, der die Verbindung mit dem Client verarbeitet, wird geschlossen.</span><span class="sxs-lookup"><span data-stu-id="e6b41-135">Once the entire message has been read from the client, the string is displayed on the console and the server socket handling the connection to the client is closed.</span></span>  
   
- Das folgende Beispiel implementiert die `readCallback`-Methode. Es wird vorausgesetzt, dass die `StateObject`-Klasse definiert ist.  
+ <span data-ttu-id="e6b41-136">Das folgende Beispiel implementiert die `readCallback`-Methode.</span><span class="sxs-lookup"><span data-stu-id="e6b41-136">The following sample implements the `readCallback` method.</span></span> <span data-ttu-id="e6b41-137">Es wird vorausgesetzt, dass die `StateObject`-Klasse definiert ist.</span><span class="sxs-lookup"><span data-stu-id="e6b41-137">It assumes that the `StateObject` class is defined.</span></span>  
   
 ```vb  
 Public Shared Sub readCallback(ar As IAsyncResult)  
@@ -273,9 +270,8 @@ public static void readCallback(IAsyncResult ar) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Using a Synchronous Server Socket (Verwenden eines synchronen Serversockets)](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [Asynchroner Serversocket, Beispiel](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Threading](../../../docs/standard/threading/index.md)   
- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="e6b41-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6b41-138">See Also</span></span>  
+ [<span data-ttu-id="e6b41-139">Verwenden eines synchronen Serversockets</span><span class="sxs-lookup"><span data-stu-id="e6b41-139">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="e6b41-140">Asynchroner Serversocket, Beispiel</span><span class="sxs-lookup"><span data-stu-id="e6b41-140">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [<span data-ttu-id="e6b41-141">Threading</span><span class="sxs-lookup"><span data-stu-id="e6b41-141">Threading</span></span>](../../../docs/standard/threading/index.md)  
+ [<span data-ttu-id="e6b41-142">Überwachen mit Sockets</span><span class="sxs-lookup"><span data-stu-id="e6b41-142">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)

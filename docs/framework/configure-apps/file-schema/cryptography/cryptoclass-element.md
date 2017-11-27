@@ -1,67 +1,72 @@
 ---
-title: "&lt;cryptoClass&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClass"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoClass>-Element"
-  - "cryptoClass-Element"
+title: '&lt;CryptoClass&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClass
+helpviewer_keywords:
+- cryptoClass element
+- <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 448e2c83f6897fd876bb79dfb781bcf4ddd2252b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cryptoClass&gt;-Element
-Enthält eine mehr, die eine Zuordnung in einen Anzeigenamen im [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)\-Element verfügt.  
+# <a name="ltcryptoclassgt-element"></a><span data-ttu-id="bca5d-102">&lt;CryptoClass&gt; Element</span><span class="sxs-lookup"><span data-stu-id="bca5d-102">&lt;cryptoClass&gt; Element</span></span>
+<span data-ttu-id="bca5d-103">Enthält eine Kryptografieklasse, die einem Anzeigenamen im Element [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="bca5d-103">Contains a cryptography class that has a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="bca5d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bca5d-104">\<configuration></span></span>  
+<span data-ttu-id="bca5d-105">\<"mscorlib" ></span><span class="sxs-lookup"><span data-stu-id="bca5d-105">\<mscorlib></span></span>  
+<span data-ttu-id="bca5d-106">\<CryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="bca5d-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="bca5d-107">\<CryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="bca5d-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="bca5d-108">\<CryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="bca5d-108">\<cryptoClasses></span></span>  
+<span data-ttu-id="bca5d-109">\<CryptoClass ></span><span class="sxs-lookup"><span data-stu-id="bca5d-109">\<cryptoClass></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="bca5d-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="bca5d-110">Syntax</span></span>  
+  
+```xml  
 <cryptoClass customClassName="fully qualified type name" />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bca5d-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="bca5d-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="bca5d-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="bca5d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="bca5d-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="bca5d-113">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`customClassName`|Erforderliches Attribut.<br /><br /> Enthält die Informationen für die Kryptografieklasse.  Verwenden Sie dieses Attribut, um einen Kurznamen für eine Klasse bereitzustellen.  Sie müssen eine Zeichenfolge angeben, die die unter [Angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) beschriebenen Anforderungen erfüllt.|  
+|<span data-ttu-id="bca5d-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="bca5d-114">Attribute</span></span>|<span data-ttu-id="bca5d-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bca5d-115">Description</span></span>|  
+|---------------|-----------------|  
+|`customClassName`|<span data-ttu-id="bca5d-116">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="bca5d-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="bca5d-117">Enthält die Informationen für die Kryptografieklasse.</span><span class="sxs-lookup"><span data-stu-id="bca5d-117">Contains the information for the cryptography class.</span></span> <span data-ttu-id="bca5d-118">Verwenden Sie dieses Attribut, um einen kurzen Namen für die Klasse bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="bca5d-118">Use this attribute to provide a short name for your class.</span></span> <span data-ttu-id="bca5d-119">Geben Sie eine Zeichenfolge, die im angegebenen Anforderungen erfüllt [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="bca5d-119">You must specify a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="bca5d-120">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="bca5d-120">Child Elements</span></span>  
+ <span data-ttu-id="bca5d-121">Keine</span><span class="sxs-lookup"><span data-stu-id="bca5d-121">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="bca5d-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="bca5d-122">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`cryptoClasses`|Enthält eine Liste von kryptografischen Klassen, die eine Zuordnung in einen Anzeigenamen im [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)\-Element verfügen.|  
-|`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
-|`cryptoNameMapping`|Enthält Zuordnungen von Klassen zu angezeigten Namen.|  
-|`mscorlib`|[\<cryptographySettings\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) Enthält das Element.|  
+|<span data-ttu-id="bca5d-123">Element</span><span class="sxs-lookup"><span data-stu-id="bca5d-123">Element</span></span>|<span data-ttu-id="bca5d-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bca5d-124">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="bca5d-125">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="bca5d-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptoClasses`|<span data-ttu-id="bca5d-126">Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="bca5d-126">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="bca5d-127">Enthält Kryptografieeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="bca5d-127">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="bca5d-128">Enthält die Zuordnung von Klassen zu den Anzeigenamen.</span><span class="sxs-lookup"><span data-stu-id="bca5d-128">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="bca5d-129">Enthält das Element [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span><span class="sxs-lookup"><span data-stu-id="bca5d-129">Contains the [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) element.</span></span>|  
   
-## Beispiel  
- Das folgende Beispiel wie mit dem **\<cryptoClass\>**\-Element, eine mehr verweisen und die Laufzeit zu konfigurieren.  Sie können dann die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName>\-Methode übergeben und mithilfe der <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>\-Methode ein `MyCryptoRSAClass`\-Objekt zurückgeben.  
+## <a name="example"></a><span data-ttu-id="bca5d-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bca5d-130">Example</span></span>  
+ <span data-ttu-id="bca5d-131">Das folgende Beispiel veranschaulicht, wie mit der  **\<CryptoClass >** Element auf eine kryptografischen Klasse verweisen und die Laufzeit zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="bca5d-131">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="bca5d-132">Sie können dann die Zeichenfolge "RSA" übergeben, um die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode und die Verwendung der <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> -Methode zur Rückgabe einer `MyCryptoRSAClass` Objekt.</span><span class="sxs-lookup"><span data-stu-id="bca5d-132">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -80,8 +85,8 @@ Enthält eine mehr, die eine Zuordnung in einen Anzeigenamen im [\<nameEntry\>](
 </configuration>  
 ```  
   
-## Siehe auch  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema für Kryptografieeinstellungen](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)   
- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="bca5d-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bca5d-133">See Also</span></span>  
+ [<span data-ttu-id="bca5d-134">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="bca5d-134">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="bca5d-135">Cryptography Settings Schema (Schema für Kryptografieeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="bca5d-135">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="bca5d-136">Kryptografische Dienste</span><span class="sxs-lookup"><span data-stu-id="bca5d-136">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="bca5d-137">Konfigurieren kryptografischer Klassen</span><span class="sxs-lookup"><span data-stu-id="bca5d-137">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

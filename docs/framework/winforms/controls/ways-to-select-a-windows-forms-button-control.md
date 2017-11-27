@@ -1,43 +1,43 @@
 ---
-title: "Methoden zur Auswahl eines Button-Steuerelements in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button-Steuerelement [Windows Forms], Auswählen"
+title: "Methoden zur Auswahl eines Button-Steuerelements in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08b5359446a80da257f5afec07cc70e3d4aad46b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Methoden zur Auswahl eines Button-Steuerelements in Windows&#160;Forms
-Eine Schaltfläche in Windows Forms kann wie folgt ausgewählt werden:  
+# <a name="ways-to-select-a-windows-forms-button-control"></a><span data-ttu-id="60bd6-102">Methoden zur Auswahl eines Button-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="60bd6-102">Ways to Select a Windows Forms Button Control</span></span>
+<span data-ttu-id="60bd6-103">Eine Windows Forms-Schaltfläche kann auf folgende Weise ausgewählt werden:</span><span class="sxs-lookup"><span data-stu-id="60bd6-103">A Windows Forms button can be selected in the following ways:</span></span>  
   
--   Sie klicken mit der Maus auf die Schaltfläche.  
+-   <span data-ttu-id="60bd6-104">Verwenden Sie eine Maus, um auf die Schaltfläche klicken.</span><span class="sxs-lookup"><span data-stu-id="60bd6-104">Use a mouse to click the button.</span></span>  
   
--   Sie aktivieren das <xref:System.Windows.Forms.Control.Click>\-Ereignis der Schaltfläche im Code.  
+-   <span data-ttu-id="60bd6-105">Rufen Sie der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignis im Code.</span><span class="sxs-lookup"><span data-stu-id="60bd6-105">Invoke the button's <xref:System.Windows.Forms.Control.Click> event in code.</span></span>  
   
--   Sie verschieben den Fokus auf die Schaltfläche, indem Sie die TAB\-TASTE drücken und die Schaltfläche anschließend mit der LEERTASTE oder der EINGABETASTE auswählen.  
+-   <span data-ttu-id="60bd6-106">Verschieben Sie den Fokus auf die Schaltfläche mit den durch Drücken der TAB-Taste, und wählen Sie dann die Schaltfläche mit den durch Drücken der LEERTASTE oder EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="60bd6-106">Move the focus to the button by pressing the TAB key, and then choose the button by pressing the SPACEBAR or ENTER.</span></span>  
   
--   Sie drücken die für die Schaltfläche definierte Zugriffstasten \(ALT \+ unterstrichener Buchstabe\).  Weitere Informationen zu Zugriffstasten finden Sie unter [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
+-   <span data-ttu-id="60bd6-107">Drücken Sie die Zugriffstaste (ALT + unterstrichener Buchstabe) für die Schaltfläche aus.</span><span class="sxs-lookup"><span data-stu-id="60bd6-107">Press the access key (ALT + the underlined letter) for the button.</span></span> <span data-ttu-id="60bd6-108">Weitere Informationen zu Zugriffstasten finden Sie unter [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="60bd6-108">For more information about access keys, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span></span>  
   
--   Wenn es sich bei der Schaltfläche um die "Annehmen"\-Schaltfläche des Formulars handelt, können Sie sie durch Drücken der EINGABETASTE auswählen, und zwar selbst dann, wenn sich der Fokus auf einem anderen Steuerelement befindet. Dies ist jedoch nicht möglich, wenn das andere Steuerelement eine weitere Schaltfläche,  ein mehrzeiliges Textfeld oder ein benutzerdefiniertes Steuerelement ist, das die Eingabetaste auffängt.  
+-   <span data-ttu-id="60bd6-109">Wenn die Schaltfläche "" die Schaltfläche "Annehmen" des Formulars ist, durch Drücken der EINGABETASTE auswählt, die Schaltfläche "", auch wenn ein anderes Steuerelement den Fokus besitzt, außer wenn andere Steuerelements ist eine weitere Schaltfläche, ein mehrzeiliges Textfeld oder ein benutzerdefiniertes Steuerelement, das die EINGABETASTE aufgefangen.</span><span class="sxs-lookup"><span data-stu-id="60bd6-109">If the button is the "accept" button of the form, pressing ENTER chooses the button, even if another control has the focus — except if that other control is another button, a multi-line text box, or a custom control that traps the enter key.</span></span>  
   
--   Wenn die Schaltfläche die "Abbrechen"\-Schaltfläche des Formulars ist, können Sie sie selbst dann mit ESC auswählen, wenn sich der Fokus auf einem anderen Steuerelement befindet.  
+-   <span data-ttu-id="60bd6-110">Ist die Schaltfläche "" auf die Schaltfläche "Abbrechen", des Formulars, wählt das Drücken von ESC die Schaltfläche, auch wenn ein anderes Steuerelement den Fokus besitzt.</span><span class="sxs-lookup"><span data-stu-id="60bd6-110">If the button is the "cancel" button of the form, pressing ESC chooses the button, even if another control has the focus.</span></span>  
   
--   Um die Schaltfläche programmgesteuert auszuwählen, rufen Sie die <xref:System.Windows.Forms.Button.PerformClick%2A>\-Methode auf.  
+-   <span data-ttu-id="60bd6-111">Rufen Sie die <xref:System.Windows.Forms.Button.PerformClick%2A> Methode, um programmgesteuert auf die Schaltfläche klicken.</span><span class="sxs-lookup"><span data-stu-id="60bd6-111">Call the <xref:System.Windows.Forms.Button.PerformClick%2A> method to select the button programmatically.</span></span>  
   
-## Siehe auch  
- [Übersicht über das Button\-Steuerelement](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Button\-Steuerelement](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="60bd6-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60bd6-112">See Also</span></span>  
+ [<span data-ttu-id="60bd6-113">Übersicht über das Button-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="60bd6-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="60bd6-114">Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="60bd6-114">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="60bd6-115">Button-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="60bd6-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

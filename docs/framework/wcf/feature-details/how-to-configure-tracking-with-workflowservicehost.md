@@ -1,43 +1,45 @@
 ---
-title: "Vorgehensweise: Konfigurieren der Nachverfolgung mit WorkflowServiceHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Konfigurieren der Nachverfolgung mit WorkflowServiceHost'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a237be3f6e4d59cbaa2d3c0144eaeb4369748ecd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Konfigurieren der Nachverfolgung mit WorkflowServiceHost
-In diesem Thema wird erläutert, wie Sie die Nachverfolgung für einen unter <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehosteten [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]\-Workflow konfigurieren.  Es wird mithilfe einer Web.config\-Datei konfiguriert, indem ein Dienstverhalten angegeben wird.  
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a><span data-ttu-id="c76ff-102">Vorgehensweise: Konfigurieren der Nachverfolgung mit WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="c76ff-102">How to: Configure Tracking with WorkflowServiceHost</span></span>
+<span data-ttu-id="c76ff-103">In diesem Thema wird erläutert, wie Sie die Nachverfolgung für einen unter [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] gehosteten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflow konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="c76ff-103">This topic explains how to configure tracking for a [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] workflow hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="c76ff-104">Es wird mithilfe einer Web.config-Datei konfiguriert, indem ein Dienstverhalten angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="c76ff-104">It is configured through a Web.config file by specifying a service behavior.</span></span>  
   
-### Konfigurieren der Nachverfolgung in einer Konfigurationsdatei  
+### <a name="configure-tracking-in-configuration"></a><span data-ttu-id="c76ff-105">Konfigurieren der Nachverfolgung in einer Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="c76ff-105">Configure Tracking in Configuration</span></span>  
   
-1.  Fügen Sie <xref:System.Activities.Tracking.EtwTrackingParticipant> hinzu, indem Sie in einer Konfigurationsdatei das \<`behavior`\>\-Element verwenden. Dies wird im folgenden Beispiel veranschaulicht.  
+1.  <span data-ttu-id="c76ff-106">Fügen Sie <xref:System.Activities.Tracking.EtwTrackingParticipant> hinzu, indem Sie in einer Konfigurationsdatei das <`behavior`>-Element verwenden. Dies wird im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="c76ff-106">Add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <behaviors>  
        <serviceBehaviors>  
          <behavior>  
            <etwTracking profileName="Sample Tracking Profile" />  
-         </behavior>              
+         </behavior>              
        </serviceBehaviors>  
     <behaviors>  
-  
     ```  
   
     > [!NOTE]
-    >  Im vorangehenden Konfigurationsbeispiel wird die vereinfachte Konfiguration verwendet.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md).  
+    >  <span data-ttu-id="c76ff-107">Im vorangehenden Konfigurationsbeispiel wird die vereinfachte Konfiguration verwendet.</span><span class="sxs-lookup"><span data-stu-id="c76ff-107">The preceding configuration sample is using simplified configuration.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c76ff-108">[Vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="c76ff-108"> [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).</span></span>  
   
-     Im vorangehenden Konfigurationsbeispiel wird ein <xref:System.Activities.Tracking.EtwTrackingParticipant>\-Objekt hinzugefügt und ein Nachverfolgungsprofilname angegeben.  Nachverfolgungsprofile werden in einem \<`trackingProfile`\>\-Element innerhalb eines \<`tracking`\>\-Elements erstellt.  Das Überwachungsprofil enthält Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert.  Im folgenden Beispiel wird das Erstellen eines Nachverfolgungsprofils veranschaulicht.  
+     <span data-ttu-id="c76ff-109">Im vorangehenden Konfigurationsbeispiel wird ein <xref:System.Activities.Tracking.EtwTrackingParticipant>-Objekt hinzugefügt und ein Nachverfolgungsprofilname angegeben.</span><span class="sxs-lookup"><span data-stu-id="c76ff-109">The preceding configuration sample adds a <xref:System.Activities.Tracking.EtwTrackingParticipant> and specifies a tracking profile name.</span></span> <span data-ttu-id="c76ff-110">Nachverfolgungsprofile werden in einem <`trackingProfile`>-Element innerhalb eines <`tracking`>-Elements erstellt.</span><span class="sxs-lookup"><span data-stu-id="c76ff-110">Tracking profiles are created in a <`trackingProfile`> element within a <`tracking`> element.</span></span> <span data-ttu-id="c76ff-111">Das Überwachungsprofil enthält Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert.</span><span class="sxs-lookup"><span data-stu-id="c76ff-111">The tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="c76ff-112">Im folgenden Beispiel wird das Erstellen eines Nachverfolgungsprofils veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="c76ff-112">The following example shows how to create a tracking profile.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -56,28 +58,27 @@ In diesem Thema wird erläutert, wie Sie die Nachverfolgung für einen unter <xr
          </trackingProfile>   
        </tracking>  
     </system.serviceModel>  
-  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Nachverfolgungsprofilen finden Sie unter [Überwachungsprofile](../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c76ff-113">Verfolgen von Profilen finden Sie unter [Nachverfolgungsprofile](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="c76ff-113"> tracking profiles, see [Tracking Profiles](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Nachverfolgung im Allgemeinen finden Sie unter [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c76ff-114">im Allgemeinen Tracking finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="c76ff-114"> tracking in general, see [Workflow Tracking and Tracing](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span>  
   
-### Konfigurieren der Nachverfolgung in Code  
+### <a name="configure-tracking-in-code"></a><span data-ttu-id="c76ff-115">Konfigurieren der Nachverfolgung in Code</span><span class="sxs-lookup"><span data-stu-id="c76ff-115">Configure Tracking in Code</span></span>  
   
-1.  Fügen Sie den <xref:System.Activities.Tracking.EtwTrackingParticipant> mit dem <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>\-Verhalten in Code hinzu, wie im folgenden Beispiel gezeigt.  
+1.  <span data-ttu-id="c76ff-116">Fügen Sie den <xref:System.Activities.Tracking.EtwTrackingParticipant> mit dem <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>-Verhalten in Code hinzu, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c76ff-116">Add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> behavior in code, as shown in the following example.</span></span>  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     Im vorangehenden Codebeispiel wird ein <xref:System.Activities.Tracking.EtwTrackingParticipant>\-Objekt hinzugefügt und ein Nachverfolgungsprofilname angegeben.  Nachverfolgungsprofile werden in einem \<`trackingProfile`\>\-Element innerhalb eines \<`tracking`\>\-Elements erstellt, wie im vorherigen Abschnitt gezeigt.  
+     <span data-ttu-id="c76ff-117">Im vorangehenden Codebeispiel wird ein <xref:System.Activities.Tracking.EtwTrackingParticipant>-Objekt hinzugefügt und ein Nachverfolgungsprofilname angegeben.</span><span class="sxs-lookup"><span data-stu-id="c76ff-117">The preceding code sample adds a <xref:System.Activities.Tracking.EtwTrackingParticipant> and specifies a tracking profile name.</span></span> <span data-ttu-id="c76ff-118">Nachverfolgungsprofile werden in einem <`trackingProfile`>-Element innerhalb eines <`tracking`>-Elements erstellt, wie im vorherigen Abschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c76ff-118">Tracking profiles are created in a <`trackingProfile`> element within a <`tracking`> element as shown in the previous section.</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Nachverfolgungsprofilen finden Sie unter [Überwachungsprofile](../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c76ff-119">Verfolgen von Profilen finden Sie unter [Nachverfolgungsprofile](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="c76ff-119"> tracking profiles, see [Tracking Profiles](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Nachverfolgung im Allgemeinen finden Sie unter [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md).  Ein Beispiel für das programmgesteuerte Konfigurieren der Nachverfolgung finden Sie unter [Konfigurieren der Nachverfolgung für einen Workflow](../../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c76ff-120">im Allgemeinen Tracking finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="c76ff-120"> tracking in general, see [Workflow Tracking and Tracing](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span> <span data-ttu-id="c76ff-121">Ein Beispiel für das Konfigurieren der nachverfolgung programmgesteuert finden Sie unter [Konfigurieren der nachverfolgung für einen Workflow](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="c76ff-121">For an example of configuring tracking programmatically see [Configuring Tracking for a Workflow](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
   
-## Siehe auch  
- [Vereinfachte Konfiguration für WCF\-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)   
- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Überwachungsprofile](../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="c76ff-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c76ff-122">See Also</span></span>  
+ [<span data-ttu-id="c76ff-123">Vereinfachte Konfiguration für WCF-Dienste</span><span class="sxs-lookup"><span data-stu-id="c76ff-123">Simplified Configuration for WCF Services</span></span>](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
+ [<span data-ttu-id="c76ff-124">Workflowdienste</span><span class="sxs-lookup"><span data-stu-id="c76ff-124">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="c76ff-125">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="c76ff-125">Tracking Profiles</span></span>](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

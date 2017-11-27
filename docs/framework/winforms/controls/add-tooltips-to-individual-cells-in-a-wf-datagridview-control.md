@@ -1,55 +1,60 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Hinzufügen von QuickInfos"
-  - "DataGridView-Steuerelement [Windows Forms], Hinzufügen von QuickInfos"
-  - "QuickInfo [Windows Forms], Hinzufügen zu Datenblättern"
+title: "Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tooltips [Windows Forms], adding to data grids
+- DataGridView control [Windows Forms], adding tooltips
+- data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73d12bb38e4929582a8317d8ab3d7b23a7d1f603
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms
-Standardmäßig werden QuickInfos verwendet, um die Werte von <xref:System.Windows.Forms.DataGridView>\-Zellen anzuzeigen, die zu klein sind, um den gesamten Inhalt anzuzeigen.  Sie können dieses Verhalten jedoch überschreiben, um QuickInfo\-Textwerte für einzelne Zellen festzulegen.  Dies bietet sich an, um Benutzern zusätzliche Informationen über eine Zelle anzuzeigen oder ihnen eine alternative Beschreibung des Zelleninhalts bereitzustellen.  Wenn Sie beispielsweise über eine Zeile verfügen, in der Zustandssymbole angezeigt werden, möchten Sie möglicherweise Texterläuterungen in Form von QuickInfos bereitstellen.  
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a><span data-ttu-id="ed783-102">Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ed783-102">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="ed783-103">Standardmäßig QuickInfos werden zum Anzeigen der Werte von <xref:System.Windows.Forms.DataGridView> Zellen, die zu klein, um den gesamten Inhalt anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="ed783-103">By default, ToolTips are used to display the values of <xref:System.Windows.Forms.DataGridView> cells that are too small to show their entire contents.</span></span> <span data-ttu-id="ed783-104">Sie können dieses Verhalten jedoch überschreiben, um QuickInfo-Text-Werte für einzelne Zellen festzulegen.</span><span class="sxs-lookup"><span data-stu-id="ed783-104">You can override this behavior, however, to set ToolTip-text values for individual cells.</span></span> <span data-ttu-id="ed783-105">Dies ist hilfreich, die Benutzer zusätzliche Informationen zu einer Zelle angezeigt oder eine alternative Beschreibung des Zelleninhalts Benutzer bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="ed783-105">This is useful to display to users additional information about a cell or to provide to users an alternate description of the cell contents.</span></span> <span data-ttu-id="ed783-106">Haben eine Zeile, die Statussymbolen anzeigt, sollten Sie erläuterungen zu den Text mithilfe von QuickInfos bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="ed783-106">For example, if you have a row that displays status icons, you may want to provide text explanations using ToolTips.</span></span>  
   
- Sie können die Anzeige von QuickInfos auf Zellenebene auch deaktivieren, indem Sie die <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=fullName>\-Eigenschaft auf `false` festlegen.  
+ <span data-ttu-id="ed783-107">Sie können die Anzeige von QuickInfos auf Zellenebene auch deaktivieren, indem die <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="ed783-107">You can also disable the display of cell-level ToolTips by setting the <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> property to `false`.</span></span>  
   
-### So fügen Sie einer Zelle eine QuickInfo hinzu  
+### <a name="to-add-a-tooltip-to-a-cell"></a><span data-ttu-id="ed783-108">So fügen Sie eine QuickInfo auf eine Zelle hinzu</span><span class="sxs-lookup"><span data-stu-id="ed783-108">To add a ToolTip to a cell</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=fullName>\-Eigenschaft fest.  
+-   <span data-ttu-id="ed783-109">Legen Sie die <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>-Eigenschaft fest.</span><span class="sxs-lookup"><span data-stu-id="ed783-109">Set the <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> property.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
      [!code-vb[System.Windows.Forms.DataGridViewCell.ToolTipText#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/VB/datagridviewcell.tooltiptext.vb#1)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="ed783-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="ed783-110">Compiling the Code</span></span>  
   
--   Dieses Beispiel setzt Folgendes voraus:  
+-   <span data-ttu-id="ed783-111">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="ed783-111">This example requires:</span></span>  
   
--   Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte mit dem Namen `Rating` enthält, um Zeichenfolgenwerte in Form von einem bis vier Sternchensymbolen \("\*"\) anzuzeigen.  Das <xref:System.Windows.Forms.DataGridView.CellFormatting>\-Ereignis des Steuerelements muss mit der im Beispiel gezeigten Ereignishandlermethode verknüpft sein.  
+-   <span data-ttu-id="ed783-112">Ein <xref:System.Windows.Forms.DataGridView> Steuerelement namens `dataGridView1` , enthält eine Spalte namens `Rating` für die Anzeige von Zeichenfolgenwerten, die von einem bis vier Sternchen ("*") Symbole.</span><span class="sxs-lookup"><span data-stu-id="ed783-112">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `Rating` for displaying string values of one through four asterisk ("*") symbols.</span></span> <span data-ttu-id="ed783-113">Die <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignisses des Steuerelements muss die Ereignishandlermethode, die im Beispiel gezeigte zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="ed783-113">The <xref:System.Windows.Forms.DataGridView.CellFormatting> event of the control must be associated with the event handler method shown in the example.</span></span>  
   
--   Verweise auf die <xref:System?displayProperty=fullName>\-Assembly und die <xref:System.Windows.Forms?displayProperty=fullName>\-Assembly.  
+-   <span data-ttu-id="ed783-114">Verweise auf die <xref:System?displayProperty=nameWithType>-Assembly und die <xref:System.Windows.Forms?displayProperty=nameWithType>-Assembly.</span><span class="sxs-lookup"><span data-stu-id="ed783-114">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Robuste Programmierung  
- Wenn Sie das <xref:System.Windows.Forms.DataGridView>\-Steuerelement an eine externe Datenquelle binden oder Ihre eigene Datenquelle bereitstellen, indem Sie den virtuellen Modus implementieren, treten möglicherweise Leistungsprobleme auf.  Um Leistungseinbußen bei der Arbeit mit großen Datenmengen zu vermeiden, behandeln Sie das <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>\-Ereignis, anstatt die <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>\-Eigenschaft mehrerer Zellen festzulegen.  Wenn Sie dieses Ereignis behandeln, wird durch Abrufen des Werts einer <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>\-Zelleneigenschaft das Ereignis ausgelöst und der Wert der <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=fullName>\-Eigenschaft wie im Ereignishandler festgelegt zurückgegeben.  
+## <a name="robust-programming"></a><span data-ttu-id="ed783-115">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="ed783-115">Robust Programming</span></span>  
+ <span data-ttu-id="ed783-116">Beim Binden der <xref:System.Windows.Forms.DataGridView> die Steuerung an eine externe Datenquelle oder eine eigene Datenquelle durch das Implementieren des virtuellen Modus bereitstellen, treten möglicherweise Leistungsprobleme auftreten.</span><span class="sxs-lookup"><span data-stu-id="ed783-116">When you bind the <xref:System.Windows.Forms.DataGridView> control to an external data source or provide your own data source by implementing virtual mode, you might encounter performance issues.</span></span> <span data-ttu-id="ed783-117">Um Leistungseinbußen zu vermeiden, bei der Arbeit mit großen Datenmengen, behandeln die <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> Ereignis statt der Einstellung der <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> Eigenschaft aus mehreren Zellen.</span><span class="sxs-lookup"><span data-stu-id="ed783-117">To avoid a performance penalty when working with large amounts of data, handle the <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event rather than setting the <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> property of multiple cells.</span></span> <span data-ttu-id="ed783-118">Wenn Sie dieses Ereignis behandeln, Abrufen des Werts einer Zelle <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> Eigenschaft löst das-Ereignis aus und gibt den Wert der <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> -Eigenschaft im Ereignishandler angegeben.</span><span class="sxs-lookup"><span data-stu-id="ed783-118">When you handle this event, getting the value of a cell <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> property raises the event and returns the value of the <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> property as specified in the event handler.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell>   
- <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=fullName>   
- [Programmieren mit Zellen, Zeilen und Spalten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+## <a name="see-also"></a><span data-ttu-id="ed783-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ed783-119">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell>  
+ <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="ed783-120">Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ed783-120">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)

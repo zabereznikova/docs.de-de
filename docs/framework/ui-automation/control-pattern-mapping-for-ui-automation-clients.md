@@ -1,87 +1,90 @@
 ---
-title: "Control Pattern Mapping for UI Automation Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, for UI Automation clients"
-  - "UI Automation, clients, control patterns for"
+title: "Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, for UI Automation clients
+- UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Control Pattern Mapping for UI Automation Clients
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a><span data-ttu-id="c2a2d-102">Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients</span><span class="sxs-lookup"><span data-stu-id="c2a2d-102">Control Pattern Mapping for UI Automation Clients</span></span>
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework\-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]\-Klassen verwenden möchten, die im <xref:System.Windows.Automation>\-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie auf der Seite zur [Windows\-Automatisierungs\-API: UI\-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="c2a2d-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="c2a2d-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="c2a2d-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- In diesem Thema werden Steuerelementtypen und ihre zugeordneten Steuerelementmuster aufgeführt.  
+ <span data-ttu-id="c2a2d-105">In diesem Thema werden Steuerelementtypen und ihre zugeordneten Steuerelementmuster aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-105">This topic lists control types and their associated control patterns.</span></span>  
   
- In der folgenden Tabelle sind die Steuerelementmuster in folgende Kategorien unterteilt:  
+ <span data-ttu-id="c2a2d-106">In der folgenden Tabelle sind die Steuerelementmuster in folgende Kategorien unterteilt:</span><span class="sxs-lookup"><span data-stu-id="c2a2d-106">The following table organizes the control patterns into the following categories:</span></span>  
   
--   Unterstützt. Das Steuerelement muss dieses Steuerelementmuster unterstützen.  
+-   <span data-ttu-id="c2a2d-107">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-107">Supported.</span></span> <span data-ttu-id="c2a2d-108">Das Steuerelement muss dieses Steuerelementmuster unterstützen.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-108">The control must support this control pattern.</span></span>  
   
--   Bedingte Unterstützung. Dieses Steuerelement unterstützt das Steuerelementmuster in Abhängigkeit vom Zustand des Steuerelements.  
+-   <span data-ttu-id="c2a2d-109">Bedingte Unterstützung.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-109">Conditional support.</span></span> <span data-ttu-id="c2a2d-110">Dieses Steuerelement unterstützt das Steuerelementmuster in Abhängigkeit vom Zustand des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-110">The control may support this control pattern depending on the state of the control.</span></span>  
   
--   Wird nicht unterstützt. Das Steuerelement unterstützt dieses Steuerelementmuster nicht. Benutzerdefinierte Steuerelemente können dieses Steuerelementmuster unterstützen.  
+-   <span data-ttu-id="c2a2d-111">Wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-111">Not supported.</span></span> <span data-ttu-id="c2a2d-112">Das Steuerelement unterstützt dieses Steuerelementmuster nicht. Benutzerdefinierte Steuerelemente können dieses Steuerelementmuster unterstützen.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-112">The control does not support this control pattern; custom controls may support this control pattern.</span></span>  
   
 > [!NOTE]
->  Einige Steuerelemente verfügen je nach Funktionalität des Steuerelements über die bedingte Unterstützung für verschiedene Steuerelementmuster. Das MenuItem\-Steuerelement verfügt beispielsweise über die bedingte Unterstützung für die <xref:System.Windows.Automation.InvokePattern>\-, <xref:System.Windows.Automation.ExpandCollapsePattern>\-, <xref:System.Windows.Automation.TogglePattern>\- oder <xref:System.Windows.Automation.SelectionItemPattern>\-Steuerelementmuster. Dies hängt von seiner Funktion im Menüsteuerelement ab.  
+>  <span data-ttu-id="c2a2d-113">Einige Steuerelemente verfügen je nach Funktionalität des Steuerelements über die bedingte Unterstützung für verschiedene Steuerelementmuster.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-113">Some controls have conditional support for several control patterns depending on the functionality of the control.</span></span> <span data-ttu-id="c2a2d-114">Das MenuItem-Steuerelement verfügt beispielsweise über die bedingte Unterstützung für die <xref:System.Windows.Automation.InvokePattern>-, <xref:System.Windows.Automation.ExpandCollapsePattern>-, <xref:System.Windows.Automation.TogglePattern>- oder <xref:System.Windows.Automation.SelectionItemPattern> -Steuerelementmuster. Dies hängt von seiner Funktion im Menüsteuerelement ab.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-114">For example, the menu item control has conditional support for the <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, or <xref:System.Windows.Automation.SelectionItemPattern> control pattern, depending on its function in the menu control.</span></span>  
   
 <a name="control_mapping_clients"></a>   
-## Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients  
+## <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="c2a2d-115">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="c2a2d-115">UI Automation Control Patterns for Clients</span></span>  
   
-|Steuerelementtyp|Unterstützt|Bedingte Unterstützung|Nicht unterstützt|  
-|----------------------|-----------------|----------------------------|-----------------------|  
-|Schaltfläche|Keine|Aufrufen, Ein\-\/ausschalten, Erweitern Reduzieren|Keine|  
-|Kalender|Raster, Tabelle|Auswahl, Scroll|Wert|  
-|Kontrollkästchen|Ein\-\/ausschalten|Keine|Keine|  
-|Kombinationsfeld|Erweitern Reduzieren|Auswahl, Wert|Scroll|  
-|DataGrid|Raster|Scroll, Auswahl, Tabelle|Keine|  
-|Datenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Scroll\-Element, Tabelle, Ein\-\/ausschalten, Wert|Keine|  
-|Dokument|Text|Scroll, Wert|Keine|  
-|Bearbeiten|Keine|Text, Bereichswert, Wert|Keine|  
-|Gruppieren|Keine|Erweitern Reduzieren|Keine|  
-|Header|Keine|Transformation|Keine|  
-|Headerelement|Keine|Transformation, Aufrufen|Keine|  
-|Link|Aufrufen|Wert|Keine|  
-|Bild|Keine|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
-|Liste|Keine|Raster, mehrere Ansichten, Scroll, Auswahl|Tabelle|  
-|Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein\-\/ausschalten, Wert|Keine|  
-|Menü|Keine|Keine|Keine|  
-|Menüleiste|Keine|Erweitern Reduzieren, Andocken, Transformation|Keine|  
-|Menübefehl|Keine|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein\-\/ausschalten|Keine|  
-|Bereich|Keine|Andocken Scroll, Transformation|Fenster|  
-|Statusanzeige|Keine|Bereichswert, Wert|Keine|  
-|Radio Button|SelectionItem|Keine|Ein\-\/ausschalten|  
-|Bildlaufleiste|Keine|Bereichswert|Scroll|  
-|Trennzeichen|Keine|Keine|Keine|  
-|Slider|Keine|Bereichswert, Auswahl, Wert|Keine|  
-|Spinner|Keine|Bereichswert, Auswahl, Wert|Keine|  
-|Unterteilte Schaltfläche|Aufrufen, Erweitern Reduzieren|Keine|Keine|  
-|Statusleiste|Keine|Raster|Keine|  
-|Registerkarte|Auswahl|Scroll|Keine|  
-|TabItem|SelectionItem|Keine|Aufrufen|  
-|Tabelle|Raster, Rasterelement, Tabelle, Tabellenelement|Keine|Keine|  
-|Text|Keine|Rasterelement, Tabellenelement, Text|Wert|  
-|Ziehpunkt|Transformation|Keine|Keine|  
-|Titelleiste|Keine|Keine|Keine|  
-|Symbolleiste|Keine|Andocken, Erweitern Reduzieren, Transformation|Keine|  
-|QuickInfo|Keine|Text, Fenster|Keine|  
-|Struktur|Keine|Scroll, Auswahl|Keine|  
-|Strukturelement|Erweitern Reduzieren|Aufrufen, Scroll\-Element, Auswahlelement, Ein\-\/ausschalten|Keine|  
-|Fenster|Transformation, Fenster|Andocken|Keine|  
+|<span data-ttu-id="c2a2d-116">Steuerelementtyp</span><span class="sxs-lookup"><span data-stu-id="c2a2d-116">Control Type</span></span>|<span data-ttu-id="c2a2d-117">Unterstützt</span><span class="sxs-lookup"><span data-stu-id="c2a2d-117">Supported</span></span>|<span data-ttu-id="c2a2d-118">Bedingte Unterstützung</span><span class="sxs-lookup"><span data-stu-id="c2a2d-118">Conditional Support</span></span>|<span data-ttu-id="c2a2d-119">Nicht unterstützt</span><span class="sxs-lookup"><span data-stu-id="c2a2d-119">Not Supported</span></span>|  
+|------------------|---------------|-------------------------|-------------------|  
+|<span data-ttu-id="c2a2d-120">Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="c2a2d-120">Button</span></span>|<span data-ttu-id="c2a2d-121">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-121">None</span></span>|<span data-ttu-id="c2a2d-122">Aufrufen, Ein-/ausschalten, Erweitern Reduzieren</span><span class="sxs-lookup"><span data-stu-id="c2a2d-122">Invoke, Toggle, Expand Collapse</span></span>|<span data-ttu-id="c2a2d-123">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-123">None</span></span>|  
+|<span data-ttu-id="c2a2d-124">Kalender</span><span class="sxs-lookup"><span data-stu-id="c2a2d-124">Calendar</span></span>|<span data-ttu-id="c2a2d-125">Raster, Tabelle</span><span class="sxs-lookup"><span data-stu-id="c2a2d-125">Grid, Table</span></span>|<span data-ttu-id="c2a2d-126">Auswahl, Scroll</span><span class="sxs-lookup"><span data-stu-id="c2a2d-126">Selection, Scroll</span></span>|<span data-ttu-id="c2a2d-127">Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-127">Value</span></span>|  
+|<span data-ttu-id="c2a2d-128">Kontrollkästchen</span><span class="sxs-lookup"><span data-stu-id="c2a2d-128">Check Box</span></span>|<span data-ttu-id="c2a2d-129">Ein-/ausschalten</span><span class="sxs-lookup"><span data-stu-id="c2a2d-129">Toggle</span></span>|<span data-ttu-id="c2a2d-130">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-130">None</span></span>|<span data-ttu-id="c2a2d-131">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-131">None</span></span>|  
+|<span data-ttu-id="c2a2d-132">Kombinationsfeld</span><span class="sxs-lookup"><span data-stu-id="c2a2d-132">Combo Box</span></span>|<span data-ttu-id="c2a2d-133">Erweitern Reduzieren</span><span class="sxs-lookup"><span data-stu-id="c2a2d-133">Expand Collapse</span></span>|<span data-ttu-id="c2a2d-134">Auswahl, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-134">Selection, Value</span></span>|<span data-ttu-id="c2a2d-135">Scroll</span><span class="sxs-lookup"><span data-stu-id="c2a2d-135">Scroll</span></span>|  
+|<span data-ttu-id="c2a2d-136">DataGrid</span><span class="sxs-lookup"><span data-stu-id="c2a2d-136">Data Grid</span></span>|<span data-ttu-id="c2a2d-137">Raster</span><span class="sxs-lookup"><span data-stu-id="c2a2d-137">Grid</span></span>|<span data-ttu-id="c2a2d-138">Scroll, Auswahl, Tabelle</span><span class="sxs-lookup"><span data-stu-id="c2a2d-138">Scroll, Selection, Table</span></span>|<span data-ttu-id="c2a2d-139">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-139">None</span></span>|  
+|<span data-ttu-id="c2a2d-140">Datenelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-140">Data Item</span></span>|<span data-ttu-id="c2a2d-141">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="c2a2d-141">Selection Item</span></span>|<span data-ttu-id="c2a2d-142">Erweitern Reduzieren, Rasterelement, Scroll-Element, Tabelle, Ein-/ausschalten, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span></span>|<span data-ttu-id="c2a2d-143">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-143">None</span></span>|  
+|<span data-ttu-id="c2a2d-144">Dokument</span><span class="sxs-lookup"><span data-stu-id="c2a2d-144">Document</span></span>|<span data-ttu-id="c2a2d-145">Text</span><span class="sxs-lookup"><span data-stu-id="c2a2d-145">Text</span></span>|<span data-ttu-id="c2a2d-146">Scroll, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-146">Scroll, Value</span></span>|<span data-ttu-id="c2a2d-147">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-147">None</span></span>|  
+|<span data-ttu-id="c2a2d-148">Bearbeiten</span><span class="sxs-lookup"><span data-stu-id="c2a2d-148">Edit</span></span>|<span data-ttu-id="c2a2d-149">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-149">None</span></span>|<span data-ttu-id="c2a2d-150">Text, Bereichswert, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-150">Text, Range Value, Value</span></span>|<span data-ttu-id="c2a2d-151">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-151">None</span></span>|  
+|<span data-ttu-id="c2a2d-152">Gruppieren</span><span class="sxs-lookup"><span data-stu-id="c2a2d-152">Group</span></span>|<span data-ttu-id="c2a2d-153">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-153">None</span></span>|<span data-ttu-id="c2a2d-154">Erweitern Reduzieren</span><span class="sxs-lookup"><span data-stu-id="c2a2d-154">Expand Collapse</span></span>|<span data-ttu-id="c2a2d-155">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-155">None</span></span>|  
+|<span data-ttu-id="c2a2d-156">Header</span><span class="sxs-lookup"><span data-stu-id="c2a2d-156">Header</span></span>|<span data-ttu-id="c2a2d-157">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-157">None</span></span>|<span data-ttu-id="c2a2d-158">Transformation</span><span class="sxs-lookup"><span data-stu-id="c2a2d-158">Transform</span></span>|<span data-ttu-id="c2a2d-159">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-159">None</span></span>|  
+|<span data-ttu-id="c2a2d-160">Headerelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-160">Header Item</span></span>|<span data-ttu-id="c2a2d-161">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-161">None</span></span>|<span data-ttu-id="c2a2d-162">Transformation, Aufrufen</span><span class="sxs-lookup"><span data-stu-id="c2a2d-162">Transform, Invoke</span></span>|<span data-ttu-id="c2a2d-163">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-163">None</span></span>|  
+|<span data-ttu-id="c2a2d-164">Link</span><span class="sxs-lookup"><span data-stu-id="c2a2d-164">Hyperlink</span></span>|<span data-ttu-id="c2a2d-165">Aufrufen</span><span class="sxs-lookup"><span data-stu-id="c2a2d-165">Invoke</span></span>|<span data-ttu-id="c2a2d-166">Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-166">Value</span></span>|<span data-ttu-id="c2a2d-167">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-167">None</span></span>|  
+|<span data-ttu-id="c2a2d-168">Bild</span><span class="sxs-lookup"><span data-stu-id="c2a2d-168">Image</span></span>|<span data-ttu-id="c2a2d-169">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-169">None</span></span>|<span data-ttu-id="c2a2d-170">Rasterelement, Tabellenelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-170">Grid Item, Table Item</span></span>|<span data-ttu-id="c2a2d-171">Aufrufen, Auswahlelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-171">Invoke, Selection Item</span></span>|  
+|<span data-ttu-id="c2a2d-172">Liste</span><span class="sxs-lookup"><span data-stu-id="c2a2d-172">List</span></span>|<span data-ttu-id="c2a2d-173">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-173">None</span></span>|<span data-ttu-id="c2a2d-174">Raster, mehrere Ansichten, Scroll, Auswahl</span><span class="sxs-lookup"><span data-stu-id="c2a2d-174">Grid, Multiple View, Scroll, Selection</span></span>|<span data-ttu-id="c2a2d-175">Tabelle</span><span class="sxs-lookup"><span data-stu-id="c2a2d-175">Table</span></span>|  
+|<span data-ttu-id="c2a2d-176">Listenelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-176">List Item</span></span>|<span data-ttu-id="c2a2d-177">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="c2a2d-177">Selection Item</span></span>|<span data-ttu-id="c2a2d-178">Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span></span>|<span data-ttu-id="c2a2d-179">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-179">None</span></span>|  
+|<span data-ttu-id="c2a2d-180">Menü</span><span class="sxs-lookup"><span data-stu-id="c2a2d-180">Menu</span></span>|<span data-ttu-id="c2a2d-181">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-181">None</span></span>|<span data-ttu-id="c2a2d-182">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-182">None</span></span>|<span data-ttu-id="c2a2d-183">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-183">None</span></span>|  
+|<span data-ttu-id="c2a2d-184">Menüleiste</span><span class="sxs-lookup"><span data-stu-id="c2a2d-184">Menu Bar</span></span>|<span data-ttu-id="c2a2d-185">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-185">None</span></span>|<span data-ttu-id="c2a2d-186">Erweitern Reduzieren, Andocken, Transformation</span><span class="sxs-lookup"><span data-stu-id="c2a2d-186">Expand Collapse, Dock, Transform</span></span>|<span data-ttu-id="c2a2d-187">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-187">None</span></span>|  
+|<span data-ttu-id="c2a2d-188">Menübefehl</span><span class="sxs-lookup"><span data-stu-id="c2a2d-188">Menu Item</span></span>|<span data-ttu-id="c2a2d-189">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-189">None</span></span>|<span data-ttu-id="c2a2d-190">Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten</span><span class="sxs-lookup"><span data-stu-id="c2a2d-190">Expand Collapse, Invoke, Selection Item, Toggle</span></span>|<span data-ttu-id="c2a2d-191">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-191">None</span></span>|  
+|<span data-ttu-id="c2a2d-192">Bereich</span><span class="sxs-lookup"><span data-stu-id="c2a2d-192">Pane</span></span>|<span data-ttu-id="c2a2d-193">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-193">None</span></span>|<span data-ttu-id="c2a2d-194">Andocken</span><span class="sxs-lookup"><span data-stu-id="c2a2d-194">Dock.</span></span> <span data-ttu-id="c2a2d-195">Scroll, Transformation</span><span class="sxs-lookup"><span data-stu-id="c2a2d-195">Scroll, Transform</span></span>|<span data-ttu-id="c2a2d-196">Fenster</span><span class="sxs-lookup"><span data-stu-id="c2a2d-196">Window</span></span>|  
+|<span data-ttu-id="c2a2d-197">Statusanzeige</span><span class="sxs-lookup"><span data-stu-id="c2a2d-197">Progress Bar</span></span>|<span data-ttu-id="c2a2d-198">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-198">None</span></span>|<span data-ttu-id="c2a2d-199">Bereichswert, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-199">Range Value, Value</span></span>|<span data-ttu-id="c2a2d-200">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-200">None</span></span>|  
+|<span data-ttu-id="c2a2d-201">Radio Button</span><span class="sxs-lookup"><span data-stu-id="c2a2d-201">Radio Button</span></span>|<span data-ttu-id="c2a2d-202">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="c2a2d-202">Selection Item</span></span>|<span data-ttu-id="c2a2d-203">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-203">None</span></span>|<span data-ttu-id="c2a2d-204">Ein-/ausschalten</span><span class="sxs-lookup"><span data-stu-id="c2a2d-204">Toggle</span></span>|  
+|<span data-ttu-id="c2a2d-205">Bildlaufleiste</span><span class="sxs-lookup"><span data-stu-id="c2a2d-205">Scroll Bar</span></span>|<span data-ttu-id="c2a2d-206">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-206">None</span></span>|<span data-ttu-id="c2a2d-207">Bereichswert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-207">Range Value</span></span>|<span data-ttu-id="c2a2d-208">Scroll</span><span class="sxs-lookup"><span data-stu-id="c2a2d-208">Scroll</span></span>|  
+|<span data-ttu-id="c2a2d-209">Trennzeichen</span><span class="sxs-lookup"><span data-stu-id="c2a2d-209">Separator</span></span>|<span data-ttu-id="c2a2d-210">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-210">None</span></span>|<span data-ttu-id="c2a2d-211">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-211">None</span></span>|<span data-ttu-id="c2a2d-212">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-212">None</span></span>|  
+|<span data-ttu-id="c2a2d-213">Slider</span><span class="sxs-lookup"><span data-stu-id="c2a2d-213">Slider</span></span>|<span data-ttu-id="c2a2d-214">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-214">None</span></span>|<span data-ttu-id="c2a2d-215">Bereichswert, Auswahl, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-215">Range Value, Selection, Value</span></span>|<span data-ttu-id="c2a2d-216">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-216">None</span></span>|  
+|<span data-ttu-id="c2a2d-217">Spinner</span><span class="sxs-lookup"><span data-stu-id="c2a2d-217">Spinner</span></span>|<span data-ttu-id="c2a2d-218">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-218">None</span></span>|<span data-ttu-id="c2a2d-219">Bereichswert, Auswahl, Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-219">Range Value, Selection, Value</span></span>|<span data-ttu-id="c2a2d-220">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-220">None</span></span>|  
+|<span data-ttu-id="c2a2d-221">Unterteilte Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="c2a2d-221">Split Button</span></span>|<span data-ttu-id="c2a2d-222">Aufrufen, Erweitern Reduzieren</span><span class="sxs-lookup"><span data-stu-id="c2a2d-222">Invoke, Expand Collapse</span></span>|<span data-ttu-id="c2a2d-223">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-223">None</span></span>|<span data-ttu-id="c2a2d-224">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-224">None</span></span>|  
+|<span data-ttu-id="c2a2d-225">Statusleiste</span><span class="sxs-lookup"><span data-stu-id="c2a2d-225">Status Bar</span></span>|<span data-ttu-id="c2a2d-226">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-226">None</span></span>|<span data-ttu-id="c2a2d-227">Raster</span><span class="sxs-lookup"><span data-stu-id="c2a2d-227">Grid</span></span>|<span data-ttu-id="c2a2d-228">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-228">None</span></span>|  
+|<span data-ttu-id="c2a2d-229">Registerkarte</span><span class="sxs-lookup"><span data-stu-id="c2a2d-229">Tab</span></span>|<span data-ttu-id="c2a2d-230">Auswahl</span><span class="sxs-lookup"><span data-stu-id="c2a2d-230">Selection</span></span>|<span data-ttu-id="c2a2d-231">Scroll</span><span class="sxs-lookup"><span data-stu-id="c2a2d-231">Scroll</span></span>|<span data-ttu-id="c2a2d-232">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-232">None</span></span>|  
+|<span data-ttu-id="c2a2d-233">TabItem</span><span class="sxs-lookup"><span data-stu-id="c2a2d-233">Tab Item</span></span>|<span data-ttu-id="c2a2d-234">SelectionItem</span><span class="sxs-lookup"><span data-stu-id="c2a2d-234">Selection Item</span></span>|<span data-ttu-id="c2a2d-235">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-235">None</span></span>|<span data-ttu-id="c2a2d-236">Aufrufen</span><span class="sxs-lookup"><span data-stu-id="c2a2d-236">Invoke</span></span>|  
+|<span data-ttu-id="c2a2d-237">Tabelle</span><span class="sxs-lookup"><span data-stu-id="c2a2d-237">Table</span></span>|<span data-ttu-id="c2a2d-238">Raster, Rasterelement, Tabelle, Tabellenelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-238">Grid, Grid Item, Table, Table Item</span></span>|<span data-ttu-id="c2a2d-239">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-239">None</span></span>|<span data-ttu-id="c2a2d-240">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-240">None</span></span>|  
+|<span data-ttu-id="c2a2d-241">Text</span><span class="sxs-lookup"><span data-stu-id="c2a2d-241">Text</span></span>|<span data-ttu-id="c2a2d-242">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-242">None</span></span>|<span data-ttu-id="c2a2d-243">Rasterelement, Tabellenelement, Text</span><span class="sxs-lookup"><span data-stu-id="c2a2d-243">Grid Item, Table Item, Text</span></span>|<span data-ttu-id="c2a2d-244">Wert</span><span class="sxs-lookup"><span data-stu-id="c2a2d-244">Value</span></span>|  
+|<span data-ttu-id="c2a2d-245">Ziehpunkt</span><span class="sxs-lookup"><span data-stu-id="c2a2d-245">Thumb</span></span>|<span data-ttu-id="c2a2d-246">Transformation</span><span class="sxs-lookup"><span data-stu-id="c2a2d-246">Transform</span></span>|<span data-ttu-id="c2a2d-247">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-247">None</span></span>|<span data-ttu-id="c2a2d-248">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-248">None</span></span>|  
+|<span data-ttu-id="c2a2d-249">Titelleiste</span><span class="sxs-lookup"><span data-stu-id="c2a2d-249">Title Bar</span></span>|<span data-ttu-id="c2a2d-250">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-250">None</span></span>|<span data-ttu-id="c2a2d-251">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-251">None</span></span>|<span data-ttu-id="c2a2d-252">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-252">None</span></span>|  
+|<span data-ttu-id="c2a2d-253">Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="c2a2d-253">Tool Bar</span></span>|<span data-ttu-id="c2a2d-254">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-254">None</span></span>|<span data-ttu-id="c2a2d-255">Andocken, Erweitern Reduzieren, Transformation</span><span class="sxs-lookup"><span data-stu-id="c2a2d-255">Dock, Expand Collapse, Transform</span></span>|<span data-ttu-id="c2a2d-256">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-256">None</span></span>|  
+|<span data-ttu-id="c2a2d-257">QuickInfo</span><span class="sxs-lookup"><span data-stu-id="c2a2d-257">Tool Tip</span></span>|<span data-ttu-id="c2a2d-258">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-258">None</span></span>|<span data-ttu-id="c2a2d-259">Text, Fenster</span><span class="sxs-lookup"><span data-stu-id="c2a2d-259">Text, Window</span></span>|<span data-ttu-id="c2a2d-260">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-260">None</span></span>|  
+|<span data-ttu-id="c2a2d-261">Struktur</span><span class="sxs-lookup"><span data-stu-id="c2a2d-261">Tree</span></span>|<span data-ttu-id="c2a2d-262">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-262">None</span></span>|<span data-ttu-id="c2a2d-263">Scroll, Auswahl</span><span class="sxs-lookup"><span data-stu-id="c2a2d-263">Scroll, Selection</span></span>|<span data-ttu-id="c2a2d-264">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-264">None</span></span>|  
+|<span data-ttu-id="c2a2d-265">Strukturelement</span><span class="sxs-lookup"><span data-stu-id="c2a2d-265">Tree Item</span></span>|<span data-ttu-id="c2a2d-266">Erweitern Reduzieren</span><span class="sxs-lookup"><span data-stu-id="c2a2d-266">Expand Collapse</span></span>|<span data-ttu-id="c2a2d-267">Aufrufen, Scroll-Element, Auswahlelement, Ein-/ausschalten</span><span class="sxs-lookup"><span data-stu-id="c2a2d-267">Invoke, Scroll Item, Selection Item, Toggle</span></span>|<span data-ttu-id="c2a2d-268">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-268">None</span></span>|  
+|<span data-ttu-id="c2a2d-269">Fenster</span><span class="sxs-lookup"><span data-stu-id="c2a2d-269">Window</span></span>|<span data-ttu-id="c2a2d-270">Transformation, Fenster</span><span class="sxs-lookup"><span data-stu-id="c2a2d-270">Transform, Window</span></span>|<span data-ttu-id="c2a2d-271">Andocken</span><span class="sxs-lookup"><span data-stu-id="c2a2d-271">Dock</span></span>|<span data-ttu-id="c2a2d-272">Keine</span><span class="sxs-lookup"><span data-stu-id="c2a2d-272">None</span></span>|  
   
 > [!NOTE]
->  Wenn für einen Steuerelementtyp keine unterstützten Steuerelementmuster aufgeführt sind, es aber über mindestens ein bedingt unterstütztes Steuerelementmuster verfügt, dann wird eines dieser bedingten Steuerelementmuster jederzeit unterstützt.  
+>  <span data-ttu-id="c2a2d-273">Wenn für einen Steuerelementtyp keine unterstützten Steuerelementmuster aufgeführt sind, es aber über mindestens ein bedingt unterstütztes Steuerelementmuster verfügt, dann wird eines dieser bedingten Steuerelementmuster jederzeit unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c2a2d-273">If a control type has no supported control patterns listed but has one or more conditionally-supported control patterns, then one of those conditional control patterns will be supported at all times.</span></span>  
   
-## Siehe auch  
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c2a2d-274">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c2a2d-274">See Also</span></span>  
+ [<span data-ttu-id="c2a2d-275">Übersicht über die Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c2a2d-275">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

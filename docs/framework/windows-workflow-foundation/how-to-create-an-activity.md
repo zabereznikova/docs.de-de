@@ -1,117 +1,124 @@
 ---
-title: "Vorgehensweise: Erstellen einer Aktivit&#228;t | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Erstellen einer Aktivität"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: 39
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b52daa513bad9d0cb05fcabb27ff5755f8dba2a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen einer Aktivit&#228;t
-Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1](../../../includes/wf1-md.md)].Die Ausführungslogik einer Aktivität kann in verwaltetem Code oder mithilfe anderer Aktivitäten implementiert werden.In diesem Thema wird veranschaulicht, wie zwei Aktivitäten erstellt werden.Die erste Aktivität ist eine einfache Aktivität, die die Ausführungslogik auf der Basis von Code implementiert.Die Implementierung der zweiten Aktivität wird mithilfe anderer Aktivitäten definiert.Diese Aktivitäten werden in den folgenden Schritten des Lernprogramms verwendet.  
+# <a name="how-to-create-an-activity"></a><span data-ttu-id="11f19-102">Vorgehensweise: Erstellen einer Aktivität</span><span class="sxs-lookup"><span data-stu-id="11f19-102">How to: Create an Activity</span></span>
+<span data-ttu-id="11f19-103">Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="11f19-103">Activities are the core unit of behavior in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span></span> <span data-ttu-id="11f19-104">Die Ausführungslogik einer Aktivität kann in verwaltetem Code oder mithilfe anderer Aktivitäten implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="11f19-104">The execution logic of an activity can be implemented in managed code or it can be implemented by using other activities.</span></span> <span data-ttu-id="11f19-105">In diesem Thema wird veranschaulicht, wie zwei Aktivitäten erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="11f19-105">This topic demonstrates how to create two activities.</span></span> <span data-ttu-id="11f19-106">Die erste Aktivität ist eine einfache Aktivität, die die Ausführungslogik auf der Basis von Code implementiert.</span><span class="sxs-lookup"><span data-stu-id="11f19-106">The first activity is a simple activity that uses code to implement its execution logic.</span></span> <span data-ttu-id="11f19-107">Die Implementierung der zweiten Aktivität wird mithilfe anderer Aktivitäten definiert.</span><span class="sxs-lookup"><span data-stu-id="11f19-107">The implementation of the second activity is defined by using other activities.</span></span> <span data-ttu-id="11f19-108">Diese Aktivitäten werden in den folgenden Schritten des Lernprogramms verwendet.</span><span class="sxs-lookup"><span data-stu-id="11f19-108">These activities are used in following steps in the tutorial.</span></span>  
   
 > [!NOTE]
->  Um eine abgeschlossene Version des Lernprogramms herunterzuladen, informieren Sie sich unter [Windows Workflow Foundation \(WF45\) – Lernprogramm "Erste Schritte"](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="11f19-109">Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.</span><span class="sxs-lookup"><span data-stu-id="11f19-109">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### So erstellen Sie das Workflow\-Aktivitätsbibliothekprojekt  
+### <a name="to-create-the-activity-library-project"></a><span data-ttu-id="11f19-110">So erstellen Sie das Workflow-Aktivitätsbibliothekprojekt</span><span class="sxs-lookup"><span data-stu-id="11f19-110">To create the activity library project</span></span>  
   
-1.  Öffnen Sie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], und wählen Sie im Menü **Datei** die Optionen **Neu**, **Projekt** aus.  
+1.  <span data-ttu-id="11f19-111">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] , und wählen Sie **neu**, **Projekt** aus der **Datei** Menü.</span><span class="sxs-lookup"><span data-stu-id="11f19-111">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and choose **New**,  **Project** from the **File** menu.</span></span>  
   
-2.  Erweitern Sie in der Liste **InstallierteVorlagen** den Knoten **Andere Projekttypen**, und wählen Sie **Visual Studio\-Projektmappen** aus.  
+2.  <span data-ttu-id="11f19-112">Erweitern Sie die **andere Projekttypen** Knoten in der **installiert**, **Vorlagen** aus, und wählen Sie **Visual Studio-Projektmappen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-112">Expand the **Other Project Types** node in the **Installed**, **Templates** list and select **Visual Studio Solutions**.</span></span>  
   
-3.  Wählen Sie in der Liste **Visual Studio\-Projektmappen** die Option **Leere Projektmappe** aus.Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework\-Version **.NET Framework 4.5** ausgewählt ist.Geben Sie im Feld **Name** den Namen `WF45GettingStartedTutorial` ein, und klicken Sie anschließend auf **OK**.  
+3.  <span data-ttu-id="11f19-113">Wählen Sie **leere Projektmappe** aus der **Visual Studio-Projektmappen** Liste.</span><span class="sxs-lookup"><span data-stu-id="11f19-113">Select **Blank Solution** from the **Visual Studio Solutions** list.</span></span> <span data-ttu-id="11f19-114">Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework-Version **.NET Framework 4.5** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="11f19-114">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="11f19-115">Typ `WF45GettingStartedTutorial` in der **Namen** Feld, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="11f19-115">Type `WF45GettingStartedTutorial` in the **Name** box and then click **OK**.</span></span>  
   
-4.  Klicken Sie im **Projektmappen\-Explorer** auf **WF45GettingStartedTutorial**, zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Projekt** aus.  
+4.  <span data-ttu-id="11f19-116">Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="11f19-116">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
     > [!TIP]
-    >  Wenn das Fenster **Projektmappen\-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen\-Explorer** aus.  
+    >  <span data-ttu-id="11f19-117">Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.</span><span class="sxs-lookup"><span data-stu-id="11f19-117">If the **Solution Explorer** window is not displayed, select **Solution Explorer** from the **View** menu.</span></span>  
   
-5.  Wählen Sie im Knoten **Installiert** die Option **Visual C\#** und anschließend **Workflow** \(oder **Visual Basic**, **Workflow**\) aus.Stellen Sie sicher, dass in der Dropdownliste mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]\-Version **.NET Framework 4.5** ausgewählt ist.Wählen Sie in der Liste **Workflow** die Option **Aktivitätsbibliothek** aus.Geben Sie im Feld `Name` die Bezeichnung **NumberGuessWorkflowActivities** ein, und klicken Sie dann auf **OK**.  
+5.  <span data-ttu-id="11f19-118">Wählen Sie im Knoten **Installiert** die Option **Visual C#**und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus.</span><span class="sxs-lookup"><span data-stu-id="11f19-118">In the **Installed** node, select **Visual C#**, **Workflow** (or **Visual Basic**, **Workflow**).</span></span> <span data-ttu-id="11f19-119">Sicherstellen, dass **.NET Framework 4.5** ausgewählt ist, der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Version Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="11f19-119">Ensure that **.NET Framework 4.5** is selected in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version drop-down list.</span></span> <span data-ttu-id="11f19-120">Wählen Sie **Aktivitätsbibliothek** aus der **Workflow** Liste.</span><span class="sxs-lookup"><span data-stu-id="11f19-120">Select **Activity Library** from the **Workflow** list.</span></span> <span data-ttu-id="11f19-121">Typ `NumberGuessWorkflowActivities` in der **Namen** Feld, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="11f19-121">Type `NumberGuessWorkflowActivities` in the **Name** box and then click **OK**.</span></span>  
   
     > [!NOTE]
-    >  In Abhängigkeit davon, welche Programmiersprache als die primäre Sprache in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] konfiguriert ist, befindet sich der Knoten **Visual C\#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert**.  
+    >  <span data-ttu-id="11f19-122">Je nachdem, welche Programmiersprache als die primäre Sprache in konfigurierten [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], die **Visual C#-** oder **Visual Basic** Knoten möglicherweise nicht unter die **andere Sprachen**Knoten in der **installiert** Knoten.</span><span class="sxs-lookup"><span data-stu-id="11f19-122">Depending on which programming language is configured as the primary language in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>  
   
-6.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **Activity1.xaml**, und wählen Sie dann **Löschen** aus.Klicken Sie zur Bestätigung auf **OK**.  
+6.  <span data-ttu-id="11f19-123">Mit der rechten Maustaste **Activity1.xaml** in **Projektmappen-Explorer** , und wählen Sie **löschen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-123">Right-click **Activity1.xaml** in **Solution Explorer** and choose **Delete**.</span></span> <span data-ttu-id="11f19-124">Klicken Sie zur Bestätigung auf **OK** .</span><span class="sxs-lookup"><span data-stu-id="11f19-124">Click **OK** to confirm.</span></span>  
   
-### So erstellen Sie die ReadInt\-Aktivität  
+### <a name="to-create-the-readint-activity"></a><span data-ttu-id="11f19-125">So erstellen Sie die ReadInt-Aktivität</span><span class="sxs-lookup"><span data-stu-id="11f19-125">To create the ReadInt activity</span></span>  
   
-1.  Wählen Sie im Menü **Projekt** die Option **Neues Element hinzufügen** aus.  
+1.  <span data-ttu-id="11f19-126">Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü.</span><span class="sxs-lookup"><span data-stu-id="11f19-126">Choose **Add New Item** from the **Project** menu.</span></span>  
   
-2.  Wählen Sie im Knoten **Gemeinsame Elemente** unter **Installiert** die Option **Workflow** aus.Wählen Sie in der Liste **Workflow** die Option **Codeaktivität** aus.  
+2.  <span data-ttu-id="11f19-127">In der **installiert**, **gemeinsame Elemente** Knoten **Workflow**.</span><span class="sxs-lookup"><span data-stu-id="11f19-127">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="11f19-128">Wählen Sie **Codeaktivität** aus der **Workflow** Liste.</span><span class="sxs-lookup"><span data-stu-id="11f19-128">Select **Code Activity** from the **Workflow** list.</span></span>  
   
-3.  Geben Sie in das Feld **Name** den Text `ReadInt` ein, und klicken Sie auf **Hinzufügen**.  
+3.  <span data-ttu-id="11f19-129">Typ `ReadInt` in der **Namen** Feld, und klicken Sie dann auf **hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-129">Type `ReadInt` into the **Name** box and then click **Add**.</span></span>  
   
-4.  Ersetzen Sie die vorhandene `ReadInt`\-Definition durch die folgende Definition.  
+4.  <span data-ttu-id="11f19-130">Ersetzen Sie die vorhandene `ReadInt`-Definition durch die folgende Definition.</span><span class="sxs-lookup"><span data-stu-id="11f19-130">Replace the existing `ReadInt` definition with the following definition.</span></span>  
   
      [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]  
   
     > [!NOTE]
-    >  Die `ReadInt`\-Aktivität wird von <xref:System.Activities.NativeActivity%601> statt von <xref:System.Activities.CodeActivity> abgeleitet. Das entspricht dem Standard für die Vorlage "Codeaktivität".<xref:System.Activities.CodeActivity%601> kann verwendet werden, wenn die Aktivität ein einziges Ergebnis bereitstellt, das durch das <xref:System.Activities.Activity%601.Result%2A>\-Argument verfügbar gemacht wird, da <xref:System.Activities.CodeActivity%601> jedoch nicht die Verwendung von Lesezeichen unterstützt, wird <xref:System.Activities.NativeActivity%601> verwendet.  
+    >  <span data-ttu-id="11f19-131">Die `ReadInt`-Aktivität wird von <xref:System.Activities.NativeActivity%601> statt von <xref:System.Activities.CodeActivity> abgeleitet. Das entspricht dem Standard für die Vorlage "Codeaktivität".</span><span class="sxs-lookup"><span data-stu-id="11f19-131">The `ReadInt` activity derives from <xref:System.Activities.NativeActivity%601> instead of <xref:System.Activities.CodeActivity>, which is the default for the code activity template.</span></span> <span data-ttu-id="11f19-132"><xref:System.Activities.CodeActivity%601> kann verwendet werden, wenn die Aktivität ein einziges Ergebnis bereitstellt, das durch das <xref:System.Activities.Activity%601.Result%2A>-Argument verfügbar gemacht wird, da <xref:System.Activities.CodeActivity%601> jedoch nicht die Verwendung von Lesezeichen unterstützt, wird <xref:System.Activities.NativeActivity%601> verwendet.</span><span class="sxs-lookup"><span data-stu-id="11f19-132"><xref:System.Activities.CodeActivity%601> can be used if the activity provides a single result, which is exposed through the <xref:System.Activities.Activity%601.Result%2A> argument, but <xref:System.Activities.CodeActivity%601> does not support the use of bookmarks, so <xref:System.Activities.NativeActivity%601> is used.</span></span>  
   
-### So erstellen Sie die Prompt\-Aktivität  
+### <a name="to-create-the-prompt-activity"></a><span data-ttu-id="11f19-133">So erstellen Sie die Prompt-Aktivität</span><span class="sxs-lookup"><span data-stu-id="11f19-133">To create the Prompt activity</span></span>  
   
-1.  Drücken Sie STRG\+UMSCHALT\+B, um das Projekt zu erstellen.Durch das Erstellen des Projekts wird die `ReadInt`\-Aktivität in diesem Projekt erstellt, mit der die benutzerdefinierte Aktivität aus diesem Schritt erstellt werden soll.  
+1.  <span data-ttu-id="11f19-134">Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="11f19-134">Press CTRL+SHIFT+B to build the project.</span></span> <span data-ttu-id="11f19-135">Durch das Erstellen des Projekts wird die `ReadInt`-Aktivität in diesem Projekt erstellt, mit der die benutzerdefinierte Aktivität aus diesem Schritt erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="11f19-135">Building the project enables the `ReadInt` activity in this project to be used to build the custom activity from this step.</span></span>  
   
-2.  Wählen Sie im Menü **Projekt** die Option **Neues Element hinzufügen** aus.  
+2.  <span data-ttu-id="11f19-136">Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü.</span><span class="sxs-lookup"><span data-stu-id="11f19-136">Choose **Add New Item** from the **Project** menu.</span></span>  
   
-3.  Wählen Sie im Knoten **Gemeinsame Elemente** unter **Installiert** die Option **Workflow** aus.Wählen Sie in der Liste **Workflow** die Option **Aktivität** aus.  
+3.  <span data-ttu-id="11f19-137">In der **installiert**, **gemeinsame Elemente** Knoten **Workflow**.</span><span class="sxs-lookup"><span data-stu-id="11f19-137">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="11f19-138">Wählen Sie **Aktivität** aus der **Workflow** Liste.</span><span class="sxs-lookup"><span data-stu-id="11f19-138">Select **Activity** from the **Workflow** list.</span></span>  
   
-4.  Geben Sie `Prompt` in das Feld **Name** den Text ein, und klicken Sie auf **Hinzufügen**.  
+4.  <span data-ttu-id="11f19-139">Typ `Prompt` in der **Namen** Feld, und klicken Sie dann auf **hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-139">Type `Prompt` into the **Name** box and then click **Add**.</span></span>  
   
-5.  Doppelklicken Sie im Projektmappen\-Explorer auf **Prompt.xaml**, um die Datei im Designer anzuzeigen, falls dies nicht bereits der Fall ist.  
+5.  <span data-ttu-id="11f19-140">Doppelklicken Sie auf **Prompt.xaml** in **Projektmappen-Explorer** im Designer angezeigt werden, wenn er nicht bereits angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="11f19-140">Double-click **Prompt.xaml** in **Solution Explorer** to display it in the designer if it is not already displayed.</span></span>  
   
-6.  Klicken Sie links unten im Aktivitäts\-Designer auf die Schaltfläche **Argumente**, um den Bereich **Argumente** anzuzeigen.  
+6.  <span data-ttu-id="11f19-141">Klicken Sie auf **Argumente** unten links die Aktivitäts-Designer zum Anzeigen der **Argumente** Bereich.</span><span class="sxs-lookup"><span data-stu-id="11f19-141">Click **Arguments** in the lower-left side of the activity designer to display the **Arguments** pane.</span></span>  
   
-7.  Klicken Sie auf **Argument erstellen**.  
+7.  <span data-ttu-id="11f19-142">Klicken Sie auf **Argument erstellen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-142">Click **Create Argument**.</span></span>  
   
-8.  Geben Sie `BookmarkName` in das Feld **Name** ein, wählen Sie aus der Dropdownliste **Richtung** die Richtung **In** und aus der Dropdownliste **Argumenttyp** die Option **String** aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+8.  <span data-ttu-id="11f19-143">Typ `BookmarkName` in der **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Zeichenfolge** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.</span><span class="sxs-lookup"><span data-stu-id="11f19-143">Type `BookmarkName` into the **Name** box, select **In** from the **Direction** drop-down list, select **String** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-9. Klicken Sie auf **Argument erstellen**.  
+9. <span data-ttu-id="11f19-144">Klicken Sie auf **Argument erstellen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-144">Click **Create Argument**.</span></span>  
   
-10. Geben Sie in das Feld **Name**, das unter dem neu hinzugefügten Argument `BookmarkName` angezeigt wird, `Result` ein. Wählen Sie aus der Dropdownliste **Richtung** die Richtung **Out** und aus der Dropdownliste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE.  
+10. <span data-ttu-id="11f19-145">Typ `Result` in der **Namen** , Feld unter dem neu hinzugefügten `BookmarkName` Argument die Option **Out** aus der **Richtung** Dropdown-Liste **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="11f19-145">Type `Result` into the **Name** box that is underneath the newly added `BookmarkName` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-11. Klicken Sie auf **Argument erstellen**.  
+11. <span data-ttu-id="11f19-146">Klicken Sie auf **Argument erstellen**.</span><span class="sxs-lookup"><span data-stu-id="11f19-146">Click **Create Argument**.</span></span>  
   
-12. Geben Sie `Subtotal` im Feld **Name** ein, und wählen Sie aus der Dropdownliste **Richtung** die Option **In** aus. Wählen Sie **String** aus der Dropdownliste **Argumenttyp** aus. Drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+12. <span data-ttu-id="11f19-147">Typ `Text` in der **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Zeichenfolge** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.</span><span class="sxs-lookup"><span data-stu-id="11f19-147">Type `Text` into the **Name** box, select **In** from the **Direction** drop-down list, select **String** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-     Diese drei Argumente werden an die entsprechenden Argumente der <xref:System.Activities.Statements.WriteLine>\-Aktivität und `ReadInt`\-Aktivität gebunden, die der `Prompt`\-Aktivität in den folgenden Schritten hinzugefügt werden.  
+     <span data-ttu-id="11f19-148">Diese drei Argumente werden an die entsprechenden Argumente der <xref:System.Activities.Statements.WriteLine>-Aktivität und `ReadInt`-Aktivität gebunden, die der `Prompt`-Aktivität in den folgenden Schritten hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="11f19-148">These three arguments are bound to the corresponding arguments of the <xref:System.Activities.Statements.WriteLine> and `ReadInt` activities that are added to the `Prompt` activity in the following steps.</span></span>  
   
-13. Klicken Sie links unten im Aktivitäts\-Designer auf die Schaltfläche **Argumente**, um den Bereich **Argumente** zu schließen.  
+13. <span data-ttu-id="11f19-149">Klicken Sie auf **Argumente** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Argumente** Bereich.</span><span class="sxs-lookup"><span data-stu-id="11f19-149">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-14. Ziehen Sie eine **Sequence**\-Aktivität aus dem Abschnitt **Ablaufsteuerung** der **Toolbox**, und legen Sie sie auf der Bezeichnung **Aktivität hier ablegen** des Designers der **Prompt**\-Aktivität ab.  
-  
-    > [!TIP]
-    >  Wenn das Fenster **Toolbox** nicht sichtbar ist, wählen Sie im Menü **Ansicht** die Option **Toolbox** aus.  
-  
-15. Ziehen Sie eine **WriteLine**\-Aktivität aus dem Abschnitt **Primitive** der **Toolbox**, und legen Sie sie auf der Bezeichnung **Aktivität hier ablegen** der **Sequence**\-Aktivität ab.  
-  
-16. Binden Sie das **Text**\-Argument der **WriteLine**\-Aktivität an das **Text**\-Argument der **Prompt**\-Aktivität, indem Sie im Fenster **Eigenschaften** im Feld **C\#\-Ausdruck eingeben** oder **VB\-Ausdruck eingeben** die Bezeichnung `Result` eingeben. Drücken Sie dann zwei Mal die TAB\-TASTE.Dadurch wird das Fenster mit den IntelliSense\-Listenmembern geschlossen und der Eigenschaftswert gespeichert, indem die Auswahl der Eigenschaft aufgehoben wird.Diese Eigenschaft kann auch festgelegt werden, indem Sie in das Feld **C\#\-Ausdruck eingeben** oder **VB\-Ausdruck eingeben** der Aktivität `Text` eingeben.  
+14. <span data-ttu-id="11f19-150">Ziehen Sie eine **Sequenz** Aktivität aus der **Control Flow** Teil der **Toolbox** und legen ihn auf die **Aktivität hier ablegen** Bezeichnung des der **Prompt** Aktivitäts-Designer.</span><span class="sxs-lookup"><span data-stu-id="11f19-150">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the **Drop activity here** label of the **Prompt** activity designer.</span></span>  
   
     > [!TIP]
-    >  Klicken Sie im Menü **Ansicht** auf **Eigenschaftenfenster**, falls das Fenster **Eigenschaften** nicht angezeigt wird.  
+    >  <span data-ttu-id="11f19-151">Wenn die **Toolbox** Fenster nicht angezeigt wird, wählen Sie **Toolbox** aus der **Ansicht** Menü.</span><span class="sxs-lookup"><span data-stu-id="11f19-151">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-17. Ziehen Sie eine **ReadInt**\-Aktivität aus dem Abschnitt **ANumberGuessWorkflowActivities** der **Toolbox**, und legen Sie sie in der **Sequence**\-Aktivität ab, sodass sie unmittelbar auf die **WriteLine**\-Aktivität folgt.  
+15. <span data-ttu-id="11f19-152">Ziehen Sie eine **WriteLine** Aktivität aus der **primitive** Teil der **Toolbox** und legen ihn auf die **Aktivität hier ablegen** Bezeichnung des der **Sequenz** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="11f19-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Drop activity here** label of the **Sequence** activity.</span></span>  
   
-18. Binden Sie das **BookmarkName**\-Argument der **ReadInt**\-Aktivität an das **BookmarkName**\-Argument der **Prompt**\-Aktivität, indem Sie im Fenster **Eigenschaften** im Feld **VB\-Ausdruck eingeben** neben dem **BookmarkName**\-Argument die Bezeichnung `BookmarkName` eingeben. Drücken Sie dann die TAB\-TASTE zwei Mal, um das Fenster mit den IntelliSense\-Listenmembern zu schließen und die Eigenschaft zu speichern.  
+16. <span data-ttu-id="11f19-153">Binden der **Text** Argument der **WriteLine** Aktivität die **Text** Argument der **Prompt** Aktivität, indem Sie Folgendes eingeben `Text` in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld der **Eigenschaften** Fenster, und drücken Sie dann die TAB-Taste zweimal.</span><span class="sxs-lookup"><span data-stu-id="11f19-153">Bind the **Text** argument of the **WriteLine** activity to the **Text** argument of the **Prompt** activity by typing `Text` into the **Enter a C# expression** or **Enter a VB expression** box in the **Properties** window, and then press the TAB key two times.</span></span> <span data-ttu-id="11f19-154">Dadurch wird das Fenster mit den IntelliSense-Listenmembern geschlossen und der Eigenschaftswert gespeichert, indem die Auswahl der Eigenschaft aufgehoben wird.</span><span class="sxs-lookup"><span data-stu-id="11f19-154">This dismisses the IntelliSense list members window and saves the property value by moving the selection off the property.</span></span> <span data-ttu-id="11f19-155">Diese Eigenschaft kann auch festgelegt werden, indem Sie Folgendes eingeben `Text` in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld für die Aktivität selbst.</span><span class="sxs-lookup"><span data-stu-id="11f19-155">This property can also be set by typing `Text` into the **Enter a C# expression** or **Enter a VB expression** box on the activity itself.</span></span>  
   
-19. Binden Sie das **Result**\-Argument der **ReadInt**\-Aktivität an das **Result**\-Argument der **Prompt**\-Aktivität, indem Sie im Fenster **Eigenschaften** im Feld **VB\-Ausdruck eingeben** neben dem **Result**\-Argument die Bezeichnung `Result` eingeben. Drücken Sie dann die TAB\-TASTE zwei Mal, um das Fenster mit den IntelliSense\-Listenmembern zu schließen und die Eigenschaft zu speichern.  
+    > [!TIP]
+    >  <span data-ttu-id="11f19-156">Wenn die **Fenster "Eigenschaften"** wird nicht angezeigt werden, wählen Sie **Fenster "Eigenschaften"** aus der **Ansicht** Menü.</span><span class="sxs-lookup"><span data-stu-id="11f19-156">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
   
-20. Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+17. <span data-ttu-id="11f19-157">Ziehen Sie eine **ReadInt** Aktivität aus der **NumberGuessWorkflowActivities** Teil der **Toolbox** und legen Sie sie in der **Sequenz** -Aktivität ab, sodass, folgt die **WriteLine** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="11f19-157">Drag a **ReadInt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox** and drop it in the **Sequence** activity so that it follows the **WriteLine** activity.</span></span>  
   
-     Anweisungen zum Erstellen eines Workflows mithilfe dieser Aktivitäten finden Sie im nächsten Lernprogrammschritt [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow.md).  
+18. <span data-ttu-id="11f19-158">Binden der **BookmarkName** Argument der **ReadInt** Aktivität der **BookmarkName** Argument der **Prompt** Aktivität durch Eingabe von `BookmarkName` in der **VB-Ausdruck eingeben** Feld rechts neben der **BookmarkName** Argument in der **Fenster "Eigenschaften"**, und drücken Sie dann die TAB-Taste zwei Male auf, um die IntelliSense-Liste Mitglieder Fenster schließen und speichern Sie die Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="11f19-158">Bind the **BookmarkName** argument of the **ReadInt** activity to the **BookmarkName** argument of the **Prompt** activity by typing `BookmarkName` into the **Enter a VB expression** box to the right of the **BookmarkName** argument in the **Properties Window**, and then press the TAB key two times to close the IntelliSense list members window and save the property.</span></span>  
   
-## Siehe auch  
- <xref:System.Activities.CodeActivity>   
- <xref:System.Activities.NativeActivity%601>   
- [Entwerfen und Implementieren von benutzerdefinierten Aktivitäten](../../../docs/framework/windows-workflow-foundation//designing-and-implementing-custom-activities.md)   
- [Lernprogramm 'Erste Schritte'](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow.md)   
- [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+19. <span data-ttu-id="11f19-159">Binden der **Ergebnis** Argument der **ReadInt** Aktivität die **Ergebnis** Argument der **Prompt** Aktivität, indem Sie Folgendes eingeben `Result` in der **VB-Ausdruck eingeben** Feld rechts neben der **Ergebnis** Argument in der **Fenster "Eigenschaften"**, und drücken Sie dann zweimal die TAB-Taste.</span><span class="sxs-lookup"><span data-stu-id="11f19-159">Bind the **Result** argument of the **ReadInt** activity to the **Result** argument of the **Prompt** activity by typing `Result` into the **Enter a VB expression** box to the right of the **Result** argument in the **Properties Window**, and then press the TAB key two times.</span></span>  
+  
+20. <span data-ttu-id="11f19-160">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="11f19-160">Press CTRL+SHIFT+B to build the solution.</span></span>  
+  
+     <span data-ttu-id="11f19-161">Für Anweisungen zum Erstellen eines Workflows mithilfe von diesen Aktivitäten finden Sie im nächsten Schritt des Lernprogramms [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="11f19-161">For instructions on how to create a workflow by using these activities, see the next step in the tutorial, [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="11f19-162">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="11f19-162">See Also</span></span>  
+ <xref:System.Activities.CodeActivity>  
+ <xref:System.Activities.NativeActivity%601>  
+ [<span data-ttu-id="11f19-163">Entwerfen und Implementieren von benutzerdefinierten Aktivitäten</span><span class="sxs-lookup"><span data-stu-id="11f19-163">Designing and Implementing Custom Activities</span></span>](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
+ [<span data-ttu-id="11f19-164">Tutorial mit ersten Schritten</span><span class="sxs-lookup"><span data-stu-id="11f19-164">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [<span data-ttu-id="11f19-165">Vorgehensweise: Erstellen eines Workfows</span><span class="sxs-lookup"><span data-stu-id="11f19-165">How to: Create a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [<span data-ttu-id="11f19-166">Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitäts-Designer</span><span class="sxs-lookup"><span data-stu-id="11f19-166">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

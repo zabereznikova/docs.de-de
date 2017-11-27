@@ -1,40 +1,42 @@
 ---
-title: "&lt;servicePointManager&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/servicePointManager"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<servicePointManager>-Element"
-  - "servicePointManager-Element"
+title: '&lt;ServicePointManager&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/servicePointManager
+helpviewer_keywords:
+- servicePointManager element
+- <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 85ccad3e2c3b237e286f3737589a5e58994521bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;servicePointManager&gt;-Element (Netzwerkeinstellungen)
-Konfiguriert Verbindungen zu Netzwerkressourcen.  
+# <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="c0e7c-102">&lt;ServicePointManager&gt; -Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="c0e7c-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="c0e7c-103">Konfiguriert die Verbindungen mit Netzwerkressourcen.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-103">Configures connections to network resources.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="c0e7c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c0e7c-104">\<configuration></span></span>  
+<span data-ttu-id="c0e7c-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="c0e7c-105">\<system.net></span></span>  
+<span data-ttu-id="c0e7c-106">\<Einstellungen ></span><span class="sxs-lookup"><span data-stu-id="c0e7c-106">\<settings></span></span>  
+<span data-ttu-id="c0e7c-107">\<ServicePointManager ></span><span class="sxs-lookup"><span data-stu-id="c0e7c-107">\<servicePointManager></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c0e7c-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="c0e7c-108">Syntax</span></span>  
   
-      <servicePointManager  
+```xml  
+<servicePointManager  
   checkCertificateName="true|false"  
   checkCertificateRevocationList="true|false"  
   encryptionPolicy="AllowNoEncryption|NoEncryption|RequireEncryption"  
@@ -45,36 +47,36 @@ Konfiguriert Verbindungen zu Netzwerkressourcen.
 />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c0e7c-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="c0e7c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="c0e7c-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="c0e7c-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="c0e7c-111">Attributes</span></span>  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|`checkCertificateName`|Gibt an, ob das System vor dem Verwenden des Zertifikats überprüfen sollte, ob der Name im Zertifikat mit dem Serverhostnamen übereinstimmt.  Der Standardwert ist `true`.|  
-|`checkCertificateRevocationList`|Gibt an, ob das System vor dem Verwenden des Zertifikats überprüfen sollte, ob das Zertifikat widerrufen wurde.  Der Standardwert ist `false`.|  
-|`dnsRefreshTimeout`|Gibt an, wie lange in Millisekunden Domain Name Service\-\(DNS\-\)Auflösungen in Verbindung mit der DNS Round Robin\-Option zwischengespeichert werden.  Der Standardwert ist 120.000 Millisekunden \(zwei Minuten\).|  
-|`enableDnsRoundRobin`|Gibt an, ob DNS\-Auflösungen von Hostnamen mit mehreren IP\-Adressen \(Internet Protocol\) alle Adressen zurückgeben oder nur die erste.  Der Standardwert ist `false`.|  
-|`encryptionPolicy`|Gibt die Verschlüsselungsrichtlinie an, die auf eine SSL\/TLS\-Sitzung einer <xref:System.Net.ServicePointManager>\-Instanz angewendet wird.  Die möglichen Werte entsprechen den Werten für die <xref:System.Net.Security.EncryptionPolicy>\-Enumeration.  Die Verwendung von <xref:System.Security.Authentication.CipherAlgorithmType> ist erforderlich, wenn die Verschlüsselungsrichtlinie auf `NoEncryption` festgelegt ist.  Der Standardwert ist `RequireEncryption`.|  
-|`expect100Continue`|Gibt an, ob POST\-Methoden erwarten sollten, eine `100-continue`\-Antwort vom Server zu empfangen.  Der Standardwert ist `true`.|  
-|`useNagleAlgorithm`|Gibt an ob vom Dienstpunktmanager kontrollierte Verbindungen den Nagle\-Algorithmus verwenden.  Der Standardwert ist `true`.|  
+|<span data-ttu-id="c0e7c-112">**Attribut**</span><span class="sxs-lookup"><span data-stu-id="c0e7c-112">**Attribute**</span></span>|<span data-ttu-id="c0e7c-113">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="c0e7c-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`checkCertificateName`|<span data-ttu-id="c0e7c-114">Gibt an, ob das System überprüft, ob der Name für das Zertifikat den Hostnamen entspricht, bevor Sie mit dem Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="c0e7c-115">Der Standardwert ist `true`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-115">The default value is `true`.</span></span>|  
+|`checkCertificateRevocationList`|<span data-ttu-id="c0e7c-116">Gibt an, ob das System, ob das Zertifikat widerrufen wurde, bevor Sie mithilfe des Zertifikats überprüft werden soll.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="c0e7c-117">Der Standardwert ist `false`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-117">The default value is `false`.</span></span>|  
+|`dnsRefreshTimeout`|<span data-ttu-id="c0e7c-118">Gibt an, wie lange Dienst DNS (Domain Name) Lösungen zwischengespeichert werden in Verbindung mit der DNS-Round-Robin-Option in Millisekunden.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="c0e7c-119">Der Standardwert ist 120.000 Millisekunden (zwei Minuten).</span><span class="sxs-lookup"><span data-stu-id="c0e7c-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
+|`enableDnsRoundRobin`|<span data-ttu-id="c0e7c-120">Gibt an, ob die DNS-Auflösung des Hosts benennt mit mehreren IP (Internet Protocol)-Adressen zurückgegeben, alle Adressen oder nur die erste Aktivität.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="c0e7c-121">Der Standardwert ist `false`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-121">The default value is `false`.</span></span>|  
+|`encryptionPolicy`|<span data-ttu-id="c0e7c-122">Gibt an, die Verschlüsselungsrichtlinie für eine SSL/TLS-Sitzung angewendet wird, auf eine <xref:System.Net.ServicePointManager> Instanz.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="c0e7c-123">Die möglichen Werte sind entsprechen den Werten für die <xref:System.Net.Security.EncryptionPolicy> Enumeration.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="c0e7c-124">Die Verwendung von <xref:System.Security.Authentication.CipherAlgorithmType.Null> ist erforderlich, wenn die Verschlüsselungsrichtlinie, um festgelegt ist `NoEncryption`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="c0e7c-125">Der Standardwert ist `RequireEncryption`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-125">The default value is `RequireEncryption`.</span></span>|  
+|`expect100Continue`|<span data-ttu-id="c0e7c-126">Gibt an, ob die POST-Methoden erwarten soll eine `100-continue` Antwort vom Server.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="c0e7c-127">Der Standardwert ist `true`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-127">The default value is `true`.</span></span>|  
+|`useNagleAlgorithm`|<span data-ttu-id="c0e7c-128">Gibt an, ob den Nagle-Algorithmus, Verbindungen, die von der Point-Dienst-Manager gesteuert verwenden.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="c0e7c-129">Der Standardwert ist `true`.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-129">The default value is `true`.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="c0e7c-130">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c0e7c-130">Child Elements</span></span>  
+ <span data-ttu-id="c0e7c-131">Keine</span><span class="sxs-lookup"><span data-stu-id="c0e7c-131">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="c0e7c-132">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c0e7c-132">Parent Elements</span></span>  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>\-Namespace.|  
+|<span data-ttu-id="c0e7c-133">**Element**</span><span class="sxs-lookup"><span data-stu-id="c0e7c-133">**Element**</span></span>|<span data-ttu-id="c0e7c-134">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="c0e7c-134">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="c0e7c-135">Einstellungen</span><span class="sxs-lookup"><span data-stu-id="c0e7c-135">Settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="c0e7c-136">Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## Hinweise  
+## <a name="remarks"></a><span data-ttu-id="c0e7c-137">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c0e7c-137">Remarks</span></span>  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a><span data-ttu-id="c0e7c-138">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="c0e7c-138">Configuration Files</span></span>  
+ <span data-ttu-id="c0e7c-139">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c0e7c-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Siehe auch  
- <xref:System.Net.ServicePointManager>   
- <xref:System.Net.Security.EncryptionPolicy>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="c0e7c-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0e7c-140">See Also</span></span>  
+ <xref:System.Net.ServicePointManager>  
+ <xref:System.Net.Security.EncryptionPolicy>  
+ [<span data-ttu-id="c0e7c-141">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="c0e7c-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

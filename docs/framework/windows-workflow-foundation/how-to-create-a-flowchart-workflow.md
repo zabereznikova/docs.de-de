@@ -1,77 +1,84 @@
 ---
-title: "Vorgehensweise: Erstellen eines Flussdiagrammworkflows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Erstellen eines Flussdiagrammworkflows'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 570e51c3b9c8ee227a9c5688fc7caa1b4a0d9c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines Flussdiagrammworkflows
-Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden.In diesem Thema wird Schritt für Schritt die Erstellung eines Workflows erläutert, der integrierte Aktivitäten wie die <xref:System.Activities.Statements.Flowchart>\-Aktivität sowie benutzerdefinierte Aktivitäten aus dem vorherigen Thema [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) verwendet.Der Workflow erstellt ein Spiel, das Zahlen errät.  
+# <a name="how-to-create-a-flowchart-workflow"></a><span data-ttu-id="6fe50-102">Vorgehensweise: Erstellen eines Flussdiagrammworkflows</span><span class="sxs-lookup"><span data-stu-id="6fe50-102">How to: Create a Flowchart Workflow</span></span>
+<span data-ttu-id="6fe50-103">Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="6fe50-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="6fe50-104">Dieses Thema führt Sie durch Erstellen eines Workflows, die sowohl integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.Flowchart> Aktivität und den benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen Sie eine Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="6fe50-104">This topic steps through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Flowchart> activity, and the custom activities from the previous [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="6fe50-105">Der Workflow erstellt ein Spiel, das Zahlen errät.</span><span class="sxs-lookup"><span data-stu-id="6fe50-105">The workflow models a number guessing game.</span></span>  
   
 > [!NOTE]
->  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab.Um dieses Thema verwenden zu können, müssen Sie zuerst [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) abschließen.  
+>  <span data-ttu-id="6fe50-106">Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab.</span><span class="sxs-lookup"><span data-stu-id="6fe50-106">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="6fe50-107">Um dieses Thema abzuschließen, müssen Sie zuerst ausführen [Vorgehensweise: Erstellen Sie eine Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span><span class="sxs-lookup"><span data-stu-id="6fe50-107">To complete this topic, you must first complete [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span></span>  
   
 > [!NOTE]
->  Um eine abgeschlossene Version des Lernprogramms herunterzuladen, informieren Sie sich unter [Windows Workflow Foundation \(WF45\) – Lernprogramm "Erste Schritte"](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="6fe50-108">Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.</span><span class="sxs-lookup"><span data-stu-id="6fe50-108">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### So erstellen Sie den Workflow  
+### <a name="to-create-the-workflow"></a><span data-ttu-id="6fe50-109">So erstellen Sie den Workflow</span><span class="sxs-lookup"><span data-stu-id="6fe50-109">To create the workflow</span></span>  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **NumberGuessWorkflowActivities**, und wählen Sie **Hinzufügen** und dann **Neues Element** aus.  
+1.  <span data-ttu-id="6fe50-110">Mit der rechten Maustaste **NumberGuessWorkflowActivities** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Element**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-110">Right-click **NumberGuessWorkflowActivities** in **Solution Explorer** and select **Add**, **New Item**.</span></span>  
   
-2.  Wählen Sie im Knoten **Gemeinsame Elemente** unter **Installiert** die Option **Workflow** aus.Wählen Sie in der Liste **Workflow** die Option **Aktivität** aus.  
+2.  <span data-ttu-id="6fe50-111">In der **installiert**, **gemeinsame Elemente** Knoten **Workflow**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-111">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="6fe50-112">Wählen Sie **Aktivität** aus der **Workflow** Liste.</span><span class="sxs-lookup"><span data-stu-id="6fe50-112">Select **Activity** from the **Workflow** list.</span></span>  
   
-3.  Geben Sie im Feld **Name** den Namen `FlowchartNumberGuessWorkflow`ein, und klicken Sie auf **Hinzufügen**.  
+3.  <span data-ttu-id="6fe50-113">Typ `FlowchartNumberGuessWorkflow` in der **Namen** Feld, und klicken Sie auf **hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-113">Type `FlowchartNumberGuessWorkflow` into the **Name** box and click **Add**.</span></span>  
   
-4.  Ziehen Sie eine **Flowchart**\-Aktivität aus dem Abschnitt **Flowchart** der **Toolbox**, und legen Sie sie auf der Entwurfsoberfläche des Workflows auf der Bezeichnung **Aktivität hier ablegen** ab.  
+4.  <span data-ttu-id="6fe50-114">Ziehen Sie eine **Flussdiagramm** Aktivität aus der **Flussdiagramm** im Abschnitt der **Toolbox** und legen ihn auf die **Aktivität hier ablegen** Bezeichnung auf die die Entwurfsoberfläche des Workflows.</span><span class="sxs-lookup"><span data-stu-id="6fe50-114">Drag a **Flowchart** activity from the **Flowchart** section of the **Toolbox** and drop it onto the **Drop activity here** label on the workflow design surface.</span></span>  
   
-### So erstellen Sie die Workflowvariablen und \-argumente  
+### <a name="to-create-the-workflow-variables-and-arguments"></a><span data-ttu-id="6fe50-115">So erstellen Sie die Workflowvariablen und -argumente</span><span class="sxs-lookup"><span data-stu-id="6fe50-115">To create the workflow variables and arguments</span></span>  
   
-1.  Doppelklicken Sie im **Projektmappen\-Explorer**auf **FlowchartNumberGuessWorkflow.xaml**, um den Workflow im Designer anzuzeigen, falls er nicht bereits angezeigt wird.  
+1.  <span data-ttu-id="6fe50-116">Doppelklicken Sie auf **FlowchartNumberGuessWorkflow.xaml** in **Projektmappen-Explorer** um den Workflow im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="6fe50-116">Double-click **FlowchartNumberGuessWorkflow.xaml** in **Solution Explorer** to display the workflow in the designer, if it is not already displayed.</span></span>  
   
-2.  Klicken Sie links unten im Workflow\-Designer auf die Schaltfläche **Argumente**, um den Bereich **Argumente** anzuzeigen.  
+2.  <span data-ttu-id="6fe50-117">Klicken Sie auf **Argumente** in der unteren linken Seite im Workflow-Designer zum Anzeigen der **Argumente** Bereich.</span><span class="sxs-lookup"><span data-stu-id="6fe50-117">Click **Arguments** in the lower-left side of the workflow designer to display the **Arguments** pane.</span></span>  
   
-3.  Klicken Sie auf **Argument erstellen**.  
+3.  <span data-ttu-id="6fe50-118">Klicken Sie auf **Argument erstellen**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-118">Click **Create Argument**.</span></span>  
   
-4.  Geben Sie `MaxNumber` im Feld **Name** ein, wählen Sie aus der Dropdownliste **Richtung** die Richtung **In** und aus der Dropdownliste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+4.  <span data-ttu-id="6fe50-119">Typ `MaxNumber` in der **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.</span><span class="sxs-lookup"><span data-stu-id="6fe50-119">Type `MaxNumber` into the **Name** box, select **In** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-5.  Klicken Sie auf **Argument erstellen**.  
+5.  <span data-ttu-id="6fe50-120">Klicken Sie auf **Argument erstellen**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-120">Click **Create Argument**.</span></span>  
   
-6.  Geben Sie in das Feld **Name**, das unter dem neu hinzugefügten Argument `MaxNumber` angezeigt wird, `Turns` ein. Wählen Sie aus der Dropdownliste **Richtung** die Richtung **Out** und aus der Dropdownliste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE.  
+6.  <span data-ttu-id="6fe50-121">Typ `Turns` in der **Namen** Feld, das unterhalb der neu hinzugefügten `MaxNumber` Argument die Option **Out** aus der **Richtung** Dropdown-Liste  **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="6fe50-121">Type `Turns` into the **Name** box that is below the newly added `MaxNumber` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-7.  Klicken Sie links unten im Aktivitäts\-Designer auf die Schaltfläche **Argumente**, um den Bereich **Argumente** zu schließen.  
+7.  <span data-ttu-id="6fe50-122">Klicken Sie auf **Argumente** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Argumente** Bereich.</span><span class="sxs-lookup"><span data-stu-id="6fe50-122">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-8.  Klicken Sie links unten im Workflow\-Designer auf **Variablen**, um den Bereich **Variablen** anzuzeigen.  
+8.  <span data-ttu-id="6fe50-123">Klicken Sie auf **Variablen** in der unteren linken Seite im Workflow-Designer zum Anzeigen der **Variablen** Bereich.</span><span class="sxs-lookup"><span data-stu-id="6fe50-123">Click **Variables** in the lower-left side of the workflow designer to display the **Variables** pane.</span></span>  
   
-9. Klicken Sie auf **Variable erstellen**.  
+9. <span data-ttu-id="6fe50-124">Klicken Sie auf **erstellen Variable**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-124">Click **Create Variable**.</span></span>  
   
     > [!TIP]
-    >  Wenn das Feld **Variable erstellen** nicht angezeigt wird, klicken Sie auf der Oberfläche des Workflow\-Designers auf die <xref:System.Activities.Statements.Flowchart>\-Aktivität, um sie auszuwählen.  
+    >  <span data-ttu-id="6fe50-125">Wenn kein **Variable erstellen** angezeigt wird, klicken Sie auf die <xref:System.Activities.Statements.Flowchart> Aktivität auf der workflowdesigneroberfläche, um es auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="6fe50-125">If no **Create Variable** box is displayed, click the <xref:System.Activities.Statements.Flowchart> activity on the workflow designer surface to select it.</span></span>  
   
-10. Geben Sie `Guess` im Feld **Name** ein, wählen Sie aus der Dropdownliste **Variablentyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.  
+10. <span data-ttu-id="6fe50-126">Typ `Guess` in der **Namen** wählen Sie im **Int32** aus der **Variablentyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.</span><span class="sxs-lookup"><span data-stu-id="6fe50-126">Type `Guess` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-11. Klicken Sie auf **Variable erstellen**.  
+11. <span data-ttu-id="6fe50-127">Klicken Sie auf **erstellen Variable**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-127">Click **Create Variable**.</span></span>  
   
-12. Geben Sie `Target` im Feld **Name** ein, wählen Sie aus der Dropdownliste **Variablentyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.  
+12. <span data-ttu-id="6fe50-128">Typ `Target` in der **Namen** wählen Sie im **Int32** aus der **Variablentyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern.</span><span class="sxs-lookup"><span data-stu-id="6fe50-128">Type `Target` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-13. Klicken Sie links unten im Aktivitäts\-Designer auf **Variablen**, um den Bereich **Variablen** zu schließen.  
+13. <span data-ttu-id="6fe50-129">Klicken Sie auf **Variablen** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Variablen** Bereich.</span><span class="sxs-lookup"><span data-stu-id="6fe50-129">Click **Variables** in the lower-left side of the activity designer to close the **Variables** pane.</span></span>  
   
-### So fügen Sie die Workflowaktivitäten hinzu  
+### <a name="to-add-the-workflow-activities"></a><span data-ttu-id="6fe50-130">So fügen Sie die Workflowaktivitäten hinzu</span><span class="sxs-lookup"><span data-stu-id="6fe50-130">To add the workflow activities</span></span>  
   
-1.  Ziehen Sie eine **Assign**\-Aktivität aus dem Abschnitt **Primitive** der **Toolbox**, und zeigen Sie auf den Knoten **Start**, der sich am oberen Rand des Flussdiagramms befindet.Wenn sich die **Assign**\-Aktivität über dem Knoten **Start** befindet, werden drei Dreiecke um den Knoten **Start** angezeigt.Legen Sie die **Assign**\-Aktivität auf dem Dreieck ab, das sich direkt unterhalb des Knotens **Start** befindet.Dadurch werden die beiden Elemente verknüpft und die **Assign**\-Aktivität als erste Aktivität im Flussdiagramm festgelegt.  
+1.  <span data-ttu-id="6fe50-131">Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und zeigen sie auf die **starten** Knoten, die am oberen Rand ist die Flussdiagramm.</span><span class="sxs-lookup"><span data-stu-id="6fe50-131">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and hover it over the **Start** node, which is at the top of the flowchart.</span></span> <span data-ttu-id="6fe50-132">Wenn die **zuweisen** Aktivität liegt über der **starten** Knoten drei Dreiecke um den **starten** Knoten.</span><span class="sxs-lookup"><span data-stu-id="6fe50-132">When the **Assign** activity is over the **Start** node, three triangles will appear around the **Start** node.</span></span> <span data-ttu-id="6fe50-133">Löschen der **zuweisen** Aktivität auf dem Dreieck ab, das direkt unterhalb der **starten** Knoten.</span><span class="sxs-lookup"><span data-stu-id="6fe50-133">Drop the **Assign** activity on the triangle that is directly below the **Start** node.</span></span> <span data-ttu-id="6fe50-134">Dadurch werden die beiden Elemente miteinander verknüpfen und bezieht sich auf die **zuweisen** Aktivität als erste Aktivität im Flussdiagramm.</span><span class="sxs-lookup"><span data-stu-id="6fe50-134">This will link the two items together and designates the **Assign** activity as the first activity in the flowchart.</span></span>  
   
     > [!NOTE]
-    >  Aktivitäten können auch als Startaktivität im Workflow angegeben werden, indem Sie die Aktivität manuell mit dem Startknoten verknüpfen.Hierzu zeigen Sie auf den Knoten **Start**, klicken auf eines der Rechtecke, die angezeigt werden, wenn sich der Mauszeiger über dem Knoten **Start** befindet, ziehen die Verbindungslinie auf die gewünschte Aktivität herunter und legen sie auf einem der angezeigten Rechtecke ab.Sie können eine Aktivität auch als Startaktivität festlegen, indem Sie mit der rechten Maustaste darauf klicken und **Als Startknoten festlegen** auswählen.  
+    >  <span data-ttu-id="6fe50-135">Aktivitäten können auch als Startaktivität im Workflow angegeben werden, indem Sie die Aktivität manuell mit dem Startknoten verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="6fe50-135">Activities can also be indicated as the starting activity in the workflow by manually linking them activity to the start node.</span></span> <span data-ttu-id="6fe50-136">Zeigen Sie dazu mit der Maus auf die **starten** Knoten, klicken Sie auf eines der Rechtecke, die angezeigt werden, wenn sich der Mauszeiger die **starten** Knoten, und ziehen Sie die Verbindungslinie auf die gewünschte Aktivität herunter und legen es auf einem der der angezeigten Rechtecke ab.</span><span class="sxs-lookup"><span data-stu-id="6fe50-136">To do this, hover the mouse over the **Start** node, click one of the rectangles that appear when the mouse is over the **Start** node, and drag the connecting line down to the desired activity and drop it on one of the rectangles that appear.</span></span> <span data-ttu-id="6fe50-137">Sie können auch festlegen, und die Aktivität als Startaktivität durch Rechtsklick auf die It und Auswahl **als Startknoten festlegen**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-137">You can also designate and activity as the starting activity by right-clicking the it and choosing **Set as Start Node**.</span></span>  
   
-2.  Geben Sie `Target` im Feld **To** und den folgenden Ausdruck im Feld **C\#\-Ausdruck eingeben** oder **VB\-Ausdruck eingeben** ein.  
+2.  <span data-ttu-id="6fe50-138">Typ `Target` in der **auf** Feld und den folgenden Ausdruck in der **Geben Sie eine C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.</span><span class="sxs-lookup"><span data-stu-id="6fe50-138">Type `Target` into the **To** box and the following expression into the **Enter a C# Expression** or **Enter a VB expression** box.</span></span>  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,11 +89,11 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     ```  
   
     > [!TIP]
-    >  Wenn das Fenster **Toolbox** nicht sichtbar ist, wählen Sie im Menü **Ansicht** die Option **Toolbox** aus.  
+    >  <span data-ttu-id="6fe50-139">Wenn die **Toolbox** Fenster nicht angezeigt wird, wählen Sie **Toolbox** aus der **Ansicht** Menü.</span><span class="sxs-lookup"><span data-stu-id="6fe50-139">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-3.  Ziehen Sie eine **Prompt**\-Aktivität aus dem Abschnitt **NumberGuessWorkflowActivities** der **Toolbox**, legen Sie sie unterhalb der **Assign**\-Aktivität aus dem vorherigen Schritt ab, und verbinden Sie die **Prompt**\-Aktivität mit der **Assign**\-Aktivität.Es gibt drei Möglichkeiten, die beiden Aktivitäten zu verbinden.Die erste Methode besteht darin, sie zu verbinden, während Sie die **Prompt**\-Aktivität im Workflow ablegen.Zeigen Sie, während Sie die **Prompt**\-Aktivität auf den Workflow ziehen, auf die **Assign**\-Aktivität, und legen Sie diese auf einem der vier Dreiecke ab, die angezeigt werden, wenn sich die **Prompt**\-Aktivität über der **Assign**\-Aktivität befindet.Die zweite Methode besteht darin, die **Prompt**\-Aktivität auf dem Workflow am gewünschten Ort abzulegen.Anschließend zeigen Sie auf die **Assign**\-Aktivität und ziehen eines der angezeigten Rechtecke nach unten auf die **Prompt**\-Aktivität.Ziehen Sie die Maus, sodass sich die Verbindungslinie von der **Assign**\-Aktivität mit einem der Rechtecke der **Prompt**\-Aktivität verbindet, und lassen Sie die Maustaste los.Der dritte Weg ist der ersten Methode sehr ähnlich, außer dass Sie die **Prompt**\-Aktivität nicht aus der **Toolbox** ziehen, sondern von ihrer Position auf der Entwurfsoberfläche des Workflows über die **Assign**\-Aktivität bewegen und auf einem der angezeigten Dreiecke ablegen.  
+3.  <span data-ttu-id="6fe50-140">Ziehen Sie eine **Prompt** Aktivität aus der **NumberGuessWorkflowActivities** im Abschnitt der **Toolbox**, legen Sie sie unterhalb der **zuweisen** Aktivität aus dem vorherigen Schritt ab, und verbinden die **Prompt** Aktivität, um die **zuweisen** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-140">Drag a **Prompt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox**, drop it below the **Assign** activity from the previous step, and connect the **Prompt** activity to the **Assign** activity.</span></span> <span data-ttu-id="6fe50-141">Es gibt drei Möglichkeiten, die beiden Aktivitäten zu verbinden.</span><span class="sxs-lookup"><span data-stu-id="6fe50-141">There are three ways to connect the two activities.</span></span> <span data-ttu-id="6fe50-142">Die erste Möglichkeit besteht, um sie zu verbinden, wie Sie löschen die **Prompt** -Aktivität im Workflow.</span><span class="sxs-lookup"><span data-stu-id="6fe50-142">The first way is to connect them as you drop the **Prompt** activity on the workflow.</span></span> <span data-ttu-id="6fe50-143">Wie Sie ziehen die **Prompt** Aktivität für den Workflow, zeigen sie auf die **zuweisen** Aktivität, und legen ihn auf einem der vier Dreiecke ab, die angezeigt werden die **Prompt** Aktivität liegt über dem **zuweisen** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-143">As you are dragging the **Prompt** activity to the workflow, hover it over the **Assign** activity and drop it onto one of the four triangles that appear when the **Prompt** activity is over the **Assign** activity.</span></span> <span data-ttu-id="6fe50-144">Die zweite Möglichkeit ist zum Löschen der **Prompt** -Aktivität auf dem Workflow am gewünschten Ort.</span><span class="sxs-lookup"><span data-stu-id="6fe50-144">The second way is to drop the **Prompt** activity onto the workflow at the desired location.</span></span> <span data-ttu-id="6fe50-145">Klicken Sie dann den Mauszeiger über die **zuweisen** Aktivität, und ziehen Sie eines der Rechtecke, die nach unten, um die **Prompt** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-145">Then, hover the mouse over the **Assign** activity and drag one of the rectangles that appears down to the **Prompt** activity.</span></span> <span data-ttu-id="6fe50-146">Ziehen Sie die Maus, sodass die Verbindungslinie von der **zuweisen** Aktivität eine Verbindung mit einem der Rechtecke der der **Prompt** Aktivität, und lassen Sie die Maustaste los.</span><span class="sxs-lookup"><span data-stu-id="6fe50-146">Drag the mouse so that the connecting line from the **Assign** activity connects to one of the rectangles of the **Prompt** activity, and then release the mouse button.</span></span> <span data-ttu-id="6fe50-147">Der dritte Weg ist vergleichbar mit der ersten Methode, außer dass ziehen die **Prompt** Aktivität aus der **Toolbox**, ziehen Sie es von ihrer Position auf der Workflowentwurfsoberfläche, zeigen sie auf die  **Weisen Sie** Aktivität, und auf einem der angezeigten Dreiecke ablegen.</span><span class="sxs-lookup"><span data-stu-id="6fe50-147">The third way is very similar to the first way, except that instead of dragging the **Prompt** activity from the **Toolbox**, you drag it from its location on the workflow design surface, hover it over the **Assign** activity, and drop it onto one of the triangles that appears.</span></span>  
   
-4.  Geben Sie im Eigenschaftenfenster für die **Prompt**\-Aktivität im Feld mit dem Eigenschaftswert **BookmarkName** den Begriff `"EnterGuess"` einschließlich der Anführungszeichen ein.Geben Sie im Feld mit dem Eigenschaftswert **Result** den Begriff `Guess` ein, und geben Sie den folgenden Ausdruck im Eigenschaftsfeld **Text** ein.  
+4.  <span data-ttu-id="6fe50-148">In der **Fenster "Eigenschaften"** für die **Prompt** -Aktivität `"EnterGuess"` einschließlich der Anführungszeichen in der **BookmarkName** Feld mit dem Eigenschaftswert.</span><span class="sxs-lookup"><span data-stu-id="6fe50-148">In the **Properties Window** for the **Prompt** activity, type `"EnterGuess"` including the quotes into the **BookmarkName** property value box.</span></span> <span data-ttu-id="6fe50-149">Typ `Guess` in der **Ergebnis** Eigenschaft Wert im Feld, und geben Sie den folgenden Ausdruck in der **Text** Eigenschaftenfeld.</span><span class="sxs-lookup"><span data-stu-id="6fe50-149">Type `Guess` into the **Result** property value box, and type the following expression into the **Text** property box.</span></span>  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -97,13 +104,13 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     ```  
   
     > [!TIP]
-    >  Klicken Sie im Menü **Ansicht** auf **Eigenschaftenfenster**, falls das Fenster **Eigenschaften** nicht angezeigt wird.  
+    >  <span data-ttu-id="6fe50-150">Wenn die **Fenster "Eigenschaften"** wird nicht angezeigt werden, wählen Sie **Fenster "Eigenschaften"** aus der **Ansicht** Menü.</span><span class="sxs-lookup"><span data-stu-id="6fe50-150">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
   
-5.  Ziehen Sie eine **Assign**\-Aktivität aus dem Abschnitt **Primitive** der **Toolbox**, und verbinden Sie diese mit einer der im vorherigen Schritt beschriebenen Methoden, sodass sie sich unterhalb der **Prompt**\-Aktivität befindet.  
+5.  <span data-ttu-id="6fe50-151">Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und verbinden Sie diese mit einer der Methoden, die im vorherigen Schritt beschrieben wird, sodass sie sich unterhalb der befindet **Prompt** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-151">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and connect it using one of the methods described in the previous step so that it is below the **Prompt** activity.</span></span>  
   
-6.  Geben Sie `Turns` im Feld **To** und `Turns + 1` im Feld **C\#\-Ausdruck eingeben** oder **VB\-Ausdruck eingeben** ein.  
+6.  <span data-ttu-id="6fe50-152">Typ `Turns` in der **auf** Feld und `Turns + 1` in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.</span><span class="sxs-lookup"><span data-stu-id="6fe50-152">Type `Turns` into the **To** box and `Turns + 1` into the **Enter a C# expression**  or **Enter a VB expression** box.</span></span>  
   
-7.  Ziehen Sie in der Toolbox eine **FlowDecision** aus dem Abschnitt **Flowchart**, und verbinden Sie sie, sodass sie sich unterhalb der **Assign**\-Aktivität befindet.Geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Condition** ein.  
+7.  <span data-ttu-id="6fe50-153">Ziehen Sie eine **FlowDecision** aus der **Flussdiagramm** Teil der **Toolbox** und verbinden Sie ihn unten die **zuweisen** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-153">Drag a **FlowDecision** from the **Flowchart** section of the **Toolbox** and connect it below the **Assign** activity.</span></span> <span data-ttu-id="6fe50-154">In der **Fenster "Eigenschaften"**, geben Sie den folgenden Ausdruck in der **Bedingung** Feld mit dem Eigenschaftswert.</span><span class="sxs-lookup"><span data-stu-id="6fe50-154">In the **Properties Window**, type the following expression into the **Condition** property value box.</span></span>  
   
     ```vb  
     Guess = Target  
@@ -113,50 +120,50 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     Guess == Target  
     ```  
   
-8.  Ziehen Sie eine weitere **FlowDecision**\-Aktivität aus der Toolbox, und legen Sie diese unter der ersten Aktivität ab.Verbinden Sie die zwei Aktivitäten über Ziehen und Ablegen vom Rechteck mit der Bezeichnung **False** der obersten **FlowDecision**\-Aktivität zum Rechteck über der zweiten **FlowDecision**\-Aktivität.  
+8.  <span data-ttu-id="6fe50-155">Ziehen Sie ein weiteres **FlowDecision** Aktivität aus der **Toolbox** und legen Sie es unterhalb der ersten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-155">Drag another **FlowDecision** activity from the **Toolbox** and drop it below the first one.</span></span> <span data-ttu-id="6fe50-156">Verbinden Sie die beiden Aktivitäten durch Ziehen zwischen dem Rechteck mit der Bezeichnung **"false"** am oberen Rand **FlowDecision** -Aktivität zum Rechteck am oberen Rand der zweiten **FlowDecision**Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-156">Connect the two activities by dragging from the rectangle that is labeled **False** on the top **FlowDecision** activity to the rectangle at the top of the second **FlowDecision** activity.</span></span>  
   
     > [!TIP]
-    >  Wenn die Bezeichnungen **True** und **False** nicht für **FlowDecision** angezeigt werden, zeigen Sie mit der Maus auf **FlowDecision**.  
+    >  <span data-ttu-id="6fe50-157">Wenn Sie nicht sehen die **"true"** und **"false"** "Bezeichnungen" auf die **FlowDecision**, zeigen Sie mit der Maus auf die **FlowDecision**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-157">If you do not see the **True** and **False** labels on the **FlowDecision**, hover the mouse over the **FlowDecision**.</span></span>  
   
-9. Klicken Sie auf die zweite **FlowDecision**\-Aktivität, um diese auszuwählen.Geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Condition** ein.  
+9. <span data-ttu-id="6fe50-158">Klicken Sie auf die zweite **FlowDecision** Aktivität, um es auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="6fe50-158">Click the second **FlowDecision** activity to select it.</span></span> <span data-ttu-id="6fe50-159">In der **Fenster "Eigenschaften"**, geben Sie den folgenden Ausdruck in der **Bedingung** Feld mit dem Eigenschaftswert.</span><span class="sxs-lookup"><span data-stu-id="6fe50-159">In the **Properties Window**, type the following expression into the **Condition** property value box.</span></span>  
   
-    ```vb-c#  
+    ```
     Guess < Target  
     ```  
   
-10. Ziehen Sie in der Toolbox zwei **WriteLine**\-Aktivitäten aus dem Abschnitt **Primitive**, und legen Sie sie nebeneinander unter den zwei **FlowDecision**\-Aktivitäten ab.Verbinden Sie die **True**\-Aktion der untersten **FlowDecision**\-Aktivität mit der **WriteLine**\-Aktivität ganz links und die **False**\-Aktion mit der **WriteLine**\-Aktivität ganz rechts.  
+10. <span data-ttu-id="6fe50-160">Ziehen Sie zwei **WriteLine** Aktivitäten aus der **primitive** Teil der **Toolbox** und ablegen, damit sie nebeneinander unter den zwei sind **FlowDecision**  Aktivitäten.</span><span class="sxs-lookup"><span data-stu-id="6fe50-160">Drag two **WriteLine** activities from the **Primitives** section of the **Toolbox** and drop them so that they are side by side below the two **FlowDecision** activities.</span></span> <span data-ttu-id="6fe50-161">Verbinden der **"true"** -Aktion der untersten **FlowDecision** Aktivität, um die am weitesten links stehende **WriteLine** Aktivität, und die **"false"** Aktion aus, um die ganz rechts **WriteLine** Aktivität.</span><span class="sxs-lookup"><span data-stu-id="6fe50-161">Connect the **True** action of the bottom **FlowDecision** activity to the leftmost **WriteLine** activity, and the **False** action to the rightmost **WriteLine** activity.</span></span>  
   
-11. Klicken Sie auf die **WriteLine**\-Aktivität ganz links, um sie auszuwählen, und geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Text** ein.  
+11. <span data-ttu-id="6fe50-162">Klicken Sie auf die am weitesten links stehende **WriteLine** Aktivität, um es auszuwählen, und geben Sie den folgenden Ausdruck in der **Text** Eigenschaftswert Feld der **Fenster "Eigenschaften"**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-162">Click the leftmost **WriteLine** activity to select it, and type the following expression into the **Text** property value box in the **Properties Window**.</span></span>  
   
-    ```vb-c#  
+    ```
     "Your guess is too low."  
     ```  
   
-12. Verbinden Sie **WriteLine** mit der linken Seite der **Prompt**\-Aktivität, die sich darüber befindet.  
+12. <span data-ttu-id="6fe50-163">Verbinden der **WriteLine** auf der linken Seite des der **Prompt** Aktivität, die jeweils darüber liegt.</span><span class="sxs-lookup"><span data-stu-id="6fe50-163">Connect the **WriteLine** to the left side of the **Prompt** activity that is above it.</span></span>  
   
-13. Klicken Sie auf die **WriteLine**\-Aktivität ganz rechts, um sie auszuwählen, und geben Sie im Eigenschaftenfenster den folgenden Ausdruck im Feld mit dem Eigenschaftswert **Text** ein.  
+13. <span data-ttu-id="6fe50-164">Klicken Sie auf der äußersten rechten **WriteLine** Aktivität, um es auszuwählen, und geben Sie den folgenden Ausdruck in der **Text** Eigenschaftswert Feld der **Fenster "Eigenschaften"**.</span><span class="sxs-lookup"><span data-stu-id="6fe50-164">Click the rightmost **WriteLine** activity to select it, and type the following expression into the **Text** property value box in the **Properties Window**.</span></span>  
   
-    ```vb-c#  
+    ```
     "Your guess is too high."  
     ```  
   
-14. Verbinden Sie **WriteLine**\-Aktivität mit der rechten Seite der **Prompt**\-Aktivität, die sich darüber befindet.  
+14. <span data-ttu-id="6fe50-165">Verbinden der **WriteLine** Aktivität rechts neben der **Prompt** Aktivität darüber.</span><span class="sxs-lookup"><span data-stu-id="6fe50-165">Connect the **WriteLine** activity to the right side of the **Prompt** activity above it.</span></span>  
   
-     Im folgenden Beispiel wird der abgeschlossene Workflow dargestellt.  
+     <span data-ttu-id="6fe50-166">Im folgenden Beispiel wird der abgeschlossene Workflow dargestellt.</span><span class="sxs-lookup"><span data-stu-id="6fe50-166">The following example illustrates the completed workflow.</span></span>  
   
-     ![Abgeschlossene Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     <span data-ttu-id="6fe50-167">![Windows Workflow Foundation abgeschlossen](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")</span><span class="sxs-lookup"><span data-stu-id="6fe50-167">![Completed Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")</span></span>  
   
-### So erstellen Sie den Workflow  
+### <a name="to-build-the-workflow"></a><span data-ttu-id="6fe50-168">So erstellen Sie den Workflow</span><span class="sxs-lookup"><span data-stu-id="6fe50-168">To build the workflow</span></span>  
   
-1.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+1.  <span data-ttu-id="6fe50-169">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="6fe50-169">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-     Informationen zum Ausführen des Workflows finden Sie im nächsten Thema, [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).Wenn Sie den Schritt [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) bereits mit einer anderen Workflowart ausgeführt haben und ihn mit dem Flussdiagramm\-Workflow aus diesem Schritt ausführen möchten, gehen Sie direkt zum Abschnitt [So erstellen und führen Sie die Anwendung aus](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md#BKMK_ToRunTheApplication) unter [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) über.  
+     <span data-ttu-id="6fe50-170">Anweisungen zum Ausführen des Workflows finden Sie unter dem nächsten Thema [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="6fe50-170">For instructions on how to run the workflow, please see the next topic, [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span> <span data-ttu-id="6fe50-171">Wenn Sie bereits abgeschlossen haben die [wie: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) Schritt mit einem anderen Format des Workflows und möchten sie mit dem Flussdiagramm-Workflow aus diesen Schritt ausführen, fahren Sie mit der [zum Erstellen und Ausführen der Anwendung](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)Abschnitt [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="6fe50-171">If you have already completed the [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) step with a different style of workflow and wish to run it using the flowchart workflow from this step, skip ahead to the [To build and run the application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section of [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Activities.Statements.Flowchart>   
- <xref:System.Activities.Statements.FlowDecision>   
- [Windows Workflow Foundation\-Programmierung](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [Entwerfen von Workflows](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [Lernprogramm 'Erste Schritte'](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)   
- [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)
+## <a name="see-also"></a><span data-ttu-id="6fe50-172">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6fe50-172">See Also</span></span>  
+ <xref:System.Activities.Statements.Flowchart>  
+ <xref:System.Activities.Statements.FlowDecision>  
+ [<span data-ttu-id="6fe50-173">Windows Workflow Foundation-Programmierung</span><span class="sxs-lookup"><span data-stu-id="6fe50-173">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [<span data-ttu-id="6fe50-174">Entwerfen von Workflows</span><span class="sxs-lookup"><span data-stu-id="6fe50-174">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [<span data-ttu-id="6fe50-175">Tutorial mit ersten Schritten</span><span class="sxs-lookup"><span data-stu-id="6fe50-175">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [<span data-ttu-id="6fe50-176">Vorgehensweise: Erstellen einer Aktivität</span><span class="sxs-lookup"><span data-stu-id="6fe50-176">How to: Create an Activity</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [<span data-ttu-id="6fe50-177">Vorgehensweise: Ausführen eines Workflows</span><span class="sxs-lookup"><span data-stu-id="6fe50-177">How to: Run a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

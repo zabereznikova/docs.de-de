@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - unmanaged functions
@@ -22,36 +16,34 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b676599513b923ae46d6ec27d7506435d9cbfcd2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 36f84796b9682411d7907cfc10d584d772ef00a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="calling-a-dll-function"></a>Aufrufen einer DLL-Funktion
-Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Aufrufen von verwaltetem Code sind, bestehen Unterschiede, die DLL-Funktionen zuerst verwirrend erscheinen lassen. Dieser Abschnitt enthält Themen, in denen einige ungewöhnliche aufrufbezogene Probleme beschrieben werden.  
+# <a name="calling-a-dll-function"></a><span data-ttu-id="2a420-102">Aufrufen einer DLL-Funktion</span><span class="sxs-lookup"><span data-stu-id="2a420-102">Calling a DLL Function</span></span>
+<span data-ttu-id="2a420-103">Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Aufrufen von verwaltetem Code sind, bestehen Unterschiede, die DLL-Funktionen zuerst verwirrend erscheinen lassen.</span><span class="sxs-lookup"><span data-stu-id="2a420-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="2a420-104">Dieser Abschnitt enthält Themen, in denen einige ungewöhnliche aufrufbezogene Probleme beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="2a420-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  
   
- Strukturen, die von Plattforminvokeaufrufen zurückgegeben werden, müssen Datentypen sein, die die gleiche Darstellung in verwaltetem und nicht verwaltetem Code haben. Solche Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist (siehe [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)). Um eine Funktion aufzurufen, die über eine nicht blitfähige Struktur als Rückgabetyp verfügt, können Sie einen blitfähigen Hilfstyp mit derselben Größe wie der nicht blitfähige Typ definieren, und nach der Rückgabe der Funktion Daten konvertieren.  
+ <span data-ttu-id="2a420-105">Strukturen, die von Plattforminvokeaufrufen zurückgegeben werden, müssen Datentypen sein, die die gleiche Darstellung in verwaltetem und nicht verwaltetem Code haben.</span><span class="sxs-lookup"><span data-stu-id="2a420-105">Structures that are returned from platform invoke calls must be data types that have the same representation in managed and unmanaged code.</span></span> <span data-ttu-id="2a420-106">Solche Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist (siehe [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)).</span><span class="sxs-lookup"><span data-stu-id="2a420-106">Such types are called *blittable types* because they do not require conversion (see [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)).</span></span> <span data-ttu-id="2a420-107">Um eine Funktion aufzurufen, die über eine nicht blitfähige Struktur als Rückgabetyp verfügt, können Sie einen blitfähigen Hilfstyp mit derselben Größe wie der nicht blitfähige Typ definieren, und nach der Rückgabe der Funktion Daten konvertieren.</span><span class="sxs-lookup"><span data-stu-id="2a420-107">To call a function that has a non-blittable structure as its return type, you can define a blittable helper type of the same size as the non-blittable type and convert the data after the function returns.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übergeben von Strukturen](../../../docs/framework/interop/passing-structures.md)  
- Identifiziert die Probleme der Übergabe von Datenstrukturen mit einem vordefinierten Layout.  
+## <a name="in-this-section"></a><span data-ttu-id="2a420-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2a420-108">In This Section</span></span>  
+ [<span data-ttu-id="2a420-109">Übergeben von Strukturen</span><span class="sxs-lookup"><span data-stu-id="2a420-109">Passing Structures</span></span>](../../../docs/framework/interop/passing-structures.md)  
+ <span data-ttu-id="2a420-110">Identifiziert die Probleme der Übergabe von Datenstrukturen mit einem vordefinierten Layout.</span><span class="sxs-lookup"><span data-stu-id="2a420-110">Identifies the issues of passing data structures with a predefined layout.</span></span>  
   
- [Rückruffunktionen](../../../docs/framework/interop/callback-functions.md)  
- Enthält grundlegende Informationen über Rückruffunktionen.  
+ [<span data-ttu-id="2a420-111">Rückruffunktionen</span><span class="sxs-lookup"><span data-stu-id="2a420-111">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
+ <span data-ttu-id="2a420-112">Enthält grundlegende Informationen über Rückruffunktionen.</span><span class="sxs-lookup"><span data-stu-id="2a420-112">Provides basic information about callback functions.</span></span>  
   
- [Vorgehensweise: Implementieren von Rückruffunktionen](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
- Beschreibt das Implementieren von Rückruffunktionen in verwaltetem Code.  
+ [<span data-ttu-id="2a420-113">Vorgehensweise: Implementieren von Rückruffunktionen</span><span class="sxs-lookup"><span data-stu-id="2a420-113">How to: Implement Callback Functions</span></span>](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
+ <span data-ttu-id="2a420-114">Beschreibt das Implementieren von Rückruffunktionen in verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="2a420-114">Describes how to implement callback functions in managed code.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf.  
+## <a name="related-sections"></a><span data-ttu-id="2a420-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="2a420-115">Related Sections</span></span>  
+ [<span data-ttu-id="2a420-116">Verwenden nicht verwalteter DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="2a420-116">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ <span data-ttu-id="2a420-117">Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf</span><span class="sxs-lookup"><span data-stu-id="2a420-117">Describes how to call unmanaged DLL functions using platform invoke.</span></span>  
   
- [Marshallen von Daten mit Plattformaufruf](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- Beschreibt, wie Sie Methodenparameter deklarieren und Argumente an Funktionen übergeben, die aus nicht verwalteten Bibliotheken exportiert wurden.
-
+ [<span data-ttu-id="2a420-118">Marshallen von Daten mit Plattformaufruf</span><span class="sxs-lookup"><span data-stu-id="2a420-118">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
+ <span data-ttu-id="2a420-119">Beschreibt, wie Sie Methodenparameter deklarieren und Argumente an Funktionen übergeben, die aus nicht verwalteten Bibliotheken exportiert wurden.</span><span class="sxs-lookup"><span data-stu-id="2a420-119">Describes how to declare method parameters and pass arguments to functions exported by unmanaged libraries.</span></span>

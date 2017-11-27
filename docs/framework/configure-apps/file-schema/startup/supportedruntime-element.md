@@ -1,135 +1,115 @@
 ---
-title: "&lt;supportedRuntime&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<supportedRuntime>-Element"
-  - "supportedRuntime-Element"
+title: '&lt;SupportedRuntime&gt; Element'
+ms.date: 10/17/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+ms.custom: updateeachrelease
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
+helpviewer_keywords:
+- supportedRuntime element
+- <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-caps.latest.revision: 33
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 28
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;supportedRuntime&gt;-Element
-Gibt an, welche Versionen der Common Language Runtime von der Anwendung unterstützt werden. Dieses Element sollte von allen Anwendungen verwendet werden, die mit Version 1.1 oder höher von .NET Framework erstellt wurden.  
+# <a name="ltsupportedruntimegt-element"></a><span data-ttu-id="158eb-102">&lt;SupportedRuntime&gt; Element</span><span class="sxs-lookup"><span data-stu-id="158eb-102">&lt;supportedRuntime&gt; Element</span></span>
+<span data-ttu-id="158eb-103">Gibt an, welche Versionen der Common Language Runtime von der Anwendung unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="158eb-103">Specifies which versions of the common language runtime the application supports.</span></span> <span data-ttu-id="158eb-104">Dieses Element sollte von allen Anwendungen verwendet werden, die mit Version 1.1 oder höher von .NET Framework erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="158eb-104">This element should be used by all applications built with version 1.1 or later of the .NET Framework.</span></span>  
   
- [\<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+[<span data-ttu-id="158eb-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="158eb-105">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+
+[<span data-ttu-id="158eb-106">\<startup></span><span class="sxs-lookup"><span data-stu-id="158eb-106">\<startup></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
   
- [\<startup\>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+<span data-ttu-id="158eb-107">**\<supportedRuntime>**</span><span class="sxs-lookup"><span data-stu-id="158eb-107">**\<supportedRuntime>**</span></span>  
   
- **\<supportedRuntime\>**  
+## <a name="syntax"></a><span data-ttu-id="158eb-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="158eb-108">Syntax</span></span>  
   
-## Syntax  
-  
-```  
-  
+```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## Attribute  
+## <a name="attributes"></a><span data-ttu-id="158eb-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="158eb-109">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|**Version**|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der die Version der Common Language Runtime \(CLR\) angibt, die diese Anwendung unterstützt. Gültige Werte des `version`\-Attributs finden Sie im Abschnitt [„runtime version“-Werte](#version). **Note:**  Durch das .NET Framework 3.5 nimmt der Wert „*Laufzeitversion*“ die Form *Hauptversion*.*Nebenversion*.*Buildnummer* an. Beginnend mit [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] sind nur die Haupt\- und Nebenversionsnummern erforderlich \(d. h. "v4.0" anstelle von "v4.0.30319"\). Die kürzere Zeichenfolge wird empfohlen.|  
-|**sku**|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der die SKU \(Stock Keeping Unit\) angibt, die wiederum angibt, welche .NET Framework\-Version von dieser Anwendung unterstützt wird.<br /><br /> Beginnend mit .NET Framework 4.0 wird die Verwendung des `sku`\-Attributs empfohlen.  Wenn vorhanden, gibt es die Version des .NET Frameworks an, auf die die App aufgerichtet ist.<br /><br /> Gültige Werte des sku\-Attributs finden Sie im Abschnitt ["sku id"-Werte](#sku).|  
+|<span data-ttu-id="158eb-110">Attribut</span><span class="sxs-lookup"><span data-stu-id="158eb-110">Attribute</span></span>|<span data-ttu-id="158eb-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="158eb-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="158eb-112">**version**</span><span class="sxs-lookup"><span data-stu-id="158eb-112">**version**</span></span>|<span data-ttu-id="158eb-113">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="158eb-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="158eb-114">Ein Zeichenfolgenwert, der die Version der Common Language Runtime (CLR) angibt, die diese Anwendung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="158eb-114">A string value that specifies the version of the common language runtime (CLR) that this application supports.</span></span> <span data-ttu-id="158eb-115">Gültige Werte von der `version` -Attribut angegeben wird, finden Sie unter der ["Runtime Version"-Werte](#version) Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="158eb-115">For valid values of the `version` attribute, see the ["runtime version" values](#version) section.</span></span> <span data-ttu-id="158eb-116">**Hinweis:** über .NET Framework 3.5, die "*Laufzeitversion*" Wert hat das Format *wichtigen*. *kleinere*. *Erstellen Sie*.</span><span class="sxs-lookup"><span data-stu-id="158eb-116">**Note:**  Through the .NET Framework 3.5, the "*runtime version*" value takes the form *major*.*minor*.*build*.</span></span> <span data-ttu-id="158eb-117">Beginnend mit [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] sind nur die Haupt- und Nebenversionsnummern erforderlich (d. h. "v4.0"anstelle von "v4.0.30319").</span><span class="sxs-lookup"><span data-stu-id="158eb-117">Beginning with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], only the major and minor version numbers are required (that is, "v4.0" instead of "v4.0.30319").</span></span> <span data-ttu-id="158eb-118">Die kürzere Zeichenfolge wird empfohlen.</span><span class="sxs-lookup"><span data-stu-id="158eb-118">The shorter string is recommended.</span></span>|  
+|<span data-ttu-id="158eb-119">**SKU**</span><span class="sxs-lookup"><span data-stu-id="158eb-119">**sku**</span></span>|<span data-ttu-id="158eb-120">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="158eb-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="158eb-121">Ein Zeichenfolgenwert, der die SKU (Stock Keeping Unit) angibt, die wiederum angibt, welche .NET Framework-Version von dieser Anwendung unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="158eb-121">A string value that specifies the stock-keeping unit (SKU), which in turn specifies which .NET Framework release this application supports.</span></span><br /><br /> <span data-ttu-id="158eb-122">Beginnend mit .NET Framework 4.0, die Verwendung der `sku` -Attributs empfohlen.</span><span class="sxs-lookup"><span data-stu-id="158eb-122">Starting with the .NET Framework 4.0, the use of the `sku` attribute is recommended.</span></span>  <span data-ttu-id="158eb-123">Wenn vorhanden, gibt es die Version des .NET Frameworks an, auf die die App aufgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="158eb-123">When present, it indicates the version of the .NET Framework that the app targets.</span></span><br /><br /> <span data-ttu-id="158eb-124">Gültige Werte des Sku-Attributs finden Sie unter der ["Sku Id"-Werte](#sku) Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="158eb-124">For valid values of the sku attribute, see the ["sku id" values](#sku) section.</span></span>|  
   
-## Hinweise  
- Wenn das **\<supportedRuntime\>**\-Element nicht in der Anwendungskonfigurationsdatei vorhanden ist, wird die Version der Laufzeit verwendet, die zum Erstellen der Anwendung verwendet wurde.  
-  
- Das **\<supportedRuntime\>**\-Element sollte von allen Anwendungen verwendet werden, die mit Version 1.1 oder einer höheren Version der Laufzeit erstellt wurden. Anwendungen, die nur Version 1.0 der Laufzeit unterstützen, müssen das [\<requiredRuntime\>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)\-Element verwenden.  
-  
-> [!NOTE]
->  Wenn Sie die Konfigurationsdatei mithilfe der [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)\-Funktion angeben, müssen Sie das `<requiredRuntime>`\-Element für alle Versionen der Laufzeit verwenden. Das `<supportedRuntime>`\-Element wird ignoriert, wenn Sie [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) verwenden.  
-  
- Bei Apps, die Versionen der Laufzeit aus .NET Framework 1.1 bis 3.5 unterstützen, sollte, wenn mehrere Versionen der Laufzeit unterstützt werden, das erste Element die bevorzugte Version der Laufzeit angeben, und das letzte die am wenigsten bevorzugte Version. Bei Apps, die .NET Framework 4.0 oder höhere Versionen unterstützen, gibt das `version`\-Attribut die CLR\-Version an, die für .NET Framework 4 und höhere Versionen gängig ist, und das `sku`\-Attribut gibt die einzelne .NET Framework\-Version an, auf die die App ausgerichtet ist.  
+## <a name="remarks"></a><span data-ttu-id="158eb-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="158eb-125">Remarks</span></span>  
+<span data-ttu-id="158eb-126">Wenn die  **\<SupportedRuntime >** -Element nicht in der Anwendungskonfigurationsdatei vorhanden ist, die Version der Laufzeit verwendet, die zum Erstellen der Anwendung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="158eb-126">If the **\<supportedRuntime>** element is not present in the application configuration file, the version of the runtime used to build the application is used.</span></span>  
+
+<span data-ttu-id="158eb-127">Die  **\<SupportedRuntime >** -Element sollte von allen Anwendungen, die mit Version 1.1 oder höher der Runtime erstellt verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="158eb-127">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="158eb-128">Anwendungen, die nur Version 1.0 der Laufzeit unterstützen müssen verwenden die [ \<RequiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) Element.</span><span class="sxs-lookup"><span data-stu-id="158eb-128">Applications built to support only version 1.0 of the runtime must use the [\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element.</span></span>  
   
 > [!NOTE]
->  Wenn Ihre Anwendung Legacy\-Aktivierungspfade verwendet, z. B. die [CorBindToRuntimeEx\-Funktion](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten, dass diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren, oder wenn Ihre Anwendung mit [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] erstellt wurde, aber eine Abhängigkeit auf eine gemischte Assembly hat, die mit einer früheren Version von .NET Framework erstellt wurde, ist es nicht ausreichend, [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in der Liste der unterstützten Laufzeiten angeben. Außerdem müssen Sie in der Konfigurationsdatei im [\<startup\>\-Element](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) das `useLegacyV2RuntimeActivationPolicy`\-Attribut auf `true` festlegen. Wenn jedoch dieses Attribut auf `true` festgelegt ist, werden alle Komponenten, die mit früheren Versionen von .NET Framework erstellt wurden, mit [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ausgeführt statt den Laufzeiten, mit denen sie erstellt wurden.  
+>  <span data-ttu-id="158eb-129">Bei Verwendung der [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) Funktion, um die Konfigurationsdatei angeben, müssen Sie die `<requiredRuntime>` -Element für alle Versionen der Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="158eb-129">If you use the [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="158eb-130">Die `<supportedRuntime>` Element wird ignoriert, wenn Sie [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span><span class="sxs-lookup"><span data-stu-id="158eb-130">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>  
   
- Es wird empfohlen, dass Sie die Anwendungen mit allen .NET Framework\-Versionen testen, in denen sie ausgeführt werden können.  
+<span data-ttu-id="158eb-131">Bei Apps, die Versionen der Laufzeit aus .NET Framework 1.1 bis 3.5 unterstützen, sollte, wenn mehrere Versionen der Laufzeit unterstützt werden, das erste Element die bevorzugte Version der Laufzeit angeben, und das letzte die am wenigsten bevorzugte Version.</span><span class="sxs-lookup"><span data-stu-id="158eb-131">For apps that support versions of the runtime from the .NET Framework 1.1 through 3.5, when multiple versions of the runtime are supported, the first element should specify the most preferred version of the runtime, and the last element should specify the least preferred version.</span></span> <span data-ttu-id="158eb-132">Für apps, die .NET Framework 4.0 oder höhere Versionen unterstützen, die `version` Attribut gibt an, die CLR-Version, die für die .NET Framework 4 und höheren Versionen ist, und die `sku` Attribut gibt die einzelnen .NET Framework-Version an, die die app Ziele.</span><span class="sxs-lookup"><span data-stu-id="158eb-132">For apps that support the .NET Framework 4.0 or later versions, the `version` attribute indicates the CLR version, which is common to the .NET Framework 4 and later versions, and the `sku` attribute indicates single .NET Framework version that the app targets.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="158eb-133">Wenn Ihre Anwendung legacy-Aktivierungspfade, z. B. verwendet die [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren, oder wenn Ihre Anwendung mit der erstelltwird[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]aber eine Abhängigkeit auf eine Assembly im gemischten Modus mit einer früheren Version von .NET Framework erstellt es reicht nicht aus, geben Sie die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in der Liste der unterstützten Laufzeiten.</span><span class="sxs-lookup"><span data-stu-id="158eb-133">If your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework, it is not sufficient to specify the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in the list of supported runtimes.</span></span> <span data-ttu-id="158eb-134">Darüber hinaus werden in der [ \<Startup > Element](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) in der Konfigurationsdatei müssen Sie festlegen der `useLegacyV2RuntimeActivationPolicy` -Attribut auf `true`.</span><span class="sxs-lookup"><span data-stu-id="158eb-134">In addition, in the [\<startup> element](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) in your configuration file, you must set the `useLegacyV2RuntimeActivationPolicy` attribute to `true`.</span></span> <span data-ttu-id="158eb-135">Wenn jedoch dieses Attribut auf `true` festgelegt ist, werden alle Komponenten, die mit früheren Versionen von .NET Framework erstellt wurden, mit [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ausgeführt statt den Laufzeiten, mit denen sie erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="158eb-135">However, setting this attribute to `true` means that all components built with earlier versions of the .NET Framework are run using the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] instead of the runtimes they were built with.</span></span>  
+  
+<span data-ttu-id="158eb-136">Es wird empfohlen, dass Sie die Anwendungen mit allen .NET Framework-Versionen testen, in denen sie ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="158eb-136">We recommend that you test applications with all the .NET Framework versions that they can run on.</span></span>  
   
 <a name="version"></a>   
-## „runtime version“\-Werte  
- In der folgenden Tabelle sind gültige Werte für den *runtime version*\-Wert des `version`\-Attributs aufgeführt.  
-  
-|.NET Framework\-Version|`version`\-Attribut|  
-|-----------------------------|-------------------------|  
-|1,0|"v1.0.3705"|  
-|1,1|"v1.1.4322"|  
-|2,0|"v2.0.50727"|  
-|3,0|"v2.0.50727"|  
-|3,5|"v2.0.50727"|  
-|4.0|"v4.0"|  
-|4.5|"v4.0"|  
-|4.5.1|"v4.0"|  
-|4.5.2|"v4.0"|  
-|4.6|"v4.0"|  
-|4.6.1|"v4.0"|  
+## <a name="runtime-version-values"></a><span data-ttu-id="158eb-137">„runtime version“-Werte</span><span class="sxs-lookup"><span data-stu-id="158eb-137">"runtime version" values</span></span>  
+<span data-ttu-id="158eb-138">Die `runtime` Attribut gibt an, die Common Language Runtime (CLR)-Version, die für eine bestimmte Anwendung erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="158eb-138">The `runtime` attribute specifies the Common Language Runtime (CLR) version that is required for a given application.</span></span> <span data-ttu-id="158eb-139">Beachten Sie, die allen Versionen von .NET Framework 4.x angeben der `v4.0` CLR.</span><span class="sxs-lookup"><span data-stu-id="158eb-139">Note that all .NET Framework v4.x versions specify the `v4.0` CLR.</span></span> <span data-ttu-id="158eb-140">Die folgende Tabelle enthält die gültigen Werte für die *Laufzeitversion* Wert, der die `version` Attribut.</span><span class="sxs-lookup"><span data-stu-id="158eb-140">The following table lists valid values for the *runtime version* value of the `version` attribute.</span></span>  
+
+|<span data-ttu-id="158eb-141">.NET Framework-Version</span><span class="sxs-lookup"><span data-stu-id="158eb-141">.NET Framework version</span></span>|<span data-ttu-id="158eb-142">`version`-Attribut</span><span class="sxs-lookup"><span data-stu-id="158eb-142">`version` attribute</span></span>|  
+|----------------------------|-------------------------|  
+|<span data-ttu-id="158eb-143">1,0</span><span class="sxs-lookup"><span data-stu-id="158eb-143">1.0</span></span>|<span data-ttu-id="158eb-144">"v1.0.3705"</span><span class="sxs-lookup"><span data-stu-id="158eb-144">"v1.0.3705"</span></span>|  
+|<span data-ttu-id="158eb-145">1,1</span><span class="sxs-lookup"><span data-stu-id="158eb-145">1.1</span></span>|<span data-ttu-id="158eb-146">"v1.1.4322"</span><span class="sxs-lookup"><span data-stu-id="158eb-146">"v1.1.4322"</span></span>|  
+|<span data-ttu-id="158eb-147">2,0</span><span class="sxs-lookup"><span data-stu-id="158eb-147">2.0</span></span>|<span data-ttu-id="158eb-148">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="158eb-148">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="158eb-149">3,0</span><span class="sxs-lookup"><span data-stu-id="158eb-149">3.0</span></span>|<span data-ttu-id="158eb-150">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="158eb-150">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="158eb-151">3,5</span><span class="sxs-lookup"><span data-stu-id="158eb-151">3.5</span></span>|<span data-ttu-id="158eb-152">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="158eb-152">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="158eb-153">4.0-4.7.1</span><span class="sxs-lookup"><span data-stu-id="158eb-153">4.0-4.7.1</span></span>|<span data-ttu-id="158eb-154">"v4.0"</span><span class="sxs-lookup"><span data-stu-id="158eb-154">"v4.0"</span></span>|  
+
   
 <a name="sku"></a>   
-## "sku id"\-Werte  
- Die folgende Tabelle führt die Versionen von .NET Framework auf, beginnend mit .NET Framework 4, die vom `sku`\-Attribut unterstützt werden.  Beachten Sie, dass, das `sku`\-Attribut, beginnend mit .NET Framework 4, die Version des .NET Frameworks angibt, auf die die App aufgerichtet ist.  
+## <a name="sku-id-values"></a><span data-ttu-id="158eb-155">"sku id"-Werte</span><span class="sxs-lookup"><span data-stu-id="158eb-155">"sku id" values</span></span>  
+<span data-ttu-id="158eb-156">Die `sku` Attribut verwendet eine Zielframeworkmoniker (TFM), um die Version von .NET Framework anzugeben, die die app als Ziel verwendet und erfordert zum Ausführen.</span><span class="sxs-lookup"><span data-stu-id="158eb-156">The `sku` attribute uses a target framework moniker (TFM) to indicate the version of the .NET Framework that the app targets and requires to run.</span></span> <span data-ttu-id="158eb-157">Die folgende Tabelle enthält die gültigen Werte sind die unterstützten durch die `sku` -Attribut, beginnend mit .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="158eb-157">The following table lists valid values that are supported by the `sku` attribute, starting with the .NET Framework 4.</span></span>
   
-|.NET Framework\-Version|`sku`\-Attribut|  
-|-----------------------------|---------------------|  
-|4.0|".NETFramework,Version\=v4.0"|  
-|4.0, Clientprofil|".NETFramework,Version\=v4.0,Profile\=Client"|  
-|4.0, Plattformupdate 1|.NETFramework, Version\=v4.0.1|  
-|4.0, Clientprofil, Update 1|.NETFramework, Version\=v4.0.1, Profile\=Client|  
-|4.0, Plattformupdate 2|.NETFramework, Version\=v4.0.2|  
-|4.0, Clientprofil, Update 2|.NETFramework, Version\=v4.0.2, Profile\=Client|  
-|4.0, Plattformupdate 3|.NETFramework, Version\=v4.0.3|  
-|4.0, Clientprofil, Update 3|.NETFramework, Version\=v4.0.3, Profile\=Client|  
-|4.5|".NETFramework,Version\=v4.5"|  
-|4.5.1|".NETFramework,Version\=v4.5.1"|  
-|4.5.2|".NETFramework,Version\=v4.5.2"|  
-|4.6|".NETFramework,Version\=v4.6"|  
-|4.6.1|".NETFramework,Version\=v4.6.1"|  
-  
- In der folgenden Tabelle wird dargestellt, unter welchen installierten Versionen von .NET Framework 4.0 eine Anwendung ausgeführt werden kann, für verschiedene Werte des `sku`\-Attributs, wenn das `version`\-Attribut „v4.0“ ist und das `sku`\-Attribut das .NET Framework 4 oder eins seiner Plattformupdates \(PU\) angibt.  
-  
-|Wert des `sku`\-Attributs|4.0 Client|4.0 Full|4.0 Client \+ PU 1|4.0 Voll \+ PU 1|4.0 Client \+ PU 2|4.0 Full \+ PU 2|4.0 Client \+ PU 3|4.0 Full \+ PU 3|4.5 und höher|  
-|-------------------------------|----------------|--------------|------------------------|----------------------|------------------------|----------------------|------------------------|----------------------|-------------------|  
-|.NETFramework, Version\=v4.0, Profile\=Client|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
-|.NETFramework, Version\=v4.0||Ja||Ja||Ja||Ja|Ja|  
-|.NETFramework, Version\=v4.0.1, Profile\=Client|||Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
-|.NETFramework, Version\=v4.0.1||||Ja||Ja||Ja|Ja|  
-|.NETFramework, Version\=v4.0.2, Profile\=Client|||||Ja|Ja|Ja|Ja|Ja|  
-|.NETFramework, Version\=v4.0.2||||||Ja||Ja|Ja|  
-|.NETFramework, Version\=v4.0.3, Profile\=Client|||||||Ja|Ja|Ja|  
-|.NETFramework, Version\=v4.0.3||||||||Ja|Ja|  
-  
-## Beispiel  
- Das folgende Beispiel veranschaulicht, wie Sie die unterstützte Laufzeitversion in einer Konfigurationsdatei angeben. Die Konfigurationsdatei gibt an, dass die App auf .NET Framework 4.6 ausgerichtet ist.  
+|<span data-ttu-id="158eb-158">.NET Framework-Version</span><span class="sxs-lookup"><span data-stu-id="158eb-158">.NET Framework version</span></span>|<span data-ttu-id="158eb-159">`sku`-Attribut</span><span class="sxs-lookup"><span data-stu-id="158eb-159">`sku` attribute</span></span>|  
+|----------------------------|---------------------|  
+|<span data-ttu-id="158eb-160">4.0</span><span class="sxs-lookup"><span data-stu-id="158eb-160">4.0</span></span>|<span data-ttu-id="158eb-161">".NETFramework,Version=v4.0"</span><span class="sxs-lookup"><span data-stu-id="158eb-161">".NETFramework,Version=v4.0"</span></span>|  
+|<span data-ttu-id="158eb-162">4.0, Clientprofil</span><span class="sxs-lookup"><span data-stu-id="158eb-162">4.0, Client Profile</span></span>|<span data-ttu-id="158eb-163">".NETFramework,Version=v4.0,Profile=Client"</span><span class="sxs-lookup"><span data-stu-id="158eb-163">".NETFramework,Version=v4.0,Profile=Client"</span></span>|  
+|<span data-ttu-id="158eb-164">4.0, Plattformupdate 1</span><span class="sxs-lookup"><span data-stu-id="158eb-164">4.0, platform update 1</span></span>|<span data-ttu-id="158eb-165">.NETFramework, Version=v4.0.1</span><span class="sxs-lookup"><span data-stu-id="158eb-165">.NETFramework,Version=v4.0.1</span></span>|  
+|<span data-ttu-id="158eb-166">4.0, Clientprofil, Update 1</span><span class="sxs-lookup"><span data-stu-id="158eb-166">4.0, Client Profile, update 1</span></span>|<span data-ttu-id="158eb-167">.NETFramework, Version=v4.0.1, Profile=Client</span><span class="sxs-lookup"><span data-stu-id="158eb-167">.NETFramework,Version=v4.0.1,Profile=Client</span></span>|  
+|<span data-ttu-id="158eb-168">4.0, Plattformupdate 2</span><span class="sxs-lookup"><span data-stu-id="158eb-168">4.0, platform update 2</span></span>|<span data-ttu-id="158eb-169">.NETFramework, Version=v4.0.2</span><span class="sxs-lookup"><span data-stu-id="158eb-169">.NETFramework,Version=v4.0.2</span></span>|  
+|<span data-ttu-id="158eb-170">4.0, Clientprofil, Update 2</span><span class="sxs-lookup"><span data-stu-id="158eb-170">4.0, Client Profile, update 2</span></span>|<span data-ttu-id="158eb-171">.NETFramework, Version=v4.0.2, Profile=Client</span><span class="sxs-lookup"><span data-stu-id="158eb-171">.NETFramework,Version=v4.0.2,Profile=Client</span></span>|  
+|<span data-ttu-id="158eb-172">4.0, Plattformupdate 3</span><span class="sxs-lookup"><span data-stu-id="158eb-172">4.0, platform update 3</span></span>|<span data-ttu-id="158eb-173">.NETFramework, Version=v4.0.3</span><span class="sxs-lookup"><span data-stu-id="158eb-173">.NETFramework,Version=v4.0.3</span></span>|  
+|<span data-ttu-id="158eb-174">4.0, Clientprofil, Update 3</span><span class="sxs-lookup"><span data-stu-id="158eb-174">4.0, Client Profile, update 3</span></span>|<span data-ttu-id="158eb-175">.NETFramework, Version=v4.0.3, Profile=Client</span><span class="sxs-lookup"><span data-stu-id="158eb-175">.NETFramework,Version=v4.0.3,Profile=Client</span></span>|  
+|<span data-ttu-id="158eb-176">4.5</span><span class="sxs-lookup"><span data-stu-id="158eb-176">4.5</span></span>|<span data-ttu-id="158eb-177">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="158eb-177">".NETFramework,Version=v4.5"</span></span>|  
+|<span data-ttu-id="158eb-178">4.5.1</span><span class="sxs-lookup"><span data-stu-id="158eb-178">4.5.1</span></span>|<span data-ttu-id="158eb-179">".NETFramework,Version=v4.5.1"</span><span class="sxs-lookup"><span data-stu-id="158eb-179">".NETFramework,Version=v4.5.1"</span></span>|  
+|<span data-ttu-id="158eb-180">4.5.2</span><span class="sxs-lookup"><span data-stu-id="158eb-180">4.5.2</span></span>|<span data-ttu-id="158eb-181">".NETFramework,Version=v4.5.2"</span><span class="sxs-lookup"><span data-stu-id="158eb-181">".NETFramework,Version=v4.5.2"</span></span>|  
+|<span data-ttu-id="158eb-182">4.6</span><span class="sxs-lookup"><span data-stu-id="158eb-182">4.6</span></span>|<span data-ttu-id="158eb-183">".NETFramework,Version=v4.6"</span><span class="sxs-lookup"><span data-stu-id="158eb-183">".NETFramework,Version=v4.6"</span></span>|  
+|<span data-ttu-id="158eb-184">4.6.1</span><span class="sxs-lookup"><span data-stu-id="158eb-184">4.6.1</span></span>|<span data-ttu-id="158eb-185">".NETFramework,Version=v4.6.1"</span><span class="sxs-lookup"><span data-stu-id="158eb-185">".NETFramework,Version=v4.6.1"</span></span>|  
+|<span data-ttu-id="158eb-186">4.6.2</span><span class="sxs-lookup"><span data-stu-id="158eb-186">4.6.2</span></span>|<span data-ttu-id="158eb-187">". NETFramework, Version = V4.6.2 "</span><span class="sxs-lookup"><span data-stu-id="158eb-187">".NETFramework,Version=v4.6.2"</span></span>|  
+|<span data-ttu-id="158eb-188">4.7</span><span class="sxs-lookup"><span data-stu-id="158eb-188">4.7</span></span>|<span data-ttu-id="158eb-189">". NETFramework, Version = 4.7 "</span><span class="sxs-lookup"><span data-stu-id="158eb-189">".NETFramework,Version=v4.7"</span></span>|
+|<span data-ttu-id="158eb-190">4.7.1</span><span class="sxs-lookup"><span data-stu-id="158eb-190">4.7.1</span></span>|<span data-ttu-id="158eb-191">". NETFramework, Version = 4.7.1"</span><span class="sxs-lookup"><span data-stu-id="158eb-191">".NETFramework,Version=4.7.1"</span></span>|
+
+## <a name="example"></a><span data-ttu-id="158eb-192">Beispiel</span><span class="sxs-lookup"><span data-stu-id="158eb-192">Example</span></span>  
+ <span data-ttu-id="158eb-193">Das folgende Beispiel veranschaulicht, wie Sie die unterstützte Laufzeitversion in einer Konfigurationsdatei angeben.</span><span class="sxs-lookup"><span data-stu-id="158eb-193">The following example shows how to specify the supported runtime version in a configuration file.</span></span> <span data-ttu-id="158eb-194">Die Konfigurationsdatei gibt an, dass die app auf die .NET Framework-4.7 abzielt.</span><span class="sxs-lookup"><span data-stu-id="158eb-194">The configuration file indicates that the app targets the .NET Framework 4.7.</span></span>  
   
 ```xml  
-  
-<configuration> <startup> <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6" /> </startup> </configuration>  
-  
+<configuration>  
+   <startup>  
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7" />  
+   </startup>  
+</configuration>  
 ```  
   
-## Konfigurationsdatei  
- Dieses Element kann in der Anwendungskonfigurationsdatei verwendet werden.  
+## <a name="configuration-file"></a><span data-ttu-id="158eb-195">Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="158eb-195">Configuration File</span></span>  
+ <span data-ttu-id="158eb-196">Dieses Element kann in der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="158eb-196">This element can be used in the application configuration file.</span></span>  
   
-## Siehe auch  
- [Schema für Starteinstellungen](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<PaveOver\> Festlegen der zu verwendenden Laufzeitversion](http://msdn.microsoft.com/de-de/c376208d-980d-42b4-865b-fbe0d9cc97c2)   
- [Prozessinterne parallele Ausführung](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+## <a name="see-also"></a><span data-ttu-id="158eb-197">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="158eb-197">See Also</span></span>  
+ [<span data-ttu-id="158eb-198">Startup Settings Schema (Schema für Starteinstellungen)</span><span class="sxs-lookup"><span data-stu-id="158eb-198">Startup Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
+ [<span data-ttu-id="158eb-199">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="158eb-199">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="158eb-200">Prozessinterne parallele Ausführung</span><span class="sxs-lookup"><span data-stu-id="158eb-200">In-Process Side-by-Side Execution</span></span>](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

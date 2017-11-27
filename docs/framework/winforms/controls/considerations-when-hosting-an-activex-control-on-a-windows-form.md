@@ -1,45 +1,46 @@
 ---
-title: "&#220;berlegungen zum Integrieren eines ActiveX-Steuerelements in ein Windows&#160;Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [Windows Forms], Hinzufügen"
-  - "ActiveX-Steuerelemente [Windows Forms], Hosting"
-  - "Windows Forms-Steuerelemente, ActiveX-Steuerelemente"
-  - "Windows Forms, ActiveX-Steuerelemente"
-  - "Windows Forms, Hosting von ActiveX-Steuerelementen"
+title: Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- ActiveX controls [Windows Forms], hosting
+- Windows Forms, ActiveX controls
+- Windows Forms, hosting ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ec828ca0b2bd8231d0baca72bf97bef566f2651
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;berlegungen zum Integrieren eines ActiveX-Steuerelements in ein Windows&#160;Form
-Obwohl Windows Forms für die Aufnahme von Windows Forms\-Steuerelementen optimiert sind, können Sie weiterhin ActiveX\-Steuerelemente verwenden.  Bei Verwendung von ActiveX\-Steuerelementen in einer Anwendung sollten Sie Folgendes berücksichtigen:  
+# <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a><span data-ttu-id="4d0ba-102">Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d0ba-102">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>
+<span data-ttu-id="4d0ba-103">Obwohl Windows Forms zum Hosten von Windows Forms-Steuerelementen optimiert wurde, können Sie weiterhin ActiveX-Steuerelemente verwenden.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-103">Although Windows Forms have been optimized to host Windows Forms controls, you can still use ActiveX controls.</span></span> <span data-ttu-id="4d0ba-104">Bei Verwendung von ActiveX-Steuerelementen in einer Anwendung sollten Sie Folgendes berücksichtigen:</span><span class="sxs-lookup"><span data-stu-id="4d0ba-104">Keep the following considerations in mind when planning an application that uses ActiveX controls:</span></span>  
   
--   **Sicherheit** Die Common Language Runtime wurde im Hinblick auf die Codezugriffssicherheit verbessert.  Anwendungen mit Windows Forms können in einer voll vertrauenswürdigen Umgebung uneingeschränkt und in einer halb vertrauenswürdigen Umgebung mit Zugriff auf die meisten verfügbaren Funktionen ausgeführt werden.  Steuerelemente für Windows Forms können problemlos in einem Browser integriert werden.  Diese verbesserten Sicherheitsmerkmale können jedoch nicht genutzt werden, wenn ActiveX\-Steuerelemente für Windows Forms verwendet werden.  Zum Ausführen eines ActiveX\-Steuerelements ist die Berechtigung für nicht verwalteten Code erforderlich. Diese wird mit der <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=fullName>\-Eigenschaft festgelegt.  Weitere Informationen über Sicherheit und die Berechtigung für nicht verwalteten Code finden Sie unter [SecurityPermissionAttribute\-Klasse](frlrfSystemSecurityPermissionsSecurityPermissionAttributeClassTopic).  
+-   <span data-ttu-id="4d0ba-105">**Sicherheit** Die Common Language Runtime wurde im Hinblick auf die Codezugriffssicherheit verbessert.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-105">**Security** The common language runtime has been enhanced with regard to code access security.</span></span> <span data-ttu-id="4d0ba-106">Anwendungen mit Windows Forms können in einer voll vertrauenswürdigen Umgebung uneingeschränkt und in einer halb vertrauenswürdigen Umgebung mit Zugriff auf die meisten verfügbaren Funktionen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-106">Applications featuring Windows Forms can run in a fully trusted environment without issue and in a semi-trusted environment with most of the functionality accessible.</span></span> <span data-ttu-id="4d0ba-107">Windows Forms-Steuerelemente können problemlos in einem Browser integriert werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-107">Windows Forms controls can be hosted in a browser with no complications.</span></span> <span data-ttu-id="4d0ba-108">Diese verbesserten Sicherheitsmerkmale können jedoch nicht genutzt werden, wenn ActiveX-Steuerelemente für Windows Forms verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-108">However, ActiveX controls on Windows Forms cannot take advantage of these security enhancements.</span></span> <span data-ttu-id="4d0ba-109">Ausführen eines ActiveX-Steuerelements erfordert die Berechtigung für nicht verwalteten Code, mit festgelegt ist die <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-109">Running an ActiveX control requires unmanaged code permission, which is set with the <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="4d0ba-110">Weitere Informationen zu Sicherheit und die Berechtigung von nicht verwaltetem Code finden Sie unter <xref:System.Security.Permissions.SecurityPermissionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-110">For more information about security and unmanaged code permission, see <xref:System.Security.Permissions.SecurityPermissionAttribute>.</span></span>  
   
--   **Gesamtkosten** ActiveX\-Steuerelemente, die einem Windows Form hinzugefügt werden, werden komplett mit diesem Windows Form weitergegeben. Dadurch können die erstellten Dateien unter Umständen sehr groß werden.  Außerdem muss bei Verwendung von ActiveX\-Steuerelementen für Windows Forms die Registrierung geändert werden.  Damit wird stärker in den Computer des Benutzers eingegriffen als mit Steuerelementen für Windows Forms, bei denen dies nicht erforderlich ist.  
-  
-    > [!NOTE]
-    >  Zum Arbeiten mit ActiveX\-Steuerelementen ist ein COM\-Interop\-Wrapper erforderlich.  Weitere Informationen finden Sie unter [COM\-Interoperabilität in Visual Basic und Visual C\#](../Topic/COM%20Interoperability%20in%20.NET%20Framework%20Applications%20\(Visual%20Basic\).md).  
+-   <span data-ttu-id="4d0ba-111">**Gesamtkosten** ActiveX-Steuerelemente, die einem Windows Form hinzugefügt werden, werden komplett mit diesem Windows Form weitergegeben. Dadurch können die erstellten Dateien unter Umständen sehr groß werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-111">**Total Cost of Ownership** ActiveX controls added to a Windows Form are deployed with that Windows Form in their entirety, which can add significantly to the size of the file(s) created.</span></span> <span data-ttu-id="4d0ba-112">Außerdem muss bei Verwendung von ActiveX-Steuerelementen für Windows Forms die Registrierung geändert werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-112">Additionally, using ActiveX controls on Windows Forms requires writing to the registry.</span></span> <span data-ttu-id="4d0ba-113">Damit wird stärker in den Computer des Benutzers eingegriffen als mit Windows Forms-Steuerelementen, bei denen dies nicht erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-113">This is more invasive to a user's computer than Windows Forms controls, which do not require this.</span></span>  
   
     > [!NOTE]
-    >  Wenn der Name eines Members des ActiveX\-Steuerelements mit einem in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] definierten Namen übereinstimmt, versieht der ActiveX Control Importer den Membernamen mit dem Präfix **Ctl**, wenn die von <xref:System.Windows.Forms.AxHost> abgeleitete Klasse erstellt wird.  Wenn beispielsweise das ActiveX\-Steuerelement ein Member mit dem Namen **Layout** enthält, wird dieser Name in der von AxHost abgeleiteten Klasse in **CtlLayout** geändert, da in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] das **Layout**\-Ereignis bereits definiert ist.  
+    >  <span data-ttu-id="4d0ba-114">Zum Arbeiten mit ActiveX-Steuerelementen ist ein COM-Interop-Wrapper erforderlich.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-114">Working with an ActiveX control requires the use of a COM interop wrapper.</span></span> <span data-ttu-id="4d0ba-115">Weitere Informationen finden Sie unter [COM-Interoperabilität in Visual Basic und Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).</span><span class="sxs-lookup"><span data-stu-id="4d0ba-115">For more information, see [COM Interoperability in Visual Basic and Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).</span></span>  
   
-## Siehe auch  
- [Gewusst wie: Hinzufügen von ActiveX\-Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [Code Access Security](../../../../docs/framework/misc/code-access-security.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/de-de/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)
+    > [!NOTE]
+    >  <span data-ttu-id="4d0ba-116">Wenn der Name eines Members des ActiveX-Steuerelements einen im definierten Namen übereinstimmt, die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], der ActiveX Control Importer den Membernamen das Präfix wird **Ctl** beim Erstellen der <xref:System.Windows.Forms.AxHost> abgeleitete Klasse.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-116">If the name of a member of the ActiveX control matches a name defined in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], then the ActiveX Control Importer will prefix the member name with **Ctl** when it creates the <xref:System.Windows.Forms.AxHost> derived class.</span></span> <span data-ttu-id="4d0ba-117">Wenn beispielsweise das ActiveX-Steuerelement ein Member mit dem Namen **Layout** enthält, wird dieser Name in der von AxHost abgeleiteten Klasse in **CtlLayout** geändert, da in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] das **Layout**-Ereignis bereits definiert ist.</span><span class="sxs-lookup"><span data-stu-id="4d0ba-117">For example, if your ActiveX control has a member named **Layout**, it is renamed **CtlLayout** in the AxHost-derived class because the **Layout** event is defined within the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4d0ba-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4d0ba-118">See Also</span></span>  
+ [<span data-ttu-id="4d0ba-119">Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d0ba-119">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [<span data-ttu-id="4d0ba-120">Codezugriffssicherheit</span><span class="sxs-lookup"><span data-stu-id="4d0ba-120">Code Access Security</span></span>](../../../../docs/framework/misc/code-access-security.md)  
+ [<span data-ttu-id="4d0ba-121">In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte</span><span class="sxs-lookup"><span data-stu-id="4d0ba-121">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [<span data-ttu-id="4d0ba-122">Einfügen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d0ba-122">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [<span data-ttu-id="4d0ba-123">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="4d0ba-123">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)

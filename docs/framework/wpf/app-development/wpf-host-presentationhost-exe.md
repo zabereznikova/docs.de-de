@@ -1,68 +1,71 @@
 ---
-title: "WPF-Host (PresentationHost.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PresentationHost.exe"
-  - "WPF-Hostanwendung"
+title: WPF-Host (PresentationHost.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF Host application [WPF]
+- PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b7662213d7204675de7e8681b6fc8141f04dd21
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# WPF-Host (PresentationHost.exe)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Host \("PresentationHost.exe"\) ist die Anwendung, mit der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen in kompatiblen Browsern gehostet werden können \(einschließlich [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] und höher\).  Standardmäßig wird [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Host als Shell und [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]\-Handler für im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Inhalte registriert. Dazu zählen:  
+# <a name="wpf-host-presentationhostexe"></a><span data-ttu-id="5d05f-102">WPF-Host (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="5d05f-102">WPF Host (PresentationHost.exe)</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="5d05f-103">-Host (PresentationHost.exe) ist die Anwendung, mit der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen in kompatiblen Browsern gehostet werden können (einschließlich [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] und höher).</span><span class="sxs-lookup"><span data-stu-id="5d05f-103"> Host (PresentationHost.exe) is the application that enables [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications to be hosted in compatible browsers (including [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] and later).</span></span> <span data-ttu-id="5d05f-104">Standardmäßig wird [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Host als Shell und [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]-Handler für im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Inhalte registriert. Dazu zählen:</span><span class="sxs-lookup"><span data-stu-id="5d05f-104">By default, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Host is registered as the shell and [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] handler for browser-hosted [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] content, which includes:</span></span>  
   
--   Loose \(nicht kompilierte\) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Dateien \(.xaml\).  
+-   <span data-ttu-id="5d05f-105">Loose (nicht kompilierte) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien (.xaml)</span><span class="sxs-lookup"><span data-stu-id="5d05f-105">Loose (uncompiled) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files (.xaml).</span></span>  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] \(.xbap\).  
+-   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]<span data-ttu-id="5d05f-106"> (.xbap)</span><span class="sxs-lookup"><span data-stu-id="5d05f-106"> (.xbap).</span></span>  
   
- Für diese Dateitypen führt [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Host Folgendes aus:  
+ <span data-ttu-id="5d05f-107">Für diese Dateitypen führt [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Host Folgendes aus:</span><span class="sxs-lookup"><span data-stu-id="5d05f-107">For files of these types, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Host:</span></span>  
   
--   Start des registrierten [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]\-Handlers, um die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Inhalte zu hosten.  
+-   <span data-ttu-id="5d05f-108">Start des registrierten [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]-Handlers, um die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Inhalte zu hosten.</span><span class="sxs-lookup"><span data-stu-id="5d05f-108">Launches the registered [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] handler to host the [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] content.</span></span>  
   
--   Laden der entsprechenden Versionen der erforderlichen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Assembly und der [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Assembly.  
+-   <span data-ttu-id="5d05f-109">Laden der entsprechenden Versionen der erforderlichen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Assembly und der [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Assembly.</span><span class="sxs-lookup"><span data-stu-id="5d05f-109">Loads the right versions of the required [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] and [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] assemblies.</span></span>  
   
--   Überprüfen, ob die entsprechenden Berechtigungsstufen für die Bereitstellungszone aktiv sind.  
+-   <span data-ttu-id="5d05f-110">Überprüfen, ob die entsprechenden Berechtigungsstufen für die Bereitstellungszone aktiv sind.</span><span class="sxs-lookup"><span data-stu-id="5d05f-110">Ensures the appropriate permission levels for the zone of deployment are in place.</span></span>  
   
- In diesem Thema werden die Befehlszeilenparameter beschrieben, die mit PresentationHost.exe verwendet werden können.  
+ <span data-ttu-id="5d05f-111">In diesem Thema werden die Befehlszeilenparameter beschrieben, die mit „PresentationHost.exe“ verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="5d05f-111">This topic describes the command line parameters that can be used with PresentationHost.exe.</span></span>  
   
-## Verwendung  
+## <a name="usage"></a><span data-ttu-id="5d05f-112">Verwendung</span><span class="sxs-lookup"><span data-stu-id="5d05f-112">Usage</span></span>  
  `PresentationHost.exe [parameters] uri|filename`  
   
-## Parameter  
+## <a name="parameters"></a><span data-ttu-id="5d05f-113">Parameter</span><span class="sxs-lookup"><span data-stu-id="5d05f-113">Parameters</span></span>  
   
-|Parameter|Beschreibung|  
-|---------------|------------------|  
-|filename|Der Pfad der zu aktivierenden Datei.  Es kann sich auch um einen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] handeln.|  
-|\-debug|Beim Aktivieren einer Anwendung wird diese nicht in den Speicher übernommen oder daraus ausgeführt.  Dies funktioniert nur, wenn eine lokale Datei aktiviert wird.|  
-|\-debugSecurityZoneURL \<url\>|Wird mit einem [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]\-Wert verwendet, um für PresentationHost.exe anzugeben, dass eine Anwendung so gedebuggt werden sollte, als ob sie von der angegebenen [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] bereitgestellt werden sollte.  Dadurch werden die Bereitstellungszone und die Ursprungssite bestimmt.|  
-|\-embedding|Wird von OLE benötigt.  Wenn der Parameter `-event` oder der Parameter `-debug` angegeben wird, ist es nicht nötig, den `-embedding`\-Parameter anzugeben, da dieser Parameter intern festgelegt wird.|  
-|\-event \<Ereignisname\>|Öffnen Sie das Ereignis mit diesem Namen, und signalisieren Sie es, wenn PresentationHost.exe initialisiert wird und bereit ist, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Inhalte zu hosten.  PresentationHost.exe wird beendet, wenn beim Öffnen des Ereignisses ein Fehler auftritt, z. B. wenn es noch nicht erstellt wurde.|  
-|\-launchApplication \<url\>|Startet eine eigenständige [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]\-Anwendung unter Verwendung der angegebenen URL.  [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] und WinInet\-Sicherheitsrichtlinie für .NET\-Anwendungen werden angewendet.|  
+|<span data-ttu-id="5d05f-114">Parameter</span><span class="sxs-lookup"><span data-stu-id="5d05f-114">Parameter</span></span>|<span data-ttu-id="5d05f-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5d05f-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="5d05f-116">filename</span><span class="sxs-lookup"><span data-stu-id="5d05f-116">filename</span></span>|<span data-ttu-id="5d05f-117">Der Pfad der zu aktivierenden Datei.</span><span class="sxs-lookup"><span data-stu-id="5d05f-117">The path of the file to be activated.</span></span> <span data-ttu-id="5d05f-118">Es kann sich auch um einen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] handeln.</span><span class="sxs-lookup"><span data-stu-id="5d05f-118">Can also be a [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].</span></span>|  
+|<span data-ttu-id="5d05f-119">-Debug</span><span class="sxs-lookup"><span data-stu-id="5d05f-119">-debug</span></span>|<span data-ttu-id="5d05f-120">Beim Aktivieren einer Anwendung wird diese nicht in den Speicher übernommen oder daraus ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="5d05f-120">When activating an application, does not commit it to or run it from the store.</span></span> <span data-ttu-id="5d05f-121">Dies funktioniert nur, wenn eine lokale Datei aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="5d05f-121">This only works when a local file is activated.</span></span>|  
+|<span data-ttu-id="5d05f-122">-debugSecurityZoneURL \<URL></span><span class="sxs-lookup"><span data-stu-id="5d05f-122">-debugSecurityZoneURL \<url></span></span>|<span data-ttu-id="5d05f-123">Wird mit einem [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]-Wert verwendet, um für „PresentationHost.exe“ anzugeben, dass eine Anwendung so gedebuggt werden sollte, als ob sie von der angegebenen [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] bereitgestellt werden sollte.</span><span class="sxs-lookup"><span data-stu-id="5d05f-123">Used with a [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] value to indicate to PresentationHost.exe that an application should be debugged as if it were deployed from the specified [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)].</span></span> <span data-ttu-id="5d05f-124">Dadurch werden die Bereitstellungszone und die Ursprungssite bestimmt.</span><span class="sxs-lookup"><span data-stu-id="5d05f-124">This determines both the deployment zone and the site of origin.</span></span>|  
+|<span data-ttu-id="5d05f-125">-embedding</span><span class="sxs-lookup"><span data-stu-id="5d05f-125">-embedding</span></span>|<span data-ttu-id="5d05f-126">Wird von OLE benötigt.</span><span class="sxs-lookup"><span data-stu-id="5d05f-126">Required by OLE.</span></span> <span data-ttu-id="5d05f-127">Wenn der Parameter `-event` oder `-debug` angegeben wird, ist es nicht nötig, den `-embedding`-Parameter anzugeben, da dieser Parameter intern festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="5d05f-127">If the `-event` or `-debug` parameter are specified, it is not necessary to specify the `-embedding` parameter, since that parameter is set internally.</span></span>|  
+|<span data-ttu-id="5d05f-128">-event \<Ereignisname></span><span class="sxs-lookup"><span data-stu-id="5d05f-128">-event \<eventname></span></span>|<span data-ttu-id="5d05f-129">Öffnen Sie das Ereignis mit diesem Namen, und signalisieren Sie es, wenn „PresentationHost.exe“ initialisiert wird und bereit ist, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Inhalte zu hosten.</span><span class="sxs-lookup"><span data-stu-id="5d05f-129">Open the event with this name and signal it when PresentationHost.exe is initialized and ready to host [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] content.</span></span> <span data-ttu-id="5d05f-130">„PresentationHost.exe“ wird beendet, wenn beim Öffnen des Ereignisses ein Fehler auftritt, z. B. wenn es noch nicht erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="5d05f-130">PresentationHost.exe will terminate if there was an error opening the event, such as if it has not already been created.</span></span>|  
+|<span data-ttu-id="5d05f-131">-launchApplication \<URL></span><span class="sxs-lookup"><span data-stu-id="5d05f-131">-launchApplication \<url></span></span>|<span data-ttu-id="5d05f-132">Startet eine eigenständige [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Anwendung unter Verwendung der angegebenen URL.</span><span class="sxs-lookup"><span data-stu-id="5d05f-132">Launches a standalone [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] application from the specified URL.</span></span> [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]<span data-ttu-id="5d05f-133">- und WinInet-Sicherheitsrichtlinie für .NET-Anwendungen werden angewendet.</span><span class="sxs-lookup"><span data-stu-id="5d05f-133"> and WinINet security policy concerning .NET applications are applied.</span></span>|  
   
-## Szenarien  
+## <a name="scenarios"></a><span data-ttu-id="5d05f-134">Szenarien</span><span class="sxs-lookup"><span data-stu-id="5d05f-134">Scenarios</span></span>  
   
-### Shell\-Handler  
+### <a name="shell-handler"></a><span data-ttu-id="5d05f-135">Shell-Handler</span><span class="sxs-lookup"><span data-stu-id="5d05f-135">Shell Handler</span></span>  
  `PresentationHost.exe example.xbap`  
   
-### MIME\-Handler  
+### <a name="mime-handler"></a><span data-ttu-id="5d05f-136">MIME-Handler</span><span class="sxs-lookup"><span data-stu-id="5d05f-136">MIME Handler</span></span>  
  `PresentationHost.exe -embedding example.xbap`  
   
-### Debuggen in Visual Studio  
+### <a name="visual-studio-debugging"></a><span data-ttu-id="5d05f-137">Debuggen in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="5d05f-137">Visual Studio Debugging</span></span>  
  `PresentationHost.exe -debug example.xbap`  
   
-### Visual Studio: Debuggen in einer Zone  
+### <a name="visual-studio-debugging-in-zone"></a><span data-ttu-id="5d05f-138">Visual Studio: Debuggen in einer Zone</span><span class="sxs-lookup"><span data-stu-id="5d05f-138">Visual Studio Debugging In Zone</span></span>  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## Siehe auch  
- [Sicherheit](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="5d05f-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5d05f-139">See Also</span></span>  
+ [<span data-ttu-id="5d05f-140">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="5d05f-140">Security</span></span>](../../../../docs/framework/wpf/security-wpf.md)

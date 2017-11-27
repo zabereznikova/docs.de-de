@@ -1,56 +1,62 @@
 ---
-title: "Interceptoren (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abfrageinterceptoren [WCF Data Services]"
-  - "WCF Data Services, Anpassen"
+title: Interceptors (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, customizing
+- query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7aad516b819723c97a40a016a46ddcbe0fcdf4d2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Interceptoren (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht einer Anwendung das Abfangen von Anforderungsnachrichten, damit einem Vorgang benutzerdefinierte Logik hinzugefügt werden kann.  Sie können Daten in eingehenden Nachrichten mithilfe dieser benutzerdefinierten Logik überprüfen.  Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  
+# <a name="interceptors-wcf-data-services"></a><span data-ttu-id="ccbe0-102">Interceptors (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="ccbe0-102">Interceptors (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="ccbe0-103">ermöglicht einer Anwendung zum Abfangen von Anforderungsnachrichten, damit Sie einen Vorgang benutzerdefinierten Logik hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-103"> enables an application to intercept request messages so that you can add custom logic to an operation.</span></span> <span data-ttu-id="ccbe0-104">Sie können diese benutzerdefinierten Logik zum Überprüfen der Daten in eingehenden Nachrichten verwenden.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-104">You can use this custom logic to validate data in incoming messages.</span></span> <span data-ttu-id="ccbe0-105">Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-105">You can also use it to further restrict the scope of a query request, such as to insert a custom authorization policy on a per request basis.</span></span>  
   
- Das Abfangen wird von speziell attributierten Methoden im Datendienst ausgeführt.  Diese Methoden werden von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum entsprechenden Zeitpunkt während der Nachrichtenverarbeitung aufgerufen.  Interceptoren werden für jede Entitätenmenge definiert, und Interceptormethoden können im Gegensatz zu Dienstvorgängen keine Parameter aus der Anforderung akzeptieren.  Abfrage\-Interceptor\-Methoden, die beim Verarbeiten einer HTTP GET\-Anforderung aufgerufen werden, müssen einen Lambda\-Ausdruck zurückgeben, der bestimmt, ob eine Instanz der Entitätenmenge des Interceptors von den Abfrageergebnissen zurückgegeben werden soll.  Dieser Ausdruck wird vom Datendienst verwendet, um den angeforderten Vorgang weiter zu optimieren.  Nachfolgend wird eine Beispieldefinition eines Abfrage\-Interceptors dargestellt.  
+ <span data-ttu-id="ccbe0-106">Das Abfangen wird von speziell attributierten Methoden im Datendienst ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-106">Interception is performed by specially attributed methods in the data service.</span></span> <span data-ttu-id="ccbe0-107">Diese Methoden werden von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum entsprechenden Zeitpunkt während der Nachrichtenverarbeitung aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-107">These methods are called by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] at the appropriate point in message processing.</span></span> <span data-ttu-id="ccbe0-108">Interceptors werden regelmäßig Satz pro Entität definiert, und interceptormethoden können keine Parameter in der Anforderung nicht annehmen, wie Dienstvorgänge können.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-108">Interceptors are defined on a per-entity set basis, and interceptor methods cannot accept parameters from the request like service operations can.</span></span> <span data-ttu-id="ccbe0-109">Abfrage-Interceptor-Methoden, die beim Verarbeiten einer HTTP GET-Anforderung aufgerufen werden, müssen zurückgeben, ein Lambda-Ausdruck, der bestimmt, ob eine Instanz des Interceptors Entität festgelegt, die von den Abfrageergebnissen zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-109">Query interceptor methods, which are called when processing an HTTP GET request, must return a lambda expression that determines whether an instance of the interceptor's entity set should be returned by the query results.</span></span> <span data-ttu-id="ccbe0-110">Dieser Ausdruck wird vom Datendienst verwendet, um den angeforderten Vorgang weiter zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-110">This expression is used by the data service to further refine the requested operation.</span></span> <span data-ttu-id="ccbe0-111">Nachfolgend wird eine Beispieldefinition eines Abfrage-Interceptors dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-111">The following is an example definition of a query interceptor.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ <span data-ttu-id="ccbe0-112">Weitere Informationen finden Sie unter [wie: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="ccbe0-112">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
- Change\-Interceptoren, die beim Verarbeiten von Nicht\-Abfragevorgängen aufgerufen werden, müssen `void` \(`Nothing` in Visual Basic\) zurückgeben.  Change\-Interceptor\-Methoden müssen die folgenden beiden Parameter akzeptieren:  
+ <span data-ttu-id="ccbe0-113">Change-Interceptoren, die beim Verarbeiten von Nicht-Abfragevorgängen aufgerufen werden, müssen `void` (`Nothing` in Visual Basic) zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-113">Change interceptors, which are called when processing non-query operations, must return `void` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="ccbe0-114">Change-Interceptor-Methoden müssen die folgenden beiden Parameter akzeptieren:</span><span class="sxs-lookup"><span data-stu-id="ccbe0-114">Change interceptor methods must accept the following two parameters:</span></span>  
   
-1.  Ein Parameter eines Typs, der mit dem Entitätstyp der Entitätenmenge kompatibel ist.  Wenn der Datendienst den Change\-Interceptor aufruft, spiegelt der Wert dieses Parameters die von der Anforderung gesendeten Entitätsinformationen wider.  
+1.  <span data-ttu-id="ccbe0-115">Ein Parameter eines Typs, der mit dem Entitätstyp der Entitätenmenge kompatibel ist.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-115">A parameter of a type that is compatible with the entity type of the entity set.</span></span> <span data-ttu-id="ccbe0-116">Wenn der Datendienst den Change-Interceptor aufruft, spiegelt der Wert dieses Parameters die von der Anforderung gesendeten Entitätsinformationen wider.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-116">When the data service invokes the change interceptor, the value of this parameter will reflect the entity information that is sent by the request.</span></span>  
   
-2.  Ein Parameter vom Typ <xref:System.Data.Services.UpdateOperations>.  Wenn der Datendienst den Change\-Interceptor aufruft, spiegelt der Wert dieses Parameters den Vorgang wider, den die Anforderung auszuführen versucht.  
+2.  <span data-ttu-id="ccbe0-117">Ein Parameter vom Typ <xref:System.Data.Services.UpdateOperations>.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-117">A parameter of type <xref:System.Data.Services.UpdateOperations>.</span></span> <span data-ttu-id="ccbe0-118">Wenn der Datendienst den Change-Interceptor aufruft, spiegelt der Wert dieses Parameters den Vorgang wider, den die Anforderung auszuführen versucht.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-118">When the data service invokes the change interceptor, the value of this parameter will reflect the operation that the request is trying to perform.</span></span>  
   
- Nachfolgend wird eine Beispieldefinition eines Change\-Interceptors dargestellt.  
+ <span data-ttu-id="ccbe0-119">Nachfolgend wird eine Beispieldefinition eines Change-Interceptors dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-119">The following is an example definition of a change interceptor.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ <span data-ttu-id="ccbe0-120">Weitere Informationen finden Sie unter [wie: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="ccbe0-120">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
- Die folgenden Attribute werden für das Abfangen unterstützt.  
+ <span data-ttu-id="ccbe0-121">Die folgenden Attribute werden für das Abfangen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-121">The following attributes are supported for interception.</span></span>  
   
- **\[QueryInterceptor\(** *EnitySetName* **\)\]**  
- Methoden mit angewendetem <xref:System.Data.Services.QueryInterceptorAttribute>\-Attribut werden aufgerufen, wenn eine HTTP GET\-Anforderung für die Ziel\-Entitätenmengenressource empfangen wird.  Diese Methoden müssen immer einen Lambda\-Ausdruck in Form von `Expression<Func<T,bool>>` zurückgeben.  
+ <span data-ttu-id="ccbe0-122">**[QueryInterceptor (** *EnitySetName* **)]**</span><span class="sxs-lookup"><span data-stu-id="ccbe0-122">**[QueryInterceptor(** *EnitySetName* **)]**</span></span>  
+ <span data-ttu-id="ccbe0-123">Methoden mit angewendetem <xref:System.Data.Services.QueryInterceptorAttribute>-Attribut werden aufgerufen, wenn eine HTTP GET-Anforderung für die Ziel-Entitätenmengenressource empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-123">Methods with the <xref:System.Data.Services.QueryInterceptorAttribute> attribute applied are called when an HTTP GET request is received for the targeted entity set resource.</span></span> <span data-ttu-id="ccbe0-124">Diese Methoden müssen immer einen Lambda-Ausdruck in Form von `Expression<Func<T,bool>>` zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-124">These methods must always return a lambda expression in the form of `Expression<Func<T,bool>>`.</span></span>  
   
- **\[ChangeInterceptor\(** *EnitySetName* **\)\]**  
- Methoden mit angewendetem <xref:System.Data.Services.ChangeInterceptorAttribute>\-Attribut werden aufgerufen, wenn eine andere HTTP\-Anforderung als eine HTTP GET\-Anforderung für die Ziel\-Entitätenmengenressource empfangen wird.  Diese Methoden müssen immer `void` \(`Nothing` in Visual Basic\) zurückgeben.  
+ <span data-ttu-id="ccbe0-125">**[ChangeInterceptor (** *EnitySetName* **)]**</span><span class="sxs-lookup"><span data-stu-id="ccbe0-125">**[ChangeInterceptor(** *EnitySetName* **)]**</span></span>  
+ <span data-ttu-id="ccbe0-126">Methoden mit angewendetem <xref:System.Data.Services.ChangeInterceptorAttribute>-Attribut werden aufgerufen, wenn eine andere HTTP-Anforderung als eine HTTP GET-Anforderung für die Ziel-Entitätenmengenressource empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-126">Methods with the <xref:System.Data.Services.ChangeInterceptorAttribute> attribute applied are called when an HTTP request other than HTTP GET request is received for the targeted entity set resource.</span></span> <span data-ttu-id="ccbe0-127">Diese Methoden müssen immer `void` (`Nothing` in Visual Basic) zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="ccbe0-127">These methods must always return `void` (`Nothing` in Visual Basic).</span></span>  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ <span data-ttu-id="ccbe0-128">Weitere Informationen finden Sie unter [wie: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="ccbe0-128">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
-## Siehe auch  
- [Dienstvorgänge](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="ccbe0-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ccbe0-129">See Also</span></span>  
+ [<span data-ttu-id="ccbe0-130">Dienstvorgänge</span><span class="sxs-lookup"><span data-stu-id="ccbe0-130">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

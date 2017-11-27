@@ -1,34 +1,36 @@
 ---
-title: "Gewusst wie: Bestimmen der installierten WPF-Version | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Version, Suchen"
+title: 'Gewusst wie: Bestimmen der installierten WPF-Version'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: version [WPF], finding
 ms.assetid: 99971cef-e218-4f9f-a4c1-350332741860
-caps.latest.revision: 3
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60f2dd65702a5dfcff4cbafa97e5a48080b8e5be
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Bestimmen der installierten WPF-Version
-Die Versionsnummer für die momentan installierte Version von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] befindet sich in der **Registrierung**.  
+# <a name="how-to-determine-the-installed-version-of-wpf"></a><span data-ttu-id="33d15-102">Gewusst wie: Bestimmen der installierten WPF-Version</span><span class="sxs-lookup"><span data-stu-id="33d15-102">How to: Determine the Installed Version of WPF</span></span>
+<span data-ttu-id="33d15-103">Die Versionsnummer für die aktuelle installierte Version von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] befindet sich der **Registrierung**.</span><span class="sxs-lookup"><span data-stu-id="33d15-103">The version number for the current installed version of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is located in the **Registry**.</span></span>  
   
- So suchen Sie die Versionsnummer:  
+ <span data-ttu-id="33d15-104">So suchen die Versionsnummer:</span><span class="sxs-lookup"><span data-stu-id="33d15-104">To find the version number:</span></span>  
   
-1.  Klicken Sie im **Startmenü** auf **Ausführen**.  
+1.  <span data-ttu-id="33d15-105">Auf der **starten** Menü klicken Sie auf **ausführen**.</span><span class="sxs-lookup"><span data-stu-id="33d15-105">On the **Start** menu, click **Run**.</span></span>  
   
-2.  Geben Sie unter **Öffnen** den Befehl **regedit.exe** ein.  
+2.  <span data-ttu-id="33d15-106">In **öffnen**, Typ **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="33d15-106">In **Open**, type **regedit.exe**.</span></span>  
   
-3.  Öffnen Sie den folgenden Schlüssel:  
+3.  <span data-ttu-id="33d15-107">Öffnen Sie den folgenden Schlüssel:</span><span class="sxs-lookup"><span data-stu-id="33d15-107">Open the following key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.0\Setup\Windows Presentation Foundation`  
   
- Die Versionsnummer von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist unter dem Wert **Version** gespeichert.
+ <span data-ttu-id="33d15-108">Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Versionsnummer befindet sich in der **Version** Wert.</span><span class="sxs-lookup"><span data-stu-id="33d15-108">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] version number is stored in the **Version** value.</span></span>

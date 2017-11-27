@@ -1,67 +1,68 @@
 ---
-title: "Gewusst wie: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows&#160;Forms mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid-Steuerelement [Windows Forms], Master/Detail-Listen"
-  - "Master/Detail-Listen"
-  - "Verknüpfte Tabellen, Anzeigen in DataGrid-Steuerelementen"
+title: "Gewusst wie: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows Forms mithilfe des Designers"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master-details lists
+- DataGrid control [Windows Forms], master-details lists
+- related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 66de6fb17e3ee5b916c4bb20dfa0799758375406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows&#160;Forms mithilfe des Designers
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="7d41e-102">Gewusst wie: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows Forms mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="7d41e-102">How to: Create Master-Details Lists with the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das <xref:System.Windows.Forms.DataGrid>\-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="7d41e-103">Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="7d41e-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="7d41e-104">Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="7d41e-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Wenn <xref:System.Data.DataSet> mehrere verwandte Tabellen enthält, können Sie mit zwei <xref:System.Windows.Forms.DataGrid>\-Steuerelementen die Daten im Master\-\/Detailformat anzeigen.  Ein <xref:System.Windows.Forms.DataGrid> wird als Masterraster, das andere als Detailraster festgelegt.  Wenn Sie einen Eintrag in der Masterliste auswählen, werden auch alle zugehörigen Einträge in der Detailliste angezeigt.  Wenn <xref:System.Data.DataSet> beispielsweise die Tabelle Customers enthält, der eine Tabelle Orders zugeordnet ist, können Sie die Tabelle Customers als Masterraster und die Tabelle Orders als Detailraster festlegen.  Wenn ein Kunde aus dem Masterraster ausgewählt wurde, werden alle diesem Kunden zugeordneten Bestellungen in der Tabelle **Bestellungen** im Detailraster angezeigt.  
+ <span data-ttu-id="7d41e-105">Wenn Ihre <xref:System.Data.DataSet> enthält eine Reihe verknüpfter Tabellen können Sie mithilfe von zwei <xref:System.Windows.Forms.DataGrid> Steuerelemente zum Anzeigen der Daten in einem Master / Detail-Format.</span><span class="sxs-lookup"><span data-stu-id="7d41e-105">If your <xref:System.Data.DataSet> contains a series of related tables, you can use two <xref:System.Windows.Forms.DataGrid> controls to display the data in a master-detail format.</span></span> <span data-ttu-id="7d41e-106">Eine <xref:System.Windows.Forms.DataGrid> festgelegt wurde, werden die master-Raster, und die zweite ist vorgesehen, um das Raster Aktivitätsdetails werden.</span><span class="sxs-lookup"><span data-stu-id="7d41e-106">One <xref:System.Windows.Forms.DataGrid> is designated to be the master grid, and the second is designated to be the details grid.</span></span> <span data-ttu-id="7d41e-107">Wenn Sie einen Eintrag in der master-Liste auswählen, werden alle zugehörigen untergeordneten Einträge in der Detailliste angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7d41e-107">When you select an entry in the master list, all of the related child entries are shown in the details list.</span></span> <span data-ttu-id="7d41e-108">Beispielsweise, wenn Ihre <xref:System.Data.DataSet> enthält eine Kundentabelle und einer verknüpften Tabelle der Aufträge, würden Sie angeben, der Customers-Tabelle der master-Raster sein und die Tabelle Orders, um das Raster Aktivitätsdetails werden.</span><span class="sxs-lookup"><span data-stu-id="7d41e-108">For example, if your <xref:System.Data.DataSet> contains a Customers table and a related Orders table, you would specify the Customers table to be the master grid and the Orders table to be the details grid.</span></span> <span data-ttu-id="7d41e-109">Wenn ein Kunde aus der master-Raster ausgewählt ist, würden alle Bestellungen dieses Kunden in der Tabelle Orders zugeordnet im Detailraster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7d41e-109">When a customer is selected from the master grid, all of the orders associated with that customer in the Orders table would be displayed in the details grid.</span></span>  
   
- Im folgenden Verfahren wird ein Projekt vom Typ **Windows\-Anwendung** benötigt.  Weitere Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+ <span data-ttu-id="7d41e-110">Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt.</span><span class="sxs-lookup"><span data-stu-id="7d41e-110">The following procedure requires a **Windows Application** project.</span></span> <span data-ttu-id="7d41e-111">Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="7d41e-111">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="7d41e-112">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="7d41e-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="7d41e-113">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="7d41e-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="7d41e-114">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="7d41e-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So erstellen Sie eine Master\-\/Detailliste im Designer  
+### <a name="to-create-a-master-details-list-in-the-designer"></a><span data-ttu-id="7d41e-115">So erstellen eine Master / Detail-Liste im designer</span><span class="sxs-lookup"><span data-stu-id="7d41e-115">To create a master-details list in the designer</span></span>  
   
-1.  Fügen Sie dem Formular zwei <xref:System.Windows.Forms.DataGrid>\-Steuerelemente hinzu.  Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] ist das <xref:System.Windows.Forms.DataGrid>\-Steuerelement in der **Toolbox** standardmäßig nicht enthalten.  Weitere Informationen finden Sie unter [How to: Add Items to the Toolbox](http://msdn.microsoft.com/de-de/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  <span data-ttu-id="7d41e-116">Fügen Sie zwei <xref:System.Windows.Forms.DataGrid> Steuerelemente im Formular.</span><span class="sxs-lookup"><span data-stu-id="7d41e-116">Add two <xref:System.Windows.Forms.DataGrid> controls to the form.</span></span> <span data-ttu-id="7d41e-117">Weitere Informationen finden Sie unter [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="7d41e-117">For more information, see [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="7d41e-118">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> Steuerelement befindet sich nicht in der **Toolbox** standardmäßig.</span><span class="sxs-lookup"><span data-stu-id="7d41e-118">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox** by default.</span></span> <span data-ttu-id="7d41e-119">Weitere Informationen finden Sie unter [wie: Hinzufügen von Elementen zur Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span><span class="sxs-lookup"><span data-stu-id="7d41e-119">For more information, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span>  
   
     > [!NOTE]
-    >  Die folgenden Schritte gelten nicht für [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], da in diesem Fall das **Datenquellenfenster** für die Datenbindung zur Entwurfszeit verwendet wird.  Weitere Informationen finden Sie unter [Binden von Steuerelementen an Daten in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md) und unter [Gewusst wie: Anzeigen von verknüpften Daten in einer Windows Forms\-Anwendung](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md).  
+    >  <span data-ttu-id="7d41e-120">Die folgenden Schritte gelten nicht für [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], verwendet der **Datenquellen** Fenster für die Datenbindung zur Entwurfszeit.</span><span class="sxs-lookup"><span data-stu-id="7d41e-120">The following steps are not applicable to [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], which uses the **Data Sources** window for design-time data binding.</span></span> <span data-ttu-id="7d41e-121">Weitere Informationen finden Sie unter [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) und [Vorgehensweise: Anzeigen von verknüpften Daten in einer Windows Forms-Anwendung](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).</span><span class="sxs-lookup"><span data-stu-id="7d41e-121">For more information, see [Bind controls to data in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) and [How to: Display Related Data in a Windows Forms Application](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).</span></span>  
   
-2.  Ziehen Sie mindestens zwei Tabellen aus dem **Server\-Explorer** in das Formular.  
+2.  <span data-ttu-id="7d41e-122">Ziehen Sie zwei oder mehr Tabellen aus **Server-Explorer** in das Formular.</span><span class="sxs-lookup"><span data-stu-id="7d41e-122">Drag two or more tables from **Server Explorer** to the form.</span></span>  
   
-3.  Wählen Sie im Menü **Daten** die Option **DataSet generieren**.  
+3.  <span data-ttu-id="7d41e-123">Aus der **Daten** klicken Sie im Menü **DataSet generieren**.</span><span class="sxs-lookup"><span data-stu-id="7d41e-123">From the **Data** menu, select **Generate DataSet**.</span></span>  
   
-4.  Legen Sie die Beziehungen zwischen den Tabellen mithilfe des XML\-Designers fest.  Ausführliche Informationen finden Sie auf MSDN unter "Gewusst wie: Erstellen von 1:n\-Beziehungen in XML\-Schemas und Datasets".  
+4.  <span data-ttu-id="7d41e-124">Legen Sie die Beziehungen zwischen den Tabellen, die mit dem XML-Designer.</span><span class="sxs-lookup"><span data-stu-id="7d41e-124">Set the relationships between the tables using the XML Designer.</span></span> <span data-ttu-id="7d41e-125">Weitere Informationen finden Sie unter "Vorgehensweise: Erstellen von n-Beziehungen in XML-Schemas und Datasets" auf MSDN.</span><span class="sxs-lookup"><span data-stu-id="7d41e-125">For details, see "How to: Create One-to-Many Relationships in XML Schemas and Datasets" on MSDN.</span></span>  
   
-5.  Klicken Sie im Menü **Datei** auf **Alle speichern**, um die Beziehungen zu speichern.  
+5.  <span data-ttu-id="7d41e-126">Speichern Sie die Beziehungen durch Auswählen von **alle speichern** aus der **Datei** Menü.</span><span class="sxs-lookup"><span data-stu-id="7d41e-126">Save the relationships by selecting **Save All** from the **File** menu.</span></span>  
   
-6.  Richten Sie das gewünschte <xref:System.Windows.Forms.DataGrid>\-Steuerelement wie folgt für das Masterraster ein:  
+6.  <span data-ttu-id="7d41e-127">Konfigurieren der <xref:System.Windows.Forms.DataGrid> Steuerelement, das Sie die master-Raster folgendermaßen festlegen möchten:</span><span class="sxs-lookup"><span data-stu-id="7d41e-127">Configure the <xref:System.Windows.Forms.DataGrid> control that you want to designate the master grid, as follows:</span></span>  
   
-    1.  Wählen Sie <xref:System.Data.DataSet> aus der Dropdownliste der <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft aus.  
+    1.  <span data-ttu-id="7d41e-128">Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in die <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7d41e-128">Select the <xref:System.Data.DataSet> from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataSource%2A> property.</span></span>  
   
-    2.  Wählen Sie die Mastertabelle \(beispielsweise "Customers"\) aus der Dropdownliste der <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft aus.  
+    2.  <span data-ttu-id="7d41e-129">Wählen Sie die Mastertabelle (z. B. "Customers") aus der Dropdown-Liste in die <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7d41e-129">Select the master table (for example, "Customers") from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataMember%2A> property.</span></span>  
   
-7.  Richten Sie das gewünschte <xref:System.Windows.Forms.DataGrid>\-Steuerelement wie folgt für das Detailraster ein:  
+7.  <span data-ttu-id="7d41e-130">Konfigurieren der <xref:System.Windows.Forms.DataGrid> Steuerelement, das Sie im Detailraster wie folgt festlegen möchten:</span><span class="sxs-lookup"><span data-stu-id="7d41e-130">Configure the <xref:System.Windows.Forms.DataGrid> control that you want to designate the details grid, as follows:</span></span>  
   
-    1.  Wählen Sie <xref:System.Data.DataSet> aus der Dropdownliste der <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft aus.  
+    1.  <span data-ttu-id="7d41e-131">Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in die <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7d41e-131">Select the <xref:System.Data.DataSet> from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataSource%2A> property.</span></span>  
   
-    2.  Wählen Sie die Beziehung zwischen der Master\- und der Detailtabelle \(beispielsweise "Customers.CustOrd"\) aus der Dropdownliste der <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft aus.  Sie müssen den Knoten erweitern, damit die Beziehung angezeigt wird. Klicken Sie in der Dropdownliste auf das Pluszeichen \(**\+**\) neben der Mastertabelle.  
+    2.  <span data-ttu-id="7d41e-132">Wählen Sie die Beziehung (z. B. "Customers.CustOrd") zwischen den Tabellen "Master" und "Details" aus der Dropdown-Liste in die <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7d41e-132">Select the relationship (for example, "Customers.CustOrd") between the master and detail tables from the drop-down list in the <xref:System.Windows.Forms.DataGrid.DataMember%2A> property.</span></span> <span data-ttu-id="7d41e-133">Um die Beziehung angezeigt wird, erweitern Sie den Knoten durch Klicken auf das Pluszeichen (**+**)-Zeichen neben die Mastertabelle in der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="7d41e-133">In order to see the relationship, expand the node by clicking on the plus (**+**) sign next to the master table in the drop-down list.</span></span>  
   
-## Siehe auch  
- [DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Übersicht über das DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Gewusst wie: Binden des DataGrid\-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)   
- [Binden von Steuerelementen an Daten in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a><span data-ttu-id="7d41e-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7d41e-134">See Also</span></span>  
+ [<span data-ttu-id="7d41e-135">DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="7d41e-135">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="7d41e-136">Übersicht über das DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="7d41e-136">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="7d41e-137">Gewusst wie: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle</span><span class="sxs-lookup"><span data-stu-id="7d41e-137">How to: Bind the Windows Forms DataGrid Control to a Data Source</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [<span data-ttu-id="7d41e-138">Binden von Steuerelementen an Daten in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7d41e-138">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

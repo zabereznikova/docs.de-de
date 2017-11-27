@@ -1,51 +1,55 @@
 ---
-title: "Transaktions-Konvoi-Bereich | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transaktions-Konvoi-Bereich
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b5fc8834fb72163a615633d81232e25768683278
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Transaktions-Konvoi-Bereich
-Anhand dieses Beispiels wird veranschaulicht, wie ein paralleles Konvoi\-Meldungsaktivitätsmuster zusammen mit einem <xref:System.ServiceModel.Activities.TransactedReceiveScope> verwendet wird, um ein Protokoll zu modellieren, bei dem in derselben Transaktion mehrere Vorgänge in beliebiger Reihenfolge auftreten können.Des Weiteren wird veranschaulicht, wie ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatisch eine neue Transaktion erstellt, wenn keine Transaktion an den Server weitergegeben wird, sodass der Client keine Transaktionen verwendet.  
+# <a name="transaction-convoy-scope"></a><span data-ttu-id="99260-102">Transaktions-Konvoi-Bereich</span><span class="sxs-lookup"><span data-stu-id="99260-102">Transaction Convoy Scope</span></span>
+<span data-ttu-id="99260-103">Anhand dieses Beispiels wird veranschaulicht, wie ein paralleles Konvoi-Meldungsaktivitätsmuster zusammen mit einem <xref:System.ServiceModel.Activities.TransactedReceiveScope> verwendet wird, um ein Protokoll zu modellieren, bei dem in derselben Transaktion mehrere Vorgänge in beliebiger Reihenfolge auftreten können.</span><span class="sxs-lookup"><span data-stu-id="99260-103">This sample demonstrates how to create a Parallel Convoy messaging activity pattern in conjunction with a <xref:System.ServiceModel.Activities.TransactedReceiveScope> to model a protocol where a number of operations can happen in any order all under the same transaction.</span></span> <span data-ttu-id="99260-104">Des Weiteren wird veranschaulicht, wie ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatisch eine neue Transaktion erstellt, wenn keine Transaktion an den Server weitergegeben wird, sodass der Client keine Transaktionen verwendet.</span><span class="sxs-lookup"><span data-stu-id="99260-104">This sample also demonstrates how a <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatically creates a new transaction when one is not flowed to the server, so the client does not make use of any transactions.</span></span>  
   
- Das Beispiel besteht aus zwei Workflowprojekten, die jeweils Client und Server darstellen.Das Clientprojekt führt einen Workflow aus, der mit dem Senden einer Meldung zur Ausführung eines Bootstrap für den Serverworkflow beginnt. Dadurch wird eine Korrelation initialisiert und ein Transaktionsbereich für den Rest der Messagingaktivitäten gestartet.Die <xref:System.Activities.Statements.Sequence>\-Aktivität des Clients enthält zunächst ein <xref:System.ServiceModel.Activities.Send>\- und <xref:System.ServiceModel.Activities.ReceiveReply>\-Paar und darauffolgend eine <xref:System.Activities.Statements.Parallel>\-Aktivität mit drei Verzweigungen.Jede Verzweigung sendet eine unidirektionale Nachricht an den Server.Die <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>\-Eigenschaft der <xref:System.Activities.Statements.Parallel>\-Aktivität wird auf `false` festgelegt, damit alle drei Verzweigungen abgeschlossen werden.  
+ <span data-ttu-id="99260-105">Das Beispiel besteht aus zwei Workflowprojekten, die jeweils Client und Server darstellen.</span><span class="sxs-lookup"><span data-stu-id="99260-105">The sample consists of two workflow projects that represent the client and server.</span></span> <span data-ttu-id="99260-106">Das Clientprojekt führt einen Workflow aus, der mit dem Senden einer Meldung zur Ausführung eines Bootstrap für den Serverworkflow beginnt. Dadurch wird eine Korrelation initialisiert und ein Transaktionsbereich für den Rest der Messagingaktivitäten gestartet.</span><span class="sxs-lookup"><span data-stu-id="99260-106">The client project runs a workflow that begins by sending a message to bootstrap the server workflow, which initializes a correlation and starts a transactional scope for the remainder of the messaging activities.</span></span> <span data-ttu-id="99260-107">Die <xref:System.Activities.Statements.Sequence>-Aktivität des Clients enthält zunächst ein <xref:System.ServiceModel.Activities.Send>- und <xref:System.ServiceModel.Activities.ReceiveReply>-Paar und darauffolgend eine <xref:System.Activities.Statements.Parallel>-Aktivität mit drei Verzweigungen.</span><span class="sxs-lookup"><span data-stu-id="99260-107">The client <xref:System.Activities.Statements.Sequence> activity contains an initial <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.ReceiveReply> pair and then a <xref:System.Activities.Statements.Parallel> activity with three branches.</span></span> <span data-ttu-id="99260-108">Jede Verzweigung sendet eine unidirektionale Nachricht an den Server.</span><span class="sxs-lookup"><span data-stu-id="99260-108">Each branch sends a one-way message to the server.</span></span> <span data-ttu-id="99260-109">Die <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>-Eigenschaft der <xref:System.Activities.Statements.Parallel>-Aktivität wird auf `false` festgelegt, damit alle drei Verzweigungen abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="99260-109">The <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> property of the <xref:System.Activities.Statements.Parallel> activity is set to `false` so that all three branches complete.</span></span>  
   
- Der Serverworkflow ist identisch mit dem Clientworkflow, mit der Ausnahme, dass die Messagingaktivitäten an die Serverseite der Kommunikation gerichtet und in einer <xref:System.ServiceModel.Activities.TransactedReceiveScope>\-Aktivität enthalten sind, damit alle Arbeitsabläufe innerhalb derselben Transaktion ausgeführt werden.Wenn der Server die erste Nachricht empfängt, wird eine Transaktion erstellt und für den Bereich des <xref:System.ServiceModel.Activities.TransactedReceiveScope>\-Texts als Ambient\-Transaktion festgelegt, damit jede Aktivität in diesem Bereich auf die Transaktion zugreifen kann.Danach werden alle empfangenen Nachrichten parallel ausgeführt.Alle empfangenen Nachrichten müssen genau einmal ausgeführt werden, wie in der Abschlussbedingung für parallele Aktivitäten festgelegt.Am Ende des <xref:System.ServiceModel.Activities.TransactedReceiveScope>\-Texts ist ein impliziter Persistenzpunkt vorhanden, und der Persistenzvorgang wird ebenfalls innerhalb derselben Transaktion ausgeführt.  
+ <span data-ttu-id="99260-110">Der Serverworkflow ist identisch mit dem Clientworkflow, mit der Ausnahme, dass die Messagingaktivitäten an die Serverseite der Kommunikation gerichtet und in einer <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität enthalten sind, damit alle Arbeitsabläufe innerhalb derselben Transaktion ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="99260-110">The server workflow is similar to the client workflow except the messaging activities are oriented towards the server side of the communication and they are contained within a <xref:System.ServiceModel.Activities.TransactedReceiveScope> activity so that all work done executes under the same transaction.</span></span> <span data-ttu-id="99260-111">Wenn der Server die erste Nachricht empfängt, wird eine Transaktion erstellt und für den Bereich des <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Texts als Ambient-Transaktion festgelegt, damit jede Aktivität in diesem Bereich auf die Transaktion zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="99260-111">When the first message is received on the server, a transaction is created and is made ambient for the scope of the <xref:System.ServiceModel.Activities.TransactedReceiveScope> body so that any activity within this scope can access the transaction.</span></span> <span data-ttu-id="99260-112">Danach werden alle empfangenen Nachrichten parallel ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="99260-112">After this, all receives execute in parallel.</span></span> <span data-ttu-id="99260-113">Alle empfangenen Nachrichten müssen genau einmal ausgeführt werden, wie in der Abschlussbedingung für parallele Aktivitäten festgelegt.</span><span class="sxs-lookup"><span data-stu-id="99260-113">All receives must execute exactly once as described by the completion condition on the parallel activity.</span></span> <span data-ttu-id="99260-114">Am Ende des <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Texts ist ein impliziter Persistenzpunkt vorhanden, und der Persistenzvorgang wird ebenfalls innerhalb derselben Transaktion ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="99260-114">An implicit persistence point exists at the end of the <xref:System.ServiceModel.Activities.TransactedReceiveScope> body and the persistence operation is also executed under the same transaction.</span></span>  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="99260-115">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="99260-115">To use this sample</span></span>  
   
-1.  Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "ParallelConvoySample.sln".  
+1.  <span data-ttu-id="99260-116">Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "ParallelConvoySample.sln".</span><span class="sxs-lookup"><span data-stu-id="99260-116">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ParallelConvoySample.sln solution file.</span></span>  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  <span data-ttu-id="99260-117">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="99260-117">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Stellen Sie sicher, dass beide Projekte als Startprojekte festgelegt sind.  
+3.  <span data-ttu-id="99260-118">Stellen Sie sicher, dass beide Projekte als Startprojekte festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="99260-118">Ensure both projects are set to start.</span></span>  
   
-    1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Startprojekte festlegen**.  
+    1.  <span data-ttu-id="99260-119">In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Startprojekte festlegen**.</span><span class="sxs-lookup"><span data-stu-id="99260-119">In **Solution Explorer**, right-click the solution and select **Set Startup Projects**.</span></span>  
   
-    2.  Wählen Sie die Option **Mehrere Startprojekte**, und stellen Sie sicher, dass die Aktion für beide Projekte **Starten** ist.  
+    2.  <span data-ttu-id="99260-120">Wählen Sie **mehrere Startprojekte** und vergewissern Sie sich die Aktion für beide Projekte **starten**.</span><span class="sxs-lookup"><span data-stu-id="99260-120">Select **Multiple Startup Projects** and ensure the action for both projects is set to **Start**.</span></span>  
   
-4.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+4.  <span data-ttu-id="99260-121">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="99260-121">To run the solution, press CTRL+F5.</span></span>  
   
-     Der Server gibt die Meldung `Server is running` aus, die angibt, dass der Server bereit ist.  
+     <span data-ttu-id="99260-122">Der Server gibt die Meldung `Server is running` aus, die angibt, dass der Server bereit ist.</span><span class="sxs-lookup"><span data-stu-id="99260-122">The server prints `Server is running`, which indicates the server is ready.</span></span>  
   
-     Drücken Sie bei geöffnetem Clientkonsolenfenster eine beliebige Taste, um das Beispiel zu starten.  
+     <span data-ttu-id="99260-123">Drücken Sie bei geöffnetem Clientkonsolenfenster eine beliebige Taste, um das Beispiel zu starten.</span><span class="sxs-lookup"><span data-stu-id="99260-123">Press any key in the client console window to start the sample.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="99260-124">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="99260-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="99260-125">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="99260-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="99260-126">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="99260-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="99260-127">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="99260-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="99260-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99260-128">See Also</span></span>

@@ -1,34 +1,37 @@
 ---
-title: "Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6896e97a4f9b7625efcef40164c3497ef4f7c90a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
-In dieser Aufgabe erstellen Sie die Bereiche **Toolbox** und **PropertyGrid** und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] hinzu.  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="418a1-102">Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche</span><span class="sxs-lookup"><span data-stu-id="418a1-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
+<span data-ttu-id="418a1-103">In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="418a1-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  
   
- Als Referenz wird am Ende dieses Themas der Code bereitgestellt, der nach Abschluss der drei Aufgaben in der Reihe [Erneutes Hosten des Workflow\-Designers](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md) von Themen in der Datei "MainWindow.xaml.cs" vorhanden sein sollte.  
+ <span data-ttu-id="418a1-104">Referenz zu der Code, der in der Datei "MainWindow.Xaml.cs" werden sollen, nach Abschluss von drei Aufgaben in der [erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) Reihe von Themen am Ende dieses Themas bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="418a1-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>  
   
-### So erstellen Sie die Toolbox und fügen sie dem Raster hinzu.  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="418a1-105">So erstellen Sie die Toolbox und fügen sie dem Raster hinzu.</span><span class="sxs-lookup"><span data-stu-id="418a1-105">To create the Toolbox and add it to the grid</span></span>  
   
-1.  Öffnen Sie das Projekt "HostingApplication", das Sie erhalten haben, indem Sie das in [Aufgabe 2: Hosten des Workflow\-Designers](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md) beschriebene Verfahren ausgeführt haben.  
+1.  <span data-ttu-id="418a1-106">Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, mithilfe des folgenden Verfahrens in beschriebenen [Aufgabe 2: Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).</span><span class="sxs-lookup"><span data-stu-id="418a1-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).</span></span>  
   
-2.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die Datei "MainWindow.xaml", und wählen Sie **Code anzeigen** aus.  
+2.  <span data-ttu-id="418a1-107">In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Code anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="418a1-107">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
   
-3.  Fügen Sie eine Methode namens `GetToolboxControl` der `MainWindow`\-Klasse hinzu, mit der ein <xref:System.Activities.Presentation.Toolbox.ToolboxControl>\-Objekt erstellt wird, der **Toolbox** eine neue **Toolbox**\-Kategorie hinzugefügt wird und dieser Kategorie der <xref:System.Activities.Statements.Assign>\-Aktivitätstyp und der <xref:System.Activities.Statements.Sequence>\-Aktivitätstyp hinzugefügt wird.  
+3.  <span data-ttu-id="418a1-108">Hinzufügen einer `GetToolboxControl` Methode, um die `MainWindow` -Klasse, die erstellt eine <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, fügt eine neue **Toolbox** Kategorie, um die **Toolbox**, und weist die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitätstypen für diese Kategorie.</span><span class="sxs-lookup"><span data-stu-id="418a1-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>  
   
     ```csharp  
-  
     private ToolboxControl GetToolboxControl()  
     {  
         // Create the ToolBoxControl.  
@@ -53,26 +56,22 @@ In dieser Aufgabe erstellen Sie die Bereiche **Toolbox** und **PropertyGrid** un
         ctrl.Categories.Add(category);  
         return ctrl;  
     }  
-  
     ```  
   
-4.  Fügen Sie der `MainWindow`\-Klasse eine private `AddToolbox`\-Methode hinzu, um die **Toolbox** in der linken Spalte des Rasters einzufügen.  
+4.  <span data-ttu-id="418a1-109">Hinzufügen eine privaten `AddToolbox` Methode, um die `MainWindow` -Klasse, die platziert die **Toolbox** in der linken Spalte des Rasters einzufügen.</span><span class="sxs-lookup"><span data-stu-id="418a1-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>  
   
     ```csharp  
-  
     private void AddToolBox()  
     {  
         ToolboxControl tc = GetToolboxControl();  
         Grid.SetColumn(tc, 0);  
         grid1.Children.Add(tc);  
     }  
-  
     ```  
   
-5.  Fügen Sie der `AddToolBox`\-Methode im `MainWindow()`\-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.  
+5.  <span data-ttu-id="418a1-110">Fügen Sie der `AddToolBox`-Methode im `MainWindow()`-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="418a1-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
   
     ```csharp  
-  
     public MainWindow()  
     {  
         InitializeComponent();  
@@ -81,31 +80,27 @@ In dieser Aufgabe erstellen Sie die Bereiche **Toolbox** und **PropertyGrid** un
   
         this.AddToolBox();  
     }  
-  
     ```  
   
-6.  Drücken Sie F5, um die Lösung zu erstellen und auszuführen.Die **Toolbox** mit der <xref:System.Activities.Statements.Assign>\-Aktivität und der <xref:System.Activities.Statements.Sequence>\-Aktivität wird angezeigt.  
+6.  <span data-ttu-id="418a1-111">Drücken Sie F5, um die Lösung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="418a1-111">Press F5 to build and run your solution.</span></span> <span data-ttu-id="418a1-112">Die **Toolbox** , enthält die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitäten angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="418a1-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>  
   
-### So erstellen Sie den PropertyGrid  
+### <a name="to-create-the-propertygrid"></a><span data-ttu-id="418a1-113">So erstellen Sie den PropertyGrid</span><span class="sxs-lookup"><span data-stu-id="418a1-113">To create the PropertyGrid</span></span>  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die Datei "MainWindow.xaml", und wählen Sie **Code anzeigen** aus.  
+1.  <span data-ttu-id="418a1-114">In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Code anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="418a1-114">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
   
-2.  Fügen Sie der `MainWindow`\-Klasse die `AddPropertyInspector`\-Methode hinzu, um den Bereich **PropertyGrid** in der Spalte ganz rechts im Raster einzufügen.  
+2.  <span data-ttu-id="418a1-115">Hinzufügen der `AddPropertyInspector` Methode, um die `MainWindow` Klasse platziert die **PropertyGrid** Bereich in der äußersten rechten Spalte des Rasters einzufügen.</span><span class="sxs-lookup"><span data-stu-id="418a1-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid.</span></span>  
   
     ```csharp  
-  
     private void AddPropertyInspector()  
     {  
         Grid.SetColumn(wd.PropertyInspectorView, 2);  
         grid1.Children.Add(wd.PropertyInspectorView);              
     }  
-  
     ```  
   
-3.  Fügen Sie der `AddPropertyInspector`\-Methode im `MainWindow()`\-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.  
+3.  <span data-ttu-id="418a1-116">Fügen Sie der `AddPropertyInspector`-Methode im `MainWindow()`-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="418a1-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
   
     ```csharp  
-  
     public MainWindow()  
     {  
         InitializeComponent();  
@@ -115,16 +110,14 @@ In dieser Aufgabe erstellen Sie die Bereiche **Toolbox** und **PropertyGrid** un
   
         this.AddPropertyInspector();   
     }  
-  
     ```  
   
-4.  Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen.Die **Toolbox**, der Entwurfszeichnungsbereich des Workflows und die **PropertyGrid**\-Bereiche werden normalerweise alle angezeigt, und wenn Sie eine <xref:System.Activities.Statements.Assign>\-Aktivität oder eine <xref:System.Activities.Statements.Sequence>\-Aktivität auf den Entwurfszeichnungsbereich ziehen, wird das Eigenschaftenraster je nach markierter Aktivität aktualisiert.  
+4.  <span data-ttu-id="418a1-117">Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="418a1-117">Press F5 to build and run the solution.</span></span> <span data-ttu-id="418a1-118">Die **Toolbox**, entwurfszeichnungsbereich des Workflows und **PropertyGrid** sollte alle Bereiche angezeigt werden, und Sie ziehen, wenn ein <xref:System.Activities.Statements.Assign> Aktivität oder eine <xref:System.Activities.Statements.Sequence> -Aktivität auf den entwurfszeichnungsbereich der Eigenschaftenraster sollten je nach markierter Aktivität aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="418a1-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>  
   
-## Beispiel  
- Die Datei "MainWindow.xaml.cs" sollte jetzt den folgenden Code enthalten.  
+## <a name="example"></a><span data-ttu-id="418a1-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="418a1-119">Example</span></span>  
+ <span data-ttu-id="418a1-120">Die Datei "MainWindow.xaml.cs" sollte jetzt den folgenden Code enthalten.</span><span class="sxs-lookup"><span data-stu-id="418a1-120">The MainWindow.xaml.cs file should now contain the following code.</span></span>  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -226,10 +219,9 @@ namespace HostingApplication
   
     }  
 }  
-  
 ```  
   
-## Siehe auch  
- [Erneutes Hosten des Workflow\-Designers](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation\-Anwendung](../../../docs/framework/windows-workflow-foundation//task-1-create-a-new-wpf-app.md)   
- [Aufgabe 2: Hosten des Workflow\-Designers](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a><span data-ttu-id="418a1-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="418a1-121">See Also</span></span>  
+ [<span data-ttu-id="418a1-122">Erneutes Hosten des Workflow-Designers</span><span class="sxs-lookup"><span data-stu-id="418a1-122">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="418a1-123">Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung</span><span class="sxs-lookup"><span data-stu-id="418a1-123">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [<span data-ttu-id="418a1-124">Aufgabe 2: Hosten des Workflow-Designers</span><span class="sxs-lookup"><span data-stu-id="418a1-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

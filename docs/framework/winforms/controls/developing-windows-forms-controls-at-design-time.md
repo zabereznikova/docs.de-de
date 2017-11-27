@@ -1,109 +1,110 @@
 ---
-title: "Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente für Windows Forms"
-  - "Erstellen von Windows Forms-Steuerelemente"
-  - "Steuerelemente [Windows Forms]"
-  - "Steuerelemente [Windows Forms], erstellen"
-  - "Benutzersteuerelemente [Windows Forms]"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms]"
+title: Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls [Windows Forms]
+- Windows Forms controls, creating
+- controls [Windows Forms]
+- controls [Windows Forms], creating
+- user controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4f9680bb64339f2f232793beb9c47a36c07aa4a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit
-Für Autoren von Steuerelementen bietet .NET Framework eine Fülle von Technologie das Erstellen von Steuerelementen. Autoren sind nicht mehr darauf beschränkt, zum Entwerfen von zusammengesetzter Steuerelementen, die als Auflistung bereits vorhandener Steuerelemente verwendet. Durch Vererbung können Sie eigene Steuerelemente aus bereits vorhandenen zusammengesetzten Steuerelementen oder Windows Forms-Steuerelementen erstellen. Sie können auch eigene Steuerelemente entwerfen, die benutzerdefinierte Zeichnen implementiert. Diese Optionen ermöglichen ein hohes Maß an Flexibilität für den Entwurf und Funktionalität der visuellen Schnittstelle. Um diese Funktionen nutzen zu können, sollten Sie mit den Konzepten der objektbasierten Programmierung vertraut sein.  
+# <a name="developing-windows-forms-controls-at-design-time"></a><span data-ttu-id="aa3af-102">Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="aa3af-102">Developing Windows Forms Controls at Design Time</span></span>
+<span data-ttu-id="aa3af-103">NET Framework bietet Autoren von Steuerelementen eine Fülle von Technologien zum Erstellen von Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="aa3af-103">For control authors, the .NET Framework provides a wealth of control authoring technology.</span></span> <span data-ttu-id="aa3af-104">Autoren sind nicht mehr darauf beschränkt, zusammengesetzte Steuerelemente zu entwerfen, die als Auflistung bereits vorhandener Steuerelemente verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="aa3af-104">Authors are no longer limited to designing composite controls that act as a collection of preexisting controls.</span></span> <span data-ttu-id="aa3af-105">Durch Vererbung können Sie eigene Steuerelemente aus bereits vorhandenen zusammengesetzten Steuerelementen bzw. bereits vorhandenen Windows Forms-Steuerelementen erstellen.</span><span class="sxs-lookup"><span data-stu-id="aa3af-105">Through inheritance, you can create your own controls from preexisting composite controls or preexisting Windows Forms controls.</span></span> <span data-ttu-id="aa3af-106">Sie können auch eigene Steuerelemente entwerfen, durch die das benutzerdefinierte Zeichnen implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-106">You can also design your own controls that implement custom painting.</span></span> <span data-ttu-id="aa3af-107">Dank dieser Möglichkeiten zeichnen sich sowohl die Entwurfsfeatures als auch die Funktionalität der grafischen Oberfläche durch eine hohe Flexibilität aus.</span><span class="sxs-lookup"><span data-stu-id="aa3af-107">These options enable a great deal of flexibility to the design and functionality of the visual interface.</span></span> <span data-ttu-id="aa3af-108">Um die Vorteile dieser Features nutzen zu können, sollten Sie mit den Konzepten der objektbasierten Programmierung vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="aa3af-108">To take advantage of these features, you should be familiar with object-based programming concepts.</span></span>  
   
 > [!NOTE]
->  Es ist nicht erforderlich, damit eine gründliche Kenntnisse über Vererbung, jedoch kann es hilfreich zum Verweisen auf [nicht im BUILD: Vererbung in Visual Basic](http://msdn.microsoft.com/de-de/e5e6e240-ed31-4657-820c-079b7c79313c).  
+>  <span data-ttu-id="aa3af-109">Es ist nicht notwendig, dass eine gründliche Kenntnisse der Vererbung ist, aber Sie finden es vielleicht hilfreich zum Verweisen auf [Grundlagen der Vererbung (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span><span class="sxs-lookup"><span data-stu-id="aa3af-109">It is not necessary to have a thorough understanding of inheritance, but you may find it useful to refer to [Inheritance basics (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span></span>  
   
- Wenn Sie benutzerdefinierte Steuerelemente zur Verwendung in Web Forms finden Sie unter erstellen möchten [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md).  
+ <span data-ttu-id="aa3af-110">Informationen zum Erstellen benutzerdefinierter Steuerelemente zur Verwendung in Web Forms finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span><span class="sxs-lookup"><span data-stu-id="aa3af-110">If you want to create custom controls to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- Veranschaulicht das Erstellen eines einfachen zusammengesetzten Steuerelements in Visual Basic.  
+## <a name="in-this-section"></a><span data-ttu-id="aa3af-111">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="aa3af-111">In This Section</span></span>  
+ [<span data-ttu-id="aa3af-112">Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic</span><span class="sxs-lookup"><span data-stu-id="aa3af-112">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ <span data-ttu-id="aa3af-113">Veranschaulicht das Erstellen eines einfachen zusammengesetzten Steuerelements in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa3af-113">Shows how to create a simple composite control in Visual Basic.</span></span>  
   
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual c#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Erstellen ein einfaches zusammengesetztes Steuerelements in c# veranschaulicht.  
+ [<span data-ttu-id="aa3af-114">Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#</span><span class="sxs-lookup"><span data-stu-id="aa3af-114">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ <span data-ttu-id="aa3af-115">Veranschaulicht das Erstellen eines einfachen zusammengesetzten Steuerelements in Visual C#.</span><span class="sxs-lookup"><span data-stu-id="aa3af-115">Shows how to create a simple composite control in C#.</span></span>  
   
- [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- Veranschaulicht das Erstellen eines einfachen Windows Forms-Steuerelements mit Vererbung in Visual Basic.  
+ [<span data-ttu-id="aa3af-116">Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic</span><span class="sxs-lookup"><span data-stu-id="aa3af-116">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ <span data-ttu-id="aa3af-117">Veranschaulicht, wie ein einfaches Windows Forms-Steuerelement unter Verwendung der Vererbung in Visual Basic erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-117">Shows how to create a simple Windows Forms control using inheritance in Visual Basic.</span></span>  
   
- [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual c#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Veranschaulicht das Erstellen eines einfachen Windows Forms-Steuerelements mithilfe von Vererbung in c#.  
+ [<span data-ttu-id="aa3af-118">Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#</span><span class="sxs-lookup"><span data-stu-id="aa3af-118">Walkthrough: Inheriting from a Windows Forms Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ <span data-ttu-id="aa3af-119">Veranschaulicht, wie ein einfaches Windows Forms-Steuerelement unter Verwendung der Vererbung in Visual C# erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-119">Shows how to create a simple Windows Forms control using inheritance in C#.</span></span>  
   
- [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Veranschaulicht, wie das Smarttagfeature für Windows Forms-Steuerelemente.  
+ [<span data-ttu-id="aa3af-120">Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="aa3af-120">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ <span data-ttu-id="aa3af-121">Veranschaulicht, wie das Smarttagfeature auf Windows Forms-Steuerelemente angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-121">Shows how to use the smart tag feature on Windows Forms controls.</span></span>  
   
- [Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- Veranschaulicht, wie die <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=fullName> Attribut, um eine Auflistung zu serialisieren.  
+ [<span data-ttu-id="aa3af-122">Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute</span><span class="sxs-lookup"><span data-stu-id="aa3af-122">Walkthrough: Serializing Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
+ <span data-ttu-id="aa3af-123">Zeigt, wie die <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> Attribut, um eine Auflistung zu serialisieren.</span><span class="sxs-lookup"><span data-stu-id="aa3af-123">Shows how to use the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> attribute to serialize a collection.</span></span>  
   
- [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Zeigt, wie das Entwurfszeitverhalten eines Windows Forms-Steuerelements zu debuggen.  
+ [<span data-ttu-id="aa3af-124">Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="aa3af-124">Walkthrough: Debugging Custom Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="aa3af-125">Veranschaulicht das Debuggen des Verhaltens eines Windows Forms-Steuerelements zur Entwurfszeit.</span><span class="sxs-lookup"><span data-stu-id="aa3af-125">Shows how to debug the design-time behavior of a Windows Forms control.</span></span>  
   
- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfeatures nutzt](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- Zeigt, wie ein zusammengesetztes Steuerelement eng in der Design-Umgebung zu integrieren.  
+ [<span data-ttu-id="aa3af-126">Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt</span><span class="sxs-lookup"><span data-stu-id="aa3af-126">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ <span data-ttu-id="aa3af-127">Zeigt, wie ein zusammengesetztes Steuerelement nahtlos in die Entwurfsumgebung integriert wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-127">Shows how to tightly integrate a composite control into the design environment.</span></span>  
   
- [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- Bietet einen Überblick über die Aspekte der Implementierung eines Windows Forms-Steuerelements.  
+ [<span data-ttu-id="aa3af-128">Gewusst wie: Erstellen von Steuerelementen für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aa3af-128">How to: Author Controls for Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ <span data-ttu-id="aa3af-129">Bietet einen Überblick über die Aspekte der Implementierung eines Windows Forms-Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="aa3af-129">Provides an overview of considerations for implementing a Windows Forms control.</span></span>  
   
- [Gewusst wie: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- Zeigt, wie Sie ein Steuerelement durch Erben von einem zusammengesetzten Steuerelement zu erstellen.  
+ [<span data-ttu-id="aa3af-130">Gewusst wie: Erstellen von zusammengesetzten Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="aa3af-130">How to: Author Composite Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ <span data-ttu-id="aa3af-131">Veranschaulicht, wie ein Steuerelement durch Vererbung von einem zusammengesetzten Steuerelement erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-131">Shows how to create a control by inheriting from a composite control.</span></span>  
   
- [Gewusst wie: erben von der UserControl-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- Bietet eine Übersicht über das Verfahren zum Erstellen eines zusammengesetzten Steuerelements.  
+ [<span data-ttu-id="aa3af-132">Gewusst wie: Erben von der UserControl-Klasse</span><span class="sxs-lookup"><span data-stu-id="aa3af-132">How to: Inherit from the UserControl Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ <span data-ttu-id="aa3af-133">Bietet eine Übersicht über das Verfahren zum Erstellen eines zusammengesetzten Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="aa3af-133">Provides an overview of the procedure for creating a composite control.</span></span>  
   
- [Gewusst wie: erben von vorhandenen Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- Zeigt, wie erstellen Sie ein erweitertes Steuerelement durch Vererbung von der <xref:System.Windows.Forms.Button> Klasse steuern.  
+ [<span data-ttu-id="aa3af-134">Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="aa3af-134">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ <span data-ttu-id="aa3af-135">Zeigt, wie ein erweitertes Steuerelements durch Erben von der <xref:System.Windows.Forms.Button> -Klasse.</span><span class="sxs-lookup"><span data-stu-id="aa3af-135">Shows how to create an extended control by inheriting from the <xref:System.Windows.Forms.Button> control class.</span></span>  
   
- [Gewusst wie: erben von der Control-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- Bietet eine Übersicht über das Erstellen eines erweiterten Steuerelements.  
+ [<span data-ttu-id="aa3af-136">Vorgehensweise: Erben von der Control-Klasse</span><span class="sxs-lookup"><span data-stu-id="aa3af-136">How to: Inherit from the Control Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ <span data-ttu-id="aa3af-137">Bietet eine Übersicht über das Erstellen eines erweiterten Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="aa3af-137">Provides an overview of creating an extended control.</span></span>  
   
- [Gewusst wie: ausrichten ein Steuerelements an den Rändern eines Formulars zur Entwurfszeit](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- Veranschaulicht, wie die <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft, um das Steuerelement an den Rand des Formulars ausrichten es einnimmt.  
+ [<span data-ttu-id="aa3af-138">Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="aa3af-138">How to: Align a Control to the Edges of Forms at Design Time</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ <span data-ttu-id="aa3af-139">Zeigt, wie die <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft, um das Steuerelement an den Rand des Formulars auszurichten es einnimmt.</span><span class="sxs-lookup"><span data-stu-id="aa3af-139">Shows how to use the <xref:System.Windows.Forms.Control.Dock%2A> property to align your control to the edge of the form it occupies.</span></span>  
   
- [Gewusst wie: Anzeigen eines Steuerelements in das Dialogfeld Toolboxelemente auswählen](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- Zeigt das Verfahren zum Installieren des Steuerelements, damit er in angezeigt wird der **Toolbox anpassen** Dialogfeld.  
+ [<span data-ttu-id="aa3af-140">Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“</span><span class="sxs-lookup"><span data-stu-id="aa3af-140">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ <span data-ttu-id="aa3af-141">Veranschaulicht das Verfahren, in dem das Steuerelement so installiert wird, dass es im Dialogfeld **Toolbox anpassen** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-141">Shows the procedure for installing your control so that it appears in the **Customize Toolbox** dialog box.</span></span>  
   
- [Gewusst wie: Bereitstellen eine Toolboxbitmap für ein Steuerelement](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- Veranschaulicht, wie die <xref:System.Drawing.ToolboxBitmapAttribute> zum Anzeigen eines Symbols neben das benutzerdefinierte Steuerelement in der **Toolbox**.  
+ [<span data-ttu-id="aa3af-142">Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement</span><span class="sxs-lookup"><span data-stu-id="aa3af-142">How to: Provide a Toolbox Bitmap for a Control</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+ <span data-ttu-id="aa3af-143">Zeigt, wie die <xref:System.Drawing.ToolboxBitmapAttribute> anzuzeigenden ein Symbol neben das benutzerdefinierte Steuerelement in der **Toolbox**.</span><span class="sxs-lookup"><span data-stu-id="aa3af-143">Shows how to use the <xref:System.Drawing.ToolboxBitmapAttribute> to display an icon next to your custom control in the **Toolbox**.</span></span>  
   
- [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- Veranschaulicht, wie die **UserControl-Testcontainer** um das Verhalten eines zusammengesetzten Steuerelements testen.  
+ [<span data-ttu-id="aa3af-144">Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl</span><span class="sxs-lookup"><span data-stu-id="aa3af-144">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ <span data-ttu-id="aa3af-145">Veranschaulicht, wie der **UserControl-Testcontainer** verwendet wird, um das Verhalten eines zusammengesetzten Steuerelements zu testen.</span><span class="sxs-lookup"><span data-stu-id="aa3af-145">Shows how to use the **UserControl Test Container** to test the behavior of a composite control.</span></span>  
   
- [Entwurfszeitfehler im Windows Forms-Designer](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- Erläutert die Bedeutung und die Verwendung von Entwurfszeit-Fehlerliste, die in Microsoft Visual Studio angezeigt wird, wenn der Windows Forms-Designer nicht geladen.  
+ [<span data-ttu-id="aa3af-146">Entwurfszeitfehler im Windows Forms-Designer</span><span class="sxs-lookup"><span data-stu-id="aa3af-146">Design-Time Errors in the Windows Forms Designer</span></span>](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
+ <span data-ttu-id="aa3af-147">Erläutert die Bedeutung und den Verwendungszweck der Entwurfszeitfehlerliste, die in Microsoft Visual Studio angezeigt wird, wenn der Windows Forms-Designer nicht geladen werden kann.</span><span class="sxs-lookup"><span data-stu-id="aa3af-147">Explains the meaning and use of the Design-Time Error List that appears in Microsoft Visual Studio when the Windows Forms designer fails to load.</span></span>  
   
- [Problembehandlung bei Komponenten und Steuerelementen](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- Zeigt, wie diagnostizieren und beheben Probleme, die auftreten können, wenn Sie eine benutzerdefinierte Komponente oder ein Steuerelement erstellen.  
+ [<span data-ttu-id="aa3af-148">Problembehandlung beim Erstellen von Komponenten und Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="aa3af-148">Troubleshooting Control and Component Authoring</span></span>](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ <span data-ttu-id="aa3af-149">Veranschaulicht, wie häufige Probleme diagnostiziert und behoben werden, die beim Erstellen einer benutzerdefinierten Komponente bzw. eines benutzerdefinierten Steuerelements auftreten können.</span><span class="sxs-lookup"><span data-stu-id="aa3af-149">Shows how to diagnose and fix common issues that can occur when you author a custom component or control.</span></span>  
   
-## <a name="reference"></a>Verweis  
- <xref:System.Windows.Forms.Control?displayProperty=fullName>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+## <a name="reference"></a><span data-ttu-id="aa3af-150">Verweis</span><span class="sxs-lookup"><span data-stu-id="aa3af-150">Reference</span></span>  
+ <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
+ <span data-ttu-id="aa3af-151">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="aa3af-151">Describes this class and has links to all of its members.</span></span>  
   
- <xref:System.Windows.Forms.UserControl?displayProperty=fullName>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
+ <span data-ttu-id="aa3af-152">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="aa3af-152">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- Erläutert, wie eigene benutzerdefinierte Steuerelemente mit .NET Framework erstellen.  
+## <a name="related-sections"></a><span data-ttu-id="aa3af-153">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="aa3af-153">Related Sections</span></span>  
+ [<span data-ttu-id="aa3af-154">Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework</span><span class="sxs-lookup"><span data-stu-id="aa3af-154">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ <span data-ttu-id="aa3af-155">Erörtert, wie Sie mit .NET Framework eigene benutzerdefinierte Steuerelemente erstellen können.</span><span class="sxs-lookup"><span data-stu-id="aa3af-155">Discusses how to create your own custom controls with the .NET Framework.</span></span>  
   
- [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../../docs/standard/language-independence-and-language-independent-components.md)  
- Führt die CLR, die zum Vereinfachen der Erstellung und Verwendung von Komponenten entworfen wurde. Ein wichtiger Aspekt dieser Vereinfachung ist Verbesserte Interoperabilität zwischen Komponenten, die mit verschiedenen Programmiersprachen geschrieben wurden. Der Common Language Specification (CLS) ermöglicht das Erstellen von Tools und Komponenten, die mit verschiedenen Programmiersprachen arbeiten.  
+ [<span data-ttu-id="aa3af-156">Sprachunabhängigkeit und sprachunabhängige Komponenten</span><span class="sxs-lookup"><span data-stu-id="aa3af-156">Language Independence and Language-Independent Components</span></span>](../../../../docs/standard/language-independence-and-language-independent-components.md)  
+ <span data-ttu-id="aa3af-157">Bietet eine Einführung in die Common Language Runtime, die zum Vereinfachen der Erstellung und Verwendung von Komponenten entworfen wurde.</span><span class="sxs-lookup"><span data-stu-id="aa3af-157">Introduces the common language runtime, which is designed to simplify the creation and use of components.</span></span> <span data-ttu-id="aa3af-158">Ein wichtiger Aspekt dieser Vereinfachung ist die verbesserte Interoperabilität zwischen Komponenten, die mit verschiedenen Programmiersprachen geschrieben wurden.</span><span class="sxs-lookup"><span data-stu-id="aa3af-158">An important aspect of this simplification is enhanced interoperability between components written using different programming languages.</span></span> <span data-ttu-id="aa3af-159">Durch die Common Language Specification (CLS) wird das Erstellen von Tools und Komponenten ermöglicht, die für mehrere Programmiersprachen ausgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="aa3af-159">The Common Language Specification (CLS) makes it possible to create tools and components that work with multiple programming languages.</span></span>  
   
- [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- Beschreibt, wie Sie die Komponente oder das Steuerelement anzuzeigenden Aktivieren der **Toolbox anpassen** Dialogfeld.
+ [<span data-ttu-id="aa3af-160">Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten</span><span class="sxs-lookup"><span data-stu-id="aa3af-160">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ <span data-ttu-id="aa3af-161">Erläutert, wie Sie vorgehen müssen, damit eine Komponente oder ein Steuerelement im Dialogfeld **Toolbox anpassen** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="aa3af-161">Describes how to enable your component or control to be displayed in the **Customize Toolbox** dialog box.</span></span>

@@ -1,65 +1,66 @@
 ---
-title: "RichTextBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Rich-Edit-Steuerelemente"
-  - "RichTextBox-Steuerelement [Windows Forms]"
-  - "Textfelder"
+title: "RichTextBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text boxes
+- RichTextBox control [Windows Forms]
+- rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80621a12a4ccd5008a0331af005629d45f60abdf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# RichTextBox-Steuerelement (Windows&#160;Forms)
-Mit dem `RichTextBox`\-Steuerelement in Windows Forms wird Text angezeigt, eingegeben und mit Formatierungsoptionen bearbeitet.  Das `RichTextBox`\-Steuerelement besitzt dieselben Funktionen wie das <xref:System.Windows.Forms.TextBox>\-Steuerelement. Zusätzlich können Sie damit aber auch Schriftarten, Farben und Links anzeigen, Text und eingebettete Bilder aus einer Datei laden, Bearbeitungsvorgänge rückgängig machen und wiederherstellen sowie nach bestimmten Zeichen suchen.  Das `RichTextBox`\-Steuerelement wird normalerweise zum Bereitstellen von Textbearbeitungs\- und Anzeigefeatures verwendet, die mit Textverarbeitungsprogrammen wie Microsoft Word vergleichbar sind.  Genauso wie im <xref:System.Windows.Forms.TextBox>\-Steuerelement können auch im `RichTextBox`\-Steuerelement Schiebeleisten angezeigt werden. Im Unterschied zum <xref:System.Windows.Forms.TextBox>\-Steuerelement werden in der Standardeinstellung jedoch horizontale und vertikale Schiebeleisten angezeigt. Außerdem stehen zusätzliche Einstellungen für Schiebeleisten zur Verfügung.  
+# <a name="richtextbox-control-windows-forms"></a><span data-ttu-id="3afaf-102">RichTextBox-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="3afaf-102">RichTextBox Control (Windows Forms)</span></span>
+<span data-ttu-id="3afaf-103">Windows Forms `RichTextBox` Steuerelement zum Anzeigen, eingeben und Bearbeiten von Text mit Formatierung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="3afaf-103">The Windows Forms `RichTextBox` control is used for displaying, entering, and manipulating text with formatting.</span></span> <span data-ttu-id="3afaf-104">Die `RichTextBox` Steuerelement ist alles, was die <xref:System.Windows.Forms.TextBox> Steuerelement bewirkt, kann jedoch auch anzeigen, Schriftarten, Farben und Links; Laden Sie Text und eingebettete Bilder aus einer Datei; rückgängig und wiederholen Bearbeitungsvorgänge; und angegebene Zeichen gefunden.</span><span class="sxs-lookup"><span data-stu-id="3afaf-104">The `RichTextBox` control does everything the <xref:System.Windows.Forms.TextBox> control does, but it can also display fonts, colors, and links; load text and embedded images from a file; undo and redo editing operations; and find specified characters.</span></span> <span data-ttu-id="3afaf-105">Die `RichTextBox` Steuerelement wird normalerweise verwendet, geben Sie die Bearbeitung von Text und Anzeigen von Funktionen, wie Textverarbeitungsprogramm erstellten Anwendungen wie Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="3afaf-105">The `RichTextBox` control is typically used to provide text manipulation and display features similar to word processing applications such as Microsoft Word.</span></span> <span data-ttu-id="3afaf-106">Wie die <xref:System.Windows.Forms.TextBox> -Steuerelement, die `RichTextBox` Steuerelement Bildlaufleisten anzeigen kann, aber im Gegensatz zu der <xref:System.Windows.Forms.TextBox> -Steuerelement, es horizontale und vertikale Bildlaufleisten werden standardmäßig angezeigt und verfügt über zusätzliche Scrollbar-Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="3afaf-106">Like the <xref:System.Windows.Forms.TextBox> control, the `RichTextBox` control can display scroll bars; but unlike the <xref:System.Windows.Forms.TextBox> control, it displays both horizontal and vertical scrollbars by default and has additional scrollbar settings.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über das RichTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte des `RichTextBox`\-Steuerelements vor, mit dem Benutzer Text eingeben, anzeigen und mit Formatierungsoptionen bearbeiten können.  
+## <a name="in-this-section"></a><span data-ttu-id="3afaf-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3afaf-107">In This Section</span></span>  
+ [<span data-ttu-id="3afaf-108">Übersicht über das RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="3afaf-108">RichTextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="3afaf-109">Stellt die allgemeinen Konzepte von der `RichTextBox` -Steuerelement, das Benutzer eingeben kann, anzeigen und Bearbeiten von Text mit Formatierungsoptionen fest.</span><span class="sxs-lookup"><span data-stu-id="3afaf-109">Introduces the general concepts of the `RichTextBox` control, which allows users to enter, display, and manipulate text with formatting options.</span></span>  
   
- [Gewusst wie: Erkennen der Änderung von Formatierungsattributen im RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/determine-when-formatting-attributes-change-wf-richtextbox-control.md)  
- Erläutert das Nachverfolgen von Änderungen an Schriftart\- und Absatzformatierungen im `RichTextBox`\-Steuerelement.  
+ [<span data-ttu-id="3afaf-110">Gewusst wie: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-110">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/determine-when-formatting-attributes-change-wf-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-111">Erläutert, wie Änderungen in der Schriftart und Formatieren von Absätzen in Überblick der `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-111">Explains how to keep track of changes in font and paragraph formatting in the `RichTextBox` control.</span></span>  
   
- [Gewusst wie: Anzeigen von Bildlaufleisten im RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md)  
- Beschreibt die vielen verfügbaren Auswahlmöglichkeiten für Schiebeleisten im `RichTextBox`\-Steuerelement.  
+ [<span data-ttu-id="3afaf-112">Gewusst wie: Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-112">How to: Display Scroll Bars in the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-113">Beschreibt die vielen verfügbaren Auswahlmöglichkeiten für Bildlaufleisten in der `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-113">Describes the many choices available for scroll bars in the `RichTextBox` control.</span></span>  
   
- [Gewusst wie: Anzeigen von Hyperlinks mit dem RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)  
- Erläutert das Erstellen von Weblinks im `RichTextBox`\-Steuerelement.  
+ [<span data-ttu-id="3afaf-114">Gewusst wie: Anzeigen von Hyperlinks mit dem RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-114">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-115">Erläutert, wie Links zu Websites von der `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-115">Explains how to link to Web sites from the `RichTextBox` control.</span></span>  
   
- [Gewusst wie: Aktivieren von Drag & Drop\-Operationen mithilfe des RichTextBox\-Steuerelements von Windows Forms](../../../../docs/framework/winforms/controls/enable-drag-and-drop-operations-with-wf-richtextbox-control.md)  
- Enthält Anweisungen für das Ziehen von Daten in das `RichTextBox`\-Steuerelement.  
+ [<span data-ttu-id="3afaf-116">Gewusst wie: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-116">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/enable-drag-and-drop-operations-with-wf-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-117">Enthält Anweisungen zum Ziehen von Daten in die `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-117">Provides instructions for dragging data into the `RichTextBox` control.</span></span>  
   
- [Gewusst wie: Laden von Dateien in das RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-load-files-into-the-windows-forms-richtextbox-control.md)  
- Enthält Anweisungen zum Laden einer vorhandenen Datei in das `RichTextBox`\-Steuerelement.  
+ [<span data-ttu-id="3afaf-118">Gewusst wie: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-118">How to: Load Files into the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-load-files-into-the-windows-forms-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-119">Enthält Anweisungen zum Laden von einer vorhandenen Datei in die `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-119">Provides instructions for loading an existing file into the `RichTextBox` control.</span></span>  
   
- [Gewusst wie: Speichern von Dateien mit dem RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-save-files-with-the-windows-forms-richtextbox-control.md)  
- Enthält Anweisungen zum Speichern des Inhalts des `RichTextBox`\-Steuerelements in einer Datei.  
+ [<span data-ttu-id="3afaf-120">Gewusst wie: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-120">How to: Save Files with the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-save-files-with-the-windows-forms-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-121">Enthält Anweisungen zum Speichern der Inhalte des der `RichTextBox` Steuerelement in eine Datei.</span><span class="sxs-lookup"><span data-stu-id="3afaf-121">Provides instructions for saving the contents of the `RichTextBox` control to a file.</span></span>  
   
- [Gewusst wie: Festlegen von Schriftartattributen für das RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)  
- Beschreibt, wie Schriftfamilie, Schriftgrad, Schriftschnitt und Textfarbe im `RichTextBox`\-Steuerelement festgelegt werden.  
+ [<span data-ttu-id="3afaf-122">Gewusst wie: Festlegen von Schriftartattributen für das RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-122">How to: Set Font Attributes for the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)  
+ <span data-ttu-id="3afaf-123">Beschreibt, wie Festlegen von Schriftart, Größe, Stil und die Farbe des Texts in der `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-123">Describes how to set the font family, size, style, and color of text in the `RichTextBox` control.</span></span>  
   
- [Gewusst wie: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
- Beschreibt das Formatieren von Absätzen im `RichTextBox`\-Steuerelement.  
+ [<span data-ttu-id="3afaf-124">Gewusst wie: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3afaf-124">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
+ <span data-ttu-id="3afaf-125">Beschreibt das Formatieren von Absätzen in der `RichTextBox` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="3afaf-125">Describes how to format paragraphs in the `RichTextBox` control.</span></span>  
   
-## Referenz  
- <xref:System.Windows.Forms.RichTextBox>\-Klasse  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+## <a name="reference"></a><span data-ttu-id="3afaf-126">Verweis</span><span class="sxs-lookup"><span data-stu-id="3afaf-126">Reference</span></span>  
+ <span data-ttu-id="3afaf-127"><xref:System.Windows.Forms.RichTextBox>-Klasse</span><span class="sxs-lookup"><span data-stu-id="3afaf-127"><xref:System.Windows.Forms.RichTextBox> class</span></span>  
+ <span data-ttu-id="3afaf-128">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.</span><span class="sxs-lookup"><span data-stu-id="3afaf-128">Describes this class and has links to all its members.</span></span>  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.  
+## <a name="related-sections"></a><span data-ttu-id="3afaf-129">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3afaf-129">Related Sections</span></span>  
+ [<span data-ttu-id="3afaf-130">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="3afaf-130">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="3afaf-131">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="3afaf-131">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [TextBox\-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
- Stellt die grundlegenden Konzepte des <xref:System.Windows.Forms.TextBox>\-Steuerelements vor, das mehrzeilige Benutzereingaben und deren Bearbeitung unterstützt.
+ [<span data-ttu-id="3afaf-132">TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="3afaf-132">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
+ <span data-ttu-id="3afaf-133">Stellt die allgemeinen Konzepte von der <xref:System.Windows.Forms.TextBox> -Steuerelement, das bearbeitet werden kann, mehrzeilige Eingaben des Benutzers ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="3afaf-133">Introduces the general concepts of the <xref:System.Windows.Forms.TextBox> control, which allows editable, multiline input from the user.</span></span>

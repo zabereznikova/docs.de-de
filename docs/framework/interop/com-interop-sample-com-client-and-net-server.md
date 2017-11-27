@@ -5,35 +5,31 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>COM-Interop-Beispiel: COM-Client und .NET-Server
-Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.NET-Server](#cpconcominteropsamplecomclientnetserveranchor2), die Hypothekenberechnungen ausführt. In diesem Beispiel erstellt der Client eine Instanz der verwalteten `Loan`-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codebeispiele aus diesem Beispiel angezeigt.  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="571c8-102">COM-Interop-Beispiel: COM-Client und .NET-Server</span><span class="sxs-lookup"><span data-stu-id="571c8-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="571c8-103">Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.NET-Server](#cpconcominteropsamplecomclientnetserveranchor2), die Hypothekenberechnungen ausführt.</span><span class="sxs-lookup"><span data-stu-id="571c8-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="571c8-104">In diesem Beispiel erstellt der Client eine Instanz der verwalteten `Loan`-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen.</span><span class="sxs-lookup"><span data-stu-id="571c8-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="571c8-105">In diesem Abschnitt werden Codebeispiele aus diesem Beispiel angezeigt.</span><span class="sxs-lookup"><span data-stu-id="571c8-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## <a name="com-client"></a>COM-Client  
+## <a name="com-client"></a><span data-ttu-id="571c8-106">COM-Client</span><span class="sxs-lookup"><span data-stu-id="571c8-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -100,7 +96,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a>.NET-Server  
+## <a name="net-server"></a><span data-ttu-id="571c8-107">.NET-Server</span><span class="sxs-lookup"><span data-stu-id="571c8-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -401,6 +397,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-
+## <a name="see-also"></a><span data-ttu-id="571c8-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="571c8-108">See Also</span></span>  
+ [<span data-ttu-id="571c8-109">Verfügbarmachen von .NET Framework-Komponenten in COM</span><span class="sxs-lookup"><span data-stu-id="571c8-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

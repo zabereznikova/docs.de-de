@@ -5,55 +5,52 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="runtime-information-etw-events"></a>ETW-Laufzeitinformationsereignisse
-Diese ETW-Ereignisse erfassen Informationen über die Laufzeit, einschließlich der SKU, der Versionsnummer, der Art der Aktivierung der Laufzeit, der Befehlszeilenparameter, mit denen sie gestartet wurde, der GUID (wenn zutreffend) und weiterer wichtiger Informationen. Wenn innerhalb eines Prozesses mehrere Laufzeiten ausgeführt werden, helfen Ihnen die von diesen Ereignissen bereitgestellten Informationen dabei, die Laufzeiten eindeutig zu machen.  
+# <a name="runtime-information-etw-events"></a><span data-ttu-id="45559-102">ETW-Laufzeitinformationsereignisse</span><span class="sxs-lookup"><span data-stu-id="45559-102">Runtime Information ETW Events</span></span>
+<span data-ttu-id="45559-103">Diese ETW-Ereignisse erfassen Informationen über die Laufzeit, einschließlich der SKU, der Versionsnummer, der Art der Aktivierung der Laufzeit, der Befehlszeilenparameter, mit denen sie gestartet wurde, der GUID (wenn zutreffend) und weiterer wichtiger Informationen.</span><span class="sxs-lookup"><span data-stu-id="45559-103">These ETW events log information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span> <span data-ttu-id="45559-104">Wenn innerhalb eines Prozesses mehrere Laufzeiten ausgeführt werden, helfen Ihnen die von diesen Ereignissen bereitgestellten Informationen dabei, die Laufzeiten eindeutig zu machen.</span><span class="sxs-lookup"><span data-stu-id="45559-104">If multiple runtimes are executing within a process, the information provided by these events (the ClrInstanceID) helps disambiguate the runtimes.</span></span>  
   
- Die folgende Tabelle enthält zwei Laufzeitinformationsereignisse. Die Ereignisse können unter jedem Schlüsselwort oder jeder Maske ausgelöst werden. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ <span data-ttu-id="45559-105">Die folgende Tabelle enthält zwei Laufzeitinformationsereignisse.</span><span class="sxs-lookup"><span data-stu-id="45559-105">The following table shows the two runtime information events.</span></span> <span data-ttu-id="45559-106">Die Ereignisse können unter jedem Schlüsselwort oder jeder Maske ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="45559-106">The events can be raised under any keyword or mask.</span></span> <span data-ttu-id="45559-107">(Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="45559-107">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Ereignis|Ereignis-ID|Anbieter|Beschreibung|  
+|<span data-ttu-id="45559-108">Ereignis</span><span class="sxs-lookup"><span data-stu-id="45559-108">Event</span></span>|<span data-ttu-id="45559-109">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="45559-109">Event ID</span></span>|<span data-ttu-id="45559-110">Anbieter</span><span class="sxs-lookup"><span data-stu-id="45559-110">Provider</span></span>|<span data-ttu-id="45559-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45559-111">Description</span></span>|  
 |-----------|--------------|--------------|-----------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|Wird ausgelöst, wenn eine Laufzeit geladen wird|  
-|`RuntimeInformationDCStart`|187|CLRRundown|Zählt die geladenen Laufzeiten auf|  
+|`RuntimeInformationEvent`|<span data-ttu-id="45559-112">187</span><span class="sxs-lookup"><span data-stu-id="45559-112">187</span></span>|<span data-ttu-id="45559-113">CLRRuntime</span><span class="sxs-lookup"><span data-stu-id="45559-113">CLRRuntime</span></span>|<span data-ttu-id="45559-114">Wird ausgelöst, wenn eine Laufzeit geladen wird</span><span class="sxs-lookup"><span data-stu-id="45559-114">Raised when a runtime is loaded.</span></span>|  
+|`RuntimeInformationDCStart`|<span data-ttu-id="45559-115">187</span><span class="sxs-lookup"><span data-stu-id="45559-115">187</span></span>|<span data-ttu-id="45559-116">CLRRundown</span><span class="sxs-lookup"><span data-stu-id="45559-116">CLRRundown</span></span>|<span data-ttu-id="45559-117">Zählt die geladenen Laufzeiten auf</span><span class="sxs-lookup"><span data-stu-id="45559-117">Enumerates the runtimes that are loaded.</span></span>|  
   
- In der folgenden Tabelle finden Sie die Ereignisdaten.  
+ <span data-ttu-id="45559-118">In der folgenden Tabelle finden Sie die Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="45559-118">The following table shows event data.</span></span>  
   
-|Feldname|Datentyp|Beschreibung|  
+|<span data-ttu-id="45559-119">Feldname</span><span class="sxs-lookup"><span data-stu-id="45559-119">Field name</span></span>|<span data-ttu-id="45559-120">Datentyp</span><span class="sxs-lookup"><span data-stu-id="45559-120">Data type</span></span>|<span data-ttu-id="45559-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45559-121">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
-|Sku|win:UInt16|1 – Desktop-CLR<br /><br /> 2 – CoreCLR|  
-|BclVersion – Major Version|win:UInt16|Hauptversion der mscorlib.dll|  
-|BclVersion – Major Version|win:UInt16|Nummer der Nebenversion der mscorlib.dll|  
-|BclVersion – Build Number|win:UInt16|Buildnummer der mscorlib.dll|  
-|BclVersion – QFE|win:UInt16|Nummer der Hotfixversion der mscorlib.dll|  
-|VMVersion – Major Version|win:UInt16|Version der clr.dll oder coreclr.dll, abhängig von der SKU|  
-|VMVersion – Minor Version|win:UInt16|Version der clr.dll oder coreclr.dll, abhängig von der SKU|  
-|VMVersion – Build Number|win:UInt16|Buildnummer der clr.dll oder coreclr.dll|  
-|VMVersion – QFE|win:UInt16|Nummer der Hotfixversion der clr.dll oder coreclr.dll|  
-|StartupFlags|win:UInt32|In mscoree.h definierte Startflags|  
-|StartupMode|win:UInt8|0x01 – verwaltete ausführbare Datei<br /><br /> 0x02 – gehostete CLR<br /><br /> 0x04 – C++ verwalteter Interop<br /><br /> 0x08 – COM-aktiviert<br /><br /> 0x10 – andere|  
-|COMMANDLINE|win:UnicodeString|Nur ungleich NULL, wenn StartupMode = 0x01|  
-|ComObjectGUID|win:GUID|Nur ungleich NULL, wenn StartupMode = 0x08|  
-|RuntimeDLLPath|win:UnicodeString|Pfad zur CLR-DLL-Datei, die in den Prozess geladen wurde|  
+|<span data-ttu-id="45559-122">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="45559-122">ClrInstanceID</span></span>|<span data-ttu-id="45559-123">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-123">win:UInt16</span></span>|<span data-ttu-id="45559-124">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="45559-124">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="45559-125">Sku</span><span class="sxs-lookup"><span data-stu-id="45559-125">Sku</span></span>|<span data-ttu-id="45559-126">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-126">win:UInt16</span></span>|<span data-ttu-id="45559-127">1 – Desktop-CLR</span><span class="sxs-lookup"><span data-stu-id="45559-127">1 – Desktop CLR.</span></span><br /><br /> <span data-ttu-id="45559-128">2 – CoreCLR</span><span class="sxs-lookup"><span data-stu-id="45559-128">2 – CoreCLR.</span></span>|  
+|<span data-ttu-id="45559-129">BclVersion – Major Version</span><span class="sxs-lookup"><span data-stu-id="45559-129">BclVersion – Major Version</span></span>|<span data-ttu-id="45559-130">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-130">win:UInt16</span></span>|<span data-ttu-id="45559-131">Hauptversion der mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="45559-131">Major version of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="45559-132">BclVersion – Major Version</span><span class="sxs-lookup"><span data-stu-id="45559-132">BclVersion – Minor Version</span></span>|<span data-ttu-id="45559-133">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-133">win:UInt16</span></span>|<span data-ttu-id="45559-134">Nummer der Nebenversion der mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="45559-134">Minor version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="45559-135">BclVersion – Build Number</span><span class="sxs-lookup"><span data-stu-id="45559-135">BclVersion – Build Number</span></span>|<span data-ttu-id="45559-136">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-136">win:UInt16</span></span>|<span data-ttu-id="45559-137">Buildnummer der mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="45559-137">Build number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="45559-138">BclVersion – QFE</span><span class="sxs-lookup"><span data-stu-id="45559-138">BclVersion – QFE</span></span>|<span data-ttu-id="45559-139">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-139">win:UInt16</span></span>|<span data-ttu-id="45559-140">Nummer der Hotfixversion der mscorlib.dll</span><span class="sxs-lookup"><span data-stu-id="45559-140">Hotfix version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="45559-141">VMVersion – Major Version</span><span class="sxs-lookup"><span data-stu-id="45559-141">VMVersion – Major Version</span></span>|<span data-ttu-id="45559-142">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-142">win:UInt16</span></span>|<span data-ttu-id="45559-143">Version der clr.dll oder coreclr.dll, abhängig von der SKU</span><span class="sxs-lookup"><span data-stu-id="45559-143">Version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="45559-144">VMVersion – Minor Version</span><span class="sxs-lookup"><span data-stu-id="45559-144">VMVersion – Minor Version</span></span>|<span data-ttu-id="45559-145">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-145">win:UInt16</span></span>|<span data-ttu-id="45559-146">Version der clr.dll oder coreclr.dll, abhängig von der SKU</span><span class="sxs-lookup"><span data-stu-id="45559-146">Minor version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="45559-147">VMVersion – Build Number</span><span class="sxs-lookup"><span data-stu-id="45559-147">VMVersion – Build Number</span></span>|<span data-ttu-id="45559-148">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-148">win:UInt16</span></span>|<span data-ttu-id="45559-149">Buildnummer der clr.dll oder coreclr.dll</span><span class="sxs-lookup"><span data-stu-id="45559-149">Build number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="45559-150">VMVersion – QFE</span><span class="sxs-lookup"><span data-stu-id="45559-150">VMVersion – QFE</span></span>|<span data-ttu-id="45559-151">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="45559-151">win:UInt16</span></span>|<span data-ttu-id="45559-152">Nummer der Hotfixversion der clr.dll oder coreclr.dll</span><span class="sxs-lookup"><span data-stu-id="45559-152">Hotfix version number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="45559-153">StartupFlags</span><span class="sxs-lookup"><span data-stu-id="45559-153">StartupFlags</span></span>|<span data-ttu-id="45559-154">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="45559-154">win:UInt32</span></span>|<span data-ttu-id="45559-155">In mscoree.h definierte Startflags</span><span class="sxs-lookup"><span data-stu-id="45559-155">Startup flags defined in mscoree.h.</span></span>|  
+|<span data-ttu-id="45559-156">StartupMode</span><span class="sxs-lookup"><span data-stu-id="45559-156">StartupMode</span></span>|<span data-ttu-id="45559-157">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="45559-157">win:UInt8</span></span>|<span data-ttu-id="45559-158">0x01 – verwaltete ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="45559-158">0x01 - Managed executable.</span></span><br /><br /> <span data-ttu-id="45559-159">0x02 – gehostete CLR</span><span class="sxs-lookup"><span data-stu-id="45559-159">0x02 - Hosted CLR.</span></span><br /><br /> <span data-ttu-id="45559-160">0x04 – C++ verwalteter Interop</span><span class="sxs-lookup"><span data-stu-id="45559-160">0x04 - C++ managed interop.</span></span><br /><br /> <span data-ttu-id="45559-161">0x08 – COM-aktiviert</span><span class="sxs-lookup"><span data-stu-id="45559-161">0x08 - COM-activated.</span></span><br /><br /> <span data-ttu-id="45559-162">0x10 – andere</span><span class="sxs-lookup"><span data-stu-id="45559-162">0x10 - Other.</span></span>|  
+|<span data-ttu-id="45559-163">COMMANDLINE</span><span class="sxs-lookup"><span data-stu-id="45559-163">CommandLine</span></span>|<span data-ttu-id="45559-164">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="45559-164">win:UnicodeString</span></span>|<span data-ttu-id="45559-165">Nur ungleich NULL, wenn StartupMode = 0x01</span><span class="sxs-lookup"><span data-stu-id="45559-165">Non-null only if StartupMode=0x01.</span></span>|  
+|<span data-ttu-id="45559-166">ComObjectGUID</span><span class="sxs-lookup"><span data-stu-id="45559-166">ComObjectGUID</span></span>|<span data-ttu-id="45559-167">win:GUID</span><span class="sxs-lookup"><span data-stu-id="45559-167">win:GUID</span></span>|<span data-ttu-id="45559-168">Nur ungleich NULL, wenn StartupMode = 0x08</span><span class="sxs-lookup"><span data-stu-id="45559-168">Non-null only if StartupMode=0x08.</span></span>|  
+|<span data-ttu-id="45559-169">RuntimeDLLPath</span><span class="sxs-lookup"><span data-stu-id="45559-169">RuntimeDLLPath</span></span>|<span data-ttu-id="45559-170">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="45559-170">win:UnicodeString</span></span>|<span data-ttu-id="45559-171">Pfad zur CLR-DLL-Datei, die in den Prozess geladen wurde</span><span class="sxs-lookup"><span data-stu-id="45559-171">Path to the CLR .dll file that was loaded into the process.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="45559-172">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="45559-172">See Also</span></span>  
+ [<span data-ttu-id="45559-173">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="45559-173">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

@@ -1,57 +1,62 @@
 ---
-title: "Vorgehensweise: &#220;berwachen von Windows Communication Foundation-Sicherheitsereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherheit [WCF], Überwachen von Ereignissen"
+title: "Vorgehensweise: Überwachen von Windows Communication Foundation-Sicherheitsereignissen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 67fca1af6a9e1fdd35051e8b289679677a0abd6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: &#220;berwachen von Windows Communication Foundation-Sicherheitsereignissen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht das Protokollieren von Sicherheitsereignissen im Ereignisprotokoll von Windows. Dieses kann mithilfe der Windows\-Ereignisanzeige angezeigt werden.  In diesem Thema wird erläutert, wie eine Anwendung so eingerichtet werden kann, dass Sicherheitsereignisse protokolliert werden.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zur Überwachung finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a><span data-ttu-id="0d3b1-102">Vorgehensweise: Überwachen von Windows Communication Foundation-Sicherheitsereignissen</span><span class="sxs-lookup"><span data-stu-id="0d3b1-102">How to: Audit Windows Communication Foundation Security Events</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="0d3b1-103"> ermöglicht das Protokollieren von Sicherheitsereignissen im Ereignisprotokoll von Windows. Dieses kann mithilfe der Windows-Ereignisanzeige angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-103"> allows you to log security events to the Windows event log, which can be viewed using the Windows Event Viewer.</span></span> <span data-ttu-id="0d3b1-104">In diesem Thema wird erläutert, wie eine Anwendung so eingerichtet werden kann, dass Sicherheitsereignisse protokolliert werden.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-104">This topic explains how to set up an application so that it logs security events.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="0d3b1-105">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Überwachung finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).</span><span class="sxs-lookup"><span data-stu-id="0d3b1-105"> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auditing, see [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).</span></span>  
   
-### So überwachen Sie Sicherheitsereignisse im Code  
+### <a name="to-audit-security-events-in-code"></a><span data-ttu-id="0d3b1-106">So überwachen Sie Sicherheitsereignisse im Code</span><span class="sxs-lookup"><span data-stu-id="0d3b1-106">To audit security events in code</span></span>  
   
-1.  Geben Sie den Speicherort des Überwachungsprotokolls an.  Legen Sie hierzu die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>\-Eigenschaft der <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>\-Klasse auf einen der <xref:System.ServiceModel.AuditLogLocation>\-Enumerationswerte fest, wie im folgenden Code gezeigt:  
+1.  <span data-ttu-id="0d3b1-107">Geben Sie den Speicherort des Überwachungsprotokolls an.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-107">Specify the audit log location.</span></span> <span data-ttu-id="0d3b1-108">Legen Sie hierzu die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>-Eigenschaft der <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>-Klasse auf einen der <xref:System.ServiceModel.AuditLogLocation>-Enumerationswerte fest, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="0d3b1-108">To do this, set the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> property of the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> class to one of the <xref:System.ServiceModel.AuditLogLocation> enumeration values, as shown in the following code.</span></span>  
   
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     Die <xref:System.ServiceModel.AuditLogLocation>\-Enumeration besitzt drei Werte: `Application`, `Security` oder `Default`.  Mithilfe des Werts wird eines der in der Ereignisanzeige angezeigten Protokolle angegeben: entweder das Sicherheits\- oder das Anwendungsprotokoll.  Bei Verwendung des `Default`\-Werts ist das tatsächliche Protokoll vom Betriebssystem abhängig, unter dem die Anwendung ausgeführt wird.  Ist bei aktivierter Überwachung kein Protokollspeicherort angegeben, wird für Plattformen, von denen das Schreiben in das Sicherheitsprotokoll unterstützt wird, standardmäßig das `Security`\-Protokoll verwendet. Andernfalls wird das `Application`\-Protokoll verwendet.  Standardmäßig wird das Schreiben in das Sicherheitsprotokoll nur von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt.  
+     <span data-ttu-id="0d3b1-109">Die <xref:System.ServiceModel.AuditLogLocation> -Enumeration besitzt drei Werte: `Application`, `Security`, oder `Default`.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-109">The <xref:System.ServiceModel.AuditLogLocation> enumeration has three values: `Application`, `Security`, or `Default`.</span></span> <span data-ttu-id="0d3b1-110">Mithilfe des Werts wird eines der in der Ereignisanzeige angezeigten Protokolle angegeben: entweder das Sicherheits- oder das Anwendungsprotokoll.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-110">The value specifies one of the logs visible in the Event Viewer, either the Security log or the Application log.</span></span> <span data-ttu-id="0d3b1-111">Bei Verwendung des `Default`-Werts ist das tatsächliche Protokoll vom Betriebssystem abhängig, unter dem die Anwendung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-111">If you use the `Default` value, the actual log will depend on the operating system the application is running on.</span></span> <span data-ttu-id="0d3b1-112">Ist bei aktivierter Überwachung kein Protokollspeicherort angegeben, wird für Plattformen, von denen das Schreiben in das Sicherheitsprotokoll unterstützt wird, standardmäßig das `Security`-Protokoll verwendet. Andernfalls wird das `Application`-Protokoll verwendet.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-112">If auditing is enabled and the log location is not specified, the default is the `Security` log for platforms that support writing to the Security log; otherwise, it will write to the `Application` log.</span></span> <span data-ttu-id="0d3b1-113">Standardmäßig wird das Schreiben in das Sicherheitsprotokoll nur von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-113">Only [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)] support writing to the Security log by default.</span></span>  
   
-2.  Richten Sie die zu überwachenden Ereignistypen ein.  Ereignisse auf Dienstebene sowie Autorisierungsereignisse auf Nachrichtenebene können gleichzeitig überwacht werden.  Legen Sie hierzu die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>\-Eigenschaft oder die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>\-Eigenschaft auf einen der <xref:System.ServiceModel.AuditLevel>\-Enumerationswerte fest, wie im folgenden Code gezeigt:  
+2.  <span data-ttu-id="0d3b1-114">Richten Sie die zu überwachenden Ereignistypen ein.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-114">Set up the types of events to audit.</span></span> <span data-ttu-id="0d3b1-115">Ereignisse auf Dienstebene sowie Autorisierungsereignisse auf Nachrichtenebene können gleichzeitig überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-115">You can simultaneously audit service-level events or message-level authorization events.</span></span> <span data-ttu-id="0d3b1-116">Legen Sie hierzu die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>-Eigenschaft oder die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>-Eigenschaft auf einen der <xref:System.ServiceModel.AuditLevel>-Enumerationswerte fest, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="0d3b1-116">To do this, set the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> property or the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> property to one of the <xref:System.ServiceModel.AuditLevel> enumeration values, as shown in the following code.</span></span>  
   
      [!code-csharp[AuditingSecurityEvents#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#3)]
      [!code-vb[AuditingSecurityEvents#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#3)]  
   
-3.  Geben Sie an, ob Fehler bei Protokollüberwachungsereignissen unterdrückt oder für die Anwendung verfügbar gemacht werden sollen.  Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>\-Eigenschaft entweder auf `true` oder auf `false` fest, wie im folgenden Code gezeigt:  
+3.  <span data-ttu-id="0d3b1-117">Geben Sie an, ob Fehler bei Protokollüberwachungsereignissen unterdrückt oder für die Anwendung verfügbar gemacht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-117">Specify whether to suppress or expose failures to the application regarding log audit events.</span></span> <span data-ttu-id="0d3b1-118">Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft entweder auf `true` oder auf `false` fest, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="0d3b1-118">Set the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> property to either `true` or `false`, as shown in the following code.</span></span>  
   
      [!code-csharp[AuditingSecurityEvents#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#4)]
      [!code-vb[AuditingSecurityEvents#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#4)]  
   
-     Die standardmäßige `SuppressAuditFailure`\-Eigenschaft ist `true`. Die Anwendung wird also durch einen Fehler bei der Überwachung nicht beeinträchtigt.  Andernfalls wird eine Ausnahme ausgelöst.  Für jede erfolgreiche Überwachung wird eine ausführliche Ablaufverfolgung geschrieben.  Für jeden Überwachungsfehler wird eine Ablaufverfolgung auf Fehlerebene geschrieben.  
+     <span data-ttu-id="0d3b1-119">Die standardmäßige `SuppressAuditFailure`-Eigenschaft ist `true`. Die Anwendung wird also durch einen Fehler bei der Überwachung nicht beeinträchtigt.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-119">The default `SuppressAuditFailure` property is `true`, so that the failure to audit does not affect the application.</span></span> <span data-ttu-id="0d3b1-120">Andernfalls wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-120">Otherwise, an exception is thrown.</span></span> <span data-ttu-id="0d3b1-121">Für jede erfolgreiche Überwachung wird eine ausführliche Ablaufverfolgung geschrieben.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-121">For any successful audit, a verbose trace is written.</span></span> <span data-ttu-id="0d3b1-122">Für jeden Überwachungsfehler wird eine Ablaufverfolgung auf Fehlerebene geschrieben.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-122">For any failure to audit, the trace is written at the Error level.</span></span>  
   
-4.  Löschen Sie das vorhandene <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> aus der Verhaltensauflistung, die sich in der Beschreibung eines <xref:System.ServiceModel.ServiceHost> befindet.  Der Zugriff auf die Verhaltensauflistung erfolgt über die <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>\-Eigenschaft, auf die wiederum über die <xref:System.ServiceModel.ServiceHostBase.Description%2A>\-Eigenschaft zugegriffen wird.  Fügen Sie der gleichen Auflistung anschließend das neue <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hinzu, wie im folgenden Code gezeigt:  
+4.  <span data-ttu-id="0d3b1-123">Löschen Sie das vorhandene <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> aus der Verhaltensauflistung, die sich in der Beschreibung eines <xref:System.ServiceModel.ServiceHost> befindet.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-123">Delete the existing <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> from the collection of behaviors found in the description of a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="0d3b1-124">Der Zugriff auf die Verhaltensauflistung erfolgt über die <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Eigenschaft, auf die wiederum über die <xref:System.ServiceModel.ServiceHostBase.Description%2A>-Eigenschaft zugegriffen wird.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-124">The behavior collection is accessed by the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> property, which in turn is accessed from the <xref:System.ServiceModel.ServiceHostBase.Description%2A> property.</span></span> <span data-ttu-id="0d3b1-125">Fügen Sie der gleichen Auflistung anschließend das neue <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hinzu, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="0d3b1-125">Then add the new <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> to the same collection, as shown in the following code.</span></span>  
   
      [!code-csharp[AuditingSecurityEvents#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#5)]
      [!code-vb[AuditingSecurityEvents#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#5)]  
   
-### So richten Sie die Überwachung in der Konfiguration ein  
+### <a name="to-set-up-auditing-in-configuration"></a><span data-ttu-id="0d3b1-126">So richten Sie die Überwachung in der Konfiguration ein</span><span class="sxs-lookup"><span data-stu-id="0d3b1-126">To set up auditing in configuration</span></span>  
   
-1.  Fügen Sie zum Einrichten der Überwachung in der Konfiguration dem [\<Verhalten\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)\-Abschnitt der web.config\-Datei ein [\<Verhalten\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)\-Element hinzu.  Fügen Sie anschließend ein [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)\-Element hinzu, und legen Sie die verschiedenen Attribute fest, wie im folgenden Beispiel gezeigt:  
+1.  <span data-ttu-id="0d3b1-127">Fügen Sie zum Einrichten der Überwachung in der Konfiguration ein [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Element der [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Abschnitt der Datei "Web.config".</span><span class="sxs-lookup"><span data-stu-id="0d3b1-127">To set up auditing in configuration, add a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element to the [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) section of the web.config file.</span></span> <span data-ttu-id="0d3b1-128">Fügen Sie dann eine [ \<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) Element, und legen Sie die verschiedenen Attribute, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-128">Then add a [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) element and set the various attributes, as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <behaviors>  
        <behavior name="myAuditBehavior">  
           <serviceSecurityAudit auditLogLocation="Application"  
@@ -62,9 +67,9 @@ caps.handback.revision: 19
     </behaviors>  
     ```  
   
-2.  Geben Sie das Verhalten für den Dienst an, wie im folgenden Beispiel gezeigt:  
+2.  <span data-ttu-id="0d3b1-129">Geben Sie das Verhalten für den Dienst an, wie im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="0d3b1-129">You must specify the behavior for the service, as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <services>  
         <service type="WCS.Samples.Service.Echo"   
         behaviorConfiguration=" myAuditBehavior">  
@@ -74,26 +79,25 @@ caps.handback.revision: 19
                     contract="WCS.Samples.Service.IEcho" />  
         </service>  
     </services>  
-  
     ```  
   
-## Beispiel  
- Mithilfe des folgenden Codes wird eine Instanz der <xref:System.ServiceModel.ServiceHost>\-Klasse erstellt, und der Verhaltensauflistung wird ein neues <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hinzugefügt.  
+## <a name="example"></a><span data-ttu-id="0d3b1-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0d3b1-130">Example</span></span>  
+ <span data-ttu-id="0d3b1-131">Mithilfe des folgenden Codes wird eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse erstellt, und der Verhaltensauflistung wird ein neues <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-131">The following code creates an instance of the <xref:System.ServiceModel.ServiceHost> class and adds a new <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> to its collection of behaviors.</span></span>  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
-## .NET Framework-Sicherheit  
- Durch Festlegen der <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>\-Eigenschaft auf `true` werden Fehler beim Generieren von Sicherheitsüberwachungen unterdrückt. \(Bei Verwendung von `false` wird eine Ausnahme ausgelöst\).  Wird jedoch für **Lokale Sicherheitseinstellung** die folgende Windows\-Eigenschaft aktiviert, führt ein Fehler beim Generieren von Überwachungsereignissen dazu, dass Windows umgehend heruntergefahren wird:  
+## <a name="net-framework-security"></a><span data-ttu-id="0d3b1-132">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="0d3b1-132">.NET Framework Security</span></span>  
+ <span data-ttu-id="0d3b1-133">Durch Festlegen der <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` werden Fehler beim Generieren von Sicherheitsüberwachungen unterdrückt. (Bei Verwendung von `false` wird eine Ausnahme ausgelöst).</span><span class="sxs-lookup"><span data-stu-id="0d3b1-133">Setting the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> property to `true`, suppresses any failure to generate security audits (if set to `false`, an exception is thrown).</span></span> <span data-ttu-id="0d3b1-134">Jedoch, wenn Sie die folgenden Windows aktivieren **lokale Sicherheitseinstellung**-Eigenschaft, ein Fehler beim Generieren von Überwachungsereignissen führt dazu, dass Windows umgehend heruntergefahren:</span><span class="sxs-lookup"><span data-stu-id="0d3b1-134">However, if you enable the following Windows **Local Security Setting**property, a failure to generate audit events will cause Windows to shut down immediately:</span></span>  
   
- **Überwachung: System sofort herunterfahren, wenn Sicherheitsüberprüfungen nicht protokolliert werden können**  
+ <span data-ttu-id="0d3b1-135">**Überwachung: Herunterfahren der System sofort, wenn sicherheitsüberprüfungen Anmeldung ist nicht möglich**</span><span class="sxs-lookup"><span data-stu-id="0d3b1-135">**Audit: Shut down system immediately if unable to log security audits**</span></span>  
   
- Öffnen Sie zum Festlegen der Eigenschaft das Dialogfeld **Lokale Sicherheitseinstellungen**.  Klicken Sie unter **Sicherheitseinstellungen** auf **Lokale Richtlinien**.  Klicken Sie anschließend auf **Sicherheitsoptionen**.  
+ <span data-ttu-id="0d3b1-136">Öffnen Sie zum Festlegen der Eigenschaft der **lokale Sicherheitseinstellungen** (Dialogfeld).</span><span class="sxs-lookup"><span data-stu-id="0d3b1-136">To set the property, open the **Local Security Settings** dialog box.</span></span> <span data-ttu-id="0d3b1-137">Klicken Sie unter **Sicherheitseinstellungen**, klicken Sie auf **lokale Richtlinien**.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-137">Under **Security Settings**, click **Local Policies**.</span></span> <span data-ttu-id="0d3b1-138">Klicken Sie dann auf **Sicherheitsoptionen**.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-138">Then click **Security Options**.</span></span>  
   
- Wenn die <xref:System.ServiceModel.AuditLogLocation>\-Eigenschaft auf <xref:System.ServiceModel.AuditLogLocation> festgelegt und für **Lokale Sicherheitsrichtlinie** nicht die Einstellung **Objektzugriffsversuche überwachen** aktiviert ist, werden Überwachungsereignisse nicht in das Sicherheitsprotokoll geschrieben.  Es wird zwar kein Fehler zurückgegeben, doch die Überwachungseinträge werden nicht in das Sicherheitsprotokoll geschrieben.  
+ <span data-ttu-id="0d3b1-139">Wenn die <xref:System.ServiceModel.AuditLogLocation> -Eigenschaftensatz auf <xref:System.ServiceModel.AuditLogLocation.Security> und **Objektzugriffsversuche** nicht festgelegt ist, der **lokale Sicherheitsrichtlinie**, Überwachungsereignisse werden nicht in das Sicherheitsprotokoll geschrieben.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-139">If the <xref:System.ServiceModel.AuditLogLocation> property is set to <xref:System.ServiceModel.AuditLogLocation.Security> and **Audit Object Access** is not set in the **Local Security Policy**, audit events will not be written to the Security log.</span></span> <span data-ttu-id="0d3b1-140">Es wird zwar kein Fehler zurückgegeben, doch die Überwachungseinträge werden nicht in das Sicherheitsprotokoll geschrieben.</span><span class="sxs-lookup"><span data-stu-id="0d3b1-140">Note that no failure is returned, but audit entries are not written to the Security log.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>   
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>   
- <xref:System.ServiceModel.AuditLogLocation>   
- [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a><span data-ttu-id="0d3b1-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d3b1-141">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
+ <xref:System.ServiceModel.AuditLogLocation>  
+ [<span data-ttu-id="0d3b1-142">Überwachung</span><span class="sxs-lookup"><span data-stu-id="0d3b1-142">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

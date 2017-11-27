@@ -1,37 +1,40 @@
 ---
-title: "Unterst&#252;tzen mehrerer IIS-Sitebindungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Unterstützen mehrerer IIS-Sitebindungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ebe433d1c18d46e0868f9566a273124e6bd63f1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Unterst&#252;tzen mehrerer IIS-Sitebindungen
-Beim Hosten eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Diensts unter Internetinformationsdienste \(IIS\) 7.0 sollten Sie mehrere Basisadressen bereitstellen, die das gleiche Protokoll auf der gleichen Website verwenden.Auf diese Weise kann ein Dienst auf unterschiedliche URIs reagieren.Dies ist nützlich, wenn Sie einen Dienst hosten möchten, der "http:\/\/www.contoso.com" und "http:\/\/contoso.com" überwacht.Es ist auch hilfreich, einen Dienst zu erstellen, der über eine Basisadresse für interne Benutzer und eine separate Basisadresse für externe Benutzer verfügt.Beispiel: http:\/\/internal.contoso.com und http:\/\/www.contoso.com.  
+# <a name="supporting-multiple-iis-site-bindings"></a><span data-ttu-id="06782-102">Unterstützen mehrerer IIS-Sitebindungen</span><span class="sxs-lookup"><span data-stu-id="06782-102">Supporting Multiple IIS Site Bindings</span></span>
+<span data-ttu-id="06782-103">Beim Hosten eines [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts unter Internetinformationsdienste (IIS) 7.0 sollten Sie mehrere Basisadressen bereitstellen, die das gleiche Protokoll auf der gleichen Website verwenden.</span><span class="sxs-lookup"><span data-stu-id="06782-103">When hosting a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service under Internet Information Services (IIS) 7.0, you may want to provide multiple base addresses that use the same protocol on the same site.</span></span> <span data-ttu-id="06782-104">Auf diese Weise kann ein Dienst auf unterschiedliche URIs reagieren.</span><span class="sxs-lookup"><span data-stu-id="06782-104">This allows the same service to respond to a number of different URIs.</span></span> <span data-ttu-id="06782-105">Dies ist nützlich, wenn Sie einen Dienst hosten möchten, der "http://www.contoso.com" und "http://contoso.com" überwacht. Es ist auch hilfreich, einen Dienst zu erstellen, der über eine Basisadresse für interne Benutzer und eine separate Basisadresse für externe Benutzer verfügt.</span><span class="sxs-lookup"><span data-stu-id="06782-105">This is useful when you want to host a service that listens on http://www.contoso.com and http://contoso.com. It is also useful to create a service that has a base address for internal users and a separate base address for external users.</span></span> <span data-ttu-id="06782-106">Beispiel: http://internal.contoso.com und http://www.contoso.com.</span><span class="sxs-lookup"><span data-stu-id="06782-106">For example: http://internal.contoso.com and http://www.contoso.com.</span></span>  
   
 > [!NOTE]
->  Diese Funktionalität ist nur bei Verwendung des HTTP\-Protokolls verfügbar.  
+>  <span data-ttu-id="06782-107">Diese Funktionalität ist nur bei Verwendung des HTTP-Protokolls verfügbar.</span><span class="sxs-lookup"><span data-stu-id="06782-107">This functionality is only available using the HTTP protocol.</span></span>  
   
-## Mehrere Basisadressen  
- Diese Funktion ist nur für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste verfügbar, die unter IIS gehostet werden.Diese Funktion ist standardmäßig nicht aktiviert.Um sie zu aktivieren, müssen Sie das `multipleSiteBindingsEnabled`\-Attribute dem \<`serviceHostingEnvironment`\>\-Element in der Web.config\-Datei hinzufügen und auf `true` festlegen. Dies wird im folgenden Beispiel veranschaulicht.  
+## <a name="multiple-base-addresses"></a><span data-ttu-id="06782-108">Mehrere Basisadressen</span><span class="sxs-lookup"><span data-stu-id="06782-108">Multiple Base Addresses</span></span>  
+ <span data-ttu-id="06782-109">Diese Funktion ist nur für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste verfügbar, die unter IIS gehostet werden.</span><span class="sxs-lookup"><span data-stu-id="06782-109">This feature is only available to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that are hosted under IIS.</span></span> <span data-ttu-id="06782-110">Diese Funktion ist standardmäßig nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="06782-110">This feature is not enabled by default.</span></span> <span data-ttu-id="06782-111">Aktivieren Sie hinzufügen müssen der `multipleSiteBindingsEnabled` -Attribut auf der <`serviceHostingEnvironment`>-Element in der Datei "Web.config"-Datei ein, und legen Sie sie auf `true`, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="06782-111">To enable it you must add the `multipleSiteBindingsEnabled` attribute to the <`serviceHostingEnvironment`> element in your Web.config file and set it to `true`, as shown in the following example.</span></span>  
   
 ```xml  
-<serviceHostingEnvironment multipleSiteBindingsEnabled=”true”/>  
+<serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  
 ```  
   
- Beim Hosten eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensts unter IIS erstellt IIS basierend auf dem URI zum virtuellen Verzeichnis, das die Anwendung enthält, eine Basisadresse.Sie können zusätzliche Basisadressen hinzufügen, die das gleiche Protokoll verwenden. Verwenden Sie dazu den Internetinformationsdienste\-Manager, um der Website eine oder mehrere Bindungen hinzuzufügen.Geben Sie für jede Bindung ein Protokoll \(HTTP oder HTTPS\), eine IP\-Adresse, einen Port und einen Hostnamen an.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Verwendung des Internetinformationsdienste\-Managers finden Sie unter [IIS\-Manager \(IIS 7\)](http://go.microsoft.com/fwlink/?LinkId=164057).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Hinzufügen von Bindungen zu einer Site finden Sie unter [Erstellen einer Website \(IIS 7\)](http://go.microsoft.com/fwlink/?LinkId=164060)  
+ <span data-ttu-id="06782-112">Beim Hosten eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts unter IIS erstellt IIS basierend auf dem URI zum virtuellen Verzeichnis, das die Anwendung enthält, eine Basisadresse.</span><span class="sxs-lookup"><span data-stu-id="06782-112">When hosting a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service under IIS, IIS creates one base address for you based on the URI to the virtual directory that contains the application.</span></span> <span data-ttu-id="06782-113">Sie können zusätzliche Basisadressen hinzufügen, die das gleiche Protokoll verwenden. Verwenden Sie dazu den Internetinformationsdienste-Manager, um der Website eine oder mehrere Bindungen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="06782-113">You can add additional base addresses that use the same protocol by using Internet Information Services Manager to add one or more bindings to your Web site.</span></span> <span data-ttu-id="06782-114">Geben Sie für jede Bindung ein Protokoll (HTTP oder HTTPS), eine IP-Adresse, einen Port und einen Hostnamen an.</span><span class="sxs-lookup"><span data-stu-id="06782-114">For each binding specify a protocol (HTTP or HTTPS), an IP address, a port, and a host name.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="06782-115">verwenden Internetinformationsdienste-Manager, finden Sie unter [IIS-Manager (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057).</span><span class="sxs-lookup"><span data-stu-id="06782-115"> using Internet Information Services Manager, see [IIS Manager (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="06782-116">Bindungen zu einem Standort hinzuzufügen, finden Sie unter [Erstellen einer Website (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)</span><span class="sxs-lookup"><span data-stu-id="06782-116"> adding bindings to a site, see [Create a Web Site (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)</span></span>  
   
- Das Angeben mehrerer Basisadressen für die gleiche Website wirkt sich auf den Inhalt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Hilfeseite, das Importschema und die vom Dienst generierten WSDL\/MEX\-Informationen aus.Die Hilfeseite von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zeigt die Befehlszeile an, die zum Generieren eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clients verwendet wird, der mit dem Dienst kommunizieren kann.Diese Befehlszeile enthält nur die erste Adresse, die in der IIS\-Bindung für die Website angegeben ist.Genauso wird beim Importieren des Schemas nur die erste Basisadresse verwendet, die in der IIS\-Bindung angegeben ist.WSDL\- und MEX\-Daten enthalten alle Basisadressen, die in den IIS\-Bindungen angegeben sind.  
+ <span data-ttu-id="06782-117">Das Angeben mehrerer Basisadressen für die gleiche Website wirkt sich auf den Inhalt der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Hilfeseite, das Importschema und die vom Dienst generierten WSDL/MEX-Informationen aus.</span><span class="sxs-lookup"><span data-stu-id="06782-117">Specifying multiple base addresses for the same site affects the content of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Help page, importing schema, and the WSDL/MEX information generated by the service.</span></span> <span data-ttu-id="06782-118">Die Hilfeseite von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zeigt die Befehlszeile an, die zum Generieren eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients verwendet wird, der mit dem Dienst kommunizieren kann.</span><span class="sxs-lookup"><span data-stu-id="06782-118">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Help page displays the command line to use to generate a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that can communicate with the service.</span></span> <span data-ttu-id="06782-119">Diese Befehlszeile enthält nur die erste Adresse, die in der IIS-Bindung für die Website angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="06782-119">This command line contains only the first address specified in the IIS binding for the Web site.</span></span> <span data-ttu-id="06782-120">Genauso wird beim Importieren des Schemas nur die erste Basisadresse verwendet, die in der IIS-Bindung angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="06782-120">Similarly when importing schema, only the first base address specified in the IIS binding is used.</span></span> <span data-ttu-id="06782-121">WSDL- und MEX-Daten enthalten alle Basisadressen, die in den IIS-Bindungen angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="06782-121">WSDL and MEX data contain all the base addresses specified in the IIS bindings.</span></span>  
   
 > [!WARNING]
->  Wenn ein Dienst über zwei Basisadressen verfügt, eine für interne Benutzer und eine für externe Benutzer, bedeutet dies, dass beide Basisadressen in den vom Dienst generierten WSDL\/MEX\-Informationen angegeben wurden.
+>  <span data-ttu-id="06782-122">Wenn ein Dienst über zwei Basisadressen verfügt, eine für interne Benutzer und eine für externe Benutzer, bedeutet dies, dass beide Basisadressen in den vom Dienst generierten WSDL/MEX-Informationen angegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="06782-122">This means that if a service has two base addresses, one for internal users and one for external users, both are specified in the WSDL/MEX information generated by the service.</span></span>

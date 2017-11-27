@@ -1,34 +1,37 @@
 ---
-title: "Grundlegende Datentypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Grundlegende Datentypen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1c0452e03e9c6471a35cd8612c1f36bbabe002d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Grundlegende Datentypen
-Da LINQ to SQL\-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Transact\-SQL übersetzt werden,  unterstützt LINQ to SQL einen Großteil der integrierten Funktionen, die SQL Server für grundlegende Datentypen bereitstellt.  
+# <a name="basic-data-types"></a><span data-ttu-id="64d18-102">Grundlegende Datentypen</span><span class="sxs-lookup"><span data-stu-id="64d18-102">Basic Data Types</span></span>
+<span data-ttu-id="64d18-103">Da LINQ to SQL-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Transact-SQL übersetzt werden,</span><span class="sxs-lookup"><span data-stu-id="64d18-103">Because LINQ to SQL queries translate to Transact-SQL before they are executed on the Microsoft SQL Server.</span></span> <span data-ttu-id="64d18-104">unterstützt LINQ to SQL einen Großteil der integrierten Funktionen, die SQL Server für grundlegende Datentypen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="64d18-104">LINQ to SQL supports much of the same built-in functionality that SQL Server does for basic data types.</span></span>  
   
-## Umwandlung von Typen  
- Implizite und explizite Umwandlungen von einem CLR\-Quell\- in einen CLR\-Zieltyp werden unterstützt, wenn in SQL Server eine ähnliche gültige Konvertierung existiert.  Weitere Informationen über CLR\-Umwandlung finden Sie unter [CType\-Funktion](../Topic/CType%20Function%20\(Visual%20Basic\).md) \([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]\) und [as](../Topic/as%20\(C%23%20Reference\).md).  Nach der Konvertierung passen Umwandlungen das Verhalten der durchgeführten Vorgänge für einen CLR\-Ausdruck an das Verhalten anderer CLR\-Ausdrücke an, die auf natürliche Weise dem Zieltyp zugewiesen werden. Umwandlungen sind auch im Kontext der Vererbungszuordnung übersetzbar.  Objekte können in spezifischere Entitätsuntertypen umgewandelt werden, damit auf ihre untertypspezifischen Daten zugegriffen werden kann.  
+## <a name="casting"></a><span data-ttu-id="64d18-105">Umwandlung von Typen</span><span class="sxs-lookup"><span data-stu-id="64d18-105">Casting</span></span>  
+ <span data-ttu-id="64d18-106">Implizite und explizite Umwandlungen von einem CLR-Quell- in einen CLR-Zieltyp werden unterstützt, wenn in SQL Server eine ähnliche gültige Konvertierung existiert.</span><span class="sxs-lookup"><span data-stu-id="64d18-106">Implicit or explicit casts are enabled from a source CLR type to a target CLR type if there is a similar valid conversion within SQL Server.</span></span> <span data-ttu-id="64d18-107">Weitere Informationen zu CLR-Umwandlung, finden Sie unter [CType-Funktion](~/docs/visual-basic/language-reference/functions/ctype-function.md) ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) und [als](~/docs/csharp/language-reference/keywords/as.md).</span><span class="sxs-lookup"><span data-stu-id="64d18-107">For more information about CLR casting, see [CType Function](~/docs/visual-basic/language-reference/functions/ctype-function.md) ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) and [as](~/docs/csharp/language-reference/keywords/as.md).</span></span> <span data-ttu-id="64d18-108">Nach der Konvertierung passen Varianten das Verhalten der durchgeführten Operationen für einen CLR-Ausdruck an das Verhalten anderer CLR-Ausdrücke an, die auf natürliche Weise dem Zieltyp zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="64d18-108">After conversion, casts change the behavior of operations performed on a CLR expression to match the behavior of other CLR expressions that naturally map to the destination type.</span></span> <span data-ttu-id="64d18-109">Umwandlungen sind auch im Kontext der Vererbungszuordnung übersetzbar.</span><span class="sxs-lookup"><span data-stu-id="64d18-109">Casts are also translatable in the context of inheritance mapping.</span></span> <span data-ttu-id="64d18-110">Objekte können in spezifischere Entitätsuntertypen umgewandelt werden, damit auf ihre untertypspezifischen Daten zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="64d18-110">Objects can be cast to more specific entity subtypes so that their subtype-specific data can be accessed.</span></span>  
   
-## Gleichheitsoperatoren  
- LINQ to SQL unterstützt die folgenden Gleichheitsoperatoren für grundlegende Datentypen in LINQ to SQL\-Abfragen:  
+## <a name="equality-operators"></a><span data-ttu-id="64d18-111">Gleichheitsoperatoren</span><span class="sxs-lookup"><span data-stu-id="64d18-111">Equality Operators</span></span>  
+ <span data-ttu-id="64d18-112">LINQ to SQL unterstützt die folgenden Gleichheitsoperatoren für grundlegende Datentypen in LINQ to SQL-Abfragen:</span><span class="sxs-lookup"><span data-stu-id="64d18-112">LINQ to SQL supports the following equality operators on basic data types inside LINQ to SQL queries:</span></span>  
   
--   Gleichheits\- und Ungleichheitsoperator: Gleichheits\- und Ungleichheitsoperatoren werden für numerische <xref:System.Boolean>\-, <xref:System.DateTime>\- und <xref:System.TimeSpan>\-Typen unterstützt.  Weitere Informationen zu [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]\-Operatoren `=` und `<>` finden Sie unter [Comparison Operators](../Topic/Comparison%20Operators%20\(Visual%20Basic\).md). Weitere Informationen zu C\#\-Vergleichsoperatoren `==` und `!=` finden Sie unter [Operator \=\=](../Topic/==%20Operator%20\(C%23%20Reference\).md) und [Operator \!\=](../Topic/!=%20Operator%20\(C%23%20Reference\).md).  
+-   <span data-ttu-id="64d18-113">Gleichheits- und Ungleichheitsoperator: Gleichheits- und Ungleichheitsoperatoren werden für numerische <xref:System.Boolean>-, <xref:System.DateTime>- und <xref:System.TimeSpan>-Typen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="64d18-113">Equal and Inequality Operator: Equality and inequality operators are supported for numeric <xref:System.Boolean>, <xref:System.DateTime>, and <xref:System.TimeSpan> types.</span></span> <span data-ttu-id="64d18-114">Weitere Informationen zu den [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] Operatoren `=` und `<>`, finden Sie unter [Vergleichsoperatoren](~/docs/visual-basic/language-reference/operators/comparison-operators.md).</span><span class="sxs-lookup"><span data-stu-id="64d18-114">For more about [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] operators `=` and `<>`, see [Comparison Operators](~/docs/visual-basic/language-reference/operators/comparison-operators.md).</span></span> <span data-ttu-id="64d18-115">Weitere Informationen zu C#-Vergleichsoperatoren `==` und `!=`, finden Sie unter [==-Operator](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) und [! =-Operator](~/docs/csharp/language-reference/operators/not-equal-operator.md)bzw.</span><span class="sxs-lookup"><span data-stu-id="64d18-115">For more information about C# comparison operators `==` and `!=`, see [== Operator](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) and [!= Operator](~/docs/csharp/language-reference/operators/not-equal-operator.md), respectively</span></span>  
   
--   "Is"\-Operator: Der `IS`\-Operator verfügt über eine unterstützte Übersetzung, wenn Vererbungsmapping verwendet wird.  Er kann anstelle der direkten Prüfung der Diskriminatorspalte verwendet werden, um festzulegen, ob ein Objekt einen bestimmten Typ aufweist. Er wird in eine Prüfung der Diskriminatorspalte übersetzt.  Weitere Informationen über die "Is"\-Operatoren in Visual Basic und C\# finden Sie unter [Is Operator](../Topic/Is%20Operator%20\(Visual%20Basic\).md) und [is](../Topic/is%20\(C%23%20Reference\).md).  
+-   <span data-ttu-id="64d18-116">"Is"-Operator: Der `IS`-Operator verfügt über eine unterstützte Übersetzung, wenn Vererbungsmapping verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="64d18-116">Is operator: The `IS` operator has a supported translation when inheritance mapping is being used.</span></span> <span data-ttu-id="64d18-117">Er kann anstelle der direkten Prüfung der Diskriminatorspalte verwendet werden, um festzulegen, ob ein Objekt einen bestimmten Typ aufweist. Er wird in eine Prüfung der Diskriminatorspalte übersetzt.</span><span class="sxs-lookup"><span data-stu-id="64d18-117">It can be used instead of directly testing the discriminator column to determine whether an object is of a specific entity type, and is translated to a check on the discriminator column.</span></span> <span data-ttu-id="64d18-118">Weitere Informationen zu den Visual Basic- und C#-Operatoren finden Sie unter [Is Operator](~/docs/visual-basic/language-reference/operators/is-operator.md) und [ist](~/docs/csharp/language-reference/keywords/is.md).</span><span class="sxs-lookup"><span data-stu-id="64d18-118">For more information about the Visual Basic and C# Is operators, see [Is Operator](~/docs/visual-basic/language-reference/operators/is-operator.md) and [is](~/docs/csharp/language-reference/keywords/is.md).</span></span>  
   
-## Siehe auch  
- [SQL CLR\-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)   
- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="64d18-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="64d18-119">See Also</span></span>  
+ [<span data-ttu-id="64d18-120">SQL-CLR-Typzuordnung</span><span class="sxs-lookup"><span data-stu-id="64d18-120">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [<span data-ttu-id="64d18-121">Datentypen und Funktionen</span><span class="sxs-lookup"><span data-stu-id="64d18-121">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

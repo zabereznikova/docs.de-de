@@ -1,45 +1,46 @@
 ---
-title: "Adressierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Adressierung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3ac0cb2b9df130820a4b12efd4b845b50ad7c79a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Adressierung
-Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von Endpunktadressen veranschaulicht.  Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md).  In diesem Beispiel ist der Dienst selbst gehostet.  Sowohl der Dienst als auch der Client sind Konsolenanwendungen.  Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.  
+# <a name="addressing"></a><span data-ttu-id="2fd29-102">Adressierung</span><span class="sxs-lookup"><span data-stu-id="2fd29-102">Addressing</span></span>
+<span data-ttu-id="2fd29-103">Im Beispiel für die Adressierung werden verschiedene Aspekte und Funktionen von Endpunktadressen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="2fd29-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="2fd29-104">Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="2fd29-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="2fd29-105">In diesem Beispiel ist der Dienst selbst gehostet.</span><span class="sxs-lookup"><span data-stu-id="2fd29-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="2fd29-106">Sowohl der Dienst als auch der Client sind Konsolenanwendungen.</span><span class="sxs-lookup"><span data-stu-id="2fd29-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="2fd29-107">Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.</span><span class="sxs-lookup"><span data-stu-id="2fd29-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="2fd29-108">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="2fd29-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Die Dienstkonfigurationsdatei gibt eine Basisadresse und vier Endpunkte an.  Die Basisadresse wird mit dem Hinzufügen\-Element unter service\/host\/baseAddresses angegeben, wie im folgenden Beispiel dargestellt.  
+ <span data-ttu-id="2fd29-109">Die Dienstkonfigurationsdatei gibt eine Basisadresse und vier Endpunkte an.</span><span class="sxs-lookup"><span data-stu-id="2fd29-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="2fd29-110">Die Basisadresse wird mit dem Hinzufügen-Element unter service/host/baseAddresses angegeben, wie im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2fd29-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
   
-```  
-<service   
-    name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">  
+```xml  
+<service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+         behaviorConfiguration="CalculatorServiceBehavior">  
   <host>  
     <baseAddresses>  
-      <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
+      <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />  
     </baseAddresses>  
   </host>  
-  ...  
 </service>  
 ```  
   
- Die erste Endpunktdefinition, die in der folgenden Beispielkonfiguration gezeigt wird, gibt eine relative Adresse an. Dies bedeutet, dass die Endpunktadresse eine Kombination aus der Basisadresse und der relativen Adresse nach den Regeln der URI\-Zusammensetzung ist.  
+ <span data-ttu-id="2fd29-111">Die erste Endpunktdefinition, die in der folgenden Beispielkonfiguration gezeigt wird, gibt eine relative Adresse an. Dies bedeutet, dass die Endpunktadresse eine Kombination aus der Basisadresse und der relativen Adresse nach den Regeln der URI-Zusammensetzung ist.</span><span class="sxs-lookup"><span data-stu-id="2fd29-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
   
-```  
+```xml
 <!-- Empty relative address specified:   
      use the base address provided by the host. -->  
 <!-- The endpoint address is  
@@ -49,11 +50,11 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- In diesem Fall ist die relative Adresse leer \(""\); folglich entspricht die Endpunktadresse der Basisadresse.  Die tatsächliche Endpunktadresse lautet http:\/\/localhost:8000\/servicemodelsamples\/service.  
+ <span data-ttu-id="2fd29-112">In diesem Fall ist die relative Adresse leer (""); folglich entspricht die Endpunktadresse der Basisadresse.</span><span class="sxs-lookup"><span data-stu-id="2fd29-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="2fd29-113">Die tatsächliche Endpunktadresse lautet http://localhost:8000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="2fd29-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
   
- Die zweite Endpunktdefinition gibt ebenfalls eine relative Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.  
+ <span data-ttu-id="2fd29-114">Die zweite Endpunktdefinition gibt ebenfalls eine relative Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2fd29-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <!-- The relative address specified: use the base address -->  
 <!-- provided by the host + path. The endpoint address is -->  
 <!-- http://localhost:8000/servicemodelsamples/service/test. -->  
@@ -62,21 +63,21 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Die relative Adresse "test" ist an die Basisadresse angefügt.  Die tatsächliche Endpunktadresse lautet http:\/\/localhost:8000\/servicemodelsamples\/service\/test.  
+ <span data-ttu-id="2fd29-115">Die relative Adresse "test" ist an die Basisadresse angefügt.</span><span class="sxs-lookup"><span data-stu-id="2fd29-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="2fd29-116">Die tatsächliche Endpunktadresse lautet http://localhost:8000/servicemodelsamples/service/test.</span><span class="sxs-lookup"><span data-stu-id="2fd29-116">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
   
- Die dritte Endpunktdefinition gibt eine absolute Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.  
+ <span data-ttu-id="2fd29-117">Die dritte Endpunktdefinition gibt eine absolute Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2fd29-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
           binding="wsHttpBinding"  
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Die Basisadresse spielt bei der Adresse keine Rolle.  Die tatsächliche Endpunktadresse lautet http:\/\/localhost:8001\/hello\/servicemodelsamples.  
+ <span data-ttu-id="2fd29-118">Die Basisadresse spielt bei der Adresse keine Rolle.</span><span class="sxs-lookup"><span data-stu-id="2fd29-118">The base address plays no role in the address.</span></span> <span data-ttu-id="2fd29-119">Die tatsächliche Endpunktadresse lautet http://localhost:8001/hello/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="2fd29-119">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
   
- Die vierte Endpunktadresse gibt eine absolute Adresse und einen anderen Transport an, nämlich TCP.  Die Basisadresse spielt bei der Adresse keine Rolle.  Die tatsächliche Endpunktadresse lautet net.tcp:\/\/localhost:9000\/servicemodelsamples\/service.  
+ <span data-ttu-id="2fd29-120">Die vierte Endpunktadresse gibt eine absolute Adresse und einen anderen Transport an, nämlich TCP.</span><span class="sxs-lookup"><span data-stu-id="2fd29-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="2fd29-121">Die Basisadresse spielt bei der Adresse keine Rolle.</span><span class="sxs-lookup"><span data-stu-id="2fd29-121">The base address plays no role in the address.</span></span> <span data-ttu-id="2fd29-122">Die tatsächliche Endpunktadresse lautet net.tcp://localhost:9000/servicemodelsamples/service.</span><span class="sxs-lookup"><span data-stu-id="2fd29-122">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
-```  
+```xml  
 <!-- The absolute address specified, different transport: -->  
 <!-- use the specified address, and ignore the base address. -->  
 <!-- The endpoint address is -->  
@@ -88,9 +89,9 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
 </service>  
 ```  
   
- Der Client greift nur auf einen der vier Dienstendpunkte zu, aber alle vier sind in seiner Konfigurationsdatei definiert.  Der Client wählt einen Endpunkt aus, wenn das `CalculatorProxy`\-Objekt erstellt wird.  Indem Sie den Konfigurationsnamen von `CalculatorEndpoint1` bis `CalculatorEndpoint4` ändern, können Sie jeden Endpunkt testen.  
+ <span data-ttu-id="2fd29-123">Der Client greift nur auf einen der vier Dienstendpunkte zu, aber alle vier sind in seiner Konfigurationsdatei definiert.</span><span class="sxs-lookup"><span data-stu-id="2fd29-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="2fd29-124">Der Client wählt einen Endpunkt aus, wenn das `CalculatorProxy`-Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="2fd29-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="2fd29-125">Indem Sie den Konfigurationsnamen von `CalculatorEndpoint1` bis `CalculatorEndpoint4` ändern, können Sie jeden Endpunkt testen.</span><span class="sxs-lookup"><span data-stu-id="2fd29-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
   
- Bei der Durchführung des Beispiels listet der Dienst die Adresse, den Bindungsnamen und den Vertragsnamen für jeden Endpunkt auf.  Der MEX\-Endpunkt \(Metadata Exchange\) ist aus Sicht des ServiceHost nur ein weiterer Endpunkt und wird somit ebenfalls aufgelistet.  
+ <span data-ttu-id="2fd29-126">Bei der Durchführung des Beispiels listet der Dienst die Adresse, den Bindungsnamen und den Vertragsnamen für jeden Endpunkt auf.</span><span class="sxs-lookup"><span data-stu-id="2fd29-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="2fd29-127">Der MEX-Endpunkt (Metadata Exchange) ist aus Sicht des ServiceHost nur ein weiterer Endpunkt und wird somit ebenfalls aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="2fd29-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
   
 ```  
 Service endpoints:  
@@ -112,10 +113,9 @@ Endpoint - address:  http://localhost:8000/ServiceModelSamples/service/mex
   
 The service is ready.  
 Press <ENTER> to terminate service.  
-  
 ```  
   
- Wenn Sie den Client ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst\- und Clientkonsolenfenster angezeigt.  Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
+ <span data-ttu-id="2fd29-128">Wenn Sie den Client ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst- und Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2fd29-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="2fd29-129">Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="2fd29-129">Press ENTER in each console window to shut down the service and client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -126,24 +126,24 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2fd29-130">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="2fd29-130">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="2fd29-131">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2fd29-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  <span data-ttu-id="2fd29-132">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="2fd29-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="2fd29-133">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2fd29-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.  
+    >  <span data-ttu-id="2fd29-134">Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="2fd29-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="2fd29-135">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="2fd29-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2fd29-136">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="2fd29-136">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="2fd29-137">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="2fd29-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2fd29-138">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="2fd29-138">This sample is located in the following directory.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="2fd29-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2fd29-139">See Also</span></span>

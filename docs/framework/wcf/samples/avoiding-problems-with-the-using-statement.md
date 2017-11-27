@@ -1,32 +1,35 @@
 ---
-title: "Vermeiden von Problemen mit der Using-Anweisung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Vermeiden von Problemen mit der Using-Anweisung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 123081683f122f68fded94aed5735d7058496366
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vermeiden von Problemen mit der Using-Anweisung
-In diesem Beispiel wird veranschaulicht, wie Sie die C\#\-Anweisung "using" beim Verwenden eines typisierten Clients nicht zum automatischen Bereinigen von Ressourcen verwenden sollten.Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md), das einen Rechnerdienst implementiert.In diesem Beispiel ist der Client eine Konsolenanwendung \(.exe\), und der Dienst wird von Internetinformationsdiensten \(IIS\) gehostet.  
+# <a name="avoiding-problems-with-the-using-statement"></a><span data-ttu-id="893fb-102">Vermeiden von Problemen mit der Using-Anweisung</span><span class="sxs-lookup"><span data-stu-id="893fb-102">Avoiding Problems with the Using Statement</span></span>
+<span data-ttu-id="893fb-103">In diesem Beispiel wird veranschaulicht, wie Sie die C#-Anweisung "using" beim Verwenden eines typisierten Clients nicht zum automatischen Bereinigen von Ressourcen verwenden sollten.</span><span class="sxs-lookup"><span data-stu-id="893fb-103">This sample demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span> <span data-ttu-id="893fb-104">Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.</span><span class="sxs-lookup"><span data-stu-id="893fb-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="893fb-105">In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.</span><span class="sxs-lookup"><span data-stu-id="893fb-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="893fb-106">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="893fb-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In diesem Beispiel werden zwei häufige Probleme veranschaulicht, die beim Verwenden der C\#\-Anweisung "using" mit typisierten Clients auftreten. Außerdem wird Code bereitgestellt, mit dem die Bereinigung nach Ausnahmen korrekt ausgeführt werden kann.  
+ <span data-ttu-id="893fb-107">In diesem Beispiel werden zwei häufige Probleme veranschaulicht, die beim Verwenden der C#-Anweisung "using" mit typisierten Clients auftreten. Außerdem wird Code bereitgestellt, mit dem die Bereinigung nach Ausnahmen korrekt ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="893fb-107">This sample shows two of the common problems that occur when using the C# "using" statement with typed clients, as well as code that correctly cleans up after exceptions.</span></span>  
   
- Die C\#\-Anweisung "using" führt zu einem Aufruf von `Dispose`\(\).Dies ist das Gleiche wie `Close`\(\). Dies kann zu Ausnahmen führen, wenn ein Netzwerkfehler auftritt.Da der Aufruf von `Dispose`\(\) implizit an der schließenden Klammer des "using"\-Blocks erfolgt, wird diese Quelle für Ausnahmen beim Schreiben oder Lesen des Codes häufig nicht bemerkt.Dies stellt eine potenzielle Quelle für Anwendungsfehler dar.  
+ <span data-ttu-id="893fb-108">Die C#-Anweisung "using" führt zu einem Aufruf von `Dispose`().</span><span class="sxs-lookup"><span data-stu-id="893fb-108">The C# "using" statement results in a call to `Dispose`().</span></span> <span data-ttu-id="893fb-109">Dies ist das Gleiche wie `Close`(). Dies kann zu Ausnahmen führen, wenn ein Netzwerkfehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="893fb-109">This is the same as `Close`(), which may throw exceptions when a network error occurs.</span></span> <span data-ttu-id="893fb-110">Da der Aufruf von `Dispose`() implizit an der schließenden Klammer des "using"-Blocks erfolgt, wird diese Quelle für Ausnahmen beim Schreiben oder Lesen des Codes häufig nicht bemerkt.</span><span class="sxs-lookup"><span data-stu-id="893fb-110">Because the call to `Dispose`() happens implicitly at the closing brace of the "using" block, this source of exceptions is likely to go unnoticed both by people writing the code and reading the code.</span></span> <span data-ttu-id="893fb-111">Dies stellt eine potenzielle Quelle für Anwendungsfehler dar.</span><span class="sxs-lookup"><span data-stu-id="893fb-111">This represents a potential source of application errors.</span></span>  
   
- Das erste Problem \(in der `DemonstrateProblemUsingCanThrow`\-Methode dargestellt\) liegt darin, dass die schließende Klammer eine Ausnahme auslöst und der Code nach der schließenden Klammer nicht ausgeführt wird:  
+ <span data-ttu-id="893fb-112">Das erste Problem (in der `DemonstrateProblemUsingCanThrow`-Methode dargestellt) liegt darin, dass die schließende Klammer eine Ausnahme auslöst und der Code nach der schließenden Klammer nicht ausgeführt wird:</span><span class="sxs-lookup"><span data-stu-id="893fb-112">The first problem, illustrated in the `DemonstrateProblemUsingCanThrow` method, is that the closing brace throws an exception and the code after the closing brace does not execute:</span></span>  
   
 ```  
 using (CalculatorClient client = new CalculatorClient())  
@@ -36,9 +39,9 @@ using (CalculatorClient client = new CalculatorClient())
 Console.WriteLine("Hope this code wasn't important, because it might not happen.");  
 ```  
   
- Selbst wenn nichts im using\-Block eine Ausnahme auslöst oder alle Ausnahmen im using\-Block abgefangen werden, wird `Console.Writeline` möglicherweise nicht ausgeführt, da der implizite `Dispose`\(\)\-Aufruf an der schließenden Klammer eine Ausnahme auslösen kann.  
+ <span data-ttu-id="893fb-113">Selbst wenn nichts im using-Block eine Ausnahme auslöst oder alle Ausnahmen im using-Block abgefangen werden, wird `Console.Writeline` möglicherweise nicht ausgeführt, da der implizite `Dispose`()-Aufruf an der schließenden Klammer eine Ausnahme auslösen kann.</span><span class="sxs-lookup"><span data-stu-id="893fb-113">Even if nothing inside the using block throws an exception or all exceptions inside the using block are caught, the `Console.Writeline` might not happen because the implicit `Dispose`() call at the closing brace might throw an exception.</span></span>  
   
- Das zweite Problem \(in der `DemonstrateProblemUsingCanThrowAndMask`\-Methode veranschaulicht\) ist eine weitere Implikation der schließenden Klammer, die eine Ausnahme auslöst:  
+ <span data-ttu-id="893fb-114">Das zweite Problem (in der `DemonstrateProblemUsingCanThrowAndMask`-Methode veranschaulicht) ist eine weitere Implikation der schließenden Klammer, die eine Ausnahme auslöst:</span><span class="sxs-lookup"><span data-stu-id="893fb-114">The second problem, illustrated in the `DemonstrateProblemUsingCanThrowAndMask` method, is another implication of the closing brace throwing an exception:</span></span>  
   
 ```  
 using (CalculatorClient client = new CalculatorClient())  
@@ -49,9 +52,9 @@ using (CalculatorClient client = new CalculatorClient())
 } // <-- this line might throw an exception.  
 ```  
   
- Da `Dispose`\(\) in einem "finally"\-Block auftritt, tritt `ApplicationException` nur außerhalb des using\-Blocks auf, wenn bei `Dispose`\(\) ein Fehler auftritt.Wenn der Code außen wissen muss, wann die `ApplicationException` auftritt, kann das "using"\-Konstrukt zu Problemen führen, da diese Ausnahme maskiert wird.  
+ <span data-ttu-id="893fb-115">Da `Dispose`() in einem "finally"-Block auftritt, tritt `ApplicationException` nur außerhalb des using-Blocks auf, wenn bei `Dispose`() ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="893fb-115">Because the `Dispose`() occurs inside a "finally" block, the `ApplicationException` is never seen outside the using block if the `Dispose`() fails.</span></span> <span data-ttu-id="893fb-116">Wenn der Code außen wissen muss, wann die `ApplicationException` auftritt, kann das "using"-Konstrukt zu Problemen führen, da diese Ausnahme maskiert wird.</span><span class="sxs-lookup"><span data-stu-id="893fb-116">If the code outside must know about when the `ApplicationException` occurs, the "using" construct may cause problems by masking this exception.</span></span>  
   
- Abschließend wird im Beispiel veranschaulicht, wie die Bereinigung ordnungsgemäß ausgeführt wird, nachdem Ausnahmen in `DemonstrateCleanupWithExceptions` aufgetreten sind.Dabei wird ein try\/catch\-Block verwendet, um Fehler zu melden und `Abort` aufzurufen.Detaillierte Informationen zum Abfangen von Ausnahmen von Clientaufrufen finden Sie im Beispiel [Erwartete Ausnahmen](../../../../docs/framework/wcf/samples/expected-exceptions.md).  
+ <span data-ttu-id="893fb-117">Abschließend wird im Beispiel veranschaulicht, wie die Bereinigung ordnungsgemäß ausgeführt wird, nachdem Ausnahmen in `DemonstrateCleanupWithExceptions` aufgetreten sind.</span><span class="sxs-lookup"><span data-stu-id="893fb-117">Finally, the sample demonstrates how to clean up correctly when exceptions occur in `DemonstrateCleanupWithExceptions`.</span></span> <span data-ttu-id="893fb-118">Dabei wird ein try/catch-Block verwendet, um Fehler zu melden und `Abort` aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="893fb-118">This uses a try/catch block to report errors and call `Abort`.</span></span> <span data-ttu-id="893fb-119">Finden Sie unter der [Ausnahmen erwartet](../../../../docs/framework/wcf/samples/expected-exceptions.md) ausführliche Informationen zum Abfangen von Ausnahmen von Clientaufrufe Sample.</span><span class="sxs-lookup"><span data-stu-id="893fb-119">See the [Expected Exceptions](../../../../docs/framework/wcf/samples/expected-exceptions.md) sample for more details about catching exceptions from client calls.</span></span>  
   
 ```  
 try  
@@ -78,13 +81,13 @@ catch (Exception e)
 ```  
   
 > [!NOTE]
->  Die using\-Anweisung und ServiceHost: Viele selbst gehostete Anwendungen führen wenige andere Aktionen als das Hosten eines Diensts aus, und ServiceHost.Close löst selten Ausnahmen aus. In solchen Anwendungen kann die using\-Anweisung mit ServiceHost daher sicher verwendet werden.Achten Sie jedoch darauf, dass ServiceHost.Close eine `CommunicationException` auslösen kann. Wenn die Anwendung daher nach dem Schließen von ServiceHost fortgesetzt wird, sollten Sie die Verwendung der using\-Anweisung vermeiden und sich an das zuvor beschriebene Muster halten.  
+>  <span data-ttu-id="893fb-120">Die using-Anweisung und ServiceHost: Viele selbst gehostete Anwendungen führen wenige andere Aktionen als das Hosten eines Diensts aus, und ServiceHost.Close löst selten Ausnahmen aus. In solchen Anwendungen kann die using-Anweisung mit ServiceHost daher sicher verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="893fb-120">The using statement and ServiceHost: Many self-hosting applications do little more than host a service, and ServiceHost.Close rarely throws an exception, so such applications can safely use the using statement with ServiceHost.</span></span> <span data-ttu-id="893fb-121">Achten Sie jedoch darauf, dass ServiceHost.Close eine `CommunicationException` auslösen kann. Wenn die Anwendung daher nach dem Schließen von ServiceHost fortgesetzt wird, sollten Sie die Verwendung der using-Anweisung vermeiden und sich an das zuvor beschriebene Muster halten.</span><span class="sxs-lookup"><span data-stu-id="893fb-121">However, be aware that ServiceHost.Close can throw a `CommunicationException`, so if your application continues after closing the ServiceHost, you should avoid the using statement and follow the pattern previously given.</span></span>  
   
- Wenn Sie das Beispiel ausführen, werden die Antworten und Ausnahmen für den Vorgang im Konsolenfenster des Clients angezeigt.  
+ <span data-ttu-id="893fb-122">Wenn Sie das Beispiel ausführen, werden die Antworten und Ausnahmen für den Vorgang im Konsolenfenster des Clients angezeigt.</span><span class="sxs-lookup"><span data-stu-id="893fb-122">When you run the sample, the operation responses and exceptions are displayed in the client console window.</span></span>  
   
- Im Clientprozess werden drei Szenarios ausgeführt, die jeweils versuchen, `Divide` aufzurufen.Im ersten Szenario wird veranschaulicht, dass Code aufgrund einer Ausnahme von `Dispose`\(\) übersprungen wird.Im zweiten Szenario wird veranschaulicht, dass eine wichtige Ausnahme aufgrund einer Ausnahme von `Dispose`\(\) maskiert wird.Das dritte Szenario zeigt die ordnungsgemäße Bereinigung.  
+ <span data-ttu-id="893fb-123">Im Clientprozess werden drei Szenarios ausgeführt, die jeweils versuchen, `Divide` aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="893fb-123">The client process runs three scenarios, each of which attempts to call `Divide`.</span></span> <span data-ttu-id="893fb-124">Im ersten Szenario wird veranschaulicht, dass Code aufgrund einer Ausnahme von `Dispose`() übersprungen wird.</span><span class="sxs-lookup"><span data-stu-id="893fb-124">The first scenario demonstrates code being skipped because of an exception from `Dispose`().</span></span> <span data-ttu-id="893fb-125">Im zweiten Szenario wird veranschaulicht, dass eine wichtige Ausnahme aufgrund einer Ausnahme von `Dispose`() maskiert wird.</span><span class="sxs-lookup"><span data-stu-id="893fb-125">The second scenario demonstrates an important exception being masked because of an exception from `Dispose`().</span></span> <span data-ttu-id="893fb-126">Das dritte Szenario zeigt die ordnungsgemäße Bereinigung.</span><span class="sxs-lookup"><span data-stu-id="893fb-126">The third scenario demonstrates correct clean up.</span></span>  
   
- Die erwartete Ausgabe vom Clientprozess lautet wie folgt:  
+ <span data-ttu-id="893fb-127">Die erwartete Ausgabe vom Clientprozess lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="893fb-127">The expected output from the client process is:</span></span>  
   
 ```  
 =  
@@ -106,24 +109,23 @@ Calling client.Divide(0.0, 0.0);
 Got System.ServiceModel.CommunicationException from Divide.  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="893fb-128">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="893fb-128">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="893fb-129">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="893fb-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="893fb-130">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="893fb-130">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="893fb-131">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="893fb-131">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="893fb-132">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="893fb-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="893fb-133">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="893fb-133">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="893fb-134">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="893fb-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="893fb-135">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="893fb-135">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="893fb-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="893fb-136">See Also</span></span>

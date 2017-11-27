@@ -1,75 +1,78 @@
 ---
-title: "Implementieren des Table-Steuerelementmusters der Benutzeroberfl&#228;chenautomatisierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI-Automatisierung, TableControl-Muster"
-  - "Steuerelementmuster, Tabelle"
-  - "TableControl-Muster"
+title: "Implementieren des Table-Steuerelementmusters der Benutzeroberflächenautomatisierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Table control pattern
+- control patterns, Table
+- TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 4a1fbe175abf07eaccfd177c6e32f5515e88c4ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Implementieren des Table-Steuerelementmusters der Benutzeroberfl&#228;chenautomatisierung
+# <a name="implementing-the-ui-automation-table-control-pattern"></a><span data-ttu-id="af21c-102">Implementieren des Table-Steuerelementmusters der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="af21c-102">Implementing the UI Automation Table Control Pattern</span></span>
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler, die die verwaltete verwenden möchten vorgesehen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Klassen, die in der <xref:System.Windows.Automation> Namespace. Die neuesten Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows Automation API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="af21c-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="af21c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="af21c-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="af21c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Dieses Thema enthält Richtlinien und Konventionen zum Implementieren von <xref:System.Windows.Automation.Provider.ITableProvider>, einschließlich Informationen zu Eigenschaften, Methoden und Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieser Übersicht aufgelistet.  
+ <span data-ttu-id="af21c-105">Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.ITableProvider>, einschließlich Informationen über Eigenschaften, Methoden und Ereignissen.</span><span class="sxs-lookup"><span data-stu-id="af21c-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ITableProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="af21c-106">Links zu zusätzlichen Referenzen sind am Ende dieser Übersicht aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="af21c-106">Links to additional references are listed at the end of the overview.</span></span>  
   
- Die <xref:System.Windows.Automation.TablePattern> -Steuerelementmuster dient zur Unterstützung von Steuerelementen, die als Container für eine Auflistung von untergeordneten Elementen dienen. Die untergeordneten Elemente dieses Elements müssen implementieren <xref:System.Windows.Automation.Provider.ITableItemProvider> und organisiert werden, in einem zweidimensionalen logischen Koordinatensystem, die nach Zeilen und Spalten durchlaufen werden kann. Dieses Steuerelementmuster entspricht dem <xref:System.Windows.Automation.Provider.IgridProvider>, mit dem Unterschied, dass jedes implementieren Steuerelement <xref:System.Windows.Automation.Provider.ITableProvider> auch Beziehung verfügbar machen muss eine Spalte bzw. Zeile Header für jedes untergeordnete Element. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="af21c-107">Die <xref:System.Windows.Automation.TablePattern> -Steuerelementmuster dient zur Unterstützung von Steuerelementen, die als Container für eine Auflistung von untergeordneten Elementen dienen.</span><span class="sxs-lookup"><span data-stu-id="af21c-107">The <xref:System.Windows.Automation.TablePattern> control pattern is used to support controls that act as containers for a collection of child elements.</span></span> <span data-ttu-id="af21c-108">Die untergeordneten Elemente dieses Elements müssen implementieren <xref:System.Windows.Automation.Provider.ITableItemProvider> und organisiert werden, in einem zweidimensionalen logischen Koordinatensystem Zeilen-und spaltenweise durchlaufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="af21c-108">The children of this element must implement <xref:System.Windows.Automation.Provider.ITableItemProvider> and be organized in a two-dimensional logical coordinate system that can be traversed by row and column.</span></span> <span data-ttu-id="af21c-109">Dieses Steuerelementmuster ist analog zu <xref:System.Windows.Automation.Provider.IGridProvider>, mit dem Unterschied, dass jedes implementieren Steuerelement <xref:System.Windows.Automation.Provider.ITableProvider> Spalten- und/oder Header, um eine Beziehung für jedes untergeordnete Element muss auch verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="af21c-109">This control pattern is analogous to <xref:System.Windows.Automation.Provider.IGridProvider>, with the distinction that any control implementing <xref:System.Windows.Automation.Provider.ITableProvider> must also expose a column and/or row header relationship for each child element.</span></span> <span data-ttu-id="af21c-110">Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="af21c-110">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
- Beachten Sie beim Implementieren des Table-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="af21c-111">Implementierungsrichtlinien und -konventionen</span><span class="sxs-lookup"><span data-stu-id="af21c-111">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="af21c-112">Beachten Sie beim Implementieren des Table-Steuerelementmusters die folgenden Richtlinien und Konventionen:</span><span class="sxs-lookup"><span data-stu-id="af21c-112">When implementing the Table control pattern, note the following guidelines and conventions:</span></span>  
   
--   Zugriff auf den Inhalt der einzelnen Zellen erfolgt über eine zweidimensionalen logischen Koordinatensystem oder ein Array von der erforderlichen gleichzeitigen Implementierung von bereitgestellten <xref:System.Windows.Automation.Provider.IGridProvider>.  
+-   <span data-ttu-id="af21c-113">Zugriff auf den Inhalt der einzelnen Zellen erfolgt über einem zweidimensionalen logischen Koordinatensystem oder einer Matrix, die von der erforderlichen gleichzeitigen Implementierung von bereitgestellten <xref:System.Windows.Automation.Provider.IGridProvider>.</span><span class="sxs-lookup"><span data-stu-id="af21c-113">Access to the content of individual cells is through a two-dimensional logical coordinate system or array provided by the required concurrent implementation of <xref:System.Windows.Automation.Provider.IGridProvider>.</span></span>  
   
--   Eine Spalten- oder Zeilenüberschrift kann in einem Tabellenobjekt enthalten sein oder ein separates Headerobjekt darstellen, das einem Tabellenobjekt zugeordnet ist.  
+-   <span data-ttu-id="af21c-114">Eine Spalten- oder Zeilenüberschrift kann in einem Tabellenobjekt enthalten sein oder ein separates Headerobjekt darstellen, das einem Tabellenobjekt zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="af21c-114">A column or row header can be contained within a table object or be a separate header object that is associated with a table object.</span></span>  
   
--   Spalten- und Zeilenüberschriften können sowohl eine primäre als auch beliebige unterstützende Überschriften enthalten.  
+-   <span data-ttu-id="af21c-115">Spalten- und Zeilenüberschriften können sowohl eine primäre als auch beliebige unterstützende Überschriften enthalten.</span><span class="sxs-lookup"><span data-stu-id="af21c-115">Column and row headers may include both a primary header as well as any supporting headers.</span></span>  
   
 > [!NOTE]
->  Dieses Konzept wird im offensichtlich eine [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Kalkulationstabelle, in dem ein Benutzer eine Spalte "First Name" definiert wurde. Diese Spalte verfügt jetzt über zwei Überschriften. Die vom Benutzer definierte Überschrift „Vorname“ und die alphanumerische Bezeichnung der Spalte, die von der Anwendung zugewiesen wird.  
+>  <span data-ttu-id="af21c-116">Dieses Konzept wird offensichtlich in einem [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Kalkulationstabelle, in dem ein Benutzer eine Spalte "Vorname" definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="af21c-116">This concept becomes evident in a [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] spreadsheet where a user has defined a "First name" column.</span></span> <span data-ttu-id="af21c-117">Diese Spalte verfügt jetzt über zwei Überschriften. Die vom Benutzer definierte Überschrift „Vorname“ und die alphanumerische Bezeichnung der Spalte, die von der Anwendung zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="af21c-117">This column now has two headers—the "First name" header defined by the user and the alphanumeric designation for that column assigned by the application.</span></span>  
   
--   Finden Sie unter [implementieren die Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) für verwandte Rasterfunktionalität.  
+-   <span data-ttu-id="af21c-118">Finden Sie unter [implementieren das Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) für Funktionen des zugehörigen Rasters.</span><span class="sxs-lookup"><span data-stu-id="af21c-118">See [Implementing the UI Automation Grid Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.</span></span>  
   
- ![Tabelle mit komplexen Headerelementen.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
-Beispiel für eine Tabelle mit komplexen Spaltenüberschriften  
+ <span data-ttu-id="af21c-119">![Tabelle mit komplexen Headerelementen. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")</span><span class="sxs-lookup"><span data-stu-id="af21c-119">![Table with complex header items.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")</span></span>  
+<span data-ttu-id="af21c-120">Beispiel für eine Tabelle mit komplexen Spaltenüberschriften</span><span class="sxs-lookup"><span data-stu-id="af21c-120">Example of a Table with Complex Column Headers</span></span>  
   
- ![Tabelle mit mehrdeutiger RowOrColumnMajor-Eigenschaft.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
-Beispiel für eine Tabelle mit mehrdeutiger RowOrColumnMajor-Eigenschaft  
+ <span data-ttu-id="af21c-121">![Tabelle mit mehrdeutiger RowOrColumnMajor-Eigenschaft. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")</span><span class="sxs-lookup"><span data-stu-id="af21c-121">![Table with ambiguous RowOrColumnMajor property.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")</span></span>  
+<span data-ttu-id="af21c-122">Beispiel für eine Tabelle mit mehrdeutiger RowOrColumnMajor-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="af21c-122">Example of a Table with Ambiguous RowOrColumnMajor Property</span></span>  
   
 <a name="Required_Members_for_ITableProvider"></a>   
-## <a name="required-members-for-itableprovider"></a>Erforderliche Member für ITableProvider  
- Für die ITableProvider-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.  
+## <a name="required-members-for-itableprovider"></a><span data-ttu-id="af21c-123">Erforderliche Member für ITableProvider</span><span class="sxs-lookup"><span data-stu-id="af21c-123">Required Members for ITableProvider</span></span>  
+ <span data-ttu-id="af21c-124">Für die ITableProvider-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.</span><span class="sxs-lookup"><span data-stu-id="af21c-124">The following properties and methods are required for the ITableProvider interface.</span></span>  
   
-|Erforderliche Member|Memberart|Notizen|  
+|<span data-ttu-id="af21c-125">Erforderliche Member</span><span class="sxs-lookup"><span data-stu-id="af21c-125">Required members</span></span>|<span data-ttu-id="af21c-126">Memberart</span><span class="sxs-lookup"><span data-stu-id="af21c-126">Member type</span></span>|<span data-ttu-id="af21c-127">Notizen</span><span class="sxs-lookup"><span data-stu-id="af21c-127">Notes</span></span>|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Methode|Keine|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|<span data-ttu-id="af21c-128">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="af21c-128">Property</span></span>|<span data-ttu-id="af21c-129">Keine</span><span class="sxs-lookup"><span data-stu-id="af21c-129">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|<span data-ttu-id="af21c-130">Methode</span><span class="sxs-lookup"><span data-stu-id="af21c-130">Method</span></span>|<span data-ttu-id="af21c-131">Keine</span><span class="sxs-lookup"><span data-stu-id="af21c-131">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|<span data-ttu-id="af21c-132">Methode</span><span class="sxs-lookup"><span data-stu-id="af21c-132">Method</span></span>|<span data-ttu-id="af21c-133">Keine</span><span class="sxs-lookup"><span data-stu-id="af21c-133">None</span></span>|  
   
- Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
+ <span data-ttu-id="af21c-134">Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="af21c-134">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Ausnahmen  
- Diesem Steuerelementmuster sind keine Ausnahmen zugeordnet.  
+## <a name="exceptions"></a><span data-ttu-id="af21c-135">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="af21c-135">Exceptions</span></span>  
+ <span data-ttu-id="af21c-136">Diesem Steuerelementmuster sind keine Ausnahmen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="af21c-136">This control pattern has no associated exceptions.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Implementieren des TableItem-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)   
- [Implementieren die Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)   
- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Zwischenspeichern Sie in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="af21c-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af21c-137">See Also</span></span>  
+ [<span data-ttu-id="af21c-138">Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="af21c-138">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="af21c-139">Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter</span><span class="sxs-lookup"><span data-stu-id="af21c-139">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="af21c-140">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="af21c-140">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="af21c-141">Implementieren des TableItem-Steuerelementmusters der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="af21c-141">Implementing the UI Automation TableItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [<span data-ttu-id="af21c-142">Implementieren das Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="af21c-142">Implementing the UI Automation Grid Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
+ [<span data-ttu-id="af21c-143">Übersicht über die Benutzeroberflächenautomatisierungs-Struktur</span><span class="sxs-lookup"><span data-stu-id="af21c-143">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="af21c-144">Verwenden der Zwischenspeicherung in der UI-Automatisierung</span><span class="sxs-lookup"><span data-stu-id="af21c-144">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
