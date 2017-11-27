@@ -1,123 +1,137 @@
 ---
-title: "Konvertieren von Uhrzeiten zwischen Zeitzonen | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Konvertieren von Zeiten"
-  - "Konvertierung lokaler Zeiten"
-  - "Zeitzonen [.NET Framework], Konvertierungen"
-  - "Zeiten [.NET Framework], Konvertieren"
-  - "UTC-Zeiten, Konvertieren"
+title: Konvertieren von Uhrzeiten zwischen Zeitzonen
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- times [.NET Framework], converting
+- time zones [.NET Framework], conversions
+- UTC times, converting
+- converting times
+- local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ace592f973c4730bd8b6e21006c8e54aef4c695a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Konvertieren von Uhrzeiten zwischen Zeitzonen
-Für Anwendungen, die mit Datumsangaben und Uhrzeiten arbeiten, wird es immer wichtiger, Unterschiede zwischen Zeitzonen verarbeiten zu können.  Eine Anwendung kann nicht länger davon ausgehen, dass alle Uhrzeiten in Ortszeit ausgedrückt werden können, also in der Uhrzeit, die durch die <xref:System.DateTime>\-Struktur festgelegt ist.  So ist beispielsweise eine Webseite, auf der die aktuelle Uhrzeit im Osten der USA angezeigt wird, für einen Benutzer in Ostasien nicht sehr glaubwürdig.  In diesem Thema wird erläutert, wie Uhrzeiten von einer Zeitzone in eine andere konvertiert werden können und wie <xref:System.DateTimeOffset>\-Werte mit eingeschränkter Zeitzonenunterstützung konvertiert werden.  
-  
-## Konvertieren in koordinierte Weltzeit \(Coordinated Universal Time, UTC\)  
- Bei der koordinierten Weltzeit \(Coordinated Universal Time, UTC\) handelt es sich um einen höchst präzisen Atomzeitstandard.  Die Zeitzonen der Welt werden als positive oder negative Offsets von UTC ausgedrückt.  UTC stellt daher eine Art Zeit dar, die unabhängig von Zeitzonen bzw. neutral ist.  Die Verwendung der UTC\-Zeit wird empfohlen, wenn die Portabilität von Datum und Uhrzeit zwischen Computern wichtig ist. \(Ausführliche Informationen und andere empfohlene Vorgehensweisen mit Datumsangaben und Uhrzeiten, die Sie finden [Codierungs\-Verfahren mithilfe DateTime verwendet in .NET Framework](http://go.microsoft.com/fwlink/?LinkId=92342).\) Durch das Konvertieren einzelner Zeitzonen in UTC wird der Vergleich von Uhrzeiten vereinfacht.  
-  
+# <a name="converting-times-between-time-zones"></a><span data-ttu-id="eed02-102">Konvertieren von Uhrzeiten zwischen Zeitzonen</span><span class="sxs-lookup"><span data-stu-id="eed02-102">Converting times between time zones</span></span>
+
+<span data-ttu-id="eed02-103">Es wird immer wichtiger, dass Anwendungen, die mit Daten und Uhrzeiten arbeiten, Unterschiede zwischen Zeitzonen verarbeiten können.</span><span class="sxs-lookup"><span data-stu-id="eed02-103">It is becoming increasingly important for any application that works with dates and times to handle differences between time zones.</span></span> <span data-ttu-id="eed02-104">Eine Anwendung kann nicht mehr davon ausgehen, die jederzeit ausgedrückt werden können in die Ortszeit steht die Zeit aus der <xref:System.DateTime> Struktur.</span><span class="sxs-lookup"><span data-stu-id="eed02-104">An application can no longer assume that all times can be expressed in the local time, which is the time available from the <xref:System.DateTime> structure.</span></span> <span data-ttu-id="eed02-105">Eine Webseite beispielsweise, die die aktuelle Uhrzeit für die Ostküste der USA anzeigt, wird für Kunden in Ostasien an Glaubwürdigkeit verlieren.</span><span class="sxs-lookup"><span data-stu-id="eed02-105">For example, a Web page that displays the current time in the eastern part of the United States will lack credibility to a customer in eastern Asia.</span></span> <span data-ttu-id="eed02-106">In diesem Thema wird erläutert, wie oft aus einer Zeitzone in eine andere zu konvertieren sowie zum Konvertieren <xref:System.DateTimeOffset> Werte, die Zeitzonen begrenzt ist.</span><span class="sxs-lookup"><span data-stu-id="eed02-106">This topic explains how to convert times from one time zone to another, as well as how to convert <xref:System.DateTimeOffset> values that have limited time zone awareness.</span></span>
+
+## <a name="converting-to-coordinated-universal-time"></a><span data-ttu-id="eed02-107">Konvertieren in die koordinierte Weltzeit</span><span class="sxs-lookup"><span data-stu-id="eed02-107">Converting to Coordinated Universal Time</span></span>
+
+<span data-ttu-id="eed02-108">Die koordinierte Weltzeit (UTC, Coordinated Universal Time) ist ein auf der Atomzeit basierender, höchst präziser Zeitstandard.</span><span class="sxs-lookup"><span data-stu-id="eed02-108">Coordinated Universal Time (UTC) is a high-precision, atomic time standard.</span></span> <span data-ttu-id="eed02-109">Die Zeitzonen der Welt werden als positive oder negative Abweichungen von der UTC ausgedrückt.</span><span class="sxs-lookup"><span data-stu-id="eed02-109">The world’s time zones are expressed as positive or negative offsets from UTC.</span></span> <span data-ttu-id="eed02-110">Daher ist die UTC sozusagen eine zeitzonenfreie bzw. zeitzonenneutrale Zeit.</span><span class="sxs-lookup"><span data-stu-id="eed02-110">Thus, UTC provides a kind of time-zone free or time-zone neutral time.</span></span> <span data-ttu-id="eed02-111">Die Verwendung der UTC wird empfohlen, wenn die computerübergreifende Portabilität von Datum und Uhrzeit von großer Bedeutung ist.</span><span class="sxs-lookup"><span data-stu-id="eed02-111">The use of UTC time is recommended when a date and time's portability across computers is important.</span></span> <span data-ttu-id="eed02-112">(Details und weitere bewährten Methoden, die mit Datumsangaben und Uhrzeiten, finden Sie unter [Codierung bewährte Methoden, die mit "DateTime" in .NET Framework](http://go.microsoft.com/fwlink/?LinkId=92342).) Durch Konvertieren einzelner Zeitzonen in die UTC lassen sich Zeiten einfach miteinander vergleichen.</span><span class="sxs-lookup"><span data-stu-id="eed02-112">(For details and other best practices using dates and times, see [Coding best practices using DateTime in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=92342).) Converting individual time zones to UTC makes time comparisons easy.</span></span>
+
 > [!NOTE]
->  Sie können eine <xref:System.DateTimeOffset>\-Struktur auch serialisieren, um einen bestimmten Zeitpunkt eindeutig darzustellen.  Da <xref:System.DateTimeOffset>\-Objekte einen Datums\- und Uhrzeitwert zusammen mit dem Offset von UTC speichern, geben sie stets einen bestimmten Zeitpunkt in Bezug auf UTC an.  
-  
- Eine Uhrzeit lässt sich am einfachsten in UTC konvertieren, indem die `static` \(`Shared` in Visual Basic\) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=fullName>\-Methode aufgerufen wird.  Die tatsächlich durch die Methode ausgeführte Konvertierung ist vom Wert der <xref:System.DateTime.Kind%2A>\-Eigenschaft des `dateTime`\-Parameters abhängig, wie in der folgenden Tabelle dargestellt.  
-  
-|DateTime.Kind\-Eigenschaft|Conversion|  
-|--------------------------------|----------------|  
-|<xref:System.DateTimeKind?displayProperty=fullName>|Konvertiert Ortszeit in UTC.|  
-|<xref:System.DateTimeKind?displayProperty=fullName>|Nimmt an, dass der `dateTime`\-Parameter Ortszeit darstellt, und konvertiert Ortszeit in UTC.|  
-|<xref:System.DateTimeKind?displayProperty=fullName>|Gibt den `dateTime`\-Parameter unverändert zurück.|  
-  
- Im folgenden Code wird die aktuelle Ortszeit in UTC konvertiert, und das Ergebnis wird auf der Konsole angezeigt.  
-  
- [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
- [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]  
-  
+> <span data-ttu-id="eed02-113">Sie können auch Serialisieren einer <xref:System.DateTimeOffset> Struktur, um einen einzigen Zeitpunkt eindeutig einen bestimmten Zeitraum darstellen.</span><span class="sxs-lookup"><span data-stu-id="eed02-113">You can also serialize a <xref:System.DateTimeOffset> structure to unambiguously represent a single point in time.</span></span> <span data-ttu-id="eed02-114">Da <xref:System.DateTimeOffset> einen Datum und Uhrzeit-Wert zusammen mit dem Offset von UTC zum Speichern von Objekten, die sie immer einen bestimmten Zeitpunkt darstellen in Beziehung in UTC.</span><span class="sxs-lookup"><span data-stu-id="eed02-114">Because <xref:System.DateTimeOffset> objects store a date and time value along with its offset from UTC, they always represent a particular point in time in relationship to UTC.</span></span>
+
+<span data-ttu-id="eed02-115">Die einfachste Möglichkeit zum Konvertieren einer Uhrzeit in UTC-Zeit ist das Aufrufen der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="eed02-115">The easiest way to convert a time to UTC is to call the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="eed02-116">Die tatsächlich von der Methode ausgeführte Konvertierung hängt vom Wert von der `dateTime` des Parameters <xref:System.DateTime.Kind%2A> Eigenschaft, wie in der folgenden Tabelle gezeigt.</span><span class="sxs-lookup"><span data-stu-id="eed02-116">The exact conversion performed by the method depends on the value of the `dateTime` parameter's <xref:System.DateTime.Kind%2A> property, as the following table shows.</span></span>
+
+| `DateTime.Kind`            | <span data-ttu-id="eed02-117">Umwandeln</span><span class="sxs-lookup"><span data-stu-id="eed02-117">Conversion</span></span>                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| `DateTimeKind.Local`       | <span data-ttu-id="eed02-118">Konvertiert die lokale Zeit in die UTC.</span><span class="sxs-lookup"><span data-stu-id="eed02-118">Converts local time to UTC.</span></span>                                                    |
+| `DateTimeKind.Unspecified` | <span data-ttu-id="eed02-119">Nimmt an, dass der `dateTime`-Parameter die lokale Zeit angibt, und konvertiert die lokale Zeit in die UTC.</span><span class="sxs-lookup"><span data-stu-id="eed02-119">Assumes the `dateTime` parameter is local time and converts local time to UTC.</span></span> |
+| `DateTimeKind.Utc`         | <span data-ttu-id="eed02-120">Gibt den `dateTime`-Parameter unverändert zurück.</span><span class="sxs-lookup"><span data-stu-id="eed02-120">Returns the `dateTime` parameter unchanged.</span></span>                                    |
+
+<span data-ttu-id="eed02-121">Der folgende Code konvertiert die aktuelle lokale Zeit in die UTC und zeigt das Ergebnis in der Konsole an.</span><span class="sxs-lookup"><span data-stu-id="eed02-121">The following code converts the current local time to UTC and displays the result to the console.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
+[!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
+
 > [!NOTE]
->  Die <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=fullName>\-Methode erzeugt notwendigerweise keine Ergebnisse, die mit der <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=fullName>\-Methode und <xref:System.DateTime.ToUniversalTime%2A?displayProperty=fullName>\-Methode identisch sind.  Wenn für die lokale Zeitzone des Hostsystems mehrere Anpassungsregeln gelten, wendet <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=fullName> die entsprechende Regel auf ein bestimmtes Datum und eine bestimmte Uhrzeit an.  Die anderen beiden Methoden wenden immer die letzte Anpassungsregel an.  
-  
- Wenn der Datums\- und Uhrzeitwert weder die Ortszeit noch UTC darstellt, gibt die <xref:System.DateTime.ToUniversalTime%2A>\-Methode wahrscheinlich ein falsches Ergebnis zurück.  Mit der <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=fullName>\-Methode können Sie jedoch das Datum und die Uhrzeit aus einer bestimmten Zeitzone konvertieren. \(Ausführliche Informationen zum Abrufen eines <xref:System.TimeZoneInfo>\-Objekts, das die Zielzeitzone darstellt, finden Sie unter [Suchen der auf einem lokalen System definierten Zeitzonen](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).\) Im folgenden Code wird die <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=fullName>\-Methode verwendet, um Eastern Normalzeit in UTC zu konvertieren.  
-  
- [!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
- [!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]  
-  
- Beachten Sie, dass die Methode eine <xref:System.ArgumentException> auslöst, wenn die <xref:System.DateTime.Kind%2A>\-Eigenschaft des <xref:System.DateTime>\-Objekts und die Zeitzone nicht übereinstimmen.  Eine fehlende Übereinstimmung tritt dann auf, wenn die <xref:System.DateTime.Kind%2A>\-Eigenschaft <xref:System.DateTimeKind?displayProperty=fullName> ist, das <xref:System.TimeZoneInfo>\-Objekt jedoch nicht die lokale Zeitzone darstellt, oder wenn die <xref:System.DateTime.Kind%2A>\-Eigenschaft <xref:System.DateTimeKind?displayProperty=fullName> ist, das <xref:System.TimeZoneInfo>\-Objekt jedoch nicht <xref:System.DateTimeKind?displayProperty=fullName> entspricht.  
-  
- Alle diese Methoden verwenden <xref:System.DateTime>\-Werte als Parameter und geben einen <xref:System.DateTime>\-Wert zurück.  Für <xref:System.DateTimeOffset>\-Werte verfügt die <xref:System.DateTimeOffset>\-Struktur über eine <xref:System.DateTimeOffset.ToUniversalTime%2A>\-Instanzmethode, mit der Datum und Uhrzeit der aktuellen Instanz in UTC konvertiert werden.  Im folgenden Beispiel werden mithilfe der <xref:System.DateTimeOffset.ToUniversalTime%2A>\-Methode die Ortszeit und mehrere andere Uhrzeiten in koordinierte Weltzeit \(UTC\) konvertiert.  
-  
- [!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
- [!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]  
-  
-## Konvertieren von UTC in eine festgelegte Zeitzone  
- Weitere Informationen zum Konvertieren von UTC in Ortszeit finden Sie im folgenden Abschnitt, "Konvertieren von UTC in Ortszeit".  Um UTC in eine Uhrzeit einer beliebigen festgelegten Zeitzone zu konvertieren, rufen Sie die <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>\-Methode auf.  Diese Methode verwendet zwei Parameter:  
-  
--   Die zu konvertierende UTC.  Hierbei muss es sich um einen <xref:System.DateTime>\-Wert handeln, dessen <xref:System.DateTime.Kind%2A>\-Eigenschaft auf <xref:System.DateTimeKind?displayProperty=fullName> oder <xref:System.DateTimeKind?displayProperty=fullName> festgelegt ist.  
-  
--   Die Zeitzone, in die UTC konvertiert werden soll.  
-  
- Im folgenden Code wird UTC in Central Normalzeit konvertiert.  
-  
- [!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
- [!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]  
-  
-## Konvertieren von UTC in Ortszeit  
- Rufen Sie zum Konvertieren von UTC in Ortszeit die <xref:System.DateTime.ToLocalTime%2A>\-Methode des <xref:System.DateTime>\-Objekts auf, dessen Uhrzeit Sie konvertieren möchten.  Das genaue Verhalten der Methode ist vom Wert der <xref:System.DateTime.Kind%2A>\-Eigenschaft des Objekts abhängig, wie in der folgenden Tabelle dargestellt.  
-  
-|`DateTime.Kind`\-Eigenschaft|Conversion|  
-|----------------------------------|----------------|  
-|`DateTimeKind.Local`|Gibt den <xref:System.DateTime>\-Wert unverändert zurück.|  
-|`DateTimeKind.Unspecified`|Nimmt an, dass der <xref:System.DateTime>\-Wert UTC ist, und konvertiert UTC in Ortszeit.|  
-|`DateTimeKind.Utc`|Konvertiert den <xref:System.DateTime>\-Wert in Ortszeit.|  
-  
- **Hinweis** Das Verhalten der <xref:System.TimeZone.ToLocalTime%2A?displayProperty=fullName>\-Methode ist mit dem der `DateTime.ToLocalTime`\-Methode identisch.  Sie verwendet einen einzelnen Parameter, wobei es sich um den zu konvertierenden Datums\- und Uhrzeitwert handelt.  
-  
- Sie können die Uhrzeit auch in die Ortszeit einer beliebigen festgelegten Zeitzone konvertieren, indem Sie die `static` \(`Shared` in Visual Basic\) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=fullName>\-Methode verwenden.  Diese Vorgehensweise wird im nächsten Abschnitt erläutert.  
-  
-## Konvertieren zwischen zwei beliebigen Zeitzonen  
- Sie können Uhrzeiten zwischen zwei beliebigen Zeitzonen konvertieren, indem Sie eine der beiden folgenden `static`\-Methoden \(`Shared` in Visual Basic\) der <xref:System.TimeZoneInfo>\-Klasse verwenden:  
-  
--   <xref:System.TimeZoneInfo.ConvertTime%2A>  
-  
-     Die Parameter dieser Methode sind das Datum und die Uhrzeit, die konvertiert werden sollen, ein `TimeZoneInfo`\-Objekt, das die Zeitzone des Datums\- und Uhrzeitwerts darstellt, sowie ein `TimeZoneInfo`\-Objekt, das die Zeitzone darstellt, in die der Datums\- und Uhrzeitwert konvertiert werden soll.  
-  
--   <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>  
-  
-     Die Parameter dieser Methode sind das Datum und die Uhrzeit, die konvertiert werden sollen, ein Zeitzonenbezeichner des Datums\- und Uhrzeitwerts sowie ein Bezeichner der Zeitzone, in die der Datums\- und Uhrzeitwert konvertiert werden soll.  
-  
- Für beide Methoden ist erforderlich, dass die <xref:System.DateTime.Kind%2A>\-Eigenschaft des zu konvertierenden Datums\- und Uhrzeitwerts und das <xref:System.TimeZoneInfo>\-Objekt oder der Zeitzonenbezeichner, der seine Zeitzone darstellt, einander entsprechen.  Andernfalls wird eine <xref:System.ArgumentException> ausgelöst.  Wenn zum Beispiel die `Kind`\-Eigenschaft des Datums\- und Uhrzeitwerts `DateTimeKind.Local` lautet, wird eine Ausnahme ausgelöst, wenn das als Parameter an die Methode übergebene `TimeZoneInfo`\-Objekt nicht gleich `TimeZoneInfo.Local` ist.  Es wird auch dann eine Ausnahme ausgelöst, wenn der als Parameter an die Methode übergebene Bezeichner nicht gleich `TimeZoneInfo.Local.Id` ist.  
-  
- Im folgenden Beispiel wird die <xref:System.TimeZoneInfo.ConvertTime%2A>\-Methode zum Konvertieren von Hawaii Normalzeit in Ortszeit verwendet.  
-  
- [!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
- [!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]  
-  
-## Konvertieren von DateTimeOffset\-Werten  
- Datums\- und Uhrzeitwerte, die durch <xref:System.DateTimeOffset>\-Objekte dargestellt werden, unterstützen Zeitzonen nicht vollständig, da das Objekt zum Zeitpunkt der Instanziierung nicht mit der Zeitzone verknüpft wird.  In vielen Fällen muss die Anwendung einfach nur ein Datum und eine Uhrzeit basierend auf zwei verschiedenen Offsets von UTC konvertieren, statt basierend auf der Uhrzeit in bestimmten Zeitzonen.  Um diese Konvertierung auszuführen, können Sie die <xref:System.DateTimeOffset.ToOffset%2A>\-Methode der aktuellen Instanz aufrufen.  Der einzige Parameter dieser Methode ist der Offset des neuen Datums\- und Uhrzeitwerts, den die Methode zurückgeben soll.  
-  
- Wenn zum Beispiel das Datum und die Uhrzeit einer Benutzeranforderung für eine Webseite bekannt und als Zeichenfolge im Format MM\/tt\/jjjj hh:mm:ss zzzz serialisiert sind, konvertiert die folgende `ReturnTimeOnServer`\-Methode diesen Datums\- und Uhrzeitwert in Datum und Uhrzeit auf dem Webserver.  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
- [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]  
-  
- Wenn die Zeichenfolge "9\/1\/2007 5:32 übergeben wird: 07 \-05:00", das Datum und die Uhrzeit in einer Zeitzone fünf Stunden vor UTC darstellt, gibt die Methode " 9\/1\/2007 3:32: 07 Morgens\-\-07:00 für einen Server in der Zeitzone Pacific Normalzeit.  
-  
- Die <xref:System.TimeZoneInfo>\-Klasse umfasst auch eine Überladung der <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=fullName>\-Methode, mit der Zeitzonenkonvertierungen anhand von <xref:System.DateTimeOffset>\-Werten durchgeführt werden.  Die Parameter der Methode sind ein <xref:System.DateTimeOffset>\-Wert und ein Verweis auf die Zeitzone, in die die Uhrzeit konvertiert werden soll.  Der Methodenaufruf gibt einen <xref:System.DateTimeOffset>\-Wert zurück.  Die `ReturnTimeOnServer`\-Methode im vorhergehenden Beispiel kann beispielsweise so umgeschrieben werden, dass die <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29>\-Methode aufgerufen wird.  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
- [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]  
-  
-## Siehe auch  
- <xref:System.TimeZoneInfo>   
- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)   
- [Suchen der auf einem lokalen System definierten Zeitzonen](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+> <span data-ttu-id="eed02-122">Die <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> Methode gibt die Ergebnisse, die identisch sind nicht notwendigerweise zurück die <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> Methoden.</span><span class="sxs-lookup"><span data-stu-id="eed02-122">The <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> method does not necessarily produce results that are identical to the <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType> and <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="eed02-123">Wenn das Hostsystem den lokalen enthält Zeitzone mehrere Anpassungsregeln <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> gilt die entsprechende Regel auf ein bestimmtes Datum und Uhrzeit.</span><span class="sxs-lookup"><span data-stu-id="eed02-123">If the host system's local time zone includes multiple adjustment rules, <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> applies the appropriate rule to a particular date and time.</span></span> <span data-ttu-id="eed02-124">Die anderen beiden Methoden wenden immer die jüngste Anpassungsregel an.</span><span class="sxs-lookup"><span data-stu-id="eed02-124">The other two methods always apply the latest adjustment rule.</span></span>
+
+<span data-ttu-id="eed02-125">Wenn der Wert für Datum und Uhrzeit nicht der Ortszeit oder UTC darstellen der <xref:System.DateTime.ToUniversalTime%2A> Methode wird wahrscheinlich ein falsches Ergebnis zurück.</span><span class="sxs-lookup"><span data-stu-id="eed02-125">If the date and time value does not represent either the local time or UTC, the <xref:System.DateTime.ToUniversalTime%2A> method will likely return an erroneous result.</span></span> <span data-ttu-id="eed02-126">Sie können jedoch die <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> Methode zum Konvertieren von Datums- und Uhrzeitangabe von einer angegebenen Zeitzone.</span><span class="sxs-lookup"><span data-stu-id="eed02-126">However, you can use the <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> method to convert the date and time from a specified time zone.</span></span> <span data-ttu-id="eed02-127">(Weitere Informationen über das Abrufen von einem <xref:System.TimeZoneInfo> Objekt, das die Zielzeitzone darstellt finden Sie unter [suchen die in einem lokalen System definierten Zeitzonen](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) Der folgende code verwendet die <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> Methode, um Eastern Standard Time, UTC konvertieren.</span><span class="sxs-lookup"><span data-stu-id="eed02-127">(For details on retrieving a <xref:System.TimeZoneInfo> object that represents the destination time zone, see [Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) The following code uses the <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> method to convert Eastern Standard Time to UTC.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
+[!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]
+
+<span data-ttu-id="eed02-128">Beachten Sie, die diese Methode löst eine <xref:System.ArgumentException> Wenn die <xref:System.DateTime> des Objekts <xref:System.DateTime.Kind%2A> Eigenschaft und die Zeitzone stimmen nicht überein.</span><span class="sxs-lookup"><span data-stu-id="eed02-128">Note that this method throws an <xref:System.ArgumentException> if the <xref:System.DateTime> object's <xref:System.DateTime.Kind%2A> property and the time zone are mismatched.</span></span> <span data-ttu-id="eed02-129">Ein Konflikt tritt auf, wenn die <xref:System.DateTime.Kind%2A> Eigenschaft ist <xref:System.DateTimeKind?displayProperty=nameWithType> aber die <xref:System.TimeZoneInfo> Objekt ist nicht die lokale Zeitzone darstellen oder wenn die <xref:System.DateTime.Kind%2A> Eigenschaft ist <xref:System.DateTimeKind?displayProperty=nameWithType> aber die <xref:System.TimeZoneInfo> Objekt ist nicht gleich <xref:System.DateTimeKind?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="eed02-129">A mismatch occurs if the <xref:System.DateTime.Kind%2A> property is <xref:System.DateTimeKind?displayProperty=nameWithType> but the <xref:System.TimeZoneInfo> object does not represent the local time zone, or if the <xref:System.DateTime.Kind%2A> property is <xref:System.DateTimeKind?displayProperty=nameWithType> but the <xref:System.TimeZoneInfo> object does not equal <xref:System.DateTimeKind?displayProperty=nameWithType>.</span></span>
+
+<span data-ttu-id="eed02-130">Alle diese Methoden nehmen <xref:System.DateTime> Werte als Parameter und Rückgabetypen einer <xref:System.DateTime> Wert.</span><span class="sxs-lookup"><span data-stu-id="eed02-130">All of these methods take <xref:System.DateTime> values as parameters and return a <xref:System.DateTime> value.</span></span> <span data-ttu-id="eed02-131">Für <xref:System.DateTimeOffset> Werte, die <xref:System.DateTimeOffset> Struktur verfügt über eine <xref:System.DateTimeOffset.ToUniversalTime%2A> -Instanzmethode, der das Datum und die Uhrzeit der aktuellen Instanz in UTC konvertiert.</span><span class="sxs-lookup"><span data-stu-id="eed02-131">For <xref:System.DateTimeOffset> values, the <xref:System.DateTimeOffset> structure has a <xref:System.DateTimeOffset.ToUniversalTime%2A> instance method that converts the date and time of the current instance to UTC.</span></span> <span data-ttu-id="eed02-132">Im folgenden Beispiel wird die <xref:System.DateTimeOffset.ToUniversalTime%2A> Methode, um eine Ortszeit und mehrere andere Uhrzeiten in Coordinated Universal Time (UTC) konvertieren.</span><span class="sxs-lookup"><span data-stu-id="eed02-132">The following example calls the <xref:System.DateTimeOffset.ToUniversalTime%2A> method to convert a local time and several other times to Coordinated Universal Time (UTC).</span></span>
+
+[!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
+[!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]
+
+## <a name="converting-utc-to-a-designated-time-zone"></a><span data-ttu-id="eed02-133">Konvertieren der UTC in eine festgelegte Zeitzone</span><span class="sxs-lookup"><span data-stu-id="eed02-133">Converting UTC to a designated time zone</span></span>
+
+<span data-ttu-id="eed02-134">Konvertieren von UTC in die Ortszeit finden Sie im Abschnitt "Konvertieren von UTC in Ortszeit", der folgt.</span><span class="sxs-lookup"><span data-stu-id="eed02-134">To convert UTC to local time, see the "Converting UTC to Local Time" section that follows.</span></span> <span data-ttu-id="eed02-135">Aufrufen, um die Zeit in eine beliebige Zeitzone UTC konvertieren, die Sie festlegen, die <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="eed02-135">To convert UTC to the time in any time zone that you designate, call the <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> method.</span></span> <span data-ttu-id="eed02-136">Die Methode akzeptiert zwei Parameter:</span><span class="sxs-lookup"><span data-stu-id="eed02-136">The method takes two parameters:</span></span>
+
+* <span data-ttu-id="eed02-137">Die zu konvertierende UTC.</span><span class="sxs-lookup"><span data-stu-id="eed02-137">The UTC to convert.</span></span> <span data-ttu-id="eed02-138">Diese Angabe muss ein <xref:System.DateTime> , dessen Wert <xref:System.DateTime.Kind%2A> -Eigenschaftensatz auf <xref:System.DateTimeKind?displayProperty=nameWithType> oder <xref:System.DateTimeKind?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="eed02-138">This must be a <xref:System.DateTime> value whose <xref:System.DateTime.Kind%2A> property is set to <xref:System.DateTimeKind?displayProperty=nameWithType> or <xref:System.DateTimeKind?displayProperty=nameWithType>.</span></span>
+
+* <span data-ttu-id="eed02-139">Die Zeitzone, in die die UTC konvertiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="eed02-139">The time zone to convert the UTC to.</span></span>
+
+<span data-ttu-id="eed02-140">Der folgende Code konvertiert die UTC in die Central Standard Time.</span><span class="sxs-lookup"><span data-stu-id="eed02-140">The following code converts UTC to Central Standard Time.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
+[!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]
+
+## <a name="converting-utc-to-local-time"></a><span data-ttu-id="eed02-141">Konvertieren der UTC in eine lokale Zeit</span><span class="sxs-lookup"><span data-stu-id="eed02-141">Converting UTC to local time</span></span>
+
+<span data-ttu-id="eed02-142">Rufen Sie zum Konvertieren von UTC in die Ortszeit der <xref:System.DateTime.ToLocalTime%2A> Methode der <xref:System.DateTime> Objekt, dessen Zeit, die Sie konvertieren möchten.</span><span class="sxs-lookup"><span data-stu-id="eed02-142">To convert UTC to local time, call the <xref:System.DateTime.ToLocalTime%2A> method of the <xref:System.DateTime> object whose time you want to convert.</span></span> <span data-ttu-id="eed02-143">Das genaue Verhalten der Methode hängt vom Wert des Objekts <xref:System.DateTime.Kind%2A> Eigenschaft, wie in der folgenden Tabelle gezeigt.</span><span class="sxs-lookup"><span data-stu-id="eed02-143">The exact behavior of the method depends on the value of the object’s <xref:System.DateTime.Kind%2A> property, as the following table shows.</span></span>
+
+| `DateTime.Kind`            | <span data-ttu-id="eed02-144">Umwandeln</span><span class="sxs-lookup"><span data-stu-id="eed02-144">Conversion</span></span>                                                                               |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| `DateTimeKind.Local`       | <span data-ttu-id="eed02-145">Gibt die <xref:System.DateTime> Wert unverändert.</span><span class="sxs-lookup"><span data-stu-id="eed02-145">Returns the <xref:System.DateTime> value unchanged.</span></span>                                      |
+| `DateTimeKind.Unspecified` | <span data-ttu-id="eed02-146">Setzt voraus, dass die <xref:System.DateTime> Wert UTC ist, und die UTC-Zeit in die Ortszeit konvertiert.</span><span class="sxs-lookup"><span data-stu-id="eed02-146">Assumes that the <xref:System.DateTime> value is UTC and converts the UTC to local time.</span></span> |
+| `DateTimeKind.Utc`         | <span data-ttu-id="eed02-147">Konvertiert die <xref:System.DateTime> Wert in die Ortszeit.</span><span class="sxs-lookup"><span data-stu-id="eed02-147">Converts the <xref:System.DateTime> value to local time.</span></span>                                 |
+
+> [!NOTE]
+> <span data-ttu-id="eed02-148">Die <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> Methode verhält sich genauso wie die `DateTime.ToLocalTime` Methode.</span><span class="sxs-lookup"><span data-stu-id="eed02-148">The <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> method behaves identically to the `DateTime.ToLocalTime` method.</span></span> <span data-ttu-id="eed02-149">Er nimmt einen Parameter, dies ist der Wert für Datum und Uhrzeit zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="eed02-149">It takes a single parameter, which is the date and time value to convert.</span></span>
+
+<span data-ttu-id="eed02-150">Sie können auch die Zeit in einer beliebigen Zeitzone in lokale Zeit konvertieren, mithilfe der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="eed02-150">You can also convert the time in any designated time zone to local time by using the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="eed02-151">Diese Technik wird im nächsten Abschnitt erläutert.</span><span class="sxs-lookup"><span data-stu-id="eed02-151">This technique is discussed in the next section.</span></span>
+
+## <a name="converting-between-any-two-time-zones"></a><span data-ttu-id="eed02-152">Konvertieren zwischen zwei beliebigen Zeitzonen</span><span class="sxs-lookup"><span data-stu-id="eed02-152">Converting between any two time zones</span></span>
+
+<span data-ttu-id="eed02-153">Sie können zwischen zwei beliebigen Zeitzonen mithilfe einer der folgenden beiden konvertieren `static` (`Shared` in Visual Basic) Methoden der <xref:System.TimeZoneInfo> Klasse:</span><span class="sxs-lookup"><span data-stu-id="eed02-153">You can convert between any two time zones by using either of the following two `static` (`Shared` in Visual Basic) methods of the <xref:System.TimeZoneInfo> class:</span></span>
+
+* <xref:System.TimeZoneInfo.ConvertTime%2A>
+
+  <span data-ttu-id="eed02-154">Die Parameter dieser Methode sind Wert für Datum und Uhrzeit zu konvertieren, eine `TimeZoneInfo` -Objekt, das der Wert für Datum und Uhrzeit, das die Zeitzone darstellt und ein `TimeZoneInfo` -Objekt, das zu konvertierende Wert für Datum und Uhrzeit, das die Zeitzone darstellt.</span><span class="sxs-lookup"><span data-stu-id="eed02-154">This method's parameters are the date and time value to convert, a `TimeZoneInfo` object that represents the time zone of the date and time value, and a `TimeZoneInfo` object that represents the time zone to convert the date and time value to.</span></span>
+
+* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
+
+  <span data-ttu-id="eed02-155">Die Parameter dieser Methode werden das Datum und, die zu konvertierende Zeitwert, der Bezeichner des Datums- und Uhrzeitwerts Zeitzone und der Bezeichner der Zeitzone Wert für Datum und Uhrzeit zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="eed02-155">This method's parameters are the date and time value to convert, the identifier of the date and time value's time zone, and the identifier of the time zone to convert the date and time value to.</span></span>
+
+<span data-ttu-id="eed02-156">Beide Methoden erfordern, die die <xref:System.DateTime.Kind%2A> Eigenschaft von der zu konvertierende Datums- und Uhrzeitangabe Wert und die <xref:System.TimeZoneInfo> Objekt oder der Zeitzonenbezeichner, der die Zeitzone darstellt, einander entsprechen.</span><span class="sxs-lookup"><span data-stu-id="eed02-156">Both methods require that the <xref:System.DateTime.Kind%2A> property of the date and time value to convert and the <xref:System.TimeZoneInfo> object or time zone identifier that represents its time zone correspond to one another.</span></span> <span data-ttu-id="eed02-157">Andernfalls ein <xref:System.ArgumentException> ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="eed02-157">Otherwise, an <xref:System.ArgumentException> is thrown.</span></span> <span data-ttu-id="eed02-158">Z. B. wenn die `Kind` Eigenschaft der Wert für Datum und Uhrzeit ist `DateTimeKind.Local`, eine Ausnahme wird ausgelöst, wenn die `TimeZoneInfo` als Parameter an die Methode übergebenen Objekts ist nicht gleich `TimeZoneInfo.Local`.</span><span class="sxs-lookup"><span data-stu-id="eed02-158">For example, if the `Kind` property of the date and time value is `DateTimeKind.Local`, an exception is thrown if the `TimeZoneInfo` object passed as a parameter to the method is not equal to `TimeZoneInfo.Local`.</span></span> <span data-ttu-id="eed02-159">Eine Ausnahme wird auch ausgelöst, wenn der als Parameter an die Methode übergebene Bezeichner nicht gleich `TimeZoneInfo.Local.Id`.</span><span class="sxs-lookup"><span data-stu-id="eed02-159">An exception is also thrown if the identifier passed as a parameter to the method is not equal to `TimeZoneInfo.Local.Id`.</span></span>
+
+<span data-ttu-id="eed02-160">Im folgenden Beispiel wird die <xref:System.TimeZoneInfo.ConvertTime%2A> -Methode zum Konvertieren von Hawaii Normalzeit in die Ortszeit.</span><span class="sxs-lookup"><span data-stu-id="eed02-160">The following example uses the <xref:System.TimeZoneInfo.ConvertTime%2A> method to convert from Hawaiian Standard Time to local time.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
+[!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]
+
+## <a name="converting-datetimeoffset-values"></a><span data-ttu-id="eed02-161">Konvertieren von DateTimeOffset-Werten</span><span class="sxs-lookup"><span data-stu-id="eed02-161">Converting DateTimeOffset values</span></span>
+
+<span data-ttu-id="eed02-162">Datum und Uhrzeit-Werte, die dargestellte <xref:System.DateTimeOffset> Objekte sind nicht vollständig Zeitzone bekannt, da das Objekt zum Zeitpunkt seiner Zeitzone aufgehoben ist er instanziiert wird.</span><span class="sxs-lookup"><span data-stu-id="eed02-162">Date and time values represented by <xref:System.DateTimeOffset> objects are not fully time-zone aware because the object is disassociated from its time zone at the time it is instantiated.</span></span> <span data-ttu-id="eed02-163">In vielen Fällen muss eine Anwendung jedoch einfach nur ein Datum und eine Uhrzeit basierend auf zwei verschiedenen Abweichungen von der UTC konvertieren, nicht basierend auf der Uhrzeit in bestimmten Zeitzonen.</span><span class="sxs-lookup"><span data-stu-id="eed02-163">However, in many cases an application simply needs to convert a date and time based on two different offsets from UTC rather than on the time in particular time zones.</span></span> <span data-ttu-id="eed02-164">Um diese Konvertierung auszuführen, können Sie der aktuellen Instanz aufrufen <xref:System.DateTimeOffset.ToOffset%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="eed02-164">To perform this conversion, you can call the current instance's <xref:System.DateTimeOffset.ToOffset%2A> method.</span></span> <span data-ttu-id="eed02-165">Einzige Parameter der Methode ist der Offset des neuen Datums- und Uhrzeitwert, der die Methode zurück.</span><span class="sxs-lookup"><span data-stu-id="eed02-165">The method's single parameter is the offset of the new date and time value that the method is to return.</span></span>
+
+<span data-ttu-id="eed02-166">Wenn Datum und Uhrzeit einer Benutzeranforderung für eine Webseite bekannt sind und als Zeichenfolge im Format MM/dd/yyyy hh:mm:ss zzzz serialisiert wurden, konvertiert die folgende `ReturnTimeOnServer`-Methode diesen Datums- und Uhrzeitwert in das Datum und die Uhrzeit des Webservers.</span><span class="sxs-lookup"><span data-stu-id="eed02-166">For example, if the date and time of a user request for a Web page is known and is serialized as a string in the format MM/dd/yyyy hh:mm:ss zzzz, the following `ReturnTimeOnServer` method converts this date and time value to the date and time on the Web server.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+
+<span data-ttu-id="eed02-167">Beispiel: An diese Methode wird die Zeichenfolge „9/1/2007 5:32:07 -05:00“ übergeben. Diese stellt das Datum und die Uhrzeit in einer Zeitzone dar, die fünf Stunden vor der UTC liegt. In diesem Fall gibt die Methode den Wert „9/1/2007 3:32:07 AM -07:00“ zurück, wenn sich der Server in der Zeitzone „Pacific Standard Time“ (USA) ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="eed02-167">If the method is passed the string "9/1/2007 5:32:07 -05:00", which represents the date and time in a time zone five hours earlier than UTC, it returns 9/1/2007 3:32:07 AM -07:00 for a server located in the U.S. Pacific Standard Time zone.</span></span>
+
+<span data-ttu-id="eed02-168">Die <xref:System.TimeZoneInfo> Klasse enthält auch eine Überladung der <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> -Methode, die von der zeitzonenkonvertierungen mit <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> Werte.</span><span class="sxs-lookup"><span data-stu-id="eed02-168">The <xref:System.TimeZoneInfo> class also includes an overload of the <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> method that performs time zone conversions with <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> values.</span></span> <span data-ttu-id="eed02-169">Parameter der Methode sind ein <xref:System.DateTimeOffset> Wert und einem Verweis auf die Zeitzone, zu deren Verwendung die Zeit ist, konvertiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="eed02-169">The method's parameters are a <xref:System.DateTimeOffset> value and a reference to the time zone to which the time is to be converted.</span></span> <span data-ttu-id="eed02-170">Aufruf der Methode gibt ein <xref:System.DateTimeOffset> Wert.</span><span class="sxs-lookup"><span data-stu-id="eed02-170">The method call returns a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="eed02-171">Z. B. die `ReturnTimeOnServer` Methode im vorherigen Beispiel könnte folgendermaßen umgeschrieben werden, zum Aufrufen der <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> Methode.</span><span class="sxs-lookup"><span data-stu-id="eed02-171">For example, the `ReturnTimeOnServer` method in the previous example could be rewritten as follows to call the <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> method.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
+
+## <a name="see-also"></a><span data-ttu-id="eed02-172">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eed02-172">See also</span></span>
+
+<span data-ttu-id="eed02-173"><xref:System.TimeZoneInfo>[Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+[suchen die in einem lokalen System definierten Zeitzonen](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)</span><span class="sxs-lookup"><span data-stu-id="eed02-173"><xref:System.TimeZoneInfo> [Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)</span></span>

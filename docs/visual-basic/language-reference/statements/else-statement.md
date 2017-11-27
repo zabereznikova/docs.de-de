@@ -1,37 +1,34 @@
 ---
-title: "Else Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.else"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Else keyword [Visual Basic]"
+title: Else-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.else
+helpviewer_keywords: Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ccee9aef305fdf2f486ad21ec7753c29aeac4903
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Else Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Leitet eine Gruppe von Anweisungen ein, die ausgeführt oder kompiliert wird, wenn keine andere bedingte Gruppe von Anweisungen ausgeführt oder kompiliert wurde.  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="c4f73-102">Else-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4f73-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="c4f73-103">Stellt eine Gruppe von Anweisungen ausgeführt oder kompiliert, wenn keine bedingten Gruppe von Anweisungen ausgeführt oder kompiliert wurde.</span><span class="sxs-lookup"><span data-stu-id="c4f73-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## Hinweise  
- Das `Else`\-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
+## <a name="remarks"></a><span data-ttu-id="c4f73-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c4f73-104">Remarks</span></span>  
+ <span data-ttu-id="c4f73-105">Das `Else`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="c4f73-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [If...Then...Else\-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="c4f73-106">If...Then...Else-Anweisung</span><span class="sxs-lookup"><span data-stu-id="c4f73-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [Select...Case\-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="c4f73-107">Select...Case-Anweisung</span><span class="sxs-lookup"><span data-stu-id="c4f73-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [\#If...Then...\#Else\-Direktiven](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="c4f73-108">#If... ... #Else-Direktive</span><span class="sxs-lookup"><span data-stu-id="c4f73-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## Siehe auch  
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="c4f73-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c4f73-109">See Also</span></span>  
+ [<span data-ttu-id="c4f73-110">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="c4f73-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

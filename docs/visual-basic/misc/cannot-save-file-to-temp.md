@@ -1,26 +1,28 @@
 ---
-title: "Die Datei kann nicht in TEMP gespeichert werden. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID735"
+title: Die Datei kann nicht in TEMP gespeichert werden.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3196f5f70405c6bf7ab8eda3d056c5a86eca57f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Die Datei kann nicht in TEMP gespeichert werden.
-Eine Komponente kann das Verzeichnis "TEMP" nicht finden, oder auf dem Laufwerk oder der Partition, das bzw. die das Verzeichnis "TEMP" enthält, steht nicht genügend Speicherplatz zum Speichern von Informationen zur Verfügung.  
+# <a name="cannot-save-file-to-temp"></a><span data-ttu-id="53643-102">Die Datei kann nicht in TEMP gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="53643-102">Cannot save file to TEMP</span></span>
+<span data-ttu-id="53643-103">Eine Komponente kann das Verzeichnis "TEMP" nicht finden, oder auf dem Laufwerk oder der Partition, das bzw. die das Verzeichnis "TEMP" enthält, steht nicht genügend Speicherplatz zum Speichern von Informationen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="53643-103">Either a component cannot find a directory named TEMP, or the drive or partition containing the TEMP directory lacks sufficient space to save information.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="53643-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="53643-104">To correct this error</span></span>  
   
-1.  Erstellen Sie ein Verzeichnis mit dem Namen "TEMP", und legen Sie die TEMP\-Umgebungsvariable auf den entsprechenden Pfad fest.  
+1.  <span data-ttu-id="53643-105">Erstellen Sie ein Verzeichnis mit dem Namen "TEMP", und legen Sie die TEMP-Umgebungsvariable auf den entsprechenden Pfad fest.</span><span class="sxs-lookup"><span data-stu-id="53643-105">Create a directory named "TEMP" and set the TEMP environment variable equal to its path.</span></span>  
   
-2.  Geben Sie Speicherplatz auf dem Laufwerk frei, und löschen Sie unnötige Dateien, oder erstellen Sie das Verzeichnis "TEMP" auf einer anderen Partition, und legen Sie die TEMP\-Umgebungsvariable auf den entsprechenden Pfad fest.  
+2.  <span data-ttu-id="53643-106">Geben Sie Speicherplatz auf dem Laufwerk frei, und löschen Sie unnötige Dateien, oder erstellen Sie das Verzeichnis "TEMP" auf einer anderen Partition, und legen Sie die TEMP-Umgebungsvariable auf den entsprechenden Pfad fest.</span><span class="sxs-lookup"><span data-stu-id="53643-106">Make space on the drive by erasing unnecessary files, or create a TEMP directory on another partition and set the TEMP environment variable equal to its path.</span></span>  
   
-## Siehe auch  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="53643-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="53643-107">See Also</span></span>  
+ [<span data-ttu-id="53643-108">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="53643-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,64 +1,82 @@
 ---
-title: "Long Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Long"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, &"
-  - "numbers, whole"
-  - "whole numbers"
-  - "integral data types"
-  - "& identifier type character"
-  - "integer numbers"
-  - "literal type characters, L"
-  - "numbers, integer"
-  - "integers, data types"
-  - "L literal type character"
-  - "integers, types"
-  - "Long keyword"
-  - "data types [Visual Basic], integral"
-  - "data types [Visual Basic], assigning"
-  - "Long data type"
+title: Long-Datentyp (Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Long
+helpviewer_keywords:
+- identifier type characters [Visual Basic], &
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- '& identifier type character'
+- integer numbers
+- literal type characters [Visual Basic], L
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- L literal type character [Visual Basic]
+- integers [Visual Basic], types
+- Long keyword [Visual Basic]
+- data types [Visual Basic], integral
+- data types [Visual Basic], assigning
+- Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Long Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="long-data-type-visual-basic"></a><span data-ttu-id="f0471-102">Long-Datentyp (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0471-102">Long data type (Visual Basic)</span></span>
 
-Speichert 64\-Bit\-\(8\-Byte\-\)Ganzzahlen mit Vorzeichen, deren Werte sich im Bereich von \-9.223.372.036.854.775.808 bis einschließlich 9.223.372.036.854.775.807 \(9,2... E\+18\) bewegen.  
+<span data-ttu-id="f0471-103">Speichert signierte 64-Bit (8 Byte) ganze Zahlen im Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 (9.2... E + 18).</span><span class="sxs-lookup"><span data-stu-id="f0471-103">Holds signed 64-bit (8-byte) integers ranging in value from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18).</span></span>  
   
-## Hinweise  
- Verwenden Sie den `Long`\-Datentyp zum Speichern ganzer Zahlen, die für den `Integer`\-Datentyp zu groß sind.  
+## <a name="remarks"></a><span data-ttu-id="f0471-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f0471-104">Remarks</span></span>
+
+ <span data-ttu-id="f0471-105">Verwenden der `Long` -Datentyp, um ganze Zahlen enthalten, die zu groß für sind die `Integer` -Datentyp.</span><span class="sxs-lookup"><span data-stu-id="f0471-105">Use the `Long` data type to contain integer numbers that are too large to fit in the `Integer` data type.</span></span>  
   
- Der Standardwert von `Long` ist 0 \(null\).  
+ <span data-ttu-id="f0471-106">Der Standardwert von `Long` lautet 0.</span><span class="sxs-lookup"><span data-stu-id="f0471-106">The default value of `Long` is 0.</span></span>
+
+## <a name="literal-assignments"></a><span data-ttu-id="f0471-107">Literal Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="f0471-107">Literal assignments</span></span> 
+
+<span data-ttu-id="f0471-108">Sie können deklarieren und Initialisieren einer `Long` Variable, indem ein decimal Literal, einen hexadezimalen Literalwert ein oktales Literal Vorlagenkörpers oder (beginnend mit Visual Basic 2017) ein binäres Literal.</span><span class="sxs-lookup"><span data-stu-id="f0471-108">You can declare and initialize a `Long` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.</span></span> <span data-ttu-id="f0471-109">Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Long` befindet – sprich, wenn es kleiner als <xref:System.Int64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.</span><span class="sxs-lookup"><span data-stu-id="f0471-109">If the integer literal is outside the range of `Long` (that is, if it is less than <xref:System.Int64.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int64.MaxValue?displayProperty=nameWithType>, a compilation error occurs.</span></span>
+
+<span data-ttu-id="f0471-110">Im folgenden Beispiel werden Ganzzahlen wie 4294967296, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `Long`-Werten zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="f0471-110">In the following example, integers equal to 4,294,967,296 that are represented as decimal, hexadecimal, and binary literals are assigned to `Long` values.</span></span>
   
-## Programmiertipps  
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
+
+> [!NOTE]
+> <span data-ttu-id="f0471-111">Verwenden Sie das Präfix `&h` oder `&H` zur Angabe einer hexadezimalen Literalwert, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix zu bezeichnen `&o` oder `&O` um ein oktales Literal zu kennzeichnen.</span><span class="sxs-lookup"><span data-stu-id="f0471-111">You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal.</span></span> <span data-ttu-id="f0471-112">Dezimale Literale haben kein Präfix.</span><span class="sxs-lookup"><span data-stu-id="f0471-112">Decimal literals have no prefix.</span></span>
+
+<span data-ttu-id="f0471-113">Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffer Trennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="f0471-113">Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
+
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
+
+<span data-ttu-id="f0471-114">Numerische Literale zählen auch die `L` [-Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `Long` -Datentyp, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="f0471-114">Numeric literals can also include the `L` [type character](../../programming-guide\language-features\data-types/type-characters.md) to denote the `Long` data type, as the following example shows.</span></span>
+
+```vb
+Dim number = &H0FAC0326L
+```
+
+## <a name="programming-tips"></a><span data-ttu-id="f0471-115">Tipps für die Programmierung</span><span class="sxs-lookup"><span data-stu-id="f0471-115">Programming tips</span></span>
+
+-   <span data-ttu-id="f0471-116">**Interop-Überlegungen.**</span><span class="sxs-lookup"><span data-stu-id="f0471-116">**Interop Considerations.**</span></span> <span data-ttu-id="f0471-117">Wenn Sie Komponenten für .NET Framework, z. B. Automatisierungs- oder COM-Objekte nicht geschrieben anbinden, müssen Sie beachten, dass `Long` verfügt über eine andere Datenbreite (32 Bit) in anderen Umgebungen.</span><span class="sxs-lookup"><span data-stu-id="f0471-117">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that `Long` has a different data width (32 bits) in other environments.</span></span> <span data-ttu-id="f0471-118">Wenn Sie eine 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `Integer` anstelle von `Long` im neuen Visual Basic-Code.</span><span class="sxs-lookup"><span data-stu-id="f0471-118">If you are passing a 32-bit argument to such a component, declare it as `Integer` instead of `Long` in your new Visual Basic code.</span></span>  
   
--   **Interop\-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden \(z. B. Automatisierungs\- oder COM\-Objekte\), müssen Sie beachten, dass `Long` in anderen Umgebungen eine andere Datenbreite hat \(32 Bit\).  Wenn Sie ein 32\-Bit\-Argument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic\-Code als `Integer` und nicht als `Long`.  
+-   <span data-ttu-id="f0471-119">**Widening.**</span><span class="sxs-lookup"><span data-stu-id="f0471-119">**Widening.**</span></span> <span data-ttu-id="f0471-120">Die `Long` -Datentyp zu `Decimal`, `Single`, oder `Double`.</span><span class="sxs-lookup"><span data-stu-id="f0471-120">The `Long` data type widens to `Decimal`, `Single`, or `Double`.</span></span> <span data-ttu-id="f0471-121">Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="f0471-121">This means you can convert `Long` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
-     Darüber hinaus unterstützt die Automatisierung keine 64\-Bit\-Ganzzahlen unter Windows 95, Windows 98, Windows Me oder Windows 2000.  Sie können unter diesen Betriebssystemen kein `Long`\-Argument in Visual Basic an eine Automatisierungskomponente übergeben.  
+-   <span data-ttu-id="f0471-122">**Typzeichen.**</span><span class="sxs-lookup"><span data-stu-id="f0471-122">**Type Characters.**</span></span> <span data-ttu-id="f0471-123">Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`-Datentyp erzwungen.</span><span class="sxs-lookup"><span data-stu-id="f0471-123">Appending the literal type character `L` to a literal forces it to the `Long` data type.</span></span> <span data-ttu-id="f0471-124">Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`-Datentyp erzwungen.</span><span class="sxs-lookup"><span data-stu-id="f0471-124">Appending the identifier type character `&` to any identifier forces it to `Long`.</span></span>  
   
--   **Erweiterung.** Der `Long`\-Datentyp wird zu `Decimal`, `Single` oder `Double` erweitert.  Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
-  
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`\-Datentyp erzwungen.  Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`\-Datentyp erzwungen.  
-  
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=fullName>\-Struktur.  
-  
-## Siehe auch  
- <xref:System.Int64>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   <span data-ttu-id="f0471-125">**Framework-Typ.**</span><span class="sxs-lookup"><span data-stu-id="f0471-125">**Framework Type.**</span></span> <span data-ttu-id="f0471-126">Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="f0471-126">The corresponding type in the .NET Framework is the <xref:System.Int64?displayProperty=nameWithType> structure.</span></span>  
+
+## <a name="see-also"></a><span data-ttu-id="f0471-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f0471-127">See also</span></span>
+
+<span data-ttu-id="f0471-128"><xref:System.Int64>[-Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md) </span><span class="sxs-lookup"><span data-stu-id="f0471-128"><xref:System.Int64> [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md) </span></span>  
+<span data-ttu-id="f0471-129">[Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md) </span><span class="sxs-lookup"><span data-stu-id="f0471-129">[Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md) </span></span>  
+<span data-ttu-id="f0471-130">[Short-Datentyp](../../../visual-basic/language-reference/data-types/short-data-type.md) </span><span class="sxs-lookup"><span data-stu-id="f0471-130">[Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md) </span></span>  
+<span data-ttu-id="f0471-131">[Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="f0471-131">[Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
+<span data-ttu-id="f0471-132">[Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md) </span><span class="sxs-lookup"><span data-stu-id="f0471-132">[Conversion Summary](../../../visual-basic/language-reference/keywords/conversion-summary.md) </span></span>  
+[<span data-ttu-id="f0471-133">Effiziente Verwendung von Datentypen</span><span class="sxs-lookup"><span data-stu-id="f0471-133">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

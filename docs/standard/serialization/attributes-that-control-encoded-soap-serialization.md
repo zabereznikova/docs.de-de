@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SOAP, XML serialization
 - XML serialization, SOAP
@@ -19,39 +14,37 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: a6af8cd2560bb9c39657d8e5b088954996ba2a04
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 052996bedcb10494cb2fee1ccf3ba7b5a083356b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="attributes-that-control-encoded-soap-serialization"></a>Attribute zur Steuerung der Serialisierung von codiertem SOAP 
-Das vom World Wide Web Consortium (www.w3.org) herausgegebene Dokument mit dem Titel „Simple Object Access Protocol (SOAP) 1.1“ enthält einen optionalen Abschnitt (Abschnitt 5), in dem die Codierung von SOAP-Parametern beschrieben wird. Um dem Abschnitt 5 dieser Spezifikation zu entsprechen, müssen Sie spezielle Attribute verwenden, die im <xref:System.Xml.Serialization>-Namespace enthalten sind. Wenden Sie diese Attribute auf die entsprechenden Klassen und Member der Klassen an, und verwenden Sie dann <xref:System.Xml.Serialization.XmlSerializer>, um Instanzen dieser Klasse oder Klassen zu serialisieren.  
+# <a name="attributes-that-control-encoded-soap-serialization"></a><span data-ttu-id="2d1f4-102">Attribute zur Steuerung der Serialisierung von codiertem SOAP</span><span class="sxs-lookup"><span data-stu-id="2d1f4-102">Attributes That Control Encoded SOAP Serialization</span></span> 
+<span data-ttu-id="2d1f4-103">Das vom World Wide Web Consortium (www.w3.org) herausgegebene Dokument mit dem Titel „Simple Object Access Protocol (SOAP) 1.1“ enthält einen optionalen Abschnitt (Abschnitt 5), in dem die Codierung von SOAP-Parametern beschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-103">The World Wide Web Consortium (www.w3.org) document named "Simple Object Access Protocol (SOAP) 1.1" contains an optional section (section 5) that describes how SOAP parameters can be encoded.</span></span> <span data-ttu-id="2d1f4-104">Um dem Abschnitt 5 dieser Spezifikation zu entsprechen, müssen Sie spezielle Attribute verwenden, die im <xref:System.Xml.Serialization>-Namespace enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-104">To conform to section 5 of the specification, you must use a special set of attributes found in the <xref:System.Xml.Serialization> namespace.</span></span> <span data-ttu-id="2d1f4-105">Wenden Sie diese Attribute auf die entsprechenden Klassen und Member der Klassen an, und verwenden Sie dann <xref:System.Xml.Serialization.XmlSerializer>, um Instanzen dieser Klasse oder Klassen zu serialisieren.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-105">Apply those attributes as appropriate to classes and members of classes, and then use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of the class or classes.</span></span>  
   
- In der folgenden Tabelle sind die Attribute, ihr Anwendungsbereich und ihre Funktion aufgeführt. Weitere Informationen zum Einsatz dieser Attribute zur Steuerung der XML-Serialisierung finden Sie unter [Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) und [Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md).  
+ <span data-ttu-id="2d1f4-106">In der folgenden Tabelle sind die Attribute, ihr Anwendungsbereich und ihre Funktion aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-106">The following table shows the attributes, where they can be applied, and what they do.</span></span> <span data-ttu-id="2d1f4-107">Weitere Informationen zum Einsatz dieser Attribute zur Steuerung der XML-Serialisierung finden Sie unter [Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) und [Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="2d1f4-107">For more information about using these attributes to control XML serialization, see [How to: Serialize an Object as a SOAP-Encoded XML Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) and [How to: Override Encoded SOAP XML Serialization](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md).</span></span>  
   
- Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/standard/attributes/index.md).  
+ <span data-ttu-id="2d1f4-108">Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/standard/attributes/index.md).</span><span class="sxs-lookup"><span data-stu-id="2d1f4-108">For more information about attributes, see [Attributes](../../../docs/standard/attributes/index.md).</span></span>  
   
-|Attribut|Betrifft|Bedeutung|  
+|<span data-ttu-id="2d1f4-109">Attribut</span><span class="sxs-lookup"><span data-stu-id="2d1f4-109">Attribute</span></span>|<span data-ttu-id="2d1f4-110">Betrifft</span><span class="sxs-lookup"><span data-stu-id="2d1f4-110">Applies to</span></span>|<span data-ttu-id="2d1f4-111">Bedeutung</span><span class="sxs-lookup"><span data-stu-id="2d1f4-111">Specifies</span></span>|  
 |---------------|----------------|---------------|  
-|<xref:System.Xml.Serialization.SoapAttributeAttribute>|Öffentliches Feld, Eigenschaft, Parameter oder Rückgabewert.|Der Klassenmember wird als XML-Attribut serialisiert.|  
-|<xref:System.Xml.Serialization.SoapElementAttribute>|Öffentliches Feld, Eigenschaft, Parameter oder Rückgabewert.|Die Klasse wird als XML-Element serialisiert.|  
-|<xref:System.Xml.Serialization.SoapEnumAttribute>|Öffentliches Feld, das ein Enumerationsbezeichner ist.|Der Elementname eines Enumerationsmembers.|  
-|<xref:System.Xml.Serialization.SoapIgnoreAttribute>|Öffentliche Eigenschaften und Felder.|Die Eigenschaft oder das Feld wird beim Serialisieren der Klasse, in dem sie bzw. es enthalten ist, ignoriert.|  
-|<xref:System.Xml.Serialization.SoapIncludeAttribute>|Öffentliche abgeleitete Klassendeklarationen und öffentliche Methoden für WSDL-Dokumente (Web Services Description Language).|Der Typ wird beim Generieren von Schemas eingeschlossen (und daher bei der Serialisierung erkannt).|  
-|<xref:System.Xml.Serialization.SoapTypeAttribute>|Deklarationen öffentlicher Klassen.|Die Klasse wird als XML-Typ serialisiert.|  
+|<xref:System.Xml.Serialization.SoapAttributeAttribute>|<span data-ttu-id="2d1f4-112">Öffentliches Feld, Eigenschaft, Parameter oder Rückgabewert.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-112">Public field, property, parameter, or return value.</span></span>|<span data-ttu-id="2d1f4-113">Der Klassenmember wird als XML-Attribut serialisiert.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-113">The class member will be serialized as an XML attribute.</span></span>|  
+|<xref:System.Xml.Serialization.SoapElementAttribute>|<span data-ttu-id="2d1f4-114">Öffentliches Feld, Eigenschaft, Parameter oder Rückgabewert.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-114">Public field, property, parameter, or return value.</span></span>|<span data-ttu-id="2d1f4-115">Die Klasse wird als XML-Element serialisiert.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-115">The class will be serialized as an XML element.</span></span>|  
+|<xref:System.Xml.Serialization.SoapEnumAttribute>|<span data-ttu-id="2d1f4-116">Öffentliches Feld, das ein Enumerationsbezeichner ist.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-116">Public field that is an enumeration identifier.</span></span>|<span data-ttu-id="2d1f4-117">Der Elementname eines Enumerationsmembers.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-117">The element name of an enumeration member.</span></span>|  
+|<xref:System.Xml.Serialization.SoapIgnoreAttribute>|<span data-ttu-id="2d1f4-118">Öffentliche Eigenschaften und Felder.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-118">Public properties and fields.</span></span>|<span data-ttu-id="2d1f4-119">Die Eigenschaft oder das Feld wird beim Serialisieren der Klasse, in dem sie bzw. es enthalten ist, ignoriert.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-119">The property or field should be ignored when the containing class is serialized.</span></span>|  
+|<xref:System.Xml.Serialization.SoapIncludeAttribute>|<span data-ttu-id="2d1f4-120">Öffentliche abgeleitete Klassendeklarationen und öffentliche Methoden für WSDL-Dokumente (Web Services Description Language).</span><span class="sxs-lookup"><span data-stu-id="2d1f4-120">Public-derived class declarations and public methods for Web Services Description Language (WSDL) documents.</span></span>|<span data-ttu-id="2d1f4-121">Der Typ wird beim Generieren von Schemas eingeschlossen (und daher bei der Serialisierung erkannt).</span><span class="sxs-lookup"><span data-stu-id="2d1f4-121">The type should be included when generating schemas (to be recognized when serialized).</span></span>|  
+|<xref:System.Xml.Serialization.SoapTypeAttribute>|<span data-ttu-id="2d1f4-122">Deklarationen öffentlicher Klassen.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-122">Public class declarations.</span></span>|<span data-ttu-id="2d1f4-123">Die Klasse wird als XML-Typ serialisiert.</span><span class="sxs-lookup"><span data-stu-id="2d1f4-123">The class should be serialized as an XML type.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)   
- [Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)   
- [Attribute](../../../docs/standard/attributes/index.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [How to: Serialize an Object (Vorgehensweise: Serialisieren eines Objekts)](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
- [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-
+## <a name="see-also"></a><span data-ttu-id="2d1f4-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2d1f4-124">See Also</span></span>  
+ [<span data-ttu-id="2d1f4-125">XML- und SOAP-Serialisierung</span><span class="sxs-lookup"><span data-stu-id="2d1f4-125">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="2d1f4-126">Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream</span><span class="sxs-lookup"><span data-stu-id="2d1f4-126">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+ [<span data-ttu-id="2d1f4-127">Gewusst wie: Überschreiben von codierter SOAP-XML-Serialisierung</span><span class="sxs-lookup"><span data-stu-id="2d1f4-127">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+ [<span data-ttu-id="2d1f4-128">Attribute</span><span class="sxs-lookup"><span data-stu-id="2d1f4-128">Attributes</span></span>](../../../docs/standard/attributes/index.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [<span data-ttu-id="2d1f4-129">Vorgehensweise: Serialisieren eines Objekts</span><span class="sxs-lookup"><span data-stu-id="2d1f4-129">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="2d1f4-130">Vorgehensweise: Deserialisieren eines Objekts</span><span class="sxs-lookup"><span data-stu-id="2d1f4-130">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

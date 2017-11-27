@@ -1,39 +1,36 @@
 ---
-title: "In Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.In"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "In keyword [Visual Basic]"
+title: In-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.In
+helpviewer_keywords: In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 347c1268ccb29238a0845b57d5d0f88f1ca27d59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# In Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt entweder die Gruppe an, die die Schleifenvariable in einer `For Each`\-Schleife durchlaufen muss, oder die Auflistung, die in einer `From`\-, `Join`\- oder `Group Join`\-Klausel abgefragt werden soll.  
+# <a name="in-clause-visual-basic"></a><span data-ttu-id="cd01e-102">In-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd01e-102">In Clause (Visual Basic)</span></span>
+<span data-ttu-id="cd01e-103">Gibt die Gruppe, der Schleifenvariablen in Durchlaufen einer `For Each` Schleife oder gibt die Auflistung in der Abfrage eine `From`, `Join`, oder `Group Join` Klausel.</span><span class="sxs-lookup"><span data-stu-id="cd01e-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
   
-## Hinweise  
- Das `In`\-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
+## <a name="remarks"></a><span data-ttu-id="cd01e-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cd01e-104">Remarks</span></span>  
+ <span data-ttu-id="cd01e-105">Die `In` -Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="cd01e-105">The `In` keyword can be used in the following contexts:</span></span>  
   
- [For Each...Next\-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="cd01e-106">For Each...Next-Anweisung</span><span class="sxs-lookup"><span data-stu-id="cd01e-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="cd01e-107">From-Klausel</span><span class="sxs-lookup"><span data-stu-id="cd01e-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [Join Clause](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="cd01e-108">Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="cd01e-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="cd01e-109">Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="cd01e-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## Siehe auch  
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="cd01e-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cd01e-110">See Also</span></span>  
+ [<span data-ttu-id="cd01e-111">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="cd01e-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

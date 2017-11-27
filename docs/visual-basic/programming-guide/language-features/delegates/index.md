@@ -1,94 +1,75 @@
 ---
 title: Delegaten (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="delegates-visual-basic"></a>Delegaten (Visual Basic)
-Delegaten sind Objekte, die auf Methoden verweisen. Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln. Im Gegensatz zu Funktionszeigern sind [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Delegaten jedoch ein Verweistyp basierend auf der Klasse <xref:System.Delegate?displayProperty=fullName>. Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.  
+# <a name="delegates-visual-basic"></a><span data-ttu-id="39dee-102">Delegaten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39dee-102">Delegates (Visual Basic)</span></span>
+<span data-ttu-id="39dee-103">Delegaten sind Objekte, die auf Methoden verweisen.</span><span class="sxs-lookup"><span data-stu-id="39dee-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="39dee-104">Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln.</span><span class="sxs-lookup"><span data-stu-id="39dee-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="39dee-105">Im Gegensatz zu Funktionszeigern sind [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Delegaten jedoch ein Verweistyp basierend auf der Klasse <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="39dee-105">But unlike function pointers, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="39dee-106">Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.</span><span class="sxs-lookup"><span data-stu-id="39dee-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>  
   
-## <a name="delegates-and-events"></a>Delegaten und Ereignisse  
- Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen. Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann. Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ermöglicht die dynamische Zuordnung von Ereignishandlern zu Ereignissen, indem ein Delegat für Sie erstellt wird, wenn Sie die `AddHandler`-Anweisung verwenden. Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.  
+## <a name="delegates-and-events"></a><span data-ttu-id="39dee-107">Delegaten und Ereignisse</span><span class="sxs-lookup"><span data-stu-id="39dee-107">Delegates and Events</span></span>  
+ <span data-ttu-id="39dee-108">Delegaten sind in Situationen hilfreich, in denen Sie einen Mittler zwischen einer aufrufenden Prozedur und der aufgerufenen Prozedur benötigen.</span><span class="sxs-lookup"><span data-stu-id="39dee-108">Delegates are useful in situations where you need an intermediary between a calling procedure and the procedure being called.</span></span> <span data-ttu-id="39dee-109">Ein Beispiel: Sie möchten, dass ein Objekt, das Ereignisse auslöst, unter verschiedenen Bedingungen verschiedene Ereignishandler aufrufen kann.</span><span class="sxs-lookup"><span data-stu-id="39dee-109">For example, you might want an object that raises events to be able to call different event handlers under different circumstances.</span></span> <span data-ttu-id="39dee-110">Leider ist dem Objekt, das die Ereignisse auslöst, nicht im Voraus bekannt, welcher Ereignishandler ein bestimmtes Ereignis verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="39dee-110">Unfortunately, the object raising the events cannot know ahead of time which event handler is handling a specific event.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="39dee-111"> ermöglicht die dynamische Zuordnung von Ereignishandlern zu Ereignissen, indem ein Delegat für Sie erstellt wird, wenn Sie die `AddHandler`-Anweisung verwenden.</span><span class="sxs-lookup"><span data-stu-id="39dee-111"> lets you dynamically associate event handlers with events by creating a delegate for you when you use the `AddHandler` statement.</span></span> <span data-ttu-id="39dee-112">Zur Laufzeit leitet der Delegat dann Aufrufe an den entsprechenden Ereignishandler weiter.</span><span class="sxs-lookup"><span data-stu-id="39dee-112">At run time, the delegate forwards calls to the appropriate event handler.</span></span>  
   
- Sie können zwar auch eigene Delegaten erstellen, doch in den meisten Fällen generiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Delegaten und verarbeitet die Details. Eine `Event`-Anweisung definiert z.B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis. Die `AddressOf`-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist. Die folgenden beiden Codezeilen sind gleichwertig. In der ersten Zeile sehen Sie die explizite Erstellung einer Instanz von `Eventhandler` mit einem Verweis auf die `Button1_Click`-Methode, die als Argument gesendet wird. Die zweite Zeile ist eine praktischere Möglichkeit, das Gleiche auszuführen.  
+ <span data-ttu-id="39dee-113">Sie können zwar auch eigene Delegaten erstellen, doch in den meisten Fällen generiert [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] den Delegaten und verarbeitet die Details.</span><span class="sxs-lookup"><span data-stu-id="39dee-113">Although you can create your own delegates, in most cases [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] creates the delegate and takes care of the details for you.</span></span> <span data-ttu-id="39dee-114">Eine `Event`-Anweisung definiert z.B. implizit eine Delegatklasse mit dem Namen `<EventName>EventHandler` als geschachtelte Klasse der Klasse, die die `Event`-Anweisung enthält, und mit der gleichen Signatur wie das Ereignis.</span><span class="sxs-lookup"><span data-stu-id="39dee-114">For example, an `Event` statement implicitly defines a delegate class named `<EventName>EventHandler` as a nested class of the class containing the `Event` statement, and with the same signature as the event.</span></span> <span data-ttu-id="39dee-115">Die `AddressOf`-Anweisung erstellt implizit eine Instanz eines Delegaten, die auf eine bestimmte Prozedur verweist.</span><span class="sxs-lookup"><span data-stu-id="39dee-115">The `AddressOf` statement implicitly creates an instance of a delegate that refers to a specific procedure.</span></span> <span data-ttu-id="39dee-116">Die folgenden beiden Codezeilen sind gleichwertig.</span><span class="sxs-lookup"><span data-stu-id="39dee-116">The following two lines of code are equivalent.</span></span> <span data-ttu-id="39dee-117">In der ersten Zeile sehen Sie die explizite Erstellung einer Instanz von `Eventhandler` mit einem Verweis auf die `Button1_Click`-Methode, die als Argument gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="39dee-117">In the first line, you see the explicit creation of an instance of `Eventhandler`, with a reference to method `Button1_Click` sent as the argument.</span></span> <span data-ttu-id="39dee-118">Die zweite Zeile ist eine praktischere Möglichkeit, das Gleiche auszuführen.</span><span class="sxs-lookup"><span data-stu-id="39dee-118">The second line is a more convenient way to do the same thing.</span></span>  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   
- Die schnelle Methode zum Erstellen von Delegaten können Sie immer dort verwenden, wo der Compiler den Delegattyp anhand des Kontexts bestimmen kann.  
+ <span data-ttu-id="39dee-119">Die schnelle Methode zum Erstellen von Delegaten können Sie immer dort verwenden, wo der Compiler den Delegattyp anhand des Kontexts bestimmen kann.</span><span class="sxs-lookup"><span data-stu-id="39dee-119">You can use the shorthand way of creating delegates anywhere the compiler can determine the delegate's type by the context.</span></span>  
   
-## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Deklarieren von Ereignissen, die einen vorhandenen Delegattyp verwenden  
- In manchen Situationen empfiehlt es sich, ein Ereignis so zu deklarieren, dass es einen vorhandenen Delegattyp als zugrunde liegenden Delegaten verwendet. Die folgende Syntax veranschaulicht dies:  
+## <a name="declaring-events-that-use-an-existing-delegate-type"></a><span data-ttu-id="39dee-120">Deklarieren von Ereignissen, die einen vorhandenen Delegattyp verwenden</span><span class="sxs-lookup"><span data-stu-id="39dee-120">Declaring Events that Use an Existing Delegate Type</span></span>  
+ <span data-ttu-id="39dee-121">In manchen Situationen empfiehlt es sich, ein Ereignis so zu deklarieren, dass es einen vorhandenen Delegattyp als zugrunde liegenden Delegaten verwendet.</span><span class="sxs-lookup"><span data-stu-id="39dee-121">In some situations, you may want to declare an event to use an existing delegate type as its underlying delegate.</span></span> <span data-ttu-id="39dee-122">Die folgende Syntax veranschaulicht dies:</span><span class="sxs-lookup"><span data-stu-id="39dee-122">The following syntax demonstrates how:</span></span>  
   
  [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_2.vb)]  
   
- Dies ist nützlich, wenn mehrere Ereignisse an den gleichen Handler weitergeleitet werden sollen.  
+ <span data-ttu-id="39dee-123">Dies ist nützlich, wenn mehrere Ereignisse an den gleichen Handler weitergeleitet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="39dee-123">This is useful when you want to route multiple events to the same handler.</span></span>  
   
-## <a name="delegate-variables-and-parameters"></a>Delegatvariablen und -parameter  
- Sie können Delegaten für andere, nicht auf Ereignisse bezogene Tasks (z.B. freies Threading) oder für Prozeduren verwenden, die zur Laufzeit verschiedene Versionen von Funktionen aufrufen müssen.  
+## <a name="delegate-variables-and-parameters"></a><span data-ttu-id="39dee-124">Delegatvariablen und -parameter</span><span class="sxs-lookup"><span data-stu-id="39dee-124">Delegate Variables and Parameters</span></span>  
+ <span data-ttu-id="39dee-125">Sie können Delegaten für andere, nicht auf Ereignisse bezogene Tasks (z.B. freies Threading) oder für Prozeduren verwenden, die zur Laufzeit verschiedene Versionen von Funktionen aufrufen müssen.</span><span class="sxs-lookup"><span data-stu-id="39dee-125">You can use delegates for other, non-event related tasks, such as free threading or with procedures that need to call different versions of functions at run time.</span></span>  
   
- Ein Beispiel: Eine Anwendung für Gebrauchtwagen-Kleinanzeigen enthält ein Listenfeld mit den Namen von Fahrzeugen. Die Anzeigen sind nach Titel sortiert, wobei es sich in der Regel um die Marke handelt. Ein Problem kann dann auftreten, wenn bei einigen Autos das Baujahr vor der Marke steht. Das Problem besteht darin, dass die integrierte Suchfunktion des Listenfelds nur nach Zeichencodes sortiert. Daher werden alle Anzeigen, die mit dem Jahr beginnen, an den Beginn der Liste sortiert, erst dann folgen die Anzeigen, die mit der Marke beginnen.  
+ <span data-ttu-id="39dee-126">Ein Beispiel: Eine Anwendung für Gebrauchtwagen-Kleinanzeigen enthält ein Listenfeld mit den Namen von Fahrzeugen.</span><span class="sxs-lookup"><span data-stu-id="39dee-126">For example, suppose you have a classified-ad application that includes a list box with the names of cars.</span></span> <span data-ttu-id="39dee-127">Die Anzeigen sind nach Titel sortiert, wobei es sich in der Regel um die Marke handelt.</span><span class="sxs-lookup"><span data-stu-id="39dee-127">The ads are sorted by title, which is normally the make of the car.</span></span> <span data-ttu-id="39dee-128">Ein Problem kann dann auftreten, wenn bei einigen Autos das Baujahr vor der Marke steht.</span><span class="sxs-lookup"><span data-stu-id="39dee-128">A problem you may face occurs when some cars include the year of the car before the make.</span></span> <span data-ttu-id="39dee-129">Das Problem besteht darin, dass die integrierte Suchfunktion des Listenfelds nur nach Zeichencodes sortiert. Daher werden alle Anzeigen, die mit dem Jahr beginnen, an den Beginn der Liste sortiert, erst dann folgen die Anzeigen, die mit der Marke beginnen.</span><span class="sxs-lookup"><span data-stu-id="39dee-129">The problem is that the built-in sort functionality of the list box sorts only by character codes; it places all the ads starting with dates first, followed by the ads starting with the make.</span></span>  
   
- Um dies zu beheben, können Sie eine Sortierprozedur in einer Klasse erstellen, die in den meisten Listenfeldern die standardmäßige alphabetische Sortierung verwendet, jedoch zur Laufzeit auf die benutzerdefinierte Sortierung für Gebrauchtwagenanzeigen umgestellt werden kann. Dafür übergeben Sie die benutzerdefinierte Sortierprozedur mithilfe von Delegaten zur Laufzeit an die Sortierklasse.  
+ <span data-ttu-id="39dee-130">Um dies zu beheben, können Sie eine Sortierprozedur in einer Klasse erstellen, die in den meisten Listenfeldern die standardmäßige alphabetische Sortierung verwendet, jedoch zur Laufzeit auf die benutzerdefinierte Sortierung für Gebrauchtwagenanzeigen umgestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="39dee-130">To fix this, you can create a sort procedure in a class that uses the standard alphabetic sort on most list boxes, but is able to switch at run time to the custom sort procedure for car ads.</span></span> <span data-ttu-id="39dee-131">Dafür übergeben Sie die benutzerdefinierte Sortierprozedur mithilfe von Delegaten zur Laufzeit an die Sortierklasse.</span><span class="sxs-lookup"><span data-stu-id="39dee-131">To do this, you pass the custom sort procedure to the sort class at run time, using delegates.</span></span>  
   
-## <a name="addressof-and-lambda-expressions"></a>AddressOf- und Lambda-Ausdrücke  
- Jede Delegatklasse definiert einen Konstruktor, dem die Spezifikation einer Objektmethode übergeben wird. Ein Argument für einen Delegatkonstruktor muss ein Verweis auf eine Methode oder ein Lambda-Ausdruck sein.  
+## <a name="addressof-and-lambda-expressions"></a><span data-ttu-id="39dee-132">AddressOf- und Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="39dee-132">AddressOf and Lambda Expressions</span></span>  
+ <span data-ttu-id="39dee-133">Jede Delegatklasse definiert einen Konstruktor, dem die Spezifikation einer Objektmethode übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="39dee-133">Each delegate class defines a constructor that is passed the specification of an object method.</span></span> <span data-ttu-id="39dee-134">Ein Argument für einen Delegatkonstruktor muss ein Verweis auf eine Methode oder ein Lambda-Ausdruck sein.</span><span class="sxs-lookup"><span data-stu-id="39dee-134">An argument to a delegate constructor must be a reference to a method, or a lambda expression.</span></span>  
   
- Verwenden Sie die folgende Syntax, um einen Verweis auf eine Methode festzulegen:  
+ <span data-ttu-id="39dee-135">Verwenden Sie die folgende Syntax, um einen Verweis auf eine Methode festzulegen:</span><span class="sxs-lookup"><span data-stu-id="39dee-135">To specify a reference to a method, use the following syntax:</span></span>  
   
- `AddressOf` [`expression`.]`methodName`  
+ <span data-ttu-id="39dee-136">`AddressOf` [`expression`.]`methodName`</span><span class="sxs-lookup"><span data-stu-id="39dee-136">`AddressOf` [`expression`.]`methodName`</span></span>  
   
- Der Typ von `expression` muss zur Kompilierungszeit der Name einer Klasse oder Schnittstelle sein, die eine Methode des angegebenen Namens enthält, deren Signatur mit der Signatur der Delegatklasse übereinstimmt. Bei `methodName` kann es sich um eine freigegebene Methode oder um eine Instanzmethode handeln. Der `methodName` ist nicht optional, selbst dann nicht, wenn Sie einen Delegaten für die Standardmethode der Klasse erstellen.  
+ <span data-ttu-id="39dee-137">Der Typ von `expression` muss zur Kompilierungszeit der Name einer Klasse oder Schnittstelle sein, die eine Methode des angegebenen Namens enthält, deren Signatur mit der Signatur der Delegatklasse übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="39dee-137">The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class.</span></span> <span data-ttu-id="39dee-138">Bei `methodName` kann es sich um eine freigegebene Methode oder um eine Instanzmethode handeln.</span><span class="sxs-lookup"><span data-stu-id="39dee-138">The `methodName` can be either a shared method or an instance method.</span></span> <span data-ttu-id="39dee-139">Der `methodName` ist nicht optional, selbst dann nicht, wenn Sie einen Delegaten für die Standardmethode der Klasse erstellen.</span><span class="sxs-lookup"><span data-stu-id="39dee-139">The `methodName` is not optional, even if you create a delegate for the default method of the class.</span></span>  
   
- Verwenden Sie die folgende Syntax, um einen Lambda-Ausdruck festzulegen:  
+ <span data-ttu-id="39dee-140">Verwenden Sie die folgende Syntax, um einen Lambda-Ausdruck festzulegen:</span><span class="sxs-lookup"><span data-stu-id="39dee-140">To specify a lambda expression, use the following syntax:</span></span>  
   
- `Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`  
+ <span data-ttu-id="39dee-141">`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`</span><span class="sxs-lookup"><span data-stu-id="39dee-141">`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`</span></span>  
   
- Das folgende Beispiel zeigt sowohl `AddressOf`- als auch Lambda-Ausdrücke, mit denen der Verweis für einen Delegaten angegeben wird.  
+ <span data-ttu-id="39dee-142">Das folgende Beispiel zeigt sowohl `AddressOf`- als auch Lambda-Ausdrücke, mit denen der Verweis für einen Delegaten angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="39dee-142">The following example shows both `AddressOf` and lambda expressions used to specify the reference for a delegate.</span></span>  
   
  [!code-vb[VbVbalrDelegates#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_3.vb)]  
   
- Die Signatur der Funktion muss mit der des Delegattyps übereinstimmen. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Beispiele für Lambda-Ausdrücke und `AddressOf`-Zuweisungen zu Delegaten finden Sie unter [Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ <span data-ttu-id="39dee-143">Die Signatur der Funktion muss mit der des Delegattyps übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="39dee-143">The signature of the function must match that of the delegate type.</span></span> <span data-ttu-id="39dee-144">Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="39dee-144">For more information about lambda expressions, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span> <span data-ttu-id="39dee-145">Beispiele für Lambda-Ausdrücke und `AddressOf`-Zuweisungen zu Delegaten finden Sie unter [Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span><span class="sxs-lookup"><span data-stu-id="39dee-145">For more examples of lambda expression and `AddressOf` assignments to delegates, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span>  
   
-## <a name="related-topics"></a>Verwandte Themen  
+## <a name="related-topics"></a><span data-ttu-id="39dee-146">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="39dee-146">Related Topics</span></span>  
   
-|Titel|Beschreibung|  
+|<span data-ttu-id="39dee-147">Titel</span><span class="sxs-lookup"><span data-stu-id="39dee-147">Title</span></span>|<span data-ttu-id="39dee-148">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="39dee-148">Description</span></span>|  
 |-----------|-----------------|  
-|[Gewusst wie: Aufrufen einer Delegatenmethode](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Zeigt anhand eines Beispiels, wie Sie eine Methode einem Delegaten zuweisen und diese Methode anschließend über den Delegaten aufrufen.|  
-|[Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Veranschaulicht, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.|  
-|[Gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Beschreibt, wie Subs und Funktionen Delegaten oder Handlern zugewiesen werden können, auch wenn deren Signaturen nicht identisch sind.|  
-|[Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)|Stellt eine Übersicht über Ereignisse in Visual Basic bereit.|
-
+|[<span data-ttu-id="39dee-149">Gewusst wie: Aufrufen einer Delegatenmethode</span><span class="sxs-lookup"><span data-stu-id="39dee-149">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|<span data-ttu-id="39dee-150">Zeigt anhand eines Beispiels, wie Sie eine Methode einem Delegaten zuweisen und diese Methode anschließend über den Delegaten aufrufen.</span><span class="sxs-lookup"><span data-stu-id="39dee-150">Provides an example that shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>|  
+|[<span data-ttu-id="39dee-151">Gewusst wie: Übergeben von Prozeduren an eine andere Prozedur in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="39dee-151">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|<span data-ttu-id="39dee-152">Veranschaulicht, wie Delegaten verwendet werden, um eine Prozedur an eine andere Prozedur zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="39dee-152">Demonstrates how to use delegates to pass one procedure to another procedure.</span></span>|  
+|[<span data-ttu-id="39dee-153">Gelockerte Delegatenkonvertierung</span><span class="sxs-lookup"><span data-stu-id="39dee-153">Relaxed Delegate Conversion</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|<span data-ttu-id="39dee-154">Beschreibt, wie Subs und Funktionen Delegaten oder Handlern zugewiesen werden können, auch wenn deren Signaturen nicht identisch sind.</span><span class="sxs-lookup"><span data-stu-id="39dee-154">Describes how you can assign subs and functions to delegates or handlers even when their signatures are not identical</span></span>|  
+|[<span data-ttu-id="39dee-155">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="39dee-155">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)|<span data-ttu-id="39dee-156">Stellt eine Übersicht über Ereignisse in Visual Basic bereit.</span><span class="sxs-lookup"><span data-stu-id="39dee-156">Provides an overview of events in Visual Basic.</span></span>|
