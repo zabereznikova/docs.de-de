@@ -1,33 +1,32 @@
 ---
-title: "SyncLock Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.SyncLock"
-  - "SyncLock"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "threading [Visual Basic], locks"
-  - "SyncLock statement"
-  - "locks, threads"
+title: SyncLock-Anweisung
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.SyncLock
+- SyncLock
+helpviewer_keywords:
+- threading [Visual Basic], locks
+- SyncLock statement [Visual Basic]
+- locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# SyncLock Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Ruft vor dem Ausführen des Anweisungsblocks eine exklusive Sperre für den Block ab.  
+# <a name="synclock-statement"></a><span data-ttu-id="d2600-102">SyncLock-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d2600-102">SyncLock Statement</span></span>
+<span data-ttu-id="d2600-103">Ruft eine exklusive Sperre für einen Anweisungsblock vor der Ausführung des Blocks ab.</span><span class="sxs-lookup"><span data-stu-id="d2600-103">Acquires an exclusive lock for a statement block before executing the block.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="d2600-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d2600-104">Syntax</span></span>  
   
 ```  
 SyncLock lockobject  
@@ -35,72 +34,72 @@ SyncLock lockobject
 End SyncLock  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="d2600-105">Teile</span><span class="sxs-lookup"><span data-stu-id="d2600-105">Parts</span></span>  
  `lockobject`  
- Erforderlich.  Ausdruck, der einen Objektverweis ergibt.  
+ <span data-ttu-id="d2600-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d2600-106">Required.</span></span> <span data-ttu-id="d2600-107">Ein Ausdruck, der einen Objektverweis ergibt.</span><span class="sxs-lookup"><span data-stu-id="d2600-107">Expression that evaluates to an object reference.</span></span>  
   
  `block`  
- Dies ist optional.  Block von Anweisungen, die auszuführen sind, wenn die Sperre erworben wird.  
+ <span data-ttu-id="d2600-108">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="d2600-108">Optional.</span></span> <span data-ttu-id="d2600-109">Der Block von Anweisungen, die ausgeführt werden, wenn die Sperre abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="d2600-109">Block of statements that are to execute when the lock is acquired.</span></span>  
   
  `End SyncLock`  
- Beendet einen `SyncLock`\-Block.  
+ <span data-ttu-id="d2600-110">Beendet eine `SyncLock` Block.</span><span class="sxs-lookup"><span data-stu-id="d2600-110">Terminates a `SyncLock` block.</span></span>  
   
-## Hinweise  
- Die `SyncLock`\-Anweisung stellt sicher, dass mehrere Threads den Anweisungsblock nicht gleichzeitig ausführen.  `SyncLock` verhindert, dass jeder Thread in den Block eintritt, bis dieser von keinem anderen Thread ausgeführt wird.  
+## <a name="remarks"></a><span data-ttu-id="d2600-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d2600-111">Remarks</span></span>  
+ <span data-ttu-id="d2600-112">Die `SyncLock` -Anweisung sicher, dass den Anweisungsblock nicht von mehreren Threads gleichzeitig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="d2600-112">The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time.</span></span> <span data-ttu-id="d2600-113">`SyncLock`verhindert, dass jeder Thread den Block eintritt, bis keine anderen Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d2600-113">`SyncLock` prevents each thread from entering the block until no other thread is executing it.</span></span>  
   
- In der Regel wird `SyncLock` dazu verwendet, Daten vor der Aktualisierung durch mehrere Threads gleichzeitig zu schützen.  Wenn die Anweisungen, mit denen die Daten bearbeitet werden, ohne Unterbrechung ausgeführt werden sollen, fügen Sie sie in einen `SyncLock`\-Block ein.  
+ <span data-ttu-id="d2600-114">Die häufigste Verwendung von `SyncLock` zu verhindern, dass Daten von mehreren Threads gleichzeitig aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="d2600-114">The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously.</span></span> <span data-ttu-id="d2600-115">Wenn die Anweisungen, die die Daten bearbeiten können bis zum Abschluss ohne Unterbrechung wechseln müssen, platzieren Sie sie innerhalb einer `SyncLock` Block.</span><span class="sxs-lookup"><span data-stu-id="d2600-115">If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.</span></span>  
   
- Ein durch eine exklusive Sperre geschützter Anweisungsblock wird gelegentlich als *kritischer Abschnitt* bezeichnet.  
+ <span data-ttu-id="d2600-116">Ein Anweisungsblock geschützt durch eine exklusive Sperre bezeichnet eine *kritischen Abschnitt*.</span><span class="sxs-lookup"><span data-stu-id="d2600-116">A statement block protected by an exclusive lock is sometimes called a *critical section*.</span></span>  
   
-## Regeln  
+## <a name="rules"></a><span data-ttu-id="d2600-117">Regeln</span><span class="sxs-lookup"><span data-stu-id="d2600-117">Rules</span></span>  
   
--   Verzweigen.  Eine Verzweigung in einen `SyncLock`\-Block ist nicht von außerhalb des Blocks möglich.  
+-   <span data-ttu-id="d2600-118">Verzweigen.</span><span class="sxs-lookup"><span data-stu-id="d2600-118">Branching.</span></span> <span data-ttu-id="d2600-119">Sie können keine Verzweigung in einer `SyncLock` Blockieren von außerhalb des Blocks.</span><span class="sxs-lookup"><span data-stu-id="d2600-119">You cannot branch into a `SyncLock` block from outside the block.</span></span>  
   
--   Wert des Sperrobjekts.  Der Wert von `lockobject` kann nicht `Nothing` sein.  Sie müssen das Sperrobjekt erstellen, bevor Sie es in einer `SyncLock`\-Anweisung verwenden.  
+-   <span data-ttu-id="d2600-120">Der Wert der Lock-Objekts.</span><span class="sxs-lookup"><span data-stu-id="d2600-120">Lock Object Value.</span></span> <span data-ttu-id="d2600-121">Der Wert der `lockobject` nicht `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="d2600-121">The value of `lockobject` cannot be `Nothing`.</span></span> <span data-ttu-id="d2600-122">Sie müssen das Sperrenobjekt erstellen, bevor Sie es im Verwenden einer `SyncLock` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="d2600-122">You must create the lock object before you use it in a `SyncLock` statement.</span></span>  
   
-     Sie können den Wert von `lockobject` nicht ändern, während ein `SyncLock`\-Block ausgeführt wird.  Der Mechanismus verlangt, dass das Sperrobjekt unverändert bleibt.  
+     <span data-ttu-id="d2600-123">Sie können den Wert der ändern `lockobject` während der Ausführung eine `SyncLock` Block.</span><span class="sxs-lookup"><span data-stu-id="d2600-123">You cannot change the value of `lockobject` while executing a `SyncLock` block.</span></span> <span data-ttu-id="d2600-124">Der Mechanismus ist erforderlich, dass das Sperrobjekt unverändert bleiben.</span><span class="sxs-lookup"><span data-stu-id="d2600-124">The mechanism requires that the lock object remain unchanged.</span></span>  
   
--   Sie können den [Rechnen Sie](../../../visual-basic/language-reference/operators/await-operator.md)\-Operator in einem `SyncLock`\-Block nicht verwenden.  
+-   <span data-ttu-id="d2600-125">Können Sie keine der ["await"](../../../visual-basic/language-reference/operators/await-operator.md) Operator in einem `SyncLock` Block.</span><span class="sxs-lookup"><span data-stu-id="d2600-125">You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.</span></span>  
   
-## Verhalten  
+## <a name="behavior"></a><span data-ttu-id="d2600-126">Verhalten</span><span class="sxs-lookup"><span data-stu-id="d2600-126">Behavior</span></span>  
   
--   Mechanismus.  Wenn ein Thread die `SyncLock`\-Anweisung erreicht, wird der `lockobject`\-Ausdruck ausgewertet und die Ausführung des Threads unterbrochen, bis der Thread eine exklusive Sperre für das durch den Ausdruck zurückgegebene Objekt erwirbt.  Wenn ein anderer Thread die `SyncLock`\-Anweisung erreicht, erwirbt er erst dann eine Sperre, wenn vom ersten Thread die `End SyncLock`\-Anweisung ausgeführt wird.  
+-   <span data-ttu-id="d2600-127">Mechanismus.</span><span class="sxs-lookup"><span data-stu-id="d2600-127">Mechanism.</span></span> <span data-ttu-id="d2600-128">Wenn ein Thread erreicht die `SyncLock` -Anweisung ausgewertet den `lockobject` Ausdruck und hält die Ausführung bis er eine exklusive Sperre für das Objekt, das von dem Ausdruck zurückgegeben erhält.</span><span class="sxs-lookup"><span data-stu-id="d2600-128">When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression.</span></span> <span data-ttu-id="d2600-129">Wenn ein anderer Thread erreicht die `SyncLock` -Anweisung, erwirbt er eine Sperre, bis der erste Thread führt die `End SyncLock` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="d2600-129">When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.</span></span>  
   
--   Geschützte Daten.  Wenn es sich bei `lockobject` um eine `Shared`\-Variable handelt, hindert die exklusive Sperre einen Thread in jeder Instanz der Klasse daran, den `SyncLock`\-Block auszuführen, wenn dieser von einem anderen Thread ausgeführt wird.  Damit werden Daten geschützt, die für alle Instanzen freigegeben sind.  
+-   <span data-ttu-id="d2600-130">Stellen Sie geschützte Daten.</span><span class="sxs-lookup"><span data-stu-id="d2600-130">Protected Data.</span></span> <span data-ttu-id="d2600-131">Wenn `lockobject` ist ein `Shared` Variable, die exklusive Sperre verhindert, dass einen Thread in jeder Instanz der Klasse Ausführen der `SyncLock` blockieren, während ein anderer Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d2600-131">If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it.</span></span> <span data-ttu-id="d2600-132">Dies schützt die Daten, die von allen Instanzen gemeinsam genutzt werden.</span><span class="sxs-lookup"><span data-stu-id="d2600-132">This protects data that is shared among all the instances.</span></span>  
   
-     Wenn es sich bei `lockobject` um eine Instanzvariable \(nicht `Shared`\) handelt, hindert die Sperre einen Thread, der in der aktuellen Instanz ausgeführt wird, daran, den `SyncLock`\-Block zur gleichen Zeit wie ein anderer Thread derselben Instanz auszuführen.  Dadurch werden von der einzelnen Instanz verwaltete Daten geschützt.  
+     <span data-ttu-id="d2600-133">Wenn `lockobject` wird von eine Instanzvariablen (nicht `Shared`), die Sperre verhindert, dass einen Thread in der aktuellen Instanz ausgeführt wird, verhindern Sie die Ausführung der `SyncLock` Block zur gleichen Zeit wie ein anderer Thread in der gleichen Instanz.</span><span class="sxs-lookup"><span data-stu-id="d2600-133">If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance.</span></span> <span data-ttu-id="d2600-134">Dies schützt die Daten, die von einzelnen Instanzen verwaltet.</span><span class="sxs-lookup"><span data-stu-id="d2600-134">This protects data maintained by the individual instance.</span></span>  
   
--   Erwerb und Freigabe.  Ein `SyncLock`\-Block verhält sich wie eine `Try...Finally`\-Konstruktion, bei der der `Try`\-Block eine exklusive Sperre für `lockobject` erwirbt, die schließlich vom `Finally`\-Block wieder aufgehoben wird.  Daher garantiert der `SyncLock`\-Block die Aufhebung der Sperre, unabhängig davon, wie Sie den Block beenden.  Dies gilt sogar im Fall einer nicht behandelten Ausnahme.  
+-   <span data-ttu-id="d2600-135">Erhalt und die Freigabe.</span><span class="sxs-lookup"><span data-stu-id="d2600-135">Acquisition and Release.</span></span> <span data-ttu-id="d2600-136">Ein `SyncLock` Block verhält sich wie ein `Try...Finally` Konstruktion, in dem die `Try` Block erhält eine exklusive Sperre auf `lockobject` und die `Finally` Block freigibt.</span><span class="sxs-lookup"><span data-stu-id="d2600-136">A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it.</span></span> <span data-ttu-id="d2600-137">Aus diesem Grund die `SyncLock` Block wird sichergestellt, Freigabe der Sperre, unabhängig davon, wie Sie den Block zu beenden.</span><span class="sxs-lookup"><span data-stu-id="d2600-137">Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block.</span></span> <span data-ttu-id="d2600-138">Dies gilt sogar im Fall einer nicht behandelten Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="d2600-138">This is true even in the case of an unhandled exception.</span></span>  
   
--   Framework\-Aufrufe.  Der `SyncLock`\-Block erwirbt die exklusive Sperre und gibt sie frei, indem er die `Enter`\-Methode und die `Exit`\-Methode der `Monitor`\-Klasse im <xref:System.Threading>\-Namespace aufruft.  
+-   <span data-ttu-id="d2600-139">Framework-Aufrufe.</span><span class="sxs-lookup"><span data-stu-id="d2600-139">Framework Calls.</span></span> <span data-ttu-id="d2600-140">Die `SyncLock` -Block erwirbt und hebt die exklusive Sperre durch Aufrufen der `Enter` und `Exit` Methoden die `Monitor` -Klasse in der <xref:System.Threading> Namespace.</span><span class="sxs-lookup"><span data-stu-id="d2600-140">The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.</span></span>  
   
-## Programmierempfehlungen  
- Der `lockobject`\-Ausdruck sollte stets ein Objekt ergeben, das ausschließlich zu der von Ihnen erstellten Klasse gehört.  Sie sollten eine `Private`\-Objektvariable deklarieren, um Daten zu schützen, die zu der aktuellen Instanz gehören, oder eine `Private Shared`\-Objektvariable, um Daten zu schützen, die allen Instanzen gemeinsam sind.  
+## <a name="programming-practices"></a><span data-ttu-id="d2600-141">Programmierung-Methoden</span><span class="sxs-lookup"><span data-stu-id="d2600-141">Programming Practices</span></span>  
+ <span data-ttu-id="d2600-142">Die `lockobject` Ausdruck ergeben sollten immer ein Objekt, das ausschließlich auf die Klasse gehört.</span><span class="sxs-lookup"><span data-stu-id="d2600-142">The `lockobject` expression should always evaluate to an object that belongs exclusively to your class.</span></span> <span data-ttu-id="d2600-143">Deklarieren Sie eine `Private` Object-Variablen zum Schützen von Daten, die auf die aktuelle Instanz gehört oder eine `Private Shared` Object-Variablen zum Schützen von Daten, die alle Instanzen gemeinsam.</span><span class="sxs-lookup"><span data-stu-id="d2600-143">You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.</span></span>  
   
- Sie sollten das `Me`\-Schlüsselwort nicht zur Bereitstellung eines Sperrobjekts für Instanzdaten verwenden.  Wenn Code außerhalb der von Ihnen erstellten Klasse einen Verweis auf eine Instanz dieser Klasse enthält, kann dieser Code den Verweis als Sperrobjekt für einen völlig anderen Block als den von Ihnen erstellten `SyncLock`\-Block verwenden, sodass andere Daten geschützt werden.  Auf diese Weise könnten die von Ihnen erstellte Klasse und die andere Klasse die Ausführung der nicht zusammenhängenden `SyncLock`\-Blöcke gegenseitig verhindern.  Ebenso kann die Sperre einer Zeichenfolge problematisch sein, da in dem Prozess jeder andere Code, der dieselbe Zeichenfolge verwendet, dieselbe Sperre anwendet.  
+ <span data-ttu-id="d2600-144">Verwenden Sie nicht die `Me` Schlüsselwort ermöglichen eine Sperre für die Instanz Objektdaten.</span><span class="sxs-lookup"><span data-stu-id="d2600-144">You should not use the `Me` keyword to provide a lock object for instance data.</span></span> <span data-ttu-id="d2600-145">Wenn Code außerhalb der Klasse einen Verweis auf eine Instanz der Klasse enthält, konnte es diesen Verweis verwenden, als ein Sperrobjekt für die für eine `SyncLock` Block ganz anderen von Ihnen, unterschiedliche Daten schützen.</span><span class="sxs-lookup"><span data-stu-id="d2600-145">If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data.</span></span> <span data-ttu-id="d2600-146">Auf diese Weise Ihre Klasse und die andere Klasse können einander blockieren Ausführung ihrer unabhängigen `SyncLock` blockiert.</span><span class="sxs-lookup"><span data-stu-id="d2600-146">In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks.</span></span> <span data-ttu-id="d2600-147">Auf ähnliche Weise Sperren für eine Zeichenfolge kann problematisch werden, da es sich bei jedem anderen Code in den Prozess über die gleiche Zeichenfolge dieselbe Sperre freigibt.</span><span class="sxs-lookup"><span data-stu-id="d2600-147">Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.</span></span>  
   
- Außerdem sollten Sie die `Me.GetType`\-Methode nicht zur Bereitstellung eines Sperrobjekts für freigegebene Daten verwenden.  Grund hierfür ist, dass `GetType` stets das gleiche `Type`\-Objekt für einen angegebenen Klassennamen zurückgibt.  Externer Code könnte `GetType` für die von Ihnen erstellte Klasse aufrufen und das gleiche Sperrobjekt erhalten, das Sie verwenden.  Dies würde dazu führen, dass beide Klassen einander durch ihre `SyncLock`\-Blöcke blockieren würden.  
+ <span data-ttu-id="d2600-148">Verwenden Sie zudem nicht die `Me.GetType` freigegebene Methode, um ein Sperrobjekt für die für bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="d2600-148">You should also not use the `Me.GetType` method to provide a lock object for shared data.</span></span> <span data-ttu-id="d2600-149">Grund hierfür ist, `GetType` gibt immer die gleiche `Type` Objekt für einen bestimmten Klassennamen.</span><span class="sxs-lookup"><span data-stu-id="d2600-149">This is because `GetType` always returns the same `Type` object for a given class name.</span></span> <span data-ttu-id="d2600-150">Externer Code Aufrufen `GetType` für Ihre Klasse und erhalten dasselbe Sperrobjekt, das Sie verwenden.</span><span class="sxs-lookup"><span data-stu-id="d2600-150">External code could call `GetType` on your class and obtain the same lock object you are using.</span></span> <span data-ttu-id="d2600-151">Dies würde die beiden Klassen blockieren miteinander aus ihren `SyncLock` blockiert.</span><span class="sxs-lookup"><span data-stu-id="d2600-151">This would result in the two classes blocking each other from their `SyncLock` blocks.</span></span>  
   
-## Beispiele  
+## <a name="examples"></a><span data-ttu-id="d2600-152">Beispiele</span><span class="sxs-lookup"><span data-stu-id="d2600-152">Examples</span></span>  
   
-### Description  
- Im folgenden Beispiel wird eine Klasse gezeigt, die eine einfache Liste mit Meldungen verwaltet.  Die Meldungen werden in einem Array abgelegt, und das zuletzt verwendete Element dieses Arrays wird in einer Variablen abgelegt.  Die `addAnotherMessage`\-Prozedur erhöht das letzte Element und speichert die neue Meldung.  Diese beiden Operationen werden durch die `SyncLock`\-Anweisung und die `End SyncLock`\-Anweisung geschützt, denn sobald das letzte Element erhöht wurde, muss die neue Meldung gespeichert werden; erst danach kann das letzte Element von einem anderen Thread erneut erhöht werden.  
+### <a name="description"></a><span data-ttu-id="d2600-153">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d2600-153">Description</span></span>  
+ <span data-ttu-id="d2600-154">Das folgende Beispiel zeigt eine Klasse, die eine einfache Liste von Nachrichten verwaltet.</span><span class="sxs-lookup"><span data-stu-id="d2600-154">The following example shows a class that maintains a simple list of messages.</span></span> <span data-ttu-id="d2600-155">Es enthält die Nachrichten in einem Array und das letzte Element des Arrays in einer Variablen verwendet.</span><span class="sxs-lookup"><span data-stu-id="d2600-155">It holds the messages in an array and the last used element of that array in a variable.</span></span> <span data-ttu-id="d2600-156">Die `addAnotherMessage` erhöht das letzte Element und speichert die neue Nachricht.</span><span class="sxs-lookup"><span data-stu-id="d2600-156">The `addAnotherMessage` procedure increments the last element and stores the new message.</span></span> <span data-ttu-id="d2600-157">Diese beiden Vorgänge werden geschützt, indem die `SyncLock` und `End SyncLock` -Anweisungen, denn sobald das letzte Element erhöht wurde, die neue Nachricht gespeichert werden muss vor dem ein anderen Threads das letzte Element erneut inkrementieren kann.</span><span class="sxs-lookup"><span data-stu-id="d2600-157">Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.</span></span>  
   
- Würde die `simpleMessageList`\-Klasse in allen Instanzen nur eine gemeinsame Liste von Meldungen verwenden, würden die `messagesList`\-Variable und die `messagesLast`\-Variable als `Shared` deklariert werden.  In diesem Fall sollte die `messagesLock`\-Variable ebenfalls `Shared` sein, sodass von jeder Instanz ein einziges Sperrobjekt verwendet werden würde.  
+ <span data-ttu-id="d2600-158">Wenn die `simpleMessageList` Klasse eine Liste von Nachrichten zwischen alle zugehörigen Instanzen, die Variablen freigegebener `messagesList` und `messagesLast` deklariert werden als `Shared`.</span><span class="sxs-lookup"><span data-stu-id="d2600-158">If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`.</span></span> <span data-ttu-id="d2600-159">In diesem Fall wird die Variable `messagesLock` muss auch `Shared`, sodass gäbe es ein einzelnes Lock-Objekt, das von jeder Instanz verwendet.</span><span class="sxs-lookup"><span data-stu-id="d2600-159">In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.</span></span>  
   
-### Code  
+### <a name="code"></a><span data-ttu-id="d2600-160">Code</span><span class="sxs-lookup"><span data-stu-id="d2600-160">Code</span></span>  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### Description  
- Im folgenden Beispiel werden Threads und `SyncLock` verwendet.  Solange die `SyncLock`\-Anweisung vorhanden ist, stellt der Anweisungsblock einen kritischen Abschnitt dar, und `balance` wird nie eine negative Zahl.  Sie können die Anweisungen `SyncLock` und `End SyncLock` auskommentieren, um die Folgen der Auslassung des `SyncLock`\-Schlüsselworts zu erkennen.  
+### <a name="description"></a><span data-ttu-id="d2600-161">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d2600-161">Description</span></span>  
+ <span data-ttu-id="d2600-162">Im folgenden Beispiel wird die Threads und `SyncLock`.</span><span class="sxs-lookup"><span data-stu-id="d2600-162">The following example uses threads and `SyncLock`.</span></span> <span data-ttu-id="d2600-163">Solange die `SyncLock` Anweisung vorhanden ist, der Anweisungsblock eines kritischen Abschnitts und `balance` wird nie eine negative Zahl.</span><span class="sxs-lookup"><span data-stu-id="d2600-163">As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number.</span></span> <span data-ttu-id="d2600-164">Können Sie Auskommentieren der `SyncLock` und `End SyncLock` Anweisungen, die Auswirkungen der eingepasst finden Sie unter der `SyncLock` Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="d2600-164">You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.</span></span>  
   
-### Code  
+### <a name="code"></a><span data-ttu-id="d2600-165">Code</span><span class="sxs-lookup"><span data-stu-id="d2600-165">Code</span></span>  
  [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
-### Kommentare  
+### <a name="comments"></a><span data-ttu-id="d2600-166">Kommentare</span><span class="sxs-lookup"><span data-stu-id="d2600-166">Comments</span></span>  
   
-## Siehe auch  
- <xref:System.Threading>   
- <xref:System.Threading.Monitor>   
- [Threadsynchronisierung](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)   
- [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="d2600-167">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2600-167">See Also</span></span>  
+ <xref:System.Threading>  
+ <xref:System.Threading.Monitor>  
+ [<span data-ttu-id="d2600-168">Threadsynchronisierung</span><span class="sxs-lookup"><span data-stu-id="d2600-168">Thread Synchronization</span></span>](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
+ [<span data-ttu-id="d2600-169">Threading</span><span class="sxs-lookup"><span data-stu-id="d2600-169">Threading</span></span>](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)

@@ -1,61 +1,60 @@
 ---
-title: "Introduction to the Line and Shape Controls (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Line control, overview"
-  - "Shape control, overview"
-  - "lines, drawing"
-  - "shapes, drawing"
+title: "Einführung in das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Line control [Visual Basic], overview
+- Shape control [Visual Basic], overview
+- lines, drawing
+- shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Introduction to the Line and Shape Controls (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Das Line\- und das Shape\-Steuerelement von Visual Basic Power Packs bestehen aus drei grafischen Steuerelementen, mit denen Sie Linien und Formen auf Formularen und in Containern zeichnen können.  Das <xref:Microsoft.VisualBasic.PowerPacks.LineShape>\-Steuerelement wird verwendet, um horizontale, vertikale, und diagonale Linien zu zeichnen.  Das <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>\-Steuerelement dient zum Zeichnen von Kreisen und Ovalen und das <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>\-Steuerelement zum Zeichnen von Rechtecken und Quadraten.  
+# <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a><span data-ttu-id="9c89a-102">Einführung in das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="9c89a-102">Introduction to the Line and Shape Controls (Visual Studio)</span></span>
+<span data-ttu-id="9c89a-103">Die Visual Basic Power Packs Line- und Shape-Steuerelemente sind eine Gruppe von drei grafische Steuerelemente, die Sie zum Zeichnen von Linien und Formen auf Formularen und Containern zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="9c89a-103">The Visual Basic Power Packs Line and Shape controls are a set of three graphical controls that enable you to draw lines and shapes on forms and containers.</span></span> <span data-ttu-id="9c89a-104">Die <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Steuerelement wird verwendet, um die horizontale, vertikale und diagonale Linien zu zeichnen.</span><span class="sxs-lookup"><span data-stu-id="9c89a-104">The <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control is used to draw horizontal, vertical, and diagonal lines.</span></span> <span data-ttu-id="9c89a-105">Die <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Steuerelement wird verwendet, um Kreise und Ovale, zeichnen und die <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> Steuerelement wird verwendet, um Rechtecke und Quadrate gezeichnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="9c89a-105">The <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> control is used to draw circles and ovals, and the <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control is used to draw rectangles and squares.</span></span>  
   
-## Line\-Steuerelement und Shape\-Steuerelement  
- Das Line\- und das Shape\-Steuerelement vereinen mehrere Grafikmethoden, die im <xref:System.Drawing>\-Namespace enthalten sind.  Auf diese Weise können Sie in nur einem Schritt Linien und Formen zeichnen, ohne Grafikobjekte, Stifte und Pinsel erstellen zu müssen.  Komplexe Grafiktechniken, wie z. B. Farbverläufe, können mit einigen wenigen Eigenschafteneinstellungen realisiert werden.  
+## <a name="line-and-shape-controls"></a><span data-ttu-id="9c89a-106">Das Line-Steuerelement und das Shape-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9c89a-106">Line and Shape Controls</span></span>  
+ <span data-ttu-id="9c89a-107">Die Linien- und Formsteuerelemente kapseln vielen Grafikmethoden, die in enthaltenen der <xref:System.Drawing> Namespace.</span><span class="sxs-lookup"><span data-stu-id="9c89a-107">Line and Shape controls encapsulate many of the graphics methods that are contained in the <xref:System.Drawing> namespace.</span></span> <span data-ttu-id="9c89a-108">Dadurch können Sie Zeichnen von Linien und Formen in einem einzigen Schritt ohne Grafikobjekten, Stifte und Pinsel erstellen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="9c89a-108">This enables you to draw lines and shapes in a single step without having to create graphics objects, pens, and brushes.</span></span> <span data-ttu-id="9c89a-109">Komplexe Grafiktechniken wie Farbverläufe können erreicht werden, indem Sie nur einige Eigenschaften festlegen.</span><span class="sxs-lookup"><span data-stu-id="9c89a-109">Complex graphics techniques such as gradient fills can be accomplished by just setting some properties.</span></span>  
   
- Linien und Formen können zwar auch mit Grafikmethoden gezeichnet werden, das Line\- und das Shape\-Steuerelement bieten jedoch zahlreiche Vorteile:  
+ <span data-ttu-id="9c89a-110">Obwohl es auch möglich, Linien und Formen zu zeichnen, indem Sie mithilfe von Grafikmethoden ist, stehen verschiedene Vorteile gegenüber der Verwendung der Line- und Shape-Steuerelemente:</span><span class="sxs-lookup"><span data-stu-id="9c89a-110">Although it is also possible to draw lines and shapes by using graphics methods, there are several advantages to using the Line and Shape controls:</span></span>  
   
--   Grafikmethoden können nur zur Laufzeit aufgerufen werden.  Das Line\- und das Shape\-Steuerelement können einem Formular hingegen zur Entwurfszeit hinzugefügt werden.  Hierdurch können Sie das Erscheinungsbild und die Position exakt überprüfen. Die Steuerelemente können aber auch zur Laufzeit hinzugefügt werden.  
+-   <span data-ttu-id="9c89a-111">Grafikmethoden können nur zur Laufzeit aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="9c89a-111">Graphics methods can be called only at run time.</span></span> <span data-ttu-id="9c89a-112">Die Linien- und Formsteuerelemente können zu einem Formular zur Entwurfszeit hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="9c89a-112">Line and Shape controls can be added to a form at design time.</span></span> <span data-ttu-id="9c89a-113">Dadurch können Sie die Aussehen feststellen, und positionieren Sie sie genau; Sie können auch zur Laufzeit hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="9c89a-113">This enables you to see what they look like and to position them exactly; they can also be added at run time.</span></span>  
   
--   Das Line\- und das Shape\-Steuerelement können zur Laufzeit ausgewählt werden und stellen Ereignisse wie <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> und <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A> bereit.  Die Ausgaben von Grafikmethoden können nicht ausgewählt werden und stellen keine Ereignisse bereit.  
+-   <span data-ttu-id="9c89a-114">Linien- und Formsteuerelemente können ausgewählt werden zur Laufzeit, z. B. Bereitstellen von Ereignissen <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> und <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>.</span><span class="sxs-lookup"><span data-stu-id="9c89a-114">Line and Shape controls are selectable at run time, providing events such as <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> and <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>.</span></span> <span data-ttu-id="9c89a-115">Die Ausgaben von Grafikmethoden können nicht ausgewählt werden und bieten keine Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="9c89a-115">The outputs of graphics methods are not selectable and do not provide events.</span></span>  
   
--   Das Line\- und das Shape\-Steuerelement stellen <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A>\- und <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A>\-Methoden bereit, mit deren Hilfe Sie die Z\-Reihenfolge zur Entwurfszeit und zur Laufzeit steuern können.  Die Z\-Reihenfolge von Grafikmethoden kann nur gesteuert werden, indem die Ausführungsreihenfolge zur Laufzeit geändert wird.  
+-   <span data-ttu-id="9c89a-116">Geben Sie die Linien- und Formsteuerelemente <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> und <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> Methoden, mit denen Sie ihre Z-Reihenfolge zur Entwurfszeit und zur Laufzeit steuern können.</span><span class="sxs-lookup"><span data-stu-id="9c89a-116">Line and Shape controls provide <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> and <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> methods that enable you to control their z-order at design time and at run time.</span></span> <span data-ttu-id="9c89a-117">Die Z-Reihenfolge von Grafikmethoden kann gesteuert werden, nur durch ihre Reihenfolge der Ausführung zur Laufzeit ändern.</span><span class="sxs-lookup"><span data-stu-id="9c89a-117">The z-order of graphics methods can be controlled only by changing their order of execution at run time.</span></span>  
   
--   Durch das Line\- und das Shape\-Steuerelement werden keine Fenster aufgerufen. Dadurch, dass sie keine Fensterhandles aufweisen, werden weniger Systemressourcen beansprucht.  
+-   <span data-ttu-id="9c89a-118">Die Linien- und Formsteuerelemente sind Fensterlose Steuerelemente. Sie haben keine Fensterhandles und daher weniger Systemressourcen verwenden.</span><span class="sxs-lookup"><span data-stu-id="9c89a-118">Line and Shape controls are windowless controls; they have no window handles and therefore use less system resources.</span></span>  
   
-### Objektmodell  
- Das Line\- und das Shape\-Steuerelement werden aus einer <xref:Microsoft.VisualBasic.PowerPacks.Shape>\-Basisklasse abgeleitet, durch die die gemeinsamen Eigenschaften, Methoden und Ereignisse definiert werden.  
+### <a name="object-model"></a><span data-ttu-id="9c89a-119">Objektmodell</span><span class="sxs-lookup"><span data-stu-id="9c89a-119">Object Model</span></span>  
+ <span data-ttu-id="9c89a-120">Linien- und Formsteuerelemente von einer Basisklasse ableiten <xref:Microsoft.VisualBasic.PowerPacks.Shape> Klasse, die die gemeinsamen Eigenschaften, Methoden und Ereignisse definiert.</span><span class="sxs-lookup"><span data-stu-id="9c89a-120">Line and Shape controls derive from a base <xref:Microsoft.VisualBasic.PowerPacks.Shape> class that defines their shared properties, methods, and events.</span></span>  
   
- In der folgenden Abbildung werden die Line\- und Shape\-Objekthierarchie dargestellt.  
+ <span data-ttu-id="9c89a-121">Die folgende Abbildung zeigt die Line- und Shape-Objekthierarchie.</span><span class="sxs-lookup"><span data-stu-id="9c89a-121">The following illustration shows the Line and Shape object hierarchy.</span></span>  
   
- ![Ein Diagramm der Line&#45; und Shape&#45;Objekthierarchie](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
-Line\- und Shape\-Objekthierarchie  
+ <span data-ttu-id="9c89a-122">![Ein Diagramm der Line- und Shape-Objekthierarchie](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")</span><span class="sxs-lookup"><span data-stu-id="9c89a-122">![A diagram of the Line and Shape object hierarchy](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")</span></span>  
+<span data-ttu-id="9c89a-123">Line- und Shape-Objekthierarchie</span><span class="sxs-lookup"><span data-stu-id="9c89a-123">Line and Shape object hierarchy</span></span>  
   
- Die abgeleitete <xref:Microsoft.VisualBasic.PowerPacks.LineShape>\-Klasse enthält Eigenschaften, Methoden und Ereignisse für Linien.  Die abgeleitete <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>\-Klasse ist die Basisklasse für <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> und <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>. Sie enthält Eigenschaften, Methoden und Ereignisse, die für alle Formen gleich sind.  Sie können für die Ableitung auch <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> verwenden, um eigene `Shape`\-Steuerelemente zu erstellen.  
+ <span data-ttu-id="9c89a-124">Die abgeleitete <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Klasse enthält Eigenschaften, Methoden und Ereignisse, die Zeilen eindeutig sind.</span><span class="sxs-lookup"><span data-stu-id="9c89a-124">The derived <xref:Microsoft.VisualBasic.PowerPacks.LineShape> class contains properties, methods, and events that are unique to lines.</span></span> <span data-ttu-id="9c89a-125">Die abgeleitete <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> Klasse ist die Basisklasse für <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> und <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; er enthält Eigenschaften, Methoden und Ereignisse, die alle Formen gemeinsam.</span><span class="sxs-lookup"><span data-stu-id="9c89a-125">The derived <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> class is the base class for <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; it contains properties, methods, and events common to all shapes.</span></span> <span data-ttu-id="9c89a-126">Sie können auch aus ableiten <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> Erstellen eigener `Shape` Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="9c89a-126">You can also derive from <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> to create your own `Shape` controls.</span></span>  
   
- Die <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>\- und <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>\-Klasse dienen zum Zeichnen von Kreisen, Ovalen, Rechtecken und Rechtecken mit abgerundeten Ecken.  
+ <span data-ttu-id="9c89a-127">Die <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> und <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> Klassen verwendet werden können, um Kreise, Ellipsen, Rechtecke und Rechtecke mit abgerundeten Ecken zu zeichnen.</span><span class="sxs-lookup"><span data-stu-id="9c89a-127">The <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> classes can be used to draw circles, ovals, rectangles, and rectangles with rounded corners.</span></span>  
   
- Wenn Sie einem Formular oder einem Container ein Line\- oder Shape\-Steuerelement hinzufügen, wird ein unsichtbares <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>\-Objekt erstellt.  Dabei fungiert <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> als eine Leinwand für die Formen in den einzelnen Containersteuerelementen. Jeder <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> verfügt über eine entsprechende <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>, sodass Sie die Line\- und Shape\-Steuerelemente durchlaufen können.  Sie können Formen von einem Container in einen anderen verschieben, indem Sie diese ausschneiden und einfügen oder indem Sie sie ziehen und ablegen.  Wenn die letzte Form aus einem Container entfernt wurde, wird der <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> ebenfalls entfernt.  
+ <span data-ttu-id="9c89a-128">Wenn ein Line- oder Shape-Steuerelement hinzugefügt wird, ein Formular oder Container, wie eine unsichtbare <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="9c89a-128">When a Line or Shape control is added to a form or container, an invisible <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> object is created.</span></span> <span data-ttu-id="9c89a-129">Die <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> , wobei jede fungiert als ein Zeichenbereich für die Formen innerhalb jedes Containersteuerelement <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> verfügt über ein entsprechendes <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> mit der Sie die Linien- und Formsteuerelemente durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="9c89a-129">The <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> acts as a canvas for the shapes within each container control; each <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> has a corresponding <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> that enables you to iterate through the Line and Shape controls.</span></span> <span data-ttu-id="9c89a-130">Sie können Formen aus einem Container in einen anderen mithilfe von Ausschneiden und einfügen oder per Drag & Drop verschieben.</span><span class="sxs-lookup"><span data-stu-id="9c89a-130">You can move shapes from one container to another by using cut and paste or by dragging and dropping.</span></span> <span data-ttu-id="9c89a-131">Beim Entfernen des letzten Form aus einem Container, der <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> wird ebenfalls entfernt.</span><span class="sxs-lookup"><span data-stu-id="9c89a-131">When the last shape is removed from a container, the <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> is removed also.</span></span>  
   
 > [!NOTE]
->  Nicht alle Containersteuerelemente unterstützen das Line\- und das Shape\-Steuerelement.  <xref:System.Windows.Forms.TableLayoutPanel> oder <xref:System.Windows.Forms.FlowLayoutPanel> können beispielsweise nicht als Host für ein Line\- oder Shape\-Steuerelement fungieren.  
+>  <span data-ttu-id="9c89a-132">Nicht alle Containersteuerelemente unterstützen die Line- und Shape-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="9c89a-132">Not all container controls support the Line and Shape controls.</span></span> <span data-ttu-id="9c89a-133">Sie können kein Line- oder Shape-Steuerelement hosten, auf eine <xref:System.Windows.Forms.TableLayoutPanel> oder ein <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="9c89a-133">You cannot host a Line or Shape control on a <xref:System.Windows.Forms.TableLayoutPanel> or a <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span>  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks>   
- [How to: Draw Lines with the LineShape Control](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)   
- [How to: Draw Shapes with the OvalShape and RectangleShape Controls](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)   
- [How to: Enable Tabbing Between Shapes](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="9c89a-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9c89a-134">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks>  
+ [<span data-ttu-id="9c89a-135">Gewusst wie: Zeichnen von Linien mit dem LineShape-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9c89a-135">How to: Draw Lines with the LineShape Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ [<span data-ttu-id="9c89a-136">Gewusst wie: Zeichnen von Formen mit dem OvalShape-Steuerelement und dem RectangleShape-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9c89a-136">How to: Draw Shapes with the OvalShape and RectangleShape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ [<span data-ttu-id="9c89a-137">Gewusst wie: Aktivieren des Wechselns zwischen Formen mit der Tabulatortaste</span><span class="sxs-lookup"><span data-stu-id="9c89a-137">How to: Enable Tabbing Between Shapes</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

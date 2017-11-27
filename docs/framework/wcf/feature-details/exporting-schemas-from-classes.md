@@ -1,73 +1,76 @@
 ---
-title: "Exportieren von Schemas aus Klassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, Import und Export von Schemas"
-  - "Schemas [WCF], Exportieren aus Klassen"
-  - "Schemas [WCF]"
-  - "XsdDataContractExporter-Klasse"
-  - "XsdDataContractImporter-Klasse"
+title: Exportieren von Schemas aus Klassen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, schema import and export
+- schemas [WCF], exporting from classes
+- schemas [WCF]
+- XsdDataContractExporter class
+- XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: afaec582673b93575f170ff474254c90841a2354
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exportieren von Schemas aus Klassen
-Verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter>\-Klasse, um XML\-XSD\-Schemas \(Schema Definition Language\) aus Klassen zu generieren, die im Datenvertragsmodell verwendet werden. In diesem Thema ist das Verfahren zum Erstellen von Schemas beschrieben.  
+# <a name="exporting-schemas-from-classes"></a><span data-ttu-id="b4cc1-102">Exportieren von Schemas aus Klassen</span><span class="sxs-lookup"><span data-stu-id="b4cc1-102">Exporting Schemas from Classes</span></span>
+<span data-ttu-id="b4cc1-103">Verwenden Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter> -Klasse, um XML-XSD-Schemas (Schema Definition Language) aus Klassen zu generieren, die im Datenvertragsmodell verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-103">To generate XML Schema definition language (XSD) schemas from classes that are used in the data contract model, use the <xref:System.Runtime.Serialization.XsdDataContractExporter> class.</span></span> <span data-ttu-id="b4cc1-104">In diesem Thema ist das Verfahren zum Erstellen von Schemas beschrieben.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-104">This topic describes the process for creating schemas.</span></span>  
   
-## Der Exportprozess  
- Der Prozess zum Exportieren von Schemas beginnt mit einem oder mehreren Typen, und es wird ein <xref:System.Xml.Schema.XmlSchemaSet> erstellt, der die XML\-Projektion dieser Typen beschreibt.  
+## <a name="the-export-process"></a><span data-ttu-id="b4cc1-105">Der Exportprozess</span><span class="sxs-lookup"><span data-stu-id="b4cc1-105">The Export Process</span></span>  
+ <span data-ttu-id="b4cc1-106">Der Prozess zum Exportieren von Schemas beginnt mit einem oder mehreren Typen, und es wird ein <xref:System.Xml.Schema.XmlSchemaSet> erstellt, der die XML-Projektion dieser Typen beschreibt.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-106">The schema export process starts with one or more types and produces an <xref:System.Xml.Schema.XmlSchemaSet> that describes the XML projection of these types.</span></span>  
   
- Der `XmlSchemaSet` ist Teil des SOM \(Schemaobjektmodell\) von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Das SOM stellt einen Satz von XSD\-Schemadokumenten dar. Um XSD\-Dokumente aus einem `XmlSchemaSet` zu erstellen, verwenden Sie die Schemaauflistung aus der <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>\-Eigenschaft der `XmlSchemaSet`\-Klasse. Serialisieren Sie dann jedes <xref:System.Xml.Schema.XmlSchema>\-Objekt mit dem <xref:System.Xml.Serialization.XmlSerializer>.  
+ <span data-ttu-id="b4cc1-107">Der `XmlSchemaSet` ist Teil des SOM (Schemaobjektmodell) von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Das SOM stellt einen Satz von XSD-Schemadokumenten dar.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-107">The `XmlSchemaSet` is part of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]’s Schema Object Model (SOM) that represents a set of XSD Schema documents.</span></span> <span data-ttu-id="b4cc1-108">Um XSD-Dokumente aus einem `XmlSchemaSet`zu erstellen, verwenden Sie die Schemaauflistung aus der <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> -Eigenschaft der `XmlSchemaSet` -Klasse.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-108">To create XSD documents from an `XmlSchemaSet`, use the collection of schemas from the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property of the `XmlSchemaSet` class.</span></span> <span data-ttu-id="b4cc1-109">Serialisieren Sie dann jedes <xref:System.Xml.Schema.XmlSchema> -Objekt mit dem <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-109">Then serialize each <xref:System.Xml.Schema.XmlSchema> object using the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-#### So exportieren Sie Schemas  
+#### <a name="to-export-schemas"></a><span data-ttu-id="b4cc1-110">So exportieren Sie Schemas</span><span class="sxs-lookup"><span data-stu-id="b4cc1-110">To export schemas</span></span>  
   
-1.  Erstellen Sie eine Instanz von <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+1.  <span data-ttu-id="b4cc1-111">Erstellen Sie eine Instanz von <xref:System.Runtime.Serialization.XsdDataContractExporter>.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-111">Create an instance of the <xref:System.Runtime.Serialization.XsdDataContractExporter>.</span></span>  
   
-2.  Dies ist optional. Übergeben Sie im Konstruktor einen <xref:System.Xml.Schema.XmlSchemaSet>. In diesem Fall wird das während des Schemaexports generierte Schema dieser <xref:System.Xml.Schema.XmlSchemaSet>\-Instanz hinzugefügt, anstatt mit einem leeren <xref:System.Xml.Schema.XmlSchemaSet> zu starten.  
+2.  <span data-ttu-id="b4cc1-112">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-112">Optional.</span></span> <span data-ttu-id="b4cc1-113">Übergeben Sie im Konstruktor einen <xref:System.Xml.Schema.XmlSchemaSet> .</span><span class="sxs-lookup"><span data-stu-id="b4cc1-113">Pass an <xref:System.Xml.Schema.XmlSchemaSet> in the constructor.</span></span> <span data-ttu-id="b4cc1-114">In diesem Fall wird das während des Schemaexports generierte Schema dieser <xref:System.Xml.Schema.XmlSchemaSet> -Instanz hinzugefügt, anstatt mit einem leeren <xref:System.Xml.Schema.XmlSchemaSet>zu starten.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-114">In this case, the schema generated during the schema export is added to this <xref:System.Xml.Schema.XmlSchemaSet> instance instead of starting with a blank <xref:System.Xml.Schema.XmlSchemaSet>.</span></span>  
   
-3.  Dies ist optional. Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A>\-Methoden auf. Die Methode bestimmt, ob der angegebene Typ exportiert werden kann. Die Methode verfügt über dieselben Überladungen wie die `Export`\-Methode im nächsten Schritt.  
+3.  <span data-ttu-id="b4cc1-115">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-115">Optional.</span></span> <span data-ttu-id="b4cc1-116">Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> -Methoden auf.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-116">Call one of the <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> methods.</span></span> <span data-ttu-id="b4cc1-117">Die Methode bestimmt, ob der angegebene Typ exportiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-117">The method determines whether the specified type can be exported.</span></span> <span data-ttu-id="b4cc1-118">Die Methode verfügt über dieselben Überladungen wie die `Export` -Methode im nächsten Schritt.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-118">The method has the same overloads as the `Export` method in the next step.</span></span>  
   
-4.  Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A>\-Methoden auf. Es sind drei Überladungen vorhanden, die einen <xref:System.Type>, eine <xref:System.Collections.Generic.List%601> mit `Type`\-Objekten oder eine <xref:System.Collections.Generic.List%601> mit <xref:System.Reflection.Assembly>\-Objekten erfordern. Im letzten Fall werden alle Typen in allen jeweiligen Assemblys exportiert.  
+4.  <span data-ttu-id="b4cc1-119">Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> -Methoden auf.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-119">Call one of the <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> methods.</span></span> <span data-ttu-id="b4cc1-120">Es sind drei Überladungen vorhanden, die einen <xref:System.Type>, eine <xref:System.Collections.Generic.List%601> mit `Type` -Objekten oder eine <xref:System.Collections.Generic.List%601> mit <xref:System.Reflection.Assembly> -Objekten erfordern.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-120">There are three overloads taking a <xref:System.Type>, a <xref:System.Collections.Generic.List%601> of `Type` objects, or a <xref:System.Collections.Generic.List%601> of <xref:System.Reflection.Assembly> objects.</span></span> <span data-ttu-id="b4cc1-121">Im letzten Fall werden alle Typen in allen jeweiligen Assemblys exportiert.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-121">In the last case, all types in all the given assemblies are exported.</span></span>  
   
-     Mehrere Aufrufe der `Export`\-Methode führen dazu, dass mehrere Elemente demselben `XmlSchemaSet` hinzugefügt werden. Ein Typ wird nicht für den `XmlSchemaSet` generiert, wenn er darin bereits vorhanden ist. Aus diesem Grund ist das mehrfache Aufrufen von `Export`  für denselben `XsdDataContractExporter` besser als das Erstellen mehrerer Instanzen der `XsdDataContractExporter`\-Klasse. So wird vermieden, dass doppelte Schematypen generiert werden.  
+     <span data-ttu-id="b4cc1-122">Mehrere Aufrufe der `Export` -Methode führen dazu, dass mehrere Elemente demselben `XmlSchemaSet`hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-122">Multiple calls to the `Export` method results in multiple items being added to the same `XmlSchemaSet`.</span></span> <span data-ttu-id="b4cc1-123">Ein Typ wird nicht für den `XmlSchemaSet` generiert, wenn er darin bereits vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-123">A type is not generated into the `XmlSchemaSet` if it already exists there.</span></span> <span data-ttu-id="b4cc1-124">Aus diesem Grund ist das mehrfache Aufrufen von `Export` für denselben `XsdDataContractExporter` besser als das Erstellen mehrerer Instanzen der `XsdDataContractExporter` -Klasse.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-124">Therefore, calling `Export` multiple times on the same `XsdDataContractExporter` is preferable to creating multiple instances of the `XsdDataContractExporter` class.</span></span> <span data-ttu-id="b4cc1-125">So wird vermieden, dass doppelte Schematypen generiert werden.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-125">This avoids duplicate schema types from being generated.</span></span>  
   
     > [!NOTE]
-    >  Wenn beim Exportieren ein Fehler auftritt, befindet sich der `XmlSchemaSet` in einem unvorhersehbaren Zustand.  
+    >  <span data-ttu-id="b4cc1-126">Wenn beim Exportieren ein Fehler auftritt, befindet sich der `XmlSchemaSet` in einem unvorhersehbaren Zustand.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-126">If there is a failure during export, the `XmlSchemaSet` will be in an unpredictable state.</span></span>  
   
-5.  Greifen Sie auf die <xref:System.Xml.Schema.XmlSchemaSet> mithilfe der <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>\-Eigenschaft zu.  
+5.  <span data-ttu-id="b4cc1-127">Greifen Sie auf die <xref:System.Xml.Schema.XmlSchemaSet> mithilfe der <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> -Eigenschaft zu.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-127">Access the <xref:System.Xml.Schema.XmlSchemaSet> through the <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> property.</span></span>  
   
-## Exportoptionen  
- Sie können die <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A>\-Eigenschaft des <xref:System.Runtime.Serialization.XsdDataContractExporter> auf eine Instanz der <xref:System.Runtime.Serialization.ExportOptions>\-Klasse festlegen, um verschiedene Aspekte des Exportprozesses zu steuern. Dabei können Sie die folgenden Optionen festlegen:  
+## <a name="export-options"></a><span data-ttu-id="b4cc1-128">Exportoptionen</span><span class="sxs-lookup"><span data-stu-id="b4cc1-128">Export Options</span></span>  
+ <span data-ttu-id="b4cc1-129">Sie können die <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> -Eigenschaft des <xref:System.Runtime.Serialization.XsdDataContractExporter> auf eine Instanz der <xref:System.Runtime.Serialization.ExportOptions> -Klasse festlegen, um verschiedene Aspekte des Exportprozesses zu steuern.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-129">You can set the <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> property of the <xref:System.Runtime.Serialization.XsdDataContractExporter> to an instance of the <xref:System.Runtime.Serialization.ExportOptions> class to control various aspects of the export process.</span></span> <span data-ttu-id="b4cc1-130">Dabei können Sie die folgenden Optionen festlegen:</span><span class="sxs-lookup"><span data-stu-id="b4cc1-130">Specifically, you can set the following options:</span></span>  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Diese `Type` \-Auflistung stellt die bekannten Typen für die zu exportierenden Typen dar. \([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).\) Diese bekannten Typen werden bei jedem `Export`\-Aufruf zusätzlich zu den Typen exportiert, die an die `Export`\-Methode übergeben werden.  
+-   <span data-ttu-id="b4cc1-131"><xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-131"><xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>.</span></span> <span data-ttu-id="b4cc1-132">Diese `Type` -Auflistung stellt die bekannten Typen für die zu exportierenden Typen dar.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-132">This collection of `Type` represents the known types for the types being exported.</span></span> <span data-ttu-id="b4cc1-133">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Diese bekannten Typen werden bei jedem `Export`-Aufruf zusätzlich zu den Typen exportiert, die an die `Export`-Methode übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-133">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) These known types are exported on every `Export` call in addition to the types passed to the `Export` method.</span></span>  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Über diese Eigenschaft kann auch ein <xref:System.Runtime.Serialization.IDataContractSurrogate>\-Element übergeben werden, das den Exportprozess anpasst.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Datenvertrag\-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
+-   <span data-ttu-id="b4cc1-134"><xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-134"><xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>.</span></span> <span data-ttu-id="b4cc1-135">Über diese Eigenschaft kann auch ein <xref:System.Runtime.Serialization.IDataContractSurrogate> -Element übergeben werden, das den Exportprozess anpasst.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-135">An <xref:System.Runtime.Serialization.IDataContractSurrogate> can be supplied through this property that will customize the export process.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b4cc1-136">[Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).</span><span class="sxs-lookup"><span data-stu-id="b4cc1-136"> [Data Contract Surrogates](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).</span></span> <span data-ttu-id="b4cc1-137">Standardmäßig wird kein Ersatzzeichen verwendet.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-137">By default, no surrogate is used.</span></span>  
   
-## Hilfsmethoden  
- Zusätzlich zu seiner Hauptaufgabe, dem Exportieren des Schemas, bietet `XsdDataContractExporter` auch mehrere nützliche Hilfsmethoden, die Informationen zu Typen liefern. Dazu gehören:  
+## <a name="helper-methods"></a><span data-ttu-id="b4cc1-138">Hilfsmethoden</span><span class="sxs-lookup"><span data-stu-id="b4cc1-138">Helper Methods</span></span>  
+ <span data-ttu-id="b4cc1-139">Zusätzlich zu seiner Hauptaufgabe, dem Exportieren des Schemas, bietet `XsdDataContractExporter` auch mehrere nützliche Hilfsmethoden, die Informationen zu Typen liefern.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-139">In addition to its primary role of exporting schema, the `XsdDataContractExporter` provides several useful helper methods that provide information about types.</span></span> <span data-ttu-id="b4cc1-140">Dazu gehören:</span><span class="sxs-lookup"><span data-stu-id="b4cc1-140">These include:</span></span>  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A>\-Methode. Diese Methode verwendet einen `Type` und gibt einen <xref:System.Xml.XmlQualifiedName> zurück, der den Stammelementnamen und den Namespace darstellt, der genutzt wird, wenn dieser Typ als Stammobjekt serialisiert wird.  
+-   <span data-ttu-id="b4cc1-141"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> -Methode.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-141"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> method.</span></span> <span data-ttu-id="b4cc1-142">Diese Methode verwendet einen `Type` und gibt einen <xref:System.Xml.XmlQualifiedName> zurück, der den Stammelementnamen und den Namespace darstellt, der genutzt wird, wenn dieser Typ als Stammobjekt serialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-142">This method takes a `Type` and returns an <xref:System.Xml.XmlQualifiedName> that represents the root element name and namespace that would be used if this type were serialized as the root object.</span></span>  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A>\-Methode. Diese Methode verwendet einen `Type` und gibt einen <xref:System.Xml.XmlQualifiedName> zurück, der den Namen des XSD\-Schematyps darstellt, der beim Exportieren dieses Typs genutzt wird. Für <xref:System.Xml.Serialization.IXmlSerializable>\-Typen, die im Schema als anonyme Typen dargestellt werden, gibt diese Methode `null` zurück.  
+-   <span data-ttu-id="b4cc1-143"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> -Methode.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-143"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> method.</span></span> <span data-ttu-id="b4cc1-144">Diese Methode verwendet einen `Type` und gibt einen <xref:System.Xml.XmlQualifiedName> zurück, der den Namen des XSD-Schematyps darstellt, der beim Exportieren dieses Typs genutzt wird.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-144">This method takes a `Type` and returns an <xref:System.Xml.XmlQualifiedName> that represents the name of the XSD schema type that would be used if this type were exported to the schema.</span></span> <span data-ttu-id="b4cc1-145">Für <xref:System.Xml.Serialization.IXmlSerializable> -Typen, die im Schema als anonyme Typen dargestellt werden, gibt diese Methode `null`zurück.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-145">For <xref:System.Xml.Serialization.IXmlSerializable> types represented as anonymous types in the schema, this method returns `null`.</span></span>  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A>\-Methode. Diese Methode funktioniert nur in Verbindung mit <xref:System.Xml.Serialization.IXmlSerializable>\-Typen, die im Schema als anonyme Typen dargestellt werden, und gibt für alle anderen Typen `null` zurück. Für anonyme Typen gibt diese Methode einen <xref:System.Xml.Schema.XmlSchemaType> zurück, der einen bestimmten `Type` darstellt.  
+-   <span data-ttu-id="b4cc1-146"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> -Methode.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-146"><xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> method.</span></span> <span data-ttu-id="b4cc1-147">Diese Methode funktioniert nur in Verbindung mit <xref:System.Xml.Serialization.IXmlSerializable> -Typen, die im Schema als anonyme Typen dargestellt werden, und gibt für alle anderen Typen `null` zurück.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-147">This method works only with <xref:System.Xml.Serialization.IXmlSerializable> types that are represented as anonymous types in the schema, and returns `null` for all other types.</span></span> <span data-ttu-id="b4cc1-148">Für anonyme Typen gibt diese Methode einen <xref:System.Xml.Schema.XmlSchemaType> zurück, der einen bestimmten `Type`darstellt.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-148">For anonymous types, this method returns an <xref:System.Xml.Schema.XmlSchemaType> that represents a given `Type`.</span></span>  
   
- Exportoptionen wirken sich auf all diese Methoden aus.  
+ <span data-ttu-id="b4cc1-149">Exportoptionen wirken sich auf all diese Methoden aus.</span><span class="sxs-lookup"><span data-stu-id="b4cc1-149">Export options affect all of these methods.</span></span>  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.Runtime.Serialization.XsdDataContractImporter>   
- <xref:System.Runtime.Serialization.XsdDataContractExporter>   
- [Import und Export von Schemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)   
- [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+## <a name="see-also"></a><span data-ttu-id="b4cc1-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4cc1-150">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.Runtime.Serialization.XsdDataContractImporter>  
+ <xref:System.Runtime.Serialization.XsdDataContractExporter>  
+ [<span data-ttu-id="b4cc1-151">Schemaimport / Export</span><span class="sxs-lookup"><span data-stu-id="b4cc1-151">Schema Import and Export</span></span>](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [<span data-ttu-id="b4cc1-152">Importieren von Schemas zum Generieren von Klassen</span><span class="sxs-lookup"><span data-stu-id="b4cc1-152">Importing Schema to Generate Classes</span></span>](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

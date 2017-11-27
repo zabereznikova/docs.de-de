@@ -1,70 +1,73 @@
 ---
-title: "Implementing the UI Automation Dock Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, dock"
-  - "dock control pattern"
-  - "UI Automation, dock control pattern"
+title: "Implementieren des Dock-Steuerelementmusters der Benutzeroberflächenautomatisierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, dock
+- dock control pattern
+- UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-caps.latest.revision: 23
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 68c3dcdb1d8f15f312dea40ae59a3b1a4736c484
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Dock Control Pattern
+# <a name="implementing-the-ui-automation-dock-control-pattern"></a><span data-ttu-id="ac044-102">Implementieren des Dock-Steuerelementmusters der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ac044-102">Implementing the UI Automation Dock Control Pattern</span></span>
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework\-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]\-Klassen verwenden möchten, die im <xref:System.Windows.Automation>\-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie auf der Seite zur [Windows\-Automatisierungs\-API: UI\-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="ac044-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="ac044-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="ac044-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="ac044-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IDockProvider>, einschließlich Informationen über Eigenschaften. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
+ <span data-ttu-id="ac044-105">Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IDockProvider>, einschließlich Informationen über Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="ac044-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IDockProvider>, including information about properties.</span></span> <span data-ttu-id="ac044-106">Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="ac044-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Das <xref:System.Windows.Automation.DockPattern>\-Steuerelementmuster wird verwendet, um Andockeigenschaften eines Steuerelements in einem Dockingcontainer verfügbar zu machen. Ein Dockingcontainer ist ein Steuerelement, mit dem untergeordnete Elemente horizontal oder vertikal zueinander ausgerichtet werden können. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="ac044-107">Das <xref:System.Windows.Automation.DockPattern> -Steuerelementmuster wird verwendet, um Andockeigenschaften eines Steuerelements in einem Dockingcontainer verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="ac044-107">The <xref:System.Windows.Automation.DockPattern> control pattern is used to expose the dock properties of a control within a docking container.</span></span> <span data-ttu-id="ac044-108">Ein Dockingcontainer ist ein Steuerelement, mit dem untergeordnete Elemente horizontal oder vertikal zueinander ausgerichtet werden können.</span><span class="sxs-lookup"><span data-stu-id="ac044-108">A docking container is a control that allows you to arrange child elements horizontally and vertically, relative to each other.</span></span> <span data-ttu-id="ac044-109">Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="ac044-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
- ![Andock&#45;Container mit zwei angedockten untergeordneten Elementen.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA\_DockPattern\_DockingExample")  
-Andockbeispiel aus Visual Studio, in dem das Fenster „Klassenansicht“ die DockPosition.Right und das Fenster „Fehlerliste“ die DockPosition.Bottom hat  
+ <span data-ttu-id="ac044-110">![Andock-Container mit zwei angedockten untergeordneten Elementen. ] (../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")</span><span class="sxs-lookup"><span data-stu-id="ac044-110">![Docking container with two docked children.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")</span></span>  
+<span data-ttu-id="ac044-111">Andockbeispiel aus Visual Studio, in dem das Fenster „Klassenansicht“ die DockPosition.Right und das Fenster „Fehlerliste“ die DockPosition.Bottom hat</span><span class="sxs-lookup"><span data-stu-id="ac044-111">Docking Example from Visual Studio Where "Class View" Window Is DockPosition.Right and "Error List" Window Is DockPosition.Bottom</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Implementierungsrichtlinien und \-konventionen  
- Beachten Sie beim Implementieren des Dock\-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="ac044-112">Implementierungsrichtlinien und -konventionen</span><span class="sxs-lookup"><span data-stu-id="ac044-112">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="ac044-113">Beachten Sie beim Implementieren des Dock-Steuerelementmusters die folgenden Richtlinien und Konventionen:</span><span class="sxs-lookup"><span data-stu-id="ac044-113">When implementing the Dock control pattern, note the following guidelines and conventions:</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> macht keine Eigenschaften des Dockingcontainers bzw. der Steuerelemente verfügbar, die neben dem aktuellen Steuerelement im Dockingcontainer angedockt sind.  
+-   <span data-ttu-id="ac044-114"><xref:System.Windows.Automation.Provider.IDockProvider> macht keine Eigenschaften des Dockingcontainers bzw. der Steuerelemente verfügbar, die neben dem aktuellen Steuerelement im Dockingcontainer angedockt sind.</span><span class="sxs-lookup"><span data-stu-id="ac044-114"><xref:System.Windows.Automation.Provider.IDockProvider> does not expose any properties of the docking container or any properties of controls that are docked adjacent to the current control within the docking container.</span></span>  
   
--   Steuerelemente werden relativ zueinander entsprechend ihrer aktuellen z\-Reihenfolge angeordnet. Je höher ihre z\-Reihenfolgenposition ist, desto weiter entfernt vom angegebenen Rand des Dockingcontainers werden sie platziert.  
+-   <span data-ttu-id="ac044-115">Steuerelemente werden relativ zueinander entsprechend ihrer aktuellen z-Reihenfolge angeordnet. Je höher ihre z-Reihenfolgenposition ist, desto weiter entfernt vom angegebenen Rand des Dockingcontainers werden sie platziert.</span><span class="sxs-lookup"><span data-stu-id="ac044-115">Controls are docked relative to each other based on their current z-order; the higher their z-order placement, the farther they are placed from the specified edge of the docking container.</span></span>  
   
--   Wenn die Größe des Dockingcontainers geändert wird, werden alle angedockten Steuerelemente im Container bündig zu derselben Kante neu positioniert, an der sie ursprünglich angedockt waren. Die Größe der angedockten Steuerelemente wird ebenfalls geändert, um den Platz innerhalb des Containers entsprechend dem Andockverhalten ihrer <xref:System.Windows.Automation.DockPosition> auszufüllen. Wenn beispielsweise <xref:System.Windows.Automation.DockPosition> angegeben ist, werden die linke und die rechte Seite des Steuerelements erweitert, um den verfügbaren Platz auszufüllen. Wenn <xref:System.Windows.Automation.DockPosition> angegeben ist, werden alle vier Seiten des Steuerelements erweitert, um den verfügbaren Platz auszufüllen.  
+-   <span data-ttu-id="ac044-116">Wenn die Größe des Dockingcontainers geändert wird, werden alle angedockten Steuerelemente im Container bündig zu derselben Kante neu positioniert, an der sie ursprünglich angedockt waren.</span><span class="sxs-lookup"><span data-stu-id="ac044-116">If the docking container is resized, any docked controls within the container will be repositioned flush to the same edge to which they were originally docked.</span></span> <span data-ttu-id="ac044-117">Die Größe der angedockten Steuerelemente wird ebenfalls geändert, um den Platz innerhalb des Containers entsprechend dem Andockverhalten ihrer <xref:System.Windows.Automation.DockPosition>auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="ac044-117">The docked controls will also resize to fill any space within the container according to the docking behavior of their <xref:System.Windows.Automation.DockPosition>.</span></span> <span data-ttu-id="ac044-118">Wenn beispielsweise <xref:System.Windows.Automation.DockPosition.Top> angegeben ist, werden die linke und die rechte Seite des Steuerelements erweitert, um den verfügbaren Platz auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="ac044-118">For example, if <xref:System.Windows.Automation.DockPosition.Top> is specified, the left and right sides of the control will expand to fill any available space.</span></span> <span data-ttu-id="ac044-119">Wenn <xref:System.Windows.Automation.DockPosition.Fill> angegeben ist, werden alle vier Seiten des Steuerelements erweitert, um den verfügbaren Platz auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="ac044-119">If <xref:System.Windows.Automation.DockPosition.Fill> is specified, all four sides of the control will expand to fill any available space.</span></span>  
   
--   Auf einem System mit mehreren Bildschirmen sollten Steuerelemente auf der linken oder rechten Seite des aktuellen Bildschirms andocken. Ist dies nicht möglich, sollten sie auf der linken Seite des am weitesten links stehenden Bildschirms bzw. auf der rechten Seite des am weitesten rechts stehenden Bildschirms angedockt werden.  
+-   <span data-ttu-id="ac044-120">Auf einem System mit mehreren Bildschirmen sollten Steuerelemente auf der linken oder rechten Seite des aktuellen Bildschirms andocken.</span><span class="sxs-lookup"><span data-stu-id="ac044-120">On a multi-monitor system, controls should dock to the left or right side of the current monitor.</span></span> <span data-ttu-id="ac044-121">Ist dies nicht möglich, sollten sie auf der linken Seite des am weitesten links stehenden Bildschirms bzw. auf der rechten Seite des am weitesten rechts stehenden Bildschirms angedockt werden.</span><span class="sxs-lookup"><span data-stu-id="ac044-121">If that is not possible, they should dock to the left side of the leftmost monitor or the right side of the rightmost monitor.</span></span>  
   
 <a name="Required_Members_for_IDockProvider"></a>   
-## Erforderliche Member für IDockProvider  
- Zum Implementieren der IDockProvider\-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.  
+## <a name="required-members-for-idockprovider"></a><span data-ttu-id="ac044-122">Erforderliche Member für IDockProvider</span><span class="sxs-lookup"><span data-stu-id="ac044-122">Required Members for IDockProvider</span></span>  
+ <span data-ttu-id="ac044-123">Zum Implementieren der IDockProvider-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.</span><span class="sxs-lookup"><span data-stu-id="ac044-123">The following properties and methods are required for implementing the IDockProvider interface.</span></span>  
   
-|Erforderliche Member|Memberart|Notizen|  
-|--------------------------|---------------|-------------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Methode|Keine|  
+|<span data-ttu-id="ac044-124">Erforderliche Member</span><span class="sxs-lookup"><span data-stu-id="ac044-124">Required members</span></span>|<span data-ttu-id="ac044-125">Memberart</span><span class="sxs-lookup"><span data-stu-id="ac044-125">Member type</span></span>|<span data-ttu-id="ac044-126">Notizen</span><span class="sxs-lookup"><span data-stu-id="ac044-126">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|<span data-ttu-id="ac044-127">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ac044-127">Property</span></span>|<span data-ttu-id="ac044-128">Keine</span><span class="sxs-lookup"><span data-stu-id="ac044-128">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|<span data-ttu-id="ac044-129">Methode</span><span class="sxs-lookup"><span data-stu-id="ac044-129">Method</span></span>|<span data-ttu-id="ac044-130">Keine</span><span class="sxs-lookup"><span data-stu-id="ac044-130">None</span></span>|  
   
- Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
+ <span data-ttu-id="ac044-131">Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ac044-131">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## Ausnahmen  
- Anbieter müssen die folgenden Ausnahmen auslösen.  
+## <a name="exceptions"></a><span data-ttu-id="ac044-132">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="ac044-132">Exceptions</span></span>  
+ <span data-ttu-id="ac044-133">Anbieter müssen die folgenden Ausnahmen auslösen.</span><span class="sxs-lookup"><span data-stu-id="ac044-133">Providers must throw the following exceptions.</span></span>  
   
-|Ausnahmetyp|Bedingung|  
-|-----------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   Wenn ein Steuerelement die geforderte Andockart nicht ausführen kann.|  
+|<span data-ttu-id="ac044-134">Ausnahmetyp</span><span class="sxs-lookup"><span data-stu-id="ac044-134">Exception type</span></span>|<span data-ttu-id="ac044-135">Bedingung</span><span class="sxs-lookup"><span data-stu-id="ac044-135">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> <span data-ttu-id="ac044-136">– Wenn ein Steuerelement nicht die geforderte Andockart ausführen kann.</span><span class="sxs-lookup"><span data-stu-id="ac044-136">-   When a control is not able to execute the requested dock style.</span></span>|  
   
-## Siehe auch  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="ac044-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac044-137">See Also</span></span>  
+ [<span data-ttu-id="ac044-138">Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ac044-138">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="ac044-139">Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter</span><span class="sxs-lookup"><span data-stu-id="ac044-139">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="ac044-140">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="ac044-140">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="ac044-141">Übersicht über die Benutzeroberflächenautomatisierungs-Struktur</span><span class="sxs-lookup"><span data-stu-id="ac044-141">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="ac044-142">Verwenden der Zwischenspeicherung in der UI-Automatisierung</span><span class="sxs-lookup"><span data-stu-id="ac044-142">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

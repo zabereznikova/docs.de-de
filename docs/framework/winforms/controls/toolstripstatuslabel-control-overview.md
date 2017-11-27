@@ -1,38 +1,38 @@
 ---
-title: "&#220;bersicht &#252;ber das ToolStripStatusLabel-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripStatusLabel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Statusleisten"
-  - "ToolStripStatusLabel-Steuerelement [Windows Forms], aboutToolStripStatusLabel-Steuerelement"
+title: "Übersicht über das ToolStripStatusLabel-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripStatusLabel
+helpviewer_keywords:
+- ToolStripStatusLabel control [Windows Forms], aboutToolStripStatusLabel control
+- status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2bd5da2474c59b9ea893b90f6b5f15343769f80c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &#220;bersicht &#252;ber das ToolStripStatusLabel-Steuerelement
-<xref:System.Windows.Forms.ToolStripStatusLabel> stellt eine Bezeichnung für <xref:System.Windows.Forms.StatusStrip> dar.  Wie <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.ToolStripLabel> stellt <xref:System.Windows.Forms.ToolStripStatusLabel> einen nicht durch Klicken aktivierbaren Anzeigebereich für Text und\/oder Bilder bereit.  <xref:System.Windows.Forms.ToolStripStatusLabel> wird durch <xref:System.Windows.Forms.StatusStrip> gehostet.  
+# <a name="toolstripstatuslabel-control-overview"></a><span data-ttu-id="6eefe-102">Übersicht über das ToolStripStatusLabel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6eefe-102">ToolStripStatusLabel Control Overview</span></span>
+<span data-ttu-id="6eefe-103">Die <xref:System.Windows.Forms.ToolStripStatusLabel> ist eine Bezeichnung für eine <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="6eefe-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> is a label for a <xref:System.Windows.Forms.StatusStrip>.</span></span> <span data-ttu-id="6eefe-104">Wie die <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.ToolStripLabel>, die <xref:System.Windows.Forms.ToolStripStatusLabel> enthält einen nicht durch Klicken aktivierbaren Anzeigebereich für Text, Bilder oder beides.</span><span class="sxs-lookup"><span data-stu-id="6eefe-104">Like the <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.ToolStripLabel>, the <xref:System.Windows.Forms.ToolStripStatusLabel> provides a non-clickable display area for text, images, or both.</span></span> <span data-ttu-id="6eefe-105">Die <xref:System.Windows.Forms.ToolStripStatusLabel> gehostet wird, indem Sie eine <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="6eefe-105">The <xref:System.Windows.Forms.ToolStripStatusLabel> is hosted by a <xref:System.Windows.Forms.StatusStrip>.</span></span>  
   
-### Wichtige ToolStripStatusLabel\-Member  
+### <a name="important-toolstripstatuslabel-members"></a><span data-ttu-id="6eefe-106">Wichtige ToolStripStatusLabel-Member</span><span class="sxs-lookup"><span data-stu-id="6eefe-106">Important ToolStripStatusLabel Members</span></span>  
   
-|Name|Beschreibung|  
-|----------|------------------|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob <xref:System.Windows.Forms.ToolStripStatusLabel> den verfügbaren Bereich in <xref:System.Windows.Forms.StatusStrip> automatisch ausfüllt, während die Formulargröße geändert wird.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|Ruft einen Wert ab, der angibt, an welchen Seiten des <xref:System.Windows.Forms.ToolStripStatusLabel> Rahmen angezeigt werden, oder legt diesen Wert fest.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|Ruft die Rahmenart des <xref:System.Windows.Forms.ToolStripStatusLabel> ab oder legt diese fest.|  
+|<span data-ttu-id="6eefe-107">Name</span><span class="sxs-lookup"><span data-stu-id="6eefe-107">Name</span></span>|<span data-ttu-id="6eefe-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6eefe-108">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|<span data-ttu-id="6eefe-109">Ruft ab oder legt einen Wert, der angibt, ob die <xref:System.Windows.Forms.ToolStripStatusLabel> auf den verfügbaren Platz ausfüllt die <xref:System.Windows.Forms.StatusStrip> Größe des Formulars</span><span class="sxs-lookup"><span data-stu-id="6eefe-109">Gets or sets a value indicating whether the <xref:System.Windows.Forms.ToolStripStatusLabel> automatically fills the available space on the <xref:System.Windows.Forms.StatusStrip> as the form is resized</span></span>|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|<span data-ttu-id="6eefe-110">Ruft ab oder legt einen Wert, der gibt an, welche Seiten des der <xref:System.Windows.Forms.ToolStripStatusLabel> Rahmen anzeigen.</span><span class="sxs-lookup"><span data-stu-id="6eefe-110">Gets or sets a value that indicates which sides of the <xref:System.Windows.Forms.ToolStripStatusLabel> show borders.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|<span data-ttu-id="6eefe-111">Ruft ab oder legt die Rahmenart der <xref:System.Windows.Forms.ToolStripStatusLabel>.</span><span class="sxs-lookup"><span data-stu-id="6eefe-111">Gets or sets the border style of the <xref:System.Windows.Forms.ToolStripStatusLabel>.</span></span>|  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="6eefe-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6eefe-112">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>

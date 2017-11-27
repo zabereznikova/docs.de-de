@@ -1,37 +1,40 @@
 ---
-title: "Verwenden des WCF-Monikers mit COM-Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden des WCF-Monikers mit COM-Clients
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 79155d68da65a421cf2aec111402b1780743b8e5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verwenden des WCF-Monikers mit COM-Clients
-In diesem Beispiel wird veranschaulicht, wie Webdienste mithilfe des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienstmonikers in COM\-Entwicklungsumgebungen wie Microsoft Office Visual Basic for Applications \(Office VBA\) oder Visual Basic 6.0 integriert werden.  Das Beispiel umfasst einen Windows Script Host\-Client \(.vbs\), eine unterstützende Clientbibliothek \(.dll\) und eine Dienstbibliothek \(.dll\), die von Internetinformationsdienste \(IIS\) gehostet werden.  Der Dienst ist ein Rechnerdienst und der COM\-Client ruft mathematische Operationen \(Addieren, Subtrahieren, Multiplizieren und Dividieren\) auf dem Dienst auf.  Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  
+# <a name="using-the-wcf-moniker-with-com-clients"></a><span data-ttu-id="d4b05-102">Verwenden des WCF-Monikers mit COM-Clients</span><span class="sxs-lookup"><span data-stu-id="d4b05-102">Using the WCF Moniker with COM Clients</span></span>
+<span data-ttu-id="d4b05-103">In diesem Beispiel wird veranschaulicht, wie Webdienste mithilfe des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienstmonikers in COM-Entwicklungsumgebungen wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 integriert werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-103">This sample demonstrates how to use the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service moniker to integrate Web services into COM-based development environments, such as Microsoft Office Visual Basic for Applications (Office VBA) or Visual Basic 6.0.</span></span> <span data-ttu-id="d4b05-104">Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-104">This sample consists of a Windows Script Host client (.vbs), a supporting client library (.dll), and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="d4b05-105">Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf.</span><span class="sxs-lookup"><span data-stu-id="d4b05-105">The service is a calculator service and the COM client calls math operations—Add, Subtract, Multiply, and Divide—on the service.</span></span> <span data-ttu-id="d4b05-106">Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.</span><span class="sxs-lookup"><span data-stu-id="d4b05-106">Client activity is visible in the message box windows.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="d4b05-107">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="d4b05-107">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="d4b05-108">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="d4b05-108">The samples may already be installed on your computer.</span></span> <span data-ttu-id="d4b05-109">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-109">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="d4b05-110">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d4b05-111">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d4b05-111">This sample is located in the following directory.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
- Der Dienst implementiert einen `ICalculator`\-Vertrag, dessen Definition im folgenden Codebeispiel veranschaulicht wird.  
+ <span data-ttu-id="d4b05-112">Der Dienst implementiert einen `ICalculator`-Vertrag, dessen Definition im folgenden Codebeispiel veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="d4b05-112">The service implements an `ICalculator` contract defined as shown in the following code example.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -48,45 +51,43 @@ public interface ICalculator
 }  
 ```  
   
- Im Beispiel werden die drei alternativen Ansätze für die Verwendung des Monikers veranschaulicht:  
+ <span data-ttu-id="d4b05-113">Im Beispiel werden die drei alternativen Ansätze für die Verwendung des Monikers veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="d4b05-113">The sample demonstrates the three alternative approaches for using the moniker:</span></span>  
   
--   Typisierter Vertrag: Der Vertrag wird auf dem Clientcomputer als für COM sichtbarer Typ registriert.  
+-   <span data-ttu-id="d4b05-114">Typisierter Vertrag: Der Vertrag wird auf dem Clientcomputer als für COM sichtbarer Typ registriert.</span><span class="sxs-lookup"><span data-stu-id="d4b05-114">Typed contract – The contract is registered as a COM visible type on the client computer.</span></span>  
   
--   WSDL\-Vertrag: Der Vertrag wird in Form eines WSDL\-Dokuments angegeben.  
+-   <span data-ttu-id="d4b05-115">WSDL-Vertrag: Der Vertrag wird in Form eines WSDL-Dokuments angegeben.</span><span class="sxs-lookup"><span data-stu-id="d4b05-115">WSDL contract – The contract is supplied in the form of a WSDL document.</span></span>  
   
--   Metadatenaustausch\-Vertrag: Der Vertrag wird zur Laufzeit von einem MEX\-Endpunkt \(Metadata Exchange\) abgerufen.  
+-   <span data-ttu-id="d4b05-116">Metadatenaustausch-Vertrag: Der Vertrag wird zur Laufzeit von einem MEX-Endpunkt (Metadata Exchange) abgerufen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-116">Metadata Exchange contract – The contract is retrieved at runtime from a Metadata Exchange (MEX) endpoint.</span></span>  
   
-## Typisierter Vertrag  
- Um den Moniker mit einem typisierten Vertrag zu verwenden, müssen auf geeignete Weise attributierte Typen für den Dienstvertrag mit COM registriert werden.  Zunächst muss ein Client mithilfe von [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert werden.  Führen Sie den folgenden Befehl an einer Eingabeaufforderung im Clientverzeichnis aus, um den typisierten Proxy zu generieren.  
+## <a name="typed-contract"></a><span data-ttu-id="d4b05-117">Typisierter Vertrag</span><span class="sxs-lookup"><span data-stu-id="d4b05-117">Typed Contract</span></span>  
+ <span data-ttu-id="d4b05-118">Um den Moniker mit einem typisierten Vertrag zu verwenden, müssen auf geeignete Weise attributierte Typen für den Dienstvertrag mit COM registriert werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-118">To use the moniker with a typed contract use, appropriately attributed types for the service contract must be registered with COM.</span></span> <span data-ttu-id="d4b05-119">Zunächst muss ein Client generiert werden, mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="d4b05-119">First, a client must be generated by using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="d4b05-120">Führen Sie den folgenden Befehl an einer Eingabeaufforderung im Clientverzeichnis aus, um den typisierten Proxy zu generieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-120">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
 ```  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
-  
 ```  
   
- Diese Klasse muss in ein Projekt eingebunden werden, und das Projekt sollte so konfiguriert werden, dass es bei der Kompilierung eine für COM sichtbare, signierte Assembly generiert.  Das folgende Attribut muss in der Datei AssemblyInfo.cs enthalten sein.  
+ <span data-ttu-id="d4b05-121">Diese Klasse muss in ein Projekt eingebunden werden, und das Projekt sollte so konfiguriert werden, dass es bei der Kompilierung eine für COM sichtbare, signierte Assembly generiert.</span><span class="sxs-lookup"><span data-stu-id="d4b05-121">This class must be included in a project and the project should be configured to generate a COM-visible, signed assembly when compiled.</span></span> <span data-ttu-id="d4b05-122">Das folgende Attribut muss in der Datei AssemblyInfo.cs enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="d4b05-122">The following attribute should be included in the AssemblyInfo.cs file.</span></span>  
   
 ```  
 [assembly: ComVisible(true)]  
-  
 ```  
   
- Registrieren Sie nach dem Erstellen des Projekts die für COM sichtbaren Typen mit `regasm`, wie im folgenden Beispiel veranschaulicht.  
+ <span data-ttu-id="d4b05-123">Registrieren Sie nach dem Erstellen des Projekts die für COM sichtbaren Typen mit `regasm`, wie im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="d4b05-123">After building the project, register the COM-visible types by using `regasm` as shown in the following example.</span></span>  
   
 ```  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
- Die erstellte Assembly sollte dem globalen Assemblycache hinzugefügt werden.  Obwohl nicht streng erforderlich, wird hierdurch der Prozess vereinfacht, bei dem die Laufzeit die Assembly lokalisiert.  Mit dem folgenden Befehl wird die Assembly dem globalen Assemblycache hinzugefügt.  
+ <span data-ttu-id="d4b05-124">Die erstellte Assembly sollte dem globalen Assemblycache hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-124">The assembly that is created should be added to the Global Assembly Cache.</span></span> <span data-ttu-id="d4b05-125">Obwohl nicht streng erforderlich, wird hierdurch der Prozess vereinfacht, bei dem die Laufzeit die Assembly lokalisiert.</span><span class="sxs-lookup"><span data-stu-id="d4b05-125">Though not strictly required, this simplifies the process of the runtime locating the assembly.</span></span> <span data-ttu-id="d4b05-126">Mit dem folgenden Befehl wird die Assembly dem globalen Assemblycache hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="d4b05-126">The following command adds the assembly to the Global Assembly Cache.</span></span>  
   
 ```  
 gacutil.exe /i client.dll  
 ```  
   
 > [!NOTE]
->  Der Dienstmoniker erfordert nur die Typregistrierung und verwendet nicht den Proxy für die Kommunikation mit dem Dienst.  
+>  <span data-ttu-id="d4b05-127">Der Dienstmoniker erfordert nur die Typregistrierung und verwendet nicht den Proxy für die Kommunikation mit dem Dienst.</span><span class="sxs-lookup"><span data-stu-id="d4b05-127">The service moniker requires only the type registration and does not use the proxy to communicate with the service.</span></span>  
   
- Die ComCalcClient.vbs\-Clientanwendung nutzt die `GetObject`\-Funktion, um einen Proxy für den Dienst zu erstellen, wobei die Dienstmonikersyntax für die Festlegung von Adresse, Bindung und Vertrag für den Dienst verwendet wird.  
+ <span data-ttu-id="d4b05-128">Die ComCalcClient.vbs-Clientanwendung nutzt die `GetObject`-Funktion, um einen Proxy für den Dienst zu erstellen, wobei die Dienstmonikersyntax für die Festlegung von Adresse, Bindung und Vertrag für den Dienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d4b05-128">ComCalcClient.vbs client application uses the `GetObject` function to construct a proxy for the service, using the service moniker syntax to specify the address, binding, and contract for the service.</span></span>  
   
 ```  
 Set typedServiceMoniker = GetObject(  
@@ -94,28 +95,27 @@ Set typedServiceMoniker = GetObject(
 contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")  
 ```  
   
- Die vom Moniker verwendeten Parameter legen Folgendes fest:  
+ <span data-ttu-id="d4b05-129">Die vom Moniker verwendeten Parameter legen Folgendes fest:</span><span class="sxs-lookup"><span data-stu-id="d4b05-129">The parameters used by the moniker specify:</span></span>  
   
--   Die Adresse des Dienstendpunkts.  
+-   <span data-ttu-id="d4b05-130">Die Adresse des Dienstendpunkts.</span><span class="sxs-lookup"><span data-stu-id="d4b05-130">The address of the service endpoint.</span></span>  
   
--   Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen.  In diesem Fall wird die vom System definierte wsHttpBinding verwendet. Allerdings können auch benutzerdefinierte Bindungen in den Clientkonfigurationsdateien definiert werden.  Für die Verwendung mit dem Windows Script Host wird die benutzerdefinierte Bindung in einer Cscript.exe.config\-Datei im gleichen Verzeichnis wie "Cscript.exe" definiert.  
+-   <span data-ttu-id="d4b05-131">Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-131">The binding that the client should use to connect with that endpoint.</span></span> <span data-ttu-id="d4b05-132">In diesem Fall wird die vom System definierte wsHttpBinding verwendet. Allerdings können auch benutzerdefinierte Bindungen in den Clientkonfigurationsdateien definiert werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-132">In this case, the system-defined wsHttpBinding is used though custom bindings can be defined in client configuration files.</span></span> <span data-ttu-id="d4b05-133">Für die Verwendung mit dem Windows Script Host wird die benutzerdefinierte Bindung in einer Cscript.exe.config-Datei im gleichen Verzeichnis wie "Cscript.exe" definiert.</span><span class="sxs-lookup"><span data-stu-id="d4b05-133">For use with the Windows Script Host, the custom binding is defined in a Cscript.exe.config file in the same directory as Cscript.exe.</span></span>  
   
--   Der Typ des Vertrags, der vom Endpunkt unterstützt wird.  Dies ist der Typ, der oben generiert und registriert wurde.  Da ein Visual Basic\-Skript keine stark typisierte COM\-Umgebung bereitstellt, muss eine ID für den Vertrag festgelegt werden.  Diese GUID ist die `interfaceID` aus "CalcProxy.tlb", die durch COM\-Tools wie OLE\/COM\-Objektkatalog \(OleView.exe\) eingesehen werden kann.  Für stark typisierte Umgebungen wie Office VBA oder Visual Basic 6.0 kann anstelle des Vertragsparameters ein expliziter Verweis auf die Typbibliothek hinzugefügt werden und daraufhin eine Deklaration des Typs des Proxyobjekts erfolgen.  Auf diese Weise wird auch während der Clientanwendungsentwicklung IntelliSense\-Unterstützung bereitgestellt.  
+-   <span data-ttu-id="d4b05-134">Der Typ des Vertrags, der vom Endpunkt unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="d4b05-134">The type of the contract that is supported at the endpoint.</span></span> <span data-ttu-id="d4b05-135">Dies ist der Typ, der oben generiert und registriert wurde.</span><span class="sxs-lookup"><span data-stu-id="d4b05-135">This is the type that was generated and registered above.</span></span> <span data-ttu-id="d4b05-136">Da ein Visual Basic-Skript keine stark typisierte COM-Umgebung bereitstellt, muss eine ID für den Vertrag festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-136">Because Visual Basic script does not provide a strongly-typed COM environment, an identifier for the contract must be specified.</span></span> <span data-ttu-id="d4b05-137">Diese GUID ist die `interfaceID` aus "CalcProxy.tlb", die durch COM-Tools wie OLE/COM-Objektkatalog (OleView.exe) eingesehen werden kann.</span><span class="sxs-lookup"><span data-stu-id="d4b05-137">This GUID is the `interfaceID` from CalcProxy.tlb, which can be viewed by using COM tools such as the OLE/COM Object Viewer (OleView.exe).</span></span> <span data-ttu-id="d4b05-138">Für stark typisierte Umgebungen wie Office VBA oder Visual Basic 6.0 kann anstelle des Vertragsparameters ein expliziter Verweis auf die Typbibliothek hinzugefügt werden und daraufhin eine Deklaration des Typs des Proxyobjekts erfolgen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-138">For strongly-typed environments such as Office VBA or Visual Basic 6.0, adding an explicit reference to the type library and then declaring the type of the proxy object can be used in place of the contract parameter.</span></span> <span data-ttu-id="d4b05-139">Auf diese Weise wird auch während der Clientanwendungsentwicklung IntelliSense-Unterstützung bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d4b05-139">This also provides IntelliSense support during client application development.</span></span>  
   
- Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.  
+ <span data-ttu-id="d4b05-140">Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.</span><span class="sxs-lookup"><span data-stu-id="d4b05-140">Having constructed the proxy instance with the service moniker, the client application can call methods on the proxy, which results in the service moniker infrastructure calling the corresponding service operations.</span></span>  
   
 ```  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Antworten für den Vorgang in einem Windows Script Host\-Meldungsfeldfenster angezeigt.  Auf diese Weise wird gezeigt, wie ein COM\-Client COM\-Aufrufe mithilfe des typisierten Monikers vornimmt, um mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst zu kommunizieren.  Trotz der Verwendung von COM in der Clientanwendung besteht die Kommunikation mit dem Dienst ausschließlich aus Webdienstaufrufen.  
+ Wenn Sie das Beispiel ausführen, werden die Antworten für den Vorgang in einem Windows Script Host-Meldungsfeldfenster angezeigt. Auf diese Weise wird gezeigt, wie ein COM-Client COM-Aufrufe mithilfe des typisierten Monikers vornimmt, um mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst zu kommunizieren. <span data-ttu-id="d4b05-143">Trotz der Verwendung von COM in der Clientanwendung besteht die Kommunikation mit dem Dienst ausschließlich aus Webdienstaufrufen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-143">Despite the use of COM in the client application, the communication with the service consists only of Web service calls.</span></span>  
   
-## WSDL\-Vertrag  
- Um den Moniker mit einem WSDL\-Vertrag zu verwenden, ist keine Registrierung der Clientbibliothek erforderlich. Allerdings muss der WSDL\-Vertrag für den Dienst über einen Out\-of\-Band\-Mechanismus abgerufen werden, wie beispielsweise die Verwendung eines Browsers für den Zugriff auf den WSDL\-Endpunkt des Diensts.  Der Moniker kann dann bei Ausführungszeit auf diesen Vertrag zugreifen.  
+## <a name="wsdl-contract"></a><span data-ttu-id="d4b05-144">WSDL-Vertrag</span><span class="sxs-lookup"><span data-stu-id="d4b05-144">WSDL Contract</span></span>  
+ <span data-ttu-id="d4b05-145">Um den Moniker mit einem WSDL-Vertrag zu verwenden, ist keine Registrierung der Clientbibliothek erforderlich. Allerdings muss der WSDL-Vertrag für den Dienst über einen Out-of-Band-Mechanismus abgerufen werden, wie beispielsweise die Verwendung eines Browsers für den Zugriff auf den WSDL-Endpunkt des Diensts.</span><span class="sxs-lookup"><span data-stu-id="d4b05-145">To use the moniker with a WSDL contract, no client library registration is required but the WSDL contract for the service must be retrieved through an out-of-band mechanism such as using a browser to access the WSDL endpoint for the service.</span></span> <span data-ttu-id="d4b05-146">Der Moniker kann dann bei Ausführungszeit auf diesen Vertrag zugreifen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-146">The moniker can then access that contract at execution time.</span></span>  
   
- Die Clientanwendung ComCalcClient.vbs nutzt `FileSystemObject`, um auf die lokal gespeicherte WSDL\-Datei zuzugreifen. Anschließend wird mithilfe der `GetObject`\-Funktion ein Proxy für den Dienst erstellt.  
+ <span data-ttu-id="d4b05-147">Die Clientanwendung ComCalcClient.vbs nutzt `FileSystemObject`, um auf die lokal gespeicherte WSDL-Datei zuzugreifen. Anschließend wird mithilfe der `GetObject`-Funktion ein Proxy für den Dienst erstellt.</span><span class="sxs-lookup"><span data-stu-id="d4b05-147">The ComCalcClient.vbs client application uses the `FileSystemObject` to access the locally saved WSDL file and then again uses the `GetObject` function to construct a proxy for the service.</span></span>  
   
 ```  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
@@ -135,33 +135,32 @@ wsdlMonikerString = wsdlMonikerString + ", contract=ICalculator, contractNamespa
 Set wsdlServiceMoniker = GetObject(wsdlMonikerString)  
 ```  
   
- Die vom Moniker verwendeten Parameter legen Folgendes fest:  
+ <span data-ttu-id="d4b05-148">Die vom Moniker verwendeten Parameter legen Folgendes fest:</span><span class="sxs-lookup"><span data-stu-id="d4b05-148">The parameters used by the moniker specify:</span></span>  
   
--   Die Adresse des Dienstendpunkts.  
+-   <span data-ttu-id="d4b05-149">Die Adresse des Dienstendpunkts.</span><span class="sxs-lookup"><span data-stu-id="d4b05-149">The address of the service endpoint.</span></span>  
   
--   Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen, und der Namespace, in dem diese Bindung definiert ist.  In diesem Fall wird `wsHttpBinding_ICalculator` verwendet.  
+-   <span data-ttu-id="d4b05-150">Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen, und der Namespace, in dem diese Bindung definiert ist.</span><span class="sxs-lookup"><span data-stu-id="d4b05-150">The binding that the client should use to connect with that endpoint and the namespace in which that binding is defined.</span></span> <span data-ttu-id="d4b05-151">In diesem Fall wird `wsHttpBinding_ICalculator` verwendet.</span><span class="sxs-lookup"><span data-stu-id="d4b05-151">In this case, the `wsHttpBinding_ICalculator` is used.</span></span>  
   
--   Die WSDL, die den Vertrag definiert.  In diesem Fall ist dies die Zeichenfolge, die aus der Datei "serviceWsdl.xml" gelesen wurde.  
+-   <span data-ttu-id="d4b05-152">Die WSDL, die den Vertrag definiert.</span><span class="sxs-lookup"><span data-stu-id="d4b05-152">The WSDL that defines the contract.</span></span> <span data-ttu-id="d4b05-153">In diesem Fall ist dies die Zeichenfolge, die aus der Datei "serviceWsdl.xml" gelesen wurde.</span><span class="sxs-lookup"><span data-stu-id="d4b05-153">In this case this is the string that has been read from the serviceWsdl.xml file.</span></span>  
   
--   Der Name und Namespace des Vertrags.  Diese Identifikation ist erforderlich, da die WSDL möglicherweise mehr als einen Vertrag enthält.  
+-   <span data-ttu-id="d4b05-154">Der Name und Namespace des Vertrags.</span><span class="sxs-lookup"><span data-stu-id="d4b05-154">The name and namespace of the contract.</span></span> <span data-ttu-id="d4b05-155">Diese Identifikation ist erforderlich, da die WSDL möglicherweise mehr als einen Vertrag enthält.</span><span class="sxs-lookup"><span data-stu-id="d4b05-155">This identification is required because the WSDL may contain more than one contract.</span></span>  
   
     > [!NOTE]
-    >  Standardmäßig generieren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste separate WSDL\-Dateien für jeden verwendeten Namespace.  Diese werden mit der Verwendung des WSDL\-Importkonstrukts verknüpft.  Da der Moniker eine einzige WSDL\-Definition erwartet, muss der Dienst entweder einen einzigen Namespace verwenden \(wie in diesem Beispiel gezeigt\) oder die separaten Dateien müssen manuell zusammengeführt werden.  
+    >  <span data-ttu-id="d4b05-156">Standardmäßig generieren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste separate WSDL-Dateien für jeden verwendeten Namespace.</span><span class="sxs-lookup"><span data-stu-id="d4b05-156">By default, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services generate separate WSDL files for each namespace that the use.</span></span> <span data-ttu-id="d4b05-157">Diese werden mit der Verwendung des WSDL-Importkonstrukts verknüpft.</span><span class="sxs-lookup"><span data-stu-id="d4b05-157">These are linked with the use of the WSDL import construct.</span></span> <span data-ttu-id="d4b05-158">Da der Moniker eine einzige WSDL-Definition erwartet, muss der Dienst entweder einen einzigen Namespace verwenden (wie in diesem Beispiel gezeigt) oder die separaten Dateien müssen manuell zusammengeführt werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-158">Because the moniker expects a single WSDL definition, the service must either use a single namespace as demonstrated in this sample or the separate files must be manually merged.</span></span>  
   
- Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.  
+ <span data-ttu-id="d4b05-159">Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.</span><span class="sxs-lookup"><span data-stu-id="d4b05-159">Having constructed the proxy instance with the service moniker, the client application can call methods on the proxy, which results in the service moniker infrastructure calling the corresponding service operations.</span></span>  
   
 ```  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Antworten für den Vorgang in einem Windows Script Host\-Meldungsfeldfenster angezeigt.  Auf diese Weise wird gezeigt, wie ein COM\-Client COM\-Aufrufe mithilfe des Monikers mit einem WSDL\-Vertrag vornimmt, um mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst zu kommunizieren.  
+ Wenn Sie das Beispiel ausführen, werden die Antworten für den Vorgang in einem Windows Script Host-Meldungsfeldfenster angezeigt. <span data-ttu-id="d4b05-161">Auf diese Weise wird gezeigt, wie ein COM-Client COM-Aufrufe mithilfe des Monikers mit einem WSDL-Vertrag vornimmt, um mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-161">This demonstrates a COM client making COM calls using the moniker with a WSDL contract to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-## Metadatenaustausch\-Vertrag  
- Um den Moniker mit einem MEX\-Vertrag zu verwenden, ist wie bei einem WSDL\-Vertrag keine Clientregistrierung erforderlich.  Der Vertrag für den Dienst wird bei Ausführungszeit durch die interne Verwendung von Metadatenaustausch abgerufen.  
+## <a name="metadata-exchange-contract"></a><span data-ttu-id="d4b05-162">Metadatenaustausch-Vertrag</span><span class="sxs-lookup"><span data-stu-id="d4b05-162">Metadata Exchange Contract</span></span>  
+ <span data-ttu-id="d4b05-163">Um den Moniker mit einem MEX-Vertrag zu verwenden, ist wie bei einem WSDL-Vertrag keine Clientregistrierung erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d4b05-163">To use the moniker with a MEX contract, as with the WSDL contract, no client registration is required.</span></span> <span data-ttu-id="d4b05-164">Der Vertrag für den Dienst wird bei Ausführungszeit durch die interne Verwendung von Metadatenaustausch abgerufen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-164">The contract for the service is retrieved at execution time through the internal use of Metadata Exchange.</span></span>  
   
- Die Clientanwendung ComCalcClient.vbs verwendet wieder die `GetObject`\-Funktion, um einen Proxy für den Dienst zu erstellen.  
+ <span data-ttu-id="d4b05-165">Die Clientanwendung ComCalcClient.vbs verwendet wieder die `GetObject`-Funktion, um einen Proxy für den Dienst zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-165">The ComCalcClient.vbs client application again uses the `GetObject` function to construct a proxy for the service.</span></span>  
   
 ```  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
@@ -174,79 +173,78 @@ mexMonikerString = mexMonikerString + ", contract=ICalculator, contractNamespace
 Set mexServiceMoniker = GetObject(mexMonikerString)  
 ```  
   
- Die vom Moniker verwendeten Parameter legen Folgendes fest:  
+ <span data-ttu-id="d4b05-166">Die vom Moniker verwendeten Parameter legen Folgendes fest:</span><span class="sxs-lookup"><span data-stu-id="d4b05-166">The parameters used by the moniker specify:</span></span>  
   
--   Die Adresse des Metadatenaustausch\-Endpunkts des Diensts.  
+-   <span data-ttu-id="d4b05-167">Die Adresse des Metadatenaustausch-Endpunkts des Diensts.</span><span class="sxs-lookup"><span data-stu-id="d4b05-167">The address of the service metadata exchange endpoint.</span></span>  
   
--   Die Adresse des Dienstendpunkts.  
+-   <span data-ttu-id="d4b05-168">Die Adresse des Dienstendpunkts.</span><span class="sxs-lookup"><span data-stu-id="d4b05-168">The address of the service endpoint.</span></span>  
   
--   Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen, und der Namespace, in dem diese Bindung definiert ist.  In diesem Fall wird `wsHttpBinding_ICalculator` verwendet.  
+-   <span data-ttu-id="d4b05-169">Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen, und der Namespace, in dem diese Bindung definiert ist.</span><span class="sxs-lookup"><span data-stu-id="d4b05-169">The binding that the client should use to connect with that endpoint and the namespace in which that binding is defined.</span></span> <span data-ttu-id="d4b05-170">In diesem Fall wird `wsHttpBinding_ICalculator` verwendet.</span><span class="sxs-lookup"><span data-stu-id="d4b05-170">In this case, the `wsHttpBinding_ICalculator` is used.</span></span>  
   
--   Der Name und Namespace des Vertrags.  Diese Identifikation ist erforderlich, da die WSDL möglicherweise mehr als einen Vertrag enthält.  
+-   <span data-ttu-id="d4b05-171">Der Name und Namespace des Vertrags.</span><span class="sxs-lookup"><span data-stu-id="d4b05-171">The name and namespace of the contract.</span></span> <span data-ttu-id="d4b05-172">Diese Identifikation ist erforderlich, da die WSDL möglicherweise mehr als einen Vertrag enthält.</span><span class="sxs-lookup"><span data-stu-id="d4b05-172">This identification is required because the WSDL may contain more than one contract.</span></span>  
   
- Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.  
+ <span data-ttu-id="d4b05-173">Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.</span><span class="sxs-lookup"><span data-stu-id="d4b05-173">Having constructed the proxy instance with the service moniker, the client application can call methods on the proxy, which results in the service moniker infrastructure calling the corresponding service operations.</span></span>  
   
 ```  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Antworten für den Vorgang in einem Windows Script Host\-Meldungsfeldfenster angezeigt.  Das Beispiel veranschaulicht, wie ein COM\-Client unter Verwendung des Monikers mit einem MEX\-Vertrag COM\-Aufrufe vornimmt, um mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst zu kommunizieren.  
+ Wenn Sie das Beispiel ausführen, werden die Antworten für den Vorgang in einem Windows Script Host-Meldungsfeldfenster angezeigt. <span data-ttu-id="d4b05-175">Das Beispiel veranschaulicht, wie ein COM-Client unter Verwendung des Monikers mit einem MEX-Vertrag COM-Aufrufe vornimmt, um mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-175">This demonstrates a COM client making COM calls using the moniker with a MEX contract to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-#### So richten Sie das Beispiel ein und erstellen es  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="d4b05-176">So richten Sie das Beispiel ein und erstellen es</span><span class="sxs-lookup"><span data-stu-id="d4b05-176">To set up and build the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="d4b05-177">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d4b05-177">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  <span data-ttu-id="d4b05-178">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-178">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Öffnen Sie an einer [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]\-Eingabeaufforderung den Ordner \\client\\bin unter dem sprachspezifischen Ordner.  
+3.  <span data-ttu-id="d4b05-179">Öffnen Sie an einer [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]-Eingabeaufforderung den Ordner \client\bin unter dem sprachspezifischen Ordner.</span><span class="sxs-lookup"><span data-stu-id="d4b05-179">From a [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] command prompt, open the \client\bin folder, under the language-specific folder.</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 oder Windows Server 2008 R2 verwenden, müssen Sie den Befehl mit Administratorberechtigungen ausführen.  
+    >  <span data-ttu-id="d4b05-180">Wenn Sie [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 oder Windows Server 2008 R2 verwenden, müssen Sie den Befehl mit Administratorberechtigungen ausführen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-180">If you are using [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, or Windows Server 2008 R2, make sure that you run the command prompt with administrator privileges.</span></span>  
   
-4.  Geben Sie `tlbexp.exe client.dll /out:CalcProxy.tlb` ein, um die DLL in eine TLB\-Datei zu exportieren.  Eventuell wird eine "Typbibliothekexporter\-Warnung" ausgegeben. Diese stellt jedoch kein Problem dar, da der generische Typ nicht benötigt wird.  
+4.  <span data-ttu-id="d4b05-181">Geben Sie im `tlbexp.exe client.dll /out:CalcProxy.tlb` auf die Dll in eine Tlb-Datei exportieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-181">Type in `tlbexp.exe client.dll /out:CalcProxy.tlb` to export the dll to a tlb file.</span></span> <span data-ttu-id="d4b05-182">Eventuell wird eine "Typbibliothekexporter-Warnung" ausgegeben. Diese stellt jedoch kein Problem dar, da der generische Typ nicht benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="d4b05-182">A "Type library exporter warning" is expected but is not an issue because the generic type is not required.</span></span>  
   
-5.  Geben Sie `regasm.exe /tlb:CalcProxy.tlb client.dll` ein, um die Typen bei COM zu registrieren.  Eventuell wird eine "Typbibliothekexporter\-Warnung" ausgegeben. Diese stellt jedoch kein Problem dar, da der generische Typ nicht benötigt wird.  
+5.  <span data-ttu-id="d4b05-183">Geben Sie im `regasm.exe /tlb:CalcProxy.tlb client.dll` auf die Typen bei COM zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-183">Type in `regasm.exe /tlb:CalcProxy.tlb client.dll` to register the types with COM.</span></span> <span data-ttu-id="d4b05-184">Eventuell wird eine "Typbibliothekexporter-Warnung" ausgegeben. Diese stellt jedoch kein Problem dar, da der generische Typ nicht benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="d4b05-184">A "Type library exporter warning" is expected but is not an issue because the generic type is not required.</span></span>  
   
-6.  Geben Sie `gacutil.exe /i client.dll` ein, um die Assembly dem globalen Assemblycache hinzuzufügen.  
+6.  <span data-ttu-id="d4b05-185">Geben Sie in `gacutil.exe /i client.dll` um die Assembly im globalen Assemblycache hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-185">Type in `gacutil.exe /i client.dll` to add the assembly to the Global Assembly Cache.</span></span>  
   
-#### So führen Sie das Beispiel auf demselben Computer aus  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="d4b05-186">So führen Sie das Beispiel auf demselben Computer aus</span><span class="sxs-lookup"><span data-stu-id="d4b05-186">To run the sample on the same computer</span></span>  
   
-1.  Prüfen Sie, ob Sie mit einem Browser auf den Dienst zugreifen können, indem Sie die folgende Adresse eingeben: `http://localhost/servicemodelsamples/service.svc`.  Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
+1.  <span data-ttu-id="d4b05-187">Test, den Sie den Dienst mithilfe eines Browsers durch Eingabe in der folgenden Adresse zugreifen können: `http://localhost/servicemodelsamples/service.svc`.</span><span class="sxs-lookup"><span data-stu-id="d4b05-187">Test that you can access the service using a browser by typing in the following address: `http://localhost/servicemodelsamples/service.svc`.</span></span> <span data-ttu-id="d4b05-188">Als Antwort sollte eine Bestätigungsseite angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-188">A confirmation page should be displayed in response.</span></span>  
   
-2.  Führen Sie die Datei "ComCalcClient.vbs" aus dem Ordner "\\client" unter dem sprachspezifischen Ordner aus.  Die Clientaktivität wird in den Meldungsfeldfenstern angezeigt.  
+2.  <span data-ttu-id="d4b05-189">Führen Sie die Datei "ComCalcClient.vbs" aus dem Ordner "\client" unter dem sprachspezifischen Ordner aus.</span><span class="sxs-lookup"><span data-stu-id="d4b05-189">Run ComCalcClient.vbs from \client, from under the language-specific folder.</span></span> <span data-ttu-id="d4b05-190">Die Clientaktivität wird in den Meldungsfeldfenstern angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d4b05-190">Client activity is displayed in message box windows.</span></span>  
   
-3.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  <span data-ttu-id="d4b05-191">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="d4b05-191">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### So führen Sie das Beispiel computerübergreifend aus  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="d4b05-192">So führen Sie das Beispiel computerübergreifend aus</span><span class="sxs-lookup"><span data-stu-id="d4b05-192">To run the sample across computers</span></span>  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis mit dem Namen ServiceModelSamples.  Zum Erstellen des Festplattenverzeichnisses und des virtuellen Verzeichnisses kann das im Beispiel enthaltene Skript Setupvroot.bat verwendet werden.  
+1.  <span data-ttu-id="d4b05-193">Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis mit dem Namen ServiceModelSamples.</span><span class="sxs-lookup"><span data-stu-id="d4b05-193">On the service computer, create a virtual directory named ServiceModelSamples.</span></span> <span data-ttu-id="d4b05-194">Zum Erstellen des Festplattenverzeichnisses und des virtuellen Verzeichnisses kann das im Beispiel enthaltene Skript Setupvroot.bat verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d4b05-194">The Setupvroot.bat script included with the sample can be used to create the disk directory and virtual directory.</span></span>  
   
-2.  Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\\Inetpub\\wwwroot\\servicemodelsamples in das virtuelle Verzeichnis ServiceModelSamples auf dem Dienstcomputer.  Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \\bin einfügen.  
+2.  <span data-ttu-id="d4b05-195">Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis ServiceModelSamples auf dem Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="d4b05-195">Copy the service program files from %SystemDrive%\Inetpub\wwwroot\servicemodelsamples to the ServiceModelSamples virtual directory on the service computer.</span></span> <span data-ttu-id="d4b05-196">Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-196">Be sure to include the files in the \bin directory.</span></span>  
   
-3.  Kopieren Sie die Skriptdatei aus dem Ordner \\client \(unterhalb des sprachspezifischen Ordners\) auf den Clientcomputer.  
+3.  <span data-ttu-id="d4b05-197">Kopieren Sie die Skriptdatei aus dem Ordner \client (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="d4b05-197">Copy the client script file from the \client folder, under the language-specific folder, to the client computer.</span></span>  
   
-4.  Ändern Sie in der Skriptdatei den Adresswert der Endpunktdefinition, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.  Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
+4.  <span data-ttu-id="d4b05-198">Ändern Sie in der Skriptdatei den Adresswert der Endpunktdefinition, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="d4b05-198">In the script file, change the address value of the endpoint definition to match the new address of your service.</span></span> <span data-ttu-id="d4b05-199">Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-199">Replace any references to "localhost" with a fully-qualified domain name in the address.</span></span>  
   
-5.  Kopieren Sie die WSDL\-Datei auf den Clientcomputer.  Ersetzen Sie in der WSDL\-Datei serviceWsdl.xml alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
+5.  <span data-ttu-id="d4b05-200">Kopieren Sie die WSDL-Datei auf den Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="d4b05-200">Copy the WSDL file to the client computer.</span></span> <span data-ttu-id="d4b05-201">Ersetzen Sie in der WSDL-Datei serviceWsdl.xml alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-201">In the WSDL file, serviceWsdl.xml, replace any references to "localhost" with a fully-qualified domain name in the address.</span></span>  
   
-6.  Kopieren Sie die Bibliothek Client.dll aus dem Ordner \\client\\bin \(unterhalb des sprachspezifischen Ordners\) in ein Verzeichnis auf dem Clientcomputer.  
+6.  <span data-ttu-id="d4b05-202">Kopieren Sie die Bibliothek Client.dll aus dem Ordner \client\bin (unterhalb des sprachspezifischen Ordners) in ein Verzeichnis auf dem Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="d4b05-202">Copy the Client.dll library from the \client\bin folder, under the language-specific folder, to a directory on the client computer.</span></span>  
   
-7.  Navigieren Sie an einer Eingabeaufforderung zu diesem Zielverzeichnis auf dem Clientcomputer.  Wenn Sie [!INCLUDE[wv](../../../../includes/wv-md.md)] oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)] verwenden, stellen Sie sicher, dass Sie die Eingabeaufforderung als Administrator ausführen.  
+7.  <span data-ttu-id="d4b05-203">Navigieren Sie an einer Eingabeaufforderung zu diesem Zielverzeichnis auf dem Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="d4b05-203">From a command prompt, navigate to that destination directory on the client computer.</span></span> <span data-ttu-id="d4b05-204">Wenn Sie [!INCLUDE[wv](../../../../includes/wv-md.md)] oder [!INCLUDE[lserver](../../../../includes/lserver-md.md)] verwenden, stellen Sie sicher, dass Sie die Eingabeaufforderung als Administrator ausführen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-204">If using [!INCLUDE[wv](../../../../includes/wv-md.md)] or [!INCLUDE[lserver](../../../../includes/lserver-md.md)], make sure to run the command prompt as Administrator.</span></span>  
   
-8.  Geben Sie `tlbexp.exe client.dll /out:CalcProxy.tlb` ein, um die DLL in eine TLB\-Datei zu exportieren.  Eventuell wird eine "Typbibliothekexporter\-Warnung" ausgegeben. Diese stellt jedoch kein Problem dar, da der generische Typ nicht benötigt wird.  
+8.  <span data-ttu-id="d4b05-205">Geben Sie im `tlbexp.exe client.dll /out:CalcProxy.tlb` auf die Dll in eine Tlb-Datei exportieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-205">Type in `tlbexp.exe client.dll /out:CalcProxy.tlb` to export the dll to a tlb file.</span></span> <span data-ttu-id="d4b05-206">Eventuell wird eine "Typbibliothekexporter-Warnung" ausgegeben. Diese stellt jedoch kein Problem dar, da der generische Typ nicht benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="d4b05-206">A "Type library exporter warning" is expected but is not an issue because the generic type is not required.</span></span>  
   
-9. Geben Sie `regasm.exe /tlb:CalcProxy.tlb client.dll` ein, um die Typen bei COM zu registrieren.  Stellen Sie sicher, dass der Pfad auf den Ordner festgelegt ist, der `regasm.exe` enthält, bevor Sie den Befehl ausführen.  
+9. <span data-ttu-id="d4b05-207">Geben Sie im `regasm.exe /tlb:CalcProxy.tlb client.dll` auf die Typen bei COM zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="d4b05-207">Type in `regasm.exe /tlb:CalcProxy.tlb client.dll` to register the types with COM.</span></span> <span data-ttu-id="d4b05-208">Stellen Sie sicher, dass der Pfad zu dem Ordner mit vorsieht `regasm.exe` vor dem Ausführen des Befehls.</span><span class="sxs-lookup"><span data-stu-id="d4b05-208">Ensure that path has been set to the folder that contains `regasm.exe` before you run the command.</span></span>  
   
-10. Geben Sie `gacutil.exe /i client.dll` ein, um die Assembly dem globalen Assemblycache hinzuzufügen.  Stellen Sie sicher, dass der Pfad auf den Ordner festgelegt ist, der `gacutil.exe` enthält, bevor Sie den Befehl ausführen.  
+10. <span data-ttu-id="d4b05-209">Geben Sie in `gacutil.exe /i client.dll` um die Assembly im globalen Assemblycache hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="d4b05-209">Type in `gacutil.exe /i client.dll` to add the assembly to the Global Assembly Cache.</span></span> <span data-ttu-id="d4b05-210">Stellen Sie sicher, dass der Pfad zu dem Ordner mit vorsieht `gacutil.exe` vor dem Ausführen des Befehls.</span><span class="sxs-lookup"><span data-stu-id="d4b05-210">Ensure that path has been set to the folder that contains `gacutil.exe` before you run the command.</span></span>  
   
-11. Testen Sie, ob Sie mit einem Browser vom Clientcomputer auf den Dienst zugreifen können.  
+11. <span data-ttu-id="d4b05-211">Testen Sie, ob Sie mit einem Browser vom Clientcomputer auf den Dienst zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="d4b05-211">Test that you can access the service from the client computer using a browser.</span></span>  
   
-12. Starten Sie auf dem Clientcomputer ComCalcClient.vbs.  
+12. <span data-ttu-id="d4b05-212">Starten Sie auf dem Clientcomputer ComCalcClient.vbs.</span><span class="sxs-lookup"><span data-stu-id="d4b05-212">On the client computer, launch ComCalcClient.vbs.</span></span>  
   
-#### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="d4b05-213">So stellen Sie den Zustand vor Ausführung des Beispiels wieder her</span><span class="sxs-lookup"><span data-stu-id="d4b05-213">To clean up after the sample</span></span>  
   
--   Entfernen Sie aus Sicherheitsgründen die Definition des virtuellen Verzeichnisses und die in den Setupschritten gewährten Berechtigungen, wenn Sie die Beispiele abgeschlossen haben.  
+-   <span data-ttu-id="d4b05-214">Entfernen Sie aus Sicherheitsgründen die Definition des virtuellen Verzeichnisses und die in den Setupschritten gewährten Berechtigungen, wenn Sie die Beispiele abgeschlossen haben.</span><span class="sxs-lookup"><span data-stu-id="d4b05-214">For security purposes, remove the virtual directory definition and permissions granted in the setup steps when you are finished with the samples.</span></span>  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="d4b05-215">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d4b05-215">See Also</span></span>

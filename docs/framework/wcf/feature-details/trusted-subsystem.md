@@ -1,61 +1,67 @@
 ---
-title: "Vertrauensw&#252;rdiges Subsystem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vertrauenswürdiges Subsystem"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 229efd7fed9b8aeb1effff7bd4358930ab8c44ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vertrauensw&#252;rdiges Subsystem
-Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden.Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen \(beispielsweise Datenbanken oder andere Webdienste\) in der Geschäftslogik des Webdiensts gekapselt sind.Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden.Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.  
+# <a name="trusted-subsystem"></a><span data-ttu-id="75f38-102">Vertrauenswürdiges Subsystem</span><span class="sxs-lookup"><span data-stu-id="75f38-102">Trusted Subsystem</span></span>
+<span data-ttu-id="75f38-103">Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="75f38-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="75f38-104">Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen (beispielsweise Datenbanken oder andere Webdienste) in der Geschäftslogik des Webdiensts gekapselt sind.</span><span class="sxs-lookup"><span data-stu-id="75f38-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="75f38-105">Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden.</span><span class="sxs-lookup"><span data-stu-id="75f38-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="75f38-106">Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.</span><span class="sxs-lookup"><span data-stu-id="75f38-106">The following illustration depicts a trusted subsystem process.</span></span>  
   
- ![Vertrauenswürdiges Subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc\_TrustedSubsystemc")  
+ <span data-ttu-id="75f38-107">![Vertrauenswürdige Subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "Wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="75f38-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
   
- Die folgenden Schritte beschreiben den vertrauenswürdigen Subsystemprozess:  
+ <span data-ttu-id="75f38-108">Die folgenden Schritte beschreiben den vertrauenswürdigen Subsystemprozess:</span><span class="sxs-lookup"><span data-stu-id="75f38-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
   
-1.  Der Client reicht zusammen mit Anmeldeinformationen eine Anforderung beim vertrauenswürdigen Subsystem ein.  
+1.  <span data-ttu-id="75f38-109">Der Client reicht zusammen mit Anmeldeinformationen eine Anforderung beim vertrauenswürdigen Subsystem ein.</span><span class="sxs-lookup"><span data-stu-id="75f38-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
   
-2.  Das vertrauenswürdige Subsystem wird authentifiziert und autorisiert den Benutzer.  
+2.  <span data-ttu-id="75f38-110">Das vertrauenswürdige Subsystem wird authentifiziert und autorisiert den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="75f38-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
   
-3.  Das vertrauenswürdige Subsystem sendet eine Anforderungsnachricht an die Remoteressource.Diese Anforderung wird von Anmeldeinformationen für das vertrauenswürdige Subsystem \(oder das Dienstkonto, unter dem der vertrauenswürdige Subsystemprozess durchgeführt wird\) begleitet.  
+3.  <span data-ttu-id="75f38-111">Das vertrauenswürdige Subsystem sendet eine Anforderungsnachricht an die Remoteressource.</span><span class="sxs-lookup"><span data-stu-id="75f38-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="75f38-112">Diese Anforderung wird von Anmeldeinformationen für das vertrauenswürdige Subsystem (oder das Dienstkonto, unter dem der vertrauenswürdige Subsystemprozess durchgeführt wird) begleitet.</span><span class="sxs-lookup"><span data-stu-id="75f38-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
   
-4.  Die Back\-End\-Ressource authentifiziert und autorisiert das vertrauenswürdige Subsystem.Es verarbeitet dann die Anforderung und gibt eine Antwort zum vertrauenswürdigen Subsystem aus.  
+4.  <span data-ttu-id="75f38-113">Die Back-End-Ressource authentifiziert und autorisiert das vertrauenswürdige Subsystem.</span><span class="sxs-lookup"><span data-stu-id="75f38-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="75f38-114">Es verarbeitet dann die Anforderung und gibt eine Antwort zum vertrauenswürdigen Subsystem aus.</span><span class="sxs-lookup"><span data-stu-id="75f38-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
   
-5.  Das vertrauenswürdige Subsystem verarbeitet die Antwort und gibt seine eigene Antwort an den Client heraus.  
+5.  <span data-ttu-id="75f38-115">Das vertrauenswürdige Subsystem verarbeitet die Antwort und gibt seine eigene Antwort an den Client heraus.</span><span class="sxs-lookup"><span data-stu-id="75f38-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
   
-|Merkmal|Beschreibung|  
-|-------------|------------------|  
-|Sicherheitsmodus|Meldung|  
-|Interoperabilität|Nur [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
-|Authentifizierung \(Dienst\)|Sicherheitstokendienst authentifiziert und autorisiert Clients.|  
-|Authentifizierung \(Client\)|Das vertrauenswürdige Subsystem authentifiziert den Client, und die Ressource authentifiziert den vertrauenswürdigen Subsystemdienst.|  
-|Integrität|Ja|  
-|Vertraulichkeit|Ja|  
-|Transport|HTTP zwischen Client und dem vertrauenswürdigen Subsystemdienst.<br /><br /> NET.TCP zwischen dem vertrauenswürdigen Subsystemdienst und der Ressource \(Back\-End\-Dienst\).|  
-|Bindung|<xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|<span data-ttu-id="75f38-116">Merkmal</span><span class="sxs-lookup"><span data-stu-id="75f38-116">Characteristic</span></span>|<span data-ttu-id="75f38-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="75f38-117">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="75f38-118">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="75f38-118">Security Mode</span></span>|<span data-ttu-id="75f38-119">Meldung</span><span class="sxs-lookup"><span data-stu-id="75f38-119">Message</span></span>|  
+|<span data-ttu-id="75f38-120">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="75f38-120">Interoperability</span></span>|<span data-ttu-id="75f38-121">Nur [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="75f38-121">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only.</span></span>|  
+|<span data-ttu-id="75f38-122">Authentifizierung (Dienst)</span><span class="sxs-lookup"><span data-stu-id="75f38-122">Authentication (service)</span></span>|<span data-ttu-id="75f38-123">Sicherheitstokendienst authentifiziert und autorisiert Clients.</span><span class="sxs-lookup"><span data-stu-id="75f38-123">Security token service authenticates and authorizes clients.</span></span>|  
+|<span data-ttu-id="75f38-124">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="75f38-124">Authentication (client)</span></span>|<span data-ttu-id="75f38-125">Das vertrauenswürdige Subsystem authentifiziert den Client, und die Ressource authentifiziert den vertrauenswürdigen Subsystemdienst.</span><span class="sxs-lookup"><span data-stu-id="75f38-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
+|<span data-ttu-id="75f38-126">Integrität</span><span class="sxs-lookup"><span data-stu-id="75f38-126">Integrity</span></span>|<span data-ttu-id="75f38-127">Ja</span><span class="sxs-lookup"><span data-stu-id="75f38-127">Yes</span></span>|  
+|<span data-ttu-id="75f38-128">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="75f38-128">Confidentiality</span></span>|<span data-ttu-id="75f38-129">Ja</span><span class="sxs-lookup"><span data-stu-id="75f38-129">Yes</span></span>|  
+|<span data-ttu-id="75f38-130">Transport</span><span class="sxs-lookup"><span data-stu-id="75f38-130">Transport</span></span>|<span data-ttu-id="75f38-131">HTTP zwischen Client und dem vertrauenswürdigen Subsystemdienst.</span><span class="sxs-lookup"><span data-stu-id="75f38-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="75f38-132">NET.TCP zwischen dem vertrauenswürdigen Subsystemdienst und der Ressource (Back-End-Dienst).</span><span class="sxs-lookup"><span data-stu-id="75f38-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
+|<span data-ttu-id="75f38-133">Bindung</span><span class="sxs-lookup"><span data-stu-id="75f38-133">Binding</span></span>|<span data-ttu-id="75f38-134"><xref:System.ServiceModel.WSHttpBinding>und <xref:System.ServiceModel.NetTcpBinding> [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="75f38-134"><xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
   
-## Ressource \(Back\-End\-Dienst\)  
+## <a name="resource-back-end-service"></a><span data-ttu-id="75f38-135">Ressource (Back-End-Dienst)</span><span class="sxs-lookup"><span data-stu-id="75f38-135">Resource (Back-End Service)</span></span>  
   
-### Code  
- Im folgenden Code wird veranschaulicht, wie ein Dienstendpunkt für die Ressource erstellt wird, der Transportsicherheit über das TCP\-Transportprotokoll verwendet.  
+### <a name="code"></a><span data-ttu-id="75f38-136">Code</span><span class="sxs-lookup"><span data-stu-id="75f38-136">Code</span></span>  
+ <span data-ttu-id="75f38-137">Im folgenden Code wird veranschaulicht, wie ein Dienstendpunkt für die Ressource erstellt wird, der Transportsicherheit über das TCP-Transportprotokoll verwendet.</span><span class="sxs-lookup"><span data-stu-id="75f38-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### Konfiguration  
- Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.  
+### <a name="configuration"></a><span data-ttu-id="75f38-138">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="75f38-138">Configuration</span></span>  
+ <span data-ttu-id="75f38-139">Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="75f38-139">The following configuration sets up the same endpoint using configuration.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -91,23 +97,23 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 </configuration>  
 ```  
   
-## Vertrauenswürdiges Subsystem  
+## <a name="trusted-subsystem"></a><span data-ttu-id="75f38-140">Vertrauenswürdiges Subsystem</span><span class="sxs-lookup"><span data-stu-id="75f38-140">Trusted Subsystem</span></span>  
   
-### Code  
- Der folgende Code veranschaulicht, wie Sie einen Dienstendpunkt für das vertrauenswürdige Subsystem erstellen, der Nachrichtensicherheit über das HTTP\-Protokoll und einen Benutzernamen und ein Kennwort für die Authentifizierung nutzt.  
+### <a name="code"></a><span data-ttu-id="75f38-141">Code</span><span class="sxs-lookup"><span data-stu-id="75f38-141">Code</span></span>  
+ <span data-ttu-id="75f38-142">Der folgende Code veranschaulicht, wie Sie einen Dienstendpunkt für das vertrauenswürdige Subsystem erstellen, der Nachrichtensicherheit über das HTTP-Protokoll und einen Benutzernamen und ein Kennwort für die Authentifizierung nutzt.</span><span class="sxs-lookup"><span data-stu-id="75f38-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
  [!code-vb[TrustedSubSystems#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#1)]  
   
- Der folgende Code zeigt einen Dienst in einem vertrauenswürdigen Subsystem, der mit einem Back\-End\-Dienst mithilfe von Transportsicherheit über das TCP\-Transportprotokoll kommuniziert.  
+ <span data-ttu-id="75f38-143">Der folgende Code zeigt einen Dienst in einem vertrauenswürdigen Subsystem, der mit einem Back-End-Dienst mithilfe von Transportsicherheit über das TCP-Transportprotokoll kommuniziert.</span><span class="sxs-lookup"><span data-stu-id="75f38-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### Konfiguration  
- Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.Beachten Sie die beiden Bindungen: Eine sichert den im vertrauenswürdigen Subsystem gehosteten Dienst und die andere kommuniziert zwischen dem vertrauenswürdigen Subsystem und dem Back\-End\-Dienst.  
+### <a name="configuration"></a><span data-ttu-id="75f38-144">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="75f38-144">Configuration</span></span>  
+ <span data-ttu-id="75f38-145">Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="75f38-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="75f38-146">Beachten Sie die beiden Bindungen: Eine sichert den im vertrauenswürdigen Subsystem gehosteten Dienst und die andere kommuniziert zwischen dem vertrauenswürdigen Subsystem und dem Back-End-Dienst.</span><span class="sxs-lookup"><span data-stu-id="75f38-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -167,18 +173,18 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 </configuration>  
 ```  
   
-## Client  
+## <a name="client"></a><span data-ttu-id="75f38-147">Client</span><span class="sxs-lookup"><span data-stu-id="75f38-147">Client</span></span>  
   
-### Code  
- Der folgende Code veranschaulicht, wie Sie einen Client, der mit dem vertrauenswürdigen Subsystem kommuniziert, mithilfe von Nachrichtensicherheit über das HTTP\-Protokoll und Benutzernamen und Kennwort für die Authentifizierung erstellen.  
+### <a name="code"></a><span data-ttu-id="75f38-148">Code</span><span class="sxs-lookup"><span data-stu-id="75f38-148">Code</span></span>  
+ <span data-ttu-id="75f38-149">Der folgende Code veranschaulicht, wie Sie einen Client, der mit dem vertrauenswürdigen Subsystem kommuniziert, mithilfe von Nachrichtensicherheit über das HTTP-Protokoll und Benutzernamen und Kennwort für die Authentifizierung erstellen.</span><span class="sxs-lookup"><span data-stu-id="75f38-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### Konfiguration  
- Der folgende Code konfiguriert den Client so, dass Nachrichtensicherheit über das HTTP\-Protokoll und Benutzername und Kennwort für die Authentifizierung verwendet werden.Der Benutzername und das Kennwort können nur mit Code \(nicht konfigurierbar\) angegeben werden.  
+### <a name="configuration"></a><span data-ttu-id="75f38-150">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="75f38-150">Configuration</span></span>  
+ <span data-ttu-id="75f38-151">Der folgende Code konfiguriert den Client so, dass Nachrichtensicherheit über das HTTP-Protokoll und Benutzername und Kennwort für die Authentifizierung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="75f38-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="75f38-152">Der Benutzername und das Kennwort können nur mit Code (nicht konfigurierbar) angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="75f38-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -214,6 +220,6 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 </configuration>  
 ```  
   
-## Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="75f38-153">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="75f38-153">See Also</span></span>  
+ [<span data-ttu-id="75f38-154">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="75f38-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="75f38-155">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="75f38-155">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

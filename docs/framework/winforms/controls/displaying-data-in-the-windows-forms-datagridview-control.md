@@ -1,86 +1,87 @@
 ---
-title: "Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Daten [Windows Forms], Anzeigen im tabellarischen Format"
-  - "Datenblätter, Anzeigen von Daten"
-  - "DataGridView-Steuerelement [Windows Forms], Anzeigen von Daten"
-  - "Anzeigen von Daten, Datenblätter"
+title: Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], displaying data
+- displaying data [Windows Forms], data grids
+- DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms
-Das `DataGridView`\-Steuerelement wird verwendet, um Daten aus einer Vielzahl externer Datenquellen anzuzeigen.  Alternativ können Sie dem Steuerelement Zeilen und Spalten hinzufügen und es manuell mit Daten füllen.  
+# <a name="displaying-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="da9d6-102">Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-102">Displaying Data in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="da9d6-103">Die `DataGridView` Steuerelement wird verwendet, um Daten aus einer Vielzahl externer Datenquellen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="da9d6-103">The `DataGridView` control is used to display data from a variety of external data sources.</span></span> <span data-ttu-id="da9d6-104">Alternativ können Sie Zeilen und Spalten zum Steuerelement hinzufügen und es manuell mit Daten aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="da9d6-104">Alternatively, you can add rows and columns to the control and manually populate it with data.</span></span>  
   
- Wenn Sie das Steuerelement an eine Datenquelle binden, können auf der Grundlage des Datenquellenschemas automatisch Spalten generiert werden.  Wenn diese Spalten nicht in der gewünschten Weise angezeigt werden, können Sie sie ausblenden, entfernen oder neu anordnen.  Außerdem können Sie ungebundene Spalten hinzufügen, um zusätzliche Daten anzuzeigen, die nicht aus der Datenquelle stammen.  
+ <span data-ttu-id="da9d6-105">Wenn Sie das Steuerelement an eine Datenquelle binden, können Sie die Spalten automatisch basierend auf dem Schema der Datenquelle generieren.</span><span class="sxs-lookup"><span data-stu-id="da9d6-105">When you bind the control to a data source, you can generate columns automatically based on the schema of the data source.</span></span> <span data-ttu-id="da9d6-106">Wenn diese Spalten nicht angezeigt werden, ebenso wie gewünscht, können Sie ausblenden, entfernen oder anordnen.</span><span class="sxs-lookup"><span data-stu-id="da9d6-106">If these columns do not appear just as you want them to, you can hide, remove, or rearrange them.</span></span> <span data-ttu-id="da9d6-107">Sie können auch hinzufügen ungebundene Spalten, um zusätzliche Daten anzeigen, die nicht aus der Datenquelle stammt.</span><span class="sxs-lookup"><span data-stu-id="da9d6-107">You can also add unbound columns to display supplemental data that does not come from the data source.</span></span>  
   
- Darüber hinaus können Sie Daten unter Verwendung von Standardformaten \(z. B. einem Währungsformat\) anzeigen oder das Anzeigeformat anpassen, um die Daten in einer beliebigen Weise darzustellen \(beispielsweise mit geänderter Hintergrundfarbe für negative Zahlen oder indem Zeichenfolgenwerte durch entsprechende Bilder ersetzt werden\).  
+ <span data-ttu-id="da9d6-108">Darüber hinaus können Sie Ihre Daten mithilfe von Standardformaten (z. B. Währungsformat) anzeigen, oder Sie können anpassen, die anzeigeformatierung, um Ihre Daten zu präsentieren, jedoch werden (z. B. Ändern der Hintergrundfarbe für negative Zahlen oder Zeichenfolgenwerte ersetzen müssen mit entsprechenden Bildern).</span><span class="sxs-lookup"><span data-stu-id="da9d6-108">Additionally, you can display your data using standard formats (such as currency format), or you can customize the display formatting to present your data however you need to (such as changing the background color for negative numbers, or replacing string values with corresponding images).</span></span>  
   
-## In diesem Abschnitt  
- [Datenanzeigemodi im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen zum Füllen des Steuerelements mit Daten.  
+## <a name="in-this-section"></a><span data-ttu-id="da9d6-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="da9d6-109">In This Section</span></span>  
+ [<span data-ttu-id="da9d6-110">Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-110">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-111">Beschreibt die Optionen für das Steuerelement mit Daten auffüllen.</span><span class="sxs-lookup"><span data-stu-id="da9d6-111">Describes the options for populating the control with data.</span></span>  
   
- [Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen zum Formatieren der Anzeigewerte von Zellen.  
+ [<span data-ttu-id="da9d6-112">Datenformatierung im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-112">Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-113">Beschreibt die Optionen für die Formatierung der Zelle Anzeigewerte.</span><span class="sxs-lookup"><span data-stu-id="da9d6-113">Describes the options for formatting cell display values.</span></span>  
   
- [Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- Beschreibt, wie das Steuerelement manuell mit Daten gefüllt wird.  
+ [<span data-ttu-id="da9d6-114">Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-114">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-115">Beschreibt, wie Sie manuell das Steuerelement mit Daten aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="da9d6-115">Describes how to manually populate the control with data.</span></span>  
   
- [Gewusst wie: Binden von Daten an das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie das Steuerelement mit Daten gefüllt wird, indem Sie es an `BindingSource` binden, die aus einer Datenbank abgerufene Informationen enthält.  
+ [<span data-ttu-id="da9d6-116">Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-116">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-117">Beschreibt, wie das Steuerelement mit Daten auffüllen, indem Sie ihn zum Binden einer `BindingSource` , die aus einer Datenbank abgerufene Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="da9d6-117">Describes how to populate the control with data by binding it to a `BindingSource` that contains information pulled from a database.</span></span>  
   
- [Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Beschreibt, wie Spalten automatisch auf der Grundlage einer gebundenen Datenquelle generiert werden.  
+ [<span data-ttu-id="da9d6-118">Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-118">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ <span data-ttu-id="da9d6-119">Beschreibt, wie zum automatischen Generieren von Spalten, die auf eine gebundene Datenquelle basieren.</span><span class="sxs-lookup"><span data-stu-id="da9d6-119">Describes how to automatically generate columns based on a bound data source.</span></span>  
   
- [Gewusst wie: Entfernen von automatisch generierten Spalten aus einem DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
- Beschreibt, wie Spalten ausgeblendet oder gelöscht werden, die automatisch aus einer gebundenen Datenquelle generiert werden.  
+ [<span data-ttu-id="da9d6-120">Gewusst wie: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-120">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ <span data-ttu-id="da9d6-121">Beschreibt das Ausblenden oder Löschen von Spalten aus einer gebundenen Datenquelle automatisch generiert.</span><span class="sxs-lookup"><span data-stu-id="da9d6-121">Describes how to hide or delete columns generated automatically from a bound data source.</span></span>  
   
- [Gewusst wie: Ändern der Reihenfolge von Spalten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Spalten neu angeordnet werden, die automatisch aus einer gebundenen Datenquelle generiert werden.  
+ [<span data-ttu-id="da9d6-122">Gewusst wie: Ändern der Reihenfolge von Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-122">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-123">Beschreibt, wie aus einer gebundenen Datenquelle automatisch generierte Spalten neu anordnen.</span><span class="sxs-lookup"><span data-stu-id="da9d6-123">Describes how to rearrange columns generated automatically from a bound data source.</span></span>  
   
- [Gewusst wie: Hinzufügen einer ungebundenen Spalte zu einem datengebundenen DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
- Beschreibt, wie Daten aus einer gebundenen Datenquelle durch das Anzeigen zusätzlicher ungebundener Spalten ergänzt werden.  
+ [<span data-ttu-id="da9d6-124">Gewusst wie: Hinzufügen einer ungebundenen Spalte zu einem datengebundenen DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-124">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+ <span data-ttu-id="da9d6-125">Beschreibt, wie Daten aus einer Datenquelle gebundenen Daten, die durch die Anzeige zusätzlicher ungebundener Spalten ergänzen.</span><span class="sxs-lookup"><span data-stu-id="da9d6-125">Describes how to supplement data from a bound data source by displaying additional, unbound columns.</span></span>  
   
- [Gewusst wie: Binden von Objekten an das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Beschreibt, wie das Steuerelement an eine Auflistung beliebiger Objekte gebunden und jedes Objekt in einer eigenen Zeile angezeigt wird.  
+ [<span data-ttu-id="da9d6-126">Vorgehensweise: Binden von Objekten an das DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-126">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ <span data-ttu-id="da9d6-127">Beschreibt, wie zum Binden des Steuerelements an eine Auflistung beliebiger Objekte, sodass jedes Objekt in einer eigenen Zeile angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="da9d6-127">Describes how to bind the control to a collection of arbitrary objects so that each object is displayed in its own row.</span></span>  
   
- [Gewusst wie: Aufrufen von Objekten, die an DataGridView\-Zeilen in Windows Forms gebunden sind](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
- Beschreibt, wie ein an eine bestimmte Zeile des Steuerelements gebundenes Objekt abgerufen wird.  
+ [<span data-ttu-id="da9d6-128">Vorgehensweise: Aufrufen von Objekten, die an DataGridView-Zeilen in Windows Forms gebunden sind</span><span class="sxs-lookup"><span data-stu-id="da9d6-128">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ <span data-ttu-id="da9d6-129">Beschreibt, wie ein Objekt, das an einer bestimmten Zeile des Steuerelements gebunden abzurufen.</span><span class="sxs-lookup"><span data-stu-id="da9d6-129">Describes how to retrieve an object bound to a particular row of the control.</span></span>  
   
- [Exemplarische Vorgehensweise: Erstellen eines Master\-\/Detailformulars mit zwei DataGridView\-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagrids.md)  
- Beschreibt, wie Daten aus zwei verknüpften Datenbanktabellen so angezeigt werden, dass die Werte eines `DataGridView`\-Steuerelements von der aktuell ausgewählten Zeile eines anderen Steuerelements abhängen.  
+ [<span data-ttu-id="da9d6-130">Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-130">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
+ <span data-ttu-id="da9d6-131">Beschreibt, wie Daten aus zwei verknüpften Tabellen angezeigt, damit die Werte in einer `DataGridView` Steuerelement richten sich nach der ausgewählten Zeile in einem anderen Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="da9d6-131">Describes how to display data from two related database tables so that the values shown in one `DataGridView` control depend on the currently selected row in another control.</span></span>  
   
- [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>\-Ereignis behandelt wird, um die Darstellung von Zellen abhängig von ihren Werten zu ändern.  
+ [<span data-ttu-id="da9d6-132">Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-132">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-133">Beschreibt das Behandeln der <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis, um die Darstellung von Zellen abhängig von deren Werten geändert.</span><span class="sxs-lookup"><span data-stu-id="da9d6-133">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> event to change the appearance of cells depending on their values.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="da9d6-134">Verweis</span><span class="sxs-lookup"><span data-stu-id="da9d6-134">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- Enthält die Referenzdokumentation zum <xref:System.Windows.Forms.DataGridView>\-Steuerelement.  
+ <span data-ttu-id="da9d6-135">Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="da9d6-135">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>  
- Enthält die Referenzdokumentation zur <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft.  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ <span data-ttu-id="da9d6-136">Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="da9d6-136">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property.</span></span>  
   
  <xref:System.Windows.Forms.BindingSource>  
- Enthält die Referenzdokumentation zur <xref:System.Windows.Forms.BindingSource>\-Komponente.  
+ <span data-ttu-id="da9d6-137">Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.BindingSource>-Komponente.</span><span class="sxs-lookup"><span data-stu-id="da9d6-137">Provides reference documentation for the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
-## Verwandte Abschnitte  
- [Dateneingabe im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- Enthält Themen, in denen beschrieben wird, wie das Verfahren geändert wird, mit dem Benutzer Daten im Steuerelement ändern.  
+## <a name="related-sections"></a><span data-ttu-id="da9d6-138">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="da9d6-138">Related Sections</span></span>  
+ [<span data-ttu-id="da9d6-139">Dateneingabe im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-139">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="da9d6-140">Enthält Themen, in denen beschrieben wird, wie die Art und Weise geändert wird, in der Benutzer Daten im Steuerelement hinzufügen und diese ändern.</span><span class="sxs-lookup"><span data-stu-id="da9d6-140">Provides topics that describe how to change the way users add and modify data in the control.</span></span>  
   
-## Siehe auch  
- [DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Spaltentypen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="da9d6-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da9d6-141">See Also</span></span>  
+ [<span data-ttu-id="da9d6-142">DataGridView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="da9d6-142">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="da9d6-143">Spaltentypen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da9d6-143">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

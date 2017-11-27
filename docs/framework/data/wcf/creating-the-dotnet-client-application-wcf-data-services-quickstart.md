@@ -1,89 +1,95 @@
 ---
-title: "Erstellen der .NET Framework-Clientanwendung (WCF Data Services-Schnellstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen der .NET Framework-Clientanwendung (WCF Data Services-Schnellstart)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d654ad24f8d23a47d2a3be3b07c42c104bb9b70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erstellen der .NET Framework-Clientanwendung (WCF Data Services-Schnellstart)
-Dies ist die letzte Aufgabe des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]\-Schnellstarts.  In dieser Aufgabe fügen Sie der Projektmappe eine Konsolenanwendung hinzu, fügen dieser neuen Clientanwendung einen Verweis auf den [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]\-Feed hinzu und greifen aus der Clientanwendung mit den generierten Clientdatendienstklassen und Clientbibliotheken auf den [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Feed zu.  
+# <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a><span data-ttu-id="12569-102">Erstellen der .NET Framework-Clientanwendung (WCF Data Services-Schnellstart)</span><span class="sxs-lookup"><span data-stu-id="12569-102">Creating the .NET Framework Client Application (WCF Data Services Quickstart)</span></span>
+<span data-ttu-id="12569-103">Dies ist die letzte Aufgabe des der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Schnellstart.</span><span class="sxs-lookup"><span data-stu-id="12569-103">This is the final task of the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] quickstart.</span></span> <span data-ttu-id="12569-104">In dieser Aufgabe fügen Sie der Projektmappe eine Konsolenanwendung, fügen einen Verweis auf die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Zuführung in dieser neuen Clientanwendung und den Zugriff der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed von der Clientanwendung mithilfe der generierten clientdatendienstklassen und Client Bibliotheken.</span><span class="sxs-lookup"><span data-stu-id="12569-104">In this task, you will add a console application to the solution, add a reference to the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed into this new client application, and access the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed from the client application by using the generated client data service classes and client libraries.</span></span>  
   
 > [!NOTE]
->  Eine .NET Framework\-basierte Clientanwendung ist für den Zugriff auf einen Datenfeed nicht erforderlich.  Auf den Datendienst kann jede Anwendungskomponente zugreifen, die einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Feed nutzt.  Weitere Informationen finden Sie unter [Verwenden eines Datendiensts in einer Clientanwendung](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
+>  <span data-ttu-id="12569-105">Eine .NET Framework-basierte Clientanwendung ist für den Zugriff auf einen Datenfeed nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="12569-105">A .NET Framework-based client application is not required to access a data feed.</span></span> <span data-ttu-id="12569-106">Auf den Datendienst kann jede Anwendungskomponente zugreifen, die einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed nutzt.</span><span class="sxs-lookup"><span data-stu-id="12569-106">The data service can be accessed by any application component that consumes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span> <span data-ttu-id="12569-107">Weitere Informationen finden Sie unter [Verwenden eines Datendiensts in einer Clientanwendung](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="12569-107">For more information, see [Using a Data Service in a Client Application](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).</span></span>  
   
-### So erstellen Sie die Clientanwendung mit Visual Studio  
+### <a name="to-create-the-client-application-by-using-visual-studio"></a><span data-ttu-id="12569-108">So erstellen Sie die Clientanwendung mit Visual Studio</span><span class="sxs-lookup"><span data-stu-id="12569-108">To create the client application by using Visual Studio</span></span>  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die Projektmappe, klicken Sie auf **Hinzufügen** und dann auf **Neues Projekt**.  
+1.  <span data-ttu-id="12569-109">In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe, klicken Sie auf **hinzufügen**, und klicken Sie dann auf **neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="12569-109">In **Solution Explorer**, right-click the solution, click **Add**, and then click **New Project**.</span></span>  
   
-2.  Klicken Sie in **Projekttypen** auf **Windows**, und wählen Sie dann im Bereich **Vorlagen** die Option **WPF\-Anwendung** aus.  
+2.  <span data-ttu-id="12569-110">In **-Projekttypen**, klicken Sie auf **Windows**, und wählen Sie dann **WPF-Anwendung** in der **Vorlagen** Bereich.</span><span class="sxs-lookup"><span data-stu-id="12569-110">In **Project types**, click **Windows**, and then select **WPF Application** in the **Templates** pane.</span></span>  
   
-3.  Geben Sie `NorthwindClient` als Projektnamen ein, und klicken Sie dann auf **OK**.  
+3.  <span data-ttu-id="12569-111">Geben Sie `NorthwindClient` für den Projektnamen, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="12569-111">Enter `NorthwindClient` for the project name, and then click **OK**.</span></span>  
   
-4.  Öffnen Sie die Datei MainWindow.xaml, und ersetzen Sie den XAML\-Code durch folgenden Code:  
+4.  <span data-ttu-id="12569-112">Öffnen Sie die Datei MainWindow.xaml, und ersetzen Sie den XAML-Code durch folgenden Code:</span><span class="sxs-lookup"><span data-stu-id="12569-112">Open the file MainWindow.xaml and replace the XAML code with the following code:</span></span>  
   
-     [!code-xml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]  
+     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]  
   
-### So fügen Sie dem Projekt einen Datendienstverweis hinzu  
+### <a name="to-add-a-data-service-reference-to-the-project"></a><span data-ttu-id="12569-113">So fügen Sie dem Projekt einen Datendienstverweis hinzu</span><span class="sxs-lookup"><span data-stu-id="12569-113">To add a data service reference to the project</span></span>  
   
-1.  Klicken Sie mit der rechten Maustaste auf das NorthwindClient\-Projekt, klicken Sie auf **Dienstverweis hinzufügen** und dann auf **Ermitteln**.  
+1.  <span data-ttu-id="12569-114">Maustaste auf das NorthwindClient-Projekt, klicken Sie auf **Hinzufügen eines Dienstverweises**, und klicken Sie dann auf **Discover**.</span><span class="sxs-lookup"><span data-stu-id="12569-114">Right-click the NorthwindClient project, click **Add Service Reference**, and then click **Discover**.</span></span>  
   
-     Dadurch wird der Northwind\-Datendienst angezeigt, den Sie in der ersten Aufgabe erstellt haben.  
+     <span data-ttu-id="12569-115">Dadurch wird der Northwind-Datendienst angezeigt, den Sie in der ersten Aufgabe erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="12569-115">This displays the Northwind data service that you created in the first task.</span></span>  
   
-2.  Geben Sie im Textfeld **Namespace** `Northwind` ein, und klicken Sie auf **OK**.  
+2.  <span data-ttu-id="12569-116">In der **Namespace** Textfeld `Northwind`, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="12569-116">In the **Namespace** text box, type `Northwind`, and then click **OK**.</span></span>  
   
-     Dadurch wird dem Projekt, das die zum Zugriff auf und zur Interaktion mit Datendienstressourcen als Objekte verwendeten Datenklassen enthält, eine neue Codedatei hinzugefügt.  Die Datenklassen werden im Namespace `NorthwindClient.Northwind` erstellt.  
+     <span data-ttu-id="12569-117">Dadurch wird dem Projekt, das die zum Zugriff auf und zur Interaktion mit Datendienstressourcen als Objekte verwendeten Datenklassen enthält, eine neue Codedatei hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="12569-117">This adds a new code file to the project, which contains the data classes that are used to access and interact with data service resources as objects.</span></span> <span data-ttu-id="12569-118">Die Datenklassen werden im Namespace `NorthwindClient.Northwind` erstellt.</span><span class="sxs-lookup"><span data-stu-id="12569-118">The data classes are created in the namespace `NorthwindClient.Northwind`.</span></span>  
   
-### So greifen Sie auf Datendienstdaten in der WPF\-Anwendung zu  
+### <a name="to-access-data-service-data-in-the-wpf-application"></a><span data-ttu-id="12569-119">So greifen Sie auf Datendienstdaten in der WPF-Anwendung zu</span><span class="sxs-lookup"><span data-stu-id="12569-119">To access data service data in the WPF application</span></span>  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** unter **NorthwindClient** mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Verweis hinzufügen**.  
+1.  <span data-ttu-id="12569-120">In **Projektmappen-Explorer** unter **NorthwindClient**mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="12569-120">In **Solution Explorer** under **NorthwindClient**, right-click the project and click **Add Reference**.</span></span>  
   
-2.  Wählen Sie im Dialogfeld "Verweis hinzufügen" auf der Registerkarte **.NET** die System.Data.Services.Client.dll\-Assembly aus, und klicken Sie anschließend auf **OK**.  Öffnen Sie im **Projektmappen\-Explorer** unter **NorthwindClient** die Codepage für die Datei MainWindow.xaml, und fügen Sie die folgende `using`\-Anweisung \(`Imports` in Visual Basic\) hinzu.  
+2.  <span data-ttu-id="12569-121">Klicken Sie im Dialogfeld "Verweis hinzufügen" klicken Sie auf die **.NET** Registerkarte, wählen Sie die System.Data.Services.Client.dll-Assembly, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="12569-121">In the Add Reference dialog box, click the **.NET** tab, select the System.Data.Services.Client.dll assembly, and then click **OK**.</span></span> <span data-ttu-id="12569-122">In **Projektmappen-Explorer** unter **NorthwindClient**, öffnen Sie die Codepage für die Datei "MainWindow.xaml", und fügen Sie die folgenden `using` Anweisung (`Imports` in Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="12569-122">In **Solution Explorer** under **NorthwindClient**, open the code page for the MainWindow.xaml file, and add the following `using` statement (`Imports` in Visual Basic).</span></span>  
   
      [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
      [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]  
   
-3.  Fügen Sie den folgenden Code ein, der diesen Datendienst abfragt und das Ergebnis an eine <xref:System.Data.Services.Client.DataServiceCollection%601> in der `MainWindow`\-Klasse bindet:  
+3.  <span data-ttu-id="12569-123">Fügen Sie den folgenden Code ein, der diesen Datendienst abfragt und das Ergebnis an eine <xref:System.Data.Services.Client.DataServiceCollection%601> in der `MainWindow`-Klasse bindet:</span><span class="sxs-lookup"><span data-stu-id="12569-123">Insert the following code that queries that data service and binds the result to a <xref:System.Data.Services.Client.DataServiceCollection%601> into the `MainWindow` class:</span></span>  
   
     > [!NOTE]
-    >  Sie müssen den Hostnamen `localhost:12345` durch den Server und den Anschluss ersetzen, der die Instanz des Northwind\-Datendiensts hostet.  
+    >  <span data-ttu-id="12569-124">Sie müssen den Hostnamen `localhost:12345` durch den Server und den Anschluss ersetzen, der die Instanz des Northwind-Datendiensts hostet.</span><span class="sxs-lookup"><span data-stu-id="12569-124">You must replace the host name `localhost:12345` with the server and port that is hosting your instance of the Northwind data service.</span></span>  
   
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#querycode)]
      [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]  
   
-4.  Fügen Sie den folgenden Code zum Speichern von Änderungen in der `MainWindow`\-Klasse hinzu:  
+4.  <span data-ttu-id="12569-125">Fügen Sie den folgenden Code zum Speichern von Änderungen in der `MainWindow`-Klasse hinzu:</span><span class="sxs-lookup"><span data-stu-id="12569-125">Insert the following code that saves changes into the `MainWindow` class:</span></span>  
   
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]  
   
-### So erstellen Sie die NorthwindClient\-Anwendung und führen sie aus  
+### <a name="to-build-and-run-the-northwindclient-application"></a><span data-ttu-id="12569-126">So erstellen Sie die NorthwindClient-Anwendung und führen sie aus</span><span class="sxs-lookup"><span data-stu-id="12569-126">To build and run the NorthwindClient application</span></span>  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf das NorthwindClient\-Projekt, und wählen Sie **Als Startprojekt festlegen** aus.  
+1.  <span data-ttu-id="12569-127">In **Projektmappen-Explorer**mit der rechten Maustaste auf das NorthwindClient-Projekt, und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="12569-127">In **Solution Explorer**, right-click the NorthwindClient project and select **Set as startup project**.</span></span>  
   
-2.  Drücken Sie F5, um die Anwendung zu starten.  
+2.  <span data-ttu-id="12569-128">Drücken Sie F5, um die Anwendung zu starten.</span><span class="sxs-lookup"><span data-stu-id="12569-128">Press F5 to start the application.</span></span>  
   
-     Die Projektmappe wird erstellt und die Clientanwendung wird gestartet.  Daten werden vom Dienst angefordert und in der Konsole angezeigt.  
+     <span data-ttu-id="12569-129">Die Projektmappe wird erstellt und die Clientanwendung wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="12569-129">This builds the solution and starts the client application.</span></span> <span data-ttu-id="12569-130">Daten werden vom Dienst angefordert und in der Konsole angezeigt.</span><span class="sxs-lookup"><span data-stu-id="12569-130">Data is requested from the service and displayed in the console.</span></span>  
   
-3.  Bearbeiten Sie in der Spalte **Quantity** des Datenrasters einen Wert, und klicken Sie dann auf **Speichern**.  
+3.  <span data-ttu-id="12569-131">Bearbeiten eines Werts in der **Menge** Spalte das Datenraster, und klicken Sie dann auf **speichern**.</span><span class="sxs-lookup"><span data-stu-id="12569-131">Edit a value in the **Quantity** column of the data grid, and then click **Save**.</span></span>  
   
-     Die Änderungen werden im Datendienst gespeichert.  
+     <span data-ttu-id="12569-132">Die Änderungen werden im Datendienst gespeichert.</span><span class="sxs-lookup"><span data-stu-id="12569-132">Changes are saved to the data service.</span></span>  
   
     > [!NOTE]
-    >  In dieser Version der Anwendung NorthwindClient wird das Hinzufügen und Löschen von Entitäten nicht unterstützt.  
+    >  <span data-ttu-id="12569-133">In dieser Version der Anwendung NorthwindClient wird das Hinzufügen und Löschen von Entitäten nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="12569-133">This version of the NorthwindClient application does not support adding and deleting of entities.</span></span>  
   
-## Nächste Schritte  
- Sie haben die Clientanwendung, die auf den Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Beispielfeed zugreift, erfolgreich erstellt.  Der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]\-Schnellstart ist damit abgeschlossen.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Zugreifen auf einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Feed in einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Anwendung finden Sie unter [WCF Data Services\-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+## <a name="next-steps"></a><span data-ttu-id="12569-134">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="12569-134">Next Steps</span></span>  
+ <span data-ttu-id="12569-135">Sie haben die Clientanwendung, die auf den Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Beispielfeed zugreift, erfolgreich erstellt.</span><span class="sxs-lookup"><span data-stu-id="12569-135">You have successfully created the client application that accesses the sample Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span> <span data-ttu-id="12569-136">Der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Schnellstart ist damit abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="12569-136">You have also completed the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] quickstart.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="12569-137">Zugreifen auf eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds aus einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Anwendung finden Sie unter [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).</span><span class="sxs-lookup"><span data-stu-id="12569-137"> accessing an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed from a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] application, see [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).</span></span>  
   
-## Siehe auch  
- [Erste Schritte](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)   
- [Ressourcen](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a><span data-ttu-id="12569-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12569-138">See Also</span></span>  
+ [<span data-ttu-id="12569-139">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="12569-139">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
+ [<span data-ttu-id="12569-140">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="12569-140">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

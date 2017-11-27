@@ -1,52 +1,55 @@
 ---
-title: "Integrieren von COM-Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM [WCF]"
-  - "COM [WCF], Windows Communication Foundation-Integrierung"
-  - "WCF, COM-Integration"
-  - "WCF, Wiederverwenden von Code"
-  - "Windows Communication Foundation, COM-Integration"
-  - "Windows Communication Foundation, Wiederverwenden von Code"
+title: Integrieren von COM-Anwendungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, COM integration
+- COM [WCF], Windows Communication Foundation integration
+- WCF, reusing code
+- Windows Communication Foundation, reusing code
+- COM [WCF]
+- WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a0e625beaf20f6445099d8fb15cb175d3d71a860
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Integrieren von COM-Anwendungen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienste können mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstmoniker direkt in den vorhandenen Code integriert werden.  Der Dienstmoniker kann in vielen verschiedenen COM\-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C\+\+ 6.0 verwendet werden.  
+# <a name="integrating-with-com-applications"></a><span data-ttu-id="38a29-102">Integrieren von COM-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="38a29-102">Integrating with COM Applications</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="38a29-103">-Dienste können mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstmoniker direkt in den vorhandenen Code integriert werden.</span><span class="sxs-lookup"><span data-stu-id="38a29-103"> services can be integrated directly into your existing code by using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service moniker.</span></span> <span data-ttu-id="38a29-104">Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="38a29-104">The service moniker can be used from a wide range of COM-based development environments, such as Office VBA, Visual Basic 6.0, or Visual C++ 6.0.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über die Integration von COM\-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)  
- Bietet eine Übersicht über die Hauptbestandteile des Integrationsprozesses.  
+## <a name="in-this-section"></a><span data-ttu-id="38a29-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="38a29-105">In This Section</span></span>  
+ [<span data-ttu-id="38a29-106">Integrieren von COM-Anwendungen (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="38a29-106">Integrating with COM Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)  
+ <span data-ttu-id="38a29-107">Bietet eine Übersicht über die Hauptbestandteile des Integrationsprozesses.</span><span class="sxs-lookup"><span data-stu-id="38a29-107">Gives an overview of the major parts of the integration process.</span></span>  
   
- [Gewusst wie: Registrieren und Konfigurieren eines Dienstmonikers](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)  
- Zur Verwendung des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstmonikers in einer COM\-Anwendung müssen die erforderlichen attributierten Typen bei COM registriert werden. Des Weiteren müssen die COM\-Anwendung sowie der Moniker mit der erforderlichen Bindungskonfiguration konfiguriert werden.  
+ [<span data-ttu-id="38a29-108">Vorgehensweise: registrieren und konfigurieren ein Dienstmonikers</span><span class="sxs-lookup"><span data-stu-id="38a29-108">How to: Register and Configure a Service Moniker</span></span>](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)  
+ <span data-ttu-id="38a29-109">Zur Verwendung des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstmonikers in einer COM-Anwendung müssen die erforderlichen attributierten Typen bei COM registriert werden. Des Weiteren müssen die COM-Anwendung sowie der Moniker mit der erforderlichen Bindungskonfiguration konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="38a29-109">To use the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service moniker within a COM application, register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>  
   
- [Gewusst wie: Verwenden des Windows Communication Foundation\-Dienstmonikers ohne Registrierung](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
- Erläutert, wie Sie die Definition des Vertrags in Form eines Web Services Definition Language \(WSDL\)\-Dokuments oder aus einem WS\-MetadataExchange\-Endpunkt abrufen.  
+ [<span data-ttu-id="38a29-110">Vorgehensweise: Verwenden der Windows Communication Foundation-Dienstmonikers ohne Registrierung</span><span class="sxs-lookup"><span data-stu-id="38a29-110">How to: Use the Windows Communication Foundation Service Moniker without Registration</span></span>](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
+ <span data-ttu-id="38a29-111">Erläutert, wie Sie die Definition des Vertrags in Form eines Web Services Definition Language (WSDL)-Dokuments oder aus einem WS-MetadataExchange-Endpunkt abrufen.</span><span class="sxs-lookup"><span data-stu-id="38a29-111">Explains how to obtain the definition of the contract in the form of a Web Services Definition Language (WSDL) document or from a WS-MetadataExchange endpoint.</span></span>  
   
- [Gewusst wie: Verwenden eines Dienstmonikers mit WSDL\-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)  
- Beschreibt das Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Beispiels mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-WSDL\-Moniker.  
+ [<span data-ttu-id="38a29-112">Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen</span><span class="sxs-lookup"><span data-stu-id="38a29-112">How to: Use a Service Moniker with WSDL Contracts</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)  
+ <span data-ttu-id="38a29-113">Beschreibt das Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiels mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-WSDL-Moniker.</span><span class="sxs-lookup"><span data-stu-id="38a29-113">Describes how to call a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sample using a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL moniker.</span></span>  
   
- [Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch\-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-metadata-exchange-contracts.md)  
- Beschreibt das Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Beispiels mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Moniker, der einen MEX\-Endpunkt angibt.  
+ [<span data-ttu-id="38a29-114">Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen</span><span class="sxs-lookup"><span data-stu-id="38a29-114">How to: Use a Service Moniker with Metadata Exchange Contracts</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-metadata-exchange-contracts.md)  
+ <span data-ttu-id="38a29-115">Beschreibt das Aufrufen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Beispiels mit einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Moniker, der einen MEX-Endpunkt angibt.</span><span class="sxs-lookup"><span data-stu-id="38a29-115">Describes how to call a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sample using a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker that specifies a Mex endpoint.</span></span>  
   
- [Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
- Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstmoniker unterstützt die `IChannelCredentials`\-Schnittstelle, die andere Methoden zur Angabe von Kanalanmeldeinformationen ermöglicht.  
+ [<span data-ttu-id="38a29-116">Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit</span><span class="sxs-lookup"><span data-stu-id="38a29-116">How to: Specify Channel Security Credentials</span></span>](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
+ <span data-ttu-id="38a29-117">Der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstmoniker unterstützt die `IChannelCredentials`-Schnittstelle, die andere Methoden zur Angabe von Kanalanmeldeinformationen ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="38a29-117">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service moniker supports the `IChannelCredentials` interface that allows a range of alternate methods for specifying channel credentials.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="38a29-118">Verweis</span><span class="sxs-lookup"><span data-stu-id="38a29-118">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## Siehe auch  
- [Integrieren von COM\+\-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a><span data-ttu-id="38a29-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38a29-119">See Also</span></span>  
+ [<span data-ttu-id="38a29-120">Integrieren von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="38a29-120">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

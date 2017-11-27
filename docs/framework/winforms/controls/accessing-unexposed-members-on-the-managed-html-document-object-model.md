@@ -1,41 +1,45 @@
 ---
-title: "Zugreifen auf nicht verf&#252;gbar gemachte Member des verwalteten HTML-Dokumentobjektmodells | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Verwaltetes HTML-DOM, Zugreifen auf nicht verfügbar gemachte Member"
-  - "Nicht verfügbar gemachte Member"
+title: "Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- unexposed members
+- managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Zugreifen auf nicht verf&#252;gbar gemachte Member des verwalteten HTML-Dokumentobjektmodells
-Das verwaltete HTML\-Dokumentobjektmodell \(DOM\) enthält eine Klasse mit dem Namen <xref:System.Windows.Forms.HtmlElement>, die die Eigenschaften, Methoden und Ereignisse verfügbar macht, die alle HTML\-Elemente gemeinsam haben.  Gelegentlich müssen Sie jedoch auf Member zugreifen, die die verwaltete Schnittstelle nicht direkt verfügbar macht.  In diesem Thema werden zwei Methoden zum Zugreifen auf nicht verfügbar gemachte Member untersucht, einschließlich [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]\-Funktionen und VBScript\-Funktionen, die innerhalb einer Webseite definiert sind.  
+# <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a><span data-ttu-id="d637c-102">Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells</span><span class="sxs-lookup"><span data-stu-id="d637c-102">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="d637c-103">Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse mit dem Namen <xref:System.Windows.Forms.HtmlElement> , verfügbar macht, die Eigenschaften, Methoden und Ereignisse, die alle HTML-Elemente gemeinsam haben.</span><span class="sxs-lookup"><span data-stu-id="d637c-103">The managed HTML Document Object Model (DOM) contains a class called <xref:System.Windows.Forms.HtmlElement> that exposes the properties, methods, and events that all HTML elements have in common.</span></span> <span data-ttu-id="d637c-104">In einigen Fällen müssen Sie jedoch auf Member zuzugreifen, die nicht direkt von die verwaltete Schnittstelle verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="d637c-104">Sometimes, however, you will need to access members that the managed interface does not directly expose.</span></span> <span data-ttu-id="d637c-105">In diesem Thema werden zwei Methoden für den Zugriff auf nicht verfügbar gemachte Member an, einschließlich untersucht [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] und VBScript-Funktionen, die innerhalb einer Webseite definiert.</span><span class="sxs-lookup"><span data-stu-id="d637c-105">This topic examines two ways for accessing unexposed members, including [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] and VBScript functions defined inside of a Web page.</span></span>  
   
-## Zugreifen auf nicht verfügbar gemachte Member über verwaltete Schnittstellen  
- <xref:System.Windows.Forms.HtmlDocument> und <xref:System.Windows.Forms.HtmlElement> stellen vier Methoden bereit, die den Zugriff auf nicht verfügbar gemachte Member ermöglichen.  In der folgenden Tabelle werden die verschiedenen Arten und ihre entsprechenden Methoden angezeigt.  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a><span data-ttu-id="d637c-106">Zugreifen auf nicht verfügbar gemachte Member über verwaltete Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d637c-106">Accessing Unexposed Members through Managed Interfaces</span></span>  
+ <span data-ttu-id="d637c-107"><xref:System.Windows.Forms.HtmlDocument>und <xref:System.Windows.Forms.HtmlElement> vier Methoden bereit, die Zugriff auf nicht verfügbar gemachte Member ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="d637c-107"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> provide four methods that enable access to unexposed members.</span></span> <span data-ttu-id="d637c-108">Die folgende Tabelle zeigt die Typen und die entsprechenden Methoden.</span><span class="sxs-lookup"><span data-stu-id="d637c-108">The following table shows the types and their corresponding methods.</span></span>  
   
-|Memberart|Methode\(n\)|  
-|---------------|------------------|  
-|Eigenschaften \(<xref:System.Windows.Forms.HtmlElement>\)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
-|Methoden|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
-|Ereignisse \(<xref:System.Windows.Forms.HtmlDocument>\)|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
-|Ereignisse \(<xref:System.Windows.Forms.HtmlElement>\)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
-|Ereignisse \(<xref:System.Windows.Forms.HtmlWindow>\)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
+|<span data-ttu-id="d637c-109">Memberart</span><span class="sxs-lookup"><span data-stu-id="d637c-109">Member Type</span></span>|<span data-ttu-id="d637c-110">Methode(n)</span><span class="sxs-lookup"><span data-stu-id="d637c-110">Method(s)</span></span>|  
+|-----------------|-----------------|  
+|<span data-ttu-id="d637c-111">Eigenschaften (<xref:System.Windows.Forms.HtmlElement>)</span><span class="sxs-lookup"><span data-stu-id="d637c-111">Properties (<xref:System.Windows.Forms.HtmlElement>)</span></span>|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
+|<span data-ttu-id="d637c-112">Methoden</span><span class="sxs-lookup"><span data-stu-id="d637c-112">Methods</span></span>|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
+|<span data-ttu-id="d637c-113">Ereignisse (<xref:System.Windows.Forms.HtmlDocument>)</span><span class="sxs-lookup"><span data-stu-id="d637c-113">Events (<xref:System.Windows.Forms.HtmlDocument>)</span></span>|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
+|<span data-ttu-id="d637c-114">Ereignisse (<xref:System.Windows.Forms.HtmlElement>)</span><span class="sxs-lookup"><span data-stu-id="d637c-114">Events (<xref:System.Windows.Forms.HtmlElement>)</span></span>|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
+|<span data-ttu-id="d637c-115">Ereignisse (<xref:System.Windows.Forms.HtmlWindow>)</span><span class="sxs-lookup"><span data-stu-id="d637c-115">Events (<xref:System.Windows.Forms.HtmlWindow>)</span></span>|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- Wenn Sie diese Methoden verwenden, wird davon ausgegangen, dass Sie über ein Element des richtigen zugrunde liegenden Typs verfügen.  Angenommen, Sie möchten das `Submit`\-Ereignis eines `FORM`\-Elements auf einer HTML\-Seite überwachen, sodass Sie die `FORM`\-Werte teilweise vorab verarbeiten können, bevor der Benutzer sie an den Server übermittelt.  Wenn Sie im Idealfall die Kontrolle über die HTML\-Seite haben, würden Sie für das `FORM` ein eindeutiges `ID`\-Attribut definieren.  
+ <span data-ttu-id="d637c-116">Wenn Sie diese Methoden verwenden, wird davon ausgegangen, dass Sie ein Element mit dem richtigen zugrunde liegenden Typ aufweisen.</span><span class="sxs-lookup"><span data-stu-id="d637c-116">When you use these methods, it is assumed that you have an element of the correct underlying type.</span></span> <span data-ttu-id="d637c-117">Nehmen wir an, dass Sie überwachen möchten die `Submit` -Ereignis ein `FORM` Element auf einer HTML-Seite, sodass für einige erforderliche Verarbeitung ausgeführt werden können die `FORM`Werte, bevor die Benutzer an den Server gesendet.</span><span class="sxs-lookup"><span data-stu-id="d637c-117">Suppose that you want to listen to the `Submit` event of a `FORM` element on an HTML page, so that you can perform some pre-processing on the `FORM`'s values before the user submits them to the server.</span></span> <span data-ttu-id="d637c-118">Im Idealfall, wenn Sie die Kontrolle über den HTML-Code haben, definieren Sie die `FORM` ein eindeutiges `ID` Attribut.</span><span class="sxs-lookup"><span data-stu-id="d637c-118">Ideally, if you have control over the HTML, you would define the `FORM` to have a unique `ID` attribute.</span></span>  
   
 ```  
 <HTML>  
@@ -53,29 +57,29 @@ Das verwaltete HTML\-Dokumentobjektmodell \(DOM\) enthält eine Klasse mit dem N
 </HTML>  
 ```  
   
- Nachdem Sie diese Seite in das <xref:System.Windows.Forms.WebBrowser>\-Steuerelement geladen haben, können Sie die <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>\-Methode verwenden, um das `FORM` zur Laufzeit mithilfe des Arguments `form1` abzurufen.  
+ <span data-ttu-id="d637c-119">Nach dem Laden dieser Seite in der <xref:System.Windows.Forms.WebBrowser> -Steuerelement, können Sie die <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> Methode zum Abrufen der `FORM` zur Laufzeit mit `form1` als Argument.</span><span class="sxs-lookup"><span data-stu-id="d637c-119">After you load this page into the <xref:System.Windows.Forms.WebBrowser> control, you can use the <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> method to retrieve the `FORM` at run time using `form1` as the argument.</span></span>  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
-## Zugreifen auf nicht verwaltete Schnittstellen  
- Sie können auch auf nicht verfügbar gemachte Member des verwalteten HTML\-DOM zugreifen, indem Sie die nicht verwalteten Schnittstellen des Komponentenobjektmodells \(COM\) verwenden, die von jeder DOM\-Klasse verfügbar gemacht werden.  Dies empfiehlt sich, wenn Sie mehrere Aufrufe für nicht verfügbar gemachte Member machen müssen oder wenn die nicht verfügbar gemachten Member andere nicht verwaltete Schnittstellen zurückgeben, die nicht vom verwalteten HTML\-DOM umschlossen sind.  
+## <a name="accessing-unmanaged-interfaces"></a><span data-ttu-id="d637c-120">Zugreifen auf nicht verwalteten Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d637c-120">Accessing Unmanaged Interfaces</span></span>  
+ <span data-ttu-id="d637c-121">Sie können auch nicht verfügbar gemachte Member auf das verwaltete HTML-DOM zugreifen, mithilfe der nicht verwalteten Component Object Model (COM)-Schnittstellen, die von jeder DOM-Klasse verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="d637c-121">You can also access unexposed members on the managed HTML DOM by using the unmanaged Component Object Model (COM) interfaces exposed by each DOM class.</span></span> <span data-ttu-id="d637c-122">Dies wird empfohlen, wenn mehrere Aufrufe für nicht verfügbar gemachte Member vorgenommen werden muss oder nicht verfügbar gemachte Member andere nicht verwaltete Schnittstellen, die nicht vom verwalteten HTML DOM. umschlossen zurückgeben</span><span class="sxs-lookup"><span data-stu-id="d637c-122">This is recommended if you have to make several calls against unexposed members, or if the unexposed members return other unmanaged interfaces not wrapped by the managed HTML DOM.</span></span>  
   
- Die folgende Tabelle zeigt alle nicht verwalteten Schnittstellen, die über das verwaltete HTML\-DOM verfügbar gemacht werden.  Klicken Sie auf die einzelnen Links, um eine Erklärung zur Verwendung sowie Beispielcode anzuzeigen.  
+ <span data-ttu-id="d637c-123">Die folgende Tabelle zeigt alle nicht verwalteten Schnittstellen, die über das verwaltete HTML-DOM. verfügbar gemacht werden</span><span class="sxs-lookup"><span data-stu-id="d637c-123">The following table shows all of the unmanaged interfaces exposed through the managed HTML DOM.</span></span> <span data-ttu-id="d637c-124">Klicken Sie auf jeden Link eine Erläuterung zur Verwendung sowie z. B. Code.</span><span class="sxs-lookup"><span data-stu-id="d637c-124">Click on each link for an explanation of its usage and for example code.</span></span>  
   
-|type|Nicht verwaltete Schnittstelle|  
-|----------|------------------------------------|  
+|<span data-ttu-id="d637c-125">Typ</span><span class="sxs-lookup"><span data-stu-id="d637c-125">Type</span></span>|<span data-ttu-id="d637c-126">Nicht verwaltete Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d637c-126">Unmanaged Interface</span></span>|  
+|----------|-------------------------|  
 |<xref:System.Windows.Forms.HtmlDocument>|<xref:System.Windows.Forms.HtmlDocument.DomDocument%2A>|  
 |<xref:System.Windows.Forms.HtmlElement>|<xref:System.Windows.Forms.HtmlElement.DomElement%2A>|  
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- Die einfachste Methode, die COM\-Schnittstellen zu verwenden, besteht darin, einen Verweis auf die nicht verwaltete Bibliothek HTML\-DOM \(MSHTML.dll\) von der Anwendung hinzugefügt werden soll, auch wenn diese nicht unterstützt wird.  Weitere Informationen finden Sie [Knowledge Base\-Artikel 934368](http://support.microsoft.com/kb/934368)unter.  
+ <span data-ttu-id="d637c-127">Die einfachste Möglichkeit zum Verwenden von COM-Schnittstellen ist einen Verweis auf die nicht verwaltete Bibliothek von HTML-DOM (MSHTML.dll) von Ihrer Anwendung hinzufügen, obwohl dies nicht unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="d637c-127">The easiest way to use the COM interfaces is to add a reference to the unmanaged HTML DOM library (MSHTML.dll) from your application, although this is unsupported.</span></span> <span data-ttu-id="d637c-128">Weitere Informationen finden Sie unter [Knowledge Base-Artikel 934368](http://support.microsoft.com/kb/934368).</span><span class="sxs-lookup"><span data-stu-id="d637c-128">For more information, see [Knowledge Base Article 934368](http://support.microsoft.com/kb/934368).</span></span>  
   
-## Zugreifen auf Skriptfunktionen  
- Eine HTML\-Seite kann mithilfe einer Skriptsprache wie [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] oder VBScript eine oder mehrere Funktionen definieren.  Diese Funktionen werden in eine `SCRIPT`\-Seite der Seite eingefügt und können bei Bedarf oder als Reaktion auf ein Ereignis im DOM ausgeführt werden.  
+## <a name="accessing-script-functions"></a><span data-ttu-id="d637c-129">Zugreifen auf Skriptfunktionen</span><span class="sxs-lookup"><span data-stu-id="d637c-129">Accessing Script Functions</span></span>  
+ <span data-ttu-id="d637c-130">Eine HTML-Seite kann eine oder mehrere Funktionen definieren, indem Sie z. B. mithilfe einer Skriptsprache [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] oder VBScript.</span><span class="sxs-lookup"><span data-stu-id="d637c-130">An HTML page can define one or more functions by using a scripting language such as [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] or VBScript.</span></span> <span data-ttu-id="d637c-131">Diese Funktionen befinden sich innerhalb von einer `SCRIPT` auf der Seite der Seite ", und kann bei Bedarf oder als Reaktion auf ein Ereignis ausgeführt werden, auf das DOM validiert werden.</span><span class="sxs-lookup"><span data-stu-id="d637c-131">These functions are placed inside of a `SCRIPT` page in the page, and can be run on demand or in response to an event on the DOM.</span></span>  
   
- Sie können alle Skriptfunktionen aufrufen, die Sie mit der <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>\-Methode in einer HTML\-Seite definieren.  Wenn die Skriptmethode ein HTML\-Element zurückgibt, können Sie dieses Ergebnis in ein <xref:System.Windows.Forms.HtmlElement> umwandeln.  Ausführliche Informationen und Beispielcode finden Sie unter <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ <span data-ttu-id="d637c-132">Sie können alle Skriptfunktionen, die Sie definieren in einer HTML-Seite mit Aufrufen der <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="d637c-132">You can call any script functions you define in an HTML page using the <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> method.</span></span> <span data-ttu-id="d637c-133">Wenn Skriptmethode ein HTML-Element zurückgibt, können Sie eine Umwandlung verwenden, um dieses Ergebnis zu konvertieren einer <xref:System.Windows.Forms.HtmlElement>.</span><span class="sxs-lookup"><span data-stu-id="d637c-133">If the script method returns an HTML element, you can use a cast to convert this return result to an <xref:System.Windows.Forms.HtmlElement>.</span></span> <span data-ttu-id="d637c-134">Ausführliche Informationen und Beispielcode finden Sie unter <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.</span><span class="sxs-lookup"><span data-stu-id="d637c-134">For details and example code, see <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.</span></span>  
   
-## Siehe auch  
- [Verwenden des verwalteten HTML\-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="d637c-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d637c-135">See Also</span></span>  
+ [<span data-ttu-id="d637c-136">Verwenden des verwalteten HTML-Dokumentobjektmodells</span><span class="sxs-lookup"><span data-stu-id="d637c-136">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

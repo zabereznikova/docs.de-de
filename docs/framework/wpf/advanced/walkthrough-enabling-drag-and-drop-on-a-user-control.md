@@ -1,344 +1,350 @@
 ---
-title: "Exemplarische Vorgehensweise: Aktivieren der Drag &amp; Drop-Funktion auf einem Benutzersteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Drag & Drop [WPF], Exemplarische Vorgehensweise"
-  - "Exemplarische Vorgehensweise [WPF], Drag &amp; Drop"
+title: 'Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- walkthrough [WPF], drag-and-drop
+- drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 360b453b2a25b6822485f18cc81cb43e313949eb
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Exemplarische Vorgehensweise: Aktivieren der Drag &amp; Drop-Funktion auf einem Benutzersteuerelement
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie ein benutzerdefiniertes Benutzersteuerelement erstellen, das bei der Drag & Drop\-Datenübertragung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verwendet werden kann.  
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a><span data-ttu-id="34666-102">Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement</span><span class="sxs-lookup"><span data-stu-id="34666-102">Walkthrough: Enabling Drag and Drop on a User Control</span></span>
+<span data-ttu-id="34666-103">In dieser exemplarische Vorgehensweise wird veranschaulicht, wie man in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ein benutzerdefiniertes Steuerelement erstellt, das Drag & Drop-Datenübertragung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="34666-103">This walkthrough demonstrates how to create a custom user control that can participate in drag-and-drop data transfer in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
- In dieser exemplarischen Vorgehensweise erstellen Sie ein benutzerdefiniertes WPF\-<xref:System.Windows.Controls.UserControl>, das eine Kreisform darstellt.  Sie implementieren Funktionen für das Steuerelement, um die Datenübertragung mittels Drag & Drop zu ermöglichen.  Wenn Sie z. B. ein Kreissteuerelement auf ein anderes ziehen, werden Füllfarbendaten aus dem Quellkreis in das Ziel kopiert.  Wenn Sie ein Kreissteuerelement auf ein <xref:System.Windows.Controls.TextBox> ziehen, wird die Zeichenfolgendarstellung der Füllfarbe in das <xref:System.Windows.Controls.TextBox> kopiert.  Außerdem erstellen Sie eine kleine Anwendung, die zwei Bereichssteuerelemente und ein <xref:System.Windows.Controls.TextBox> enthält, um die Drag & Drop\-Funktion zu testen.  Sie schreiben Code, der den Bereichen das Verarbeiten abgelegter Kreisdaten ermöglicht, sodass Sie Kreise aus der Auflistung der untergeordneten Elemente eines Bereichs in den anderen Bereich verschieben oder kopieren können.  
+ <span data-ttu-id="34666-104">In dieser exemplarischen Vorgehensweise erstellen Sie eine benutzerdefinierte WPF <xref:System.Windows.Controls.UserControl> , die eine Form "Kreis" darstellt.</span><span class="sxs-lookup"><span data-stu-id="34666-104">In this walkthrough, you will create a custom WPF <xref:System.Windows.Controls.UserControl> that represents a circle shape.</span></span> <span data-ttu-id="34666-105">Sie werden dabei Funktionen für das Steuerelement implementieren, welche die Übertragung von Daten durch Drag & Drop ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="34666-105">You will implement functionality on the control to enable data transfer through drag-and-drop.</span></span> <span data-ttu-id="34666-106">Wenn Sie z.B. von einem Kreis-Steuerelement auf ein anderes ziehen, werden die Füllfarbdaten vom Quellkreis auf den Zielkreis kopiert.</span><span class="sxs-lookup"><span data-stu-id="34666-106">For example, if you drag from one Circle control to another, the Fill color data is copied from the source Circle to the target.</span></span> <span data-ttu-id="34666-107">Wenn Sie von einem Kreissteuerelement, ziehen Sie eine <xref:System.Windows.Controls.TextBox>, in eine Zeichenfolgendarstellung der Füllfarbe kopiert die <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-107">If you drag from a Circle control to a <xref:System.Windows.Controls.TextBox>, the string representation of the Fill color is copied to the <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="34666-108">Außerdem erstellen Sie eine kleine Anwendung, die zwei Panel-Steuerelemente enthält und eine <xref:System.Windows.Controls.TextBox> zum Testen der Drag-and-Drop-Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="34666-108">You will also create a small application that contains two panel controls and a <xref:System.Windows.Controls.TextBox> to test the drag-and-drop functionality.</span></span> <span data-ttu-id="34666-109">Sie werden Code erstellen, der es den Panels ermöglicht, abgelegte Kreisdaten zu verarbeiten, sodass Sie Kreise aus der Auflistung untergeordneter Elemente von einem Panel zum anderen hin verschieben oder kopieren können.</span><span class="sxs-lookup"><span data-stu-id="34666-109">You will write code that enables the panels to process dropped Circle data, which will enable you to move or copy Circles from the Children collection of one panel to the other.</span></span>  
   
- In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
+ <span data-ttu-id="34666-110">In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="34666-110">This walkthrough illustrates the following tasks:</span></span>  
   
--   Erstellen eines benutzerdefinierten Benutzersteuerelements  
+-   <span data-ttu-id="34666-111">Erstellen eines benutzerdefinierten Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="34666-111">Create a custom user control.</span></span>  
   
--   Einrichten des Benutzersteuerelements als Quelle des Ziehvorgangs  
+-   <span data-ttu-id="34666-112">Konfigurieren des benutzerdefinierten Steuerelements, sodass es als Quelle eines Ziehvorgangs dienen kann.</span><span class="sxs-lookup"><span data-stu-id="34666-112">Enable the user control to be a drag source.</span></span>  
   
--   Einrichten des Benutzersteuerelements als Ablageziel  
+-   <span data-ttu-id="34666-113">Konfigurieren des benutzerdefinierten Steuerelements, sodass es als Ziel eines Ablegevorgangs dienen kann.</span><span class="sxs-lookup"><span data-stu-id="34666-113">Enable the user control to be a drop target.</span></span>  
   
--   Einrichten eines Bereichs zum Empfangen abgelegter Daten des Benutzersteuerelements  
+-   <span data-ttu-id="34666-114">Konfigurieren eines Panels, sodass es von dem Benutzersteuerelement abgelegte Daten empfangen kann.</span><span class="sxs-lookup"><span data-stu-id="34666-114">Enable a panel to receive data dropped from the user control.</span></span>  
   
-## Vorbereitungsmaßnahmen  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
+## <a name="prerequisites"></a><span data-ttu-id="34666-115">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="34666-115">Prerequisites</span></span>  
+ <span data-ttu-id="34666-116">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="34666-116">You need the following components to complete this walkthrough:</span></span>  
   
--   Visual Studio 2010  
+-   <span data-ttu-id="34666-117">Visual Studio 2010</span><span class="sxs-lookup"><span data-stu-id="34666-117">Visual Studio 2010</span></span>  
   
-## Erstellen des Anwendungsprojekts  
- In diesem Abschnitt erstellen Sie die Anwendungsinfrastruktur, die eine Hauptseite mit zwei Bereichen und ein <xref:System.Windows.Controls.TextBox> enthält.  
+## <a name="creating-the-application-project"></a><span data-ttu-id="34666-118">Erstellen des Anwendungsprojekts</span><span class="sxs-lookup"><span data-stu-id="34666-118">Creating the Application Project</span></span>  
+ <span data-ttu-id="34666-119">In diesem Abschnitt erstellen Sie die Anwendungsstruktur, die eine Hauptseite mit zwei Bereiche enthält und eine <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-119">In this section, you will create the application infrastructure, which includes a main page with two panels and a <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-### So erstellen Sie das Projekt  
+### <a name="to-create-the-project"></a><span data-ttu-id="34666-120">So erstellen Sie das Projekt</span><span class="sxs-lookup"><span data-stu-id="34666-120">To create the project</span></span>  
   
-1.  Erstellen Sie in Visual Basic oder Visual C\# ein neues WPF\-Anwendungsprojekt mit dem Namen `DragDropExample`.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen eines neuen WPF\-Anwendungsprojekts](http://msdn.microsoft.com/de-de/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  <span data-ttu-id="34666-121">Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `DragDropExample`.</span><span class="sxs-lookup"><span data-stu-id="34666-121">Create a new WPF Application project in Visual Basic or Visual C# named `DragDropExample`.</span></span> <span data-ttu-id="34666-122">Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span><span class="sxs-lookup"><span data-stu-id="34666-122">For more information, see [How to: Create a New WPF Application Project](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span></span>  
   
-2.  Öffnen Sie MainWindow.xaml.  
+2.  <span data-ttu-id="34666-123">Öffnen Sie „MainWindow.xaml“.</span><span class="sxs-lookup"><span data-stu-id="34666-123">Open MainWindow.xaml.</span></span>  
   
-3.  Fügen Sie das folgende Markup zwischen den öffnenden und schließenden <xref:System.Windows.Controls.Grid>\-Tags hinzu.  
+3.  <span data-ttu-id="34666-124">Fügen Sie das folgende Markup zwischen den öffnenden und schließenden <xref:System.Windows.Controls.Grid> Tags.</span><span class="sxs-lookup"><span data-stu-id="34666-124">Add the following markup between the opening and closing <xref:System.Windows.Controls.Grid> tags.</span></span>  
   
-     Dieses Markup erstellt die Benutzeroberfläche für die Testanwendung.  
+     <span data-ttu-id="34666-125">Dieses Markup erstellt die Benutzeroberfläche für die Testanwendung.</span><span class="sxs-lookup"><span data-stu-id="34666-125">This markup creates the user interface for the test application.</span></span>  
   
-     [!code-xml[DragDropWalkthrough#PanelsStep1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]  
+     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]  
   
-## Hinzufügen eines neuen Benutzersteuerelements zum Projekt  
- In diesem Abschnitt fügen Sie dem Projekt ein neues Benutzersteuerelement hinzu.  
+## <a name="adding-a-new-user-control-to-the-project"></a><span data-ttu-id="34666-126">Hinzufügen eines neuen Benutzersteuerelements zum Projekt</span><span class="sxs-lookup"><span data-stu-id="34666-126">Adding a New User Control to the Project</span></span>  
+ <span data-ttu-id="34666-127">In diesem Abschnitt fügen Sie dem Projekt ein neues Benutzersteuerelement hinzu.</span><span class="sxs-lookup"><span data-stu-id="34666-127">In this section, you will add a new user control to the project.</span></span>  
   
-### So fügen Sie ein neues Benutzersteuerelement hinzu  
+### <a name="to-add-a-new-user-control"></a><span data-ttu-id="34666-128">So fügen Sie ein neues Benutzersteuerelement hinzu</span><span class="sxs-lookup"><span data-stu-id="34666-128">To add a new user control</span></span>  
   
-1.  Klicken Sie im Menü "Projekt" auf **Benutzersteuerelement hinzufügen**.  
+1.  <span data-ttu-id="34666-129">Klicken Sie im Menü „Projekt” auf **Benutzersteuerelement hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="34666-129">On the Project menu, select **Add User Control**.</span></span>  
   
-2.  Ändern Sie im Dialogfeld "Neues Element hinzufügen" den Namen in `Circle.xaml`, und klicken Sie auf **Hinzufügen**.  
+2.  <span data-ttu-id="34666-130">Ändern Sie im Dialogfeld „Neues Element hinzufügen” den Namen in `Circle.xaml`. Klicken Sie dann auf **Hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="34666-130">In the Add New Item dialog box, change the name to `Circle.xaml`, and click **Add**.</span></span>  
   
-     "Circle.xaml" und die zugehörige CodeBehind\-Datei werden dem Projekt hinzugefügt.  
+     <span data-ttu-id="34666-131">Circle.XAML und der dazugehörige CodeBehind werden dem Projekt hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="34666-131">Circle.xaml and its code-behind is added to the project.</span></span>  
   
-3.  Öffnen Sie "Circle.xaml".  
+3.  <span data-ttu-id="34666-132">Öffnen Sie Circle.xaml.</span><span class="sxs-lookup"><span data-stu-id="34666-132">Open Circle.xaml.</span></span>  
   
-     Diese Datei enthält die Benutzeroberflächenelemente des Benutzersteuerelements.  
+     <span data-ttu-id="34666-133">Diese Datei enthält die Benutzeroberflächenelemente des Benutzersteuerelements.</span><span class="sxs-lookup"><span data-stu-id="34666-133">This file will contain the user interface elements of the user control.</span></span>  
   
-4.  Fügen Sie dem Stamm\-<xref:System.Windows.Controls.Grid> das folgende Markup hinzu, um ein einfaches Benutzersteuerelement mit einem blauen Kreis als Benutzeroberfläche zu erstellen.  
+4.  <span data-ttu-id="34666-134">Fügen Sie das folgende Markup in das Stammverzeichnis <xref:System.Windows.Controls.Grid> ein einfache Benutzersteuerelement zu erstellen, die einen blauen Kreis als seine Benutzeroberfläche verfügt.</span><span class="sxs-lookup"><span data-stu-id="34666-134">Add the following markup to the root <xref:System.Windows.Controls.Grid> to create a simple user control that has a blue circle as its UI.</span></span>  
   
-     [!code-xml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]  
+     [!code-xaml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]  
   
-5.  Öffnen Sie "Circle.xaml.cs" bzw. "Circle.xaml.vb".  
+5.  <span data-ttu-id="34666-135">Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".</span><span class="sxs-lookup"><span data-stu-id="34666-135">Open Circle.xaml.cs or Circle.xaml.vb.</span></span>  
   
-6.  Fügen Sie in C\# den folgenden Code nach dem Standardkonstruktor hinzu, um einen Kopierkonstruktor zu erstellen.  Fügen Sie in Visual Basic den folgenden Code hinzu, um einen Standardkonstruktor und einen Kopierkonstruktor zu erstellen.  
+6.  <span data-ttu-id="34666-136">Fügen Sie in C# den folgenden Code nach dem Standardkonstruktor hinzu, um einen Kopierkonstruktor zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="34666-136">In C#, add the following code after the default constructor to create a copy constructor.</span></span> <span data-ttu-id="34666-137">Fügen Sie in Visual Basic den folgenden Code hinzu, um sowohl einen Standardkonstruktor als auch einen Kopierkonstruktor zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="34666-137">In Visual Basic, add the following code to create both a default constructor and a copy constructor.</span></span>  
   
-     Damit das Benutzersteuerelement kopiert werden kann, fügen Sie in der CodeBehind\-Datei eine Kopierkonstruktormethode hinzu.  Im vereinfachten Kreisbenutzersteuerelement kopieren Sie nur die Füllung und die Größe des Benutzersteuerelements.  
+     <span data-ttu-id="34666-138">Fügen Sie eine Kopierkonstruktor-Methode in die CodeBehind-Datei ein, damit das Benutzersteuerelement kopiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="34666-138">In order to allow the user control to be copied, you add a copy constructor method in the code-behind file.</span></span> <span data-ttu-id="34666-139">Im vereinfachten kreisförmigen Benutzersteuerelement wollen wir nur die Füllfarbe und die Größe des Benutzersteuerelements kopieren.</span><span class="sxs-lookup"><span data-stu-id="34666-139">In the simplified Circle user control, you will only copy the Fill and the size of the of the user control.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
      [!code-vb[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]  
   
-### So fügen Sie das Benutzersteuerelement dem Hauptfenster hinzu  
+### <a name="to-add-the-user-control-to-the-main-window"></a><span data-ttu-id="34666-140">So fügen Sie das Benutzersteuerelement dem Hauptfenster hinzu</span><span class="sxs-lookup"><span data-stu-id="34666-140">To add the user control to the main window</span></span>  
   
-1.  Öffnen Sie MainWindow.xaml.  
+1.  <span data-ttu-id="34666-141">Öffnen Sie „MainWindow.xaml“.</span><span class="sxs-lookup"><span data-stu-id="34666-141">Open MainWindow.xaml.</span></span>  
   
-2.  Fügen Sie dem öffnenden <xref:System.Windows.Window>\-Tag den folgenden XAML\-Code hinzu, um einen XML\-Namespaceverweis auf die aktuelle Anwendung zu erstellen.  
+2.  <span data-ttu-id="34666-142">Fügen Sie den folgenden XAML-Code dem öffnenden <xref:System.Windows.Window> -Tag, um eine XML-Namespaceverweis auf die aktuelle Anwendung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="34666-142">Add the following XAML to the opening <xref:System.Windows.Window> tag to create an XML namespace reference to the current application.</span></span>  
   
     ```  
     xmlns:local="clr-namespace:DragDropExample"  
     ```  
   
-3.  Fügen Sie im ersten <xref:System.Windows.Controls.StackPanel> den folgenden XAML\-Code hinzu, um zwei Instanzen des Kreisbenutzersteuerelements im ersten Bereich zu erstellen.  
+3.  <span data-ttu-id="34666-143">Im ersten <xref:System.Windows.Controls.StackPanel>, fügen Sie den folgenden XAML-Code zum Erstellen von zwei Instanzen des Benutzersteuerelements Kreis im ersten Bereich hinzu.</span><span class="sxs-lookup"><span data-stu-id="34666-143">In the first <xref:System.Windows.Controls.StackPanel>, add the following XAML to create two instances of the Circle user control in the first panel.</span></span>  
   
-     [!code-xml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]  
+     [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]  
   
-     Das vollständige XAML für den Bereich sieht folgendermaßen aus.  
+     <span data-ttu-id="34666-144">Der vollständige XAML-Code für das Panel sieht folgendermaßen aus.</span><span class="sxs-lookup"><span data-stu-id="34666-144">The full XAML for the panel looks like the following.</span></span>  
   
-     [!code-xml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]  
+     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]  
   
-## Implementieren von Ereignissen für die Quelle des Ziehvorgangs im Benutzersteuerelement  
- In diesem Abschnitt überschreiben Sie die <xref:System.Windows.UIElement.OnMouseMove%2A>\-Methode, und Sie initiieren den Drag & Drop\-Vorgang.  
+## <a name="implementing-drag-source-events-in-the-user-control"></a><span data-ttu-id="34666-145">Implementieren der Ereignisse der Ziehquelle im Benutzersteuerelement</span><span class="sxs-lookup"><span data-stu-id="34666-145">Implementing Drag Source Events in the User Control</span></span>  
+ <span data-ttu-id="34666-146">In diesem Abschnitt, überschreiben Sie die <xref:System.Windows.UIElement.OnMouseMove%2A> -Methode und initiieren Sie die Drag-and-Drop-Vorgang.</span><span class="sxs-lookup"><span data-stu-id="34666-146">In this section, you will override the <xref:System.Windows.UIElement.OnMouseMove%2A> method and initiate the drag-and-drop operation.</span></span>  
   
- Wenn ein Ziehvorgang gestartet wird \(eine Maustaste wird gedrückt und die Maus wird bewegt\), verpacken Sie die zu übertragenden Daten in einem <xref:System.Windows.DataObject>.  In diesem Fall verpackt das Kreissteuerelement drei Datenelemente: eine Zeichenfolgendarstellung der Füllfarbe, eine Double\-Darstellung seiner Höhe und eine Kopie von sich selbst.  
+ <span data-ttu-id="34666-147">Wenn ein Ziehvorgang gestartet wird (eine Maustaste gedrückt wird und die Maus bewegt wird), Verpacken Sie die Daten in übertragen werden eine <xref:System.Windows.DataObject>.</span><span class="sxs-lookup"><span data-stu-id="34666-147">If a drag is started (a mouse button is pressed and the mouse is moved), you will package the data to be transferred into a <xref:System.Windows.DataObject>.</span></span> <span data-ttu-id="34666-148">In diesem Fall wird das Kreis-Steuerelement drei Datenelemente verpacken: eine Zeichenfolgendarstellung seiner Füllfarbe, eine double-Darstellung seiner Höhe und eine Kopie von sich selbst.</span><span class="sxs-lookup"><span data-stu-id="34666-148">In this case, the Circle control will package three data items; a string representation of its Fill color, a double representation of its height, and a copy of itself.</span></span>  
   
-### So initiieren Sie einen Drag & Drop\-Vorgang  
+### <a name="to-initiate-a-drag-and-drop-operation"></a><span data-ttu-id="34666-149">Initiieren eines Drag & Drop-Vorgangs</span><span class="sxs-lookup"><span data-stu-id="34666-149">To initiate a drag-and-drop operation</span></span>  
   
-1.  Öffnen Sie "Circle.xaml.cs" bzw. "Circle.xaml.vb".  
+1.  <span data-ttu-id="34666-150">Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".</span><span class="sxs-lookup"><span data-stu-id="34666-150">Open Circle.xaml.cs or Circle.xaml.vb.</span></span>  
   
-2.  Fügen Sie die folgende <xref:System.Windows.UIElement.OnMouseMove%2A>\-Überschreibung hinzu, um eine Klassenbehandlung für das <xref:System.Windows.UIElement.MouseMove>\-Ereignis bereitzustellen.  
+2.  <span data-ttu-id="34666-151">Fügen Sie die folgenden <xref:System.Windows.UIElement.OnMouseMove%2A> überschreiben, um eine Klassenbehandlung für bieten die <xref:System.Windows.UIElement.MouseMove> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="34666-151">Add the following <xref:System.Windows.UIElement.OnMouseMove%2A> override to provide class handling for the <xref:System.Windows.UIElement.MouseMove> event.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
      [!code-vb[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]  
   
-     Diese <xref:System.Windows.UIElement.OnMouseMove%2A>\-Überschreibung führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-152">Dies <xref:System.Windows.UIElement.OnMouseMove%2A> Außerkraftsetzung führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-152">This <xref:System.Windows.UIElement.OnMouseMove%2A> override performs the following tasks:</span></span>  
   
-    -   Sie überprüft, ob die linke Maustaste gedrückt wird, während sich der Mauszeiger bewegt.  
+    -   <span data-ttu-id="34666-153">Überprüft, ob die linke Maustaste gedrückt wird, während sich die Maus bewegt.</span><span class="sxs-lookup"><span data-stu-id="34666-153">Checks whether the left mouse button is pressed while the mouse is moving.</span></span>  
   
-    -   Sie verpackt Kreisdaten in einem <xref:System.Windows.DataObject>.  In diesem Fall verpackt das Kreissteuerelement drei Datenelemente: eine Zeichenfolgendarstellung der Füllfarbe, eine Double\-Darstellung seiner Höhe und eine Kopie von sich selbst.  
+    -   <span data-ttu-id="34666-154">Pakete die Kreis-Daten in eine <xref:System.Windows.DataObject>.</span><span class="sxs-lookup"><span data-stu-id="34666-154">Packages the Circle data into a <xref:System.Windows.DataObject>.</span></span> <span data-ttu-id="34666-155">In diesem Fall verpackt das Kreis-Steuerelement drei Datenelemente: eine Zeichenfolgendarstellung seiner Füllfarbe, eine double-Darstellung seiner Höhe und eine Kopie von sich selbst.</span><span class="sxs-lookup"><span data-stu-id="34666-155">In this case, the Circle control packages three data items; a string representation of its Fill color, a double representation of its height, and a copy of itself.</span></span>  
   
-    -   Sie ruft die statische <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=fullName>\-Methode auf, um den Drag & Drop\-Vorgang zu initiieren.  Die folgenden drei Parameter werden an die <xref:System.Windows.DragDrop.DoDragDrop%2A>\-Methode übergeben:  
+    -   <span data-ttu-id="34666-156">Ruft die statische <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> Methode, um den Drag & Drop-Vorgang zu initiieren.</span><span class="sxs-lookup"><span data-stu-id="34666-156">Calls the static <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> method to initiate the drag-and-drop operation.</span></span> <span data-ttu-id="34666-157">Übergeben Sie die folgenden drei Parameter für die <xref:System.Windows.DragDrop.DoDragDrop%2A> Methode:</span><span class="sxs-lookup"><span data-stu-id="34666-157">You pass the following three parameters to the <xref:System.Windows.DragDrop.DoDragDrop%2A> method:</span></span>  
   
-        -   `dragSource` – Ein Verweis auf dieses Steuerelement.  
+        -   <span data-ttu-id="34666-158">`dragSource`: Ein Verweis auf dieses Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="34666-158">`dragSource` – A reference to this control.</span></span>  
   
-        -   `data` – Das im vorherigen Code erstellte <xref:System.Windows.DataObject>.  
+        -   <span data-ttu-id="34666-159">`data`– Die <xref:System.Windows.DataObject> im vorherigen Code erstellt.</span><span class="sxs-lookup"><span data-stu-id="34666-159">`data` – The <xref:System.Windows.DataObject> created in the previous code.</span></span>  
   
-        -   `allowedEffects` – Die zulässigen Drag & Drop\-Vorgänge \(<xref:System.Windows.DragDropEffects> oder <xref:System.Windows.DragDropEffects>\).  
+        -   <span data-ttu-id="34666-160">`allowedEffects`– Die zulässigen Drag-and-Drop-Vorgänge, die sind <xref:System.Windows.DragDropEffects.Copy> oder <xref:System.Windows.DragDropEffects.Move>.</span><span class="sxs-lookup"><span data-stu-id="34666-160">`allowedEffects` – The allowed drag-and-drop operations, which are <xref:System.Windows.DragDropEffects.Copy> or <xref:System.Windows.DragDropEffects.Move>.</span></span>  
   
-3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+3.  <span data-ttu-id="34666-161">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="34666-161">Press F5 to build and run the application.</span></span>  
   
-4.  Klicken Sie auf eines der Kreissteuerelemente, und ziehen Sie es über die Bereiche, den anderen Kreis und das <xref:System.Windows.Controls.TextBox>.  Wenn der Kreis über das <xref:System.Windows.Controls.TextBox> gezogen wird, ändert sich die Darstellung des Cursors, um eine Verschiebung anzuzeigen.  
+4.  <span data-ttu-id="34666-162">Klicken Sie auf eines der Steuerelemente Kreis, und ziehen Sie es über die Bereiche, die andere Kreis und die <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-162">Click one of the Circle controls and drag it over the panels, the other Circle, and the <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="34666-163">Beim Ziehen von über die <xref:System.Windows.Controls.TextBox>, ändert sich der Cursor, um einen Verschiebevorgang anzugeben.</span><span class="sxs-lookup"><span data-stu-id="34666-163">When dragging over the <xref:System.Windows.Controls.TextBox>, the cursor changes to indicate a move.</span></span>  
   
-5.  Drücken Sie die STRG\-TASTE, während der Kreis über das <xref:System.Windows.Controls.TextBox> gezogen wird.  Die Darstellung des Cursors ändert sich, um einen Kopiervorgang anzuzeigen.  
+5.  <span data-ttu-id="34666-164">Beim Ziehen eines Kreises über die <xref:System.Windows.Controls.TextBox>, drücken Sie die STRG-Taste.</span><span class="sxs-lookup"><span data-stu-id="34666-164">While dragging a Circle over the <xref:System.Windows.Controls.TextBox>, press the CTRL key.</span></span> <span data-ttu-id="34666-165">Beachten Sie, wie sich der Cursor ändert, um einen Kopiervorgang anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="34666-165">Notice how the cursor changes to indicate a copy.</span></span>  
   
-6.  Legen Sie den Kreis per Drag & Drop auf dem <xref:System.Windows.Controls.TextBox> ab.  Die Zeichenfolgendarstellung der Füllfarbe des Kreises wird an <xref:System.Windows.Controls.TextBox> angefügt.  
+6.  <span data-ttu-id="34666-166">Drag & drop einen Kreis auf dem <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-166">Drag and drop a Circle onto the <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="34666-167">Die Zeichenfolgendarstellung der Füllfarbe für den Kreis angehängt der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-167">The string representation of the Circle’s fill color is appended to the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-     ![Zeichenfolgendarstellung der Füllfarbe für den Kreis](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop\_ColorString")  
+     <span data-ttu-id="34666-168">![Zeichenfolgendarstellung der Füllfarbe des Kreises](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")</span><span class="sxs-lookup"><span data-stu-id="34666-168">![String representation of Circle's fill color](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")</span></span>  
   
- Standardmäßig ändert sich die Darstellung des Cursors während eines Drag & Drop\-Vorgangs, um anzugeben, welche Auswirkungen das Ablegen der Daten hat.  Sie können das Feedback für den Benutzer anpassen, indem Sie das <xref:System.Windows.UIElement.GiveFeedback>\-Ereignis behandeln und einen anderen Cursor festlegen.  
+ <span data-ttu-id="34666-169">Standardmäßig ändert sich der Cursor während eines Drag & Drop-Vorgangs, um anzuzeigen, welche Auswirkungen das Ablegen der Daten hat.</span><span class="sxs-lookup"><span data-stu-id="34666-169">By default, the cursor will change during a drag-and-drop operation to indicate what effect dropping the data will have.</span></span> <span data-ttu-id="34666-170">Sie können anpassen, dass das Feedback für den Benutzer durch Behandeln der <xref:System.Windows.UIElement.GiveFeedback> Ereignis und einen anderen Cursor festlegen.</span><span class="sxs-lookup"><span data-stu-id="34666-170">You can customize the feedback given to the user by handling the <xref:System.Windows.UIElement.GiveFeedback> event and setting a different cursor.</span></span>  
   
-### So geben Sie dem Benutzer Feedback  
+### <a name="to-give-feedback-to-the-user"></a><span data-ttu-id="34666-171">Feedback an den Benutzer geben</span><span class="sxs-lookup"><span data-stu-id="34666-171">To give feedback to the user</span></span>  
   
-1.  Öffnen Sie "Circle.xaml.cs" bzw. "Circle.xaml.vb".  
+1.  <span data-ttu-id="34666-172">Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".</span><span class="sxs-lookup"><span data-stu-id="34666-172">Open Circle.xaml.cs or Circle.xaml.vb.</span></span>  
   
-2.  Fügen Sie die folgende <xref:System.Windows.UIElement.OnGiveFeedback%2A>\-Überschreibung hinzu, um eine Klassenbehandlung für das <xref:System.Windows.UIElement.GiveFeedback>\-Ereignis bereitzustellen.  
+2.  <span data-ttu-id="34666-173">Fügen Sie die folgenden <xref:System.Windows.UIElement.OnGiveFeedback%2A> überschreiben, um eine Klassenbehandlung für bieten die <xref:System.Windows.UIElement.GiveFeedback> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="34666-173">Add the following <xref:System.Windows.UIElement.OnGiveFeedback%2A> override to provide class handling for the <xref:System.Windows.UIElement.GiveFeedback> event.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
      [!code-vb[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]  
   
-     Diese <xref:System.Windows.UIElement.OnGiveFeedback%2A>\-Überschreibung führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-174">Dies <xref:System.Windows.UIElement.OnGiveFeedback%2A> Außerkraftsetzung führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-174">This <xref:System.Windows.UIElement.OnGiveFeedback%2A> override performs the following tasks:</span></span>  
   
-    -   Sie überprüft die <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>\-Werte, die im <xref:System.Windows.UIElement.DragOver>\-Ereignishandler des Ablageziels festgelegt sind.  
+    -   <span data-ttu-id="34666-175">Überprüft die <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> , in des Ablageziels festgelegte, Werte <xref:System.Windows.UIElement.DragOver> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="34666-175">Checks the <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> values that are set in the drop target's <xref:System.Windows.UIElement.DragOver> event handler.</span></span>  
   
-    -   Sie legt basierend auf dem <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>\-Wert einen benutzerdefinierten Cursor fest.  Der Cursor soll dem Benutzer visuelles Feedback über die Auswirkungen des Ablegens der Daten geben.  
+    -   <span data-ttu-id="34666-176">Legt einen benutzerdefinierten Cursor auf der Grundlage der <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> Wert.</span><span class="sxs-lookup"><span data-stu-id="34666-176">Sets a custom cursor based on the <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> value.</span></span> <span data-ttu-id="34666-177">Der Cursor soll visuelles Feedback an den Benutzer geben, welche Auswirkungen das Ablegen der Daten hat.</span><span class="sxs-lookup"><span data-stu-id="34666-177">The cursor is intended to give visual feedback to the user about what effect dropping the data will have.</span></span>  
   
-3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+3.  <span data-ttu-id="34666-178">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="34666-178">Press F5 to build and run the application.</span></span>  
   
-4.  Ziehen Sie eines der Kreissteuerelemente über die Bereiche, den anderen Kreis und das <xref:System.Windows.Controls.TextBox>.  Jetzt werden die benutzerdefinierten Cursor angezeigt, die Sie in der <xref:System.Windows.UIElement.OnGiveFeedback%2A>\-Überschreibung angegeben haben.  
+4.  <span data-ttu-id="34666-179">Ziehen eines Kreises über die Bereiche, die andere Kreis steuert und den <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-179">Drag one of the Circle controls over the panels, the other Circle, and the <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="34666-180">Beachten Sie, dass der Cursor jetzt die benutzerdefinierte Cursor, die Sie angegeben haben sind, in der <xref:System.Windows.UIElement.OnGiveFeedback%2A> außer Kraft setzen.</span><span class="sxs-lookup"><span data-stu-id="34666-180">Notice that the cursors are now the custom cursors that you specified in the <xref:System.Windows.UIElement.OnGiveFeedback%2A> override.</span></span>  
   
-     ![Drag & Drop mit benutzerdefiniertem Cursor](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop\_CustomCursor")  
+     <span data-ttu-id="34666-181">![Drag & Drop mit benutzerdefiniertem Cursor](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")</span><span class="sxs-lookup"><span data-stu-id="34666-181">![Drag and drop with custom cursors](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")</span></span>  
   
-5.  Wählen Sie den Text `green` im <xref:System.Windows.Controls.TextBox> aus.  
+5.  <span data-ttu-id="34666-182">Wählen Sie den Text `green` aus der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-182">Select the text `green` from the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-6.  Ziehen Sie den Text `green` auf ein Kreissteuerelement.  Die Standardcursor werden angezeigt, um die Auswirkungen des Drag & Drop\-Vorgangs anzugeben.  Der Feedbackcursor wird immer durch die Quelle des Ziehvorgangs festgelegt.  
+6.  <span data-ttu-id="34666-183">Ziehen Sie den Text `green` auf ein Kreis-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="34666-183">Drag the `green` text to a Circle control.</span></span> <span data-ttu-id="34666-184">Beachten Sie, dass die standardmäßigen Cursor angezeigt werden, um die Auswirkungen des Drag & Drop-Vorgangs anzugeben.</span><span class="sxs-lookup"><span data-stu-id="34666-184">Notice that the default cursors are shown to indicate the effects of the drag-and-drop operation.</span></span> <span data-ttu-id="34666-185">Der Feedbackcursor wird immer durch die Quelle des Ziehvorgangs festgelegt.</span><span class="sxs-lookup"><span data-stu-id="34666-185">The feedback cursor is always set by the drag source.</span></span>  
   
-## Implementieren von Ablagezielereignisse im Benutzersteuerelement  
- In diesem Abschnitt geben Sie an, dass das Benutzersteuerelement ein Ablageziel ist, Sie überschreiben die Methoden, die dem Benutzersteuerelement die Funktion als Ablageziel ermöglichen, und Sie verarbeiten die Daten, die auf dem Benutzersteuerelement abgelegt werden.  
+## <a name="implementing-drop-target-events-in-the-user-control"></a><span data-ttu-id="34666-186">Implementieren der Ereignisse des Ablageziels im Benutzersteuerelement</span><span class="sxs-lookup"><span data-stu-id="34666-186">Implementing Drop Target Events in the User Control</span></span>  
+ <span data-ttu-id="34666-187">In diesem Abschnitt geben Sie an, dass das Benutzersteuerelement ein Ablageziel ist, überschreiben die Methoden, die das Benutzersteuerelement befähigen, ein Ablageziel sein und verarbeiten die Daten, die darauf abgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="34666-187">In this section, you will specify that the user control is a drop target, override the methods that enable the user control to be a drop target, and process the data that is dropped on it.</span></span>  
   
-### So richten Sie das Benutzersteuerelement als Ablageziel ein  
+### <a name="to-enable-the-user-control-to-be-a-drop-target"></a><span data-ttu-id="34666-188">So konfigurieren Sie das Benutzersteuerelement als Ziel eines Ablegevorgangs</span><span class="sxs-lookup"><span data-stu-id="34666-188">To enable the user control to be a drop target</span></span>  
   
-1.  Öffnen Sie "Circle.xaml".  
+1.  <span data-ttu-id="34666-189">Öffnen Sie Circle.xaml.</span><span class="sxs-lookup"><span data-stu-id="34666-189">Open Circle.xaml.</span></span>  
   
-2.  Fügen Sie im öffnenden <xref:System.Windows.Controls.UserControl>\-Tag die <xref:System.Windows.UIElement.AllowDrop%2A>\-Eigenschaft hinzu, und legen Sie sie auf `true` fest.  
+2.  <span data-ttu-id="34666-190">Im öffnenden <xref:System.Windows.Controls.UserControl> zu kennzeichnen, fügen Sie der <xref:System.Windows.UIElement.AllowDrop%2A> Eigenschaft, und legen Sie es auf `true`.</span><span class="sxs-lookup"><span data-stu-id="34666-190">In the opening <xref:System.Windows.Controls.UserControl> tag, add the <xref:System.Windows.UIElement.AllowDrop%2A> property and set it to `true`.</span></span>  
   
-     [!code-xml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]  
+     [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]  
   
- Die <xref:System.Windows.UIElement.OnDrop%2A>\-Methode wird aufgerufen, wenn die <xref:System.Windows.UIElement.AllowDrop%2A>\-Eigenschaft auf `true` festgelegt ist und Daten aus der Quelle des Ziehvorgangs auf dem Kreisbenutzersteuerelement abgelegt werden.  In dieser Methode werden die abgelegten Daten verarbeitet und auf den Kreis angewendet.  
+ <span data-ttu-id="34666-191">Die <xref:System.Windows.UIElement.OnDrop%2A> Methode wird aufgerufen, wenn die <xref:System.Windows.UIElement.AllowDrop%2A> -Eigenschaftensatz auf `true` und Daten aus der Quelle des Ziehvorgangs werden auf das Benutzersteuerelement Kreis gelöscht.</span><span class="sxs-lookup"><span data-stu-id="34666-191">The <xref:System.Windows.UIElement.OnDrop%2A> method is called when the <xref:System.Windows.UIElement.AllowDrop%2A> property is set to `true` and data from the drag source is dropped on the Circle user control.</span></span> <span data-ttu-id="34666-192">In dieser Methode verarbeiten Sie die Daten, die abgelegt wurden und wenden sie auf den Kreis an.</span><span class="sxs-lookup"><span data-stu-id="34666-192">In this method, you will process the data that was dropped and apply the data to the Circle.</span></span>  
   
-### So verarbeiten Sie die abgelegten Daten  
+### <a name="to-process-the-dropped-data"></a><span data-ttu-id="34666-193">So verarbeiten Sie die abgelegten Daten</span><span class="sxs-lookup"><span data-stu-id="34666-193">To process the dropped data</span></span>  
   
-1.  Öffnen Sie "Circle.xaml.cs" bzw. "Circle.xaml.vb".  
+1.  <span data-ttu-id="34666-194">Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".</span><span class="sxs-lookup"><span data-stu-id="34666-194">Open Circle.xaml.cs or Circle.xaml.vb.</span></span>  
   
-2.  Fügen Sie die folgende <xref:System.Windows.UIElement.OnDrop%2A>\-Überschreibung hinzu, um eine Klassenbehandlung für das <xref:System.Windows.UIElement.Drop>\-Ereignis bereitzustellen.  
+2.  <span data-ttu-id="34666-195">Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDrop%2A> überschreiben, um eine Klassenbehandlung für bieten die <xref:System.Windows.UIElement.Drop> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="34666-195">Add the following <xref:System.Windows.UIElement.OnDrop%2A> override to provide class handling for the <xref:System.Windows.UIElement.Drop> event.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#OnDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
      [!code-vb[DragDropWalkthrough#OnDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]  
   
-     Diese <xref:System.Windows.UIElement.OnDrop%2A>\-Überschreibung führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-196">Dies <xref:System.Windows.UIElement.OnDrop%2A> Außerkraftsetzung führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-196">This <xref:System.Windows.UIElement.OnDrop%2A> override performs the following tasks:</span></span>  
   
-    -   Sie überprüft mithilfe der <xref:System.Windows.DataObject.GetDataPresent%2A>\-Methode, ob die gezogenen Daten ein Zeichenfolgenobjekt enthalten.  
+    -   <span data-ttu-id="34666-197">Verwendet die <xref:System.Windows.DataObject.GetDataPresent%2A> Methode zum Überprüfen, ob die gezogenen Daten einem String-Objekt enthält.</span><span class="sxs-lookup"><span data-stu-id="34666-197">Uses the <xref:System.Windows.DataObject.GetDataPresent%2A> method to check if the dragged data contains a string object.</span></span>  
   
-    -   Sie extrahiert mithilfe der <xref:System.Windows.DataObject.GetData%2A>\-Methode die Zeichenfolgendaten \(sofern vorhanden\).  
+    -   <span data-ttu-id="34666-198">Verwendet die <xref:System.Windows.DataObject.GetData%2A> Methode, um die Zeichenfolgedaten extrahiert werden, wenn es vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="34666-198">Uses the <xref:System.Windows.DataObject.GetData%2A> method to extract the string data if it is present.</span></span>  
   
-    -   Sie versucht, die Zeichenfolge mithilfe von <xref:System.Windows.Media.BrushConverter> in einen <xref:System.Windows.Media.Brush> zu konvertieren.  
+    -   <span data-ttu-id="34666-199">Verwendet eine <xref:System.Windows.Media.BrushConverter> zu dem Versuch, die Zeichenfolge zum Konvertieren einer <xref:System.Windows.Media.Brush>.</span><span class="sxs-lookup"><span data-stu-id="34666-199">Uses a <xref:System.Windows.Media.BrushConverter> to try to convert the string to a <xref:System.Windows.Media.Brush>.</span></span>  
   
-    -   Wenn die Konvertierung erfolgreich ist, wendet sie den Pinsel auf die <xref:System.Windows.Shapes.Shape.Fill%2A> der <xref:System.Windows.Shapes.Ellipse> an, die die Benutzeroberfläche des Kreissteuerelements bereitstellt.  
+    -   <span data-ttu-id="34666-200">Wenn die Konvertierung erfolgreich ist, gilt den Pinsel, der <xref:System.Windows.Shapes.Shape.Fill%2A> von der <xref:System.Windows.Shapes.Ellipse> , der die Benutzeroberfläche des Steuerelements Kreis bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="34666-200">If the conversion is successful, applies the brush to the <xref:System.Windows.Shapes.Shape.Fill%2A> of the <xref:System.Windows.Shapes.Ellipse> that provides the UI of the Circle control.</span></span>  
   
-    -   Sie markiert das <xref:System.Windows.UIElement.Drop>\-Ereignis als behandelt.  Das Drop\-Ereignis sollte als behandelt markiert werden, damit andere Elemente, die dieses Ereignis empfangen, wissen, dass es vom Kreisbenutzersteuerelement behandelt wurde.  
+    -   <span data-ttu-id="34666-201">Markiert die <xref:System.Windows.UIElement.Drop> Ereignis als behandelt.</span><span class="sxs-lookup"><span data-stu-id="34666-201">Marks the <xref:System.Windows.UIElement.Drop> event as handled.</span></span> <span data-ttu-id="34666-202">Sie sollten das Drop-Ereignis als behandelt kennzeichnen, damit andere Elemente, die dieses Ereignis empfangen, wissen, dass das Kreis-Steuerelement es behandelt hat.</span><span class="sxs-lookup"><span data-stu-id="34666-202">You should mark the drop event as handled so that other elements that receive this event know that the Circle user control handled it.</span></span>  
   
-3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+3.  <span data-ttu-id="34666-203">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="34666-203">Press F5 to build and run the application.</span></span>  
   
-4.  Wählen Sie den Text `green` im <xref:System.Windows.Controls.TextBox> aus.  
+4.  <span data-ttu-id="34666-204">Wählen Sie den Text `green` in der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-204">Select the text `green` in the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-5.  Ziehen Sie den Text auf ein Kreissteuerelement, und legen Sie ihn ab.  Die Farbe des Kreises ändert sich von Blau in Grün.  
+5.  <span data-ttu-id="34666-205">Ziehen Sie den Text auf ein Kreis-Steuerelement, und legen Sie ihn ab.</span><span class="sxs-lookup"><span data-stu-id="34666-205">Drag the text to a Circle control and drop it.</span></span> <span data-ttu-id="34666-206">Der Kreis ändert sich von Blau in Grün.</span><span class="sxs-lookup"><span data-stu-id="34666-206">The Circle changes from blue to green.</span></span>  
   
-     ![Zeichenfolge in einen Pinsel konvertieren](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop\_DropGreenText")  
+     <span data-ttu-id="34666-207">![Konvertieren einer Zeichenfolge in einen Pinsel](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")</span><span class="sxs-lookup"><span data-stu-id="34666-207">![Convert a string to a brush](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")</span></span>  
   
-6.  Geben Sie den Text `green` in das <xref:System.Windows.Controls.TextBox> ein.  
+6.  <span data-ttu-id="34666-208">Geben Sie den Text `green` in der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-208">Type the text `green` in the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-7.  Wählen Sie den Text `gre` im <xref:System.Windows.Controls.TextBox> aus.  
+7.  <span data-ttu-id="34666-209">Wählen Sie den Text `gre` in der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-209">Select the text `gre` in the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-8.  Ziehen Sie ihn auf ein Kreissteuerelement, und legen Sie ihn ab.  Der Cursor ändert sich, um anzugeben, dass der Ablegevorgang zulässig ist, die Farbe des Kreises wird jedoch nicht geändert, da `gre` keine gültige Farbe ist.  
+8.  <span data-ttu-id="34666-210">Ziehen Sie ihn auf ein Kreis-Steuerelement, und legen Sie ihn ab.</span><span class="sxs-lookup"><span data-stu-id="34666-210">Drag it to a Circle control and drop it.</span></span> <span data-ttu-id="34666-211">Beachten Sie, dass sich zwar der Cursor ändert, um anzuzeigen, dass der Ablegevorgang zulässig ist, die Farbe des Kreises sich aber nicht ändert, da `gre` keine gültige Farbe ist.</span><span class="sxs-lookup"><span data-stu-id="34666-211">Notice that the cursor changes to indicate that the drop is allowed, but the color of the Circle does not change because `gre` is not a valid color.</span></span>  
   
-9. Ziehen Sie das grüne Kreissteuerelement, und legen Sie es auf dem blauen Kreissteuerelement ab.  Die Farbe des Kreises ändert sich von Blau in Grün.  Der angezeigte Cursor hängt davon ab, ob das <xref:System.Windows.Controls.TextBox> oder das Kreissteuerelement die Quelle des Ziehvorgangs ist.  
+9. <span data-ttu-id="34666-212">Ziehen Sie vom grünen Kreis-Steuerelement auf das blaue Kreis-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="34666-212">Drag from the green Circle control and drop on the blue Circle control.</span></span> <span data-ttu-id="34666-213">Der Kreis ändert sich von Blau in Grün.</span><span class="sxs-lookup"><span data-stu-id="34666-213">The Circle changes from blue to green.</span></span> <span data-ttu-id="34666-214">Beachten Sie die angezeigte Cursor, ob abhängt die <xref:System.Windows.Controls.TextBox> oder der Kreis entspricht die Quelle des Ziehvorgangs.</span><span class="sxs-lookup"><span data-stu-id="34666-214">Notice that which cursor is shown depends on whether the <xref:System.Windows.Controls.TextBox> or the Circle is the drag source.</span></span>  
   
- Zum Einrichten eines Elements als Ablageziel müssen Sie lediglich die <xref:System.Windows.UIElement.AllowDrop%2A>\-Eigenschaft auf `true` festlegen und die abgelegten Daten verarbeiten.  Zum Verbessern der Benutzerfreundlichkeit sollten Sie jedoch auch die <xref:System.Windows.UIElement.DragEnter>\-, <xref:System.Windows.UIElement.DragLeave>\- und <xref:System.Windows.UIElement.DragOver>\-Ereignisse behandeln.  In diesen Ereignissen können Sie Überprüfungen durchführen und zusätzliches Feedback für den Benutzer bereitstellen, bevor die Daten abgelegt werden.  
+ <span data-ttu-id="34666-215">Festlegen der <xref:System.Windows.UIElement.AllowDrop%2A> Eigenschaft `true` und Verarbeitung der gelöschten Daten ist erforderlich, damit ein Element auf ein Ablageziel sein können.</span><span class="sxs-lookup"><span data-stu-id="34666-215">Setting the <xref:System.Windows.UIElement.AllowDrop%2A> property to `true` and processing the dropped data is all that is required to enable an element to be a drop target.</span></span> <span data-ttu-id="34666-216">Jedoch um eine bessere benutzererfahrung zu gewährleisten, sollten auch behandelt die <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, und <xref:System.Windows.UIElement.DragOver> Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="34666-216">However, to provide a better user experience, you should also handle the <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, and <xref:System.Windows.UIElement.DragOver> events.</span></span> <span data-ttu-id="34666-217">In diesen Ereignissen können Sie vor Ablage der Daten diese überprüfen und zusätzliches Feedback für den Benutzer bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="34666-217">In these events, you can perform checks and provide additional feedback to the user before the data is dropped.</span></span>  
   
- Wenn Daten über das Kreisbenutzersteuerelement gezogen werden, sollte das Steuerelement die Quelle des Ziehvorgangs darüber benachrichtigen, ob sie die gezogenen Daten verarbeiten kann.  Wenn das Steuerelement die Daten nicht verarbeiten kann, sollte es den Ablegevorgang ablehnen.  Hierzu behandeln Sie das <xref:System.Windows.UIElement.DragOver>\-Ereignis, und Sie legen die <xref:System.Windows.DragEventArgs.Effects%2A>\-Eigenschaft fest.  
+ <span data-ttu-id="34666-218">Wenn Daten über das Kreis-Steuerelement gezogen werden, sollte das Steuerelement die Quelle des Ziehvorgangs darüber benachrichtigen, ob die darüber gezogenen Daten verarbeitet werden können.</span><span class="sxs-lookup"><span data-stu-id="34666-218">When data is dragged over the Circle user control, the control should notify the drag source whether it can process the data that is being dragged.</span></span> <span data-ttu-id="34666-219">Wenn das Steuerelement nicht weiß, wie die Daten zu verarbeiten sind, sollte es den Ablegevorgang ablehnen.</span><span class="sxs-lookup"><span data-stu-id="34666-219">If the control does not know how to process the data, it should refuse the drop.</span></span> <span data-ttu-id="34666-220">Behandeln Sie dazu die <xref:System.Windows.UIElement.DragOver> Ereignis, und legen die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="34666-220">To do this, you will handle the <xref:System.Windows.UIElement.DragOver> event and set the <xref:System.Windows.DragEventArgs.Effects%2A> property.</span></span>  
   
-### So überprüfen Sie, ob das Ablegen von Daten zulässig ist  
+### <a name="to-verify-that-the-data-drop-is-allowed"></a><span data-ttu-id="34666-221">So stellen sie sicher, dass die Datenablage zulässig ist</span><span class="sxs-lookup"><span data-stu-id="34666-221">To verify that the data drop is allowed</span></span>  
   
-1.  Öffnen Sie "Circle.xaml.cs" bzw. "Circle.xaml.vb".  
+1.  <span data-ttu-id="34666-222">Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".</span><span class="sxs-lookup"><span data-stu-id="34666-222">Open Circle.xaml.cs or Circle.xaml.vb.</span></span>  
   
-2.  Fügen Sie die folgende <xref:System.Windows.UIElement.OnDragOver%2A>\-Überschreibung hinzu, um eine Klassenbehandlung für das <xref:System.Windows.UIElement.DragOver>\-Ereignis bereitzustellen.  
+2.  <span data-ttu-id="34666-223">Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragOver%2A> überschreiben, um eine Klassenbehandlung für bieten die <xref:System.Windows.UIElement.DragOver> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="34666-223">Add the following <xref:System.Windows.UIElement.OnDragOver%2A> override to provide class handling for the <xref:System.Windows.UIElement.DragOver> event.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
      [!code-vb[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]  
   
-     Diese <xref:System.Windows.UIElement.OnDragOver%2A>\-Überschreibung führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-224">Dies <xref:System.Windows.UIElement.OnDragOver%2A> Außerkraftsetzung führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-224">This <xref:System.Windows.UIElement.OnDragOver%2A> override performs the following tasks:</span></span>  
   
-    -   Legt die <xref:System.Windows.DragEventArgs.Effects%2A>\-Eigenschaft auf <xref:System.Windows.DragDropEffects> fest.  
+    -   <span data-ttu-id="34666-225">Legt die <xref:System.Windows.DragEventArgs.Effects%2A>-Eigenschaft auf <xref:System.Windows.DragDropEffects.None> fest.</span><span class="sxs-lookup"><span data-stu-id="34666-225">Sets the <xref:System.Windows.DragEventArgs.Effects%2A> property to <xref:System.Windows.DragDropEffects.None>.</span></span>  
   
-    -   Sie führt die gleichen Überprüfungen aus, die in der <xref:System.Windows.UIElement.OnDrop%2A>\-Methode ausgeführt werden, um zu bestimmen, ob das Kreisbenutzersteuerelement die gezogenen Daten verarbeiten kann.  
+    -   <span data-ttu-id="34666-226">Führt die gleichen Überprüfungen, die innerhalb der <xref:System.Windows.UIElement.OnDrop%2A> Methode, um zu bestimmen, ob das Benutzersteuerelement Kreis die gezogenen Daten verarbeiten kann.</span><span class="sxs-lookup"><span data-stu-id="34666-226">Performs the same checks that are performed in the <xref:System.Windows.UIElement.OnDrop%2A> method to determine whether the Circle user control can process the dragged data.</span></span>  
   
-    -   Wenn das Benutzersteuerelement die Daten verarbeiten kann, legt sie die <xref:System.Windows.DragEventArgs.Effects%2A>\-Eigenschaft auf <xref:System.Windows.DragDropEffects> oder <xref:System.Windows.DragDropEffects> fest.  
+    -   <span data-ttu-id="34666-227">Wenn das Benutzersteuerelement die Daten verarbeiten kann, legt der <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft <xref:System.Windows.DragDropEffects.Copy> oder <xref:System.Windows.DragDropEffects.Move>.</span><span class="sxs-lookup"><span data-stu-id="34666-227">If the user control can process the data, sets the <xref:System.Windows.DragEventArgs.Effects%2A> property to <xref:System.Windows.DragDropEffects.Copy> or <xref:System.Windows.DragDropEffects.Move>.</span></span>  
   
-3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+3.  <span data-ttu-id="34666-228">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="34666-228">Press F5 to build and run the application.</span></span>  
   
-4.  Wählen Sie den Text `gre` im <xref:System.Windows.Controls.TextBox> aus.  
+4.  <span data-ttu-id="34666-229">Wählen Sie den Text `gre` in der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-229">Select the text `gre` in the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-5.  Ziehen Sie den Text auf ein Kreissteuerelement.  Der Cursor ändert sich, um anzugeben, dass der Ablegevorgang nicht zulässig ist, weil `gre` keine gültige Farbe ist.  
+5.  <span data-ttu-id="34666-230">Ziehen Sie den Text auf ein Kreis-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="34666-230">Drag the text to a Circle control.</span></span> <span data-ttu-id="34666-231">Beachten Sie, dass sich der Cursor jetzt so ändert, dass er anzeigt, dass der Ablegevorgang nicht zulässig ist, da `gre` keine gültige Farbe ist.</span><span class="sxs-lookup"><span data-stu-id="34666-231">Notice that the cursor now changes to indicate that the drop is not allowed because `gre` is not a valid color.</span></span>  
   
- Sie können die Benutzerfreundlichkeit weiter verbessern, indem Sie eine Vorschau des Ablegevorgangs anwenden.  Für das Kreisbenutzersteuerelement überschreiben Sie die <xref:System.Windows.UIElement.OnDragLeave%2A>\- und <xref:System.Windows.UIElement.OnDragEnter%2A>\-Methoden.  Wenn die Daten über das Steuerelement gezogen werden, wird der aktuelle Hintergrund <xref:System.Windows.Shapes.Shape.Fill%2A> in einer Platzhaltervariable gespeichert.  Die Zeichenfolge wird dann in einen Pinsel konvertiert und auf die <xref:System.Windows.Shapes.Ellipse> angewendet, die die Benutzeroberfläche des Kreises bereitstellt.  Wenn die Daten aus dem Kreis gezogen werden, ohne sie abzulegen, wird wieder der ursprüngliche <xref:System.Windows.Shapes.Shape.Fill%2A>\-Wert auf den Kreis angewendet.  
+ <span data-ttu-id="34666-232">Sie können die Benutzerfunktionalität weiter verbessern, indem Sie eine Vorschau des Drop-Vorgangs anwenden.</span><span class="sxs-lookup"><span data-stu-id="34666-232">You can further enhance the user experience by applying a preview of the drop operation.</span></span> <span data-ttu-id="34666-233">Für die Kreis-Benutzersteuerelement, setzen Sie die <xref:System.Windows.UIElement.OnDragEnter%2A> und <xref:System.Windows.UIElement.OnDragLeave%2A> Methoden.</span><span class="sxs-lookup"><span data-stu-id="34666-233">For the Circle user control, you will override the <xref:System.Windows.UIElement.OnDragEnter%2A> and <xref:System.Windows.UIElement.OnDragLeave%2A> methods.</span></span> <span data-ttu-id="34666-234">Wenn die Daten gezogen wird, über dem Steuerelement, das den aktuellen Hintergrund <xref:System.Windows.Shapes.Shape.Fill%2A> in einer Platzhalter-Variablen gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="34666-234">When the data is dragged over the control, the current background <xref:System.Windows.Shapes.Shape.Fill%2A> is saved in a placeholder variable.</span></span> <span data-ttu-id="34666-235">Klicken Sie dann die Zeichenfolge in einen Pinsel konvertiert und angewendet werden, um die <xref:System.Windows.Shapes.Ellipse> , bietet es sich um des Kreis UI.</span><span class="sxs-lookup"><span data-stu-id="34666-235">The string is then converted to a brush and applied to the <xref:System.Windows.Shapes.Ellipse> that provides the Circle's UI.</span></span> <span data-ttu-id="34666-236">Wenn die Daten aus dem Kreis gezogen werden, nicht abgelegt wird, wird die ursprüngliche <xref:System.Windows.Shapes.Shape.Fill%2A> Wert wieder auf den Kreis angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="34666-236">If the data is dragged out of the Circle without being dropped, the original <xref:System.Windows.Shapes.Shape.Fill%2A> value is re-applied to the Circle.</span></span>  
   
-### So zeigen Sie eine Vorschau der Auswirkungen des Drag & Drop\-Vorgangs an  
+### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a><span data-ttu-id="34666-237">So können Sie die Auswirkungen eines Drag & Drop-Vorgangs in der Vorschau anzeigen</span><span class="sxs-lookup"><span data-stu-id="34666-237">To preview the effects of the drag-and-drop operation</span></span>  
   
-1.  Öffnen Sie "Circle.xaml.cs" bzw. "Circle.xaml.vb".  
+1.  <span data-ttu-id="34666-238">Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".</span><span class="sxs-lookup"><span data-stu-id="34666-238">Open Circle.xaml.cs or Circle.xaml.vb.</span></span>  
   
-2.  Deklarieren Sie in der Circle\-Klasse eine private <xref:System.Windows.Media.Brush>\-Variable mit dem Namen `_previousFill`, und initialisieren Sie sie mit `null`.  
+2.  <span data-ttu-id="34666-239">In der Klasse Kreis Deklarieren eines privaten <xref:System.Windows.Media.Brush> Variable mit dem Namen `_previousFill` und initialisieren Sie sie mit `null`.</span><span class="sxs-lookup"><span data-stu-id="34666-239">In the Circle class, declare a private <xref:System.Windows.Media.Brush> variable named `_previousFill` and initialize it to `null`.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]  
   
-3.  Fügen Sie die folgende <xref:System.Windows.UIElement.OnDragEnter%2A>\-Überschreibung hinzu, um eine Klassenbehandlung für das <xref:System.Windows.UIElement.DragEnter>\-Ereignis bereitzustellen.  
+3.  <span data-ttu-id="34666-240">Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragEnter%2A> überschreiben, um eine Klassenbehandlung für bieten die <xref:System.Windows.UIElement.DragEnter> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="34666-240">Add the following <xref:System.Windows.UIElement.OnDragEnter%2A> override to provide class handling for the <xref:System.Windows.UIElement.DragEnter> event.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
      [!code-vb[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]  
   
-     Diese <xref:System.Windows.UIElement.OnDragEnter%2A>\-Überschreibung führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-241">Dies <xref:System.Windows.UIElement.OnDragEnter%2A> Außerkraftsetzung führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-241">This <xref:System.Windows.UIElement.OnDragEnter%2A> override performs the following tasks:</span></span>  
   
-    -   Sie speichert die <xref:System.Windows.Shapes.Shape.Fill%2A>\-Eigenschaft der <xref:System.Windows.Shapes.Ellipse> in der `_previousFill`\-Variable.  
+    -   <span data-ttu-id="34666-242">Speichert die <xref:System.Windows.Shapes.Shape.Fill%2A> Eigenschaft von der <xref:System.Windows.Shapes.Ellipse> in die `_previousFill` Variable.</span><span class="sxs-lookup"><span data-stu-id="34666-242">Saves the <xref:System.Windows.Shapes.Shape.Fill%2A> property of the <xref:System.Windows.Shapes.Ellipse> in the `_previousFill` variable.</span></span>  
   
-    -   Sie führt die gleichen Überprüfungen aus, die in der <xref:System.Windows.UIElement.OnDrop%2A>\-Methode ausgeführt werden, um zu bestimmen, ob die Daten in einen <xref:System.Windows.Media.Brush> konvertiert werden können.  
+    -   <span data-ttu-id="34666-243">Führt die gleichen Überprüfungen, die in ausgeführt werden die <xref:System.Windows.UIElement.OnDrop%2A> Methode, um zu bestimmen, ob die Daten können, um konvertiert werden eine <xref:System.Windows.Media.Brush>.</span><span class="sxs-lookup"><span data-stu-id="34666-243">Performs the same checks that are performed in the <xref:System.Windows.UIElement.OnDrop%2A> method to determine whether the data can be converted to a <xref:System.Windows.Media.Brush>.</span></span>  
   
-    -   Wenn die Daten in einen gültigen <xref:System.Windows.Media.Brush> konvertiert werden, wendet sie ihn auf die <xref:System.Windows.Shapes.Shape.Fill%2A> der <xref:System.Windows.Shapes.Ellipse> an.  
+    -   <span data-ttu-id="34666-244">Wenn die Daten in eine gültige konvertiert werden <xref:System.Windows.Media.Brush>, wendet ihn auf die <xref:System.Windows.Shapes.Shape.Fill%2A> von der <xref:System.Windows.Shapes.Ellipse>.</span><span class="sxs-lookup"><span data-stu-id="34666-244">If the data is converted to a valid <xref:System.Windows.Media.Brush>, applies it to the <xref:System.Windows.Shapes.Shape.Fill%2A> of the <xref:System.Windows.Shapes.Ellipse>.</span></span>  
   
-4.  Fügen Sie die folgende <xref:System.Windows.UIElement.OnDragLeave%2A>\-Überschreibung hinzu, um eine Klassenbehandlung für das <xref:System.Windows.UIElement.DragLeave>\-Ereignis bereitzustellen.  
+4.  <span data-ttu-id="34666-245">Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragLeave%2A> überschreiben, um eine Klassenbehandlung für bieten die <xref:System.Windows.UIElement.DragLeave> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="34666-245">Add the following <xref:System.Windows.UIElement.OnDragLeave%2A> override to provide class handling for the <xref:System.Windows.UIElement.DragLeave> event.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
      [!code-vb[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]  
   
-     Diese <xref:System.Windows.UIElement.OnDragLeave%2A>\-Überschreibung führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-246">Dies <xref:System.Windows.UIElement.OnDragLeave%2A> Außerkraftsetzung führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-246">This <xref:System.Windows.UIElement.OnDragLeave%2A> override performs the following tasks:</span></span>  
   
-    -   Sie wendet den in der `_previousFill`\-Variable gespeicherten <xref:System.Windows.Media.Brush> auf die <xref:System.Windows.Shapes.Shape.Fill%2A> der <xref:System.Windows.Shapes.Ellipse> an, die die Benutzeroberfläche des Kreisbenutzersteuerelements bereitstellt.  
+    -   <span data-ttu-id="34666-247">Gilt die <xref:System.Windows.Media.Brush> gespeichert, der `_previousFill` Variable auf die <xref:System.Windows.Shapes.Shape.Fill%2A> von der <xref:System.Windows.Shapes.Ellipse> , der die Benutzeroberfläche des Benutzersteuerelements Kreis bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="34666-247">Applies the <xref:System.Windows.Media.Brush> saved in the `_previousFill` variable to the <xref:System.Windows.Shapes.Shape.Fill%2A> of the <xref:System.Windows.Shapes.Ellipse> that provides the UI of the Circle user control.</span></span>  
   
-5.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+5.  <span data-ttu-id="34666-248">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="34666-248">Press F5 to build and run the application.</span></span>  
   
-6.  Wählen Sie den Text `green` im <xref:System.Windows.Controls.TextBox> aus.  
+6.  <span data-ttu-id="34666-249">Wählen Sie den Text `green` in der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-249">Select the text `green` in the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-7.  Ziehen Sie den Text über ein Kreissteuerelement, ohne ihn abzulegen.  Die Farbe des Kreises ändert sich von Blau in Grün.  
+7.  <span data-ttu-id="34666-250">Ziehen Sie den Text über ein Kreis-Steuerelement ohne ihn abzulegen.</span><span class="sxs-lookup"><span data-stu-id="34666-250">Drag the text over a Circle control without dropping it.</span></span> <span data-ttu-id="34666-251">Der Kreis ändert sich von Blau in Grün.</span><span class="sxs-lookup"><span data-stu-id="34666-251">The Circle changes from blue to green.</span></span>  
   
-     ![Auswirkungen eines Drag & Drop&#45;Vorgangs in der Vorschau anzeigen](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop\_PreviewEffects")  
+     <span data-ttu-id="34666-252">![Vorschau der Auswirkungen eines Drag & Drop-Vorgangs](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")</span><span class="sxs-lookup"><span data-stu-id="34666-252">![Preview the effects of a drag&#45;and&#45;drop operation](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")</span></span>  
   
-8.  Ziehen Sie den Text vom Kreissteuerelement weg.  Die Farbe des Kreises ändert sich wieder von Grün in Blau.  
+8.  <span data-ttu-id="34666-253">Ziehen Sie den Text vom Kreis-Steuerelement weg.</span><span class="sxs-lookup"><span data-stu-id="34666-253">Drag the text away from the Circle control.</span></span> <span data-ttu-id="34666-254">Der Kreis ändert sich von Grün zurück in Blau.</span><span class="sxs-lookup"><span data-stu-id="34666-254">The Circle changes from green back to blue.</span></span>  
   
-## Einrichten eines Bereichs zum Empfangen abgelegter Daten  
- In diesem Abschnitt richten Sie die Bereiche, die die Kreisbenutzersteuerelemente hosten, so ein, dass sie als Ablageziele für gezogene Kreisdaten fungieren können.  Sie implementieren Code, der es Ihnen ermöglicht, einen Kreis von einem Bereich in einen anderen zu verschieben oder eine Kopie eines Kreissteuerelements zu erstellen, indem Sie während des Ziehens und Ablegens eines Kreises die STRG\-TASTE gedrückt halten.  
+## <a name="enabling-a-panel-to-receive-dropped-data"></a><span data-ttu-id="34666-255">Einem Panel ermöglichen, abgelegte Daten zu empfangen</span><span class="sxs-lookup"><span data-stu-id="34666-255">Enabling a Panel to Receive Dropped Data</span></span>  
+ <span data-ttu-id="34666-256">In diesem Abschnitt werden Sie den Panels, die die Kreis-Steuerelemente hosten, ermöglichen, als Ziele für gezogene Kreisdaten zu fungieren.</span><span class="sxs-lookup"><span data-stu-id="34666-256">In this section, you will enable the panels that host the Circle user controls to act as drop targets for dragged Circle data.</span></span> <span data-ttu-id="34666-257">Sie werden Code implementieren, der es Ihnen ermöglicht, einen Kreis von einem Panel in ein anderes zu verschieben, oder eine Kopie eines Kreis-Steuerelements zu erstellen, indem Sie die STRG-Taste gedrückt halten, während Sie einen Kreis ziehen und ablegen.</span><span class="sxs-lookup"><span data-stu-id="34666-257">You will implement code that enables you to move a Circle from one panel to another, or to make a copy of a Circle control by holding down the CTRL key while dragging and dropping a Circle.</span></span>  
   
-### So richten Sie den Bereich als Ablageziel ein  
+### <a name="to-enable-the-panel-to-be-a-drop-target"></a><span data-ttu-id="34666-258">So konfigurieren Sie das Panel als Ziel eines Ablegevorgangs</span><span class="sxs-lookup"><span data-stu-id="34666-258">To enable the panel to be a drop target</span></span>  
   
-1.  Öffnen Sie MainWindow.xaml.  
+1.  <span data-ttu-id="34666-259">Öffnen Sie „MainWindow.xaml“.</span><span class="sxs-lookup"><span data-stu-id="34666-259">Open MainWindow.xaml.</span></span>  
   
-2.  Fügen Sie wie im folgenden XAML\-Code dargestellt in jedem der <xref:System.Windows.Controls.StackPanel>\-Steuerelemente Handler für die <xref:System.Windows.UIElement.Drop>\- und <xref:System.Windows.UIElement.DragOver>\-Ereignisse hinzu.  Geben Sie für den <xref:System.Windows.UIElement.DragOver>\-Ereignishandler den Namen `panel_DragOver` und für den <xref:System.Windows.UIElement.Drop>\-Ereignishandler den Namen `panel_Drop` ein.  
+2.  <span data-ttu-id="34666-260">Wie in den folgenden XAML-Code in den einzelnen gezeigt die <xref:System.Windows.Controls.StackPanel> Handler für Hinzufügen von Steuerelementen, die <xref:System.Windows.UIElement.DragOver> und <xref:System.Windows.UIElement.Drop> Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="34666-260">As shown in the following XAML, in each of the <xref:System.Windows.Controls.StackPanel> controls, add handlers for the <xref:System.Windows.UIElement.DragOver> and <xref:System.Windows.UIElement.Drop> events.</span></span> <span data-ttu-id="34666-261">Name der <xref:System.Windows.UIElement.DragOver> Ereignishandler, d. h. `panel_DragOver`, und nennen Sie die <xref:System.Windows.UIElement.Drop> Ereignishandler, d. h. `panel_Drop`.</span><span class="sxs-lookup"><span data-stu-id="34666-261">Name the <xref:System.Windows.UIElement.DragOver> event handler, `panel_DragOver`, and name the <xref:System.Windows.UIElement.Drop> event handler, `panel_Drop`.</span></span>  
   
-     [!code-xml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]  
+     [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]  
   
-3.  Öffnen Sie "MainWindows.xaml.cs" bzw. "MainWindow.xaml.vb".  
+3.  <span data-ttu-id="34666-262">Öffnen Sie „MainWindow.xaml.cs“ bzw. „MainWindow.xaml.vb“.</span><span class="sxs-lookup"><span data-stu-id="34666-262">Open MainWindows.xaml.cs or MainWindow.xaml.vb.</span></span>  
   
-4.  Fügen Sie folgenden Code für den <xref:System.Windows.UIElement.DragOver>\-Ereignishandler hinzu.  
+4.  <span data-ttu-id="34666-263">Fügen Sie den folgenden Code für die <xref:System.Windows.UIElement.DragOver> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="34666-263">Add the following code for the <xref:System.Windows.UIElement.DragOver> event handler.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
      [!code-vb[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]  
   
-     Dieser <xref:System.Windows.UIElement.DragOver>\-Ereignishandler führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-264">Dies <xref:System.Windows.UIElement.DragOver> -Ereignishandler führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-264">This <xref:System.Windows.UIElement.DragOver> event handler performs the following tasks:</span></span>  
   
-    -   Er überprüft, ob die gezogenen Daten die "Objektdaten" enthalten, die vom Kreisbenutzersteuerelement im <xref:system.Windows.DataObject> verpackt und im Aufruf an <xref:System.Windows.DragDrop.DoDragDrop%2A> übergeben wurden.  
+    -   <span data-ttu-id="34666-265">Überprüft, ob die gezogenen Daten die "Object"-Daten enthält, die in gepackt wurde die <xref:System.Windows.DataObject> durch das Benutzersteuerelement Kreis und im Aufruf übergeben <xref:System.Windows.DragDrop.DoDragDrop%2A>.</span><span class="sxs-lookup"><span data-stu-id="34666-265">Checks that the dragged data contains the "Object" data that was packaged in the <xref:System.Windows.DataObject> by the Circle user control and passed in the call to <xref:System.Windows.DragDrop.DoDragDrop%2A>.</span></span>  
   
-    -   Wenn die "Objektdaten" vorhanden sind, überprüft er, ob die STRG\-TASTE gedrückt wird.  
+    -   <span data-ttu-id="34666-266">Überprüft, ob die STRG-Taste gedrückt wird, falls die „Objekt”-Daten vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="34666-266">If the "Object" data is present, checks whether the CTRL key is pressed.</span></span>  
   
-    -   Wenn die STRG\-TASTE gedrückt wird, legt er die <xref:System.Windows.DragEventArgs.Effects%2A>\-Eigenschaft auf <xref:System.Windows.DragDropEffects> fest.  Andernfalls legt er die <xref:System.Windows.DragEventArgs.Effects%2A>\-Eigenschaft auf <xref:System.Windows.DragDropEffects> fest.  
+    -   <span data-ttu-id="34666-267">Wenn Sie die STRG-Taste gedrückt wird, legt die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft <xref:System.Windows.DragDropEffects.Copy>.</span><span class="sxs-lookup"><span data-stu-id="34666-267">If the CTRL key is pressed, sets the <xref:System.Windows.DragEventArgs.Effects%2A> property to <xref:System.Windows.DragDropEffects.Copy>.</span></span> <span data-ttu-id="34666-268">Andernfalls legen die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft <xref:System.Windows.DragDropEffects.Move>.</span><span class="sxs-lookup"><span data-stu-id="34666-268">Otherwise, set the <xref:System.Windows.DragEventArgs.Effects%2A> property to <xref:System.Windows.DragDropEffects.Move>.</span></span>  
   
-5.  Fügen Sie folgenden Code für den <xref:System.Windows.UIElement.Drop>\-Ereignishandler hinzu.  
+5.  <span data-ttu-id="34666-269">Fügen Sie den folgenden Code für die <xref:System.Windows.UIElement.Drop> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="34666-269">Add the following code for the <xref:System.Windows.UIElement.Drop> event handler.</span></span>  
   
      [!code-csharp[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
      [!code-vb[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]  
   
-     Dieser <xref:System.Windows.UIElement.Drop>\-Ereignishandler führt die folgenden Aufgaben aus:  
+     <span data-ttu-id="34666-270">Dies <xref:System.Windows.UIElement.Drop> -Ereignishandler führt die folgenden Aufgaben:</span><span class="sxs-lookup"><span data-stu-id="34666-270">This <xref:System.Windows.UIElement.Drop> event handler performs the following tasks:</span></span>  
   
-    -   Er überprüft, ob das <xref:System.Windows.UIElement.Drop>\-Ereignis bereits behandelt wurde.  Wenn z. B. ein Kreis auf einem anderen Kreis abgelegt wird, der das <xref:System.Windows.UIElement.Drop>\-Ereignis behandelt, soll das Ereignis nicht auch von dem Bereich behandelt werden, der den Kreis enthält.  
+    -   <span data-ttu-id="34666-271">Überprüft, ob die <xref:System.Windows.UIElement.Drop> Ereignis bereits behandelt wurde.</span><span class="sxs-lookup"><span data-stu-id="34666-271">Checks whether the <xref:System.Windows.UIElement.Drop> event has already been handled.</span></span> <span data-ttu-id="34666-272">Z. B. wenn ein Kreis, auf einem anderen gelöscht wird Circle der Ziehpunkte die <xref:System.Windows.UIElement.Drop> Ereignis, Sie möchten nicht den Bereich, der den Kreis auch enthält.</span><span class="sxs-lookup"><span data-stu-id="34666-272">For instance, if a Circle is dropped on another Circle which handles the <xref:System.Windows.UIElement.Drop> event, you do not want the panel that contains the Circle to also handle it.</span></span>  
   
-    -   Wenn das <xref:System.Windows.UIElement.Drop>\-Ereignis nicht behandelt wurde, überprüft er, ob die STRG\-TASTE gedrückt wird.  
+    -   <span data-ttu-id="34666-273">Wenn die <xref:System.Windows.UIElement.Drop> Ereignis wird nicht verarbeitet, überprüft, ob die STRG-Taste gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="34666-273">If the <xref:System.Windows.UIElement.Drop> event is not handled, checks whether the CTRL key is pressed.</span></span>  
   
-    -   Wenn die STRG\-TASTE während <xref:System.Windows.UIElement.Drop> gedrückt wird, erstellt er eine Kopie des Kreissteuerelements und fügt sie der <xref:System.Windows.Controls.Panel.Children%2A>\-Auflistung des <xref:System.Windows.Controls.StackPanel> hinzu.  
+    -   <span data-ttu-id="34666-274">Wenn Sie die STRG-Taste gedrückt wird, wenn die <xref:System.Windows.UIElement.Drop> erfolgt, erstellt er eine Kopie des Kreises steuern, und fügen Sie diese der <xref:System.Windows.Controls.Panel.Children%2A> Auflistung von der <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="34666-274">If the CTRL key is pressed when the <xref:System.Windows.UIElement.Drop> happens, makes a copy of the Circle control and add it to the <xref:System.Windows.Controls.Panel.Children%2A> collection of the <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
-    -   Wenn die STRG\-TASTE nicht gedrückt wird, verschiebt er den Kreis aus der <xref:System.Windows.Controls.Panel.Children%2A>\-Auflistung des übergeordneten Bereichs in die <xref:System.Windows.Controls.Panel.Children%2A>\-Auflistung des Bereichs, auf dem der Kreis abgelegt wurde.  
+    -   <span data-ttu-id="34666-275">Wenn Sie nicht die STRG-Taste gedrückt wird, verschiebt den Kreis aus der <xref:System.Windows.Controls.Panel.Children%2A> Auflistung des übergeordneten Bereichs in der <xref:System.Windows.Controls.Panel.Children%2A> Auflistung des Bereichs, die sie gelöscht wurde, auf.</span><span class="sxs-lookup"><span data-stu-id="34666-275">If the CTRL key is not pressed, moves the Circle from the <xref:System.Windows.Controls.Panel.Children%2A> collection of its parent panel to the <xref:System.Windows.Controls.Panel.Children%2A> collection of the panel that it was dropped on.</span></span>  
   
-    -   Er legt die <xref:System.Windows.DragEventArgs.Effects%2A>\-Eigenschaft fest, um die <xref:System.Windows.DragDrop.DoDragDrop%2A>\-Methode darüber zu benachrichtigen, ob ein Verschiebevorgang oder ein Kopiervorgang ausgeführt wurde.  
+    -   <span data-ttu-id="34666-276">Legt die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft benachrichtigt die <xref:System.Windows.DragDrop.DoDragDrop%2A> Methode, ob ein Verschiebe- oder Kopiervorgang-Vorgang ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="34666-276">Sets the <xref:System.Windows.DragEventArgs.Effects%2A> property to notify the <xref:System.Windows.DragDrop.DoDragDrop%2A> method whether a move or copy operation was performed.</span></span>  
   
-6.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+6.  <span data-ttu-id="34666-277">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="34666-277">Press F5 to build and run the application.</span></span>  
   
-7.  Wählen Sie den Text `green` im <xref:System.Windows.Controls.TextBox> aus.  
+7.  <span data-ttu-id="34666-278">Wählen Sie den Text `green` aus der <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="34666-278">Select the text `green` from the <xref:System.Windows.Controls.TextBox>.</span></span>  
   
-8.  Ziehen Sie den Text über ein Kreissteuerelement, und legen Sie ihn ab.  
+8.  <span data-ttu-id="34666-279">Ziehen Sie den Text auf ein Kreis-Steuerelement, und legen Sie ihn ab.</span><span class="sxs-lookup"><span data-stu-id="34666-279">Drag the text over a Circle control and drop it.</span></span>  
   
-9. Ziehen Sie ein Kreissteuerelement vom linken Bereich in den rechten Bereich, und legen Sie es ab.  Der Kreis wird aus der <xref:System.Windows.Controls.Panel.Children%2A>\-Auflistung des linken Bereichs entfernt und der Auflistung der untergeordneten Elemente des rechten Bereichs hinzugefügt.  
+9. <span data-ttu-id="34666-280">Ziehen Sie ein Kreis-Steuerelement vom linken Panel in das rechte Panel und legen Sie es ab.</span><span class="sxs-lookup"><span data-stu-id="34666-280">Drag a Circle control from the left panel to the right panel and drop it.</span></span> <span data-ttu-id="34666-281">Der Kreis wird daraus der <xref:System.Windows.Controls.Panel.Children%2A> Auflistung im linken Bereich und auf die Auflistung der untergeordneten Elemente des rechten Bereichs hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="34666-281">The Circle is removed from the <xref:System.Windows.Controls.Panel.Children%2A> collection of the left panel and added to the Children collection of the right panel.</span></span>  
   
-10. Ziehen Sie ein Kreissteuerelement von dem Bereich, in dem es sich befindet, in den anderen Bereich, und legen Sie es mit gedrückter STRG\-TASTE ab.  Der Kreis wird kopiert, und die Kopie wird der <xref:System.Windows.Controls.Panel.Children%2A>\-Auflistung des empfangenden Bereichs hinzugefügt.  
+10. <span data-ttu-id="34666-282">Ziehen Sie ein Kreis-Steuerelement aus dem Panel, in dem es sich befindet, in das andere Panel und legen Sie es bei gedrückter STRG-Taste ab.</span><span class="sxs-lookup"><span data-stu-id="34666-282">Drag a Circle control from the panel it is in to the other panel and drop it while pressing the CTRL key.</span></span> <span data-ttu-id="34666-283">Der Kreis wird kopiert und die Kopie wird hinzugefügt, um die <xref:System.Windows.Controls.Panel.Children%2A> Auflistung der Bereiche "empfangen".</span><span class="sxs-lookup"><span data-stu-id="34666-283">The Circle is copied and the copy is added to the <xref:System.Windows.Controls.Panel.Children%2A> collection of the receiving panel.</span></span>  
   
-     ![Ziehen eines Kreises beim Drücken der Strg&#45;Taste](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop\_PanelDrop")  
+     <span data-ttu-id="34666-284">![Ziehen eines Kreises bei gedrückter STRG-Taste](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")</span><span class="sxs-lookup"><span data-stu-id="34666-284">![Dragging a Circle while pressing the CTRL key](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")</span></span>  
   
-## Siehe auch  
- [Übersicht über Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="34666-285">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="34666-285">See Also</span></span>  
+ [<span data-ttu-id="34666-286">Übersicht über Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="34666-286">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

@@ -1,47 +1,39 @@
 ---
-title: "Securing State Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], state data"
-  - "code security, state data"
-  - "secure coding, state data"
-  - "state data security"
+title: Sichern von Statusdaten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], state data
+- code security, state data
+- secure coding, state data
+- state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: bd41f5174f426e723ea7e069eaee8f2d367625a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Securing State Data
-Anwendungen, die vertrauliche Daten verarbeiten und Sicherheitsentscheidungen treffen, müssen diese Daten unter eigener Kontrolle behalten und sie vor dem direkten Zugriff durch möglicherweise böswilligen Code schützen.  Die beste Möglichkeit für den Schutz der Daten im Speicher besteht darin, diese als private bzw. interne \(Gültigkeitsbereich auf dieselbe Assembly beschränkt\) Variablen zu deklarieren.  Sie müssen sich jedoch darüber im Klaren sein, dass auch dann auf die Daten zugegriffen wird:  
+# <a name="securing-state-data"></a><span data-ttu-id="3ab3d-102">Sichern von Statusdaten</span><span class="sxs-lookup"><span data-stu-id="3ab3d-102">Securing State Data</span></span>
+<span data-ttu-id="3ab3d-103">Anwendungen, die vertrauliche Daten verarbeiten oder irgendwelche Sicherheitsentscheidungen treffen, müssen diese Daten unter eigener Kontrolle behalten und sie vor dem direkten Zugriff durch möglicherweise böswilligen Code schützen.</span><span class="sxs-lookup"><span data-stu-id="3ab3d-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="3ab3d-104">Die beste Möglichkeit, Daten im Speicher zu schützen, besteht darin, diese als private oder interne (Gültigkeitsbereich ist auf dieselbe Assembly beschränkt) Variablen zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="3ab3d-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="3ab3d-105">Allerdings wird auch auf diese Daten zugegriffen, also sollten Sie Folgendes berücksichtigen:</span><span class="sxs-lookup"><span data-stu-id="3ab3d-105">However, even this data is subject to access you should be aware of:</span></span>  
   
--   Sehr vertrauenswürdiger Code, der auf das Objekt verweisen kann, kann anhand von Reflektion private Member abrufen und festlegen.  
+-   <span data-ttu-id="3ab3d-106">Über Reflektionsmechanismen kann sehr vertrauenswürdiger Code, der auf das Objekt verweisen kann, private Member abrufen und festlegen.</span><span class="sxs-lookup"><span data-stu-id="3ab3d-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
   
--   Sehr vertrauenswürdiger Code kann private Member mithilfe von Serialisierung abrufen und festlegen, wenn er auf die entsprechenden Daten des Objekts in serialisierter Form zugreifen kann.  
+-   <span data-ttu-id="3ab3d-107">Über Serialisierung kann sehr vertrauenswürdiger Code private Member abrufen und festlegen, wenn er auf die entsprechenden Daten in der serialisierten Form des Objekts zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="3ab3d-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
   
--   Beim Debuggen können diese Daten gelesen werden.  
+-   <span data-ttu-id="3ab3d-108">Beim Debuggen können diese Daten gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="3ab3d-108">Under debugging, this data can be read.</span></span>  
   
- Stellen Sie sicher, dass diese Werte nicht versehentlich durch Ihre eigenen Methoden und Eigenschaften verfügbar gemacht werden.  
+ <span data-ttu-id="3ab3d-109">Stellen Sie sicher, dass diese Werte in keiner Ihrer Methoden oder Eigenschaften versehentlich verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="3ab3d-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
   
- In einigen Fällen können Daten als "protected" deklariert werden, wobei der Zugriff auf die Klasse und ihre Ableitungen beschränkt ist.  Aufgrund einer weiteren Gefährdung sollten Sie die folgenden zusätzlichen Sicherheitsvorkehrungen treffen:  
-  
--   Legen Sie fest, welcher Code von der Klasse ableiten darf, indem Sie diesen auf dieselbe Assembly beschränken oder indem Sie mithilfe von deklarativer Sicherheit eine bestimmte Identität oder bestimmte Berechtigungen fordern \(siehe unter [Sichern des Methodenzugriffs](../../../docs/framework/misc/securing-method-access.md)\).  
-  
--   Achten Sie darauf, dass für alle abgeleiteten Klassen ein vergleichbarer Schutz implementiert ist oder diese versiegelt werden.  
-  
-## Siehe auch  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="3ab3d-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ab3d-110">See Also</span></span>  
+ [<span data-ttu-id="3ab3d-111">Richtlinien für das Schreiben von sicherem Code</span><span class="sxs-lookup"><span data-stu-id="3ab3d-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

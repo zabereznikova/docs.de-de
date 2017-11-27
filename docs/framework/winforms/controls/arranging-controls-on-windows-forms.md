@@ -1,83 +1,83 @@
 ---
-title: "Anordnen von Steuerelementen in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VisualSelection"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Positionierung"
-  - "Windows Forms-Steuerelemente positionieren in Formular"
+title: "Anordnen von Steuerelementen in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VisualSelection
+helpviewer_keywords:
+- controls [Windows Forms], positioning
+- Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Anordnen von Steuerelementen in Windows&#160;Forms
-Indem und Bearbeiten von Steuerelementen auf Formularen auf unterschiedliche Weise, können Sie Benutzeroberflächen erstellen, die intuitiv und für Benutzer sind.  
+# <a name="arranging-controls-on-windows-forms"></a><span data-ttu-id="e27d4-102">Anordnen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-102">Arranging Controls on Windows Forms</span></span>
+<span data-ttu-id="e27d4-103">Durch die verschiedenen Möglichkeiten, Steuerelemente in Formularen zu platzieren und zu bearbeiten, können Sie Benutzeroberflächen erstellen, die gleichermaßen intuitiv und funktionell sind.</span><span class="sxs-lookup"><span data-stu-id="e27d4-103">By placing and manipulating controls on forms in different ways, you can create user interfaces that are both intuitive and functional for users.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Ausrichten von mehreren Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
- Bietet Informationen über die Position einer Anzahl von Steuerelementen auf dem Windows-Formular ausrichten.  
+## <a name="in-this-section"></a><span data-ttu-id="e27d4-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e27d4-104">In This Section</span></span>  
+ [<span data-ttu-id="e27d4-105">Gewusst wie: Ausrichten von mehreren Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-105">How to: Align Multiple Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-106">Hier erfahren Sie, wie Sie die Positionen mehrerer Steuerelemente in Windows Forms aufeinander ausrichten.</span><span class="sxs-lookup"><span data-stu-id="e27d4-106">Gives directions for lining up the position of a number of controls on your Windows Form.</span></span>  
   
- [Gewusst wie: Verankern von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- Bietet Informationen zum Festlegen der Steuerelemente zur Laufzeit dynamisch ändern.  
+ [<span data-ttu-id="e27d4-107">Gewusst wie: Verankern von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-107">How to: Anchor Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-108">Hier erfahren Sie, wie Steuerelemente eingerichtet werden, deren Größe zur Laufzeit dynamisch verändert wird.</span><span class="sxs-lookup"><span data-stu-id="e27d4-108">Gives directions for setting controls to resize dynamically at run time.</span></span>  
   
- [Gewusst wie: Kopieren von Steuerelementen zwischen Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
- Bietet Informationen über die Steuerelemente zwischen Formularen duplizieren.  
+ [<span data-ttu-id="e27d4-109">Gewusst wie: Kopieren von Steuerelementen zwischen Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-109">How to: Copy Controls Between Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
+ <span data-ttu-id="e27d4-110">Hier erfahren Sie, wie Sie Steuerelemente zwischen Formularen duplizieren.</span><span class="sxs-lookup"><span data-stu-id="e27d4-110">Gives directions for duplicating controls between forms.</span></span>  
   
- [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- Erläutert das Erstellen von Steuerelementen "Stick" auf die Seite(n) festlegen bzw. denen eines Formulars.  
+ [<span data-ttu-id="e27d4-111">Gewusst wie: Andocken von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-111">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-112">Hier erfahren Sie, wie Sie Steuerelemente an den Seiten eines Formulars „anheften“.</span><span class="sxs-lookup"><span data-stu-id="e27d4-112">Gives directions for making controls "stick" to the side(s) of a form.</span></span>  
   
- [Gewusst wie: Überlagern von Objekten in Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)  
- Bietet Informationen zur Ermittlung, welche Steuerelemente im Vordergrund relativ zur z-Achse (Z-Reihenfolge) sind.  
+ [<span data-ttu-id="e27d4-113">Gewusst wie: Überlagern von Objekten in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-113">How to: Layer Objects on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-114">Hier erfahren Sie, wie Sie festlegen, welche Steuerelemente relativ zur Z-Achse (Z-Anordnung) oben angeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="e27d4-114">Gives directions for establishing which controls are on top relative to the z-axis (z-order).</span></span>  
   
- [Gewusst wie: Sperren von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)  
- Bietet Informationen über die Befestigung dauerhaft Steuerelemente im Formular.  
+ [<span data-ttu-id="e27d4-115">Gewusst wie: Sperren von Steuerelementen für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-115">How to: Lock Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)  
+ <span data-ttu-id="e27d4-116">Hier erfahren Sie, wie Sie Steuerelemente dauerhaft mit einem Formular verbinden.</span><span class="sxs-lookup"><span data-stu-id="e27d4-116">Gives directions for fastening controls permanently to the form.</span></span>  
   
- [Gewusst wie: Positionieren von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-position-controls-on-windows-forms.md)  
- Bietet Informationen über die Koordinaten der Steuerelemente in einem Formular.  
+ [<span data-ttu-id="e27d4-117">Gewusst wie: Positionieren von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-117">How to: Position Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-position-controls-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-118">Hier erfahren Sie, wie Sie die Koordinaten der Steuerelemente im Formular festlegen.</span><span class="sxs-lookup"><span data-stu-id="e27d4-118">Gives directions for setting the coordinates of the controls on a form.</span></span>  
   
- [Gewusst wie: Ändern der Größe Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- Bietet Informationen zum Festlegen der Größe von Steuerelementen in einem Formular.  
+ [<span data-ttu-id="e27d4-119">Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-119">How to: Resize Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-120">Hier erfahren Sie, wie Sie die Größe von Steuerelementen im Formular festlegen.</span><span class="sxs-lookup"><span data-stu-id="e27d4-120">Gives directions for setting the size of controls on a form.</span></span>  
   
- [Gewusst wie: Festlegen von Rasteroptionen für alle Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-grid-options-for-all-windows-forms.md)  
- Bietet Informationen über die Kalibrierung der Größe des Rasters, das ein Formular ausfüllt.  
+ [<span data-ttu-id="e27d4-121">Gewusst wie: Festlegen von Rasteroptionen für alle Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-121">How to: Set Grid Options for All Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-grid-options-for-all-windows-forms.md)  
+ <span data-ttu-id="e27d4-122">Hier erfahren Sie, wie Sie die Größe des Rasters kalibrieren, das ein Formular überlagert.</span><span class="sxs-lookup"><span data-stu-id="e27d4-122">Gives directions for calibrating the size of the grid that covers a form.</span></span>  
   
- [Gewusst wie: festlegen die Aktivierreihenfolge in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
- Bietet Informationen über die Reihenfolge, in der Steuerelemente den Fokus beim Drücken der TAB hat, regulieren.  
+ [<span data-ttu-id="e27d4-123">Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-123">How to: Set the Tab Order on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
+ <span data-ttu-id="e27d4-124">Hier erfahren Sie, wie Sie steuern, in welcher Reihenfolge Steuerelemente den Fokus erhalten, wenn der Benutzer die TAB-TASTE drückt.</span><span class="sxs-lookup"><span data-stu-id="e27d4-124">Gives directions for regulating the order in which controls will have focus when the user presses TAB.</span></span>  
   
- [Gewusst wie: Anordnen von Steuerelementen mithilfe von Ausrichtungslinien und des Rasters in Windows Forms](../../../../docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md)  
- Fügen Steuerelemente zum Raster in einem Formular erläutert.  
+ [<span data-ttu-id="e27d4-125">Gewusst wie: Anordnen von Steuerelementen mithilfe der Ausrichtungslinien und des Rasters in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e27d4-125">How to: Arrange Controls with Snaplines and the Grid in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md)  
+ <span data-ttu-id="e27d4-126">Hier erfahren Sie, wie Sie Steuerelemente am Raster eines Formulars befestigen.</span><span class="sxs-lookup"><span data-stu-id="e27d4-126">Gives directions for affixing controls to the grid on a form.</span></span>  
   
- [Gewusst wie: Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)  
- Bietet Informationen zum Zuweisen von vorhandenen Steuerelementen zu einem neuen übergeordneten Container.  
+ [<span data-ttu-id="e27d4-127">Gewusst wie: Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element</span><span class="sxs-lookup"><span data-stu-id="e27d4-127">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)  
+ <span data-ttu-id="e27d4-128">Hier erfahren Sie, wie vorhandene Steuerelemente einem neuen übergeordneten Container zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="e27d4-128">Gives directions for assigning existing controls to a new parent container.</span></span>  
   
- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
- Beschreibt, wie Sie mithilfe von Steuerelementen in Formularen platzieren können die <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, und <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaften innerhalb der **Forms-Designer**.  
+ [<span data-ttu-id="e27d4-129">Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="e27d4-129">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ <span data-ttu-id="e27d4-130">Beschreibt, wie Sie mithilfe von Steuerelementen auf Formularen platzieren können die <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, und <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaften innerhalb der **Forms-Designer**.</span><span class="sxs-lookup"><span data-stu-id="e27d4-130">Describes how you can place controls on your forms by using the <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, and <xref:System.Windows.Forms.Control.AutoSize%2A> properties within the **Forms Designer**.</span></span>  
   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- Veranschaulicht die verschiedenen Layouts Rollen durch Ausrichtungslinien erfüllt.  
+ [<span data-ttu-id="e27d4-131">Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien</span><span class="sxs-lookup"><span data-stu-id="e27d4-131">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ <span data-ttu-id="e27d4-132">Demonstriert die verschiedenen Layoutmöglichkeiten mit Ausrichtungslinien.</span><span class="sxs-lookup"><span data-stu-id="e27d4-132">Demonstrates the various layout roles fulfilled by snaplines.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Gewusst wie: Festlegen eine Windows Forms-Schaltfläche als "Abbrechen"-Schaltfläche mithilfe des Designers](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- Bietet Informationen zum Einrichten einer Schaltfläche als das Steuerelement auf das Formular zu schließen.  
+## <a name="related-sections"></a><span data-ttu-id="e27d4-133">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="e27d4-133">Related Sections</span></span>  
+ [<span data-ttu-id="e27d4-134">Gewusst wie: Definieren einer Windows Forms-Schaltfläche als "Abbrechen"-Schaltfläche mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="e27d4-134">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ <span data-ttu-id="e27d4-135">Hier erfahren Sie, wie Sie eine Schaltfläche als das Steuerelement festlegen, mit dem die Anzeige des Formulars beendet wird.</span><span class="sxs-lookup"><span data-stu-id="e27d4-135">Gives directions for establishing a button as the control to cancel the form.</span></span>  
   
- [Gewusst wie: Festlegen eine Windows Forms-Schaltfläche als "Annehmen"-Schaltfläche mithilfe des Designers](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- Bietet Informationen über eine Schaltfläche (häufig die Schaltfläche "OK") als "Eingabe akzeptieren"-Schaltfläche herstellen, wenn die EINGABETASTE gedrückt wird, unabhängig davon, wo sich die zum Zeitpunkt im Dialogfeld befindet.  
+ [<span data-ttu-id="e27d4-136">Gewusst wie: Festlegen eine Windows Forms-Schaltfläche als "Annehmen"-Schaltfläche mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="e27d4-136">How to: Designate a Windows Forms Button as the Accept Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ <span data-ttu-id="e27d4-137">Hier erfahren Sie, wie Sie eine Schaltfläche (häufig die Schaltfläche „OK“) so konfigurieren, dass sie beim Drücken der EINGABETASTE als „Eingabe akzeptieren“-Schaltfläche behandelt wird, und zwar unabhängig davon, an welcher Stelle sich der Fokus im Dialogfeld befindet.</span><span class="sxs-lookup"><span data-stu-id="e27d4-137">Gives directions for establishing a button (often an "OK" button) as the "accept input" button when ENTER is pressed regardless of where focus is at the time in the dialog box.</span></span>  
   
- [Gewusst wie: Gruppieren von RadioButton-Steuerelementen für Windows Forms, als Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- Erläutert, wie die für eine Reihe von `RadioButton` als mit anderen Steuerelementen.  
+ [<span data-ttu-id="e27d4-138">Gewusst wie: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set</span><span class="sxs-lookup"><span data-stu-id="e27d4-138">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ <span data-ttu-id="e27d4-139">Hier erfahren Sie, wie Sie eine Reihe von `RadioButton`-Steuerelementen miteinander verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="e27d4-139">Gives directions for establishing a set of `RadioButton` controls as being related to one another.</span></span>  
   
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
- Stellt allgemeine Informationen zu Steuerelementen bereit.
+ [<span data-ttu-id="e27d4-140">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="e27d4-140">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="e27d4-141">Stellt allgemeine Informationen zu Steuerelementen bereit.</span><span class="sxs-lookup"><span data-stu-id="e27d4-141">Provides general information about controls.</span></span>

@@ -1,27 +1,30 @@
 ---
-title: "LINQ to SQL mit eng verkn&#252;pften Client-Server-Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to SQL mit eng verknüpften Client-Server-Anwendungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e3879d8eeec498f2855ee2b540f77570ee91109f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to SQL mit eng verkn&#252;pften Client-Server-Anwendungen
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann auf der mittleren Ebene zusammen mit eng verknüpften intelligenten Clients auf der Darstellungsebene verwendet werden.  Szenarien mit schreibgeschütztem Datenzugriff, ohne Überprüfungen auf vollständige Parallelität oder ohne vollständige Parallelität mit Timestamps sind nicht wesentlich komplexer als Szenarien ohne Remotezugriff.  Wenn für eine Datenbank jedoch eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten erforderlich ist, bietet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht die erforderliche Unterstützung für Roundtrips durch die in DataSets enthaltenen Daten.  Eine mittlere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Ebene kann Daten jedoch mit Clients auf beliebigen Plattformen austauschen.  
+# <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a><span data-ttu-id="92f7f-102">LINQ to SQL mit eng verknüpften Client-Server-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="92f7f-102">LINQ to SQL with Tightly-Coupled Client-Server Applications</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="92f7f-103">kann auf der mittleren Ebene mit eng verknüpften intelligenten Clients auf der Darstellungsebene verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="92f7f-103"> can be used on the middle tier with tightly-coupled Smart Clients on the presentation layer.</span></span> <span data-ttu-id="92f7f-104">Szenarien mit schreibgeschütztem Datenzugriff, ohne Überprüfungen auf vollständige Parallelität oder ohne vollständige Parallelität mit Timestamps sind nicht wesentlich komplexer als Szenarien ohne Remotezugriff.</span><span class="sxs-lookup"><span data-stu-id="92f7f-104">In scenarios that involve read-only data access, no optimistic concurrency checks, or optimistic concurrency with timestamps, there is not much more complexity than with non-remote scenarios.</span></span> <span data-ttu-id="92f7f-105">Wenn für eine Datenbank jedoch eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten erforderlich ist, bietet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht die erforderliche Unterstützung für Roundtrips durch die in DataSets enthaltenen Daten.</span><span class="sxs-lookup"><span data-stu-id="92f7f-105">However, when a database requires optimistic concurrency checks with original values, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not provide the level of support for round-tripping of data that you find in DataSets.</span></span> <span data-ttu-id="92f7f-106">Eine mittlere [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Ebene kann Daten jedoch mit Clients auf beliebigen Plattformen austauschen.</span><span class="sxs-lookup"><span data-stu-id="92f7f-106">However, a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] middle tier can exchange data with clients on any platform.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] stellt keine Infrastruktur zum Nachverfolgen des Entitätszustands bereit, nachdem die Serialisierung in einen Client erfolgte.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aktiviert dienstorientierte Architekturen, in denen es nur wenig und relativ atomare Interaktionen zwischen den Daten und den Darstellungsschichten gibt. Es werden jedoch keine Round\-Trips von ursprünglichen Werten ausgeführt.  Wenn Sie einen eng gekoppelten intelligenten Client mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einsetzen möchten und eine Datenbank vollständige Parallelität mit ursprünglichen Werten verwendet, müssen Sie deshalb einen eigenen Mechanismus implementieren, um Änderungen zwischen Präsentationsebene und mittlerer Ebene zu kommunizieren.  Es liegt im Ermessen des System\-Designers, ob dieser geringe zusätzliche Arbeitsaufwand die Vorteile aufwiegt, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf der mittleren Ebene bereitstellt.  Wenn die Datenbank über Timestamps verfügt, besteht andererseits keine Notwendigkeit für eine benutzerdefinierte Logik zur Änderungsverfolgung.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="92f7f-107">in [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] stellt keine Infrastruktur zum Nachverfolgen des nach der Serialisierung an einen Client.</span><span class="sxs-lookup"><span data-stu-id="92f7f-107"> in [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] provides no infrastructure for tracking entity state after they have been serialized to a client.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="92f7f-108">aktiviert dienstorientierte Architekturen, in denen Interaktionen zwischen den Daten und den Darstellungsschichten wenig und relativ atomare sind, aber wird nicht Trips von ursprünglichen Werten.</span><span class="sxs-lookup"><span data-stu-id="92f7f-108"> enables service-oriented architectures where interactions between the data and presentation layers are small and relatively atomic, but does not perform any round-tripping of original values.</span></span> <span data-ttu-id="92f7f-109">Wenn Sie einen eng gekoppelten intelligenten Client mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einsetzen möchten und eine Datenbank vollständige Parallelität mit ursprünglichen Werten verwendet, müssen Sie deshalb einen eigenen Mechanismus implementieren, um Änderungen zwischen Präsentationsebene und mittlerer Ebene zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="92f7f-109">Therefore, if you want to use a tightly-coupled Smart Client with [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], and a database uses optimistic concurrency with original values, you will have to implement your own mechanism for communicating changes between the presentation tier and middle tier.</span></span> <span data-ttu-id="92f7f-110">Es liegt im Ermessen des System-Designers, ob dieser geringe zusätzliche Arbeitsaufwand die Vorteile aufwiegt, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf der mittleren Ebene bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="92f7f-110">It is up to the system designer to decide whether it makes sense to do this bit of extra work in exchange for the benefits that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides on the middle tier.</span></span> <span data-ttu-id="92f7f-111">Wenn die Datenbank über Timestamps verfügt, besteht andererseits keine Notwendigkeit für eine benutzerdefinierte Logik zur Änderungsverfolgung.</span><span class="sxs-lookup"><span data-stu-id="92f7f-111">On the other hand, if the database has timestamps, then there is no need for custom change-tracking logic.</span></span>  
   
-## Siehe auch  
- [N\-Tier\- und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)   
- [LINQ to SQL\-N\-Tier mit Webdiensten](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)   
- [Arbeiten mit Datasets in N\-Tier\-Anwendungen](../Topic/Work%20with%20datasets%20in%20n-tier%20applications.md)
+## <a name="see-also"></a><span data-ttu-id="92f7f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="92f7f-112">See Also</span></span>  
+ [<span data-ttu-id="92f7f-113">N-schichtige und Remoteanwendungen mit LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="92f7f-113">N-Tier and Remote Applications with LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [<span data-ttu-id="92f7f-114">LINQ to SQL-N-Tier mit Webdiensten</span><span class="sxs-lookup"><span data-stu-id="92f7f-114">LINQ to SQL N-Tier with Web Services</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
+ [<span data-ttu-id="92f7f-115">Arbeiten mit Datasets in N-Tier-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="92f7f-115">Work with datasets in n-tier applications</span></span>](http://msdn.microsoft.com/library/f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20)

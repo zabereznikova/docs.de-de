@@ -1,23 +1,26 @@
 ---
-title: "Dienst: Transactions Flowed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Dienst: Transaktionen Flowed'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c564d7d-60d3-45a4-a9a1-c78f62ace57f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 87a1b0493582c86b0f75f381928d5aaeada85d6a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Dienst: Transactions Flowed
-Indikatorname: Transactions Flowed.  
+# <a name="service-transactions-flowed"></a><span data-ttu-id="25d2b-102">Dienst: Transaktionen Flowed</span><span class="sxs-lookup"><span data-stu-id="25d2b-102">Service: Transactions Flowed</span></span>
+<span data-ttu-id="25d2b-103">Indikatorname: Transactions Flowed.</span><span class="sxs-lookup"><span data-stu-id="25d2b-103">Counter Name: Transactions Flowed.</span></span>  
   
-## Beschreibung  
- Die Anzahl der in diesem Dienst an Vorgänge übergegangenen Transaktionen.
+## <a name="description"></a><span data-ttu-id="25d2b-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="25d2b-104">Description</span></span>  
+ <span data-ttu-id="25d2b-105">Die Anzahl der in diesem Dienst an Vorgänge übergegangenen Transaktionen.</span><span class="sxs-lookup"><span data-stu-id="25d2b-105">Number of transactions flowed to operations in this service.</span></span>

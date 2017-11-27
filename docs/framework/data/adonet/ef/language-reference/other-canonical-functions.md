@@ -1,33 +1,32 @@
 ---
-title: "Weitere kanonische Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Andere kanonische Funktionen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a636fbe7457ab6f50909009cf89da59b29842039
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Weitere kanonische Funktionen
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] enthält kanonische Funktionen, die nicht als bitweise, aggregiert, mathematisch, für Datum\/Uhrzeit oder für Zeichenfolgen klassifiziert sind.  
+# <a name="other-canonical-functions"></a><span data-ttu-id="4b8cf-102">Andere kanonische Funktionen</span><span class="sxs-lookup"><span data-stu-id="4b8cf-102">Other Canonical Functions</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="4b8cf-103"> enthält kanonische Funktionen, die nicht als bitweise, aggregiert, mathematisch, für Datum/Uhrzeit oder für Zeichenfolgen klassifiziert sind.</span><span class="sxs-lookup"><span data-stu-id="4b8cf-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  
   
- In der folgenden Tabelle sind die weiteren kanonischen [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Funktionen aufgeführt.  
+ <span data-ttu-id="4b8cf-104">In der folgenden Tabelle sind die weiteren kanonischen [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Funktionen aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="4b8cf-104">The following table shows the other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
-|Funktion|Beschreibung|  
-|--------------|------------------|  
-|`NewGuid()`|Gibt eine neue GUID zurück.<br /><br /> **Beispiel**<br /><br /> `NewGuid()`|  
+|<span data-ttu-id="4b8cf-105">Funktion</span><span class="sxs-lookup"><span data-stu-id="4b8cf-105">Function</span></span>|<span data-ttu-id="4b8cf-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4b8cf-106">Description</span></span>|  
+|--------------|-----------------|  
+|`NewGuid()`|<span data-ttu-id="4b8cf-107">Gibt eine neue GUID zurück.</span><span class="sxs-lookup"><span data-stu-id="4b8cf-107">Returns a new GUID.</span></span><br /><br /> <span data-ttu-id="4b8cf-108">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="4b8cf-108">**Example**</span></span><br /><br /> `NewGuid()`|  
   
-## Siehe auch  
- [Kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4b8cf-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4b8cf-109">See Also</span></span>  
+ [<span data-ttu-id="4b8cf-110">Canonical Functions (Kanonische Funktionen)</span><span class="sxs-lookup"><span data-stu-id="4b8cf-110">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

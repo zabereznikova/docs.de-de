@@ -1,44 +1,47 @@
 ---
-title: "Mitgliedschafts- und Rollenanbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mitgliedschafts- und Rollenanbieter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f2107c5ae03330eb82567ab483dcd7003a35e189
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Mitgliedschafts- und Rollenanbieter
-Im Beispiel zum Mitgliedschafts\- und Rollenanbieter wird veranschaulicht, wie ein Dienst mithilfe der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Mitgliedschafts\- und Rollenanbieter Clients authentifizieren und autorisieren kann.  
+# <a name="membership-and-role-provider"></a><span data-ttu-id="5d16d-102">Mitgliedschafts- und Rollenanbieter</span><span class="sxs-lookup"><span data-stu-id="5d16d-102">Membership and Role Provider</span></span>
+<span data-ttu-id="5d16d-103">Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ein Dienst mithilfe der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschafts- und Rollenanbieter Clients authentifizieren und autorisieren kann.</span><span class="sxs-lookup"><span data-stu-id="5d16d-103">The Membership and Role Provider sample demonstrates how a service can use the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership and role providers to authenticate and authorize clients.</span></span>  
   
- In diesem Beispiel ist der Client eine Konsolenanwendung \(.exe\), und der Dienst wird von Internetinformationsdiensten \(IIS\) gehostet.  
+ <span data-ttu-id="5d16d-104">In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.</span><span class="sxs-lookup"><span data-stu-id="5d16d-104">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="5d16d-105">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="5d16d-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In diesem Beispiel werden folgende Vorgänge veranschaulicht:  
+ <span data-ttu-id="5d16d-106">In diesem Beispiel werden folgende Vorgänge veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="5d16d-106">The sample demonstrates how:</span></span>  
   
--   Ein Client kann die Authentifizierung mithilfe einer Kombination aus Benutzername und Kennwort durchführen.  
+-   <span data-ttu-id="5d16d-107">Ein Client kann die Authentifizierung mithilfe einer Kombination aus Benutzername und Kennwort durchführen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-107">A client can authenticate by using the username-password combination.</span></span>  
   
--   Der Server kann die Clientanmeldeinformationen anhand des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Mitgliedschaftsanbieters überprüfen.  
+-   <span data-ttu-id="5d16d-108">Der Server kann die Clientanmeldeinformationen anhand des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieters überprüfen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-108">The server can validate the client credentials against the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider.</span></span>  
   
--   Der Server kann über das X.509\-Zertifikat des Servers authentifiziert werden.  
+-   <span data-ttu-id="5d16d-109">Der Server kann über das X.509-Zertifikat des Servers authentifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-109">The server can be authenticated by using the server's X.509 certificate.</span></span>  
   
--   Der Server kann den authentifizierten Client mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Rollenanbieter einer Rolle zuordnen.  
+-   <span data-ttu-id="5d16d-110">Der Server kann den authentifizierten Client mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter einer Rolle zuordnen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-110">The server can map the authenticated client to a role by using the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] role provider.</span></span>  
   
--   Der Server kann mit `PrincipalPermissionAttribute` den Zugriff auf bestimmte Methoden steuern, die vom Dienst verfügbar gemacht werden.  
+-   <span data-ttu-id="5d16d-111">Der Server kann mit `PrincipalPermissionAttribute` den Zugriff auf bestimmte Methoden steuern, die vom Dienst verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-111">The server can use the `PrincipalPermissionAttribute` to control access to certain methods that are exposed by the service.</span></span>  
   
- Die Mitgliedschafts\- und Rollenanbieter werden für die Verwendung eines Speichers konfiguriert, der von SQL Server unterstützt wird.Eine Verbindungszeichenfolge und verschiedene Optionen werden in der Dienstkonfigurationsdatei angegeben.Dem Mitgliedschaftsanbieter wird der Name `SqlMembershipProvider` zugewiesen, und dem Rollenanbieter wird der Name `SqlRoleProvider` zugewiesen.  
+ <span data-ttu-id="5d16d-112">Die Mitgliedschafts- und Rollenanbieter werden für die Verwendung eines Speichers konfiguriert, der von SQL Server unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="5d16d-112">The membership and role providers are configured to use a store backed by SQL Server.</span></span> <span data-ttu-id="5d16d-113">Eine Verbindungszeichenfolge und verschiedene Optionen werden in der Dienstkonfigurationsdatei angegeben.</span><span class="sxs-lookup"><span data-stu-id="5d16d-113">A connection string and various options are specified in the service configuration file.</span></span> <span data-ttu-id="5d16d-114">Dem Mitgliedschaftsanbieter wird der Name `SqlMembershipProvider` zugewiesen, und dem Rollenanbieter wird der Name `SqlRoleProvider` zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-114">The membership provider is given the name `SqlMembershipProvider` while the role provider is given the name `SqlRoleProvider`.</span></span>  
   
-```  
+```xml  
 <!-- Set the connection string for SQL Server -->  
 <connectionStrings>  
   <add name="SqlConn"   
@@ -76,9 +79,9 @@ Im Beispiel zum Mitgliedschafts\- und Rollenanbieter wird veranschaulicht, wie e
 </system.web>  
 ```  
   
- Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert.Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.Die Bindung wird mit einer Standard\-`wsHttpBinding` konfiguriert, die standardmäßig die Windows\-Authentifizierung verwendet.In diesem Beispiel wird die Standard\-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt.Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll.Das Serverzertifikat muss für `SubjectName` denselben Wert wie das `findValue`\-Attribut im [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\-Konfigurationselement enthalten.Außerdem gibt das Verhalten an, dass die Authentifizierung von Benutzername\/Kennwort\-Paaren vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Mitgliedschaftsanbieter und die Rollenzuordnung vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Rollenanbieter ausgeführt werden soll, indem die für die beiden Anbieter definierten Namen angegeben werden.  
+ <span data-ttu-id="5d16d-115">Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert.</span><span class="sxs-lookup"><span data-stu-id="5d16d-115">The service exposes a single endpoint for communicating with the service, which is defined by using the Web.config configuration file.</span></span> <span data-ttu-id="5d16d-116">Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.</span><span class="sxs-lookup"><span data-stu-id="5d16d-116">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="5d16d-117">Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="5d16d-117">The binding is configured with a standard `wsHttpBinding`, which defaults to using Windows authentication.</span></span> <span data-ttu-id="5d16d-118">In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt.</span><span class="sxs-lookup"><span data-stu-id="5d16d-118">This sample sets the standard `wsHttpBinding` to use username authentication.</span></span> <span data-ttu-id="5d16d-119">Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="5d16d-119">The behavior specifies that the server certificate is to be used for service authentication.</span></span> <span data-ttu-id="5d16d-120">Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Konfigurationselement.</span><span class="sxs-lookup"><span data-stu-id="5d16d-120">The server certificate must contain the same value for the `SubjectName` as the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) configuration element.</span></span> <span data-ttu-id="5d16d-121">Außerdem gibt das Verhalten an, dass die Authentifizierung von Benutzername/Kennwort-Paaren vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter und die Rollenzuordnung vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter ausgeführt werden soll, indem die für die beiden Anbieter definierten Namen angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-121">In addition the behavior specifies that authentication of username-password pairs is performed by the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider and role mapping is performed by the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] role provider by specifying the names defined for the two providers.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
   <protocolMapping>  
@@ -121,71 +124,71 @@ Im Beispiel zum Mitgliedschafts\- und Rollenanbieter wird veranschaulicht, wie e
 </system.serviceModel>  
 ```  
   
- Wenn Sie das Beispiel ausführen, ruft der Client die unterschiedlichen Dienstvorgänge unter drei verschiedenen Benutzerkonten auf: Alice, Bob und Charlie.Die Anforderungen und Antworten des Vorgangs werden im Clientkonsolenfenster angezeigt.Alle vier Aufrufe als Benutzer "Alice" sollten erfolgreich sein.Für Benutzer "Bob" sollte der Versuch, die Divide\-Methode aufzurufen, zu einem Zugriffsverweigerungsfehler führen.Bei Benutzer "Charlie" sollte beim Versuch, die Multiply\-Methode aufzurufen, ein Zugriffsverweigerungsfehler auftreten.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="5d16d-122">Wenn Sie das Beispiel ausführen, ruft der Client die unterschiedlichen Dienstvorgänge unter drei verschiedenen Benutzerkonten auf: Alice, Bob und Charlie.</span><span class="sxs-lookup"><span data-stu-id="5d16d-122">When you run the sample, the client calls the various service operations under three different user accounts: Alice, Bob, and Charlie.</span></span> <span data-ttu-id="5d16d-123">Die Anforderungen und Antworten des Vorgangs werden im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5d16d-123">The operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="5d16d-124">Alle vier Aufrufe als Benutzer "Alice" sollten erfolgreich sein.</span><span class="sxs-lookup"><span data-stu-id="5d16d-124">All four calls made as user "Alice" should succeed.</span></span> <span data-ttu-id="5d16d-125">Für Benutzer "Bob" sollte der Versuch, die Divide-Methode aufzurufen, zu einem Zugriffsverweigerungsfehler führen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-125">User "Bob" should get an access denied error when trying to call the Divide method.</span></span> <span data-ttu-id="5d16d-126">Bei Benutzer "Charlie" sollte beim Versuch, die Multiply-Methode aufzurufen, ein Zugriffsverweigerungsfehler auftreten.</span><span class="sxs-lookup"><span data-stu-id="5d16d-126">User "Charlie" should get an access denied error when trying to call the Multiply method.</span></span> <span data-ttu-id="5d16d-127">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-127">Press ENTER in the client window to shut down the client.</span></span>  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5d16d-128">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="5d16d-128">To set up, build, and run the sample</span></span>  
   
-1.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1.  <span data-ttu-id="5d16d-129">Führen Sie zum Erstellen der C#- oder Visual Basic-Edition der Lösung die Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5d16d-129">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-2.  Stellen Sie sicher, dass Sie die [Datenbank für ASP.NET\-Anwendungsdienste](http://go.microsoft.com/fwlink/?LinkId=94997) konfiguriert haben.  
-  
-    > [!NOTE]
-    >  Wenn Sie SQL Server Express Edition ausführen, lautet der Servername:\\SQLEXPRESS.Dieser Server sollte zum Konfigurieren der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Datenbank für die Anwendungsdienste sowie in der Web.config\-Verbindungszeichenfolge verwendet werden.  
+2.  <span data-ttu-id="5d16d-130">Stellen Sie sicher, dass Sie konfiguriert haben, die [ASP.NET Anwendungsdienstdatenbank](http://go.microsoft.com/fwlink/?LinkId=94997).</span><span class="sxs-lookup"><span data-stu-id="5d16d-130">Ensure that you have configured the [ASP.NET Application Services Database](http://go.microsoft.com/fwlink/?LinkId=94997).</span></span>  
   
     > [!NOTE]
-    >  Das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Arbeitsprozesskonto muss über Berechtigungen für die in diesem Schritt erstellte Datenbank verfügen.Verwenden Sie hierzu das sqlcmd\-Hilfsprogramm oder SQL Server Management Studio.  
+    >  <span data-ttu-id="5d16d-131">Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS.</span><span class="sxs-lookup"><span data-stu-id="5d16d-131">If you are running SQL Server Express Edition, your server name is .\SQLEXPRESS.</span></span> <span data-ttu-id="5d16d-132">Dieser Server sollte zum Konfigurieren der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Datenbank für die Anwendungsdienste sowie in der Web.config-Verbindungszeichenfolge verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-132">This server should be used when configuring the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Application Services Database as well as in the Web.config connection string.</span></span>  
   
-3.  Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend auszuführen, befolgen Sie die folgenden Anweisungen.  
+    > [!NOTE]
+    >  <span data-ttu-id="5d16d-133">Das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Arbeitsprozesskonto muss über Berechtigungen für die in diesem Schritt erstellte Datenbank verfügen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-133">The [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] worker process account must have permissions on the database that is created in this step.</span></span> <span data-ttu-id="5d16d-134">Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.</span><span class="sxs-lookup"><span data-stu-id="5d16d-134">Use the sqlcmd utility or SQL Server Management Studio to do this.</span></span>  
   
-### So führen Sie das Beispiel auf demselben Computer aus  
+3.  <span data-ttu-id="5d16d-135">Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend auszuführen, befolgen Sie die folgenden Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="5d16d-135">To run the sample in a single- or cross-computer configuration, use the following instructions.</span></span>  
   
-1.  Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.  
+### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="5d16d-136">So führen Sie das Beispiel auf demselben Computer aus</span><span class="sxs-lookup"><span data-stu-id="5d16d-136">To run the sample on the same computer</span></span>  
   
-2.  Führen Sie Setup.bat aus dem Beispielinstallationsordner an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten aus.Hierdurch werden die Dienstzertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
+1.  <span data-ttu-id="5d16d-137">Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.</span><span class="sxs-lookup"><span data-stu-id="5d16d-137">Make sure that the path includes the folder where Makecert.exe is located.</span></span>  
   
-3.  Starten Sie Client.exe aus dem Ordner \\client\\bin.In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+2.  <span data-ttu-id="5d16d-138">Führen Sie Setup.bat aus dem Beispielinstallationsordner an einer Visual Studio-Eingabeaufforderung mit Administratorrechten aus.</span><span class="sxs-lookup"><span data-stu-id="5d16d-138">Run Setup.bat from the sample install folder in a Visual Studio command prompt run with administrator privileges.</span></span> <span data-ttu-id="5d16d-139">Hierdurch werden die Dienstzertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="5d16d-139">This installs the service certificates required for running the sample.</span></span>  
   
-4.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  <span data-ttu-id="5d16d-140">Starten Sie Client.exe aus dem Ordner \client\bin.</span><span class="sxs-lookup"><span data-stu-id="5d16d-140">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="5d16d-141">In der Clientkonsolenanwendung wird Clientaktivität angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5d16d-141">Client activity is displayed on the client console application.</span></span>  
   
-### So führen Sie das Beispiel computerübergreifend aus  
+4.  <span data-ttu-id="5d16d-142">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="5d16d-142">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.Erstellen Sie mithilfe des Verwaltungstools für Internetinformationsdienste \(IIS\) für dieses Verzeichnis eine virtuelle Anwendung mit dem Namen servicemodelsamples.  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="5d16d-143">So führen Sie das Beispiel computerübergreifend aus</span><span class="sxs-lookup"><span data-stu-id="5d16d-143">To run the sample across computers</span></span>  
   
-2.  Kopieren Sie die Dienstprogrammdateien aus \\inetpub\\wwwroot\\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer.Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \\bin kopieren.Kopieren Sie außerdem die Dateien Setup.bat, GetComputerName.vbs und Cleanup.bat auf den Dienstcomputer.  
+1.  <span data-ttu-id="5d16d-144">Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="5d16d-144">Create a directory on the service computer.</span></span> <span data-ttu-id="5d16d-145">Erstellen Sie mithilfe des Verwaltungstools für Internetinformationsdienste (IIS) für dieses Verzeichnis eine virtuelle Anwendung mit dem Namen servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="5d16d-145">Create a virtual application named servicemodelsamples for this directory by using the Internet Information Services (IIS) management tool.</span></span>  
   
-3.  Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.  
+2.  <span data-ttu-id="5d16d-146">Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="5d16d-146">Copy the service program files from \inetpub\wwwroot\servicemodelsamples to the virtual directory on the service computer.</span></span> <span data-ttu-id="5d16d-147">Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren.</span><span class="sxs-lookup"><span data-stu-id="5d16d-147">Ensure that you copy the files in the \bin subdirectory.</span></span> <span data-ttu-id="5d16d-148">Kopieren Sie außerdem die Dateien Setup.bat, GetComputerName.vbs und Cleanup.bat auf den Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="5d16d-148">Also copy the Setup.bat, GetComputerName.vbs, and Cleanup.bat files to the service computer.</span></span>  
   
-4.  Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer.Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
+3.  <span data-ttu-id="5d16d-149">Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.</span><span class="sxs-lookup"><span data-stu-id="5d16d-149">Create a directory on the client computer for the client binaries.</span></span>  
   
-5.  Öffnen Sie auf dem Server eine Visual Studio\-Eingabeaufforderung mit Administratorrechten, und führen Sie `setup.bat service` aus.Durch Ausführen von `setup.bat` mit dem Argument `service` wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und in die Datei Service.cer exportiert.  
+4.  <span data-ttu-id="5d16d-150">Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="5d16d-150">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="5d16d-151">Kopieren Sie die Dateien "Setup.bat", "Cleanup.bat" und "ImportServiceCert.bat" ebenfalls auf den Client.</span><span class="sxs-lookup"><span data-stu-id="5d16d-151">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-6.  Bearbeiten Sie die Datei Web.config so, dass sie den neuen Zertifikatnamen \(im `findValue`\-Attribut im [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\) enthält, der dem vollqualifizierten Domänennamen des Computers entspricht.  
+5.  <span data-ttu-id="5d16d-152">Öffnen Sie auf dem Server eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie `setup.bat service` aus.</span><span class="sxs-lookup"><span data-stu-id="5d16d-152">On the server, open a Visual Studio command prompt with administrative privileges and run `setup.bat service`.</span></span> <span data-ttu-id="5d16d-153">Ausführen `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in eine Datei "Service.cer" exportiert exportiert.</span><span class="sxs-lookup"><span data-stu-id="5d16d-153">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computer and exports the service certificate to a file named Service.cer.</span></span>  
   
-7.  Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
+6.  <span data-ttu-id="5d16d-154">Bearbeiten der Datei "Web.config", um den neuen Zertifikatnamen entspricht (in der `findValue` Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), also den voll qualifizierten Domänennamen des Computers identisch.</span><span class="sxs-lookup"><span data-stu-id="5d16d-154">Edit Web.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), which is the same as the fully-qualified domain name of the computer.</span></span>  
   
-8.  Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
+7.  <span data-ttu-id="5d16d-155">Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="5d16d-155">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-9. Öffnen Sie auf dem Client eine Visual Studio\-Eingabeaufforderung mit Administratorrechten, und führen Sie ImportServiceCert.bat aus.Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
+8.  <span data-ttu-id="5d16d-156">Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="5d16d-156">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-10. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+9. <span data-ttu-id="5d16d-157">Öffnen Sie auf dem Client eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie ImportServiceCert.bat aus.</span><span class="sxs-lookup"><span data-stu-id="5d16d-157">On the client, open a Visual Studio command prompt with administrative privileges and run ImportServiceCert.bat.</span></span> <span data-ttu-id="5d16d-158">Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.</span><span class="sxs-lookup"><span data-stu-id="5d16d-158">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+10. <span data-ttu-id="5d16d-159">Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="5d16d-159">On the client computer, launch Client.exe from a command prompt.</span></span> <span data-ttu-id="5d16d-160">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="5d16d-160">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
--   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="5d16d-161">So stellen Sie den Zustand vor Ausführung des Beispiels wieder her</span><span class="sxs-lookup"><span data-stu-id="5d16d-161">To clean up after the sample</span></span>  
+  
+-   <span data-ttu-id="5d16d-162">Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.</span><span class="sxs-lookup"><span data-stu-id="5d16d-162">Run Cleanup.bat in the samples folder after you have finished running the sample.</span></span>  
   
 > [!NOTE]
->  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client.Wenn Sie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser – TrustedPeople installiert wurden.Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  <span data-ttu-id="5d16d-163">Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client.</span><span class="sxs-lookup"><span data-stu-id="5d16d-163">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="5d16d-164">Wenn Sie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser – TrustedPeople installiert wurden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-164">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="5d16d-165">Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="5d16d-165">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## Die Setupbatchdatei  
- Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
+## <a name="the-setup-batch-file"></a><span data-ttu-id="5d16d-166">Die Setupbatchdatei</span><span class="sxs-lookup"><span data-stu-id="5d16d-166">The Setup Batch File</span></span>  
+ <span data-ttu-id="5d16d-167">Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.</span><span class="sxs-lookup"><span data-stu-id="5d16d-167">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run a self-hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="5d16d-168">Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="5d16d-168">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.  
+ <span data-ttu-id="5d16d-169">Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-169">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration.</span></span>  
   
--   Erstellen des Serverzertifikats.  
+-   <span data-ttu-id="5d16d-170">Erstellen des Serverzertifikats.</span><span class="sxs-lookup"><span data-stu-id="5d16d-170">Creating the server certificate.</span></span>  
   
-     Mit den folgenden Zeilen aus der Batchdatei Setup.bat wird das zu verwendende Serverzertifikat erstellt.Die Variable %SERVER\_NAME% gibt den Servernamen an.Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an.Standardmäßig lautet sie in dieser Batchdatei localhost.  
+     <span data-ttu-id="5d16d-171">Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt.</span><span class="sxs-lookup"><span data-stu-id="5d16d-171">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="5d16d-172">Die Variable %SERVER_NAME% gibt den Servernamen an.</span><span class="sxs-lookup"><span data-stu-id="5d16d-172">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="5d16d-173">Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an.</span><span class="sxs-lookup"><span data-stu-id="5d16d-173">Change this variable to specify your own server name.</span></span> <span data-ttu-id="5d16d-174">Standardmäßig lautet sie in dieser Batchdatei localhost.</span><span class="sxs-lookup"><span data-stu-id="5d16d-174">This batch file defaults it to localhost.</span></span>  
   
-     Das Zertifikat wird im persönlichen Speicher unter dem Speicherort LocalMachine gespeichert.  
+     <span data-ttu-id="5d16d-175">Das Zertifikat wird im persönlichen Speicher unter dem Speicherort LocalMachine gespeichert.</span><span class="sxs-lookup"><span data-stu-id="5d16d-175">The certificate is stored in My (Personal) store under the LocalMachine store location.</span></span>  
   
     ```  
     echo ************  
@@ -197,12 +200,12 @@ Im Beispiel zum Mitgliedschafts\- und Rollenanbieter wird veranschaulicht, wie e
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.  
+-   <span data-ttu-id="5d16d-176">Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.</span><span class="sxs-lookup"><span data-stu-id="5d16d-176">Installing the server certificate into the client's trusted certificate store.</span></span>  
   
-     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.Dieser Schritt ist erforderlich, da von Makecert.exe generierten Zertifikaten nicht implizit vom Clientsystem vertraut wird.Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
+     <span data-ttu-id="5d16d-177">Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.</span><span class="sxs-lookup"><span data-stu-id="5d16d-177">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="5d16d-178">Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.</span><span class="sxs-lookup"><span data-stu-id="5d16d-178">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="5d16d-179">Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="5d16d-179">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="5d16d-180">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5d16d-180">See Also</span></span>

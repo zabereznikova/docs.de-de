@@ -1,27 +1,30 @@
 ---
-title: "Aufrufe pro Sekunde | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aufrufe pro Sekunde
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0efb5a94-d83b-4793-b529-6fcbedb65c43
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 54e8b60679c7e7106f5b2e28abfebe5adc589174
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Aufrufe pro Sekunde
-Zählername: Aufrufe pro Sekunde  
+# <a name="calls-per-second"></a><span data-ttu-id="69260-102">Aufrufe pro Sekunde</span><span class="sxs-lookup"><span data-stu-id="69260-102">Calls Per Second</span></span>
+<span data-ttu-id="69260-103">Zählername: Aufrufe pro Sekunde</span><span class="sxs-lookup"><span data-stu-id="69260-103">Counter Name: Calls Per Second</span></span>  
   
-## Beschreibung  
- Anzahl von Aufrufen in diesem Vorgang pro Sekunde.  
+## <a name="description"></a><span data-ttu-id="69260-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="69260-104">Description</span></span>  
+ <span data-ttu-id="69260-105">Anzahl von Aufrufen in diesem Vorgang pro Sekunde.</span><span class="sxs-lookup"><span data-stu-id="69260-105">Number of calls to this operation in a second.</span></span>  
   
- Bei diesem Zähler handelt es sich um einen Leistungsindikator vom Typ [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird:  
+ <span data-ttu-id="69260-106">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="69260-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0\)\/\(\(D 1 \- D 0\)\/F\)
+ <span data-ttu-id="69260-107">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="69260-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - invalid member declaration
 - InvalidMemberDeclaration MDA
@@ -21,36 +15,35 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 34db255e3e04776123d30ad06dc3026c4e75addd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71313a14ba1f9222e19dbf9f8180280d0e8c444d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration-MDA
-Der `invalidMemberDeclaration`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Fehler zu melden, der aufgetreten ist, als ermittelt werden sollte, wie das Marshalling für die Parameter eines Members zu erfolgen hat, das aus COM aufgerufen werden soll.  
+# <a name="invalidmemberdeclaration-mda"></a><span data-ttu-id="995c0-102">invalidMemberDeclaration-MDA</span><span class="sxs-lookup"><span data-stu-id="995c0-102">invalidMemberDeclaration MDA</span></span>
+<span data-ttu-id="995c0-103">Der `invalidMemberDeclaration`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Fehler zu melden, der aufgetreten ist, als ermittelt werden sollte, wie das Marshalling für die Parameter eines Members zu erfolgen hat, das aus COM aufgerufen werden soll.</span><span class="sxs-lookup"><span data-stu-id="995c0-103">The `invalidMemberDeclaration` managed debugging assistant (MDA) is activated to report an error that occurs while determining how to marshal the parameters of a member to be called from COM.</span></span>  
   
-## <a name="symptoms"></a>Symptome  
- Es wird ein Fehler-HRESULT an COM zurückgegeben, ohne dass die verwaltete Methode aufgerufen wurde.  
+## <a name="symptoms"></a><span data-ttu-id="995c0-104">Symptome</span><span class="sxs-lookup"><span data-stu-id="995c0-104">Symptoms</span></span>  
+ <span data-ttu-id="995c0-105">Es wird ein Fehler-HRESULT an COM zurückgegeben, ohne dass die verwaltete Methode aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="995c0-105">A failure HRESULT is returned to COM without the managed method having been called.</span></span>  
   
-## <a name="cause"></a>Ursache  
- Dies wird höchstwahrscheinlich durch ein inkompatibles <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut für einen der Parameter verursacht.  
+## <a name="cause"></a><span data-ttu-id="995c0-106">Ursache</span><span class="sxs-lookup"><span data-stu-id="995c0-106">Cause</span></span>  
+ <span data-ttu-id="995c0-107">Dies wird höchstwahrscheinlich durch ein inkompatibles <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut für einen der Parameter verursacht.</span><span class="sxs-lookup"><span data-stu-id="995c0-107">This is most likely due to an incompatible <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute on one of the parameters.</span></span>  
   
-## <a name="resolution"></a>Auflösung  
- Geben Sie gültige <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribute für die Parameter an.  
+## <a name="resolution"></a><span data-ttu-id="995c0-108">Auflösung</span><span class="sxs-lookup"><span data-stu-id="995c0-108">Resolution</span></span>  
+ <span data-ttu-id="995c0-109">Geben Sie gültige <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribute für die Parameter an.</span><span class="sxs-lookup"><span data-stu-id="995c0-109">Specify valid <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributes on the parameters.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
- Dieser MDA hat keine Auswirkungen auf die CLR.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="995c0-110">Auswirkungen auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="995c0-110">Effect on the Runtime</span></span>  
+ <span data-ttu-id="995c0-111">Dieser MDA hat keine Auswirkungen auf die CLR.</span><span class="sxs-lookup"><span data-stu-id="995c0-111">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>Ausgabe  
- Eine Informationsmeldung, die den Membernamen, den Typnamen und die Fehlermeldung enthält.  
+## <a name="output"></a><span data-ttu-id="995c0-112">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="995c0-112">Output</span></span>  
+ <span data-ttu-id="995c0-113">Eine Informationsmeldung, die den Membernamen, den Typnamen und die Fehlermeldung enthält.</span><span class="sxs-lookup"><span data-stu-id="995c0-113">An informational message containing the member name, type name, and error message.</span></span>  
   
-## <a name="configuration"></a>Konfiguration  
+## <a name="configuration"></a><span data-ttu-id="995c0-114">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="995c0-114">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -60,8 +53,7 @@ Der `invalidMemberDeclaration`-MDA (Managed Debugging Assistant, Assistent für 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="995c0-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="995c0-115">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="995c0-116">Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)</span><span class="sxs-lookup"><span data-stu-id="995c0-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="995c0-117">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="995c0-117">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

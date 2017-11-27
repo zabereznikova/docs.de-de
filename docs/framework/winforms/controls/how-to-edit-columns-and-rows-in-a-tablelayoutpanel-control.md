@@ -1,57 +1,57 @@
 ---
-title: "Gewusst wie: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Spalten [Windows Forms], Bearbeiten"
-  - "Zeilen [Windows Forms], Bearbeiten"
-  - "TableLayoutPanel-Steuerelement [Windows Forms], Bearbeiten"
+title: 'Gewusst wie: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.StyleCollectionEditor
+helpviewer_keywords:
+- columns [Windows Forms], editing
+- TableLayoutPanel control [Windows Forms], editing
+- rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84dbcfcbad30f9ef08548874c5e68ed658aa0914
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement
-Sie können mit dem Auflistungs\-Editor des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements, also mit dem Dialogfeld **Spalten\- und Zeilenstile**, die Zeilen und Spalten der Steuerelemente bearbeiten.  
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a><span data-ttu-id="1e227-102">Gewusst wie: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="1e227-102">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="1e227-103">Können Sie den auflistungs-Editor von der <xref:System.Windows.Forms.TableLayoutPanel> als Steuerelement der **Spalten- und Zeilenstile** (Dialogfeld), um die Zeilen und Spalten der Steuerelemente zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="1e227-103">You can use the collection editor of the <xref:System.Windows.Forms.TableLayoutPanel> control, called the **Column and Row Styles** dialog box, to edit the rows and columns of your controls.</span></span>  
   
 > [!NOTE]
->  Wenn ein Steuerelement mehrere Zeilen oder Spalten überspannen soll, legen Sie die `RowSpan`\-Eigenschaft und die `ColumnSpan`\-Eigenschaft für das Steuerelement fest.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+>  <span data-ttu-id="1e227-104">Wenn Sie ein Steuerelement, die mehrere Zeilen oder Spalten umfassen soll, legen die `RowSpan` und `ColumnSpan` Eigenschaften des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="1e227-104">If you want a control to span multiple rows or columns, set the `RowSpan` and `ColumnSpan` properties on the control.</span></span> <span data-ttu-id="1e227-105">Weitere Informationen finden Sie unter [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span><span class="sxs-lookup"><span data-stu-id="1e227-105">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
 >   
->  Wenn Sie ein Steuerelement in einer Zelle ausrichten oder strecken möchten, verwenden Sie seine <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+>  <span data-ttu-id="1e227-106">Wenn Sie ein Steuerelement in einer Zelle ausrichten möchten, oder ein Steuerelement in einer Zelle gestreckt werden soll, verwenden Sie des Steuerelements <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="1e227-106">If you want to align a control within a cell, or if you want a control to stretch within a cell, use the control's <xref:System.Windows.Forms.Control.Anchor%2A> property.</span></span> <span data-ttu-id="1e227-107">Weitere Informationen finden Sie unter [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span><span class="sxs-lookup"><span data-stu-id="1e227-107">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
 >   
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="1e227-108">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="1e227-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="1e227-109">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="1e227-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="1e227-110">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="1e227-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So bearbeiten Sie Zeilen und Spalten  
+### <a name="to-edit-rows-and-columns"></a><span data-ttu-id="1e227-111">So bearbeiten Sie die Zeilen und Spalten</span><span class="sxs-lookup"><span data-stu-id="1e227-111">To edit rows and columns</span></span>  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement aus der **Toolbox** auf das Formular.  
+1.  <span data-ttu-id="1e227-112">Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.</span><span class="sxs-lookup"><span data-stu-id="1e227-112">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Klicken Sie auf das Smarttagsymbol \(![Smarttag&#45;Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements, und wählen Sie **Zeilen und Spalten bearbeiten** aus, um das Dialogfeld **Spalten\- und Zeilenstile** zu öffnen.  Sie können auch mit der rechten Maustaste auf das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement klicken und im Kontextmenü **Zeilen und Spalten bearbeiten** auswählen.  
+2.  <span data-ttu-id="1e227-113">Klicken Sie auf die <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements Smarttag-Glyphe (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), und wählen Sie **Zeilen und Spalten bearbeiten** So öffnen die  **Spalten- und Zeilenstile** (Dialogfeld).</span><span class="sxs-lookup"><span data-stu-id="1e227-113">Click the <xref:System.Windows.Forms.TableLayoutPanel> control's smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) and select **Edit Rows and Columns** to open the **Column and Row Styles** dialog box.</span></span> <span data-ttu-id="1e227-114">Sie können auch mit der rechten Maustaste auf die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und wählen Sie **Zeilen und Spalten bearbeiten** aus dem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="1e227-114">You can also right click on the <xref:System.Windows.Forms.TableLayoutPanel> control and select **Edit Rows and Columns** from the shortcut menu.</span></span>  
   
-3.  Um Spalten hinzuzufügen oder zu entfernen, wählen Sie in der Dropdownliste **Membertyp** die Option **Spalten** aus.  
+3.  <span data-ttu-id="1e227-115">Wählen Sie zum Hinzufügen oder Entfernen von Spalten, **Spalten** aus der **Elementtyp** Dropdown Listenfeld aus.</span><span class="sxs-lookup"><span data-stu-id="1e227-115">To add or remove columns, select **Columns** from the **Member type** drop-down list box.</span></span>  
   
-4.  Um Zeilen hinzuzufügen oder zu entfernen, wählen Sie in der Dropdownliste **Membertyp** die Option **Zeilen** aus.  
+4.  <span data-ttu-id="1e227-116">Wählen Sie zum Hinzufügen oder Entfernen von Zeilen, **Zeilen** aus der **Elementtyp** Dropdown Listenfeld aus.</span><span class="sxs-lookup"><span data-stu-id="1e227-116">To add or remove rows, select **Rows** from the **Member type** drop-down list box.</span></span>  
   
-5.  Klicken Sie auf die Schaltfläche **Hinzufügen**, um dem Ende der Liste **Member** eine Zeile oder eine Spalte hinzuzufügen.  
+5.  <span data-ttu-id="1e227-117">Klicken Sie auf die **hinzufügen** Schaltfläche zum Hinzufügen einer Zeile oder Spalte an das Ende der **Member** Liste.</span><span class="sxs-lookup"><span data-stu-id="1e227-117">Click the **Add** button to add a row or column to the end of the **Member** list.</span></span>  
   
-6.  Klicken Sie auf die Schaltfläche **Einfügen**, um eine Zeile oder Spalte vor dem derzeit ausgewählten Element in der Liste hinzuzufügen.  
+6.  <span data-ttu-id="1e227-118">Klicken Sie auf die **einfügen** Schaltfläche, um eine Zeile oder Spalte vor dem aktuell ausgewählten Element in der Liste hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="1e227-118">Click the **Insert** button to add a row or column before the currently selected item in the list.</span></span>  
   
-7.  Wenn Sie eine Zeile oder Spalte hinzufügen, wählen Sie den **Größentyp** für die neue Zeile oder Spalte.  Weitere Informationen finden Sie unter <xref:System.Windows.Forms.SizeType>.  
+7.  <span data-ttu-id="1e227-119">Wenn Sie eine Zeile oder Spalte hinzufügen, wählen Sie die **Größentyps** für die neue Zeile oder Spalte.</span><span class="sxs-lookup"><span data-stu-id="1e227-119">If you are adding a row or column, select the **Size Type** for the new row or column.</span></span> <span data-ttu-id="1e227-120">Weitere Informationen finden Sie unter <xref:System.Windows.Forms.SizeType>.</span><span class="sxs-lookup"><span data-stu-id="1e227-120">For more information, see <xref:System.Windows.Forms.SizeType>.</span></span>  
   
-8.  Wenn Sie eine Zeile oder Spalte entfernen möchten, klicken Sie auf die Schaltfläche **Entfernen**, um das derzeit ausgewählte Element in der Liste **Member** zu löschen.  
+8.  <span data-ttu-id="1e227-121">Um eine Zeile oder Spalte zu entfernen, klicken Sie auf die **entfernen** Schaltfläche, um das aktuell ausgewählte Element im Löschen der **Member** Liste.</span><span class="sxs-lookup"><span data-stu-id="1e227-121">To remove a row or column, click the **Remove** button to delete the currently selected item in the **Member** list.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SizeType>   
- [TableLayoutPanel\-Steuerelement](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1e227-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1e227-122">See Also</span></span>  
+ <xref:System.Windows.Forms.SizeType>  
+ [<span data-ttu-id="1e227-123">TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="1e227-123">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

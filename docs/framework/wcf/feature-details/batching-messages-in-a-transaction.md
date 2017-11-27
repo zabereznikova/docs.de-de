@@ -1,94 +1,96 @@
 ---
-title: "Batchverarbeitung von Nachrichten in einer Transaktion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Batchverarbeitung von Nachrichten [WCF]"
+title: Batchverarbeitung von Nachrichten in einer Transaktion
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Batchverarbeitung von Nachrichten in einer Transaktion
-Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine richtige und zuverlässige Zustellung der Nachrichten zu gewährleisten.Transaktionen sind jedoch teuer und können den Nachrichtendurchsatz stark senken.Eine Möglichkeit, den Nachrichtendurchsatz zu verbessern, ist, dass mehrere Nachrichten in einer Transaktion von einer Anwendung gelesen und verarbeitet werden.Dabei muss zwischen Leistung und Wiederherstellungsaufwand abgewogen werden: Je mehr Nachrichten sich in einem Batch befinden, desto umfangreicher ist die Wiederherstellungsarbeit, die anfällt, falls Transaktionen zurückgesetzt werden.Beachten Sie dabei den Unterschied zwischen der Batchverarbeitung von Nachrichten in einer Transaktion und in Sitzungen.Eine *Sitzung* ist eine Gruppierung verwandter Nachrichten, die von einer einzigen Anwendung verarbeitet werden und für die der Commit als Einheit durchgeführt wird.Sitzungen werden in der Regel verwendet, wenn eine Gruppe verwandter Nachrichten gemeinsam verarbeitet werden muss.Ein Beispiel hierfür ist eine Website für Online\-Shopping.*Batches* werden für die Verarbeitung mehrerer unzusammenhängender Nachrichten verwendet, um den Nachrichtendurchsatz zu erhöhen.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Sitzungen finden Sie unter [Gruppieren von Nachrichten in der Warteschlange einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).Nachrichten in einem Batch werden auch nur von einer Anwendung verarbeitet und als Einheit festgeschrieben \(COMMIT\), die Nachrichten im Batch stehen jedoch ggf. in keinem Zusammenhang zueinander.Die Batchverarbeitung von Nachrichten in einer Transaktion ist eine Optimierung, die sich nicht auf die Ausführung der Anwendung auswirkt.  
+# <a name="batching-messages-in-a-transaction"></a><span data-ttu-id="f621a-102">Batchverarbeitung von Nachrichten in einer Transaktion</span><span class="sxs-lookup"><span data-stu-id="f621a-102">Batching Messages in a Transaction</span></span>
+<span data-ttu-id="f621a-103">Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine richtige und zuverlässige Zustellung der Nachrichten zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="f621a-103">Queued applications use transactions to ensure correctness and reliable delivery of messages.</span></span> <span data-ttu-id="f621a-104">Transaktionen sind jedoch teuer und können den Nachrichtendurchsatz stark senken.</span><span class="sxs-lookup"><span data-stu-id="f621a-104">Transactions, however, are expensive operations and can dramatically reduce message throughput.</span></span> <span data-ttu-id="f621a-105">Eine Möglichkeit, den Nachrichtendurchsatz zu verbessern, ist, dass mehrere Nachrichten in einer Transaktion von einer Anwendung gelesen und verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="f621a-105">One way to improve message throughput is to have an application read and process multiple messages within a single transaction.</span></span> <span data-ttu-id="f621a-106">Dabei muss zwischen Leistung und Wiederherstellungsaufwand abgewogen werden: Je mehr Nachrichten sich in einem Batch befinden, desto umfangreicher ist die Wiederherstellungsarbeit, die anfällt, falls Transaktionen zurückgesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="f621a-106">The trade-off is between performance and recovery: as the number of messages in a batch increases, so does the amount of recovery work that required if transactions are rolled back.</span></span> <span data-ttu-id="f621a-107">Beachten Sie dabei den Unterschied zwischen der Batchverarbeitung von Nachrichten in einer Transaktion und in Sitzungen.</span><span class="sxs-lookup"><span data-stu-id="f621a-107">It is important to note the difference between batching messages in a transaction and sessions.</span></span> <span data-ttu-id="f621a-108">Ein *Sitzung* ist eine Gruppierung verwandter Nachrichten, die von einer einzigen Anwendung verarbeitet werden und als einzelne Einheit ein Commit.</span><span class="sxs-lookup"><span data-stu-id="f621a-108">A *session* is a grouping of related messages that are processed by a single application and committed as a single unit.</span></span> <span data-ttu-id="f621a-109">Sitzungen werden in der Regel verwendet, wenn eine Gruppe verwandter Nachrichten gemeinsam verarbeitet werden muss.</span><span class="sxs-lookup"><span data-stu-id="f621a-109">Sessions are generally used when a group of related messages must be processed together.</span></span> <span data-ttu-id="f621a-110">Ein Beispiel hierfür ist eine Website für Online-Shopping.</span><span class="sxs-lookup"><span data-stu-id="f621a-110">An example of this is an online shopping Web site.</span></span> <span data-ttu-id="f621a-111">*Batches* werden verwendet, um die Verarbeitung mehrerer, unzusammenhängender Nachrichten so, dass Nachrichtendurchsatz zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="f621a-111">*Batches* are used to process multiple, unrelated messages in a way that increases message throughput.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f621a-112">Sitzungen, finden Sie unter [Gruppierung in der Warteschlange Nachrichten in einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span><span class="sxs-lookup"><span data-stu-id="f621a-112"> sessions, see [Grouping Queued Messages in a Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span></span> <span data-ttu-id="f621a-113">Nachrichten in einem Batch werden auch nur von einer Anwendung verarbeitet und als Einheit festgeschrieben (COMMIT), die Nachrichten im Batch stehen jedoch ggf. in keinem Zusammenhang zueinander.</span><span class="sxs-lookup"><span data-stu-id="f621a-113">Messages in a batch are also processed by a single application and committed as a single unit, but there may be no relationship between the messages in the batch.</span></span> <span data-ttu-id="f621a-114">Die Batchverarbeitung von Nachrichten in einer Transaktion ist eine Optimierung, die sich nicht auf die Ausführung der Anwendung auswirkt.</span><span class="sxs-lookup"><span data-stu-id="f621a-114">Batching messages in a transaction is an optimization that does not change how the application runs.</span></span>  
   
-## Aktivieren des Batchmodus  
- Die Batchverarbeitung wird durch das <xref:System.ServiceModel.Description.TransactedBatchingBehavior>\-Endpunktverhalten gesteuert.Wenn Sie einem Dienstendpunkt dieses Endpunktverhalten hinzufügen, weiß [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], dass Nachrichten in einem Batch in einer Transaktion verarbeitet werden sollen.Nicht alle Nachrichten erfordern eine Transaktion. Daher werden nur Nachrichten, für die eine Transaktion erforderlich ist, in einen Batch aufgenommen, und es kommen nur Nachrichten, die von einem Vorgang mit der Kennzeichnung `TransactionScopeRequired`  \= `true` und `TransactionAutoComplete` \= `true` stammen, für die Aufnahme in einen Batch in Frage.Wenn alle Vorgänge im Dienstvertrag mit `TransactionScopeRequired` \= `false` und `TransactionAutoComplete` \= `false` gekennzeichnet sind, wird der Batchmodus nie aktiviert.  
+## <a name="entering-batching-mode"></a><span data-ttu-id="f621a-115">Aktivieren des Batchmodus</span><span class="sxs-lookup"><span data-stu-id="f621a-115">Entering Batching Mode</span></span>  
+ <span data-ttu-id="f621a-116">Die Batchverarbeitung wird durch das <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Endpunktverhalten gesteuert.</span><span class="sxs-lookup"><span data-stu-id="f621a-116">The <xref:System.ServiceModel.Description.TransactedBatchingBehavior> endpoint behavior controls batching.</span></span> <span data-ttu-id="f621a-117">Wenn Sie einem Dienstendpunkt dieses Endpunktverhalten hinzufügen, weiß [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], dass Nachrichten in einem Batch in einer Transaktion verarbeitet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="f621a-117">Adding this endpoint behavior to a service endpoint tells [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to batch messages in a transaction.</span></span> <span data-ttu-id="f621a-118">Nicht alle Nachrichten erfordern eine Transaktion nur Nachrichten, die eine Transaktion müssen in einem Batch platziert werden, und nur Nachrichten von Vorgängen mit markierten `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete`  =  `true` sind für einen Batch berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="f621a-118">Not all messages require a transaction, so only messages that require a transaction are placed in a batch, and only messages sent from operations marked with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true` are considered for a batch.</span></span> <span data-ttu-id="f621a-119">Wenn alle Vorgänge im Dienstvertrag mit gekennzeichnet sind `TransactionScopeRequired`  =  `false` und `TransactionAutoComplete`  =  `false`, und klicken Sie dann Batchmodus nie ist.</span><span class="sxs-lookup"><span data-stu-id="f621a-119">If all operations on the service contract are marked with `TransactionScopeRequired` = `false` and `TransactionAutoComplete` = `false`, then batching mode is never entered.</span></span>  
   
-## Durchführen eines Commits für eine Transaktion  
- Bei Batchtransaktionen werden Commits auf Grundlage der folgenden Punkte durchgeführt:  
+## <a name="committing-a-transaction"></a><span data-ttu-id="f621a-120">Durchführen eines Commits für eine Transaktion</span><span class="sxs-lookup"><span data-stu-id="f621a-120">Committing a Transaction</span></span>  
+ <span data-ttu-id="f621a-121">Bei Batchtransaktionen werden Commits auf Grundlage der folgenden Punkte durchgeführt:</span><span class="sxs-lookup"><span data-stu-id="f621a-121">A batched transaction is committed based on the following:</span></span>  
   
--   `MaxBatchSize`.Eine Eigenschaft des <xref:System.ServiceModel.Description.TransactedBatchingBehavior>\-Verhaltens.Durch diese Eigenschaft wird die maximale Anzahl von Nachrichten in einen Batch bestimmt.Sobald diese Anzahl erreicht ist, wird ein Commit für den Batch durchgeführt.Es handelt sich bei diesem Wert allerdings um einen flexiblen Grenzwert, das heißt, dass für einen Batch auch schon vor Erreichen dieser Anzahl von Nachrichten ein Commit durchgeführt werden kann.  
+-   <span data-ttu-id="f621a-122">`MaxBatchSize`.</span><span class="sxs-lookup"><span data-stu-id="f621a-122">`MaxBatchSize`.</span></span> <span data-ttu-id="f621a-123">Eine Eigenschaft des <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Verhaltens.</span><span class="sxs-lookup"><span data-stu-id="f621a-123">A property of the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> behavior.</span></span> <span data-ttu-id="f621a-124">Durch diese Eigenschaft wird die maximale Anzahl von Nachrichten in einen Batch bestimmt.</span><span class="sxs-lookup"><span data-stu-id="f621a-124">This property determines the maximum number of messages that are placed into a batch.</span></span> <span data-ttu-id="f621a-125">Sobald diese Anzahl erreicht ist, wird ein Commit für den Batch durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="f621a-125">When this number is reached, the batch is committed.</span></span> <span data-ttu-id="f621a-126">Es handelt sich bei diesem Wert allerdings um einen flexiblen Grenzwert, das heißt, dass für einen Batch auch schon vor Erreichen dieser Anzahl von Nachrichten ein Commit durchgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="f621a-126">This is value is not a strict limit, it is possible to commit a batch before receiving this number of messages.</span></span>  
   
--   `Transaction Timeout`.Sobald 80 Prozent des Transaktionstimeouts verstrichen sind, wird ein Commit für den Batch durchgeführt und ein neuer Batch erstellt.Das heißt, dass der Commit für den Batch durchgeführt wird, sobald nur noch maximal 20 Prozent der für die Transaktion erlaubten Zeit übrig sind.  
+-   <span data-ttu-id="f621a-127">`Transaction Timeout`.</span><span class="sxs-lookup"><span data-stu-id="f621a-127">`Transaction Timeout`.</span></span> <span data-ttu-id="f621a-128">Sobald 80 Prozent des Transaktionstimeouts verstrichen sind, wird ein Commit für den Batch durchgeführt und ein neuer Batch erstellt.</span><span class="sxs-lookup"><span data-stu-id="f621a-128">After 80 percent of the transaction's time-out has elapsed, the batch is committed and a new batch is created.</span></span> <span data-ttu-id="f621a-129">Das heißt, dass der Commit für den Batch durchgeführt wird, sobald nur noch maximal 20 Prozent der für die Transaktion erlaubten Zeit übrig sind.</span><span class="sxs-lookup"><span data-stu-id="f621a-129">This means that if 20 percent or less of the time given for a transaction to complete remains, the batch is committed.</span></span>  
   
--   `TransactionScopeRequired`.Wenn [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bei der Verarbeitung eines Nachrichtenbatches auf eine Nachricht mit der Kennzeichnung `TransactionScopeRequired`  \= `false` trifft, wird ein Commit für den Batch durchgeführt und bei Eingang der ersten Nachricht mit der Kennzeichnung `TransactionScopeRequired` \= `true` und `TransactionAutoComplete` \= `true` ein neuer Batch eröffnet.  
+-   <span data-ttu-id="f621a-130">`TransactionScopeRequired`.</span><span class="sxs-lookup"><span data-stu-id="f621a-130">`TransactionScopeRequired`.</span></span> <span data-ttu-id="f621a-131">Wenn einen Batch von Nachrichten, bei der Verarbeitung [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kennzeichnung `TransactionScopeRequired`  =  `false`, er führt einen Commit für den Batch und ein neuer Batch nach dem Empfang der ersten Nachricht mit eröffnet `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete` = `true`.</span><span class="sxs-lookup"><span data-stu-id="f621a-131">When processing a batch of messages, if [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] finds one that has `TransactionScopeRequired` = `false`, it commits the batch and reopens a new batch on receipt of the first message with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true`.</span></span>  
   
--   Falls die Warteschlange keine weiteren Nachrichten mehr enthält, wird ein Commit für den aktuellen Batch durchgeführt, selbst wenn `MaxBatchSize` noch nicht erreicht wurde bzw. noch keine 80 Prozent des Transaktionstimeouts verstrichen sind.  
+-   <span data-ttu-id="f621a-132">Falls die Warteschlange keine weiteren Nachrichten mehr enthält, wird ein Commit für den aktuellen Batch durchgeführt, selbst wenn `MaxBatchSize` noch nicht erreicht wurde bzw. noch keine 80 Prozent des Transaktionstimeouts verstrichen sind.</span><span class="sxs-lookup"><span data-stu-id="f621a-132">If no more messages exist in the queue, then the current batch is committed, even if the `MaxBatchSize` has not been reached or 80 percent of the transaction's time-out has not elapsed.</span></span>  
   
-## Deaktivieren des Batchmodus  
- Falls die Transaktion durch eine Nachricht in einem Batch abgebrochen wird, werden die folgenden Schritte durchlaufen:  
+## <a name="leaving-batching-mode"></a><span data-ttu-id="f621a-133">Deaktivieren des Batchmodus</span><span class="sxs-lookup"><span data-stu-id="f621a-133">Leaving Batching Mode</span></span>  
+ <span data-ttu-id="f621a-134">Falls die Transaktion durch eine Nachricht in einem Batch abgebrochen wird, werden die folgenden Schritte durchlaufen:</span><span class="sxs-lookup"><span data-stu-id="f621a-134">If a message in a batch causes the transaction to abort, the following steps occur:</span></span>  
   
-1.  Der gesamte Nachrichtenbatch wird zurückgesetzt.  
+1.  <span data-ttu-id="f621a-135">Der gesamte Nachrichtenbatch wird zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="f621a-135">The entire batch of messages is rolled back.</span></span>  
   
-2.  Die Nachrichten werden solange einzeln nacheinander gelesen, bis die Anzahl der gelesenen Nachrichten die doppelte maximale Batchgröße überschritten hat.  
+2.  <span data-ttu-id="f621a-136">Die Nachrichten werden solange einzeln nacheinander gelesen, bis die Anzahl der gelesenen Nachrichten die doppelte maximale Batchgröße überschritten hat.</span><span class="sxs-lookup"><span data-stu-id="f621a-136">Messages are read one at a time until the number of messages read exceeds twice the maximum batch size.</span></span>  
   
-3.  Der Batchmodus wird wieder aufgenommen.  
+3.  <span data-ttu-id="f621a-137">Der Batchmodus wird wieder aufgenommen.</span><span class="sxs-lookup"><span data-stu-id="f621a-137">Batch mode is re-entered.</span></span>  
   
-## Auswählen der Batchgröße  
- Die Größe eines Batches ist abhängig von der Anwendung.Mit einem empirischen Vorgehen lässt sich die optimale Batchgröße für die Anwendung am besten bestimmen.Wählen Sie die Batchgröße immer entsprechend dem tatsächlichen Bereitstellungsmodell Ihrer Anwendung.Wenn beispielsweise bei der Bereitstellung der Anwendung ein SQL\-Server auf einem Remotecomputer und eine Transaktion als Brücke zwischen Warteschlange und SQL\-Server erforderlich sind, lässt sich die Batchgröße am besten durch Ausführen genau dieser Konfiguration ermitteln.  
+## <a name="choosing-the-batch-size"></a><span data-ttu-id="f621a-138">Auswählen der Batchgröße</span><span class="sxs-lookup"><span data-stu-id="f621a-138">Choosing the Batch Size</span></span>  
+ <span data-ttu-id="f621a-139">Die Größe eines Batches ist abhängig von der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="f621a-139">The size of a batch is application-dependent.</span></span> <span data-ttu-id="f621a-140">Mit einem empirischen Vorgehen lässt sich die optimale Batchgröße für die Anwendung am besten bestimmen.</span><span class="sxs-lookup"><span data-stu-id="f621a-140">The empirical method is the best way to arrive at an optimal batch size for the application.</span></span> <span data-ttu-id="f621a-141">Wählen Sie die Batchgröße immer entsprechend dem tatsächlichen Bereitstellungsmodell Ihrer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="f621a-141">It is important to remember when choosing a batch size to choose the size according to your application's actual deployment model.</span></span> <span data-ttu-id="f621a-142">Wenn beispielsweise bei der Bereitstellung der Anwendung ein SQL-Server auf einem Remotecomputer und eine Transaktion als Brücke zwischen Warteschlange und SQL-Server erforderlich sind, lässt sich die Batchgröße am besten durch Ausführen genau dieser Konfiguration ermitteln.</span><span class="sxs-lookup"><span data-stu-id="f621a-142">For example, when deploying the application, if you need an SQL server on a remote machine and a transaction that spans the queue and the SQL server, then the batch size is best determined by running this exact configuration.</span></span>  
   
-## Parallelität und Batchverarbeitung  
- Um den Durchsatz zu erhöhen, können auch viele Batches gleichzeitig ausgeführt werden.Die parallele Batchverarbeitung wird aktiviert, indem Sie `ServiceBehaviorAttribute` auf `ConcurrencyMode.Multiple` setzen.  
+## <a name="concurrency-and-batching"></a><span data-ttu-id="f621a-143">Parallelität und Batchverarbeitung</span><span class="sxs-lookup"><span data-stu-id="f621a-143">Concurrency and Batching</span></span>  
+ <span data-ttu-id="f621a-144">Um den Durchsatz zu erhöhen, können auch viele Batches gleichzeitig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="f621a-144">To increase throughput, you can also have many batches run concurrently.</span></span> <span data-ttu-id="f621a-145">Die parallele Batchverarbeitung wird aktiviert, indem Sie `ConcurrencyMode.Multiple` auf `ServiceBehaviorAttribute` setzen.</span><span class="sxs-lookup"><span data-stu-id="f621a-145">By setting `ConcurrencyMode.Multiple` in `ServiceBehaviorAttribute`, you enable concurrent batching.</span></span>  
   
- Bei der *Diensteinschränkung* handelt es sich um ein Dienstverhalten, mit dem angegeben wird, wie viele parallele Aufrufe maximal für den Dienst durchgeführt werden dürfen.Im Zusammenhang mit der Batchverarbeitung legt dieses Verhalten fest, wie viele Batches gleichzeitig ausgeführt werden dürfen.Wird keine Diensteinschränkung festgelegt, lässt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standardmäßig höchstens 16 parallele Aufrufe zu.Wird zudem standardmäßig noch das Batchverarbeitungsverhalten hinzugefügt, bedeutet dies, dass maximal 16 Batches gleichzeitig aktiv sein können.Optimieren Sie die Diensteinschränkung und die Batchverarbeitung möglichst auf Grundlage Ihrer Kapazitäten.Wenn die Warteschlange beispielsweise 100 Nachrichten enthält und ein Batch 20 Nachrichten umfassen soll, ist es nicht sinnvoll, maximal 16 parallele Aufrufe festzulegen, da in diesem Fall je nach Durchsatz 16 Transaktion aktiv sein können, was einer Deaktivierung der Batchverarbeitung gleichkommen würde.Um eine optimale Leistung zu erzielen, müssen Sie daher entweder die parallele Batchverarbeitung deaktivieren oder bei aktivierter paralleler Verarbeitung die richtige Größe für die Diensteinschränkung auswählen.  
+ <span data-ttu-id="f621a-146">*Diensteinschränkung* ist ein Dienstverhalten, die verwendet wird, um anzugeben, wie viele parallele Aufrufe maximal für den Dienst durchgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="f621a-146">*Service throttling* is a service behavior that is used to indicate how many maximum concurrent calls can be made on the service.</span></span> <span data-ttu-id="f621a-147">Im Zusammenhang mit der Batchverarbeitung legt dieses Verhalten fest, wie viele Batches gleichzeitig ausgeführt werden dürfen.</span><span class="sxs-lookup"><span data-stu-id="f621a-147">When used with batching, this is interpreted as how many concurrent batches can be run.</span></span> <span data-ttu-id="f621a-148">Wird keine Diensteinschränkung festgelegt, lässt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standardmäßig höchstens 16 parallele Aufrufe zu.</span><span class="sxs-lookup"><span data-stu-id="f621a-148">If the service throttling is not set, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] defaults the maximum concurrent calls to 16.</span></span> <span data-ttu-id="f621a-149">Wird zudem standardmäßig noch das Batchverarbeitungsverhalten hinzugefügt, bedeutet dies, dass maximal 16 Batches gleichzeitig aktiv sein können.</span><span class="sxs-lookup"><span data-stu-id="f621a-149">Thus, if batching behavior were added by default, a maximum of 16 batches can be active at the same time.</span></span> <span data-ttu-id="f621a-150">Optimieren Sie die Diensteinschränkung und die Batchverarbeitung möglichst auf Grundlage Ihrer Kapazitäten.</span><span class="sxs-lookup"><span data-stu-id="f621a-150">It is best to tune the service throttling and batching based on your capacity.</span></span> <span data-ttu-id="f621a-151">Wenn die Warteschlange beispielsweise 100 Nachrichten enthält und ein Batch 20 Nachrichten umfassen soll, ist es nicht sinnvoll, maximal 16 parallele Aufrufe festzulegen, da in diesem Fall je nach Durchsatz 16 Transaktion aktiv sein können, was einer Deaktivierung der Batchverarbeitung gleichkommen würde.</span><span class="sxs-lookup"><span data-stu-id="f621a-151">For example, if the queue has 100 messages and a batch of 20 is desired, having the maximum concurrent calls set to 16 is not useful because, depending on throughput, 16 transactions could be active, similar to not having batching turned on.</span></span> <span data-ttu-id="f621a-152">Um eine optimale Leistung zu erzielen, müssen Sie daher entweder die parallele Batchverarbeitung deaktivieren oder bei aktivierter paralleler Verarbeitung die richtige Größe für die Diensteinschränkung auswählen.</span><span class="sxs-lookup"><span data-stu-id="f621a-152">Therefore, when fine-tuning for performance, either do not have concurrent batching or have concurrent batching with the correct service throttle size.</span></span>  
   
-## Batchverarbeitung und mehrere Endpunkte  
- Ein Endpunkt besteht aus einer Adresse und einem Vertrag.Mehrere Endpunkte können die gleiche Bindung verwenden.Zwei Endpunkte können die gleiche Bindung und den gleichen Abhör\-URI \(Uniform Resource Identifier\) bzw. die gleiche Warteschlangenadresse verwenden.Falls zwei Endpunkte aus derselben Warteschlange lesen und für beide Endpunkte wird transaktives Batchverarbeitungsverhalten hinzugefügt, kann es zu einem Konflikt zwischen den angegebenen Batchgrößen kommen.Dieser Konflikt lässt sich lösen, indem die Batchverarbeitung mit der kleinsten zwischen den beiden transaktiven Batchverarbeitungsverhalten angegebenen Batchgröße implementiert wird.In diesem Szenario wird an keinem Endpunkt eine Batchverarbeitung durchgeführt, wenn für einen Endpunkt keine transaktive Batchverarbeitung angegeben wird.  
+## <a name="batching-and-multiple-endpoints"></a><span data-ttu-id="f621a-153">Batchverarbeitung und mehrere Endpunkte</span><span class="sxs-lookup"><span data-stu-id="f621a-153">Batching and Multiple Endpoints</span></span>  
+ <span data-ttu-id="f621a-154">Ein Endpunkt besteht aus einer Adresse und einem Vertrag.</span><span class="sxs-lookup"><span data-stu-id="f621a-154">An endpoint is composed of an address and a contract.</span></span> <span data-ttu-id="f621a-155">Mehrere Endpunkte können die gleiche Bindung verwenden.</span><span class="sxs-lookup"><span data-stu-id="f621a-155">There may be multiple endpoints that share the same binding.</span></span> <span data-ttu-id="f621a-156">Zwei Endpunkte können die gleiche Bindung und den gleichen Abhör-URI (Uniform Resource Identifier) bzw. die gleiche Warteschlangenadresse verwenden.</span><span class="sxs-lookup"><span data-stu-id="f621a-156">It is possible for two endpoints to share the same binding and listen Uniform Resource Identifier (URI), or queue address.</span></span> <span data-ttu-id="f621a-157">Falls zwei Endpunkte aus derselben Warteschlange lesen und für beide Endpunkte wird transaktives Batchverarbeitungsverhalten hinzugefügt, kann es zu einem Konflikt zwischen den angegebenen Batchgrößen kommen.</span><span class="sxs-lookup"><span data-stu-id="f621a-157">If two endpoints are reading from the same queue, and transacted batching behavior is added to both endpoints, a conflict in the batch sizes specified could arise.</span></span> <span data-ttu-id="f621a-158">Dieser Konflikt lässt sich lösen, indem die Batchverarbeitung mit der kleinsten zwischen den beiden transaktiven Batchverarbeitungsverhalten angegebenen Batchgröße implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="f621a-158">This is resolved by implementing batching using the minimal batch size specified between the two transacted batching behaviors.</span></span> <span data-ttu-id="f621a-159">In diesem Szenario wird an keinem Endpunkt eine Batchverarbeitung durchgeführt, wenn für einen Endpunkt keine transaktive Batchverarbeitung angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="f621a-159">In this scenario, if one of the endpoints does not specify transacted batching, then both endpoints would not use batching.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie Sie `TransactedBatchingBehavior` in einer Konfigurationsdatei angeben können.  
+## <a name="example"></a><span data-ttu-id="f621a-160">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f621a-160">Example</span></span>  
+ <span data-ttu-id="f621a-161">Im folgenden Beispiel wird gezeigt, wie Sie `TransactedBatchingBehavior` in einer Konfigurationsdatei angeben können.</span><span class="sxs-lookup"><span data-stu-id="f621a-161">The following example shows how to specify the `TransactedBatchingBehavior` in a configuration file.</span></span>  
   
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="TransactedBatchingBehavior"
+              maxBatchSize="100" />
+  </endpointBehaviors>
+</behaviors>
 ```  
-<behaviors>  
-      <endpointBehaviors>  
-        <behavior name="TransactedBatchingBehavior"  
-                  maxBatchSize="100"/>  
-      </endpointBehaviors>  
-    </behaviors>  
-```  
   
- Im folgenden Beispiel wird gezeigt, wie Sie <xref:System.ServiceModel.Description.TransactedBatchingBehavior> im Code angeben können.  
+ <span data-ttu-id="f621a-162">Im folgenden Beispiel wird gezeigt, wie Sie <xref:System.ServiceModel.Description.TransactedBatchingBehavior> im Code angeben können.</span><span class="sxs-lookup"><span data-stu-id="f621a-162">The following example shows how to specify the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> in code.</span></span>  
   
-```  
-using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
-{  
-     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");  
-                sep.Behaviors.Add(new TransactedBatchingBehavior(100));  
+```csharp
+using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
+{
+     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");
+     sep.Behaviors.Add(new TransactedBatchingBehavior(100));
+     
+     // Open the ServiceHost to create listeners and start listening for messages.
+    serviceHost.Open();
   
-     // Open the ServiceHost to create listeners and start listening for messages.  
-    serviceHost.Open();  
+    // The service can now be accessed.
+    Console.WriteLine("The service is ready.");
+    Console.WriteLine("Press <ENTER> to terminate service.");
+    Console.WriteLine();
+    Console.ReadLine();
   
-    // The service can now be accessed.  
-    Console.WriteLine("The service is ready.");  
-    Console.WriteLine("Press <ENTER> to terminate service.");  
-    Console.WriteLine();  
-    Console.ReadLine();  
-  
-   // Close the ServiceHostB to shut down the service.  
-    serviceHost.Close();  
+    // Close the ServiceHostB to shut down the service.
+    serviceHost.Close();
 }  
 ```  
   
-## Siehe auch  
- [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="f621a-163">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f621a-163">See Also</span></span>  
+ [<span data-ttu-id="f621a-164">Nachrichtenwarteschlangen (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="f621a-164">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [<span data-ttu-id="f621a-165">Warteschlangen in WCF</span><span class="sxs-lookup"><span data-stu-id="f621a-165">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

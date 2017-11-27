@@ -1,49 +1,53 @@
 ---
-title: "Gewusst wie: Drucken eines Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Drucken [Windows Forms], Drucken eines Formulars"
-  - "Drucken [Windows Forms]"
-  - "Drucken eines Formulars"
-  - "Windows Forms, Drucken"
+title: 'Gewusst wie: Drucken eines Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, printing
+- printing [Windows Forms]
+- printing a form
+- printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9149b90317036c7c62c5fca3056bb697df56e543
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Drucken eines Windows Form
-Im Verlauf der Entwicklung entsteht häufig der Wunsch, ein Windows Form zu drucken.  Im folgenden Codebeispiel wird veranschaulicht, wie das aktuelle Formular mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A>\-Methode gedruckt wird.  
+# <a name="how-to-print-a-windows-form"></a><span data-ttu-id="68421-102">Gewusst wie: Drucken eines Windows Form</span><span class="sxs-lookup"><span data-stu-id="68421-102">How to: Print a Windows Form</span></span>
+<span data-ttu-id="68421-103">Als Teil des Entwicklungsprozesses sollten Sie in der Regel eine Kopie der Windows Form zu drucken.</span><span class="sxs-lookup"><span data-stu-id="68421-103">As part of the development process, you typically will want to print a copy of your Windows Form.</span></span> <span data-ttu-id="68421-104">Im folgenden Codebeispiel wird veranschaulicht, wie auf eine Kopie des aktuellen Formulars gedruckt werden, indem Sie mit der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="68421-104">The following code example shows how to print a copy of the current form by using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method.</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="68421-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="68421-105">Example</span></span>  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
-## Kompilieren des Codes  
- Dies ist ein vollständiges Codebeispiel mit einer `Main`\-Methode.  
+## <a name="compiling-the-code"></a><span data-ttu-id="68421-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="68421-106">Compiling the Code</span></span>  
+ <span data-ttu-id="68421-107">Dies ist ein vollständiges Codebeispiel, das enthält eine `Main` Methode.</span><span class="sxs-lookup"><span data-stu-id="68421-107">This is a complete code example that contains a `Main` method.</span></span>  
   
-## Robuste Programmierung  
- Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  
+## <a name="robust-programming"></a><span data-ttu-id="68421-108">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="68421-108">Robust Programming</span></span>  
+ <span data-ttu-id="68421-109">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="68421-109">The following conditions may cause an exception:</span></span>  
   
--   Sie verfügen nicht über die entsprechende Berechtigung für den Zugriff auf den Drucker.  
+-   <span data-ttu-id="68421-110">Sie haben keine Berechtigung zum Zugriff auf den Drucker.</span><span class="sxs-lookup"><span data-stu-id="68421-110">You do not have permission to access the printer.</span></span>  
   
--   Es ist kein Drucker installiert.  
+-   <span data-ttu-id="68421-111">Es ist kein Drucker installiert.</span><span class="sxs-lookup"><span data-stu-id="68421-111">There is no printer installed.</span></span>  
   
-## .NET Framework-Sicherheit  
- Zum Ausführen dieses Codebeispiels müssen Sie über Zugriffsberechtigungen für den Drucker verfügen, der an den Computer angeschlossen ist.  
+## <a name="net-framework-security"></a><span data-ttu-id="68421-112">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="68421-112">.NET Framework Security</span></span>  
+ <span data-ttu-id="68421-113">Um dieses Codebeispiel ausführen zu können, benötigen Sie die Berechtigung zum Zugriff auf den Drucker, die mit dem Computer verwendet.</span><span class="sxs-lookup"><span data-stu-id="68421-113">In order to run this code example, you must have permission to access the printer you use with your computer.</span></span>  
   
-## Siehe auch  
- <xref:System.Drawing.Printing.PrintDocument>   
- [Gewusst wie: Darstellen von Bildern mit GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)   
- [Gewusst wie: Drucken von Grafiken in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="68421-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="68421-114">See Also</span></span>  
+ <xref:System.Drawing.Printing.PrintDocument>  
+ [<span data-ttu-id="68421-115">Gewusst wie: Darstellen von Bildern mit GDI+</span><span class="sxs-lookup"><span data-stu-id="68421-115">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ [<span data-ttu-id="68421-116">Vorgehensweise: Drucken von Grafiken in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="68421-116">How to: Print Graphics in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)

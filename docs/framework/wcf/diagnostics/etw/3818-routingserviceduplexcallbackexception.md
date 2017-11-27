@@ -1,35 +1,38 @@
 ---
-title: "3818 - RoutingServiceDuplexCallbackException | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3818 - RoutingServiceDuplexCallbackException
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aafc3932-5a52-4b99-89ca-09341ac4d39b
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b035c6746d634c6814a45f28c02f955e1865bc8a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3818 - RoutingServiceDuplexCallbackException
-## Eigenschaften  
+# <a name="3818---routingserviceduplexcallbackexception"></a><span data-ttu-id="c0658-102">3818 - RoutingServiceDuplexCallbackException</span><span class="sxs-lookup"><span data-stu-id="c0658-102">3818 - RoutingServiceDuplexCallbackException</span></span>
+## <a name="properties"></a><span data-ttu-id="c0658-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="c0658-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3818|  
-|Stichwörter|RoutingServices|  
-|Ebene|Fehler|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="c0658-104">ID</span><span class="sxs-lookup"><span data-stu-id="c0658-104">ID</span></span>|<span data-ttu-id="c0658-105">3818</span><span class="sxs-lookup"><span data-stu-id="c0658-105">3818</span></span>|  
+|<span data-ttu-id="c0658-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="c0658-106">Keywords</span></span>|<span data-ttu-id="c0658-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="c0658-107">RoutingServices</span></span>|  
+|<span data-ttu-id="c0658-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="c0658-108">Level</span></span>|<span data-ttu-id="c0658-109">Fehler</span><span class="sxs-lookup"><span data-stu-id="c0658-109">Error</span></span>|  
+|<span data-ttu-id="c0658-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="c0658-110">Channel</span></span>|<span data-ttu-id="c0658-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="c0658-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird ausgegeben, wenn der Routingdienst eine Duplexrückrufausnahme festgestellt hat.  
+## <a name="description"></a><span data-ttu-id="c0658-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c0658-112">Description</span></span>  
+ <span data-ttu-id="c0658-113">Dieses Ereignis wird ausgegeben, wenn der Routingdienst eine Duplexrückrufausnahme festgestellt hat.</span><span class="sxs-lookup"><span data-stu-id="c0658-113">This event is emitted when the Routing Service encountered a duplex callback exception.</span></span>  
   
-## Meldung  
- Routingdienstkomponente %1 hat eine Duplexrückrufausnahme festgestellt.  
+## <a name="message"></a><span data-ttu-id="c0658-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="c0658-114">Message</span></span>  
+ <span data-ttu-id="c0658-115">Routingdienstkomponente %1 hat eine Duplexrückrufausnahme festgestellt.</span><span class="sxs-lookup"><span data-stu-id="c0658-115">Routing Service component %1 encountered a duplex callback exception.</span></span>  
   
-## Details
+## <a name="details"></a><span data-ttu-id="c0658-116">Details</span><span class="sxs-lookup"><span data-stu-id="c0658-116">Details</span></span>

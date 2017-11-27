@@ -1,44 +1,43 @@
 ---
-title: "&#220;berlegungen zur Bereitstellung (Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Überlegungen zur Bereitstellung (Entity Framework)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;berlegungen zur Bereitstellung (Entity Framework)
-Dieses Thema enthält Informationen über das Bereitstellen von Anwendungen, die das ADO.NET Entity Framework für den Datenzugriff verwenden.  Weitere Informationen zum Entity Framework finden Sie unter [Erste Schritte](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
+# <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="3028a-102">Überlegungen zur Bereitstellung (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="3028a-102">Deployment Considerations (Entity Framework)</span></span>
+<span data-ttu-id="3028a-103">Dieses Thema enthält Informationen über das Bereitstellen von Anwendungen, die das ADO.NET Entity Framework für den Datenzugriff verwenden.</span><span class="sxs-lookup"><span data-stu-id="3028a-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="3028a-104">Weitere Informationen über das Entity Framework finden Sie unter [Einstieg](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span><span class="sxs-lookup"><span data-stu-id="3028a-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  
   
- Das Entity Framework stellt einen Satz von Tools zur Verfügung, die zur Verwendung in Visual Studio geeignet sind und die Entwicklung in Visual Studio vereinfachen.  Weitere Informationen finden Sie unter [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/de-de/91076853-0881-421b-837a-f582f36be527).  In diesem Thema wird nicht beschrieben, wie spezielle Technologien verwendet werden, um eine Entity Framework\-basierte Anwendung bereitzustellen.  
+ <span data-ttu-id="3028a-105">Das Entity Framework stellt einen Satz von Tools zur Verfügung, die zur Verwendung in Visual Studio geeignet sind und die Entwicklung in Visual Studio vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="3028a-105">The Entity Framework provides a set of tools that integrate with and make it easier to develop in Visual Studio.</span></span> <span data-ttu-id="3028a-106">Weitere Informationen finden Sie unter [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span><span class="sxs-lookup"><span data-stu-id="3028a-106">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span> <span data-ttu-id="3028a-107">In diesem Thema wird nicht beschrieben, wie spezielle Technologien verwendet werden, um eine Entity Framework-basierte Anwendung bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="3028a-107">This topic does not describe how to use specific technologies to deploy an Entity Framework–based application.</span></span>  
   
- Visual Studio stellt Funktionen zum Verteilen und Bereitstellen von Anwendungen bereit, z. B. die ClickOnce\-Bereitstellung.  Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen und Komponenten](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md) in der Visual Studio\-Dokumentation.  
+ <span data-ttu-id="3028a-108">Visual Studio stellt Funktionen zum Verteilen und Bereitstellen von Anwendungen bereit, z. B. die ClickOnce-Bereitstellung.</span><span class="sxs-lookup"><span data-stu-id="3028a-108">Visual Studio provides facilities for distributing and deploying applications, such as ClickOnce deployment.</span></span> <span data-ttu-id="3028a-109">Weitere Informationen finden Sie unter [Bereitstellen von Anwendungen und Komponenten](https://msdn.microsoft.com/library/wtzawcsz) in der Visual Studio-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="3028a-109">For more information, see [Deploying Applications and Components](https://msdn.microsoft.com/library/wtzawcsz) in the Visual Studio documentation.</span></span>  
   
- Die folgenden Überlegungen gelten, wenn Sie eine Anwendung bereitstellen, die das Entity Framework verwendet:  
+ <span data-ttu-id="3028a-110">Die folgenden Überlegungen gelten, wenn Sie eine Anwendung bereitstellen, die das Entity Framework verwendet:</span><span class="sxs-lookup"><span data-stu-id="3028a-110">The following considerations apply when you deploy an application that uses the Entity Framework:</span></span>  
   
--   Das Entity Framework ist seit .NET Framework 3.5 Service Pack 1 \(SP1\) eine Komponente von .NET Framework.  Sie müssen sicherstellen, dass .NET Framework 3.5 SP1 oder eine neuere Version installiert ist, wenn Sie eine Anwendung auf der Grundlage von Entity Framework bereitstellen möchten.  
+-   <span data-ttu-id="3028a-111">Das Entity Framework ist seit .NET Framework 3.5 Service Pack 1 (SP1) eine Komponente von .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3028a-111">The Entity Framework is a component of the .NET Framework starting with the .NET Framework 3.5 Service Pack 1 (SP1).</span></span> <span data-ttu-id="3028a-112">Sie müssen sicherstellen, dass .NET Framework 3.5 SP1 oder eine neuere Version installiert ist, wenn Sie eine Anwendung auf der Grundlage von Entity Framework bereitstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="3028a-112">You must ensure that the .NET Framework 3.5 SP1 or a later version is installed when deploying an Entity Framework–based application.</span></span>  
   
--   Wenn Sie ein konzeptionelles Modell mit dem Entity Data Model\-Assistenten erstellen, wird in der Anwendungskonfigurationsdatei eine Verbindungszeichenfolge erstellt.  Modell\- und Zuordnungsdateien können als Anwendungsressourcen eingebettet oder in das Ausgabeverzeichnis kopiert werden.  Standardmäßig werden sie als eingebettete Anwendungsressourcen bereitgestellt.  Verwenden Sie die `Metadata Artifact Processing`\-Eigenschaft in Entity Designer, um eine dieser Optionen auszuwählen.  Weitere Informationen finden Sie unter [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/de-de/e2c9820f-1705-457e-9fdb-8b289f3179b4).  
+-   <span data-ttu-id="3028a-113">Wenn Sie ein konzeptionelles Modell mit dem Entity Data Model-Assistenten erstellen, wird in der Anwendungskonfigurationsdatei eine Verbindungszeichenfolge erstellt.</span><span class="sxs-lookup"><span data-stu-id="3028a-113">When a conceptual model is generated by the Entity Data Model Wizard, a connection string is created in the application configuration file.</span></span> <span data-ttu-id="3028a-114">Modell- und Zuordnungsdateien können als Anwendungsressourcen eingebettet oder in das Ausgabeverzeichnis kopiert werden.</span><span class="sxs-lookup"><span data-stu-id="3028a-114">Model and mapping files can be embedded as application resources or they can be copied to the output directory.</span></span> <span data-ttu-id="3028a-115">Standardmäßig werden sie als eingebettete Anwendungsressourcen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="3028a-115">By default, they are deployed as embedded application resources.</span></span> <span data-ttu-id="3028a-116">Verwenden Sie die `Metadata Artifact Processing`-Eigenschaft in Entity Designer, um eine dieser Optionen auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="3028a-116">Use the `Metadata Artifact Processing` property of the Entity Designer file to select one of these options.</span></span> <span data-ttu-id="3028a-117">Weitere Informationen finden Sie unter [Vorgehensweise: Kopieren Sie Modell- und Zuordnen von Dateien in das Ausgabeverzeichnis](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span><span class="sxs-lookup"><span data-stu-id="3028a-117">For more information, see [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span></span>  
   
--   Stellen Sie sicher, dass die Modell\- und Zuordnungsinformationen \(ausgedrückt in konzeptioneller Schemadefinitionssprache \(CSDL\)\), die Datenspeicherschema\-Definitionssprache \(SSDL\) und die Mapping\-Spezifikationssprache \(MSL\) zusammen mit der Anwendung und am von der Verbindungszeichenfolge angegebenen Speicherort bereitgestellt werden.  Weitere Informationen finden Sie unter [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+-   <span data-ttu-id="3028a-118">Stellen Sie sicher, dass die Modell- und Zuordnungsinformationen (ausgedrückt in konzeptioneller Schemadefinitionssprache (CSDL)), die Datenspeicherschema-Definitionssprache (SSDL) und die Mapping-Spezifikationssprache (MSL) zusammen mit der Anwendung und am von der Verbindungszeichenfolge angegebenen Speicherort bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="3028a-118">Ensure that the model and mapping information (expressed in conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL)) is deployed together with the application and in the location specified by the connection string.</span></span> <span data-ttu-id="3028a-119">Weitere Informationen finden Sie unter [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="3028a-119">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
--   Wenn Sie Modell\- und Zuordnungsinformationen als Anwendungsressourcen einbetten, müssen Sie bei jeder Aktualisierung des konzeptionellen Modells die Anwendung neu kompilieren und erneut bereitstellen.  
+-   <span data-ttu-id="3028a-120">Wenn Sie Modell- und Zuordnungsinformationen als Anwendungsressourcen einbetten, müssen Sie bei jeder Aktualisierung des konzeptionellen Modells die Anwendung neu kompilieren und erneut bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="3028a-120">When you embed model and mapping information as application resources, you must recompile and redeploy the application every time the conceptual model is updated.</span></span>  
   
--   Da das Entity Framework eine Komponente von .NET Framework ist, kann es gemäß der .NET Framework\-Lizenzvereinbarung mit Ihrer Anwendung weitergegeben werden.  
+-   <span data-ttu-id="3028a-121">Da das Entity Framework eine Komponente von .NET Framework ist, kann es gemäß der .NET Framework-Lizenzvereinbarung mit Ihrer Anwendung weitergegeben werden.</span><span class="sxs-lookup"><span data-stu-id="3028a-121">Because the Entity Framework is a component of the .NET Framework, it can be redistributed with your application as permitted by the .NET Framework license agreement.</span></span>  
   
-## Siehe auch  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [Überlegungen zur Entwicklung und Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="3028a-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3028a-122">See Also</span></span>  
+ [<span data-ttu-id="3028a-123">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="3028a-123">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="3028a-124">Entwicklungs- und Überlegungen zur Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="3028a-124">Development and Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

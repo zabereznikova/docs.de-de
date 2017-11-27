@@ -1,49 +1,50 @@
 ---
-title: "Gewusst wie: Erstellen eines Steuerelements, das &#252;ber eine Tastenkombination und Textumbruch verf&#252;gt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zugriffstasten, Steuerelement für"
-  - "Steuerelemente, Zugriffstasten"
-  - "Steuerelemente, Umbrechen von Text"
-  - "Schlüssel, Steuerelement für"
-  - "Umbrechen von Text"
-  - "Umbrechen von Text"
+title: "Gewusst wie: Erstellen eines Steuerelements, das über eine Tastenkombination und Textumbruch verfügt"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access keys [WPF], control for
+- controls [WPF], text wrapping
+- wrapping text [WPF]
+- keys [WPF], control for
+- controls [WPF], access keys
+- text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a759011425a3f09a7b91b728442f8e8ea7b92fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Erstellen eines Steuerelements, das &#252;ber eine Tastenkombination und Textumbruch verf&#252;gt
-In diesem Beispiel wird gezeigt, wie ein Steuerelement erstellt wird, das über eine [Tastenkombination](GTMT) verfügt und Textumbruch unterstützt.  Im Beispiel wird zur Veranschaulichung dieser Konzepte ein <xref:System.Windows.Controls.Label>\-Steuerelement verwendet.  
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="70521-102">Gewusst wie: Erstellen eines Steuerelements, das über eine Tastenkombination und Textumbruch verfügt</span><span class="sxs-lookup"><span data-stu-id="70521-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
+<span data-ttu-id="70521-103">Diese Beispiel veranschaulicht, wie Sie ein Steuerelement erstellen, das über eine Tastenkombination verfügt und das Umbrechen von Text unterstützt.</span><span class="sxs-lookup"><span data-stu-id="70521-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="70521-104">Im Beispiel wird eine <xref:System.Windows.Controls.Label> Steuerelement zur Veranschaulichung dieser Konzepte.</span><span class="sxs-lookup"><span data-stu-id="70521-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  
   
-## Beispiel  
- **Hinzufügen von Textumbruch zur Bezeichnung**  
+## <a name="example"></a><span data-ttu-id="70521-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="70521-105">Example</span></span>  
+ <span data-ttu-id="70521-106">**Umbrechen des Texts einer Bezeichnung**</span><span class="sxs-lookup"><span data-stu-id="70521-106">**Add Text Wrapping to Your Label**</span></span>  
   
- Das <xref:System.Windows.Controls.Label>\-Steuerelement unterstützt keinen Textumbruch.  Wenn Sie eine Bezeichnung benötigen, die auf mehrere Zeilen aufgeteilt werden soll, können Sie ein anderes Element verschachteln, das Textumbruch unterstützt, und dieses Element innerhalb der Bezeichnung stellen.  Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.TextBlock> verwendet werden kann, um eine Bezeichnung zu erstellen, die auf mehrere Textzeilen aufgeteilt ist.  
+ <span data-ttu-id="70521-107">Die <xref:System.Windows.Controls.Label> Steuerelement unterstützt nicht den Textumbruch.</span><span class="sxs-lookup"><span data-stu-id="70521-107">The <xref:System.Windows.Controls.Label> control does not support text wrapping.</span></span> <span data-ttu-id="70521-108">Wenn sich eine Bezeichnung über mehrere Zeilen erstrecken soll, können Sie ein anderes Element verschachteln, das das Umbrechen von Text unterstützt, und es innerhalb der Bezeichnung platzieren.</span><span class="sxs-lookup"><span data-stu-id="70521-108">If you need a label that wraps across multiple lines, you can nest another element that does support text wrapping and put the element inside the label.</span></span> <span data-ttu-id="70521-109">Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Controls.TextBlock> um eine Bezeichnung zu erstellen, die mehrere Textzeilen umschließt.</span><span class="sxs-lookup"><span data-stu-id="70521-109">The following example shows how to use a <xref:System.Windows.Controls.TextBlock> to make a label that wraps several lines of text.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
+ [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Hinzufügen von Tastenkombination und Textumbruch zur Bezeichnung**  
+ <span data-ttu-id="70521-110">**Hinzufügen von Textumbruch und einer Tastenkombination zu einer Bezeichnung**</span><span class="sxs-lookup"><span data-stu-id="70521-110">**Add an Access Key and Text Wrapping to Your Label**</span></span>  
   
- Wenn Sie eine <xref:System.Windows.Controls.Label> benötigen, der eine Tastenkombination \(Tastenkürzel\) zugeordnet ist, verwenden Sie das <xref:System.Windows.Controls.AccessText>\-Element, das sich innerhalb der <xref:System.Windows.Controls.Label> befindet.  
+ <span data-ttu-id="70521-111">Wenn die gewünschte eine <xref:System.Windows.Controls.Label> , hat es sich um eine Zugriffstaste (mnemonischen Codes), verwenden Sie die <xref:System.Windows.Controls.AccessText> Elements in der <xref:System.Windows.Controls.Label>.</span><span class="sxs-lookup"><span data-stu-id="70521-111">If you need a <xref:System.Windows.Controls.Label> that has an access key (mnemonic), use the <xref:System.Windows.Controls.AccessText> element that is inside the <xref:System.Windows.Controls.Label>.</span></span>  
   
- Steuerelemente wie <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander> und <xref:System.Windows.Controls.GroupBox> haben Standardvorlagen für Steuerelemente.  Diese Vorlagen enthalten einen <xref:System.Windows.Controls.ContentPresenter>.  Eine der Eigenschaften, die Sie im <xref:System.Windows.Controls.ContentPresenter> festlegen können, ist <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>\="true". Diese Eigenschaft können Sie verwenden, um eine Tastenkombination für das Steuerelement anzugeben.  
+ <span data-ttu-id="70521-112">Steuert, wie z. B. <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, und <xref:System.Windows.Controls.GroupBox> Steuerelementvorlagen Standardwert haben.</span><span class="sxs-lookup"><span data-stu-id="70521-112">Controls such as <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, and <xref:System.Windows.Controls.GroupBox> have default control templates.</span></span> <span data-ttu-id="70521-113">Diese Vorlagen enthalten einen <xref:System.Windows.Controls.ContentPresenter>.</span><span class="sxs-lookup"><span data-stu-id="70521-113">These templates contain a <xref:System.Windows.Controls.ContentPresenter>.</span></span> <span data-ttu-id="70521-114">Eine der Eigenschaften, die Sie auf festlegen, können die <xref:System.Windows.Controls.ContentPresenter> ist <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>= "true", damit können Sie eine Zugriffstaste für das Steuerelement festlegen.</span><span class="sxs-lookup"><span data-stu-id="70521-114">One of the properties that you can set on the <xref:System.Windows.Controls.ContentPresenter> is <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true", which you can use to specify an access key for the control.</span></span>  
   
- Das folgende Beispiel zeigt, wie eine <xref:System.Windows.Controls.Label> erstellt wird, die über eine Tastenkombination verfügt und Textumbruch unterstützt.  Um den Textumbruch zu aktivieren, legt das Beispiel die <xref:System.Windows.Controls.AccessText.TextWrapping%2A>\-Eigenschaft fest. Ein Unterstrichzeichen wird verwendet, um die Tastenkombination anzugeben.  \(Das Zeichen, das unmittelbar auf das Unterstrichzeichen folgt, ist die Tastenkombination.\)  
+ <span data-ttu-id="70521-115">Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Label> , die über eine Tastenkombination verfügt und Textumbruch unterstützt.</span><span class="sxs-lookup"><span data-stu-id="70521-115">The following example shows how to create a <xref:System.Windows.Controls.Label> that has an access key and supports text wrapping.</span></span> <span data-ttu-id="70521-116">So aktivieren Sie den Textumbruch, im Beispiel wird die <xref:System.Windows.Controls.AccessText.TextWrapping%2A> -Eigenschaft und verwendet ein Unterstrich-Zeichen zum Angeben des Zugriffsschlüssels.</span><span class="sxs-lookup"><span data-stu-id="70521-116">To enable text wrapping, the example sets the <xref:System.Windows.Controls.AccessText.TextWrapping%2A> property and uses an underline character to specify the access key.</span></span> <span data-ttu-id="70521-117">(Das Zeichen, das unmittelbar auf den Unterstrich folgt, ist die Tastenkombination.)</span><span class="sxs-lookup"><span data-stu-id="70521-117">(The character that immediately follows the underline character is the access key.)</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
+ [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## Siehe auch  
- [How to: Set the Target Property of a Label](http://msdn.microsoft.com/de-de/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a><span data-ttu-id="70521-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70521-118">See Also</span></span>  
+ [<span data-ttu-id="70521-119">Vorgehensweise: Festlegen der Eigenschaft „Target“ einer Bezeichnung</span><span class="sxs-lookup"><span data-stu-id="70521-119">How to: Set the Target Property of a Label</span></span>](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

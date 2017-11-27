@@ -1,63 +1,66 @@
 ---
-title: "Einf&#252;hrung in die Erweiterbarkeit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erweiterbarkeit [WCF]"
-  - "WCF [WCF], Erweiterbarkeit"
-  - "Windows Communication Foundation [WCF], Erweiterbarkeit"
+title: "Einführung in die Erweiterbarkeit"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], extensibility
+- Windows Communication Foundation [WCF], extensibility
+- extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0b53ec29f973760237133003c2f582e1a33a9f83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Einf&#252;hrung in die Erweiterbarkeit
-Mit dem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Anwendungsmodell wird den meisten Kommunikationsanforderungen aller beliebigen verteilten Anwendungen entsprochen.  Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen.  Mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, indem das Systemverhalten auf jeder Ebene geändert werden kann. Dies ist sogar bis zum Ersatz des gesamten Anwendungsmodells möglich.  Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
+# <a name="introduction-to-extensibility"></a><span data-ttu-id="6235d-102">Einführung in die Erweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="6235d-102">Introduction to Extensibility</span></span>
+<span data-ttu-id="6235d-103">Mit dem [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungsmodell wird den meisten Kommunikationsanforderungen aller beliebigen verteilten Anwendungen entsprochen.</span><span class="sxs-lookup"><span data-stu-id="6235d-103">The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application model is designed to solve the greater part of the communication requirements of any distributed application.</span></span> <span data-ttu-id="6235d-104">Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen.</span><span class="sxs-lookup"><span data-stu-id="6235d-104">But there are always scenarios that the default application model and system-provided implementations do not support.</span></span> <span data-ttu-id="6235d-105">Mit dem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, indem das Systemverhalten auf jeder Ebene geändert werden kann. Dies ist sogar bis zum Ersatz des gesamten Anwendungsmodells möglich.</span><span class="sxs-lookup"><span data-stu-id="6235d-105">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] extensibility model is intended to support custom scenarios by enabling you to modify system behavior at every level, even to the point of replacing the entire application model.</span></span> <span data-ttu-id="6235d-106">Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.</span><span class="sxs-lookup"><span data-stu-id="6235d-106">This topic outlines the various areas of extension and points to more information about each.</span></span>  
   
-## Zu erweiternde Bereiche  
- Folgende Werte können erweitert werden:  
+## <a name="areas-to-extend"></a><span data-ttu-id="6235d-107">Zu erweiternde Bereiche</span><span class="sxs-lookup"><span data-stu-id="6235d-107">Areas to Extend</span></span>  
+ <span data-ttu-id="6235d-108">Folgende Werte können erweitert werden:</span><span class="sxs-lookup"><span data-stu-id="6235d-108">You can extend:</span></span>  
   
--   Die Anwendungslaufzeit.  Dies erweitert das Zustellen und Verarbeiten von Nachrichten für die Anwendung.  Dieser Bereich beinhaltet auch die Erweiterung von Sicherheitssystem, Metadatensystem, Serialisierungssystem und der Bindungen und Bindungselemente, die die Anwendung mit dem zugrunde liegenden Kanalsystem verbinden.  
+-   <span data-ttu-id="6235d-109">Die Anwendungslaufzeit.</span><span class="sxs-lookup"><span data-stu-id="6235d-109">The application runtime.</span></span> <span data-ttu-id="6235d-110">Dies erweitert das Zustellen und Verarbeiten von Nachrichten für die Anwendung.</span><span class="sxs-lookup"><span data-stu-id="6235d-110">This extends the dispatching and the processing of messages for the application.</span></span> <span data-ttu-id="6235d-111">Dieser Bereich beinhaltet auch die Erweiterung von Sicherheitssystem, Metadatensystem, Serialisierungssystem und der Bindungen und Bindungselemente, die die Anwendung mit dem zugrunde liegenden Kanalsystem verbinden.</span><span class="sxs-lookup"><span data-stu-id="6235d-111">This area also includes extending the security system, the metadata system, the serialization system, and the bindings and binding elements that connect the application with the underlying channel system.</span></span>  
   
--   Der Kanal und die Kanallaufzeit.  Dadurch wird das auf Nachrichtenebene funktionierende System erweitert und Protokoll\-, Transport\- und Codierungsunterstützung bereitgestellt.  
+-   <span data-ttu-id="6235d-112">Der Kanal und die Kanallaufzeit.</span><span class="sxs-lookup"><span data-stu-id="6235d-112">The channel and channel runtime.</span></span> <span data-ttu-id="6235d-113">Dadurch wird das auf Nachrichtenebene funktionierende System erweitert und Protokoll-, Transport- und Codierungsunterstützung bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="6235d-113">This extends the system that functions at the message level, providing protocol, transport, and encoding support.</span></span>  
   
--   Die Hostlaufzeit.  Dadurch wird die Beziehung der Hostinganwendungsdomäne zum Kanal und der Anwendungslaufzeit erweitert.  
+-   <span data-ttu-id="6235d-114">Die Hostlaufzeit.</span><span class="sxs-lookup"><span data-stu-id="6235d-114">The host runtime.</span></span> <span data-ttu-id="6235d-115">Dadurch wird die Beziehung der Hostinganwendungsdomäne zum Kanal und der Anwendungslaufzeit erweitert.</span><span class="sxs-lookup"><span data-stu-id="6235d-115">This extends the relationship of the hosting application domain to the channel and application runtime.</span></span>  
   
-### Erweitern der Anwendungslaufzeit  
- In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Anwendungen unterscheidet man zwischen Nachrichten, die für einen entsprechenden Kanal und Nachrichten, die für die Anwendung selbst vorgesehen sind.  Kanalnachrichten unterstützen einige kanalbezogene Funktionen, zum Beispiel das Einrichten einer sicheren Konversation oder einer zuverlässigen Sitzung.  Diese Nachrichten sind nicht für die Anwendungslaufzeit verfügbar; sie werden vor Einbeziehung der Anwendungsebene verarbeitet.  
+### <a name="extending-the-application-runtime"></a><span data-ttu-id="6235d-116">Erweitern der Anwendungslaufzeit</span><span class="sxs-lookup"><span data-stu-id="6235d-116">Extending the Application Runtime</span></span>  
+ <span data-ttu-id="6235d-117">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Anwendungen unterscheidet man zwischen Nachrichten, die für einen entsprechenden Kanal und Nachrichten, die für die Anwendung selbst vorgesehen sind.</span><span class="sxs-lookup"><span data-stu-id="6235d-117">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications, there is a distinction between messages that are destined for a corresponding channel and messages that are destined for the application itself.</span></span> <span data-ttu-id="6235d-118">Kanalnachrichten unterstützen einige kanalbezogene Funktionen, zum Beispiel das Einrichten einer sicheren Konversation oder einer zuverlässigen Sitzung.</span><span class="sxs-lookup"><span data-stu-id="6235d-118">Channel messages support some channel-related functionality, such as establishing a secure conversation or establishing a reliable session.</span></span> <span data-ttu-id="6235d-119">Diese Nachrichten sind nicht für die Anwendungslaufzeit verfügbar; sie werden vor Einbeziehung der Anwendungsebene verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="6235d-119">These messages are not available to the application runtime; they are processed before the application layer is involved.</span></span>  
   
- Anwendungsnachrichten beinhalten Daten für einen Client\- oder einen Dienstvorgang, der von Ihnen oder einem Kunden erstellt wurde.  Diese Nachrichten sind je nach Anforderung für das Erweiterungssystem auf Anwendungsebene in Nachrichten\- oder Objektform verfügbar.  
+ <span data-ttu-id="6235d-120">Anwendungsnachrichten beinhalten Daten für einen Client- oder einen Dienstvorgang, der von Ihnen oder einem Kunden erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="6235d-120">Application messages contain data that is destined for a client or service operation that you or your customer has created.</span></span> <span data-ttu-id="6235d-121">Diese Nachrichten sind je nach Anforderung für das Erweiterungssystem auf Anwendungsebene in Nachrichten- oder Objektform verfügbar.</span><span class="sxs-lookup"><span data-stu-id="6235d-121">These messages are available to the application-level extension system in message or object form, depending upon your needs.</span></span>  
   
- Alle Nachrichten durchlaufen das Kanalsystem; nur Anwendungsnachrichten werden vom Kanalsystem an die Anwendung weitergegeben.  Um neue Funktionen auf Kanalebene zu erstellen, muss das Kanalsystem erweitert werden.  Sollen neue Funktionen auf Anwendungsebene erstellt werden, muss die Dienst\- oder Clientlaufzeit \(Verteiler bzw. Kanalfactorys\) erweitert werden.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Erweitern der Anwendungslaufzeit finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ <span data-ttu-id="6235d-122">Alle Nachrichten durchlaufen das Kanalsystem; nur Anwendungsnachrichten werden vom Kanalsystem an die Anwendung weitergegeben.</span><span class="sxs-lookup"><span data-stu-id="6235d-122">All messages pass through the channel system; only application messages are passed from the channel system into the application.</span></span> <span data-ttu-id="6235d-123">Um neue Funktionen auf Kanalebene zu erstellen, muss das Kanalsystem erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="6235d-123">To create new channel-level functionality, you must extend the channel system.</span></span> <span data-ttu-id="6235d-124">Sollen neue Funktionen auf Anwendungsebene erstellt werden, muss die Dienst- oder Clientlaufzeit (Verteiler bzw. Kanalfactorys) erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="6235d-124">To create new application-level functionality, you must extend the service or client runtime (dispatchers and channel factories, respectively).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="6235d-125">Erweitern der Anwendungslaufzeit finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-125"> extending the application runtime, see [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
-#### Erweitern der Sicherheit  
- Um benutzerdefinierte Sicherheitsmechanismen \(zum Beispiel Token und Anmeldeinformationen\) zu erstellen, muss das Sicherheitssystem erweitert werden.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Erweitern der Sicherheit](../../../docs/framework/wcf/extending/extending-security.md).  
+#### <a name="extending-security"></a><span data-ttu-id="6235d-126">Erweitern der Sicherheit</span><span class="sxs-lookup"><span data-stu-id="6235d-126">Extending Security</span></span>  
+ <span data-ttu-id="6235d-127">Um benutzerdefinierte Sicherheitsmechanismen (zum Beispiel Token und Anmeldeinformationen) zu erstellen, muss das Sicherheitssystem erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="6235d-127">To build custom security mechanisms such as tokens and credentials, you must extend the security system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6235d-128">[Erweitern der Sicherheit](../../../docs/framework/wcf/extending/extending-security.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-128"> [Extending Security](../../../docs/framework/wcf/extending/extending-security.md).</span></span>  
   
-#### Erweitern von Metadaten  
- Sollen die Metadaten nicht nur im Standardsystem verfügbar gemacht werden, muss das Metadatensystem erweitert werden.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Erweitern des Metadatensystems](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+#### <a name="extending-metadata"></a><span data-ttu-id="6235d-129">Erweitern von Metadaten</span><span class="sxs-lookup"><span data-stu-id="6235d-129">Extending Metadata</span></span>  
+ <span data-ttu-id="6235d-130">Sollen die Metadaten nicht nur im Standardsystem verfügbar gemacht werden, muss das Metadatensystem erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="6235d-130">To expose your metadata in differently than the default, you must extend the metadata system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6235d-131">[Erweitern des Metadatensystems](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-131"> [Extending the Metadata System](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).</span></span>  
   
-#### Erweitern der Serialisierung  
- Wenn Sie benutzerdefinierte Encoder erstellen und Datenersatzzeichen oder andere Elemente, bei denen übertragene Daten angepasst werden, bereitstellen möchten, erweitern Sie das Serialisierungssystem.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Erweitern von Encodern und Serialisierungsprogrammen](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+#### <a name="extending-serialization"></a><span data-ttu-id="6235d-132">Erweitern der Serialisierung</span><span class="sxs-lookup"><span data-stu-id="6235d-132">Extending Serialization</span></span>  
+ <span data-ttu-id="6235d-133">Wenn Sie benutzerdefinierte Encoder erstellen und Datenersatzzeichen oder andere Elemente, bei denen übertragene Daten angepasst werden, bereitstellen möchten, erweitern Sie das Serialisierungssystem.</span><span class="sxs-lookup"><span data-stu-id="6235d-133">To build custom encoders, provide data surrogates, or other work involving the customization of transferred data, you must extend the serialization system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6235d-134">[Erweitern von Encodern und Serialisierungsprogrammen](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-134"> [Extending Encoders and Serializers](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).</span></span>  
   
-#### Erweitern von Bindungen  
- Sollen Transport\- oder Protokollkanäle der Anwendungsebene zugeordnet werden, muss das Bindungssystem erweitert werden.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Erweitern von Bindungen](../../../docs/framework/wcf/extending/extending-bindings.md).  
+#### <a name="extending-bindings"></a><span data-ttu-id="6235d-135">Erweitern von Bindungen</span><span class="sxs-lookup"><span data-stu-id="6235d-135">Extending Bindings</span></span>  
+ <span data-ttu-id="6235d-136">Sollen Transport- oder Protokollkanäle der Anwendungsebene zugeordnet werden, muss das Bindungssystem erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="6235d-136">To associate transport or protocol channels with the application layer, you must extend the binding system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6235d-137">[Erweitern von Bindungen](../../../docs/framework/wcf/extending/extending-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-137"> [Extending Bindings](../../../docs/framework/wcf/extending/extending-bindings.md).</span></span>  
   
-### Erweitern des Kanalsystems  
- Informationen zum Erstellen von Kanälen, die benutzerdefinierte Transporte oder Protokollfunktionen unterstützen, erhalten Sie unter [Erweitern der Kanalschicht](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+### <a name="extending-the-channel-system"></a><span data-ttu-id="6235d-138">Erweitern des Kanalsystems</span><span class="sxs-lookup"><span data-stu-id="6235d-138">Extending the Channel System</span></span>  
+ <span data-ttu-id="6235d-139">Kanäle erstellen, die benutzerdefinierte Transporte unterstützen oder Protokoll Funktionalität, finden Sie unter [Erweitern der Kanalschicht](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-139">To create channels that support custom transports or protocol functionality, see [Extending the Channel Layer](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).</span></span>  
   
-### Erweitern des Diensthostsystems  
- Soll das dienstweite Anwendungsmodell geändert werden, ist eine Erweiterung der <xref:System.ServiceModel.ServiceHostBase?displayProperty=fullName>\-Klasse erforderlich.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+### <a name="extending-the-service-hosting-system"></a><span data-ttu-id="6235d-140">Erweitern des Diensthostsystems</span><span class="sxs-lookup"><span data-stu-id="6235d-140">Extending the Service Hosting System</span></span>  
+ <span data-ttu-id="6235d-141">Soll das dienstweite Anwendungsmodell geändert werden, ist eine Erweiterung der <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>-Klasse erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6235d-141">To modify the service-wide application model, you must extend <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> class.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6235d-142">[Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-142"> [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
- Soll die Beziehung zwischen der Hostanwendungsdomäne und dem Diensthost geändert werden, ist eine Erweiterung der <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=fullName>\-Klasse erforderlich.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Erweitern des Hosting mit ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ <span data-ttu-id="6235d-143">Soll die Beziehung zwischen der Hostanwendungsdomäne und dem Diensthost geändert werden, ist eine Erweiterung der <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>-Klasse erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6235d-143">To modify the relationship between the hosting application domain and the service host, you must extend the <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> class.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6235d-144">[Erweitern des Hosting mit ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).</span><span class="sxs-lookup"><span data-stu-id="6235d-144"> [Extending Hosting Using ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).</span></span>  
   
-## Siehe auch  
- [Erweitern von WCF](../../../docs/framework/wcf/extending/extending-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="6235d-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6235d-145">See Also</span></span>  
+ [<span data-ttu-id="6235d-146">Erweitern von WCF</span><span class="sxs-lookup"><span data-stu-id="6235d-146">Extending WCF</span></span>](../../../docs/framework/wcf/extending/extending-wcf.md)

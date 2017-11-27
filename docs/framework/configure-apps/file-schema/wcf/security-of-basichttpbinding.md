@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; von &lt;basicHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; von &lt;basicHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-caps.latest.revision: 16
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c4f8449d99ce897cc1be9adc2e6dad5f98498743
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; von &lt;basicHttpBinding&gt;
-Definiert die Sicherheitsfunktionen für [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a><span data-ttu-id="d6adf-102">&lt;security&gt; von &lt;basicHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d6adf-102">&lt;security&gt; of &lt;basicHttpBinding&gt;</span></span>
+<span data-ttu-id="d6adf-103">Definiert die Sicherheitsfunktionen des der [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d6adf-103">Defines the security capabilities of the [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
-## Syntax  
+ <span data-ttu-id="d6adf-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d6adf-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d6adf-105">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="d6adf-105">\<bindings></span></span>  
+<span data-ttu-id="d6adf-106">\<BasicHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="d6adf-106">\<basicHttpBinding></span></span>  
+<span data-ttu-id="d6adf-107">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="d6adf-107">\<binding></span></span>  
+<span data-ttu-id="d6adf-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="d6adf-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d6adf-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="d6adf-109">Syntax</span></span>  
   
+```xml  
 <security mode="Message/None/Transport/TransportWithCredential">  
    <transport  
       clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
@@ -34,49 +42,49 @@ Definiert die Sicherheitsfunktionen für [\<basicHttpBinding\>](../../../../../d
 </security>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d6adf-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="d6adf-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="d6adf-111">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d6adf-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="d6adf-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="d6adf-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|Modus|Dies ist optional.  Gibt den verwendeten Sicherheitstyp an.  Die Standardeinstellung ist `None`.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
+|<span data-ttu-id="d6adf-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="d6adf-113">Attribute</span></span>|<span data-ttu-id="d6adf-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6adf-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="d6adf-115">Modus</span><span class="sxs-lookup"><span data-stu-id="d6adf-115">mode</span></span>|<span data-ttu-id="d6adf-116">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="d6adf-116">Optional.</span></span> <span data-ttu-id="d6adf-117">Gibt den verwendeten Sicherheitstyp an.</span><span class="sxs-lookup"><span data-stu-id="d6adf-117">Specifies the type of security that is used.</span></span> <span data-ttu-id="d6adf-118">Die Standardeinstellung ist `None`.</span><span class="sxs-lookup"><span data-stu-id="d6adf-118">The default is `None`.</span></span> <span data-ttu-id="d6adf-119">Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="d6adf-119">This attribute is of type <xref:System.ServiceModel.BasicHttpSecurityMode>.</span></span>|  
   
-## mode\-Attribut  
+## <a name="mode-attribute"></a><span data-ttu-id="d6adf-120">mode-Attribut</span><span class="sxs-lookup"><span data-stu-id="d6adf-120">mode Attribute</span></span>  
   
-|Wert|Beschreibung|  
-|----------|------------------|  
-|Keine|-   Nachrichten werden nicht während der Übertragung gesichert.|  
-|Transport|Die Sicherheit wird über HTTPS bereitgestellt.  Die SOAP\-Nachrichten werden über HTTPS gesichert.  Der Dienst wird über das X.509\-Zertifikat beim Client authentifiziert.  Der Client wird über ClientCredentialType authentifiziert.  Weitere Informationen zu diesem Thema finden Sie im [\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
-|Meldung|Sicherheit wird über die SOAP\-Nachrichtensicherheit bereitgestellt.  Standardmäßig wird der Text verschlüsselt und signiert.  Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out\-of\-band zur Verfügung gestellt wird.  Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.|  
-|TransportWithMessageCredential|Integrität, Vertraulichkeit und Serverauthentifizierung werden über die Transportsicherheit bereitgestellt.  Die Clientauthentifizierung wird über die SOAP\-Nachrichtensicherheit bereitgestellt.  Dieser Modus ist relevant, wenn sich der Benutzer mit Benutzername\/Kennwort authentifiziert und eine vorhandene HTTP\-Bereitstellung für die Absicherung der Nachrichtenübertragung vorhanden ist.|  
-|TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit.  Er bietet dagegen HTTP\-basierte Clientauthentifizierung.  Dieser Modus sollte mit Vorsicht angewendet werden.  Er ist nur für Umgebungen geeignet, in denen die Transportsicherheit mit anderen Mitteln sichergestellt wird \(z.&\#160;B. durch IPSec\) und nur die Clientauthentifizierung über die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Infrastruktur bereitgestellt wird.|  
+|<span data-ttu-id="d6adf-121">Wert</span><span class="sxs-lookup"><span data-stu-id="d6adf-121">Value</span></span>|<span data-ttu-id="d6adf-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6adf-122">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="d6adf-123">Keine</span><span class="sxs-lookup"><span data-stu-id="d6adf-123">None</span></span>|<span data-ttu-id="d6adf-124">-Nachrichten werden während der Übertragung nicht gesichert.</span><span class="sxs-lookup"><span data-stu-id="d6adf-124">-   Messages are not secured during transfer.</span></span>|  
+|<span data-ttu-id="d6adf-125">Transport</span><span class="sxs-lookup"><span data-stu-id="d6adf-125">Transport</span></span>|<span data-ttu-id="d6adf-126">Die Sicherheit wird über HTTPS bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d6adf-126">Security is provided using HTTPS transport.</span></span> <span data-ttu-id="d6adf-127">Die SOAP-Nachrichten werden über HTTPS gesichert.</span><span class="sxs-lookup"><span data-stu-id="d6adf-127">The SOAP messages are secured using HTTPS.</span></span> <span data-ttu-id="d6adf-128">Der Dienst wird über das X.509-Zertifikat beim Client authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="d6adf-128">The service is authenticated to the client using the service's X.509 certificate.</span></span> <span data-ttu-id="d6adf-129">Der Client wird über ClientCredentialType authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="d6adf-129">The client is authenticated using the ClientCredentialType supplied.</span></span> <span data-ttu-id="d6adf-130">Finden Sie unter der [ \<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d6adf-130">See the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).</span></span>|  
+|<span data-ttu-id="d6adf-131">Meldung</span><span class="sxs-lookup"><span data-stu-id="d6adf-131">Message</span></span>|<span data-ttu-id="d6adf-132">Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d6adf-132">Security is provided using SOAP message security.</span></span> <span data-ttu-id="d6adf-133">Standardmäßig wird der Text verschlüsselt und signiert.</span><span class="sxs-lookup"><span data-stu-id="d6adf-133">By default, the body is encrypted and signed.</span></span> <span data-ttu-id="d6adf-134">Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out-of-band zur Verfügung gestellt wird.</span><span class="sxs-lookup"><span data-stu-id="d6adf-134">For this binding, the system requires that the server certificate be provided to the client out of band.</span></span> <span data-ttu-id="d6adf-135">Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.</span><span class="sxs-lookup"><span data-stu-id="d6adf-135">The only valid `ClientCredentialType` for this binding is `Certificate`.</span></span>|  
+|<span data-ttu-id="d6adf-136">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="d6adf-136">TransportWithMessageCredential</span></span>|<span data-ttu-id="d6adf-137">Integrität, Vertraulichkeit und Serverauthentifizierung werden über die Transportsicherheit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d6adf-137">Integrity, confidentiality and server authentication are provided by transport security.</span></span> <span data-ttu-id="d6adf-138">Die Clientauthentifizierung wird über die SOAP-Nachrichtensicherheit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="d6adf-138">Client authentication is provided by means of SOAP message security.</span></span> <span data-ttu-id="d6adf-139">Dieser Modus ist relevant, wenn sich der Benutzer mit Benutzername/Kennwort authentifiziert und eine vorhandene HTTP-Bereitstellung für die Absicherung der Nachrichtenübertragung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="d6adf-139">This mode is relevant when the user is authenticating using username/password and there is an existing HTTP deployment for securing message transfer.</span></span>|  
+|<span data-ttu-id="d6adf-140">TransportCredentialOnly</span><span class="sxs-lookup"><span data-stu-id="d6adf-140">TransportCredentialOnly</span></span>|<span data-ttu-id="d6adf-141">Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit.</span><span class="sxs-lookup"><span data-stu-id="d6adf-141">This mode does not provide message integrity and confidentiality.</span></span> <span data-ttu-id="d6adf-142">Er bietet dagegen HTTP-basierte Clientauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="d6adf-142">It provides http-based client authentication.</span></span> <span data-ttu-id="d6adf-143">Dieser Modus sollte mit Vorsicht angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="d6adf-143">This mode should be used with caution.</span></span> <span data-ttu-id="d6adf-144">Er ist nur für Umgebungen geeignet, in denen die Transportsicherheit mit anderen Mitteln sichergestellt wird (z.&#160;B. durch IPSec) und nur die Clientauthentifizierung über die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Infrastruktur bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="d6adf-144">It should be used in environments where the transport security is being provided by other means (such as IPSec) and only client authentication is provided by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] infrastructure.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="d6adf-145">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d6adf-145">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard\-HTTP\-Dienst.  Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Definiert die Nachrichtensicherheitseinstellungen für einen Standard\-HTTP\-Dienst.  Dieses Element entspricht <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
+|<span data-ttu-id="d6adf-146">Element</span><span class="sxs-lookup"><span data-stu-id="d6adf-146">Element</span></span>|<span data-ttu-id="d6adf-147">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6adf-147">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d6adf-148">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="d6adf-148">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|<span data-ttu-id="d6adf-149">Definiert die Transportsicherheitseinstellungen für einen Standard-HTTP-Dienst.</span><span class="sxs-lookup"><span data-stu-id="d6adf-149">Defines the transport security settings for a basic HTTP service.</span></span> <span data-ttu-id="d6adf-150">Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.</span><span class="sxs-lookup"><span data-stu-id="d6adf-150">This element corresponds to <xref:System.ServiceModel.HttpTransportSecurity>.</span></span>|  
+|[<span data-ttu-id="d6adf-151">\<Meldung ></span><span class="sxs-lookup"><span data-stu-id="d6adf-151">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|<span data-ttu-id="d6adf-152">Definiert die Nachrichtensicherheitseinstellungen für einen Standard-HTTP-Dienst.</span><span class="sxs-lookup"><span data-stu-id="d6adf-152">Defines the message security settings for a basic HTTP service.</span></span> <span data-ttu-id="d6adf-153">Dieses Element entspricht <xref:System.ServiceModel.BasicHttpMessageSecurity>.</span><span class="sxs-lookup"><span data-stu-id="d6adf-153">This element corresponds to <xref:System.ServiceModel.BasicHttpMessageSecurity>.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="d6adf-154">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d6adf-154">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|Bindung|Das Bindungselement von [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|<span data-ttu-id="d6adf-155">Element</span><span class="sxs-lookup"><span data-stu-id="d6adf-155">Element</span></span>|<span data-ttu-id="d6adf-156">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6adf-156">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="d6adf-157">Bindung</span><span class="sxs-lookup"><span data-stu-id="d6adf-157">binding</span></span>|<span data-ttu-id="d6adf-158">Das Bindungselement, das von der [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d6adf-158">The binding element of the [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>|  
   
-## Hinweise  
- Standardmäßig wird die SOAP\-Nachricht nicht geschützt, und der Client wird nicht authentifiziert.  Dieses Element ermöglicht es Ihnen, zusätzliche Sicherheitseinstellungen für das `basicHttpBinding`\-Element zu konfigurieren.  
+## <a name="remarks"></a><span data-ttu-id="d6adf-159">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d6adf-159">Remarks</span></span>  
+ <span data-ttu-id="d6adf-160">Standardmäßig wird die SOAP-Nachricht nicht geschützt, und der Client wird nicht authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="d6adf-160">By default, the SOAP message is not secured and the client is not authenticated.</span></span> <span data-ttu-id="d6adf-161">Dieses Element ermöglicht es Ihnen, zusätzliche Sicherheitseinstellungen für das `basicHttpBinding`-Element zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="d6adf-161">This element enables you to configure additional security settings for the `basicHttpBinding` element.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>   
- <xref:System.ServiceModel.BasicHttpSecurity>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Wählen eines Typs von Anmeldeinformationen](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="d6adf-162">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6adf-162">See Also</span></span>  
+ <xref:System.ServiceModel.BasicHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>  
+ <xref:System.ServiceModel.BasicHttpSecurity>  
+ [<span data-ttu-id="d6adf-163">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="d6adf-163">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="d6adf-164">Auswählen eines Anmeldeinformationentyps</span><span class="sxs-lookup"><span data-stu-id="d6adf-164">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="d6adf-165">Bindungen</span><span class="sxs-lookup"><span data-stu-id="d6adf-165">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="d6adf-166">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="d6adf-166">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="d6adf-167">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="d6adf-167">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="d6adf-168">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="d6adf-168">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

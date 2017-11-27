@@ -1,75 +1,57 @@
 ---
-title: AddHandler-Anweisung | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: AddHandler-Anweisung
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.AddHandlerMethod
 - addhandler
 - vb.addhandler
-dev_langs:
-- VB
-helpviewer_keywords:
-- AddHandler statement
+helpviewer_keywords: AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 728d8393c44d777f9cc016d9cf66030036582ae4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 07fbfe04ccd01b7d0f99338ef2682238830099dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="addhandler-statement"></a>AddHandler-Anweisung
-Ordnet ein Ereignis zur Laufzeit einen Ereignishandler.  
+# <a name="addhandler-statement"></a><span data-ttu-id="8e8c8-102">AddHandler-Anweisung</span><span class="sxs-lookup"><span data-stu-id="8e8c8-102">AddHandler Statement</span></span>
+<span data-ttu-id="8e8c8-103">Ordnet ein Ereignis mit einem Ereignishandler zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-103">Associates an event with an event handler at run time.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="8e8c8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8e8c8-104">Syntax</span></span>  
   
 ```  
 AddHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a><span data-ttu-id="8e8c8-105">Teile</span><span class="sxs-lookup"><span data-stu-id="8e8c8-105">Parts</span></span>  
  `event`  
- Der Name des zu behandelnden Ereignisses.  
+ <span data-ttu-id="8e8c8-106">Der Name des zu behandelnden Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-106">The name of the event to handle.</span></span>  
   
  `eventhandler`  
- Der Name einer Prozedur, die das Ereignis behandelt.  
+ <span data-ttu-id="8e8c8-107">Der Name einer Prozedur, die das Ereignis behandelt.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-107">The name of a procedure that handles the event.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Die `AddHandler` und `RemoveHandler` -Anweisungen ermöglichen Ihnen das Starten und Beenden der Ereignisbehandlung zu einem beliebigen Zeitpunkt während der Ausführung des Programms.  
+## <a name="remarks"></a><span data-ttu-id="8e8c8-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8e8c8-108">Remarks</span></span>  
+ <span data-ttu-id="8e8c8-109">Die `AddHandler` und `RemoveHandler` Anweisungen ermöglichen das Starten und Beenden der Ereignisbehandlung zu einem beliebigen Zeitpunkt während der Ausführung des Programms.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-109">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.</span></span>  
   
- Die Signatur der `eventhandler` Verfahren muss der Signatur des Ereignisses entsprechen `event`.  
+ <span data-ttu-id="8e8c8-110">Die Signatur der `eventhandler` Prozedur muss die Signatur des Ereignisses übereinstimmen `event`.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-110">The signature of the `eventhandler` procedure must match the signature of the event `event`.</span></span>  
   
- Mit dem Schlüsselwort `Handles` und der Anweisung `AddHandler` können Sie angeben, dass diese bestimmten Prozeduren bestimmte Ereignisse verarbeiten. Es bestehen jedoch keine Unterschiede. Die Anweisung `AddHandler` verbindet Prozeduren zur Laufzeit mit Ereignissen. Verwenden Sie das Schlüsselwort `Handles`, wenn Sie eine Prozedur definieren, um anzugeben, dass sie ein bestimmtes Ereignis verarbeitet.  Weitere Informationen finden Sie unter [behandelt](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ <span data-ttu-id="8e8c8-111">Mit dem Schlüsselwort `Handles` und der Anweisung `AddHandler` können Sie angeben, dass diese bestimmten Prozeduren bestimmte Ereignisse verarbeiten. Es bestehen jedoch keine Unterschiede.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-111">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="8e8c8-112">Die Anweisung `AddHandler` verbindet Prozeduren zur Laufzeit mit Ereignissen.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-112">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="8e8c8-113">Verwenden Sie das Schlüsselwort `Handles`, wenn Sie eine Prozedur definieren, um anzugeben, dass sie ein bestimmtes Ereignis verarbeitet. </span><span class="sxs-lookup"><span data-stu-id="8e8c8-113">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="8e8c8-114">Weitere Informationen finden Sie unter [behandelt](../../../visual-basic/language-reference/statements/handles-clause.md).</span><span class="sxs-lookup"><span data-stu-id="8e8c8-114">For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).</span></span>  
   
 > [!NOTE]
->  Für benutzerdefinierte Ereignisse die `AddHandler` -Anweisung ruft des Ereignis `AddHandler` Accessor. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
+>  <span data-ttu-id="8e8c8-115">Für benutzerdefinierte Ereignisse die `AddHandler` -Anweisung ruft des Ereignis `AddHandler` Accessor.</span><span class="sxs-lookup"><span data-stu-id="8e8c8-115">For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor.</span></span> <span data-ttu-id="8e8c8-116">Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8e8c8-116">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-vb[VbVbalrEvents&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
+## <a name="example"></a><span data-ttu-id="8e8c8-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8e8c8-117">Example</span></span>  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [RemoveHandler-Anweisung](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="8e8c8-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8e8c8-118">See Also</span></span>  
+ [<span data-ttu-id="8e8c8-119">RemoveHandler-Anweisung</span><span class="sxs-lookup"><span data-stu-id="8e8c8-119">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [<span data-ttu-id="8e8c8-120">Handles</span><span class="sxs-lookup"><span data-stu-id="8e8c8-120">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [<span data-ttu-id="8e8c8-121">Event-Anweisung</span><span class="sxs-lookup"><span data-stu-id="8e8c8-121">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="8e8c8-122">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="8e8c8-122">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

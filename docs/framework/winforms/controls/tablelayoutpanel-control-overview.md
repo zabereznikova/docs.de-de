@@ -1,58 +1,58 @@
 ---
-title: "&#220;bersicht &#252;ber das TableLayoutPanel-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TableLayoutPanel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Größenänderung"
-  - "Layout [Windows Forms], TableLayoutPanel-Steuerelement"
-  - "Größenveränderbare Steuerelemente"
-  - "TableLayoutPanel-Steuerelement [Windows Forms], Informationen über das TableLayoutPanel-Steuerelement"
-  - "Windows Forms-Steuerelemente, Proportionale Größenänderung"
-  - "Windows Forms, Proportionale Größenänderung von Steuerelementen"
+title: "Übersicht über das TableLayoutPanel-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TableLayoutPanel
+helpviewer_keywords:
+- controls [Windows Forms], resizing
+- resizable controls [Windows Forms]
+- Windows Forms controls, proportional resizing
+- Windows Forms, proportional resizing of controls
+- layout [Windows Forms], TableLayoutPanel control
+- TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fd8d68aa57ffe8b6fb84ceddf9d01aed56d40bdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das TableLayoutPanel-Steuerelement
-Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement ordnet seinen Inhalt in einem Raster an.  Da das Layout sowohl zur Entwurfszeit als auch zur Laufzeit ausgeführt wird, kann es sich dynamisch ändern, wenn sich die Anwendungsumgebung ändert.  Dadurch können sich die Steuerelemente im Bereich proportional in der Größe anpassen, sodass sie auf Änderungen wie die Größenanpassung des übergeordneten Steuerelements oder eine durch Lokalisierung veränderte Textlänge reagieren.  
+# <a name="tablelayoutpanel-control-overview"></a><span data-ttu-id="c6343-102">Übersicht über das TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c6343-102">TableLayoutPanel Control Overview</span></span>
+<span data-ttu-id="c6343-103">Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inhalt in einem Raster an.</span><span class="sxs-lookup"><span data-stu-id="c6343-103">The <xref:System.Windows.Forms.TableLayoutPanel> control arranges its contents in a grid.</span></span> <span data-ttu-id="c6343-104">Da das Layout sowohl zur Entwurfszeit als auch zur Laufzeit ausgeführt wird, kann es sich dynamisch ändern, wenn sich die Anwendungsumgebung ändert.</span><span class="sxs-lookup"><span data-stu-id="c6343-104">Because the layout is performed both at design time and run time, it can change dynamically as the application environment changes.</span></span> <span data-ttu-id="c6343-105">Dadurch können sich die Steuerelemente im Bereich proportional in der Größe anpassen, sodass sie auf Änderungen wie die Größenanpassung des übergeordneten Steuerelements oder eine durch Lokalisierung veränderte Textlänge reagieren.</span><span class="sxs-lookup"><span data-stu-id="c6343-105">This gives the controls in the panel the ability to proportionally resize, so they can respond to changes such as the parent control resizing or text length changing due to localization.</span></span>  
   
- Jedes Windows Forms\-Steuerelement kann ein untergeordnetes Element des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements sein, einschließlich anderer Instanzen von <xref:System.Windows.Forms.TableLayoutPanel>.  Dadurch können Sie anspruchsvolle Layouts erstellen, die sich zur Laufzeit an Änderungen anpassen.  
+ <span data-ttu-id="c6343-106">Jedes Windows Forms-Steuerelement kann ein untergeordnetes Element des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements sein, einschließlich anderer Instanzen von <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="c6343-106">Any Windows Forms control can be a child of the <xref:System.Windows.Forms.TableLayoutPanel> control, including other instances of <xref:System.Windows.Forms.TableLayoutPanel>.</span></span> <span data-ttu-id="c6343-107">Dadurch können Sie anspruchsvolle Layouts erstellen, die sich zur Laufzeit an Änderungen anpassen.</span><span class="sxs-lookup"><span data-stu-id="c6343-107">This allows you to construct sophisticated layouts that adapt to changes at run time.</span></span>  
   
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement kann je nach Wert der Eigenschaften <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>, <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> und <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> erweitert werden, sodass neue Steuerelemente hinzugefügt werden können.  Indem Sie die <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>\-Eigenschaft oder die <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>\-Eigenschaft auf den Wert 0 festlegen, geben Sie an, dass der <xref:System.Windows.Forms.TableLayoutPanel> in der entsprechenden Richtung ungebunden ist.  
+ <span data-ttu-id="c6343-108">Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement kann je nach Wert der Eigenschaften <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>, <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> und <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> erweitert werden, sodass neue Steuerelemente hinzugefügt werden können.</span><span class="sxs-lookup"><span data-stu-id="c6343-108">The <xref:System.Windows.Forms.TableLayoutPanel> control can expand to accommodate new controls when they are added, depending on the value of the <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>, <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>, and <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> properties.</span></span> <span data-ttu-id="c6343-109">Indem Sie die <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>-Eigenschaft oder die <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>-Eigenschaft auf den Wert 0 festlegen, geben Sie an, dass der <xref:System.Windows.Forms.TableLayoutPanel> in der entsprechenden Richtung ungebunden ist.</span><span class="sxs-lookup"><span data-stu-id="c6343-109">Setting either the <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> or <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> property to a value of 0 specifies that the <xref:System.Windows.Forms.TableLayoutPanel> will be unbound in the corresponding direction.</span></span>  
   
- Außerdem können Sie festlegen, in welche Richtung \(horizontal oder vertikal\) das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement erweitert wird, wenn es bereits mit untergeordneten Steuerelementen gefüllt ist.  Standardmäßig wird das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement nach unten erweitert, indem Zeilen hinzufügt werden.  
+ <span data-ttu-id="c6343-110">Außerdem können Sie festlegen, in welche Richtung (horizontal oder vertikal) das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement erweitert wird, wenn es bereits mit untergeordneten Steuerelementen gefüllt ist.</span><span class="sxs-lookup"><span data-stu-id="c6343-110">You can also control the direction of expansion (horizontal or vertical) after the <xref:System.Windows.Forms.TableLayoutPanel> control is full of child controls.</span></span> <span data-ttu-id="c6343-111">Standardmäßig wird das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement nach unten erweitert, indem Zeilen hinzufügt werden.</span><span class="sxs-lookup"><span data-stu-id="c6343-111">By default, the <xref:System.Windows.Forms.TableLayoutPanel> control expands downward by adding rows.</span></span>  
   
- Wenn Sie Zeilen und Spalten ein anderes Verhalten als das Standardverhalten zuweisen möchten, können Sie deren Eigenschaften mithilfe der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>\-Eigenschaft und <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>\-Eigenschaft steuern.  Sie können die Eigenschaften von Zeilen oder Spalten individuell festlegen.  
+ <span data-ttu-id="c6343-112">Wenn Sie Zeilen und Spalten ein anderes Verhalten als das Standardverhalten zuweisen möchten, können Sie deren Eigenschaften mithilfe der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>-Eigenschaft und <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>-Eigenschaft steuern.</span><span class="sxs-lookup"><span data-stu-id="c6343-112">If you want rows and columns that behave differently from the default behavior, you can control the properties of rows and columns by using the <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> and <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> properties.</span></span> <span data-ttu-id="c6343-113">Sie können die Eigenschaften von Zeilen oder Spalten individuell festlegen.</span><span class="sxs-lookup"><span data-stu-id="c6343-113">You can set the properties of rows or columns individually.</span></span>  
   
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement fügt seinen untergeordneten Steuerelementen folgende Eigenschaften hinzu: `Cell`, `Column`, `Row`, `ColumnSpan` und `RowSpan`.  
+ <span data-ttu-id="c6343-114">Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement fügt seinen untergeordneten Steuerelementen folgende Eigenschaften hinzu: `Cell`, `Column`, `Row`, `ColumnSpan` und `RowSpan`.</span><span class="sxs-lookup"><span data-stu-id="c6343-114">The <xref:System.Windows.Forms.TableLayoutPanel> control adds the following properties to its child controls: `Cell`, `Column`, `Row`, `ColumnSpan`, and `RowSpan`.</span></span>  
   
- Sie können Zellen im <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement zusammenführen, indem Sie die `ColumnSpan`\-Eigenschaft oder `RowSpan`\-Eigenschaft für ein untergeordnetes Steuerelement festlegen.  
+ <span data-ttu-id="c6343-115">Sie können Zellen im <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement zusammenführen, indem Sie die `ColumnSpan`-Eigenschaft oder `RowSpan`-Eigenschaft für ein untergeordnetes Steuerelement festlegen.</span><span class="sxs-lookup"><span data-stu-id="c6343-115">You can merge cells in the <xref:System.Windows.Forms.TableLayoutPanel> control by setting the `ColumnSpan` or `RowSpan` properties on a child control.</span></span>  
   
-1.  [Gewusst wie: Ausrichten und Strecken eines Steuerelements in einem TableLayoutPanel\-Steuerelement](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))  
+1.  <span data-ttu-id="c6343-116">[Vorgehensweise: Ausrichten und Strecken eines Steuerelements in einem TableLayoutPanel-Steuerelement](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c6343-116">[How to: Align and Stretch a Control in a TableLayoutPanel Control](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))</span></span>  
   
-2.  [Gewusst wie: Überspannen von Zeilen und Spalten in einem TableLayoutPanel\-Steuerelement](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))  
+2.  <span data-ttu-id="c6343-117">[Vorgehensweise: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c6343-117">[How to: Span Rows and Columns in a TableLayoutPanel Control](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))</span></span>  
   
-3.  [Gewusst wie: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel\-Steuerelement](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))  
+3.  <span data-ttu-id="c6343-118">[Vorgehensweise: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c6343-118">[How to: Edit Columns and Rows in a TableLayoutPanel Control](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))</span></span>  
   
-4.  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  <span data-ttu-id="c6343-119">[Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c6343-119">[Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.FlowLayoutPanel>   
- <xref:System.Windows.Forms.TableLayoutSettings>   
- [Gewusst wie: Entwerfen eines Windows Forms\-Layouts, das zur Lokalisierung gut geeignet ist](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)   
- [Gewusst wie: Erstellen von in der Größe veränderbaren Windows Forms für die Dateneingabe](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)   
- [Empfohlene Vorgehensweisen für das TableLayoutPanel\-Steuerelement](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
+## <a name="see-also"></a><span data-ttu-id="c6343-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c6343-120">See Also</span></span>  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
+ <xref:System.Windows.Forms.TableLayoutSettings>  
+ [<span data-ttu-id="c6343-121">Gewusst wie: Entwerfen eines Windows Forms-Layouts, das zur Lokalisierung gut geeignet ist</span><span class="sxs-lookup"><span data-stu-id="c6343-121">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [<span data-ttu-id="c6343-122">Gewusst wie: Erstellen von in der Größe veränderbaren Windows Forms für die Dateneingabe</span><span class="sxs-lookup"><span data-stu-id="c6343-122">How to: Create a Resizable Windows Form for Data Entry</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [<span data-ttu-id="c6343-123">Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c6343-123">Best Practices for the TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)

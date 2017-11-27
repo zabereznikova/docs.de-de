@@ -1,47 +1,50 @@
 ---
-title: "Vorgehensweise: Erstellen eines unidirektionalen Vertrags | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: 'Vorgehensweise: Erstellen eines unidirektionalen Vertrags'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fb899bdc8d1452046b71fdce5d0782e1d1338d2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines unidirektionalen Vertrags
-Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen unidirektionalen Vertrag verwenden.Solche Methoden rufen Vorgänge in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst von einem Client auf, erwarten aber keine Antwort.Dieser Vertragstyp kann verwendet werden, um z. B. Benachrichtigungen für viele Abonnenten zu veröffentlichen.Sie können unidirektionale Verträge auch beim Erstellen eines Duplexvertrags \(bidirektionalen Vertrags\) verwenden. Dies ermöglicht eine unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils anderen initiieren können.So wird insbesondere dem Server ermöglicht, unidirektionale Aufrufe an den Client durchzuführen, die der Client als Ereignisse behandeln kann.Ausführliche Informationen zum Angeben von unidirektionalen Methoden finden Sie in der Beschreibung zur <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>\-Methode und zur <xref:System.ServiceModel.OperationContractAttribute>\-Klasse.  
+# <a name="how-to-create-a-one-way-contract"></a><span data-ttu-id="f12fb-102">Vorgehensweise: Erstellen eines unidirektionalen Vertrags</span><span class="sxs-lookup"><span data-stu-id="f12fb-102">How to: Create a One-Way Contract</span></span>
+<span data-ttu-id="f12fb-103">Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen unidirektionalen Vertrag verwenden.</span><span class="sxs-lookup"><span data-stu-id="f12fb-103">This topic shows the basic steps to create methods that use a one-way contract.</span></span> <span data-ttu-id="f12fb-104">Solche Methoden rufen Vorgänge in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst von einem Client auf, erwarten aber keine Antwort.</span><span class="sxs-lookup"><span data-stu-id="f12fb-104">Such methods invoke operations on a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service from a client but do not expect a reply.</span></span> <span data-ttu-id="f12fb-105">Dieser Vertragstyp kann verwendet werden, um z.&#160;B. Benachrichtigungen für viele Abonnenten zu veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="f12fb-105">This type of contract can be used, for example, to publish notifications to many subscribers.</span></span> <span data-ttu-id="f12fb-106">Sie können unidirektionale Verträge auch beim Erstellen eines Duplexvertrags (bidirektionalen Vertrags) verwenden. Dies ermöglicht eine unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils anderen initiieren können.</span><span class="sxs-lookup"><span data-stu-id="f12fb-106">You can also use one-way contracts when creating a duplex (two-way) contract, which allows clients and servers to communicate with each other independently so that either can initiate calls to the other.</span></span> <span data-ttu-id="f12fb-107">So wird insbesondere dem Server ermöglicht, unidirektionale Aufrufe an den Client durchzuführen, die der Client als Ereignisse behandeln kann.</span><span class="sxs-lookup"><span data-stu-id="f12fb-107">This can allow, in particular, the server to make one-way calls to the client that the client can treat as events.</span></span> <span data-ttu-id="f12fb-108">Ausführliche Informationen zum Angeben von unidirektionalen Methoden finden Sie in der Beschreibung zur <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Methode und zur <xref:System.ServiceModel.OperationContractAttribute>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="f12fb-108">For detailed information about specifying one-way methods, see the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property and the <xref:System.ServiceModel.OperationContractAttribute> class.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Erstellen einer Clientanwendung für einen Duplexvertrag finden Sie unter [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung\-Antwort\-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md).Ein Arbeitsbeispiel finden Sie im Beispiel [Unidirektional](../../../../docs/framework/wcf/samples/one-way.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f12fb-109">Erstellen eine Clientanwendung für einen Duplexvertrag finden Sie unter [Vorgehensweise: Access Services mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="f12fb-109"> creating a client application for a duplex contract, see [How to: Access Services with One-Way and Request-Reply Contracts](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md).</span></span> <span data-ttu-id="f12fb-110">Ein funktionierendes Beispiel finden Sie unter der [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="f12fb-110">For a working sample, see the [One-Way](../../../../docs/framework/wcf/samples/one-way.md) sample.</span></span>  
   
-### So erstellen Sie einen unidirektionalen Vertrag  
+### <a name="to-create-a-one-way-contract"></a><span data-ttu-id="f12fb-111">So erstellen Sie einen unidirektionalen Vertrag</span><span class="sxs-lookup"><span data-stu-id="f12fb-111">To create a one-way contract</span></span>  
   
-1.  Erstellen Sie einen Dienstvertrag, indem Sie die <xref:System.ServiceModel.ServiceContractAttribute>\-Klasse auf die Schnittstelle anwenden, die die Methoden definiert, die der Dienst implementieren soll.  
+1.  <span data-ttu-id="f12fb-112">Erstellen Sie einen Dienstvertrag, indem Sie die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse auf die Schnittstelle anwenden, die die Methoden definiert, die der Dienst implementieren soll.</span><span class="sxs-lookup"><span data-stu-id="f12fb-112">Create the service contract by applying the <xref:System.ServiceModel.ServiceContractAttribute> class to the interface that defines the methods the service is to implement.</span></span>  
   
-2.  Geben Sie an, welche Methoden in der Schnittstelle ein Client aufrufen kann, indem Sie die <xref:System.ServiceModel.OperationContractAttribute>\-Klasse auf die Methoden anwenden.  
+2.  <span data-ttu-id="f12fb-113">Geben Sie an, welche Methoden in der Schnittstelle ein Client aufrufen kann, indem Sie die <xref:System.ServiceModel.OperationContractAttribute>-Klasse auf die Methoden anwenden.</span><span class="sxs-lookup"><span data-stu-id="f12fb-113">Indicate which methods in the interface a client can invoked by applying the <xref:System.ServiceModel.OperationContractAttribute> class to them.</span></span>  
   
-3.  Definieren Sie die Vorgänge, die keine unidirektionale Ausgabe \(keinen Rückgabewert und keine out\- oder ref\-Parameter\) haben dürfen, indem Sie die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>\-Eigenschaft auf `true` festlegen.Beachten Sie, dass alle Vorgänge mit der <xref:System.ServiceModel.OperationContractAttribute>\-Klasse standardmäßig einen Anforderung\-Antwort\-Vertrag erfüllen, weil die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>\-Eigenschaft standardmäßig `false` lautet.Wenn Sie einen unidirektionalen Vertrag für die Methode definieren möchten, müssen Sie den Wert der Attributeigenschaft folglich explizit auf `true` festlegen.  
+3.  <span data-ttu-id="f12fb-114">Definieren Sie die Vorgänge, die keine unidirektionale Ausgabe (keinen Rückgabewert und keine out- oder ref-Parameter) haben dürfen, indem Sie die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Eigenschaft auf `true` festlegen.</span><span class="sxs-lookup"><span data-stu-id="f12fb-114">Designate operations that must have no output (no return value and no out or ref parameters) as one-way by setting the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `true`.</span></span> <span data-ttu-id="f12fb-115">Beachten Sie, dass alle Vorgänge mit der <xref:System.ServiceModel.OperationContractAttribute>-Klasse standardmäßig einen Anforderung-Antwort-Vertrag erfüllen, weil die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Eigenschaft standardmäßig `false` lautet.</span><span class="sxs-lookup"><span data-stu-id="f12fb-115">Note that the operations that carry the <xref:System.ServiceModel.OperationContractAttribute> class satisfy a request-reply contract by default because the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property is `false` by default.</span></span> <span data-ttu-id="f12fb-116">Wenn Sie einen unidirektionalen Vertrag für die Methode definieren möchten, müssen Sie den Wert der Attributeigenschaft folglich explizit auf `true` festlegen.</span><span class="sxs-lookup"><span data-stu-id="f12fb-116">So you must explicitly specify the value of the attribute property to be `true` if you want a one-way contract for the method.</span></span>  
   
-## Beispiel  
- Im folgenden Codebeispiel wird ein Vertrag für einen Dienst definiert, der mehrere unidirektionale Methoden besitzt.Alle diese Methoden haben unidirektionale Verträge mit Ausnahme von `Equals`, das standardmäßig auf Anforderung\-Antwort festgelegt ist und ein Ergebnis zurückgibt.  
+## <a name="example"></a><span data-ttu-id="f12fb-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f12fb-117">Example</span></span>  
+ <span data-ttu-id="f12fb-118">Im folgenden Codebeispiel wird ein Vertrag für einen Dienst definiert, der mehrere unidirektionale Methoden besitzt.</span><span class="sxs-lookup"><span data-stu-id="f12fb-118">The following code example defines a contract for a service that includes several one-way methods.</span></span> <span data-ttu-id="f12fb-119">Alle diese Methoden haben unidirektionale Verträge mit Ausnahme von `Equals`, das standardmäßig auf Anforderung-Antwort festgelegt ist und ein Ergebnis zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="f12fb-119">All of the methods have one-way contracts except `Equals`, which defaults to request-reply and returns a result.</span></span>  
   
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## Siehe auch  
- <xref:System.ServiceModel.ServiceContractAttribute>   
- <xref:System.ServiceModel.OperationContractAttribute>   
- [Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md)   
- [Gewusst wie: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)   
- [Sitzung](../../../../docs/framework/wcf/samples/session.md)   
- [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a><span data-ttu-id="f12fb-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f12fb-120">See Also</span></span>  
+ <xref:System.ServiceModel.ServiceContractAttribute>  
+ <xref:System.ServiceModel.OperationContractAttribute>  
+ [<span data-ttu-id="f12fb-121">Entwerfen und Implementieren von Diensten</span><span class="sxs-lookup"><span data-stu-id="f12fb-121">Designing and Implementing Services</span></span>](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [<span data-ttu-id="f12fb-122">Vorgehensweise: Definieren eines Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="f12fb-122">How to: Define a Service Contract</span></span>](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [<span data-ttu-id="f12fb-123">Sitzung</span><span class="sxs-lookup"><span data-stu-id="f12fb-123">Session</span></span>](../../../../docs/framework/wcf/samples/session.md)  
+ [<span data-ttu-id="f12fb-124">Vorgehensweise: Erstellen eines Duplexvertrags</span><span class="sxs-lookup"><span data-stu-id="f12fb-124">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

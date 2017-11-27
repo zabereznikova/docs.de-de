@@ -1,90 +1,93 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von benutzerdefinierten Daten zu Freihanddaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Freihanddaten, Hinzufügen benutzerdefinierter Daten"
-  - "InkCanvas, Anzeigen"
+title: "Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu Freihanddaten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ink data [WPF], adding custom data
+- InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f266f3c98ca64c80ccbb669a1cc646321754579f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von benutzerdefinierten Daten zu Freihanddaten
-Benutzerdefinierte Daten können Freihanddaten hinzugefügt werden, die gespeichert werden, wenn die Freihanddaten als ISF \(Ink Serialized Format\)\-Daten gespeichert werden.  Sie können die benutzerdefinierten Daten in dem Objekt <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection> oder <xref:System.Windows.Ink.Stroke> speichern.  Durch die Möglichkeit benutzerdefinierte Daten in drei Objekten zu speichern, kann der beste Ort zum Speichern ausgewählt werden.  Alle drei Klassen verwenden ähnliche Methoden, um benutzerdefinierte Daten zu speichern und auf diese zuzugreifen.  
+# <a name="how-to-add-custom-data-to-ink-data"></a><span data-ttu-id="d792e-102">Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu Freihanddaten</span><span class="sxs-lookup"><span data-stu-id="d792e-102">How to: Add Custom Data to Ink Data</span></span>
+<span data-ttu-id="d792e-103">Sie können benutzerdefinierte Daten Freihandeingaben hinzufügen, die zusammen die Freihandeingabe als serialisiert Freihand-Format (ISF) gespeichert.</span><span class="sxs-lookup"><span data-stu-id="d792e-103">You can add custom data to ink that will be saved when the ink is saved as ink serialized format (ISF).</span></span>  <span data-ttu-id="d792e-104">Sie können die benutzerdefinierten Daten zu speichern die <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, oder die <xref:System.Windows.Ink.Stroke>.</span><span class="sxs-lookup"><span data-stu-id="d792e-104">You can save the custom data to the <xref:System.Windows.Ink.DrawingAttributes>, the <xref:System.Windows.Ink.StrokeCollection>, or the <xref:System.Windows.Ink.Stroke>.</span></span>  <span data-ttu-id="d792e-105">Die Möglichkeit zum Speichern von benutzerdefinierter Daten für drei Objekte bietet Ihnen die Möglichkeit, um zu entscheiden, die beste Möglichkeit zum Speichern der Daten.</span><span class="sxs-lookup"><span data-stu-id="d792e-105">Being able to save custom data on three objects gives you the ability to decide the best place to save the data.</span></span>  <span data-ttu-id="d792e-106">Alle drei Klassen verwenden ähnliche Methoden zum Speichern und Zugreifen auf benutzerdefinierte Daten an.</span><span class="sxs-lookup"><span data-stu-id="d792e-106">All three classes use similar methods to store and access custom data.</span></span>  
   
- Nur die folgenden Typen können als benutzerdefinierte Daten gespeichert werden:  
+ <span data-ttu-id="d792e-107">Nur die folgenden Typen können als benutzerdefinierte Daten gespeichert werden:</span><span class="sxs-lookup"><span data-stu-id="d792e-107">Only the following types can be saved as custom data:</span></span>  
   
 -   <xref:System.Boolean>  
   
--   <xref:System.Boolean>\[\]  
+-   <span data-ttu-id="d792e-108"><xref:System.Boolean>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-108"><xref:System.Boolean>[]</span></span>  
   
 -   <xref:System.Byte>  
   
--   <xref:System.Byte>\[\]  
+-   <span data-ttu-id="d792e-109"><xref:System.Byte>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-109"><xref:System.Byte>[]</span></span>  
   
 -   <xref:System.Char>  
   
--   <xref:System.Char>\[\]  
+-   <span data-ttu-id="d792e-110"><xref:System.Char>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-110"><xref:System.Char>[]</span></span>  
   
 -   <xref:System.DateTime>  
   
--   <xref:System.DateTime>\[\]  
+-   <span data-ttu-id="d792e-111"><xref:System.DateTime>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-111"><xref:System.DateTime>[]</span></span>  
   
 -   <xref:System.Decimal>  
   
--   <xref:System.Decimal>\[\]  
+-   <span data-ttu-id="d792e-112"><xref:System.Decimal>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-112"><xref:System.Decimal>[]</span></span>  
   
 -   <xref:System.Double>  
   
--   <xref:System.Double>\[\]  
+-   <span data-ttu-id="d792e-113"><xref:System.Double>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-113"><xref:System.Double>[]</span></span>  
   
 -   <xref:System.Int16>  
   
--   <xref:System.Int16>\[\]  
+-   <span data-ttu-id="d792e-114"><xref:System.Int16>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-114"><xref:System.Int16>[]</span></span>  
   
 -   <xref:System.Int32>  
   
--   <xref:System.Int32>\[\]  
+-   <span data-ttu-id="d792e-115"><xref:System.Int32>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-115"><xref:System.Int32>[]</span></span>  
   
 -   <xref:System.Int64>  
   
--   <xref:System.Int64>\[\]  
+-   <span data-ttu-id="d792e-116"><xref:System.Int64>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-116"><xref:System.Int64>[]</span></span>  
   
 -   <xref:System.Single>  
   
--   <xref:System.Single>\[\]  
+-   <span data-ttu-id="d792e-117"><xref:System.Single>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-117"><xref:System.Single>[]</span></span>  
   
 -   <xref:System.String>  
   
 -   <xref:System.UInt16>  
   
--   <xref:System.UInt16>\[\]  
+-   <span data-ttu-id="d792e-118"><xref:System.UInt16>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-118"><xref:System.UInt16>[]</span></span>  
   
 -   <xref:System.UInt32>  
   
--   <xref:System.UInt32>\[\]  
+-   <span data-ttu-id="d792e-119"><xref:System.UInt32>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-119"><xref:System.UInt32>[]</span></span>  
   
 -   <xref:System.UInt64>  
   
--   <xref:System.UInt64>\[\]  
+-   <span data-ttu-id="d792e-120"><xref:System.UInt64>[]</span><span class="sxs-lookup"><span data-stu-id="d792e-120"><xref:System.UInt64>[]</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie benutzerdefinierte Daten einem <xref:System.Windows.Ink.StrokeCollection>\-Objekt hinzugefügt und daraus abgerufen werden.  
+## <a name="example"></a><span data-ttu-id="d792e-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d792e-121">Example</span></span>  
+ <span data-ttu-id="d792e-122">Das folgende Beispiel veranschaulicht das Hinzufügen und Abrufen von benutzerdefinierten Daten aus einer <xref:System.Windows.Ink.StrokeCollection>.</span><span class="sxs-lookup"><span data-stu-id="d792e-122">The following example demonstrates how to add and retrieve custom data from a <xref:System.Windows.Ink.StrokeCollection>.</span></span>  
   
  [!code-csharp[HowToAddCustomDataToInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
   
- Im folgenden Beispiel wird eine Anwendung erstellt, die ein <xref:System.Windows.Controls.InkCanvas>\-Steuerelement und zwei Schaltflächen anzeigt.  Die Schaltfläche `switchAuthor` aktiviert zwei Stifte, die von zwei verschiedenen Autoren verwendet werden können.  Die Schaltfläche `changePenColors` ändert je nach Autor die Farbe jedes Strichs auf dem <xref:System.Windows.Controls.InkCanvas>\-Steuerelement.  Die Anwendung definiert zwei <xref:System.Windows.Ink.DrawingAttributes>\-Objekte und fügt jedem eine benutzerdefinierte Eigenschaft hinzu, die anzeigt, von welchem Autor <xref:System.Windows.Ink.Stroke> gezeichnet wurde.  Wenn der Benutzer auf `changePenColors` klickt, ändert die Anwendung dem Wert der benutzerdefinierten Eigenschaft entsprechend die Darstellung des Strichs.  
+ <span data-ttu-id="d792e-123">Das folgende Beispiel erstellt eine Anwendung, die zeigt eine <xref:System.Windows.Controls.InkCanvas> und zwei Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="d792e-123">The following example creates an application that displays an <xref:System.Windows.Controls.InkCanvas> and two buttons.</span></span>  <span data-ttu-id="d792e-124">Die Schaltfläche `switchAuthor`, zwei Stifte, die von zwei verschiedenen Autoren verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="d792e-124">The button, `switchAuthor`, enables two pens to be used by two different authors.</span></span>  <span data-ttu-id="d792e-125">Die Schaltfläche mit den `changePenColors` ändert sich die Farbe jedes Strich auf die <xref:System.Windows.Controls.InkCanvas> gemäß den Autor.</span><span class="sxs-lookup"><span data-stu-id="d792e-125">The button `changePenColors` changes the color of each stroke on the <xref:System.Windows.Controls.InkCanvas> according to the author.</span></span>  <span data-ttu-id="d792e-126">Die Anwendung definiert zwei <xref:System.Windows.Ink.DrawingAttributes> -Objekte und fügt eine benutzerdefinierte Eigenschaft für jede Anwendung, der angibt, welche Autor gezeichnet wurde die <xref:System.Windows.Ink.Stroke>.</span><span class="sxs-lookup"><span data-stu-id="d792e-126">The application defines two <xref:System.Windows.Ink.DrawingAttributes> objects and adds a custom property to each one that indicates which author drew the <xref:System.Windows.Ink.Stroke>.</span></span>  <span data-ttu-id="d792e-127">Wenn der Benutzer klickt `changePenColors`, die Anwendung ändert die Darstellung des Strichs entsprechend dem Wert der benutzerdefinierten Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="d792e-127">When the user clicks `changePenColors`, the application changes the appearance of the stroke according to the value of the custom property.</span></span>  
   
- [!code-xml[HowToAddCustomDataToInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HowToAddCustomDataToInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
   
  [!code-csharp[HowToAddCustomDataToInk#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]

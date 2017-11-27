@@ -1,32 +1,35 @@
 ---
-title: "System.ServiceModel.Channels.MsmqPoisonMessageRejected | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 87c6cef7420976c26cd1e9027f134818339273af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqPoisonMessageRejected
-Nicht verarbeitbare Nachrichten wurden abgelehnt.  
+# <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a><span data-ttu-id="168ee-102">System.ServiceModel.Channels.MsmqPoisonMessageRejected</span><span class="sxs-lookup"><span data-stu-id="168ee-102">System.ServiceModel.Channels.MsmqPoisonMessageRejected</span></span>
+<span data-ttu-id="168ee-103">Nicht verarbeitbare Nachrichten wurden abgelehnt.</span><span class="sxs-lookup"><span data-stu-id="168ee-103">Poison message rejected.</span></span>  
   
-## Beschreibung  
- Die Ablaufverfolgung gibt an, dass eine nicht verarbeitbare Nachricht erkannt und anschließend abgelehnt wurde.Dies geschieht, wenn die `ReceiveErrorHandling`\-Eigenschaft von NetMsmqBinding oder MsmqIntegrationBinding auf `Reject` festgelegt ist.Die abgelehnte Nachricht wird zurück an die [Warteschlange für unzustellbare Nachrichten](http://go.microsoft.com/fwlink/?LinkId=99544) des Absenders gesendet.  
+## <a name="description"></a><span data-ttu-id="168ee-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="168ee-104">Description</span></span>  
+ <span data-ttu-id="168ee-105">Die Ablaufverfolgung gibt an, dass eine nicht verarbeitbare Nachricht erkannt und anschließend abgelehnt wurde.</span><span class="sxs-lookup"><span data-stu-id="168ee-105">The trace indicates that a poison message was encountered and subsequently rejected.</span></span> <span data-ttu-id="168ee-106">Dies geschieht, wenn die `ReceiveErrorHandling`-Eigenschaft von NetMsmqBinding oder MsmqIntegrationBinding auf `Reject` festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="168ee-106">This occurs when the `ReceiveErrorHandling` property on the NetMsmqBinding or MsmqIntegrationBinding is set to `Reject`.</span></span> <span data-ttu-id="168ee-107">Eine abgelehnte Nachricht wird an des Absenders übermittelt [Dead Letter-Warteschlange](http://go.microsoft.com/fwlink/?LinkId=99544).</span><span class="sxs-lookup"><span data-stu-id="168ee-107">A rejected message is delivered back to the sender’s [Dead-Letter Queue](http://go.microsoft.com/fwlink/?LinkId=99544).</span></span>  
   
- Weitere Informationen darüber, wann Nachrichten beschädigt werden und wie Sie den Dienst konfigurieren, damit sie richtig verarbeitet werden, finden Sie unter [Behandlung nicht verarbeitbarer Nachrichten](http://go.microsoft.com/fwlink/?LinkId=99546) \(Seite möglicherweise auf Englisch\).Weitere Informationen zur Bedeutung einer abgelehnten Nachricht in MSMQ finden Sie unter [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548) \(Seite möglicherweise auf Englisch\).  
+ <span data-ttu-id="168ee-108">Finden Sie unter [verarbeitbarer Behandlung von](http://go.microsoft.com/fwlink/?LinkId=99546) detaillierte Informationen auf, wenn Nachrichten werden und wie Sie den Dienst, damit sie richtig verarbeitet konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="168ee-108">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkId=99546) for more details on when messages become poison and how to configure your service to handle them appropriately.</span></span> <span data-ttu-id="168ee-109">Finden Sie unter [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548) Weitere Informationen zur Bedeutung der einer abgelehnten Nachricht in MSMQ.</span><span class="sxs-lookup"><span data-stu-id="168ee-109">See [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548) for more details on what a rejected message means in MSMQ.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)   
- [Behandlung nicht verarbeitbarer Nachrichten](http://go.microsoft.com/fwlink/?LinkId=99546)   
- [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkId=99548)
+## <a name="see-also"></a><span data-ttu-id="168ee-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="168ee-110">See Also</span></span>  
+ [<span data-ttu-id="168ee-111">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="168ee-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="168ee-112">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="168ee-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="168ee-113">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="168ee-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [<span data-ttu-id="168ee-114">Handhabung beschädigter Nachrichten</span><span class="sxs-lookup"><span data-stu-id="168ee-114">Poison-Message Handling</span></span>](http://go.microsoft.com/fwlink/?LinkId=99546)  
+ [<span data-ttu-id="168ee-115">MQMarkMessageRejected</span><span class="sxs-lookup"><span data-stu-id="168ee-115">MQMarkMessageRejected</span></span>](http://go.microsoft.com/fwlink/?LinkId=99548)

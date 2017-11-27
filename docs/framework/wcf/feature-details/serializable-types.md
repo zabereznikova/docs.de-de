@@ -1,53 +1,56 @@
 ---
-title: "Serialisierbare Typen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Serialisierbare Typen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6f053edc688080293b6fae927049bf6776551b7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Serialisierbare Typen
-Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> alle öffentlich sichtbaren Typen.  Alle öffentlichen Lese\-\/Schreibeigenschaften und Felder des Typs werden serialisiert.  
+# <a name="serializable-types"></a><span data-ttu-id="d79d2-102">Serialisierbare Typen</span><span class="sxs-lookup"><span data-stu-id="d79d2-102">Serializable Types</span></span>
+<span data-ttu-id="d79d2-103">Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> alle öffentlich sichtbaren Typen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-103">By default, the <xref:System.Runtime.Serialization.DataContractSerializer> serializes all publicly visible types.</span></span> <span data-ttu-id="d79d2-104">Alle öffentlichen Lese-/Schreibeigenschaften und Felder des Typs werden serialisiert.</span><span class="sxs-lookup"><span data-stu-id="d79d2-104">All public read/write properties and fields of the type are serialized.</span></span>  
   
- Sie können das Standardverhalten ändern, indem Sie das <xref:System.Runtime.Serialization.DataContractAttribute>\-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>\-Attribut auf die Typen und Member anwenden. Diese Funktion ist hilfreich in Situationen mit Typen, die nicht von Ihnen gesteuert und nicht mit weiteren Attributen versehen werden können.  Der <xref:System.Runtime.Serialization.DataContractSerializer> erkennt solche nicht markierten Typen.  
+ <span data-ttu-id="d79d2-105">Sie können das Standardverhalten ändern, indem Sie das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut auf die Typen und Member anwenden. Diese Funktion ist hilfreich in Situationen mit Typen, die nicht von Ihnen gesteuert und nicht mit weiteren Attributen versehen werden können.</span><span class="sxs-lookup"><span data-stu-id="d79d2-105">You can change the default behavior by applying the <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes to the types and members This feature can be useful in situations in which you have types that are not under your control and cannot be modified to add attributes.</span></span> <span data-ttu-id="d79d2-106">Der <xref:System.Runtime.Serialization.DataContractSerializer> erkennt solche nicht markierten Typen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-106">The <xref:System.Runtime.Serialization.DataContractSerializer> recognizes such "unmarked" types.</span></span>  
   
-## Standardwerte für die Serialisierung  
- Sie können das <xref:System.Runtime.Serialization.DataContractAttribute>\-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>\-Attribut anwenden, um die Serialisierung von Typen und Membern explizit zu steuern oder anzupassen.  Darüber hinaus können Sie diese Attribute auf private Felder anwenden.  Doch auch Typen, die nicht mit diesen Attributen markiert sind, werden serialisiert und deserialisiert.  Folgende Regeln und Ausnahmen gelten:  
+## <a name="serialization-defaults"></a><span data-ttu-id="d79d2-107">Standardwerte für die Serialisierung</span><span class="sxs-lookup"><span data-stu-id="d79d2-107">Serialization Defaults</span></span>  
+ <span data-ttu-id="d79d2-108">Sie können das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut anwenden, um die Serialisierung von Typen und Membern explizit zu steuern oder anzupassen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-108">You can apply the <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes to explicitly control or customize the serialization of types and members.</span></span> <span data-ttu-id="d79d2-109">Darüber hinaus können Sie diese Attribute auf private Felder anwenden.</span><span class="sxs-lookup"><span data-stu-id="d79d2-109">In addition, you can apply these attributes to private fields.</span></span> <span data-ttu-id="d79d2-110">Doch auch Typen, die nicht mit diesen Attributen markiert sind, werden serialisiert und deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="d79d2-110">However, even types that are not marked with these attributes are serialized and deserialized.</span></span> <span data-ttu-id="d79d2-111">Folgende Regeln und Ausnahmen gelten:</span><span class="sxs-lookup"><span data-stu-id="d79d2-111">The following rules and exceptions apply:</span></span>  
   
--   Der <xref:System.Runtime.Serialization.DataContractSerializer> leitet einen Datenvertrag von Typen ohne Attribute unter Verwendung der Eigenschaften der neu erstellten Typen ab.  
+-   <span data-ttu-id="d79d2-112">Der <xref:System.Runtime.Serialization.DataContractSerializer> leitet einen Datenvertrag von Typen ohne Attribute unter Verwendung der Eigenschaften der neu erstellten Typen ab.</span><span class="sxs-lookup"><span data-stu-id="d79d2-112">The <xref:System.Runtime.Serialization.DataContractSerializer> infers a data contract from types without attributes using the default properties of the newly created types.</span></span>  
   
--   Alle öffentlichen Felder sowie Eigenschaften mit öffentlicher `get`\- oder `set`\-Methode werden serialisiert, es sei denn, Sie wenden auf diesen Member das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>\-Attribut an.  
+-   <span data-ttu-id="d79d2-113">Alle öffentlichen Felder sowie Eigenschaften mit öffentlicher `get`- oder `set`-Methode werden serialisiert, es sei denn, Sie wenden auf diesen Member das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut an.</span><span class="sxs-lookup"><span data-stu-id="d79d2-113">All public fields, and properties with public `get` and `set` methods are serialized, unless you apply the <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> attribute to that member.</span></span>  
   
--   Die Serialisierungssemantik gleicht der des <xref:System.Xml.Serialization.XmlSerializer>.  
+-   <span data-ttu-id="d79d2-114">Die Serialisierungssemantik gleicht der des <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="d79d2-114">The serialization semantics are similar to those of the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
--   In nicht markierten Typen werden nur öffentliche Typen mit Konstruktoren serialisiert, die nicht über Parameter verfügen.  Die Ausnahme dieser Regel bildet das <xref:System.Runtime.Serialization.IExtensibleDataObject> unter Verwendung der <xref:System.Runtime.Serialization.ExtensionDataObject>\-Schnittstelle.  
+-   <span data-ttu-id="d79d2-115">In nicht markierten Typen werden nur öffentliche Typen mit Konstruktoren serialisiert, die nicht über Parameter verfügen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-115">In unmarked types, only public types with constructors that do not have parameters are serialized.</span></span> <span data-ttu-id="d79d2-116">Die Ausnahme dieser Regel bildet das <xref:System.Runtime.Serialization.ExtensionDataObject> unter Verwendung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="d79d2-116">The exception to this rule is <xref:System.Runtime.Serialization.ExtensionDataObject> used with the <xref:System.Runtime.Serialization.IExtensibleDataObject> interface.</span></span>  
   
--   Schreibgeschützte Felder, Eigenschaften ohne `get`\- oder `set`\-Methode sowie Eigenschaften mit interner oder privater `set`\- oder `get`\-Methode werden nicht serialisiert.  Diese Eigenschaften werden ignoriert, und es wird keine Ausnahme ausgelöst. Ausgenommen hiervon sind get\-exklusive Auflistungen.  
+-   <span data-ttu-id="d79d2-117">Schreibgeschützte Felder, Eigenschaften ohne `get`- oder `set`-Methode sowie Eigenschaften mit interner oder privater `set`- oder `get`-Methode werden nicht serialisiert.</span><span class="sxs-lookup"><span data-stu-id="d79d2-117">Read-only fields, properties without a `get` or `set` method, and properties with internal or private `set` or `get` methods are not serialized.</span></span> <span data-ttu-id="d79d2-118">Diese Eigenschaften werden ignoriert, und es wird keine Ausnahme ausgelöst. Ausgenommen hiervon sind get-exklusive Auflistungen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-118">Such properties are ignored and no exception is thrown, except in the case of get-only collections.</span></span>  
   
--   <xref:System.Xml.Serialization.XmlSerializer>Attribute \(beispielsweise `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` usw.\) werden ignoriert.  
+-   <span data-ttu-id="d79d2-119"><xref:System.Xml.Serialization.XmlSerializer>Attribute (beispielsweise `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` usw.) werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d79d2-119"><xref:System.Xml.Serialization.XmlSerializer> attributes (such as `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, and so on) are ignored.</span></span>  
   
--   Wird das <xref:System.Runtime.Serialization.DataContractAttribute>\-Attribut nicht auf einen angegebenen Typ angewendet, ignoriert der Serialisierer jeden Member des Typs, auf den das <xref:System.Runtime.Serialization.DataMemberAttribute>\-Attribut angewendet wurde.  
+-   <span data-ttu-id="d79d2-120">Wird das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut nicht auf einen angegebenen Typ angewendet, ignoriert der Serialisierer jeden Member des Typs, auf den das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut angewendet wurde.</span><span class="sxs-lookup"><span data-stu-id="d79d2-120">If you do not apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to a given type, the serializer ignores any member in that type to which the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute is applied.</span></span>  
   
--   Die <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>\-Eigenschaft wird in Typen unterstützt, die nicht mit dem <xref:System.Runtime.Serialization.DataContractAttribute>\-Attribut markiert sind.  Hierzu zählt die Unterstützung des <xref:System.Runtime.Serialization.KnownTypeAttribute>\-Attributs für nicht markierte Typen.  
+-   <span data-ttu-id="d79d2-121">Die <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>-Eigenschaft wird in Typen unterstützt, die nicht mit dem <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut markiert sind.</span><span class="sxs-lookup"><span data-stu-id="d79d2-121">The <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> property is supported in types not marked with the <xref:System.Runtime.Serialization.DataContractAttribute> attribute.</span></span> <span data-ttu-id="d79d2-122">Hierzu zählt die Unterstützung des <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attributs für nicht markierte Typen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-122">This includes support for the <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute on unmarked types.</span></span>  
   
--   Sollen öffentliche Member, Eigenschaften oder Felder von der Serialisierung ausgenommen werden, wenden Sie das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>\-Attribut auf den entsprechenden Member an.  
+-   <span data-ttu-id="d79d2-123">Sollen öffentliche Member, Eigenschaften oder Felder von der Serialisierung ausgenommen werden, wenden Sie das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut auf den entsprechenden Member an.</span><span class="sxs-lookup"><span data-stu-id="d79d2-123">To "opt out" of the serialization process for public members, properties, or fields, apply the <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> attribute to that member.</span></span>  
   
-## Vererbung  
- Nicht markierte Typen \(Typen ohne <xref:System.Runtime.Serialization.DataContractAttribute>\-Attribut\) können von Typen erben, die dieses Attribut besitzen. Der umgekehrte Vorgang ist jedoch nicht möglich: Typen mit diesem Attribut können nicht von nicht markierten Typen erben.  Diese Regel wird in erster Linie deshalb erzwungen, um die Abwärtskompatibilität mit in früheren Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] geschriebenem Code sicherzustellen.  
+## <a name="inheritance"></a><span data-ttu-id="d79d2-124">Vererbung</span><span class="sxs-lookup"><span data-stu-id="d79d2-124">Inheritance</span></span>  
+ <span data-ttu-id="d79d2-125">Nicht markierte Typen (Typen ohne <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut) können von Typen erben, die dieses Attribut besitzen. Der umgekehrte Vorgang ist jedoch nicht möglich: Typen mit diesem Attribut können nicht von nicht markierten Typen erben.</span><span class="sxs-lookup"><span data-stu-id="d79d2-125">Unmarked types (types without the <xref:System.Runtime.Serialization.DataContractAttribute> attribute) can inherit from types that do have this attribute; however, the reverse is not permitted: types with the attribute cannot inherit from unmarked types.</span></span> <span data-ttu-id="d79d2-126">Diese Regel wird in erster Linie deshalb erzwungen, um die Abwärtskompatibilität mit in früheren Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] geschriebenem Code sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="d79d2-126">This rule is enforced primarily to ensure backward compatibility with code written in earlier versions of [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>   
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a><span data-ttu-id="d79d2-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d79d2-127">See Also</span></span>  
+ <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [<span data-ttu-id="d79d2-128">Vom Datenvertragsserialisierer unterstützte Typen</span><span class="sxs-lookup"><span data-stu-id="d79d2-128">Types Supported by the Data Contract Serializer</span></span>](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

@@ -1,39 +1,42 @@
 ---
-title: "Benutzerdefiniertes Binden von zuverl&#228;ssigen Sitzungen &#252;ber HTTPS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dfd417bc04bcbcabda70618aff9db3605556b068
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefiniertes Binden von zuverl&#228;ssigen Sitzungen &#252;ber HTTPS
-In diesem Beispiel wird die Verwendung der SSL\-Transportsicherheit mit zuverlässigen Sitzungen veranschaulicht.Zuverlässige Sitzungen implementieren das WS\-ReliableMessaging\-Protokoll.Durch das Erstellen von WS\-Sicherheit über zuverlässige Sitzungen können Sie eine sichere zuverlässige Sitzung erreichen.In einigen Fällen werden Sie jedoch die Verwendung der HTTP\-Transportsicherheit mit SSL vorziehen.  
+# <a name="custom-binding-reliable-session-over-https"></a><span data-ttu-id="464ee-102">Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS</span><span class="sxs-lookup"><span data-stu-id="464ee-102">Custom Binding Reliable Session over HTTPS</span></span>
+<span data-ttu-id="464ee-103">In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit mit zuverlässigen Sitzungen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="464ee-103">This sample demonstrates the use of SSL transport security with Reliable Sessions.</span></span> <span data-ttu-id="464ee-104">Zuverlässige Sitzungen implementieren das WS-ReliableMessaging-Protokoll.</span><span class="sxs-lookup"><span data-stu-id="464ee-104">Reliable Sessions implements the WS-Reliable Messaging protocol.</span></span> <span data-ttu-id="464ee-105">Durch das Erstellen von WS-Sicherheit über zuverlässige Sitzungen können Sie eine sichere zuverlässige Sitzung erreichen.</span><span class="sxs-lookup"><span data-stu-id="464ee-105">You can have a secure reliable session by composing WS-Security over Reliable Sessions.</span></span> <span data-ttu-id="464ee-106">In einigen Fällen werden Sie jedoch die Verwendung der HTTP-Transportsicherheit mit SSL vorziehen.</span><span class="sxs-lookup"><span data-stu-id="464ee-106">But sometimes, you may choose to instead use HTTP transport security with SSL.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="464ee-107">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="464ee-107">The samples may already be installed on your machine.</span></span> <span data-ttu-id="464ee-108">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="464ee-108">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="464ee-109">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="464ee-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="464ee-110">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="464ee-110">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
-## Beispieldetails  
- SSL stellt sicher, dass die Pakete selbst sicher sind.Beachten Sie unbedingt, dass dies sich vom Sichern der zuverlässigen Sitzung mit WS\-Secure Conversation unterscheidet.  
+## <a name="sample-details"></a><span data-ttu-id="464ee-111">Beispieldetails</span><span class="sxs-lookup"><span data-stu-id="464ee-111">Sample Details</span></span>  
+ <span data-ttu-id="464ee-112">SSL stellt sicher, dass die Pakete selbst sicher sind.</span><span class="sxs-lookup"><span data-stu-id="464ee-112">SSL ensures that the packets themselves are secured.</span></span> <span data-ttu-id="464ee-113">Beachten Sie unbedingt, dass dies sich vom Sichern der zuverlässigen Sitzung mit WS-Secure Conversation unterscheidet.</span><span class="sxs-lookup"><span data-stu-id="464ee-113">It is important to note that this is different from securing the reliable session using WS-Secure Conversation.</span></span>  
   
- Zum Verwenden einer zuverlässigen Sitzung über HTTPS müssen Sie eine benutzerdefinierte Bindung erstellen.Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md), das einen Rechnerdienst implementiert.Eine benutzerdefinierte Bindung wird mit dem Bindungselement für zuverlässige Sitzungen und [\<httpsTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) erstellt.Die folgende Konfiguration bezieht sich auf die benutzerdefinierte Bindung.  
+ <span data-ttu-id="464ee-114">Zum Verwenden einer zuverlässigen Sitzung über HTTPS müssen Sie eine benutzerdefinierte Bindung erstellen.</span><span class="sxs-lookup"><span data-stu-id="464ee-114">To use reliable session over HTTPS, you must create a custom binding.</span></span> <span data-ttu-id="464ee-115">Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.</span><span class="sxs-lookup"><span data-stu-id="464ee-115">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="464ee-116">Eine benutzerdefinierte Bindung wird mit dem Bindungselement der zuverlässigen Sitzung erstellt und die [ \<HttpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md).</span><span class="sxs-lookup"><span data-stu-id="464ee-116">A custom binding is created using the reliable session binding element and the [\<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md).</span></span> <span data-ttu-id="464ee-117">Die folgende Konfiguration bezieht sich auf die benutzerdefinierte Bindung.</span><span class="sxs-lookup"><span data-stu-id="464ee-117">The following configuration is of the custom binding.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -77,9 +80,9 @@ In diesem Beispiel wird die Verwendung der SSL\-Transportsicherheit mit zuverlä
 </configuration>  
 ```  
   
- Der Programmcode im Beispiel stimmt mit dem des Diensts in [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md) überein.Sie müssen ein Zertifikat erstellen und es mithilfe des Assistenten für Webserverzertifikate zuweisen, bevor Sie das Beispiel erstellen und ausführen.Durch die Endpunktdefinition und Bindungsdefinition in den Einstellungen der Konfigurationsdatei wird die Verwendung der benutzerdefinierten Bindung aktiviert, wie in der folgenden Beispielkonfiguration für den Client dargestellt.  
+ <span data-ttu-id="464ee-118">Die Programm-Codes in diesem Beispiel ist identisch mit der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) Dienst.</span><span class="sxs-lookup"><span data-stu-id="464ee-118">The program code in the sample is identical to that of the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) service.</span></span> <span data-ttu-id="464ee-119">Sie müssen ein Zertifikat erstellen und es mithilfe des Assistenten für Webserverzertifikate zuweisen, bevor Sie das Beispiel erstellen und ausführen.</span><span class="sxs-lookup"><span data-stu-id="464ee-119">You must create a certificate and assign it by using the Web Server Certificate Wizard before building and running the sample.</span></span> <span data-ttu-id="464ee-120">Durch die Endpunktdefinition und Bindungsdefinition in den Einstellungen der Konfigurationsdatei wird die Verwendung der benutzerdefinierten Bindung aktiviert, wie in der folgenden Beispielkonfiguration für den Client dargestellt.</span><span class="sxs-lookup"><span data-stu-id="464ee-120">The endpoint definition and binding definition in the configuration file settings enable the use of custom binding as shown in the following sample configuration for the client.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -105,20 +108,18 @@ In diesem Beispiel wird die Verwendung der SSL\-Transportsicherheit mit zuverlä
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
- Für die angegebene Adresse wird das https:\/\/\-Schema verwendet.  
+ <span data-ttu-id="464ee-121">Für die angegebene Adresse wird das https://-Schema verwendet.</span><span class="sxs-lookup"><span data-stu-id="464ee-121">The address specified uses the https:// scheme.</span></span>  
   
- Da das in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine Sicherheitswarnung angezeigt, wenn Sie versuchen, in Ihrem Browser auf eine https:\-Adresse wie https:\/\/localhost\/servicemodelsamples\/service.svc zuzugreifen.Damit der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Client mit einem vorhandenen Testzertifikat arbeiten kann, muss auf dem Client zusätzlicher Code hinzugefügt werden, um die Sicherheitswarnung zu unterdrücken.Dieser Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.  
+ <span data-ttu-id="464ee-122">Da das in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine Sicherheitswarnung angezeigt, wenn Sie versuchen, in Ihrem Browser auf eine https:-Adresse wie https://localhost/servicemodelsamples/service.svc zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="464ee-122">Because the certificate used in this sample is a test certificate created with Makecert.exe, a security alert appears when you try to access an https: address, such as https://localhost/servicemodelsamples/service.svc, from your browser.</span></span> <span data-ttu-id="464ee-123">Damit der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client mit einem vorhandenen Testzertifikat arbeiten kann, muss auf dem Client zusätzlicher Code hinzugefügt werden, um die Sicherheitswarnung zu unterdrücken.</span><span class="sxs-lookup"><span data-stu-id="464ee-123">To allow the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client to work with a test certificate in place, some additional code has been added to the client to suppress the security alert.</span></span> <span data-ttu-id="464ee-124">Dieser Code und die begleitende Klasse sind bei der Verwendung von Produktionszertifikaten nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="464ee-124">This code, and the accompanying class, is not required when using production certificates.</span></span>  
   
 ```  
 // This code is required only for test certificates like those created by Makecert.exe.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="464ee-125">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="464ee-125">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="464ee-126">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="464ee-126">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -129,21 +130,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="464ee-127">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="464ee-127">To set up, build, and run the sample</span></span>  
   
-1.  Installieren Sie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mithilfe des folgenden Befehls.  
+1.  <span data-ttu-id="464ee-128">Installieren Sie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mithilfe des folgenden Befehls.</span><span class="sxs-lookup"><span data-stu-id="464ee-128">Install  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Vergewissern Sie sich, dass Sie [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+2.  <span data-ttu-id="464ee-129">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="464ee-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  Vergewissern Sie sich, dass Sie [Installationsanleitung für IIS\-Serverzertifikate \(Internetinformationsdienste\)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md) ausgeführt haben.  
+3.  <span data-ttu-id="464ee-130">Stellen Sie sicher, dass Sie ausgeführt haben die [Installationsanweisungen für Internetinformationsdienste (Internet Information Services, IIS) Server Zertifikat](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span><span class="sxs-lookup"><span data-stu-id="464ee-130">Ensure that you have performed the [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
   
-4.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Lösung befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+4.  <span data-ttu-id="464ee-131">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="464ee-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  Wenn Sie das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend ausführen möchten, befolgen Sie die unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+5.  <span data-ttu-id="464ee-132">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="464ee-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="464ee-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="464ee-133">See Also</span></span>

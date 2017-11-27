@@ -1,65 +1,69 @@
 ---
-title: "Gewusst wie: Datennavigation mithilfe des DataNavigator-Steuerelements in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingNavigator-Steuerelement [Windows Forms], Navigieren durch Daten"
-  - "Daten [Windows Forms], Navigieren"
-  - "Datennavigation"
-  - "Beispiele [Windows Forms], BindingNavigator-Steuerelement"
+title: 'Gewusst wie: Datennavigation mithilfe des BindingNavigator-Steuerelements in Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- BindingNavigator control [Windows Forms], navigating data
+- data [Windows Forms], navigating
+- data navigation
+- examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08b9fb555966cf8459646a12da69c6db3361f0b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Datennavigation mithilfe des DataNavigator-Steuerelements in Windows Forms
-Die Einführung des <xref:System.Windows.Forms.BindingNavigator>\-Steuerelements in Windows Forms ermöglicht es Entwicklern, Endbenutzern eine einfache Benutzeroberfläche für die Datennavigation und \-bearbeitung auf den Formularen bereitzustellen, die sie erstellen.  
+# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a><span data-ttu-id="12930-102">Gewusst wie: Datennavigation mithilfe des BindingNavigator-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="12930-102">How to: Navigate Data with the Windows Forms BindingNavigator Control</span></span>
+<span data-ttu-id="12930-103">Die Einführung des <xref:System.Windows.Forms.BindingNavigator>-Steuerelements in Windows Forms ermöglicht es Entwicklern, Endbenutzern eine einfache Benutzeroberfläche für die Datennavigation und -bearbeitung auf den Formularen bereitzustellen, die sie erstellen.</span><span class="sxs-lookup"><span data-stu-id="12930-103">The advent of the <xref:System.Windows.Forms.BindingNavigator> control in Windows Forms enables developers to provide end users with a simple data navigation and manipulation user interface on the forms they create.</span></span>  
   
- Das <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement ist ein <xref:System.Windows.Forms.ToolStrip>\-Steuerelement mit Schaltflächen, die für die Navigation zum ersten, letzten, nächsten und vorherigen Datensatz in einem Dataset vorkonfiguriert sind, sowie mit Schaltflächen zum Hinzufügen und Löschen von Datensätzen.  Schaltflächen lassen sich ganz einfach zu dem <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement hinzufügen, da es ein <xref:System.Windows.Forms.ToolStrip>\-Steuerelement ist.  Siehe auch [Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator\-Steuerelement in Windows Forms](http://msdn.microsoft.com/library/safa4957\(v=vs.110\)).  
+ <span data-ttu-id="12930-104">Das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement ist ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement mit Schaltflächen, die für die Navigation zum ersten, letzten, nächsten und vorherigen Datensatz in einem Dataset vorkonfiguriert sind, sowie mit Schaltflächen zum Hinzufügen und Löschen von Datensätzen.</span><span class="sxs-lookup"><span data-stu-id="12930-104">The <xref:System.Windows.Forms.BindingNavigator> control is a <xref:System.Windows.Forms.ToolStrip> control with buttons preconfigured for navigation to the first, last, next, and previous record in a data set, as well as buttons to add and delete records.</span></span> <span data-ttu-id="12930-105">Schaltflächen lassen sich ganz einfach zu dem <xref:System.Windows.Forms.BindingNavigator>-Steuerelement hinzufügen, da es ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement ist.</span><span class="sxs-lookup"><span data-stu-id="12930-105">Adding buttons to the <xref:System.Windows.Forms.BindingNavigator> control is easy, because it is a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  <span data-ttu-id="12930-106">Siehe auch [Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms](http://msdn.microsoft.com/library/safa4957\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="12930-106">Also see [How to: Add Load, Save, and Cancel Buttons to the Windows Forms BindingNavigator Control](http://msdn.microsoft.com/library/safa4957\(v=vs.110\)).</span></span>  
   
- Für jede Schaltfläche im <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement gibt es einen entsprechenden Member der <xref:System.Windows.Forms.BindingSource>\-Komponente, die dieselbe Funktionalität programmgesteuert bereitstellt.  Beispielsweise entspricht die <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>\-Schaltfläche der <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>\-Methode der <xref:System.Windows.Forms.BindingSource>\-Komponente, die <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>\-Schaltfläche der <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>\-Methode usw.  Demzufolge ist das Aktivieren des <xref:System.Windows.Forms.BindingNavigator>\-Steuerelements für die Navigation zwischen Datensätzen ebenso einfach wie das Festlegen seiner <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>\-Eigenschaft auf die entsprechende <xref:System.Windows.Forms.BindingSource>\-Komponente auf dem Formular.  
+ <span data-ttu-id="12930-107">Für jede Schaltfläche im <xref:System.Windows.Forms.BindingNavigator>-Steuerelement gibt es einen entsprechenden Member der <xref:System.Windows.Forms.BindingSource>-Komponente, die dieselbe Funktionalität programmgesteuert bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="12930-107">For each button on the <xref:System.Windows.Forms.BindingNavigator> control, there is a corresponding member of the <xref:System.Windows.Forms.BindingSource> component that programmatically allows the same functionality.</span></span> <span data-ttu-id="12930-108">Beispielsweise entspricht die <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>-Schaltfläche der <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>-Methode der <xref:System.Windows.Forms.BindingSource>-Komponente, die <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>-Schaltfläche der <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>-Methode usw.</span><span class="sxs-lookup"><span data-stu-id="12930-108">For example, the <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> button corresponds to the <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> method of the <xref:System.Windows.Forms.BindingSource> component, the <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> button corresponds to the <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> method, and so on.</span></span> <span data-ttu-id="12930-109">Demzufolge ist das Aktivieren des <xref:System.Windows.Forms.BindingNavigator>-Steuerelements für die Navigation zwischen Datensätzen ebenso einfach wie das Festlegen seiner <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>-Eigenschaft auf die entsprechende <xref:System.Windows.Forms.BindingSource>-Komponente auf dem Formular.</span><span class="sxs-lookup"><span data-stu-id="12930-109">As a result, enabling the <xref:System.Windows.Forms.BindingNavigator> control to navigate data records is a simple as setting its <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> property to the appropriate <xref:System.Windows.Forms.BindingSource> component on the form.</span></span>  
   
-### So richten Sie das BindingNavigator\-Steuerelement ein  
+### <a name="to-set-up-the-bindingnavigator-control"></a><span data-ttu-id="12930-110">So richten Sie das BindingNavigator-Steuerelement ein</span><span class="sxs-lookup"><span data-stu-id="12930-110">To set up the BindingNavigator control</span></span>  
   
-1.  Fügen Sie eine <xref:System.Windows.Forms.BindingSource>\-Komponente namens `bindingSource1` und zwei <xref:System.Windows.Forms.TextBox>\-Steuerelemente namens `textBox1` und `textBox2` hinzu.  
+1.  <span data-ttu-id="12930-111">Fügen Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente namens `bindingSource1` und zwei <xref:System.Windows.Forms.TextBox>-Steuerelemente namens `textBox1` und `textBox2` hinzu.</span><span class="sxs-lookup"><span data-stu-id="12930-111">Add a <xref:System.Windows.Forms.BindingSource> component named `bindingSource1` and two <xref:System.Windows.Forms.TextBox> controls named `textBox1` and `textBox2`.</span></span>  
   
-2.  Binden Sie `bindingSource1` an Daten und die TextBox\-Steuerelemente an `bindingSource1`.  Fügen Sie zu diesem Zweck den folgenden Code in Ihr Formular ein, und rufen Sie `LoadData` aus dem Konstruktor des Formulars oder der <xref:System.Windows.Forms.Form.Load>\-Ereignisbehandlungsmethode heraus auf.  
+2.  <span data-ttu-id="12930-112">Binden Sie `bindingSource1` an Daten und die TextBox-Steuerelemente an `bindingSource1`.</span><span class="sxs-lookup"><span data-stu-id="12930-112">Bind `bindingSource1` to data, and the textbox controls to `bindingSource1`.</span></span> <span data-ttu-id="12930-113">Fügen Sie zu diesem Zweck den folgenden Code in Ihr Formular ein, und rufen Sie `LoadData` aus dem Konstruktor des Formulars oder der <xref:System.Windows.Forms.Form.Load>-Ereignisbehandlungsmethode heraus auf.</span><span class="sxs-lookup"><span data-stu-id="12930-113">To do this, paste the following code into your form and call `LoadData` from the form's constructor or <xref:System.Windows.Forms.Form.Load> event-handling method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
   
-3.  Fügen Sie Ihrem Formular ein <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement namens `bindingNavigator1` hinzu.  
+3.  <span data-ttu-id="12930-114">Fügen Sie Ihrem Formular ein <xref:System.Windows.Forms.BindingNavigator>-Steuerelement namens `bindingNavigator1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="12930-114">Add a <xref:System.Windows.Forms.BindingNavigator> control named `bindingNavigator1` to your form.</span></span>  
   
-4.  Legen Sie die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>\-Eigenschaft für `bindingNavigator1` auf `bindingSource1` fest.  Dies ist mit dem Designer oder im Code möglich.  
+4.  <span data-ttu-id="12930-115">Legen Sie die <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>-Eigenschaft für `bindingNavigator1` auf `bindingSource1` fest.</span><span class="sxs-lookup"><span data-stu-id="12930-115">Set the <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> property for `bindingNavigator1` to `bindingSource1`.</span></span> <span data-ttu-id="12930-116">Dies ist mit dem Designer oder im Code möglich.</span><span class="sxs-lookup"><span data-stu-id="12930-116">You can do this with the designer or in code.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
   
-## Beispiel  
- Das folgende Codebeispiel ist das vollständige Beispiel für die zuvor aufgeführten Schritte.  
+## <a name="example"></a><span data-ttu-id="12930-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="12930-117">Example</span></span>  
+ <span data-ttu-id="12930-118">Das folgende Codebeispiel ist das vollständige Beispiel für die zuvor aufgeführten Schritte.</span><span class="sxs-lookup"><span data-stu-id="12930-118">The following code example is the complete example for the steps listed previously.</span></span>  
   
  [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#1)]  
   
-## Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+## <a name="compiling-the-code"></a><span data-ttu-id="12930-119">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="12930-119">Compiling the Code</span></span>  
+ <span data-ttu-id="12930-120">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="12930-120">This example requires:</span></span>  
   
--   Verweise auf die Assemblys "System", "System.Data", "System.Drawing", "System.Windows.Forms" und "System.Xml".  
+-   <span data-ttu-id="12930-121">Verweise auf die Assemblys "System", "System.Data", "System.Drawing", "System.Windows.Forms" und "System.Xml".</span><span class="sxs-lookup"><span data-stu-id="12930-121">References to the System, System.Data, System.Drawing, System.Windows.Forms and System.Xml assemblies.</span></span>  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] oder [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] finden Sie unter [Erstellen von der Befehlszeile aus](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) oder [Erstellen über die Befehlszeile mit csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  Sie können dieses Beispiel auch in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms\-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="12930-122">Informationen zum Erstellen dieses Beispiels über die Befehlszeile für [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] oder [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] finden Sie unter [Erstellen von der Befehlszeile aus](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Erstellen über die Befehlszeile mit „csc.exe“](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="12930-122">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="12930-123">Sie können dieses Beispiel auch in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] erstellen, indem Sie den Code in ein neues Projekt einfügen.</span><span class="sxs-lookup"><span data-stu-id="12930-123">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="12930-124">Siehe auch: [Vorgehensweise: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="12930-124">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.BindingNavigator>   
- [BindingNavigator\-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)   
- [ToolStrip\-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="12930-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12930-125">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ [<span data-ttu-id="12930-126">BindingNavigator-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="12930-126">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [<span data-ttu-id="12930-127">ToolStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="12930-127">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

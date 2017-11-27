@@ -1,25 +1,28 @@
 ---
-title: "WindowsStreamSecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WindowsStreamSecurityBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b0508c5-669c-4fe3-9225-8a10f8ee3be4
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 25a4fc8e8c34144ad0eb2c4f39c02b3b91a41a3b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# WindowsStreamSecurityBindingElement
-WindowsStreamSecurityBindingElement  
+# <a name="windowsstreamsecuritybindingelement"></a><span data-ttu-id="96c9f-102">WindowsStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="96c9f-102">WindowsStreamSecurityBindingElement</span></span>
+<span data-ttu-id="96c9f-103">WindowsStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="96c9f-103">WindowsStreamSecurityBindingElement</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="96c9f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="96c9f-104">Syntax</span></span>  
   
 ```  
 class WindowsStreamSecurityBindingElement : BindingElement  
@@ -28,24 +31,24 @@ class WindowsStreamSecurityBindingElement : BindingElement
 };  
 ```  
   
-## Methoden  
- Die WindowsStreamSecurityBindingElement\-Klasse definiert keine Methoden.  
+## <a name="methods"></a><span data-ttu-id="96c9f-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="96c9f-105">Methods</span></span>  
+ <span data-ttu-id="96c9f-106">Die WindowsStreamSecurityBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="96c9f-106">The WindowsStreamSecurityBindingElement class does not define any methods.</span></span>  
   
-## Eigenschaften  
- Die WindowsStreamSecurityBindungElement\-Klasse verfügt über die folgende Eigenschaft:  
+## <a name="properties"></a><span data-ttu-id="96c9f-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="96c9f-107">Properties</span></span>  
+ <span data-ttu-id="96c9f-108">Die WindowsStreamSecurityBindungElement-Klasse verfügt über die folgende Eigenschaft:</span><span class="sxs-lookup"><span data-stu-id="96c9f-108">The WindowsStreamSecurityBindingElement class has the following property:</span></span>  
   
-### ProtectionLevel  
- Datentyp: Zeichenfolge  
+### <a name="protectionlevel"></a><span data-ttu-id="96c9f-109">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="96c9f-109">ProtectionLevel</span></span>  
+ <span data-ttu-id="96c9f-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="96c9f-110">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="96c9f-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="96c9f-111">Access type: Read-only</span></span>  
   
- Die Schutzebene für den TCP\-Datenstrom.  
+ <span data-ttu-id="96c9f-112">Die Schutzebene für den TCP-Datenstrom.</span><span class="sxs-lookup"><span data-stu-id="96c9f-112">The protection level for the TCP stream.</span></span>  
   
-## Voraussetzungen  
+## <a name="requirements"></a><span data-ttu-id="96c9f-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="96c9f-113">Requirements</span></span>  
   
-|MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|<span data-ttu-id="96c9f-114">MOF</span><span class="sxs-lookup"><span data-stu-id="96c9f-114">MOF</span></span>|<span data-ttu-id="96c9f-115">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="96c9f-115">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="96c9f-116">Namespace</span><span class="sxs-lookup"><span data-stu-id="96c9f-116">Namespace</span></span>|<span data-ttu-id="96c9f-117">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="96c9f-117">Defined in root\ServiceModel</span></span>|  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="96c9f-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="96c9f-118">See Also</span></span>  
  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

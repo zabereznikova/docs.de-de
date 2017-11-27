@@ -1,54 +1,52 @@
 ---
-title: "Zuordnen von Algorithmennamen zu kryptografischen Klassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kryptografische Algorithmen"
-  - "Kryptografie, Zuordnen von Algorithmennamen"
-  - "Zuordnen von Algorithmennamen"
-  - "Namen [.NET Framework], Algorithmuszuordnung"
+title: Zuordnen von Algorithmennamen zu kryptografischen Klassen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mapping algorithm names
+- cryptography, mapping algorithm names
+- cryptographic algorithms
+- names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: e59b2551545b8b70bcb54a5d43d041c44579b786
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zuordnen von Algorithmennamen zu kryptografischen Klassen
-Mit [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] können Entwickler kryptografische Objekte auf vier Arten erstellen:  
+# <a name="mapping-algorithm-names-to-cryptography-classes"></a><span data-ttu-id="efcf6-102">Zuordnen von Algorithmennamen zu kryptografischen Klassen</span><span class="sxs-lookup"><span data-stu-id="efcf6-102">Mapping Algorithm Names to Cryptography Classes</span></span>
+<span data-ttu-id="efcf6-103">Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie-Objekt mithilfe erstellen kann der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="efcf6-103">There are four ways a developer can create a cryptography object using the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:</span></span>  
   
--   Erstellen eines Objekts durch Verwenden des Operators **new**.  
+-   <span data-ttu-id="efcf6-104">Erstellen Sie ein Objekt mithilfe der **neue** Operator.</span><span class="sxs-lookup"><span data-stu-id="efcf6-104">Create an object by using the **new** operator.</span></span>  
   
--   Erstellen eines Objekts, das einen bestimmten kryptografischen Algorithmus implementiert, durch Aufrufen der **Create**\-Methode in der abstrakten Klasse dieses Algorithmus.  
+-   <span data-ttu-id="efcf6-105">Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der **erstellen** Methode in der abstrakten Klasse für diesen Algorithmus.</span><span class="sxs-lookup"><span data-stu-id="efcf6-105">Create an object that implements a particular cryptography algorithm by calling the **Create** method on the abstract class for that algorithm.</span></span>  
   
--   Erstellen eines Objekts, das einen bestimmten kryptografischen Algorithmus implementiert, durch Aufrufen der [System.Security.Cryptography.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic)\-Methode.  
+-   <span data-ttu-id="efcf6-106">Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="efcf6-106">Create an object that implements a particular cryptography algorithm by calling the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method.</span></span>  
   
--   Erstellen eines Objekts, das eine Klasse kryptografischer Algorithmen implementiert \(z. B. symmetrische Blockchiffre\) durch Aufrufen der **Create\-**Methode in der abstrakten Klasse dieses Algorithmustyps \(z. B. <xref:System.Security.Cryptography.SymmetricAlgorithm>\).  
+-   <span data-ttu-id="efcf6-107">Erstellen Sie ein Objekt, das eine Klasse kryptografischer Algorithmen (z. B. symmetrische Blockchiffre), durch Aufrufen implementiert der **erstellen** Methode in der abstrakten Klasse für diesen Typ des-Algorithmus (z. B. <xref:System.Security.Cryptography.SymmetricAlgorithm>).</span><span class="sxs-lookup"><span data-stu-id="efcf6-107">Create an object that implements a class of cryptographic algorithms (such as a symmetric block cipher) by calling the **Create** method on the abstract class for that type of algorithm (such as <xref:System.Security.Cryptography.SymmetricAlgorithm>).</span></span>  
   
- Angenommen, ein Entwickler möchte den SHA1\-Hash eines Bytesatzes berechnen.  Der <xref:System.Security.Cryptography>\-Namespace enthält zwei Implementierungen des SHA1\-Algorithmus, eine rein verwaltete Implementierung und eine, die CryptoAPI umschließt.  Der Entwickler kann durch Aufrufen des Operators **new** eine bestimmte SHA1\-Implementierung instanziieren \(z. B. die [SHA1Managed\-Klasse](frlrfSystemSecurityCryptographySHA1ManagedClassTopic)\).  Es spielt jedoch keine Rolle, welche Klasse die Common Language Runtime lädt. Solange die Klasse den SHA1\-Hashalgorithmus implementiert, kann ein Objekt durch Aufrufen der [System.Security.Cryptography.SHA1.Create](frlrfSystemSecurityCryptographySHA1ClassCreateTopic)\-Methode erstellt werden.  Diese Methode ruft **System.Security.Cryptography.CryptoConfig.CreateFromName\("System.Security.Cryptography.SHA1"\)** auf, wodurch eine Implementierung des SHA1\-Hashalgorithmus zurückgegeben werden muss.  
+ <span data-ttu-id="efcf6-108">Nehmen wir beispielsweise an, dass ein Entwickler möchte den SHA1-Hash einer Reihe von Bytes zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="efcf6-108">For example, suppose a developer wants to compute the SHA1 hash of a set of bytes.</span></span> <span data-ttu-id="efcf6-109">Die <xref:System.Security.Cryptography> -Namespace enthält zwei Implementierungen von den SHA1-Algorithmus, eine rein verwaltete Implementierung und die CryptoAPI umschließt.</span><span class="sxs-lookup"><span data-stu-id="efcf6-109">The <xref:System.Security.Cryptography> namespace contains two implementations of the SHA1 algorithm, one purely managed implementation and one that wraps CryptoAPI.</span></span> <span data-ttu-id="efcf6-110">Der Entwickler die Möglichkeit, eine bestimmte SHA1-Implementierung instanziieren (z. B. die <xref:System.Security.Cryptography.SHA1Managed>) durch Aufrufen der **neue** Operator.</span><span class="sxs-lookup"><span data-stu-id="efcf6-110">The developer can choose to instantiate a particular SHA1 implementation (such as the <xref:System.Security.Cryptography.SHA1Managed>) by calling the **new** operator.</span></span> <span data-ttu-id="efcf6-111">Wenn es nicht, welche Klasse die common Language Runtime lädt ausschlaggebend, solange die Klasse des SHA1-Hash-Algorithmus implementiert, der Entwickler kann jedoch erstellen ein Objekt durch Aufrufen der <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="efcf6-111">However, if it does not matter which class the common language runtime loads as long as the class implements the SHA1 hash algorithm, the developer can create an object by calling the <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="efcf6-112">Diese Methode ruft **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1") auf**, muss die eine Implementierung des SHA1-Hashalgorithmus zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="efcf6-112">This method calls **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, which must return an implementation of the SHA1 hash algorithm.</span></span>  
   
- Der Entwickler kann auch **System.Security.Cryptography.CryptoConfig.CreateFromName\("SHA1"\)** aufrufen, weil Kryptografiekonfigurationssysteme standardmäßig Kurznamen für die in .NET Framework mitgelieferten Algorithmen enthalten.  
+ <span data-ttu-id="efcf6-113">Der Entwickler kann auch aufrufen **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** da standardmäßig Kryptografiekonfiguration Kurznamen für die Algorithmen, die im Lieferumfang von .NET Framework enthält.</span><span class="sxs-lookup"><span data-stu-id="efcf6-113">The developer can also call **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** because, by default, cryptography configuration includes short names for the algorithms shipped in the .NET Framework.</span></span>  
   
- Wenn es nicht darauf ankommt, welcher Hashalgorithmus verwendet wird, kann durch Aufruf der [System.Security.Cryptography.HashAlgorithm.Create](frlrfSystemSecurityCryptographyHashAlgorithmClassCreateTopic)\-Methode ein Objekt zurückgegeben werden, das eine Hashtransformation implementiert.  
+ <span data-ttu-id="efcf6-114">Wenn es nicht ausschlaggebend, welche Hash-Algorithmus verwendet wird, kann der Entwickler rufen die <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> Methode, die ein Objekt zurückgibt, die eine hashing Transformation implementiert.</span><span class="sxs-lookup"><span data-stu-id="efcf6-114">If it does not matter which hash algorithm is used, the developer can call the <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> method, which returns an object that implements a hashing transformation.</span></span>  
   
-## Zuordnen von Algorithmusnamen zu Konfigurationsdateien  
- Standardmäßig gibt die Common Language Runtime ein [System.Security.Cryptography.SHA1CryptoServiceProvider\-Klassenobjekt](frlrfSystemSecurityCryptographySHA1CryptoServiceProviderClassTopic) für alle vier Szenarien zurück.  Ein Administrator kann jedoch den Objekttyp ändern, den die Methoden in den beiden letzten Szenarien zurückgeben.  Dazu muss ein angezeigter Algorithmusname der Klasse zugeordnet werden, die Sie in der Konfigurationsdatei des Computers \(Machine.config\) verwenden möchten.  
+## <a name="mapping-algorithm-names-in-configuration-files"></a><span data-ttu-id="efcf6-115">Zuordnen von Algorithmennamen in Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="efcf6-115">Mapping Algorithm Names in Configuration Files</span></span>  
+ <span data-ttu-id="efcf6-116">Standardmäßig gibt die Runtime eine <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> Objekt für alle vier Szenarien.</span><span class="sxs-lookup"><span data-stu-id="efcf6-116">By default, the runtime returns a <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> object for all four scenarios.</span></span> <span data-ttu-id="efcf6-117">Ein Computeradministrator kann jedoch den Typ des Objekts ändern, die die Methoden in den letzten beiden Szenarien zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="efcf6-117">However, a machine administrator can change the type of object that the methods in the last two scenarios return.</span></span> <span data-ttu-id="efcf6-118">Zu diesem Zweck müssen Sie die Klasse ein angezeigte Algorithmusnamen zuordnen, die Sie in der Computerkonfigurationsdatei ("Machine.config") verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="efcf6-118">To do this, you must map a friendly algorithm name to the class you want to use in the machine configuration file (Machine.config).</span></span>  
   
- Im folgenden Beispiel wird dargestellt, wie die Common Language Runtime so konfiguriert wird, dass **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName\("SHA1"\)** und **System.Security.Cryptography.HashAlgorithm.Create** ein `MySHA1HashClass`\-Objekt zurückgeben.  
+ <span data-ttu-id="efcf6-119">Im folgende Beispiel wird gezeigt, wie die Common Language Runtime zu konfigurieren, damit **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, und  **System.Security.Cryptography.HashAlgorithm.Create** Zurückgeben einer `MySHA1HashClass` Objekt.</span><span class="sxs-lookup"><span data-stu-id="efcf6-119">The following example shows how to configure the runtime so that **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, and **System.Security.Cryptography.HashAlgorithm.Create** return a `MySHA1HashClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <!-- Other configuration settings. -->  
    <mscorlib>  
@@ -70,15 +68,15 @@ Mit [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] können Entwickle
 </configuration>  
 ```  
   
- Sie können den Namen des Attributs im [\<cryptoClass\>\-Element](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) angeben \(im vorigen Beispiel heißt das Attribut `MySHA1Hash`\).  Der Wert des Attributs im **\<cryptoClass\>**\-Element ist eine Zeichenfolge mit der die Common Language Runtime, die Klasse zu finden.  Sie können jede Zeichenfolge verwenden, die die unter [Angeben vollständig gekennzeichneter Typnamen](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) aufgeführten Anforderungen erfüllt.  
+ <span data-ttu-id="efcf6-120">Sie können angeben, den Namen des Attributs in der [< CryptoClass\> Element](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (im vorherige Beispiel benennt das Attribut `MySHA1Hash`).</span><span class="sxs-lookup"><span data-stu-id="efcf6-120">You can specify the name of the attribute in the [<cryptoClass\> element](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (the previous example names the attribute `MySHA1Hash`).</span></span> <span data-ttu-id="efcf6-121">Der Wert des Attributs in der  **\<CryptoClass >** Element ist eine Zeichenfolge, die common Language Runtime verwendet die Klasse nicht gefunden.</span><span class="sxs-lookup"><span data-stu-id="efcf6-121">The value of the attribute in the **\<cryptoClass>** element is a string that the common language runtime uses to find the class.</span></span> <span data-ttu-id="efcf6-122">Sie können eine beliebige Zeichenfolge, die im angegebenen Anforderungen erfüllt [angeben vollständig gekennzeichneter Typnamen](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="efcf6-122">You can use any string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>  
   
- Viele Algorithmusnamen können der gleichen Klasse zugeordnet sein.  Das [\<nameEntry\>\-Element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) ordnet eine Klasse einem angezeigten Algorithmusnamen zu.  Das **name**\-Attribut kann entweder eine Zeichenfolge sein, die beim Aufrufen der **System.Security.Cryptography.CryptoConfig.CreateFromName**\-Methode verwendet wird, oder der Name einer abstrakten kryptografischen Klasse im <xref:System.Security.Cryptography>\-Namespace.  Der Wert des **Klasse**\-Attributs ist der Name des Attributs im **\<cryptoClass\>**\-Element.  
+ <span data-ttu-id="efcf6-123">Viele Algorithmusnamen können auf die gleiche Klasse zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="efcf6-123">Many algorithm names can map to the same class.</span></span> <span data-ttu-id="efcf6-124">Die [ \<NameEntry >-Element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) einen benutzerfreundlichen Algorithmusname eine Klasse zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="efcf6-124">The [\<nameEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) maps a class to one friendly algorithm name.</span></span> <span data-ttu-id="efcf6-125">Die **Namen** Attribut kann entweder eine Zeichenfolge, die verwendet wird, beim Aufrufen der **System.Security.Cryptography.CryptoConfig.CreateFromName** -Methode oder der Name einer abstrakten kryptografischen Klasse in der <xref:System.Security.Cryptography> Namespace.</span><span class="sxs-lookup"><span data-stu-id="efcf6-125">The **name** attribute can be either a string that is used when calling the **System.Security.Cryptography.CryptoConfig.CreateFromName** method or the name of an abstract cryptography class in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="efcf6-126">Der Wert von der **Klasse** -Attribut ist der Name des Attributs in der  **\<CryptoClass >** Element.</span><span class="sxs-lookup"><span data-stu-id="efcf6-126">The value of the **class** attribute is the name of the attribute in the **\<cryptoClass>** element.</span></span>  
   
 > [!NOTE]
->  Sie können einen SHA1\-Algorithmus durch Aufruf der [System.Security.Cryptography.SHA1.Create](frlrfSystemSecurityCryptographySHA1ClassCreateTopic)\-Methode oder der **Security.CryptoConfig.CreateFromName\("SHA1"\)**\-Methode erhalten.  Durch jede dieser Methoden wird lediglich gewährleistet, dass ein Objekt zurückgegeben wird, das den SHA1\-Algorithmus implementiert.  Es ist nicht erforderlich, jeden angezeigten Algorithmusnamen derselben Klasse in der Konfigurationsdatei zuzuordnen.  
+>  <span data-ttu-id="efcf6-127">Sie erhalten einen SHA1-Algorithmus durch Aufrufen der <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> oder **Security.CryptoConfig.CreateFromName("SHA1")** Methode.</span><span class="sxs-lookup"><span data-stu-id="efcf6-127">You can get an SHA1 algorithm by calling the <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> or the **Security.CryptoConfig.CreateFromName("SHA1")** method.</span></span> <span data-ttu-id="efcf6-128">Jede Methode ist, gewährleistet lediglich, dass ein Objekt zurückgegeben wird, die den SHA1-Algorithmus implementiert.</span><span class="sxs-lookup"><span data-stu-id="efcf6-128">Each method guarantees only that it returns an object that implements the SHA1 algorithm.</span></span> <span data-ttu-id="efcf6-129">Sie müssen nicht jeden Anzeigenamen eines Algorithmus auf die gleiche Klasse in der Konfigurationsdatei zuordnen.</span><span class="sxs-lookup"><span data-stu-id="efcf6-129">You do not have to map each friendly name of an algorithm to the same class in the configuration file.</span></span>  
   
- Eine Liste mit Standardnamen und den zugeordneten Klassen finden Sie unter der [CryptoConfig\-Klasse](frlrfSystemSecurityCryptographyCryptoConfigClassTopic).  
+ <span data-ttu-id="efcf6-130">Eine Liste der Standardnamen und die Klassen, denen sie sind zugeordnet, finden Sie unter <xref:System.Security.Cryptography.CryptoConfig>.</span><span class="sxs-lookup"><span data-stu-id="efcf6-130">For a list of default names and the classes they map to, see <xref:System.Security.Cryptography.CryptoConfig>.</span></span>  
   
-## Siehe auch  
- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)   
- [Konfigurieren kryptografischer Klassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="efcf6-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="efcf6-131">See Also</span></span>  
+ [<span data-ttu-id="efcf6-132">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="efcf6-132">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="efcf6-133">Konfigurieren kryptografischer Klassen</span><span class="sxs-lookup"><span data-stu-id="efcf6-133">Configuring Cryptography Classes</span></span>](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

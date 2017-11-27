@@ -1,32 +1,36 @@
 ---
-title: "Vorgehensweise: Erstellen eines benutzerdefinierten Instanzspeichers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Instanzspeichers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c383d3af92ba2f76f8ba09bc194220c170beaa0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Erstellen eines benutzerdefinierten Instanzspeichers
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, einen Instanzspeicher, der SQL Server verwendet, um Workflowdaten beizubehalten.  Wenn die Anwendung Workflowdaten auf einem anderen Medium, z. B. einer anderen Datenbank oder einem anderen Dateisystem dauerhaft speichern muss, können Sie einen benutzerdefinierten Instanzspeicher implementieren.  Ein benutzerdefinierter Instanzspeicher wird erstellt, indem die abstrakte <xref:System.Runtime.DurableInstancing.InstanceStore>\-Klasse erweitert wird und die Methoden implementiert werden, die für die Implementierung erforderlich sind.  Eine vollständige Implementierung eines benutzerdefinierten Instanzspeichers finden Sie im Beispiel [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  
+# <a name="how-to-create-a-custom-instance-store"></a><span data-ttu-id="0fd32-102">Vorgehensweise: Erstellen eines benutzerdefinierten Instanzspeichers</span><span class="sxs-lookup"><span data-stu-id="0fd32-102">How to: Create a Custom Instance Store</span></span>
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="0fd32-103"> enthält <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, einen Instanzspeicher, der SQL Server verwendet, um Workflowdaten beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="0fd32-103"> contains <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, an instance store that uses SQL Server to persist workflow data.</span></span> <span data-ttu-id="0fd32-104">Wenn die Anwendung Workflowdaten auf einem anderen Medium, z. B. einer anderen Datenbank oder einem anderen Dateisystem dauerhaft speichern muss, können Sie einen benutzerdefinierten Instanzspeicher implementieren.</span><span class="sxs-lookup"><span data-stu-id="0fd32-104">If your application is required to persist workflow data to another medium, such as a different database or a file system, you can implement a custom instance store.</span></span> <span data-ttu-id="0fd32-105">Ein benutzerdefinierter Instanzspeicher wird erstellt, indem die abstrakte <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse erweitert wird und die Methoden implementiert werden, die für die Implementierung erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="0fd32-105">A custom instance store is created by extending the abstract <xref:System.Runtime.DurableInstancing.InstanceStore> class and implementing the methods that are required for the implementation.</span></span> <span data-ttu-id="0fd32-106">Eine vollständige Implementierung eines benutzerdefinierten instanzspeichers, finden Sie unter der [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="0fd32-106">For a complete implementation of a custom instance store, see the [Corporate Purchase Process](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) sample.</span></span>  
   
-## Implementieren der BeginTryCommand\-Methode  
- <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> wird vom Instanzspeicher an das Persistenzmodul gesendet.  Der Typ des `command`\-Parameters gibt an, welcher Befehl ausgeführt wird. Dieser Parameter kann folgende Typen aufweisen:  
+## <a name="implementing-the-begintrycommand-method"></a><span data-ttu-id="0fd32-107">Implementieren der BeginTryCommand-Methode</span><span class="sxs-lookup"><span data-stu-id="0fd32-107">Implementing the BeginTryCommand method</span></span>  
+ <span data-ttu-id="0fd32-108"><xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> wird vom Instanzspeicher an das Persistenzmodul gesendet.</span><span class="sxs-lookup"><span data-stu-id="0fd32-108">The <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> is sent to the instance store by the persistence engine.</span></span> <span data-ttu-id="0fd32-109">Der Typ des `command`-Parameters gibt an, welcher Befehl ausgeführt wird. Dieser Parameter kann folgende Typen aufweisen:</span><span class="sxs-lookup"><span data-stu-id="0fd32-109">The type of the `command` parameter indicates which command is being executed; this parameter can be of the following types:</span></span>  
   
--   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein Workflow auf dem Speichermedium beibehalten werden soll.  Die Persistenzdaten des Workflows werden im <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A>\-Member des `command`\-Parameters für die Methode bereitgestellt.  
+-   <span data-ttu-id="0fd32-110"><xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein Workflow auf dem Speichermedium beibehalten werden soll.</span><span class="sxs-lookup"><span data-stu-id="0fd32-110"><xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: The persistence engine sends this command to the instance store when a workflow is to be persisted to the storage medium.</span></span> <span data-ttu-id="0fd32-111">Die Persistenzdaten des Workflows werden im <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A>-Member des `command`-Parameters für die Methode bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="0fd32-111">The workflow persistence data is provided to the method in the <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> member of the `command` parameter.</span></span>  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein Workflow vom Speichermedium geladen werden soll.  Die Instanz\-ID des zu ladenden Workflows wird für die Methode im `instanceId`\-Parameter der <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A>\-Eigenschaft des `context`\-Parameters bereitgestellt.  
+-   <span data-ttu-id="0fd32-112"><xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein Workflow vom Speichermedium geladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0fd32-112"><xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: The persistence engine sends this command to the instance store when a workflow is to be loaded from the storage medium.</span></span> <span data-ttu-id="0fd32-113">Die Instanz-ID des zu ladenden Workflows wird für die Methode im `instanceId`-Parameter der <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A>-Eigenschaft des `context`-Parameters bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="0fd32-113">The instance ID of the workflow to be loaded is provided to the method in the `instanceId` parameter of the <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> property of the `context` parameter.</span></span>  
   
--   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein <xref:System.ServiceModel.Activities.WorkflowServiceHost> als Sperrbesitzer registriert werden muss.  Die Instanz\-ID des aktuellen Workflows sollte für den Instanzspeicher unter Verwendung der <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A>\-Methode des `context`\-Parameters bereitgestellt werden.  
+-   <span data-ttu-id="0fd32-114"><xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein <xref:System.ServiceModel.Activities.WorkflowServiceHost> als Sperrbesitzer registriert werden muss.</span><span class="sxs-lookup"><span data-stu-id="0fd32-114"><xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: The persistence engine sends this command to the instance store when a <xref:System.ServiceModel.Activities.WorkflowServiceHost> must be registered as a lock owner.</span></span> <span data-ttu-id="0fd32-115">Die Instanz-ID des aktuellen Workflows sollte für den Instanzspeicher unter Verwendung der <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A>-Methode des `context`-Parameters bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="0fd32-115">The instance ID of the current workflow should be provided to the instance store using <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> method of the `context` parameter.</span></span>  
   
-     Der folgende Codeausschnitt zeigt, wie der CreateWorkflowOwner\-Befehl implementiert wird, um einen expliziten Sperrbesitzer zuzuweisen.  
+     <span data-ttu-id="0fd32-116">Der folgende Codeausschnitt zeigt, wie der CreateWorkflowOwner-Befehl implementiert wird, um einen expliziten Sperrbesitzer zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="0fd32-116">The following code snippet demonstrates how to implement the CreateWorkflowOwner command to assign an explicit lock owner.</span></span>  
   
     ```  
     XName WFInstanceScopeName = XName.Get(scopeName, "<namespace>");  
@@ -44,12 +48,11 @@ caps.handback.revision: 11
                                    createCommand,  
                                    TimeSpan.FromSeconds(30)).InstanceOwner;  
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn die Instanz\-ID eines Sperrbesitzers aus dem Instanzspeicher entfernt werden kann.  Wie bei <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> sollte die ID des Sperrbesitzers von der Anwendung bereitgestellt werden.  
+-   <span data-ttu-id="0fd32-117"><xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn die Instanz-ID eines Sperrbesitzers aus dem Instanzspeicher entfernt werden kann.</span><span class="sxs-lookup"><span data-stu-id="0fd32-117"><xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: The persistence engine sends this command to the instance store when the instance ID of a lock owner can be removed from the instance store.</span></span> <span data-ttu-id="0fd32-118">Wie bei <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> sollte die ID des Sperrbesitzers von der Anwendung bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="0fd32-118">As with <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, the ID of the lock owner should be provided by the application.</span></span>  
   
-     Der folgende Codeausschnitt zeigt, wie eine Sperre mit <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> aufgehoben wird.  
+     <span data-ttu-id="0fd32-119">Der folgende Codeausschnitt zeigt, wie eine Sperre mit <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> aufgehoben wird.</span><span class="sxs-lookup"><span data-stu-id="0fd32-119">The following code snippet demonstrates how to release a lock using <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>.</span></span>  
   
     ```  
     static void FreeHandleAndDeleteOwner(InstanceStore store, InstanceHandle handle)  
@@ -72,10 +75,9 @@ caps.handback.revision: 11
             store.DefaultInstanceOwner = null;  
         }  
     }  
-  
     ```  
   
-     Die oben dargestellte Methode sollte in einem Try\/Catch\-Block aufgerufen werden, wenn eine untergeordnete Instanz ausgeführt wird.  
+     <span data-ttu-id="0fd32-120">Die oben dargestellte Methode sollte in einem Try/Catch-Block aufgerufen werden, wenn eine untergeordnete Instanz ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0fd32-120">The above method should be called in a Try/Catch block when a child instance is run.</span></span>  
   
     ```  
     try  
@@ -90,14 +92,13 @@ caps.handback.revision: 11
     {  
         FreeHandleAndDeleteOwner(store, ownerHandle);  
     }  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn eine Workflowinstanz mit dem Instanzschlüssel des Workflows geladen werden soll.  Die ID des Instanzschlüssels kann bestimmt werden, indem der <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A>\-Parameter des Befehls verwendet wird.  
+-   <span data-ttu-id="0fd32-121"><xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn eine Workflowinstanz mit dem Instanzschlüssel des Workflows geladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="0fd32-121"><xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: The persistence engine sends this command to the instance store when a workflow instance is to be loaded using the workflow’s instance key.</span></span> <span data-ttu-id="0fd32-122">Die ID des Instanzschlüssels kann bestimmt werden, indem der <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A>-Parameter des Befehls verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0fd32-122">The ID of the instance key can be determined by using the <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> parameter of the command.</span></span>  
   
--   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, um Aktivierungsparameter für beibehaltene Workflows abzurufen, um einen Workflowhost zu erstellen, der dann Workflows laden kann.  Diesen Befehl sendet das Modul als Reaktion darauf, dass der Instanzspeicher <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> für den Host auslöst, wenn er eine Instanz findet, die aktiviert werden kann.  Der Instanzspeicher sollte abgefragt werden, um zu bestimmen, ob Workflows vorhanden sind, die aktiviert werden können.  
+-   <span data-ttu-id="0fd32-123"><xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, um Aktivierungsparameter für beibehaltene Workflows abzurufen, um einen Workflowhost zu erstellen, der dann Workflows laden kann.</span><span class="sxs-lookup"><span data-stu-id="0fd32-123"><xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: The persistence engine sends this command to the instance store to retrieve activation parameters for persisted workflows in order to create a workflow host that can then load workflows.</span></span> <span data-ttu-id="0fd32-124">Diesen Befehl sendet das Modul als Reaktion darauf, dass der Instanzspeicher <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> für den Host auslöst, wenn er eine Instanz findet, die aktiviert werden kann.</span><span class="sxs-lookup"><span data-stu-id="0fd32-124">This command is sent by the engine in response to the instance store raising the <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> to the host when it locates an instance that can be activated.</span></span> <span data-ttu-id="0fd32-125">Der Instanzspeicher sollte abgefragt werden, um zu bestimmen, ob Workflows vorhanden sind, die aktiviert werden können.</span><span class="sxs-lookup"><span data-stu-id="0fd32-125">The instance store should be polled to determine if there are workflows that can be activated.</span></span>  
   
--   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, um ausführbare Workflowinstanzen zu laden.  Diesen Befehl sendet das Modul als Reaktion darauf, dass der Instanzspeicher <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> für den Host auslöst, wenn er eine Instanz findet, die ausgeführt werden kann.  Der Instanzspeicher sollte Workflows abfragen, die ausgeführt werden können.  Der folgende Codeausschnitt zeigt, wie ein Instanzspeicher Workflows abfragt, die ausgeführt oder aktiviert werden können.  
+-   <span data-ttu-id="0fd32-126"><xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: Das Persistenzmodul sendet diesen Befehl an den Instanzspeicher, um ausführbare Workflowinstanzen zu laden.</span><span class="sxs-lookup"><span data-stu-id="0fd32-126"><xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: The persistence engine sends this command to the instance store to load runnable workflow instances.</span></span> <span data-ttu-id="0fd32-127">Diesen Befehl sendet das Modul als Reaktion darauf, dass der Instanzspeicher <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> für den Host auslöst, wenn er eine Instanz findet, die ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="0fd32-127">This command is sent by the engine in response to the instance store raising the <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> to the host when it locates an instance that can be run.</span></span> <span data-ttu-id="0fd32-128">Der Instanzspeicher sollte Workflows abfragen, die ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="0fd32-128">The instance store should poll for workflows that can be run.</span></span> <span data-ttu-id="0fd32-129">Der folgende Codeausschnitt zeigt, wie ein Instanzspeicher Workflows abfragt, die ausgeführt oder aktiviert werden können.</span><span class="sxs-lookup"><span data-stu-id="0fd32-129">The following code snippet demonstrates polling an instance store for workflows that can be run or activated.</span></span>  
   
     ```  
     public void PollForEvents()  
@@ -135,10 +136,9 @@ caps.handback.revision: 11
             }  
         }  
     }  
-  
     ```  
   
-     Im oben stehenden Codeausschnitt fragt der Instanzspeicher die verfügbaren Ereignisse ab und überprüft jedes Ereignis, um zu bestimmen, ob es ein <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>\-Ereignis ist.  Wenn ein derartiges Ereignis gefunden wird, wird <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> aufgerufen, um den Host anzuweisen, einen Befehl an den Instanzspeicher zu senden.  Der folgende Codeausschnitt zeigt eine Implementierung eines Handlers für diesen Befehl.  
+     <span data-ttu-id="0fd32-130">Im oben stehenden Codeausschnitt fragt der Instanzspeicher die verfügbaren Ereignisse ab und überprüft jedes Ereignis, um zu bestimmen, ob es ein <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>-Ereignis ist.</span><span class="sxs-lookup"><span data-stu-id="0fd32-130">In the above code snippet, the instance store queries the events available and examines each one to determine if it is a <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> event.</span></span> <span data-ttu-id="0fd32-131">Wenn ein derartiges Ereignis gefunden wird, wird <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> aufgerufen, um den Host anzuweisen, einen Befehl an den Instanzspeicher zu senden.</span><span class="sxs-lookup"><span data-stu-id="0fd32-131">If one is found, <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> is called to signal the host to send a command to the instance store.</span></span>  <span data-ttu-id="0fd32-132">Der folgende Codeausschnitt zeigt eine Implementierung eines Handlers für diesen Befehl.</span><span class="sxs-lookup"><span data-stu-id="0fd32-132">The following code snippet demonstrates an implementation of a handler for this command.</span></span>  
   
     ```  
     If (command is TryLoadRunnableWorkflowCommand)  
@@ -227,19 +227,17 @@ caps.handback.revision: 11
             break;  
         }  
     }  
-  
     ```  
   
-     Im oben stehenden Codeausschnitt sucht der Instanzspeicher ausführbare Instanzen.  Wenn eine Instanz gefunden wird, wird sie an den Ausführungskontext gebunden und geladen.  
+     <span data-ttu-id="0fd32-133">Im oben stehenden Codeausschnitt sucht der Instanzspeicher ausführbare Instanzen.</span><span class="sxs-lookup"><span data-stu-id="0fd32-133">In the above code snippet, the instance store searches for runnable instances.</span></span> <span data-ttu-id="0fd32-134">Wenn eine Instanz gefunden wird, wird sie an den Ausführungskontext gebunden und geladen.</span><span class="sxs-lookup"><span data-stu-id="0fd32-134">If an instance is found, it is bound to the execution context and loaded.</span></span>  
   
-## Verwenden eines benutzerdefinierten Instanzspeichers  
- Um einen benutzerdefinierten Instanzspeicher zu implementieren, weisen Sie <xref:System.Activities.WorkflowApplication.InstanceStore%2A> eine Instanz des Instanzspeichers zu, und implementieren Sie die <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>\-Methode.  Einzelheiten finden Sie im Lernprogramm [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md).  
+## <a name="using-a-custom-instance-store"></a><span data-ttu-id="0fd32-135">Verwenden eines benutzerdefinierten Instanzspeichers</span><span class="sxs-lookup"><span data-stu-id="0fd32-135">Using a custom instance store</span></span>  
+ <span data-ttu-id="0fd32-136">Um einen benutzerdefinierten Instanzspeicher zu implementieren, weisen Sie <xref:System.Activities.WorkflowApplication.InstanceStore%2A> eine Instanz des Instanzspeichers zu, und implementieren Sie die <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="0fd32-136">To implement a custom instance store, assign an instance of the instance store to the <xref:System.Activities.WorkflowApplication.InstanceStore%2A>, and implement the <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> method.</span></span>  <span data-ttu-id="0fd32-137">Finden Sie unter der [Vorgehensweise: Erstellen und Ausführen einer Workflows mit langer Laufzeit](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) Einzelheiten Tutorial.</span><span class="sxs-lookup"><span data-stu-id="0fd32-137">See the [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) tutorial for specifics.</span></span>  
   
-## Beispiel für einen Instanzspeicher  
- Das folgende Codebeispiel stellt eine vollständige Implementierung eines Instanzspeichers aus dem Beispiel [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) dar.  Dieser Instanzspeicher speichert Workflowdaten unter Verwendung von XML dauerhaft in einer Datei.  
+## <a name="a-sample-instance-store"></a><span data-ttu-id="0fd32-138">Beispiel für einen Instanzspeicher</span><span class="sxs-lookup"><span data-stu-id="0fd32-138">A sample instance store</span></span>  
+ <span data-ttu-id="0fd32-139">Im folgenden Codebeispiel wird eine vollständige Instanz Implementierung eines instanzspeichers aus dem [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="0fd32-139">The following code sample is a complete instance store implementation, taken from the [Corporate Purchase Process](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) sample.</span></span> <span data-ttu-id="0fd32-140">Dieser Instanzspeicher speichert Workflowdaten unter Verwendung von XML dauerhaft in einer Datei.</span><span class="sxs-lookup"><span data-stu-id="0fd32-140">This instance store persists workflow data to a file using XML.</span></span>  
   
 ```  
-  
 using System;  
 using System.Activities.DurableInstancing;  
 using System.Collections.Generic;  
@@ -400,5 +398,4 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         }  
     }  
 }  
-  
 ```

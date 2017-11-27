@@ -1,50 +1,32 @@
 ---
-title: Nothing und Zeichenfolgen in Visual Basic | Microsoft-Dokumentation
+title: Nothing und Zeichenfolgen in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- strings [Visual Basic], Nothing
+helpviewer_keywords: strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 56fc47ba2523825224aae3264e965d462cf4c3b6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6ce9f81f23f50e38f6b1ad5e638e8c6ac026e992
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="nothing-and-strings-in-visual-basic"></a>Nothing und Zeichenfolgen in Visual Basic
-Die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Common Language Runtime und die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] auswerten `Nothing` anders Startkonfigurations Zeichenfolgen.  
+# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="1d2c6-102">Nothing und Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1d2c6-102">Nothing and Strings in Visual Basic</span></span>
+<span data-ttu-id="1d2c6-103">Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Common Language Runtime und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] auswerten `Nothing` anders Wenn es darum geht, Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="1d2c6-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic-Laufzeit und .NET Framework  
- Betrachten Sie das folgende Beispiel:  
+## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="1d2c6-104">Visual Basic-Laufzeit und .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1d2c6-104">Visual Basic Runtime and the .NET Framework</span></span>  
+ <span data-ttu-id="1d2c6-105">Betrachten Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="1d2c6-105">Consider the following example:</span></span>  
   
- [!code-vb[VbVbalrStrings&#47;](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
- Die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Laufzeit wertet normalerweise `Nothing` als eine leere Zeichenfolge (""). Die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] tut dies jedoch nicht und löst eine Ausnahme aus, wenn versucht wird, eine Zeichenfolgenoperation auszuführen, auf `Nothing`.  
+ <span data-ttu-id="1d2c6-106">Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Laufzeit wertet normalerweise `Nothing` als eine leere Zeichenfolge ("").</span><span class="sxs-lookup"><span data-stu-id="1d2c6-106">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="1d2c6-107">Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] jedoch nicht der Fall ist, und löst eine Ausnahme aus, wenn versucht wird, führen Sie eine Zeichenfolgenoperation auf `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="1d2c6-107">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="1d2c6-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1d2c6-108">See Also</span></span>  
+ [<span data-ttu-id="1d2c6-109">Einführung in Zeichenfolgen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1d2c6-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

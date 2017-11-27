@@ -1,55 +1,61 @@
 ---
-title: "Remoteausf&#252;hrung im Vergleich zur lokalen Ausf&#252;hrung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Remoteausführung von Abfragen im Vergleich zur lokaler Ausführung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2b04ba6dde572aa0a8edddc8a2a30a8e11a3e79c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Remoteausf&#252;hrung im Vergleich zur lokalen Ausf&#252;hrung
-Sie können festlegen, ob Ihre Abfragen remote \(das Datenbankmodul führt eine Abfrage mit der Datenbank aus \) oder lokal \([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] führt die Abfrage mit einem lokalen Cache aus\) erfolgen sollen.  
+# <a name="remote-vs-local-execution"></a><span data-ttu-id="4e596-102">Remoteausführung von Abfragen im Vergleich zur lokaler Ausführung</span><span class="sxs-lookup"><span data-stu-id="4e596-102">Remote vs. Local Execution</span></span>
+<span data-ttu-id="4e596-103">Sie können festlegen, ob Ihre Abfragen remote (das Datenbankmodul führt eine Abfrage mit der Datenbank aus ) oder lokal ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] führt die Abfrage mit einem lokalen Cache aus) erfolgen sollen.</span><span class="sxs-lookup"><span data-stu-id="4e596-103">You can decide to execute your queries either remotely (that is, the database engine executes the query against the database) or locally ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executes the query against a local cache).</span></span>  
   
-## Remoteausführung  
- Betrachten Sie die folgende Abfrage:  
+## <a name="remote-execution"></a><span data-ttu-id="4e596-104">Remoteausführung</span><span class="sxs-lookup"><span data-stu-id="4e596-104">Remote Execution</span></span>  
+ <span data-ttu-id="4e596-105">Betrachten Sie die folgende Abfrage:</span><span class="sxs-lookup"><span data-stu-id="4e596-105">Consider the following query:</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#7)]
  [!code-vb[DLinqQueryConcepts#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#7)]  
   
- Wenn Ihre Datenbank Tausende von Zeilen mit Bestellungen aufweist, möchten Sie diese nicht alle abrufen müssen, um eine kleinere Teilmenge zu bearbeiten.  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert die <xref:System.Data.Linq.EntitySet%601>\-Klasse die <xref:System.Linq.IQueryable>\-Schnittstelle.  Dieser Ansatz stellt sicher, dass solche Abfragen remote ausgeführt werden können.  Aus dieser Technik ergeben sich zwei wesentliche Vorteile:  
+ <span data-ttu-id="4e596-106">Wenn Ihre Datenbank Tausende von Zeilen mit Bestellungen aufweist, möchten Sie diese nicht alle abrufen müssen, um eine kleinere Teilmenge zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="4e596-106">If your database has thousands of rows of orders, you do not want to retrieve them all to process a small subset.</span></span> <span data-ttu-id="4e596-107">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert die <xref:System.Data.Linq.EntitySet%601>-Klasse die <xref:System.Linq.IQueryable>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="4e596-107">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Data.Linq.EntitySet%601> class implements the <xref:System.Linq.IQueryable> interface.</span></span> <span data-ttu-id="4e596-108">Dieser Ansatz stellt sicher, dass solche Abfragen remote ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="4e596-108">This approach makes sure that such queries can be executed remotely.</span></span> <span data-ttu-id="4e596-109">Aus dieser Technik ergeben sich zwei wesentliche Vorteile:</span><span class="sxs-lookup"><span data-stu-id="4e596-109">Two major benefits flow from this technique:</span></span>  
   
--   Unnötige Daten werden nicht abgerufen.  
+-   <span data-ttu-id="4e596-110">Unnötige Daten werden nicht abgerufen.</span><span class="sxs-lookup"><span data-stu-id="4e596-110">Unnecessary data is not retrieved.</span></span>  
   
--   Eine vom Datenbankmodul ausgeführte Abfrage ist aufgrund der Datenbankindizes oft effizienter.  
+-   <span data-ttu-id="4e596-111">Eine vom Datenbankmodul ausgeführte Abfrage ist aufgrund der Datenbankindizes oft effizienter.</span><span class="sxs-lookup"><span data-stu-id="4e596-111">A query executed by the database engine is often more efficient because of the database indexes.</span></span>  
   
-## lokaler Ausführung  
- In anderen Situationen möchten Sie ggf. alle verbundenen Entitäten in den lokalen Cache übertragen.  Zu diesem Zweck stellt <xref:System.Data.Linq.EntitySet%601> die <xref:System.Data.Linq.EntitySet%601.Load%2A>\-Methode bereit, um explizit alle Member von <xref:System.Data.Linq.EntitySet%601> zu laden.  
+## <a name="local-execution"></a><span data-ttu-id="4e596-112">lokaler Ausführung</span><span class="sxs-lookup"><span data-stu-id="4e596-112">Local Execution</span></span>  
+ <span data-ttu-id="4e596-113">In anderen Situationen möchten Sie ggf. alle verbundenen Entitäten in den lokalen Cache übertragen.</span><span class="sxs-lookup"><span data-stu-id="4e596-113">In other situations, you might want to have the complete set of related entities in the local cache.</span></span> <span data-ttu-id="4e596-114">Zu diesem Zweck stellt <xref:System.Data.Linq.EntitySet%601> die <xref:System.Data.Linq.EntitySet%601.Load%2A>-Methode bereit, um explizit alle Member von <xref:System.Data.Linq.EntitySet%601> zu laden.</span><span class="sxs-lookup"><span data-stu-id="4e596-114">For this purpose, <xref:System.Data.Linq.EntitySet%601> provides the <xref:System.Data.Linq.EntitySet%601.Load%2A> method to explicitly load all the members of the <xref:System.Data.Linq.EntitySet%601>.</span></span>  
   
- Wenn ein <xref:System.Data.Linq.EntitySet%601> bereits geladen ist, werden nachfolgende Abfragen lokal ausgeführt.  Dieser Ansatz unterstützt Sie auf zwei Arten:  
+ <span data-ttu-id="4e596-115">Wenn ein <xref:System.Data.Linq.EntitySet%601> bereits geladen ist, werden nachfolgende Abfragen lokal ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="4e596-115">If an <xref:System.Data.Linq.EntitySet%601> is already loaded, subsequent queries are executed locally.</span></span> <span data-ttu-id="4e596-116">Dieser Ansatz unterstützt Sie auf zwei Arten:</span><span class="sxs-lookup"><span data-stu-id="4e596-116">This approach helps in two ways:</span></span>  
   
--   Wenn der gesamte Satz lokal oder mehrmals verwendet werden muss, können Sie Remoteabfragen und die zugehörige Latenz vermeiden.  
+-   <span data-ttu-id="4e596-117">Wenn der gesamte Satz lokal oder mehrmals verwendet werden muss, können Sie Remoteabfragen und die zugehörige Latenz vermeiden.</span><span class="sxs-lookup"><span data-stu-id="4e596-117">If the complete set must be used locally or multiple times, you can avoid remote queries and associated latencies.</span></span>  
   
--   Die Entität kann als vollständige Entität serialisiert werden.  
+-   <span data-ttu-id="4e596-118">Die Entität kann als vollständige Entität serialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="4e596-118">The entity can be serialized as a complete entity.</span></span>  
   
- Das folgende Codefragment zeigt, wie die lokale Ausführung erreicht werden kann:  
+ <span data-ttu-id="4e596-119">Das folgende Codefragment zeigt, wie die lokale Ausführung erreicht werden kann:</span><span class="sxs-lookup"><span data-stu-id="4e596-119">The following code fragment illustrates how local execution can be obtained:</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#8)]
  [!code-vb[DLinqQueryConcepts#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#8)]  
   
-## Vergleich  
- Diese beiden Möglichkeiten bieten eine leistungsfähige Kombination aus Optionen: Remoteausführung für große Auflistungen und lokale Ausführung für kleine Auflistungen bzw. wenn die gesamte Auflistung benötigt wird.  Die Remoteausführung wird mit <xref:System.Linq.IQueryable> implementiert, die lokale Ausführung mit einer <xref:System.Collections.Generic.IEnumerable%601>\-Auflistung im Arbeitsspeicher.  Wenn Sie die lokale Ausführung \(d. h. <xref:System.Collections.Generic.IEnumerable%601>\) erzwingen möchten, lesen Sie den Abschnitt [Konvertieren eines Typs in eine generische IEnumerable](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
+## <a name="comparison"></a><span data-ttu-id="4e596-120">Vergleich</span><span class="sxs-lookup"><span data-stu-id="4e596-120">Comparison</span></span>  
+ <span data-ttu-id="4e596-121">Diese beiden Möglichkeiten bieten eine leistungsfähige Kombination aus Optionen: Remoteausführung für große Auflistungen und lokale Ausführung für kleine Auflistungen bzw. wenn die gesamte Auflistung benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="4e596-121">These two capabilities provide a powerful combination of options: remote execution for large collections and local execution for small collections or where the complete collection is needed.</span></span> <span data-ttu-id="4e596-122">Die Remoteausführung wird mit <xref:System.Linq.IQueryable> implementiert, die lokale Ausführung mit einer <xref:System.Collections.Generic.IEnumerable%601>-Auflistung im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="4e596-122">You implement remote execution through <xref:System.Linq.IQueryable>, and local execution against an in-memory <xref:System.Collections.Generic.IEnumerable%601> collection.</span></span> <span data-ttu-id="4e596-123">Lokalen Ausführung erzwingen (d. h. <xref:System.Collections.Generic.IEnumerable%601>), finden Sie unter [Konvertieren eines Typs in eine generische "IEnumerable"](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).</span><span class="sxs-lookup"><span data-stu-id="4e596-123">To force local execution (that is, <xref:System.Collections.Generic.IEnumerable%601>), see [Convert a Type to a Generic IEnumerable](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).</span></span>  
   
-### Abfragen von ungeordneten Sätzen  
- Beachten Sie den wichtigen Unterschied zwischen einer lokalen Auflistung mit Implementierung von <xref:System.Collections.Generic.List%601> und einer Auflistung, die Remoteabfragen mit *ungeordneten Sätzen* in einer relationalen Datenbank ermöglicht.  <xref:System.Collections.Generic.List%601>\-Methoden wie jene, die Indexwerte verwenden, erfordern Listensemantik, die in der Regel nicht durch eine Remoteabfrage mit einem ungeordneten Satz erreicht werden kann.  Aus diesem Grund laden diese Methoden implizit den <xref:System.Data.Linq.EntitySet%601>, um die lokale Ausführung zu ermöglichen.  
+### <a name="queries-against-unordered-sets"></a><span data-ttu-id="4e596-124">Abfragen von ungeordneten Sätzen</span><span class="sxs-lookup"><span data-stu-id="4e596-124">Queries Against Unordered Sets</span></span>  
+ <span data-ttu-id="4e596-125">Beachten Sie die wichtigen Unterschied zwischen einer lokalen Auflistung mit Implementierung <xref:System.Collections.Generic.List%601> und eine Auflistung, die Remoteabfragen mit *ungeordneten Sätzen* in einer relationalen Datenbank.</span><span class="sxs-lookup"><span data-stu-id="4e596-125">Note the important difference between a local collection that implements <xref:System.Collections.Generic.List%601> and a collection that provides remote queries executed against *unordered sets* in a relational database.</span></span> <span data-ttu-id="4e596-126"><xref:System.Collections.Generic.List%601>-Methoden wie jene, die Indexwerte verwenden, erfordern Listensemantik, die in der Regel nicht durch eine Remoteabfrage mit einem ungeordneten Satz erreicht werden kann.</span><span class="sxs-lookup"><span data-stu-id="4e596-126"><xref:System.Collections.Generic.List%601> methods such as those that use index values require list semantics, which typically cannot be obtained through a remote query against an unordered set.</span></span> <span data-ttu-id="4e596-127">Aus diesem Grund laden diese Methoden implizit den <xref:System.Data.Linq.EntitySet%601>, um die lokale Ausführung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="4e596-127">For this reason, such methods implicitly load the <xref:System.Data.Linq.EntitySet%601> to allow local execution.</span></span>  
   
-## Siehe auch  
- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="4e596-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4e596-128">See Also</span></span>  
+ [<span data-ttu-id="4e596-129">Abfragekonzepte</span><span class="sxs-lookup"><span data-stu-id="4e596-129">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

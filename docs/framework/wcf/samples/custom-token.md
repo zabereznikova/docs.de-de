@@ -1,39 +1,42 @@
 ---
-title: "Benutzerdefiniertes Token | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefiniertes Token
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19593e61cc640068ac7c90a6abbd6ea0d6a3ff08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefiniertes Token
-In diesem Beispiel wird die Aufnahme einer benutzerdefinierten Tokenimplementierung in eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Anwendung veranschaulicht.  Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben.  Das Token wird an den WS\-Sicherheits\-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt.  Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen.  In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann.  Der Dienst implementiert einen Vertrag, der ein Anforderungs\-Antwort\-Kommunikationsmuster definiert.  
+# <a name="custom-token"></a><span data-ttu-id="e33a1-102">Benutzerdefiniertes Token</span><span class="sxs-lookup"><span data-stu-id="e33a1-102">Custom Token</span></span>
+<span data-ttu-id="e33a1-103">In diesem Beispiel wird die Aufnahme einer benutzerdefinierten Tokenimplementierung in eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="e33a1-103">This sample demonstrates how to add a custom token implementation into a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="e33a1-104">Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-104">The example uses a `CreditCardToken` to securely pass information about client credit cards to the service.</span></span> <span data-ttu-id="e33a1-105">Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-105">The token is passed in the WS-Security message header and is signed and encrypted using the symmetric security binding element along with message body and other message headers.</span></span> <span data-ttu-id="e33a1-106">Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-106">This is useful in cases where the built-in tokens are not sufficient.</span></span> <span data-ttu-id="e33a1-107">In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e33a1-107">This sample demonstrates how to provide a custom security token to a service instead of using one of the built-in tokens.</span></span> <span data-ttu-id="e33a1-108">Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-108">The service implements a contract that defines a request-reply communication pattern.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="e33a1-109">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="e33a1-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:  
+ <span data-ttu-id="e33a1-110">Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:</span><span class="sxs-lookup"><span data-stu-id="e33a1-110">To summarize, this sample demonstrates the following:</span></span>  
   
--   Wie ein Client ein benutzerdefiniertes Sicherheitstoken an einen Dienst übergeben kann.  
+-   <span data-ttu-id="e33a1-111">Wie ein Client ein benutzerdefiniertes Sicherheitstoken an einen Dienst übergeben kann.</span><span class="sxs-lookup"><span data-stu-id="e33a1-111">How a client can pass a custom security token to a service.</span></span>  
   
--   Wie der Dienst ein benutzerdefiniertes Sicherheitstoken verwenden und überprüfen kann.  
+-   <span data-ttu-id="e33a1-112">Wie der Dienst ein benutzerdefiniertes Sicherheitstoken verwenden und überprüfen kann.</span><span class="sxs-lookup"><span data-stu-id="e33a1-112">How the service can consume and validate a custom security token.</span></span>  
   
--   Wie der  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstcode die Informationen zu empfangenen Sicherheitstoken \(einschließlich des benutzerdefinierten Sicherheitstokens\) abrufen kann.  
+-   <span data-ttu-id="e33a1-113">Wie der  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstcode die Informationen zu empfangenen Sicherheitstoken (einschließlich des benutzerdefinierten Sicherheitstokens) abrufen kann.</span><span class="sxs-lookup"><span data-stu-id="e33a1-113">How the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service code can obtain the information about received security tokens including the custom security token.</span></span>  
   
--   Wie das X.509\-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.  
+-   <span data-ttu-id="e33a1-114">Wie das X.509-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-114">How the server's X.509 certificate is used to protect the symmetric key used for message encryption and signature.</span></span>  
   
-## Sicherheitsauthentifizierung mithilfe eines benutzerdefinierten Sicherheitstokens  
- Der Dienst macht einen einzelnen Endpunkt verfügbar, der programmgesteuert mithilfe der `BindingHelper`\-Klasse und der `EchoServiceHost`\-Klasse erstellt wird.  Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.  Die Bindung wird mit einer benutzerdefinierten Bindung unter Verwendung von `SymmetricSecurityBindingElement` und `HttpTransportBindingElement` konfiguriert.  In diesem Beispiel wird `SymmetricSecurityBindingElement` so eingestellt, dass es ein X.509\-Zertifikat für den Dienst verwendet, um den symmetrischen Schlüssel während der Übertragung zu schützen und um in einem WS\-Sicherheits\-Nachrichtenkopf ein benutzerdefiniertes `CreditCardToken` als signiertes und verschlüsseltes Sicherheitstoken zu übergeben.  Das Verhalten legt die Dienstanmeldeinformationen fest, die zur Clientauthentifizierung verwendet werden sollen, sowie Informationen über das X.509\-Zertifikat des Diensts.  
+## <a name="client-authentication-using-a-custom-security-token"></a><span data-ttu-id="e33a1-115">Sicherheitsauthentifizierung mithilfe eines benutzerdefinierten Sicherheitstokens</span><span class="sxs-lookup"><span data-stu-id="e33a1-115">Client Authentication Using a Custom Security Token</span></span>  
+ <span data-ttu-id="e33a1-116">Der Dienst macht einen einzelnen Endpunkt verfügbar, der programmgesteuert mithilfe der `BindingHelper`-Klasse und der `EchoServiceHost`-Klasse erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="e33a1-116">The service exposes a single endpoint that is programmatically created using `BindingHelper` and `EchoServiceHost` classes.</span></span> <span data-ttu-id="e33a1-117">Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.</span><span class="sxs-lookup"><span data-stu-id="e33a1-117">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="e33a1-118">Die Bindung wird mit einer benutzerdefinierten Bindung unter Verwendung von `SymmetricSecurityBindingElement` und `HttpTransportBindingElement` konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-118">The binding is configured with a custom binding using `SymmetricSecurityBindingElement` and `HttpTransportBindingElement`.</span></span> <span data-ttu-id="e33a1-119">In diesem Beispiel wird `SymmetricSecurityBindingElement` so eingestellt, dass es ein X.509-Zertifikat für den Dienst verwendet, um den symmetrischen Schlüssel während der Übertragung zu schützen und um in einem WS-Sicherheits-Nachrichtenkopf ein benutzerdefiniertes `CreditCardToken` als signiertes und verschlüsseltes Sicherheitstoken zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-119">This sample sets the `SymmetricSecurityBindingElement` to use a service's X.509 certificate to protect the symmetric key during transmission and to pass a custom `CreditCardToken` in a WS-Security message header as a signed and encrypted security token.</span></span> <span data-ttu-id="e33a1-120">Das Verhalten legt die Dienstanmeldeinformationen fest, die zur Clientauthentifizierung verwendet werden sollen, sowie Informationen über das X.509-Zertifikat des Diensts.</span><span class="sxs-lookup"><span data-stu-id="e33a1-120">The behavior specifies the service credentials that are to be used for client authentication and also information about the service X.509 certificate.</span></span>  
   
 ```  
 public static class BindingHelper  
@@ -54,7 +57,7 @@ public static class BindingHelper
 }  
 ```  
   
- Um ein Kreditkartentoken in der Nachricht zu nutzen, werden im Beispiel benutzerdefinierte Dienstanmeldeinformationen verwendet, um diese Funktion anzugeben.  Die Dienstanmeldeinformationsklasse befindet sich in der Klasse `CreditCardServiceCredentials` und wird zu den Verhaltensauflistungen des Diensthosts in der `EchoServiceHost.InitializeRuntime`\-Methode hinzugefügt.  
+ <span data-ttu-id="e33a1-121">Um ein Kreditkartentoken in der Nachricht zu nutzen, werden im Beispiel benutzerdefinierte Dienstanmeldeinformationen verwendet, um diese Funktion anzugeben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-121">To consume a credit card token in the message, the sample uses custom service credentials to provide this functionality.</span></span> <span data-ttu-id="e33a1-122">Die Dienstanmeldeinformationsklasse befindet sich in der Klasse `CreditCardServiceCredentials` und wird zu den Verhaltensauflistungen des Diensthosts in der `EchoServiceHost.InitializeRuntime`-Methode hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-122">The service credentials class is located in the `CreditCardServiceCredentials` class and is added to the behaviors collections of the service host in the `EchoServiceHost.InitializeRuntime` method.</span></span>  
   
 ```  
 class EchoServiceHost : ServiceHost  
@@ -89,10 +92,9 @@ class EchoServiceHost : ServiceHost
         base.InitializeRuntime();  
     }  
 }  
-  
 ```  
   
- Der Clientendpunkt wird auf ähnliche Weise wie der Dienstendpunkt konfiguriert.  Der Client verwendet die gleiche `BindingHelper`\-Klasse, um eine Bindung zu erstellen.  Der Rest des Setups befindet sich in der `Client`\-Klasse.  Der Client legt außerdem Informationen, die im `CreditCardToken` enthalten sein sollen, sowie Informationen zum X.509\-Zertifikat des Diensts im Setupcode fest, indem eine `CreditCardClientCredentials`\-Instanz mit den entsprechenden Daten zur Auflistung der Clientendpunktverhaltensweisen hinzugefügt wird.  Im Beispiel wird das X.509\-Zertifikat mit dem Antragstellernamen `CN=localhost` als Dienstzertifikat verwendet.  
+ <span data-ttu-id="e33a1-123">Der Clientendpunkt wird auf ähnliche Weise wie der Dienstendpunkt konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-123">The client endpoint is configured in a similar manner as the service endpoint.</span></span> <span data-ttu-id="e33a1-124">Der Client verwendet die gleiche `BindingHelper`-Klasse, um eine Bindung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-124">The client uses the same `BindingHelper` class to create a binding.</span></span> <span data-ttu-id="e33a1-125">Der Rest des Setups befindet sich in der `Client`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="e33a1-125">The rest of the setup is located in the `Client` class.</span></span> <span data-ttu-id="e33a1-126">Der Client legt außerdem Informationen, die im `CreditCardToken` enthalten sein sollen, sowie Informationen zum X.509-Zertifikat des Diensts im Setupcode fest, indem eine `CreditCardClientCredentials`-Instanz mit den entsprechenden Daten zur Auflistung der Clientendpunktverhaltensweisen hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="e33a1-126">The client also sets information to be contained in the `CreditCardToken` and information about the service X.509 certificate in the setup code by adding a `CreditCardClientCredentials` instance with the proper data to the client endpoint behaviors collection.</span></span> <span data-ttu-id="e33a1-127">Im Beispiel wird das X.509-Zertifikat mit dem Antragstellernamen `CN=localhost` als Dienstzertifikat verwendet.</span><span class="sxs-lookup"><span data-stu-id="e33a1-127">The sample uses X.509 certificate with subject name set to `CN=localhost` as the service certificate.</span></span>  
   
 ```  
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();  
@@ -122,10 +124,10 @@ Console.WriteLine("Echo service returned: {0}", client.Echo());
 channelFactory.Close();  
 ```  
   
-## Implementierung des benutzerdefinierten Sicherheitstokens  
- Um in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein benutzerdefiniertes Sicherheitstoken zu aktivieren, erstellen Sie eine Objektdarstellung des benutzerdefinierten Sicherheitstokens.  Das Beispiel enthält diese Darstellung in der `CreditCardToken`\-Klasse.  Die Objektdarstellung dient zur Aufnahme aller relevanten Informationen zu Sicherheitstoken und zur Bereitstellung einer Liste der im Sicherheitstoken enthaltenen Sicherheitsschlüssel.  In diesem Fall enthält das Sicherheitstoken der Kreditkarte keinen Sicherheitsschlüssel.  
+## <a name="custom-security-token-implementation"></a><span data-ttu-id="e33a1-128">Implementierung des benutzerdefinierten Sicherheitstokens</span><span class="sxs-lookup"><span data-stu-id="e33a1-128">Custom Security Token Implementation</span></span>  
+ <span data-ttu-id="e33a1-129">Um in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein benutzerdefiniertes Sicherheitstoken zu aktivieren, erstellen Sie eine Objektdarstellung des benutzerdefinierten Sicherheitstokens.</span><span class="sxs-lookup"><span data-stu-id="e33a1-129">To enable a custom security token in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], create an object representation of the custom security token.</span></span> <span data-ttu-id="e33a1-130">Das Beispiel enthält diese Darstellung in der `CreditCardToken`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="e33a1-130">The sample has this representation in the `CreditCardToken` class.</span></span> <span data-ttu-id="e33a1-131">Die Objektdarstellung dient zur Aufnahme aller relevanten Informationen zu Sicherheitstoken und zur Bereitstellung einer Liste der im Sicherheitstoken enthaltenen Sicherheitsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="e33a1-131">The object representation is responsible for holding all relevant security token information and to provide a list of security keys contained in the security token.</span></span> <span data-ttu-id="e33a1-132">In diesem Fall enthält das Sicherheitstoken der Kreditkarte keinen Sicherheitsschlüssel.</span><span class="sxs-lookup"><span data-stu-id="e33a1-132">In this case, the credit card security token does not contain any security key.</span></span>  
   
- Im nächsten Abschnitt wird beschrieben, was geschehen muss, damit ein benutzerdefiniertes Token über die Verbindung übertragen und von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Endpunkt verwendet werden kann.  
+ <span data-ttu-id="e33a1-133">Im nächsten Abschnitt wird beschrieben, was geschehen muss, damit ein benutzerdefiniertes Token über die Verbindung übertragen und von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkt verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="e33a1-133">The next section describes what must be done to enable a custom token to be transmitted over the wire and consumed by a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint.</span></span>  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -160,15 +162,14 @@ class CreditCardToken : SecurityToken
     public override DateTime ValidTo { get { return this.cardInfo.ExpirationDate; } }  
     public override string Id { get { return this.id; } }  
 }  
-  
 ```  
   
-## Abrufen des benutzerdefinierte Kreditkartentokens aus der Nachricht und Einbinden des Tokens in die Nachricht  
- Sicherheitstoken\-Serialisierungsprogramme in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dienen zum Erstellen einer Objektdarstellung von Sicherheitstoken aus der XML in der Nachricht und zum Erstellen einer XML\-Form dieser Sicherheitstokens.  Außerdem sind sie für andere Funktionen zuständig, wie beispielsweise das Lesen und Schreiben von Schlüsselbezeichnern, die auf Sicherheitstoken verweisen. In diesem Beispiel werden jedoch nur die Funktionen behandelt, die sich auf Sicherheitstoken beziehen.  Um ein benutzerdefiniertes Token zu aktivieren, müssen Sie ein eigenes Sicherheitstoken\-Serialisierungsprogramm implementieren.  In diesem Beispiel wird zu diesem Zweck die `CreditCardSecurityTokenSerializer`\-Klasse verwendet.  
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a><span data-ttu-id="e33a1-134">Abrufen des benutzerdefinierte Kreditkartentokens aus der Nachricht und Einbinden des Tokens in die Nachricht</span><span class="sxs-lookup"><span data-stu-id="e33a1-134">Getting the Custom Credit Card Token to and from the Message</span></span>  
+ <span data-ttu-id="e33a1-135">Sicherheitstoken-Serialisierungsprogramme in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dienen zum Erstellen einer Objektdarstellung von Sicherheitstoken aus der XML in der Nachricht und zum Erstellen einer XML-Form dieser Sicherheitstokens.</span><span class="sxs-lookup"><span data-stu-id="e33a1-135">Security token serializers in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are responsible for creating an object representation of security tokens from the XML in the message and creating a XML form of the security tokens.</span></span> <span data-ttu-id="e33a1-136">Außerdem sind sie für andere Funktionen zuständig, wie beispielsweise das Lesen und Schreiben von Schlüsselbezeichnern, die auf Sicherheitstoken verweisen. In diesem Beispiel werden jedoch nur die Funktionen behandelt, die sich auf Sicherheitstoken beziehen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-136">They are also responsible for other functionality such as reading and writing key identifiers pointing to security tokens, but this example uses only security token-related functionality.</span></span> <span data-ttu-id="e33a1-137">Um ein benutzerdefiniertes Token zu aktivieren, müssen Sie ein eigenes Sicherheitstoken-Serialisierungsprogramm implementieren.</span><span class="sxs-lookup"><span data-stu-id="e33a1-137">To enable a custom token you must implement your own security token serializer.</span></span> <span data-ttu-id="e33a1-138">In diesem Beispiel wird zu diesem Zweck die `CreditCardSecurityTokenSerializer`-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="e33a1-138">This sample uses the `CreditCardSecurityTokenSerializer` class for this purpose.</span></span>  
   
- Im Dienst liest das benutzerdefinierte Serialisierungsprogramm die XML\-Form des benutzerdefinierten Tokens und erstellt daraus die Objektdarstellung des benutzerdefinierten Tokens.  
+ <span data-ttu-id="e33a1-139">Im Dienst liest das benutzerdefinierte Serialisierungsprogramm die XML-Form des benutzerdefinierten Tokens und erstellt daraus die Objektdarstellung des benutzerdefinierten Tokens.</span><span class="sxs-lookup"><span data-stu-id="e33a1-139">On the service, the custom serializer reads the XML form of the custom token and creates the custom token object representation from it.</span></span>  
   
- Auf dem Client schreibt die `CreditCardSecurityTokenSerializer`\-Klasse die in der Objektdarstellung des benutzerdefinierten Tokens enthaltenen Informationen in den XML\-Writer.  
+ <span data-ttu-id="e33a1-140">Auf dem Client schreibt die `CreditCardSecurityTokenSerializer`-Klasse die in der Objektdarstellung des benutzerdefinierten Tokens enthaltenen Informationen in den XML-Writer.</span><span class="sxs-lookup"><span data-stu-id="e33a1-140">On the client, the `CreditCardSecurityTokenSerializer` class writes the information contained in the security token object representation into the XML writer.</span></span>  
   
 ```  
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer  
@@ -251,20 +252,20 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }  
 ```  
   
-## So werden Tokenanbieter\- und Tokenauthentifiziererklassen erstellt  
- Client\- und Dienstanmeldeinformationen sind für die Bereitstellung der Instanz des Sicherheitstoken\-Managers zuständig.  Die Instanz des Sicherheitstoken\-Managers dient zum Abrufen von Tokenanbietern, Tokenauthentifizierern und Serialisierungsprogrammen für das Token.  
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a><span data-ttu-id="e33a1-141">So werden Tokenanbieter- und Tokenauthentifiziererklassen erstellt</span><span class="sxs-lookup"><span data-stu-id="e33a1-141">How Token Provider and Token Authenticator Classes are Created</span></span>  
+ <span data-ttu-id="e33a1-142">Client- und Dienstanmeldeinformationen sind für die Bereitstellung der Instanz des Sicherheitstoken-Managers zuständig.</span><span class="sxs-lookup"><span data-stu-id="e33a1-142">Client and service credentials are responsible for providing the security token manager instance.</span></span> <span data-ttu-id="e33a1-143">Die Instanz des Sicherheitstoken-Managers dient zum Abrufen von Tokenanbietern, Tokenauthentifizierern und Serialisierungsprogrammen für das Token.</span><span class="sxs-lookup"><span data-stu-id="e33a1-143">The security token manager instance is used to get token providers, token authenticators and token serializers.</span></span>  
   
- Der Tokenanbieter erstellt eine Objektdarstellung des Tokens basierend auf Daten in den Client\- oder Dienstanmeldeinformationen.  Anschließend wird die Objektdarstellung des Tokens mithilfe des Token\-Serialisierungsprogramms \(im vorigen Abschnitt erörtert\) in die Nachricht geschrieben.  
+ <span data-ttu-id="e33a1-144">Der Tokenanbieter erstellt eine Objektdarstellung des Tokens basierend auf Daten in den Client- oder Dienstanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-144">The token provider creates an object representation of the token based on the information contained in the client or service credentials.</span></span> <span data-ttu-id="e33a1-145">Anschließend wird die Objektdarstellung des Tokens mithilfe des Token-Serialisierungsprogramms (im vorigen Abschnitt erörtert) in die Nachricht geschrieben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-145">The token object representation is then written to the message using the token serializer (discussed in the previous section).</span></span>  
   
- Der Tokenauthentifizierer überprüft Token, die in der Nachricht ankommen.  Die Objektdarstellung der eingehenden Token wird vom Token\-Serialisierungsprogramm erstellt.  Diese Objektdarstellung wird dann zur Validierung an den Tokenauthentifizierer übergeben.  Nach der erfolgreichen Validierung des Tokens gibt der Tokenauthentifizierer eine Auflistung der `IAuthorizationPolicy`\-Objekte zurück, die die im Token enthaltenen Informationen darstellen.  Diese Informationen werden später während der Nachrichtenverarbeitung verwendet, um Autorisierungsentscheidungen durchzuführen und Ansprüche für die Anwendung bereitzustellen.  In diesem Beispiel verwendet der Tokenauthentifizierer für Kreditkarten `CreditCardTokenAuthorizationPolicy` für diesen Zweck.  
+ <span data-ttu-id="e33a1-146">Der Tokenauthentifizierer überprüft Token, die in der Nachricht ankommen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-146">The token authenticator validates tokens that arrive in the message.</span></span> <span data-ttu-id="e33a1-147">Die Objektdarstellung der eingehenden Token wird vom Token-Serialisierungsprogramm erstellt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-147">The incoming token object representation is created by the token serializer.</span></span> <span data-ttu-id="e33a1-148">Diese Objektdarstellung wird dann zur Validierung an den Tokenauthentifizierer übergeben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-148">This object representation is then passed to the token authenticator for validation.</span></span> <span data-ttu-id="e33a1-149">Nach der erfolgreichen Validierung des Tokens gibt der Tokenauthentifizierer eine Auflistung der `IAuthorizationPolicy`-Objekte zurück, die die im Token enthaltenen Informationen darstellen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-149">After the token is successfully validated, the token authenticator returns a collection of `IAuthorizationPolicy` objects that represent the information contained in the token.</span></span> <span data-ttu-id="e33a1-150">Diese Informationen werden später während der Nachrichtenverarbeitung verwendet, um Autorisierungsentscheidungen durchzuführen und Ansprüche für die Anwendung bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-150">This information is used later during the message processing to perform authorization decisions and to provide claims for the application.</span></span> <span data-ttu-id="e33a1-151">In diesem Beispiel verwendet der Tokenauthentifizierer für Kreditkarten `CreditCardTokenAuthorizationPolicy` für diesen Zweck.</span><span class="sxs-lookup"><span data-stu-id="e33a1-151">In this example, the credit card token authenticator uses `CreditCardTokenAuthorizationPolicy` for this purpose.</span></span>  
   
- Das Token\-Serialisierungsprogramm ist zuständig für das Abrufen der Objektdarstellung des Tokens von der Verbindung und zum Einbinden der Darstellung in die Verbindung.  Dies wird im vorherigen Abschnitt erläutert.  
+ <span data-ttu-id="e33a1-152">Das Token-Serialisierungsprogramm ist zuständig für das Abrufen der Objektdarstellung des Tokens von der Verbindung und zum Einbinden der Darstellung in die Verbindung.</span><span class="sxs-lookup"><span data-stu-id="e33a1-152">The token serializer is responsible for getting the object representation of the token to and from the wire.</span></span> <span data-ttu-id="e33a1-153">Dies wird im vorherigen Abschnitt erläutert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-153">This is discussed in the previous section.</span></span>  
   
- In diesem Beispiel wird ein Tokenanbieter nur für den Client und ein Tokenauthentifizierer nur für den Dienst verwendet, da ein Kreditkartentoken nur in der Richtung vom Client zum Dienst übertragen werden soll.  
+ <span data-ttu-id="e33a1-154">In diesem Beispiel wird ein Tokenanbieter nur für den Client und ein Tokenauthentifizierer nur für den Dienst verwendet, da ein Kreditkartentoken nur in der Richtung vom Client zum Dienst übertragen werden soll.</span><span class="sxs-lookup"><span data-stu-id="e33a1-154">In this sample, we use a token provider only on the client and a token authenticator only on the service, because we want to transmit a credit card token only in the client-to-service direction.</span></span>  
   
- Die Funktionalität auf dem Client befindet sich in den Klassen `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` und `CreditCardTokenProvider`.  
+ <span data-ttu-id="e33a1-155">Die Funktionalität auf dem Client befindet sich in den Klassen `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` und `CreditCardTokenProvider`.</span><span class="sxs-lookup"><span data-stu-id="e33a1-155">The functionality on the client is located in the `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` and `CreditCardTokenProvider` classes.</span></span>  
   
- Beim Dienst befindet sich die Funktionalität in den Klassen `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` und `CreditCardTokenAuthorizationPolicy`.  
+ <span data-ttu-id="e33a1-156">Beim Dienst befindet sich die Funktionalität in den Klassen `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` und `CreditCardTokenAuthorizationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="e33a1-156">On the service, the functionality resides in the `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` and `CreditCardTokenAuthorizationPolicy` classes.</span></span>  
   
 ```  
     public class CreditCardClientCredentials : ClientCredentials  
@@ -506,11 +507,10 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
             return true;  
         }  
     }  
-  
 ```  
   
-## Anzeigen der Aufruferinformationen  
- Um die Informationen zu den Aufrufern anzuzeigen, können Sie `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` verwenden, wie im folgenden Beispielcode gezeigt.  `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` enthält dem aktuellen Aufrufer zugeordnete Autorisierungsansprüche.  Die Ansprüche werden von der `CreditCardToken`\-Klasse in der `AuthorizationPolicies`\-Auflistung angegeben.  
+## <a name="displaying-the-callers-information"></a><span data-ttu-id="e33a1-157">Anzeigen der Aufruferinformationen</span><span class="sxs-lookup"><span data-stu-id="e33a1-157">Displaying the Callers' Information</span></span>  
+ <span data-ttu-id="e33a1-158">Um die Informationen zu den Aufrufern anzuzeigen, können Sie `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` verwenden, wie im folgenden Beispielcode gezeigt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-158">To display the caller's information, use the `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` as shown in the following sample code.</span></span> <span data-ttu-id="e33a1-159">`ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` enthält dem aktuellen Aufrufer zugeordnete Autorisierungsansprüche.</span><span class="sxs-lookup"><span data-stu-id="e33a1-159">The `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contains authorization claims associated with the current caller.</span></span> <span data-ttu-id="e33a1-160">Die Ansprüche werden von der `CreditCardToken`-Klasse in der `AuthorizationPolicies`-Auflistung angegeben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-160">The claims are supplied by the `CreditCardToken` class in its `AuthorizationPolicies` collection.</span></span>  
   
 ```  
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)  
@@ -551,21 +551,20 @@ string GetCallerCreditCardNumber()
 }  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.  Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="e33a1-161">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-161">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="e33a1-162">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-162">Press ENTER in the client window to shut down the client.</span></span>  
   
-## Setupbatchdatei  
- Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer IIS\-gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.  Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
+## <a name="setup-batch-file"></a><span data-ttu-id="e33a1-163">Setupbatchdatei</span><span class="sxs-lookup"><span data-stu-id="e33a1-163">Setup Batch File</span></span>  
+ <span data-ttu-id="e33a1-164">Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer IIS-gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-164">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run the IIS-hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="e33a1-165">Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="e33a1-165">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.  
+ <span data-ttu-id="e33a1-166">Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e33a1-166">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration.</span></span>  
   
--   Erstellen des Serverzertifikats  
+-   <span data-ttu-id="e33a1-167">Erstellen des Serverzertifikats</span><span class="sxs-lookup"><span data-stu-id="e33a1-167">Creating the server certificate:</span></span>  
   
-     Mit den folgenden Zeilen aus der Batchdatei `Setup.bat` wird das zu verwendende Serverzertifikat erstellt.  Die Variable `%SERVER_NAME%`  gibt den Servernamen an.  Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an.  Standardmäßig lautet die Variable in dieser Batchdatei localhost.  Wenn Sie die Variable `%SERVER_NAME%` ändern, müssen Sie die Dateien Client.cs und Service.cs durchgehen und alle Vorkommnisse von localhost durch den Servernamen ersetzen, den Sie im Setup.bat\-Skript verwenden.  
+     <span data-ttu-id="e33a1-168">Mit den folgenden Zeilen aus der Batchdatei `Setup.bat` wird das zu verwendende Serverzertifikat erstellt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-168">The following lines from the `Setup.bat` batch file create the server certificate to be used.</span></span> <span data-ttu-id="e33a1-169">Die Variable `%SERVER_NAME%` gibt den Servernamen an.</span><span class="sxs-lookup"><span data-stu-id="e33a1-169">The `%SERVER_NAME%` variable specifies the server name.</span></span> <span data-ttu-id="e33a1-170">Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an.</span><span class="sxs-lookup"><span data-stu-id="e33a1-170">Change this variable to specify your own server name.</span></span> <span data-ttu-id="e33a1-171">Standardmäßig lautet die Variable in dieser Batchdatei localhost.</span><span class="sxs-lookup"><span data-stu-id="e33a1-171">The default in this batch file is localhost.</span></span> <span data-ttu-id="e33a1-172">Wenn Sie die Variable `%SERVER_NAME%` ändern, müssen Sie die Dateien Client.cs und Service.cs durchgehen und alle Vorkommnisse von localhost durch den Servernamen ersetzen, den Sie im Setup.bat-Skript verwenden.</span><span class="sxs-lookup"><span data-stu-id="e33a1-172">If you change the `%SERVER_NAME%` variable, you must go through the Client.cs and Service.cs files and replace all instances of localhost with the server name that you use in the Setup.bat script.</span></span>  
   
-     Das Zertifikat wird im persönlichen Speicher unter dem Speicherort `LocalMachine` gespeichert.  Das Zertifikat wird für die IIS\-gehosteten Dienste im LocalMachine\-Speicher gespeichert.  Für selbst gehostete Dienste sollten Sie die Batchdatei so ändern, dass das Clientzertifikat im Speicherort CurrentUser gespeichert wird. Ersetzen Sie hierzu die Zeichenfolge LocalMachine durch CurrentUser.  
+     <span data-ttu-id="e33a1-173">Das Zertifikat wird im persönlichen Speicher unter dem Speicherort `LocalMachine` gespeichert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-173">The certificate is stored in My (Personal) store under the `LocalMachine` store location.</span></span> <span data-ttu-id="e33a1-174">Das Zertifikat wird für die IIS-gehosteten Dienste im LocalMachine-Speicher gespeichert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-174">The certificate is stored in the LocalMachine store for the IIS-hosted services.</span></span> <span data-ttu-id="e33a1-175">Für selbst gehostete Dienste sollten Sie die Batchdatei so ändern, dass das Clientzertifikat im Speicherort CurrentUser gespeichert wird. Ersetzen Sie hierzu die Zeichenfolge LocalMachine durch CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e33a1-175">For self-hosted services, you should modify the batch file to store the client certificate in the CurrentUser store location by replacing the string LocalMachine with CurrentUser.</span></span>  
   
     ```  
-  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -573,23 +572,20 @@ string GetCallerCreditCardNumber()
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:  
+-   <span data-ttu-id="e33a1-176">Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:</span><span class="sxs-lookup"><span data-stu-id="e33a1-176">Installing the server certificate into client's trusted certificate store:</span></span>  
   
-     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.  Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.  Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
+     <span data-ttu-id="e33a1-177">Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.</span><span class="sxs-lookup"><span data-stu-id="e33a1-177">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="e33a1-178">Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.</span><span class="sxs-lookup"><span data-stu-id="e33a1-178">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="e33a1-179">Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="e33a1-179">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
-  
     echo ************  
     echo copying server cert to client's TrustedPeople store  
     echo ************  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
--   Um den Zugriff vom IIS\-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS\-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden.  Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.  
+-   <span data-ttu-id="e33a1-180">Um den Zugriff vom IIS-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden.</span><span class="sxs-lookup"><span data-stu-id="e33a1-180">To enable access to the certificate private key from the IIS-hosted service, the user account under which the IIS-hosted process is running must be granted appropriate permissions for the private key.</span></span> <span data-ttu-id="e33a1-181">Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.</span><span class="sxs-lookup"><span data-stu-id="e33a1-181">This is accomplished by last steps in the Setup.bat script.</span></span>  
   
     ```  
     echo ************  
@@ -603,49 +599,49 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung ausgeführt zu werden.  Die innerhalb der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung festgelegte PATH\-Umgebungsvariable zeigt auf das Verzeichnis mit den ausführbaren Dateien, die für das Skript Setup.bat erforderlich sind.  
+>  <span data-ttu-id="e33a1-182">Die Batchdatei Setup.bat ist darauf ausgelegt, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung ausgeführt zu werden.</span><span class="sxs-lookup"><span data-stu-id="e33a1-182">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="e33a1-183">Die innerhalb der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung festgelegte PATH-Umgebungsvariable zeigt auf das Verzeichnis mit den ausführbaren Dateien, die für das Skript Setup.bat erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="e33a1-183">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-#### So richten Sie das Beispiel ein und erstellen es  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="e33a1-184">So richten Sie das Beispiel ein und erstellen es</span><span class="sxs-lookup"><span data-stu-id="e33a1-184">To set up and build the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="e33a1-185">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e33a1-185">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Projektmappe zu erstellen.  
+2.  <span data-ttu-id="e33a1-186">Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e33a1-186">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### So führen Sie das Beispiel auf demselben Computer aus  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="e33a1-187">So führen Sie das Beispiel auf demselben Computer aus</span><span class="sxs-lookup"><span data-stu-id="e33a1-187">To run the sample on the same computer</span></span>  
   
-1.  Öffnen Sie eine [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem Beispielinstallationsordner aus.  Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.  
+1.  <span data-ttu-id="e33a1-188">Öffnen Sie eine [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem Beispielinstallationsordner aus.</span><span class="sxs-lookup"><span data-stu-id="e33a1-188">Open a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="e33a1-189">Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.</span><span class="sxs-lookup"><span data-stu-id="e33a1-189">This installs all the certificates required for running the sample.Make sure that the path includes the folder where Makecert.exe is located.</span></span>  
   
 > [!NOTE]
->  Entfernen Sie nach Abschluss des Beispiels unbedingt die Zertifikate, indem Sie Cleanup.bat ausführen.  In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
+>  <span data-ttu-id="e33a1-190">Entfernen Sie nach Abschluss des Beispiels unbedingt die Zertifikate, indem Sie Cleanup.bat ausführen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-190">Be sure to remove the certificates by running Cleanup.bat when finished with the sample.</span></span> <span data-ttu-id="e33a1-191">In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.</span><span class="sxs-lookup"><span data-stu-id="e33a1-191">Other security samples use the same certificates.</span></span>  
   
-1.  Starten Sie Client.exe im Verzeichnis \\client\\bin.  In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+1.  <span data-ttu-id="e33a1-192">Starten Sie Client.exe im Verzeichnis \client\bin.</span><span class="sxs-lookup"><span data-stu-id="e33a1-192">Launch Client.exe from client\bin directory.</span></span> <span data-ttu-id="e33a1-193">In der Clientkonsolenanwendung wird Clientaktivität angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-193">Client activity is displayed on the client console application.</span></span>  
   
-2.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  <span data-ttu-id="e33a1-194">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="e33a1-194">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### So führen Sie das Beispiel computerübergreifend aus  
+#### <a name="to-run-the-sample-across-computer"></a><span data-ttu-id="e33a1-195">So führen Sie das Beispiel computerübergreifend aus</span><span class="sxs-lookup"><span data-stu-id="e33a1-195">To run the sample across computer</span></span>  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
+1.  <span data-ttu-id="e33a1-196">Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.</span><span class="sxs-lookup"><span data-stu-id="e33a1-196">Create a directory on the service computer for the service binaries.</span></span>  
   
-2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer.  Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen.  Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2.  <span data-ttu-id="e33a1-197">Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="e33a1-197">Copy the service program files into the service directory on the service computer.</span></span> <span data-ttu-id="e33a1-198">Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen.</span><span class="sxs-lookup"><span data-stu-id="e33a1-198">Do not forget to copy CreditCardFile.txt; otherwise the credit card authenticator cannot validate credit card information sent from the client.</span></span> <span data-ttu-id="e33a1-199">Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="e33a1-199">Also copy the Setup.bat and Cleanup.bat files to the service computer.</span></span>  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält.  Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird.  Beachten Sie, dass die Datei Setup.bat an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten ausgeführt werden muss.  
+3.  <span data-ttu-id="e33a1-200">Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält.</span><span class="sxs-lookup"><span data-stu-id="e33a1-200">You must have a server certificate with the subject name that contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="e33a1-201">Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="e33a1-201">You can create one using the Setup.bat if you change the `%SERVER_NAME%` variable to fully-qualified name of the computer where the service is hosted.</span></span> <span data-ttu-id="e33a1-202">Beachten Sie, dass die Datei Setup.bat an einer Visual Studio-Eingabeaufforderung mit Administratorrechten ausgeführt werden muss.</span><span class="sxs-lookup"><span data-stu-id="e33a1-202">Note that the Setup.bat file must be run in a Visual Studio command prompt opened with administrator privileges.</span></span>  
   
-4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser\-TrustedPeople auf dem Client.  Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
+4.  <span data-ttu-id="e33a1-203">Kopieren Sie das Serverzertifikat in den Speicher CurrentUser-TrustedPeople auf dem Client.</span><span class="sxs-lookup"><span data-stu-id="e33a1-203">Copy the server certificate into the CurrentUser-TrustedPeople store on the client.</span></span> <span data-ttu-id="e33a1-204">Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="e33a1-204">You must do this only if the server certificate is not issued by a trusted issuer.</span></span>  
   
-5.  Ändern Sie in der Datei EchoServiceHost.cs den Wert des Zertifikatsantragstellers, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
+5.  <span data-ttu-id="e33a1-205">Ändern Sie in der Datei EchoServiceHost.cs den Wert des Zertifikatsantragstellers, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.</span><span class="sxs-lookup"><span data-stu-id="e33a1-205">In the EchoServiceHost.cs file, change the value of the certificate subject name to specify a fully-qualified computer name instead of localhost.</span></span>  
   
-6.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \\client\\bin\\ \(unterhalb des sprachspezifischen Ordners\) auf den Clientcomputer.  
+6.  <span data-ttu-id="e33a1-206">Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="e33a1-206">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-7.  Ändern Sie in der Datei Client.cs den Adresswert des Endpunkts, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.  
+7.  <span data-ttu-id="e33a1-207">Ändern Sie in der Datei Client.cs den Adresswert des Endpunkts, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="e33a1-207">In the Client.cs file, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-8.  Ändern Sie in der Datei Client.cs den Antragstellernamen des X.509\-Dienstzertifikats, und geben Sie anstelle von localhost den vollqualifizierten Computernamen des Remotehosts an.  
+8.  <span data-ttu-id="e33a1-208">Ändern Sie in der Datei Client.cs den Antragstellernamen des X.509-Dienstzertifikats, und geben Sie anstelle von localhost den vollqualifizierten Computernamen des Remotehosts an.</span><span class="sxs-lookup"><span data-stu-id="e33a1-208">In the Client.cs file change the subject name of the service X.509 certificate to match the fully-qualified computer name of the remote host instead of localhost.</span></span>  
   
-9. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.  
+9. <span data-ttu-id="e33a1-209">Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.</span><span class="sxs-lookup"><span data-stu-id="e33a1-209">On the client computer, launch Client.exe from a command prompt window.</span></span>  
   
-10. Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. <span data-ttu-id="e33a1-210">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="e33a1-210">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="e33a1-211">So stellen Sie den Zustand vor Ausführung des Beispiels wieder her</span><span class="sxs-lookup"><span data-stu-id="e33a1-211">To clean up after the sample</span></span>  
   
-1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
+1.  <span data-ttu-id="e33a1-212">Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.</span><span class="sxs-lookup"><span data-stu-id="e33a1-212">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="e33a1-213">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e33a1-213">See Also</span></span>

@@ -1,43 +1,48 @@
 ---
-title: "Gewusst wie: Deaktivieren von Registerkarten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Registerkarten, Ausblenden in Formularen"
-  - "TabControl-Steuerelement [Windows Forms], Deaktivieren von Seiten"
+title: 'Gewusst wie: Deaktivieren von Registerkarten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tab pages [Windows Forms], hiding in forms
+- TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Deaktivieren von Registerkarten
-Unter Umständen möchten Sie den Zugriff auf Daten beschränken, die innerhalb der Windows Forms\-Anwendung verfügbar sind.  Wenn beispielsweise Daten in den Registerkarten von einem Registersteuerelement angezeigt werden, können Sie Administratoren den Zugriff auf Informationen einer Registerkarte ermöglichen, während Gäste oder Benutzer mit eingeschränkten Rechten keinen Zugriff darauf haben.  
+# <a name="how-to-disable-tab-pages"></a><span data-ttu-id="fba0c-102">Gewusst wie: Deaktivieren von Registerkarten</span><span class="sxs-lookup"><span data-stu-id="fba0c-102">How to: Disable Tab Pages</span></span>
+<span data-ttu-id="fba0c-103">Unter Umständen möchten Sie den Zugriff auf Daten beschränken, die innerhalb der Windows Forms-Anwendung verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="fba0c-103">On some occasions, you will want to restrict access to data that is available within your Windows Forms application.</span></span> <span data-ttu-id="fba0c-104">Dazu zählt beispielsweise der möglicherweise auf, wenn Sie in den Registerkarten des Registerkarten-Steuerelement angezeigte Daten haben; Administratoren möglicherweise Informationen über eine Registerkarte, die Sie vom Gastbetriebssystem oder technisch anspruchsvolle Benutzer einschränken möchten, würden.</span><span class="sxs-lookup"><span data-stu-id="fba0c-104">One example of this might be when you have data displayed in the tab pages of a tab control; administrators could have information on a tab page that you would want to restrict from guest or lower-level users.</span></span>  
   
-### So deaktivieren Sie Registerkarten programmgesteuert  
+### <a name="to-disable-tab-pages-programmatically"></a><span data-ttu-id="fba0c-105">So deaktivieren Sie Registerkarten programmgesteuert</span><span class="sxs-lookup"><span data-stu-id="fba0c-105">To disable tab pages programmatically</span></span>  
   
-1.  Schreiben Sie Code, um das <xref:System.Windows.Forms.TabControl.SelectedIndexChanged>\-Ereignis des Tab\-Steuerelements zu behandeln.  Dieses Ereignis wird ausgelöst, wenn der Benutzer von einer Registerkarte zur nächsten wechselt.  
+1.  <span data-ttu-id="fba0c-106">Schreiben von Code zum Behandeln des Registersteuerelements <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="fba0c-106">Write code to handle the tab control's <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> event.</span></span> <span data-ttu-id="fba0c-107">Dies ist das Ereignis, das ausgelöst wird, wenn der Benutzer von einer Registerkarte zur nächsten wechselt.</span><span class="sxs-lookup"><span data-stu-id="fba0c-107">This is the event that is raised when the user switches from one tab to the next.</span></span>  
   
-2.  Überprüfen Sie die Anmeldeinformationen.  Entsprechend den angegebenen Informationen können Sie den Benutzernamen, unter dem sich der Benutzer angemeldet hat, bzw. andere Anmeldeinformationen überprüfen, bevor Sie dem Benutzer das Anzeigen der Registerkarte gestatten.  
+2.  <span data-ttu-id="fba0c-108">Überprüfen Sie die Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="fba0c-108">Check credentials.</span></span> <span data-ttu-id="fba0c-109">Abhängig von den angezeigten Informationen, sollten Sie den Benutzernamen an, dem der Benutzer angemeldet hat, oder eine andere Art von Anmeldeinformationen überprüfen, bevor der Benutzer auf die Registerkarte "anzeigen.</span><span class="sxs-lookup"><span data-stu-id="fba0c-109">Depending upon the information presented, you may want to check the user name the user has logged in with or some other form of credentials before allowing the user to view the tab.</span></span>  
   
-3.  Wenn der Benutzer über die entsprechenden Anmeldeinformationen verfügt, zeigen Sie die Registerkarte an, auf die geklickt wurde.  Wenn der Benutzer nicht über die erforderlichen Anmeldeinformationen verfügt, zeigen Sie ein Meldungsfeld oder eine andere Benutzeroberfläche an, um darauf hinzuweisen, dass die erforderlichen Zugriffsrechte nicht vorhanden sind. Kehren Sie anschließend zur ersten Registerkarte zurück.  
+3.  <span data-ttu-id="fba0c-110">Wenn der Benutzer die entsprechende Anmeldeinformationen verfügt, zeigen Sie die Registerkarte, auf die geklickt wurde.</span><span class="sxs-lookup"><span data-stu-id="fba0c-110">If the user has appropriate credentials, display the tab that was clicked.</span></span> <span data-ttu-id="fba0c-111">Wenn der Benutzer nicht über die entsprechende Anmeldeinformationen verfügt, ein Meldungsfeld anzeigen oder eine andere Benutzeroberfläche zeigt an, dass sie keine Zugriffsrechte, und auf der ersten Registerkarte zurück.</span><span class="sxs-lookup"><span data-stu-id="fba0c-111">If the user does not have appropriate credentials, display a message box or some other user interface indicating that they do not have access, and return to the initial tab.</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie diese Funktionalität in Produktionsanwendungen implementieren, können Sie die Überprüfung der Anmeldeinformationen während des <xref:System.Windows.Forms.Form.Load>\-Ereignisses des Formulars durchführen.  Dies ermöglicht es Ihnen, die Registerkarte vor dem Anzeigen einer beliebigen Benutzeroberfläche auszublenden und damit eine äußerst saubere Programmierung durchzuführen.  Die im Folgenden verwendete Methodik \(Überprüfen von Anmeldeinformationen und Deaktivieren der Registerkarte während des <xref:System.Windows.Forms.TabControl.SelectedIndexChanged>\-Ereignisses\) dient zur Veranschaulichung.  
+    >  <span data-ttu-id="fba0c-112">Wenn Sie diese Funktionalität in Ihre Produktionsanwendungen zu implementieren, können Sie diese Überprüfung von Anmeldeinformationen ausführen, während des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="fba0c-112">When you implement this functionality in your production applications, you can perform this credential check during the form's <xref:System.Windows.Forms.Form.Load> event.</span></span> <span data-ttu-id="fba0c-113">Dadurch können Sie auf die Registerkarte "ausblenden, bevor der Benutzeroberfläche angezeigt wird, ist eine äußerst saubere Programmierung.</span><span class="sxs-lookup"><span data-stu-id="fba0c-113">This will allow you to hide the tab before any user interface is shown, which is a much cleaner approach to programming.</span></span> <span data-ttu-id="fba0c-114">Die Methodik unten (Überprüfen von Anmeldeinformationen und Deaktivieren der Registerkarte während der <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> Ereignis) Dient zur Veranschaulichung.</span><span class="sxs-lookup"><span data-stu-id="fba0c-114">The methodology used below (checking credentials and disabling the tab during the <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> event) is for illustrative purposes.</span></span>  
   
-4.  Wenn es sich um mehr als zwei Registerkarten handelt, zeigen Sie optional eine von der ursprünglichen Registerkarte abweichende Registerkarte an.  
+4.  <span data-ttu-id="fba0c-115">Optional, wenn Sie über mehr als zwei Registerkarten verfügen, eine Registerkarte, die sich von der ursprünglichen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="fba0c-115">Optionally, if you have more than two tab pages, display a tab page different from the original.</span></span>  
   
-     Im folgenden Beispiel wird anstelle der Überprüfung der Anmeldeinformationen ein <xref:System.Windows.Forms.CheckBox>\-Steuerelement verwendet, da die Kriterien für den Zugriff auf die Registerkarte je nach Anwendung variieren.  Wenn die Überprüfung der Anmeldeinformationen bei Auslösung des <xref:System.Windows.Forms.TabControl.SelectedIndexChanged>\-Ereignisses true zurückgibt \(d. h., das Kontrollkästchen aktiviert ist\) und die ausgewählte Registerkarte `TabPage2` ist \(in diesem Beispiel die Registerkarte mit den vertraulichen Informationen\), wird `TabPage2` angezeigt.  Andernfalls wird `TabPage3` angezeigt. Die Benutzer sehen ein Meldungsfeld, das darauf hinweist, dass sie nicht über die erforderlichen Zugriffsrechte verfügen.  Im folgenden Code wird ein Formular mit einem <xref:System.Windows.Forms.CheckBox>\-Steuerelement \(`CredentialCheck`\) und einem <xref:System.Windows.Forms.TabControl>\-Steuerelement mit drei Registerkarten vorausgesetzt.  
+     <span data-ttu-id="fba0c-116">Im folgenden Beispiel wird eine <xref:System.Windows.Forms.CheckBox> -Steuerelement wird anstelle der Überprüfung von Anmeldeinformationen für das Konto als Kriterium für den Zugriff auf die Registerkarte je nach Anwendung variieren.</span><span class="sxs-lookup"><span data-stu-id="fba0c-116">In the example below, a <xref:System.Windows.Forms.CheckBox> control is used in lieu of checking the credentials, as the criteria for access to the tab will vary by application.</span></span> <span data-ttu-id="fba0c-117">Wenn die <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> Ereignis wird ausgelöst, wenn die Überprüfung der Anmeldeinformationen auf "true" festgelegt ist (d. h. Sie dieses Kontrollkästchen aktiviert ist) und die ausgewählte Registerkarte `TabPage2` (die Registerkarte mit den vertraulichen Informationen in diesem Beispiel), klicken Sie dann `TabPage2` wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="fba0c-117">When the <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> event is raised, if the credential check is true (that is, the check box is checked) and the selected tab is `TabPage2` (the tab with the confidential information, in this example), then `TabPage2` is displayed.</span></span> <span data-ttu-id="fba0c-118">Andernfalls `TabPage3` wird angezeigt, und ein Meldungsfeld wird angezeigt, für den Benutzer, der angibt, sie verfügte nicht über ausreichende Zugriffsrechte.</span><span class="sxs-lookup"><span data-stu-id="fba0c-118">Otherwise, `TabPage3` is displayed and a message box is shown to the user, indicating they did not have appropriate access privileges.</span></span> <span data-ttu-id="fba0c-119">Im folgenden Code wird ein Formular mit einem <xref:System.Windows.Forms.CheckBox> Steuerelement (`CredentialCheck`) und ein <xref:System.Windows.Forms.TabControl> -Steuerelement mit drei Registerkarten.</span><span class="sxs-lookup"><span data-stu-id="fba0c-119">The code below assumes a form with a <xref:System.Windows.Forms.CheckBox> control (`CredentialCheck`) and a <xref:System.Windows.Forms.TabControl> control with three tab pages.</span></span>  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -53,7 +58,6 @@ Unter Umständen möchten Sie den Zugriff auf Daten beschränken, die innerhalb 
           TabControl1.SelectedTab = TabPage3  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -71,7 +75,6 @@ Unter Umständen möchten Sie den Zugriff auf Daten beschränken, die innerhalb 
             tabControl1.SelectedTab = tabPage3;  
         }  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,12 +99,11 @@ Unter Umständen möchten Sie den Zugriff auf Daten beschränken, die innerhalb 
        }  
     ```  
   
-     \(Visual C\#, Visual C\+\+\) Fügen Sie den folgenden Code im Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
+     <span data-ttu-id="fba0c-120">(Visual c#, Visual C++) Fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="fba0c-120">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.tabControl1.SelectedIndexChanged +=   
        new System.EventHandler(this.tabControl1_SelectedIndexChanged);  
-  
     ```  
   
     ```cpp  
@@ -109,8 +111,8 @@ Unter Umständen möchten Sie den Zugriff auf Daten beschränken, die innerhalb 
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## Siehe auch  
- [Übersicht über das TabControl\-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [Gewusst wie: Hinzufügen eines Steuerelements zu einer Registerkarte](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [Gewusst wie: Hinzufügen und Entfernen von Registerkarten mit dem TabControl\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)   
- [Gewusst wie: Ändern der Darstellung der TabControl\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="fba0c-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fba0c-121">See Also</span></span>  
+ [<span data-ttu-id="fba0c-122">Übersicht über das TabControl-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="fba0c-122">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="fba0c-123">Gewusst wie: Hinzufügen eines Steuerelements zu einer Registerkarte</span><span class="sxs-lookup"><span data-stu-id="fba0c-123">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="fba0c-124">Gewusst wie: Hinzufügen und Entfernen von Registerkarten mit dem TabControl-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fba0c-124">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [<span data-ttu-id="fba0c-125">Gewusst wie: Ändern der Darstellung der TabControl-Komponente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fba0c-125">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

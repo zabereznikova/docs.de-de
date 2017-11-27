@@ -1,41 +1,47 @@
 ---
-title: "Gewusst wie: Animieren der Gr&#246;&#223;e eines ArcSegment | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, ArcSegment-Größe"
-  - "ArcSegment, Animieren der Größe"
-  - "Grafiken [WPF], Animation"
+title: "Gewusst wie: Animieren der Größe eines ArcSegment"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], animation
+- animation [WPF], ArcSegment size
+- ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f71f910dca651b66d02971d05fb83a8d7bbc5f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Animieren der Gr&#246;&#223;e eines ArcSegment
-In diesem Beispiel wird das Animieren der <xref:System.Windows.Media.ArcSegment.Size%2A>\-Eigenschaft eines <xref:System.Windows.Media.ArcSegment> dargestellt.  
+# <a name="how-to-animate-the-size-of-an-arcsegment"></a><span data-ttu-id="e7d68-102">Gewusst wie: Animieren der Größe eines ArcSegment</span><span class="sxs-lookup"><span data-stu-id="e7d68-102">How to: Animate the Size of an ArcSegment</span></span>
+<span data-ttu-id="e7d68-103">In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.ArcSegment.Size%2A> Eigenschaft ein <xref:System.Windows.Media.ArcSegment>.</span><span class="sxs-lookup"><span data-stu-id="e7d68-103">This example shows how to animate the <xref:System.Windows.Media.ArcSegment.Size%2A> property of an <xref:System.Windows.Media.ArcSegment>.</span></span>  
   
-## Beispiel  
- In folgendem Beispiel wird ein <xref:System.Windows.Media.ArcSegment> erstellt, dessen <xref:System.Windows.Media.ArcSegment.Size%2A> animiert wird, wenn es auf den Bildschirm geladen wird.  
+## <a name="example"></a><span data-ttu-id="e7d68-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e7d68-104">Example</span></span>  
+ <span data-ttu-id="e7d68-105">Das folgende Beispiel erstellt eine <xref:System.Windows.Media.ArcSegment> , die eine Animation seine <xref:System.Windows.Media.ArcSegment.Size%2A> Wenn dieses geladen wird auf dem Bildschirm.</span><span class="sxs-lookup"><span data-stu-id="e7d68-105">The following example creates an <xref:System.Windows.Media.ArcSegment> that animates its <xref:System.Windows.Media.ArcSegment.Size%2A> when it loads on the screen.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- Weitere Geometrie\- und Animationsbeispiele finden Sie unter [Beispiele zu Geometrie](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ <span data-ttu-id="e7d68-106">Zusätzliche Geometrie und Animationsbeispiele finden Sie in der [Geometrien Beispiel](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="e7d68-106">For additional geometry and animation samples, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Media.ArcSegment.Size%2A>   
- <xref:System.Windows.Media.ArcSegment>   
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)   
- [Animation and Timing](http://msdn.microsoft.com/de-de/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="e7d68-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7d68-107">See Also</span></span>  
+ <xref:System.Windows.Media.ArcSegment.Size%2A>  
+ <xref:System.Windows.Media.ArcSegment>  
+ [<span data-ttu-id="e7d68-108">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="e7d68-108">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="e7d68-109">Übersicht über Geometrien</span><span class="sxs-lookup"><span data-stu-id="e7d68-109">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="e7d68-110">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="e7d68-110">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [<span data-ttu-id="e7d68-111">Animation und zeitlichen Steuerung</span><span class="sxs-lookup"><span data-stu-id="e7d68-111">Animation and Timing</span></span>](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="e7d68-112">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="e7d68-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

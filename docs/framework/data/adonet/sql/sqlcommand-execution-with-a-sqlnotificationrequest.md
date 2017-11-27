@@ -1,38 +1,44 @@
 ---
-title: "&#39;SqlCommand&#39;-Ausf&#252;hrung mit einer &#39;SqlNotificationRequest&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SqlCommand-Ausführung mit \"SqlNotificationRequest\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fdd76820ee0758492fab1364c7561920c549a412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;SqlCommand&#39;-Ausf&#252;hrung mit einer &#39;SqlNotificationRequest&#39;
-Ein <xref:System.Data.SqlClient.SqlCommand>\-Objekt kann so konfiguriert werden, dass eine Benachrichtigung generiert wird, sobald zuvor vom Server abgerufene Daten geändert werden, wodurch die Ergebnisse einer erneuten Ausführung der Abfrage anders aussehen würden.  Eine solche Konfiguration bietet sich für Szenarien an, in denen Sie benutzerdefinierte Benachrichtigungswarteschlangen auf dem Server verwenden oder keine aktiven Objekte verwalten möchten.  
+# <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a><span data-ttu-id="052e7-102">SqlCommand-Ausführung mit "SqlNotificationRequest"</span><span class="sxs-lookup"><span data-stu-id="052e7-102">SqlCommand Execution with a SqlNotificationRequest</span></span>
+<span data-ttu-id="052e7-103">Ein <xref:System.Data.SqlClient.SqlCommand>-Objekt kann so konfiguriert werden, dass eine Benachrichtigung generiert wird, sobald zuvor vom Server abgerufene Daten geändert werden, wodurch die Ergebnisse einer erneuten Ausführung der Abfrage anders aussehen würden.</span><span class="sxs-lookup"><span data-stu-id="052e7-103">A <xref:System.Data.SqlClient.SqlCommand> can be configured to generate a notification when data changes after it has been fetched from the server and the result set would be different if the query were executed again.</span></span> <span data-ttu-id="052e7-104">Eine solche Konfiguration bietet sich für Szenarien an, in denen Sie benutzerdefinierte Benachrichtigungswarteschlangen auf dem Server verwenden oder keine aktiven Objekte verwalten möchten.</span><span class="sxs-lookup"><span data-stu-id="052e7-104">This is useful for scenarios where you want to use custom notification queues on the server or when you do not want to maintain live objects.</span></span>  
   
-## Erstellen der Benachrichtigungsanforderung  
- Sie können ein <xref:System.Data.Sql.SqlNotificationRequest>\-Objekt verwenden, um die Benachrichtigungsanforderung zu erstellen, indem Sie es an ein `SqlCommand`\-Objekt binden.  Sobald die Anforderung erstellt ist, benötigen Sie das `SqlNotificationRequest`\-Objekt nicht mehr.  Sie können die Warteschlange dann nach Benachrichtigungen abfragen und auf diese entsprechend reagieren.  Benachrichtigungen können auch dann ausgegeben werden, wenn die Anwendung geschlossen und anschließend wieder gestartet wird.  
+## <a name="creating-the-notification-request"></a><span data-ttu-id="052e7-105">Erstellen der Benachrichtigungsanforderung</span><span class="sxs-lookup"><span data-stu-id="052e7-105">Creating the Notification Request</span></span>  
+ <span data-ttu-id="052e7-106">Sie können ein <xref:System.Data.Sql.SqlNotificationRequest>-Objekt verwenden, um die Benachrichtigungsanforderung zu erstellen, indem Sie es an ein `SqlCommand`-Objekt binden.</span><span class="sxs-lookup"><span data-stu-id="052e7-106">You can use a <xref:System.Data.Sql.SqlNotificationRequest> object to create the notification request by binding it to a `SqlCommand` object.</span></span> <span data-ttu-id="052e7-107">Sobald die Anforderung erstellt ist, benötigen Sie das `SqlNotificationRequest`-Objekt nicht mehr.</span><span class="sxs-lookup"><span data-stu-id="052e7-107">Once the request is created, you no longer need the `SqlNotificationRequest` object.</span></span> <span data-ttu-id="052e7-108">Sie können die Warteschlange dann nach Benachrichtigungen abfragen und auf diese entsprechend reagieren.</span><span class="sxs-lookup"><span data-stu-id="052e7-108">You can query the queue for any notifications and respond appropriately.</span></span> <span data-ttu-id="052e7-109">Benachrichtigungen können auch dann ausgegeben werden, wenn die Anwendung geschlossen und anschließend wieder gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="052e7-109">Notifications can occur even if the application is shut down and subsequently restarted.</span></span>  
   
- Wenn der Befehl mit der zugehörigen Benachrichtigung ausgeführt wird, lösen alle Änderungen im ursprünglichen Resultset das Senden einer Nachricht an die SQL Server\-Warteschlange aus, die in der Benachrichtigungsanforderung konfiguriert wurde.  
+ <span data-ttu-id="052e7-110">Wenn der Befehl mit der zugehörigen Benachrichtigung ausgeführt wird, lösen alle Änderungen im ursprünglichen Resultset das Senden einer Nachricht an die SQL Server-Warteschlange aus, die in der Benachrichtigungsanforderung konfiguriert wurde.</span><span class="sxs-lookup"><span data-stu-id="052e7-110">When the command with the associated notification is executed, any changes to the original result set trigger sending a message to the SQL Server queue that was configured in the notification request.</span></span>  
   
- Wie Sie die SQL Server\-Warteschlange abrufen können und die Meldung interpretieren müssen, hängt von Ihrer Anwendung ab.  Die Anwendung ist dafür verantwortlich, die Warteschlange abzufragen und aufgrund der Meldung zu reagieren.  
+ <span data-ttu-id="052e7-111">Wie Sie die SQL Server-Warteschlange abrufen können und die Meldung interpretieren müssen, hängt von Ihrer Anwendung ab.</span><span class="sxs-lookup"><span data-stu-id="052e7-111">How you poll the SQL Server queue and interpret the message is specific to your application.</span></span> <span data-ttu-id="052e7-112">Die Anwendung ist dafür verantwortlich, die Warteschlange abzufragen und aufgrund der Meldung zu reagieren.</span><span class="sxs-lookup"><span data-stu-id="052e7-112">The application is responsible for polling the queue and reacting based on the contents of the message.</span></span>  
   
 > [!NOTE]
->  Wenn Sie die SQL Server\-Benachrichtigungsanforderungen mit <xref:System.Data.SqlClient.SqlDependency> verwenden, erstellen Sie einen eigenen Warteschlangennamen, statt den Standarddienstnamen zu verwenden.  
+>  <span data-ttu-id="052e7-113">Wenn Sie die SQL Server-Benachrichtigungsanforderungen mit <xref:System.Data.SqlClient.SqlDependency> verwenden, erstellen Sie einen eigenen Warteschlangennamen, statt den Standarddienstnamen zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="052e7-113">When using SQL Server notification requests with <xref:System.Data.SqlClient.SqlDependency>, create your own queue name instead of using the default service name.</span></span>  
   
- Es gibt keine neuen clientseitigen Sicherheitselemente für <xref:System.Data.Sql.SqlNotificationRequest>.  Dies ist vor allem eine Serverfunktion, und der Server hat Sonderberechtigungen erstellt, die Benutzer für das Anfordern einer Benachrichtigung besitzen müssen.  
+ <span data-ttu-id="052e7-114">Es gibt keine neuen clientseitigen Sicherheitselemente für <xref:System.Data.Sql.SqlNotificationRequest>.</span><span class="sxs-lookup"><span data-stu-id="052e7-114">There are no new client-side security elements for <xref:System.Data.Sql.SqlNotificationRequest>.</span></span> <span data-ttu-id="052e7-115">Dies ist vor allem eine Serverfunktion, und der Server hat Sonderberechtigungen erstellt, die Benutzer für das Anfordern einer Benachrichtigung besitzen müssen.</span><span class="sxs-lookup"><span data-stu-id="052e7-115">This is primarily a server feature, and the server has created special privileges that users must have to request a notification.</span></span>  
   
-### Beispiel  
- Das folgende Codefragment veranschaulicht, wie ein <xref:System.Data.Sql.SqlNotificationRequest>\-Objekt erstellt und einem <xref:System.Data.Sql.SqlCommand>\-Objekt zugeordnet wird.  
+### <a name="example"></a><span data-ttu-id="052e7-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="052e7-116">Example</span></span>  
+ <span data-ttu-id="052e7-117">Das folgende Codefragment veranschaulicht, wie ein <xref:System.Data.Sql.SqlNotificationRequest>-Objekt erstellt und einem <xref:System.Data.SqlClient.SqlCommand>-Objekt zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="052e7-117">The following code fragment demonstrates how to create a <xref:System.Data.Sql.SqlNotificationRequest> and associate it with a <xref:System.Data.SqlClient.SqlCommand>.</span></span>  
   
 ```vb  
 ' Assume connection is an open SqlConnection.  
@@ -72,9 +78,8 @@ command.ExecuteReader();
 // Process the DataReader.  
 // You can use Transact-SQL syntax to periodically poll the   
 // SQL Server queue to see if you have a new message.  
-  
 ```  
   
-## Siehe auch  
- [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="052e7-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="052e7-118">See Also</span></span>  
+ [<span data-ttu-id="052e7-119">Abfragebenachrichtigungen in SQLServer</span><span class="sxs-lookup"><span data-stu-id="052e7-119">Query Notifications in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [<span data-ttu-id="052e7-120">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="052e7-120">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

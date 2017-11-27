@@ -1,167 +1,168 @@
 ---
-title: "Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Interoperabilität [WPF]"
-  - "Windows Forms, Verankern und Andocken von WPF-Inhalt"
-  - "Windows Forms, Anordnen von WPF-Inhalt zur Entwurfszeit"
-  - "WPF-Inhalt [Windows Forms], Anordnen zur Entwurfszeit"
-  - "WPF-Inhalt, Hosten in Windows Forms"
-  - "WPF-Benutzersteuerelement [Windows Forms], Hosten in einem Layoutbereich"
+title: 'Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF user control [Windows Forms], hosting in a layout panel
+- WPF content [Windows Forms], arranging at design time
+- Windows Forms, arranging WPF content at design time
+- WPF content [Windows Forms], hosting in Windows Forms
+- Windows Forms, anchoring and docking WPF content
+- interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ae86989489ec4c50a4234eeb4a0950a71e53b0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Forms\-Layoutfeatures, z. B. Verankern und Ausrichtungslinien, verwendet werden können, um WPF\-Steuerelemente \(Windows Presentation Foundation\) anzuordnen.  
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a><span data-ttu-id="db9ed-102">Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="db9ed-102">Walkthrough: Arranging WPF Content on Windows Forms at Design Time</span></span>
+<span data-ttu-id="db9ed-103">In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Forms-Layoutfunktionen, z. B. Verankern und Ausrichtungslinien, verwendet werden können, um WPF-Steuerelemente (Windows Presentation Foundation) anzuordnen.</span><span class="sxs-lookup"><span data-stu-id="db9ed-103">This walkthrough shows you how to use the Windows Forms layout features, such as anchoring and snaplines, to arrange Windows Presentation Foundation (WPF) controls.</span></span>  
   
- Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:  
+ <span data-ttu-id="db9ed-104">Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:</span><span class="sxs-lookup"><span data-stu-id="db9ed-104">In this walkthrough, you perform the following tasks:</span></span>  
   
--   Erstellen eines Projekts  
+-   <span data-ttu-id="db9ed-105">Erstellen eines Projekts</span><span class="sxs-lookup"><span data-stu-id="db9ed-105">Create the project.</span></span>  
   
--   Erstellen des WPF\-Steuerelements  
+-   <span data-ttu-id="db9ed-106">Erstellen des WPF-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="db9ed-106">Create the WPF control.</span></span>  
   
--   Hosten von WPF\-Steuerelementen in einem Layoutbereich  
+-   <span data-ttu-id="db9ed-107">Hosten von WPF-Steuerelementen in einem Layoutbereich</span><span class="sxs-lookup"><span data-stu-id="db9ed-107">Host WPF controls in a layout panel.</span></span>  
   
--   Verwenden von Ausrichtungslinien zum Ausrichten von WPF\-Steuerelementen  
+-   <span data-ttu-id="db9ed-108">Verwenden von Ausrichtungslinien zum Ausrichten von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="db9ed-108">Use snaplines to align WPF controls.</span></span>  
   
--   Verankern und Andocken von WPF\-Steuerelementen  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren**, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## Vorbereitungsmaßnahmen  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
-  
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
-  
-## Erstellen des Projekts  
- Zunächst muss das Windows Forms\-Projekt erstellt werden.  
+-   <span data-ttu-id="db9ed-109">Verankern und Andocken von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="db9ed-109">Anchor and dock WPF controls.</span></span>  
   
 > [!NOTE]
->  Beim Hosten von WPF\-Inhalt werden nur C\#\- und Visual Basic\-Projekte unterstützt.  
+>  <span data-ttu-id="db9ed-110">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="db9ed-110">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="db9ed-111">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="db9ed-111">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="db9ed-112">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="db9ed-112">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-#### So erstellen Sie das Projekt  
+## <a name="prerequisites"></a><span data-ttu-id="db9ed-113">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="db9ed-113">Prerequisites</span></span>  
+ <span data-ttu-id="db9ed-114">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="db9ed-114">You need the following components to complete this walkthrough:</span></span>  
   
--   Erstellen Sie in Visual Basic oder Visual C\# ein neues Windows Forms\-Anwendungsprojekt mit dem Namen `ArrangeElementHost`.  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]<span data-ttu-id="db9ed-115">.</span><span class="sxs-lookup"><span data-stu-id="db9ed-115">.</span></span>  
   
-## Erstellen des WPF\-Steuerelements  
- Nachdem Sie dem Projekt ein WPF\-Steuerelement hinzugefügt haben, können Sie dieses auf dem Formular anordnen.  
+## <a name="creating-the-project"></a><span data-ttu-id="db9ed-116">Erstellen des Projekts</span><span class="sxs-lookup"><span data-stu-id="db9ed-116">Creating the Project</span></span>  
+ <span data-ttu-id="db9ed-117">Zunächst muss das Windows Forms-Projekt erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="db9ed-117">The first step is to create the Windows Forms project.</span></span>  
   
-#### So erstellen Sie ein WPF\-Steuerelement  
+> [!NOTE]
+>  <span data-ttu-id="db9ed-118">Beim Hosten von WPF-Inhalt werden nur C#- und Visual Basic-Projekte unterstützt.</span><span class="sxs-lookup"><span data-stu-id="db9ed-118">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-1.  Fügen Sie dem Projekt ein neues WPF\-<xref:System.Windows.Controls.UserControl>\-Objekt hinzu.  Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF\-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+#### <a name="to-create-the-project"></a><span data-ttu-id="db9ed-119">So erstellen Sie das Projekt</span><span class="sxs-lookup"><span data-stu-id="db9ed-119">To create the project</span></span>  
   
-2.  Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.  Weitere Informationen finden Sie unter [Gewusst wie: Auswählen und Verschieben von Elementen auf der Entwurfsoberfläche](http://msdn.microsoft.com/de-de/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+-   <span data-ttu-id="db9ed-120">Erstellen Sie ein neues Windows Forms-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen `ArrangeElementHost`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-120">Create a new Windows Forms Application project in Visual Basic or Visual C# named `ArrangeElementHost`.</span></span>  
   
-3.  Legen Sie im Fenster **Eigenschaften** den Wert der Eigenschaften <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> auf `200` fest.  
+## <a name="creating-the-wpf-control"></a><span data-ttu-id="db9ed-121">Erstellen des WPF-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="db9ed-121">Creating the WPF Control</span></span>  
+ <span data-ttu-id="db9ed-122">Nachdem Sie dem Projekt ein WPF-Steuerelement hinzugefügt haben, können Sie dieses auf dem Formular anordnen.</span><span class="sxs-lookup"><span data-stu-id="db9ed-122">After you add a WPF control to the project, you can arrange it on the form.</span></span>  
   
-4.  Legen Sie den Wert der <xref:System.Windows.Controls.Control.Background%2A>\-Eigenschaft auf `Blue` fest.  
+#### <a name="to-create-wpf-controls"></a><span data-ttu-id="db9ed-123">So erstellen Sie ein WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="db9ed-123">To create WPF controls</span></span>  
   
-5.  Erstellen Sie das Projekt.  
+1.  <span data-ttu-id="db9ed-124">Fügen Sie dem Projekt ein neues WPF-<xref:System.Windows.Controls.UserControl>-Objekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="db9ed-124">Add a new WPF <xref:System.Windows.Controls.UserControl> to the project.</span></span> <span data-ttu-id="db9ed-125">Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp.</span><span class="sxs-lookup"><span data-stu-id="db9ed-125">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="db9ed-126">Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="db9ed-126">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-## Hosten von WPF\-Steuerelementen in einem Layoutbereich  
- Sie können WPF\-Steuerelemente in Layoutbereichen auf die gleiche Weise verwenden wie andere Windows Forms\-Steuerelemente.  
+2.  <span data-ttu-id="db9ed-127">Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="db9ed-127">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="db9ed-128">Weitere Informationen finden Sie unter [Vorgehensweise: auswählen und Verschieben von Elementen auf der Entwurfsoberfläche](http://msdn.microsoft.com/en-us/54cb70b6-b35b-46e4-a0cc-65189399c474).</span><span class="sxs-lookup"><span data-stu-id="db9ed-128">For more information, see [How to: Select and Move Elements on the Design Surface](http://msdn.microsoft.com/en-us/54cb70b6-b35b-46e4-a0cc-65189399c474).</span></span>  
   
-#### So hosten Sie WPF\-Steuerelemente in einem Layoutbereich  
+3.  <span data-ttu-id="db9ed-129">In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften `200`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-129">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
-1.  Öffnen Sie `Form1` im Windows Forms\-Designer.  
+4.  <span data-ttu-id="db9ed-130">Legen Sie den Wert der <xref:System.Windows.Controls.Control.Background%2A>-Eigenschaft auf `Blue` fest.</span><span class="sxs-lookup"><span data-stu-id="db9ed-130">Set the value of the <xref:System.Windows.Controls.Control.Background%2A> property to `Blue`.</span></span>  
   
-2.  Ziehen Sie aus der **Toolbox** ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement auf das Formular.  
+5.  <span data-ttu-id="db9ed-131">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="db9ed-131">Build the project.</span></span>  
   
-3.  Wählen Sie im Smarttagbereich des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements die Option **Letzte Zeile entfernen** aus.  
+## <a name="hosting-wpf-controls-in-a-layout-panel"></a><span data-ttu-id="db9ed-132">Hosten von WPF-Steuerelementen in einem Layoutbereich</span><span class="sxs-lookup"><span data-stu-id="db9ed-132">Hosting WPF Controls in a Layout Panel</span></span>  
+ <span data-ttu-id="db9ed-133">Sie können WPF-Steuerelemente in Layoutbereichen auf die gleiche Weise verwenden wie andere Windows Forms-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="db9ed-133">You can use WPF controls in layout panels in the same way you use other Windows Forms controls.</span></span>  
   
-4.  Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements, sodass es breiter und höher wird.  
+#### <a name="to-host-wpf-controls-in-a-layout-panel"></a><span data-ttu-id="db9ed-134">So hosten Sie WPF-Steuerelemente in einem Layoutbereich</span><span class="sxs-lookup"><span data-stu-id="db9ed-134">To host WPF controls in a layout panel</span></span>  
   
-5.  Doppelklicken Sie in der **Toolbox** auf `UserControl1`, um eine Instanz von `UserControl1` in der ersten Zelle des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements zu erstellen.  
+1.  <span data-ttu-id="db9ed-135">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="db9ed-135">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-     Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement namens `elementHost1` gehostet.  
+2.  <span data-ttu-id="db9ed-136">In der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement auf das Formular.</span><span class="sxs-lookup"><span data-stu-id="db9ed-136">In the **Toolbox**, drag a <xref:System.Windows.Forms.TableLayoutPanel> control onto the form.</span></span>  
   
-6.  Doppelklicken Sie in der **Toolbox** auf `UserControl1`, um in der zweiten Zelle des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements eine weitere Instanz zu erstellen.  
+3.  <span data-ttu-id="db9ed-137">Auf der <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements Smarttagbereich select **letzte Zeile entfernen**.</span><span class="sxs-lookup"><span data-stu-id="db9ed-137">On the <xref:System.Windows.Forms.TableLayoutPanel> control's smart tag panel, select **Remove Last Row**.</span></span>  
   
-7.  Wählen Sie `tableLayoutPanel1` im Fenster **Dokumentgliederung** aus.  Weitere Informationen finden Sie unter [Document Outline Window](http://msdn.microsoft.com/de-de/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
+4.  <span data-ttu-id="db9ed-138">Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements, sodass es breiter und höher wird.</span><span class="sxs-lookup"><span data-stu-id="db9ed-138">Resize the <xref:System.Windows.Forms.TableLayoutPanel> control to a larger width and height.</span></span>  
   
-8.  Legen Sie im **Eigenschaftenfenster** den Wert der <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft auf `10, 10, 10, 10` fest.  
+5.  <span data-ttu-id="db9ed-139">In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz des `UserControl1` in der ersten Zelle der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="db9ed-139">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` in the first cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-     Die Größe beider <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelemente wird entsprechend dem neuen Layout angepasst.  
+     <span data-ttu-id="db9ed-140">Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.</span><span class="sxs-lookup"><span data-stu-id="db9ed-140">The instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-## Verwenden von Ausrichtungslinien zum Ausrichten von WPF\-Steuerelementen  
- Ausrichtungslinien erleichtern die Ausrichtung von Steuerelementen auf einem Formular.  Sie können Ausrichtungslinien auch verwenden, um WPF\-Steuerelemente auszurichten.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+6.  <span data-ttu-id="db9ed-141">In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen von einer anderen Instanz in der zweiten Zelle des der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="db9ed-141">In the **Toolbox**, double-click `UserControl1` to create another instance in the second cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-#### So verwenden Sie Ausrichtungslinien zum Ausrichten von WPF\-Steuerelementen  
+7.  <span data-ttu-id="db9ed-142">In der **Dokumentgliederung** Option `tableLayoutPanel1`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-142">In the **Document Outline** window, select `tableLayoutPanel1`.</span></span> <span data-ttu-id="db9ed-143">Weitere Informationen finden Sie unter [Dokumentgliederung (Fenster)](http://msdn.microsoft.com/en-us/9054f2bc-f6f8-4242-9fe0-be71089b12f8).</span><span class="sxs-lookup"><span data-stu-id="db9ed-143">For more information, see [Document Outline Window](http://msdn.microsoft.com/en-us/9054f2bc-f6f8-4242-9fe0-be71089b12f8).</span></span>  
   
-1.  Ziehen Sie aus der **Toolbox** eine Instanz von `UserControl1` auf das Formular, und platzieren Sie diese in dem Bereich unterhalb des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements.  
+8.  <span data-ttu-id="db9ed-144">In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft `10, 10, 10, 10`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-144">In the **Properties** window, set the value of the <xref:System.Windows.Forms.Control.Padding%2A> property to `10, 10, 10, 10`.</span></span>  
   
-     Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement namens `elementHost3` gehostet.  
+     <span data-ttu-id="db9ed-145">Die Größe beider <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelemente wird entsprechend dem neuen Layout angepasst.</span><span class="sxs-lookup"><span data-stu-id="db9ed-145">Both <xref:System.Windows.Forms.Integration.ElementHost> controls are resized to fit into the new layout.</span></span>  
   
-2.  Richten Sie den linken Rand von `elementHost3` mithilfe der Ausrichtungslinien am linken Rand des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements aus.  
+## <a name="using-snaplines-to-align-wpf-controls"></a><span data-ttu-id="db9ed-146">Verwenden von Ausrichtungslinien zum Ausrichten von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="db9ed-146">Using Snaplines to Align WPF Controls</span></span>  
+ <span data-ttu-id="db9ed-147">Ausrichtungslinien erleichtern die Ausrichtung von Steuerelementen auf einem Formular.</span><span class="sxs-lookup"><span data-stu-id="db9ed-147">Snaplines enable easy alignment of controls on a form.</span></span> <span data-ttu-id="db9ed-148">Sie können Ausrichtungslinien auch verwenden, um WPF-Steuerelemente auszurichten.</span><span class="sxs-lookup"><span data-stu-id="db9ed-148">You can use snaplines to align your WPF controls as well.</span></span> <span data-ttu-id="db9ed-149">Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span><span class="sxs-lookup"><span data-stu-id="db9ed-149">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>  
   
-3.  Legen Sie die Breite von `elementHost3` mithilfe der Ausrichtungslinien auf dieselbe Breite wie das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement fest.  
+#### <a name="to-use-snaplines-to-align-wpf-controls"></a><span data-ttu-id="db9ed-150">So verwenden Sie Ausrichtungslinien zum Ausrichten von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="db9ed-150">To use snaplines to align WPF controls</span></span>  
   
-4.  Verschieben Sie `elementHost3` in Richtung des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements,  steuern, bis zwischen den Steuerelementen eine mittige Ausrichtungslinie angezeigt wird.  
+1.  <span data-ttu-id="db9ed-151">Aus der **Toolbox**, ziehen Sie eine Instanz des `UserControl1` auf das Formular, und platzieren Sie es in dem Bereich unterhalb der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="db9ed-151">From the **Toolbox**, drag an instance of `UserControl1` onto the form and place it in the space beneath the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-5.  Legen Sie im **Eigenschaftenfenster** den Wert der Margin\-Eigenschaft auf `20, 20, 20, 20` fest.  
+     <span data-ttu-id="db9ed-152">Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost3` gehostet.</span><span class="sxs-lookup"><span data-stu-id="db9ed-152">The instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost3`.</span></span>  
   
-6.  Verschieben Sie `elementHost3` vom <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement weg, bis die mittige Ausrichtungslinie erneut angezeigt wird.  Die mittige Ausrichtungslinie kennzeichnet jetzt einen Rand von 20.  
+2.  <span data-ttu-id="db9ed-153">Richten Sie den linken Rand von `elementHost3` mithilfe der Ausrichtungslinien am linken Rand des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements aus.</span><span class="sxs-lookup"><span data-stu-id="db9ed-153">Using snaplines, align the left edge of `elementHost3` with the left edge of <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-7.  Verschieben Sie `elementHost3` nach rechts, bis dessen linker Rand am linken Rand von `elementHost1` ausgerichtet ist.  
+3.  <span data-ttu-id="db9ed-154">Legen Sie die Breite von `elementHost3` mithilfe der Ausrichtungslinien auf dieselbe Breite wie das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement fest.</span><span class="sxs-lookup"><span data-stu-id="db9ed-154">Using snaplines, size `elementHost3` to the same width as the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-8.  Ändern Sie die Breite von `elementHost3` bis dessen rechter Rand am rechten Rand von `elementHost2` ausgerichtet ist.  
+4.  <span data-ttu-id="db9ed-155">Verschieben Sie `elementHost3` in Richtung des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements,  steuern, bis zwischen den Steuerelementen eine mittige Ausrichtungslinie angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="db9ed-155">Move `elementHost3` toward the <xref:System.Windows.Forms.TableLayoutPanel> control until a center snapline appears between the controls.</span></span>  
   
-## Verankern und Andocken von WPF\-Steuerelementen  
- Ein auf einem Formular gehostetes WPF\-Steuerelement hat dasselbe Verankerungs\- und Andockverhalten auf wie andere Windows Forms\-Steuerelemente.  
+5.  <span data-ttu-id="db9ed-156">In der **Eigenschaften** Fenster, legen Sie den Wert der Margin-Eigenschaft auf `20, 20, 20, 20`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-156">In the **Properties** window, set the value of the Margin property to `20, 20, 20, 20`.</span></span>  
   
-#### So verankern Sie WPF\-Steuerelemente und docken diese an  
+6.  <span data-ttu-id="db9ed-157">Verschieben Sie `elementHost3` vom <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement weg, bis die mittige Ausrichtungslinie erneut angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="db9ed-157">Move the `elementHost3` away from the <xref:System.Windows.Forms.TableLayoutPanel> control until the center snapline appears again.</span></span> <span data-ttu-id="db9ed-158">Die mittige Ausrichtungslinie kennzeichnet jetzt einen Rand von 20.</span><span class="sxs-lookup"><span data-stu-id="db9ed-158">The center snapline now indicates a margin of 20.</span></span>  
   
-1.  Klicken Sie auf `elementHost1`.  
+7.  <span data-ttu-id="db9ed-159">Verschieben Sie `elementHost3` nach rechts, bis dessen linker Rand am linken Rand von `elementHost1` ausgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="db9ed-159">Move `elementHost3` to the right, until its left edge aligns with the left edge of `elementHost1`.</span></span>  
   
-2.  Legen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft auf **Top, Bottom, Left, Right** fest.  
+8.  <span data-ttu-id="db9ed-160">Ändern Sie die Breite von `elementHost3` bis dessen rechter Rand am rechten Rand von `elementHost2` ausgerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="db9ed-160">Change the width of `elementHost3` until its right edge aligns with the right edge of `elementHost2`.</span></span>  
   
-3.  Vergrößern Sie das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement.  
+## <a name="anchoring-and-docking-wpf-controls"></a><span data-ttu-id="db9ed-161">Verankern und Andocken von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="db9ed-161">Anchoring and Docking WPF Controls</span></span>  
+ <span data-ttu-id="db9ed-162">Ein auf einem Formular gehostetes WPF-Steuerelement hat dasselbe Verankerungs- und Andockverhalten auf wie andere Windows Forms-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="db9ed-162">A WPF control hosted on a form has the same anchoring and docking behavior as other Windows Forms controls.</span></span>  
   
-     Die Größe des `elementHost1`\-Steuerelements wird geändert, sodass es die Zelle ausfüllt.  
+#### <a name="to-anchor-and-dock-wpf-controls"></a><span data-ttu-id="db9ed-163">So verankern Sie WPF-Steuerelemente und docken diese an</span><span class="sxs-lookup"><span data-stu-id="db9ed-163">To anchor and dock WPF controls</span></span>  
   
-4.  Klicken Sie auf `elementHost2`.  
+1.  <span data-ttu-id="db9ed-164">Klicken Sie auf `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-164">Select `elementHost1`.</span></span>  
   
-5.  Legen Sie im **Eigenschaftenfenster** den Wert der <xref:System.Windows.Forms.Control.Dock%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DockStyle> fest.  
+2.  <span data-ttu-id="db9ed-165">In der **Eigenschaften** legen die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft **Top, Bottom, Left, Right**.</span><span class="sxs-lookup"><span data-stu-id="db9ed-165">In the **Properties** window, set the <xref:System.Windows.Forms.Control.Anchor%2A> property to **Top, Bottom, Left, Right**.</span></span>  
   
-     Die Größe des `elementHost2`\-Steuerelements wird geändert, sodass es die Zelle ausfüllt.  
+3.  <span data-ttu-id="db9ed-166">Vergrößern Sie das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="db9ed-166">Resize the <xref:System.Windows.Forms.TableLayoutPanel> control to a larger size.</span></span>  
   
-6.  Wählen Sie das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement.  
+     <span data-ttu-id="db9ed-167">Die Größe des `elementHost1`-Steuerelements wird geändert, sodass es die Zelle ausfüllt.</span><span class="sxs-lookup"><span data-stu-id="db9ed-167">The `elementHost1` control resizes to fill the cell.</span></span>  
   
-7.  Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Dock%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DockStyle> fest.  
+4.  <span data-ttu-id="db9ed-168">Klicken Sie auf `elementHost2`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-168">Select `elementHost2`.</span></span>  
   
-8.  Klicken Sie auf `elementHost3`.  
+5.  <span data-ttu-id="db9ed-169">In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="db9ed-169">In the **Properties** window, set the value of the <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
-9. Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Dock%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DockStyle> fest.  
+     <span data-ttu-id="db9ed-170">Die Größe des `elementHost2`-Steuerelements wird geändert, sodass es die Zelle ausfüllt.</span><span class="sxs-lookup"><span data-stu-id="db9ed-170">The `elementHost2` control resizes to fill the cell.</span></span>  
   
-     Die Größe des `elementHost3`\-Steuerelements wird so geändert, dass es den verbleibenden Platz auf dem Formular ausfüllt.  
+6.  <span data-ttu-id="db9ed-171">Wählen Sie das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="db9ed-171">Select the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-10. Ändern Sie die Größe des Formulars.  
+7.  <span data-ttu-id="db9ed-172">Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Top> fest.</span><span class="sxs-lookup"><span data-stu-id="db9ed-172">Set the value of its <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Top>.</span></span>  
   
-     Die Größen aller drei <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelemente werden entsprechend angepasst.  
+8.  <span data-ttu-id="db9ed-173">Klicken Sie auf `elementHost3`.</span><span class="sxs-lookup"><span data-stu-id="db9ed-173">Select `elementHost3`.</span></span>  
   
-     Weitere Informationen finden Sie unter [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel\-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
+9. <span data-ttu-id="db9ed-174">Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill> fest.</span><span class="sxs-lookup"><span data-stu-id="db9ed-174">Set the value of its <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel\-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [Gewusst wie: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)   
- [Verwenden von WPF\-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)   
- [WPF\-Designer](http://msdn.microsoft.com/de-de/c6c65214-8411-4e16-b254-163ed4099c26)
+     <span data-ttu-id="db9ed-175">Die Größe des `elementHost3`-Steuerelements wird so geändert, dass es den verbleibenden Platz auf dem Formular ausfüllt.</span><span class="sxs-lookup"><span data-stu-id="db9ed-175">The `elementHost3` control resizes to fill the remaining space on the form.</span></span>  
+  
+10. <span data-ttu-id="db9ed-176">Ändern Sie die Größe des Formulars.</span><span class="sxs-lookup"><span data-stu-id="db9ed-176">Resize the form.</span></span>  
+  
+     <span data-ttu-id="db9ed-177">Die Größen aller drei <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelemente werden entsprechend angepasst.</span><span class="sxs-lookup"><span data-stu-id="db9ed-177">All three <xref:System.Windows.Forms.Integration.ElementHost> controls resize appropriately.</span></span>  
+  
+     <span data-ttu-id="db9ed-178">Weitere Informationen finden Sie unter [Vorgehensweise: Ankerelemente und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).</span><span class="sxs-lookup"><span data-stu-id="db9ed-178">For more information, see [How to: Anchor and Dock Child Controls in a TableLayoutPanel Control](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="db9ed-179">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="db9ed-179">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="db9ed-180">Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="db9ed-180">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="db9ed-181">Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="db9ed-181">How to: Align a Control to the Edges of Forms at Design Time</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ [<span data-ttu-id="db9ed-182">Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien</span><span class="sxs-lookup"><span data-stu-id="db9ed-182">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="db9ed-183">Migration und Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="db9ed-183">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="db9ed-184">Verwenden von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="db9ed-184">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [<span data-ttu-id="db9ed-185">WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="db9ed-185">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

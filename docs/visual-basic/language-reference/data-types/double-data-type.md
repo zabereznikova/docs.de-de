@@ -1,74 +1,72 @@
 ---
-title: "Double Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Double"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, #"
-  - "trailing zeros"
-  - "real numbers"
-  - "trailing 0 characters"
-  - "0 characters, trailing"
-  - "literal type characters, R"
-  - "data types [Visual Basic], assigning"
-  - "Double data type [Visual Basic]"
-  - "# identifier type character"
-  - "double-precision numbers"
-  - "floating-point numbers, Double data type"
-  - "R literal type character"
-  - "zeros, trailing"
-  - "Double data type"
+title: Double-Datentyp (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Double
+helpviewer_keywords:
+- 'identifier type characters [Visual Basic], #'
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- 0 characters [Visual Basic], trailing
+- literal type characters [Visual Basic], R
+- data types [Visual Basic], assigning
+- Double data type [Visual Basic]
+- '# identifier type character'
+- double-precision numbers
+- floating-point numbers [Visual Basic], Double data type
+- R literal type character [Visual Basic]
+- zeros, trailing
+- Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Double Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Speichert 64\-Bit\-\(8\-Byte\-\)Gleitkommazahlen mit Vorzeichen und doppelter Genauigkeit nach IEEE. Die Werte reichen von \-1,79769313486231570E\+308 bis \-4,94065645841246544E\-324 für negative Werte und von 4,94065645841246544E\-324 bis 1,79769313486231570E\+308 für positive Werte.  Zahlen mit doppelter Genauigkeit enthalten eine Näherung einer reellen Zahl.  
+# <a name="double-data-type-visual-basic"></a><span data-ttu-id="6ac39-102">Double-Datentyp (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ac39-102">Double Data Type (Visual Basic)</span></span>
+<span data-ttu-id="6ac39-103">Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazahlen, die von - 1.79769313486231570E + 308 bis - Wertebereich 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 bis 1.79769313486231570E + 308 für positive Werte zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="6ac39-103">Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span> <span data-ttu-id="6ac39-104">Zahlen mit doppelter Genauigkeit Näherung eine einer reellen Zahl.</span><span class="sxs-lookup"><span data-stu-id="6ac39-104">Double-precision numbers store an approximation of a real number.</span></span>  
   
-## Hinweise  
- Der `Double`\-Datentyp stellt die größten und kleinsten möglichen Werte für eine Zahl bereit.  
+## <a name="remarks"></a><span data-ttu-id="6ac39-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6ac39-105">Remarks</span></span>  
+ <span data-ttu-id="6ac39-106">Die `Double` -Datentyp stellt den größten und kleinsten möglichen Werte für einige.</span><span class="sxs-lookup"><span data-stu-id="6ac39-106">The `Double` data type provides the largest and smallest possible magnitudes for a number.</span></span>  
   
- Der Standardwert von `Double` ist 0 \(null\).  
+ <span data-ttu-id="6ac39-107">Der Standardwert von `Double` lautet 0.</span><span class="sxs-lookup"><span data-stu-id="6ac39-107">The default value of `Double` is 0.</span></span>  
   
-## Programmiertipps  
+## <a name="programming-tips"></a><span data-ttu-id="6ac39-108">Programmiertipps</span><span class="sxs-lookup"><span data-stu-id="6ac39-108">Programming Tips</span></span>  
   
--   **Genauigkeit.** Wenn Sie mit Gleitkommazahlen arbeiten, müssen Sie daran denken, dass die Zahlen im Speicher nicht immer präzise dargestellt werden.  Dies kann bei bestimmten Operationen zu unerwarteten Ergebnissen führen, z. B. beim Wertvergleich und beim Operator `Mod`.  Weitere Informationen finden Sie unter [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   <span data-ttu-id="6ac39-109">**Mit einfacher Genauigkeit.**</span><span class="sxs-lookup"><span data-stu-id="6ac39-109">**Precision.**</span></span> <span data-ttu-id="6ac39-110">Wenn Sie mit Gleitkommazahlen arbeiten, denken Sie daran, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen.</span><span class="sxs-lookup"><span data-stu-id="6ac39-110">When you work with floating-point numbers, remember that they do not always have a precise representation in memory.</span></span> <span data-ttu-id="6ac39-111">Dies kann zu unerwarteten Ergebnissen führen, über bestimmte Vorgänge, z. B. Wertvergleich und `Mod` Operator.</span><span class="sxs-lookup"><span data-stu-id="6ac39-111">This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="6ac39-112">Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="6ac39-112">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
--   **Nachgestellte Nullen.** Die Gleitkommadatentypen verfügen über keine interne Darstellung von nachgestellten Nullen.  Sie unterscheiden zum Beispiel nicht zwischen 4,2000 und 4,2.  Daher werden nachgestellte Nullen nicht dargestellt, wenn Sie Gleitkommawerte anzeigen oder drucken.  
+-   <span data-ttu-id="6ac39-113">**Nachfolgende Nullen.**</span><span class="sxs-lookup"><span data-stu-id="6ac39-113">**Trailing Zeros.**</span></span> <span data-ttu-id="6ac39-114">Der Gleitkomma-Datentypen keine interne Darstellung des Nachstellen von 0 (null) Zeichen.</span><span class="sxs-lookup"><span data-stu-id="6ac39-114">The floating-point data types do not have any internal representation of trailing zero characters.</span></span> <span data-ttu-id="6ac39-115">Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2.</span><span class="sxs-lookup"><span data-stu-id="6ac39-115">For example, they do not distinguish between 4.2000 and 4.2.</span></span> <span data-ttu-id="6ac39-116">Folglich Nachstellen von 0 (null) Zeichen erscheinen nicht beim Anzeigen oder Drucken Gleitkommawerte.</span><span class="sxs-lookup"><span data-stu-id="6ac39-116">Consequently, trailing zero characters do not appear when you display or print floating-point values.</span></span>  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `R` an ein Literal wird der `Double`\-Datentyp erzwungen.  Wenn beispielsweise einem ganzzahligen Wert `R` folgt, wird der Wert in ein `Double` geändert.  
+-   <span data-ttu-id="6ac39-117">**Typzeichen.**</span><span class="sxs-lookup"><span data-stu-id="6ac39-117">**Type Characters.**</span></span> <span data-ttu-id="6ac39-118">Durch Anhängen des Literaltypzeichens `R` an ein Literal wird der `Double`-Datentyp erzwungen.</span><span class="sxs-lookup"><span data-stu-id="6ac39-118">Appending the literal type character `R` to a literal forces it to the `Double` data type.</span></span> <span data-ttu-id="6ac39-119">Wenn Sie ein ganzzahligen Wert folgt, wird z. B. `R`, der Wert wird geändert, um eine `Double`.</span><span class="sxs-lookup"><span data-stu-id="6ac39-119">For example, if an integer value is followed by `R`, the value is changed to a `Double`.</span></span>  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     Durch Anhängen des Typkennzeichens `#` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Double`\-Datentyp erzwungen.  Im folgenden Beispiel wird die Variable `num` als `Double` behandelt:  
+     <span data-ttu-id="6ac39-120">Durch Anhängen des Typkennzeichens `#` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Double`-Datentyp erzwungen.</span><span class="sxs-lookup"><span data-stu-id="6ac39-120">Appending the identifier type character `#` to any identifier forces it to `Double`.</span></span> <span data-ttu-id="6ac39-121">Im folgenden Beispiel wird die Variable `num` als typisiert ist, eine `Double`:</span><span class="sxs-lookup"><span data-stu-id="6ac39-121">In the following example, the variable `num` is typed as a `Double`:</span></span>  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Double?displayProperty=fullName>\-Struktur.  
+-   <span data-ttu-id="6ac39-122">**Framework-Typ.**</span><span class="sxs-lookup"><span data-stu-id="6ac39-122">**Framework Type.**</span></span> <span data-ttu-id="6ac39-123">Der entsprechende Typ in .NET Framework ist die <xref:System.Double?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="6ac39-123">The corresponding type in the .NET Framework is the <xref:System.Double?displayProperty=nameWithType> structure.</span></span>  
   
-## Siehe auch  
- <xref:System.Double?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a><span data-ttu-id="6ac39-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6ac39-124">See Also</span></span>  
+ <xref:System.Double?displayProperty=nameWithType>  
+ [<span data-ttu-id="6ac39-125">Datentypen</span><span class="sxs-lookup"><span data-stu-id="6ac39-125">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="6ac39-126">Decimal-Datentyp</span><span class="sxs-lookup"><span data-stu-id="6ac39-126">Decimal Data Type</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [<span data-ttu-id="6ac39-127">Single-Datentyp</span><span class="sxs-lookup"><span data-stu-id="6ac39-127">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [<span data-ttu-id="6ac39-128">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="6ac39-128">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="6ac39-129">Konvertierung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="6ac39-129">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="6ac39-130">Effiziente Verwendung von Datentypen</span><span class="sxs-lookup"><span data-stu-id="6ac39-130">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [<span data-ttu-id="6ac39-131">Problembehandlung bei Datentypen</span><span class="sxs-lookup"><span data-stu-id="6ac39-131">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="6ac39-132">Typzeichen</span><span class="sxs-lookup"><span data-stu-id="6ac39-132">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

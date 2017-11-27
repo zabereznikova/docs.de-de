@@ -1,45 +1,28 @@
 ---
-title: "Dieses System enthält keine Unterstützung für das Gebietsschema für Chinesisch (vereinfacht) | Microsoft-Dokumentation"
-ms.date: 2015-07-20
+title: "Dieses System unterstützt das Gebietsschema für Chinesisch (vereinfacht) nicht"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_SCNotSupported
+f1_keywords: vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1c8d0d94c753476bbef252457bb7cad0d459fa3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 70d2c223385533788a6b739aacd975a3554d9e66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>Dieses System unterstützt das Gebietsschema für Chinesisch (vereinfacht) nicht
-Sie versuchen, den `VbStrConv.SimplifiedChinese` -Enumerationsmember zu verwenden, aber Ihr System unterstützt das Gebietsschema für Chinesisch (vereinfacht) nicht.  
+# <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a><span data-ttu-id="6227e-102">Dieses System unterstützt das Gebietsschema für Chinesisch (vereinfacht) nicht</span><span class="sxs-lookup"><span data-stu-id="6227e-102">This system does not contain support for the SimplifiedChinese locale</span></span>
+<span data-ttu-id="6227e-103">Sie versuchen, den `VbStrConv.SimplifiedChinese` -Enumerationsmember zu verwenden, aber Ihr System unterstützt das Gebietsschema für Chinesisch (vereinfacht) nicht.</span><span class="sxs-lookup"><span data-stu-id="6227e-103">You are attempting to use the `VbStrConv.SimplifiedChinese` enumeration member, but your system does not support the Simplified Chinese locale.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6227e-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="6227e-104">To correct this error</span></span>  
   
-1.  Aktualisieren Sie den Computer, sodass er das Gebietsschema für Chinesisch (vereinfacht) unterstützt, oder führen Sie die Anwendung auf einem Computer aus, der Unterstützung für dieses Gebietsschema bietet.  
+1.  <span data-ttu-id="6227e-105">Aktualisieren Sie den Computer, sodass er das Gebietsschema für Chinesisch (vereinfacht) unterstützt, oder führen Sie die Anwendung auf einem Computer aus, der Unterstützung für dieses Gebietsschema bietet.</span><span class="sxs-lookup"><span data-stu-id="6227e-105">Upgrade the machine to support the Simplified Chinese locale, or run the application on a machine that supports the locale.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Globalization>   
- [NOTINBUILD VbStrConv-Enumeration](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)   
- [Einführung in internationale Anwendungen basierend auf .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a><span data-ttu-id="6227e-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6227e-106">See Also</span></span>  
+ <xref:System.Globalization>  
+ [<span data-ttu-id="6227e-107">NICHT IM BUILD: VbStrConv-Enumeration</span><span class="sxs-lookup"><span data-stu-id="6227e-107">NOTINBUILD VbStrConv Enumeration</span></span>](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)  
+ [<span data-ttu-id="6227e-108">Einführung in internationale Anwendungen basierend auf .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6227e-108">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

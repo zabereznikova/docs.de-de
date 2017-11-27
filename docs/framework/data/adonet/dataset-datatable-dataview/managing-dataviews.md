@@ -1,27 +1,33 @@
 ---
-title: "Verwalten von &#39;DataViews&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwalten von "DataViews"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3cf89cd378d19b5de64a733e80ec757c7e3bdb89
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwalten von &#39;DataViews&#39;
-Mit einem <xref:System.Data.DataViewManager> können Sie die Ansichtseinstellungen für alle Tabellen in einer <xref:System.Data.DataView> verwalten.  Wenn Sie ein Steuerelement an mehrere Tabellen binden möchten, z. B. ein Raster, das Beziehungen navigiert, ist ein **DataViewManager** optimal geeignet.  
+# <a name="managing-dataviews"></a><span data-ttu-id="0c49a-102">Verwalten von "DataViews"</span><span class="sxs-lookup"><span data-stu-id="0c49a-102">Managing DataViews</span></span>
+<span data-ttu-id="0c49a-103">Mit einem <xref:System.Data.DataViewManager> können Sie die Ansichtseinstellungen für alle Tabellen in einer <xref:System.Data.DataView> verwalten.</span><span class="sxs-lookup"><span data-stu-id="0c49a-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="0c49a-104">Wenn Sie ein Steuerelement, das Sie an mehrere Tabellen binden möchten, z. B. ein Raster, das Beziehungen navigiert, eine **DataViewManager** ist ideal.</span><span class="sxs-lookup"><span data-stu-id="0c49a-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  
   
- Der **DataViewManager** enthält eine Auflistung von <xref:System.Data.DataViewSetting>\-Objekten, die zum Festlegen der Ansichtseinstellung für die Tabellen im <xref:System.Data.DataSet> verwendet werden.  Die <xref:System.Data.DataViewSettingCollection> enthält ein <xref:System.Data.DataViewSetting>\-Objekt für jede Tabelle in einem **DataSet**.  Mit der zugehörigen **DataViewSetting** der Tabelle, auf die verwiesen wird, können Sie die Standardeigenschaften **ApplyDefaultSort**, **Sort**, **RowFilter** und **RowStateFilter** festlegen.  Auf die **DataViewSetting** für eine bestimmte Tabelle kann nach Name oder Ordinalzahlverweis verwiesen werden oder indem ein Verweis an das bestimmte Tabellenobjekt übergeben wird.  Mit der **DataViewSettings**\-Eigenschaft können Sie auf die Auflistung von **DataViewSetting**\-Objekten in einem **DataViewManager** zugreifen.  
+ <span data-ttu-id="0c49a-105">Die **DataViewManager** enthält eine Auflistung von <xref:System.Data.DataViewSetting> Objekte, die verwendet werden, um die Ansicht eingestellt, der Tabellen in der <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="0c49a-105">The **DataViewManager** contains a collection of <xref:System.Data.DataViewSetting> objects that are used to set the view setting of the tables in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="0c49a-106">Die <xref:System.Data.DataViewSettingCollection> enthält mindestens ein <xref:System.Data.DataViewSetting> Objekt für jede Tabelle in einer **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="0c49a-106">The <xref:System.Data.DataViewSettingCollection> contains one <xref:System.Data.DataViewSetting> object for each table in a **DataSet**.</span></span> <span data-ttu-id="0c49a-107">Setzen Sie die standardmäßige **ApplyDefaultSort**, **sortieren**, **RowFilter**, und **RowStateFilter** Eigenschaften der von der referenzierten Tabelle Mithilfe der **DataViewSetting**.</span><span class="sxs-lookup"><span data-stu-id="0c49a-107">You can set the default **ApplyDefaultSort**, **Sort**, **RowFilter**, and **RowStateFilter** properties of the referenced table by using its **DataViewSetting**.</span></span> <span data-ttu-id="0c49a-108">Sie können verweisen die **DataViewSetting** für eine bestimmte Tabelle nach Name oder Ordinalzahlverweis oder durch einen Verweis auf das bestimmte Tabellenobjekt übergeben.</span><span class="sxs-lookup"><span data-stu-id="0c49a-108">You can reference the **DataViewSetting** for a particular table by name or ordinal reference, or by passing a reference to that specific table object.</span></span> <span data-ttu-id="0c49a-109">Sie erreichen die Auflistung der **DataViewSetting** Objekte in einem **DataViewManager** mithilfe der **DataViewSettings** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="0c49a-109">You can access the collection of **DataViewSetting** objects in a **DataViewManager** by using the **DataViewSettings** property.</span></span>  
   
- Im folgenden Codebeispiel wird ein **DataSet** mit den SQL Server **Northwind**\-Datenbanktabellen **Customers**, **Orders** und **Order Details** gefüllt, anschließend werden die Beziehungen zwischen den Tabellen erstellt, danach wird mit einem **DataViewManager** die **DataView**\-Standardeinstellung festgelegt, und es wird ein **DataGrid** an den **DataViewManager** gebunden.  In diesem Beispiel werden die **DataView**\-Standardeinstellungen für alle Tabellen im **DataSet** festgelegt, um nach dem Primärschlüssel der Tabelle \(**ApplyDefaultSort** \= **true**\) zu sortieren. Anschließend wird die Sortierreihenfolge der **Customers**\-Tabelle geändert, um nach **CompanyName** zu sortieren.  
+ <span data-ttu-id="0c49a-110">Im folgenden Codebeispiel Beispiel füllt ein **DataSet** mit dem SQL Server **Northwind** -Datenbanktabellen **Kunden**, **Aufträge**, und  **Auftragsdetails**, die Beziehungen zwischen den Tabellen erstellt, verwendet eine **DataViewManager** festlegen **"DataView"** Einstellungen, und bindet ein **DataGrid**  auf die **DataViewManager**.</span><span class="sxs-lookup"><span data-stu-id="0c49a-110">The following code example fills a **DataSet** with the SQL Server **Northwind** database tables **Customers**, **Orders**, and **Order Details**, creates the relationships between the tables, uses a **DataViewManager** to set default **DataView** settings, and binds a **DataGrid** to the **DataViewManager**.</span></span> <span data-ttu-id="0c49a-111">Im Beispiel wird die Standardeinstellung **"DataView"** Einstellungen für alle Tabellen in der **DataSet** sortiert nach dem Primärschlüssel der Tabelle (**ApplyDefaultSort**  =  **"true"**), und ändert dann die Sortierreihenfolge der **Kunden** Tabelle Sortierungskriterium **CompanyName**.</span><span class="sxs-lookup"><span data-stu-id="0c49a-111">The example sets the default **DataView** settings for all tables in the **DataSet** to sort by the primary key of the table (**ApplyDefaultSort** = **true**), and then modifies the sort order of the **Customers** table to sort by **CompanyName**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -72,7 +78,6 @@ viewManager.DataViewSettings("Customers").Sort = "CompanyName"
 ' Bind to a DataGrid.  
 Dim grid As System.Windows.Forms.DataGrid = New System.Windows.Forms.DataGrid()  
 grid.SetDataBinding(viewManager, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -124,10 +129,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataViewManager>   
- <xref:System.Data.DataViewSetting>   
- <xref:System.Data.DataViewSettingCollection>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="0c49a-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c49a-112">See Also</span></span>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataViewManager>  
+ <xref:System.Data.DataViewSetting>  
+ <xref:System.Data.DataViewSettingCollection>  
+ [<span data-ttu-id="0c49a-113">DataViews</span><span class="sxs-lookup"><span data-stu-id="0c49a-113">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="0c49a-114">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="0c49a-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

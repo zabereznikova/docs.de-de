@@ -1,68 +1,69 @@
 ---
-title: "Ensuring Data Integrity with Hash Codes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "generating hash"
-  - "verifying hash codes"
-  - "cryptography [.NET Framework], hash"
-  - "data integrity"
-  - "checking hash codes"
-  - "encryption [.NET Framework], hash"
-  - "hash"
+title: "Gewährleisten der Datenintegrität über Hashcodes"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- generating hash
+- verifying hash codes
+- cryptography [.NET Framework], hash
+- data integrity
+- checking hash codes
+- encryption [.NET Framework], hash
+- hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-caps.latest.revision: 14
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b5d54a608ae87a1b453b4fa2b4b351ac5fc9f068
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Ensuring Data Integrity with Hash Codes
-Ein Hashwert ist ein numerischer Wert einer festen Länge, der die Daten eindeutig identifiziert.  Hashwerte stellen große Mengen von Daten als viel kleinere numerische Werte dar, damit sie mit digitalen Signaturen verwendet werden.  Sie können einen Hashwert effizienter signieren als den größeren Wert.  Hashwerte sind auch zum Überprüfen der Integrität der Daten nützlich, die über unsichere Kanäle gesendet werden.  Der Hashwert der empfangenen Daten kann mit dem Hashwert der Daten verglichen werden, da sie gesendet wurden, um festzustellen, ob die Daten verändert wurden.  
+# <a name="ensuring-data-integrity-with-hash-codes"></a><span data-ttu-id="022f5-102">Gewährleisten der Datenintegrität über Hashcodes</span><span class="sxs-lookup"><span data-stu-id="022f5-102">Ensuring Data Integrity with Hash Codes</span></span>
+<span data-ttu-id="022f5-103">Ein Hashwert ist ein numerischer Wert einer festen Länge, der die Daten eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="022f5-103">A hash value is a numeric value of a fixed length that uniquely identifies data.</span></span> <span data-ttu-id="022f5-104">Hashwerte stellen große Mengen von Daten als viel kleinere numerische Werte dar, damit sie mit digitalen Signaturen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="022f5-104">Hash values represent large amounts of data as much smaller numeric values, so they are used with digital signatures.</span></span> <span data-ttu-id="022f5-105">Sie können einen Hashwert effizienter signieren als den größeren Wert.</span><span class="sxs-lookup"><span data-stu-id="022f5-105">You can sign a hash value more efficiently than signing the larger value.</span></span> <span data-ttu-id="022f5-106">Hashwerte sind auch zum Überprüfen der Integrität der Daten nützlich, die über unsichere Kanäle gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="022f5-106">Hash values are also useful for verifying the integrity of data sent through insecure channels.</span></span> <span data-ttu-id="022f5-107">Der Hashwert der empfangenen Daten kann mit dem Hashwert der Daten verglichen werden, da sie gesendet wurden, um festzustellen, ob die Daten verändert wurden.</span><span class="sxs-lookup"><span data-stu-id="022f5-107">The hash value of received data can be compared to the hash value of data as it was sent to determine whether the data was altered.</span></span>  
   
- In diesem Thema wird beschrieben, wie Hashcodes mit den Klassen im <xref:System.Security.Cryptography?displayProperty=fullName>\-Namespace generiert und überprüft werden.  
+ <span data-ttu-id="022f5-108">In diesem Thema wird beschrieben, wie Hashcodes mit den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType>-Namespace generiert und überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="022f5-108">This topic describes how to generate and verify hash codes by using the classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.</span></span>  
   
-## Generieren eines Hashs  
- Die verwalteten Hashklassen können entweder ein Bytearray oder ein verwaltetes Streamobjekt hashen.  Im folgenden Beispiel wird der SHA1\-Hashalgorithmus verwendet, um einen Hashwert für eine Zeichenfolge zu erstellen.  Im Beispiel wird die <xref:System.Text.UnicodeEncoding>\-Klasse verwendet, um die Zeichenfolge in ein Bytearray zu konvertieren, dem mithilfe der <xref:System.Security.Cryptography.SHA1Managed>\-Klasse ein Hash hinzugefügt werden soll.  Der Hashwert wird dann in der Konsole angezeigt.  
+## <a name="generating-a-hash"></a><span data-ttu-id="022f5-109">Generieren eines Hashs</span><span class="sxs-lookup"><span data-stu-id="022f5-109">Generating a Hash</span></span>  
+ <span data-ttu-id="022f5-110">Die verwalteten Hashklassen können entweder ein Bytearray oder ein verwaltetes Streamobjekt hashen.</span><span class="sxs-lookup"><span data-stu-id="022f5-110">The managed hash classes can hash either an array of bytes or a managed stream object.</span></span> <span data-ttu-id="022f5-111">Im folgenden Beispiel wird der SHA1-Hashalgorithmus verwendet, um einen Hashwert für eine Zeichenfolge zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="022f5-111">The following example uses the SHA1 hash algorithm to create a hash value for a string.</span></span> <span data-ttu-id="022f5-112">Im Beispiel wird die <xref:System.Text.UnicodeEncoding>-Klasse verwendet, um die Zeichenfolge in ein Bytearray zu konvertieren, dem mithilfe der <xref:System.Security.Cryptography.SHA1Managed>-Klasse ein Hash hinzugefügt werden soll.</span><span class="sxs-lookup"><span data-stu-id="022f5-112">The example uses the <xref:System.Text.UnicodeEncoding> class to convert the string into an array of bytes that are hashed by using the <xref:System.Security.Cryptography.SHA1Managed> class.</span></span> <span data-ttu-id="022f5-113">Der Hashwert wird dann in der Konsole angezeigt.</span><span class="sxs-lookup"><span data-stu-id="022f5-113">The hash value is then displayed to the console.</span></span>  
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
   
- Dieser Code zeigt die folgende Zeichenfolge in der Konsole an:  
+ <span data-ttu-id="022f5-114">Dieser Code zeigt die folgende Zeichenfolge in der Konsole an:</span><span class="sxs-lookup"><span data-stu-id="022f5-114">This code will display the following string to the console:</span></span>  
   
  `59 4 248 102 77 97 142 201 210 12 224 93 25 41 100 197 213 134 130 135`  
   
-## Überprüfen eines Hashs  
- Die Daten können mit einem Hashwert verglichen werden, um die Integrität zu bestimmen.  In der Regel werden die Daten zu einem bestimmten Zeitpunkt gehasht, und der Hashwert wird entsprechend geschützt.  Zu einem späteren Zeitpunkt werden die Daten erneut gehasht und mit dem geschützten Wert verglichen.  Wenn die Hashwerte übereinstimmen, wurden die Daten nicht geändert.  Wenn die Werte nicht übereinstimmen, sind die Daten beschädigt wurden.  Damit dieses System funktioniert, muss der geschützte Hash verschlüsselt oder vor allen nicht vertrauenswürdigen Parteien geheim gehalten werden.  
+## <a name="verifying-a-hash"></a><span data-ttu-id="022f5-115">Überprüfen eines Hashs</span><span class="sxs-lookup"><span data-stu-id="022f5-115">Verifying a Hash</span></span>  
+ <span data-ttu-id="022f5-116">Die Daten können mit einem Hashwert verglichen werden, um die Integrität zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="022f5-116">Data can be compared to a hash value to determine its integrity.</span></span> <span data-ttu-id="022f5-117">In der Regel werden die Daten zu einem bestimmten Zeitpunkt gehasht, und der Hashwert wird entsprechend geschützt.</span><span class="sxs-lookup"><span data-stu-id="022f5-117">Usually, data is hashed at a certain time and the hash value is protected in some way.</span></span> <span data-ttu-id="022f5-118">Zu einem späteren Zeitpunkt werden die Daten erneut gehasht und mit dem geschützten Wert verglichen.</span><span class="sxs-lookup"><span data-stu-id="022f5-118">At a later time, the data can be hashed again and compared to the protected value.</span></span> <span data-ttu-id="022f5-119">Wenn die Hashwerte übereinstimmen, wurden die Daten nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="022f5-119">If the hash values match, the data has not been altered.</span></span> <span data-ttu-id="022f5-120">Wenn die Werte nicht übereinstimmen, sind die Daten beschädigt wurden.</span><span class="sxs-lookup"><span data-stu-id="022f5-120">If the values do not match, the data has been corrupted.</span></span> <span data-ttu-id="022f5-121">Damit dieses System funktioniert, muss der geschützte Hash verschlüsselt oder vor allen nicht vertrauenswürdigen Parteien geheim gehalten werden.</span><span class="sxs-lookup"><span data-stu-id="022f5-121">For this system to work, the protected hash must be encrypted or kept secret from all untrusted parties.</span></span>  
   
- Im folgenden Beispiel wird der vorherige Hashwert einer Zeichenfolge mit einem neuen Hashwert verglichen.  In diesem Beispiel wird jedes Byte der Hashwerte durchlaufen und verglichen.  
+ <span data-ttu-id="022f5-122">Im folgenden Beispiel wird der vorherige Hashwert einer Zeichenfolge mit einem neuen Hashwert verglichen.</span><span class="sxs-lookup"><span data-stu-id="022f5-122">The following example compares the previous hash value of a string to a new hash value.</span></span> <span data-ttu-id="022f5-123">In diesem Beispiel wird jedes Byte der Hashwerte durchlaufen und verglichen.</span><span class="sxs-lookup"><span data-stu-id="022f5-123">This example loops through each byte of the hash values and makes a comparison.</span></span>  
   
  [!code-csharp[VerifyingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/verifyingahash/cs/program.cs#1)]
  [!code-vb[VerifyingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/verifyingahash/vb/program.vb#1)]  
   
- Wenn die beiden Hashwerte übereinstimmen, zeigt dieser Code Folgendes in der Konsole an:  
+ <span data-ttu-id="022f5-124">Wenn die beiden Hashwerte übereinstimmen, zeigt dieser Code Folgendes in der Konsole an:</span><span class="sxs-lookup"><span data-stu-id="022f5-124">If the two hash values match, this code displays the following to the console:</span></span>  
   
 ```  
 The hash codes match.  
 ```  
   
- Wenn sie nicht übereinstimmen, zeigt der Code Folgendes an:  
+ <span data-ttu-id="022f5-125">Wenn sie nicht übereinstimmen, zeigt der Code Folgendes an:</span><span class="sxs-lookup"><span data-stu-id="022f5-125">If they do not match, the code displays the following:</span></span>  
   
 ```  
 The hash codes do not match.  
 ```  
   
-## Siehe auch  
- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="022f5-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="022f5-126">See Also</span></span>  
+ [<span data-ttu-id="022f5-127">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="022f5-127">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

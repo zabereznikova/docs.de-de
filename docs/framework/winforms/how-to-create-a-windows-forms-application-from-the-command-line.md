@@ -1,125 +1,125 @@
 ---
-title: "Gewusst wie: Erstellen von Windows Forms-Anwendungen &#252;ber die Befehlszeile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, Anwendungsentwicklung über die Befehlszeile"
-  - "Windows Forms, Erstellen des Basisformulars"
-  - "Windows Forms, Erste Schritte"
+title: "Vorgehensweise: erstellen eine Windows Forms-Anwendung über die Befehlszeile"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-winforms
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, application development from command line
+- Windows Forms, getting started
+- Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6ddb27f724e30071be339ac753cfd85599ccd86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Windows Forms-Anwendungen &#252;ber die Befehlszeile
-In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms\-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen.  Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/z9w2f38k%20\(v=vs.110\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="8a01a-102">Vorgehensweise: erstellen eine Windows Forms-Anwendung über die Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="8a01a-102">How to: Create a Windows Forms application from the command line</span></span>
+<span data-ttu-id="8a01a-103">In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen.</span><span class="sxs-lookup"><span data-stu-id="8a01a-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="8a01a-104">Visual Studio bietet umfassende Unterstützung für diese Verfahren.</span><span class="sxs-lookup"><span data-stu-id="8a01a-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="8a01a-105">Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).</span><span class="sxs-lookup"><span data-stu-id="8a01a-105">Also see [Walkthrough: Creating a Simple Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).</span></span>  
   
-## Prozedur  
+## <a name="procedure"></a><span data-ttu-id="8a01a-106">Prozedur</span><span class="sxs-lookup"><span data-stu-id="8a01a-106">Procedure</span></span>  
   
-#### So erstellen Sie das Formular  
+#### <a name="to-create-the-form"></a><span data-ttu-id="8a01a-107">So erstellen Sie das Formular</span><span class="sxs-lookup"><span data-stu-id="8a01a-107">To create the form</span></span>  
   
-1.  Geben Sie in einer leeren Codedatei die folgende Imports\- bzw. using\-Anweisungen ein:  
+1.  <span data-ttu-id="8a01a-108">Geben Sie in einer leeren Codedatei die folgende Imports- bzw. using-Anweisungen ein:</span><span class="sxs-lookup"><span data-stu-id="8a01a-108">In an empty code file, type the following import or using statements:</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2.  Deklarieren Sie eine Klasse namens `Form1`, die von der Form\-Klasse erbt.  
+2.  <span data-ttu-id="8a01a-109">Deklarieren Sie eine Klasse namens `Form1`, die von der Form-Klasse erbt.</span><span class="sxs-lookup"><span data-stu-id="8a01a-109">Declare a class named `Form1` that inherits from the Form class.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3.  Erstellen Sie einen Standardkonstruktor für `Form1`.  
+3.  <span data-ttu-id="8a01a-110">Erstellen Sie einen Standardkonstruktor für `Form1`.</span><span class="sxs-lookup"><span data-stu-id="8a01a-110">Create a default constructor for `Form1`.</span></span>  
   
-     In einem späteren Verfahren fügen Sie dem Konstruktor weiteren Code hinzu.  
+     <span data-ttu-id="8a01a-111">In einem späteren Verfahren fügen Sie dem Konstruktor weiteren Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="8a01a-111">You will add more code to the constructor in a subsequent procedure.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4.  Fügen Sie der Klasse eine `Main`\-Method hinzu.  
+4.  <span data-ttu-id="8a01a-112">Fügen Sie der Klasse eine `Main`-Method hinzu.</span><span class="sxs-lookup"><span data-stu-id="8a01a-112">Add a `Main` method to the class.</span></span>  
   
-    1.  Wenden Sie <xref:System.STAThreadAttribute> auf die `Main`\-Methode an, um anzugeben, dass es sich bei der Windows Forms\-Anwendung um ein Singlethread\-Apartment handelt.  
+    1.  <span data-ttu-id="8a01a-113">Wenden Sie <xref:System.STAThreadAttribute> auf die `Main`-Methode an, um anzugeben, dass es sich bei der Windows Forms-Anwendung um ein Singlethread-Apartment handelt.</span><span class="sxs-lookup"><span data-stu-id="8a01a-113">Apply the <xref:System.STAThreadAttribute> to the `Main` method to specify your Windows Forms application is a single threaded apartment.</span></span>  
   
-    2.  Rufen Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> auf, um Ihre Anwendung im Stil von Windows XP anzuzeigen.  
+    2.  <span data-ttu-id="8a01a-114">Rufen Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> auf, um Ihre Anwendung im Stil von Windows XP anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="8a01a-114">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to give a Windows XP appearance to your application.</span></span>  
   
-    3.  Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.  
+    3.  <span data-ttu-id="8a01a-115">Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.</span><span class="sxs-lookup"><span data-stu-id="8a01a-115">Create an instance of the form and run it.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### So kompilieren Sie die Anwendung und führen sie aus  
+#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="8a01a-116">So kompilieren Sie die Anwendung und führen sie aus</span><span class="sxs-lookup"><span data-stu-id="8a01a-116">To compile and run the application</span></span>  
   
-1.  Navigieren Sie an der .NET Framework\-Eingabeaufforderung zu dem Verzeichnis, in dem Sie die `Form1`\-Klasse erstellt haben.  
+1.  <span data-ttu-id="8a01a-117">Navigieren Sie an der .NET Framework-Eingabeaufforderung zu dem Verzeichnis, in dem Sie die `Form1`-Klasse erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="8a01a-117">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
   
-2.  Kompilieren Sie das Formular.  
+2.  <span data-ttu-id="8a01a-118">Kompilieren Sie das Formular.</span><span class="sxs-lookup"><span data-stu-id="8a01a-118">Compile the form.</span></span>  
   
-    -   Wenn Sie C\# verwenden, geben Sie Folgendes ein: `csc form1.cs`.  
+    -   <span data-ttu-id="8a01a-119">Wenn Sie c# verwenden, geben Sie ein:`csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="8a01a-119">If you are using C#, type: `csc form1.cs`</span></span>  
   
-         `- oder -`  
+         `-or-`  
   
-    -   Wenn Sie Visual Basic verwenden, geben Sie Folgendes ein:  `vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`.  
+    -   <span data-ttu-id="8a01a-120">Wenn Sie Visual Basic verwenden, geben Sie:`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`</span><span class="sxs-lookup"><span data-stu-id="8a01a-120">If you are using Visual Basic, type: `vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`</span></span>  
   
-3.  Geben Sie an der Eingabeaufforderung Folgendes ein: `Form1.exe`.  
+3.  <span data-ttu-id="8a01a-121">Geben Sie an der Eingabeaufforderung:`Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="8a01a-121">At the command prompt, type: `Form1.exe`</span></span>  
   
-## Hinzufügen eines Steuerelements und Behandeln eines Ereignisses  
- Anhand der vorherigen Schritte wurde veranschaulicht, wie Sie ein einfaches Windows Form erstellen, das kompiliert und ausgeführt wird.  Im nächsten Verfahren wird erläutert, wie Sie ein Steuerelement erstellen und es dem Formular hinzufügen und wie Sie ein Ereignis für das Steuerelement behandeln.  Weitere Informationen zu den Steuerelementen, die Sie Windows Forms hinzufügen können, finden Sie unter [Windows Forms\-Steuerelemente](../../../docs/framework/winforms/controls/index.md).  
+## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="8a01a-122">Hinzufügen eines Steuerelements und Behandeln eines Ereignisses</span><span class="sxs-lookup"><span data-stu-id="8a01a-122">Adding a Control and Handling an Event</span></span>  
+ <span data-ttu-id="8a01a-123">Anhand der vorherigen Schritte wurde veranschaulicht, wie Sie ein einfaches Windows Form erstellen, das kompiliert und ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8a01a-123">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="8a01a-124">Im nächsten Verfahren wird erläutert, wie Sie ein Steuerelement erstellen und es dem Formular hinzufügen und wie Sie ein Ereignis für das Steuerelement behandeln.</span><span class="sxs-lookup"><span data-stu-id="8a01a-124">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="8a01a-125">Weitere Informationen zu den Steuerelementen, die Sie zu Windows Forms hinzufügen können, finden Sie unter [Windows Forms-Steuerelementen](../../../docs/framework/winforms/controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="8a01a-125">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](../../../docs/framework/winforms/controls/index.md).</span></span>  
   
- Zusätzlich zu dem Wissen, wie Windows Forms\-Anwendungen erstellt werden, sollten Sie auch wissen, wie ereignisbasierte Programmierung geht und wie Benutzereingaben behandelt werden.  Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md) und [Behandeln von Benutzereingaben](../../../docs/framework/winforms/controls/handling-user-input.md).  
+ <span data-ttu-id="8a01a-126">Zusätzlich zu dem Wissen, wie Windows Forms-Anwendungen erstellt werden, sollten Sie auch wissen, wie ereignisbasierte Programmierung geht und wie Benutzereingaben behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="8a01a-126">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="8a01a-127">Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), und [Behandeln von Benutzereingaben](../../../docs/framework/winforms/controls/handling-user-input.md)</span><span class="sxs-lookup"><span data-stu-id="8a01a-127">For more information, see [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), and [Handling User Input](../../../docs/framework/winforms/controls/handling-user-input.md)</span></span>  
   
-#### So deklarieren Sie ein Button\-Steuerelement und behandeln sein Click\-Ereignis  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="8a01a-128">So deklarieren Sie ein Button-Steuerelement und behandeln sein Click-Ereignis</span><span class="sxs-lookup"><span data-stu-id="8a01a-128">To declare a button control and handle its click event</span></span>  
   
-1.  Deklarieren Sie ein Button\-Steuerelement namens `button1`.  
+1.  <span data-ttu-id="8a01a-129">Deklarieren Sie ein Button-Steuerelement namens `button1`.</span><span class="sxs-lookup"><span data-stu-id="8a01a-129">Declare a button control named `button1`.</span></span>  
   
-2.  Erstellen Sie im Konstruktor die Schaltfläche, und legen Sie deren Eigenschaften <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> und <xref:System.Windows.Forms.Control.Text%2A> fest.  
+2.  <span data-ttu-id="8a01a-130">Erstellen Sie im Konstruktor die Schaltfläche, und legen Sie deren Eigenschaften <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> und <xref:System.Windows.Forms.Control.Text%2A> fest.</span><span class="sxs-lookup"><span data-stu-id="8a01a-130">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
   
-3.  Fügen Sie die Schaltfläche dem Formular hinzu.  
+3.  <span data-ttu-id="8a01a-131">Fügen Sie die Schaltfläche dem Formular hinzu.</span><span class="sxs-lookup"><span data-stu-id="8a01a-131">Add the button to the form.</span></span>  
   
-     Im folgenden Codebeispiel wird die Deklaration des Button\-Steuerelements veranschaulicht.  
+     <span data-ttu-id="8a01a-132">Im folgenden Codebeispiel wird die Deklaration des Button-Steuerelements veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="8a01a-132">The following code example demonstrates how to declare the button control.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4.  Erstellen Sie eine Methode, um das <xref:System.Windows.Forms.Control.Click>\-Ereignis für die Schaltfläche zu behandeln.  
+4.  <span data-ttu-id="8a01a-133">Erstellen Sie eine Methode, um das <xref:System.Windows.Forms.Control.Click>-Ereignis für die Schaltfläche zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="8a01a-133">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
   
-5.  Zeigen Sie im Click\-Ereignishandler eine <xref:System.Windows.Forms.MessageBox>\-Instanz mit der Meldung "Hello World" an.  
+5.  <span data-ttu-id="8a01a-134">Zeigen Sie im Click-Ereignishandler eine <xref:System.Windows.Forms.MessageBox>-Instanz mit der Meldung "Hello World" an.</span><span class="sxs-lookup"><span data-stu-id="8a01a-134">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
   
-     Im folgenden Codebeispiel wird veranschaulicht, wie das Click\-Ereignis des Button\-Steuerelements behandelt wird.  
+     <span data-ttu-id="8a01a-135">Im folgenden Codebeispiel wird veranschaulicht, wie das Click-Ereignis des Button-Steuerelements behandelt wird.</span><span class="sxs-lookup"><span data-stu-id="8a01a-135">The following code example demonstrates how to handle the button control's click event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6.  Ordnen Sie das <xref:System.Windows.Forms.Control.Click>\-Ereignis der Methode zu, die Sie erstellt haben.  
+6.  <span data-ttu-id="8a01a-136">Ordnen Sie das <xref:System.Windows.Forms.Control.Click>-Ereignis der Methode zu, die Sie erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="8a01a-136">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
   
-     Im folgenden Codebeispiel wird veranschaulicht, wie der Methode das Ereignis zugeordnet wird.  
+     <span data-ttu-id="8a01a-137">Im folgenden Codebeispiel wird veranschaulicht, wie der Methode das Ereignis zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="8a01a-137">The following code example demonstrates how to associate the event with the method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7.  Kompilieren Sie die Anwendung, und führen Sie sie aus, wie im vorherigen Verfahren beschrieben.  
+7.  <span data-ttu-id="8a01a-138">Kompilieren Sie die Anwendung, und führen Sie sie aus, wie im vorherigen Verfahren beschrieben.</span><span class="sxs-lookup"><span data-stu-id="8a01a-138">Compile and run the application as described in the previous procedure.</span></span>  
   
-## Beispiel  
- Das folgende Codebeispiel entspricht dem vollständigen Beispiel aus den vorherigen Verfahren.  
+## <a name="example"></a><span data-ttu-id="8a01a-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8a01a-139">Example</span></span>  
+ <span data-ttu-id="8a01a-140">Das folgende Codebeispiel entspricht dem vollständigen Beispiel aus den vorherigen Verfahren.</span><span class="sxs-lookup"><span data-stu-id="8a01a-140">Following code example is the complete example from the previous procedures.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="8a01a-141">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="8a01a-141">Compiling the Code</span></span>  
   
--   Um den Code zu kompilieren, führen Sie die Anweisungen aus dem vorangehenden Verfahren aus, in denen beschrieben ist, wie die Anwendung zu kompilieren und auszuführen ist.  
+-   <span data-ttu-id="8a01a-142">Um den Code zu kompilieren, führen Sie die Anweisungen aus dem vorangehenden Verfahren aus, in denen beschrieben ist, wie die Anwendung zu kompilieren und auszuführen ist.</span><span class="sxs-lookup"><span data-stu-id="8a01a-142">To compile the code, follow the instructions in the proceeding procedure that describe how to compile and run the application.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Form>   
- <xref:System.Windows.Forms.Control>   
- [Ändern der Darstellung von Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)   
- [Erweitern von Windows Forms\-Anwendungen](../../../docs/framework/winforms/advanced/index.md)   
- [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8a01a-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8a01a-143">See Also</span></span>  
+ <xref:System.Windows.Forms.Form>  
+ <xref:System.Windows.Forms.Control>  
+ [<span data-ttu-id="8a01a-144">Ändern der Darstellung von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8a01a-144">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [<span data-ttu-id="8a01a-145">Erweitern von Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="8a01a-145">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)  
+ [<span data-ttu-id="8a01a-146">Erste Schritte mit Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8a01a-146">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

@@ -1,29 +1,32 @@
 ---
-title: "Nicht autorisierte Sicherheitsaufrufe pro Sekunde | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Nicht autorisierte Sicherheitsaufrufe pro Sekunde
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f189767-8c05-478a-8f0b-9228e5d351e5
-caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 73500901b89eb2cb61fe34895ce6ba150b7e3357
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Nicht autorisierte Sicherheitsaufrufe pro Sekunde
-Indikatorname: Nicht autorisierte Sicherheitsaufrufe pro Sekunde.  
+# <a name="security-calls-not-authorized-per-second"></a><span data-ttu-id="0e89f-102">Nicht autorisierte Sicherheitsaufrufe pro Sekunde</span><span class="sxs-lookup"><span data-stu-id="0e89f-102">Security Calls Not Authorized Per Second</span></span>
+<span data-ttu-id="0e89f-103">Indikatorname: Security Calls Not Authorized Per Second.</span><span class="sxs-lookup"><span data-stu-id="0e89f-103">Counter Name: Security Calls Not Authorized Per Second.</span></span>  
   
-## Beschreibung  
- Die Anzahl der Aufrufe, die in diesem Vorgang in einer Sekunde keine Autorisierung erhielten.  
+## <a name="description"></a><span data-ttu-id="0e89f-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0e89f-104">Description</span></span>  
+ <span data-ttu-id="0e89f-105">Die Anzahl der Aufrufe, die in diesem Vorgang in einer Sekunde keine Autorisierung erhielten.</span><span class="sxs-lookup"><span data-stu-id="0e89f-105">Number of calls that failed authorization in this operation in a second.</span></span>  
   
- Dieser Indikator wird inkrementiert, wenn die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A>\-Methode `false` zurückgibt.Er gibt an, dass die eingehende Nachricht von einem gültigen Benutzer stammt und ordnungsgemäß geschützt ist, der Benutzer jedoch nicht für die Durchführung spezifischer Aufgaben autorisiert ist.  
+ <span data-ttu-id="0e89f-106">Dieser Indikator wird erhöht, wenn die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A>-Methode `false` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="0e89f-106">This counter is incremented when the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> method returns `false`.</span></span> <span data-ttu-id="0e89f-107">Er gibt an, dass die eingehende Nachricht von einem gültigen Benutzer stammt und ordnungsgemäß geschützt ist, der Benutzer jedoch nicht für die Durchführung spezifischer Aufgaben autorisiert ist.</span><span class="sxs-lookup"><span data-stu-id="0e89f-107">It indicates that the incoming message is from a valid user and protected properly, but the user is not authorized to do specific tasks.</span></span>  
   
- Bei diesem Zähler handelt es sich um einen Leistungsindikator vom Typ [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird:  
+ <span data-ttu-id="0e89f-108">Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="0e89f-108">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0\)\/\(\(D 1 \- D 0\)\/F\)
+ <span data-ttu-id="0e89f-109">(N 1 - N 0)/( (D 1 - D 0)/F)</span><span class="sxs-lookup"><span data-stu-id="0e89f-109">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

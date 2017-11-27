@@ -1,78 +1,84 @@
 ---
-title: "Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: ec2800d2b6a910f75366e323b7580afe08de2acb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
-Die Sicherung eines Diensts mithilfe eines X.509\-Zertifikats ist eine grundlegende Technik, die von den meisten Bindungen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird.Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509\-Zertifikat.  
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a><span data-ttu-id="4212c-102">Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat</span><span class="sxs-lookup"><span data-stu-id="4212c-102">How to: Secure a Service with an X.509 Certificate</span></span>
+<span data-ttu-id="4212c-103">Die Sicherung eines Diensts mithilfe eines X.509-Zertifikats ist eine grundlegende Technik, die von den meisten Bindungen in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4212c-103">Securing a service with an X.509 certificate is a basic technique that most bindings in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] use.</span></span> <span data-ttu-id="4212c-104">Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="4212c-104">This topic walks through the steps of configuring a self-hosted service with an X.509 certificate.</span></span>  
   
- Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann.Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden.Ist das Zertifikat ungültig, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Verwendung von Zertifikaten finden Sie unter [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ <span data-ttu-id="4212c-105">Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="4212c-105">A prerequisite is a valid certificate that can be used to authenticate the server.</span></span> <span data-ttu-id="4212c-106">Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="4212c-106">The certificate must be issued to the server by a trusted certificate authority.</span></span> <span data-ttu-id="4212c-107">Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut.</span><span class="sxs-lookup"><span data-stu-id="4212c-107">If the certificate is not valid, any client trying to use the service will not trust the service, and consequently no connection will be made.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4212c-108">Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="4212c-108"> using certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  
   
-### So konfigurieren Sie einen Dienst mit einem Zertifikat mithilfe von Code  
+### <a name="to-configure-a-service-with-a-certificate-using-code"></a><span data-ttu-id="4212c-109">So konfigurieren Sie einen Dienst mit einem Zertifikat mithilfe von Code</span><span class="sxs-lookup"><span data-stu-id="4212c-109">To configure a service with a certificate using code</span></span>  
   
-1.  Erstellen Sie den Dienstvertrag und den implementierten Dienst.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  <span data-ttu-id="4212c-110">Erstellen Sie den Dienstvertrag und den implementierten Dienst.</span><span class="sxs-lookup"><span data-stu-id="4212c-110">Create the service contract and the implemented service.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4212c-111">[Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).</span><span class="sxs-lookup"><span data-stu-id="4212c-111"> [Designing and Implementing Services](../../../../docs/framework/wcf/designing-and-implementing-services.md).</span></span>  
   
-2.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>\-Klasse, und legen Sie deren Sicherheitsmodus auf <xref:System.ServiceModel.SecurityMode> fest. Dies wird im folgenden Code veranschaulicht.  
+2.  <span data-ttu-id="4212c-112">Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie deren Sicherheitsmodus auf <xref:System.ServiceModel.SecurityMode.Message> fest. Dies wird im folgenden Code veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4212c-112">Create an instance of the <xref:System.ServiceModel.WSHttpBinding> class and set its security mode to <xref:System.ServiceModel.SecurityMode.Message>, as shown in the following code.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#1)]
      [!code-vb[C_SecureWithCertificate#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#1)]  
   
-3.  Erstellen Sie zwei <xref:System.Type>\-Variablen, je eine für den Vertragstyp und den implementierten Vertrag. Dies wird im folgenden Code veranschaulicht.  
+3.  <span data-ttu-id="4212c-113">Erstellen Sie zwei <xref:System.Type>-Variablen, je eine für den Vertragstyp und den implementierten Vertrag. Dies wird im folgenden Code veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4212c-113">Create two <xref:System.Type> variables, one each for the contract type and the implemented contract, as shown in the following code.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Erstellen Sie eine Instanz der <xref:System.Uri>\-Klasse für die Basisadresse des Diensts.Da `WSHttpBinding` den HTTP\-Transport nutzt, muss der Uniform Resource Identifier \(URI\) mit einem Schema beginnen. Andernfalls löst [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine Ausnahme aus, wenn der Dienst geöffnet wird.  
+4.  <span data-ttu-id="4212c-114">Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts.</span><span class="sxs-lookup"><span data-stu-id="4212c-114">Create an instance of the <xref:System.Uri> class for the base address of the service.</span></span> <span data-ttu-id="4212c-115">Da `WSHttpBinding` den HTTP-Transport nutzt, muss der Uniform Resource Identifier (URI) mit einem Schema beginnen. Andernfalls löst [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine Ausnahme aus, wenn der Dienst geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="4212c-115">Because the `WSHttpBinding` uses the HTTP transport, the Uniform Resource Identifier (URI) must begin with that schema, or [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] will throw an exception when the service is opened.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
   
-5.  Erstellen Sie eine neue Instanz der <xref:System.ServiceModel.ServiceHost>\-Klasse mit der Variablen des implementierten Vertragstyps und dem URI.  
+5.  <span data-ttu-id="4212c-116">Erstellen Sie eine neue Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse mit der Variablen des implementierten Vertragstyps und dem URI.</span><span class="sxs-lookup"><span data-stu-id="4212c-116">Create a new instance of the <xref:System.ServiceModel.ServiceHost> class with the implemented contract type variable and the URI.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6.  Fügen Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> zum Dienst hinzu, indem Sie die <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>\-Methode verwenden.Übergeben Sie den Vertrag, die Bindung und eine Endpunktadresse an den Konstruktor. Dies wird im folgenden Code veranschaulicht.  
+6.  <span data-ttu-id="4212c-117">Fügen Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> zum Dienst hinzu, indem Sie die <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>-Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="4212c-117">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> to the service using the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.</span></span> <span data-ttu-id="4212c-118">Übergeben Sie den Vertrag, die Bindung und eine Endpunktadresse an den Konstruktor. Dies wird im folgenden Code veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4212c-118">Pass the contract, binding, and an endpoint address to the constructor, as shown in the following code.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7.  Optional.Um Metadaten vom Dienst abzufragen, erstellen Sie ein neues <xref:System.ServiceModel.Description.ServiceMetadataBehavior>\-Objekt und legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>\-Eigenschaft auf `true` fest.  
+7.  <span data-ttu-id="4212c-119">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="4212c-119">Optional.</span></span> <span data-ttu-id="4212c-120">Um Metadaten vom Dienst abzufragen, erstellen Sie ein neues <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Objekt und legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf `true` fest.</span><span class="sxs-lookup"><span data-stu-id="4212c-120">To retrieve metadata from the service, create a new <xref:System.ServiceModel.Description.ServiceMetadataBehavior> object and set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property to `true`.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
   
-8.  Verwenden Sie die <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>\-Methode der <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>\-Klasse, um das gültige Zertifikat zum Dienst hinzuzufügen.Die Methode kann eine von diversen Methoden nutzen, um ein Zertifikat zu suchen.In diesem Beispiel wird die <xref:System.Security.Cryptography.X509Certificates.X509FindType>\-Enumeration verwendet.Die Enumeration gibt an, dass der gelieferte Wert der Name der Entität ist, an die das Zertifikat herausgegeben wurde.  
+8.  <span data-ttu-id="4212c-121">Verwenden Sie die <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>-Methode der <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>-Klasse, um das gültige Zertifikat zum Dienst hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="4212c-121">Use the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> method of the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> class to add the valid certificate to the service.</span></span> <span data-ttu-id="4212c-122">Die Methode kann eine von diversen Methoden nutzen, um ein Zertifikat zu suchen.</span><span class="sxs-lookup"><span data-stu-id="4212c-122">The method can use one of several methods to find a certificate.</span></span> <span data-ttu-id="4212c-123">In diesem Beispiel wird die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName>-Enumeration verwendet.</span><span class="sxs-lookup"><span data-stu-id="4212c-123">This example uses the <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> enumeration.</span></span> <span data-ttu-id="4212c-124">Die Enumeration gibt an, dass der gelieferte Wert der Name der Entität ist, an die das Zertifikat herausgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="4212c-124">The enumeration specifies that the supplied value is the name of the entity that the certificate was issued to.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#7)]
      [!code-vb[C_SecureWithCertificate#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#7)]  
   
-9. Rufen Sie die <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>\-Methode auf, um die Dienstüberwachung zu starten.Sollten Sie eine Konsolenanwendung erstellen, rufen Sie die <xref:System.Console.ReadLine%2A>\-Methode auf, um den Dienst im Überwachungsstatus zu halten.  
+9. <span data-ttu-id="4212c-125">Rufen Sie die <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>-Methode auf, um die Dienstüberwachung zu starten.</span><span class="sxs-lookup"><span data-stu-id="4212c-125">Call the <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> method to start the service listening.</span></span> <span data-ttu-id="4212c-126">Sollten Sie eine Konsolenanwendung erstellen, rufen Sie die <xref:System.Console.ReadLine%2A>-Methode auf, um den Dienst im Überwachungsstatus zu halten.</span><span class="sxs-lookup"><span data-stu-id="4212c-126">If you are creating a console application, call the <xref:System.Console.ReadLine%2A> method to keep the service in the listening state.</span></span>  
   
      [!code-csharp[C_SecureWithCertificate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#8)]
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
-## Beispiel  
- Im folgenden Beispiel wird die <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>\-Methode verwendet, um einen Dienst mit einem X.509\-Zertifikat zu konfigurieren.  
+## <a name="example"></a><span data-ttu-id="4212c-127">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4212c-127">Example</span></span>  
+ <span data-ttu-id="4212c-128">Im folgenden Beispiel wird die <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>-Methode verwendet, um einen Dienst mit einem X.509-Zertifikat zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="4212c-128">The following example uses the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> method to configure a service with an X.509 certificate.</span></span>  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
-## Kompilieren des Codes  
- Die folgenden Namespaces sind zum Kompilieren des Codes erforderlich:  
+## <a name="compiling-the-code"></a><span data-ttu-id="4212c-129">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="4212c-129">Compiling the Code</span></span>  
+ <span data-ttu-id="4212c-130">Die folgenden Namespaces sind zum Kompilieren des Codes erforderlich:</span><span class="sxs-lookup"><span data-stu-id="4212c-130">The following namespaces are required to compile the code:</span></span>  
   
 -   <xref:System>  
   
@@ -86,5 +92,5 @@ Die Sicherung eines Diensts mithilfe eines X.509\-Zertifikats ist eine grundlege
   
 -   <xref:System.Runtime.Serialization>  
   
-## Siehe auch  
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="4212c-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4212c-131">See Also</span></span>  
+ [<span data-ttu-id="4212c-132">Verwenden von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="4212c-132">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -1,24 +1,26 @@
 ---
-title: "Methode &#39;&lt;Methodenname&gt;&#39; verf&#252;gt &#252;ber keinen Parameter namens &#39;&lt;Parametername&gt;&#39;. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrArgument_InvalidNamedArg2"
+title: Methode &#39; &lt;Methodname&gt;&#39; weist keine Parameter mit dem Namen &#39;&lt; Parametername&gt;&#39;
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrArgument_InvalidNamedArg2
 ms.assetid: b4346b6a-87da-4e65-a2de-ee5239c671f8
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1d1e5e8fb0f26b8e5ada4409fb0a5cf6ec3d80e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Methode &#39;&lt;Methodenname&gt;&#39; verf&#252;gt &#252;ber keinen Parameter namens &#39;&lt;Parametername&gt;&#39;.
-Ein angegebenes benanntes Argument stimmt mit keinem der Argumente der Zielmethode überein.  
+# <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a><span data-ttu-id="f9e39-102">Methode &#39; &lt;Methodname&gt;&#39; weist keine Parameter mit dem Namen &#39;&lt; Parametername&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="f9e39-102">Method &#39;&lt;methodname&gt;&#39; has no parameter named &#39;&lt;parametername&gt;&#39;</span></span>
+<span data-ttu-id="f9e39-103">Ein angegebenes benanntes Argument stimmt mit keinem der Argumente der Zielmethode überein.</span><span class="sxs-lookup"><span data-stu-id="f9e39-103">A supplied named argument does not match any of the arguments of the target method.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f9e39-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="f9e39-104">To correct this error</span></span>  
   
-1.  Stellen Sie sicher, dass das benannte Argument ordnungsgemäß angegeben wurde.  
+1.  <span data-ttu-id="f9e39-105">Stellen Sie sicher, dass das benannte Argument ordnungsgemäß angegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="f9e39-105">Ensure that the named argument was supplied correctly.</span></span>  
   
-## Siehe auch  
- [Passing Arguments by Value and by Reference](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="f9e39-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f9e39-106">See Also</span></span>  
+ [<span data-ttu-id="f9e39-107">Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="f9e39-107">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

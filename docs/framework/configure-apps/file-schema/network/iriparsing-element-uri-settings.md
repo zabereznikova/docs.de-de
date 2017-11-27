@@ -1,88 +1,86 @@
 ---
-title: "&lt;iriParsing&gt;-Element (Uri-Einstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;IriParsing&gt; Element (Uri-Einstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: aad2ea9a9255a6fc11465bae92f693065db21cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;iriParsing&gt;-Element (Uri-Einstellungen)
-Gibt an, ob IRI\-Analysen \(International Resource Identifier\) auf einen <xref:System.Uri> angewendet werden sollen und ob IRI\-Analyseregeln beachtet werden sollen.  
+# <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="15e45-102">&lt;IriParsing&gt; Element (Uri-Einstellungen)</span><span class="sxs-lookup"><span data-stu-id="15e45-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="15e45-103">Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International Resource Identifier, IRI) auf <xref:System.Uri> angewendet wird und ob die IRI-Analyseregeln angewendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="15e45-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  
   
-## Schemahierarchie  
- [\<configuration\>\-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="15e45-104">Schemahierarchie</span><span class="sxs-lookup"><span data-stu-id="15e45-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="15e45-105">\<configuration>-Element</span><span class="sxs-lookup"><span data-stu-id="15e45-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<Uri\>\-Element \(Uri\-Einstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="15e45-106">\<URI >-Element (Uri-Einstellungen)</span><span class="sxs-lookup"><span data-stu-id="15e45-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<iriParsing\>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [<span data-ttu-id="15e45-107">\<IriParsing ></span><span class="sxs-lookup"><span data-stu-id="15e45-107">\<iriParsing></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="15e45-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="15e45-108">Syntax</span></span>  
   
-```  
-<idn  
+```xml  
+<iriParsing  
   enabled="true|false"  
-/idn>  
+/>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="15e45-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="15e45-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="15e45-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="15e45-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="15e45-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="15e45-111">Attributes</span></span>  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|`enabled`|Gibt an, ob die IRI\-Analyse aktiviert ist.  Der Standardwert ist `false`.|  
+|<span data-ttu-id="15e45-112">**Element**</span><span class="sxs-lookup"><span data-stu-id="15e45-112">**Element**</span></span>|<span data-ttu-id="15e45-113">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="15e45-113">**Description**</span></span>|  
+|-----------------|---------------------|  
+|`enabled`|<span data-ttu-id="15e45-114">Gibt an, ob IRI-Analyse aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="15e45-114">Specifies whether IRI parsing is enabled.</span></span> <span data-ttu-id="15e45-115">Der Standardwert ist `false`.</span><span class="sxs-lookup"><span data-stu-id="15e45-115">The default value is `false`.</span></span>|  
   
-### Untergeordnete Elemente  
- Kein  
+### <a name="child-elements"></a><span data-ttu-id="15e45-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="15e45-116">Child Elements</span></span>  
+ <span data-ttu-id="15e45-117">Keine</span><span class="sxs-lookup"><span data-stu-id="15e45-117">None</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="15e45-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="15e45-118">Parent Elements</span></span>  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie .NET Framework durch URIs \(Uniform Resource Identifier\) ausgedrückte Webadressen behandelt.|  
+|<span data-ttu-id="15e45-119">**Element**</span><span class="sxs-lookup"><span data-stu-id="15e45-119">**Element**</span></span>|<span data-ttu-id="15e45-120">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="15e45-120">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="15e45-121">URI</span><span class="sxs-lookup"><span data-stu-id="15e45-121">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="15e45-122">Enthält Einstellungen, die angeben, wie .NET Framework Webadressen ausgedrückt mit uniform Resource Identifier (URIs) behandelt.</span><span class="sxs-lookup"><span data-stu-id="15e45-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## Hinweise  
- Die vorhandene <xref:System.Uri>\-Klasse wurde in .NET Framework 3.5, 3.0 SP1 und 2.0 SP1 so erweitert, dass nun IRI \(International Resource Identifiers\) und IDN \(Internationalized Domain Names\) bereitgestellt werden.  Aktuelle Benutzer werden keinen Unterschied zum .NET Framework 2.0\-Verhalten feststellen, es sei denn, sie aktivieren die IRI\- und IDN\-Unterstützung explizit.  Damit wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework gewährleistet.  
+## <a name="remarks"></a><span data-ttu-id="15e45-123">Hinweise</span><span class="sxs-lookup"><span data-stu-id="15e45-123">Remarks</span></span>  
+ <span data-ttu-id="15e45-124">Die vorhandene <xref:System.Uri> Klasse in .NET Framework 3.5 erweitert wurde.</span><span class="sxs-lookup"><span data-stu-id="15e45-124">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="15e45-125">3.0 SP1 und 2.0 SP1 zur Unterstützung von International Resource Identifiers (IRI) und internationale Domänennamen (IDN).</span><span class="sxs-lookup"><span data-stu-id="15e45-125">3.0 SP1, and 2.0 SP1 to provide support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="15e45-126">Aktuellen Benutzer sehen keine Änderungen des Verhaltens gegenüber den .NET Framework 2.0, es sei denn, sie explizit IRI und IDN aktivieren unterstützen.</span><span class="sxs-lookup"><span data-stu-id="15e45-126">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="15e45-127">Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.</span><span class="sxs-lookup"><span data-stu-id="15e45-127">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- Zum Aktivieren der Unterstützung für IRI müssen die folgenden zwei Änderungen vorgenommen werden:  
+ <span data-ttu-id="15e45-128">Um die Unterstützung für IRI aktivieren, sind die folgenden zwei Änderungen erforderlich:</span><span class="sxs-lookup"><span data-stu-id="15e45-128">To enable support for IRI, the following two changes are required:</span></span>  
   
-1.  Fügen Sie der Datei machine.config im .NET Framework 2.0\-Verzeichnis folgende Zeile hinzu:  
+1.  <span data-ttu-id="15e45-129">Fügen Sie die folgende Zeile auf die Datei "Machine.config" im .NET Framework 2.0-Verzeichnis</span><span class="sxs-lookup"><span data-stu-id="15e45-129">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
   
-    ```  
+    ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Geben Sie an, ob IRI\-Analyseregeln angewendet werden sollen.  Dies können Sie in der Datei machine.config oder in der Datei app.config festlegen.  
+2.  <span data-ttu-id="15e45-130">Geben Sie an, ob die IRI-Analyse Regeln angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="15e45-130">Specify whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="15e45-131">Dies kann in der Datei „machine.config“ oder in der Datei „App.config“ durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="15e45-131">This can be done in the machine.config or in the app.config file.</span></span>  
   
- Durch das Aktivieren von IRI\-Analysen \(iriParsing enabled \= `true`\) werden Normalisierung und Zeichenüberprüfung gemäß den aktuellen IRI\-Regeln in RFC 3987 ausgeführt.  Der Standardwert ist `false`, bei dem Normalisierung und Zeichenüberprüfung gemäß RFC 2396 und RFC 3986 \(für IPv6\-Literale\) ausgeführt werden.  
+ <span data-ttu-id="15e45-132">Aktivieren die IRI-Analyse (IriParsing aktiviert = `true`) ist dies der Normalisierung und zeichenüberprüfung entsprechend der neuesten IRI Regeln in RFC 3987.</span><span class="sxs-lookup"><span data-stu-id="15e45-132">Enabling IRI parsing (iriParsing enabled = `true`) will do normalization and character checking according to the latest IRI rules in RFC 3987.</span></span> <span data-ttu-id="15e45-133">Der Standardwert ist `false` und führen Sie die Normalisierung und Überprüfung gemäß RFC 2396 und RFC 3986 mit Escapezeichen (für IPv6-Literale) Zeichen.</span><span class="sxs-lookup"><span data-stu-id="15e45-133">The default value is `false` and will do normalization and character checking according to RFC 2396 and RFC 3986 (for IPv6 literals).</span></span>  
   
-### Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+### <a name="configuration-files"></a><span data-ttu-id="15e45-134">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="15e45-134">Configuration Files</span></span>  
+ <span data-ttu-id="15e45-135">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="15e45-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="15e45-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="15e45-136">Example</span></span>  
   
-### **Beschreibung**  
- Im folgenden Codebeispiel wird eine von der <xref:System.Uri>\-Klasse verwendete Konfiguration für die Unterstützung von IRI\-Analyse und IDN\-Namen veranschaulicht.  
+### <a name="description"></a><span data-ttu-id="15e45-137">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="15e45-137">Description</span></span>  
+ <span data-ttu-id="15e45-138">Das folgende Beispiel zeigt eine Konfiguration von verwendet die <xref:System.Uri> Klasse IRI-Analyse und IDN-Namen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="15e45-138">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
   
-### Code  
+### <a name="code"></a><span data-ttu-id="15e45-139">Code</span><span class="sxs-lookup"><span data-stu-id="15e45-139">Code</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -91,7 +89,7 @@ Gibt an, ob IRI\-Analysen \(International Resource Identifier\) auf einen <xref:
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="15e45-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="15e45-140">See Also</span></span>  
+ <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ [<span data-ttu-id="15e45-141">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="15e45-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

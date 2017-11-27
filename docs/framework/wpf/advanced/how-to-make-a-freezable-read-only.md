@@ -1,47 +1,52 @@
 ---
-title: "Gewusst wie: Erstellen eines schreibgesch&#252;tzten Freezable-Objekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Freezable-Objekte, Als schreibgeschützt markieren"
+title: "Gewusst wie: Erstellen eines schreibgeschützten Freezable-Objekts"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c407a2fcccfbda29ba23f63ba6ae71302c734d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines schreibgesch&#252;tzten Freezable-Objekts
-In diesem Beispiel wird dargestellt, wie der Schreibschutz für ein <xref:System.Windows.Freezable> mithilfe des Aufrufs der <xref:System.Windows.Freezable.Freeze%2A>\-Methode aktiviert wird.  
+# <a name="how-to-make-a-freezable-read-only"></a><span data-ttu-id="bf768-102">Gewusst wie: Erstellen eines schreibgeschützten Freezable-Objekts</span><span class="sxs-lookup"><span data-stu-id="bf768-102">How to: Make a Freezable Read-Only</span></span>
+<span data-ttu-id="bf768-103">Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Freezable> schreibgeschützt sind und durch Aufrufen seiner <xref:System.Windows.Freezable.Freeze%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="bf768-103">This example shows how to make a <xref:System.Windows.Freezable> read-only by calling its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span>  
   
- Ein <xref:System.Windows.Freezable>\-Objekt kann nicht fixiert werden, wenn eine der folgenden Bedingungen in Bezug auf das Objekt `true` ist:  
+ <span data-ttu-id="bf768-104">Sie können nicht eingefroren werden eine <xref:System.Windows.Freezable> Objekt, wenn eine der folgenden Bedingungen ist `true` über das Objekt:</span><span class="sxs-lookup"><span data-stu-id="bf768-104">You cannot freeze a <xref:System.Windows.Freezable> object if any one of the following conditions is `true` about the object:</span></span>  
   
--   Es verfügt über animierte oder datengebundene Eigenschaften.  
+-   <span data-ttu-id="bf768-105">Es verfügt über animierte oder datengebundene Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="bf768-105">It has animated or data bound properties.</span></span>  
   
--   Es verfügt über Eigenschaften, die von einer dynamischen Ressource festgelegt werden.  Weitere Informationen zu dynamischen Ressourcen finden Sie unter [XAML\-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   <span data-ttu-id="bf768-106">Sie verfügt über Eigenschaften, die von einer dynamischen Ressource festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="bf768-106">It has properties that are set by a dynamic resource.</span></span> <span data-ttu-id="bf768-107">Weitere Informationen zu dynamischen Ressourcen finden Sie unter der [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="bf768-107">For more information about dynamic resources, see the [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
--   Es enthält untergeordnete <xref:System.Windows.Freezable>\-Objekte, die nicht fixiert werden können.  
+-   <span data-ttu-id="bf768-108">Er enthält <xref:System.Windows.Freezable> untergeordnete Objekte, die nicht fixiert werden können.</span><span class="sxs-lookup"><span data-stu-id="bf768-108">It contains <xref:System.Windows.Freezable> sub-objects that cannot be frozen.</span></span>  
   
- Wenn diese Bedingungen `false` in Bezug auf das <xref:System.Windows.Freezable>\-Objekt sind und keine Änderungen nötig sind, sollten Sie zur Leistungsverbesserung das Fixieren des Objekts in Betracht ziehen.  
+ <span data-ttu-id="bf768-109">Wenn diese Bedingungen sind `false` für Ihre <xref:System.Windows.Freezable> -Objekt, und Sie möchten nicht ändern, sollten die Sperren, um die Leistungsvorteile zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="bf768-109">If these conditions are `false` for your <xref:System.Windows.Freezable> object and you do not intend to modify it, consider freezing it to gain performance benefits.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird ein <xref:System.Windows.Media.SolidColorBrush> fixiert, der vom Typ <xref:System.Windows.Freezable>\-Objekt ist.  
+## <a name="example"></a><span data-ttu-id="bf768-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bf768-110">Example</span></span>  
+ <span data-ttu-id="bf768-111">Im folgende Beispiel werden eingefroren eine <xref:System.Windows.Media.SolidColorBrush>, d. h. einen Typ von <xref:System.Windows.Freezable> Objekt.</span><span class="sxs-lookup"><span data-stu-id="bf768-111">The following example freezes a <xref:System.Windows.Media.SolidColorBrush>, which is a type of <xref:System.Windows.Freezable> object.</span></span>  
   
  [!code-csharp[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
  [!code-vb[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
   
- Weitere Informationen über <xref:System.Windows.Freezable>\-Objekte finden Sie unter [Übersicht über Freezable\-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ <span data-ttu-id="bf768-112">Weitere Informationen zu <xref:System.Windows.Freezable> anzuzeigen, die [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span><span class="sxs-lookup"><span data-stu-id="bf768-112">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Freezable>   
- <xref:System.Windows.Freezable.CanFreeze%2A>   
- <xref:System.Windows.Freezable.Freeze%2A>   
- [Übersicht über Freezable\-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="bf768-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf768-113">See Also</span></span>  
+ <xref:System.Windows.Freezable>  
+ <xref:System.Windows.Freezable.CanFreeze%2A>  
+ <xref:System.Windows.Freezable.Freeze%2A>  
+ [<span data-ttu-id="bf768-114">Übersicht über Freezable-Objekte</span><span class="sxs-lookup"><span data-stu-id="bf768-114">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="bf768-115">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="bf768-115">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

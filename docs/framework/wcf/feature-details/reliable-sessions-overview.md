@@ -1,132 +1,141 @@
 ---
-title: "&#220;bersicht &#252;ber zuverl&#228;ssige Sitzungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "Übersicht über zuverlässige Sitzungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ddec86fac46da7a93d17ecd55f292471fac2ee5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &#220;bersicht &#252;ber zuverl&#228;ssige Sitzungen
-Zuverlässiges [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP\-Messaging stellt eine zuverlässige End\-to\-End\-Übertragung zwischen SOAP\-Endpunkten bereit.Dies erfolgt in nicht zuverlässigen Netzwerken, indem Transportfehler und SOAP\-Fehler auf Nachrichtenebene behoben werden.Insbesondere wird sitzungsbasierte, einzelne und \(optional\) geordnete Zustellung für Nachrichten bereitgestellt, die über SOAP\- oder Transportvermittler übertragen werden.Die sitzungsbasierte Zustellung gruppiert Nachrichten in einer Sitzung und ordnet optional die Nachrichten.  
-  
- Die folgenden Erläuterungen beschreiben, was eine zuverlässige Sitzung ist, wie und wann sie verwendet wird, und wie sie geschützt wird.  
-  
-## Zuverlässige WCF\-Sitzungen  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind zuverlässige Sitzungen eine Implementierung von zuverlässigem SOAP\-Messaging, wie im WS\-ReliableMessaging\-Protokoll definiert.  
-  
- Zuverlässiges [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP\-Messaging bietet eine zuverlässige End\-to\-End\-Übertragung zwischen zwei Endpunkten, unabhängig von der Anzahl oder dem Typ der Vermittler, durch die die Messagingendpunkte getrennt werden.Dies umfasst alle Transportvermittler, die kein SOAP \(z. B. HTTP\-Proxys\) verwenden, oder Vermittler, die SOAP \(z. B. SOAP\-basierte Router oder Brücken\) verwenden, und die für die Übertragung von Nachrichten zwischen den Endpunkten erforderlich sind.Ein zuverlässiger Sitzungskanal unterstützt "interaktive" Kommunikation, sodass die über einen solchen Kanal verbundenen Dienste gleichzeitig ausgeführt werden können und mit geringer Latenz, also in relativ geringen Zeitintervallen, Nachrichten austauschen und verarbeiten können.Diese Kopplung bedeutet, dass diese Komponenten zusammen weiterarbeiten oder zusammen fehlschlagen; sie sind also nicht voneinander isoliert.  
-  
- Eine zuverlässige Sitzung maskiert zwei Arten von Fehlern:  
-  
--   SOAP\-Fehler auf Nachrichtenebene, zu denen verloren gegangene oder doppelte Nachrichten gehören sowie Nachrichten, die in einer anderen Reihenfolge eintreffen als der, in der sie gesendet wurden.  
-  
--   Transportfehler.  
-  
- Eine zuverlässige Sitzung implementiert das WS\-ReliableMessaging\-Protokoll und ein Übertragungsfenster im Arbeitsspeicher, um SOAP\-Fehler auf Nachrichtenebene zu maskieren und Verbindungen im Falle von Transportfehlern neu herzustellen.  
-  
- Eine zuverlässige Sitzung stellt für SOAP\-Nachrichten das bereit, was TCP für IP\-Pakete bereitstellt.Eine TCP\-Socketverbindung stellt eine einzelne, geordnete Übertragung von IP\-Paketen zwischen Knoten bereit.Der zuverlässige Kanal stellt denselben Typ zuverlässiger Übertragung bereit, die sich aber von der TCP\-Socket\-Zuverlässigkeit in folgenden Punkten unterscheidet:  
-  
--   Die Zuverlässigkeit gilt für die SOAP\-Nachrichten\-Ebene, nicht für ein Byte\-Paket zufälliger Größe.  
-  
--   Die Zuverlässigkeit ist transportneutral und gilt nicht nur für die Übertragung über TCP.  
-  
--   Die Zuverlässigkeit ist nicht an eine bestimmte Transportsitzung gebunden \(beispielsweise an die Sitzung, die eine TCP\-Verbindung bereitstellt\) und kann während der Lebensdauer einer zuverlässigen Sitzung mehrere Transportsitzungen gleichzeitig oder nacheinander verwenden.  
-  
--   Die zuverlässige Sitzung besteht zwischen den sendenden und den empfangenden SOAP\-Endpunkten, unabhängig von der Anzahl der Transportverbindungen, die für die Konnektivität zwischen ihnen erforderlich ist.Kurz gesagt, TCP\-Zuverlässigkeit endet, wo die Transportverbindung endet, wohingegen eine zuverlässige Sitzung End\-to\-End\-Zuverlässigkeit bereitstellt.  
-  
-## Zuverlässige Sitzungen und Bindungen  
- Wie schon erwähnt, ist eine zuverlässige Sitzung transportneutral und kann daher über viele Transporte implementiert werden.Eine zuverlässige Sitzung kann auch über viele Nachrichtenaustauschmuster eingerichtet werden, z. B. über Anforderung\-Antwort\- oder Duplex\-Muster.Die zuverlässige Sitzung wird daher in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] als Eigenschaft eines Satzes von Bindungen verfügbar gemacht.  
-  
- Sie können eine zuverlässige Sitzung auf Endpunkten einsetzen, die folgende Bindungen verwenden:  
-  
--   HTTP\-basierte Transport\-Standardbindungen:  
-  
-    -   `WsHttpBinding` und verfügbar gemachte Anforderung\-Antwort\- oder unidirektionale Verträge.  
-  
-    -   Kann verwendet werden, wenn zuverlässige Sitzung über einen Anforderung\-Antwort\- oder einen einfachen unidirektionalen Dienstvertrag verwendet wird.  
-  
-    -   `WsDualHttpBinding` und verfügbar gemachte Duplex\-, Anforderung\-Antwort\- oder unidirektionale Verträge.  
-  
-    -   `WsFederationHttpBinding` und verfügbar gemachte Anforderung\-Antwort\- oder unidirektionale Verträge.  
-  
--   TCP\-basierte Transport\-Standardbindungen:  
-  
-    -   `NetTcpBinding` und verfügbar gemachte Duplex\-, Anforderung\-Antwort\- oder unidirektionale Verträge.  
-  
- Sie können eine zuverlässige Sitzung für jede andere Bindung verwenden, indem Sie eine benutzerdefinierte Bindung, etwa HTTPS \(weitere Informationen zu möglichen Problemen finden Sie im Abschnitt "Zuverlässige Sitzungen und Sicherheit" weiter unten in diesem Thema\), oder eine benannte Pipebindung erstellen.  
-  
- Eine zuverlässige Sitzung kann auf verschiedene zugrunde liegende Kanaltypen gestapelt werden, und die Form des sich ergebenden zuverlässigen Sitzungskanals variiert.Sowohl beim Client als auch beim Server hängt der Typ des unterstützten zuverlässigen Sitzungskanals vom Typ des zugrunde liegenden Kanals ab, der verwendet wird.In der folgenden Tabelle werden die Typen von Sitzungskanälen aufgeführt, die vom Client auf der Basis des zugrunde liegenden Kanaltyps unterstützt werden.  
-  
-|Unterstützte zuverlässige Sitzungskanaltypen \(unterstützte Werte von `TChannel` für einen gegebenen, zugrunde liegenden Kanaltyp\)|`IRequestChannel`|`IRequestSessionChanne`l|`IDuplexChannel`|`IDuplexSessionChannel`|  
-|-----------------------------------------------------------------------------------------------------------------------------------------|-----------------------|------------------------------|----------------------|-----------------------------|  
-|`IOutputSessionChannel`|Ja|Ja|Ja|Ja|  
-|`IRequestSessionChannel`|Yes|Ja|Nein|Nein|  
-|`IDuplexSessionChannel`|Nein|Nein|Ja|Ja|  
-  
- Die unterstützen Kanaltypen sind die für den generischen `TChannel`\-Parameterwert verfügbaren Werte. Dieser Parameter wird in die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>\-Methode übergeben.  
-  
- In der folgenden Tabelle werden die Typen von Sitzungskanälen aufgeführt, die vom Server auf der Basis des zugrunde liegenden Kanaltyps unterstützt werden.  
-  
-|Unterstützte zuverlässige Sitzungskanaltypen \(unterstützte Werte von `TChannel` für einen gegebenen, zugrunde liegenden Kanaltyp\)|`IReplyChannel`|`IReplySessionChannel`|`IDuplexChannel`|`IDuplexSessionChannel`|  
-|-----------------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------|----------------------|-----------------------------|  
-|`IInputSessionChannel`|Ja|Ja|Ja|Ja|  
-|`IReplySessionChannel`|Yes|Ja|Nein|Nein|  
-|`IDuplexSessionChannel`|Nein|Nein|Ja|Ja|  
-  
- Die unterstützen Kanaltypen sind die für den generischen `TChannel`\-Parameterwert verfügbaren Werte. Dieser Parameter wird in die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>\-Methode übergeben.  
-  
-## Zuverlässige Sitzungen und Sicherheit  
- Der Schutz einer zuverlässigen Sitzung ist wichtig, um sicherstellen zu können, dass die Kommunikationspartner \(Dienst und Client\) authentifiziert und die in der Sitzung ausgetauschten Nachrichten nicht verfälscht werden.Weiterhin ist es wichtig, die Integrität jeder einzelnen zuverlässigen Sitzung sicherzustellen.Eine zuverlässige Sitzung wird geschützt, indem sie an einen sicheren Kontext gebunden wird, der vom Sicherheitskanal der Sitzung dargestellt und verwaltet wird.Der Sicherheitskanal stellt eine Sicherheitssitzung bereit.Die Sicherheitstoken, die während der Einrichtung der Sitzung ausgetauscht werden, werden anschließend verwendet, um die Nachrichten in der zuverlässigen Sitzung zu schützen.  
-  
- Findet die zuverlässige Sitzung über TCP\-S statt, ist die TCP\-Sitzung an die zuverlässige Sitzung gebunden, und daher gewährleistet die Transportsicherheit, dass die Sicherheit ebenfalls an die zuverlässige Sitzung gebunden ist.In diesem Fall ist die erneute Einrichtung einer Verbindung abgeschaltet.  
-  
- Die einzige Ausnahme besteht bei der Verwendung von HTTPS.Die Secure Sockets Layer \(SSL\)\-Sitzung ist nicht an die zuverlässige Sitzung gebunden.Dies stellt ein Risiko dar, weil Sitzungen, die einen Sicherheitskontext gemeinsam verwenden \(die SSL\-Sitzung\), nicht voreinander geschützt sind. Dies kann, abhängig von der Anwendung, ein echtes Risiko darstellen oder auch nicht.  
-  
-## Verwenden von zuverlässigen Sitzungen  
- Um zuverlässige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Sitzungen zu verwenden, erstellen Sie einen Endpunkt mit einer Bindung, die eine zuverlässige Sitzung unterstützt.Verwenden Sie eine der von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bereitgestellten Bindungen mit aktivierter zuverlässiger Sitzung, oder erstellen Sie eine eigene benutzerdefinierte Bindung, die dies tut.Die systemdefinierten Bindungen, die standardmäßig eine zuverlässige Sitzung unterstützen und aktivieren, sind:  
-  
--   <xref:System.ServiceModel.WSDualHttpBinding>  
-  
- Die systemdefinierten Bindungen, die optional eine zuverlässige Sitzung unterstützen, sie jedoch nicht standardmäßig aktivieren, sind:  
-  
--   <xref:System.ServiceModel.WSHttpBinding>  
-  
--   <xref:System.ServiceModel.WSFederationHttpBinding>  
-  
--   <xref:System.ServiceModel.NetTcpBinding>  
-  
- Ein Beispiel dafür, wie eine benutzerdefinierte Bindung erstellt wird, finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten zuverlässigen Sitzungsbindung mit HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).  
-  
- Eine Erläuterung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Bindungen, die zuverlässige Sitzungen unterstützen, finden Sie unter [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).  
-  
-## Wann zuverlässige Sitzungen verwendet werden  
- Es ist wichtig zu wissen, wann Sie in Ihrer Anwendung zuverlässige Sitzungen verwenden sollten.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt zuverlässige Sitzungen zwischen Endpunkten, die gleichzeitig aktiv und am Leben sind.Wenn es für Ihre Anwendung erforderlich ist, dass einer der Endpunkte für einen bestimmten Zeitraum nicht verfügbar ist, können Sie die Zuverlässigkeit mithilfe von Warteschlangen erreichen.  
-  
- Erfordert das Szenario, dass zwei Endpunkte über TCP miteinander verbunden sind, dann kann TCP ausreichen, um den zuverlässigen Austausch der Nachrichten bereitzustellen, auch wenn es nicht notwendig ist, eine zuverlässige Sitzung zu verwenden. TCP stellt sicher, dass die Pakete in der richtigen Reihenfolge und nur einmal eintreffen.  
-  
- Weist Ihr Szenario eines der folgenden Merkmale auf, müssen Sie ernsthaft erwägen, eine zuverlässige Sitzung zu verwenden:  
-  
--   SOAP\-Vermittler, z. B. SOAP\-Router  
-  
--   Proxyvermittler oder Transportbrücken  
-  
--   Periodische Konnektivität  
-  
--   Sitzungen über HTTP  
-  
-## Siehe auch  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [Zuverlässige WS\-Sitzung](../../../../docs/framework/wcf/samples/ws-reliable-session.md)
+# <a name="reliable-sessions-overview"></a><span data-ttu-id="350ff-102">Übersicht über zuverlässige Sitzungen</span><span class="sxs-lookup"><span data-stu-id="350ff-102">Reliable Sessions Overview</span></span>
+
+<span data-ttu-id="350ff-103">Zuverlässiges [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP-Messaging stellt eine zuverlässige End-to-End-Übertragung zwischen SOAP-Endpunkten bereit.</span><span class="sxs-lookup"><span data-stu-id="350ff-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP reliable messaging provides end-to-end message transfer reliability between SOAP endpoints.</span></span> <span data-ttu-id="350ff-104">Dies erfolgt in nicht zuverlässigen Netzwerken, indem Transportfehler und SOAP-Fehler auf Nachrichtenebene behoben werden.</span><span class="sxs-lookup"><span data-stu-id="350ff-104">It does this on networks that are unreliable by overcoming transport failures and SOAP message-level failures.</span></span> <span data-ttu-id="350ff-105">Insbesondere wird sitzungsbasierte, einzelne und (optional) geordnete Zustellung für Nachrichten bereitgestellt, die über SOAP- oder Transportvermittler übertragen werden.</span><span class="sxs-lookup"><span data-stu-id="350ff-105">In particular, it provides session-based, single, and (optionally) ordered delivery for messages sent across SOAP or transport intermediaries.</span></span> <span data-ttu-id="350ff-106">Sitzungsbasierte Zustellung bietet zum Gruppieren von Nachrichten in einer Sitzung und ordnet die Nachrichten optional.</span><span class="sxs-lookup"><span data-stu-id="350ff-106">Session-based delivery provides for grouping messages in a session with optional ordering of the messages.</span></span>
+
+<span data-ttu-id="350ff-107">Dieses Thema beschreibt zuverlässige Sitzungen, wie und wann Sie zu verwenden und diese sichern.</span><span class="sxs-lookup"><span data-stu-id="350ff-107">This topic describes reliable sessions, how and when to use them, and how to secure them.</span></span>
+
+## <a name="wcf-reliable-sessions"></a><span data-ttu-id="350ff-108">Zuverlässige WCF-Sitzungen</span><span class="sxs-lookup"><span data-stu-id="350ff-108">WCF reliable sessions</span></span>
+
+<span data-ttu-id="350ff-109">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sind zuverlässige Sitzungen eine Implementierung von zuverlässigem SOAP-Messaging, wie im WS-ReliableMessaging-Protokoll definiert.</span><span class="sxs-lookup"><span data-stu-id="350ff-109">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable sessions is an implementation of SOAP reliable messaging as defined by the WS-ReliableMessaging protocol.</span></span>
+
+<span data-ttu-id="350ff-110">Zuverlässiges [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP-Messaging bietet eine zuverlässige End-to-End-Übertragung zwischen zwei Endpunkten, unabhängig von der Anzahl oder dem Typ der Vermittler, durch die die Messagingendpunkte getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="350ff-110">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP reliable messaging provides an end-to-end reliable session between two endpoints, regardless of the number or type of intermediaries that separate the messaging endpoints.</span></span> <span data-ttu-id="350ff-111">Dies umfasst alle transportvermittler, die SOAP (z. B. HTTP-Proxys) verwenden, oder Vermittler, die SOAP (z. B. SOAP-basierte Router oder Brücken) verwenden, die Nachrichten zwischen den Endpunkten erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="350ff-111">This includes any transport intermediaries that don't use SOAP (for example, HTTP proxies) or intermediaries that use SOAP (for example, SOAP-based routers or bridges) that are required for messages to flow between the endpoints.</span></span> <span data-ttu-id="350ff-112">Ein zuverlässiger Sitzungskanal unterstützt *interaktive* Kommunikation, damit die über einen solchen Kanal verbundenen Dienste gleichzeitig ausgeführt werden und austauschen und Verarbeiten von Nachrichten in Situationen mit geringer Latenz, also in relativ geringen Zeitintervalle.</span><span class="sxs-lookup"><span data-stu-id="350ff-112">A reliable session channel supports *interactive* communication so that the services connected by such a channel run concurrently and exchange and process messages under conditions of low latency, that is, within relatively short intervals of time.</span></span> <span data-ttu-id="350ff-113">Diese Kopplung bedeutet, dass diese Komponenten zusammen weiterarbeiten oder zusammen fehlschlagen; es gibt also keine voneinander isoliert.</span><span class="sxs-lookup"><span data-stu-id="350ff-113">This coupling means that these components make progress together or fail together, so there's no isolation provided between them.</span></span>
+
+<span data-ttu-id="350ff-114">Eine zuverlässige Sitzung maskiert zwei Arten von Fehlern:</span><span class="sxs-lookup"><span data-stu-id="350ff-114">A reliable session masks two kinds of failures:</span></span>
+
+- <span data-ttu-id="350ff-115">SOAP-Fehler auf Nachrichtenebene, zu denen verloren gegangene oder doppelte Nachrichten gehören sowie Nachrichten, die in einer anderen Reihenfolge eintreffen als der, in der sie gesendet wurden.</span><span class="sxs-lookup"><span data-stu-id="350ff-115">SOAP message-level failures, which includes lost or duplicated messages and messages that arrive in a different order from the order in which they were sent.</span></span>
+
+- <span data-ttu-id="350ff-116">Transportfehler.</span><span class="sxs-lookup"><span data-stu-id="350ff-116">Transport failures.</span></span>
+
+<span data-ttu-id="350ff-117">Eine zuverlässige Sitzung implementiert das WS-ReliableMessaging-Protokoll und ein Übertragungsfenster im Arbeitsspeicher, um SOAP-Fehler auf Nachrichtenebene zu maskieren und Verbindungen im Falle von Transportfehlern neu herzustellen.</span><span class="sxs-lookup"><span data-stu-id="350ff-117">A reliable session implements the WS-ReliableMessaging protocol and an in-memory transfer window to mask SOAP message-level failures and re-establishes connections in the case of transport failures.</span></span>
+
+<span data-ttu-id="350ff-118">Eine zuverlässige Sitzung stellt für SOAP-Nachrichten das bereit, was TCP für IP-Pakete bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="350ff-118">A reliable session provides for SOAP messages what TCP provides for IP packets.</span></span> <span data-ttu-id="350ff-119">Eine TCP-Socketverbindung stellt eine einzelne, geordnete Übertragung von IP-Paketen zwischen Knoten bereit.</span><span class="sxs-lookup"><span data-stu-id="350ff-119">A TCP socket connection provides a singular, in-order transfer of IP packets between nodes.</span></span> <span data-ttu-id="350ff-120">Der zuverlässige Kanal stellt denselben Typ zuverlässiger Übertragung bereit, die sich aber von der TCP-Socket-Zuverlässigkeit in folgenden Punkten unterscheidet:</span><span class="sxs-lookup"><span data-stu-id="350ff-120">The reliable channel provides the same type of reliable transfer, but it differs from TCP socket reliability in the following ways:</span></span>
+
+- <span data-ttu-id="350ff-121">Die Zuverlässigkeit gilt für die SOAP-Nachrichten-Ebene, nicht für ein Byte-Paket zufälliger Größe.</span><span class="sxs-lookup"><span data-stu-id="350ff-121">The reliability is at the SOAP message level, not for an arbitrarily sized packet of bytes.</span></span>
+
+- <span data-ttu-id="350ff-122">Die Zuverlässigkeit ist transportneutral, nicht nur für die Übertragung über TCP.</span><span class="sxs-lookup"><span data-stu-id="350ff-122">The reliability is transport-neutral, not just for transfer over TCP.</span></span>
+
+- <span data-ttu-id="350ff-123">Die Zuverlässigkeit ist nicht an eine bestimmte transportsitzung (z. B. die Sitzung, die eine TCP-Verbindung bereitstellt) gebunden und kann mehrere transportsitzungen gleichzeitig oder nacheinander während der gesamten Lebensdauer einer zuverlässigen Sitzung.</span><span class="sxs-lookup"><span data-stu-id="350ff-123">The reliability isn't tied to a particular transport session (for example, the session a TCP connection provides) and can use multiple transport sessions concurrently or sequentially over the lifetime of the reliable session.</span></span>
+
+- <span data-ttu-id="350ff-124">Die zuverlässige Sitzung besteht zwischen den sendenden und den empfangenden SOAP-Endpunkten, unabhängig von der Anzahl der Transportverbindungen, die für die Konnektivität zwischen ihnen erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="350ff-124">The reliable session is between the sender and receiver SOAP endpoints, regardless of the number of transport connections required for connectivity between them.</span></span> <span data-ttu-id="350ff-125">Kurz gesagt, endet TCP-Zuverlässigkeit, wo die transportverbindung endet, während eine zuverlässige Sitzung End-to-End-Zuverlässigkeit bereitstellt, wird.</span><span class="sxs-lookup"><span data-stu-id="350ff-125">In short, TCP reliability ends where the transport connection ends, while a reliable session provides end-to-end reliability.</span></span>
+
+## <a name="reliable-sessions-and-bindings"></a><span data-ttu-id="350ff-126">Zuverlässige Sitzungen und Bindungen</span><span class="sxs-lookup"><span data-stu-id="350ff-126">Reliable sessions and bindings</span></span>
+
+<span data-ttu-id="350ff-127">Wie bereits erwähnt, ist eine zuverlässige Sitzung transportneutral.</span><span class="sxs-lookup"><span data-stu-id="350ff-127">As mentioned earlier, a reliable session is transport neutral.</span></span> <span data-ttu-id="350ff-128">Darüber hinaus können Sie eine zuverlässige Sitzung über viele Nachrichtenaustauschmuster, z. B. Anforderung-Antwort oder Duplex herstellen.</span><span class="sxs-lookup"><span data-stu-id="350ff-128">Also, you can establish a reliable session over many message exchange patterns, such as request-reply or duplex.</span></span> <span data-ttu-id="350ff-129">Ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zuverlässige Sitzung wird als eine Eigenschaft eines Satzes von Bindungen verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="350ff-129">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable session is exposed as a property of a set of bindings.</span></span>
+
+<span data-ttu-id="350ff-130">Verwenden Sie eine zuverlässige Sitzung auf Endpunkten, verwenden:</span><span class="sxs-lookup"><span data-stu-id="350ff-130">Use a reliable session on endpoints that use:</span></span>
+
+- <span data-ttu-id="350ff-131">HTTP-basierte Transport-Standardbindungen:</span><span class="sxs-lookup"><span data-stu-id="350ff-131">HTTP-based transport standard bindings:</span></span>
+
+  - <span data-ttu-id="350ff-132">`WsHttpBinding` und verfügbar gemachte Anforderung-Antwort- oder unidirektionale Verträge.</span><span class="sxs-lookup"><span data-stu-id="350ff-132">`WsHttpBinding` and expose request-reply or one-way contracts.</span></span>
+
+  - <span data-ttu-id="350ff-133">Wenn die zuverlässige Sitzung über einen Anforderung / Antwort- oder einen einfachen unidirektionalen Dienstvertrag verwendet.</span><span class="sxs-lookup"><span data-stu-id="350ff-133">When using reliable session over a request-reply or simple one-way service contract.</span></span>
+
+  - <span data-ttu-id="350ff-134">`WsDualHttpBinding` und verfügbar gemachte Duplex-, Anforderung-Antwort- oder unidirektionale Verträge.</span><span class="sxs-lookup"><span data-stu-id="350ff-134">`WsDualHttpBinding` and expose duplex, request-reply, or one-way contracts.</span></span>
+
+  - <span data-ttu-id="350ff-135">`WsFederationHttpBinding` und verfügbar gemachte Anforderung-Antwort- oder unidirektionale Verträge.</span><span class="sxs-lookup"><span data-stu-id="350ff-135">`WsFederationHttpBinding` and expose request-reply or one-way contracts.</span></span>
+
+- <span data-ttu-id="350ff-136">TCP-basierte Transport-Standardbindungen:</span><span class="sxs-lookup"><span data-stu-id="350ff-136">TCP-based transport standard bindings:</span></span>
+
+  - <span data-ttu-id="350ff-137">`NetTcpBinding` und verfügbar gemachte Duplex-, Anforderung-Antwort- oder unidirektionale Verträge.</span><span class="sxs-lookup"><span data-stu-id="350ff-137">`NetTcpBinding` and expose duplex, request reply, or one-way contracts.</span></span>
+
+<span data-ttu-id="350ff-138">Eine zuverlässige Sitzung für jede andere Bindung verwenden, erstellen Sie eine benutzerdefinierte Bindung, etwa HTTPS (Weitere Informationen zu Problemen finden Sie unter <a href="#reliable-sessions-and-security">zuverlässige Sitzungen und Sicherheit</a>) oder eine benannte Pipe-Bindung.</span><span class="sxs-lookup"><span data-stu-id="350ff-138">Use a reliable session on any other bindings by creating a custom binding, such as HTTPS (for more information about issues, see <a href="#reliable-sessions-and-security">Reliable sessions and security</a>) or a named pipe binding.</span></span>
+
+<span data-ttu-id="350ff-139">Sie können eine zuverlässige Sitzung auf verschiedene zugrunde liegende Kanaltypen gestapelt, und die resultierende kanalform für zuverlässige Sitzung variiert.</span><span class="sxs-lookup"><span data-stu-id="350ff-139">You can stack a reliable session on different underlying channel types, and the resulting reliable session channel shape varies.</span></span> <span data-ttu-id="350ff-140">Auf dem Client und dem Server hängt den Typ des zugrunde liegenden Kanäle zur Datenübergabe der Typ des zuverlässigen Sitzungskanal unterstützt.</span><span class="sxs-lookup"><span data-stu-id="350ff-140">On both the client and the server, the type of reliable session channel supported depends on the type of underlying channel used.</span></span> <span data-ttu-id="350ff-141">In der folgenden Tabelle werden die Typen von Sitzungskanälen aufgeführt, die vom Client auf der Basis des zugrunde liegenden Kanaltyps unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="350ff-141">The following table lists the types of session channels supported on the client as a function of the underlying channel type.</span></span>
+
+| <span data-ttu-id="350ff-142">Unterstützte zuverlässige sitzungskanaltypen &#8224;</span><span class="sxs-lookup"><span data-stu-id="350ff-142">Supported reliable session channel types&#8224;</span></span> | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
+| `IOutputSessionChannel`                         | <span data-ttu-id="350ff-143">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-143">Yes</span></span>               | <span data-ttu-id="350ff-144">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-144">Yes</span></span>                      | <span data-ttu-id="350ff-145">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-145">Yes</span></span>              | <span data-ttu-id="350ff-146">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-146">Yes</span></span>                     |
+| `IRequestSessionChannel`                        | <span data-ttu-id="350ff-147">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-147">Yes</span></span>               | <span data-ttu-id="350ff-148">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-148">Yes</span></span>                      | <span data-ttu-id="350ff-149">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-149">No</span></span>               | <span data-ttu-id="350ff-150">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-150">No</span></span>                      |
+| `IDuplexSessionChannel`                         | <span data-ttu-id="350ff-151">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-151">No</span></span>                | <span data-ttu-id="350ff-152">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-152">No</span></span>                       | <span data-ttu-id="350ff-153">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-153">Yes</span></span>              | <span data-ttu-id="350ff-154">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-154">Yes</span></span>                     |
+
+<span data-ttu-id="350ff-155">&#8224; Die unterstützen Kanaltypen sind die Werte für die generische `TChannel` Parameterwert, der übergeben wird die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> Methode.</span><span class="sxs-lookup"><span data-stu-id="350ff-155">&#8224;The supported channel types are the values available for the generic `TChannel` parameter value that is passed into the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> method.</span></span>
+
+<span data-ttu-id="350ff-156">In der folgenden Tabelle werden die Typen von Sitzungskanälen aufgeführt, die vom Server auf der Basis des zugrunde liegenden Kanaltyps unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="350ff-156">The following table lists the types of session channels supported on the server as a function of the underlying channel type.</span></span>
+
+| <span data-ttu-id="350ff-157">Unterstützte zuverlässige sitzungskanaltypen &#8225;</span><span class="sxs-lookup"><span data-stu-id="350ff-157">Supported reliable session channel types&#8225;</span></span> | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
+| `IInputSessionChannel`                          | <span data-ttu-id="350ff-158">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-158">Yes</span></span>             | <span data-ttu-id="350ff-159">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-159">Yes</span></span>                    | <span data-ttu-id="350ff-160">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-160">Yes</span></span>              | <span data-ttu-id="350ff-161">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-161">Yes</span></span>                     |
+| `IReplySessionChannel`                          | <span data-ttu-id="350ff-162">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-162">Yes</span></span>             | <span data-ttu-id="350ff-163">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-163">Yes</span></span>                    | <span data-ttu-id="350ff-164">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-164">No</span></span>               | <span data-ttu-id="350ff-165">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-165">No</span></span>                      |
+| `IDuplexSessionChannel`                         | <span data-ttu-id="350ff-166">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-166">No</span></span>              | <span data-ttu-id="350ff-167">Nein</span><span class="sxs-lookup"><span data-stu-id="350ff-167">No</span></span>                     | <span data-ttu-id="350ff-168">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-168">Yes</span></span>              | <span data-ttu-id="350ff-169">Ja</span><span class="sxs-lookup"><span data-stu-id="350ff-169">Yes</span></span>                     |
+
+<span data-ttu-id="350ff-170">&#8225; Die unterstützen Kanaltypen sind die Werte für die generische `TChannel` Parameterwert, der übergeben wird die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> Methode.</span><span class="sxs-lookup"><span data-stu-id="350ff-170">&#8225;The supported channel types are the values available for the generic `TChannel` parameter value that is passed into the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> method.</span></span>
+
+## <a name="reliable-sessions-and-security"></a><span data-ttu-id="350ff-171">Zuverlässige Sitzungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="350ff-171">Reliable sessions and security</span></span>
+
+<span data-ttu-id="350ff-172">Schutz einer zuverlässigen Sitzung ist wichtig, stellen Sie sicher, dass die Kommunikationspartner (Dienst und Client) authentifiziert werden und die in der Sitzung ausgetauschten Nachrichten manipuliert werden nicht.</span><span class="sxs-lookup"><span data-stu-id="350ff-172">Securing a reliable session is important to ensure that the communicating parties (service and client) are authenticated and that the messages exchanged in the session aren't tampered with.</span></span> <span data-ttu-id="350ff-173">Darüber hinaus ist es wichtig, um die Integrität jeder einzelnen zuverlässigen Sitzung sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="350ff-173">Furthermore, it's important to ensure the integrity of each individual reliable session.</span></span> <span data-ttu-id="350ff-174">Eine zuverlässige Sitzung wird geschützt, indem es an einen Sicherheitskontext, die dargestellt und verwaltet vom Sicherheitskanal der Sitzung gebunden.</span><span class="sxs-lookup"><span data-stu-id="350ff-174">A reliable session is secured by binding it to a security context that's represented and managed by a security session channel.</span></span> <span data-ttu-id="350ff-175">Der Sicherheitskanal stellt eine Sicherheitssitzung bereit.</span><span class="sxs-lookup"><span data-stu-id="350ff-175">The security channel provides a security session.</span></span> <span data-ttu-id="350ff-176">Die Sicherheitstoken, die während der Einrichtung der Sitzung ausgetauscht werden, werden anschließend verwendet, um die Nachrichten in der zuverlässigen Sitzung zu schützen.</span><span class="sxs-lookup"><span data-stu-id="350ff-176">Security tokens exchanged during the session establishment are then used to secure the messages in the reliable session.</span></span>
+
+<span data-ttu-id="350ff-177">Wenn eine zuverlässige Sitzung über TCP-S ist, ist die TCP-Sitzung an die zuverlässige Sitzung gebunden.</span><span class="sxs-lookup"><span data-stu-id="350ff-177">When a reliable session is over TCP-S, the TCP session is tied to the reliable session.</span></span> <span data-ttu-id="350ff-178">Aus diesem Grund wird transportsicherheit sichergestellt, dass Sicherheit auch an die zuverlässige Sitzung gebunden ist.</span><span class="sxs-lookup"><span data-stu-id="350ff-178">Therefore, transport security ensures that security is also tied to the reliable session.</span></span> <span data-ttu-id="350ff-179">In diesem Fall ist die erneute Einrichtung einer Verbindung abgeschaltet.</span><span class="sxs-lookup"><span data-stu-id="350ff-179">In this case, connection re-establishment is turned off.</span></span>
+
+<span data-ttu-id="350ff-180">Die einzige Ausnahme besteht bei der Verwendung von HTTPS.</span><span class="sxs-lookup"><span data-stu-id="350ff-180">The only exception is when using HTTPS.</span></span> <span data-ttu-id="350ff-181">Die Secure Sockets Layer (SSL)-Sitzung ist nicht an die zuverlässige Sitzung gebunden.</span><span class="sxs-lookup"><span data-stu-id="350ff-181">The Secure Sockets Layer (SSL) session isn't bound to the reliable session.</span></span> <span data-ttu-id="350ff-182">Dies erzwingt eine Bedrohung darstellen, weil Sitzungen, die gemeinsam einen Sicherheitskontext (die SSL-Sitzung) voneinander geschützt sind; Dadurch möglicherweise oder ist möglicherweise nicht in der ein echtes Risiko darstellen, abhängig von der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="350ff-182">This imposes a threat because sessions that are sharing a security context (the SSL session) aren't protected from each other; this might or might not be a real threat depending on the application.</span></span>
+
+## <a name="using-reliable-sessions"></a><span data-ttu-id="350ff-183">Verwenden von zuverlässigen Sitzungen</span><span class="sxs-lookup"><span data-stu-id="350ff-183">Using reliable sessions</span></span>
+
+<span data-ttu-id="350ff-184">Um zuverlässige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sitzungen zu verwenden, erstellen Sie einen Endpunkt mit einer Bindung, die eine zuverlässige Sitzung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="350ff-184">To use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable sessions, create an endpoint with a binding that supports a reliable session.</span></span> <span data-ttu-id="350ff-185">Verwenden Sie eine der vom System bereitgestellten Bindungen, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit aktivierter zuverlässiger Sitzung bietet, oder erstellen Sie eine eigene benutzerdefinierte Bindung, die dies tut.</span><span class="sxs-lookup"><span data-stu-id="350ff-185">Use one of the system-provided bindings that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides with the reliable session enabled or create your own custom binding that does this.</span></span>
+
+<span data-ttu-id="350ff-186">Die systemdefinierten Bindungen, die standardmäßig eine zuverlässige Sitzung unterstützen und aktivieren, sind:</span><span class="sxs-lookup"><span data-stu-id="350ff-186">The system-defined bindings that support and enable a reliable session by default include:</span></span>
+
+- <xref:System.ServiceModel.WSDualHttpBinding>
+
+<span data-ttu-id="350ff-187">Die vom System bereitgestellte Bindungen, die eine zuverlässige Sitzung als Option unterstützen, aber nicht standardmäßig aktivieren sind:</span><span class="sxs-lookup"><span data-stu-id="350ff-187">The system-provided bindings that support a reliable session as an option but don't enable one by default include:</span></span>
+
+- <xref:System.ServiceModel.WSHttpBinding>
+
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+
+- <xref:System.ServiceModel.NetTcpBinding>
+
+<span data-ttu-id="350ff-188">Ein Beispiel zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten zuverlässigen Sitzungsbindung mit HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).</span><span class="sxs-lookup"><span data-stu-id="350ff-188">For an example of how to create a custom binding, see [How to: Create a Custom Reliable Session Binding with HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).</span></span>
+
+<span data-ttu-id="350ff-189">Eine Erläuterung der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungen, die zuverlässige Sitzungen unterstützen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="350ff-189">For a discussion of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bindings that support reliable sessions, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>
+
+## <a name="when-to-use-reliable-sessions"></a><span data-ttu-id="350ff-190">Wann zuverlässige Sitzungen verwendet</span><span class="sxs-lookup"><span data-stu-id="350ff-190">When to use reliable sessions</span></span>
+
+<span data-ttu-id="350ff-191">Es ist wichtig zu verstehen, wann zuverlässige Sitzungen in Ihrer Anwendung verwenden.</span><span class="sxs-lookup"><span data-stu-id="350ff-191">It's important to understand when to use reliable sessions in your application.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="350ff-192"> unterstützt zuverlässige Sitzungen zwischen Endpunkten, die gleichzeitig aktiv und gültig sind.</span><span class="sxs-lookup"><span data-stu-id="350ff-192"> supports reliable sessions between endpoints that are active and alive at the same time.</span></span> <span data-ttu-id="350ff-193">Wenn Ihre Anwendung einen der Endpunkte erfordert für einen bestimmten Zeitraum nicht verfügbar sein, und klicken Sie dann mithilfe von Warteschlangen an um Zuverlässigkeit zu erreichen.</span><span class="sxs-lookup"><span data-stu-id="350ff-193">If your application requires one of the endpoints be unavailable for a duration of time, then use queues to achieve reliability.</span></span>
+
+<span data-ttu-id="350ff-194">Wenn das Szenario mit zwei Endpunkte über TCP verbunden erforderlich ist, kann TCP ausreichen, um den zuverlässigen Nachrichtenaustausch gewähren sein.</span><span class="sxs-lookup"><span data-stu-id="350ff-194">If the scenario requires two endpoints connected over TCP, then TCP may be sufficient to provide reliable message exchanges.</span></span> <span data-ttu-id="350ff-195">Zwar ist es nicht erforderlich, um eine zuverlässige Sitzung zu verwenden, da TCP wird, dass sichergestellt Eintreffen der Pakete in der Reihenfolge und nur einmal.</span><span class="sxs-lookup"><span data-stu-id="350ff-195">Although, it isn't necessary to use a reliable session, since TCP ensures that the packets arrive in order and only once.</span></span>
+
+<span data-ttu-id="350ff-196">Verfügt Ihr Szenario die folgenden Merkmale, müssen Sie ernsthaft sollten Sie die Verwendung einer zuverlässigen Sitzungs.</span><span class="sxs-lookup"><span data-stu-id="350ff-196">If your scenario has any of the following characteristics, then you must seriously consider using a reliable session.</span></span>
+
+- <span data-ttu-id="350ff-197">SOAP-Vermittler, z. B. SOAP-Router</span><span class="sxs-lookup"><span data-stu-id="350ff-197">SOAP intermediaries, such as SOAP routers</span></span>
+
+- <span data-ttu-id="350ff-198">Proxyvermittler oder transportbrücken</span><span class="sxs-lookup"><span data-stu-id="350ff-198">Proxy intermediaries or transport bridges</span></span>
+
+- <span data-ttu-id="350ff-199">Periodische Konnektivität</span><span class="sxs-lookup"><span data-stu-id="350ff-199">Intermittent connectivity</span></span>
+
+- <span data-ttu-id="350ff-200">Sitzungen über HTTP</span><span class="sxs-lookup"><span data-stu-id="350ff-200">Sessions over HTTP</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="350ff-201">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="350ff-201">See also</span></span>
+
+<span data-ttu-id="350ff-202">[Verwenden von Bindungen, um Dienste und Clients konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) </span><span class="sxs-lookup"><span data-stu-id="350ff-202">[Using Bindings to Configure Services and Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) </span></span>  
+[<span data-ttu-id="350ff-203">Zuverlässige WS-Sitzung</span><span class="sxs-lookup"><span data-stu-id="350ff-203">WS Reliable Session</span></span>](../../../../docs/framework/wcf/samples/ws-reliable-session.md)

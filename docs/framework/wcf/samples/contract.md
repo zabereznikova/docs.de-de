@@ -1,39 +1,42 @@
 ---
-title: "Vertrag | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contract2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 660ec440c7edd60af9c90f87d082b0aed608db30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vertrag
-Dieser Abschnitt enthält Beispiele, in denen Verträge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dargestellt werden.  
+# <a name="contract"></a><span data-ttu-id="fe312-102">Vertrag</span><span class="sxs-lookup"><span data-stu-id="fe312-102">Contract</span></span>
+<span data-ttu-id="fe312-103">Dieser Abschnitt enthält Beispiele, in denen Verträge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="fe312-103">This section contains samples that demonstrate contracts in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## In diesem Abschnitt  
- [Datenverträge](../../../../docs/framework/wcf/samples/data-contracts.md)  
- Veranschaulicht Datenverträge in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="fe312-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="fe312-104">In This Section</span></span>  
+ [<span data-ttu-id="fe312-105">Datenverträge</span><span class="sxs-lookup"><span data-stu-id="fe312-105">Data Contracts</span></span>](../../../../docs/framework/wcf/samples/data-contracts.md)  
+ <span data-ttu-id="fe312-106">Veranschaulicht Datenverträge in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fe312-106">Demonstrates data contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Nachrichtenverträge](../../../../docs/framework/wcf/samples/message-contracts.md)  
- Veranschaulicht Nachrichtenverträge in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="fe312-107">Nachrichtenverträge</span><span class="sxs-lookup"><span data-stu-id="fe312-107">Message Contracts</span></span>](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ <span data-ttu-id="fe312-108">Veranschaulicht Nachrichtenverträge in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fe312-108">Demonstrates message contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Dienstverträge](../../../../docs/framework/wcf/samples/service-contracts.md)  
- Veranschaulicht Dienstverträge in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="fe312-109">Dienstverträge</span><span class="sxs-lookup"><span data-stu-id="fe312-109">Service Contracts</span></span>](../../../../docs/framework/wcf/samples/service-contracts.md)  
+ <span data-ttu-id="fe312-110">Veranschaulicht Dienstverträge in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fe312-110">Demonstrates service contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
- Veranschaulicht, wie die Serialisierungs\- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>\-Klasse angepasst werden können.  
+ [<span data-ttu-id="fe312-111">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="fe312-111">DataContractResolver</span></span>](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
+ <span data-ttu-id="fe312-112">Veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können.</span><span class="sxs-lookup"><span data-stu-id="fe312-112">Demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span>  
   
- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
- Veranschaulicht, wie bekannte Typen während der Serialisierung und Deserialisierung dynamisch hinzugefügt werden.  
+ [<span data-ttu-id="fe312-113">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="fe312-113">KnownAssemblyAttribute</span></span>](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
+ <span data-ttu-id="fe312-114">Veranschaulicht, wie bekannte Typen während der Serialisierung und Deserialisierung dynamisch hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="fe312-114">Demonstrates how to dynamically add known types during serialization and deserialization.</span></span>  
   
- [Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
- Veranschaulicht, wie durch Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> mit einem entsprechenden <xref:System.Runtime.Serialization.DataContractResolver> die gleiche Funktionalität wie bei <xref:System.Runtime.Serialization.NetDataContractSerializer> bereitgestellt wird.
+ [<span data-ttu-id="fe312-115">Verwenden zum Bereitstellen der Funktionen für NetDataContractSerializer DataContractSerializer und DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="fe312-115">Using DataContractSerializer and DataContractResolver to Provide the Functionality of NetDataContractSerializer</span></span>](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
+ <span data-ttu-id="fe312-116">Veranschaulicht, wie durch Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> mit einem entsprechenden <xref:System.Runtime.Serialization.DataContractResolver> die gleiche Funktionalität wie bei <xref:System.Runtime.Serialization.NetDataContractSerializer> bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="fe312-116">Demonstrates how to use <xref:System.Runtime.Serialization.DataContractSerializer> with an appropriate <xref:System.Runtime.Serialization.DataContractResolver> provides the same functionality as <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span>

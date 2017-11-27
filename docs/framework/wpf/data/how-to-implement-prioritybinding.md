@@ -1,56 +1,59 @@
 ---
-title: "Gewusst wie: Implementieren von PriorityBinding | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen, PriorityBinding"
-  - "Datenbindung, PriorityBinding-Klasse"
-  - "PriorityBinding-Klasse"
+title: 'Gewusst wie: Implementieren von PriorityBinding'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9753462908928eaf177e100a16186826bf4828ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Implementieren von PriorityBinding
-<xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert durch Angabe einer Liste von Bindungen.  Die folgende Liste der Bindungen ist absteigend nach Priorität geordnet.  Wenn die Bindung mit der höchsten Priorität erfolgreich einen Wert zurückgibt, wenn sie verarbeitet wird, dann müssen die anderen Bindungen in der Liste nicht mehr verarbeitet werden.  Möglicherweise nimmt die Auswertung der Bindung mit der höchsten Priorität einige Zeit in Anspruch. Es wird so lange die Bindung mit der nächsten Priorität, die erfolgreich einen Wert zurückgibt, verwendet, bis eine Bindung mit einer höheren Priorität einen Wert erfolgreich zurückgibt.  
+# <a name="how-to-implement-prioritybinding"></a><span data-ttu-id="544de-102">Gewusst wie: Implementieren von PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="544de-102">How to: Implement PriorityBinding</span></span>
+<span data-ttu-id="544de-103"><xref:System.Windows.Data.PriorityBinding>in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben.</span><span class="sxs-lookup"><span data-stu-id="544de-103"><xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] works by specifying a list of bindings.</span></span> <span data-ttu-id="544de-104">Die Liste der Bindungen ist von der höchsten Priorität bis zur niedrigsten Priorität geordnet.</span><span class="sxs-lookup"><span data-stu-id="544de-104">The list of bindings is ordered from highest priority to lowest priority.</span></span> <span data-ttu-id="544de-105">Wenn die höchste Priorität Bindung einen Wert zurückgibt besteht erfolgreich bei ihrer Verarbeitung niemals müssen die anderen Bindungen in der Liste zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="544de-105">If the highest priority binding returns a value successfully when it is processed then there is never a need to process the other bindings in the list.</span></span> <span data-ttu-id="544de-106">Es könnte sein, die Groß-/Kleinschreibung, die die höchste Priorität Bindung auszuwertende lange dauert, die höchsten Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung eine höhere Priorität erfolgreich einen Wert zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="544de-106">It could be the case that the highest priority binding takes a long time to be evaluated, the next highest priority that returns a value successfully will be used until a binding of a higher priority returns a value successfully.</span></span>  
   
-## Beispiel  
- Um die Funktionsweise von <xref:System.Windows.Data.PriorityBinding> zu veranschaulichen, wurde das `AsyncDataSource`\-Objekt mit den folgenden drei Eigenschaften erstellt: `FastDP`, `SlowerDP` und `SlowestDP`.  
+## <a name="example"></a><span data-ttu-id="544de-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="544de-107">Example</span></span>  
+ <span data-ttu-id="544de-108">Zur Veranschaulichung der Funktion wie <xref:System.Windows.Data.PriorityBinding> verwendet werden kann, die `AsyncDataSource` Objekt mit den folgenden drei Eigenschaften erstellt wurde: `FastDP`, `SlowerDP`, und `SlowestDP`.</span><span class="sxs-lookup"><span data-stu-id="544de-108">To demonstrate how <xref:System.Windows.Data.PriorityBinding> works, the `AsyncDataSource` object has been created with the following three properties: `FastDP`, `SlowerDP`, and `SlowestDP`.</span></span>  
   
- Der get\-Accessor von `FastDP` gibt den Wert des `_fastDP`\-Datenmembers zurück.  
+ <span data-ttu-id="544de-109">Get-Accessor der `FastDP` gibt den Wert der `_fastDP` -Datenmember.</span><span class="sxs-lookup"><span data-stu-id="544de-109">The get accessor of `FastDP` returns the value of the `_fastDP` data member.</span></span>  
   
- Der get\-Accessor von `SlowerDP` wartet 3 Sekunden, bevor der Wert des `_slowerDP`\-Datenmembers zurückgegeben wird.  
+ <span data-ttu-id="544de-110">Get-Accessor der `SlowerDP` wartet vor der Rückgabe des Wert von 3 Sekunden die `_slowerDP` -Datenmember.</span><span class="sxs-lookup"><span data-stu-id="544de-110">The get accessor of `SlowerDP` waits for 3 seconds before returning the value of the `_slowerDP` data member.</span></span>  
   
- Der get\-Accessor von `SlowestDP` wartet 5 Sekunden, bevor der Wert des `_slowestDP`\-Datenmembers zurückgegeben wird.  
+ <span data-ttu-id="544de-111">Get-Accessor der `SlowestDP` vor der Rückgabe des Wert von 5 Sekunden wartet, bis die `_slowestDP` -Datenmember.</span><span class="sxs-lookup"><span data-stu-id="544de-111">The get accessor of `SlowestDP` waits for 5 seconds before returning the value of the `_slowestDP` data member.</span></span>  
   
 > [!NOTE]
->  Dieses Beispiel dient nur der Veranschaulichung.  In den [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]\-Richtlinien wird die Definition von Eigenschaften, die erheblich langsamer als ein Satz von Feldern sind, nicht empfohlen.  Weitere Informationen finden Sie unter [NIB: Choosing Between Properties and Methods](http://msdn.microsoft.com/de-de/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  <span data-ttu-id="544de-112">In diesem Beispiel wird nur zu Demonstrationszwecken.</span><span class="sxs-lookup"><span data-stu-id="544de-112">This example is for demonstration purposes only.</span></span> <span data-ttu-id="544de-113">Die [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Richtlinien wird davon abgeraten, Definieren von Eigenschaften, die erheblich langsamer als ein Standardfeld festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="544de-113">The [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] guidelines recommend against defining properties that are orders of magnitude slower than a field set would be.</span></span> <span data-ttu-id="544de-114">Weitere Informationen finden Sie unter [NIB: Auswahl zwischen Eigenschaften und Methoden](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af).</span><span class="sxs-lookup"><span data-stu-id="544de-114">For more information, see [NIB: Choosing Between Properties and Methods](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af).</span></span>  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- Die <xref:System.Windows.Controls.TextBlock.Text%2A>\-Eigenschaft wird mit <xref:System.Windows.Data.PriorityBinding> an den oben erwähnten `AsyncDS` gebunden:  
+ <span data-ttu-id="544de-115">Die <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft gebunden wird, für den oben `AsyncDS` mit <xref:System.Windows.Data.PriorityBinding>:</span><span class="sxs-lookup"><span data-stu-id="544de-115">The <xref:System.Windows.Controls.TextBlock.Text%2A> property binds to the above `AsyncDS` using <xref:System.Windows.Data.PriorityBinding>:</span></span>  
   
- [!code-xml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- Wenn das Bindungsmodul die <xref:System.Windows.Data.Binding>\-Objekte verarbeitet, wird zunächst das erste <xref:System.Windows.Data.Binding>\-Element verarbeitet, das an die `SlowestDP`\-Eigenschaft gebunden ist.  Wenn dieses <xref:System.Windows.Data.Binding>\-Element verarbeitet wurde, gibt es keinen Wert erfolgreich zurück, da es 5 Sekunden deaktiviert ist. Deshalb wird das nächste <xref:System.Windows.Data.Binding>\-Element verarbeitet.  Das nächste <xref:System.Windows.Data.Binding>\-Element gibt keinen Wert erfolgreich zurück, da es 3 Sekunden aktiviert ist.  Das Bindungsmodul fährt mit dem nächsten <xref:System.Windows.Data.Binding>\-Element fort, das an die `FastDP`\-Eigenschaft gebunden ist.  Dieses <xref:System.Windows.Data.Binding>\-Element gibt den Wert "Fast Value" zurück.  Der <xref:System.Windows.Controls.TextBlock> zeigt jetzt den Wert "Fast Value" an.  
+ <span data-ttu-id="544de-116">Wenn das Bindungsmodul verarbeitet die <xref:System.Windows.Data.Binding> Objekte, mit dem ersten Start <xref:System.Windows.Data.Binding>, das gebunden ist, um die `SlowestDP` Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="544de-116">When the binding engine processes the <xref:System.Windows.Data.Binding> objects, it starts with the first <xref:System.Windows.Data.Binding>, which is bound to the `SlowestDP` property.</span></span> <span data-ttu-id="544de-117">Wenn dies <xref:System.Windows.Data.Binding> wird verarbeitet, es wird keinen Wert zurückgegeben erfolgreich, da er für 5 Sekunden deaktiviert ist <xref:System.Windows.Data.Binding> Element verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="544de-117">When this <xref:System.Windows.Data.Binding> is processed, it does not return a value successfully because it is sleeping for 5 seconds, so the next <xref:System.Windows.Data.Binding> element is processed.</span></span> <span data-ttu-id="544de-118">Das nächste <xref:System.Windows.Data.Binding> keinen Rückgabewert erfolgreich, da es 3 Sekunden aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="544de-118">The next <xref:System.Windows.Data.Binding> does not return a value successfully because it is sleeping for 3 seconds.</span></span> <span data-ttu-id="544de-119">Das Bindungsmodul fährt mit der nächsten <xref:System.Windows.Data.Binding> -Element, das gebunden ist die `FastDP` Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="544de-119">The binding engine then moves onto the next <xref:System.Windows.Data.Binding> element, which is bound to the `FastDP` property.</span></span> <span data-ttu-id="544de-120">Dies <xref:System.Windows.Data.Binding> gibt den Wert "Fast Value" zurück.</span><span class="sxs-lookup"><span data-stu-id="544de-120">This <xref:System.Windows.Data.Binding> returns the value "Fast Value".</span></span> <span data-ttu-id="544de-121">Die <xref:System.Windows.Controls.TextBlock> zeigt jetzt den Wert "Fast".</span><span class="sxs-lookup"><span data-stu-id="544de-121">The <xref:System.Windows.Controls.TextBlock> now displays the value "Fast Value".</span></span>  
   
- Nach 3 Sekunden gibt die `SlowerDP`\-Eigenschaft den Wert "Slower Value" zurück.  Der <xref:System.Windows.Controls.TextBlock> zeigt dann den Wert "Slower Value" an.  
+ <span data-ttu-id="544de-122">Nach drei Sekunden verstrichen ist die `SlowerDP` Eigenschaft gibt den Wert "Langsamer Value" zurück.</span><span class="sxs-lookup"><span data-stu-id="544de-122">After 3 seconds elapses, the `SlowerDP` property returns the value "Slower Value".</span></span> <span data-ttu-id="544de-123">Die <xref:System.Windows.Controls.TextBlock> zeigt dann den Wert "langsamer".</span><span class="sxs-lookup"><span data-stu-id="544de-123">The <xref:System.Windows.Controls.TextBlock> then displays the value "Slower Value".</span></span>  
   
- Nach 5 Sekunden gibt die `SlowestDP`\-Eigenschaft den Wert "Slowest Value" zurück.  Diese Bindung hat die höchste Priorität, weil sie zuerst in der Liste angezeigt wird.  Der <xref:System.Windows.Controls.TextBlock> zeigt jetzt den Wert "Slowest Value" an.  
+ <span data-ttu-id="544de-124">Nach 5 Sekunden die `SlowestDP` Eigenschaft gibt den Wert "Langsamste Value" zurück.</span><span class="sxs-lookup"><span data-stu-id="544de-124">After 5 seconds elapses, the `SlowestDP` property returns the value "Slowest Value".</span></span> <span data-ttu-id="544de-125">Diese Bindung hat die höchste Priorität, da er zuerst aufgelistet ist.</span><span class="sxs-lookup"><span data-stu-id="544de-125">That binding has the highest priority because it is listed first.</span></span> <span data-ttu-id="544de-126">Die <xref:System.Windows.Controls.TextBlock> zeigt jetzt den Wert "Langsamste Value".</span><span class="sxs-lookup"><span data-stu-id="544de-126">The <xref:System.Windows.Controls.TextBlock> now displays the value "Slowest Value".</span></span>  
   
- Weitere Informationen über erfolgreiche Rückgabewerte von einer Bindung finden Sie unter <xref:System.Windows.Data.PriorityBinding>.  
+ <span data-ttu-id="544de-127">Finden Sie unter <xref:System.Windows.Data.PriorityBinding> Informationen, was einen erfolgreiche Rückgabewert aus einer Bindung gilt.</span><span class="sxs-lookup"><span data-stu-id="544de-127">See <xref:System.Windows.Data.PriorityBinding> for information about what is considered a successful return value from a binding.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=fullName>   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="544de-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="544de-128">See Also</span></span>  
+ <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="544de-129">Übersicht zur Datenbindung</span><span class="sxs-lookup"><span data-stu-id="544de-129">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="544de-130">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="544de-130">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

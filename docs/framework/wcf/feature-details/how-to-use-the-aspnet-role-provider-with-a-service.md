@@ -1,39 +1,42 @@
 ---
-title: "Vorgehensweise: Verwenden des Rollenanbieters f&#252;r den ASP.NET bei einem Dienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bdddbd39a528e6abd6a0268db310b6173849f19b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Verwenden des Rollenanbieters f&#252;r den ASP.NET bei einem Dienst
-Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Rollenanbieter \(zusammen mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Mitgliedschaftsanbieter\) ist eine Funktion für [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Entwickler zum Erstellen von Websites, mit denen die Benutzer ein Konto auf einer Site erstellen können. Außerdem können ihnen Rollen für die Autorisierung zugewiesen werden.Jeder Benutzer kann mit dieser Funktion ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden.Dies steht im Gegensatz zur Windows\-Sicherheit, bei der die Benutzer über Konten in einer Windows\-Domäne verfügen müssen.Stattdessen kann jeder Benutzer, der seine Anmeldeinformationen \(eine Kombination aus Benutzername\/Kennwort\) angibt, die Site und ihre Dienste nutzen.  
+# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a><span data-ttu-id="70203-102">Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst</span><span class="sxs-lookup"><span data-stu-id="70203-102">How to: Use the ASP.NET Role Provider with a Service</span></span>
+<span data-ttu-id="70203-103">Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter (zusammen mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter) ist eine Funktion für [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Entwickler zum Erstellen von Websites, mit denen die Benutzer ein Konto auf einer Site erstellen können. Außerdem können ihnen Rollen für die Autorisierung zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="70203-103">The [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] role provider (in conjunction with the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider) is a feature that enables [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] developers to create Web sites that allow users to create an account with a site and to be assigned roles for authorization purposes.</span></span> <span data-ttu-id="70203-104">Jeder Benutzer kann mit dieser Funktion ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden.</span><span class="sxs-lookup"><span data-stu-id="70203-104">With this feature, any user can establish an account with the site, and log in for exclusive access to the site and its services.</span></span> <span data-ttu-id="70203-105">Dies steht im Gegensatz zur Windows-Sicherheit, bei der die Benutzer über Konten in einer Windows-Domäne verfügen müssen.</span><span class="sxs-lookup"><span data-stu-id="70203-105">This is in contrast to Windows security, which requires users to have accounts in a Windows domain.</span></span> <span data-ttu-id="70203-106">Stattdessen kann jeder Benutzer, der seine Anmeldeinformationen (eine Kombination aus Benutzername/Kennwort) angibt, die Site und ihre Dienste nutzen.</span><span class="sxs-lookup"><span data-stu-id="70203-106">Instead, any user who supplies his or her credentials (the user name/password combination) can use the site and its services.</span></span>  
   
- Eine Beispielanwendung finden Sie unter [Mitgliedschafts\- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Mitgliedschaftsanbieterfunktion finden Sie unter [Gewusst wie: Verwenden des ASP.NET\-Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ <span data-ttu-id="70203-107">Eine beispielanwendung finden Sie unter [Mitgliedschafts- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).</span><span class="sxs-lookup"><span data-stu-id="70203-107">For a sample application, see [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="70203-108">die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anbieter Mitgliedschaftsfunktion, finden Sie unter [Vorgehensweise: Verwenden Sie den ASP.NET-Mitgliedschaftsanbieter](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).</span><span class="sxs-lookup"><span data-stu-id="70203-108"> the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider feature, see [How to: Use the ASP.NET Membership Provider](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).</span></span>  
   
- Die Rollenanbieterfunktion verwendet eine SQL Server\-Datenbank zum Speichern von Benutzerinformationen.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Entwickler können diese Funktionen für Sicherheitszwecke nutzen.Wenn sie in eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendung integriert sind, müssen die Benutzer der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clientanwendung eine Kombination aus Benutzername\/Kennwort bereitstellen.Damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Datenbank verwenden kann, müssen Sie eine Instanz der <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>\-Klasse erstellen, ihre <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>\-Eigenschaft auf <xref:System.ServiceModel.Description.PrincipalPermissionMode> festlegen und die Instanz zu der Verhaltensauflistung zum <xref:System.ServiceModel.ServiceHost> hinzufügen, der den Dienst hostet.  
+ <span data-ttu-id="70203-109">Die Rollenanbieterfunktion verwendet eine SQL Server-Datenbank zum Speichern von Benutzerinformationen.</span><span class="sxs-lookup"><span data-stu-id="70203-109">The role provider feature uses a SQL Server database to store user information.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="70203-110">-Entwickler können diese Funktionen für Sicherheitszwecke nutzen.</span><span class="sxs-lookup"><span data-stu-id="70203-110"> developers can take advantage of these features for security purposes.</span></span> <span data-ttu-id="70203-111">Wenn sie in eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung integriert sind, müssen die Benutzer der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientanwendung eine Kombination aus Benutzername/Kennwort bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="70203-111">When integrated into a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, users must supply a user name/password combination to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application.</span></span> <span data-ttu-id="70203-112">Damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die Datenbank verwenden kann, müssen Sie eine Instanz der <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Klasse erstellen, ihre <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> festlegen und die Instanz zu der Verhaltensauflistung zum <xref:System.ServiceModel.ServiceHost> hinzufügen, der den Dienst hostet.</span><span class="sxs-lookup"><span data-stu-id="70203-112">To enable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to use the database, you must create an instance of the <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> class, set its <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> property to <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>, and add the instance to the collection of behaviors to the <xref:System.ServiceModel.ServiceHost> that is hosting the service.</span></span>  
   
-### So konfigurieren Sie den Rollenanbieter  
+### <a name="to-configure-the-role-provider"></a><span data-ttu-id="70203-113">So konfigurieren Sie den Rollenanbieter</span><span class="sxs-lookup"><span data-stu-id="70203-113">To configure the role provider</span></span>  
   
-1.  Fügen Sie in der Datei Web.config unter dem \<`system.web`\>\-Element ein \<`roleManager`\>\-Element hinzu, und legen Sie das `enabled`\-Attribut auf `true` fest.  
+1.  <span data-ttu-id="70203-114">In der Datei "Web.config" unter der <`system.web`>-Element hinzufügen einer <`roleManager`> Element, und legen seine `enabled` -Attribut auf `true`.</span><span class="sxs-lookup"><span data-stu-id="70203-114">In the Web.config file, under the <`system.web`> element, add a <`roleManager`> element and set its `enabled` attribute to `true`.</span></span>  
   
-2.  Legen Sie das `defaultProvider`\-Attribut auf `SqlRoleProvider` fest.  
+2.  <span data-ttu-id="70203-115">Legen Sie das `defaultProvider`-Attribut auf `SqlRoleProvider` fest.</span><span class="sxs-lookup"><span data-stu-id="70203-115">Set the `defaultProvider` attribute to `SqlRoleProvider`.</span></span>  
   
-3.  Fügen Sie ein \<`providers`\>\-Element als untergeordnetes Element des \<`roleManager`\>\-Elements hinzu.  
+3.  <span data-ttu-id="70203-116">Als untergeordnetes Element der <`roleManager`>-Element hinzufügen einer <`providers`> Element.</span><span class="sxs-lookup"><span data-stu-id="70203-116">As a child to the <`roleManager`> element, add a <`providers`> element.</span></span>  
   
-4.  Fügen Sie ein \<`add`\>\-Element als untergeordnetes Element zum \<`providers`\>\-Element hinzu, wobei die folgenden Attribute auf die entsprechenden Werte festgelegt werden sollten: `name`, `type`, `connectionStringName` und `applicationName`, wie im folgenden Beispiel dargestellt.  
+4.  <span data-ttu-id="70203-117">Als untergeordnetes Element der <`providers`>-Element, Hinzufügen einer <`add`>-Element mit den folgenden Attributen auf die entsprechenden Werte festgelegt: `name`, `type`, `connectionStringName`, und `applicationName`, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="70203-117">As a child to the <`providers`> element, add an <`add`> element with the following attributes set to appropriate values: `name`, `type`, `connectionStringName`, and `applicationName`, as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <!-- Configure the Sql Role Provider. -->  
     <roleManager enabled ="true"   
      defaultProvider ="SqlRoleProvider" >  
@@ -46,23 +49,23 @@ Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Rollenanbieter \(
     </roleManager>  
     ```  
   
-### So konfigurieren Sie den Dienst für die Verwendung des Rollenanbieters  
+### <a name="to-configure-the-service-to-use-the-role-provider"></a><span data-ttu-id="70203-118">So konfigurieren Sie den Dienst für die Verwendung des Rollenanbieters</span><span class="sxs-lookup"><span data-stu-id="70203-118">To configure the service to use the role provider</span></span>  
   
-1.  Fügen Sie in der Datei Web.config ein [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)\-Element hinzu.  
+1.  <span data-ttu-id="70203-119">In der Datei "Web.config" Hinzufügen einer [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element.</span><span class="sxs-lookup"><span data-stu-id="70203-119">In the Web.config file, add a [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element.</span></span>  
   
-2.  Fügen Sie dem \<`system.ServiceModel`\>\-Element ein [\<Verhalten\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)Element hinzu.  
+2.  <span data-ttu-id="70203-120">Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element auf der <`system.ServiceModel`> Element.</span><span class="sxs-lookup"><span data-stu-id="70203-120">Add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element to the <`system.ServiceModel`> element.</span></span>  
   
-3.  Fügen Sie dem \<`behaviors`\>\-Element ein [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)\-Element hinzu.  
+3.  <span data-ttu-id="70203-121">Hinzufügen einer [ \<ServiceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) auf der <`behaviors`> Element.</span><span class="sxs-lookup"><span data-stu-id="70203-121">Add a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the <`behaviors`> element.</span></span>  
   
-4.  Fügen Sie ein [\<Verhalten\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)\-Element hinzu, und legen Sie das `name`\-Attribut auf einen passenden Wert fest.  
+4.  <span data-ttu-id="70203-122">Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Element, und legen die `name` -Attribut auf einen geeigneten Wert.</span><span class="sxs-lookup"><span data-stu-id="70203-122">Add a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element and set the `name` attribute to an appropriate value.</span></span>  
   
-5.  Fügen Sie dem \<`behavior`\>\-Element ein [\<serviceAuthorization\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)\-Element hinzu.  
+5.  <span data-ttu-id="70203-123">Hinzufügen einer [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) auf der <`behavior`> Element.</span><span class="sxs-lookup"><span data-stu-id="70203-123">Add a [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) to the <`behavior`> element.</span></span>  
   
-6.  Legen Sie das `principalPermissionMode`\-Attribut auf `UseAspNetRoles` fest.  
+6.  <span data-ttu-id="70203-124">Legen Sie das `principalPermissionMode`-Attribut auf `UseAspNetRoles` fest.</span><span class="sxs-lookup"><span data-stu-id="70203-124">Set the `principalPermissionMode` attribute to `UseAspNetRoles`.</span></span>  
   
-7.  Legen Sie das `roleProviderName`\-Attribut auf `SqlRoleProvider` fest.Im folgenden Beispiel wird ein Fragment der Konfiguration dargestellt.  
+7.  <span data-ttu-id="70203-125">Legen Sie das `roleProviderName`-Attribut auf `SqlRoleProvider` fest.</span><span class="sxs-lookup"><span data-stu-id="70203-125">Set the `roleProviderName` attribute to `SqlRoleProvider`.</span></span> <span data-ttu-id="70203-126">Im folgenden Beispiel wird ein Fragment der Konfiguration dargestellt.</span><span class="sxs-lookup"><span data-stu-id="70203-126">The following example shows a fragment of the configuration.</span></span>  
   
-    ```  
+    ```xml  
     <behaviors>  
      <serviceBehaviors>  
       <behavior name="CalculatorServiceBehavior">  
@@ -73,6 +76,6 @@ Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Rollenanbieter \(
     </behaviors>  
     ```  
   
-## Siehe auch  
- [Mitgliedschafts\- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)   
- [Gewusst wie: Verwenden des ASP.NET\-Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+## <a name="see-also"></a><span data-ttu-id="70203-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70203-127">See Also</span></span>  
+ [<span data-ttu-id="70203-128">Mitgliedschafts- und Rollenanbieter</span><span class="sxs-lookup"><span data-stu-id="70203-128">Membership and Role Provider</span></span>](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
+ [<span data-ttu-id="70203-129">Vorgehensweise: Verwenden Sie den ASP.NET-Mitgliedschaftsanbieter</span><span class="sxs-lookup"><span data-stu-id="70203-129">How to: Use the ASP.NET Membership Provider</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

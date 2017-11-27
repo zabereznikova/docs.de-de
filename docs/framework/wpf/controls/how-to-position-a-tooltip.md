@@ -1,73 +1,76 @@
 ---
-title: "Gewusst wie: Positionieren einer QuickInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Positionieren von ToolTip-Steuerelementen"
-  - "ToolStrip-Steuerelement, Positionieren"
+title: 'Gewusst wie: Positionieren einer QuickInfo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolTip control [WPF], positioning
+- positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e8345b74cf9269bca21e1e5698de974109c2aee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Positionieren einer QuickInfo
-In diesem Beispiel wird gezeigt, wie die Position eines QuickInfos auf dem Bildschirm angegeben wird.  
+# <a name="how-to-position-a-tooltip"></a><span data-ttu-id="b091c-102">Gewusst wie: Positionieren einer QuickInfo</span><span class="sxs-lookup"><span data-stu-id="b091c-102">How to: Position a ToolTip</span></span>
+<span data-ttu-id="b091c-103">Dieses Beispiel zeigt, wie die Position einer QuickInfo auf dem Bildschirm an.</span><span class="sxs-lookup"><span data-stu-id="b091c-103">This example shows how to specify the position of a tooltip on the screen.</span></span>  
   
-## Beispiel  
- Sie können ein QuickInfo mithilfe eines Satzes aus fünf Eigenschaften positionieren, die in den Klassen <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ToolTipService> definiert sind.  In der folgenden Tabelle werden diese beiden Sätze von je fünf Eigenschaften mit Links zu den jeweils zugehörigen Referenzdokumentationen nach Klassen geordnet aufgeführt.  
+## <a name="example"></a><span data-ttu-id="b091c-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b091c-104">Example</span></span>  
+ <span data-ttu-id="b091c-105">Sie können eine QuickInfo mit einem Satz von fünf Eigenschaften, die in beiden definiert sind Positionieren der <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ToolTipService> Klassen.</span><span class="sxs-lookup"><span data-stu-id="b091c-105">You can position a tooltip by using a set of five properties that are defined in both the <xref:System.Windows.Controls.ToolTip> and <xref:System.Windows.Controls.ToolTipService> classes.</span></span> <span data-ttu-id="b091c-106">Die folgende Tabelle zeigt diese zwei Sätze von fünf Eigenschaften und Links in der entsprechenden Referenzdokumentation nach der Klasse.</span><span class="sxs-lookup"><span data-stu-id="b091c-106">The following table shows these two sets of five properties and provides links to their reference documentation according to class.</span></span>  
   
-### Zugehörige QuickInfo\-Eigenschaften nach Klasse geordnet  
+### <a name="corresponding-tooltip-properties-according-to-class"></a><span data-ttu-id="b091c-107">Nach der Klasse entsprechende QuickInfo-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b091c-107">Corresponding tooltip properties according to class</span></span>  
   
-|<xref:System.Windows.Controls.ToolTip?displayProperty=fullName>\-Klasseneigenschaften|<xref:System.Windows.Controls.ToolTipService?displayProperty=fullName>\-Klasseneigenschaften|  
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.ToolTip.Placement%2A?displayProperty=fullName>|<xref:System.Windows.Controls.ToolTipService.Placement%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Controls.ToolTip.PlacementTarget%2A?displayProperty=fullName>|<xref:System.Windows.Controls.ToolTipService.PlacementTarget%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A?displayProperty=fullName>|<xref:System.Windows.Controls.ToolTipService.PlacementRectangle%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A?displayProperty=fullName>|<xref:System.Windows.Controls.ToolTipService.HorizontalOffset%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Controls.ToolTip.VerticalOffset%2A?displayProperty=fullName>|<xref:System.Windows.Controls.ToolTipService.VerticalOffset%2A?displayProperty=fullName>|  
+|<span data-ttu-id="b091c-108"><xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType>Eigenschaften der Objektklassen</span><span class="sxs-lookup"><span data-stu-id="b091c-108"><xref:System.Windows.Controls.ToolTip?displayProperty=nameWithType> class properties</span></span>|<span data-ttu-id="b091c-109"><xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType>Eigenschaften der Objektklassen</span><span class="sxs-lookup"><span data-stu-id="b091c-109"><xref:System.Windows.Controls.ToolTipService?displayProperty=nameWithType> class properties</span></span>|  
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.ToolTip.Placement%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.Placement%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.ToolTip.PlacementTarget%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.PlacementTarget%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.ToolTip.PlacementRectangle%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.PlacementRectangle%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.ToolTip.HorizontalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.HorizontalOffset%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.ToolTip.VerticalOffset%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.ToolTipService.VerticalOffset%2A?displayProperty=nameWithType>|  
   
- Wenn Sie den Inhalt eines QuickInfos mithilfe eines <xref:System.Windows.Controls.ToolTip> \-Objekts definieren, können Sie die Eigenschaften beider Klassen verwenden. Die <xref:System.Windows.Controls.ToolTipService>\-Eigenschaften haben jedoch Vorrang.  Verwenden Sie die <xref:System.Windows.Controls.ToolTipService>\-Eigenschaften für QuickInfos, die nicht als <xref:System.Windows.Controls.ToolTip>\-Objekte definiert sind.  
+ <span data-ttu-id="b091c-110">Wenn Sie den Inhalt einer QuickInfo mit definieren eine <xref:System.Windows.Controls.ToolTip> -Objekt können Sie die Eigenschaften der jeweiligen Klasse, aber die <xref:System.Windows.Controls.ToolTipService> Eigenschaften haben Vorrang vor.</span><span class="sxs-lookup"><span data-stu-id="b091c-110">If you define the contents of a tooltip by using a <xref:System.Windows.Controls.ToolTip> object, you can use the properties of either class; however, the <xref:System.Windows.Controls.ToolTipService> properties take precedence.</span></span> <span data-ttu-id="b091c-111">Verwenden der <xref:System.Windows.Controls.ToolTipService> Eigenschaften für QuickInfos, die nicht als definierten Fehlerklassen <xref:System.Windows.Controls.ToolTip> Objekte.</span><span class="sxs-lookup"><span data-stu-id="b091c-111">Use the <xref:System.Windows.Controls.ToolTipService> properties for tooltips that are not defined as <xref:System.Windows.Controls.ToolTip> objects.</span></span>  
   
- Die folgenden Darstellungen zeigen, wie ein QuickInfo mithilfe dieser Eigenschaften positioniert wird.  Obwohl in den [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Beispielen dieser Darstellungen gezeigt wird, wie die Eigenschaften festgelegt werden, die durch die <xref:System.Windows.Controls.ToolTip>\-Klasse definiert sind, folgen die entsprechenden Eigenschaften der <xref:System.Windows.Controls.ToolTipService>\-Klasse denselben Layoutregeln.  Weitere Informationen zu den möglichen Werten für die Placement\-Eigenschaft finden Sie unter [Verhalten beim Platzieren von Popups](../../../../docs/framework/wpf/controls/popup-placement-behavior.md).  
+ <span data-ttu-id="b091c-112">Die folgenden Abbildungen zeigen, wie eine QuickInfo positioniert wird, unter Verwendung dieser Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="b091c-112">The following illustrations show how to position a tooltip by using these properties.</span></span> <span data-ttu-id="b091c-113">Obwohl, die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Beispiele in diesen Abbildungen zeigen, wie zum Festlegen der Eigenschaften, die von definiert sind die <xref:System.Windows.Controls.ToolTip> Klasse, die entsprechenden Eigenschaften des der <xref:System.Windows.Controls.ToolTipService> Klasse gelten die gleichen Layout-Regeln.</span><span class="sxs-lookup"><span data-stu-id="b091c-113">Although, the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] examples in these illustrations show how to set the properties that are defined by the <xref:System.Windows.Controls.ToolTip> class, the corresponding properties of the <xref:System.Windows.Controls.ToolTipService> class follow the same layout rules.</span></span> <span data-ttu-id="b091c-114">Weitere Informationen zu den möglichen Werten für die Eigenschaft für die Platzierung finden Sie unter [das Verhalten der Platzierung Popup](../../../../docs/framework/wpf/controls/popup-placement-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="b091c-114">For more information about the possible values for the Placement property, see [Popup Placement Behavior](../../../../docs/framework/wpf/controls/popup-placement-behavior.md).</span></span>  
   
- ![QuickInfo&#45;Platzierung](../../../../docs/framework/wpf/controls/media/tooltipplacement.png "ToolTipPlacement")  
+ <span data-ttu-id="b091c-115">![QuickInfo-Platzierung](../../../../docs/framework/wpf/controls/media/tooltipplacement.png "ToolTipPlacement")</span><span class="sxs-lookup"><span data-stu-id="b091c-115">![ToolTip placement](../../../../docs/framework/wpf/controls/media/tooltipplacement.png "ToolTipPlacement")</span></span>  
+<span data-ttu-id="b091c-116">Mithilfe der Eigenschaft zum Bestimmen der QuickInfo-Platzierung</span><span class="sxs-lookup"><span data-stu-id="b091c-116">ToolTip placement by using the Placement property</span></span>  
   
-        QuickInfo\-Platzierung mithilfe der Placement\-Eigenschaft  
+ <span data-ttu-id="b091c-117">![Platzieren einer QuickInfo mithilfe eines Platzierungsrechtecks](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")</span><span class="sxs-lookup"><span data-stu-id="b091c-117">![Placing a ToolTip by using a placement rectangle](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")</span></span>  
+<span data-ttu-id="b091c-118">QuickInfo-Platzierung mithilfe der Eigenschaften Placement und PlacementRectangle</span><span class="sxs-lookup"><span data-stu-id="b091c-118">ToolTip placement by using the Placement and PlacementRectangle properties</span></span>  
   
- ![Platzieren einer QuickInfo mithilfe eines Platzierungsrechtecks](../../../../docs/framework/wpf/controls/media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
+ <span data-ttu-id="b091c-119">![QuickInfo-platzierungsdiagramm](../../../../docs/framework/wpf/controls/media/tooltipplacementprhv.png "ToolTipPlacementPRHV")</span><span class="sxs-lookup"><span data-stu-id="b091c-119">![ToolTip placement diagram](../../../../docs/framework/wpf/controls/media/tooltipplacementprhv.png "ToolTipPlacementPRHV")</span></span>  
+<span data-ttu-id="b091c-120">QuickInfo-Platzierung mithilfe der Platzierung PlacementRectangle und Offset-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b091c-120">ToolTip placement by using the Placement, PlacementRectangle, and Offset properties</span></span>  
   
-        QuickInfo\-Platzierung mithilfe der Eigenschaften Placement und PlacementRectangle  
+ <span data-ttu-id="b091c-121">Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.ToolTip> Eigenschaft, um die Position des eine QuickInfo anzugeben, deren Inhalt, eine <xref:System.Windows.Controls.ToolTip> Objekt.</span><span class="sxs-lookup"><span data-stu-id="b091c-121">The following example shows how to use the <xref:System.Windows.Controls.ToolTip> properties to specify the position of a tooltip whose content is a <xref:System.Windows.Controls.ToolTip> object.</span></span>  
   
- ![QuickInfo&#45;Platzierungsdiagramm](../../../../docs/framework/wpf/controls/media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-  
-        QuickInfo\-Platzierung mithilfe der Eigenschaften Placement, PlacementRectangle und Offset  
-  
- Im folgenden Beispiel wird dargestellt, wie mithilfe der <xref:System.Windows.Controls.ToolTip>\-Eigenschaften die Position eines QuickInfos angegeben wird, dessen Inhalt ein <xref:System.Windows.Controls.ToolTip>\-Objekt ist.  
-  
- [!code-xml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
  [!code-csharp[ToolTipService#ToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#tooltipcode)]
  [!code-vb[ToolTipService#ToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#tooltipcode)]  
   
- Im folgenden Beispiel wird dargestellt, wie mithilfe der <xref:System.Windows.Controls.ToolTipService>\-Eigenschaften die Position eines QuickInfos angegeben wird, dessen Inhalt kein <xref:System.Windows.Controls.ToolTip>\-Objekt ist.  
+ <span data-ttu-id="b091c-122">Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.ToolTipService> Eigenschaft, um die Position des eine QuickInfo anzugeben, deren Inhalt nicht ist, einem <xref:System.Windows.Controls.ToolTip> Objekt.</span><span class="sxs-lookup"><span data-stu-id="b091c-122">The following example shows how to use the <xref:System.Windows.Controls.ToolTipService> properties to specify the position of a tooltip whose content is not a <xref:System.Windows.Controls.ToolTip> object.</span></span>  
   
- [!code-xml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
  [!code-csharp[ToolTipService#NoToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
  [!code-vb[ToolTipService#NoToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.ToolTip>   
- <xref:System.Windows.Controls.ToolTipService>   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)   
- [Übersicht über die QuickInfo](../../../../docs/framework/wpf/controls/tooltip-overview.md)   
- [Use the ContextMenuService and ToolTipService](http://msdn.microsoft.com/de-de/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+## <a name="see-also"></a><span data-ttu-id="b091c-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b091c-123">See Also</span></span>  
+ <xref:System.Windows.Controls.ToolTip>  
+ <xref:System.Windows.Controls.ToolTipService>  
+ [<span data-ttu-id="b091c-124">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="b091c-124">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [<span data-ttu-id="b091c-125">Übersicht über QuickInfo</span><span class="sxs-lookup"><span data-stu-id="b091c-125">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
+ [<span data-ttu-id="b091c-126">Verwenden Sie die ContextMenuService- und ToolTipService</span><span class="sxs-lookup"><span data-stu-id="b091c-126">Use the ContextMenuService and ToolTipService</span></span>](http://msdn.microsoft.com/en-us/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

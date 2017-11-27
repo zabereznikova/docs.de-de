@@ -1,31 +1,34 @@
 ---
-title: "Vorgehensweise: Verwenden der Konfiguration zum Hinzuf&#252;gen eines ASP.NET AJAX-Endpunkts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b08bfd30eae1b33b2bf91eb1b0bd0127c09f9632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Verwenden der Konfiguration zum Hinzuf&#252;gen eines ASP.NET AJAX-Endpunkts
-Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Dienst erstellen, der einen ASP.NET AJAX\-aktivierten Endpunkt verfügbar macht, der auf einer Client\-Website von JavaScript aufgerufen werden kann.Zum Erstellen eines solchen Endpunkts können Sie entweder \(wie bei allen anderen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Endpunkten\) eine Konfigurationsdatei verwenden, oder Sie können eine Methode einsetzen, die keine Konfigurationselemente benötigt.In diesem Thema wird die Konfigurationsmethode veranschaulicht.  
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a><span data-ttu-id="28a4b-102">Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts</span><span class="sxs-lookup"><span data-stu-id="28a4b-102">How to: Use Configuration to Add an ASP.NET AJAX Endpoint</span></span>
+<span data-ttu-id="28a4b-103">Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Dienst erstellen, der einen ASP.NET AJAX-aktivierten Endpunkt verfügbar macht, der auf einer Client-Website von JavaScript aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="28a4b-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] allows you to create a service that makes an ASP.NET AJAX-enabled endpoint available that can be called from JavaScript on a client Web site.</span></span> <span data-ttu-id="28a4b-104">Zum Erstellen eines solchen Endpunkts können Sie entweder (wie bei allen anderen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Endpunkten) eine Konfigurationsdatei verwenden, oder Sie können eine Methode einsetzen, die keine Konfigurationselemente benötigt.</span><span class="sxs-lookup"><span data-stu-id="28a4b-104">To create such an endpoint, you can either use a configuration file, as with all other [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoints, or use a method that does not require any configuration elements.</span></span> <span data-ttu-id="28a4b-105">In diesem Thema wird die Konfigurationsmethode veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="28a4b-105">This topic demonstrates the configuration approach.</span></span>  
   
- Der Teil der Prozedur, durch den der Dienstendpunkt ASP.NET AJAX\-aktiviert wird, konfiguriert den Endpunkt für die Verwendung von <xref:System.ServiceModel.WebHttpBinding> und fügt das [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)\-Endpunktverhalten hinzu.Die Schritte zum Implementieren und Hosten des Diensts nach der Konfiguration des Endpunkts sind den Schritten ähnlich, die von jedem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst verwendet werden.Ein Arbeitsbeispiel finden Sie unter [AJAX\-Dienst mit HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+ <span data-ttu-id="28a4b-106">Der Teil der Prozedur, die den Dienstendpunkt zu ASP.NET AJAX-aktivierten ermöglicht besteht in der Konfiguration des Endpunkts verwendet die <xref:System.ServiceModel.WebHttpBinding> und zum Hinzufügen der [ \<EnableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Endpunktverhalten.</span><span class="sxs-lookup"><span data-stu-id="28a4b-106">The part of the procedure that enables the service endpoint to become ASP.NET AJAX-enabled consists of configuring the endpoint to use the <xref:System.ServiceModel.WebHttpBinding> and to add the [\<enableWebScript>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) endpoint behavior.</span></span> <span data-ttu-id="28a4b-107">Die Schritte zum Implementieren und Hosten des Diensts nach der Konfiguration des Endpunkts sind den Schritten ähnlich, die von jedem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="28a4b-107">After configuring the endpoint, the steps to implement and host the service are similar to those used by any [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="28a4b-108">Ein Arbeitsbeispiel finden Sie unter der [AJAX-Dienst mithilfe von HTTP-POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).</span><span class="sxs-lookup"><span data-stu-id="28a4b-108">For a working example, see the [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Konfigurieren eines ASP.NET AJAX\-Endpunkts ohne Konfiguration finden Sie unter [Vorgehensweise: Hinzufügen eines ASP.NET AJAX\-Endpunkts ohne Verwendung einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="28a4b-109">zum Konfigurieren von ASP.NET AJAX-Endpunkt ohne Konfiguration finden Sie unter [wie: Hinzufügen einer ASP.NET AJAX-Endpunkt ohne mithilfe der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="28a4b-109"> how to configure an ASP.NET AJAX endpoint without using configuration, see [How to: Add an ASP.NET AJAX Endpoint Without Using Configuration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).</span></span>  
   
-### So erstellen Sie einen WCF\-Basisdienst  
+### <a name="to-create-a-basic-wcf-service"></a><span data-ttu-id="28a4b-110">So erstellen Sie einen WCF-Basisdienst</span><span class="sxs-lookup"><span data-stu-id="28a4b-110">To create a basic WCF service</span></span>  
   
-1.  Definieren Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Basisdienstvertrag mit einer Schnittstelle, die mit dem <xref:System.ServiceModel.ServiceContractAttribute>\-Attribut gekennzeichnet ist.Markieren Sie jeden Vorgang mit <xref:System.ServiceModel.OperationContractAttribute>.Stellen Sie sicher, dass Sie die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>\-Eigenschaft festlegen.  
+1.  <span data-ttu-id="28a4b-111">Definieren Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Basisdienstvertrag mit einer Schnittstelle, die mit dem <xref:System.ServiceModel.ServiceContractAttribute>-Attribut gekennzeichnet ist.</span><span class="sxs-lookup"><span data-stu-id="28a4b-111">Define a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service contract with an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute> attribute.</span></span> <span data-ttu-id="28a4b-112">Markieren Sie jeden Vorgang mit <xref:System.ServiceModel.OperationContractAttribute>.</span><span class="sxs-lookup"><span data-stu-id="28a4b-112">Mark each operation with the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="28a4b-113">Stellen Sie sicher, dass Sie die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft festlegen.</span><span class="sxs-lookup"><span data-stu-id="28a4b-113">Be sure to set the <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> property.</span></span>  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -40,7 +43,7 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     }  
     ```  
   
-2.  Implementieren Sie den `ICalculator`\-Dienstvertrag mit `CalculatorService`.  
+2.  <span data-ttu-id="28a4b-114">Implementieren Sie den `ICalculator`-Dienstvertrag mit `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="28a4b-114">Implement the `ICalculator` service contract with a `CalculatorService`.</span></span>  
   
     ```  
     public class CalculatorService : ICalculator  
@@ -53,7 +56,7 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     //Other operations omitted…  
     ```  
   
-3.  Definieren Sie einen Namespace für die `ICalculator`\-Implementierung und die `CalculatorService`\-Implementierung, indem Sie sie in einen Namespaceblock einschließen.  
+3.  <span data-ttu-id="28a4b-115">Definieren Sie einen Namespace für die `ICalculator`- und die `CalculatorService`-Implementierung, indem Sie sie in einen Namespaceblock einschließen.</span><span class="sxs-lookup"><span data-stu-id="28a4b-115">Define a namespace for the `ICalculator` and `CalculatorService` implementations by wrapping them in a namespace block.</span></span>  
   
     ```  
     Namespace Microsoft.Ajax.Samples  
@@ -62,11 +65,11 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     }  
     ```  
   
-### So erstellen Sie einen ASP.NET AJAX\-Endpunkt für den Dienst  
+### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a><span data-ttu-id="28a4b-116">So erstellen Sie einen ASP.NET AJAX-Endpunkt für den Dienst</span><span class="sxs-lookup"><span data-stu-id="28a4b-116">To create an ASP.NET AJAX endpoint for the service</span></span>  
   
-1.  Erstellen Sie eine Verhaltenskonfiguration, und geben Sie das [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)\-Verhalten für ASP.NET AJAX\-aktivierte Endpunkte des Diensts an.  
+1.  <span data-ttu-id="28a4b-117">Erstellen eine Verhaltenskonfiguration und geben Sie die [ \<EnableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Verhalten für ASP.NET AJAX-aktivierte Endpunkte des Diensts.</span><span class="sxs-lookup"><span data-stu-id="28a4b-117">Create a behavior configuration and specify the [\<enableWebScript>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) behavior for ASP.NET AJAX-enabled endpoints of the service.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <behaviors>  
             <endpointBehaviors>  
@@ -78,9 +81,9 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     </system.serviceModel>  
     ```  
   
-2.  Erstellen Sie einen Endpunkt für den Dienst, der <xref:System.ServiceModel.WebHttpBinding> und das ASP.NET AJAX\-Verhalten verwendet, das im vorherigen Schritt definiert wurde.  
+2.  <span data-ttu-id="28a4b-118">Erstellen Sie einen Endpunkt für den Dienst, der <xref:System.ServiceModel.WebHttpBinding> und das ASP.NET AJAX-Verhalten verwendet, das im vorherigen Schritt definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="28a4b-118">Create an endpoint for the service that uses the <xref:System.ServiceModel.WebHttpBinding> and the ASP.NET AJAX behavior defined in the previous step.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <services>  
             <service name="Microsoft.Ajax.Samples.CalculatorService">  
@@ -93,9 +96,9 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     </system.serviceModel>   
     ```  
   
-### So hosten Sie den Dienst in IIS  
+### <a name="to-host-the-service-in-iis"></a><span data-ttu-id="28a4b-119">So hosten Sie den Dienst in IIS</span><span class="sxs-lookup"><span data-stu-id="28a4b-119">To host the service in IIS</span></span>  
   
-1.  Um den Dienst in IIS zu hosten, erstellen Sie in der Anwendung eine neue Datei mit dem Namen service und einer SVC\-Erweiterung.Bearbeiten Sie diese Datei, indem Sie die entsprechenden [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)\-Direktiveninformationen für den Dienst hinzufügen.Die Dienstdatei für das `CalculatorService`\-Beispiel enthält z. B. folgende Informationen.  
+1.  <span data-ttu-id="28a4b-120">Um den Dienst in IIS zu hosten, erstellen Sie in der Anwendung eine neue Datei mit dem Namen service und einer SVC-Erweiterung.</span><span class="sxs-lookup"><span data-stu-id="28a4b-120">To host the service in IIS, create a new file named service with a .svc extension in the application.</span></span> <span data-ttu-id="28a4b-121">Bearbeiten Sie diese Datei durch Hinzufügen der entsprechenden [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) Richtlinie Informationen für den Dienst.</span><span class="sxs-lookup"><span data-stu-id="28a4b-121">Edit this file by adding the appropriate [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive information for the service.</span></span> <span data-ttu-id="28a4b-122">Die Dienstdatei für das `CalculatorService`-Beispiel enthält z.&#160;B. folgende Informationen.</span><span class="sxs-lookup"><span data-stu-id="28a4b-122">For example, the content in the service file for the `CalculatorService` sample contains the following information.</span></span>  
   
     ```  
     <%@ServiceHost   
@@ -105,12 +108,12 @@ Mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Di
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Hosting in IIS finden Sie unter [Gewusst wie: Hosten eines WCF\-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="28a4b-123">Hosting in IIS finden Sie unter [wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span><span class="sxs-lookup"><span data-stu-id="28a4b-123"> hosting in IIS, see [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span></span>  
   
-### So rufen Sie den Dienst auf  
+### <a name="to-call-the-service"></a><span data-ttu-id="28a4b-124">So rufen Sie den Dienst auf</span><span class="sxs-lookup"><span data-stu-id="28a4b-124">To call the service</span></span>  
   
-1.  Der Endpunkt ist für eine leere Adresse konfiguriert, die relativ zur SVC\-Datei festgelegt ist. Daher ist der Dienst jetzt verfügbar und kann durch Senden von Anforderungen an "service.svc\/\<operation\>" aufgerufen werden – beispielsweise durch "service.svc\/Add" für den `Add`\-Vorgang.Sie können ihn verwenden, indem Sie die Endpunkt\-URL in die Scripts\-Auflistung des ASP.NET AJAX Script Manager\-Steuerelements eingeben.Ein Beispiel hierfür finden Sie unter [AJAX\-Dienst mit HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+1.  <span data-ttu-id="28a4b-125">Der Endpunkt ist eine leere Adresse relativ zur SVC-Datei konfiguriert, damit der Dienst jetzt verfügbar ist und kann durch Senden von Anforderungen an service.svc/ aufgerufen werden\<Vorgang > – z. B. service.svc/Add für die `Add` Vorgang.</span><span class="sxs-lookup"><span data-stu-id="28a4b-125">The endpoint is configured at an empty address relative to the .svc file, so the service is now available and can be invoked by sending requests to service.svc/\<operation> - for example, service.svc/Add for the `Add` operation.</span></span> <span data-ttu-id="28a4b-126">Sie können ihn verwenden, indem Sie die Endpunkt-URL in die Scripts-Auflistung des ASP.NET AJAX Script Manager-Steuerelements eingeben.</span><span class="sxs-lookup"><span data-stu-id="28a4b-126">You can use it by entering the endpoint URL into the Scripts collection of the ASP.NET AJAX Script Manager control.</span></span> <span data-ttu-id="28a4b-127">Ein Beispiel finden Sie die [AJAX-Dienst mithilfe von HTTP-POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).</span><span class="sxs-lookup"><span data-stu-id="28a4b-127">For an example, see the [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).</span></span>  
   
-## Siehe auch  
- [Erstellen von WCF\-Diensten für ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)   
- [Vorgehensweise: Migrieren AJAX\-aktivierter ASP.NET\-Webdienste nach WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="28a4b-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="28a4b-128">See Also</span></span>  
+ [<span data-ttu-id="28a4b-129">Erstellen von WCF-Diensten für ASP.NET-AJAX</span><span class="sxs-lookup"><span data-stu-id="28a4b-129">Creating WCF Services for ASP.NET AJAX</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [<span data-ttu-id="28a4b-130">Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF</span><span class="sxs-lookup"><span data-stu-id="28a4b-130">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

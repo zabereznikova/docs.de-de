@@ -1,60 +1,63 @@
 ---
-title: "Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberfl&#228;chenautomatisierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelementmuster Scroll-Element"
-  - "ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung"
-  - "Scroll Item-Steuerelementmuster"
+title: "Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Scroll Item
+- UI Automation, Scroll Item control pattern
+- Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-caps.latest.revision: 16
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 92c3b4fad775dcd04299e18da126107d8fbb4471
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberfl&#228;chenautomatisierung
+# <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a><span data-ttu-id="734f7-102">Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="734f7-102">Implementing the UI Automation ScrollItem Control Pattern</span></span>
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler, die die verwaltete verwenden möchten vorgesehen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Klassen, die in der <xref:System.Windows.Automation> Namespace. Die neuesten Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows Automation API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="734f7-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="734f7-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="734f7-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="734f7-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Dieses Thema enthält Richtlinien und Konventionen zum Implementieren der <xref:System.Windows.Automation.Provider.IScrollItemProvider>, einschließlich Informationen zu Eigenschaften, Methoden und Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
+ <span data-ttu-id="734f7-105">Dieses Thema enthält Richtlinien und Konventionen für das Implementieren der <xref:System.Windows.Automation.Provider.IScrollItemProvider>, einschließlich Informationen über Eigenschaften, Methoden und Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="734f7-105">This topic introduces guidelines and conventions for implementing the <xref:System.Windows.Automation.Provider.IScrollItemProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="734f7-106">Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="734f7-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Die <xref:System.Windows.Automation.ScrollItemPattern> -Steuerelementmuster wird verwendet, um einzelne untergeordnete Steuerelemente von Containern zu unterstützen, implementieren <xref:System.Windows.Automation.Provider.IScrollProvider>. Dieses Steuerelementmuster dient als Kommunikationskanal zwischen einem untergeordneten Steuerelement und dessen Container, um sicherzustellen, dass der Container den aktuell sichtbaren Inhalt (oder die Region) innerhalb des Viewports ändern kann, um das untergeordnete Steuerelement anzuzeigen. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="734f7-107">Die <xref:System.Windows.Automation.ScrollItemPattern> -Steuerelementmuster wird verwendet, um einzelne untergeordnete Steuerelemente von Containern zu unterstützen, implementieren <xref:System.Windows.Automation.Provider.IScrollProvider>.</span><span class="sxs-lookup"><span data-stu-id="734f7-107">The <xref:System.Windows.Automation.ScrollItemPattern> control pattern is used to support individual child controls of containers that implement <xref:System.Windows.Automation.Provider.IScrollProvider>.</span></span> <span data-ttu-id="734f7-108">Dieses Steuerelementmuster dient als Kommunikationskanal zwischen einem untergeordneten Steuerelement und dessen Container, um sicherzustellen, dass der Container den aktuell sichtbaren Inhalt (oder die Region) innerhalb des Viewports ändern kann, um das untergeordnete Steuerelement anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="734f7-108">This control pattern acts as a communication channel between a child control and its container to ensure that the container can change the currently visible content (or region) within its viewport to display the child control.</span></span> <span data-ttu-id="734f7-109">Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="734f7-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
- Beachten Sie beim Implementieren des ScrollItem-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="734f7-110">Implementierungsrichtlinien und -konventionen</span><span class="sxs-lookup"><span data-stu-id="734f7-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="734f7-111">Beachten Sie beim Implementieren des ScrollItem-Steuerelementmusters die folgenden Richtlinien und Konventionen:</span><span class="sxs-lookup"><span data-stu-id="734f7-111">When implementing the Scroll Item control pattern, note the following guidelines and conventions:</span></span>  
   
--   In einem Window- oder Canvas-Steuerelement enthaltene Elemente müssen die IScrollItemProvider-Schnittstelle nicht implementieren. Als Alternative jedoch, sie müssen zur Verfügung stellen eines gültigen Speicherorts für die <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Dadurch wird die Clientanwendung eine UI-Automatisierung verwenden die <xref:System.Windows.Automation.ScrollPattern> -Methoden des Steuerelementmusters im Container zum Anzeigen des untergeordneten Elements.  
+-   <span data-ttu-id="734f7-112">In einem Window- oder Canvas-Steuerelement enthaltene Elemente müssen die IScrollItemProvider-Schnittstelle nicht implementieren.</span><span class="sxs-lookup"><span data-stu-id="734f7-112">Items contained within a Window or Canvas control are not required to implement the IScrollItemProvider interface.</span></span> <span data-ttu-id="734f7-113">Als Alternative können jedoch diese müssen verfügbar machen eines gültigen Speicherort für die <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.</span><span class="sxs-lookup"><span data-stu-id="734f7-113">As an alternative, however, they must expose a valid location for the <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.</span></span> <span data-ttu-id="734f7-114">Dadurch kann eine Benutzeroberflächenautomatisierungs-Clientanwendung zum Verwenden der <xref:System.Windows.Automation.ScrollPattern> -steuerelementmustermethoden im Container auf das untergeordnete Element anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="734f7-114">This will allow a UI Automation client application to use the <xref:System.Windows.Automation.ScrollPattern> control pattern methods on the container to display the child item.</span></span>  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
-## <a name="required-members-for-iscrollitemprovider"></a>Erforderliche Member für IScrollItemProvider  
- Die folgende Methode ist zum Implementieren der IScrollProvider-Schnittstelle erforderlich.  
+## <a name="required-members-for-iscrollitemprovider"></a><span data-ttu-id="734f7-115">Erforderliche Member für IScrollItemProvider</span><span class="sxs-lookup"><span data-stu-id="734f7-115">Required Members for IScrollItemProvider</span></span>  
+ <span data-ttu-id="734f7-116">Die folgende Methode ist zum Implementieren der IScrollProvider-Schnittstelle erforderlich.</span><span class="sxs-lookup"><span data-stu-id="734f7-116">The following method is required for implementing the IScrollProvider interface.</span></span>  
   
-|Erforderliche Member|Memberart|Notizen|  
+|<span data-ttu-id="734f7-117">Erforderliche Member</span><span class="sxs-lookup"><span data-stu-id="734f7-117">Required members</span></span>|<span data-ttu-id="734f7-118">Memberart</span><span class="sxs-lookup"><span data-stu-id="734f7-118">Member type</span></span>|<span data-ttu-id="734f7-119">Hinweise</span><span class="sxs-lookup"><span data-stu-id="734f7-119">Notes</span></span>|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|<span data-ttu-id="734f7-120">-Methode</span><span class="sxs-lookup"><span data-stu-id="734f7-120">-   Method</span></span>|<span data-ttu-id="734f7-121">Keine</span><span class="sxs-lookup"><span data-stu-id="734f7-121">None</span></span>|  
   
- Diesem Steuerelementmuster sind keine Eigenschaften oder Ereignisse zugeordnet.  
+ <span data-ttu-id="734f7-122">Diesem Steuerelementmuster sind keine Eigenschaften oder Ereignisse zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="734f7-122">This control pattern has no associated properties or events.</span></span>  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>Ausnahmen  
- Anbieter müssen die folgenden Ausnahmen auslösen.  
+## <a name="exceptions"></a><span data-ttu-id="734f7-123">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="734f7-123">Exceptions</span></span>  
+ <span data-ttu-id="734f7-124">Anbieter müssen die folgenden Ausnahmen auslösen.</span><span class="sxs-lookup"><span data-stu-id="734f7-124">Providers must throw the following exceptions.</span></span>  
   
-|Ausnahmetyp|Bedingung|  
+|<span data-ttu-id="734f7-125">Ausnahmetyp</span><span class="sxs-lookup"><span data-stu-id="734f7-125">Exception Type</span></span>|<span data-ttu-id="734f7-126">Bedingung</span><span class="sxs-lookup"><span data-stu-id="734f7-126">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Wenn ein Element nicht in die Ansicht gescrollt werden kann:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="734f7-127">Wenn ein Element nicht in die Ansicht gescrollt werden kann:</span><span class="sxs-lookup"><span data-stu-id="734f7-127">If an item cannot be scrolled into view:</span></span><br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Zwischenspeichern Sie in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="734f7-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="734f7-128">See Also</span></span>  
+ [<span data-ttu-id="734f7-129">Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="734f7-129">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="734f7-130">Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter</span><span class="sxs-lookup"><span data-stu-id="734f7-130">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="734f7-131">Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients</span><span class="sxs-lookup"><span data-stu-id="734f7-131">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="734f7-132">Übersicht über die Benutzeroberflächenautomatisierungs-Struktur</span><span class="sxs-lookup"><span data-stu-id="734f7-132">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="734f7-133">Verwenden der Zwischenspeicherung in der UI-Automatisierung</span><span class="sxs-lookup"><span data-stu-id="734f7-133">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

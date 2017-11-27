@@ -1,34 +1,39 @@
 ---
-title: "Gewusst wie: Erstellen und Verwenden eines GridLengthConverter-Objekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grid-Steuerelement, Erstellen, GridLengthConverter-Objekte"
+title: 'Gewusst wie: Erstellen und Verwenden eines GridLengthConverter-Objekts'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Grid control [WPF], creating [WPF], GridLengthConverter objects
 ms.assetid: 5ab75911-e36a-4825-80e4-081c57e8e182
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 775d51a35f64f8736931dec32fb439bb9925be53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen und Verwenden eines GridLengthConverter-Objekts
-## Beispiel  
- Im folgenden Beispiel wird das Erstellen und Verwenden einer Instanz von <xref:System.Windows.GridLengthConverter> veranschaulicht.  Im Beispiel wird eine benutzerdefinierte Methode mit dem Namen `changeCol` definiert, die <xref:System.Windows.Controls.ListBoxItem> an ein <xref:System.Windows.GridLengthConverter>\-Objekt übergibt. Dieses konvertiert <xref:System.Windows.Controls.ContentControl.Content%2A> von <xref:System.Windows.Controls.ListBoxItem> in eine Instanz von <xref:System.Windows.GridLength>.  Der konvertierte Wert wird dann als Wert der <xref:System.Windows.Controls.ColumnDefinition.Width%2A>\-Eigenschaft des <xref:System.Windows.Controls.ColumnDefinition>\-Elements zurückgegeben.  
+# <a name="how-to-create-and-use-a-gridlengthconverter-object"></a><span data-ttu-id="600a8-102">Gewusst wie: Erstellen und Verwenden eines GridLengthConverter-Objekts</span><span class="sxs-lookup"><span data-stu-id="600a8-102">How to: Create and Use a GridLengthConverter Object</span></span>
+## <a name="example"></a><span data-ttu-id="600a8-103">Beispiel</span><span class="sxs-lookup"><span data-stu-id="600a8-103">Example</span></span>  
+ <span data-ttu-id="600a8-104">Im folgende Beispiel wird gezeigt, wie zum Erstellen und Verwenden einer Instanz von <xref:System.Windows.GridLengthConverter>.</span><span class="sxs-lookup"><span data-stu-id="600a8-104">The following example shows how to create and use an instance of <xref:System.Windows.GridLengthConverter>.</span></span> <span data-ttu-id="600a8-105">Im Beispiel definiert eine benutzerdefinierte Methode wird aufgerufen, `changeCol`, übergibt der <xref:System.Windows.Controls.ListBoxItem> auf eine <xref:System.Windows.GridLengthConverter> , konvertiert der <xref:System.Windows.Controls.ContentControl.Content%2A> des eine <xref:System.Windows.Controls.ListBoxItem> mit einer Instanz von <xref:System.Windows.GridLength>.</span><span class="sxs-lookup"><span data-stu-id="600a8-105">The example defines a custom method called `changeCol`, which passes the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.Windows.GridLengthConverter> that converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of a <xref:System.Windows.Controls.ListBoxItem> to an instance of <xref:System.Windows.GridLength>.</span></span> <span data-ttu-id="600a8-106">Der konvertierte Wert wird dann wieder als Wert des übergeben der <xref:System.Windows.Controls.ColumnDefinition.Width%2A> Eigenschaft von der <xref:System.Windows.Controls.ColumnDefinition> Element.</span><span class="sxs-lookup"><span data-stu-id="600a8-106">The converted value is then passed back as the value of the <xref:System.Windows.Controls.ColumnDefinition.Width%2A> property of the <xref:System.Windows.Controls.ColumnDefinition> element.</span></span>  
   
- Außerdem wird im Beispiel eine zweite benutzerdefinierte Methode mit dem Namen `changeColVal` definiert.  Diese benutzerdefinierte Methode konvertiert <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von <xref:System.Windows.Controls.Slider> in <xref:System.String> und gibt diesen Wert dann an <xref:System.Windows.Controls.ColumnDefinition> als <xref:System.Windows.Controls.ColumnDefinition.Width%2A> des Elements zurück.  
+ <span data-ttu-id="600a8-107">Im Beispiel definiert auch eine zweite benutzerdefinierte Methode namens `changeColVal`.</span><span class="sxs-lookup"><span data-stu-id="600a8-107">The example also defines a second custom method, called `changeColVal`.</span></span> <span data-ttu-id="600a8-108">Diese benutzerdefinierte Methode konvertiert die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> des eine <xref:System.Windows.Controls.Slider> auf eine <xref:System.String> und übergibt dann, den Wert zum Sichern der <xref:System.Windows.Controls.ColumnDefinition> als die <xref:System.Windows.Controls.ColumnDefinition.Width%2A> des Elements.</span><span class="sxs-lookup"><span data-stu-id="600a8-108">This custom method converts the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of a <xref:System.Windows.Controls.Slider> to a <xref:System.String> and then passes that value back to the <xref:System.Windows.Controls.ColumnDefinition> as the <xref:System.Windows.Controls.ColumnDefinition.Width%2A> of the element.</span></span>  
   
- Beachten Sie, dass eine separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Datei den Inhalt eines <xref:System.Windows.Controls.ListBoxItem> definiert.  
+ <span data-ttu-id="600a8-109">Beachten Sie, dass eine Separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Datei definiert den Inhalt einer <xref:System.Windows.Controls.ListBoxItem>.</span><span class="sxs-lookup"><span data-stu-id="600a8-109">Note that a separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file defines the contents of a <xref:System.Windows.Controls.ListBoxItem>.</span></span>  
   
  [!code-csharp[gridlengthConverterGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridlengthConverterGrid/CSharp/Window1.xaml.cs#1)]
  [!code-vb[gridlengthConverterGrid#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridlengthConverterGrid/VisualBasic/Window1.xaml.vb#1)]  
   
-## Siehe auch  
- <xref:System.Windows.GridLengthConverter>   
+## <a name="see-also"></a><span data-ttu-id="600a8-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="600a8-110">See Also</span></span>  
+ <xref:System.Windows.GridLengthConverter>  
  <xref:System.Windows.GridLength>

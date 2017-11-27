@@ -1,239 +1,242 @@
 ---
-title: "Bindungen und Sicherheit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bindungen [WCF]"
-  - "Bindungen [WCF], Sicherheit"
-  - "WCF-Sicherheit"
-  - "Windows Communication Foundation, Sicherheit"
+title: Bindungen und Sicherheit
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bindings [WCF], security
+- WCF security
+- Windows Communication Foundation, security
+- bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bindungen und Sicherheit
-Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] integrierten Bindungen bieten eine schnelle Möglichkeit, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendungen zu programmieren.Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema.Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
+# <a name="bindings-and-security"></a><span data-ttu-id="dfc60-102">Bindungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="dfc60-102">Bindings and Security</span></span>
+<span data-ttu-id="dfc60-103">Die vom System bereitgestellten, in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] integrierten Bindungen bieten eine schnelle Möglichkeit, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen zu programmieren.</span><span class="sxs-lookup"><span data-stu-id="dfc60-103">The system-provided bindings included with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offer a quick way to program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="dfc60-104">Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema.</span><span class="sxs-lookup"><span data-stu-id="dfc60-104">With one exception, all the bindings have a default security scheme enabled.</span></span> <span data-ttu-id="dfc60-105">Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-105">This topic helps you select the right binding for your security needs.</span></span>  
   
- Eine Übersicht über die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Sicherheit finden Sie unter [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Programmierung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mit Bindungen finden Sie unter [Programmieren der WCF\-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ <span data-ttu-id="dfc60-106">Eine Übersicht über [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-106">For an overview of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="dfc60-107">Programmieren von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bindungen, finden Sie unter [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-107"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] using bindings, see [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).</span></span>  
   
- Wenn Sie bereits eine Bindung ausgewählt haben, können Sie unter [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md) mehr über die der Sicherheit zugehörigen Laufzeitverhalten erfahren.  
+ <span data-ttu-id="dfc60-108">Wenn Sie bereits eine Bindung ausgewählt haben, finden Sie weitere Informationen über das Laufzeitverhalten, die unter Berücksichtigung von Sicherheitsaspekten einhergehen [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-108">If you have already selected a binding, you can find out more about the run-time behaviors that are associated with security in [Security Behaviors](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).</span></span>  
   
- Einige Sicherheitsfunktionen sind mit den vom System bereitgestellten Bindungen nicht programmierbar.Weitere Informationen über die Kontrolle durch benutzerdefinierte Bindungen finden Sie unter [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ <span data-ttu-id="dfc60-109">Einige Sicherheitsfunktionen sind mit den vom System bereitgestellten Bindungen nicht programmierbar.</span><span class="sxs-lookup"><span data-stu-id="dfc60-109">Some security functions are not programmable using the system-provided bindings.</span></span> <span data-ttu-id="dfc60-110">Mehr Kontrolle über eine benutzerdefinierte Bindung, finden Sie unter [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-110">For more control using a custom binding, see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## Sicherheitsfunktionen von Bindungen  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet einige vom System bereitgestellte Bindungen, die die meisten Bedürfnisse erfüllen.Wenn eine bestimmte Bindung nicht ausreicht, können Sie auch eine benutzerdefinierte Bindung erstellen.Eine Liste der vom System bereitgestellten Bindungen finden Sie unter [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu benutzerdefinierten Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+## <a name="security-functions-of-bindings"></a><span data-ttu-id="dfc60-111">Sicherheitsfunktionen von Bindungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-111">Security Functions of Bindings</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="dfc60-112"> bietet einige vom System bereitgestellte Bindungen, die die meisten Bedürfnisse erfüllen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-112"> includes a number of system-provided bindings that meet most needs.</span></span> <span data-ttu-id="dfc60-113">Wenn eine bestimmte Bindung nicht ausreicht, können Sie auch eine benutzerdefinierte Bindung erstellen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-113">If a particular binding does not suffice, you can also create a custom binding.</span></span> <span data-ttu-id="dfc60-114">Eine Liste der vom System bereitgestellte Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-114">For a list of system-provided bindings, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="dfc60-115">Benutzerdefinierte Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-115"> custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
- Jede Bindung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erscheint in zwei Formen: als API\- und als XML\-Element, die in einer Konfigurationsdatei verwendet werden.`WSHttpBinding` \(API\) hat z. B. in [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ein Äquivalent.  
+ <span data-ttu-id="dfc60-116">Jede Bindung in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erscheint in zwei Formen: als API- und als XML-Element, die in einer Konfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dfc60-116">Every binding in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has two forms: as an API and as an XML element used in a configuration file.</span></span> <span data-ttu-id="dfc60-117">Z. B. die `WSHttpBinding` (API) hat eine Entsprechung den [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-117">For example, the `WSHttpBinding` (API) has a counterpart in the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- Der folgende Abschnitt führt beide Formen einer Bindung auf und fasst die Sicherheitsfunktionen zusammen.  
+ <span data-ttu-id="dfc60-118">Der folgende Abschnitt führt beide Formen einer Bindung auf und fasst die Sicherheitsfunktionen zusammen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-118">The following section lists both forms for each binding and summarizes the security features.</span></span>  
   
-### BasicHttp  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.BasicHttpBinding>; verwenden Sie in der Konfiguration [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+### <a name="basichttp"></a><span data-ttu-id="dfc60-119">BasicHttp</span><span class="sxs-lookup"><span data-stu-id="dfc60-119">BasicHttp</span></span>  
+ <span data-ttu-id="dfc60-120">Verwenden Sie im Code die <xref:System.ServiceModel.BasicHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-120">In code, use the <xref:System.ServiceModel.BasicHttpBinding> class; in configuration, use the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
- Diese Bindung ist für die Verwendung mit vielen verschiedenen vorhandenen Technologien vorgesehen, u. a. mit:  
+ <span data-ttu-id="dfc60-121">Diese Bindung ist für die Verwendung mit vielen verschiedenen vorhandenen Technologien vorgesehen, u. a. mit:</span><span class="sxs-lookup"><span data-stu-id="dfc60-121">This binding is designed for use with a range of existing technologies, including the following:</span></span>  
   
--   ASP.NET\-Webdienste \(ASMX\), Version 1.  
+-   <span data-ttu-id="dfc60-122">ASP.NET-Webdienste (ASMX), Version 1.</span><span class="sxs-lookup"><span data-stu-id="dfc60-122">ASP.NET Web services (ASMX), version 1.</span></span>  
   
--   Webdienststeigerungen \(WSE\)\-Anwendungen.  
+-   <span data-ttu-id="dfc60-123">Webdienststeigerungen (WSE)-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-123">Web Service Enhancements (WSE) applications.</span></span>  
   
--   Grundlegendes Profil gemäß der Webdienst\-Interoperabilitätsspezifikation \(WS\-I\) \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=38955](http://go.microsoft.com/fwlink/?LinkId=38955) \(möglicherweise in englischer Sprache\)\).  
+-   <span data-ttu-id="dfc60-124">Basic Profile gemäß Definition in Web Services Interoperability (WS-I) Spezifikation ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).</span><span class="sxs-lookup"><span data-stu-id="dfc60-124">Basic Profile as defined in the Web Services Interoperability (WS-I) specification ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).</span></span>  
   
--   Standardsicherheitsprofil gemäß der Definition in WS\-I.  
+-   <span data-ttu-id="dfc60-125">Standardsicherheitsprofil gemäß der Definition in WS-I.</span><span class="sxs-lookup"><span data-stu-id="dfc60-125">Basic security profile as defined in WS-I.</span></span>  
   
- Standardmäßig ist diese Bindung nicht sicher.Sie ist darauf ausgelegt, mit ASMX\-Diensten zusammenzuarbeiten.Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services \(IIS\)\-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Digest und integrierte Windows\-Sicherheit.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).Diese Bindung unterstützt Folgendes:  
+ <span data-ttu-id="dfc60-126">Standardmäßig ist diese Bindung nicht sicher.</span><span class="sxs-lookup"><span data-stu-id="dfc60-126">By default, this binding is not secure.</span></span> <span data-ttu-id="dfc60-127">Sie ist darauf ausgelegt, mit ASMX-Diensten zusammenzuarbeiten.</span><span class="sxs-lookup"><span data-stu-id="dfc60-127">It is designed to interoperate with ASMX services.</span></span> <span data-ttu-id="dfc60-128">Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services (IIS)-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Digest und integrierte Windows-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-128">When security is enabled, the binding is designed for seamless interoperation with Internet Information Services (IIS) security mechanisms, such as basic authentication, digest, and integrated Windows security.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-129">[Übersicht über die transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-129"> [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span> <span data-ttu-id="dfc60-130">Diese Bindung unterstützt Folgendes:</span><span class="sxs-lookup"><span data-stu-id="dfc60-130">This binding supports the following:</span></span>  
   
--   HTTPS\-Transportsicherheit.  
+-   <span data-ttu-id="dfc60-131">HTTPS-Transportsicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-131">HTTPS transport security.</span></span>  
   
--   HTTP\-Standardauthentifizierung  
+-   <span data-ttu-id="dfc60-132">HTTP-Standardauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-132">HTTP basic authentication.</span></span>  
   
--   WS\-Sicherheit.  
+-   <span data-ttu-id="dfc60-133">WS-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-133">WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> und <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-134"> <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> und <xref:System.ServiceModel.BasicHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-134"> <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, and <xref:System.ServiceModel.BasicHttpSecurityMode>.</span></span>  
   
-### WSHttpBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.WSHttpBinding>; verwenden Sie in der Konfiguration [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+### <a name="wshttpbinding"></a><span data-ttu-id="dfc60-135">WSHttpBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-135">WSHttpBinding</span></span>  
+ <span data-ttu-id="dfc60-136">Verwenden Sie im Code die <xref:System.ServiceModel.WSHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-136">In code, use the <xref:System.ServiceModel.WSHttpBinding> class; in configuration, use the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- Standardmäßig implementiert diese Bindung die WS\-Sicherheitsspezifikation und bietet Interoperabilität mit Diensten, die die WS\-\*\-Spezifikationen  implementieren.Sie unterstützt Folgendes:  
+ <span data-ttu-id="dfc60-137">Standardmäßig implementiert diese Bindung die WS-Sicherheitsspezifikation und bietet Interoperabilität mit Diensten, die die WS-*-Spezifikationen implementieren.</span><span class="sxs-lookup"><span data-stu-id="dfc60-137">By default, this binding implements the WS-Security specification and provides interoperability with services that implement the WS-* specifications.</span></span> <span data-ttu-id="dfc60-138">Sie unterstützt Folgendes:</span><span class="sxs-lookup"><span data-stu-id="dfc60-138">It supports the following:</span></span>  
   
--   HTTPS\-Transportsicherheit.  
+-   <span data-ttu-id="dfc60-139">HTTPS-Transportsicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-139">HTTPS transport security.</span></span>  
   
--   WS\-Sicherheit.  
+-   <span data-ttu-id="dfc60-140">WS-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-140">WS-Security.</span></span>  
   
--   HTTPS\-Transportschutz mit SOAP\-Nachrichten\-Anmeldeinformationen\-Sicherheit zur Authentifizierung des Anrufers.  
+-   <span data-ttu-id="dfc60-141">HTTPS-Transportschutz mit SOAP-Nachrichten-Anmeldeinformationen-Sicherheit zur Authentifizierung des Anrufers.</span><span class="sxs-lookup"><span data-stu-id="dfc60-141">HTTPS transport protection with SOAP message credential security for authenticating the caller.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType> und <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-142"> <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType> und <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-142"> <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, and <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>  
   
-### WSDualHttpBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.WSDualHttpBinding>; verwenden Sie in der Konfiguration [\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+### <a name="wsdualhttpbinding"></a><span data-ttu-id="dfc60-143">WSDualHttpBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-143">WSDualHttpBinding</span></span>  
+ <span data-ttu-id="dfc60-144">Verwenden Sie im Code die <xref:System.ServiceModel.WSDualHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<WsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-144">In code, use the <xref:System.ServiceModel.WSDualHttpBinding> class; in configuration, use the [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- Diese Bindung wird entworfen, um Duplexdienstanwendungen zu aktivieren.Diese Bindung implementiert die WS\-Sicherheitsspezifikation für nachrichtenbasierte Übertragungssicherheit.Transportsicherheit ist nicht verfügbar.Standardmäßig gibt es die folgenden Funktionen:  
+ <span data-ttu-id="dfc60-145">Diese Bindung wird entworfen, um Duplexdienstanwendungen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="dfc60-145">This binding is designed to enable duplex service applications.</span></span> <span data-ttu-id="dfc60-146">Diese Bindung implementiert die WS-Sicherheitsspezifikation für nachrichtenbasierte Übertragungssicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-146">This binding implements the WS-Security specification for message-based transfer security.</span></span> <span data-ttu-id="dfc60-147">Transportsicherheit ist nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="dfc60-147">Transport security is not available.</span></span> <span data-ttu-id="dfc60-148">Standardmäßig gibt es die folgenden Funktionen:</span><span class="sxs-lookup"><span data-stu-id="dfc60-148">By default, it provides the following features:</span></span>  
   
--   Implementiert WS\-Reliable Messaging für Zuverlässigkeit.  
+-   <span data-ttu-id="dfc60-149">Implementiert WS-Reliable Messaging für Zuverlässigkeit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-149">Implements WS-Reliable Messaging for reliability.</span></span>  
   
--   Implementiert WS\-Sicherheit für die Übertragungssicherheit und zur Authentifizierung.  
+-   <span data-ttu-id="dfc60-150">Implementiert WS-Sicherheit für die Übertragungssicherheit und zur Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-150">Implements WS-Security for transfer security and authentication.</span></span>  
   
--   Verwendet HTTP zur Nachrichtenübermittlung.  
+-   <span data-ttu-id="dfc60-151">Verwendet HTTP zur Nachrichtenübermittlung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-151">Uses HTTP for message delivery.</span></span>  
   
--   Verwendet Text\/XML\-Nachrichtencodierung.  
+-   <span data-ttu-id="dfc60-152">Verwendet Text/XML-Nachrichtencodierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-152">Uses text/XML message encoding.</span></span>  
   
- Beim Verwenden von WS\-Sicherheit \(Nachrichtenebenen\-Sicherheit\) ermöglicht die Bindung die Konfiguration der folgenden Parameter:  
+ <span data-ttu-id="dfc60-153">Beim Verwenden von WS-Sicherheit (Nachrichtenebenen-Sicherheit) ermöglicht die Bindung die Konfiguration der folgenden Parameter:</span><span class="sxs-lookup"><span data-stu-id="dfc60-153">Using WS-Security (message-layer security), the binding allows you to configure the following parameters:</span></span>  
   
--   der Sicherheitsalgorithmus\-Suite, um den Kryptografiesatz zu bestimmen.  
+-   <span data-ttu-id="dfc60-154">der Sicherheitsalgorithmus-Suite, um den Kryptografiesatz zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-154">The security algorithm suite to determine the cryptographic algorithm.</span></span>  
   
--   Bindungsoptionen für Folgendes:  
+-   <span data-ttu-id="dfc60-155">Bindungsoptionen für Folgendes:</span><span class="sxs-lookup"><span data-stu-id="dfc60-155">Binding options for the following:</span></span>  
   
-    -   die Bereitstellung von Dienstanmeldeinformationen, die beim Client Out\-of\-Band verfügbar sind.  
+    -   <span data-ttu-id="dfc60-156">die Bereitstellung von Dienstanmeldeinformationen, die beim Client Out-of-Band verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="dfc60-156">Providing service credentials available out-of-band at the client.</span></span>  
   
-    -   die Bereitstellung von vom Dienst als Teil des Kanal\-Setups ausgehandelten Dienstanmeldeinformationen.  
+    -   <span data-ttu-id="dfc60-157">die Bereitstellung von vom Dienst als Teil des Kanal-Setups ausgehandelten Dienstanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-157">Providing service credentials negotiated from the service as part of channel setup.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> und <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-158"><xref:System.ServiceModel.WSDualHttpSecurity> und <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-158"> <xref:System.ServiceModel.WSDualHttpSecurity> and <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>  
   
-### NetTcpBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.NetTcpBinding>; verwenden Sie in der Konfiguration [\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+### <a name="nettcpbinding"></a><span data-ttu-id="dfc60-159">NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-159">NetTcpBinding</span></span>  
+ <span data-ttu-id="dfc60-160">Verwenden Sie im Code die <xref:System.ServiceModel.NetTcpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-160">In code, use the <xref:System.ServiceModel.NetTcpBinding> class; in configuration, use the [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  
   
- Diese Bindung ist für die computerübergreifende Kommunikation optimiert.Standardmäßig besitzt sie folgende Eigenschaften:  
+ <span data-ttu-id="dfc60-161">Diese Bindung ist für die computerübergreifende Kommunikation optimiert.</span><span class="sxs-lookup"><span data-stu-id="dfc60-161">This binding is optimized for cross-machine communication.</span></span> <span data-ttu-id="dfc60-162">Standardmäßig besitzt sie folgende Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="dfc60-162">By default, it has the following characteristics:</span></span>  
   
--   Implementiert Transport Layer Security.  
+-   <span data-ttu-id="dfc60-163">Implementiert Transport Layer Security.</span><span class="sxs-lookup"><span data-stu-id="dfc60-163">Implements transport-layer security.</span></span>  
   
--   Setzt Windows\-Sicherheit für die Übertragungssicherheit und zur Authentifizierung ein.  
+-   <span data-ttu-id="dfc60-164">Setzt Windows-Sicherheit für die Übertragungssicherheit und zur Authentifizierung ein.</span><span class="sxs-lookup"><span data-stu-id="dfc60-164">Leverages Windows security for transfer security and authentication.</span></span>  
   
--   Verwendet TCP für Transport.  
+-   <span data-ttu-id="dfc60-165">Verwendet TCP für Transport.</span><span class="sxs-lookup"><span data-stu-id="dfc60-165">Uses TCP for transport.</span></span>  
   
--   Implementiert binäre Nachrichtencodierung.  
+-   <span data-ttu-id="dfc60-166">Implementiert binäre Nachrichtencodierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-166">Implements binary message encoding.</span></span>  
   
--   Implementiert WS\-Reliable Messaging.  
+-   <span data-ttu-id="dfc60-167">Implementiert WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="dfc60-167">Implements WS-Reliable Messaging.</span></span>  
   
- Es gibt folgende Optionen:  
+ <span data-ttu-id="dfc60-168">Es gibt folgende Optionen:</span><span class="sxs-lookup"><span data-stu-id="dfc60-168">Options include the following:</span></span>  
   
--   Nachrichtenebenen\-Sicherheit \(über WS\-Sicherheit\).  
+-   <span data-ttu-id="dfc60-169">Nachrichtenebenen-Sicherheit (über WS-Sicherheit).</span><span class="sxs-lookup"><span data-stu-id="dfc60-169">Message-layer security (using WS-Security).</span></span>  
   
--   Transportsicherheit mit Nachrichtenanmeldeinformationen: Vertraulichkeit und Integrität werden über Transport Layer Security \(TLS\) über TCP geboten und die Anmeldeinformationen für die Authentifizierung über WS\-Sicherheit.  
+-   <span data-ttu-id="dfc60-170">Transportsicherheit mit Nachrichtenanmeldeinformationen: Vertraulichkeit und Integrität werden über Transport Layer Security (TLS) über TCP geboten und die Anmeldeinformationen für die Authentifizierung über WS-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-170">Transport security with message credential—confidentiality and integrity provided by Transport Layer Security (TLS) over TCP, and credentials for authorization provided by WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp> und <xref:System.ServiceModel.MessageCredentialType>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-171"> <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp> und <xref:System.ServiceModel.MessageCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-171"> <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, and <xref:System.ServiceModel.MessageCredentialType>.</span></span>  
   
-### NetNamedPipeBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.NetNamedPipeBinding>; verwenden Sie in der Konfiguration [\<netNamedPipeBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
+### <a name="netnamedpipebinding"></a><span data-ttu-id="dfc60-172">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-172">NetNamedPipeBinding</span></span>  
+ <span data-ttu-id="dfc60-173">Verwenden Sie im Code die <xref:System.ServiceModel.NetNamedPipeBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-173">In code, use the <xref:System.ServiceModel.NetNamedPipeBinding> class; in configuration, use the [\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>  
   
- Diese Bindung ist für prozessübergreifende Kommunikation \(normalerweise auf dem gleichen Computer\) optimiert.Standardmäßig besitzt diese Bindung folgende Eigenschaften:  
+ <span data-ttu-id="dfc60-174">Diese Bindung ist für prozessübergreifende Kommunikation (normalerweise auf dem gleichen Computer) optimiert.</span><span class="sxs-lookup"><span data-stu-id="dfc60-174">This binding is optimized for cross-process communication (usually on the same machine).</span></span> <span data-ttu-id="dfc60-175">Standardmäßig besitzt diese Bindung folgende Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="dfc60-175">By default, this binding has the following characteristics:</span></span>  
   
--   Verwendet Transportsicherheit für die Nachrichtenübertragung und zur Authentifizierung.  
+-   <span data-ttu-id="dfc60-176">Verwendet Transportsicherheit für die Nachrichtenübertragung und zur Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-176">Uses transport security for message transfer and authentication.</span></span>  
   
--   Verwendet Named Pipes zur Nachrichtenübermittlung.  
+-   <span data-ttu-id="dfc60-177">Verwendet Named Pipes zur Nachrichtenübermittlung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-177">Uses named pipes for message delivery.</span></span>  
   
--   Implementiert binäre Nachrichtencodierung.  
+-   <span data-ttu-id="dfc60-178">Implementiert binäre Nachrichtencodierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-178">Implements binary message encoding.</span></span>  
   
--   Verschlüsselung und Nachrichtensignierung.  
+-   <span data-ttu-id="dfc60-179">Verschlüsselung und Nachrichtensignierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-179">Encryption and message signing.</span></span>  
   
- Es gibt folgende Optionen:  
+ <span data-ttu-id="dfc60-180">Es gibt folgende Optionen:</span><span class="sxs-lookup"><span data-stu-id="dfc60-180">Options include the following:</span></span>  
   
--   Authentifizierung über Windows\-Sicherheit.  
+-   <span data-ttu-id="dfc60-181">Authentifizierung über Windows-Sicherheit.</span><span class="sxs-lookup"><span data-stu-id="dfc60-181">Authentication using Windows security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> und <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-182"><xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> und <xref:System.ServiceModel.NamedPipeTransportSecurity>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, and <xref:System.ServiceModel.NamedPipeTransportSecurity>.</span></span>  
   
-### MsmqIntegrationBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>; verwenden Sie in der Konfiguration [\<msmqIntegrationBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
+### <a name="msmqintegrationbinding"></a><span data-ttu-id="dfc60-183">MsmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-183">MsmqIntegrationBinding</span></span>  
+ <span data-ttu-id="dfc60-184">Verwenden Sie im Code die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<MsmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-184">In code, use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> class; in configuration, use the [\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>  
   
- Diese Bindung ist für das Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clients und \-Diensten optimiert, die mit Nicht\-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing \(MSMQ\)\-Endpunkten zusammenarbeiten.  
+ <span data-ttu-id="dfc60-185">Diese Bindung ist für das Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients und -Diensten optimiert, die mit Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ)-Endpunkten zusammenarbeiten.</span><span class="sxs-lookup"><span data-stu-id="dfc60-185">This binding is optimized for creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and services that interoperate with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) endpoints.</span></span>  
   
- Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:  
+ <span data-ttu-id="dfc60-186">Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:</span><span class="sxs-lookup"><span data-stu-id="dfc60-186">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   Sicherheit kann deaktiviert werden \(Keine\).  
+-   <span data-ttu-id="dfc60-187">Sicherheit kann deaktiviert werden (Keine).</span><span class="sxs-lookup"><span data-stu-id="dfc60-187">Security can be disabled (None).</span></span>  
   
--   MSMQ\-Transportsicherheit \(Transport\).  
+-   <span data-ttu-id="dfc60-188">MSMQ-Transportsicherheit (Transport).</span><span class="sxs-lookup"><span data-stu-id="dfc60-188">MSMQ transport security (Transport).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> und <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-189"><xref:System.ServiceModel.NetMsmqSecurity> und <xref:System.ServiceModel.NetMsmqSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-189"> <xref:System.ServiceModel.NetMsmqSecurity> and <xref:System.ServiceModel.NetMsmqSecurityMode>.</span></span>  
   
-### NetMsmqBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.NetMsmqBinding>; verwenden Sie in der Konfiguration [\<NetMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
+### <a name="netmsmqbinding"></a><span data-ttu-id="dfc60-190">NetMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-190">NetMsmqBinding</span></span>  
+ <span data-ttu-id="dfc60-191">Verwenden Sie im Code die <xref:System.ServiceModel.NetMsmqBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-191">In code, use the <xref:System.ServiceModel.NetMsmqBinding> class; in configuration, use the [\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).</span></span>  
   
- Diese Bindung ist für den Einsatz beim Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensten gedacht, die MSMQ Queued Message\-Support benötigen.  
+ <span data-ttu-id="dfc60-192">Diese Bindung ist für den Einsatz beim Erstellen von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten gedacht, die MSMQ Queued Message-Support benötigen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-192">This binding is intended for use when creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that require MSMQ queued message support.</span></span>  
   
- Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:  
+ <span data-ttu-id="dfc60-193">Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:</span><span class="sxs-lookup"><span data-stu-id="dfc60-193">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   Sicherheit kann deaktiviert werden \(Keine\).  
+-   <span data-ttu-id="dfc60-194">Sicherheit kann deaktiviert werden (Keine).</span><span class="sxs-lookup"><span data-stu-id="dfc60-194">Security can be disabled (None).</span></span>  
   
--   MSMQ\-Transportsicherheit \(Transport\).  
+-   <span data-ttu-id="dfc60-195">MSMQ-Transportsicherheit (Transport).</span><span class="sxs-lookup"><span data-stu-id="dfc60-195">MSMQ transport security (Transport).</span></span>  
   
--   SOAP\-basierte Nachrichtensicherheit \(Nachricht\).  
+-   <span data-ttu-id="dfc60-196">SOAP-basierte Nachrichtensicherheit (Nachricht).</span><span class="sxs-lookup"><span data-stu-id="dfc60-196">SOAP-based message security (Message).</span></span>  
   
--   Gleichzeitige Transport\- und Nachrichtensicherheit \(Beides\).  
+-   <span data-ttu-id="dfc60-197">Gleichzeitige Transport- und Nachrichtensicherheit (Beides).</span><span class="sxs-lookup"><span data-stu-id="dfc60-197">Simultaneous Transport and Message security (Both).</span></span>  
   
--   Unterstützte Typen von Clientanmeldeinformationen: Keine, Windows, UserName, Zertifikat, IssuedToken.  
+-   <span data-ttu-id="dfc60-198">Unterstützte Typen von Clientanmeldeinformationen: Keine, Windows, UserName, Zertifikat, IssuedToken.</span><span class="sxs-lookup"><span data-stu-id="dfc60-198">Client Credential Types supported: None, Windows, UserName, Certificate, IssuedToken.</span></span>  
   
- Die <xref:System.ServiceModel.MessageCredentialType>\-Anmeldeinformationen werden nur unterstützt, wenn der Sicherheitsmodus entweder auf <xref:System.ServiceModel.NetMsmqSecurityMode> oder auf <xref:System.ServiceModel.NetMsmqSecurityMode> festgelegt ist.  
+ <span data-ttu-id="dfc60-199">Die <xref:System.ServiceModel.MessageCredentialType.Certificate>-Anmeldeinformationen werden nur unterstützt, wenn der Sicherheitsmodus entweder auf <xref:System.ServiceModel.NetMsmqSecurityMode.Both> oder auf <xref:System.ServiceModel.NetMsmqSecurityMode.Message> festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="dfc60-199">The <xref:System.ServiceModel.MessageCredentialType.Certificate> credential is supported only when the security mode is set to either <xref:System.ServiceModel.NetMsmqSecurityMode.Both> or <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> und <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-200"><xref:System.ServiceModel.MessageSecurityOverMsmq> und <xref:System.ServiceModel.MsmqTransportSecurity>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-200"> <xref:System.ServiceModel.MessageSecurityOverMsmq> and <xref:System.ServiceModel.MsmqTransportSecurity>.</span></span>  
   
-### WSFederationHttpBinding  
- Verwenden Sie im Code die Klasse <xref:System.ServiceModel.WSFederationHttpBinding>; verwenden Sie in der Konfiguration [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+### <a name="wsfederationhttpbinding"></a><span data-ttu-id="dfc60-201">WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="dfc60-201">WSFederationHttpBinding</span></span>  
+ <span data-ttu-id="dfc60-202">Verwenden Sie im Code die <xref:System.ServiceModel.WSFederationHttpBinding> -Klasse; verwenden Sie in der Konfiguration der [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-202">In code, use the <xref:System.ServiceModel.WSFederationHttpBinding> class; in configuration, use the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
- Standardmäßig verwendet diese Bindung WS\-Sicherheit \(Nachrichtenebenen\-Sicherheit\).  
+ <span data-ttu-id="dfc60-203">Standardmäßig verwendet diese Bindung WS-Sicherheit (Nachrichtenebenen-Sicherheit).</span><span class="sxs-lookup"><span data-stu-id="dfc60-203">By default, this binding uses WS-Security (message-layer security).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Verbund](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity> und <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-204">[Verbund](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, und <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="dfc60-204"> [Federation](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, and <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>  
   
-## Benutzerdefinierte Bindungen  
- Wenn keine der vom System bereitgestellten Bindungen Ihre Anforderungen erfüllt, können Sie eine benutzerdefinierte Bindung mit einem benutzerdefinierten Sicherheitsbindungselement erstellen.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+## <a name="custom-bindings"></a><span data-ttu-id="dfc60-205">Benutzerdefinierte Bindungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-205">Custom Bindings</span></span>  
+ <span data-ttu-id="dfc60-206">Wenn keine der vom System bereitgestellten Bindungen Ihre Anforderungen erfüllt, können Sie eine benutzerdefinierte Bindung mit einem benutzerdefinierten Sicherheitsbindungselement erstellen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-206">If none of the system-provided bindings meets you requirements, you can create a custom binding with a custom security binding element.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-207">[Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-207"> [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## Bindungsmöglichkeiten  
- In der folgenden Tabelle werden die Funktionen aufgeführt, die in der Sicherheitsmoduseinstellung geboten werden, d. h. die Funktionen werden aufgeführt, die bei Festlegung des Sicherheitsmodus auf `Transport`, `Message` oder `TransportWithMessageCredential` verfügbar sind.Verwenden Sie diese Tabelle, um die Sicherheitsfunktionen zu finden, die von der Anwendung benötigt werden.  
+## <a name="binding-choices"></a><span data-ttu-id="dfc60-208">Bindungsmöglichkeiten</span><span class="sxs-lookup"><span data-stu-id="dfc60-208">Binding Choices</span></span>  
+ <span data-ttu-id="dfc60-209">In der folgenden Tabelle werden die Funktionen aufgeführt, die in der Sicherheitsmoduseinstellung geboten werden, d. h. die Funktionen werden aufgeführt, die bei Festlegung des Sicherheitsmodus auf `Transport`, `Message` oder `TransportWithMessageCredential` verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="dfc60-209">The following table summarizes the features offered in the security mode setting, that is, it lists the features available when the security mode is set to `Transport`, `Message`, or `TransportWithMessageCredential`.</span></span> <span data-ttu-id="dfc60-210">Verwenden Sie diese Tabelle, um die Sicherheitsfunktionen zu finden, die von der Anwendung benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="dfc60-210">Use this table to help you find the security features your application requires.</span></span>  
   
-|Einstellung|Funktionen|  
-|-----------------|----------------|  
-|Transport|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> Point\-to\-Point\-Sicherheit<br /><br /> Interoperabilität<br /><br /> Hardwarebeschleunigung.<br /><br /> Hoher Durchsatz<br /><br /> Sichere Firewall<br /><br /> Hohe\-Wartezeit\-Anwendungen<br /><br /> Wiederverschlüsselung über mehrere Hops|  
-|Nachricht|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> End\-to\-End\-Sicherheit<br /><br /> Interoperabilität<br /><br /> Rich Claims<br /><br /> Verbund<br /><br /> Mehrfaktoren\-Authentifizierung<br /><br /> Benutzerdefinierte Token<br /><br /> Notar\-\/Timestampdienst<br /><br /> Hohe\-Wartezeit\-Anwendungen<br /><br /> Beständigkeit von Nachrichtensignaturen|  
-|TransportWithMessageCredential|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> Point\-to\-Point\-Sicherheit<br /><br /> Interoperabilität<br /><br /> Hardwarebeschleunigung.<br /><br /> Hoher Durchsatz<br /><br /> Rich Client\-Claims<br /><br /> Verbund<br /><br /> Mehrfaktoren\-Authentifizierung<br /><br /> Benutzerdefinierte Token<br /><br /> Sichere Firewall<br /><br /> Hohe\-Wartezeit\-Anwendungen<br /><br /> Wiederverschlüsselung über mehrere Hops|  
+|<span data-ttu-id="dfc60-211">Einstellung</span><span class="sxs-lookup"><span data-stu-id="dfc60-211">Setting</span></span>|<span data-ttu-id="dfc60-212">Features</span><span class="sxs-lookup"><span data-stu-id="dfc60-212">Features</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="dfc60-213">Transport</span><span class="sxs-lookup"><span data-stu-id="dfc60-213">Transport</span></span>|<span data-ttu-id="dfc60-214">Serverauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-214">Server authentication</span></span><br /><br /> <span data-ttu-id="dfc60-215">Clientauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-215">Client authentication</span></span><br /><br /> <span data-ttu-id="dfc60-216">Point-to-Point-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="dfc60-216">Point-to-point security</span></span><br /><br /> <span data-ttu-id="dfc60-217">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="dfc60-217">Interoperability</span></span><br /><br /> <span data-ttu-id="dfc60-218">Hardwarebeschleunigung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-218">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="dfc60-219">Hoher Durchsatz</span><span class="sxs-lookup"><span data-stu-id="dfc60-219">High throughput</span></span><br /><br /> <span data-ttu-id="dfc60-220">Sichere Firewall</span><span class="sxs-lookup"><span data-stu-id="dfc60-220">Secure firewall</span></span><br /><br /> <span data-ttu-id="dfc60-221">Hohe-Wartezeit-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-221">High-latency applications</span></span><br /><br /> <span data-ttu-id="dfc60-222">Wiederverschlüsselung über mehrere Hops</span><span class="sxs-lookup"><span data-stu-id="dfc60-222">Re-encryption across multiple hops</span></span>|  
+|<span data-ttu-id="dfc60-223">Meldung</span><span class="sxs-lookup"><span data-stu-id="dfc60-223">Message</span></span>|<span data-ttu-id="dfc60-224">Serverauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-224">Server authentication</span></span><br /><br /> <span data-ttu-id="dfc60-225">Clientauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-225">Client authentication</span></span><br /><br /> <span data-ttu-id="dfc60-226">End-to-End-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="dfc60-226">End-to-end security</span></span><br /><br /> <span data-ttu-id="dfc60-227">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="dfc60-227">Interoperability</span></span><br /><br /> <span data-ttu-id="dfc60-228">Rich Claims</span><span class="sxs-lookup"><span data-stu-id="dfc60-228">Rich claims</span></span><br /><br /> <span data-ttu-id="dfc60-229">Verbund</span><span class="sxs-lookup"><span data-stu-id="dfc60-229">Federation</span></span><br /><br /> <span data-ttu-id="dfc60-230">Mehrfaktoren-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-230">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="dfc60-231">Benutzerdefinierte Token</span><span class="sxs-lookup"><span data-stu-id="dfc60-231">Custom tokens</span></span><br /><br /> <span data-ttu-id="dfc60-232">Notar-/Timestampdienst</span><span class="sxs-lookup"><span data-stu-id="dfc60-232">Notary/timestamp service</span></span><br /><br /> <span data-ttu-id="dfc60-233">Hohe-Wartezeit-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-233">High-latency applications</span></span><br /><br /> <span data-ttu-id="dfc60-234">Beständigkeit von Nachrichtensignaturen</span><span class="sxs-lookup"><span data-stu-id="dfc60-234">Persistence of message signatures</span></span>|  
+|<span data-ttu-id="dfc60-235">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="dfc60-235">TransportWithMessageCredential</span></span>|<span data-ttu-id="dfc60-236">Serverauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-236">Server authentication</span></span><br /><br /> <span data-ttu-id="dfc60-237">Clientauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-237">Client authentication</span></span><br /><br /> <span data-ttu-id="dfc60-238">Point-to-Point-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="dfc60-238">Point-to-point security</span></span><br /><br /> <span data-ttu-id="dfc60-239">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="dfc60-239">Interoperability</span></span><br /><br /> <span data-ttu-id="dfc60-240">Hardwarebeschleunigung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-240">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="dfc60-241">Hoher Durchsatz</span><span class="sxs-lookup"><span data-stu-id="dfc60-241">High throughput</span></span><br /><br /> <span data-ttu-id="dfc60-242">Rich Client-Claims</span><span class="sxs-lookup"><span data-stu-id="dfc60-242">Rich client claims</span></span><br /><br /> <span data-ttu-id="dfc60-243">Verbund</span><span class="sxs-lookup"><span data-stu-id="dfc60-243">Federation</span></span><br /><br /> <span data-ttu-id="dfc60-244">Mehrfaktoren-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="dfc60-244">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="dfc60-245">Benutzerdefinierte Token</span><span class="sxs-lookup"><span data-stu-id="dfc60-245">Custom tokens</span></span><br /><br /> <span data-ttu-id="dfc60-246">Sichere Firewall</span><span class="sxs-lookup"><span data-stu-id="dfc60-246">Secure firewall</span></span><br /><br /> <span data-ttu-id="dfc60-247">Hohe-Wartezeit-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-247">High-latency applications</span></span><br /><br /> <span data-ttu-id="dfc60-248">Wiederverschlüsselung über mehrere Hops</span><span class="sxs-lookup"><span data-stu-id="dfc60-248">Re-encryption across multiple hops</span></span>|  
   
- In der folgenden Tabelle werden die Bindungen, die die verschiedenen Moduseinstellungen unterstützen, aufgeführt.Wählen Sie eine Bindung aus der Tabelle aus, die verwendet werden soll, um den Dienstendpunkt zu erstellen.  
+ <span data-ttu-id="dfc60-249">In der folgenden Tabelle werden die Bindungen, die die verschiedenen Moduseinstellungen unterstützen, aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="dfc60-249">The following table lists the bindings that support the various mode settings.</span></span> <span data-ttu-id="dfc60-250">Wählen Sie eine Bindung aus der Tabelle aus, die verwendet werden soll, um den Dienstendpunkt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-250">Select a binding from the table to use to create your service endpoint.</span></span>  
   
-|Bindung|Transportmodus\-Support|Nachrichtenmodus\-Support|TransportWithMessageCredential\-Unterstützung|  
-|-------------|-----------------------------|-------------------------------|---------------------------------------------------|  
-|`BasicHttpBinding`|Ja|Ja|Ja|  
-|`WSHttpBinding`|Ja|Ja|Ja|  
-|`WSDualHttpBinding`|Nein|Ja|Nein|  
-|`NetTcpBinding`|Ja|Yes|Ja|  
-|`NetNamedPipeBinding`|Ja|nein|Nein|  
-|`NetMsmqBinding`|Ja|Ja|Nein|  
-|`MsmqIntegrationBinding`|Ja|Nein|Nein|  
-|`wsFederationHttpBinding`|Nein|Ja|Ja|  
+|<span data-ttu-id="dfc60-251">Bindung</span><span class="sxs-lookup"><span data-stu-id="dfc60-251">Binding</span></span>|<span data-ttu-id="dfc60-252">Transportmodus-Support</span><span class="sxs-lookup"><span data-stu-id="dfc60-252">Transport mode support</span></span>|<span data-ttu-id="dfc60-253">Nachrichtenmodus-Support</span><span class="sxs-lookup"><span data-stu-id="dfc60-253">Message mode support</span></span>|<span data-ttu-id="dfc60-254">TransportWithMessageCredential-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="dfc60-254">TransportWithMessageCredential support</span></span>|  
+|-------------|----------------------------|--------------------------|--------------------------------------------|  
+|`BasicHttpBinding`|<span data-ttu-id="dfc60-255">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-255">Yes</span></span>|<span data-ttu-id="dfc60-256">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-256">Yes</span></span>|<span data-ttu-id="dfc60-257">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-257">Yes</span></span>|  
+|`WSHttpBinding`|<span data-ttu-id="dfc60-258">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-258">Yes</span></span>|<span data-ttu-id="dfc60-259">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-259">Yes</span></span>|<span data-ttu-id="dfc60-260">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-260">Yes</span></span>|  
+|`WSDualHttpBinding`|<span data-ttu-id="dfc60-261">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-261">No</span></span>|<span data-ttu-id="dfc60-262">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-262">Yes</span></span>|<span data-ttu-id="dfc60-263">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-263">No</span></span>|  
+|`NetTcpBinding`|<span data-ttu-id="dfc60-264">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-264">Yes</span></span>|<span data-ttu-id="dfc60-265">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-265">Yes</span></span>|<span data-ttu-id="dfc60-266">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-266">Yes</span></span>|  
+|`NetNamedPipeBinding`|<span data-ttu-id="dfc60-267">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-267">Yes</span></span>|<span data-ttu-id="dfc60-268">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-268">No</span></span>|<span data-ttu-id="dfc60-269">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-269">No</span></span>|  
+|`NetMsmqBinding`|<span data-ttu-id="dfc60-270">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-270">Yes</span></span>|<span data-ttu-id="dfc60-271">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-271">Yes</span></span>|<span data-ttu-id="dfc60-272">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-272">No</span></span>|  
+|`MsmqIntegrationBinding`|<span data-ttu-id="dfc60-273">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-273">Yes</span></span>|<span data-ttu-id="dfc60-274">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-274">No</span></span>|<span data-ttu-id="dfc60-275">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-275">No</span></span>|  
+|`wsFederationHttpBinding`|<span data-ttu-id="dfc60-276">Nein</span><span class="sxs-lookup"><span data-stu-id="dfc60-276">No</span></span>|<span data-ttu-id="dfc60-277">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-277">Yes</span></span>|<span data-ttu-id="dfc60-278">Ja</span><span class="sxs-lookup"><span data-stu-id="dfc60-278">Yes</span></span>|  
   
-## Transportieren von Anmeldeinformationen in Bindungen  
- In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung von `BasicHttpBinding` oder `WSHttpBinding` im Transportsicherheitsmodus zur Verfügung stehen.  
+## <a name="transport-credentials-in-bindings"></a><span data-ttu-id="dfc60-279">Transportieren von Anmeldeinformationen in Bindungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-279">Transport Credentials in Bindings</span></span>  
+ <span data-ttu-id="dfc60-280">In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung von `BasicHttpBinding` oder `WSHttpBinding` im Transportsicherheitsmodus zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-280">The following table lists the client credential types available when using either `BasicHttpBinding` or `WSHttpBinding` in transport security mode.</span></span>  
   
-|Typ|Beschreibung|  
-|---------|------------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss.Dies führt zur Verwendung eines anonymen Clients.|  
-|Standard|Standardauthentifizierung.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617, HTTP\-Authentifizierung: Standard\- und Digestauthentifizierung, verfügbar unter [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023) \(möglicherweise in englischer Sprache\).|  
-|Digest|Digestauthentifizierung.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617, HTTP\-Authentifizierung: Standard\- und Digestauthentifizierung, verfügbar unter [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023) \(möglicherweise in englischer Sprache\).|  
-|NTLM|NT\-LAN\-Manager \(NTLM\)\-Authentifizierung.|  
-|Windows|Windows\-Authentifizierung.|  
-|Zertifikat|Die Authentifizierung fand über ein Zertifikat statt.|  
-|IssuedToken|Ermöglicht dem Dienst die Forderung, dass der Client über ein Token, das von einem Sicherheitstokendienst oder von [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ausgestellt wurde, authentifiziert werden muss.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|<span data-ttu-id="dfc60-281">Typ</span><span class="sxs-lookup"><span data-stu-id="dfc60-281">Type</span></span>|<span data-ttu-id="dfc60-282">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dfc60-282">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="dfc60-283">Keine</span><span class="sxs-lookup"><span data-stu-id="dfc60-283">None</span></span>|<span data-ttu-id="dfc60-284">Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss.</span><span class="sxs-lookup"><span data-stu-id="dfc60-284">Specifies that the client does not need to present any credential.</span></span> <span data-ttu-id="dfc60-285">Dies führt zur Verwendung eines anonymen Clients.</span><span class="sxs-lookup"><span data-stu-id="dfc60-285">This translates to an anonymous client.</span></span>|  
+|<span data-ttu-id="dfc60-286">Standard</span><span class="sxs-lookup"><span data-stu-id="dfc60-286">Basic</span></span>|<span data-ttu-id="dfc60-287">Standardauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-287">Basic authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-288">RFC 2617 – HTTP-Authentifizierung: Standard- und Digestauthentifizierung, verfügbar unter [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span><span class="sxs-lookup"><span data-stu-id="dfc60-288"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="dfc60-289">Digest</span><span class="sxs-lookup"><span data-stu-id="dfc60-289">Digest</span></span>|<span data-ttu-id="dfc60-290">Hashwertauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-290">Digest authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-291">RFC 2617 – HTTP-Authentifizierung: Standard- und Digestauthentifizierung, verfügbar unter [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span><span class="sxs-lookup"><span data-stu-id="dfc60-291"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="dfc60-292">NTLM</span><span class="sxs-lookup"><span data-stu-id="dfc60-292">NTLM</span></span>|<span data-ttu-id="dfc60-293">NT-LAN-Manager (NTLM)-Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-293">NT LAN Manager (NTLM) authentication.</span></span>|  
+|<span data-ttu-id="dfc60-294">Windows</span><span class="sxs-lookup"><span data-stu-id="dfc60-294">Windows</span></span>|<span data-ttu-id="dfc60-295">Windows-Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="dfc60-295">Windows authentication.</span></span>|  
+|<span data-ttu-id="dfc60-296">Zertifikat</span><span class="sxs-lookup"><span data-stu-id="dfc60-296">Certificate</span></span>|<span data-ttu-id="dfc60-297">Die Authentifizierung fand über ein Zertifikat statt.</span><span class="sxs-lookup"><span data-stu-id="dfc60-297">Authentication performed using a certificate.</span></span>|  
+|<span data-ttu-id="dfc60-298">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="dfc60-298">IssuedToken</span></span>|<span data-ttu-id="dfc60-299">Ermöglicht dem Dienst die Forderung, dass der Client über ein Token, das von einem Sicherheitstokendienst oder von [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ausgestellt wurde, authentifiziert werden muss.</span><span class="sxs-lookup"><span data-stu-id="dfc60-299">Allows the service to require that the client be authenticated using a token issued by a security token service or by [!INCLUDE[infocard](../../../../includes/infocard-md.md)].</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dfc60-300">[Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span><span class="sxs-lookup"><span data-stu-id="dfc60-300"> [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>|  
   
-### Clientanmeldeinformationen für Nachrichten in Bindungen  
- In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung einer Bindung im Nachrichtensicherheitsmodus zur Verfügung stehen.  
+### <a name="message-client-credentials-in-bindings"></a><span data-ttu-id="dfc60-301">Clientanmeldeinformationen für Nachrichten in Bindungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-301">Message Client Credentials in Bindings</span></span>  
+ <span data-ttu-id="dfc60-302">In der folgenden Tabelle werden die Typen von Clientanmeldeinformationen aufgeführt, die bei der Nutzung einer Bindung im Nachrichtensicherheitsmodus zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-302">The following table lists the client credential types available when using a binding in Message security mode.</span></span>  
   
-|Typ|Beschreibung|  
-|---------|------------------|  
-|Keine \(None\)|Ermöglicht dem Dienst, mit anonymen Clients zu interagieren.|  
-|Windows|Ermöglicht SOAP\-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows\-Anmeldeinformationen.|  
-|UserName|Ermöglicht dem Dienst die Forderung an den Client, sich über eine Benutzernamen\-Anmeldeinformation zu authentifizieren.Bitte beachten Sie, dass bei einer Festlegung des Sicherheitsmodus auf `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] das Senden eines Kennwortdigest oder die Ableitung von Schlüsseln über das Kennwort und die Verwendung solcher Schlüssel für die Nachrichtenmodussicherheit nicht unterstützt werden.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setzt prinzipiell durch, dass der Transport gesichert wird, wenn er Benutzernamen\-Anmeldeinformationen verwendet.|  
-|Zertifikat|Ermöglicht es dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
-|IssuedToken|Ermöglicht es dem Dienst, einen Sicherheitstokendienst zu verwenden, um ein benutzerdefiniertes Token zu liefern.|  
+|<span data-ttu-id="dfc60-303">Typ</span><span class="sxs-lookup"><span data-stu-id="dfc60-303">Type</span></span>|<span data-ttu-id="dfc60-304">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dfc60-304">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="dfc60-305">Keine</span><span class="sxs-lookup"><span data-stu-id="dfc60-305">None</span></span>|<span data-ttu-id="dfc60-306">Ermöglicht dem Dienst die Interaktion mit anonymen Clients.</span><span class="sxs-lookup"><span data-stu-id="dfc60-306">Allows the service to interact with anonymous clients.</span></span>|  
+|<span data-ttu-id="dfc60-307">Windows</span><span class="sxs-lookup"><span data-stu-id="dfc60-307">Windows</span></span>|<span data-ttu-id="dfc60-308">Ermöglicht SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="dfc60-308">Allows SOAP message exchanges to be made under the authenticated context of a Windows credential.</span></span>|  
+|<span data-ttu-id="dfc60-309">UserName</span><span class="sxs-lookup"><span data-stu-id="dfc60-309">UserName</span></span>|<span data-ttu-id="dfc60-310">Ermöglicht dem Dienst die Forderung an den Client, sich über eine Benutzernamen-Anmeldeinformation zu authentifizieren.</span><span class="sxs-lookup"><span data-stu-id="dfc60-310">Allows the service to require that the client be authenticated using a user name credential.</span></span> <span data-ttu-id="dfc60-311">Bitte beachten Sie, dass bei einer Festlegung des Sicherheitsmodus auf `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] das Senden eines Kennwortdigest oder die Ableitung von Schlüsseln über das Kennwort und die Verwendung solcher Schlüssel für die Nachrichtenmodussicherheit nicht unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="dfc60-311">Note that when the security mode is set to `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support sending a password digest or deriving keys using password and using such keys for Message mode security.</span></span> <span data-ttu-id="dfc60-312">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] setzt prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen erfolgt.</span><span class="sxs-lookup"><span data-stu-id="dfc60-312">As such, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enforces that the transport is secured when using user name credentials.</span></span>|  
+|<span data-ttu-id="dfc60-313">Zertifikat</span><span class="sxs-lookup"><span data-stu-id="dfc60-313">Certificate</span></span>|<span data-ttu-id="dfc60-314">Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.</span><span class="sxs-lookup"><span data-stu-id="dfc60-314">Allows the service to require that the client be authenticated using a certificate.</span></span>|  
+|<span data-ttu-id="dfc60-315">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="dfc60-315">IssuedToken</span></span>|<span data-ttu-id="dfc60-316">Ermöglicht es dem Dienst, einen Sicherheitstokendienst zu verwenden, um ein benutzerdefiniertes Token zu liefern.</span><span class="sxs-lookup"><span data-stu-id="dfc60-316">Allows the service to use a security token service to supply a custom token.</span></span>|  
   
-## Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Wählen eines Typs von Anmeldeinformationen](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)   
- [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="dfc60-317">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dfc60-317">See Also</span></span>  
+ [<span data-ttu-id="dfc60-318">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="dfc60-318">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="dfc60-319">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="dfc60-319">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="dfc60-320">Auswählen eines Anmeldeinformationentyps</span><span class="sxs-lookup"><span data-stu-id="dfc60-320">Selecting a Credential Type</span></span>](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="dfc60-321">Sicherheitsfunktionen mit benutzerdefinierten Bindungen</span><span class="sxs-lookup"><span data-stu-id="dfc60-321">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="dfc60-322">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="dfc60-322">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="dfc60-323">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="dfc60-323">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

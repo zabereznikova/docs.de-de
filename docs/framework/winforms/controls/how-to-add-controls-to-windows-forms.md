@@ -1,64 +1,69 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Steuerelementen zu Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Hinzufügen"
-  - "Windows Forms-Steuerelemente, Hinzufügen zum Formular"
+title: "Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms controls, adding to form
+- controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1f5f739afa914a69017dbba2a9a4afb990f6e43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von Steuerelementen zu Windows&#160;Forms
-Die meisten Formulare werden entworfen, indem der Formularoberfläche Steuerelemente hinzugefügt werden, um so eine Benutzeroberfläche zu entwickeln.  Ein *Steuerelement* ist eine Komponente in einem Formular. Es wird verwendet, um Informationen anzuzeigen oder Benutzereingaben zu akzeptieren.  Weitere Informationen zu Steuerelementen finden Sie unter [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md).  
+# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="677a5-102">Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="677a5-102">How to: Add Controls to Windows Forms</span></span>
+<span data-ttu-id="677a5-103">Die meisten Formulare werden durch Hinzufügen von Steuerelementen auf die Oberfläche des Formulars entworfen, um eine Benutzeroberfläche (UI) zu definieren.</span><span class="sxs-lookup"><span data-stu-id="677a5-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="677a5-104">Ein *Steuerelement* ist eine Komponente in einem Formular zum Anzeigen von Informationen oder annehmen von Benutzereingaben verwendet.</span><span class="sxs-lookup"><span data-stu-id="677a5-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="677a5-105">Weitere Informationen zu Steuerelementen finden Sie unter [Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="677a5-105">For more information about controls, see [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="677a5-106">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="677a5-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="677a5-107">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="677a5-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="677a5-108">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="677a5-108">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So zeichnen Sie ein Steuerelement in einem Formular  
+### <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="677a5-109">Zum Zeichnen eines Steuerelements in einem Formular</span><span class="sxs-lookup"><span data-stu-id="677a5-109">To draw a control on a form</span></span>  
   
-1.  Öffnen Sie das Formular.  Weitere Informationen hierzu finden Sie unter [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/de-de/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  <span data-ttu-id="677a5-110">Öffnen Sie das Formular.</span><span class="sxs-lookup"><span data-stu-id="677a5-110">Open the form.</span></span> <span data-ttu-id="677a5-111">Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span><span class="sxs-lookup"><span data-stu-id="677a5-111">For more information, see [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
   
-2.  Klicken Sie in der **Toolbox** auf das Steuerelement, das zum Formular hinzugefügt werden soll.  
+2.  <span data-ttu-id="677a5-112">In der **Toolbox**, klicken Sie auf das Steuerelement dem Formular hinzufügen möchten.</span><span class="sxs-lookup"><span data-stu-id="677a5-112">In the **Toolbox**, click the control you want to add to your form.</span></span>  
   
-3.  Klicken Sie im Formular auf die Stelle, an der die obere linke Ecke des Steuerelements positioniert werden soll, und ziehen Sie den Mauszeiger an die Stelle, an der die untere rechte Ecke des Steuerelements positioniert werden soll.  
+3.  <span data-ttu-id="677a5-113">Klicken Sie auf der linken oberen Ecke des Steuerelements befinden soll, und ziehen Sie in der unteren rechten Ecke des Steuerelements befinden soll, auf dem Formular.</span><span class="sxs-lookup"><span data-stu-id="677a5-113">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>  
   
-     Das Steuerelement wird mit der angegebenen Größe und Position in das Formular eingefügt.  
-  
-    > [!NOTE]
-    >  Jedes Steuerelement verfügt über eine vordefinierte Standardgröße.  Um dem Formular ein Steuerelement in Standardgröße hinzuzufügen, ziehen Sie es aus der **Toolbox** in das Formular.  
-  
-### So ziehen Sie ein Steuerelement in ein Formular  
-  
-1.  Öffnen Sie das Formular.  Weitere Informationen hierzu finden Sie unter [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/de-de/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
-  
-2.  Klicken Sie in der **Toolbox** auf das gewünschte Steuerelement, und ziehen Sie es in das Formular.  
-  
-     Das Steuerelement wird in seiner Standardgröße an der angegebenen Position in das Formular eingefügt.  
+     <span data-ttu-id="677a5-114">Das Steuerelement wird in das Formular mit der angegebenen Position und Größe hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="677a5-114">The control is added to the form with the specified location and size.</span></span>  
   
     > [!NOTE]
-    >  Sie können auf ein Steuerelement in der **Toolbox** doppelklicken, um es in seiner Standardgröße in der linken oberen Ecke des Formulars einzufügen.  
+    >  <span data-ttu-id="677a5-115">Jedes Steuerelement verfügt über eine Standardgröße definiert.</span><span class="sxs-lookup"><span data-stu-id="677a5-115">Each control has a default size defined.</span></span> <span data-ttu-id="677a5-116">Sie können ein Steuerelement zum Formular in Standardgröße des Steuerelements hinzufügen, indem Sie ziehen es aus der **Toolbox** in das Formular.</span><span class="sxs-lookup"><span data-stu-id="677a5-116">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>  
   
-     Steuerelemente können dem Formular auch dynamisch zur Laufzeit hinzugefügt werden.  Im folgenden Codebeispiel wird dem Formular ein <xref:System.Windows.Forms.TextBox>\-Steuerelement hinzugefügt, wenn auf ein <xref:System.Windows.Forms.Button>\-Steuerelement geklickt wird.  
+### <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="677a5-117">Ziehen Sie ein Steuerelement zu einem Formular</span><span class="sxs-lookup"><span data-stu-id="677a5-117">To drag a control to a form</span></span>  
+  
+1.  <span data-ttu-id="677a5-118">Öffnen Sie das Formular.</span><span class="sxs-lookup"><span data-stu-id="677a5-118">Open the form.</span></span> <span data-ttu-id="677a5-119">Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span><span class="sxs-lookup"><span data-stu-id="677a5-119">For more information, see [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
+  
+2.  <span data-ttu-id="677a5-120">In der **Toolbox**, klicken Sie auf das Steuerelement, Sie möchten, und ziehen Sie es in Ihr Formular.</span><span class="sxs-lookup"><span data-stu-id="677a5-120">In the **Toolbox**, click the control you want and drag it to your form.</span></span>  
+  
+     <span data-ttu-id="677a5-121">Das Steuerelement wird dem Formular an der angegebenen Position in der Standardgröße hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="677a5-121">The control is added to the form at the specified location in its default size.</span></span>  
   
     > [!NOTE]
-    >  Für die folgende Prozedur ist ein Formular erforderlich, auf dem bereits das **Button**\-Steuerelement `Button1` platziert ist.  
+    >  <span data-ttu-id="677a5-122">Sie können ein Steuerelement in Doppelklicken Sie auf die **Toolbox** der oberen linken Ecke des Formulars in der Standardgröße hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="677a5-122">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>  
   
-### So fügen Sie einem Formular ein Steuerelement programmgesteuert hinzu  
+     <span data-ttu-id="677a5-123">Sie können auch Steuerelemente dynamisch zu einem Formular zur Laufzeit hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="677a5-123">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="677a5-124">Im folgenden Codebeispiel eine <xref:System.Windows.Forms.TextBox> Steuerelement wird dem Formular hinzugefügt werden bei einem <xref:System.Windows.Forms.Button> Steuerelement geklickt wird.</span><span class="sxs-lookup"><span data-stu-id="677a5-124">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>  
   
-1.  Geben Sie in der Methode, durch die das `Click`\-Ereignis der Schaltfläche innerhalb der Formularklasse behandelt wird, mit dem folgenden Beispiel vergleichbaren Code ein, um einen Verweis auf die Steuerelementvariable hinzuzufügen. Legen Sie die `Location`\-Eigenschaft für das Steuerelement fest, und fügen Sie das Steuerelement hinzu:  
+    > [!NOTE]
+    >  <span data-ttu-id="677a5-125">Das folgende Verfahren erfordert das Vorhandensein eines Formulars mit einem **Schaltfläche** Steuerelement `Button1`, bereits platziert ist.</span><span class="sxs-lookup"><span data-stu-id="677a5-125">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>  
+  
+### <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="677a5-126">Programmgesteuertes Hinzufügen des Steuerelements zu einem Formular</span><span class="sxs-lookup"><span data-stu-id="677a5-126">To add a control to a form programmatically</span></span>  
+  
+1.  <span data-ttu-id="677a5-127">In der Methode, die der Schaltfläche behandelt `Click` Ereignisses innerhalb der Formularklasse Code einfügen, die etwa wie folgt einen Verweis auf die Steuerelementvariable hinzufügen festlegen, welches Steuerelement `Location`, und fügen Sie das Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="677a5-127">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -66,7 +71,6 @@ Die meisten Formulare werden entworfen, indem der Formularoberfläche Steuerelem
        MyText.Location = New Point(25, 25)  
        Me.Controls.Add(MyText)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -76,7 +80,6 @@ Die meisten Formulare werden entworfen, indem der Formularoberfläche Steuerelem
        myText.Location = new Point(25,25);  
        this.Controls.Add (myText);  
     }  
-  
     ```  
   
     ```cpp  
@@ -91,14 +94,14 @@ Die meisten Formulare werden entworfen, indem der Formularoberfläche Steuerelem
     ```  
   
     > [!NOTE]
-    >  Sie können auch Code hinzufügen, um weitere Steuerelementeigenschaften zu initialisieren.  
+    >  <span data-ttu-id="677a5-128">Sie können auch Code zum Initialisieren der anderen Eigenschaften des Steuerelements hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="677a5-128">You can also add code to initialize other properties of the control.</span></span>  
   
     > [!IMPORTANT]
-    >  Unter Umständen setzen Sie den lokalen Computer über das Netzwerk einem Sicherheitsrisiko aus, wenn Sie auf ein schädliches `UserControl` verweisen.  Allerdings ist dies nur dann ein Problem, wenn ein böswilliger Benutzer ein schädliches benutzerdefiniertes Steuerelement erstellt, das Sie versehentlich zu dem Projekt hinzufügen.  
+    >  <span data-ttu-id="677a5-129">Sie können den lokalen Computer über das Netzwerk ein Sicherheitsrisiko verfügbar zu machen, durch Verweisen auf ein böswilliger `UserControl`.</span><span class="sxs-lookup"><span data-stu-id="677a5-129">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="677a5-130">Dies ist nur relevant, wenn ein böswilliger Benutzer, erstellen ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="677a5-130">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)   
- [Gewusst wie: Festlegen des durch ein Windows Forms\-Steuerelement angezeigten Textes](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="677a5-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="677a5-131">See Also</span></span>  
+ [<span data-ttu-id="677a5-132">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="677a5-132">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="677a5-133">Anordnen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="677a5-133">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="677a5-134">Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="677a5-134">How to: Resize Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ [<span data-ttu-id="677a5-135">Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Texts</span><span class="sxs-lookup"><span data-stu-id="677a5-135">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="677a5-136">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="677a5-136">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

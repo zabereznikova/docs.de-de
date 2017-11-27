@@ -5,59 +5,56 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: aa25f163199652618e35399c6548a9864a17370a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="building-my-first-claims-aware-aspnet-web-application"></a>Erstellen meiner ersten Ansprüche unterstützenden ASP.NET Web-Anwendung
-## <a name="applies-to"></a>Gilt für  
+# <a name="building-my-first-claims-aware-aspnet-web-application"></a><span data-ttu-id="2b383-102">Erstellen meiner ersten Ansprüche unterstützenden ASP.NET Web-Anwendung</span><span class="sxs-lookup"><span data-stu-id="2b383-102">Building My First Claims-Aware ASP.NET Web Application</span></span>
+## <a name="applies-to"></a><span data-ttu-id="2b383-103">Gilt für</span><span class="sxs-lookup"><span data-stu-id="2b383-103">Applies To</span></span>  
   
--   Windows Identity Foundation (WIF)  
+-   <span data-ttu-id="2b383-104">Windows Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="2b383-104">Windows Identity Foundation (WIF)</span></span>  
   
--   ASP.NET  
+-   <span data-ttu-id="2b383-105">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2b383-105">ASP.NET</span></span>  
   
- In diesem Thema wird beschrieben, wie Ansprüche unterstützende ASP.NET-Webanwendungen mithilfe von WIF erstellt werden. Normalerweise sind an einem Szenario mit Ansprüche unterstützenden Anwendungen drei Parteien beteiligt: die Anwendung selbst, der Endbenutzer und der Sicherheitstokendienst (STS). Die folgende Abbildung beschreibt dieses Szenario:  
+ <span data-ttu-id="2b383-106">In diesem Thema wird beschrieben, wie Ansprüche unterstützende ASP.NET-Webanwendungen mithilfe von WIF erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="2b383-106">This topic outlines the scenario of building claims-aware ASP.NET web applications using WIF.</span></span> <span data-ttu-id="2b383-107">Normalerweise sind an einem Szenario mit Ansprüche unterstützenden Anwendungen drei Parteien beteiligt: die Anwendung selbst, der Endbenutzer und der Sicherheitstokendienst (STS).</span><span class="sxs-lookup"><span data-stu-id="2b383-107">There are usually three participants in a claims-aware application scenario: the application itself, the end user, and the Security Token Service (STS).</span></span> <span data-ttu-id="2b383-108">Die folgende Abbildung beschreibt dieses Szenario:</span><span class="sxs-lookup"><span data-stu-id="2b383-108">The following figure describes this scenario:</span></span>  
   
- ![WIF Basic Web-App](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ <span data-ttu-id="2b383-109">![WIF Basic Web-App](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")</span><span class="sxs-lookup"><span data-stu-id="2b383-109">![WIF Basic Web App](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")</span></span>  
   
-1.  Die Ansprüche unterstützende Anwendung verwendet WIF, um nicht authentifizierte Anforderungen zu identifizieren und an den STS umzuleiten.  
+1.  <span data-ttu-id="2b383-110">Die Ansprüche unterstützende Anwendung verwendet WIF, um nicht authentifizierte Anforderungen zu identifizieren und an den STS umzuleiten.</span><span class="sxs-lookup"><span data-stu-id="2b383-110">The claims-aware application uses WIF to identify unauthenticated requests and to redirect them to the STS.</span></span>  
   
-2.  Der Endbenutzer gibt Anmeldeinformationen für den STS ein, und nach erfolgreicher Authentifizierung gibt der STS ein Token für den Benutzer aus.  
+2.  <span data-ttu-id="2b383-111">Der Endbenutzer gibt Anmeldeinformationen für den STS ein, und nach erfolgreicher Authentifizierung gibt der STS ein Token für den Benutzer aus.</span><span class="sxs-lookup"><span data-stu-id="2b383-111">The end user provides credentials to the STS and upon successful authentication the user is issued a token by the STS.</span></span>  
   
-3.  Der Benutzer wird mit dem vom STS ausgegebenen Token in der Anforderung vom STS zur Ansprüche unterstützenden Anwendung umgeleitet.  
+3.  <span data-ttu-id="2b383-112">Der Benutzer wird mit dem vom STS ausgegebenen Token in der Anforderung vom STS zur Ansprüche unterstützenden Anwendung umgeleitet.</span><span class="sxs-lookup"><span data-stu-id="2b383-112">The user is redirected from the STS to the claims-aware application with the STS-issued token in the request.</span></span>  
   
-4.  Die Ansprüche unterstützende Anwendung wird so konfiguriert, dass sie dem STS und den Token, die sie ausgibt, vertraut. Die Ansprüche unterstützende Anwendung verwendet WIF, um das Token zu überprüfen und zu analysieren. Entwickler verwenden die entsprechende WIF-API und -Typen wie **ClaimsPrincpal** für die Anforderungen der Anwendung, z.B. das Implementieren der entsprechenden Autorisierung.  
+4.  <span data-ttu-id="2b383-113">Die Ansprüche unterstützende Anwendung wird so konfiguriert, dass sie dem STS und den Token, die sie ausgibt, vertraut.</span><span class="sxs-lookup"><span data-stu-id="2b383-113">The claims-aware application is configured to trust the STS and the tokens it issues.</span></span> <span data-ttu-id="2b383-114">Die Ansprüche unterstützende Anwendung verwendet WIF, um das Token zu überprüfen und zu analysieren.</span><span class="sxs-lookup"><span data-stu-id="2b383-114">The claims-aware application uses WIF to validate the token and to parse it.</span></span> <span data-ttu-id="2b383-115">Entwickler verwenden die entsprechende WIF-API und -Typen wie **ClaimsPrincpal** für die Anforderungen der Anwendung, z.B. das Implementieren der entsprechenden Autorisierung.</span><span class="sxs-lookup"><span data-stu-id="2b383-115">Developers use the appropriate WIF API and types, for example, **ClaimsPrincpal** for the application’s needs, such as implementing authorization for it.</span></span>  
   
- Ab .NET 4.5 ist WIF Bestandteil des .NET Framework-Pakets. Da die WIF-Klassen direkt im Framework selbst verfügbar sind, ist eine weitaus umfassendere Integration der anspruchsbasierten Identität in .NET möglich, sodass Ansprüche einfacher verwendet werden können. Mit WIF 4.5 müssen keine Out-of-Band-Komponenten installiert werden, um Ansprüche unterstützende Webanwendungen zu entwickeln. WIF-Klassen sind nun über mehrere Assemblys verteilt. Die wichtigsten Klassen hierbei sind System.Security.Claims, System.IdentityModel und System.IdentityModel.Services.  
+ <span data-ttu-id="2b383-116">Ab .NET 4.5 ist WIF Bestandteil des .NET Framework-Pakets.</span><span class="sxs-lookup"><span data-stu-id="2b383-116">Starting from .NET 4.5, WIF is part of the .NET Framework package.</span></span> <span data-ttu-id="2b383-117">Da die WIF-Klassen direkt im Framework selbst verfügbar sind, ist eine weitaus umfassendere Integration der anspruchsbasierten Identität in .NET möglich, sodass Ansprüche einfacher verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="2b383-117">Having the WIF classes directly available in the framework allows a much deeper integration of claims-based identity in .NET, making it easier to use claims.</span></span> <span data-ttu-id="2b383-118">Mit WIF 4.5 müssen keine Out-of-Band-Komponenten installiert werden, um Ansprüche unterstützende Webanwendungen zu entwickeln.</span><span class="sxs-lookup"><span data-stu-id="2b383-118">With WIF 4.5, you do not need to install any out-of-band components in order to start developing claims-aware web applications.</span></span> <span data-ttu-id="2b383-119">WIF-Klassen sind nun über mehrere Assemblys verteilt. Die wichtigsten Klassen hierbei sind System.Security.Claims, System.IdentityModel und System.IdentityModel.Services.</span><span class="sxs-lookup"><span data-stu-id="2b383-119">WIF classes are now spread across various assemblies, the main ones being System.Security.Claims, System.IdentityModel and System.IdentityModel.Services.</span></span>  
   
- STS ist ein Dienst, der Token nach erfolgreicher Authentifizierung ausgibt. Microsoft bietet zwei STS-Dienste nach Industriestandard an:  
+ <span data-ttu-id="2b383-120">STS ist ein Dienst, der Token nach erfolgreicher Authentifizierung ausgibt.</span><span class="sxs-lookup"><span data-stu-id="2b383-120">STS is a service that issues tokens upon successful authentication.</span></span> <span data-ttu-id="2b383-121">Microsoft bietet zwei STS-Dienste nach Industriestandard an:</span><span class="sxs-lookup"><span data-stu-id="2b383-121">Microsoft offers two industry standard STS’s:</span></span>  
   
--   [Active Directory-Verbunddienste (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   <span data-ttu-id="2b383-122">[Active Directory-Verbunddienste (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)</span><span class="sxs-lookup"><span data-stu-id="2b383-122">[Active Directory Federation Services (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)</span></span>  
   
--   [Windows Azure-Zugriffssteuerungsdienst (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).  
+-   <span data-ttu-id="2b383-123">[Windows Azure-Zugriffssteuerungsdienst (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).</span><span class="sxs-lookup"><span data-stu-id="2b383-123">[Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).</span></span>  
   
- AD FS 2.0 ist Bestandteil von Windows Server R2 und kann als STS für lokale Szenarien verwendet werden. ACS ist ein Cloud-Dienst, der im Rahmen der Microsoft Azure-Plattform angeboten wird. Zu Test- oder Schulungszwecken können Sie auch andere STS verwenden, um die Ansprüche unterstützenden Anwendungen zu erstellen. Beispielsweise können Sie den lokalen Entwicklungs-STS verwenden, der Teil des [Identitäts- und Zugriffs-Tools für Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) ist, welches kostenlos online erhältlich ist.  
+ <span data-ttu-id="2b383-124">AD FS 2.0 ist Bestandteil von Windows Server R2 und kann als STS für lokale Szenarien verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2b383-124">AD FS 2.0 is part of the Windows Server R2 and can be used as an STS for on-premise scenarios.</span></span> <span data-ttu-id="2b383-125">ACS ist ein Cloud-Dienst, der im Rahmen der Microsoft Azure-Plattform angeboten wird.</span><span class="sxs-lookup"><span data-stu-id="2b383-125">ACS is a cloud service, offered as part of the Windows Azure Platform.</span></span> <span data-ttu-id="2b383-126">Zu Test- oder Schulungszwecken können Sie auch andere STS verwenden, um die Ansprüche unterstützenden Anwendungen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2b383-126">For testing or educational purposes, you can also use other STS’s in order to build your claims-aware applications.</span></span> <span data-ttu-id="2b383-127">Beispielsweise können Sie den lokalen Entwicklungs-STS verwenden, der Teil des [Identitäts- und Zugriffs-Tools für Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) ist, welches kostenlos online erhältlich ist.</span><span class="sxs-lookup"><span data-stu-id="2b383-127">For example, you can use the Local Development STS that is part of the [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) which is freely available online.</span></span>  
   
- Um die erste Ansprüche unterstützende ASP.NET-Anwendung mithilfe von WIF zu erstellen, befolgen Sie die Anweisungen in einem der folgenden Abschnitte:  
+ <span data-ttu-id="2b383-128">Um die erste Ansprüche unterstützende ASP.NET-Anwendung mithilfe von WIF zu erstellen, befolgen Sie die Anweisungen in einem der folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="2b383-128">To build your first claims-aware ASP.NET application using WIF, follow the instructions in one of the following:</span></span>  
   
--   [Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Webanwendung mithilfe von WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [<span data-ttu-id="2b383-129">Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Webanwendung mithilfe von WIF</span><span class="sxs-lookup"><span data-stu-id="2b383-129">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [<span data-ttu-id="2b383-130">Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF</span><span class="sxs-lookup"><span data-stu-id="2b383-130">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit formularbasierter Authentifizierung](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [<span data-ttu-id="2b383-131">Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit formularbasierter Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="2b383-131">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit WIF](../../../docs/framework/security/getting-started-with-wif.md)
-
+## <a name="see-also"></a><span data-ttu-id="2b383-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2b383-132">See Also</span></span>  
+ [<span data-ttu-id="2b383-133">Erste Schritte mit WIF</span><span class="sxs-lookup"><span data-stu-id="2b383-133">Getting Started With WIF</span></span>](../../../docs/framework/security/getting-started-with-wif.md)

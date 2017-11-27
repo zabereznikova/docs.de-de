@@ -1,347 +1,353 @@
 ---
-title: "Features f&#252;r OpenType-Schriftarten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Schriftarten, OpenType"
-  - "Typografie OpenType-schriftarttechnologie"
-  - "OpenType-Schriftarttechnologie"
+title: "Features für OpenType-Schriftarten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [WPF], OpenType
+- typography [WPF], OpenType font technology
+- OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-caps.latest.revision: 38
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 37
+caps.latest.revision: "38"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c80769a1563953fc412afc6baeffcb91b49667d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Features f&#252;r OpenType-Schriftarten
-Dieses Thema enthält eine Übersicht über einige der wichtigsten Features von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Technologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="opentype-font-features"></a><span data-ttu-id="c0d7f-102">Features für OpenType-Schriftarten</span><span class="sxs-lookup"><span data-stu-id="c0d7f-102">OpenType Font Features</span></span>
+<span data-ttu-id="c0d7f-103">Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarttechnologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c0d7f-103">This topic provides an overview of some of the key features of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font technology in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-   
+
   
 <a name="overview"></a>   
-## <a name="opentype-font-format"></a>OpenType-Schriftarten  
- Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat ist eine Erweiterung der [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftartformat, Hinzufügen von Unterstützung für PostScript-Schriftartdaten. Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat Zusammenarbeit von entwickelt wurde [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]die Unterstützung von Schriftarten und das Betriebssystem services [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten bieten Benutzern eine einfache Möglichkeit zum Installieren und Verwenden von Schriftarten, ob die Schriftarten enthalten [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] Konturen oder CFF (PostScript) beschrieben werden.  
+## <a name="opentype-font-format"></a><span data-ttu-id="c0d7f-104">OpenType-Schriftartformat</span><span class="sxs-lookup"><span data-stu-id="c0d7f-104">OpenType Font Format</span></span>  
+ <span data-ttu-id="c0d7f-105">Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]-Schriftartformat zur zusätzlichen Unterstützung von PostScript-Schriftartdaten.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-105">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format is an extension of the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] font format, adding support for PostScript font data.</span></span> <span data-ttu-id="c0d7f-106">Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe Corporation entwickelt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-106">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format was developed jointly by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] and Adobe Corporation.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-107">-Schriftarten und die Betriebssystemdienste, die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen, liefern dem Benutzer eine einfache Möglichkeit zur Installation und Verwendung von Schriftarten, unabhängig davon, ob die Schriftarten [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]-Outlines oder CFF-Outlines (PostScript) enthalten.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-107"> fonts and the operating system services which support [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts provide users with a simple way to install and use fonts, whether the fonts contain [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] outlines or CFF (PostScript) outlines.</span></span>  
   
- Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat behebt die folgenden Probleme für Entwickler:  
+ <span data-ttu-id="c0d7f-108">Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat behebt die folgenden Probleme für Entwickler:</span><span class="sxs-lookup"><span data-stu-id="c0d7f-108">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format addresses the following developer challenges:</span></span>  
   
--   Breitere Multiplattform-Unterstützung.  
+-   <span data-ttu-id="c0d7f-109">Breitere Multiplattform-Unterstützung.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-109">Broader multi-platform support.</span></span>  
   
--   Bessere Unterstützung für internationale Zeichensätze.  
+-   <span data-ttu-id="c0d7f-110">Bessere Unterstützung für internationale Zeichensätze.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-110">Better support for international character sets.</span></span>  
   
--   Besserer Schutz Schriftartdaten.  
+-   <span data-ttu-id="c0d7f-111">Besserer Schutz der Schriftartdaten.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-111">Better protection for font data.</span></span>  
   
--   Kleinere Dateigrößen Schriftart Verteilung effizienter zu gestalten.  
+-   <span data-ttu-id="c0d7f-112">Kleinere Dateigrößen die eine effizientere Schriftartenverteilung ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-112">Smaller file sizes to make font distribution more efficient.</span></span>  
   
--   Breitere Unterstützung für erweiterte typografische Steuerelement.  
+-   <span data-ttu-id="c0d7f-113">Breitere Unterstützung für erweiterte typografische Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-113">Broader support for advanced typographic control.</span></span>  
   
 > [!NOTE]
->  Das Windows SDK enthält eine Reihe von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten, die Sie verwenden können [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Applications. Diese Schriftarten bieten die meisten Funktionen, die im Rest dieses Themas veranschaulicht. Weitere Informationen finden Sie unter [Beispiel OpenType-Schriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
+>  <span data-ttu-id="c0d7f-114">Das Windows SDK enthält eine Reihe von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten, die mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-114">The Windows SDK contains a set of sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that you can use with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="c0d7f-115">Diese Schriftarten bieten die meisten der Funktionen, wie im folgenden Thema dargestellt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-115">These fonts provide most of the features illustrated in the rest of this topic.</span></span> <span data-ttu-id="c0d7f-116">Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).</span><span class="sxs-lookup"><span data-stu-id="c0d7f-116">For more information, see [Sample OpenType Font Pack](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).</span></span>  
   
- Finden Sie unter der [OpenType-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=96731) Details zu den [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat.  
+ <span data-ttu-id="c0d7f-117">Detaillierte Informationen zu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat finden Sie unter [OpenType-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=96731).</span><span class="sxs-lookup"><span data-stu-id="c0d7f-117">See the [OpenType Specification](http://go.microsoft.com/fwlink/?LinkId=96731) for details of the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format.</span></span>  
   
-### <a name="advanced-typographic-extensions"></a>Erweiterte typografische Funktionen  
- Die erweiterten typografischen Tabellen ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layouttabellen) erweitern die Funktionen der Schriftarten durch [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] oder CFF beschrieben werden. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Layout-Schriftarten enthalten zusätzliche Informationen, die die Funktionen der Schriftarten, um qualitativ hochwertige internationale Typografie unterstützt erweitert. Die meisten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten machen nur eine Teilmenge aller [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Funktionen verfügbar sind. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Schriftarten werden die folgenden Funktionen bereitstellen.  
+### <a name="advanced-typographic-extensions"></a><span data-ttu-id="c0d7f-118">Erweiterte typografische Funktionen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-118">Advanced Typographic Extensions</span></span>  
+ <span data-ttu-id="c0d7f-119">Bei den erweiterten typografischen Tabellen ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen) werden die Funktionen der Schriftarten mit [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]- oder CFF-Outlines ergänzt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-119">The Advanced Typographic tables ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layout tables) extend the functionality of fonts with either [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] or CFF outlines.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-120">-Layoutschriftarten enthalten zusätzliche Informationen, die die Leistungsfähigkeit der Schriftarten so erweitern, dass hochwertige internationale Typografie unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-120"> Layout fonts contain additional information that extends the capabilities of the fonts to support high-quality international typography.</span></span> <span data-ttu-id="c0d7f-121">Die meisten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten machen nur eine Teilmenge aller [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Funktionen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-121">Most [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts expose only a subset of the total [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features available.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-122">-Schriftarten stellen die folgenden Features bereit.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-122"> fonts provide the following features.</span></span>  
   
--   Umfassende Zuordnung zwischen Zeichen und Symbole, die Unterstützung von Ligaturen, Formulare mit Feldern fester Breite, alternativen und andere Schriftarten ersetzen.  
+-   <span data-ttu-id="c0d7f-123">Umfangreiche Zuordnung zwischen Zeichen und Symbolen, die Ligaturen, positionelle Formen, alternative Stile und andere Schriftartersetzungen unterstützen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-123">Rich mapping between characters and glyphs that support ligatures, positional forms, alternates, and other font substitutions.</span></span>  
   
--   Unterstützung für zweidimensionale Positionierung und Symbol Anlage.  
+-   <span data-ttu-id="c0d7f-124">Unterstützung von zweidimensionaler Positionierung und Symbolanfügung.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-124">Support for two-dimensional positioning and glyph attachment.</span></span>  
   
--   Explizite Skript und die Sprache in enthaltene Informationen Schriftart, damit eine Anwendung für die Verarbeitung von Text sein Verhalten entsprechend angepasst werden kann.  
+-   <span data-ttu-id="c0d7f-125">Explizite Skript- und Sprachinformationen, die in der Schriftart enthalten sind, damit Textverarbeitungsanwendungen ihr Verhalten entsprechend anpassen können.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-125">Explicit script and language information contained in font, so a text-processing application can adjust its behavior accordingly.</span></span>  
   
- Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layouttabellen werden ausführlich in der ["Font File Tables"](http://www.microsoft.com/typography/otspec/otff.htm) Teil der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Spezifikation.  
+ <span data-ttu-id="c0d7f-126">Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen werden ausführlich im Abschnitt [„Font File Tables“](http://www.microsoft.com/typography/otspec/otff.htm) der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Spezifikation beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-126">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layout tables are described in more detail in the ["Font File Tables"](http://www.microsoft.com/typography/otspec/otff.htm) section of the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] specification.</span></span>  
   
- Im weiteren Verlauf dieser Übersicht werden, die Breite und Flexibilität einiger der visuell interessanten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Funktionen, die durch die Eigenschaften verfügbar gemacht werden die <xref:System.Windows.Documents.Typography> Objekt. Weitere Informationen zu diesem Objekt, finden Sie unter [Typografie-Klasse](#typography_class).  
+ <span data-ttu-id="c0d7f-127">Im weiteren Verlauf dieser Übersicht werden eingeführt, der Breite und Flexibilität einiger der visuell interessante [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Funktionen, die von den Eigenschaften des verfügbar gemacht werden die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-127">The remainder of this overview introduces the breadth and flexibility of some of the visually-interesting [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features that are exposed by the properties of the <xref:System.Windows.Documents.Typography> object.</span></span> <span data-ttu-id="c0d7f-128">Weitere Informationen über dieses Objekt finden Sie unter [Typografieklasse](#typography_class).</span><span class="sxs-lookup"><span data-stu-id="c0d7f-128">For more information on this object, see [Typography Class](#typography_class).</span></span>  
   
 <a name="variants"></a>   
-## <a name="variants"></a>Varianten  
- Varianten werden zum Rendern von verschiedenen typografischen Stilen, wie z. B. hoch- und tiefgestellten Zeichen.  
+## <a name="variants"></a><span data-ttu-id="c0d7f-129">Varianten</span><span class="sxs-lookup"><span data-stu-id="c0d7f-129">Variants</span></span>  
+ <span data-ttu-id="c0d7f-130">Varianten werden verwendet, um verschiedene typographische Formate zu rendern, z.B. hoch- und tiefgestellte Zeichen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-130">Variants are used to render different typographic styles, such as superscripts and subscripts.</span></span>  
   
-### <a name="superscripts-and-subscripts"></a>Hoch- und tiefgestellte Zeichen  
- Die <xref:System.Windows.Documents.Typography.Variants%2A> -Eigenschaft können Sie hoch- und tiefgestellten Optionswerte für eine [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftart.  
+### <a name="superscripts-and-subscripts"></a><span data-ttu-id="c0d7f-131">Hoch- und tiefgestellte Zeichen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-131">Superscripts and Subscripts</span></span>  
+ <span data-ttu-id="c0d7f-132">Die <xref:System.Windows.Documents.Typography.Variants%2A> -Eigenschaft können Sie zum Festlegen von hoch- und tiefgestellter Werten für eine [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftart.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-132">The <xref:System.Windows.Documents.Typography.Variants%2A> property allows you to set superscript and subscript values for an [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font.</span></span>  
   
- Im folgenden Text werden hochgestellte Zeichen für die Schriftart Palatino Linotype definiert werden.  
+ <span data-ttu-id="c0d7f-133">Der folgende Text zeigt hochgestellte Zeichen für die Schriftart Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-133">The following text displays superscripts for the Palatino Linotype font.</span></span>  
   
- ![Text mit hochgestellten OpenType-Zeichen](../../../../docs/framework/wpf/advanced/media/opentypefont14.png "opentypefont14")  
-Text mit hochgestellten OpenType-Zeichen  
+ <span data-ttu-id="c0d7f-134">![Text mit hochgestellten OpenType-Zeichen](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-134">![Text using OpenType superscripts](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")</span></span>  
+<span data-ttu-id="c0d7f-135">Text mit hochgestellten OpenType-Zeichen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-135">Text using OpenType superscripts</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie hochgestellte Zeichen für die Schriftart Palatino Linotype, mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-136">Im folgenden Markupbeispiel wird gezeigt, wie hochgestellte Zeichen für die Schriftart Palatino Linotype, die mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-136">The following markup example shows how to define superscripts for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
+ [!code-xaml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
- Im folgenden Text werden tiefgestellte Zeichen für die Schriftart Palatino Linotype definiert werden.  
+ <span data-ttu-id="c0d7f-137">Der folgende Text zeigt tiefgestellte Zeichen für die Schriftart Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-137">The following text displays subscripts for the Palatino Linotype font.</span></span>  
   
- ![Text mit tiefgestellten OpenType-Zeichen](../../../../docs/framework/wpf/advanced/media/opentypefont15.png "opentypefont15")  
-Text mit tiefgestellten OpenType-Zeichen  
+ <span data-ttu-id="c0d7f-138">![Text mit tiefgestellten OpenType-Zeichen](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-138">![Text using OpenType subscripts](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")</span></span>  
+<span data-ttu-id="c0d7f-139">Text mit tiefgestellten OpenType-Zeichen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-139">Text using OpenType subscripts</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie tiefgestellte Zeichen für die Schriftart Palatino Linotype, mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-140">Im folgenden Markupbeispiel wird gezeigt, wie tiefgestellte Zeichen für die Schriftart Palatino Linotype, die mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-140">The following markup example shows how to define subscripts for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
+ [!code-xaml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
-### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Hoch- und tiefgestellten dekorativen verwendet  
- Hoch- und tiefgestellten können auch um Text mit Groß-Hintergrundbildern zu erstellen. Im folgenden Text werden hoch- und tiefgestellten Text für die Schriftart Palatino Linotype definiert werden. Beachten Sie, dass die Großbuchstaben nicht beeinflusst werden.  
+### <a name="decorative-uses-of-superscripts-and-subscripts"></a><span data-ttu-id="c0d7f-141">Dekorative Verwendung von hoch- und tiefgestellten Zeichen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-141">Decorative Uses of Superscripts and Subscripts</span></span>  
+ <span data-ttu-id="c0d7f-142">Hoch- und tiefgestellte Zeichen können auch verwendet werden, um mit Groß- und Kleinbuchstaben aus einem Text dekorative Effekte zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-142">You can also use superscripts and subscripts to create decorative effects of mixed case text.</span></span> <span data-ttu-id="c0d7f-143">Der folgende Text zeigt hoch- und tiefgestellte Zeichen für die Schriftart Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-143">The following text displays superscript and subscript text for the Palatino Linotype font.</span></span> <span data-ttu-id="c0d7f-144">Beachten Sie, dass Großbuchstaben nicht beeinflusst werden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-144">Note that the capitals are not affected.</span></span>  
   
- ![Text mit hoch- und tiefgestellten OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont16.png "opentypefont16")  
-Text mit hoch- und tiefgestellten OpenType-Zeichen  
+ <span data-ttu-id="c0d7f-145">![Text mit hoch- und tiefgestellten OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-145">![Text using OpenType superscripts and subscripts](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")</span></span>  
+<span data-ttu-id="c0d7f-146">Text mit hoch- und tiefgestellten OpenType-Zeichen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-146">Text using OpenType superscripts and subscripts</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie hoch- und tiefgestellten Zeichen für eine Schriftart anhand der Eigenschaften definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-147">Im folgenden Markupbeispiel wird gezeigt, wie hoch- und tiefgestellten für eine Schriftart, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-147">The following markup example shows how to define superscripts and subscripts for a font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
+ [!code-xaml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
 <a name="capitals"></a>   
-## <a name="capitals"></a>Großbuchstaben  
- Großbuchstaben sind ein Satz typografischen Formen, die Text in Großbuchstaben formatiert Symbole dargestellt. In der Regel, wenn Text als Großbuchstaben gerendert wird, der Abstand zwischen Buchstaben stehen zu eng ist, und die Stärke und die Proportion der Buchstaben zu groß. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]unterstützt verschiedene Formate Stilen für Großbuchstaben, einschließlich Kapitälchen kleiner Kapitälchen, anspruchsvolle und Kapitälchenabstand. Dieser Stil-Formate können Sie die Darstellung von Großbuchstaben.  
+## <a name="capitals"></a><span data-ttu-id="c0d7f-148">Großbuchstaben</span><span class="sxs-lookup"><span data-stu-id="c0d7f-148">Capitals</span></span>  
+ <span data-ttu-id="c0d7f-149">Großbuchstaben sind ein Satz typografischer Formen, bei dem Text mit Symbolen gerendert wird, die als Großbuchstaben formatiert sind.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-149">Capitals are a set of typographical forms that render text in capital-styled glyphs.</span></span> <span data-ttu-id="c0d7f-150">Wenn Text ausschließlich in Großbuchstaben gerendert wird, kann der Abstand zwischen den Buchstaben als zu gering, die Breite der Buchstaben als zu groß und die Proportionen der Buchstaben als zu unausgewogen erscheinen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-150">Typically, when text is rendered as all capitals, the spacing between letters can appear too tight, and the weight and proportion of the letters too heavy.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-151"> unterstützt eine Reihe von Formatierungen für Großbuchstaben, z.B. Kapitälchen, kleine Kapitälchen, Titel und Großbuchstabenabstand.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-151"> supports a number of styling formats for capitals, including small capitals, petite capitals, titling, and capital spacing.</span></span> <span data-ttu-id="c0d7f-152">Mit diesen Formatierungen kann die Darstellung von Großbuchstaben gesteuert werden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-152">These styling formats allow you to control the appearance of capitals.</span></span>  
   
- Im folgenden Text werden die standardmäßigen Großbuchstaben für die Schriftart Pescadero, gefolgt von den Buchstaben "SmallCaps" und "AllSmallCaps". In diesem Fall wird die gleiche Schriftgröße für alle drei Wörter verwendet.  
+ <span data-ttu-id="c0d7f-153">Der folgende Text zeigt zuerst die Standardgroßbuchstaben, gefolgt von den Buchstaben in den Formaten „SmallCaps“ und „AllSmallCaps“ für die Schriftart Pescadero.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-153">The following text displays standard capital letters for the Pescadero font, followed by the letters styled as "SmallCaps" and "AllSmallCaps".</span></span> <span data-ttu-id="c0d7f-154">Für alle drei Wörter wird der gleiche Schriftgrad verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-154">In this case, the same font size is used for all three words.</span></span>  
   
- ![Text mit OpenType-Kapitälchen](../../../../docs/framework/wpf/advanced/media/opentypefont11.png "opentypefont11")  
-Text mit OpenType-Kapitälchen  
+ <span data-ttu-id="c0d7f-155">![Text mit OpenType-Kapitälchen](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-155">![Text using OpenType capitals](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span></span>  
+<span data-ttu-id="c0d7f-156">Text mit OpenType-Kapitälchen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-156">Text using OpenType capitals</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Großbuchstaben für die Schriftart Pescadero anhand der Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt. Wenn das "SmallCaps"-Format verwendet wird, ist die führende Großbuchstaben ignoriert.  
+ <span data-ttu-id="c0d7f-157">Im folgenden Markupbeispiel wird gezeigt, wie Großbuchstaben für die Schriftart Pescadero, die mit den Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-157">The following markup example shows how to define capitals for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span> <span data-ttu-id="c0d7f-158">Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-158">When the "SmallCaps" format is used, any leading capital letter is ignored.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
-### <a name="titling-capitals"></a>Großbuchstaben  
- Großbuchstaben sind heller und Anteil und sollen im Vergleich zu normalen Großbuchstaben eine elegantere Aussehen verleihen. Großbuchstaben werden in der Regel bei größeren Schriftgraden als Spaltenüberschriften verwendet. Im folgenden Text werden normale Großbuchstaben und Großbuchstaben für die Schriftart Pescadero. Beachten Sie die geringeren Strichstärken des Texts in der zweiten Zeile.  
+### <a name="titling-capitals"></a><span data-ttu-id="c0d7f-159">Großbuchstaben für Titel</span><span class="sxs-lookup"><span data-stu-id="c0d7f-159">Titling Capitals</span></span>  
+ <span data-ttu-id="c0d7f-160">Großbuchstaben für Titel sind weniger stark ausgebildet und proportioniert und sollen im Vergleich zu normalen Großbuchstaben eine elegantere Darstellungsweise sicherstellen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-160">Titling capitals are lighter in weight and proportion and designed to give a more elegant look than normal capitals.</span></span> <span data-ttu-id="c0d7f-161">Großbuchstaben für Titel werden üblicherweise mit größeren Schriftgraden in Überschriften verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-161">Titling capitals are typically used in larger font sizes as headings.</span></span> <span data-ttu-id="c0d7f-162">Der folgende Text zeigt normale Großbuchstaben und Großbuchstaben für Titel für die Schriftart Pescadero.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-162">The following text displays normal and titling capitals for the Pescadero font.</span></span> <span data-ttu-id="c0d7f-163">Beachten Sie die geringeren Strichstärken des Texts in der zweiten Zeile.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-163">Notice the narrower stem widths of the text on the second line.</span></span>  
   
- ![Text mit OpenType-Initialen](../../../../docs/framework/wpf/advanced/media/opentypefont20.png "OpenTypeFont20")  
-Text mit OpenType-Initialen  
+ <span data-ttu-id="c0d7f-164">![Text mit OpenType-Initialen](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-164">![Text using OpenType titling capitals](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")</span></span>  
+<span data-ttu-id="c0d7f-165">Text mit OpenType-Initialen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-165">Text using OpenType titling capitals</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Großbuchstaben für die Schriftart Pescadero anhand der Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-166">Im folgenden Markupbeispiel wird gezeigt, wie Großbuchstaben für die Schriftart Pescadero, die mit den Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-166">The following markup example shows how to define titling capitals for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
-### <a name="capital-spacing"></a>Kapitälchenabstand  
- Kapitälchenabstand ist ein Feature, das Ihnen ermöglicht, weitere Abstände bieten bei Verwendung von Großbuchstaben in Text. Großbuchstaben dienen in der Regel mit einem Kleinbuchstaben blend. Abstand, wird zwischen und einem Großbuchstaben und einem Kleinbuchstaben aussehen zu eng gefasst wenn Großbuchstaben verwendet werden. Im folgenden Text werden normale und Abstand für die Schriftart Pescadero.  
+### <a name="capital-spacing"></a><span data-ttu-id="c0d7f-167">Großbuchstabenabstand</span><span class="sxs-lookup"><span data-stu-id="c0d7f-167">Capital Spacing</span></span>  
+ <span data-ttu-id="c0d7f-168">Der Großbuchstabenabstand ist ein Feature, mit dem Sie in einem Textabschnitt, der ausschließlich aus Großbuchstaben besteht, die Laufweite vergrößern können.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-168">Capital spacing is a feature that allows you to provide more spacing when using all capitals in text.</span></span> <span data-ttu-id="c0d7f-169">Großbuchstaben werden i. d. R. so entworfen, dass sie mit Kleinbuchstaben harmonieren.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-169">Capital letters are typically designed to blend with lowercase letters.</span></span> <span data-ttu-id="c0d7f-170">Ein Abstand, der zwischen einem Großbuchstaben und einem Kleinbuchstaben ästhetisch wirkt, kann zwischen Großbuchstaben zu gering erscheinen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-170">Spacing that appears attractive between and a capital letter and a lowercase letter may look too tight when all capital letters are used.</span></span> <span data-ttu-id="c0d7f-171">Im folgende Text werden normale Großbuchstaben und Großbuchstaben für Titel für die Schriftart Pescadero gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-171">The following text displays normal and capital spacing for the Pescadero font.</span></span>  
   
- ![Text mit OpenType-Kapitälchenabstand](../../../../docs/framework/wpf/advanced/media/opentypefont21.png "OpenTypeFont21")  
-Text mit OpenType-Kapitälchenabstand  
+ <span data-ttu-id="c0d7f-172">![Text mit OpenType-Kapitälchenabstand](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-172">![Text using OpenType capital spacing](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")</span></span>  
+<span data-ttu-id="c0d7f-173">Text mit OpenType-Kapitälchenabstand</span><span class="sxs-lookup"><span data-stu-id="c0d7f-173">Text using OpenType capital spacing</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Kapitälchenabstand für die Schriftart Pescadero anhand der Eigenschaften definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-174">Im folgenden Markupbeispiel wird gezeigt, wie für die Schriftart Pescadero, die mit den Eigenschaften des-Kapitälchenabstand definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-174">The following markup example shows how to define capital spacing for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
 <a name="ligatures"></a>   
-## <a name="ligatures"></a>Ligaturen  
- Ligaturen sind zwei oder mehr Symbole, die in ein einzelnes Symbol gebildet werden, um besser lesbaren oder attraktiveren Text zu erstellen. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen vier Typen von Ligaturen:  
+## <a name="ligatures"></a><span data-ttu-id="c0d7f-175">Ligaturen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-175">Ligatures</span></span>  
+ <span data-ttu-id="c0d7f-176">Ligaturen sind zwei oder mehr Symbole, die zu einem einzigen Symbol zusammengefügt werden, um einen besser lesbaren oder attraktiveren Text zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-176">Ligatures are two or more glyphs that are formed into a single glyph in order to create more readable or attractive text.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-177">-Schriftarten unterstützen vier Typen von Ligaturen:</span><span class="sxs-lookup"><span data-stu-id="c0d7f-177"> fonts support four types of ligatures:</span></span>  
   
--   **Standardligaturen**. Entwickelt, um die Lesbarkeit zu verbessern. Standardligaturen gehören "Fi", "fl" und "ff".  
+-   <span data-ttu-id="c0d7f-178">**Standardligaturen**.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-178">**Standard ligatures**.</span></span> <span data-ttu-id="c0d7f-179">Zur Verbesserung der Lesbarkeit.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-179">Designed to enhance readability.</span></span> <span data-ttu-id="c0d7f-180">Zu den Standardligaturen gehören „fi“, „fl“ und „ff“.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-180">Standard ligatures include "fi", "fl", and "ff".</span></span>  
   
--   **Kontextbedingte Ligaturen**. Entwickelt, um die Lesbarkeit zu verbessern, indem Sie zwischen den Zeichen, die Ligatur optimiertes Verbinden Verhalten bereitstellen.  
+-   <span data-ttu-id="c0d7f-181">**Kontextbedingte Ligaturen**.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-181">**Contextual ligatures**.</span></span> <span data-ttu-id="c0d7f-182">Mit Kontextligaturen soll die Lesbarkeit verbessert werden, indem die Buchstaben einer Ligatur optimal verbunden werden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-182">Designed to enhance readability by providing better joining behavior between the characters that make up the ligature.</span></span>  
   
--   **Ligaturen**. Konzipiert waren und nicht speziell zur besseren Lesbarkeit.  
+-   <span data-ttu-id="c0d7f-183">**Bedingte Ligaturen**.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-183">**Discretionary ligatures**.</span></span> <span data-ttu-id="c0d7f-184">Bedingte Ligaturen sollen verzierend wirken, wobei die Lesbarkeit eine untergeordnete Rolle spielt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-184">Designed to be ornamental, and not specifically designed for readability.</span></span>  
   
--   **Historischer Ligaturen**. Soll die Verlaufs- und nicht speziell zur besseren Lesbarkeit werden.  
+-   <span data-ttu-id="c0d7f-185">**Historische Ligaturen**.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-185">**Historical ligatures**.</span></span> <span data-ttu-id="c0d7f-186">Historische Ligaturen sollen eine historische Wirkung erzielen, wobei die Lesbarkeit eine untergeordnete Rolle spielt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-186">Designed to be historical, and not specifically designed for readability.</span></span>  
   
- Im folgenden Text werden Symbole für die Schriftart Pericles Standardligaturen.  
+ <span data-ttu-id="c0d7f-187">Im folgenden Text werden Symbole für Standardligaturen in der Schriftart Pericles gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-187">The following text displays standard ligature glyphs for the Pericles font.</span></span>  
   
- ![Text mit OpenType-Standardligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont04.png "opentypefont04")  
-Text mit OpenType-Standardligaturen  
+ <span data-ttu-id="c0d7f-188">![Text mit OpenType-Standardligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-188">![Text using OpenType standard ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")</span></span>  
+<span data-ttu-id="c0d7f-189">Text mit OpenType-Standardligaturen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-189">Text using OpenType standard ligatures</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Symbole für die mithilfe der Eigenschaften der Schriftart Pericles Standardligaturen definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-190">Im folgenden Markupbeispiel wird gezeigt, wie Symbole für die mithilfe der Eigenschaften der Schriftart Pericles Standardligaturen definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-190">The following markup example shows how to define standard ligature glyphs for the Pericles font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
+ [!code-xaml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
- Im folgenden Text werden Symbole für die Schriftart Pericles Ligaturen.  
+ <span data-ttu-id="c0d7f-191">Im folgenden Text werden Symbole für bedingte Ligaturen in der Schriftart Pericles gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-191">The following text displays discretionary ligature glyphs for the Pericles font.</span></span>  
   
- ![Text mit OpenType-Ligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont05.png "opentypefont05")  
-Text mit bedingten OpenType-Ligaturen  
+ <span data-ttu-id="c0d7f-192">![Text mit OpenType-Ligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-192">![Text using OpenType discretionary ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")</span></span>  
+<span data-ttu-id="c0d7f-193">Text mit bedingten OpenType-Ligaturen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-193">Text using OpenType discretionary ligatures</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Ligaturen Symbole für die mithilfe der Eigenschaften der Schriftart Pericles definiert die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-194">Im folgenden Markupbeispiel wird gezeigt, wie Symbole für die mithilfe der Eigenschaften der Schriftart Pericles Ligaturen definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-194">The following markup example shows how to define discretionary ligature glyphs for the Pericles font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
+ [!code-xaml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- In der Standardeinstellung [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Standardligaturen. Z. B. bei Verwendung die Schriftart Palatino Linotype angezeigt werden die Standardligaturen "Fi", "ff" und "fl" als kombiniertes Zeichensymbol. Beachten Sie, dass das Paar von Zeichen für die einzelnen Standardligaturen berühren.  
+ <span data-ttu-id="c0d7f-195">Standardmäßig aktivieren [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Standardligaturen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-195">By default, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enable standard ligatures.</span></span> <span data-ttu-id="c0d7f-196">Wenn Sie beispielsweise die Schriftart Palatino Linotype verwenden, werden die Standardligaturen „fi“, „ff“ und „fl“ als kombiniertes Zeichensymbol angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-196">For example, if you use the Palatino Linotype font, the standard ligatures "fi", "ff", and "fl" appear as a combined character glyph.</span></span> <span data-ttu-id="c0d7f-197">Dabei berühren die beiden Zeichen einer Standardligatur einander.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-197">Notice that the pair of characters for each standard ligature touch each other.</span></span>  
   
- ![Text mit OpenType-Standardligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont06.png "opentypefont06")  
-Text mit OpenType-Standardligaturen  
+ <span data-ttu-id="c0d7f-198">![Text mit OpenType-Standardligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont06.gif "opentypefont06")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-198">![Text using OpenType standard ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont06.gif "opentypefont06")</span></span>  
+<span data-ttu-id="c0d7f-199">Text mit OpenType-Standardligaturen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-199">Text using OpenType standard ligatures</span></span>  
   
- Allerdings können Sie Features für Standardligaturen deaktivieren, damit eine Standardligaturen wie z. B. "ff" als zwei einzelne Symbole, und nicht als ein kombiniertes Zeichen-Symbol angezeigt.  
+ <span data-ttu-id="c0d7f-200">Allerdings können Sie die Features für Standardligaturen auch deaktivieren, sodass z.B. die Standardligatur „ff“ nicht als kombiniertes Zeichensymbol, sondern als zwei einzelne Symbole angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-200">However, you can disable standard ligature features so that a standard ligature such as "ff" displays as two separate glyphs, rather than as a combined character glyph.</span></span>  
   
- ![Text mit deaktivierten OpenType-Standardligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont07.png "opentypefont07")  
-Text mit deaktivierten OpenType-Standardligaturen  
+ <span data-ttu-id="c0d7f-201">![Text mit deaktivierten OpenType-Standardligaturen](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-201">![Text using disabled OpenType standard ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")</span></span>  
+<span data-ttu-id="c0d7f-202">Text mit deaktivierten OpenType-Standardligaturen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-202">Text using disabled OpenType standard ligatures</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Symbole für die Schriftart Palatino Linotype, mit den Eigenschaften des Standardligaturen deaktiviert die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-203">Das folgende Markupbeispiel zeigt, wie Symbole für die Schriftart Palatino Linotype, die mit den Eigenschaften des Standardligaturen deaktiviert die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-203">The following markup example shows how to disable standard ligature glyphs for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
+ [!code-xaml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
 <a name="swashes"></a>   
-## <a name="swashes"></a>Schwungschrift  
- Schwungschrift besteht aus dekorativen Symbole, die ausgefeilten Verzierung häufig mit Kalligraphie assoziiert verwenden. Im folgenden Text werden Symbole in Standard- und Schwungschrift für die Schriftart Pescadero.  
+## <a name="swashes"></a><span data-ttu-id="c0d7f-204">Schwünge</span><span class="sxs-lookup"><span data-stu-id="c0d7f-204">Swashes</span></span>  
+ <span data-ttu-id="c0d7f-205">Schwungschrift besteht aus dekorativen Symbolen, deren reiche Verzierungen häufig mit Kalligraphie assoziiert werden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-205">Swashes are decorative glyphs that use elaborate ornamentation often associated with calligraphy.</span></span> <span data-ttu-id="c0d7f-206">Im folgenden Text werden Standard- und Schwungsymbole für die Schriftart Pescadero gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-206">The following text displays standard and swash glyphs for the Pescadero font.</span></span>  
   
- ![Text mit OpenType-Standard- und Ziersymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont08.png "opentypefont08")  
-Text mit OpenType-Standard- und Ziersymbolen  
+ <span data-ttu-id="c0d7f-207">![Text mit OpenType-Standard- und Ziersymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-207">![Text using OpenType standard and swash glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")</span></span>  
+<span data-ttu-id="c0d7f-208">Text mit OpenType-Standard- und Ziersymbolen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-208">Text using OpenType standard and swash glyphs</span></span>  
   
- Schwungschrift werden häufig als dekorativen Elementen in kurzen Sätzen wie z. B. Ereignis Ankündigungen verwendet. Der folgende Text verwendet Schwungschrift, um den Großbuchstaben, der den Namen des Ereignisses hervorzuheben.  
+ <span data-ttu-id="c0d7f-209">Schwungschrift wird häufig als dekoratives Element in kurzen Sätzen verwendet, z.B. in Veranstaltungsankündigungen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-209">Swashes are often used as decorative elements in short phrases such as event announcements.</span></span> <span data-ttu-id="c0d7f-210">Im folgenden Text werden die Großbuchstaben eines Veranstaltungstitels mit Schwungschrift hervorgehoben.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-210">The following text uses swashes to emphasize the capital letters of the name of the event.</span></span>  
   
- ![Text mit OpenType-Zierbuchstaben](../../../../docs/framework/wpf/advanced/media/opentypefont09.png "opentypefont09")  
-Text mit OpenType-Zierbuchstaben  
+ <span data-ttu-id="c0d7f-211">![Text mit OpenType-Zierbuchstaben](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-211">![Text using OpenType swashes](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")</span></span>  
+<span data-ttu-id="c0d7f-212">Text mit OpenType-Zierbuchstaben</span><span class="sxs-lookup"><span data-stu-id="c0d7f-212">Text using OpenType swashes</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie die Schwungschrift für eine Schriftart anhand der Eigenschaften definiert die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-213">Im folgenden Markupbeispiel wird gezeigt, wie die Schwungschrift für eine Schriftart, die mit den Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-213">The following markup example shows how to define swashes for a font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
+ [!code-xaml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
-### <a name="contextual-swashes"></a>Schwungschrift  
- Bestimmte Kombinationen von Symbolen in Schwungschrift können unästhetisch wirken, z. B. sich überschneidende Unterlängen bei aufeinander folgenden Buchstaben. Eine kontextbedingte Schwungschrift verwenden, können Sie ein Ersatz Schwungschrift Symbol verwenden, die eine bessere Darstellung erzeugt. Im folgenden Text wird das gleiche Wort vor und nach eine kontextbedingte Schwungschrift angewendet wird.  
+### <a name="contextual-swashes"></a><span data-ttu-id="c0d7f-214">Kontextbedingte Schwungschrift</span><span class="sxs-lookup"><span data-stu-id="c0d7f-214">Contextual Swashes</span></span>  
+ <span data-ttu-id="c0d7f-215">Bestimmte Kombinationen von Symbolen in Schwungschrift können unästhetisch wirken, z.B. sich überschneidende Unterlängen bei aufeinander folgenden Buchstaben.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-215">Certain combinations of swash glyphs can cause an unattractive appearance, such as overlapping descenders on adjacent letters.</span></span> <span data-ttu-id="c0d7f-216">Mit kontextbedingter Schwungschrift können Sie Varianten eines Symbols in Schwungschrift verwenden, deren Darstellung dann ästhetischer wirkt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-216">Using a contextual swash allows you to use a substitute swash glyph that produces a better appearance.</span></span> <span data-ttu-id="c0d7f-217">Im folgenden Text wird das gleiche Wort vor und nach dem Übernehmen einer kontextbedingten Variante für die Schwungschrift gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-217">The following text shows the same word before and after a contextual swash is applied.</span></span>  
   
- ![Text mit kontextbezogenen OpenType-Zierbuchstaben](../../../../docs/framework/wpf/advanced/media/opentypefont19.png "OpenTypeFont19")  
-Text mit kontextbezogenen OpenType-Zierbuchstaben  
+ <span data-ttu-id="c0d7f-218">![Text mit OpenType-Zierbuchstaben](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-218">![Text using OpenType contextual swashes](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")</span></span>  
+<span data-ttu-id="c0d7f-219">Text mit kontextbezogenen OpenType-Zierbuchstaben</span><span class="sxs-lookup"><span data-stu-id="c0d7f-219">Text using OpenType contextual swashes</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie eine kontextbedingte Schwungschrift für die Schriftart Pescadero anhand der Eigenschaften definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-220">Im folgenden Markupbeispiel wird gezeigt, wie eine kontextbedingte Schwungschrift für die Schriftart Pescadero, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-220">The following markup example shows how to define a contextual swash for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
 <a name="alternates"></a>   
-## <a name="alternates"></a>Stellvertreter  
- Varianten sind Symbole, die ein Standardsymbol ersetzen können. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Schriftarten, z. B. die Schriftart Pericles in den folgenden Beispielen können von Symbolen enthalten, die Sie verwenden können, um unterschiedliche Darstellungen für Text zu erstellen. Im folgenden Text werden die Standardsymbole der Schriftart Pericles.  
+## <a name="alternates"></a><span data-ttu-id="c0d7f-221">Alternative Stile</span><span class="sxs-lookup"><span data-stu-id="c0d7f-221">Alternates</span></span>  
+ <span data-ttu-id="c0d7f-222">Alternative Stilvarianten sind Symbole, die ein Standardsymbol ersetzen können.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-222">Alternates are glyphs that can be substituted for a standard glyph.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-223">-Schriftarten (wie im folgenden Beispiel die Schriftart Pericles) enthalten Varianten von Symbolen, mit denen Text auf verschiedene Weise dargestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-223"> fonts, such as the Pericles font used in the following examples, can contain alternate glyphs that you can use to create different appearances for text.</span></span> <span data-ttu-id="c0d7f-224">Im folgenden Text werden die Standardsymbole der Schriftart Pericles dargestellt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-224">The following text displays standard glyphs for the Pericles font.</span></span>  
   
- ![Text mit OpenType-Standardsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont01.png "opentypefont01")  
-Text mit OpenType-Standardsymbolen  
+ <span data-ttu-id="c0d7f-225">![Text mit OpenType-Standardsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-225">![Text using OpenType standard glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")</span></span>  
+<span data-ttu-id="c0d7f-226">Text mit OpenType-Standardsymbolen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-226">Text using OpenType standard glyphs</span></span>  
   
- Die Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] enthält zusätzliche Symbole, die Stilvariante für den Standardsatz von Symbolen bereitstellen. Im folgenden Text werden Symbole im alternativen.  
+ <span data-ttu-id="c0d7f-227">Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftart Pericles enthält zusätzliche Symbole, die als alternativer Stil für den Standardsatz von Symbolen verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-227">The Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font contains additional glyphs that provide stylistic alternates to the standard set of glyphs.</span></span> <span data-ttu-id="c0d7f-228">Im folgenden Text werden Symbole im alternativen Stil gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-228">The following text displays stylistic alternate glyphs.</span></span>  
   
- ![Text mit alternativen OpenType-Stilsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont02.png "opentypefont02")  
-Text mit alternativen OpenType-Stilsymbolen  
+ <span data-ttu-id="c0d7f-229">![Text mit alternativen OpenType-Stilsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-229">![Text using OpenType stylistic alternate glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")</span></span>  
+<span data-ttu-id="c0d7f-230">Text mit alternativen OpenType-Stilsymbolen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-230">Text using OpenType stylistic alternate glyphs</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Symbole im alternativen mithilfe der Eigenschaften der Schriftart Pericles definiert die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-231">Im folgenden Markupbeispiel wird gezeigt, wie alternative Stilsymbolen für die mithilfe der Eigenschaften der Schriftart Pericles definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-231">The following markup example shows how to define stylistic alternate glyphs for the Pericles font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
+ [!code-xaml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
- Im folgenden Text werden mehrere andere alternativen Stilsymbolen der Schriftart Pericles.  
+ <span data-ttu-id="c0d7f-232">Im folgenden Text werden verschiedene Symbole im alternativen Stil in der Schriftart Pericles gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-232">The following text displays several other stylistic alternate glyphs for the Pericles font.</span></span>  
   
- ![Text mit alternativen OpenType-Stilsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont03.png "opentypefont03")  
-Text mit alternativen OpenType-Stilsymbolen  
+ <span data-ttu-id="c0d7f-233">![Text mit alternativen OpenType-Stilsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-233">![Text using OpenType stylistic alternate glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")</span></span>  
+<span data-ttu-id="c0d7f-234">Text mit alternativen OpenType-Stilsymbolen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-234">Text using OpenType stylistic alternate glyphs</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie diese andere alternativen Stilsymbolen definieren.  
+ <span data-ttu-id="c0d7f-235">Im folgenden Markupbeispiel wird veranschaulicht, wie diese zusätzlichen Stilvarianten von Symbolen definiert werden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-235">The following markup example shows how to define these other stylistic alternate glyphs.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
+ [!code-xaml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
   
-### <a name="random-contextual-alternates"></a>Willkürlichen kontextbedingten  
- Willkürlichen kontextbedingten bieten mehrere Ersatzsymbole für ein einzelnes Zeichen. Bei der Implementierung mit Schriftarten kann dieses Feature Handschrift simulieren, indem Sie mit einem Satz zufällig ausgewählter Symbole mit geringfügigen Unterschieden in der Darstellung. Der folgende Text verwendet willkürlichen kontextbedingten für Lindsey-Schriftart. Beachten Sie, dass der Buchstabe "a" variiert leicht in der Darstellung  
+### <a name="random-contextual-alternates"></a><span data-ttu-id="c0d7f-236">Zufällige kontextbedingte Varianten</span><span class="sxs-lookup"><span data-stu-id="c0d7f-236">Random Contextual Alternates</span></span>  
+ <span data-ttu-id="c0d7f-237">Bei zufälligen kontextbedingten Varianten werden mehrere Ersatzsymbole für ein einzelnes Zeichen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-237">Random contextual alternates provide multiple substitute glyphs for a single character.</span></span> <span data-ttu-id="c0d7f-238">Wenn dieses Feature für handschriftähnliche Schriftarten implementiert ist, kann Handschrift mit einem Satz zufällig ausgewählter Symbole simuliert werden, die leicht unterschiedlich dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-238">When implemented with script-type fonts, this feature can simulate handwriting by using of a set of randomly chosen glyphs with slight differences in appearance.</span></span> <span data-ttu-id="c0d7f-239">Im folgenden Text werden zufällige kontextbedingte Varianten für die Schriftart Lindsey verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-239">The following text uses random contextual alternates for the Lindsey font.</span></span> <span data-ttu-id="c0d7f-240">Dabei wird der Buchstabe „a“ in der Darstellung leicht abgewandelt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-240">Notice that the letter "a" varies slightly in appearance</span></span>  
   
- ![Text mit willkürlichen kontextbedingten OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont23.png "OpenTypeFont23")  
-Text mit willkürlichen kontextbedingten OpenType-Varianten  
+ <span data-ttu-id="c0d7f-241">![Text mit willkürlichen kontextbedingten OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-241">![Text using OpenType random contextual alternates](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")</span></span>  
+<span data-ttu-id="c0d7f-242">Text mit willkürlichen kontextbedingten OpenType-Varianten</span><span class="sxs-lookup"><span data-stu-id="c0d7f-242">Text using OpenType random contextual alternates</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie willkürlichen kontextbedingten für die Lindsey-Schriftart mithilfe der Eigenschaften der definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-243">Im folgenden Markupbeispiel wird gezeigt, wie willkürlichen kontextbedingten für Lindsey-Schriftart, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-243">The following markup example shows how to define random contextual alternates for the Lindsey font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
-### <a name="historical-forms"></a>Mediävalen  
- Mediävalen sind typografische Konventionen, die häufig in der Vergangenheit waren. Im folgenden Text wird der Ausdruck "Boston, Massachusetts", mit einem Verlauf-Formular von Symbolen für die Schriftart Palatino Linotype definiert werden.  
+### <a name="historical-forms"></a><span data-ttu-id="c0d7f-244">Historische Formen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-244">Historical Forms</span></span>  
+ <span data-ttu-id="c0d7f-245">Unter historischen Formen werden der Vergangenheit verbreitete typografische Konventionen verstanden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-245">Historical forms are typographic conventions that were common in the past.</span></span> <span data-ttu-id="c0d7f-246">Im folgenden Text wird „Boston, Massachusetts“ unter Verwendung einer historischen Form der Symbole in der Schriftart Palatino Linotype gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-246">The following text displays the phrase, "Boston, Massachusetts", using an historical form of glyphs for the Palatino Linotype font.</span></span>  
   
- ![Text mit OpenType-Mediävalen](../../../../docs/framework/wpf/advanced/media/opentypefont10.png "opentypefont10")  
-Text mit OpenType-Mediävalen  
+ <span data-ttu-id="c0d7f-247">![Text mit OpenType-Mediävalen](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-247">![Text using OpenType historical forms](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")</span></span>  
+<span data-ttu-id="c0d7f-248">Text mit OpenType-Mediävalen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-248">Text using OpenType historical forms</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Mediävalen für die mithilfe der Eigenschaften der Schriftart Palatino Linotype definiert die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-249">Im folgenden Markupbeispiel wird gezeigt, wie für die Schriftart Palatino Linotype, die mit den Eigenschaften des Mediävalen definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-249">The following markup example shows how to define historical forms for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
+ [!code-xaml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
 <a name="numerical_styles"></a>   
-## <a name="numerical-styles"></a>Numerische Formate  
- OpenType-Schriftarten unterstützen eine große Anzahl von Features, die mit numerischen Werten im Text verwendet werden können.  
+## <a name="numerical-styles"></a><span data-ttu-id="c0d7f-250">Numerische Formate</span><span class="sxs-lookup"><span data-stu-id="c0d7f-250">Numerical Styles</span></span>  
+ <span data-ttu-id="c0d7f-251">OpenType-Schriftarten unterstützen eine große Anzahl von Features, die mit numerischen Werten im Text verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-251">OpenType fonts support a large number of features that can be used with numerical values in text.</span></span>  
   
-### <a name="fractions"></a>Brüche  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Schriftarten unterstützen Formatvorlagen, einschließlich diagonalem und horizontalem.  
+### <a name="fractions"></a><span data-ttu-id="c0d7f-252">Brüche</span><span class="sxs-lookup"><span data-stu-id="c0d7f-252">Fractions</span></span>  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-253">-Schriftarten unterstützen u. a. auch Bruchformate mit diagonalem und horizontalem Bruchstrich.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-253"> fonts support styles for fractions, including slashed and stacked.</span></span>  
   
- Im folgenden Text werden Bruchformate für die Schriftart Palatino Linotype.  
+ <span data-ttu-id="c0d7f-254">Im folgenden Text werden Bruchformate für die Schriftart Palatino Linotype gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-254">The following text displays fraction styles for the Palatino Linotype font.</span></span>  
   
- ![Text mit OpenType-Brüchen mit schrägem oder waagerechtem Bruchstrich](../../../../docs/framework/wpf/advanced/media/opentypefont12.png "opentypefont12")  
-Text mit OpenType-Brüchen mit schrägem oder waagerechtem Bruchstrich  
+ <span data-ttu-id="c0d7f-255">![Text mit OpenType-Ziffern mit und waagerechtem Bruchstrich](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-255">![Text using OpenType slashed and stacked fractions](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")</span></span>  
+<span data-ttu-id="c0d7f-256">Text mit OpenType-Brüchen mit schrägem oder waagerechtem Bruchstrich</span><span class="sxs-lookup"><span data-stu-id="c0d7f-256">Text using OpenType slashed and stacked fractions</span></span>  
   
- Im folgenden Markupbeispiel veranschaulicht die Bruchformate für die Schriftart Palatino Linotype, mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-257">Im folgenden Markupbeispiel veranschaulicht die Bruch Stile für die Schriftart Palatino Linotype, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-257">The following markup example shows how to define fraction styles for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
+ [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
-### <a name="old-style-numerals"></a>Mediävalziffern  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Schriftarten unterstützen ein altes Format Ziffer-Format. Dieses Format eignet sich zum Anzeigen von Zahlen in Formate, die nicht mehr standard sind. Der folgende Text wird ein Datum 18. Jahrhundert im Standard- und Mediävalziffern für die Schriftart Palatino Linotype definiert werden.  
+### <a name="old-style-numerals"></a><span data-ttu-id="c0d7f-258">Mediävalziffern</span><span class="sxs-lookup"><span data-stu-id="c0d7f-258">Old Style Numerals</span></span>  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-259">-Schriftarten unterstützen Mediävalziffern.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-259"> fonts support an old style numeral format.</span></span> <span data-ttu-id="c0d7f-260">Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-260">This format is useful for displaying numerals in styles that are no longer standard.</span></span> <span data-ttu-id="c0d7f-261">Im folgenden Text wird ein Datum aus dem 18. Jahrhundert im Standardformat und mit Mediävalziffern in der Schriftart Palatino Linotype gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-261">The following text displays an 18th century date in standard and old style numeral formats for the Palatino Linotype font.</span></span>  
   
- ![Text mit OpenType-Mediävalziffern](../../../../docs/framework/wpf/advanced/media/opentypefont24.png "OpenTypeFont24")  
-Text mit OpenType-Mediävalziffern  
+ <span data-ttu-id="c0d7f-262">![Text mit OpenType-Mediävalziffern](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-262">![Text using OpenType old style numerals](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")</span></span>  
+<span data-ttu-id="c0d7f-263">Text mit OpenType-Mediävalziffern</span><span class="sxs-lookup"><span data-stu-id="c0d7f-263">Text using OpenType old style numerals</span></span>  
   
- Der folgende Text werden in der Schriftart Palatino Linotype, gefolgt von Mediävalziffern.  
+ <span data-ttu-id="c0d7f-264">Im folgenden Text werden in der Schriftart Palatino Linotype zuerst Standardziffern und dann Mediävalziffern gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-264">The following text displays standard numerals for the Palatino Linotype font, followed by old style numerals.</span></span>  
   
- ![Text mit OpenType-Mediävalziffernsätzen](../../../../docs/framework/wpf/advanced/media/opentypefont13.png "opentypefont13")  
-Text mit OpenType-Mediävalziffernsätzen  
+ <span data-ttu-id="c0d7f-265">![Text mit OpenType-Mediävalziffernsätzen](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-265">![Text using OpenType old style numeral sets](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")</span></span>  
+<span data-ttu-id="c0d7f-266">Text mit OpenType-Mediävalziffernsätzen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-266">Text using OpenType old style numeral sets</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Mediävalziffern für die Schriftart Palatino Linotype, mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-267">Im folgenden Markupbeispiel wird gezeigt, wie Mediävalziffern für die Schriftart Palatino Linotype, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-267">The following markup example shows how to define old style numerals for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
+ [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
-### <a name="proportional-and-tabular-figures"></a>Proportional und tabellarische Zahlen  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Schriftarten werden eine proportional und tabellarische Abbildung-Funktion, um die Ausrichtung der breiten zu steuern, wenn Zahlen mit unterstützt. Proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: "1" ist schmaler als "5". Tabellarische Zahlen werden als Ziffern in gleich Breite behandelt, damit sie erhöhen die Lesbarkeit des finanziellen Typinformationen vertikal auszurichten.  
+### <a name="proportional-and-tabular-figures"></a><span data-ttu-id="c0d7f-268">Proportionale Darstellung und Tabellendarstellung</span><span class="sxs-lookup"><span data-stu-id="c0d7f-268">Proportional and Tabular Figures</span></span>  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-269">-Schriftarten unterstützen bei der Verwendung von Ziffern in proportionaler und in Tabellendarstellung ein Feature zum Anpassen von Ziffern in der Breite.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-269"> fonts support a proportional and tabular figure feature to control the alignment of widths when using numerals.</span></span> <span data-ttu-id="c0d7f-270">In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-270">Proportional figures treat each numeral as having a different width—"1" is narrower than "5".</span></span> <span data-ttu-id="c0d7f-271">In der Tabellendarstellung werden alle Ziffern mit der gleichen Breite dargestellt und vertikal ausgerichtet. Dies verbessert die Lesbarkeit z.B. bei Finanzinformationen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-271">Tabular figures are treated as equal-width numerals so that they align vertically, which increases the readability of financial type information.</span></span>  
   
- Im folgenden Text werden zwei proportionalen Darstellung in der ersten Spalte, die mit der Schriftart Miramonte definiert wird. Beachten Sie den Unterschied in der Breite zwischen die Ziffern "5" und "1". Die zweite Spalte enthält die gleichen zwei numerische Werte mit der breiten mithilfe der Funktion der tabellarischen Abbildung angepasst.  
+ <span data-ttu-id="c0d7f-272">Im folgenden Text werden in der ersten Spalte zwei proportionale Zahlen in der Schriftart Miramonte proportional dargestellt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-272">The following text displays two proportional figures in the first column using the Miramonte font.</span></span> <span data-ttu-id="c0d7f-273">Die Ziffern „5“ und „1“ unterscheiden sich in der Breite.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-273">Note the difference in width between the numerals "5" and "1".</span></span> <span data-ttu-id="c0d7f-274">In der zweiten Spalte wurde die Breite der gleichen Zahlen mit dem Feature für die Tabellendarstellung angepasst.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-274">The second column shows the same two numeric values with the widths adjusted by using the tabular figure feature.</span></span>  
   
- ![Text mit OpenType-proportional & tabellarische Tabellensatz](../../../../docs/framework/wpf/advanced/media/opentypefont22.png "OpenTypeFont22")  
-Text mit OpenType-proportional und tabellarische Tabellensatz  
+ <span data-ttu-id="c0d7f-275">![Text mit OpenType-proportional- und Tabellensatz](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-275">![Text using OpenType proportional & tabular figures](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")</span></span>  
+<span data-ttu-id="c0d7f-276">Text mit proportionaler und Tabellendarstellung im OpenType-Format</span><span class="sxs-lookup"><span data-stu-id="c0d7f-276">Text using OpenType proportional and tabular figures</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie proportionale und tabellarische Zahlen für die Schriftart Miramonte definiert wird, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-277">Im folgenden Markupbeispiel wird gezeigt, wie proportionale und tabellarische Zahlen für die Schriftart Miramonte definiert wird, die mit den Eigenschaften des definieren die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-277">The following markup example shows how to define proportional and tabular figures for the Miramonte font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
-### <a name="slashed-zero"></a>NULL mit Schrägstrich  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Schriftarten unterstützen Ziffernformat NULL Ziffer Format den Unterschied zwischen den Buchstaben "O" und die Ziffer "0" hervorgehoben werden sollen. Das Ziffernformat, die&0; (null) wird häufig für Bezeichner in Finanz- und Informationen verwendet wird.  
+### <a name="slashed-zero"></a><span data-ttu-id="c0d7f-278">Null mit Schrägstrich</span><span class="sxs-lookup"><span data-stu-id="c0d7f-278">Slashed Zero</span></span>  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="c0d7f-279">-Schriftarten unterstützen das Ziffernformat einer 0 (null) mit Schrägstrich, um den Buchstaben „O“ und die Ziffer „0“ optisch besser voneinander zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-279"> fonts support a slashed zero numeral format to emphasize the difference between the letter "O" and the numeral "0".</span></span> <span data-ttu-id="c0d7f-280">Die Ziffer 0 (null) mit Schrägstrich wird häufig für Kennungen in Finanz- und Geschäftsinformationen verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-280">The slashed zero numeral is often used for identifiers in financial and business information.</span></span>  
   
- Im folgenden Text werden die Kennung ein Beispiel mit der Schriftart Miramonte definiert wird. Die erste Zeile verwendet standard-Zahlen. Die zweite Zeile verwendet Ziffer Null mit Schrägstrich um optisch besser vom Großbuchstaben "O".  
+ <span data-ttu-id="c0d7f-281">Im folgenden Text wird ein Beispiel mit einer Bestellnummer in der Schriftart Miramonte gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-281">The following text displays a sample order identifier using the Miramonte font.</span></span> <span data-ttu-id="c0d7f-282">In der ersten Zeile werden Standardziffern verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-282">The first line uses standard numerals.</span></span> <span data-ttu-id="c0d7f-283">In der zweiten wird die Ziffer 0 (null) mit Schrägstrich verwendet, um die Ziffer 0 (null) optisch besser vom Großbuchstaben „O“ zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-283">The second line used slashed zero numerals to provide better contrast with the uppercase "O" letter.</span></span>  
   
- ![Text mit OpenType-Brüchen mit schrägem oder NULL](../../../../docs/framework/wpf/advanced/media/opentypefont17.png "OpenTypeFont17")  
-Text mit OpenType-Ziffern mit Null mit Schrägstrich  
+ <span data-ttu-id="c0d7f-284">![Text mit OpenType-Ziffern mit NULL](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-284">![Text using OpenType slashed zero numerals](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")</span></span>  
+<span data-ttu-id="c0d7f-285">Text mit OpenType-Ziffern mit Null mit Schrägstrich</span><span class="sxs-lookup"><span data-stu-id="c0d7f-285">Text using OpenType slashed zero numerals</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie definieren Ziffer Null mit Schrägstrich für die Schriftart Miramonte definiert wird, die mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.  
+ <span data-ttu-id="c0d7f-286">Im folgenden Markupbeispiel wird gezeigt, wie definieren NULL mit Schrägstrich für die Schriftart Miramonte definiert wird, die mit den Eigenschaften des der <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-286">The following markup example shows how to define slashed zero numerals for the Miramonte font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
-## <a name="typography-class"></a>Typografieklasse  
- Die <xref:System.Windows.Documents.Typography> -Objekt macht den Satz von Funktionen, die eine [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftart unterstützt. Durch Festlegen der Eigenschaften des <xref:System.Windows.Documents.Typography> im Markup können Sie problemlos Dokumente, die nutzen erstellen [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Funktionen.  
+## <a name="typography-class"></a><span data-ttu-id="c0d7f-287">Typografieklasse</span><span class="sxs-lookup"><span data-stu-id="c0d7f-287">Typography Class</span></span>  
+ <span data-ttu-id="c0d7f-288">Die <xref:System.Windows.Documents.Typography> Objekt macht den Satz von Funktionen, die eine [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftart unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-288">The <xref:System.Windows.Documents.Typography> object exposes the set of features that an [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font supports.</span></span> <span data-ttu-id="c0d7f-289">Durch Festlegen der Eigenschaften von <xref:System.Windows.Documents.Typography> im Markup, können Sie problemlos Dokumente, die nutzen erstellen [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Funktionen.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-289">By setting the properties of <xref:System.Windows.Documents.Typography> in markup, you can easily author documents that take advantage of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features.</span></span>  
   
- Im folgenden Text werden die standardmäßigen Großbuchstaben für die Schriftart Pescadero, gefolgt von den Buchstaben "SmallCaps" und "AllSmallCaps". In diesem Fall wird die gleiche Schriftgröße für alle drei Wörter verwendet.  
+ <span data-ttu-id="c0d7f-290">Der folgende Text zeigt zuerst die Standardgroßbuchstaben, gefolgt von den Buchstaben in den Formaten „SmallCaps“ und „AllSmallCaps“ für die Schriftart Pescadero.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-290">The following text displays standard capital letters for the Pescadero font, followed by the letters styled as "SmallCaps" and "AllSmallCaps".</span></span> <span data-ttu-id="c0d7f-291">Für alle drei Wörter wird der gleiche Schriftgrad verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-291">In this case, the same font size is used for all three words.</span></span>  
   
- ![Text mit OpenType-Kapitälchen](../../../../docs/framework/wpf/advanced/media/opentypefont11.png "opentypefont11")  
-Text mit OpenType-Kapitälchen  
+ <span data-ttu-id="c0d7f-292">![Text mit OpenType-Kapitälchen](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span><span class="sxs-lookup"><span data-stu-id="c0d7f-292">![Text using OpenType capitals](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span></span>  
+<span data-ttu-id="c0d7f-293">Text mit OpenType-Kapitälchen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-293">Text using OpenType capitals</span></span>  
   
- Im folgenden Markupbeispiel wird veranschaulicht, wie Großbuchstaben für die Schriftart Pescadero anhand der Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt. Wenn das "SmallCaps"-Format verwendet wird, ist die führende Großbuchstaben ignoriert.  
+ <span data-ttu-id="c0d7f-294">Im folgenden Markupbeispiel wird gezeigt, wie Großbuchstaben für die Schriftart Pescadero, die mit den Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-294">The following markup example shows how to define capitals for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span> <span data-ttu-id="c0d7f-295">Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-295">When the "SmallCaps" format is used, any leading capital letter is ignored.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
- Im folgenden Codebeispiel wird die gleiche Aufgabe wie im vorherigen Markupbeispiel erreicht.  
+ <span data-ttu-id="c0d7f-296">Im folgenden Codebeispiel wird die gleiche Aufgabe wie im vorherigen Markupbeispiel ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-296">The following code example accomplishes the same task as the previous markup example.</span></span>  
   
  [!code-csharp[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TypographyCodeSnippets/CSharp/Page1.xaml.cs#typographycodesnippet1)]
  [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
-### <a name="typography-class-properties"></a>Eigenschaften von Typografie-Klasse  
- Die folgende Tabelle enthält die Eigenschaften, Werte und Standardeinstellungen für die <xref:System.Windows.Documents.Typography> Objekt.  
+### <a name="typography-class-properties"></a><span data-ttu-id="c0d7f-297">Typografieklasseneigenschaften</span><span class="sxs-lookup"><span data-stu-id="c0d7f-297">Typography Class Properties</span></span>  
+ <span data-ttu-id="c0d7f-298">Die folgende Tabelle enthält die Eigenschaften, die Werte und die Standardeinstellungen für die <xref:System.Windows.Documents.Typography> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c0d7f-298">The following table lists the properties, values, and default settings of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
-|Eigenschaft|Werte|Standardwert|  
+|<span data-ttu-id="c0d7f-299">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="c0d7f-299">Property</span></span>|<span data-ttu-id="c0d7f-300">Wert(e)</span><span class="sxs-lookup"><span data-stu-id="c0d7f-300">Value(s)</span></span>|<span data-ttu-id="c0d7f-301">Standardwert</span><span class="sxs-lookup"><span data-stu-id="c0d7f-301">Default Value</span></span>|  
 |--------------|----------------|-------------------|  
-|<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Numerischen Wert - Byte|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals>|<xref:System.Windows.FontCapitals?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|<span data-ttu-id="c0d7f-302">Numerischer Wert – Byte</span><span class="sxs-lookup"><span data-stu-id="c0d7f-302">Numeric value - byte</span></span>|<span data-ttu-id="c0d7f-303">0</span><span class="sxs-lookup"><span data-stu-id="c0d7f-303">0</span></span>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<span data-ttu-id="c0d7f-304"><xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase></span><span class="sxs-lookup"><span data-stu-id="c0d7f-304"><xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase></span></span>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
 |<xref:System.Windows.Documents.Typography.ContextualLigatures%2A>|<xref:System.Boolean>|`true`|  
-|<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Numerischen Wert - Byte|0|  
+|<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|<span data-ttu-id="c0d7f-305">Numerischer Wert – Byte</span><span class="sxs-lookup"><span data-stu-id="c0d7f-305">Numeric value - byte</span></span>|<span data-ttu-id="c0d7f-306">0</span><span class="sxs-lookup"><span data-stu-id="c0d7f-306">0</span></span>|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage>|<xref:System.Windows.FontEastAsianLanguage?displayProperty=fullName>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths>|<xref:System.Windows.FontEastAsianWidths?displayProperty=fullName>|  
-|<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction> | <xref:System.Windows.FontFraction> | <xref:System.Windows.FontFraction>|<xref:System.Windows.FontFraction?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<span data-ttu-id="c0d7f-307"><xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames></span><span class="sxs-lookup"><span data-stu-id="c0d7f-307"><xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames></span></span>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<span data-ttu-id="c0d7f-308"><xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third></span><span class="sxs-lookup"><span data-stu-id="c0d7f-308"><xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third></span></span>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Fraction%2A>|<span data-ttu-id="c0d7f-309"><xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked></span><span class="sxs-lookup"><span data-stu-id="c0d7f-309"><xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked></span></span>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.Kerning%2A>|<xref:System.Boolean>|`true`|  
 |<xref:System.Windows.Documents.Typography.MathematicalGreek%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.NumeralAlignment%2A>|<xref:System.Windows.FontNumeralAlignment> | <xref:System.Windows.FontNumeralAlignment> | <xref:System.Windows.FontNumeralAlignment>|<xref:System.Windows.FontNumeralAlignment?displayProperty=fullName>|  
-|<xref:System.Windows.Documents.Typography.NumeralStyle%2A>|<xref:System.Boolean>|<xref:System.Windows.FontNumeralStyle?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.NumeralAlignment%2A>|<span data-ttu-id="c0d7f-310"><xref:System.Windows.FontNumeralAlignment.Normal> &#124; <xref:System.Windows.FontNumeralAlignment.Proportional> &#124; <xref:System.Windows.FontNumeralAlignment.Tabular></span><span class="sxs-lookup"><span data-stu-id="c0d7f-310"><xref:System.Windows.FontNumeralAlignment.Normal> &#124; <xref:System.Windows.FontNumeralAlignment.Proportional> &#124; <xref:System.Windows.FontNumeralAlignment.Tabular></span></span>|<xref:System.Windows.FontNumeralAlignment.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.NumeralStyle%2A>|<xref:System.Boolean>|<xref:System.Windows.FontNumeralStyle.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.SlashedZero%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StandardLigatures%2A>|<xref:System.Boolean>|`true`|  
-|<xref:System.Windows.Documents.Typography.StandardSwashes%2A>|numerischen Wert – Byte|0|  
-|<xref:System.Windows.Documents.Typography.StylisticAlternates%2A>|numerischen Wert – Byte|0|  
+|<xref:System.Windows.Documents.Typography.StandardSwashes%2A>|<span data-ttu-id="c0d7f-311">Numerischer Wert – Byte</span><span class="sxs-lookup"><span data-stu-id="c0d7f-311">numeric value – byte</span></span>|<span data-ttu-id="c0d7f-312">0</span><span class="sxs-lookup"><span data-stu-id="c0d7f-312">0</span></span>|  
+|<xref:System.Windows.Documents.Typography.StylisticAlternates%2A>|<span data-ttu-id="c0d7f-313">Numerischer Wert – Byte</span><span class="sxs-lookup"><span data-stu-id="c0d7f-313">numeric value – byte</span></span>|<span data-ttu-id="c0d7f-314">0</span><span class="sxs-lookup"><span data-stu-id="c0d7f-314">0</span></span>|  
 |<xref:System.Windows.Documents.Typography.StylisticSet1%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet2%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet3%2A>|<xref:System.Boolean>|`false`|  
@@ -362,11 +368,11 @@ Text mit OpenType-Kapitälchen
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants>|<xref:System.Windows.FontVariants?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<span data-ttu-id="c0d7f-315"><xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript></span><span class="sxs-lookup"><span data-stu-id="c0d7f-315"><xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript></span></span>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Documents.Typography>   
- [OpenType-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=96731)   
- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)   
- [Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)   
- [Verpacken von Schriftarten mit Anwendungen](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a><span data-ttu-id="c0d7f-316">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0d7f-316">See Also</span></span>  
+ <xref:System.Windows.Documents.Typography>  
+ [<span data-ttu-id="c0d7f-317">OpenType-Spezifikation</span><span class="sxs-lookup"><span data-stu-id="c0d7f-317">OpenType Specification</span></span>](http://go.microsoft.com/fwlink/?LinkId=96731)  
+ [<span data-ttu-id="c0d7f-318">Typografie in WPF</span><span class="sxs-lookup"><span data-stu-id="c0d7f-318">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [<span data-ttu-id="c0d7f-319">OpenType-Beispielschriftartenpaket</span><span class="sxs-lookup"><span data-stu-id="c0d7f-319">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [<span data-ttu-id="c0d7f-320">Verpacken von Schriftarten mit Anwendungen</span><span class="sxs-lookup"><span data-stu-id="c0d7f-320">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

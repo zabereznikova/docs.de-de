@@ -8,26 +8,23 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ec19e46289131ec137081c610c1a8194ad22611f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 30006e43899cb146f02dbed3e8e72ed1b5416f71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Gewusst wie: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream
-In diesem Beispiel erfahren Sie, wie Sie eine Webseite anfordern und die Ergebnisse als Stream abrufen.  
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="a151f-102">Gewusst wie: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream</span><span class="sxs-lookup"><span data-stu-id="a151f-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
+<span data-ttu-id="a151f-103">In diesem Beispiel erfahren Sie, wie Sie eine Webseite anfordern und die Ergebnisse als Stream abrufen.</span><span class="sxs-lookup"><span data-stu-id="a151f-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="a151f-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a151f-104">Example</span></span>  
   
 ```csharp  
 WebClient myClient = new WebClient();  
@@ -43,11 +40,10 @@ Dim response As Stream = myClient.OpenRead("http://www.contoso.com/index.htm")
 response.Close()  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+## <a name="compiling-the-code"></a><span data-ttu-id="a151f-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="a151f-105">Compiling the Code</span></span>  
+ <span data-ttu-id="a151f-106">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="a151f-106">This example requires:</span></span>  
   
--   Verweise auf die Namespaces <xref:System.IO> und <xref:System.Net>.  
+-   <span data-ttu-id="a151f-107">Verweise auf die Namespaces <xref:System.IO> und <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="a151f-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="a151f-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a151f-108">See Also</span></span>  
+ [<span data-ttu-id="a151f-109">Anfordern von Daten</span><span class="sxs-lookup"><span data-stu-id="a151f-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

@@ -1,27 +1,30 @@
 ---
-title: "Angeben von Beziehungen zwischen Elementen ohne Schachtelung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 036085160e9e4817964754a85db627e4d4ba8654
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Angeben von Beziehungen zwischen Elementen ohne Schachtelung
-Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt.  Sie können jedoch Beziehungen zwischen nicht geschachtelten Elementen mithilfe der **msdata:Relationship**\-Anmerkung explizit angeben.  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="9844a-102">Angeben von Beziehungen zwischen Elementen ohne Verschachtelung</span><span class="sxs-lookup"><span data-stu-id="9844a-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="9844a-103">Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt.</span><span class="sxs-lookup"><span data-stu-id="9844a-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="9844a-104">Sie können jedoch explizit festlegen, Beziehungen zwischen Elementen, die mit nicht geschachtelt sind die **msdata: Relationship** Anmerkung.</span><span class="sxs-lookup"><span data-stu-id="9844a-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- Im folgenden Beispiel wird ein XML\-Schema gezeigt, in dem die **msdata:Relationship**\-Anmerkung zwischen den Elementen **Order** und **OrderDetail** angegeben wurde, die nicht geschachtelt sind.  Die **msdata:Relationship**\-Anmerkung wird als das untergeordnete Element des **Schema**\-Elements angegeben.  
+ <span data-ttu-id="9844a-105">Das folgende Beispiel zeigt ein XML-Schema, in dem die **msdata: Relationship** -Anmerkung zwischen den **Reihenfolge** und **OrderDetail** Elemente, die nicht geschachtelt.</span><span class="sxs-lookup"><span data-stu-id="9844a-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="9844a-106">Die **msdata: Relationship** -Anmerkung wird als untergeordnetes Element von der **Schema** Element.</span><span class="sxs-lookup"><span data-stu-id="9844a-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
              xmlns:xs="http://www.w3.org/2001/XMLSchema"   
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -60,7 +63,7 @@ Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erste
 </xs:schema>  
 ```  
   
- Während des Zuordnungsvorgangs des XSD\-Sprachschemas \(XML Schema Definition\) wird ein <xref:System.Data.DataSet> mit der **Order**\-Tabelle und der **OrderDetail**\-Tabelle und einer zwischen diesen beiden Tabellen definierten Beziehung erstellt, wie nachstehend gezeigt wird.  
+ <span data-ttu-id="9844a-107">Die XML-Schema Definition Language (XSD)-Schemazuordnungsprozess erstellt eine <xref:System.Data.DataSet> mit **Reihenfolge** und **OrderDetail** Tabellen und eine Beziehung zwischen diesen beiden Tabellen angegeben werden, wie unten dargestellt.</span><span class="sxs-lookup"><span data-stu-id="9844a-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -71,7 +74,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## Siehe auch  
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="9844a-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9844a-108">See Also</span></span>  
+ [<span data-ttu-id="9844a-109">Generieren von DataSet-Beziehungen aus XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="9844a-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="9844a-110">Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="9844a-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="9844a-111">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="9844a-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,61 +1,66 @@
 ---
-title: "Vorgehensweise: Konfigurieren eines WCF-Diensts f&#252;r die Zusammenarbeit mit ASP.NET Webdienstclients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET Webdienstclients"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce9c0ca82803654b2268ff0440bbacec4cb0d0dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Konfigurieren eines WCF-Diensts f&#252;r die Zusammenarbeit mit ASP.NET Webdienstclients
-So konfigurieren Sie eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienstendpunkt, Interoperabilität mit [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Webdienstclients ist, verwenden Sie die <xref:System.ServiceModel.BasicHttpBinding?displayProperty=fullName> Typ als Bindungstyp für den Dienstendpunkt.  
+# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a><span data-ttu-id="1a50a-102">Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET Webdienstclients</span><span class="sxs-lookup"><span data-stu-id="1a50a-102">How to: Configure WCF Service to Interoperate with ASP.NET Web Service Clients</span></span>
+<span data-ttu-id="1a50a-103">Verwenden Sie den Typ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] als Bindungstyp für Ihren Dienstendpunkt, um einen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Dienstendpunkt so zu konfigurieren, dass er mit <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>-Webdienstclients zusammenarbeitet.</span><span class="sxs-lookup"><span data-stu-id="1a50a-103">To configure a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients, use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  
   
- Sie können für die Bindung auch Unterstützung für HTTPS und Clientauthentifizierung auf Transportebene aktivieren. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdienstclients unterstützen keine MTOM-nachrichtencodierung, damit der <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=fullName> Eigenschaft sollte den Standardwert bleiben <xref:System.ServiceModel.WSMessageEncoding?displayProperty=fullName>. ASP.NET-Webdienstclients unterstützen keine WS-Security, damit der <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=fullName> sollte festgelegt werden, um <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ <span data-ttu-id="1a50a-104">Sie können für die Bindung auch Unterstützung für HTTPS und Clientauthentifizierung auf Transportebene aktivieren.</span><span class="sxs-lookup"><span data-stu-id="1a50a-104">You can optionally enable support for HTTPS and transport-level client authentication on the binding.</span></span> [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]<span data-ttu-id="1a50a-105">-Webdienstclients unterstützen keine MTOM-Nachrichtencodierung; daher sollte die Eigenschaft <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> ihren Standardwert, <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>, behalten.</span><span class="sxs-lookup"><span data-stu-id="1a50a-105"> Web service clients do not support MTOM message encoding, so the <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> property should be left as its default value, which is <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1a50a-106">ASP.NET-Webdienstclients unterstützen WS-Sicherheit nicht; deshalb sollte  <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> auf <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="1a50a-106">ASP.Net Web Service clients do not support WS-Security, so the <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> should be set to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span>  
   
- Zu den Metadaten für eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst zum [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Service Tools zur Proxygenerierung (, also [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Webdienste-Suchtool (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834), und die Funktion "Webverweis hinzufügen" in Visual Studio), Sie sollten einen HTTP/GET-Metadatenendpunkt verfügbar zu machen.  
+ <span data-ttu-id="1a50a-107">Die Metadaten vornehmen, damit eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst zur Verfügung [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Service Proxy Generation Tools (d. h. [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Services Discovery Tool ( DISCO.exe)](http://go.microsoft.com/fwlink/?LinkId=73834), und das Feature "Webverweis hinzufügen" in Visual Studio), Sie sollten einen HTTP/GET-Metadatenendpunkt verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="1a50a-107">To make the metadata for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service available to [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service proxy generation tools (that is, [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Services Discovery Tool (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834), and the Add Web Reference feature in Visual Studio), you should expose an HTTP/GET metadata endpoint.</span></span>  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>So fügen Sie einen WCF-Endpunkt hinzu, der im Code mit ASP.NET-Webdienstclients kompatibel ist  
+### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a><span data-ttu-id="1a50a-108">So fügen Sie einen WCF-Endpunkt hinzu, der im Code mit ASP.NET-Webdienstclients kompatibel ist</span><span class="sxs-lookup"><span data-stu-id="1a50a-108">To add a WCF endpoint that is compatible with ASP.NET Web service clients in code</span></span>  
   
-1.  Erstellen Sie ein neues <xref:System.ServiceModel.BasicHttpBinding> Instanz  
+1.  <span data-ttu-id="1a50a-109">Erstellen Sie eine neue <xref:System.ServiceModel.BasicHttpBinding>-Instanz.</span><span class="sxs-lookup"><span data-stu-id="1a50a-109">Create a new <xref:System.ServiceModel.BasicHttpBinding> instance</span></span>  
   
-2.  Aktivieren Sie optional transportsicherheit für diese dienstendpunktbindung, indem Festlegen des Sicherheitsmodus für die Bindung an <xref:System.ServiceModel.BasicHttpSecurityMode>. Weitere Informationen finden Sie unter [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2.  <span data-ttu-id="1a50a-110">Aktivieren Sie optional Transportsicherheit für diese Dienstendpunktbindung, indem Sie den Sicherheitsmodus für die Bindung auf <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> festlegen.</span><span class="sxs-lookup"><span data-stu-id="1a50a-110">Optionally enable transport security for this service endpoint binding by setting the security mode for the binding to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span> <span data-ttu-id="1a50a-111">Weitere Informationen finden Sie unter [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-111">For details, please see [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).</span></span>  
   
-3.  Fügen Sie dem Diensthost einen neuen Anwendungsendpunkt mit der Bindungsinstanz hinzu, die Sie soeben erstellt haben. Ausführliche Informationen zum Hinzufügen eines Dienstendpunkts im Code finden Sie unter der [Gewusst wie: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+3.  <span data-ttu-id="1a50a-112">Fügen Sie dem Diensthost einen neuen Anwendungsendpunkt mit der Bindungsinstanz hinzu, die Sie soeben erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="1a50a-112">Add a new application endpoint to your service host using the binding instance that you just created.</span></span> <span data-ttu-id="1a50a-113">Ausführliche Informationen zum Hinzufügen eines Dienstendpunkts im Code finden Sie unter der [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-113">For details about how to add a service endpoint in code, see the [How to: Create a Service Endpoint in Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).</span></span>  
   
-4.  Aktivieren Sie einen HTTP/GET-Metadatenendpunkt für Ihren Dienst. Weitere Informationen finden Sie [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+4.  <span data-ttu-id="1a50a-114">Aktivieren Sie einen HTTP/GET-Metadatenendpunkt für Ihren Dienst.</span><span class="sxs-lookup"><span data-stu-id="1a50a-114">Enable an HTTP/GET metadata endpoint for your service.</span></span> <span data-ttu-id="1a50a-115">Weitere Informationen finden Sie [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-115">For details see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span>  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>So fügen Sie einen WCF-Endpunkt, der mit ASP.NET-Webdienstclients kompatibel ist, einer Konfigurationsdatei hinzu.  
+### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a><span data-ttu-id="1a50a-116">So fügen Sie einen WCF-Endpunkt, der mit ASP.NET-Webdienstclients kompatibel ist, einer Konfigurationsdatei hinzu.</span><span class="sxs-lookup"><span data-stu-id="1a50a-116">To add a WCF endpoint that is compatible with ASP.NET Web service clients in a configuration file</span></span>  
   
-1.  Erstellen Sie ein neues <xref:System.ServiceModel.BasicHttpBinding> Bindungskonfiguration. Weitere Informationen finden Sie unter der [Gewusst wie: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+1.  <span data-ttu-id="1a50a-117">Erstellen Sie eine neue <xref:System.ServiceModel.BasicHttpBinding>-Bindungskonfiguration.</span><span class="sxs-lookup"><span data-stu-id="1a50a-117">Create a new <xref:System.ServiceModel.BasicHttpBinding> binding configuration.</span></span> <span data-ttu-id="1a50a-118">Einzelheiten finden Sie in der [wie: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-118">For details, see the [How to: Specify a Service Binding in Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span></span>  
   
-2.  Aktivieren Sie optional transportsicherheit für diese Dienstendpunkt-Bindungskonfiguration durch Festlegen des Sicherheitsmodus für die Bindung an <xref:System.ServiceModel.BasicHttpSecurityMode>. Weitere Informationen finden Sie unter [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2.  <span data-ttu-id="1a50a-119">Aktivieren Sie optional Transportsicherheit für diese Dienstendpunkt-Bindungskonfiguration, indem Sie den Sicherheitsmodus für die Bindung auf <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> festlegen.</span><span class="sxs-lookup"><span data-stu-id="1a50a-119">Optionally enable transport security for this service endpoint binding configuration by setting the security mode for the binding to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span> <span data-ttu-id="1a50a-120">Weitere Informationen finden Sie unter [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-120">For details, see [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).</span></span>  
   
-3.  Konfigurieren Sie einen neuen Anwendungsendpunkt für Ihren Dienst, indem Sie die Bindungskonfiguration verwenden, die Sie gerade erstellt haben. Ausführliche Informationen zum Hinzufügen eines Dienstendpunkts in einer Konfigurationsdatei finden Sie unter der [Gewusst wie: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+3.  <span data-ttu-id="1a50a-121">Konfigurieren Sie einen neuen Anwendungsendpunkt für Ihren Dienst, indem Sie die Bindungskonfiguration verwenden, die Sie gerade erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="1a50a-121">Configure a new application endpoint for your service using the binding configuration that you just created.</span></span> <span data-ttu-id="1a50a-122">Ausführliche Informationen zum Hinzufügen eines Dienstendpunkts in einer Konfigurationsdatei finden Sie unter der [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-122">For details about how to add a service endpoint in a configuration file, see the [How to: Create a Service Endpoint in Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).</span></span>  
   
-4.  Aktivieren Sie einen HTTP/GET-Metadatenendpunkt für Ihren Dienst. Weitere Informationen finden Sie die [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+4.  <span data-ttu-id="1a50a-123">Aktivieren Sie einen HTTP/GET-Metadatenendpunkt für Ihren Dienst.</span><span class="sxs-lookup"><span data-stu-id="1a50a-123">Enable an HTTP/GET metadata endpoint for your service.</span></span> <span data-ttu-id="1a50a-124">Weitere Informationen finden Sie die [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).</span><span class="sxs-lookup"><span data-stu-id="1a50a-124">For details see the [How to: Publish Metadata for a Service Using a Configuration File](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende Beispielcode zeigt das Hinzufügen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkts, der im Code und alternativ in den Konfigurationsdateien kompatibel mit den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdienstclients ist.  
+## <a name="example"></a><span data-ttu-id="1a50a-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1a50a-125">Example</span></span>  
+ <span data-ttu-id="1a50a-126">Der folgende Beispielcode zeigt das Hinzufügen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkts, der im Code und alternativ in den Konfigurationsdateien kompatibel mit den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdienstclients ist.</span><span class="sxs-lookup"><span data-stu-id="1a50a-126">The following example code demonstrates how to add a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint that is compatible with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients in code and alternatively in configuration files.</span></span>  
   
- [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
- [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
+ [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
+ [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 
+ [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]     
   
- <!-- TODO: review snippet reference [!code[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  -->  
-  
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)   
- [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)   
- [Gewusst wie: angeben eine Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)   
- [Gewusst wie: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)   
- [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)   
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="1a50a-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1a50a-127">See Also</span></span>  
+ [<span data-ttu-id="1a50a-128">Vorgehensweise: Erstellen eines Dienstendpunkts im Code</span><span class="sxs-lookup"><span data-stu-id="1a50a-128">How to: Create a Service Endpoint in Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [<span data-ttu-id="1a50a-129">Vorgehensweise: Veröffentlichen von Metadaten für einen Dienstcode</span><span class="sxs-lookup"><span data-stu-id="1a50a-129">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [<span data-ttu-id="1a50a-130">Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration</span><span class="sxs-lookup"><span data-stu-id="1a50a-130">How to: Specify a Service Binding in Configuration</span></span>](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [<span data-ttu-id="1a50a-131">Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration</span><span class="sxs-lookup"><span data-stu-id="1a50a-131">How to: Create a Service Endpoint in Configuration</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [<span data-ttu-id="1a50a-132">Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="1a50a-132">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [<span data-ttu-id="1a50a-133">Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="1a50a-133">Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [<span data-ttu-id="1a50a-134">Mithilfe von Metadaten</span><span class="sxs-lookup"><span data-stu-id="1a50a-134">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)

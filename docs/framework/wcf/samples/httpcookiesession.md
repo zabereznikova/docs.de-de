@@ -1,52 +1,55 @@
 ---
-title: "HttpCookieSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpCookieSession
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2ea032f7284884d842916d6019f7df9e66d8b4e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# HttpCookieSession
-In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP\-Cookies für die Sitzungsverwaltung veranschaulicht.Dieser Kanal ermöglicht die Kommunikation zwischen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Diensten und ASMX\-Clients oder zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clients und ASMX\-Diensten.  
+# <a name="httpcookiesession"></a><span data-ttu-id="f8d84-102">HttpCookieSession</span><span class="sxs-lookup"><span data-stu-id="f8d84-102">HttpCookieSession</span></span>
+<span data-ttu-id="f8d84-103">In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="f8d84-103">This sample demonstrates how to build a custom protocol channel to use HTTP cookies for session management.</span></span> <span data-ttu-id="f8d84-104">Dieser Kanal ermöglicht die Kommunikation zwischen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensten und ASMX-Clients oder zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients und ASMX-Diensten.</span><span class="sxs-lookup"><span data-stu-id="f8d84-104">This channel enables communication between [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services and ASMX clients or between [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and ASMX services.</span></span>  
   
- Wenn ein Client eine Webmethode in einem sitzungsbasierten ASMX\-Webdienst aufruft, führt das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Modul Folgendes aus:  
+ <span data-ttu-id="f8d84-105">Wenn ein Client eine Webmethode in einem sitzungsbasierten ASMX-Webdienst aufruft, führt das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Modul Folgendes aus:</span><span class="sxs-lookup"><span data-stu-id="f8d84-105">When a client calls a Web method in an ASMX Web service that is session-based, the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] engine does the following:</span></span>  
   
--   Generiert eine eindeutige ID \(Sitzungs\-ID\).  
+-   <span data-ttu-id="f8d84-106">Generiert eine eindeutige ID (Sitzungs-ID).</span><span class="sxs-lookup"><span data-stu-id="f8d84-106">Generates a unique ID (session ID).</span></span>  
   
--   Generiert das Sitzungsobjekt und ordnet es der eindeutigen ID zu.  
+-   <span data-ttu-id="f8d84-107">Generiert das Sitzungsobjekt und ordnet es der eindeutigen ID zu.</span><span class="sxs-lookup"><span data-stu-id="f8d84-107">Generates the session object and associates it with the unique ID.</span></span>  
   
--   Fügt die eindeutige ID dem HTTP\-Antwortheader Set\-Cookie hinzu und sendet diesen an den Client.  
+-   <span data-ttu-id="f8d84-108">Fügt die eindeutige ID dem HTTP-Antwortheader Set-Cookie hinzu und sendet diesen an den Client.</span><span class="sxs-lookup"><span data-stu-id="f8d84-108">Adds the unique ID to a Set-Cookie HTTP response header and sends it to the client.</span></span>  
   
--   Identifiziert den Client in nachfolgenden Aufrufen auf Grundlage der an ihn gesendeten Sitzungs\-ID.  
+-   <span data-ttu-id="f8d84-109">Identifiziert den Client in nachfolgenden Aufrufen auf Grundlage der an ihn gesendeten Sitzungs-ID.</span><span class="sxs-lookup"><span data-stu-id="f8d84-109">Identifies the client on subsequent calls based on the session ID it sends to it.</span></span>  
   
- Der Client schließt diese Sitzungs\-ID in nachfolgenden Anforderungen an den Server ein.Der Server lädt mithilfe der Sitzungs\-ID vom Client das entsprechende Sitzungsobjekt für den aktuellen HTTP\-Kontext.  
+ <span data-ttu-id="f8d84-110">Der Client schließt diese Sitzungs-ID in nachfolgenden Anforderungen an den Server ein.</span><span class="sxs-lookup"><span data-stu-id="f8d84-110">The client includes this session ID in its subsequent requests to the server.</span></span> <span data-ttu-id="f8d84-111">Der Server lädt mithilfe der Sitzungs-ID vom Client das entsprechende Sitzungsobjekt für den aktuellen HTTP-Kontext.</span><span class="sxs-lookup"><span data-stu-id="f8d84-111">The server uses the session ID from the client to load the appropriate session object for the current HTTP context.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="f8d84-112">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="f8d84-112">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f8d84-113">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="f8d84-113">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="f8d84-114">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f8d84-115">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="f8d84-115">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
-## HttpCookieSession\-Nachrichtenaustauschmuster für Kanal  
- In diesem Beispiel werden Sitzungen für ASMX\-ähnliche Szenarien aktiviert.Unten im Kanalstapel befindet sich der HTTP\-Transport, der <xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel> unterstützt.Der Kanal stellt Sitzungen für die höheren Ebenen des Kanalstapels bereit.Im Beispiel werden zwei Kanäle implementiert, die Sitzungen unterstützen \(<xref:System.ServiceModel.Channels.IRequestSessionChannel> und <xref:System.ServiceModel.Channels.IReplySessionChannel>\).  
+## <a name="httpcookiesession-channel-message-exchange-pattern"></a><span data-ttu-id="f8d84-116">HttpCookieSession-Nachrichtenaustauschmuster für Kanal</span><span class="sxs-lookup"><span data-stu-id="f8d84-116">HttpCookieSession Channel Message Exchange Pattern</span></span>  
+ <span data-ttu-id="f8d84-117">In diesem Beispiel werden Sitzungen für ASMX-ähnliche Szenarios aktiviert.</span><span class="sxs-lookup"><span data-stu-id="f8d84-117">This sample enables sessions for ASMX-like scenarios.</span></span> <span data-ttu-id="f8d84-118">Unten im Kanalstapel befindet sich der HTTP-Transport, der <xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel> unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f8d84-118">At the bottom of our channel stack, we have the HTTP transport that supports <xref:System.ServiceModel.Channels.IRequestChannel> and <xref:System.ServiceModel.Channels.IReplyChannel>.</span></span> <span data-ttu-id="f8d84-119">Der Kanal stellt Sitzungen für die höheren Ebenen des Kanalstapels bereit.</span><span class="sxs-lookup"><span data-stu-id="f8d84-119">It is the job of the channel to provide sessions to the higher levels of the channel stack.</span></span> <span data-ttu-id="f8d84-120">Im Beispiel werden zwei Kanäle implementiert, die Sitzungen unterstützen (<xref:System.ServiceModel.Channels.IRequestSessionChannel> und <xref:System.ServiceModel.Channels.IReplySessionChannel>).</span><span class="sxs-lookup"><span data-stu-id="f8d84-120">The sample implements two channels, (<xref:System.ServiceModel.Channels.IRequestSessionChannel> and <xref:System.ServiceModel.Channels.IReplySessionChannel>) that support sessions.</span></span>  
   
-## Dienstkanal  
- Im Beispiel wird ein Dienstkanal in der `HttpCookieReplySessionChannelListener`\-Klasse bereitgestellt.Diese Klasse implementiert die <xref:System.ServiceModel.Channels.IChannelListener>\-Schnittstelle und konvertiert den <xref:System.ServiceModel.Channels.IReplyChannel>\-Kanal weiter unten im Kanalstapel in <xref:System.ServiceModel.Channels.IReplySessionChannel>.Dieser Prozess kann folgendermaßen unterteilt werden:  
+## <a name="service-channel"></a><span data-ttu-id="f8d84-121">Dienstkanal</span><span class="sxs-lookup"><span data-stu-id="f8d84-121">Service Channel</span></span>  
+ <span data-ttu-id="f8d84-122">Im Beispiel wird ein Dienstkanal in der `HttpCookieReplySessionChannelListener`-Klasse bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="f8d84-122">The sample provides a service channel in the `HttpCookieReplySessionChannelListener` class.</span></span> <span data-ttu-id="f8d84-123">Diese Klasse implementiert die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle und konvertiert den <xref:System.ServiceModel.Channels.IReplyChannel>-Kanal weiter unten im Kanalstapel in <xref:System.ServiceModel.Channels.IReplySessionChannel>.</span><span class="sxs-lookup"><span data-stu-id="f8d84-123">This class implements the <xref:System.ServiceModel.Channels.IChannelListener> interface and converts the <xref:System.ServiceModel.Channels.IReplyChannel> channel from lower in the channel stack to a <xref:System.ServiceModel.Channels.IReplySessionChannel>.</span></span> <span data-ttu-id="f8d84-124">Dieser Prozess kann folgendermaßen unterteilt werden:</span><span class="sxs-lookup"><span data-stu-id="f8d84-124">This process can be divided into the following parts:</span></span>  
   
--   Wenn der Kanallistener geöffnet wird, akzeptiert er einen inneren Kanal vom inneren Listener.Da es sich bei dem inneren Listener um einen Datagrammlistener handelt und die Lebensdauer eines akzeptierten Kanals unabhängig von der Lebensdauer des Listeners ist, kann der innere Listener geschlossen und nur der innere Kanal beibehalten werden.  
+-   <span data-ttu-id="f8d84-125">Wenn der Kanallistener geöffnet wird, akzeptiert er einen inneren Kanal vom inneren Listener.</span><span class="sxs-lookup"><span data-stu-id="f8d84-125">When the channel listener is opened, it accepts an inner channel from its inner listener.</span></span> <span data-ttu-id="f8d84-126">Da es sich bei dem inneren Listener um einen Datagrammlistener handelt und die Lebensdauer eines akzeptierten Kanals unabhängig von der Lebensdauer des Listeners ist, kann der innere Listener geschlossen und nur der innere Kanal beibehalten werden.</span><span class="sxs-lookup"><span data-stu-id="f8d84-126">Because the inner listener is a datagram listener and the lifetime of an accepted channel is decoupled from the lifetime of the listener, we can close the inner listener and only hold on to the inner channel</span></span>  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -55,7 +58,7 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   Wenn der Prozess zum Öffnen abgeschlossen ist, wird eine Nachrichtenschleife zum Empfangen von Nachrichten vom inneren Kanal eingerichtet.  
+-   <span data-ttu-id="f8d84-127">Wenn der Prozess zum Öffnen abgeschlossen ist, wird eine Nachrichtenschleife zum Empfangen von Nachrichten vom inneren Kanal eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="f8d84-127">When the open process completes, we set up a message loop to receive messages from the inner channel.</span></span>  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -70,31 +73,31 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
     }  
     ```  
   
--   Wenn eine Nachricht eingeht, prüft der Dienstkanal die Sitzungs\-ID und führt ein De\-Multiplexing für den entsprechenden Sitzungskanal durch.Der Kanallistener verwaltet ein Wörterbuch, das die Sitzungs\-IDs den Sitzungskanalinstanzen zuordnet.  
+-   <span data-ttu-id="f8d84-128">Wenn eine Nachricht eingeht, prüft der Dienstkanal die Sitzungs-ID und führt ein De-Multiplexing für den entsprechenden Sitzungskanal durch.</span><span class="sxs-lookup"><span data-stu-id="f8d84-128">When a message arrives, the service channel examines the session identifier and de-multiplexes to the appropriate session channel.</span></span> <span data-ttu-id="f8d84-129">Der Kanallistener verwaltet ein Wörterbuch, das die Sitzungs-IDs den Sitzungskanalinstanzen zuordnet.</span><span class="sxs-lookup"><span data-stu-id="f8d84-129">The channel listener maintains a dictionary that maps the session identifiers to the session channel instances.</span></span>  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- Die `HttpCookieReplySessionChannel`\-Klasse implementiert <xref:System.ServiceModel.Channels.IReplySessionChannel>.In höheren Ebenen des Kanalstapels wird die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>\-Methode aufgerufen, um Anforderungen für diese Sitzung zu lesen.Jeder Sitzungskanal verfügt über eine private Meldungswarteschlange, die vom Dienstkanal aufgefüllt wird.  
+ <span data-ttu-id="f8d84-130">Die `HttpCookieReplySessionChannel` -Klasse implementiert <xref:System.ServiceModel.Channels.IReplySessionChannel>.</span><span class="sxs-lookup"><span data-stu-id="f8d84-130">The `HttpCookieReplySessionChannel` class implements <xref:System.ServiceModel.Channels.IReplySessionChannel>.</span></span> <span data-ttu-id="f8d84-131">In höheren Ebenen des Kanalstapels wird die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen, um Anforderungen für diese Sitzung zu lesen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-131">Higher levels of the channel stack call the <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> method to read requests for this session.</span></span> <span data-ttu-id="f8d84-132">Jeder Sitzungskanal verfügt über eine private Meldungswarteschlange, die vom Dienstkanal aufgefüllt wird.</span><span class="sxs-lookup"><span data-stu-id="f8d84-132">Each session channel has a private message queue that is populated by the service channel.</span></span>  
   
 ```  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- Wenn die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>\-Methode aufgerufen wird und sich keine Meldungen in der Meldungswarteschlange befinden, wartet der Kanal für einen angegebenen Zeitraum und beendet sich dann selbst.So werden die für Nicht\-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clients erstellten Sitzungskanäle bereinigt.  
+ <span data-ttu-id="f8d84-133">Wenn die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen wird und sich keine Meldungen in der Meldungswarteschlange befinden, wartet der Kanal für einen angegebenen Zeitraum und beendet sich dann selbst.</span><span class="sxs-lookup"><span data-stu-id="f8d84-133">In the case when someone calls the <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> method and there are no messages in the message queue, the channel waits for a specified amount of time before shutting itself down.</span></span> <span data-ttu-id="f8d84-134">So werden die für Nicht-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients erstellten Sitzungskanäle bereinigt.</span><span class="sxs-lookup"><span data-stu-id="f8d84-134">This cleans up the session channels created for non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients.</span></span>  
   
- Mit `channelMapping` wird `ReplySessionChannels` nachverfolgt. Außerdem wird der zugrunde liegende `innerChannel` erst geschlossen, wenn alle akzeptierten Kanäle geschlossen wurden.So kann `HttpCookieReplySessionChannel` über die Lebensdauer von `HttpCookieReplySessionChannelListener` hinaus vorhanden sein.Außerdem besteht nicht die Gefahr, dass der Listener durch die Garbage Collection entfernt wird, da die akzeptierten Kanäle über den `OnClosed`\-Rückruf einen Verweis auf den Listener beibehalten.  
+ <span data-ttu-id="f8d84-135">Mit `channelMapping` wird `ReplySessionChannels` nachverfolgt. Außerdem wird der zugrunde liegende `innerChannel` erst geschlossen, wenn alle akzeptierten Kanäle geschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="f8d84-135">We use the `channelMapping` to track the `ReplySessionChannels`, and we do not close our underlying `innerChannel` until all the accepted channels have been closed.</span></span> <span data-ttu-id="f8d84-136">So kann `HttpCookieReplySessionChannel` über die Lebensdauer von `HttpCookieReplySessionChannelListener` hinaus vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="f8d84-136">This way `HttpCookieReplySessionChannel` can exist beyond the lifetime of `HttpCookieReplySessionChannelListener`.</span></span> <span data-ttu-id="f8d84-137">Außerdem besteht nicht die Gefahr, dass der Listener durch die Garbage Collection entfernt wird, da die akzeptierten Kanäle über den `OnClosed`-Rückruf einen Verweis auf den Listener beibehalten.</span><span class="sxs-lookup"><span data-stu-id="f8d84-137">We also do not have to worry about the listener getting garbage collected underneath us because the accepted channels keep a reference to their listener through the `OnClosed` callback.</span></span>  
   
-## Clientkanal  
- Der entsprechende Clientkanal befindet sich in der `HttpCookieSessionChannelFactory`\-Klasse.Bei der Kanalerstellung schließt die Kanalfactory den inneren Anforderungskanal mit einem `HttpCookieRequestSessionChannel` ein.Die `HttpCookieRequestSessionChannel`\-Klasse leitet die Aufrufe des zugrunde liegenden Anforderungskanals weiter.Wenn der Client den Proxy schließt, sendet `HttpCookieRequestSessionChannel` eine Meldung an den Dienst, mit der angegeben wird, dass der Kanal geschlossen wird.So kann der Dienstkanalstapel den verwendeten Sitzungskanal ordnungsgemäß beenden.  
+## <a name="client-channel"></a><span data-ttu-id="f8d84-138">Clientkanal</span><span class="sxs-lookup"><span data-stu-id="f8d84-138">Client channel</span></span>  
+ <span data-ttu-id="f8d84-139">Der entsprechende Clientkanal befindet sich in der `HttpCookieSessionChannelFactory`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="f8d84-139">The corresponding client channel is in the `HttpCookieSessionChannelFactory` class.</span></span> <span data-ttu-id="f8d84-140">Bei der Kanalerstellung schließt die Kanalfactory den inneren Anforderungskanal mit einem `HttpCookieRequestSessionChannel` ein.</span><span class="sxs-lookup"><span data-stu-id="f8d84-140">During channel creation, the channel factory wraps the inner request channel with an `HttpCookieRequestSessionChannel`.</span></span> <span data-ttu-id="f8d84-141">Die `HttpCookieRequestSessionChannel`-Klasse leitet die Aufrufe des zugrunde liegenden Anforderungskanals weiter.</span><span class="sxs-lookup"><span data-stu-id="f8d84-141">The `HttpCookieRequestSessionChannel` class forwards the calls to the underlying request channel.</span></span> <span data-ttu-id="f8d84-142">Wenn der Client den Proxy schließt, sendet `HttpCookieRequestSessionChannel` eine Meldung an den Dienst, mit der angegeben wird, dass der Kanal geschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="f8d84-142">When the client closes the proxy, `HttpCookieRequestSessionChannel` sends a message to the service that indicates that the channel is being closed.</span></span> <span data-ttu-id="f8d84-143">So kann der Dienstkanalstapel den verwendeten Sitzungskanal ordnungsgemäß beenden.</span><span class="sxs-lookup"><span data-stu-id="f8d84-143">Thus, the service channel stack can gracefully shutdown the session channel that is in use.</span></span>  
   
-## Bindung und Bindungselement  
- Nach dem Erstellen der Dienst\- und Clientkanäle ist der nächste Schritt das Integrieren der Kanäle in der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Laufzeit.Kanäle werden durch Bindungen und Bindungselemente für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar gemacht.Eine Bindung besteht aus einem oder mehreren Bindungselementen.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt mehrere systemdefinierte Bindungen bereit, beispielsweise BasicHttpBinding und WSHttpBinding.Die `HttpCookieSessionBindingElement`\-Klasse enthält die Implementierung des Bindungselements.Sie überschreibt die Methoden zur Kanallistener\- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.  
+## <a name="binding-and-binding-element"></a><span data-ttu-id="f8d84-144">Bindung und Bindungselement</span><span class="sxs-lookup"><span data-stu-id="f8d84-144">Binding and Binding Element</span></span>  
+ <span data-ttu-id="f8d84-145">Nach dem Erstellen der Dienst- und Clientkanäle ist der nächste Schritt das Integrieren der Kanäle in der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="f8d84-145">After creating the service and client channels, the next step is to integrate them into the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime.</span></span> <span data-ttu-id="f8d84-146">Kanäle werden durch Bindungen und Bindungselemente für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="f8d84-146">Channels are exposed to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] through bindings and binding elements.</span></span> <span data-ttu-id="f8d84-147">Eine Bindung besteht aus einem oder mehreren Bindungselementen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-147">A binding consists of one or many binding elements.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f8d84-148"> stellt mehrere systemdefinierte Bindungen bereit, beispielsweise BasicHttpBinding und WSHttpBinding.</span><span class="sxs-lookup"><span data-stu-id="f8d84-148"> offers several system-defined bindings; for example, BasicHttpBinding or WSHttpBinding.</span></span> <span data-ttu-id="f8d84-149">Die `HttpCookieSessionBindingElement`-Klasse enthält die Implementierung des Bindungselements.</span><span class="sxs-lookup"><span data-stu-id="f8d84-149">The `HttpCookieSessionBindingElement` class contains the implementation for the binding element.</span></span> <span data-ttu-id="f8d84-150">Sie überschreibt die Methoden zur Kanallistener- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-150">It overrides the channel listener and channel factory creation methods to do the necessary channel listener or channel factory instantiations.</span></span>  
   
- Im Beispiel werden Richtlinienassertionen für die Dienstbeschreibung verwendet.So können im Beispiel die Kanalanforderungen für andere Clients veröffentlicht werden, die den Dienst verwenden können.Dieses Bindungselement veröffentlicht beispielsweise Richtlinienassertionen, damit potenzielle Clients wissen, dass Sitzungen unterstützt werden.Da im Beispiel die `ExchangeTerminateMessage`\-Eigenschaft in der Bindungselementkonfiguration aktiviert wird, werden die erforderlichen Assertionen hinzugefügt, um zu zeigen, dass der Dienst eine zusätzliche Meldungsaustauschaktion zum Beenden der Sitzungskommunikation unterstützt.Clients können diese Aktion dann verwenden.Im folgenden WSDL\-Code werden die aus `HttpCookieSessionBindingElement` erstellten Richtlinienassertionen veranschaulicht.  
+ <span data-ttu-id="f8d84-151">Im Beispiel werden Richtlinienassertionen für die Dienstbeschreibung verwendet.</span><span class="sxs-lookup"><span data-stu-id="f8d84-151">The sample uses policy assertions for the service description.</span></span> <span data-ttu-id="f8d84-152">So können im Beispiel die Kanalanforderungen für andere Clients veröffentlicht werden, die den Dienst verwenden können.</span><span class="sxs-lookup"><span data-stu-id="f8d84-152">This allows the sample to publish its channel requirements to other clients that can consume the service.</span></span> <span data-ttu-id="f8d84-153">Dieses Bindungselement veröffentlicht beispielsweise Richtlinienassertionen, damit potenzielle Clients wissen, dass Sitzungen unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="f8d84-153">For example, this binding element publishes policy assertions to let potential clients know that it supports sessions.</span></span> <span data-ttu-id="f8d84-154">Da im Beispiel die `ExchangeTerminateMessage`-Eigenschaft in der Bindungselementkonfiguration aktiviert wird, werden die erforderlichen Assertionen hinzugefügt, um zu zeigen, dass der Dienst eine zusätzliche Meldungsaustauschaktion zum Beenden der Sitzungskommunikation unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f8d84-154">Because the sample enables the `ExchangeTerminateMessage` property in the binding element configuration, it adds the necessary assertions to show that the service supports an extra message exchange action to terminate the session conversation.</span></span> <span data-ttu-id="f8d84-155">Clients können diese Aktion dann verwenden.</span><span class="sxs-lookup"><span data-stu-id="f8d84-155">Clients can then use this action.</span></span> <span data-ttu-id="f8d84-156">Im folgenden WSDL-Code werden die aus `HttpCookieSessionBindingElement` erstellten Richtlinienassertionen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="f8d84-156">The following WSDL code shows the policy assertions created from the `HttpCookieSessionBindingElement`.</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="HttpCookieSessionBinding_IWcfCookieSessionService_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
 <wsp:ExactlyOne>  
 <wsp:All>  
@@ -105,15 +108,15 @@ InputQueue<RequestContext> requestQueue;
 </wsp:Policy>  
 ```  
   
- Die `HttpCookieSessionBinding`\-Klasse ist eine vom System bereitgestellte Bindung, die das zuvor beschriebene Bindungselement verwendet.  
+ <span data-ttu-id="f8d84-157">Die `HttpCookieSessionBinding`-Klasse ist eine vom System bereitgestellte Bindung, die das zuvor beschriebene Bindungselement verwendet.</span><span class="sxs-lookup"><span data-stu-id="f8d84-157">The `HttpCookieSessionBinding` class is a system-provided binding that uses the binding element described previously.</span></span>  
   
-## Hinzufügen des Kanals zum Konfigurationssystem  
- Im Beispiel werden zwei Klassen bereitgestellt, die den Beispielkanal durch Konfiguration verfügbar machen.Die erste ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> für das `HttpCookieSessionBindingElement`.Dem `HttpCookieSessionBindingConfigurationElement`, das sich von <xref:System.ServiceModel.Configuration.StandardBindingElement> herleitet, wird der Großteil der Implementierung übertragen.`HttpCookieSessionBindingConfigurationElement` verfügt über Eigenschaften, die den Eigenschaften von `HttpCookieSessionBindingElement` entsprechen.  
+## <a name="adding-the-channel-to-the-configuration-system"></a><span data-ttu-id="f8d84-158">Hinzufügen des Kanals zum Konfigurationssystem</span><span class="sxs-lookup"><span data-stu-id="f8d84-158">Adding the Channel to the Configuration System</span></span>  
+ <span data-ttu-id="f8d84-159">Im Beispiel werden zwei Klassen bereitgestellt, die den Beispielkanal durch Konfiguration verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-159">The sample provides two classes that expose the sample channel through configuration.</span></span> <span data-ttu-id="f8d84-160">Die erste ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> für das `HttpCookieSessionBindingElement`.</span><span class="sxs-lookup"><span data-stu-id="f8d84-160">The first is a <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> for the `HttpCookieSessionBindingElement`.</span></span> <span data-ttu-id="f8d84-161">Dem `HttpCookieSessionBindingConfigurationElement`, das sich von <xref:System.ServiceModel.Configuration.StandardBindingElement> herleitet, wird der Großteil der Implementierung übertragen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-161">The bulk of the implementation is delegated to the `HttpCookieSessionBindingConfigurationElement`, which derives from <xref:System.ServiceModel.Configuration.StandardBindingElement>.</span></span> <span data-ttu-id="f8d84-162">`HttpCookieSessionBindingConfigurationElement` verfügt über Eigenschaften, die den Eigenschaften von `HttpCookieSessionBindingElement` entsprechen.</span><span class="sxs-lookup"><span data-stu-id="f8d84-162">The `HttpCookieSessionBindingConfigurationElement` has properties that correspond to the properties on `HttpCookieSessionBindingElement`.</span></span>  
   
-### Abschnitt für Bindungselementerweiterungen  
- Der Abschnitt `HttpCookieSessionBindingElementSection` ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, das die `HttpCookieSessionBindingElement` für das Konfigurationssystem verfügbar macht.Mit wenigen Überschreibungen werden der Konfigurationsabschnittsname, der Typ des Bindungselements und das Erstellen des Bindungselements definiert.Danach kann der Erweiterungsabschnitt wie folgt in einer Konfigurationsdatei registriert werden:  
+### <a name="binding-element-extension-section"></a><span data-ttu-id="f8d84-163">Abschnitt für Bindungselementerweiterungen</span><span class="sxs-lookup"><span data-stu-id="f8d84-163">Binding Element Extension Section</span></span>  
+ <span data-ttu-id="f8d84-164">Der Abschnitt `HttpCookieSessionBindingElementSection` ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, das die `HttpCookieSessionBindingElement` für das Konfigurationssystem verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="f8d84-164">The section `HttpCookieSessionBindingElementSection` is a <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> that exposes `HttpCookieSessionBindingElement` to the configuration system.</span></span> <span data-ttu-id="f8d84-165">Mit wenigen Überschreibungen werden der Konfigurationsabschnittsname, der Typ des Bindungselements und das Erstellen des Bindungselements definiert.</span><span class="sxs-lookup"><span data-stu-id="f8d84-165">With a few overrides the configuration section name, the type of the binding element and how to create the binding element are defined.</span></span> <span data-ttu-id="f8d84-166">Danach kann der Erweiterungsabschnitt wie folgt in einer Konfigurationsdatei registriert werden:</span><span class="sxs-lookup"><span data-stu-id="f8d84-166">We can then register the extension section in a configuration file as follows:</span></span>  
   
-```  
+```xml  
 <configuration>        
     <system.serviceModel>        
       <extensions>          
@@ -139,10 +142,10 @@ InputQueue<RequestContext> requestQueue;
 </configuration>  
 ```  
   
-## Testcode  
- Testcode für die Verwendung dieses Beispieltransports ist in den Client\- und Dienstverzeichnissen verfügbar.Dieser besteht aus zwei Tests. In einem Test wird eine Bindung verwendet, wobei `allowCookies`  auf dem Client auf `true` festgelegt ist.Im zweiten Test wird das explizite Herunterfahren \(mit abschließenden Meldungsaustausch\) für die Bindung aktiviert.  
+## <a name="test-code"></a><span data-ttu-id="f8d84-167">Testcode</span><span class="sxs-lookup"><span data-stu-id="f8d84-167">Test Code</span></span>  
+ <span data-ttu-id="f8d84-168">Testcode für die Verwendung dieses Beispieltransports ist in den Client- und Dienstverzeichnissen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="f8d84-168">Test code for using this sample transport is available in the Client and Service directories.</span></span> <span data-ttu-id="f8d84-169">Er besteht aus zwei Tests: ein Test verwendet eine Bindung mit `allowCookies` festgelegt `true` auf dem Client.</span><span class="sxs-lookup"><span data-stu-id="f8d84-169">It consists of two tests—one test uses a binding with `allowCookies` set to `true` on the client.</span></span> <span data-ttu-id="f8d84-170">Im zweiten Test wird das explizite Herunterfahren (mit abschließenden Meldungsaustausch) für die Bindung aktiviert.</span><span class="sxs-lookup"><span data-stu-id="f8d84-170">The second test enables explicit shutdown (using the terminate message exchange) on the binding.</span></span>  
   
- Wenn Sie das Beispiel ausführen, sollten Sie folgende Ausgabe erhalten:  
+ <span data-ttu-id="f8d84-171">Wenn Sie das Beispiel ausführen, sollten Sie folgende Ausgabe erhalten:</span><span class="sxs-lookup"><span data-stu-id="f8d84-171">When you run the sample, you should see the following output:</span></span>  
   
 ```  
 Simple binding:  
@@ -163,19 +166,18 @@ Items
 Press <ENTER> to terminate client.  
 ```  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f8d84-172">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="f8d84-172">To set up, build, and run the sample</span></span>  
   
-1.  Installieren Sie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mithilfe des folgenden Befehls.  
+1.  <span data-ttu-id="f8d84-173">Installieren Sie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mithilfe des folgenden Befehls.</span><span class="sxs-lookup"><span data-stu-id="f8d84-173">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Vergewissern Sie sich, dass Sie [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+2.  <span data-ttu-id="f8d84-174">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f8d84-174">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  Folgen Sie den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen, um die Projektmappe zu erstellen.  
+3.  <span data-ttu-id="f8d84-175">Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f8d84-175">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder über Computer hinweg ausführen möchten, folgen Sie den unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+4.  <span data-ttu-id="f8d84-176">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f8d84-176">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="f8d84-177">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8d84-177">See Also</span></span>

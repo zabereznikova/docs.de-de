@@ -1,48 +1,51 @@
 ---
-title: "Codegenerierung in LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Codegenerierung in LINQ to SQL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5720ca8adbfb4a25e6c1360ac156e950a2f1ce52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Codegenerierung in LINQ to SQL
-Sie können Code zur Darstellung einer Datenbank generieren, indem Sie entweder den [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] oder das SQLMetal\-Befehlszeilentool verwenden.  Die End\-to\-End\-Codegenerierung findet grundsätzlich in drei Phasen statt:  
+# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="86113-102">Codegenerierung in LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="86113-102">Code Generation in LINQ to SQL</span></span>
+<span data-ttu-id="86113-103">Sie können Code zur Darstellung einer Datenbank generieren, indem Sie entweder den [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] oder das SQLMetal-Befehlszeilentool verwenden.</span><span class="sxs-lookup"><span data-stu-id="86113-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="86113-104">Die End-to-End-Codegenerierung findet grundsätzlich in drei Phasen statt:</span><span class="sxs-lookup"><span data-stu-id="86113-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
   
-1.  Das *DBML\-Extrahierungsprogramm* extrahiert Schemainformationen aus der Datenbank und setzt die Informationen in einer XML\-formatierten DBML\-Datei wieder zusammen.  
+1.  <span data-ttu-id="86113-105">Die *DBML-Extrahierungsprogramm* extrahiert Schemainformationen aus der Datenbank und die Informationen in eine XML-formatierten DBML-Datei auf der dialogprotokollebene.</span><span class="sxs-lookup"><span data-stu-id="86113-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
   
-2.  Die DBML\-Datei wird vom *DBML\-Validierungsprogramm* auf Fehler überprüft.  
+2.  <span data-ttu-id="86113-106">Die DBML-Datei wird überprüft, indem die *DBML-Validierungsprogramm* auf Fehler.</span><span class="sxs-lookup"><span data-stu-id="86113-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
   
-3.  Wenn keine Validierungsfehler auftreten, wird die Datei an den Code\-Generator übergeben.  
+3.  <span data-ttu-id="86113-107">Wenn keine Validierungsfehler auftreten, wird die Datei an den Code-Generator übergeben.</span><span class="sxs-lookup"><span data-stu-id="86113-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
   
- Weitere Informationen finden Sie unter [SqlMetal.exe \(Tool zur Codegenerierung\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  Entwickler mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] können diesen Code auch mithilfe des [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] generieren.  Informationen finden Sie unter [LINQ to SQL\-Tools in Visual Studio](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md).  
+ <span data-ttu-id="86113-108">Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="86113-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="86113-109">Entwickler mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] können auch die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Generieren von Code.</span><span class="sxs-lookup"><span data-stu-id="86113-109">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code.</span></span> <span data-ttu-id="86113-110">Finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="86113-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## DBML\-Extrahierungsprogramm  
- Das DBML\-Extrahierungsprogramm ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Komponente, die Datenbank\-Metadaten als Eingabe akzeptiert und eine DBML\-Datei als Ausgabe erstellt.  
+## <a name="dbml-extractor"></a><span data-ttu-id="86113-111">DBML-Extrahierungsprogramm</span><span class="sxs-lookup"><span data-stu-id="86113-111">DBML Extractor</span></span>  
+ <span data-ttu-id="86113-112">Die DBML-Extrahierungsprogramm ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Komponente, die Datenbank-Metadaten als Eingabe akzeptiert und eine DBML-Datei als Ausgabe erzeugt.</span><span class="sxs-lookup"><span data-stu-id="86113-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
   
-## Code\-Generator  
- Der Code\-Generator ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Komponente, die DBML\-Dateien in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]\-, C\#\- oder XML\-Zuordnungsdateien übersetzt.  
+## <a name="code-generator"></a><span data-ttu-id="86113-113">Code-Generator</span><span class="sxs-lookup"><span data-stu-id="86113-113">Code Generator</span></span>  
+ <span data-ttu-id="86113-114">Der Code-Generator ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Komponente, die DBML-Dateien in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-, C#- oder XML-Zuordnungsdateien übersetzt.</span><span class="sxs-lookup"><span data-stu-id="86113-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], C#, or XML mapping files.</span></span>  
   
-## XML\-Schemadefinitionsdatei  
- Die DBML\-Datei muss gegenüber der folgenden Schemadefinition als XSD\-Datei gültig sein.  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="86113-115">XML-Schemadefinitionsdatei</span><span class="sxs-lookup"><span data-stu-id="86113-115">XML Schema Definition File</span></span>  
+ <span data-ttu-id="86113-116">Die DBML-Datei muss gegenüber der folgenden Schemadefinition als XSD-Datei gültig sein.</span><span class="sxs-lookup"><span data-stu-id="86113-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
   
- Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer externen Zuordnungsdatei verwendet wird.  Weitere Informationen finden Sie unter [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)\).  
+ <span data-ttu-id="86113-117">Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer externen Zuordnungsdatei verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="86113-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="86113-118">Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span><span class="sxs-lookup"><span data-stu-id="86113-118">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]\-Benutzer finden diese XSD\-Datei auch im Dialogfeld XML\-Schemas als Datei "DbmlSchema.xsd".  Weitere Informationen zum korrekten Verwenden der XSD\-Datei zum Überprüfen einer DBML\-Datei finden Sie unter [Vorgehensweise: Validierung von DBML und externen Zuordnungsdateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]<span data-ttu-id="86113-119">-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als Datei "DbmlSchema.xsd".</span><span class="sxs-lookup"><span data-stu-id="86113-119"> users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="86113-120">Um die XSD-Datei zum Überprüfen einer DBML-Datei ordnungsgemäß zu verwenden, finden Sie unter [Vorgehensweise: Validieren von DBML- und externen Zuordnung Dateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="86113-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```  
-﻿?<?xml version="1.0" encoding="utf-16"?>  
+?<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -249,10 +252,10 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## Beispiel einer DBML\-Datei  
- Der folgende Code entspricht einem Auszug aus der DBML\-Datei, die aus der Beispieldatenbank Northwind erzeugt wurde.  Sie können die gesamte Datei generieren, indem Sie SQLMetal mit der Option **\/xml** verwenden.  Weitere Informationen finden Sie unter [SqlMetal.exe \(Tool zur Codegenerierung\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+## <a name="sample-dbml-file"></a><span data-ttu-id="86113-121">Beispiel einer DBML-Datei</span><span class="sxs-lookup"><span data-stu-id="86113-121">Sample DBML File</span></span>  
+ <span data-ttu-id="86113-122">Der folgende Code entspricht einem Auszug aus der DBML-Datei, die aus der Beispieldatenbank Northwind erzeugt wurde.</span><span class="sxs-lookup"><span data-stu-id="86113-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="86113-123">Sie können die gesamte Datei generieren, indem Sie SQLMetal mit der **zulässig.%0d;a** Option.</span><span class="sxs-lookup"><span data-stu-id="86113-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="86113-124">Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="86113-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <Database Name="northwnd" Class="Northwnd" xmlns="http://schemas.microsoft.com/dsltools/DLinqML">  
   
@@ -276,9 +279,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)   
- [Vorgehensweise: Generieren des Objektmodells als externe Datei](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)   
- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a><span data-ttu-id="86113-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="86113-125">See Also</span></span>  
+ [<span data-ttu-id="86113-126">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="86113-126">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="86113-127">External Mapping (Externe Zuordnung)</span><span class="sxs-lookup"><span data-stu-id="86113-127">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [<span data-ttu-id="86113-128">Vorgehensweise: Generieren des Objektmodells als externe Datei</span><span class="sxs-lookup"><span data-stu-id="86113-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [<span data-ttu-id="86113-129">Downloading Sample Databases (Herunterladen von Beispieldatenbanken)</span><span class="sxs-lookup"><span data-stu-id="86113-129">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="86113-130">Referenz</span><span class="sxs-lookup"><span data-stu-id="86113-130">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

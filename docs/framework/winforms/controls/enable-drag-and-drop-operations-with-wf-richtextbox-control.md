@@ -1,36 +1,41 @@
 ---
-title: "Gewusst wie: Aktivieren von Drag&#160;&amp;&#160;Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], Textfelder"
-  - "Drag & Drop, RichTextBox-Steuerelement"
-  - "Textfelder, Drag & Drop-Vorgänge"
-  - "RichTextBox-Steuerelement [Windows Forms], Drag & Drop-Vorgänge"
+title: 'Gewusst wie: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- drag and drop [Windows Forms], richTextBox control
+- text boxes [Windows Forms], drag-and-drop operations
+- RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91739643aaa2d7fe3ea302d0d35edabbae0ab14f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Aktivieren von Drag&#160;&amp;&#160;Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows&#160;Forms
-Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows.Forms.RichTextBox> erfolgen durch Verarbeitung der Ereignisse <xref:System.Windows.Forms.RichTextBox.DragEnter> und <xref:System.Windows.Forms.RichTextBox.DragDrop>. Durch das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement werden Drag & Drop\-Vorgänge daher sehr einfach.  
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="0cf5e-102">Gewusst wie: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0cf5e-102">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="0cf5e-103">Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windows.Forms.RichTextBox> erfolgen durch Verarbeitung der Ereignisse <xref:System.Windows.Forms.RichTextBox.DragEnter> und <xref:System.Windows.Forms.RichTextBox.DragDrop> .</span><span class="sxs-lookup"><span data-stu-id="0cf5e-103">Drag-and-drop operations with the Windows Forms <xref:System.Windows.Forms.RichTextBox> control are done by handling the <xref:System.Windows.Forms.RichTextBox.DragEnter> and <xref:System.Windows.Forms.RichTextBox.DragDrop> events.</span></span> <span data-ttu-id="0cf5e-104">Durch das <xref:System.Windows.Forms.RichTextBox> -Steuerelement werden Drag &amp; Drop-Vorgänge daher sehr einfach.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-104">Thus, drag-and-drop operations are extremely simple with the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-### Aktivieren von Drag\-Vorgängen in einem RichTextBox\-Steuerelement  
+### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a><span data-ttu-id="0cf5e-105">Aktivieren von Drag-Vorgängen in einem RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0cf5e-105">To enable drag operations in a RichTextBox control</span></span>  
   
-1.  Legen Sie die <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A>\-Eigenschaft des <xref:System.Windows.Forms.RichTextBox>\-Steuerelements auf `true` fest.  
+1.  <span data-ttu-id="0cf5e-106">Legen Sie die <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> -Eigenschaft des <xref:System.Windows.Forms.RichTextBox> -Steuerelements auf `true`fest.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-106">Set the <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> property of the <xref:System.Windows.Forms.RichTextBox> control to `true`.</span></span>  
   
-2.  Erstellen Sie Code für den Ereignishandler des <xref:System.Windows.Forms.RichTextBox.DragEnter>\-Ereignisses. Verwenden Sie eine `if`\-Anweisung, um sicherzustellen, dass die gezogenen Daten einem passenden Typ angehören \(in diesem Fall Text\). Die <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=fullName>\-Eigenschaft kann auf jeden beliebigen Wert der <xref:System.Windows.Forms.DragDropEffects>\-Enumeration festgelegt werden.  
+2.  <span data-ttu-id="0cf5e-107">Erstellen Sie Code für den Ereignishandler des <xref:System.Windows.Forms.RichTextBox.DragEnter> -Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-107">Write code in the event handler of the <xref:System.Windows.Forms.RichTextBox.DragEnter> event.</span></span> <span data-ttu-id="0cf5e-108">Verwenden Sie eine `if` -Anweisung, um sicherzustellen, dass die gezogenen Daten einem passenden Typ angehören (in diesem Fall Text).</span><span class="sxs-lookup"><span data-stu-id="0cf5e-108">Use an `if` statement to ensure that the data being dragged is of an acceptable type (in this case, text).</span></span> <span data-ttu-id="0cf5e-109">Die <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType>-Eigenschaft kann auf jeden beliebigen Wert der <xref:System.Windows.Forms.DragDropEffects>-Enumeration festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-109">The <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> property can be set to any value of the <xref:System.Windows.Forms.DragDropEffects> enumeration.</span></span>  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -42,7 +47,6 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
           e.Effect = DragDropEffects.None  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
        else  
           e.Effect = DragDropEffects.None;  
     }  
-  
     ```  
   
     ```cpp  
@@ -69,7 +72,7 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
+     <span data-ttu-id="0cf5e-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -83,9 +86,9 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  Erstellen Sie Code zur Behandlung des <xref:System.Windows.Forms.RichTextBox.DragDrop>\-Ereignisses. Verwenden Sie die <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>\-Methode, um die gezogenen Daten abzurufen.  
+3.  <span data-ttu-id="0cf5e-111">Erstellen Sie Code zur Behandlung des <xref:System.Windows.Forms.RichTextBox.DragDrop> -Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-111">Write code to handle the <xref:System.Windows.Forms.RichTextBox.DragDrop> event.</span></span> <span data-ttu-id="0cf5e-112">Verwenden Sie die <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType>-Methode, um die gezogenen Daten abzurufen.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-112">Use the <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> method to retrieve the data being dragged.</span></span>  
   
-     Im Beispiel unten legt der Code die <xref:System.Windows.Forms.RichTextBox.Text%2A>\-Eigenschaft des <xref:System.Windows.Forms.RichTextBox>\-Steuerelements auf die gezogenen Daten fest. Wenn sich bereits Text im <xref:System.Windows.Forms.RichTextBox>\-Steuerelement befindet, wird der gezogene Text an der Einfügemarke eingefügt.  
+     <span data-ttu-id="0cf5e-113">Im Beispiel unten legt der Code die <xref:System.Windows.Forms.RichTextBox.Text%2A> -Eigenschaft des <xref:System.Windows.Forms.RichTextBox> -Steuerelements auf die gezogenen Daten fest.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-113">In the example below, the code sets the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control equal to the data being dragged.</span></span> <span data-ttu-id="0cf5e-114">Wenn sich bereits Text im <xref:System.Windows.Forms.RichTextBox> -Steuerelement befindet, wird der gezogene Text an der Einfügemarke eingefügt.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-114">If there is already text in the <xref:System.Windows.Forms.RichTextBox> control, the dragged text is inserted at the insertion point.</span></span>  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -104,7 +107,6 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
           e.Data.GetData(DataFormats.Text).ToString()  
        RichTextBox1.Text = RichTextBox1.Text + s  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -124,7 +126,6 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
           e.Data.GetData(DataFormats.Text).ToString();  
        richTextBox1.Text = richTextBox1.Text + s;  
     }  
-  
     ```  
   
     ```cpp  
@@ -147,13 +148,12 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
+     <span data-ttu-id="0cf5e-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
         System.Windows.Forms.DragEventHandler  
         (this.richTextBox1_DragDrop);  
-  
     ```  
   
     ```cpp  
@@ -162,20 +162,20 @@ Drag & Drop\-Vorgänge mit dem Windows Forms\-Steuerelement <xref:System.Windows
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
   
-### Testen der Drag & Drop\-Funktionalität in der Anwendung  
+### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a><span data-ttu-id="0cf5e-116">Testen der Drag & Drop-Funktionalität in der Anwendung</span><span class="sxs-lookup"><span data-stu-id="0cf5e-116">To test the drag-and-drop functionality in your application</span></span>  
   
-1.  Speichern und erstellen Sie Ihre Anwendung. Führen Sie WordPad aus, während die Anwendung ausgeführt wird.  
+1.  <span data-ttu-id="0cf5e-117">Speichern und erstellen Sie Ihre Anwendung.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-117">Save and build your application.</span></span> <span data-ttu-id="0cf5e-118">Führen Sie WordPad aus, während die Anwendung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-118">While it is running, run WordPad.</span></span>  
   
-     WordPad ist ein Text\-Editor von Windows, der Drag & Drop\-Vorgänge ermöglicht. Sie können auf WordPad zugreifen, indem Sie auf die Schaltfläche **Start** klicken, den Befehl **Ausführen** auswählen und anschließend `WordPad` in das Textfeld des Dialogfelds **Ausführen** eingeben. Abschließend klicken Sie auf **OK**.  
+     <span data-ttu-id="0cf5e-119">WordPad ist ein Text-Editor von Windows, der Drag & Drop-Vorgänge ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-119">WordPad is a text editor installed by Windows that allows drag-and-drop operations.</span></span> <span data-ttu-id="0cf5e-120">Sie können auf WordPad zugreifen, indem Sie auf die Schaltfläche **Start** klicken, den Befehl **Ausführen**auswählen und anschließend `WordPad` in das Textfeld des Dialogfelds **Ausführen** eingeben. Abschließend klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-120">It is accessible by clicking the **Start** button, selecting **Run**, typing `WordPad` in the text box of the **Run** dialog box, and then clicking **OK**.</span></span>  
   
-2.  Wenn WordPad geöffnet ist, geben Sie eine Textzeichenfolge ein. Markieren Sie den Text mit der Maus, und ziehen Sie den markierten Text dann auf das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement in der Windows\-Anwendung.  
+2.  <span data-ttu-id="0cf5e-121">Wenn WordPad geöffnet ist, geben Sie eine Textzeichenfolge ein.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-121">Once WordPad is open, type a string of text in it.</span></span> <span data-ttu-id="0cf5e-122">Markieren Sie den Text mit der Maus, und ziehen Sie den markierten Text dann auf das <xref:System.Windows.Forms.RichTextBox> -Steuerelement in der Windows-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-122">Using the mouse, select the text, and then drag the selected text over to the <xref:System.Windows.Forms.RichTextBox> control in your Windows application.</span></span>  
   
-     Beachten Sie, dass wenn sich die Maus über dem <xref:System.Windows.Forms.RichTextBox>\-Steuerelement befindet \(und damit folglich das <xref:System.Windows.Forms.RichTextBox.DragEnter>\-Ereignis ausgelöst wird\), sich der Mauszeiger ändert und Sie den ausgewählten Text auf dem <xref:System.Windows.Forms.RichTextBox>\-Steuerelement ablegen können.  
+     <span data-ttu-id="0cf5e-123">Beachten Sie, dass wenn sich die Maus über dem <xref:System.Windows.Forms.RichTextBox> -Steuerelement befindet (und damit folglich das <xref:System.Windows.Forms.RichTextBox.DragEnter> -Ereignis ausgelöst wird), sich der Mauszeiger ändert und Sie den ausgewählten Text auf dem <xref:System.Windows.Forms.RichTextBox> -Steuerelement ablegen können.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-123">Notice that when you point the mouse at the <xref:System.Windows.Forms.RichTextBox> control (and, consequently, raise the <xref:System.Windows.Forms.RichTextBox.DragEnter> event), the mouse pointer changes and you can drop the selected text into the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-     Wenn Sie die Maustaste loslassen, wird der ausgewählte Text abgelegt \(das heißt, das <xref:System.Windows.Forms.RichTextBox.DragDrop>\-Ereignis wird ausgelöst\) und in das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement eingefügt.  
+     <span data-ttu-id="0cf5e-124">Wenn Sie die Maustaste loslassen, wird der ausgewählte Text abgelegt (das heißt, das <xref:System.Windows.Forms.RichTextBox.DragDrop> -Ereignis wird ausgelöst) und in das <xref:System.Windows.Forms.RichTextBox> -Steuerelement eingefügt.</span><span class="sxs-lookup"><span data-stu-id="0cf5e-124">When you release the mouse button, the selected text is dropped (that is, the <xref:System.Windows.Forms.RichTextBox.DragDrop> event is raised) and is inserted within the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.RichTextBox>   
- [Gewusst wie: Ausführen von Drag & Drop\-Operationen zwischen Anwendungen](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)   
- [RichTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0cf5e-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0cf5e-125">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="0cf5e-126">Gewusst wie: Ausführen von Drag & Drop-Operationen zwischen Anwendungen</span><span class="sxs-lookup"><span data-stu-id="0cf5e-126">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [<span data-ttu-id="0cf5e-127">RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0cf5e-127">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="0cf5e-128">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="0cf5e-128">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

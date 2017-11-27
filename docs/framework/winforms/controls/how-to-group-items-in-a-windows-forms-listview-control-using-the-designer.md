@@ -1,64 +1,65 @@
 ---
-title: "Gewusst wie: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Gruppieren"
-  - "Gruppen, In Windows Forms-Steuerelementen"
-  - "ListView-Steuerelement [Windows Forms], Gruppieren von Elementen"
+title: 'Gewusst wie: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ListView control [Windows Forms], grouping items
+- grouping
+- groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97c9dc3a12227d3c9bfd64c97be61e69b50d2bbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
-Das Gruppierungsfeature des <xref:System.Windows.Forms.ListView>\-Steuerelements ermöglicht es Ihnen, verwandte Elemente in Gruppen anzuzeigen.  Diese Gruppen werden auf dem Bildschirm durch horizontale Gruppenheader getrennt, die die Gruppentitel enthalten.  Sie können <xref:System.Windows.Forms.ListView>\-Gruppen verwenden, um das Navigieren in umfangreichen Listen zu vereinfachen, indem Sie Elemente alphabetisch, nach Datum oder nach einem anderen logischen Gruppierungsmerkmal gruppieren.  In der folgenden Abbildung werden einige gruppierte Elemente angezeigt.  
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a><span data-ttu-id="0698d-102">Gewusst wie: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="0698d-102">How to: Group Items in a Windows Forms ListView Control Using the Designer</span></span>
+<span data-ttu-id="0698d-103">Die Grouping-Funktion von der <xref:System.Windows.Forms.ListView> Steuerelement können Sie verwandte Elemente in Gruppen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="0698d-103">The grouping feature of the <xref:System.Windows.Forms.ListView> control enables you to display related sets of items in groups.</span></span> <span data-ttu-id="0698d-104">Diese Gruppen werden auf dem Bildschirm durch horizontale Gruppenheader getrennt, die die Gruppentitel enthalten.</span><span class="sxs-lookup"><span data-stu-id="0698d-104">These groups are separated on the screen by horizontal group headers that contain the group titles.</span></span> <span data-ttu-id="0698d-105">Sie können <xref:System.Windows.Forms.ListView> Gruppen aus, um die Navigation in umfangreichen Listen einfacher durch Gruppieren Elemente alphabetisch nach Datum oder eine beliebige andere logische Gruppierung vornehmen.</span><span class="sxs-lookup"><span data-stu-id="0698d-105">You can use <xref:System.Windows.Forms.ListView> groups to make navigating large lists easier by grouping items alphabetically, by date, or by any other logical grouping.</span></span> <span data-ttu-id="0698d-106">Die folgende Abbildung zeigt einige gruppierten Elemente.</span><span class="sxs-lookup"><span data-stu-id="0698d-106">The following image shows some grouped items.</span></span>  
   
- ![ListView&#45;Gruppen](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
+ <span data-ttu-id="0698d-107">![ListView-Gruppen](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")</span><span class="sxs-lookup"><span data-stu-id="0698d-107">![ListView Groups](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")</span></span>  
   
- Für das folgende Verfahren wird ein Projekt vom Typ **Windows\-Anwendung** mit einem Formular benötigt, das ein <xref:System.Windows.Forms.ListView>\-Steuerelement enthält.  Weitere Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="0698d-108">Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit einer <xref:System.Windows.Forms.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="0698d-108">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="0698d-109">Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="0698d-109">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
- Zur Aktivierung der Gruppierung müssen Sie zunächst im Designer oder programmgesteuert mindestens ein <xref:System.Windows.Forms.ListViewGroup>\-Objekt erstellen.  Nachdem eine Gruppe definiert wurde, können Sie ihr Elemente zuweisen.  
+ <span data-ttu-id="0698d-110">Um die Gruppierung zu aktivieren, müssen Sie zuerst eine oder mehrere erstellen <xref:System.Windows.Forms.ListViewGroup> Objekte im Designer oder programmgesteuert.</span><span class="sxs-lookup"><span data-stu-id="0698d-110">To enable grouping, you must first create one or more <xref:System.Windows.Forms.ListViewGroup> objects either in the designer or programmatically.</span></span> <span data-ttu-id="0698d-111">Nachdem eine Gruppe definiert wurde, können Sie Elemente zuweisen.</span><span class="sxs-lookup"><span data-stu-id="0698d-111">Once a group has been defined, you can assign items to it.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView>\-Gruppen sind in [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] nur verfügbar, wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName>\-Methode aufruft.  Auf älteren Betriebssystemen ist Code in Zusammenhang mit Gruppen unwirksam; folglich werden keine Gruppen angezeigt.  Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=fullName>.  
+>  <span data-ttu-id="0698d-112"><xref:System.Windows.Forms.ListView>Gruppen stehen nur in [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] bei einem Aufruf der <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="0698d-112"><xref:System.Windows.Forms.ListView> groups are available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="0698d-113">Unter älteren Betriebssystemen Code in Zusammenhang mit Gruppen hat keine Auswirkungen, und die Gruppen werden nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0698d-113">On earlier operating systems, any code relating to groups has no effect and the groups will not appear.</span></span> <span data-ttu-id="0698d-114">Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0698d-114">For more information, see <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.</span></span>  
 >   
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="0698d-115">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="0698d-115">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="0698d-116">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="0698d-116">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="0698d-117">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="0698d-117">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So fügen Sie im Designer Gruppen hinzu oder entfernen sie  
+### <a name="to-add-or-remove-groups-in-the-designer"></a><span data-ttu-id="0698d-118">Zum Hinzufügen oder Entfernen von Gruppen im designer</span><span class="sxs-lookup"><span data-stu-id="0698d-118">To add or remove groups in the designer</span></span>  
   
-1.  Klicken Sie im **Eigenschaftenfenster** auf die Schaltfläche mit dem **Auslassungszeichen** \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\), die sich neben der <xref:System.Windows.Forms.ListView.Groups%2A>\-Eigenschaft befindet.  
+1.  <span data-ttu-id="0698d-119">In der **Eigenschaften** Fenster, klicken Sie auf die **Auslassungszeichen** (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) neben die <xref:System.Windows.Forms.ListView.Groups%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="0698d-119">In the **Properties** window, click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button next to the <xref:System.Windows.Forms.ListView.Groups%2A> property.</span></span>  
   
-     Der **ListViewItem\-Auflistungs\-Editor** wird angezeigt.  
+     <span data-ttu-id="0698d-120">Die **ListViewGroup Auflistungs-Editor** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="0698d-120">The **ListViewGroup Collection Editor** appears.</span></span>  
   
-2.  Klicken Sie auf die Schaltfläche **Hinzufügen**, um eine Gruppe hinzuzufügen.  Im Anschluss können Sie die Eigenschaften der neuen Gruppe festlegen, z. B. <xref:System.Windows.Forms.ListViewGroup.Header%2A> und <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A>.  Um eine Gruppe zu entfernen, wählen Sie sie aus und klicken auf die Schaltfläche **Entfernen**.  
+2.  <span data-ttu-id="0698d-121">Um eine Gruppe hinzuzufügen, klicken Sie auf die **hinzufügen** Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="0698d-121">To add a group, click the **Add** button.</span></span> <span data-ttu-id="0698d-122">Sie können dann Eigenschaften der neuen Gruppe festlegen, wie z. B. die <xref:System.Windows.Forms.ListViewGroup.Header%2A> und <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="0698d-122">You can then set properties of the new group, such as the <xref:System.Windows.Forms.ListViewGroup.Header%2A> and <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> properties.</span></span> <span data-ttu-id="0698d-123">Um eine Gruppe zu entfernen, wählen Sie ihn aus, und klicken Sie auf die **entfernen** Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="0698d-123">To remove a group, select it and click the **Remove** button.</span></span>  
   
-### So weisen Sie Gruppen im Designer Elemente zu  
+### <a name="to-assign-items-to-groups-in-the-designer"></a><span data-ttu-id="0698d-124">Zum Zuweisen von Elementen zu Gruppen im designer</span><span class="sxs-lookup"><span data-stu-id="0698d-124">To assign items to groups in the designer</span></span>  
   
-1.  Klicken Sie im **Eigenschaftenfenster** auf die Schaltfläche mit dem **Auslassungszeichen** \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\), die sich neben der <xref:System.Windows.Forms.ListView.Items%2A>\-Eigenschaft befindet.  
+1.  <span data-ttu-id="0698d-125">In der **Eigenschaften** Fenster, klicken Sie auf die **Auslassungszeichen** (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) neben die <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="0698d-125">In the **Properties** window, click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button next to the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span>  
   
-     Der **ListViewItem**\-Auflistungs\-Editor wird angezeigt.  
+     <span data-ttu-id="0698d-126">Die **ListViewItem Auflistungs-Editor** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="0698d-126">The **ListViewItem Collection Editor** appears.</span></span>  
   
-2.  Klicken Sie auf die Schaltfläche **Hinzufügen**, um ein neues Element hinzuzufügen.  Im Anschluss können Sie die Eigenschaften des neuen Elements festlegen, z. B. <xref:System.Windows.Forms.ListViewItem.Text%2A> und <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>.  
+2.  <span data-ttu-id="0698d-127">Um ein neues Element hinzuzufügen, klicken Sie auf die **hinzufügen** Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="0698d-127">To add a new item, click the **Add** button.</span></span> <span data-ttu-id="0698d-128">Sie können dann Eigenschaften des neuen Elements festlegen, wie z. B. die <xref:System.Windows.Forms.ListViewItem.Text%2A> und <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="0698d-128">You can then set properties of the new item, such as the <xref:System.Windows.Forms.ListViewItem.Text%2A> and <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> properties.</span></span>  
   
-3.  Wählen Sie die <xref:System.Windows.Forms.ListViewItem.Group%2A>\-Eigenschaft und aus der dazugehörigen Dropdownliste eine Gruppe aus.  
+3.  <span data-ttu-id="0698d-129">Wählen Sie die <xref:System.Windows.Forms.ListViewItem.Group%2A> Eigenschaft, und wählen Sie eine Gruppe aus der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="0698d-129">Select the <xref:System.Windows.Forms.ListViewItem.Group%2A> property and choose a group from the drop-down list.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ListView>   
- <xref:System.Windows.Forms.ListView.Groups%2A>   
- <xref:System.Windows.Forms.ListViewGroup>   
- [ListView\-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
- [Übersicht über das ListView\-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Windows XP Features and Windows Forms Controls](http://msdn.microsoft.com/de-de/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)   
- [Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+## <a name="see-also"></a><span data-ttu-id="0698d-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0698d-130">See Also</span></span>  
+ <xref:System.Windows.Forms.ListView>  
+ <xref:System.Windows.Forms.ListView.Groups%2A>  
+ <xref:System.Windows.Forms.ListViewGroup>  
+ [<span data-ttu-id="0698d-131">ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0698d-131">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [<span data-ttu-id="0698d-132">Übersicht über das ListView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0698d-132">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="0698d-133">Windows XP-Features und Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="0698d-133">Windows XP Features and Windows Forms Controls</span></span>](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [<span data-ttu-id="0698d-134">Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0698d-134">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
