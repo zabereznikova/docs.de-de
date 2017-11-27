@@ -1,29 +1,27 @@
 ---
-title: "Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: Zugriff auf die Standardeigenschaft ist mehrdeutig zwischen die geerbten Schnittstellenmember &#39; &lt;Defaultpropertyname&gt;&#39; Schnittstelle &#39;&lt; schnittstellenname1&gt;&#39; und &#39;&lt; Defaultpropertyname&gt;&#39; Schnittstelle &#39;&lt; schnittstellenname2&gt;&#39;
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Eine Schnittstelle erbt von zwei Schnittstellen, von denen jede eine Standardeigenschaft mit dem gleichen Namen deklariert.  Der Compiler kann einen Zugriff auf diese Standardeigenschaft ohne Qualifikation nicht auflösen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Zugriff auf die Standardeigenschaft ist mehrdeutig zwischen die geerbten Schnittstellenmember &#39; &lt;Defaultpropertyname&gt;&#39; Schnittstelle &#39;&lt; schnittstellenname1&gt;&#39; und &#39;&lt; Defaultpropertyname&gt;&#39; Schnittstelle &#39;&lt; schnittstellenname2&gt;&#39;
+Eine Schnittstelle erbt von zwei Schnittstellen, von die jede eine Standardeigenschaft mit demselben Namen deklariert. Der Compiler kann keinen Zugriff auf diese Eigenschaft standardmäßig ohne Qualifizierung aufgelöst werden. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Public Interface Iface1  
@@ -43,21 +41,21 @@ Public Class testClass
 End Class  
 ```  
   
- Wenn Sie `testObj(1)` angeben, versucht der Compiler, es in die Standardeigenschaft aufzulösen.  Aufgrund der geerbten Schnittstellen gibt es jedoch zwei mögliche Standardeigenschaften. Der Compiler signalisiert deshalb diesen Fehler.  
+ Geben Sie bei `testObj(1)`, versucht der Compiler, es in die Standardeigenschaft aufzulösen. Es gibt jedoch zwei möglichen Standardeigenschaften aufgrund der geerbten Schnittstellen, damit der Compiler diesen Fehler signalisiert.  
   
- **Fehler\-ID:** BC30686  
+ **Fehler-ID:** BC30686  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Vermeiden Sie das Vererben von Membern mit dem gleichen Namen.  Wenn `testObj` im obigen Beispiel keinen der Member beispielsweise von `Iface2` benötigt, deklarieren Sie es folgendermaßen:  
+-   Vermeiden Sie erbt alle Member mit demselben Namen. Im vorherigen Beispiel wenn `testObj` benötigt keine von, z. B. `Iface2`, deklarieren Sie es wie folgt:  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     \- oder \-  
+     - oder -   
   
--   Implementieren Sie die erbende Schnittstelle in einer Klasse.  Anschließend können Sie jede der geerbten Eigenschaften mit unterschiedlichen Namen implementieren.  Allerdings kann nur eine Eigenschaft die Standardeigenschaft der implementierenden Klasse sein.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+-   Implementieren Sie die erbende Schnittstelle in einer Klasse. Anschließend können Sie jede der geerbten Eigenschaften mit unterschiedlichen Namen implementieren. Allerdings kann nur eine davon die Standardeigenschaft der implementierenden Klasse sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## Siehe auch  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

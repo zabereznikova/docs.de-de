@@ -1,74 +1,80 @@
 ---
-title: "&lt;serviceDiscovery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;serviceDiscovery&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c371455767b912bd124c2207a1cc29b8ead71cb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;serviceDiscovery&gt;
+# <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 Gibt die Ermittelbarkeit von Dienstendpunkten an.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Verhalten >  
+\<ServiceBehaviors >  
+\<Verhalten >  
+\<ServiceDiscovery >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <serviceDiscovery>  
-        <announcementEndpoints>  
-              <endpoint name="String”  
-                        kind="Type" />  
-        </announcementEndpoints>  
-        <discoveryEndpoints>  
-              <endpoint name="String”  
-                        kind="Type" />  
-        </discoveryEndpoints>  
-      </serviceDiscovery>  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <serviceDiscovery>
+        <announcementEndpoints>
+          <endpoint name="String" 
+                    kind="Type" />
+        </announcementEndpoints>
+        <discoveryEndpoints>
+          <endpoint name="String" 
+                    kind="Type" />
+        </discoveryEndpoints>
+      </serviceDiscovery>
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
- Keine  
+### <a name="attributes"></a>Attribute  
+ Keine.  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Eine Auflistung von Ankündigungsendpunkten.  Verwenden Sie diesen Abschnitt, um die Endpunkte anzugeben, die zum Senden von Ankündigungsnachrichten verwendet werden sollen.|  
-|[\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Eine Auflistung von Ermittlungsendpunkten.  Verwenden Sie diesen Abschnitt, um die Endpunkte anzugeben, die auf Ankündigungsnachrichten überwacht werden sollen.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Verhalten\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
+|-------------|-----------------|  
+|[\<AnnouncementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Eine Auflistung von Ankündigungsendpunkten. Verwenden Sie diesen Abschnitt, um die Endpunkte anzugeben, die zum Senden von Ankündigungsnachrichten verwendet werden sollen.|  
+|[\<DiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Eine Auflistung von Ermittlungsendpunkten. Verwenden Sie diesen Abschnitt, um die Endpunkte anzugeben, die auf Ankündigungsnachrichten überwacht werden sollen.|  
   
-## Hinweise  
- Wenn dieses Element der Verhaltenskonfiguration des Diensts hinzugefügt wird, macht es alle Endpunkte dieses Diensts auffindbar.  Sie können die Suchfunktionen von solchen Endpunkten mit den [\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) oder untergeordneten [\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)\-Elementen weiter konfigurieren.  Verwenden Sie den [\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)\-Abschnitt, um die Ankündigungen zu konfigurieren, indem Sie die Endpunktkonfiguration zum Senden von Dienstankündigungen \(online\/Hello und offline\/Bye\) angeben.  Verwenden Sie den [\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)\-Abschnitt, um den zu überwachenden Endpunkt manuell anzugeben.  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-## Beispiel  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<Verhalten >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
+  
+## <a name="remarks"></a>Hinweise  
+ Wenn dieses Element der Verhaltenskonfiguration des Diensts hinzugefügt wird, macht es alle Endpunkte dieses Diensts auffindbar. Sie können die Suchfunktionen solche Endpunkte weiter konfigurieren, mit der [ \<DiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) oder [ \<AnnouncementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) untergeordnete Elemente. Verwenden Sie die [ \<AnnouncementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) Abschnitt So konfigurieren Sie die Ankündigungen durch Angabe der Endpunktkonfiguration zu verwendende dienstankündigungen (online/Hello und offline/Bye) zu senden. Verwenden der [ \<DiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) Abschnitt aus, um den Endpunkt an, die für die Discovery-Nachrichten abgehört manuell angeben.  
+  
+## <a name="example"></a>Beispiel  
  Im folgenden Konfigurationsbeispiel wird angegeben, dass der CalculatorService sichtbar ist, und optional wird der zu verwendende Ankündigungsendpunkt angegeben.  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -88,8 +94,7 @@ Gibt die Ermittelbarkeit von Dienstendpunkten an.
     </behavior>  
   </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

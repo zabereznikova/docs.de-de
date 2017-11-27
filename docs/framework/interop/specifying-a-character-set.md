@@ -5,33 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3e97c640472156c1a47ad125bffeaf39b8eb0762
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-a-character-set"></a>Angeben eines Zeichensatzes
-Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>-Feld steuert das Marshallen von Zeichenfolgen und bestimmt, wie Plattformaufrufe Funktionsnamen in einer DLL finden. In diesem Abschnitt werden beide Verhaltensweisen beschrieben.  
+Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld steuert das Marshallen von Zeichenfolgen und bestimmt, wie Plattformaufrufe Funktionsnamen in einer DLL finden. In diesem Abschnitt werden beide Verhaltensweisen beschrieben.  
   
  Einige APIs exportieren zwei Versionen von Funktionen, die Zeichenfolgenargumente verwenden: schmal (ANSI) und breit (Unicode). Die Win32-API enthält z.B. die folgenden Einstiegspunktnamen für die **MessageBox**-Funktion:  
   
@@ -54,7 +51,7 @@ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
   
 -   Namensübereinstimmung  
   
-     Wenn das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName>-Feld **TRUE**entspricht, wie es standardmäßig in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] der Fall ist, sucht der Plattformaufruf nur nach dem von Ihnen angegebenen Namen. Wenn Sie z.B. **MessageBox** angeben, sucht der Plattformaufruf nach **MessageBox** und schlägt fehl, wenn er die exakte Schreibweise nicht finden kann.  
+     Wenn das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType>-Feld **TRUE**entspricht, wie es standardmäßig in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] der Fall ist, sucht der Plattformaufruf nur nach dem von Ihnen angegebenen Namen. Wenn Sie z.B. **MessageBox** angeben, sucht der Plattformaufruf nach **MessageBox** und schlägt fehl, wenn er die exakte Schreibweise nicht finden kann.  
   
      Wenn das **ExactSpelling**-Feld **FALSE** ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem zerlegten Alias (**MessageBox**), und dann nach dem ergänzten Namen (**MessageBoxA**), wenn der zerlegte Alias nicht gefunden wird. Beachten Sie, dass die Namensübereinstimmung des ANSI-Verhaltens sich von der Namensübereinstimmung des Unicode-Verhaltens unterscheidet.  
   
@@ -77,7 +74,7 @@ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Festlegen eines Zeichensatzes in Visual Basic  
  Das folgende Beispiel deklariert die **MessageBox**-Funktion dreimal, wobei der Zeichensatz sich jedes Mal unterschiedlich verhält. Sie können das Verhalten des Zeichensatzes in Visual Basic angeben, indem Sie die Schlüsselwörter **Ansi**, **Unicode** oder **Auto** zur Deklarationsanweisung hinzufügen.  
   
- Wenn Sie das Zeichensatzschlüsselwort weglassen, wie es in der ersten Deklarationsanweisung der Fall ist, erfolgt das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>-Feld standardmäßig im ANSI-Zeichensatz. Die zweite und dritte Anweisung in diesem Beispiel geben einen Zeichensatz explizit mit einem Schlüsselwort an.  
+ Wenn Sie das Zeichensatzschlüsselwort weglassen, wie es in der ersten Deklarationsanweisung der Fall ist, erfolgt das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld standardmäßig im ANSI-Zeichensatz. Die zweite und dritte Anweisung in diesem Beispiel geben einen Zeichensatz explizit mit einem Schlüsselwort an.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -98,7 +95,7 @@ End Class
 ```  
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>Festlegen eines Zeichensatzes in C# und C++  
- Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName>-Feld identifiziert den zugrunde liegenden Zeichensatz als ANSI oder Unicode. Der Zeichensatz steuert, wie die Zeichenfolgenargumente an eine Methode gemarshallt werden sollen. Verwenden Sie eines der folgenden Formate, um den Zeichensatz anzugeben:  
+ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>-Feld identifiziert den zugrunde liegenden Zeichensatz als ANSI oder Unicode. Der Zeichensatz steuert, wie die Zeichenfolgenargumente an eine Methode gemarshallt werden sollen. Verwenden Sie eines der folgenden Formate, um den Zeichensatz anzugeben:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -152,8 +149,7 @@ extern "C" int MessageBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Marshallen von Daten mit Plattformaufruf](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

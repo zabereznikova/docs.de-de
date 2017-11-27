@@ -1,73 +1,79 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Zeilendetails zu einem DataGrid-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DataGrid [WPF], Zeilendetails"
-  - "DataTemplate [WPF], DataGrid"
-  - "Zeilendetails [WPF], DataGrid"
+title: "Gewusst wie: Hinzufügen von Zeilendetails zu einem DataGrid-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataTemplate [WPF], DataGrid
+- row details [WPF], DataGrid
+- DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 036e06d110df8900ab46f0d501f30b4a163c8eb9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von Zeilendetails zu einem DataGrid-Steuerelement
-Wenn Sie das <xref:System.Windows.Controls.DataGrid>\-Steuerelement verwenden, können Sie die Datendarstellung anpassen, indem Sie einen Zeilendetailabschnitt hinzufügen.  Durch das Hinzufügen eines Zeilendetailabschnitts können Sie einige Daten in einer Vorlage zu gruppieren, die optional sichtbar oder ausgeblendet ist.  Sie können z. B. einem <xref:System.Windows.Controls.DataGrid> Zeilendetails hinzufügen, der nur eine Zusammenfassung der Daten für jede Zeile im <xref:System.Windows.Controls.DataGrid> darstellt, aber mehr Datenfelder darstellt, wenn der Benutzer eine Zeile auswählt.  Sie definieren die Vorlage für den Zeilendetailabschnitt in der <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>\-Eigenschaft.  Die folgende Darstellung zeigt ein Beispiel eines Zeilendetailabschnitts.  
+# <a name="how-to-add-row-details-to-a-datagrid-control"></a>Gewusst wie: Hinzufügen von Zeilendetails zu einem DataGrid-Steuerelement
+Bei Verwendung der <xref:System.Windows.Controls.DataGrid> -Steuerelement, können Sie die Präsentation der Daten anpassen, indem Sie Abschnitt einer Zeile hinzufügen. Hinzufügen eines Zeilendetailabschnitts ermöglicht Ihnen, einige Daten in einer Vorlage zu gruppieren, die optional sichtbar oder reduziert ist. Sie können z. B. Zeilendetails zum Hinzufügen einer <xref:System.Windows.Controls.DataGrid> stellt nur eine Zusammenfassung der Daten für jede Zeile in der <xref:System.Windows.Controls.DataGrid>, aber weitere Datenfelder präsentiert, wenn der Benutzer eine Zeile auswählt. Sie definieren die Vorlage für die Zeile im Abschnitt die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> Eigenschaft. Die folgende Abbildung zeigt ein Beispiel für eine Zeilendetailabschnitt.  
   
- ![DataGrid mit Zeilendetails](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP\_RowDetails")  
+ ![DataGrid mit Zeilendetails](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")  
   
- Sie definieren die Zeilendetailvorlage als Inline\-XAML oder als Ressource.  Beide Möglichkeiten werden in den folgenden Verfahren dargestellt.  Eine Datenvorlage, die als Ressource hinzugefügt wird, kann im gesamten Projekt verwendet werden, ohne die Vorlage neu zu erstellen.  Auf eine Datenvorlage, die als Inline\-XAML hinzugefügt wird, kann nur von dem Steuerelement zugegriffen werden, in dem sie definiert ist.  
+ Sie definieren die Details Zeilenvorlage als Inline-XAML oder als Ressource. In den folgenden Verfahren werden beide Ansätze angezeigt. Eine Datenvorlage, die als eine Ressource im Verlauf des Projekts verwendet werden kann, ohne das erneute Erstellen der Vorlage hinzugefügt wird. Eine Datenvorlage, die hinzugefügt wird, als Inline-XAML nur über das Steuerelement zugegriffen werden kann, wo er definiert ist.  
   
-### So zeigen Sie Zeilendetails mit Inline\-XAML an  
+### <a name="to-display-row-details-by-using-inline-xaml"></a>Anzuzeigende Zeilendetails mit Inline-XAML  
   
-1.  Erstellen Sie ein <xref:System.Windows.Controls.DataGrid>, das Daten aus einer Datenquelle anzeigt.  
+1.  Erstellen einer <xref:System.Windows.Controls.DataGrid> , die Daten aus einer Datenquelle anzeigt.  
   
-2.  Fügen Sie im <xref:System.Windows.Controls.DataGrid>\-Element ein <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>\-Element hinzu.  
+2.  Fügen Sie im <xref:System.Windows.Controls.DataGrid>-Element ein <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>-Element hinzu.  
   
-3.  Erstellen Sie eine <xref:System.Windows.DataTemplate>, die die Darstellung des Zeilendetailabschnitts definiert.  
+3.  Erstellen einer <xref:System.Windows.DataTemplate> , definiert die Darstellung der Detailbereich Zeile.  
   
-     Die folgende XAML zeigt das <xref:System.Windows.Controls.DataGrid> an und zeigt an, wie die  <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> inline definiert wird.  Das <xref:System.Windows.Controls.DataGrid> zeigt drei Werte in jeder Zeile und drei weitere Werte an, wenn die Zeile ausgewählt wird.  
+     Der folgende XAML-Code zeigt die <xref:System.Windows.Controls.DataGrid> und zum Definieren der <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> Inline. Die <xref:System.Windows.Controls.DataGrid> zeigt drei Werte in jeder Zeile und drei weitere Werte an, wenn die Zeile ausgewählt ist.  
   
-     [!code-xml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
+     [!code-xaml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
   
-     Im folgenden Code wird die Abfrage dargestellt, die zum Auswählen der Daten verwendet wird, die im <xref:System.Windows.Controls.DataGrid> angezeigt werden.  In diesem Beispiel wählt die Abfrage Daten aus einer Entität aus, die Kundeninformationen enthält.  
+     Der folgende Code zeigt die Abfrage, die verwendet wird, um Daten auszuwählen, die in angezeigt wird der <xref:System.Windows.Controls.DataGrid>. In diesem Beispiel wählt die Abfrage Daten aus einer Entität, die Kundeninformationen enthält.  
   
      [!code-csharp[DataGrid_RowDetails#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml.cs#2)]
      [!code-vb[DataGrid_RowDetails#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_rowdetails/vb/mainwindow.xaml.vb#2)]  
   
-### So zeigen Sie Zeilendetails mit einer Ressource an  
+### <a name="to-display-row-details-by-using-a-resource"></a>Um die Zeilendetails anzeigen, indem Sie eine Ressource  
   
-1.  Erstellen Sie ein <xref:System.Windows.Controls.DataGrid>, das Daten aus einer Datenquelle anzeigt.  
+1.  Erstellen einer <xref:System.Windows.Controls.DataGrid> , die Daten aus einer Datenquelle anzeigt.  
   
-2.  Fügen Sie ein <xref:System.Windows.FrameworkElement.Resources%2A>\-Element zum Stammelement hinzu, wie z. B. ein <xref:System.Windows.Window>\-Steuerelement oder ein <xref:System.Windows.Controls.Page>\-Steuerelement, oder fügen Sie ein <xref:System.Windows.Application.Resources%2A>\-Element zur <xref:System.Windows.Application>\-Klasse in der Datei App.xaml \(oder Application.xaml\) hinzu.  
+2.  Hinzufügen einer <xref:System.Windows.FrameworkElement.Resources%2A> Element dem Stammelement wie z. B. eine <xref:System.Windows.Window> Steuerelement oder ein <xref:System.Windows.Controls.Page> steuern, oder fügen eine <xref:System.Windows.Application.Resources%2A> Element der <xref:System.Windows.Application> Klasse in der Datei App.xaml (oder Application.xaml).  
   
-3.  Erstellen Sie im Ressourcenelement eine <xref:System.Windows.DataTemplate>, die die Darstellung des Zeilendetailabschnitts definiert.  
+3.  Erstellen Sie im Ressourcenelement, eine <xref:System.Windows.DataTemplate> , definiert die Darstellung der Detailbereich Zeile.  
   
-     Die folgende XAML zeigt die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>, die in der <xref:System.Windows.Application>\-Klasse definiert wurde.  
+     Der folgende XAML-Code zeigt die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definiert, der <xref:System.Windows.Application> Klasse.  
   
-     [!code-xml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
+     [!code-xaml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
   
-4.  Legen Sie in der <xref:System.Windows.DataTemplate> das [x:Key\-Direktive](../../../../docs/framework/xaml-services/x-key-directive.md) auf einen Wert fest, der die Datenvorlage eindeutig identifiziert.  
+4.  Auf der <xref:System.Windows.DataTemplate>legen die [X: Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md) auf einen Wert, der die Datenvorlage eindeutig identifiziert.  
   
-5.  Legen Sie im <xref:System.Windows.Controls.DataGrid>\-Element die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>\-Eigenschaft auf die in den vorherigen Schritten definierte Ressource fest.  Weisen Sie die Ressource als statische Ressource zu.  
+5.  In der <xref:System.Windows.Controls.DataGrid> -Elementgruppe, die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> Eigenschaft auf die Ressource, die in den vorherigen Schritten definiert. Weisen Sie den Ressourcen als statische Ressource.  
   
-     Die folgende XAML zeigt die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>\-Eigenschaft, die auf die Ressource aus dem vorherigen Beispiel festgelegt ist.  
+     Der folgende XAML-Code zeigt die <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> -Eigenschaft auf die Ressource aus dem vorherigen Beispiel.  
   
-     [!code-xml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
+     [!code-xaml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
   
-### So legen Sie die Sichtbarkeit fest und verhindern den horizontalen Bildlauf für Zeilendetails  
+### <a name="to-set-visibility-and-prevent-horizontal-scrolling-for-row-details"></a>Legen Sie die Sichtbarkeit und zu verhindern, dass horizontalen Bildlauf für Zeilendetails  
   
-1.  Legen Sie die <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A>\-Eigenschaft gegebenenfalls auf einen <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>\-Wert fest.  
+1.  Legen Sie bei Bedarf die <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> Eigenschaft, um eine <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> Wert.  
   
-     Standardmäßig ist der Wert auf <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> festgelegt.  Sie können ihn auf <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> festlegen, um die Details für alle Zeilen anzuzeigen, oder auf <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>, um die Details für alle Zeilen auszublenden.  
+     Der Wert wird standardmäßig auf festgelegt <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>. Sie können sie festlegen, um <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> zum Anzeigen der Details für alle Zeilen oder <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> So blenden Sie die Details für alle Zeilen aus.  
   
-2.  Legen Sie die <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A>\-Eigenschaft gegebenenfalls auf `true` fest, um einen horizontalen Bildlauf im Zeilendetailabschnitt zu verhindern.
+2.  Legen Sie bei Bedarf die <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> Eigenschaft `true` erläutert, um zu verhindern, dass die Zeile einen horizontalen Bildlauf.

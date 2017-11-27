@@ -1,23 +1,27 @@
 ---
-title: "REF CURSOR-Parameter in einem &#39;OracleDataReader&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: REF CURSOR-Parameter in "OracleDataReader"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bebc77755f376cdb13b97ce4532cd79307fc7ec3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# REF CURSOR-Parameter in einem &#39;OracleDataReader&#39;
-In diesem Microsoft Visual Basic\-Beispiel wird eine gespeicherte PL\/SQL\-Prozedur ausgeführt, die einen REF CURSOR\-Parameter zurückgibt und den Wert als <xref:System.Data.OracleClient.OracleDataReader> liest.  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>REF CURSOR-Parameter in "OracleDataReader"
+In diesem Microsoft Visual Basic-Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die einen REF CURSOR-Parameter zurückgibt und den Wert als <xref:System.Data.OracleClient.OracleDataReader> liest.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -48,6 +52,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## Siehe auch  
- [Oracle\-REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Oracle-REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

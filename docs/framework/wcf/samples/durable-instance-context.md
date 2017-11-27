@@ -1,43 +1,46 @@
 ---
-title: "Permanenter Instanzkontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Permanenter Instanzkontext
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 540f6b6fe7795eb958afd84695865fd2e4271175
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Permanenter Instanzkontext
-In diesem Beispiel wird veranschaulicht, wie die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Laufzeit angepasst wird, um permanente Instanzkontexte zu aktivieren.Dabei wird als Sicherungsspeicher SQL Server 2005 \(in diesem Fall SQL Server 2005 Express\) verwendet.Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
+# <a name="durable-instance-context"></a>Permanenter Instanzkontext
+In diesem Beispiel wird veranschaulicht, wie die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Laufzeit angepasst wird, um permanente Instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In diesem Beispiel wird die Erweiterung der Kanalschicht und der Dienstmodellebene von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eingeschlossen.Deshalb ist es notwendig, das zugrunde liegenden Konzept zu verstehen, bevor Sie sich mit den Implementierungsdetails beschäftigen.  
+ In diesem Beispiel wird die Erweiterung der Kanalschicht und der Dienstmodellebene von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eingeschlossen. Deshalb ist es notwendig, das zugrunde liegenden Konzept zu verstehen, bevor Sie sich mit den Implementierungsdetails beschäftigen.  
   
- Permanente Instanzkontexte sind sehr häufig in realen Szenarios anzutreffen.Eine Warenkorb\-Anwendung kann beispielsweise unterbrochen und am nächsten Tag fortgesetzt werden.Wenn der Warenkorb am nächsten Tag geöffnet wird, wird der ursprüngliche Kontext wiederhergestellt.Es ist jedoch unbedingt zu beachten, dass die Warenkorb\-Anwendung \(auf dem Server\) nicht die Warenkorb\-Instanz beibehält, während die Verbindung zum Server getrennt ist.Sie behält vielmehr ihren Zustand in einem permanenten Speichermedium bei und verwendet diesen Zustand, wenn eine neue Instanz für den wiederhergestellten Kontext erstellt wird.Aus diesem Grund handelt es sich bei der Dienstinstanz, die möglicherweise für denselben Kontext dient, nicht um dieselbe Instanz wie die vorherige Instanz \(d. h. sie hat nicht dieselbe Speicheradresse\).  
+ Permanente Instanzkontexte sind sehr häufig in realen Szenarios anzutreffen. Eine Warenkorb-Anwendung kann beispielsweise unterbrochen und am nächsten Tag fortgesetzt werden. Wenn der Warenkorb am nächsten Tag geöffnet wird, wird der ursprüngliche Kontext wiederhergestellt. Es ist jedoch unbedingt zu beachten, dass die Warenkorb-Anwendung (auf dem Server) nicht die Warenkorb-Instanz beibehält, während die Verbindung zum Server getrennt ist. Sie behält vielmehr ihren Zustand in einem permanenten Speichermedium bei und verwendet diesen Zustand, wenn eine neue Instanz für den wiederhergestellten Kontext erstellt wird. Aus diesem Grund handelt es sich bei der Dienstinstanz, die möglicherweise für denselben Kontext dient, nicht um dieselbe Instanz wie die vorherige Instanz (d. h. sie hat nicht dieselbe Speicheradresse).  
   
- Permanenter Instanzkontext wird durch ein kleines Protokoll ermöglicht, das eine Kontext\-ID zwischen dem Client und dem Dienst austauscht.Diese Kontext\-ID wird auf dem Client erstellt und zum Dienst übertragen.Wenn die Dienstinstanz erstellt wird, versucht die Dienstlaufzeit den beibehaltenen Zustand zu laden, der dieser Kontext\-ID aus einer permanenten Speicherung entspricht \(standardmäßig ist es eine SQL Server 2005\-Datenbank\).Wenn kein Zustand verfügbar ist, liegt die neue Instanz in ihrem Standardzustand vor.Die Dienstimplementierung verwendet ein benutzerdefiniertes Attribut, um Vorgänge zu kennzeichnen, die den Zustand der Dienstimplementierung ändern. Die Laufzeit kann dadurch die Dienstinstanz speichern, nachdem die Vorgänge aufgerufen wurden.  
+ Permanenter Instanzkontext wird durch ein kleines Protokoll ermöglicht, das eine Kontext-ID zwischen dem Client und dem Dienst austauscht. Diese Kontext-ID wird auf dem Client erstellt und zum Dienst übertragen. Wenn die Dienstinstanz erstellt wird, versucht die Dienstlaufzeit den beibehaltenen Zustand zu laden, der dieser Kontext-ID aus einer permanenten Speicherung entspricht (standardmäßig ist es eine SQL Server 2005-Datenbank). Wenn kein Zustand verfügbar ist, liegt die neue Instanz in ihrem Standardzustand vor. Die Dienstimplementierung verwendet ein benutzerdefiniertes Attribut, um Vorgänge zu kennzeichnen, die den Zustand der Dienstimplementierung ändern. Die Laufzeit kann dadurch die Dienstinstanz speichern, nachdem die Vorgänge aufgerufen wurden.  
   
  Anhand der vorangegangenen Beschreibung können leicht zwei Schritte bestimmt werden, um das Ziel zu erreichen:  
   
-1.  Ändern Sie die Nachricht, mit der die Kontext\-ID übertragen wird.  
+1.  Ändern Sie die Nachricht, mit der die Kontext-ID übertragen wird.  
   
 2.  Ändern Sie das lokale Verhalten des Diensts, um die benutzerdefinierte Instanziierungslogik zu implementieren.  
   
- Da der erste aufgeführte Schritt die gesendete Nachricht betrifft, sollte er als ein benutzerdefinierter Kanal implementiert und mit der Kanalschicht verknüpft werden.Der zweite Schritt beeinflusst nur das lokale Verhalten des Diensts und kann deshalb durch das Erweitern mehrerer Diensterweiterungspunkte implementiert werden.In den nächsten Abschnitten wird jede dieser Erweiterungen erläutert.  
+ Da der erste aufgeführte Schritt die gesendete Nachricht betrifft, sollte er als ein benutzerdefinierter Kanal implementiert und mit der Kanalschicht verknüpft werden. Der zweite Schritt beeinflusst nur das lokale Verhalten des Diensts und kann deshalb durch das Erweitern mehrerer Diensterweiterungspunkte implementiert werden. In den nächsten Abschnitten wird jede dieser Erweiterungen erläutert.  
   
-## Permanenter InstanceContext\-Kanal  
- Als erstes wird eine Kanalschichterweiterung betrachtet.Der erste Schritt beim Schreiben eines benutzerdefinierten Kanals besteht darin, die Kommunikationsstruktur des Kanals festzulegen.Da ein neues Versandprotokoll eingeführt wird, sollte der Kanal mit fast allen anderen Kanälen im Kanalstapel funktionieren.Deshalb sollte es alle Nachrichtenaustauschmuster unterstützen.Die Kernfunktionalität des Kanals ändert sich jedoch nicht, unabhängig von seiner Kommunikationsstruktur.Genauer gesagt sollte der Kanal vom Client die Kontext\-ID in die Nachrichten schreiben und vom Dienst sollte er diese Kontext\-ID aus den Nachrichten lesen und an die höheren Ebenen weiterleiten.Aus diesem Grund wird eine `DurableInstanceContextChannelBase`\-Klasse erstellt, die als die abstrakte Basisklasse für alle Implementierungen von permanenten Instanzkontext\-Kanälen handelt.Diese Klasse enthält die allgemeinen Computerverwaltungsfunktionen und zwei geschützte Member, um die Kontextinformationen auf Nachrichten anzuwenden und von ihnen zu lesen.  
+## <a name="durable-instancecontext-channel"></a>Permanenter InstanceContext-Kanal  
+ Als erstes wird eine Kanalschichterweiterung betrachtet. Der erste Schritt beim Schreiben eines benutzerdefinierten Kanals besteht darin, die Kommunikationsstruktur des Kanals festzulegen. Da ein neues Versandprotokoll eingeführt wird, sollte der Kanal mit fast allen anderen Kanälen im Kanalstapel funktionieren. Deshalb sollte es alle Nachrichtenaustauschmuster unterstützen. Die Kernfunktionalität des Kanals ändert sich jedoch nicht, unabhängig von seiner Kommunikationsstruktur. Genauer gesagt sollte der Kanal vom Client die Kontext-ID in die Nachrichten schreiben und vom Dienst sollte er diese Kontext-ID aus den Nachrichten lesen und an die höheren Ebenen weiterleiten. Aus diesem Grund wird eine `DurableInstanceContextChannelBase`-Klasse erstellt, die als die abstrakte Basisklasse für alle Implementierungen von permanenten Instanzkontext-Kanälen handelt. Diese Klasse enthält die allgemeinen Computerverwaltungsfunktionen und zwei geschützte Member, um die Kontextinformationen auf Nachrichten anzuwenden und von ihnen zu lesen.  
   
 ```  
 class DurableInstanceContextChannelBase  
@@ -54,13 +57,13 @@ class DurableInstanceContextChannelBase
 }  
 ```  
   
- Diese beiden Methoden nutzen `IContextManager`\-Implementierungen, um die Kontext\-ID auf Nachrichten zu schreiben und von ihnen zu lesen.\(`IContextManager` ist eine benutzerdefinierte Schnittstelle, die verwendet wird, um den Vertrag für alle Kontext\-Manager zu definieren.\) Der Kanal kann entweder die Kontext\-ID in einem benutzerdefinierten SOAP\-Header oder in einem HTTP\-Cookieheader enthalten.Jede Kontextmanagerimplementierung erbt von der `ContextManagerBase`\-Klasse, die die allgemeine Funktionalität für alle Kontextmanager enthält.Die `GetContextId`\-Methode in dieser Klasse wird verwendet, um die Kontext\-ID vom Client zu erzeugen.Wenn eine Kontext\-ID ist zum ersten Mal erzeugt wird, wird sie mithilfe dieser Methode in einer Textdatei gespeichert, deren Name von der Remote\-Endpunktadresse erstellt wird \(in den typischen URI werden ungültige Zeichen im Dateinamen durch @\-Zeichen ersetzt\).  
+ Diese beiden Methoden nutzen `IContextManager`-Implementierungen, um die Kontext-ID auf Nachrichten zu schreiben und von ihnen zu lesen. (`IContextManager` ist eine benutzerdefinierte Schnittstelle, die verwendet wird, um den Vertrag für alle Kontext-Manager zu definieren.) Der Kanal kann entweder die Kontext-ID in einem benutzerdefinierten SOAP-Header oder in einem HTTP-Cookieheader enthalten. Jede Kontextmanagerimplementierung erbt von der `ContextManagerBase`-Klasse, die die allgemeine Funktionalität für alle Kontextmanager enthält. Die `GetContextId`-Methode in dieser Klasse wird verwendet, um die Kontext-ID vom Client zu erzeugen. Wenn eine Kontext-ID ist zum ersten Mal erzeugt wird, wird sie mithilfe dieser Methode in einer Textdatei gespeichert, deren Name von der Remote-Endpunktadresse erstellt wird (in den typischen URI werden ungültige Zeichen im Dateinamen durch @-Zeichen ersetzt).  
   
- Wird die Kontext\-ID später für denselben Remote\-Endpunkt benötigt, überprüft diese Methode, ob eine entsprechende Datei vorhanden ist.Wenn dies der Fall ist, liest sie die Kontext\-ID und gibt sie zurück.Andernfalls gibt sie eine neu generierte Kontext\-ID zurück und speichert sie in einer Datei.In der Standardkonfiguration werden diese Dateien in einem Verzeichnis namens "ContextStore" abgelegt. Es befindet sich im temporären Verzeichnis des aktuellen Benutzers.Dieser Speicherort ist jedoch mit dem Bindungselement konfigurierbar.  
+ Wird die Kontext-ID später für denselben Remote-Endpunkt benötigt, überprüft diese Methode, ob eine entsprechende Datei vorhanden ist. Wenn dies der Fall ist, liest sie die Kontext-ID und gibt sie zurück. Andernfalls gibt sie eine neu generierte Kontext-ID zurück und speichert sie in einer Datei. In der Standardkonfiguration werden diese Dateien in einem Verzeichnis namens "ContextStore" abgelegt. Es befindet sich im temporären Verzeichnis des aktuellen Benutzers. Dieser Speicherort ist jedoch mit dem Bindungselement konfigurierbar.  
   
- Der für den Transport der Kontext\-ID verwendete Mechanismus kann konfiguriert werden.Er kann entweder in den HTTP\-Cookieheader oder einen benutzerdefinierten SOAP\-Header geschrieben werden.Wenn Sie sich für den benutzerdefinierten SOAP\-Header entscheiden, kann dieses Protokoll mit anderen als HTTP\-Protokollen \(z. B. TCP oder Benannte Pipes\) verwendet werden.Es gibt zwei Klassen, nämlich `MessageHeaderContextManager` und `HttpCookieContextManager`, die diese beiden Optionen implementieren.  
+ Der für den Transport der Kontext-ID verwendete Mechanismus kann konfiguriert werden. Er kann entweder in den HTTP-Cookieheader oder einen benutzerdefinierten SOAP-Header geschrieben werden. Wenn Sie sich für den benutzerdefinierten SOAP-Header entscheiden, kann dieses Protokoll mit anderen als HTTP-Protokollen (z. B. TCP oder Benannte Pipes) verwendet werden. Es gibt zwei Klassen, nämlich `MessageHeaderContextManager` und `HttpCookieContextManager`, die diese beiden Optionen implementieren.  
   
- Beide Klassen schreiben die Kontext\-ID richtig in die Nachricht.Die `MessageHeaderContextManager`\-Klasse schreibt sie beispielsweise in einen SOAP\-Header in der `WriteContext`\-Methode.  
+ Beide Klassen schreiben die Kontext-ID richtig in die Nachricht. Die `MessageHeaderContextManager`-Klasse schreibt sie beispielsweise in einen SOAP-Header in der `WriteContext`-Methode.  
   
 ```  
 public override void WriteContext(Message message)  
@@ -77,7 +80,7 @@ public override void WriteContext(Message message)
 }   
 ```  
   
- Sowohl die `ApplyContext`\-Methode als auch die `ReadContextId`\-Methode in der `DurableInstanceContextChannelBase`\-Klasse rufen `IContextManager.ReadContext` bzw. `IContextManager.WriteContext` auf.Diese Kontext\-Manager werden jedoch nicht direkt von der `DurableInstanceContextChannelBase`\-Klasse erstellt.Diese Aufgabe wird von der `ContextManagerFactory`\-Klasse ausgeführt.  
+ Sowohl die `ApplyContext`-Methode als auch die `ReadContextId`-Methode in der `DurableInstanceContextChannelBase`-Klasse rufen `IContextManager.ReadContext` bzw. `IContextManager.WriteContext` auf. Diese Kontext-Manager werden jedoch nicht direkt von der `DurableInstanceContextChannelBase`-Klasse erstellt. Diese Aufgabe wird von der `ContextManagerFactory`-Klasse ausgeführt.  
   
 ```  
 IContextManager contextManager =  
@@ -86,15 +89,15 @@ IContextManager contextManager =
                 this.endpointAddress);  
 ```  
   
- Die `ApplyContext`\-Methode wird von den Sendekanälen aufgerufen.Sie fügt die Kontext\-ID in die ausgehenden Nachrichten ein.Die `ReadContextId`\-Methode wird von den Empfangskanälen aufgerufen.Diese Methode stellt sicher, dass die Kontext\-ID in den eingehenden Nachrichten verfügbar ist und fügt sie zur `Properties`\-Auflistung der `Message`\-Klasse hinzu.Wenn ein Fehler beim Lesen der Kontext\-ID auftritt und der Kanal abgebrochen wird, löst diese Methode eine `CommunicationException` aus.  
+ Die `ApplyContext`-Methode wird von den Sendekanälen aufgerufen. Sie fügt die Kontext-ID in die ausgehenden Nachrichten ein. Die `ReadContextId`-Methode wird von den Empfangskanälen aufgerufen. Diese Methode stellt sicher, dass die Kontext-ID in den eingehenden Nachrichten verfügbar ist und fügt sie zur `Properties`-Auflistung der `Message`-Klasse hinzu. Wenn ein Fehler beim Lesen der Kontext-ID auftritt und der Kanal abgebrochen wird, löst diese Methode eine `CommunicationException` aus.  
   
 ```  
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);  
 ```  
   
- Bevor Sie fortfahren, ist es wichtig, die Verwendung der `Properties`\-Auflistung in der `Message`\-Klasse zu verstehen.In der Regel wird diese `Properties`\-Auflistung verwendet, wenn Daten von unteren an die obere Ebenen der Kanalschicht weitergegeben werden.So können die gewünschten Daten den oberen Ebenen konsistent und unabhängig von den Protokolldetails zur Verfügung gestellt werden.Anders ausgedrückt kann die Kanalschicht die Kontext\-ID als SOAP\-Header oder HTTP\-Cookieheader senden und empfangen.Die oberen Ebenen müssen diese Details jedoch nicht kennen, da die Kanalschicht diese Informationen in der `Properties`\-Auflistung verfügbar macht.  
+ Bevor Sie fortfahren, ist es wichtig, die Verwendung der `Properties`-Auflistung in der `Message`-Klasse zu verstehen. In der Regel wird diese `Properties`-Auflistung verwendet, wenn Daten von unteren an die obere Ebenen der Kanalschicht weitergegeben werden. So können die gewünschten Daten den oberen Ebenen konsistent und unabhängig von den Protokolldetails zur Verfügung gestellt werden. Anders ausgedrückt kann die Kanalschicht die Kontext-ID als SOAP-Header oder HTTP-Cookieheader senden und empfangen. Die oberen Ebenen müssen diese Details jedoch nicht kennen, da die Kanalschicht diese Informationen in der `Properties`-Auflistung verfügbar macht.  
   
- Wenn die `DurableInstanceContextChannelBase`\-Klasse vorhanden ist, müssen alle zehn erforderlichen Schnittstellen \(IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel\) implementiert werden.Sie ähneln jedem verfügbaren Nachrichtenaustauschmuster \(Datagramm, Simplex, Duplex und deren sitzungsbasierten Varianten\).Jede dieser Implementierungen erbt die vorher beschriebene Basisklasse und ruft `ApplyContext` und `ReadContexId` entsprechend auf.So ruft beispielsweise `DurableInstanceContextOutputChannel` – die die IOutputChannel\-Schnittstelle implementiert – die `ApplyContext`\-Methode von jeder Methode auf, die Nachrichten sendet.  
+ Wenn die `DurableInstanceContextChannelBase`-Klasse vorhanden ist, müssen alle zehn erforderlichen Schnittstellen (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) implementiert werden. Sie ähneln jedem verfügbaren Nachrichtenaustauschmuster (Datagramm, Simplex, Duplex und deren sitzungsbasierten Varianten). Jede dieser Implementierungen erbt die vorher beschriebene Basisklasse und ruft `ApplyContext` und `ReadContexId` entsprechend auf. So ruft beispielsweise `DurableInstanceContextOutputChannel` – die die IOutputChannel-Schnittstelle implementiert – die `ApplyContext`-Methode von jeder Methode auf, die Nachrichten sendet.  
   
 ```  
 public void Send(Message message, TimeSpan timeout)  
@@ -105,7 +108,7 @@ public void Send(Message message, TimeSpan timeout)
 }   
 ```  
   
- Die `DurableInstanceContextInputChannel` wiederum – die die `IInputChannel`\-Schnittstelle implementiert – ruft die `ReadContextId`\-Methode in jeder Methode auf, die Nachrichten empfängt.  
+ Die `DurableInstanceContextInputChannel` wiederum – die die `IInputChannel`-Schnittstelle implementiert – ruft die `ReadContextId`-Methode in jeder Methode auf, die Nachrichten empfängt.  
   
 ```  
 public Message Receive(TimeSpan timeout)  
@@ -116,7 +119,7 @@ public Message Receive(TimeSpan timeout)
 }  
 ```  
   
- Außerdem delegieren diese Kanalimplementierungen die Methodenaufrufe an den nächst unteren Kanal im Kanalstapel.Sitzungsbasierte Varianten verfügen jedoch über eine Grundlogik, um sicherzustellen, dass die Kontext\-ID gesendet und nur für die erste Nachricht gelesen wird, aufgrund derer die Sitzung erstellt wurde.  
+ Außerdem delegieren diese Kanalimplementierungen die Methodenaufrufe an den nächst unteren Kanal im Kanalstapel. Sitzungsbasierte Varianten verfügen jedoch über eine Grundlogik, um sicherzustellen, dass die Kontext-ID gesendet und nur für die erste Nachricht gelesen wird, aufgrund derer die Sitzung erstellt wurde.  
   
 ```  
 if (isFirstMessage)  
@@ -127,10 +130,10 @@ if (isFirstMessage)
 }  
 ```  
   
- Diese Kanalimplementierungen werden dann von der `DurableInstanceContextBindingElement`\-Klasse und der `DurableInstanceContextBindingElementSection`\-Klasse entsprechend zur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Kanallaufzeit hinzugefügt.Weitere Informationen zu Bindungselementen und Bindungselementabschnitten finden Sie in der Dokumentation zum [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)\-Kanalbeispiel.  
+ Diese Kanalimplementierungen werden dann von der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Klasse und der `DurableInstanceContextBindingElement`-Klasse entsprechend zur `DurableInstanceContextBindingElementSection`-Kanallaufzeit hinzugefügt. Finden Sie unter der [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel Beispieldokumentation für ausführliche Informationen zu Bindungselementen und Elementabschnitte binden.  
   
-## Erweiterungen der Dienstmodellebene  
- Nachdem nun die Kontext\-ID die Kanalschicht durchlaufen hat, kann das Dienstverhalten implementiert werden, um die Instanziierung benutzerspezifisch anzupassen.In diesem Beispiel wird ein Speicher\-Manager verwendet, um den Zustand aus dem permanenten Speicher zu laden und in ihm zu speichern.Wie bereits erläutert arbeitet dieses Beispiel mit einem Speicher\-Manager, der SQL Server 2005 als Sicherungsspeicher verwendet.Es ist aber auch möglich, benutzerdefinierte Speichermechanismen zu dieser Erweiterung hinzuzufügen.Dazu wird eine öffentliche Schnittstelle deklariert, die von allen Speicher\-Managern implementiert werden muss.  
+## <a name="service-model-layer-extensions"></a>Erweiterungen der Dienstmodellebene  
+ Nachdem nun die Kontext-ID die Kanalschicht durchlaufen hat, kann das Dienstverhalten implementiert werden, um die Instanziierung benutzerspezifisch anzupassen. In diesem Beispiel wird ein Speicher-Manager verwendet, um den Zustand aus dem permanenten Speicher zu laden und in ihm zu speichern. Wie bereits erläutert arbeitet dieses Beispiel mit einem Speicher-Manager, der SQL Server 2005 als Sicherungsspeicher verwendet. Es ist aber auch möglich, benutzerdefinierte Speichermechanismen zu dieser Erweiterung hinzuzufügen. Dazu wird eine öffentliche Schnittstelle deklariert, die von allen Speicher-Managern implementiert werden muss.  
   
 ```  
 public interface IStorageManager  
@@ -140,7 +143,7 @@ public interface IStorageManager
 }  
 ```  
   
- Die `SqlServerStorageManager`\-Klasse enthält die `IStorageManager`\-Standardimplementierung.In ihrer `SaveInstance`\-Methode wird das entsprechende Objekt mit dem XmlSerializer serialisiert und in einer SQL Server\-Datenbank gespeichert.  
+ Die `SqlServerStorageManager`-Klasse enthält die `IStorageManager`-Standardimplementierung. In ihrer `SaveInstance`-Methode wird das entsprechende Objekt mit dem XmlSerializer serialisiert und in einer SQL Server-Datenbank gespeichert.  
   
 ```  
 XmlSerializer serializer = new XmlSerializer(state.GetType());  
@@ -175,7 +178,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }  
 ```  
   
- In der `GetInstance`\-Methode werden die serialisierten Daten für eine angegebene Kontext\-ID gelesen, und das daraus erstellte Objekt wird an den Aufrufer zurückgegeben.  
+ In der `GetInstance`-Methode werden die serialisierten Daten für eine angegebene Kontext-ID gelesen, und das daraus erstellte Objekt wird an den Aufrufer zurückgegeben.  
   
 ```  
 object data;  
@@ -202,7 +205,7 @@ if (data != null)
 }  
 ```  
   
- Benutzer dieser Speicher\-Manager sollten sie nicht direkt instanziieren.Sie verwenden die `StorageManagerFactory`\-Klasse, die von den Speichermanagererstellungsdetails abstrahiert wird.Diese Klasse verfügt über einen statischen Member, `GetStorageManager`, der eine Instanz eines gegebenen Speichermanagertyps erstellt.Wenn der Typparameter `null` lautet, erstellt diese Methode eine Instanz der `SqlServerStorageManager`\-Standardklasse und gibt diese zurück.Sie überprüft auch den gegebenen Typ, um sicherzustellen, dass er die `IStorageManager`\-Schnittstelle implementiert.  
+ Benutzer dieser Speicher-Manager sollten sie nicht direkt instanziieren. Sie verwenden die `StorageManagerFactory`-Klasse, die von den Speichermanagererstellungsdetails abstrahiert wird. Diese Klasse verfügt über einen statischen Member, `GetStorageManager`, der eine Instanz eines gegebenen Speichermanagertyps erstellt. Wenn der Typparameter `null` lautet, erstellt diese Methode eine Instanz der `SqlServerStorageManager`-Standardklasse und gibt diese zurück. Sie überprüft auch den gegebenen Typ, um sicherzustellen, dass er die `IStorageManager`-Schnittstelle implementiert.  
   
 ```  
 public static IStorageManager GetStorageManager(Type storageManagerType)  
@@ -234,19 +237,19 @@ else
 }   
 ```  
   
- Die notwendige Infrastruktur zum Lesen und Schreiben von Instanzen aus dem permanenten Speicher wurde implementiert.Jetzt müssen die notwendigen Schritte zum Ändern des Dienstverhaltens durchgeführt werden.  
+ Die notwendige Infrastruktur zum Lesen und Schreiben von Instanzen aus dem permanenten Speicher wurde implementiert. Jetzt müssen die notwendigen Schritte zum Ändern des Dienstverhaltens durchgeführt werden.  
   
- Zuerst muss die Kontext\-ID gespeichert werden, die über die Kanalschicht zur aktuellen InstanceContext übertragen wurde.Bei InstanceContext handelt es sich um eine Laufzeitkomponente, die als Verknüpfung zwischen dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Verteiler und der Dienstinstanz fungiert.Sie kann verwendet werden, um der Dienstinstanz einen zusätzlichen Zustand und zusätzliches Verhalten bereitzustellen.Dies ist notwendig, da die Kontext\-ID in einer sitzungsbasierten Kommunikation nur mit der ersten Nachricht gesendet wird.  
+ Zuerst muss die Kontext-ID gespeichert werden, die über die Kanalschicht zur aktuellen InstanceContext übertragen wurde. Bei InstanceContext handelt es sich um eine Laufzeitkomponente, die als Verknüpfung zwischen dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Verteiler und der Dienstinstanz fungiert. Sie kann verwendet werden, um der Dienstinstanz einen zusätzlichen Zustand und zusätzliches Verhalten bereitzustellen. Dies ist notwendig, da die Kontext-ID in einer sitzungsbasierten Kommunikation nur mit der ersten Nachricht gesendet wird.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht es, seine InstanceContext\-Laufzeitkomponente zu erweitern, indem mithilfe des erweiterbaren Objektmusters ein neuer Zustand und ein neues Verhalten hinzugefügt werden.Das erweiterbare Objektmuster wird in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet, um vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen.Es gibt drei Schnittstellen im erweiterbaren Objektmuster – IExtensibleObject\<T\>, IExtension\<T\> und IExtensionCollection\<T\>:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht es, seine InstanceContext-Laufzeitkomponente zu erweitern, indem mithilfe des erweiterbaren Objektmusters ein neuer Zustand und ein neues Verhalten hinzugefügt werden. Das erweiterbare Objektmuster wird in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet, um vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um neue Zustandsfunktionen zu einem Objekt hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster – IExtensibleObject\<T >, IExtension\<T >, und IExtensionCollection\<T >:  
   
--   Die IExtensibleObject\<T\>\-Schnittstelle wird von Objekten implementiert, die Erweiterungen zulassen, die ihre Funktionalität anpassen.  
+-   Die IExtensibleObject\<T >-Schnittstelle wird von Objekten implementiert, die Erweiterungen zulassen, die ihre Funktionalität anpassen.  
   
--   Die IExtension\<T\-\>\-Schnittstelle wird von Objekten implementiert, die Erweiterungen der Klassen des Typs T sind.  
+-   Die IExtension\<T >-Schnittstelle wird von Objekten implementiert, die Erweiterungen der Klassen des Typs t sind.  
   
--   Die IExtensionCollection\<T\-\>\-Schnittstelle ist eine Auflistung von IExtensions, die ein Abrufen von IExtensions ermöglichen.  
+-   Die IExtensionCollection\<T >-Schnittstelle ist eine Auflistung von iextensions, die ein Abrufen von ihrem Typ iextensions ermöglichen.  
   
- Es sollte deshalb eine InstanceContextExtension\-Klasse erstellt werden, die die IExtension\-Schnittstelle implementiert und den erforderlichen Zustand zum Speichern der Kontext\-ID definiert.Diese Klasse bietet auch den Zustand, um den verwendeten Speicher\-Manager aufzunehmen.Sobald der neue Zustand gespeichert ist, sollte es nicht mehr möglich sein, ihn zu ändern.Deshalb wird der Zustand zum Erstellungszeitpunkt bereitgestellt und in der Instanz gespeichert. Anschließend kann nur über schreibgeschützte Eigenschaften darauf zugegriffen werden.  
+ Es sollte deshalb eine InstanceContextExtension-Klasse erstellt werden, die die IExtension-Schnittstelle implementiert und den erforderlichen Zustand zum Speichern der Kontext-ID definiert. Diese Klasse bietet auch den Zustand, um den verwendeten Speicher-Manager aufzunehmen. Sobald der neue Zustand gespeichert ist, sollte es nicht mehr möglich sein, ihn zu ändern. Deshalb wird der Zustand zum Erstellungszeitpunkt bereitgestellt und in der Instanz gespeichert. Anschließend kann nur über schreibgeschützte Eigenschaften darauf zugegriffen werden.  
   
 ```  
 // Constructor  
@@ -269,7 +272,7 @@ public IStorageManager StorageManager
 }   
 ```  
   
- Die InstanceContextInitializer\-Klasse implementiert die IInstanceContextInitializer\-Schnittstelle und fügt die Instanzkontexterweiterung zur Erweiterungsauflistung der erstellten Komponente InstanceContext hinzu.  
+ Die InstanceContextInitializer-Klasse implementiert die IInstanceContextInitializer-Schnittstelle und fügt die Instanzkontexterweiterung zur Erweiterungsauflistung der erstellten Komponente InstanceContext hinzu.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  
@@ -284,9 +287,9 @@ public void Initialize(InstanceContext instanceContext, Message message)
 }  
 ```  
   
- Wie bereits beschrieben wird die Kontext\-ID von der `Properties`\-Auflistung der `Message`\-Klasse gelesen und an den Konstruktor der Erweiterungsklasse weitergegeben.Dadurch wird veranschaulicht, wie Informationen zwischen den Schichten konsistent ausgetauscht werden können.  
+ Wie bereits beschrieben wird die Kontext-ID von der `Properties`-Auflistung der `Message`-Klasse gelesen und an den Konstruktor der Erweiterungsklasse weitergegeben. Dadurch wird veranschaulicht, wie Informationen zwischen den Schichten konsistent ausgetauscht werden können.  
   
- Im nächsten wichtigen Schritt wird der Vorgang zum Erstellen der Dienstinstanz überschrieben.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht die Implementierung von benutzerdefinierten Instanziierungsverhaltensweisen und das Einbinden dieser Verhaltensweisen in die Laufzeit mithilfe der IInstanceProvider\-Schnittstelle.Die neue `InstanceProvider`\-Klasse wird implementiert, um diese Aufgabe auszuführen.Im Konstruktor wird der vom Instanzenanbieter erwartete Diensttyp akzeptiert.Später wird dies verwendet, um neue Instanzen zu erstellen.In der `GetInstance`\-Implementierung wird eine Instanz eines Speicher\-Managers erstellt, die nach einer beibehaltenen Instanz sucht.Wenn sie `null` zurückgibt, wird eine neue Instanz des Diensttyps instanziiert und zum Aufrufer zurückgegeben.  
+ Im nächsten wichtigen Schritt wird der Vorgang zum Erstellen der Dienstinstanz überschrieben. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ermöglicht die Implementierung von benutzerdefinierten Instanziierungsverhaltensweisen und das Einbinden dieser Verhaltensweisen in die Laufzeit mithilfe der IInstanceProvider-Schnittstelle. Die neue `InstanceProvider`-Klasse wird implementiert, um diese Aufgabe auszuführen. Im Konstruktor wird der vom Instanzenanbieter erwartete Diensttyp akzeptiert. Später wird dies verwendet, um neue Instanzen zu erstellen. In der `GetInstance`-Implementierung wird eine Instanz eines Speicher-Managers erstellt, die nach einer beibehaltenen Instanz sucht. Wenn sie `null` zurückgibt, wird eine neue Instanz des Diensttyps instanziiert und zum Aufrufer zurückgegeben.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -310,11 +313,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }  
 ```  
   
- Im nächsten wichtigen Schritt wird die `InstanceContextExtension`, `InstanceContextInitializer`\-Klasse und die `InstanceProvider`\-Klasse in die Dienstmodellaufzeit installiert.Es kann ein benutzerdefiniertes Attribut verwendet werden, um die Dienstimplementierungsklassen für die Installation des Verhaltens zu kennzeichnen.`DurableInstanceContextAttribute` enthält die Implementierung für dieses Attribut und implementiert die `IServiceBehavior`\-Schnittstelle, um die gesamte Dienstlaufzeit zu erweitern.  
+ Im nächsten wichtigen Schritt wird die `InstanceContextExtension`, `InstanceContextInitializer`-Klasse und die `InstanceProvider`-Klasse in die Dienstmodellaufzeit installiert. Es kann ein benutzerdefiniertes Attribut verwendet werden, um die Dienstimplementierungsklassen für die Installation des Verhaltens zu kennzeichnen. `DurableInstanceContextAttribute` enthält die Implementierung für dieses Attribut und implementiert die `IServiceBehavior`-Schnittstelle, um die gesamte Dienstlaufzeit zu erweitern.  
   
- Diese Klasse verfügt über eine Eigenschaft, die den Typ des zu verwendenden Speicher\-Managers akzeptiert.So ermöglicht es die Implementierung den Benutzern, ihre eigene `IStorageManager`\-Implementierung als Parameter dieses Attributs anzugeben.  
+ Diese Klasse verfügt über eine Eigenschaft, die den Typ des zu verwendenden Speicher-Managers akzeptiert. So ermöglicht es die Implementierung den Benutzern, ihre eigene `IStorageManager`-Implementierung als Parameter dieses Attributs anzugeben.  
   
- In der `ApplyDispatchBehavior`\-Implementierung wird der `InstanceContextMode` des aktuellen `ServiceBehavior`\-Attributs überprüft.Wenn diese Eigenschaft auf "Singleton" festgelegt ist, kann keine permanente Instanziierung aktualisiert werden und `InvalidOperationException` wird ausgelöst, um den Host zu benachrichtigen.  
+ In der `ApplyDispatchBehavior`-Implementierung wird der `InstanceContextMode` des aktuellen `ServiceBehavior`-Attributs überprüft. Wenn diese Eigenschaft auf "Singleton" festgelegt ist, kann keine permanente Instanziierung aktualisiert werden und `InvalidOperationException` wird ausgelöst, um den Host zu benachrichtigen.  
   
 ```  
 ServiceBehaviorAttribute serviceBehavior =  
@@ -328,7 +331,7 @@ if (serviceBehavior != null &&
 }  
 ```  
   
- Anschließend werden die Instanzen des Speicher\-Managers, des Instanzkontextinitialisierers und des Instanzenanbieters erstellt und in der für jeden Endpunkt erstellten `DispatchRuntime` installiert.  
+ Anschließend werden die Instanzen des Speicher-Managers, des Instanzkontextinitialisierers und des Instanzenanbieters erstellt und in der für jeden Endpunkt erstellten `DispatchRuntime` installiert.  
   
 ```  
 IStorageManager storageManager =   
@@ -355,17 +358,17 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 }  
 ```  
   
- Bisher resultiert aus diesem Beispiel ein Kanal, der das benutzerdefinierte Versandprotokoll für den Austausch der benutzerdefinierten Kontext\-ID aktiviert hat. Außerdem überschreibt es das Standardinstanziierungsverhalten, die Instanzen aus dem permanenten Speicher zu laden.  
+ Bisher resultiert aus diesem Beispiel ein Kanal, der das benutzerdefinierte Versandprotokoll für den Austausch der benutzerdefinierten Kontext-ID aktiviert hat. Außerdem überschreibt es das Standardinstanziierungsverhalten, die Instanzen aus dem permanenten Speicher zu laden.  
   
- Nun muss nur noch die Dienstinstanz im permanenten Speicher gespeichert werden.Wie zuvor erläutert gibt es bereits die erforderliche Funktionalität, den Zustand in einer `IStorageManager`\-Implementierung zu speichern.Diese Funktionalität muss jetzt mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Laufzeit integriert werden.Es ist ein weiteres Attribut erforderlich, dass auf die Methoden in der Dienstimplementierungsklasse angewendet werden kann.Dieses Attribut soll auf die Methoden angewendet werden, die den Zustand der Dienstinstanz ändern.  
+ Nun muss nur noch die Dienstinstanz im permanenten Speicher gespeichert werden. Wie zuvor erläutert gibt es bereits die erforderliche Funktionalität, den Zustand in einer `IStorageManager`-Implementierung zu speichern. Diese Funktionalität muss jetzt mit der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit integriert werden. Es ist ein weiteres Attribut erforderlich, dass auf die Methoden in der Dienstimplementierungsklasse angewendet werden kann. Dieses Attribut soll auf die Methoden angewendet werden, die den Zustand der Dienstinstanz ändern.  
   
- Die `SaveStateAttribute`\-Klasse implementiert diese Funktionalität.Sie implementiert auch die `IOperationBehavior`\-Klasse, um die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Laufzeit für jeden Vorgang zu ändern.Wenn eine Methode mit diesem Attribut gekennzeichnet ist, ruft die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Laufzeit die `ApplyBehavior`\-Methoden auf, während der entsprechende `DispatchOperation` erstellt wird.In dieser Methodenimplementierung ist eine Codezeile vorhanden:  
+ Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Sie implementiert auch die `IOperationBehavior`-Klasse, um die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut gekennzeichnet ist, ruft die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Laufzeit die `ApplyBehavior`-Methoden auf, während der entsprechende `DispatchOperation` erstellt wird. In dieser Methodenimplementierung ist eine Codezeile vorhanden:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
 ```  
   
- Die Anweisung erstellt eine Instanz des `OperationInvoker`\-Typs und weist sie zur `Invoker`\-Eigenschaft des erstellten `DispatchOperation` zu.Die `OperationInvoker`\-Klasse ist ein Wrapper des Standardvorgangaufrufers, der für `DispatchOperation` erstellt wurde.Diese Klasse implementiert die `IOperationInvoker`\-Schnittstelle.In der `Invoke`\-Methodenimplementierung wird der tatsächliche Methodenaufruf an den internen Vorgangsaufrufer delegiert.Bevor die Ergebnisse jedoch zurückgegeben werden, wird mit dem Speicher\-Manager in `InstanceContext` die Dienstinstanz gespeichert.  
+ Die Anweisung erstellt eine Instanz des `OperationInvoker`-Typs und weist sie zur `Invoker`-Eigenschaft des erstellten `DispatchOperation` zu. Die `OperationInvoker`-Klasse ist ein Wrapper des Standardvorgangaufrufers, der für `DispatchOperation` erstellt wurde. Diese Klasse implementiert die `IOperationInvoker`-Schnittstelle. In der `Invoke`-Methodenimplementierung wird der tatsächliche Methodenaufruf an den internen Vorgangsaufrufer delegiert. Bevor die Ergebnisse jedoch zurückgegeben werden, wird mit dem Speicher-Manager in `InstanceContext` die Dienstinstanz gespeichert.  
   
 ```  
 object result = innerOperationInvoker.Invoke(instance,  
@@ -380,8 +383,8 @@ extension.StorageManager.SaveInstance(extension.ContextId, instance);
 return result;  
 ```  
   
-## Verwenden der Erweiterung  
- Sowohl die Erweiterung der Kanalschicht als auch der Dienstmodellschicht ist nun abgeschlossen, und sie können jetzt in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendungen verwendet werden.Dienste müssen den Kanal mithilfe einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen und die Dienstimplementierungsklassen dann mit den entsprechenden Attributen kennzeichnen.  
+## <a name="using-the-extension"></a>Verwenden der Erweiterung  
+ Sowohl die Erweiterung der Kanalschicht als auch der Dienstmodellschicht ist nun abgeschlossen, und sie können jetzt in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen verwendet werden. Dienste müssen den Kanal mithilfe einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen und die Dienstimplementierungsklassen dann mit den entsprechenden Attributen kennzeichnen.  
   
 ```  
 [DurableInstanceContext]  
@@ -398,9 +401,9 @@ public class ShoppingCart : IShoppingCart
  }  
 ```  
   
- Clientanwendungen müssen den DurableInstanceContextChannel mit einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen.Um den Kanal deklarativ in der Konfigurationsdatei zu konfigurieren, muss der Bindungselementbereich zur Auflistung der Bindungselementerweiterungen hinzugefügt werden.  
+ Clientanwendungen müssen den DurableInstanceContextChannel mit einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen. Um den Kanal deklarativ in der Konfigurationsdatei zu konfigurieren, muss der Bindungselementbereich zur Auflistung der Bindungselementerweiterungen hinzugefügt werden.  
   
-```  
+```xml  
 <system.serviceModel>  
  <extensions>  
    <bindingElementExtensions>  
@@ -412,7 +415,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
   
  Jetzt kann das Bindungselement wie andere Standardbindungselemente mit einer benutzerdefinierten Bindung verwendet werden:  
   
-```  
+```xml  
 <bindings>  
  <customBinding>  
    <binding name="TextOverHttp">  
@@ -425,14 +428,14 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 </bindings>  
 ```  
   
-## Schlussfolgerung  
+## <a name="conclusion"></a>Schlussfolgerung  
  In diesem Beispiel wurde gezeigt, wie ein benutzerdefinierter Protokollkanal erstellt wird und wie das Dienstverhalten angepasst werden muss, um diesen Protokollkanal zu aktivieren.  
   
- Die Erweiterung kann weiter verbessert werden, wenn Benutzer die `IStorageManager`\-Implementierung mit einem Konfigurationsabschnitt angeben können.Dadurch kann der Sicherungsspeicher geändert werden, ohne den Dienstcode neu zu kompilieren.  
+ Die Erweiterung kann weiter verbessert werden, wenn Benutzer die `IStorageManager`-Implementierung mit einem Konfigurationsabschnitt angeben können. Dadurch kann der Sicherungsspeicher geändert werden, ohne den Dienstcode neu zu kompilieren.  
   
- Außerdem können Sie versuchen, eine Klasse zu implementieren \(z. B. `StateBag`\), die den Zustand der Instanz kapselt.Diese Klasse ist für das Beibehalten des Zustands verantwortlich, wenn er sich ändert.Sie können so die Verwendung des `SaveState`\-Attributs vermeiden und die bestehenden Aufgaben genauer ausführen \(Sie können z. B. den Zustand beibehalten, wenn der Zustand geändert wird, anstatt ihn jedes Mal zu speichern, wenn eine Methode mit dem `SaveState`\-Attribut aufgerufen wird\).  
+ Außerdem können Sie versuchen, eine Klasse zu implementieren (z. B. `StateBag`), die den Zustand der Instanz kapselt. Diese Klasse ist für das Beibehalten des Zustands verantwortlich, wenn er sich ändert. Sie können so die Verwendung des `SaveState`-Attributs vermeiden und die bestehenden Aufgaben genauer ausführen (Sie können z. B. den Zustand beibehalten, wenn der Zustand geändert wird, anstatt ihn jedes Mal zu speichern, wenn eine Methode mit dem `SaveState`-Attribut aufgerufen wird).  
   
- Wenn Sie das Beispiel ausführen, wird die folgende Ausgabe angezeigt:Der Client fügt zwei Elemente zum Warenkorb hinzu und erhält dann vom Dienst die Liste der Elemente im Warenkorb.Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
+ Wenn Sie das Beispiel ausführen, wird die folgende Ausgabe angezeigt: Der Client fügt zwei Elemente zum Warenkorb hinzu und erhält dann vom Dienst die Liste der Elemente im Warenkorb. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
 ```  
 Enter the name of the product: apples  
@@ -445,26 +448,26 @@ Press ENTER to shut down client
 ```  
   
 > [!NOTE]
->  Durch erneutes Erstellen des Diensts wird die Datenbankdatei überschrieben.Wenn Sie den Zustand überwachen möchten, der während mehrerer Durchläufe des Beispiels beibehalten wurde, erstellen Sie das Beispiel zwischen den einzelnen Durchläufen nicht neu.  
+>  Durch erneutes Erstellen des Diensts wird die Datenbankdatei überschrieben. Wenn Sie den Zustand überwachen möchten, der während mehrerer Durchläufe des Beispiels beibehalten wurde, erstellen Sie das Beispiel zwischen den einzelnen Durchläufen nicht neu.  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Vergewissern Sie sich, dass Sie [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Folgen Sie zum Erstellen der Projektmappe den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend ausführen möchten, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Um dieses Beispiel auszuführen, muss SQL Server 2005 oder SQL Express 2005 ausgeführt werden.Wenn Sie SQL Server 2005 ausführen, müssen Sie die Konfiguration der Verbindungszeichenfolge des Diensts ändern.Wenn Sie das Beispiel computerübergreifend ausführen, ist SQL Server nur auf dem Servercomputer erforderlich.  
+>  Um dieses Beispiel auszuführen, muss SQL Server 2005 oder SQL Express 2005 ausgeführt werden. Wenn Sie SQL Server 2005 ausführen, müssen Sie die Konfiguration der Verbindungszeichenfolge des Diensts ändern. Wenn Sie das Beispiel computerübergreifend ausführen, ist SQL Server nur auf dem Servercomputer erforderlich.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

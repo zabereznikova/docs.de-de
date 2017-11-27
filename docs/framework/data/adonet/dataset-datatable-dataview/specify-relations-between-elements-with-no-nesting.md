@@ -1,27 +1,30 @@
 ---
-title: "Angeben von Beziehungen zwischen Elementen ohne Schachtelung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 036085160e9e4817964754a85db627e4d4ba8654
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Angeben von Beziehungen zwischen Elementen ohne Schachtelung
-Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt.  Sie können jedoch Beziehungen zwischen nicht geschachtelten Elementen mithilfe der **msdata:Relationship**\-Anmerkung explizit angeben.  
+# <a name="specify-relations-between-elements-with-no-nesting"></a>Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
+Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt. Sie können jedoch explizit festlegen, Beziehungen zwischen Elementen, die mit nicht geschachtelt sind die **msdata: Relationship** Anmerkung.  
   
- Im folgenden Beispiel wird ein XML\-Schema gezeigt, in dem die **msdata:Relationship**\-Anmerkung zwischen den Elementen **Order** und **OrderDetail** angegeben wurde, die nicht geschachtelt sind.  Die **msdata:Relationship**\-Anmerkung wird als das untergeordnete Element des **Schema**\-Elements angegeben.  
+ Das folgende Beispiel zeigt ein XML-Schema, in dem die **msdata: Relationship** -Anmerkung zwischen den **Reihenfolge** und **OrderDetail** Elemente, die nicht geschachtelt. Die **msdata: Relationship** -Anmerkung wird als untergeordnetes Element von der **Schema** Element.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
              xmlns:xs="http://www.w3.org/2001/XMLSchema"   
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -60,7 +63,7 @@ Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erste
 </xs:schema>  
 ```  
   
- Während des Zuordnungsvorgangs des XSD\-Sprachschemas \(XML Schema Definition\) wird ein <xref:System.Data.DataSet> mit der **Order**\-Tabelle und der **OrderDetail**\-Tabelle und einer zwischen diesen beiden Tabellen definierten Beziehung erstellt, wie nachstehend gezeigt wird.  
+ Die XML-Schema Definition Language (XSD)-Schemazuordnungsprozess erstellt eine <xref:System.Data.DataSet> mit **Reihenfolge** und **OrderDetail** Tabellen und eine Beziehung zwischen diesen beiden Tabellen angegeben werden, wie unten dargestellt.  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -71,7 +74,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## Siehe auch  
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Generieren von DataSet-Beziehungen aus XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

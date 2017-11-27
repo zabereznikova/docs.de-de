@@ -1,50 +1,32 @@
 ---
-title: Property-Anweisung | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Property Statement
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
 - vb.Property
 - vb.PropertyGet
-dev_langs:
-- VB
 helpviewer_keywords:
-- Property statement
+- Property statement [Visual Basic]
 - default modifier
-- property procedures, Property statements
-- Property keyword
+- property procedures [Visual Basic], Property statements
+- Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 87cb32c12ab3238508a6a4bb114306909e409dda
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="property-statement"></a>Property Statement
-Deklariert den Namen einer Eigenschaft sowie die Eigenschaftenprozeduren zum Speichern und Abrufen des Werts der Eigenschaft.  
+Deklariert den Namen einer Eigenschaft und den Eigenschaftenprozeduren, die zum Speichern und Abrufen des Werts der Eigenschaft.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,15 +51,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     Optional. Liste der Attribute, die für diese Eigenschaft gelten oder `Get` oder `Set` Verfahren. Finden Sie unter [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Dies ist optional. Liste der Attribute, die für diese Eigenschaft gelten oder `Get` oder `Set` Prozedur. Finden Sie unter [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     Optional. Gibt an, dass diese Eigenschaft ist die Standardeigenschaft für die Klasse oder Struktur, in der sie definiert ist. Standardeigenschaften können müssen Parameter akzeptieren und festgelegt und ohne den Eigenschaftsnamen abgerufen werden. Wenn Sie die Eigenschaft als deklarieren `Default`, können keine `Private` für die Eigenschaft noch für eine ihrer Eigenschaftenprozeduren.  
+     Dies ist optional. Gibt an, dass diese Eigenschaft ist die Standardeigenschaft für die Klasse oder Struktur, die auf dem sie definiert ist. Standardeigenschaften können müssen Parameter annehmen und festgelegt und ohne den Namen der Eigenschaft abgerufen werden. Wenn Sie die Eigenschaft als deklarieren `Default`, können keine `Private` auf die Eigenschaft oder eine der Eigenschaftenprozeduren.  
   
 -   `accessmodifier`  
   
-     Optional Klicken Sie auf die `Property` -Anweisung und für höchstens eine der der `Get` und `Set` Anweisungen. Einer der folgenden Werte ist möglich:  
+     Optional Klicken Sie auf die `Property` Anweisung und höchstens eines der `Get` und `Set` Anweisungen. Einer der folgenden Werte ist möglich:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -93,7 +75,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `propertymodifiers`  
   
-     Optional. Einer der folgenden Werte ist möglich:  
+     Dies ist optional. Einer der folgenden Werte ist möglich:  
   
     -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -111,43 +93,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     Optional. Finden Sie unter [freigegebenen](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Dies ist optional. Finden Sie unter [freigegebene](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Optional. Finden Sie unter [Schatten](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Dies ist optional. Finden Sie unter [Schatten](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
-     Optional. Finden Sie unter [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Dies ist optional. Finden Sie unter [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WriteOnly`  
   
-     Optional. Finden Sie unter [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+     Dies ist optional. Finden Sie unter [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
 -   `Iterator`  
   
-     Optional. Finden Sie unter [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Dies ist optional. Finden Sie unter [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Erforderlich. Der Name der Eigenschaft. Finden Sie unter [deklarierten Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Erforderlich. Der Name der Eigenschaft. Finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
-     Optional. Liste der Namen lokaler Variablen, die die Parameter dieser Eigenschaft und mögliche zusätzliche Parameter der darstellen der `Set` Verfahren. Finden Sie unter [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     Dies ist optional. Liste der Namen lokaler Variablen darstellt, die Parameter dieser Eigenschaft und mögliche zusätzliche Parameter der `Set` Prozedur. Finden Sie unter [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
-     Erforderlich, wenn `Option``Strict` ist `On`. Der Datentyp des von dieser Eigenschaft zurückgegebenen Werts.  
+     Erforderlich, wenn `Option``Strict` ist `On`. Der Datentyp der von dieser Eigenschaft zurückgegebene Wert.  
   
 -   `Implements`  
   
-     Optional. Gibt an, dass diese Eigenschaft implementiert eine oder mehrere Eigenschaften, die jeweils in einer Schnittstelle implementiert, die von dieser Eigenschaft enthaltenden Klasse oder Struktur definiert. Finden Sie unter [Anweisung implementiert](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     Dies ist optional. Gibt an, dass diese Eigenschaft implementiert wird, eine oder mehrere Eigenschaften, die jeweils in einer Schnittstelle implementiert, die durch diese Eigenschaft enthaltende Klasse oder Struktur definiert. Finden Sie unter [Anweisung implementiert](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
-     Erforderlich, wenn `Implements` angegeben wird. Liste der implementierten Eigenschaften.  
+     Erforderlich, wenn `Implements` angegeben wird. Liste der Eigenschaften, die implementiert wird.  
   
      `implementedproperty [ , implementedproperty ... ]`  
   
@@ -157,84 +139,83 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |Segment|Beschreibung|  
     |---|---|  
-    |`interface`|Erforderlich. Name der Schnittstelle implementiert, die von dieser Eigenschaft der enthaltenden Klasse oder Struktur.|  
-    |`definedname`|Erforderlich. Name, mit dem die Eigenschaft, in definiert ist `interface`.|  
+    |`interface`|Erforderlich. Name einer Schnittstelle implementiert, die von dieser Eigenschaft der enthaltenden Klasse oder Struktur.|  
+    |`definedname`|Erforderlich. Mit dem die Eigenschaft, im definiert ist Namen `interface`.|  
   
 -   `Get`  
   
-     Optional. Erforderlich, wenn die Eigenschaft markiert ist `WriteOnly`. Startet eine `Get` Property-Prozedur, die verwendet wird, um den Wert der Eigenschaft zurückzugeben.  
+     Dies ist optional. Erforderlich, wenn die Eigenschaft gekennzeichnet ist `WriteOnly`. Startet eine `Get` Eigenschaftenprozedur, der verwendet wird, um den Wert der Eigenschaft zurückzugeben.  
   
 -   `statements`  
   
-     Optional. Block von Anweisungen für die Ausführung innerhalb der `Get` oder `Set` Verfahren.  
+     Dies ist optional. Block von Anweisungen für die Ausführung innerhalb der `Get` oder `Set` Prozedur.  
   
 -   `End Get`  
   
-     Beendet die `Get` Property-Prozeduren.  
+     Beendet die `Get` -Eigenschaftenprozedur.  
   
 -   `Set`  
   
-     Optional. Erforderlich, wenn die Eigenschaft markiert ist `ReadOnly`. Startet eine `Set` Property-Prozedur, die zum Speichern des Werts der Eigenschaft verwendet wird.  
+     Dies ist optional. Erforderlich, wenn die Eigenschaft gekennzeichnet ist `ReadOnly`. Startet eine `Set` Eigenschaftenprozedur, die zum Speichern des Werts der Eigenschaft verwendet wird.  
   
 -   `End Set`  
   
-     Beendet die `Set` Property-Prozeduren.  
+     Beendet die `Set` -Eigenschaftenprozedur.  
   
 -   `End Property`  
   
      Beendet die Definition dieser Eigenschaft.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Property` -Anweisung führt die Deklaration einer Eigenschaft. Eine Eigenschaft haben eine `Get` Verfahren (schreibgeschützt), eine `Set` -Prozedur (lesegeschützt) oder beide (Lese-/ Schreibzugriff). Sie lassen die `Get` und `Set` Verfahren, wenn Sie eine automatisch implementierte Eigenschaft verwenden. Weitere Informationen finden Sie unter [automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
+ Die `Property` -Anweisung führt die Deklaration einer Eigenschaft. Eine Eigenschaft aufweisen kann eine `Get` Prozedur (schreibgeschützt), eine `Set` Prozedur (lesegeschützt) oder beide (Lese-/ Schreibzugriff). Sie lassen die `Get` und `Set` Verfahren, wenn Sie eine automatisch implementierte Eigenschaft verwenden. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
- Sie können `Property` nur auf Klassenebene. Dies bedeutet, dass die *Deklarationskontext* für eine Eigenschaft eine Klasse, Struktur, Modul oder Schnittstelle sein muss und darf keine Quelldatei, Namespace, Prozedur oder Block. Weitere Informationen finden Sie unter [Deklarationskontexte und Zugriffsebenen standardmäßig](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Sie können `Property` nur auf Klassenebene. Dies bedeutet, dass die *Deklarationskontext* für eine Eigenschaft muss eine Klasse, Struktur, Modul oder Schnittstelle, und nicht mit einer Quelldatei, Namespace, Prozedur oder Block. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Standardmäßig verwenden die Eigenschaften öffentlicher Zugriff. Sie können die Zugriffsebene einer Eigenschaft mit einem Zugriffsmodifizierer anpassen, auf die `Property` -Anweisung, und Sie können optional auch anpassen, eine ihrer Eigenschaftenprozeduren auf eine restriktivere Zugriffsebene festlegen.  
+ Standardmäßig verwenden Eigenschaften öffentlicher Zugriff. Sie können die Zugriffsebene für eine Eigenschaft mit einem Zugriffsmodifizierer anpassen, auf die `Property` -Anweisung, und Sie können optional auch anpassen, eine der Eigenschaftenprozeduren auf eine restriktivere Zugriffsebene.  
   
- Visual Basic übergibt einen Parameter an die `Set` Prozedur während der Eigenschaften. Wenn Sie keine Parameter für bieten `Set`, die integrierte Entwicklungsumgebung (IDE) verwendet einen impliziten Parameter mit dem Namen `value`. Dieser Parameter enthält den Wert der Eigenschaft zugewiesen werden. In der Regel speichern Sie diesen Wert in einer privaten lokalen Variablen und gibt es immer die `Get` Prozedur aufgerufen wird.  
+ Visual Basic übergibt die Parameter für die `Set` Prozedur während der eigenschaftenzuweisungen. Wenn Sie keine Parameter für angeben `Set`, der integrierten Entwicklungsumgebung (IDE) verwendet einen impliziten Parameter mit dem Namen `value`. Dieser Parameter enthält den Wert der Eigenschaft zugewiesen werden soll. In der Regel speichern den Wert in einer privaten lokalen Variable und gibt es immer die `Get` Prozedur aufgerufen wird.  
   
 ## <a name="rules"></a>Regeln  
   
--   **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder für die `Get` oder `Set` Verfahren, aber nicht beide. Wenn Sie dies tun, muss die Zugriffsebene der Prozedur restriktiver als die Zugriffsebene der Eigenschaft sein. Beispielsweise, wenn die Eigenschaft deklariert wird `Friend`, können Sie deklarieren die `Set` Prozedur `Private`, aber nicht `Public`.  
+-   **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder die `Get` oder `Set` Prozedur, aber nicht beides. Wenn in diesem Fall muss die Zugriffsebene der Prozedur restriktiver ist als die Zugriffsebene der Eigenschaft. Z. B., wenn die Eigenschaft deklariert wird `Friend`, Sie können deklarieren, die `Set` Prozedur `Private`, aber nicht `Public`.  
   
-     Definieren einer `ReadOnly` oder `WriteOnly` -Eigenschaft, die Eigenschaftenprozedur (`Get` oder `Set`bzw.) alle der Eigenschaft darstellt. Sie können nicht für eine Prozedur, eine andere Zugriffsebene deklarieren, da hierdurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
+     Wenn Sie definieren eine `ReadOnly` oder `WriteOnly` -Eigenschaft, die einzelne Eigenschaftenprozedur (`Get` oder `Set`bzw.) stellt alle von der Eigenschaft. Eine andere Zugriffsebene für eine solche Prozedur nicht deklariert werden, da hierdurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
   
--   **Der Rückgabetyp.** Die `Property` -Anweisung kann den Datentyp des zurückgegebenen Werts deklarieren. Sie können einen beliebigen Datentyp oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle angeben.  
+-   **Der Rückgabetyp.** Die `Property` -Anweisung kann den Datentyp des zurückgegebenen Werts deklarieren. Sie können einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle angeben.  
   
      Wenn Sie keinen angeben `returntype`, gibt die Eigenschaft `Object`.  
   
--   **-Implementierung.** Wenn diese Eigenschaft verwendet die `Implements` -Schlüsselwort, der enthaltenden Klasse oder Struktur benötigen eine `Implements` -Anweisung unmittelbar nach seiner `Class` oder `Structure` Anweisung. Die `Implements` -Anweisung muss jede Schnittstelle, die im angegebenen enthalten `implementslist`. Allerdings den Namen, mit dem eine Schnittstelle definiert, die `Property` (in `definedname`) muss nicht identisch mit dem Namen dieser Eigenschaft werden (in `name`).  
+-   **-Implementierung.** Wenn diese Eigenschaft verwendet die `Implements` -Schlüsselwort, der enthaltenden Klasse oder Struktur benötigen eine `Implements` Anweisung unmittelbar nach seiner `Class` oder `Structure` Anweisung. Die `Implements` -Anweisung muss jede Schnittstelle, die im angegebenen enthalten `implementslist`. Jedoch den Namen, die mit dem eine Schnittstelle definiert die `Property` (in `definedname`) muss nicht in den Namen dieser Eigenschaft entsprechen (im `name`).  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zurückgeben einer Eigenschaftenprozedur.** Wenn die `Get` oder `Set` -Prozedur zum aufrufenden Code zurückkehrt, die Ausführung wird fortgesetzt, mit der Anweisung nach der Anweisung, die sie aufgerufen.  
+-   **Zurückgeben aus einer Eigenschaftenprozedur.** Wenn die `Get` oder `Set` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, mit der Anweisung nach der Anweisung, die sie aufgerufen hat.  
   
-     Die `Exit Property` und `Return` -Anweisung führen zur unmittelbare Beendigung einer Eigenschaftenprozedur. Eine beliebige Anzahl von `Exit Property` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie kombinieren können `Exit Property` und `Return` Anweisungen.  
+     Die `Exit Property` und `Return` Anweisungen bewirken, dass eine sofortige Beendigung einer Eigenschaftenprozedur. Eine beliebige Anzahl von `Exit Property` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie können kombinieren `Exit Property` und `Return` Anweisungen.  
   
--   **Der Rückgabewert.** Zum Zurückgeben eines Werts aus einer `Get` Verfahren, Sie können entweder den Wert der Eigenschaftenname zuweisen oder ihn in eine `Return` Anweisung. Das folgende Beispiel weist den Rückgabewert dem Eigenschaftennamen `quoteForTheDay` und verwendet dann die `Exit Property` -Anweisung zurückgegeben.  
+-   **Der Rückgabewert.** Zurückzugebenden einen Wert aus einer `Get` Prozedur, Sie können entweder weisen den Namen der Eigenschaft den Wert oder fügen Sie ihn in eine `Return` Anweisung. Im folgende Beispiel weist den Rückgabewert des Eigenschaftennamens `quoteForTheDay` und verwendet dann die `Exit Property` -Anweisung zurückgegeben.  
   
-     [!code-vb[VbVbalrStatements&#27;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements&#28;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
   
-     Bei Verwendung von `Exit Property` ohne Zuweisen eines Werts zur `name`der `Get` Prozedur gibt den Standardwert für den Datentyp der Eigenschaft zurück.  
+     Bei Verwendung von `Exit Property` ohne Zuweisen eines Werts zur `name`die `Get` Prozedur gibt den Standardwert für den Datentyp der Eigenschaft zurück.  
   
-     Die `Return` Anweisung zur gleichen Zeit weist der `Get` Prozedur zurück und beendet die Prozedur. Das folgende Beispiel zeigt dies.  
+     Die `Return` Anweisung zur gleichen Zeit weist der `Get` Prozedur zurückgeben, Wert und Beenden der Prozedur. Das folgende Beispiel zeigt dies.  
   
-     [!code-vb[VbVbalrStatements&#27;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements&#29;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird eine Eigenschaft in einer Klasse deklariert.  
+ Das folgende Beispiel deklariert eine Eigenschaft in einer Klasse.  
   
- [!code-vb[VbVbalrStatements&51;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Get-Anweisung](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)   
+ [Automatisch implementierte Eigenschaften](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Get-Anweisung](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)  
  [Default](../../../visual-basic/language-reference/modifiers/default.md)
-

@@ -1,41 +1,47 @@
 ---
-title: "Gewusst wie: Animieren der Gr&#246;&#223;e eines ArcSegment | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, ArcSegment-Größe"
-  - "ArcSegment, Animieren der Größe"
-  - "Grafiken [WPF], Animation"
+title: "Gewusst wie: Animieren der Größe eines ArcSegment"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], animation
+- animation [WPF], ArcSegment size
+- ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f71f910dca651b66d02971d05fb83a8d7bbc5f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Animieren der Gr&#246;&#223;e eines ArcSegment
-In diesem Beispiel wird das Animieren der <xref:System.Windows.Media.ArcSegment.Size%2A>\-Eigenschaft eines <xref:System.Windows.Media.ArcSegment> dargestellt.  
+# <a name="how-to-animate-the-size-of-an-arcsegment"></a>Gewusst wie: Animieren der Größe eines ArcSegment
+In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.ArcSegment.Size%2A> Eigenschaft ein <xref:System.Windows.Media.ArcSegment>.  
   
-## Beispiel  
- In folgendem Beispiel wird ein <xref:System.Windows.Media.ArcSegment> erstellt, dessen <xref:System.Windows.Media.ArcSegment.Size%2A> animiert wird, wenn es auf den Bildschirm geladen wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Media.ArcSegment> , die eine Animation seine <xref:System.Windows.Media.ArcSegment.Size%2A> Wenn dieses geladen wird auf dem Bildschirm.  
   
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- Weitere Geometrie\- und Animationsbeispiele finden Sie unter [Beispiele zu Geometrie](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Zusätzliche Geometrie und Animationsbeispiele finden Sie in der [Geometrien Beispiel](http://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## Siehe auch  
- <xref:System.Windows.Media.ArcSegment.Size%2A>   
- <xref:System.Windows.Media.ArcSegment>   
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)   
- [Animation and Timing](http://msdn.microsoft.com/de-de/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Media.ArcSegment.Size%2A>  
+ <xref:System.Windows.Media.ArcSegment>  
+ [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Animation und zeitlichen Steuerung](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

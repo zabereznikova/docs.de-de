@@ -1,33 +1,32 @@
 ---
-title: "SyncLock Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.SyncLock"
-  - "SyncLock"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "threading [Visual Basic], locks"
-  - "SyncLock statement"
-  - "locks, threads"
+title: SyncLock-Anweisung
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.SyncLock
+- SyncLock
+helpviewer_keywords:
+- threading [Visual Basic], locks
+- SyncLock statement [Visual Basic]
+- locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# SyncLock Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Ruft vor dem Ausführen des Anweisungsblocks eine exklusive Sperre für den Block ab.  
+# <a name="synclock-statement"></a>SyncLock-Anweisung
+Ruft eine exklusive Sperre für einen Anweisungsblock vor der Ausführung des Blocks ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 SyncLock lockobject  
@@ -35,72 +34,72 @@ SyncLock lockobject
 End SyncLock  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `lockobject`  
- Erforderlich.  Ausdruck, der einen Objektverweis ergibt.  
+ Erforderlich. Ein Ausdruck, der einen Objektverweis ergibt.  
   
  `block`  
- Dies ist optional.  Block von Anweisungen, die auszuführen sind, wenn die Sperre erworben wird.  
+ Dies ist optional. Der Block von Anweisungen, die ausgeführt werden, wenn die Sperre abgerufen wurde.  
   
  `End SyncLock`  
- Beendet einen `SyncLock`\-Block.  
+ Beendet eine `SyncLock` Block.  
   
-## Hinweise  
- Die `SyncLock`\-Anweisung stellt sicher, dass mehrere Threads den Anweisungsblock nicht gleichzeitig ausführen.  `SyncLock` verhindert, dass jeder Thread in den Block eintritt, bis dieser von keinem anderen Thread ausgeführt wird.  
+## <a name="remarks"></a>Hinweise  
+ Die `SyncLock` -Anweisung sicher, dass den Anweisungsblock nicht von mehreren Threads gleichzeitig ausgeführt werden. `SyncLock`verhindert, dass jeder Thread den Block eintritt, bis keine anderen Thread ausgeführt wird.  
   
- In der Regel wird `SyncLock` dazu verwendet, Daten vor der Aktualisierung durch mehrere Threads gleichzeitig zu schützen.  Wenn die Anweisungen, mit denen die Daten bearbeitet werden, ohne Unterbrechung ausgeführt werden sollen, fügen Sie sie in einen `SyncLock`\-Block ein.  
+ Die häufigste Verwendung von `SyncLock` zu verhindern, dass Daten von mehreren Threads gleichzeitig aktualisiert wird. Wenn die Anweisungen, die die Daten bearbeiten können bis zum Abschluss ohne Unterbrechung wechseln müssen, platzieren Sie sie innerhalb einer `SyncLock` Block.  
   
- Ein durch eine exklusive Sperre geschützter Anweisungsblock wird gelegentlich als *kritischer Abschnitt* bezeichnet.  
+ Ein Anweisungsblock geschützt durch eine exklusive Sperre bezeichnet eine *kritischen Abschnitt*.  
   
-## Regeln  
+## <a name="rules"></a>Regeln  
   
--   Verzweigen.  Eine Verzweigung in einen `SyncLock`\-Block ist nicht von außerhalb des Blocks möglich.  
+-   Verzweigen. Sie können keine Verzweigung in einer `SyncLock` Blockieren von außerhalb des Blocks.  
   
--   Wert des Sperrobjekts.  Der Wert von `lockobject` kann nicht `Nothing` sein.  Sie müssen das Sperrobjekt erstellen, bevor Sie es in einer `SyncLock`\-Anweisung verwenden.  
+-   Der Wert der Lock-Objekts. Der Wert der `lockobject` nicht `Nothing`. Sie müssen das Sperrenobjekt erstellen, bevor Sie es im Verwenden einer `SyncLock` Anweisung.  
   
-     Sie können den Wert von `lockobject` nicht ändern, während ein `SyncLock`\-Block ausgeführt wird.  Der Mechanismus verlangt, dass das Sperrobjekt unverändert bleibt.  
+     Sie können den Wert der ändern `lockobject` während der Ausführung eine `SyncLock` Block. Der Mechanismus ist erforderlich, dass das Sperrobjekt unverändert bleiben.  
   
--   Sie können den [Rechnen Sie](../../../visual-basic/language-reference/operators/await-operator.md)\-Operator in einem `SyncLock`\-Block nicht verwenden.  
+-   Können Sie keine der ["await"](../../../visual-basic/language-reference/operators/await-operator.md) Operator in einem `SyncLock` Block.  
   
-## Verhalten  
+## <a name="behavior"></a>Verhalten  
   
--   Mechanismus.  Wenn ein Thread die `SyncLock`\-Anweisung erreicht, wird der `lockobject`\-Ausdruck ausgewertet und die Ausführung des Threads unterbrochen, bis der Thread eine exklusive Sperre für das durch den Ausdruck zurückgegebene Objekt erwirbt.  Wenn ein anderer Thread die `SyncLock`\-Anweisung erreicht, erwirbt er erst dann eine Sperre, wenn vom ersten Thread die `End SyncLock`\-Anweisung ausgeführt wird.  
+-   Mechanismus. Wenn ein Thread erreicht die `SyncLock` -Anweisung ausgewertet den `lockobject` Ausdruck und hält die Ausführung bis er eine exklusive Sperre für das Objekt, das von dem Ausdruck zurückgegeben erhält. Wenn ein anderer Thread erreicht die `SyncLock` -Anweisung, erwirbt er eine Sperre, bis der erste Thread führt die `End SyncLock` Anweisung.  
   
--   Geschützte Daten.  Wenn es sich bei `lockobject` um eine `Shared`\-Variable handelt, hindert die exklusive Sperre einen Thread in jeder Instanz der Klasse daran, den `SyncLock`\-Block auszuführen, wenn dieser von einem anderen Thread ausgeführt wird.  Damit werden Daten geschützt, die für alle Instanzen freigegeben sind.  
+-   Stellen Sie geschützte Daten. Wenn `lockobject` ist ein `Shared` Variable, die exklusive Sperre verhindert, dass einen Thread in jeder Instanz der Klasse Ausführen der `SyncLock` blockieren, während ein anderer Thread ausgeführt wird. Dies schützt die Daten, die von allen Instanzen gemeinsam genutzt werden.  
   
-     Wenn es sich bei `lockobject` um eine Instanzvariable \(nicht `Shared`\) handelt, hindert die Sperre einen Thread, der in der aktuellen Instanz ausgeführt wird, daran, den `SyncLock`\-Block zur gleichen Zeit wie ein anderer Thread derselben Instanz auszuführen.  Dadurch werden von der einzelnen Instanz verwaltete Daten geschützt.  
+     Wenn `lockobject` wird von eine Instanzvariablen (nicht `Shared`), die Sperre verhindert, dass einen Thread in der aktuellen Instanz ausgeführt wird, verhindern Sie die Ausführung der `SyncLock` Block zur gleichen Zeit wie ein anderer Thread in der gleichen Instanz. Dies schützt die Daten, die von einzelnen Instanzen verwaltet.  
   
--   Erwerb und Freigabe.  Ein `SyncLock`\-Block verhält sich wie eine `Try...Finally`\-Konstruktion, bei der der `Try`\-Block eine exklusive Sperre für `lockobject` erwirbt, die schließlich vom `Finally`\-Block wieder aufgehoben wird.  Daher garantiert der `SyncLock`\-Block die Aufhebung der Sperre, unabhängig davon, wie Sie den Block beenden.  Dies gilt sogar im Fall einer nicht behandelten Ausnahme.  
+-   Erhalt und die Freigabe. Ein `SyncLock` Block verhält sich wie ein `Try...Finally` Konstruktion, in dem die `Try` Block erhält eine exklusive Sperre auf `lockobject` und die `Finally` Block freigibt. Aus diesem Grund die `SyncLock` Block wird sichergestellt, Freigabe der Sperre, unabhängig davon, wie Sie den Block zu beenden. Dies gilt sogar im Fall einer nicht behandelten Ausnahme.  
   
--   Framework\-Aufrufe.  Der `SyncLock`\-Block erwirbt die exklusive Sperre und gibt sie frei, indem er die `Enter`\-Methode und die `Exit`\-Methode der `Monitor`\-Klasse im <xref:System.Threading>\-Namespace aufruft.  
+-   Framework-Aufrufe. Die `SyncLock` -Block erwirbt und hebt die exklusive Sperre durch Aufrufen der `Enter` und `Exit` Methoden die `Monitor` -Klasse in der <xref:System.Threading> Namespace.  
   
-## Programmierempfehlungen  
- Der `lockobject`\-Ausdruck sollte stets ein Objekt ergeben, das ausschließlich zu der von Ihnen erstellten Klasse gehört.  Sie sollten eine `Private`\-Objektvariable deklarieren, um Daten zu schützen, die zu der aktuellen Instanz gehören, oder eine `Private Shared`\-Objektvariable, um Daten zu schützen, die allen Instanzen gemeinsam sind.  
+## <a name="programming-practices"></a>Programmierung-Methoden  
+ Die `lockobject` Ausdruck ergeben sollten immer ein Objekt, das ausschließlich auf die Klasse gehört. Deklarieren Sie eine `Private` Object-Variablen zum Schützen von Daten, die auf die aktuelle Instanz gehört oder eine `Private Shared` Object-Variablen zum Schützen von Daten, die alle Instanzen gemeinsam.  
   
- Sie sollten das `Me`\-Schlüsselwort nicht zur Bereitstellung eines Sperrobjekts für Instanzdaten verwenden.  Wenn Code außerhalb der von Ihnen erstellten Klasse einen Verweis auf eine Instanz dieser Klasse enthält, kann dieser Code den Verweis als Sperrobjekt für einen völlig anderen Block als den von Ihnen erstellten `SyncLock`\-Block verwenden, sodass andere Daten geschützt werden.  Auf diese Weise könnten die von Ihnen erstellte Klasse und die andere Klasse die Ausführung der nicht zusammenhängenden `SyncLock`\-Blöcke gegenseitig verhindern.  Ebenso kann die Sperre einer Zeichenfolge problematisch sein, da in dem Prozess jeder andere Code, der dieselbe Zeichenfolge verwendet, dieselbe Sperre anwendet.  
+ Verwenden Sie nicht die `Me` Schlüsselwort ermöglichen eine Sperre für die Instanz Objektdaten. Wenn Code außerhalb der Klasse einen Verweis auf eine Instanz der Klasse enthält, konnte es diesen Verweis verwenden, als ein Sperrobjekt für die für eine `SyncLock` Block ganz anderen von Ihnen, unterschiedliche Daten schützen. Auf diese Weise Ihre Klasse und die andere Klasse können einander blockieren Ausführung ihrer unabhängigen `SyncLock` blockiert. Auf ähnliche Weise Sperren für eine Zeichenfolge kann problematisch werden, da es sich bei jedem anderen Code in den Prozess über die gleiche Zeichenfolge dieselbe Sperre freigibt.  
   
- Außerdem sollten Sie die `Me.GetType`\-Methode nicht zur Bereitstellung eines Sperrobjekts für freigegebene Daten verwenden.  Grund hierfür ist, dass `GetType` stets das gleiche `Type`\-Objekt für einen angegebenen Klassennamen zurückgibt.  Externer Code könnte `GetType` für die von Ihnen erstellte Klasse aufrufen und das gleiche Sperrobjekt erhalten, das Sie verwenden.  Dies würde dazu führen, dass beide Klassen einander durch ihre `SyncLock`\-Blöcke blockieren würden.  
+ Verwenden Sie zudem nicht die `Me.GetType` freigegebene Methode, um ein Sperrobjekt für die für bereitzustellen. Grund hierfür ist, `GetType` gibt immer die gleiche `Type` Objekt für einen bestimmten Klassennamen. Externer Code Aufrufen `GetType` für Ihre Klasse und erhalten dasselbe Sperrobjekt, das Sie verwenden. Dies würde die beiden Klassen blockieren miteinander aus ihren `SyncLock` blockiert.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
   
-### Description  
- Im folgenden Beispiel wird eine Klasse gezeigt, die eine einfache Liste mit Meldungen verwaltet.  Die Meldungen werden in einem Array abgelegt, und das zuletzt verwendete Element dieses Arrays wird in einer Variablen abgelegt.  Die `addAnotherMessage`\-Prozedur erhöht das letzte Element und speichert die neue Meldung.  Diese beiden Operationen werden durch die `SyncLock`\-Anweisung und die `End SyncLock`\-Anweisung geschützt, denn sobald das letzte Element erhöht wurde, muss die neue Meldung gespeichert werden; erst danach kann das letzte Element von einem anderen Thread erneut erhöht werden.  
+### <a name="description"></a>Beschreibung  
+ Das folgende Beispiel zeigt eine Klasse, die eine einfache Liste von Nachrichten verwaltet. Es enthält die Nachrichten in einem Array und das letzte Element des Arrays in einer Variablen verwendet. Die `addAnotherMessage` erhöht das letzte Element und speichert die neue Nachricht. Diese beiden Vorgänge werden geschützt, indem die `SyncLock` und `End SyncLock` -Anweisungen, denn sobald das letzte Element erhöht wurde, die neue Nachricht gespeichert werden muss vor dem ein anderen Threads das letzte Element erneut inkrementieren kann.  
   
- Würde die `simpleMessageList`\-Klasse in allen Instanzen nur eine gemeinsame Liste von Meldungen verwenden, würden die `messagesList`\-Variable und die `messagesLast`\-Variable als `Shared` deklariert werden.  In diesem Fall sollte die `messagesLock`\-Variable ebenfalls `Shared` sein, sodass von jeder Instanz ein einziges Sperrobjekt verwendet werden würde.  
+ Wenn die `simpleMessageList` Klasse eine Liste von Nachrichten zwischen alle zugehörigen Instanzen, die Variablen freigegebener `messagesList` und `messagesLast` deklariert werden als `Shared`. In diesem Fall wird die Variable `messagesLock` muss auch `Shared`, sodass gäbe es ein einzelnes Lock-Objekt, das von jeder Instanz verwendet.  
   
-### Code  
+### <a name="code"></a>Code  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### Description  
- Im folgenden Beispiel werden Threads und `SyncLock` verwendet.  Solange die `SyncLock`\-Anweisung vorhanden ist, stellt der Anweisungsblock einen kritischen Abschnitt dar, und `balance` wird nie eine negative Zahl.  Sie können die Anweisungen `SyncLock` und `End SyncLock` auskommentieren, um die Folgen der Auslassung des `SyncLock`\-Schlüsselworts zu erkennen.  
+### <a name="description"></a>Beschreibung  
+ Im folgenden Beispiel wird die Threads und `SyncLock`. Solange die `SyncLock` Anweisung vorhanden ist, der Anweisungsblock eines kritischen Abschnitts und `balance` wird nie eine negative Zahl. Können Sie Auskommentieren der `SyncLock` und `End SyncLock` Anweisungen, die Auswirkungen der eingepasst finden Sie unter der `SyncLock` Schlüsselwort.  
   
-### Code  
+### <a name="code"></a>Code  
  [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
-### Kommentare  
+### <a name="comments"></a>Kommentare  
   
-## Siehe auch  
- <xref:System.Threading>   
- <xref:System.Threading.Monitor>   
- [Threadsynchronisierung](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)   
- [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Threading>  
+ <xref:System.Threading.Monitor>  
+ [Threadsynchronisierung](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
+ [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)

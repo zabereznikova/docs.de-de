@@ -1,42 +1,41 @@
 ---
-title: "Of Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Of"
-  - "vb.Of"
-  - "vb.of"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Of keyword"
-  - "arguments [Visual Basic], data types"
-  - "constraints, Visual Basic generic types"
-  - "generic parameters"
-  - "generics [Visual Basic], constraints"
-  - "parameters, type"
-  - "types [Visual Basic], generic"
-  - "parameters, generic"
-  - "type parameters"
-  - "data type arguments"
+title: Of-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Of
+- vb.Of
+- vb.of
+helpviewer_keywords:
+- Of keyword [Visual Basic]
+- arguments [Visual Basic], data types
+- constraints, Visual Basic generic types
+- generic parameters
+- generics [Visual Basic], constraints
+- parameters [Visual Basic], type
+- types [Visual Basic], generic
+- parameters [Visual Basic], generic
+- type parameters
+- data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Of Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Leitet eine `Of`\-Klausel ein, die in einer *generischen* Klasse, Struktur, Schnittstelle, Prozedur oder in einem Delegaten einen *Typparameter* identifiziert.  Informationen zu generischen Typen finden Sie unter [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+# <a name="of-clause-visual-basic"></a>Of-Klausel (Visual Basic)
+Führt eine `Of` -Klausel, die identifiziert eine *Typparameter* auf eine *generischen* -Klasse, Struktur, Schnittstelle, Delegat oder Prozedur. Informationen zu generischen Typen finden Sie unter [generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## Verwenden des Of\-Schlüsselworts  
- Im folgenden Codebeispiel wird mithilfe des `Of`\-Schlüsselworts die Gliederung in einer Klasse definiert, die zwei Typparameter annimmt.  Das Schlüsselwort *beschränkt* den `keyType`\-Parameter durch die <xref:System.IComparable>\-Schnittstelle; d. h., der verwendete Code muss ein Typargument bereitstellen, das <xref:System.IComparable> implementiert.  Dies ist notwendig, damit die `add`\-Prozedur die <xref:System.IComparable.CompareTo%2A?displayProperty=fullName>\-Methode aufrufen kann.  Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Mit dem Schlüsselwort  
+ Im folgenden Codebeispiel wird mit der `Of` Schlüsselwort, um den Umriss einer Klasse definieren, die zwei Typparameter erhält. Es *schränkt* der `keyType` Parameters, indem die <xref:System.IComparable> -Schnittstelle, d. h., der verwendete Code ein Typargument, das implementiert angeben muss <xref:System.IComparable>. Dies ist erforderlich, damit die `add` Prozeduraufruf können die <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> Methode. Weitere Informationen zu Einschränkungen finden Sie unter [Typliste](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -50,31 +49,31 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Wenn Sie die vorangehende Klassendefinition vervollständigen, können Sie eine Vielzahl von `dictionary`\-Klassen daraus konstruieren.  Durch die Typen, die Sie für `entryType` und `keyType` vorgeben, wird bestimmt, welchen Eintragstyp die Klasse enthält und welchen Schlüsseltyp sie den Einträgen zuordnet.  Aufgrund der Einschränkung müssen Sie für `keyType` einen Typ angeben, der <xref:System.IComparable> implementiert.  
+ Wenn Sie die vorangehende Klassendefinition abgeschlossen haben, können Sie eine Vielzahl von erstellen `dictionary` Klassen daraus. Die Typen, die Sie, um angeben `entryType` und `keyType` zu bestimmen, welche Art des Eintrags die Klasse enthält, und welche Art von Schlüssel dieser mit jeder Eintrag verknüpft. Aufgrund der Einschränkung müssen Sie angeben `keyType` ein Typ, der implementiert <xref:System.IComparable>.  
   
- Im folgenden Codebeispiel wird ein Objekt erstellt, das `String`\-Einträge enthält und jedem Objekt einen `Integer`\-Schlüssel zuordnet.  `Integer` implementiert <xref:System.IComparable> und entspricht der Einschränkung auf `keyType`.  
+ Das folgende Codebeispiel erstellt ein Objekt, das enthält `String` Einträge und ordnet eine `Integer` mit den einzelnen Schlüssel. `Integer`implementiert <xref:System.IComparable> und erfüllt daher die Einschränkung auf `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- Das `Of`\-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
+ Das `Of`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Delegate\-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Function\-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface\-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub\-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Siehe auch  
- <xref:System.IComparable>   
- [Type List](../../../visual-basic/language-reference/statements/type-list.md)   
- [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.IComparable>  
+ [Typliste](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -1,39 +1,37 @@
 ---
-title: "First statement of this &#39;Sub New&#39; must be a call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; (No Accessible Constructor Without Parameters) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30148"
-  - "vbc30148"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30148"
+title: Die erste Anweisung dieser &#39; Sub New &#39; Hierbei muss es sich um einen Aufruf von &#39;sein. MyBase.New &#39; oder &#39; MyClass.New &#39; (Kein zugreifbarer Konstruktor ohne Parameter)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30148
+- vbc30148
+helpviewer_keywords: BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1065643e1f6c868092fbad839af0dbbd33afaf01
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# First statement of this &#39;Sub New&#39; must be a call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; (No Accessible Constructor Without Parameters)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Die erste Anweisung dieses "Sub New" muss ein Aufruf von "MyBase.New" oder "MyClass.New" sein, da die Basisklasse "\<Basisname\>" von "\<abgeleiteter Name\>" keine zugreifbare "Sub New" hat, die ohne Argumente aufgerufen werden kann.  
+# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>Die erste Anweisung dieser &#39; Sub New &#39; Hierbei muss es sich um einen Aufruf von &#39;sein. MyBase.New &#39; oder &#39; MyClass.New &#39; (Kein zugreifbarer Konstruktor ohne Parameter)
+Die erste Anweisung dieser "Sub New" muss ein Aufruf von "MyBase.New" oder "MyClass.New" sein, da Basisklasse\<Basename >' von '\<Derivedname >' besitzt keine zugegriffen werden kann "Sub New" hat, die ohne Argumente aufgerufen werden kann.  
   
- In einer abgeleiteten Klasse muss jeder Konstruktor einen Basisklassenkonstruktor \(`MyBase.New`\) aufrufen.  Wenn die Basisklasse einen Konstruktor ohne Parameter enthält, auf den abgeleitete Klassen zugreifen können, kann `MyBase.New` automatisch aufgerufen werden.  Andernfalls muss ein Basisklassenkonstruktor mit Parametern aufgerufen werden. Dies kann nicht automatisch ausgeführt werden.  In diesem Fall muss die erste Anweisung jedes abgeleiteten Klassenkonstruktors einen parametrisierten Konstruktor der Basisklasse oder einen anderen Konstruktor in der abgeleiteten Klasse aufrufen, die einen Aufruf eines Basisklassenkonstruktors ausführt.  
+ Jeder Konstruktor muss in einer abgeleiteten Klasse einen Basisklassenkonstruktor aufrufen (`MyBase.New`). Wenn die Basisklasse der Klasse einen Konstruktor ohne Parameter verfügt, die für den abgeleiteten Klassen zugänglich ist `MyBase.New` automatisch aufgerufen werden kann. Wenn dies nicht der Fall ist, muss ein Basisklassenkonstruktor mit Parametern aufgerufen werden, und dies kann nicht automatisch durchgeführt werden. In diesem Fall muss die erste Anweisung jeder abgeleiteten Klassenkonstruktor einen parametrisierten Konstruktor der Basisklasse aufrufen, oder rufen Sie einen anderen Konstruktor in der abgeleiteten Klasse, mit der ein Konstruktor der Basisklasse aufrufen.  
   
- **Fehler\-ID:** BC30148  
+ **Fehler-ID:** BC30148  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Rufen Sie entweder `MyBase.New` unter Angabe der erforderlichen Parameter auf, oder rufen Sie einen Peerkonstruktor auf, der einen solchen Aufruf ausführt.  
+-   Entweder Aufruf `MyBase.New` Geben Sie die erforderlichen Parameter, oder rufen Sie einen Peerkonstruktor, der solch einen Aufruf macht.  
   
-     Wenn z. B. die Basisklasse über einen Konstruktor verfügt, der als `Public Sub New(ByVal index as Integer)` deklariert ist, kann die erste Anweisung im Konstruktor der abgeleiteten Klasse `MyBase.New(100)`.  
+     Angenommen, wenn die Basisklasse der Klasse einen Konstruktor verfügt, die als deklariert ist `Public Sub New(ByVal index as Integer)`, die erste Anweisung in der abgeleiteten Klassenkonstruktor möglicherweise `MyBase.New(100)`.  
   
-## Siehe auch  
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>Siehe auch  
+ [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

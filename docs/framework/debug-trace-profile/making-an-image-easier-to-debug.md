@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - images [.NET Framework], debugging
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e844cde5f33c1accb8addf953b5a72415f4dc301
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>Erleichtern des Debuggens für ein Abbild
 Beim Kompilieren von nicht verwaltetem Code können Sie durch das Festlegen von IDE-Schaltern oder Befehlszeilenoptionen ein ausführbares Image zum Debuggen konfigurieren. Sie können beispielsweise die Befehlszeilenoption /**Zi** in Visual C++ verwenden, um zur Ausgabe von Debugsymboldateien aufzufordern (Dateierweiterung „.pdb“). Dementsprechend weist die Befehlszeilenoption /**Od** den Compiler an, die Optimierung zu deaktivieren. Der erzeugte Code wird langsamer ausgeführt, lässt sich jedoch gegebenenfalls einfacher debuggen.  
@@ -59,7 +52,7 @@ AllowOptimize=0
 >  In .NET Framework Version 2.0 generiert der JIT-Compiler unabhängig vom Wert für `GenerateTrackingInfo` immer Verfolgungsinformationen. Der `AllowOptimize`-Wert hat jedoch weiterhin Auswirkungen. Wenn Sie das native Image mithilfe von [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) ohne Optimierung vorkompilieren, muss bei der Ausführung von „Ngen.exe“ die INI-Datei im Zielordner mit der Einstellung `AllowOptimize=0` vorhanden sein. Falls Sie eine Assembly ohne Optimierung vorkompiliert haben, müssen Sie den vorkompilierten Code mit der **/uninstall**-Option von „Ngen.exe“ entfernen, bevor Sie „Ngen.exe“ erneut ausführen, um den Code in optimierter Form vorzukompilieren. Wenn die INI-Datei nicht im Ordner vorhanden ist, kompiliert Ngen.exe den Code standardmäßig optimiert vor.  
   
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=fullName> kontrolliert die Einstellungen für eine Assembly. **DebuggableAttribute** enthält zwei Felder, in denen festgelegt wird, ob der JIT-Compiler eine Optimierung durchführen und/oder Verfolgungsinformationen generieren soll. In .NET Framework, Version 2.0, generiert der JIT-Compiler immer Verfolgungsinformationen.  
+>  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> kontrolliert die Einstellungen für eine Assembly. **DebuggableAttribute** enthält zwei Felder, in denen festgelegt wird, ob der JIT-Compiler eine Optimierung durchführen und/oder Verfolgungsinformationen generieren soll. In .NET Framework, Version 2.0, generiert der JIT-Compiler immer Verfolgungsinformationen.  
   
 > [!NOTE]
 >  Bei Verkaufsversionen legen Compiler das Attribut **DebuggableAttribute** nicht fest. Der JIT-Compiler generiert standardmäßig Computercode, der eine optimale Leistungsfähigkeit bietet und höchst schwierig zu debuggen ist. Durch Aktivieren der JIT-Verfolgung wird die Leistung geringfügig, durch Deaktivieren der Optimierung erheblich verschlechtert.  
@@ -71,7 +64,6 @@ AllowOptimize=0
 >  In Version 1.0 von .NET Framework fügt der Microsoft Visual C++-Compiler das **DebuggableAttribute** hinzu, wenn die Compileroptionen **/clr** und **/Zi** angegeben werden. In Version 1.1 von .NET Framework müssen Sie entweder das **DebugabbleAttribute** manuell im Code hinzufügen oder die Linkeroption **/ASSEMBLYDEBUG** verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Debugging, Tracing, and Profiling (Debuggen, Ablaufverfolgung und Profilerstellung)](../../../docs/framework/debug-trace-profile/index.md)   
- [Enabling JIT-Attach Debugging (Aktivieren von JIT-Attach Debugging)](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)   
+ [Debuggen, Ablaufverfolgung und Profilerstellung](../../../docs/framework/debug-trace-profile/index.md)  
+ [Aktivieren von JIT-attach Debugging](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [Aktivieren der Profilerstellung](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
-

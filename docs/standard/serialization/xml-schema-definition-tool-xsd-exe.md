@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 83da65d17d927e6afa8c669d5a3123d458246b31
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 79d7aef2cf374acc4380fac6009615f75eaf1e81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 Das XML Schema Definition-Tool (Xsd.exe) generiert XML-Schema- oder Common Language Runtime-Klassen aus XDR-, XML- und XSD-Dateien oder aus Klassen in einer Laufzeitassembly.  
@@ -65,7 +64,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/enableDataBinding**|Implementiert die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle für alle generierten Typen, um die Datenbindung zu ermöglichen. Die Kurzform ist `/edb`.|  
 |**/enableLinqDataSet**|(Kurzform: `/eld`.) Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Diese Option wird verwendet, wenn auch die /dataset-Option angegeben wird. Weitere Informationen finden Sie unter [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) und [Abfragen typisierter DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md). Weitere Informationen zur LINQ-Verwendung finden Sie unter [LINQ (Language-Integrated Query, sprachintegrierte Abfrage)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Generiert Felder anstelle von Eigenschaften. Standardmäßig werden Eigenschaften generiert.|  
-|**/l**[**anguage**]**:***Sprache*|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> implementiert.|  
+|**/l**[**anguage**]**:***Sprache*|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementiert.|  
 |**/n**[**amespace**]**:***Namespace*|Gibt den Laufzeitnamespace für die generierten Typen an. Der Standardnamespace ist `Schemas`.|  
 |**/nologo**|Unterdrückt das Banner.|  
 |**/order**|Generiert explizite Reihenfolgebezeichner für alle Abschnittsmember.|  
@@ -91,7 +90,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Generiert <xref:System.Data.DataSet>-Klassen der Common&#160;Language&#160;Runtime aus einer XSD-Schemadatei. Die generierten Klassen stellen ein umfangreiches Objektmodell für reguläre XML-Daten bereit.  
   
  XSD nach Klassen  
- Generiert Laufzeitklassen aus einer XSD-Schemadatei. Die generierten Klassen können in Verbindung mit <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> zum Lesen und Schreiben von XML-Code verwendet werden, der diesem Schema folgt.  
+ Generiert Laufzeitklassen aus einer XSD-Schemadatei. Die generierten Klassen können in Verbindung mit <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> zum Lesen und Schreiben von XML-Code verwendet werden, der diesem Schema folgt.  
   
  Klassen nach XSD  
  Generiert ein XML-Schema aus einem oder mehreren Typen in einer Laufzeitassemblydatei. Das generierte Schema definiert das von `System.Xml.Serialization.XmlSerializer`verwendete XML-Format.  
@@ -233,10 +232,9 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>   
+ <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [Tools](../../../docs/framework/tools/index.md)      
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)   
- [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)   
+ [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [LINQ to DataSet-Übersicht](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
-

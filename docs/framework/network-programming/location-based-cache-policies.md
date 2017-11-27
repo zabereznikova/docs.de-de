@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5b4bf67db3fcbb70d2a93f35976d8d9b4b3a028
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="location-based-cache-policies"></a>Speicherortbasierte Cacherichtlinien
 Eine speicherortbasierte Cacherichtlinie definiert die Aktualität gültiger zwischengespeicherter Einträge basierend darauf, woher die angeforderte Ressource stammen kann. Eine zwischengespeicherte Ressource ist gültig, wenn ihre Verwendung keinen Verstoß gegen vom Server angegebene Anforderungen an die erneute Überprüfung darstellt. Eine speicherortbasierte Cacherichtlinie wird programmgesteuert erstellt, indem ein <xref:System.Net.Cache.RequestCachePolicy>- oder <xref:System.Net.Cache.HttpRequestCachePolicy>-Klassenkonstruktor verwendet wird. Der Typ der speicherortbasierten Richtlinie wird mithilfe eines <xref:System.Net.Cache.RequestCacheLevel>- oder <xref:System.Net.Cache.HttpRequestCacheLevel>-Enumerationswerts an den Konstruktor übergeben. Codebeispiele, die speicherortbasierte Cacherichtlinien erstellen, finden Sie unter [Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Im folgenden Abschnitt wird jeder Typ der speicherortbasierten Cacherichtlinie für Hypertext Transfer-Protokollressourcen (http und https) erklärt.  
@@ -62,9 +56,8 @@ Eine speicherortbasierte Cacherichtlinie definiert die Aktualität gültiger zwi
  Vergleicht die Kopie der Ressource im Cache mit der Kopie auf dem Server. Wenn die Kopie auf dem Server neuer ist, wird sie zum Erfüllen der Anforderung verwendet und ersetzt die Kopie im Cache. Wenn die Kopie im Cache mit der Serverkopie übereinstimmt, wird die zwischengespeicherte Kopie verwendet. Im HTTP-Cacheprotokoll wird dies erreicht, indem eine bedingte Anforderung verwendet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)   
- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)  
+ [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

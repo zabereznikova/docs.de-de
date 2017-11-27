@@ -1,63 +1,60 @@
 ---
-title: "&amp;= Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.&="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operator &="
-  - "assignment statements, compound"
-  - "statements [Visual Basic], compound assignment"
-  - "&= operator [Visual Basic]"
-  - "compound assignment statements"
+title: '&amp;=-Operator (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.&=
+helpviewer_keywords:
+- operator &=
+- assignment statements [Visual Basic], compound
+- statements [Visual Basic], compound assignment
+- '&= operator [Visual Basic]'
+- compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &amp;= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Verkettet einen `String`\-Ausdruck mit einer `String`\-Variablen oder \-Eigenschaft und weist das Ergebnis der Variablen oder der Eigenschaft zu.  
+# <a name="amp-operator-visual-basic"></a>&amp;=-Operator (Visual Basic)
+Verkettet eine `String` Ausdruck, der eine `String` Variablen oder Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 variableorproperty &= expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich.  Beliebige `String`\-Variable oder \-Eigenschaft.  
+ Erforderlich. Alle `String` Variablen oder Eigenschaft.  
   
  `expression`  
- Erforderlich.  Ein beliebiger `String`\-Ausdruck.  
+ Erforderlich. Beliebiger `String`-Ausdruck.  
   
-## Hinweise  
- Das Element auf der linken Seite des Operators `&=` kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein.  Die Variable oder die Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)sein.  Der Operator `&=` verkettet den `String` Ausdruck für das Recht zur `String`\-Variablen oder Eigenschaft auf der linken und weist das Ergebnis der Variablen oder Eigenschaft auf der linken Seite.  
+## <a name="remarks"></a>Hinweise  
+ Das Element auf der linken Seite von der `&=` Operator kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). Die `&=` verkettet die `String` Ausdruck auf der rechten Seite, um die `String` Variablen oder Eigenschaft auf der linken und weist das Ergebnis der Variablen oder Eigenschaft auf der linken Seite.  
   
-## Überladen  
- Der [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Das Überladen des Operators `&` hat Auswirkungen auf das Verhalten des Operators `&=`.  Wenn im Code `&=` auf eine Klasse oder Struktur angewendet wird, die `&` überlädt, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Überladen  
+ Die [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Überladen der `&` Operator wirkt sich auf das Verhalten der `&=` Operator. Wenn im Code verwendet `&=` auf eine Klasse oder Struktur, die Überladungen `&`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird der Operator `&=` verwendet, um zwei `String`\-Variablen zu verketten und das Ergebnis der ersten Variablen zuzuweisen.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `&=` Operator zum Verketten von zwei `String` Variablen und das Ergebnis die erste Variable zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
   
-## Siehe auch  
- [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)   
- [\+\= Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Concatenation Operators](../../../visual-basic/language-reference/operators/concatenation-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Siehe auch  
+ [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [+=-Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

@@ -1,74 +1,78 @@
 ---
-title: "Gewusst wie: Verwenden einer Farbmatrix zum Transformieren einer Farbe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farbmatrizen, Verwenden"
-  - "Bildfarben, Transformieren"
+title: 'Gewusst wie: Verwenden einer Farbmatrix zum Transformieren einer Farbe'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image colors [Windows Forms], transforming
+- color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden einer Farbmatrix zum Transformieren einer Farbe
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt die <xref:System.Drawing.Image>\-Klasse und die <xref:System.Drawing.Bitmap>\-Klasse zum Speichern und Bearbeiten von Bildern bereit.  Das <xref:System.Drawing.Image>\-Objekt und das <xref:System.Drawing.Bitmap>\-Objekt speichern die Farbe jedes Pixels als 32\-Bit\-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha.  Jeder der vier Anteile entspricht einer Zahl von 0 bis 255, wobei 0 für keine Intensität und 255 für volle Farbintensität steht.  Durch den Alphaanteil wird die Transparenz der Farbe angegeben: 0 entspricht vollständiger Transparenz und 255 vollständiger Deckung.  
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Gewusst wie: Verwenden einer Farbmatrix zum Transformieren einer Farbe
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Stellt die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. <xref:System.Drawing.Image>und <xref:System.Drawing.Bitmap> Objekte speichern die Farbe jedes Pixels als 32-Bit-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha. Jede der vier Komponenten ist eine Zahl zwischen 0 und 255, wobei 0 für keine Intensität und 255 für volle Farbintensität. Mit dem Alphaanteil gibt die Transparenz der Farbe: 0 vollständig transparent ist, und 255 ist nicht vollständig transparent.  
   
- Ein Farbvektor ist ein Vierfachwert in der Form \(Rot, Grün, Blau, Alpha\).  Der Farbvektor \(0, 255, 0, 255\) stellt beispielsweise eine nicht transparente Farbe ohne Rot oder Blau, jedoch mit voller Grünintensität dar.  
+ Ein Vektor Farbe ist ein 4-Tupel des Formulars (Rot, Grün, Blau, Alpha). Der Vektor Farbe (0, 255, 0, 255) stellt beispielsweise eine nicht transparente Farbe, die keine rote oder blaue hat, jedoch grün mit voller Intensität.  
   
- Gemäß einer anderen Farbdarstellungskonvention wird für volle Intensität die Ziffer 1 verwendet.  Entsprechend dieser Konvention würde die im vorherigen Abschnitt beschriebene Farbe durch den Vektor \(0, 1, 0, 1\) dargestellt werden.  Die auf dem Wert 1 basierende Konvention wird in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bei der Durchführung von Farbtransformationen für höchste Intensität verwendet.  
+ Eine andere Konvention für die Darstellung von Farben verwendet die Zahl 1 für volle Intensität an. Mithilfe dieser Konvention, würde die Farbe, die im vorherigen Abschnitt beschrieben durch den Vektor (0, 1, 0, 1) dargestellt werden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]die Konvention von 1 verwendet als vollständige Intensität, wenn Color-Transformationen ausgeführt.  
   
- Sie können lineare Transformationen \(Drehung, Skalierung u. ä.\) auf Farbvektoren anwenden, indem Sie die Farbvektoren mit einer 4x4\-Matrix multiplizieren.  Für Verschiebungen \(nicht linear\) kann jedoch keine 4x4\-Matrix verwendet werden.  Wenn Sie jedem Farbvektor eine fünfte Koordinate \(z. B. die Ziffer 1\) als Dummy hinzufügen, können Sie mit einer 5x5\-Matrix eine Kombination aus linearen Transformationen und Verschiebungen anwenden.  Eine Transformation, die aus einer linearen Transformation besteht, auf die eine Verschiebung folgt, wird als affine Transformation bezeichnet.  
+ Sie können Farbe Vektoren lineare Transformationen (Drehung, Skalierung und Like) anwenden, multipliziert der Vektoren Farbe mit einer 4 x 4-Matrix. Eine 4 x 4-Matrix können Sie jedoch eine Übersetzung (nichtlinearen) ausführen. Wenn Sie jede der Farbe Vektoren eine dummy fünfte Koordinate (z. B. der Zahl 1) hinzugefügt haben, können Sie eine Matrix 5 x 5 verwenden, um eine beliebige Kombination von lineare Transformationen und Konvertierungen anzuwenden. Eine Transformation, bestehend aus einer linearen Transformations gefolgt von einer Übersetzung wird eine affine Transformation aufgerufen werden.  
   
- Angenommen, Sie möchten z. B. ausgehend von der Farbe \(0.2, 0.0, 0.4, 1.0\) die folgenden Transformationen anwenden:  
+ Nehmen wir beispielsweise an, dass Sie mit der Farbe (0,2, 0.0, 0.4, 1.0) starten und die folgenden Transformationen anwenden möchten:  
   
 1.  Verdoppelung des Rotanteils  
   
-2.  Erhöhung des Rot\-, Grün\- und Blauanteils um den Wert 0.2  
+2.  Hinzufügen von 0,2 Rot-, Grün- und Blau-Komponenten  
   
- Durch die folgende Matrixmultiplikation werden die beiden Transformationen in der gezeigten Reihenfolge ausgeführt.  
+ Die folgenden Matrixmultiplikation führt das Paar von Transformationen in entsprechender Reihenfolge aufgelistet.  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring01.png "recoloring01")  
+ ![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")  
   
- Die Elemente einer Farbmatrix sind erst nach Zeile und anschließend nach Spalte indiziert \(nullbasiert\).  Der Eintrag in der fünften Zeile und der dritten Spalte von Matrix "M" wird z. B. durch M\[4\]\[2\] dargestellt.  
+ Von Zeilen- und klicken Sie dann werden die Elemente einer Farbmatrix (nullbasiert) indiziert. Beispielsweise wird der Eintrag in der fünften Zeile und der dritten Spalte der Matrix M von M [4] [2] gekennzeichnet.  
   
- Die 5x5\-Identitätsmatrix \(siehe folgende Abbildung\) verfügt in der Diagonalen über Einsen und ansonsten lediglich über Nullen.  Wird ein Farbvektor mit der Identitätsmatrix multipliziert, bleibt der Farbvektor unverändert.  Die beste Möglichkeit, die Matrix einer Farbtransformation zu bilden, besteht darin, ausgehend von der Identitätsmatrix eine geringfügige Änderung vorzunehmen, durch die die gewünschte Transformation erzielt wird.  
+ Die 5 x 5-Identitätsmatrix (in der folgenden Abbildung gezeigt) verfügt über 1 s auf die diagonale und 0 s anderen Orten wegzulassen. Wenn Sie einen Vektor Farbe durch die Identitätsmatrix multiplizieren, ändert sich der Vektor Farbe nicht. Eine einfache Möglichkeit, bilden die Matrix eine Farbe Transformation ist mit die Identitätsmatrix beginnen, und stellen eine kleine Änderung, die die gewünschte Transformation produziert.  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ ![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
   
- Detailliertere Ausführungen zu Matrizen und Transformationen finden Sie unter [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Eine ausführlichere Erläuterung von Matrizen und Transformationen, finden Sie unter [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird die in den vorangehenden Abschnitten beschriebene Transformation auf ein komplett einfarbiges Bild \(0.2, 0.0, 0.4, 1.0\) angewendet.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird ein Bild, das alle einfarbig (0,2, 0.0, 0.4, 1.0) und wendet die Transformation, die in den vorherigen Abschnitten beschrieben.  
   
- In der folgenden Abbildung ist das ursprüngliche Bild auf der linken und das transformierte Bild auf der rechten Seite zu sehen.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das transformierte Bild auf der rechten Seite.  
   
  ![Farben](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
   
- Im Code aus dem nachstehenden Beispiel werden die folgenden Schritte ausgeführt, um das Bild neu einzufärben:  
+ Der Code im folgenden Beispiel verwendet die folgenden Schritte aus, um das über erneutes Einfärben auszuführen:  
   
-1.  Initialisieren eines <xref:System.Drawing.Imaging.ColorMatrix>\-Objekts.  
+1.  Initialisieren einer <xref:System.Drawing.Imaging.ColorMatrix> Objekt.  
   
-2.  Erstellen eines <xref:System.Drawing.Imaging.ImageAttributes>\-Objekts und Übergeben des <xref:System.Drawing.Imaging.ColorMatrix>\-Objekts an die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>\-Methode des <xref:System.Drawing.Imaging.ImageAttributes>\-Objekts.  
+2.  Erstellen einer <xref:System.Drawing.Imaging.ImageAttributes> Objekts und übergeben der <xref:System.Drawing.Imaging.ColorMatrix> -Objekt an die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> Objekt.  
   
-3.  Übergeben des <xref:System.Drawing.Imaging.ImageAttributes>\-Objekts an die <xref:System.Drawing.Graphics.DrawImage%2A>\-Methode eines <xref:System.Drawing.Graphics>\-Objekts.  
+3.  Übergeben der <xref:System.Drawing.Imaging.ImageAttributes> -Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A> Methode von einer <xref:System.Drawing.Graphics> Objekt.  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
   
-## Siehe auch  
- [Neueinfärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Neufärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
  [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

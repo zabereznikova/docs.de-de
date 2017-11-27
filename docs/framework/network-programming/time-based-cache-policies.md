@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - cache synchronization date policy
@@ -28,16 +23,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2915139d6a3c46de06bd2bdb0cb12f95f611af3b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1d4cfa67d7fba06140838e04bdbff71102a2a303
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-based-cache-policies"></a>zeitbasierte Cacherichtlinien
 Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge mithilfe der Uhrzeit, zu der die Ressource abgerufen wurde, der Header, die mit der Ressource zurückgegeben wurden und der aktuellen Uhrzeit. Wenn Sie eine zeitbasierte Cacherichtlinie festlegen, können Sie entweder die zeitbasierte Richtlinie <xref:System.Net.Cache.HttpRequestCacheLevel.Default> verwenden, oder eine benutzerdefinierte zeitbasierte Richtlinie erstellen. Bei Verwendung der zeitbasierten Standardrichtlinie für Ressourcen, die mithilfe des Hypertext Transfer Protocol (HTTP) abgerufen wurde, wird das exakte Cacheverhalten von den Headern bestimmt, die in der zwischengespeicherten Antwort enthalten sind, und von den Verhaltensweisen in den Abschnitten 13 und 14 des RFC 2616, verfügbar unter [http://www.ietf.org](http://www.ietf.org/). Ein Codebeispiel, das das Festlegen der zeitbasierten Standardrichtlinie für HTTP-Ressourcen veranschaulicht, finden Sie unter [Vorgehensweise: Festlegen der standardmäßigen zeitbasierten Cacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -77,9 +71,8 @@ Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeic
 -   [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)  
+ [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

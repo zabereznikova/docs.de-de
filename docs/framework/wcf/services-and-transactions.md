@@ -1,31 +1,33 @@
 ---
-title: "Dienste und Transaktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dienstverträge [WCF], Entwerfen von Diensten und Transaktionen"
+title: Dienste und Transaktionen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a206ff3d82378e825cd612a6564366ef1e07977
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Dienste und Transaktionen
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Anwendungen können eine Transaktion aus einem Client initiieren und die Transaktion im Dienstvorgang koordinieren.Clients können eine Transaktion initiieren und mehrere Dienstvorgänge aufrufen und sicherstellen, dass für die Dienstvorgänge entweder ein Commit oder ein Rollback als einzelne Einheit ausgeführt wurde.  
+# <a name="services-and-transactions"></a>Dienste und Transaktionen
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendungen können eine Transaktion aus einem Client initiieren und die Transaktion im Dienstvorgang koordinieren. Clients können eine Transaktion initiieren und mehrere Dienstvorgänge aufrufen und sicherstellen, dass für die Dienstvorgänge entweder ein Commit oder ein Rollback als einzelne Einheit ausgeführt wurde.  
   
- Sie können das Transaktionsverhalten im Dienstvertrag aktivieren, indem Sie ein <xref:System.ServiceModel.ServiceBehaviorAttribute> festlegen und die <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>\-Eigenschaft und die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>\-Eigenschaft für Dienstvorgänge, die Clienttransaktionen benötigen, festlegen.Der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>\-Parameter legt fest, ob die Transaktion, in der die Methode ausgeführt wird, automatisch abgeschlossen wird, wenn keine Ausnahmefehler ausgelöst werden.[!INCLUDE[crabout](../../../includes/crabout-md.md)] zu diesen Attributen finden Sie unter [ServiceModel\-Transaktionsattribute](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Sie können das Transaktionsverhalten im Dienstvertrag aktivieren, indem Sie ein <xref:System.ServiceModel.ServiceBehaviorAttribute> festlegen und die <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>-Eigenschaft und die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Eigenschaft für Dienstvorgänge, die Clienttransaktionen benötigen, festlegen. Der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Parameter legt fest, ob die Transaktion, in der die Methode ausgeführt wird, automatisch abgeschlossen wird, wenn keine unbehandelten Ausnahmen ausgelöst werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Diese Attribute finden Sie unter [ServiceModel-Transaktionsattribute](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
- Die Aufgaben \(z. B. die Protokollierung von Datenbankupdates\), die in den Dienstvorgängen ausgeführt und von einem Ressourcenmanager verwaltet werden, sind Teil der Clienttransaktionen.  
+ Die Aufgaben (z. B. die Protokollierung von Datenbankupdates), die in den Dienstvorgängen ausgeführt und von einem Ressourcenmanager verwaltet werden, sind Teil der Clienttransaktionen.  
   
- Das folgende Beispiel veranschaulicht die Nutzung der <xref:System.ServiceModel.ServiceBehaviorAttribute>\-Attribute und <xref:System.ServiceModel.OperationBehaviorAttribute>\-Attribute bei der Steuerung des Transaktionsverhalten aufseiten des Dienstes.  
+ Das folgende Beispiel veranschaulicht die Nutzung der <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attribute und <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribute bei der Steuerung des Transaktionsverhalten aufseiten des Dienstes.  
   
 ```  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
@@ -66,9 +68,9 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- Sie können Transaktionen und Transaktionsflüsse aktivieren, indem Sie die Clientbindungen und Dienstbindungen konfigurieren, um das WS\-AtomicTransaction\-Protokoll zu verwenden, und indem Sie das [\<transactionFlow\>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)`true-Element auf`  festlegen, wie in der folgenden Beispielkonfiguration dargestellt wird.  
+ Können Sie Transaktionen aktivieren und Transaktion unter Konfigurieren des Clients und -service-Bindungen verwendet die WS-AtomicTransaction-Protokoll und das Festlegen der [ \<TransactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) Element `true`(siehe) in der folgenden Beispielkonfiguration.  
   
-```  
+```xml  
 <client>  
     <endpoint address="net.tcp://localhost/ServiceModelSamples/service"   
           binding="netTcpBinding"   
@@ -95,7 +97,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## Siehe auch  
- [Transaktionsunterstützung in System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)   
- [Transaktionsmodelle](../../../docs/framework/wcf/feature-details/transaction-models.md)   
- [WS\-Transaktionsfluss](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>Siehe auch  
+ [Transaktionsunterstützung in System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
+ [Transaktionsmodelle](../../../docs/framework/wcf/feature-details/transaction-models.md)  
+ [WS-Transaktionsfluss](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

@@ -7,30 +7,24 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3e0e648fb14e07b62f70c614af84a98a256f6095
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1d4746e2303949ddeabee36e4875e7480467f33e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Erweiterungen der Socketleistung in Version 3.5
-Die <xref:System.Net.Sockets.Socket?displayProperty=fullName>-Klasse wurde in Version 3.5 für die Verwendung von Anwendungen verbessert, die asynchrone Netzwerk-E/A verwenden, um die höchste Leistung zu erreichen. Es wurde eine Serie neuer Klassen als Teil eines Satzes von Ergänzungen für die <xref:System.Net.Sockets.Socket>-Klasse hinzugefügt, durch die ein alternatives asynchrones Muster bereitgestellt wird, das von spezialisierten Socketanwendungen mit hoher Leistung verwendet werden kann. Diese Verbesserungen wurden speziell für Netzwerkserveranwendungen entwickelt, die hohe Leistung erfordern. Eine Anwendung kann die erweiterten asynchronen Muster ausschließlich oder nur in bestimmten Bereichen ihrer Anwendung nutzen (wenn z.B. große Datenmengen empfangen werden).  
+Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde in Version 3.5 für die Verwendung von Anwendungen verbessert, die asynchrone Netzwerk-E/A verwenden, um die höchste Leistung zu erreichen. Es wurde eine Serie neuer Klassen als Teil eines Satzes von Ergänzungen für die <xref:System.Net.Sockets.Socket>-Klasse hinzugefügt, durch die ein alternatives asynchrones Muster bereitgestellt wird, das von spezialisierten Socketanwendungen mit hoher Leistung verwendet werden kann. Diese Verbesserungen wurden speziell für Netzwerkserveranwendungen entwickelt, die hohe Leistung erfordern. Eine Anwendung kann die erweiterten asynchronen Muster ausschließlich oder nur in bestimmten Bereichen ihrer Anwendung nutzen (wenn z.B. große Datenmengen empfangen werden).  
   
 ## <a name="class-enhancements"></a>Klassenverbesserungen  
- Die Hauptfunktion dieser Erweiterungen ist die Vermeidung der wiederholten Zuordnung und Synchronisierung von Objekten während asynchroner Socket-E/A mit hohem Volumen. Das derzeit von der <xref:System.Net.Sockets.Socket>-Klasse für asynchrone Socket-E/A implementierte Begin/End-Entwurfsmuster erfordert, dass jedem asynchronen Socketvorgang ein <xref:System.IAsyncResult?displayProperty=fullName>-Objekt zugewiesen wird.  
+ Die Hauptfunktion dieser Erweiterungen ist die Vermeidung der wiederholten Zuordnung und Synchronisierung von Objekten während asynchroner Socket-E/A mit hohem Volumen. Das derzeit von der <xref:System.Net.Sockets.Socket>-Klasse für asynchrone Socket-E/A implementierte Begin/End-Entwurfsmuster erfordert, dass jedem asynchronen Socketvorgang ein <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekt zugewiesen wird.  
   
- In den neuen <xref:System.Net.Sockets.Socket>-Klassenerweiterungen werden asynchrone Vorgänge von wiederverwendbaren <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName>-Klassenobjekten beschrieben, die von der Anwendung zugewiesen und verwaltet werden. Socketanwendungen mit hoher Leistung kennen die Menge an überlappenden Socketvorgängen, die aufrechterhalten werden müssen, am besten. Die Anwendung kann so viele <xref:System.Net.Sockets.SocketAsyncEventArgs>-Objekte erstellen wie nötig. Wenn beispielsweise eine Serveranwendung zu jeder Zeit 15 Socketannahmevorgänge zur Verfügung haben muss, um eingehende Clientverbindungsraten zu unterstützen, kann sie diesem Zweck im Voraus 15 wiederverwendbare <xref:System.Net.Sockets.SocketAsyncEventArgs>-Objekte zuweisen.  
+ In den neuen <xref:System.Net.Sockets.Socket>-Klassenerweiterungen werden asynchrone Vorgänge von wiederverwendbaren <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>-Klassenobjekten beschrieben, die von der Anwendung zugewiesen und verwaltet werden. Socketanwendungen mit hoher Leistung kennen die Menge an überlappenden Socketvorgängen, die aufrechterhalten werden müssen, am besten. Die Anwendung kann so viele <xref:System.Net.Sockets.SocketAsyncEventArgs>-Objekte erstellen wie nötig. Wenn beispielsweise eine Serveranwendung zu jeder Zeit 15 Socketannahmevorgänge zur Verfügung haben muss, um eingehende Clientverbindungsraten zu unterstützen, kann sie diesem Zweck im Voraus 15 wiederverwendbare <xref:System.Net.Sockets.SocketAsyncEventArgs>-Objekte zuweisen.  
   
  Das Muster zum Ausführen eines asynchronen Socketvorgangs mit dieser Klasse besteht aus den folgenden Schritten:  
   
@@ -49,10 +43,9 @@ Die <xref:System.Net.Sockets.Socket?displayProperty=fullName>-Klasse wurde in Ve
  Die Lebensdauer des neuen Kontextobjekts des asynchronen Socketvorgangs wird durch Verweise im Anwendungscode und asynchrone E/A-Verweise bestimmt. Es ist nicht erforderlich, dass die Anwendung einen Verweis auf das Kontextobjekt des asynchronen Socketvorgangs beibehält, nachdem er als Parameter an eine der Methoden des asynchronen Socketvorgangs gesendet wurde. Der Verweis bleibt bestehen, bis der Abschlussrückruf zurückgegeben wird. Es ist jedoch von Vorteil für die Anwendung, den Verweis auf das Kontextobjekt beizubehalten, damit er für einen weiteren asynchronen Socketvorgang wiederverwendet werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.Sockets.Socket?displayProperty=fullName>   
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=fullName>   
- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Socket Performance Technology Sample (Technologiebeispiel für die Socketleistung)](http://go.microsoft.com/fwlink/?LinkID=179570)
-
+ <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
+ [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Beispiel zur Technologie der Socketleistung](http://go.microsoft.com/fwlink/?LinkID=179570)

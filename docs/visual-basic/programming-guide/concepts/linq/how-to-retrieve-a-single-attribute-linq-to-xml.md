@@ -1,34 +1,30 @@
 ---
-title: 'Gewusst wie: Abrufen eines einzelnen Attributs (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Abrufen eines einzelnes Attributs (LINQ to XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 35f477ead2bdcfdf78781459f93a755dbc89e5cc
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 08b9b2bed60f5818db9c494047ade576e8526bb7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Gewusst wie: Abrufen eines einzelnen Attributs (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Vorgehensweise: Abrufen eines einzelnes Attributs (LINQ to XML) (Visual Basic)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen Attributs eines Elements anhand des Attributsnamens erläutert. Diese Vorgehensweise eignet sich für das Schreiben von Abfrageausdrücken, mit denen Sie nach einem Element mit einem bestimmten Attribut suchen möchten.  
   
- Die <xref:System.Xml.Linq.XElement.Attribute%2A>Methode der <xref:System.Xml.Linq.XElement>zurück der <xref:System.Xml.Linq.XAttribute>mit dem angegebenen Namen.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Attribute%2A>  
+ Die <xref:System.Xml.Linq.XElement.Attribute%2A>-Methode der <xref:System.Xml.Linq.XElement>-Klasse gibt das <xref:System.Xml.Linq.XAttribute> mit dem angegebenen Namen zurück.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die <xref:System.Xml.Linq.XElement.Attribute%2A>-Methode.</xref:System.Xml.Linq.XElement.Attribute%2A>  
+ Im folgenden Beispiel wird die <xref:System.Xml.Linq.XElement.Attribute%2A>-Methode verwendet:  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -51,7 +47,7 @@ work
 ```  
   
 ## <a name="example"></a>Beispiel  
- Wenn Sie den Wert des Attributs abrufen möchten, können Sie es, umwandeln, wie Sie mit für <xref:System.Xml.Linq.XElement>Objekte.</xref:System.Xml.Linq.XElement> Das folgende Beispiel veranschaulicht das.  
+ Wenn Sie den Wert des Attributs abrufen möchten, können Sie es einfach genauso umwandeln, wie Sie es bei <xref:System.Xml.Linq.XElement>-Objekten machen würden. Dies wird im folgenden Beispiel veranschaulicht:  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -73,7 +69,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</xref:System.Xml.Linq.XAttribute>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet explizite Umwandlungsoperatoren für die Umwandlung der <xref:System.Xml.Linq.XAttribute>-Klasse in `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` und `GUID?`.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel enthält denselben Code für ein Attribut, das sich in einem Namespace befindet. Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  

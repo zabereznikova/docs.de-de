@@ -1,38 +1,38 @@
 ---
-title: "&#220;bersicht &#252;ber das ToolStripStatusLabel-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripStatusLabel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Statusleisten"
-  - "ToolStripStatusLabel-Steuerelement [Windows Forms], aboutToolStripStatusLabel-Steuerelement"
+title: "Übersicht über das ToolStripStatusLabel-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripStatusLabel
+helpviewer_keywords:
+- ToolStripStatusLabel control [Windows Forms], aboutToolStripStatusLabel control
+- status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2bd5da2474c59b9ea893b90f6b5f15343769f80c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &#220;bersicht &#252;ber das ToolStripStatusLabel-Steuerelement
-<xref:System.Windows.Forms.ToolStripStatusLabel> stellt eine Bezeichnung für <xref:System.Windows.Forms.StatusStrip> dar.  Wie <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.ToolStripLabel> stellt <xref:System.Windows.Forms.ToolStripStatusLabel> einen nicht durch Klicken aktivierbaren Anzeigebereich für Text und\/oder Bilder bereit.  <xref:System.Windows.Forms.ToolStripStatusLabel> wird durch <xref:System.Windows.Forms.StatusStrip> gehostet.  
+# <a name="toolstripstatuslabel-control-overview"></a>Übersicht über das ToolStripStatusLabel-Steuerelement
+Die <xref:System.Windows.Forms.ToolStripStatusLabel> ist eine Bezeichnung für eine <xref:System.Windows.Forms.StatusStrip>. Wie die <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.ToolStripLabel>, die <xref:System.Windows.Forms.ToolStripStatusLabel> enthält einen nicht durch Klicken aktivierbaren Anzeigebereich für Text, Bilder oder beides. Die <xref:System.Windows.Forms.ToolStripStatusLabel> gehostet wird, indem Sie eine <xref:System.Windows.Forms.StatusStrip>.  
   
-### Wichtige ToolStripStatusLabel\-Member  
+### <a name="important-toolstripstatuslabel-members"></a>Wichtige ToolStripStatusLabel-Member  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob <xref:System.Windows.Forms.ToolStripStatusLabel> den verfügbaren Bereich in <xref:System.Windows.Forms.StatusStrip> automatisch ausfüllt, während die Formulargröße geändert wird.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|Ruft einen Wert ab, der angibt, an welchen Seiten des <xref:System.Windows.Forms.ToolStripStatusLabel> Rahmen angezeigt werden, oder legt diesen Wert fest.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|Ruft die Rahmenart des <xref:System.Windows.Forms.ToolStripStatusLabel> ab oder legt diese fest.|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|Ruft ab oder legt einen Wert, der angibt, ob die <xref:System.Windows.Forms.ToolStripStatusLabel> auf den verfügbaren Platz ausfüllt die <xref:System.Windows.Forms.StatusStrip> Größe des Formulars|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|Ruft ab oder legt einen Wert, der gibt an, welche Seiten des der <xref:System.Windows.Forms.ToolStripStatusLabel> Rahmen anzeigen.|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|Ruft ab oder legt die Rahmenart der <xref:System.Windows.Forms.ToolStripStatusLabel>.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.ToolStripStatusLabel>

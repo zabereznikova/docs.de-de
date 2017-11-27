@@ -1,38 +1,39 @@
 ---
-title: "Gewusst wie: Erkennen des Mauszeigers auf einem ToolStripItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Maus, Erkennen von Bewegungen auf Symbolleisten"
-  - "Symbolleisten [Windows Forms], Erkennen von Mausbewegungen"
-  - "ToolStrip-Steuerelement [Windows Forms], Erkennen von Mausbewegungen"
-  - "ToolStripItem-Klasse, Erkennen von Mausbewegungen"
+title: 'Gewusst wie: Erkennen des Mauszeigers auf einem ToolStripItem'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms], detecting mouse movement
+- ToolStrip control [Windows Forms], detecting mouse movement
+- ToolStripItem class [Windows Forms], detecting mouse movement
+- mouse [Windows Forms], detecting movement on toolbars
 ms.assetid: d38b5082-aba7-4f6c-841b-bd9714e307fd
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 633b92bf6da837b3727001c621548fa58b230102
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erkennen des Mauszeigers auf einem ToolStripItem
-Mithilfe der folgenden Prozedur können Sie erkennen, wann sich der Mauszeiger über einem <xref:System.Windows.Forms.ToolStripItem> befindet.  
+# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Gewusst wie: Erkennen des Mauszeigers auf einem ToolStripItem
+Verwenden Sie das folgende Verfahren um zu erkennen, wenn der Mauszeiger über ein <xref:System.Windows.Forms.ToolStripItem>.  
   
-### So erkennen Sie, wann sich der Mauszeiger über einem ToolStripItem befindet  
+### <a name="to-detect-when-the-pointer-is-over-a-toolstripitem"></a>Erkennen, wenn der Mauszeiger über einem ToolStripItem befindet  
   
--   Verwenden Sie die <xref:System.Windows.Forms.ToolStripItem.Selected%2A>\-Eigenschaft für Elemente, in denen <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> auf `true` festgelegt ist.  
+-   Verwenden der <xref:System.Windows.Forms.ToolStripItem.Selected%2A> für Elemente in der Eigenschaft <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> ist `true`.  
   
-     Dadurch wird verhindert, dass Sie das <xref:System.Windows.Forms.ToolStripItem.MouseEnter>\-Ereignis und das <xref:System.Windows.Forms.ToolStripItem.MouseLeave>\-Ereignis synchronisieren müssen.  
+     Dadurch wird verhindert, Sie synchronisieren müssen die <xref:System.Windows.Forms.ToolStripItem.MouseEnter> und <xref:System.Windows.Forms.ToolStripItem.MouseLeave> Ereignisse.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ToolStripItem>   
- <xref:System.Windows.Forms.ToolStripItem.Selected%2A>   
- [Übersicht über das ToolStrip\-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.ToolStripItem>  
+ <xref:System.Windows.Forms.ToolStripItem.Selected%2A>  
+ [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

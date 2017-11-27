@@ -1,25 +1,29 @@
 ---
-title: "Benutzerdefinierte zusammengesetzte Designer - Workflowelementpr&#228;sentation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Benutzerdefinierte zusammengesetzte Designer - Workflowelementpräsentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3fa40a7a864ae65d15d787f5dec58a8da7b8e9a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Benutzerdefinierte zusammengesetzte Designer - Workflowelementpr&#228;sentation
-Der <xref:System.Activities.Presentation.WorkflowItemPresenter> ist ein Schlüsseltyp im WF\-Designer\-Programmiermodell, das die Erstellung einer "Ablagezone" ermöglicht, in der eine beliebige Aktivität platziert werden kann.In diesem Beispiel wird gezeigt, wie ein Aktivitätsdesigner erstellt wird, der eine solche "Ablagezone" aufweist.  
+# <a name="custom-composite-designers---workflow-item-presenter"></a>Benutzerdefinierte zusammengesetzte Designer - Workflowelementpräsentation
+Die <xref:System.Activities.Presentation.WorkflowItemPresenter> ist ein Schlüsseltyp im WF-Designer-Programmiermodell, die es die Erstellung einer "Ablagezone ermöglicht", in denen eine beliebige Aktivität platziert werden kann. In diesem Beispiel wird gezeigt, wie einem Aktivitätsdesigner erstellt wird, Flächen solche "Ablagezone."  
   
  Dieses Beispiel veranschaulicht Folgendes:  
   
-## Veranschaulicht  
+## <a name="demonstrates"></a>Veranschaulicht  
   
 -   Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemPresenter>.  
   
@@ -27,10 +31,10 @@ Der <xref:System.Activities.Presentation.WorkflowItemPresenter> ist ein Schlüss
   
 -   Deklaratives und imperatives Programmieren der neu gehosteten Toolbox.  
   
-## Beispieldetails  
+## <a name="sample-details"></a>Beispieldetails  
  Der Code für dieses Beispiel zeigt Folgendes:  
   
--   Der benutzerdefinierte Aktivitätsdesigner wird für die `SimpleNativeActivity`\-Klasse erstellt.  
+-   Der benutzerdefinierte Aktivitätsdesigner wird für die `SimpleNativeActivity`-Klasse erstellt.  
   
 -   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemPresenter>.  
   
@@ -68,23 +72,23 @@ Der <xref:System.Activities.Presentation.WorkflowItemPresenter> ist ein Schlüss
 </sap:ActivityDesigner>  
 ```  
   
- Beachten Sie die Verwendung der WPF\-Datenbindung, um eine Bindung an `ModelItem.Body` auszuführen.`ModelItem` ist die Eigenschaft im <xref:System.Activities.Presentation.WorkflowElementDesigner>, die auf das zugrunde liegende Objekt verweist, für das der Designer verwendet wird; in diesem Fall **SimpleNativeActivity**.  
+ Beachten Sie die Verwendung der WPF-Datenbindung, um eine Bindung an `ModelItem.Body` auszuführen. `ModelItem`ist die Eigenschaft im <xref:System.Activities.Presentation.ActivityDesigner> , die auf das zugrunde liegende Objekt, das der Designer wird, in diesem Fall verwendet wird verweist **SimpleNativeActivity**.  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-setup-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus  
   
 1.  Öffnen Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## Siehe auch  
- <xref:System.Activities.Presentation.WorkflowItemPresenter>   
- [Entwickeln von Anwendungen mit dem Workflow\-Designer](../Topic/Developing%20Applications%20with%20the%20Workflow%20Designer.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Activities.Presentation.WorkflowItemPresenter>  
+ [Entwickeln von Anwendungen mit dem Workflow-Designer](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

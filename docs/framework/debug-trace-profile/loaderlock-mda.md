@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock-MDA
 Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur Ausführung von verwaltetem Code in einem Thread, der die Loadersperre für das Microsoft Windows-Betriebssystem enthält.  Eine solche Ausführung ist ungültig, da sie zu Deadlocks führen und DLLs verwenden kann, bevor sie vom Ladeprogramm des Betriebssystems initialisiert wird.  
@@ -45,7 +38,7 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
  Schließlich gibt es Fälle, in denen Aufrufe in DLLs auftreten können, bevor diese DLLs ordnungsgemäß vom Ladeprogramm des Betriebssystems initialisiert wurden.  Im Gegensatz zu den Deadlock-Fehlern, die durch Untersuchen der Stapel aller am Deadlock beteiligten Threads diagnostiziert werden können, ist es sehr schwierig, die Verwendung von nicht initialisierten DLLs ohne diesen MDA zu diagnostizieren.  
   
 ## <a name="cause"></a>Ursache  
- Eine Mischung aus verwalteten und nicht verwalteten C++-Assemblys für die .NET Framework-Versionen 1.0 oder 1.1 versucht in der Regel, verwalteten Code innerhalb der Loadersperre auszuführen, es sei denn, es wurde besondere Sorgfalt angewendet und z.B. eine Verknüpfung mit **/NOENTRY** erstellt.  Eine ausführliche Beschreibung dieser Probleme finden Sie unter „Mixed DLL Loading Problem“ (Problem beim Laden gemischter DLLs) in der MSDN Library.  
+ Eine Mischung aus verwalteten und nicht verwalteten C++-Assemblys für die .NET Framework-Versionen 1.0 oder 1.1 versucht in der Regel, verwalteten Code innerhalb der Loadersperre auszuführen, es sei denn, es wurde besondere Sorgfalt angewendet und z.B. eine Verknüpfung mit **/NOENTRY** erstellt.
   
  Eine Mischung aus verwalteten und nicht verwalteten C++-Assemblys für die .NET Framework-Versionen 2.0 ist weniger anfällig für diese Probleme und hat dasselbe verringerte Risiko wie Anwendungen, die nicht verwaltete DLLs verwenden, die gegen die Regeln des Betriebssystems verstoßen.  Wenn beispielsweise der `DllMain`-Einstiegspunkt einer nicht verwalteten DLL `CoCreateInstance` aufruft, um ein verwaltetes Objekt zu erhalten, das für COM verfügbar gemacht wurde, erhält man einen Versuch, verwalteten Code innerhalb der Loadersperre auszuführen. Weitere Informationen zu Problemen mit Loadersperren in .NET Framework Version 2.0 oder höher finden Sie unter [Initialization of Mixed Assemblies (Initialisierung gemischter Assemblys)](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
@@ -72,4 +65,3 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
   
 ## <a name="see-also"></a>Siehe auch  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

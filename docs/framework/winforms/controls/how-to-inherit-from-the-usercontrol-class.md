@@ -1,52 +1,53 @@
 ---
-title: "Gewusst wie: Erben von der UserControl-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zusammengesetzte Steuerelemente, Erstellen"
-  - "Vererbung, Benutzerdefinierte Windows Forms-Steuerelemente"
-  - "Benutzersteuerelemente [Windows Forms], Erstellen"
-  - "UserControl-Klasse, Erben von"
+title: 'Gewusst wie: Erben von der UserControl-Klasse'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inheritance [Windows Forms], Windows Forms custom controls
+- UserControl class [Windows Forms], inheriting from
+- user controls [Windows Forms], creating
+- composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fbeb2712742ae4c500ccd14a19c397d5d411c73a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erben von der UserControl-Klasse
-Um die Funktionalität eines oder mehrerer Windows Forms\-Steuerelemente mit benutzerdefiniertem Code zu kombinieren, können Sie ein *Benutzersteuerelement* erstellen.  Mithilfe von Benutzersteuerelementen kann die schnelle Entwicklung von Steuerelementen mit der Funktionalität von Windows Forms\-Standardsteuerelementen und der Vielseitigkeit von benutzerdefinierten Eigenschaften und Methoden kombiniert werden.  Sobald ein Benutzersteuerelement erstellt wird, wird ein sichtbarer Designer angezeigt, auf dem Windows Forms\-Standardsteuerelemente positioniert werden können.  Diese Steuerelemente behalten sowohl ihre inhärente Funktionalität als auch das Aussehen und Verhalten von Standardsteuerelementen bei.  Wenn sie jedoch einmal in das Benutzersteuerelement integriert sind, sind sie für den Entwickler über Code nicht länger verfügbar.  Vom Benutzersteuerelement wird sowohl das eigene Zeichnen als auch die gesamte grundlegende Funktionalität behandelt, die mit Steuerelementen verbunden ist.  
+# <a name="how-to-inherit-from-the-usercontrol-class"></a>Gewusst wie: Erben von der UserControl-Klasse
+Sie können ein *Benutzersteuerelement* erstellen, um die Funktionalität einer oder mehrerer Windows Forms-Steuerelemente mit benutzerdefiniertem Code zu kombinieren. Benutzersteuerelemente kombinieren die schnelle Entwicklung von Steuerelementen, die standardmäßige Funktionalität von Windows Forms-Steuerelementen und die Vielseitigkeit von benutzerdefinierten Eigenschaften und Methoden. Wenn Sie mit dem Erstellen eines Benutzersteuerelements beginnen, wird ein Designer angezeigt, auf dem Sie die standardmäßigen Windows Forms-Steuerelemente platzieren können. Diese Steuerelemente behalten ihre implementierte Funktionalität sowie das Aussehen und Verhalten der Standardsteuerelemente. Sobald diese Steuerelemente in das Benutzersteuerelement integriert sind, stehen sie jedoch nicht mehr über Code zur Verfügung. Das Benutzersteuerelement führt seine eigene Grafikausgabe aus und behandelt auch die gesamte grundlegende Funktionalität von Steuerelementen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So erstellen Sie ein Benutzersteuerelement  
+### <a name="to-create-a-user-control"></a>So erstellen Sie ein benutzerdefiniertes Steuerelement  
   
-1.  Erstellen Sie ein neues **Windows\-Steuerelementbibliothek**\-Projekt.  
+1.  Erstellen Sie ein neues eines **Windows-Steuerelementbibliothek**-Projekt.  
   
-     Ein neues Projekt wird mit einem leeren Benutzersteuerelement erstellt.  
+     Ein neues Projekt mit einem leeren Benutzersteuerelement wird erstellt.  
   
-2.  Ziehen Sie Steuerelemente von der Registerkarte **Windows Forms** der **Toolbox** auf den Designer.  
+2.  Ziehen Sie Steuerelemente von der Registerkarte **Windows Forms** der **Toolbox** auf den Designer.  
   
-3.  Die Steuerelemente sollten so positioniert und entworfen werden, wie sie im fertig gestellten Steuerelement angezeigt werden sollen.  Wenn Entwickler in der Lage sein sollen, auf die konstituierenden Steuerelemente zuzugreifen, müssen diese als öffentlich deklariert werden. Wahlweise müssen Eigenschaften des konstituierenden Steuerelements selektiv verfügbar gemacht werden.  Ausführliche Informationen finden Sie unter [Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).  
+3.  Diese Steuerelemente sollten so positioniert und entworfen werden, wie Sie im fertig gestellten Steuerelement angezeigt werden sollen. Wenn Sie möchten, dass Entwickler auf die konstituierenden Steuerelemente zugreifen können, müssen Sie diese als öffentlich deklarieren oder Eigenschaften des konstituierenden Steuerelements einzeln verfügbar machen. Einzelheiten finden Sie unter [Vorgehensweise: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).  
   
-4.  Implementieren Sie alle benutzerdefinierten Methoden oder Eigenschaften, die in das Steuerelement eingebunden werden.  
+4.  Implementieren Sie alle benutzerdefinierten Methoden oder Eigenschaften, die in das Steuerelement eingebunden werden sollen.  
   
-5.  Drücken Sie F5, um das Projekt zu erstellen und das Steuerelement im **UserControl\-Testcontainer** auszuführen.  Weitere Informationen finden Sie unter [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+5.  Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl-Testcontainer** aus. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
-## Siehe auch  
- [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [Gewusst wie: Erben von der Control\-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)   
- [Gewusst wie: Erben von vorhandenen Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)   
- [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [Troubleshooting Inherited Event Handlers in Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)   
- [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+## <a name="see-also"></a>Siehe auch  
+ [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Vorgehensweise: Erben von der Control-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)

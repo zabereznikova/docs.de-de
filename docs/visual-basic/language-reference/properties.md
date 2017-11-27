@@ -1,40 +1,38 @@
 ---
-title: "Properties (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "properties [Visual Basic]"
+title: Eigenschaften (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a38fff09a56d431255b0be3e052b32a5daddf90c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Properties (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-Auf dieser Seite sind die Eigenschaften aufgeführt, die Member der Visual Basic\-Module sind.  Weitere Eigenschaften, die Member bestimmter Visual Basic\-Objekte darstellen, sind in [Objects](../../visual-basic/language-reference/objects/index.md) aufgeführt.  
+# <a name="properties-visual-basic"></a>Eigenschaften (Visual Basic)
+Auf dieser Seite sind die Eigenschaften, die Mitglieder der Visual Basic-Module sind. Andere Eigenschaften, die Mitglieder bestimmter Visual Basic-Objekte sind in aufgelisteten [Objekte](../../visual-basic/language-reference/objects/index.md).  
   
-## Visual Basic\-Eigenschaften  
+## <a name="visual-basic-properties"></a>Visual Basic-Eigenschaften  
   
 |||  
-|-|-|  
-|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Gibt einen `String`\-Wert zurück bzw. legt einen String\-Wert fest, der das aktuelle Datum gemäß den Systemeinstellungen angibt.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Gibt einen `Date`\-Wert zurück, der das aktuelle Datum und die aktuelle Uhrzeit gemäß der Systemeinstellung enthält.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Gibt einen `String`\-Wert zurück, der die aktuelle Laufzeit darstellt.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Gibt einen `Integer`\-Wert zurück, der die Buildversionsnummer der aktuellen Laufzeit enthält.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Gibt `Integer` mit der Hauptversionsnummer der aktuellen Laufzeit zurück.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Gibt einen `Integer`\-Wert zurück, der die Nebenversionsnummer der aktuellen Laufzeit enthält.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Gibt einen `Date`\-Wert zurück bzw. legt einen Date\-Wert fest, der die aktuelle Uhrzeit gemäß der Systemeinstellung enthält.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Gibt einen Wert vom Typ `Double` zurück, der die Anzahl der seit Mitternacht vergangenen Sekunden angibt.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Gibt einen `String`\-Wert zurück, der die aktuelle Uhrzeit gemäß der Systemeinstellung angibt, oder legt diesen fest.|  
-|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Gibt einen `Date`\-Wert zurück bzw. legt einen Date\-Wert fest, der das aktuelle Datum gemäß den Systemeinstellungen angibt.|  
+|---|---|  
+|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Zurück oder legt einen `String` Wert, der das aktuelle Datum gemäß Ihrem System darstellt.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Gibt eine `Date` Wert, der das aktuelle Datum und Uhrzeit des Systems enthält.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Gibt eine `String` , die die Laufzeit derzeit darstellt.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Gibt eine `Integer` , enthält die Buildversionsnummer der Laufzeit aktuell in Verwendung.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Gibt eine `Integer` , enthält die Hauptversionsnummer der Laufzeit aktuell in Verwendung.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Gibt eine `Integer` , die die Nebenversionsnummer der Laufzeit derzeit enthält.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Zurück oder legt einen `Date` Wert, der die aktuelle Tageszeit gemäß Ihrem Systems enthält.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Gibt eine `Double` Wert, der die Anzahl der Sekunden seit Mitternacht vergangenen.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Zurück oder legt einen `String` Wert, der die aktuelle Tageszeit gemäß Ihrem System darstellt.|  
+|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Zurück oder legt einen `Date` Wert, der das aktuelle Datum gemäß Ihrem Systems enthält.|  
   
-## Siehe auch  
- [Visual Basic Language Reference](../../visual-basic/language-reference/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../visual-basic/index.md)

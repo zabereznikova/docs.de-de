@@ -1,106 +1,109 @@
 ---
-title: "Sicherheit (WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungssicherheit [WPF]"
-  - "Anwendungsweite Navigationssicherheit [WPF]"
-  - "Funktionssteuerelemente [WPF], Sicherheit"
-  - "Internet Explorer-Sicherheitseinstellungen [WPF]"
-  - "Lose XAML-Dateien [WPF], Sandboxverhalten"
-  - "Navigationssicherheit [WPF]"
-  - "WebBrowser-Steuerelement [WPF], Sicherheit"
-  - "WPF-Sicherheit"
-  - "XAML-Dateien [WPF], Sandboxverhalten"
-  - "XBAP-Sicherheit [WPF]"
+title: Sicherheit (WPF)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML files [WPF], sandbox behavior
+- browser-hosted application security [WPF]
+- application security [WPF]
+- navigation security [WPF]
+- loose XAML files [WPF], sandbox behavior
+- WPF security [WPF]
+- WebBrowser control [WPF], security
+- feature controls [WPF], security
+- XBAP security [WPF]
+- Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: 38
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "38"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Sicherheit (WPF)
-<a name="introduction"></a> Beim Entwickeln eigenständiger und im Browser gehosteter [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]\-Anwendungen müssen Sie das Sicherheitsmodell beachten. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen werden mit uneingeschränkten Berechtigungen \([!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**\-Berechtigungssatz\) ausgeführt. Dabei ist es unerheblich, ob sie mit Windows Installer \(.msi\), Xcopy oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bereitgestellt wurden.  Die Bereitstellung teilweise vertrauenswürdiger, eigenständiger WPF\-Anwendungen mit ClickOnce wird nicht unterstützt.  Eine voll vertrauenswürdige Hostanwendung kann jedoch mithilfe des .NET Framework\-Add\-In\-Modells eine teilweise vertrauenswürdige <xref:System.AppDomain> erstellen.  Weitere Informationen finden Sie unter [Übersicht über WPF\-Add\-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+# <a name="security-wpf"></a>Sicherheit (WPF)
+<a name="introduction"></a>Bei der Entwicklung von [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] eigenständige und im Browser gehostete Anwendungen, müssen Sie berücksichtigen, dass das Sicherheitsmodell. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]eigenständige Anwendungen mit uneingeschränkten Berechtigungen ausgeführt ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** Berechtigungssatz), ob mithilfe von Windows Installer (MSI-Datei) mithilfe von XCopy, bereitgestellt oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Eine voll vertrauenswürdige hostanwendung kann jedoch eine teilweise vertrauenswürdigen erstellen <xref:System.AppDomain> mit dem .NET Framework-Add-in-Modell. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
- Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen werden von [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] oder Firefox gehostet. Es handelt sich dabei entweder um [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]\- oder um Loose [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]\-Dokumente. Weitere Informationen finden Sie unter [Übersicht über WPF\-XAML\-Browseranwendungen](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]im Browser gehostete Anwendungen werden von gehosteten [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] oder Firefox, und kann entweder [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] oder lose [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] Dokumente Weitere Informationen finden Sie unter [WPF-XAML Browser Applications Overview](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen werden standardmäßig in einem teilweise vertrauenswürdigen Sicherheitsbereich \(Sandkasten\) ausgeführt, der auf den Standardberechtigungssatz für die [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internetzone** beschränkt ist.  Auf diese Weise werden im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen auf dieselbe Weise vom Clientcomputer isoliert wie typische Webanwendungen.  Eine XBAP kann abhängig von der Sicherheitszone der Bereitstellung\-URL und der Sicherheitskonfiguration des Clients Berechtigungen bis zur vollen Vertrauenswürdigkeit ausweiten.  Weitere Informationen finden Sie unter [WPF\-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Führen Sie im Browser gehostete Anwendungen in einer teilweise vertrauenswürdigen Sicherheits-Sandbox wird standardmäßig die beschränkt der Standardwert ist [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** zone Berechtigungssatz. Dies effektiv isoliert [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] im Browser gehostete Anwendungen auf dem Clientcomputer auf die gleiche Weise, dass erwartet typische Webanwendungen isoliert werden müssen. Eine XBAP kann, abhängig von der Sicherheitszone der Bereitstellungs-URL und der Sicherheitskonfiguration des Clients, Berechtigungen bis zur vollen Vertrauenswürdigkeit erhöhen. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- In diesem Thema wird das Sicherheitsmodell für eigenständige und im Browser gehostete [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]\-Anwendungen erläutert.  
+ Dieses Thema beschreibt das Sicherheitsmodell für [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] eigenständige und im Browser gehostete Anwendungen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
 -   [Sichere Navigation](#SafeTopLevelNavigation)  
   
--   [Sicherheitseinstellungen für Webbrowsersoftware](#InternetExplorerSecuritySettings)  
+-   [Sicherheitseinstellungen für webbrowsende Software](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser\-Steuerelement und Funktionssteuerelemente](#webbrowser_control_and_feature_controls)  
+-   [WebBrowser-Steuerelement und Funktionssteuerelemente](#webbrowser_control_and_feature_controls)  
   
--   [Deaktivieren von APTCA\-Assemblys für teilweise vertrauenswürdige Clientanwendungen](#APTCA)  
+-   [Deaktivieren von APTCA-Assemblys für teilweise vertrauenswürdige Clientanwendungen](#APTCA)  
   
--   [Sandkastenverhalten für Loose XAML\-Dateien](#LooseContentSandboxing)  
+-   [Sandkastenverhalten für Loose XAML-Dateien](#LooseContentSandboxing)  
   
--   [Ressourcen zum Entwickeln von WPF\-Anwendungen, die die Sicherheit erhöhen](#BestPractices)  
+-   [Ressourcen zum Entwickeln von WPF-Anwendungen, die die Sicherheit erhöhen](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
-## Sichere Navigation  
- Für [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] unterscheidet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zwei Navigationstypen: Anwendungsnavigation und Browsernavigation.  
+## <a name="safe-navigation"></a>Sichere Navigation  
+ Für [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] werden zwei Threadtypen Navigation: Anwendung und Browser.  
   
- Als *Anwendungsnavigation* wird die Navigation zwischen Inhaltselementen in einer Anwendung bezeichnet, die in einem Browser gehostet wird.  Als *Browsernavigation* wird dagegen die Navigation bezeichnet, die die Inhalts\- und Speicherort\-URL des Browsers selbst ändert.  Die Beziehung zwischen Anwendungsnavigation \(in der Regel XAML\) und Browsernavigation \(in der Regel HTML\) wird in der folgenden Abbildung dargestellt:  
+ Als *Anwendungsnavigation* wird die Navigation zwischen Inhaltselementen in einer Anwendung bezeichnet, die in einem Browser gehostet wird. Als *Browsernavigation* wird die Navigation bezeichnet, die die Inhalts- und Speicherort-URL eines Browsers selbst ändert. Die Beziehung zwischen der Navigation in der Anwendung (normalerweise XAML) und Browsernavigation (in der Regel HTML) wird in der folgenden Abbildung gezeigt:
   
  ![Navigationsdiagramm](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
   
- Der Inhaltstyp, der als sicheres Navigationsziel für eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] angesehen wird, wird hauptsächlich dadurch bestimmt, ob die Anwendungsnavigation oder die Browsernavigation verwendet wird.  
+ Der Typ des Inhalts, die als sicher betrachtet eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] zum Navigieren in erster Linie richtet sich nach, ob die Navigation in der Anwendung oder Browser-Navigation verwendet wird.  
   
 <a name="Application_Navigation_Security"></a>   
-### Sicherheit der Anwendungsnavigation  
- Die Anwendungsnavigation wird als sicher betrachtet, wenn sie mit einem Paket\-[!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)] identifiziert werden kann, der vier Inhaltstypen unterstützt:  
+### <a name="application-navigation-security"></a>Sicherheit von Anwendungsnavigation  
+ Navigation in der Anwendung wird als sicher betrachtet, wenn er mit einem Pack identifiziert werden kann [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)], die unterstützt vier Typen von Inhalten:  
   
-|Inhaltstyp|Beschreibung|Beispiel für URI|  
-|----------------|------------------|----------------------|  
-|Ressource|Dateien, die einem Projekt mit einem **Resource**\-Buildtyp hinzugefügt werden.|`pack://application:,,,/MyResourceFile.xaml`|  
-|Inhalt|Dateien, die einem Projekt mit einem **Content**\-Buildtyp hinzugefügt werden.|`pack://application:,,,/MyContentFile.xaml`|  
-|Ursprungssite|Dateien, die einem Projekt mit einem **None**\-Buildtyp hinzugefügt werden.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Anwendungscode|XAML\-Ressourcen mit kompiliertem Code\-Behind.<br /><br /> \- oder \-<br /><br /> XAML\-Dateien, die einem Projekt mit einem **Page**\-Buildtyp hinzugefügt werden.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Inhaltstyp|Beschreibung|URI-Beispiel|  
+|------------------|-----------------|-----------------|  
+|Ressource|Dateien, die zu einem Projekt mit einem Build hinzugefügt werden **Ressource**.|`pack://application:,,,/MyResourceFile.xaml`|  
+|Inhalt|Dateien, die zu einem Projekt mit einem Build hinzugefügt werden **Content**.|`pack://application:,,,/MyContentFile.xaml`|  
+|Ursprungswebsite|Dateien, die zu einem Projekt mit einem Build hinzugefügt werden **keine**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
+|Anwendungscode|XAML-Ressourcen mit kompiliertem Code-Behind<br /><br /> - oder - <br /><br /> Verwendung von XAML-Dateien, die zu einem Projekt mit einem Build hinzugefügt werden **Seite**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  Weitere Informationen zu Anwendungsdatendateien und Paket\-[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)] finden Sie unter [WPF\-Anwendungsressource, Inhalts\- und Datendateien](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+>  Weitere Informationen zu Anwendungsdatendateien und Pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], finden Sie unter [Anwendungsressource WPF-Inhalt und Datendateien](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
   
- Zu Dateien dieser Inhaltstypen kann vom Benutzer oder programmgesteuert navigiert werden:  
+ Ein Navigieren zu Dateien dieser Inhaltstypen kann sowohl durch einen Benutzer als auch programmgesteuert erfolgen:  
   
--   **Benutzernavigation**.  Der Benutzer navigiert, indem er auf ein <xref:System.Windows.Documents.Hyperlink>\-Element klickt.  
+-   **Benutzernavigation**. Der Benutzer navigiert wird, indem Sie auf eine <xref:System.Windows.Documents.Hyperlink> Element.  
   
--   **Programmgesteuerte Navigation**.  Die Anwendung navigiert, ohne den Benutzer einzubinden, z. B. durch Festlegen der <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=fullName>\-Eigenschaft.  
+-   **Programmgesteuerte Navigation** Die Anwendung navigiert, ohne den Benutzer einzubinden, z. B. durch Festlegen der <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> Eigenschaft.  
   
 <a name="Browser_Navigation_Security"></a>   
-### Sicherheit der Browsernavigation  
- Die Browsernavigation wird nur unter den folgenden Bedingungen als sicher betrachtet:  
+### <a name="browser-navigation-security"></a>Sicherheit von Browsernavigation  
+ Browsernavigation wird nur unter den folgenden Bedingungen als sicher betrachtet:  
   
--   **Benutzernavigation**.  Der Benutzer navigiert, indem er auf ein <xref:System.Windows.Documents.Hyperlink>\-Element klickt, das sich innerhalb des Haupt\-<xref:System.Windows.Navigation.NavigationWindow> befindet, nicht in einem geschachtelten <xref:System.Windows.Controls.Frame>.  
+-   **Benutzernavigation**. Der Benutzer navigiert wird, indem Sie auf eine <xref:System.Windows.Documents.Hyperlink> Element, das innerhalb des Haupt- <xref:System.Windows.Navigation.NavigationWindow>, nicht in einer geschachtelten <xref:System.Windows.Controls.Frame>.  
   
--   **Zone**.  Der Inhalt, durch den navigiert wird, befindet sich im Internet oder im lokalen Intranet.  
+-   **Zone**. Der Inhalt, in dem navigiert wird, befindet sich im Internet oder im lokalen Intranet.  
   
--   **Protokoll**.  Das Protokoll, das verwendet wird, ist entweder **http**, **https**, **file** oder **mailto**.  
+-   **Protokoll**. Das verwendete Protokoll ist entweder **http**, **Https**, **Datei**, oder **Mailto**.  
   
- Wenn eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] versucht, auf eine Weise zu Inhalten zu navigieren, die nicht diesen Bedingungen entspricht, wird eine <xref:System.Security.SecurityException> ausgelöst.  
+ Wenn ein [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] versucht, auf Inhalte auf eine Weise zu navigieren, die nicht mit den folgenden Bedingungen entspricht einer <xref:System.Security.SecurityException> ausgelöst wird.  
   
 <a name="InternetExplorerSecuritySettings"></a>   
-## Sicherheitseinstellungen für Webbrowsersoftware  
- Die Sicherheitseinstellungen auf dem Computer bestimmen, welcher Zugriff jeder Webbrowsersoftware gewährt wird.  Webbrowsersoftware umfasst Anwendungen oder Komponenten, die [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379)\- oder [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383)\-APIs verwenden, einschließlich Internet Explorer und PresentationHost.exe.  
+## <a name="web-browsing-software-security-settings"></a>Sicherheitseinstellungen für webbrowsende Software  
+ Die Sicherheitseinstellungen auf dem Computer bestimmen, welcher Zugriff jeder webbrowsenden Software gewährt wird. Webbrowser-Software enthält jede Anwendung oder Komponente, verwendet der [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) oder [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) APIs, einschließlich Internet Explorer und PresentationHost.exe.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] stellt einen Mechanismus bereit, mit dem Sie die Funktionalität konfigurieren können, deren Ausführung durch oder von [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] zulässig ist. Dazu zählt Folgendes:  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]bietet einen Mechanismus, mit dem können Sie konfigurieren, die Funktionalität, die von oder aus ausgeführt werden darf [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], u. a. folgende:  
   
--   Auf [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] basierende Komponenten  
+-   Komponenten, die auf [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] aufsetzen  
   
--   ActiveX\-Steuerelemente und Plug\-Ins  
+-   ActiveX-Steuerelemente und Plug-Ins  
   
 -   Downloads  
   
@@ -108,181 +111,181 @@ caps.handback.revision: 33
   
 -   Benutzerauthentifizierung  
   
- Die Auflistung der Funktionalitäten, die auf diese Weise gesichert werden können, wird auf Zonenbasis für die Zonen **Internet**, **Intranet**, **Vertrauenswürdige Sites** und **Eingeschränkte Sites** konfiguriert.  Die folgenden Schritte beschreiben, wie die Sicherheitseinstellungen konfiguriert werden:  
+ Die Sammlung von Funktionen, die auf diese Weise gesichert werden kann auf Basis der pro-Zone konfiguriert ist die **Internet**, **Intranet**, **vertrauenswürdige Sites**, und  **Eingeschränkte Sites** Zonen. Die folgenden Schritte beschreiben, wie die Sicherheitseinstellungen konfiguriert werden:  
   
-1.  Öffnen Sie die **Systemsteuerung**.  
+1.  Open **in der Systemsteuerung**.  
   
-2.  Klicken Sie auf **Netzwerk und Internet** und dann auf **Internetoptionen**.  
+2.  Klicken Sie auf **Netzwerk und Internet** , und klicken Sie dann auf **Internetoptionen**.  
   
-     Das Dialogfeld Internetoptionen wird angezeigt.  
+     Das Dialogfeld "Internetoptionen" wird angezeigt.  
   
-3.  Wählen Sie auf der Registerkarte **Sicherheit** die Zone aus, für die die Sicherheitseinstellungen konfiguriert werden sollen.  
+3.  Auf der **Sicherheit** Registerkarte, wählen Sie die Zone so konfigurieren Sie die Sicherheitseinstellungen für.  
   
-4.  Klicken Sie auf die Schaltfläche **Stufe anpassen**.  
+4.  Klicken Sie auf die **Stufe** Schaltfläche.  
   
-     Das Dialogfeld **Sicherheitseinstellungen** wird geöffnet, in dem Sie die Sicherheitseinstellungen für die ausgewählte Zone konfigurieren können.  
+     Die **Sicherheitseinstellungen** Dialogfeld wird angezeigt, und Sie können die Sicherheitseinstellungen für die ausgewählte Zone konfigurieren.  
   
-     ![Dialogfeld Sicherheitseinstellungen](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![Dialogfeld „Sicherheitseinstellungen“](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
   
 > [!NOTE]
->  Sie können auch das Dialogfeld Internetoptionen von Internet Explorer verwenden.  Klicken Sie auf **Extras** und dann auf **Internetoptionen**.  
+>  Sie können auch aus Internet Explorer zum Dialogfeld „Internetoptionen“ gelangen. Klicken Sie auf **Tools** , und klicken Sie dann auf **Internetoptionen**.  
   
- Ab [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)] sind die folgenden Sicherheitseinstellungen speziell für [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] enthalten:  
+ Beginnend mit [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], speziell für die folgenden Sicherheitseinstellungen [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] sind enthalten:  
   
--   **Loose XAML**.  Steuert, ob [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] zu Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Dateien navigieren kann.  \(Optionen Aktivieren, Deaktivieren und Eingabeaufforderung.\)  
+-   **Loose XAML**. Steuert, ob [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] können zu navigieren und lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien. (Optionen „Aktivieren“, „Deaktivieren“ und „Bestätigen“.)  
   
--   **XAML\-Browseranwendungen**.  Steuert, ob [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] zu [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] navigieren und sie ausführen kann.  \(Optionen Aktivieren, Deaktivieren und Eingabeaufforderung.\)  
+-   **XAML-Browseranwendungen**. Steuert, ob [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] können zu navigieren, und führen Sie [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Optionen „Aktivieren“, „Deaktivieren“ und „Bestätigen“.)  
   
- Standardmäßig sind diese Einstellungen für die Zonen **Internet**, **Lokales Intranet** und **Vertrauenswürdige Sites** aktiviert und für die Zone **Eingeschränkte Sites** deaktiviert.  
+ Wird standardmäßig diese Einstellungen sind alle aktiviert für die **Internet**, **lokales Intranet**, und **vertrauenswürdige Sites** Zonen und deaktiviert für den **eingeschränkte Sites**  Zone.  
   
 <a name="Security_Settings_for_IE6_and_Below"></a>   
-### Sicherheitsbezogene WPF\-Registrierungseinstellungen  
- Zusätzlich zu den Sicherheitseinstellungen über die Internetoptionen sind die folgenden Registrierungswerte für die selektive Blockierung sicherheitsrelevanter WPF\-Funktionen verfügbar.  Die Werte werden unter dem folgenden Schlüssel definiert:  
+### <a name="security-related-wpf-registry-settings"></a>Sicherheitsbezogene WPF-Registrierungseinstellungen  
+ Zusätzlich zu den Sicherheitseinstellungen, die über die Internetoptionen verfügbar sind, sind die folgenden Registrierungswerte für die selektive Blockierung einiger sicherheitsrelevanter WPF-Funktionen verfügbar. Die Werte werden unter dem folgenden Schlüssel definiert:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Windows Presentation Foundation\Features`  
   
  In der folgenden Tabelle sind die Werte aufgelistet, die festgelegt werden können.  
   
 |Wertname|Werttyp|Wertdaten|  
-|--------------|-------------|---------------|  
-|XBAPDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
-|LooseXamlDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
-|WebBrowserDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
-|MediaAudioDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
-|MediaImageDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
-|MediaVideoDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
-|ScriptInteropDisallow|REG\_DWORD|1 \(nicht zulassen\); 0 \(zulassen\)|  
+|----------------|----------------|----------------|  
+|XBAPDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
+|LooseXamlDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
+|WebBrowserDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
+|MediaAudioDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
+|MediaImageDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
+|MediaVideoDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
+|ScriptInteropDisallow|REG_DWORD|1 = nicht zulassen; 0 = zulassen|  
   
 <a name="webbrowser_control_and_feature_controls"></a>   
-## WebBrowser\-Steuerelement und Funktionssteuerelemente  
- Das <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement kann zum Hosten von Webinhalt verwendet werden.  Das <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement umschließt das zugrunde liegende WebBrowser\-ActiveX\-Steuerelement.  WPF bietet eine gewisse Unterstützung zum Sichern der Anwendung, wenn Sie mit dem <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement nicht vertrauenswürdigen Webinhalt hosten.  Einige Sicherheitsfunktionen müssen jedoch mit dem <xref:System.Windows.Controls.WebBrowser>\-Steuerelement direkt durch die Anwendungen angewendet werden.  Weitere Informationen zum WebBrowser\-ActiveX\-Steuerelement finden Sie unter [WebBrowser Control Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=179388).  
+## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser-Steuerelement und Funktionssteuerelemente  
+ Die WPF <xref:System.Windows.Controls.WebBrowser> Steuerelement zum Hosten von Webinhalten verwendet werden kann. Die WPF <xref:System.Windows.Controls.WebBrowser> Steuerelement umschließt das zugrunde liegende WebBrowser ActiveX-Steuerelement. WPF bietet einige Unterstützung zum Sichern Ihrer Anwendung bei der Verwendung von WPF <xref:System.Windows.Controls.WebBrowser> zu hostende Steuerelement als nicht vertrauenswürdig eingestuft Webinhalte. Allerdings müssen einige Sicherheitsfunktionen angewendet werden, direkt von den Anwendungen, die mithilfe der <xref:System.Windows.Controls.WebBrowser> Steuerelement. Weitere Informationen über das WebBrowser ActiveX-Steuerelement finden Sie unter [WebBrowser-Steuerelement Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=179388).  
   
 > [!NOTE]
->  Dieser Abschnitt gilt auch für das <xref:System.Windows.Controls.Frame>\-Steuerelement, da es mithilfe des <xref:System.Windows.Controls.WebBrowser> zu HTML\-Inhalt navigiert.  
+>  Dieser Abschnitt gilt auch für die <xref:System.Windows.Controls.Frame> steuern, da er verwendet die <xref:System.Windows.Controls.WebBrowser> zu HTML-Inhalt navigieren.  
   
- Wenn das <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement zum Hosten von nicht vertrauenswürdigem Webinhalt verwendet wird, sollte die Anwendung eine teilweise vertrauenswürdige <xref:System.AppDomain> verwenden, um den Anwendungscode von potenziell bösartigem HTML\-Skriptcode zu isolieren.  Dies gilt besonders, wenn die Anwendung mit dem gehosteten Skript mit der <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>\-Methode und der <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>\-Eigenschaft interagiert.  Weitere Informationen finden Sie unter [Übersicht über WPF\-Add\-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+ Wenn der WPF <xref:System.Windows.Controls.WebBrowser> Steuerelement zum Hosten von nicht vertrauenswürdigen Webinhalte verwendet wird, die Anwendung sollte eine teilweise vertrauenswürdigen verwenden <xref:System.AppDomain> können den Anwendungscode von potenziell bösartige HTML-Skript-Code zu isolieren. Dies gilt insbesondere, wenn Ihre Anwendung mit dem gehosteten Skript mit interagiert der <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> Methode und die <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
- Wenn die Anwendung das <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement verwendet, ist das Aktivieren der Internet Explorer\-Funktionssteuerelemente eine weitere Möglichkeit, um die Sicherheit zu erhöhen und Angriffe zu verhindern.  Funktionssteuerelemente sind Ergänzungen zu Internet Explorer, mit denen Administratoren und Entwickler Funktionen von Internet Explorer und Anwendungen konfigurieren können, die das vom <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement umschlossene WebBrowser\-ActiveX\-Steuerelement hosten.  Funktionssteuerelemente können mithilfe der [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394)\-Funktion oder durch das Ändern von Werten in der Registrierung konfiguriert werden.  Weitere Informationen zu Funktionssteuerelementen finden Sie unter [Introduction to Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179390) und [Internet Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179392).  
+ Wenn Ihre Anwendung der WPF verwendet <xref:System.Windows.Controls.WebBrowser> Steuerelement, eine weitere Möglichkeit zum Erhöhen der Sicherheit und Angriffe zu mindern Steuerelemente für Internet Explorer-Funktion zu aktivieren. Feature-Steuerelemente sind Ergänzungen an Internet Explorer, mit denen Administratoren und Entwickler Features von Internet Explorer und Anwendungen, die im WebBrowser ActiveX-Steuerelement hosten konfigurieren können die WPF <xref:System.Windows.Controls.WebBrowser> steuern umschließt. Feature-Steuerelemente können konfiguriert werden, mithilfe der [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394) Funktion oder durch Ändern der Werte in der Registrierung. Weitere Informationen zum Feature Steuerelemente finden Sie unter [Introduction to Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179390) und [Feature Internetsteuerelemente](http://go.microsoft.com/fwlink/?LinkId=179392).  
   
- Wenn Sie eine eigenständige WPF\-Anwendung entwickeln, die das <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement verwendet, aktiviert WPF automatisch die folgenden Funktionssteuerelemente für die Anwendung.  
+ Wenn Sie eine eigenständige WPF-Anwendung entwickeln, die der WPF verwendet <xref:System.Windows.Controls.WebBrowser> WPF-Steuerelement, kann automatisch die folgenden Feature-Steuerelemente für Ihre Anwendung.  
   
 |Funktionssteuerelement|  
-|----------------------------|  
-|FEATURE\_MIME\_HANDLING|  
-|FEATURE\_MIME\_SNIFFING|  
-|FEATURE\_OBJECT\_CACHING|  
-|FEATURE\_SAFE\_BINDTOOBJECT|  
-|FEATURE\_WINDOW\_RESTRICTIONS|  
-|FEATURE\_ZONE\_ELEVATION|  
-|FEATURE\_RESTRICT\_FILEDOWNLOAD|  
-|FEATURE\_RESTRICT\_ACTIVEXINSTALL|  
-|FEATURE\_ADDON\_MANAGEMENT|  
-|FEATURE\_HTTP\_USERNAME\_PASSWORD\_DISABLE|  
-|FEATURE\_SECURITYBAND|  
-|FEATURE\_UNC\_SAVEDFILECHECK|  
-|FEATURE\_VALIDATE\_NAVIGATE\_URL|  
-|FEATURE\_DISABLE\_TELNET\_PROTOCOL|  
-|FEATURE\_WEBOC\_POPUPMANAGEMENT|  
-|FEATURE\_DISABLE\_LEGACY\_COMPRESSION|  
-|FEATURE\_SSLUX|  
+|---------------------|  
+|FEATURE_MIME_HANDLING|  
+|FEATURE_MIME_SNIFFING|  
+|FEATURE_OBJECT_CACHING|  
+|FEATURE_SAFE_BINDTOOBJECT|  
+|FEATURE_WINDOW_RESTRICTIONS|  
+|FEATURE_ZONE_ELEVATION|  
+|FEATURE_RESTRICT_FILEDOWNLOAD|  
+|FEATURE_RESTRICT_ACTIVEXINSTALL|  
+|FEATURE_ADDON_MANAGEMENT|  
+|FEATURE_HTTP_USERNAME_PASSWORD_DISABLE|  
+|FEATURE_SECURITYBAND|  
+|FEATURE_UNC_SAVEDFILECHECK|  
+|FEATURE_VALIDATE_NAVIGATE_URL|  
+|FEATURE_DISABLE_TELNET_PROTOCOL|  
+|FEATURE_WEBOC_POPUPMANAGEMENT|  
+|FEATURE_DISABLE_LEGACY_COMPRESSION|  
+|FEATURE_SSLUX|  
   
- Da diese Funktionssteuerelemente ohne Bedingung aktiviert werden, können sie möglicherweise voll vertrauenswürdige Anwendungen beeinträchtigen.  In diesem Fall kann das entsprechende Funktionssteuerelement deaktiviert werden, wenn kein Sicherheitsrisiko für die jeweilige Anwendung und den gehosteten Inhalt besteht.  
+ Da diese Funktionssteuerelemente bedingungslos aktiviert werden, können sie möglicherweise voll vertrauenswürdige Anwendungen beeinträchtigen. In diesem Fall kann das entsprechende Funktionssteuerelement deaktiviert werden, wenn kein Sicherheitsrisiko für die jeweilige Anwendung und den gehosteten Inhalt besteht.  
   
- Funktionssteuerelemente werden von dem Prozess angewendet, der das WebBrowser\-ActiveX\-Objekt instanziiert.  Daher wird dringend empfohlen, beim Erstellen einer eigenständigen Anwendung, die zu nicht vertrauenswürdigem Inhalt navigieren kann, zusätzliche Funktionssteuerelemente zu aktivieren.  
+ Feature-Steuerelemente werden durch den Prozess, instanziieren den WebBrowser ActiveX-Objekt angewendet. Daher wird unbedingt empfohlen, beim Erstellen einer eigenständigen Anwendung, die zu nicht vertrauenswürdigem Inhalt navigieren kann, zusätzliche Funktionssteuerelemente zu aktivieren.  
   
 > [!NOTE]
->  Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML\- und SHDOCVW\-Hostsicherheit.  Weitere Informationen finden Sie unter [The MSHTML Host Security FAQ: Part I of II](http://go.microsoft.com/fwlink/?LinkId=179396) und [The MSHTML Host Security FAQ: Part II of II](http://go.microsoft.com/fwlink/?LinkId=179415).  
+>  Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden Sie unter [die FAQ zur Sicherheit des MSHTML-Host: Teil I, II](http://go.microsoft.com/fwlink/?LinkId=179396) und [die FAQ zur Sicherheit des MSHTML-Host: Teil II II](http://go.microsoft.com/fwlink/?LinkId=179415).  
   
- Es wird empfohlen, für die ausführbare Datei die folgenden Funktionssteuerelemente durch Festlegen des Registrierungswerts auf 1 zu aktivieren.  
-  
-|Funktionssteuerelement|  
-|----------------------------|  
-|FEATURE\_ACTIVEX\_REPURPOSEDETECTION|  
-|FEATURE\_BLOCK\_LMZ\_IMG|  
-|FEATURE\_BLOCK\_LMZ\_OBJECT|  
-|FEATURE\_BLOCK\_LMZ\_SCRIPT|  
-|FEATURE\_RESTRICT\_RES\_TO\_LMZ|  
-|FEATURE\_RESTRICT\_ABOUT\_PROTOCOL\_IE7|  
-|FEATURE\_SHOW\_APP\_PROTOCOL\_WARN\_DIALOG|  
-|FEATURE\_LOCALMACHINE\_LOCKDOWN|  
-|FEATURE\_FORCE\_ADDR\_AND\_STATUS|  
-|FEATURE\_RESTRICTED\_ZONE\_WHEN\_FILE\_NOT\_FOUND|  
-  
- Es wird empfohlen, für die ausführbare Datei das folgende Funktionssteuerelement durch Festlegen des Registrierungswerts auf 0 zu deaktivieren.  
+ Für eine ausführbare Datei sollten die folgenden Funktionssteuerelemente aktiviert werden, indem der Registrierungswert auf 1 festgelegt wird.  
   
 |Funktionssteuerelement|  
-|----------------------------|  
-|FEATURE\_ENABLE\_SCRIPT\_PASTE\_URLACTION\_IF\_PROMPT|  
+|---------------------|  
+|FEATURE_ACTIVEX_REPURPOSEDETECTION|  
+|FEATURE_BLOCK_LMZ_IMG|  
+|FEATURE_BLOCK_LMZ_OBJECT|  
+|FEATURE_BLOCK_LMZ_SCRIPT|  
+|FEATURE_RESTRICT_RES_TO_LMZ|  
+|FEATURE_RESTRICT_ABOUT_PROTOCOL_IE7|  
+|FEATURE_SHOW_APP_PROTOCOL_WARN_DIALOG|  
+|FEATURE_LOCALMACHINE_LOCKDOWN|  
+|FEATURE_FORCE_ADDR_AND_STATUS|  
+|FEATURE_RESTRICTED_ZONE_WHEN_FILE_NOT_FOUND|  
   
- Wenn Sie eine teilweise vertrauenswürdige [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] ausführen, die ein <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement in [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] enthält, hostet WPF das WebBrowser\-ActiveX\-Steuerelement im Adressbereich des Internet Explorer\-Prozesses.  Da das WebBrowser\-ActiveX\-Steuerelement im [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]\-Prozess gehostet wird, sind alle Funktionssteuerelemente für Internet Explorer auch für das WebBrowser\-ActiveX\-Steuerelement aktiviert.  
+ Für eine ausführbare Datei sollte das folgenden Funktionssteuerelement deaktiviert werden, indem der Registrierungswert auf 0 festgelegt wird.  
   
- In Internet Explorer ausgeführte XBAPs erhalten im Vergleich zu normalen eigenständigen Anwendungen ebenfalls eine zusätzliche Sicherheitsebene.  Diese zusätzliche Sicherheit ergibt sich daraus, dass Internet Explorer und daher das WebBrowser\-ActiveX\-Steuerelement unter [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)] standardmäßig im geschützten Modus ausgeführt werden.  Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and Working in Protected Mode Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179393).  
+|Funktionssteuerelement|  
+|---------------------|  
+|FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
+  
+ Wenn das Ausführen von einer teilweise vertrauenswürdigen [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] enthält eine WPF <xref:System.Windows.Controls.WebBrowser> steuern [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)], WPF hostet das WebBrowser ActiveX-Steuerelement in den Adressraum des Internet Explorer-Prozess. Seit der WebBrowser ActiveX-Steuerelement, in gehostet wird der [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] Prozess, alle Steuerelemente Feature für Internet Explorer auch für das WebBrowser ActiveX-Steuerelement aktiviert sind.  
+  
+ XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheitsmaßnahme ist, da Internet Explorer und daher im WebBrowser ActiveX-Steuerelement ausgeführt wird im geschützten Modus standardmäßig auf [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)]. Weitere Informationen zum geschützten Modus finden Sie unter [verstehen und Arbeiten im geschützten Modus Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
->  Wenn Sie versuchen, in der Internetzone eine XBAP auszuführen, die ein <xref:System.Windows.Controls.WebBrowser>\-WPF\-Steuerelement in Firefox enthält, wird eine <xref:System.Security.SecurityException> ausgelöst.  Dies geschieht aufgrund der WPF\-Sicherheitsrichtlinie.  
+>  Wenn Sie versuchen, eine XBAP auszuführen, die eine WPF umfasst <xref:System.Windows.Controls.WebBrowser> -Steuerelement in Firefox, klicken Sie in der Internetzone eine <xref:System.Security.SecurityException> ausgelöst. Dies geschieht aufgrund der WPF-Sicherheitsrichtlinie.  
   
 <a name="APTCA"></a>   
-## Deaktivieren von APTCA\-Assemblys für teilweise vertrauenswürdige Clientanwendungen  
- Wenn verwaltete Assemblys in GAC \([!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]\) installiert werden, werden sie voll vertrauenswürdig, weil der Benutzer für die Installation eine explizite Berechtigung bereitstellen muss.  Da sie voll vertrauenswürdig sind, können sie nur von voll vertrauenswürdigen verwalteten Clientanwendungen verwendet werden.  Damit teilweise vertrauenswürdige Anwendungen sie verwenden können, müssen sie mit <xref:System.Security.AllowPartiallyTrustedCallersAttribute> \(APTCA\) markiert werden.  Nur Assemblys, die sich in einem Test bei der Ausführung in teilweiser Vertrauenswürdigkeit als sicher erwiesen haben, sollten mit diesem Attribut markiert werden.  
+## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Deaktivieren von APTCA-Assemblys für teilweise vertrauenswürdige Clientanwendungen  
+ Wenn verwaltete Assemblys installiert sind, in der [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], werden sie voll vertrauenswürdig, da der Benutzer explizite Zugriffsberechtigung für die Installation bereitgestellt werden muss. Da sie voll vertrauenswürdig sind, können sie nur von voll vertrauenswürdigen verwalteten Clientanwendungen verwendet werden. Damit wird teilweise vertrauenswürdige Anwendungen zu verwenden, müssen sie mit markiert werden die <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Mit diesem Attribut sollten nur Assemblys markiert werden, für die bei Tests nachgewiesen wurde, dass sie bei Ausführung in teilweiser Vertrauenswürdigkeit sicher sind.  
   
- Eine APTCA\-Assembly kann jedoch nach der Installation in GAC \([!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]\) einen Sicherheitsmangel aufweisen.  Nachdem ein Sicherheitsmangel entdeckt wurde, können Assemblyherausgeber ein Sicherheitsupdate erzeugen, um das Problem in vorhandenen Installationen zu beheben und Installationen zu schützen, die nach der Entdeckung des Problems erfolgen.  Das Update kann die Assembly deinstallieren, was jedoch zur Unterbrechung anderer voll vertrauenswürdiger Clientanwendungen führen kann, die diese Assembly verwenden.  
+ Allerdings ist es möglich, dass eine APTCA-Assembly mit einem Sicherheitsmangels ausgeführt wird, nach der Installation in der [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]. Nachdem ein Sicherheitsrisiko entdeckt wurde, können Assemblyherausgeber ein Sicherheitsupdate erstellen, um das Problem in vorhandenen Installationen zu beheben und Installationen zu schützen, die nach der Entdeckung des Problems erfolgen. Eine Option für ein solches Update besteht darin, die Assembly zu deinstallieren, was jedoch zum Versagen anderer voll vertrauenswürdiger Clientanwendungen führen kann, die diese Assembly verwenden.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] stellt einen Mechanismus bereit, mit dem eine APTCA\-Assembly für teilweise vertrauenswürdige [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] deaktiviert werden kann, ohne die APTCA\-Assembly zu deinstallieren.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]bietet einen Mechanismus, mit dem APTCA-Assembly deaktiviert werden, kann für teilweise vertrauenswürdige [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ohne die APTCA-Assembly zu deinstallieren.  
   
- Zum Deaktivieren einer APTCA\-Assembly müssen Sie einen speziellen Registrierungsschlüssel erstellen:  
+ Um eine APTCA-Assembly zu deaktivieren, müssen Sie einen speziellen Registrierungsschlüssel erstellen:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\<AssemblyFullName>, FileVersion=<AssemblyFileVersion>`  
   
- Im Folgenden wird ein Beispiel angezeigt:  
+ Es folgt ein Beispiel:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\aptcagac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=215e3ac809a0fea7, FileVersion=1.0.0.0`  
   
- Dieser Schlüssel erstellt einen Eintrag für die APTCA\-Assembly.  Sie müssen außerdem einen Wert in diesem Schlüssel erstellen, der die Assembly aktiviert oder deaktiviert.  Im Folgenden sind die Details für den Wert aufgeführt:  
+ Dieser Schlüssel erstellt einen Eintrag für die APTCA-Assembly. Sie müssen außerdem einen Wert in diesem Schlüssel erstellen, der die Assembly aktiviert oder deaktiviert. Die Details des Werts sehen wie folgt aus:  
   
--   Wertname: **APTCA\_FLAG**  
+-   Wertname: **APTCA_FLAG**.  
   
--   Werttyp: **REG\_DWORD**  
+-   Typ: **REG_DWORD**.  
   
--   Wertdaten: **1** \(deaktivieren\); **0** \(aktivieren\)  
+-   Wertdaten: **1** zu deaktivieren; **0** zu aktivieren.  
   
- Muss eine Assembly für teilweise vertrauenswürdige Clientanwendungen deaktiviert werden, können Sie ein Update zum Erstellen des Registrierungsschlüssels und des Werts schreiben.  
+ Muss eine Assembly für teilweise vertrauenswürdige Clientanwendungen deaktiviert werden, können Sie ein Update schreiben, in dem der Registrierungsschlüssel und dessen Wert aktualisiert werden.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]\-Kernassemblys sind von dieser Art der Deaktivierung nicht betroffen, da sie für die Ausführung von verwalteten Anwendungen erforderlich sind.  Die Unterstützung zur Deaktivierung von APTCA\-Assemblys wird hauptsächlich für Anwendungen von Drittanbietern bereitgestellt.  
+>  Core [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] Assemblys sind nicht betroffen, indem sie auf diese Weise zu deaktivieren, da sie für die Ausführung von verwalteten Anwendungen erforderlich sind. Die Unterstützung zur Deaktivierung von APTCA-Assemblys zielt hauptsächlich auf Anwendungen von Drittanbietern ab.  
   
 <a name="LooseContentSandboxing"></a>   
-## Sandkastenverhalten für Loose XAML\-Dateien  
- Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Dateien sind Markup\-XAML\-Dateien, die nicht von CodeBehind\-, Ereignishandler\- oder anwendungsspezifischen Assemblys abhängen.  Wenn zu Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Dateien direkt vom Browser navigiert wird, werden sie basierend auf dem Standardberechtigungssatz für die Internetzone in einem Sicherheitssandkasten geladen.  
+## <a name="sandbox-behavior-for-loose-xaml-files"></a>Sandkastenverhalten für Loose XAML-Dateien  
+ Lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien sind Markup-XAML-Dateien, die nicht auf Code-Behind, Ereignishandler oder anwendungsspezifische Assembly abhängen. Wenn lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien direkt vom Browser navigiert, die sie in einem Sicherheitssandkasten basierend auf den Standardberechtigungssatz für die Zone erneut geladen werden.  
   
- Das Sicherheitsverhalten ändert sich jedoch, wenn in einer eigenständigen Anwendung entweder von einem <xref:System.Windows.Navigation.NavigationWindow> oder einem <xref:System.Windows.Controls.Frame> zu Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Dateien navigiert wird.  
+ Das Sicherheitsverhalten ist jedoch anders aus, wenn Sie loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien entweder navigiert ein <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> in eine eigenständige Anwendung.  
   
- In beiden Fällen erbt die Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Datei, zu der navigiert wird, die Berechtigung ihrer Hostanwendung.  Dieses Verhalten kann jedoch aus Sicherheitsgründen auch unerwünscht sein, besonders wenn eine Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Datei von einer Entität erzeugt wurde, die entweder nicht vertrauenswürdig oder unbekannt ist.  Dieser Inhaltstyp wird als *externer Inhalt* bezeichnet. Sowohl <xref:System.Windows.Controls.Frame> als auch <xref:System.Windows.Navigation.NavigationWindow> kann so konfiguriert werden, dass der Inhalt, zu dem navigiert wird, isoliert wird.  Die Isolation wird durch Festlegen der **SandboxExternalContent**\-Eigenschaft auf true erzielt, wie in den folgenden Beispielen für <xref:System.Windows.Controls.Frame> und <xref:System.Windows.Navigation.NavigationWindow> gezeigt:  
+ In beiden Fällen, die losen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei, zu der navigiert wird, erbt die Berechtigungen von der hostanwendung. Allerdings möglicherweise dieses Verhalten unerwünscht im Hinblick auf Sicherheit, insbesondere, wenn eine lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei wurde erstellt, indem Sie eine Entität, die nicht vertrauenswürdig oder unbekannt ist. Dieser Typ des Inhalts wird als bezeichnet *externe Inhalte*, und die beiden <xref:System.Windows.Controls.Frame> und <xref:System.Windows.Navigation.NavigationWindow> kann konfiguriert werden, um ihn bei der Navigation zu isolieren. Isolation wird erreicht, indem die **SandboxExternalContent** Eigenschaft auf "true", wie in den folgenden Beispielen gezeigt, <xref:System.Windows.Controls.Frame> und <xref:System.Windows.Navigation.NavigationWindow>:  
   
- [!code-xml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
- Mit dieser Einstellung wird der externe Inhalt in einen anderen Prozess als den Prozess geladen, der die Anwendung hostet.  Dieser Prozess ist auf den Standardberechtigungssatz für die Internetzone beschränkt und isoliert ihn effizient von der Hostanwendung und dem Clientcomputer.  
+ Mit dieser Einstellung wird der externe Inhalt in einen Prozess geladen, der von dem Prozess getrennt ist, der die Anwendung hostet. Dieser Prozess ist auf den Standardberechtigungssatz für die Internetzone beschränkt, wodurch er effizient von der Hostanwendung und dem Clientcomputer isoliert ist.  
   
 > [!NOTE]
->  Obwohl die Navigation zu Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Dateien von einem <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> in einer eigenständigen Anwendung auf Grundlage der WPF\-Browserhostinginfrastruktur implementiert wird und den PresentationHost\-Prozess beinhaltet, ist die Sicherheitsebene etwas niedriger, als wenn der Inhalt unter [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)] direkt in Internet Explorer geladen wird \(ebenfalls über PresentationHost\). Dies liegt daran, dass eine eigenständige WPF\-Anwendung, die einen Webbrowser verwendet, die zusätzliche Sicherheitsfunktion für den geschützten Modus von Internet Explorer nicht bereitstellt.  
+>  Obwohl Navigation zu lose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien entweder eine <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> in eine eigenständige Anwendung implementiert wird basierend auf dem Host fungierende Infrastruktur, die im Zusammenhang mit der Prozess PresentationHost WPF-Browser wird die Sicherheitsstufe wird etwas weniger als wenn der Inhalt auf direkt im Internet Explorer geladen wird [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)] (die wäre immer noch über PresentationHost). Dies liegt daran, dass eine eigenständige WPF-Anwendung, die einen Webbrowser verwendet, die zusätzliche „Geschützter Modus“-Sicherheitsfunktion von Internet Explorer nicht bereitstellt.  
   
 <a name="BestPractices"></a>   
-## Ressourcen zum Entwickeln von WPF\-Anwendungen, die die Sicherheit erhöhen  
- Nachfolgend sind einige zusätzliche Ressourcen zum Entwickeln von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]\-Anwendungen aufgeführt, die die Sicherheit erhöhen:  
+## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Ressourcen zum Entwickeln von WPF-Anwendungen, die die Sicherheit erhöhen  
+ Im folgenden sind einige zusätzlichen Ressourcen zum Entwickeln von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, die Sicherheit höher stufen:  
   
 |Bereich|Ressource|  
-|-------------|---------------|  
-|Verwalteter Code|[Patterns and Practices\-Sicherheitsleitfaden für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=117426) \(möglicherweise in englischer Sprache\)|  
+|----------|--------------|  
+|Verwalteter Code|[Patterns and Practices-Sicherheitsleitfaden für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce\-Sicherheit und Bereitstellung](../Topic/ClickOnce%20Security%20and%20Deployment.md)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF\-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## Siehe auch  
- [WPF\-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)   
- [WPF\-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)   
- [WPF\-Sicherheitsstrategie – Sicherheitsentwicklung](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)   
- [Patterns and Practices\-Sicherheitsleitfaden für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=117426)   
- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)   
- [ClickOnce\-Sicherheit und Bereitstellung](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [Übersicht über XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Siehe auch  
+ [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
+ [Patterns and Practices-Sicherheitsleitfaden für Anwendungen](http://go.microsoft.com/fwlink/?LinkId=117426)  
+ [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)  
+ [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

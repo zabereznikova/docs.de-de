@@ -1,30 +1,36 @@
 ---
-title: "Abrufen von Bin&#228;rdaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Abrufen von Binärdaten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bd524ed605f1fe125480bae0949745f4f045f03a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Abrufen von Bin&#228;rdaten
-In der Standardeinstellung lädt der **DataReader** eingehende Daten als Zeile, sobald eine ganze Datenzeile verfügbar ist.  BLOBs \(Binary Large Objects\) müssen jedoch anders behandelt werden, da sie mehrere Gigabyte an Daten umfassen können, die nicht in eine einzelne Zeile passen.  Die **Command.ExecuteReader**\-Methode weist eine Überladung auf, die eine Änderung des Standardverhaltens von **DataReader** mit einem <xref:System.Data.CommandBehavior>\-Argument erforderlich macht.  Durch Übergeben von <xref:System.Data.CommandBehavior> an die **ExecuteReader**\-Methode kann das Standardverhalten von **DataReader** so geändert werden, dass nicht Datenzeilen, sondern die Daten beim Empfang nacheinander geladen werden.  Diese Methode eignet sich hervorragend zum Laden von BLOBs oder anderen großen Datenstrukturen.  Beachten Sie, dass dieses Verhalten je nach Datenquelle verschieden sein kann.  Wenn beispielsweise ein BLOB von Microsoft Access zurückgegeben wird, werden die Daten beim Empfang nicht sequenziell geladen, sondern das BLOB wird vollständig in den Speicher geladen.  
+# <a name="retrieving-binary-data"></a>Abrufen von Binärdaten
+Wird standardmäßig die **DataReader** lädt eingehende Daten als eine Zeile, sobald eine ganze Datenzeile verfügbar ist. BLOBs (Binary Large Objects) müssen jedoch anders behandelt werden, da sie mehrere Gigabyte an Daten umfassen können, die nicht in eine einzelne Zeile passen. Die **Command.ExecuteReader** Methode verfügt über eine Überladung, mit denen gelangen eine <xref:System.Data.CommandBehavior> Argument so ändern Sie das Standardverhalten der **DataReader**. Sie übergeben können <xref:System.Data.CommandBehavior.SequentialAccess> auf der **ExecuteReader** Methode, um das Standardverhalten ändern der **DataReader** so, dass anstelle von Laden von Datenzeilen aus, es Daten sequenziell geladen werden Daten beim Empfang. Diese Methode eignet sich hervorragend zum Laden von BLOBs oder anderen großen Datenstrukturen. Beachten Sie, dass dieses Verhalten je nach Datenquelle verschieden sein kann. Wenn beispielsweise ein BLOB von Microsoft Access zurückgegeben wird, werden die Daten beim Empfang nicht sequenziell geladen, sondern das BLOB wird vollständig in den Speicher geladen.  
   
- Wenn Sie für **DataReader** die Verwendung von **SequentialAccess** festlegen, müssen Sie die Reihenfolge beachten, in der Sie auf die zurückgegebenen Felder zugreifen.  Das Standardverhalten von **DataReader** \(Laden der ganzen Zeile sobald sie verfügbar ist\) ermöglicht Ihnen den Zugriff auf die zurückgegebenen Felder in beliebiger Reihenfolge, bis die nächste Zeile gelesen wird.  Beim Verwenden von **SequentialAccess** muss jedoch auf die vom **DataReader** zurückgegebenen Felder in der entsprechenden Reihenfolge zugegriffen werden.  Wenn die Abfrage beispielsweise drei Spalten zurückgibt, von der die dritte ein BLOB ist, müssen zuerst die Werte des ersten und zweiten Felds zurückgegeben werden, bevor auf die BLOB\-Daten im dritten Feld zugegriffen werden darf.  Wenn Sie vor dem ersten und zweiten Feld auf das dritte Feld zugreifen, sind die Werte des ersten und zweiten Feldes nicht mehr verfügbar.  Dies liegt daran, dass der **DataReader** mit **SequentialAccess** geändert wurde, sodass Daten nur noch der Reihe nach zurückgegeben werden und die Daten nicht mehr verfügbar sind, nachdem der **DataReader** über das Ende dieser Daten hinaus gelesen hat.  
+ Beim Festlegen der **DataReader** verwenden **SequentialAccess**, es ist wichtig, die Reihenfolge beachten, in denen Sie die zurückgegebenen Felder zugreifen. Das Standardverhalten der **DataReader**, sobald es verfügbar ist, wird eine ganze Zeile lädt ermöglicht Ihnen den Zugriff auf die Felder in beliebiger Reihenfolge zurückgegeben werden, bis die nächste Zeile gelesen wird. Bei Verwendung **SequentialAccess** müssen Sie jedoch die von zurückgegebenen Felder zugreifen der **DataReader** in Reihenfolge. Wenn die Abfrage beispielsweise drei Spalten zurückgibt, von der die dritte ein BLOB ist, müssen zuerst die Werte des ersten und zweiten Felds zurückgegeben werden, bevor auf die BLOB-Daten im dritten Feld zugegriffen werden darf. Wenn Sie vor dem ersten und zweiten Feld auf das dritte Feld zugreifen, sind die Werte des ersten und zweiten Feldes nicht mehr verfügbar. Grund hierfür ist, **SequentialAccess** wurde geändert, die **DataReader** zurückzugebenden Daten in und die Daten ist nicht verfügbar, nachdem die **DataReader** hinaus gelesen hat.  
   
- Verwenden Sie zum Zugreifen auf die Daten im BLOB\-Feld die typisierten Accessoren **GetBytes** oder **GetChars** des **DataReader**, die ein Array mit Daten füllen.  Sie können jedoch auch **GetString** für Zeichendaten verwenden.  Möglicherweise möchten Sie keinen ganzen BLOB\-Wert in eine einzelne Zeichenfolgenvariable laden.  Sie können stattdessen eine bestimmte Puffergröße für Rückgabedaten und die Anfangsposition für das erste zu lesende Byte oder Zeichen in den Rückgabedaten angeben.  Mit **GetBytes** und **GetChars** wird ein `long`\-Wert zurückgegeben, der der Anzahl der zurückgegebenen Bytes oder Zeichen entspricht.  Wenn Sie an **GetBytes** oder **GetChars** ein NULL\-Array übergeben, entspricht der zurückgegebene long\-Wert der Gesamtzahl von Bytes oder Zeichen im BLOB.  Optional können Sie einen Index im Array als Anfangsposition für die gelesenen Daten angeben.  
+ Verwenden Sie den Zugriff auf die Daten im BLOB-Feld der **GetBytes** oder **GetChars** typisierte Accessoren von der **DataReader**, die ein Array mit Daten füllen. Sie können auch **GetString** für Zeichendaten; jedoch. Möglicherweise möchten Sie keinen ganzen BLOB-Wert in eine einzelne Zeichenfolgenvariable laden. Sie können stattdessen eine bestimmte Puffergröße für Rückgabedaten und die Anfangsposition für das erste zu lesende Byte oder Zeichen in den Rückgabedaten angeben. **GetBytes** und **GetChars** zurückgegeben wird ein `long` -Wert, der die Anzahl der zurückgegebenen Bytes oder Zeichen darstellt. Wenn Sie ein null-Array übergeben **GetBytes** oder **GetChars**, long-Wert zurückgegeben wird, werden die Gesamtanzahl von Bytes oder Zeichen im BLOB. Optional können Sie einen Index im Array als Anfangsposition für die gelesenen Daten angeben.  
   
-## Beispiel  
- Im folgenden Beispiel werden die Herausgeber\-ID und das Logo von der **pubs**\-Beispieldatenbank in Microsoft SQL Server zurückgegeben.  Die Herausgeber\-ID \(`pub_id`\) ist ein Zeichenfeld, und das Logo ist ein Bild, das ein BLOB darstellt.  Da das **logo**\-Feld ein Bitmap ist, werden im Beispiel mithilfe von **GetBytes** Binärdaten zurückgegeben.  Beachten Sie, dass für die aktuelle Datenzeile zuerst auf die Herausgeber\-ID und dann auf das Logo zugegriffen wird, da der Zugriff auf die Felder der Reihe nach erfolgen muss.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel gibt die Herausgeber-ID und das Logo aus dem **Pubs** in Microsoft SQL Server-Beispieldatenbank. Die Herausgeber-ID (`pub_id`) ist ein Zeichenfeld, und das Logo ist ein Bild, das ein BLOB darstellt. Da die **Logo** Feld ist eine Bitmap, das Beispiel gibt Binärdaten mit **GetBytes**. Beachten Sie, dass für die aktuelle Datenzeile zuerst auf die Herausgeber-ID und dann auf das Logo zugegriffen wird, da der Zugriff auf die Felder der Reihe nach erfolgen muss.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -88,7 +94,6 @@ Loop
 ' Close the reader and the connection.  
 reader.Close()  
 connection.Close()  
-  
 ```  
   
 ```csharp  
@@ -145,7 +150,7 @@ while (reader.Read())
   }  
   
   // Write the remaining buffer.  
-  writer.Write(outByte, 0, (int)retval - 1);  
+  writer.Write(outByte, 0, (int)retval);  
   writer.Flush();  
   
   // Close the output file.  
@@ -158,7 +163,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## Siehe auch  
- [Working with DataReaders](http://msdn.microsoft.com/de-de/126a966a-d08d-4d22-a19f-f432908b2b54)   
- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Arbeiten mit DataReaders](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

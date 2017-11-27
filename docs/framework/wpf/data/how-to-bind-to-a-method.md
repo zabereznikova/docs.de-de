@@ -1,45 +1,46 @@
 ---
-title: "Gewusst wie: Binden an eine Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bindung, An Methoden"
-  - "Klassen, ObjectDataProvider"
-  - "Datenbindung, Bindung an Methoden mit ObjectDataProvider"
-  - "Methoden, Binden an"
-  - "ObjectDataProvider-Klasse"
+title: 'Gewusst wie: Binden an eine Methode'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [WPF], binding to methods using ObjectDataProvider
+- binding [WPF], to methods
+- methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c276e9da3eaaf786038a117532848364b03e9b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Binden an eine Methode
-Im folgenden Beispiel wird die Bindung an eine Methode mithilfe von <xref:System.Windows.Data.ObjectDataProvider> veranschaulicht.  
+# <a name="how-to-bind-to-a-method"></a>Gewusst wie: Binden an eine Methode
+Im folgende Beispiel wird gezeigt, wie zum Binden an eine Methode mit <xref:System.Windows.Data.ObjectDataProvider>.  
   
-## Beispiel  
- In diesem Beispiel ist `TemperatureScale` eine Klasse, die über eine `ConvertTemp`\-Methode verfügt. Auf Grundlage von zwei Parametern \(einer vom Typ `double` und einer vom Typ `enum`\-Typ `TempType)` konvertiert diese Methode den vorgegebenen Wert von einer Temperaturskala in eine andere.  Im folgenden Beispiel wird ein <xref:System.Windows.Data.ObjectDataProvider> verwendet, um das `TemperatureScale`\-Objekt zu instanziieren.  Die `ConvertTemp`\-Methode wird mit zwei angegebenen Parametern aufgerufen.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel ist `TemperatureScale` eine Klasse, die über eine `ConvertTemp`-Methode verfügt. Auf Grundlage von zwei Parametern (einem des Typs `double` und einem des `enum`-Typs `TempType)`) konvertiert diese Methode den vorgegebenen Wert von einer Temperaturskala in eine andere. Im folgenden Beispiel ein <xref:System.Windows.Data.ObjectDataProvider> wird zum Instanziieren der `TemperatureScale` Objekt. Die `ConvertTemp`-Methode wird mit zwei angegebenen Parametern aufgerufen.  
   
- [!code-xml[BindToMethod#WindowResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
+ [!code-xaml[BindToMethod#WindowResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
   
- Jetzt ist die Methode als Ressource verfügbar, und Sie können Bindungen an ihre Ergebnisse erstellen.  Im folgenden Beispiel wird die <xref:System.Windows.Controls.TextBox.Text%2A>\-Eigenschaft für das <xref:System.Windows.Controls.TextBox> und für den <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> für das <xref:System.Windows.Controls.ComboBox> an die beiden Parameter der Methode gebunden.  Dies ermöglicht es Benutzern, die zu konvertierende Temperatur sowie die Temperaturskala, aus der konvertiert werden soll, anzugeben.  Beachten Sie, dass <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A> auf `true` festgelegt ist, weil die Bindung an die <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A>\-Eigenschaft der <xref:System.Windows.Data.ObjectDataProvider>\-Instanz erfolgt und nicht an Eigenschaften des Objekts, das mit <xref:System.Windows.Data.ObjectDataProvider> umschlossen wird \(das `TemperatureScale`\-Objekt\).  
+ Nun da die Methode als Ressource verfügbar ist, können Sie Bindungen an ihre Ergebnisse erstellen. Im folgenden Beispiel die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft von der <xref:System.Windows.Controls.TextBox> und die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> von der <xref:System.Windows.Controls.ComboBox> an die beiden Parameter der Methode gebunden sind. Dies ermöglicht Benutzern, die zu konvertierende Temperatur sowie die Temperaturskala anzugeben, aus der konvertiert werden soll. Beachten Sie, dass <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A> auf festgelegt ist `true` da wir zum Binden der <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> Eigenschaft von der <xref:System.Windows.Data.ObjectDataProvider> Instanz und nicht die Eigenschaften des Objekts umschlossen der <xref:System.Windows.Data.ObjectDataProvider> (die `TemperatureScale` Objekt).  
   
- Der <xref:System.Windows.Controls.ContentControl.Content%2A> der letzten <xref:System.Windows.Controls.Label> wird aktualisiert, sobald der Benutzer den Inhalt für das <xref:System.Windows.Controls.TextBox> oder die Auswahl für das <xref:System.Windows.Controls.ComboBox> ändert.  
+ Die <xref:System.Windows.Controls.ContentControl.Content%2A> des letzten <xref:System.Windows.Controls.Label> aktualisiert, wenn der Benutzer den Inhalt des ändert die <xref:System.Windows.Controls.TextBox> oder die Auswahl für die <xref:System.Windows.Controls.ComboBox>.  
   
- [!code-xml[BindToMethod#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
+ [!code-xaml[BindToMethod#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
   
- Der Konverter `DoubleToString` wandelt einen double\-Wert in eine Zeichenfolge in der <xref:System.Windows.Data.IValueConverter.Convert%2A>\-Richtung um \(von der [Bindungsquelle](GTMT) zum [Bindungsziel](GTMT), das in diesem Fall die <xref:System.Windows.Controls.TextBox.Text%2A>\-Eigenschaft ist\), und er wandelt eine `string` in einen `double`\-Wert in der <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>\-Richtung um.  
+ Der Konverter `DoubleToString` akzeptiert einen Double und verwandelt sie in eine Zeichenfolge in der <xref:System.Windows.Data.IValueConverter.Convert%2A> Richtung (von der Bindungsquelle zum Bindungsziel, also die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft) und konvertiert eine `string` auf eine `double` in der <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Richtung.  
   
- Die `InvalidationCharacterRule` ist eine <xref:System.Windows.Controls.ValidationRule>, die nach ungültigen Zeichen sucht.  Die Standardfehlervorlage wird durch einen roten Rahmen um das <xref:System.Windows.Controls.TextBox> dargestellt und benachrichtigt den Benutzer, falls es sich beim eingegebenen Wert nicht um einen double\-Wert handelt.  
+ Die `InvalidationCharacterRule` ist eine <xref:System.Windows.Controls.ValidationRule> , die überprüft, ob ein ungültiges Zeichen. Die Standardvorlage für die Fehler, also einen roten Rahmen um das <xref:System.Windows.Controls.TextBox>, angezeigt wird, um Benutzer zu benachrichtigen, wenn der Eingabewert keinen double-Wert ist.  
   
-## Siehe auch  
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [Binden an eine Enumeration](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)

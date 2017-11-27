@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.GetChannelEndpointElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.GetChannelEndpointElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee75c333-2e63-4f26-ae73-14324f4d088a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dd0acadf769e1e47b8d4cccfa610452526236a80
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.GetChannelEndpointElement
+# <a name="systemservicemodelgetchannelendpointelement"></a>System.ServiceModel.GetChannelEndpointElement
 System.ServiceModel.GetChannelEndpointElement  
   
-## Beschreibung  
- Diese Ablaufverfolgung wird beim Erstellen einer Kanalfactory auf Informationsebene ausgegeben.  Die Verfolgung beinhaltet eine Beschreibung des Endpunkts, mit dem der Client kommuniziert \(zum Beispiel Remoteadresse, Bindung, Vertragsname\).  
+## <a name="description"></a>Beschreibung  
+ Diese Ablaufverfolgung wird beim Erstellen einer Kanalfactory auf Informationsebene ausgegeben. Die Verfolgung beinhaltet eine Beschreibung des Endpunkts, mit dem der Client kommuniziert (zum Beispiel Remoteadresse, Bindung, Vertragsname).  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,25 +1,28 @@
 ---
-title: "Feed-Beispiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Feed-Beispiel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c95a2e1e1790633df77e7c4ecd6603e68321e478
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Feed-Beispiel
-Dieses Beispiel demonstriert, wie Sie einen RSS\-\/ATOM\-Feed für die Syndizierung mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellen.  Es handelt sich um ein einfaches "Hello World"\-Programm, das die Grundlagen des Objektmodells und die Einrichtung in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst zeigt.  
+# <a name="stand-alone-diagnostics-feed-sample"></a>Feed-Beispiel
+Dieses Beispiel demonstriert, wie Sie einen RSS-/ATOM-Feed für die Syndizierung mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] erstellen. Es handelt sich um ein einfaches "Hello World"-Programm, das die Grundlagen des Objektmodells und die Einrichtung in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst zeigt.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelliert Syndication\-Feeds als Dienstoperationen, die einen speziellen Datentyp zurückgeben: <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.  Instanzen von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> können einen Feed sowohl in das Format RSS 2.0 als auch in das Format Atom 1.0 serialisieren.  Der folgende Beispielcode zeigt den verwendeten Vertrag.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelliert Syndication-Feeds als Dienstoperationen, die einen speziellen Datentyp zurückgeben: <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Instanzen von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> können einen Feed sowohl in das Format RSS 2.0 als auch in das Format Atom 1.0 serialisieren. Der folgende Beispielcode zeigt den verwendeten Vertrag.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -39,9 +42,9 @@ Dieses Beispiel demonstriert, wie Sie einen RSS\-\/ATOM\-Feed für die Syndizier
     }  
 ```  
   
- An die `GetProcesses`\-Operation wird das <xref:System.ServiceModel.Web.WebGetAttribute>\-Attribut angehängt, das Ihnen ermöglicht zu steuern, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP GET\-Anforderungen an Dienstoperationen verteilt werden, und das Format der gesendeten Nachrichten anzugeben.  
+ An die `GetProcesses`-Operation wird das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut angehängt, das Ihnen ermöglicht zu steuern, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP GET-Anforderungen an Dienstoperationen verteilt werden, und das Format der gesendeten Nachrichten anzugeben.  
   
- Wie alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste können Syndication\-Feeds lokal oder in jeder verwalteten Anwendung selbst gehostet werden.  Syndication\-Dienste erfordern eine bestimmte Bindung \(die <xref:System.ServiceModel.WebHttpBinding>\) und ein bestimmtes Endpunktverhalten \(das <xref:System.ServiceModel.Description.WebHttpBehavior>\), um ordnungsgemäß zu funktionieren.  Die neue <xref:System.ServiceModel.Web.WebServiceHost>\-Klasse stellt eine geeignete API zur Erstellung solcher Endpunkte ohne eine spezielle Konfiguration bereit.  
+ Wie alle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste können Syndication-Feeds lokal oder in jeder verwalteten Anwendung selbst gehostet werden. Syndication-Dienste erfordern eine bestimmte Bindung (die <xref:System.ServiceModel.WebHttpBinding>) und ein bestimmtes Endpunktverhalten (das <xref:System.ServiceModel.Description.WebHttpBehavior>), um ordnungsgemäß zu funktionieren. Die neue <xref:System.ServiceModel.Web.WebServiceHost>-Klasse stellt eine geeignete API zur Erstellung solcher Endpunkte ohne eine spezielle Konfiguration bereit.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -50,15 +53,15 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
             //using the proper binding (the WebHttpBinding) and endpoint behavior (the WebHttpBehavior)  
 ```  
   
- Alternativ können Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> in einer in IIS gehosteten .svc\-Datei verwenden, um die entsprechende Funktionalität bereitzustellen \(dieses Verfahren wird in diesem Beispielcode nicht gezeigt\).  
+ Alternativ können Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> in einer in IIS gehosteten .svc-Datei verwenden, um die entsprechende Funktionalität bereitzustellen (dieses Verfahren wird in diesem Beispielcode nicht gezeigt).  
   
 ```  
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Da dieser Dienst Anforderungen über die HTTP GET\-Standardmethode empfängt, können Sie jeden beliebigen RSS\- oder ATOM\-fähigen Client verwenden, um auf den Dienst zuzugreifen.  Sie können zum Beispiel die Ausgabe dieses Dienstes anzeigen, indem Sie mit einem RSS\-fähigen Browser wie Internet Explorer&\#160;7 nach http:\/\/localhost:8000\/diagnostics\/feed\/?format\=atom\/ oder http:\/\/localhost:8000\/diagnostics\/feed\/?format\=rss navigieren.  
+ Da dieser Dienst Anforderungen über die HTTP GET-Standardmethode empfängt, können Sie jeden beliebigen RSS- oder ATOM-fähigen Client verwenden, um auf den Dienst zuzugreifen. Sie können zum Beispiel die Ausgabe dieses Dienstes anzeigen, indem Sie mit einem RSS-fähigen Browser wie Internet Explorer&#160;7 nach http://localhost:8000/diagnostics/feed/?format=atom/ oder http://localhost:8000/diagnostics/feed/?format=rss navigieren.  
   
- Sie können auch das [Wie das WCF\-Syndication\-Objektmodell Atom und RSS zugeordnet wird](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) verwenden, um Syndication\-Daten zu lesen und sie mit imperativen Code zu verarbeiten.  
+ Sie können auch die [wie das WCF Syndication-Objekt Modell Maps Atom und RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) syndizierte Daten gelesen und mithilfe von imperativem Code zu verarbeiten.  
   
 ```  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
@@ -81,25 +84,25 @@ foreach (SyndicationItem i in feed.Items)
 }  
 ```  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie über die richtigen Adressen\-Registrierungsberechtigungen für HTTP und HTTPS auf dem Computer verfügen, wie in den Setupanweisungen unter [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) beschrieben.  
+1.  Stellen Sie sicher, dass Sie die richtige Adresse Registrierung-Berechtigung für HTTP und HTTPS auf dem Computer verfügen, wie in der Gruppe von Anweisungen in erläutert [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Erstellen Sie die Projektmappe.  
   
 3.  Führen Sie die Konsolenanwendung aus.  
   
-4.  Während die Konsolenanwendung ausgeführt wird, navigieren Sie mit einem RSS\-fähigen Browser zu http:\/\/localhost:8000\/diagnostics\/feed\/?format\=atom oder http:\/\/localhost:8000\/diagnostics\/feed\/?format\=rss.  
+4.  Während die Konsolenanwendung ausgeführt wird, navigieren Sie mit einem RSS-fähigen Browser zu http://localhost:8000/diagnostics/feed/?format=atom oder http://localhost:8000/diagnostics/feed/?format=rss.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## Siehe auch  
- [WCF\-Web\-HTTP\-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
+## <a name="see-also"></a>Siehe auch  
+ [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

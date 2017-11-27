@@ -1,50 +1,48 @@
 ---
-title: "Erase Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Erase"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Erase keyword"
-  - "Erase statement"
+title: Erase-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Erase
+helpviewer_keywords:
+- Erase keyword [Visual Basic]
+- Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 45a2b439cf5ad04d59cea59bb21d345d0057b322
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erase Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Wird zur Freigabe von Arrayvariablen und des Speichers, der für ihre Elemente benötigt wird, verwendet.  
+# <a name="erase-statement-visual-basic"></a>Erase-Anweisung (Visual Basic)
+Zum Arrayvariablen freigeben und Aufheben der Zuordnung für ihre Elemente verwendeten Arbeitsspeichers.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Erase arraylist  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `arraylist`  
- Erforderlich.  Liste der zu löschenden Arrayvariablen.  Mehrere Variablen werden durch Komma voneinander getrennt.  
+ Erforderlich. Liste der Arrayvariablen gelöscht werden soll. Mehrere Variablen werden durch Kommas voneinander getrennt.  
   
-## Hinweise  
- Die `Erase`\-Anweisung kann nur auf Prozedurebene verwendet werden.  Das bedeutet, Sie können Arrays zwar in einer Prozedur freigeben, jedoch nicht auf Klassen\- oder Modulebene.  
+## <a name="remarks"></a>Hinweise  
+ Die `Erase` Anweisung kann nur auf Prozedurebene angezeigt werden. Dies bedeutet, dass Sie Arrays innerhalb einer Prozedur, aber nicht auf Klassen-oder Modulebene freigeben können.  
   
- Statt die `Erase`\-Anweisung zu verwenden, können Sie den einzelnen Arrayvariablen auch `Nothing` zuweisen.  
+ Die `Erase` Anweisung ist äquivalent zum Zuweisen von `Nothing` jedes Array-Variable.  
   
-## Beispiel  
- Im folgenden Beispiel werden mit der `Erase`\-Anweisung zwei Arrays gelöscht, und der von ihnen belegte Speicherplatz wird freigegeben \(jeweils 1000 bzw. 100 Speicherelemente\).  Anschließend weist die `ReDim`\-Anweisung dem dreidimensionalen Array eine neue Arrayinstanz zu.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `Erase` Anweisung zum Löschen von zwei Arrays und Freigeben von Speicher (1000 und 100 Speicherelemente bzw.). Die `ReDim` Anweisung dann weist eine neue Arrayinstanz auf das dreidimensionale Array.  
   
  [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
-## Siehe auch  
- [Nothing](../../../visual-basic/language-reference/nothing.md)   
- [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Nothing](../../../visual-basic/language-reference/nothing.md)  
+ [ReDim-Anweisung](../../../visual-basic/language-reference/statements/redim-statement.md)

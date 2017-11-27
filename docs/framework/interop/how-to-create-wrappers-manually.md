@@ -5,28 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- wrappers, creating manually
+helpviewer_keywords: wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 218e92b379d562be66c72cb731654907766f2ec4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19f605203a79f8435d414fb3c2eb7041c9824640
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-wrappers-manually"></a>Gewusst wie: Manuelles Erstellen von Wrappern
 Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollten Sie mit einer vorhandenen IDL-Datei oder -Typbibliothek (IDL, Interface Definition Language – Sprache für die Schnittstellendefinition) beginnen. Wenn Sie nicht über eine IDL-Datei verfügen oder keine Typbibliotheksdatei generieren können, können Sie die COM-Typen simulieren, indem Sie verwaltete Deklarationen erstellen und die sich daraus ergebende Assembly in eine Typbibliothek exportieren.  
@@ -101,9 +93,9 @@ namespace SAServer
  }   
  [ComImport]  
  [Guid("116CCA1E-7E39-4515-9849-90790DA6431E")]  
- [ClassInterface(ClassInterfaceType.None)]   
+ [ClassInterface(ClassInterfaceType.None)]  
  [TypeLibType(TypeLibTypeFlags.FCanCreate)]  
- public class SATest : ISATest   
+ public class SATest : ISATest  
  {  
   [DispId(1)]  
   [MethodImpl(MethodImplOptions.InternalCall,   
@@ -115,10 +107,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anpassen von Runtime Callable Wrappers](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)   
- [COM-Datentypen](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)   
- [Vorgehensweise: Bearbeiten von Interop-Assemblys](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)   
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
+ [Anpassen von Runtime Callable Wrappers](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [COM-Datentypen](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [Vorgehensweise: Bearbeiten von Interop-Assemblys](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (Type Library Exporter-Tool)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
-

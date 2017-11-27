@@ -1,23 +1,26 @@
 ---
-title: "Benutzerdefiniertes Token | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefiniertes Token
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19593e61cc640068ac7c90a6abbd6ea0d6a3ff08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefiniertes Token
-In diesem Beispiel wird die Aufnahme einer benutzerdefinierten Tokenimplementierung in eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Anwendung veranschaulicht.  Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben.  Das Token wird an den WS\-Sicherheits\-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt.  Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen.  In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann.  Der Dienst implementiert einen Vertrag, der ein Anforderungs\-Antwort\-Kommunikationsmuster definiert.  
+# <a name="custom-token"></a>Benutzerdefiniertes Token
+In diesem Beispiel wird die Aufnahme einer benutzerdefinierten Tokenimplementierung in eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung veranschaulicht. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -28,12 +31,12 @@ In diesem Beispiel wird die Aufnahme einer benutzerdefinierten Tokenimplementier
   
 -   Wie der Dienst ein benutzerdefiniertes Sicherheitstoken verwenden und überprüfen kann.  
   
--   Wie der  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstcode die Informationen zu empfangenen Sicherheitstoken \(einschließlich des benutzerdefinierten Sicherheitstokens\) abrufen kann.  
+-   Wie der  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstcode die Informationen zu empfangenen Sicherheitstoken (einschließlich des benutzerdefinierten Sicherheitstokens) abrufen kann.  
   
--   Wie das X.509\-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.  
+-   Wie das X.509-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.  
   
-## Sicherheitsauthentifizierung mithilfe eines benutzerdefinierten Sicherheitstokens  
- Der Dienst macht einen einzelnen Endpunkt verfügbar, der programmgesteuert mithilfe der `BindingHelper`\-Klasse und der `EchoServiceHost`\-Klasse erstellt wird.  Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.  Die Bindung wird mit einer benutzerdefinierten Bindung unter Verwendung von `SymmetricSecurityBindingElement` und `HttpTransportBindingElement` konfiguriert.  In diesem Beispiel wird `SymmetricSecurityBindingElement` so eingestellt, dass es ein X.509\-Zertifikat für den Dienst verwendet, um den symmetrischen Schlüssel während der Übertragung zu schützen und um in einem WS\-Sicherheits\-Nachrichtenkopf ein benutzerdefiniertes `CreditCardToken` als signiertes und verschlüsseltes Sicherheitstoken zu übergeben.  Das Verhalten legt die Dienstanmeldeinformationen fest, die zur Clientauthentifizierung verwendet werden sollen, sowie Informationen über das X.509\-Zertifikat des Diensts.  
+## <a name="client-authentication-using-a-custom-security-token"></a>Sicherheitsauthentifizierung mithilfe eines benutzerdefinierten Sicherheitstokens  
+ Der Dienst macht einen einzelnen Endpunkt verfügbar, der programmgesteuert mithilfe der `BindingHelper`-Klasse und der `EchoServiceHost`-Klasse erstellt wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer benutzerdefinierten Bindung unter Verwendung von `SymmetricSecurityBindingElement` und `HttpTransportBindingElement` konfiguriert. In diesem Beispiel wird `SymmetricSecurityBindingElement` so eingestellt, dass es ein X.509-Zertifikat für den Dienst verwendet, um den symmetrischen Schlüssel während der Übertragung zu schützen und um in einem WS-Sicherheits-Nachrichtenkopf ein benutzerdefiniertes `CreditCardToken` als signiertes und verschlüsseltes Sicherheitstoken zu übergeben. Das Verhalten legt die Dienstanmeldeinformationen fest, die zur Clientauthentifizierung verwendet werden sollen, sowie Informationen über das X.509-Zertifikat des Diensts.  
   
 ```  
 public static class BindingHelper  
@@ -54,7 +57,7 @@ public static class BindingHelper
 }  
 ```  
   
- Um ein Kreditkartentoken in der Nachricht zu nutzen, werden im Beispiel benutzerdefinierte Dienstanmeldeinformationen verwendet, um diese Funktion anzugeben.  Die Dienstanmeldeinformationsklasse befindet sich in der Klasse `CreditCardServiceCredentials` und wird zu den Verhaltensauflistungen des Diensthosts in der `EchoServiceHost.InitializeRuntime`\-Methode hinzugefügt.  
+ Um ein Kreditkartentoken in der Nachricht zu nutzen, werden im Beispiel benutzerdefinierte Dienstanmeldeinformationen verwendet, um diese Funktion anzugeben. Die Dienstanmeldeinformationsklasse befindet sich in der Klasse `CreditCardServiceCredentials` und wird zu den Verhaltensauflistungen des Diensthosts in der `EchoServiceHost.InitializeRuntime`-Methode hinzugefügt.  
   
 ```  
 class EchoServiceHost : ServiceHost  
@@ -89,10 +92,9 @@ class EchoServiceHost : ServiceHost
         base.InitializeRuntime();  
     }  
 }  
-  
 ```  
   
- Der Clientendpunkt wird auf ähnliche Weise wie der Dienstendpunkt konfiguriert.  Der Client verwendet die gleiche `BindingHelper`\-Klasse, um eine Bindung zu erstellen.  Der Rest des Setups befindet sich in der `Client`\-Klasse.  Der Client legt außerdem Informationen, die im `CreditCardToken` enthalten sein sollen, sowie Informationen zum X.509\-Zertifikat des Diensts im Setupcode fest, indem eine `CreditCardClientCredentials`\-Instanz mit den entsprechenden Daten zur Auflistung der Clientendpunktverhaltensweisen hinzugefügt wird.  Im Beispiel wird das X.509\-Zertifikat mit dem Antragstellernamen `CN=localhost` als Dienstzertifikat verwendet.  
+ Der Clientendpunkt wird auf ähnliche Weise wie der Dienstendpunkt konfiguriert. Der Client verwendet die gleiche `BindingHelper`-Klasse, um eine Bindung zu erstellen. Der Rest des Setups befindet sich in der `Client`-Klasse. Der Client legt außerdem Informationen, die im `CreditCardToken` enthalten sein sollen, sowie Informationen zum X.509-Zertifikat des Diensts im Setupcode fest, indem eine `CreditCardClientCredentials`-Instanz mit den entsprechenden Daten zur Auflistung der Clientendpunktverhaltensweisen hinzugefügt wird. Im Beispiel wird das X.509-Zertifikat mit dem Antragstellernamen `CN=localhost` als Dienstzertifikat verwendet.  
   
 ```  
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();  
@@ -122,10 +124,10 @@ Console.WriteLine("Echo service returned: {0}", client.Echo());
 channelFactory.Close();  
 ```  
   
-## Implementierung des benutzerdefinierten Sicherheitstokens  
- Um in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein benutzerdefiniertes Sicherheitstoken zu aktivieren, erstellen Sie eine Objektdarstellung des benutzerdefinierten Sicherheitstokens.  Das Beispiel enthält diese Darstellung in der `CreditCardToken`\-Klasse.  Die Objektdarstellung dient zur Aufnahme aller relevanten Informationen zu Sicherheitstoken und zur Bereitstellung einer Liste der im Sicherheitstoken enthaltenen Sicherheitsschlüssel.  In diesem Fall enthält das Sicherheitstoken der Kreditkarte keinen Sicherheitsschlüssel.  
+## <a name="custom-security-token-implementation"></a>Implementierung des benutzerdefinierten Sicherheitstokens  
+ Um in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein benutzerdefiniertes Sicherheitstoken zu aktivieren, erstellen Sie eine Objektdarstellung des benutzerdefinierten Sicherheitstokens. Das Beispiel enthält diese Darstellung in der `CreditCardToken`-Klasse. Die Objektdarstellung dient zur Aufnahme aller relevanten Informationen zu Sicherheitstoken und zur Bereitstellung einer Liste der im Sicherheitstoken enthaltenen Sicherheitsschlüssel. In diesem Fall enthält das Sicherheitstoken der Kreditkarte keinen Sicherheitsschlüssel.  
   
- Im nächsten Abschnitt wird beschrieben, was geschehen muss, damit ein benutzerdefiniertes Token über die Verbindung übertragen und von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Endpunkt verwendet werden kann.  
+ Im nächsten Abschnitt wird beschrieben, was geschehen muss, damit ein benutzerdefiniertes Token über die Verbindung übertragen und von einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Endpunkt verwendet werden kann.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -160,15 +162,14 @@ class CreditCardToken : SecurityToken
     public override DateTime ValidTo { get { return this.cardInfo.ExpirationDate; } }  
     public override string Id { get { return this.id; } }  
 }  
-  
 ```  
   
-## Abrufen des benutzerdefinierte Kreditkartentokens aus der Nachricht und Einbinden des Tokens in die Nachricht  
- Sicherheitstoken\-Serialisierungsprogramme in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dienen zum Erstellen einer Objektdarstellung von Sicherheitstoken aus der XML in der Nachricht und zum Erstellen einer XML\-Form dieser Sicherheitstokens.  Außerdem sind sie für andere Funktionen zuständig, wie beispielsweise das Lesen und Schreiben von Schlüsselbezeichnern, die auf Sicherheitstoken verweisen. In diesem Beispiel werden jedoch nur die Funktionen behandelt, die sich auf Sicherheitstoken beziehen.  Um ein benutzerdefiniertes Token zu aktivieren, müssen Sie ein eigenes Sicherheitstoken\-Serialisierungsprogramm implementieren.  In diesem Beispiel wird zu diesem Zweck die `CreditCardSecurityTokenSerializer`\-Klasse verwendet.  
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Abrufen des benutzerdefinierte Kreditkartentokens aus der Nachricht und Einbinden des Tokens in die Nachricht  
+ Sicherheitstoken-Serialisierungsprogramme in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dienen zum Erstellen einer Objektdarstellung von Sicherheitstoken aus der XML in der Nachricht und zum Erstellen einer XML-Form dieser Sicherheitstokens. Außerdem sind sie für andere Funktionen zuständig, wie beispielsweise das Lesen und Schreiben von Schlüsselbezeichnern, die auf Sicherheitstoken verweisen. In diesem Beispiel werden jedoch nur die Funktionen behandelt, die sich auf Sicherheitstoken beziehen. Um ein benutzerdefiniertes Token zu aktivieren, müssen Sie ein eigenes Sicherheitstoken-Serialisierungsprogramm implementieren. In diesem Beispiel wird zu diesem Zweck die `CreditCardSecurityTokenSerializer`-Klasse verwendet.  
   
- Im Dienst liest das benutzerdefinierte Serialisierungsprogramm die XML\-Form des benutzerdefinierten Tokens und erstellt daraus die Objektdarstellung des benutzerdefinierten Tokens.  
+ Im Dienst liest das benutzerdefinierte Serialisierungsprogramm die XML-Form des benutzerdefinierten Tokens und erstellt daraus die Objektdarstellung des benutzerdefinierten Tokens.  
   
- Auf dem Client schreibt die `CreditCardSecurityTokenSerializer`\-Klasse die in der Objektdarstellung des benutzerdefinierten Tokens enthaltenen Informationen in den XML\-Writer.  
+ Auf dem Client schreibt die `CreditCardSecurityTokenSerializer`-Klasse die in der Objektdarstellung des benutzerdefinierten Tokens enthaltenen Informationen in den XML-Writer.  
   
 ```  
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer  
@@ -251,14 +252,14 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }  
 ```  
   
-## So werden Tokenanbieter\- und Tokenauthentifiziererklassen erstellt  
- Client\- und Dienstanmeldeinformationen sind für die Bereitstellung der Instanz des Sicherheitstoken\-Managers zuständig.  Die Instanz des Sicherheitstoken\-Managers dient zum Abrufen von Tokenanbietern, Tokenauthentifizierern und Serialisierungsprogrammen für das Token.  
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>So werden Tokenanbieter- und Tokenauthentifiziererklassen erstellt  
+ Client- und Dienstanmeldeinformationen sind für die Bereitstellung der Instanz des Sicherheitstoken-Managers zuständig. Die Instanz des Sicherheitstoken-Managers dient zum Abrufen von Tokenanbietern, Tokenauthentifizierern und Serialisierungsprogrammen für das Token.  
   
- Der Tokenanbieter erstellt eine Objektdarstellung des Tokens basierend auf Daten in den Client\- oder Dienstanmeldeinformationen.  Anschließend wird die Objektdarstellung des Tokens mithilfe des Token\-Serialisierungsprogramms \(im vorigen Abschnitt erörtert\) in die Nachricht geschrieben.  
+ Der Tokenanbieter erstellt eine Objektdarstellung des Tokens basierend auf Daten in den Client- oder Dienstanmeldeinformationen. Anschließend wird die Objektdarstellung des Tokens mithilfe des Token-Serialisierungsprogramms (im vorigen Abschnitt erörtert) in die Nachricht geschrieben.  
   
- Der Tokenauthentifizierer überprüft Token, die in der Nachricht ankommen.  Die Objektdarstellung der eingehenden Token wird vom Token\-Serialisierungsprogramm erstellt.  Diese Objektdarstellung wird dann zur Validierung an den Tokenauthentifizierer übergeben.  Nach der erfolgreichen Validierung des Tokens gibt der Tokenauthentifizierer eine Auflistung der `IAuthorizationPolicy`\-Objekte zurück, die die im Token enthaltenen Informationen darstellen.  Diese Informationen werden später während der Nachrichtenverarbeitung verwendet, um Autorisierungsentscheidungen durchzuführen und Ansprüche für die Anwendung bereitzustellen.  In diesem Beispiel verwendet der Tokenauthentifizierer für Kreditkarten `CreditCardTokenAuthorizationPolicy` für diesen Zweck.  
+ Der Tokenauthentifizierer überprüft Token, die in der Nachricht ankommen. Die Objektdarstellung der eingehenden Token wird vom Token-Serialisierungsprogramm erstellt. Diese Objektdarstellung wird dann zur Validierung an den Tokenauthentifizierer übergeben. Nach der erfolgreichen Validierung des Tokens gibt der Tokenauthentifizierer eine Auflistung der `IAuthorizationPolicy`-Objekte zurück, die die im Token enthaltenen Informationen darstellen. Diese Informationen werden später während der Nachrichtenverarbeitung verwendet, um Autorisierungsentscheidungen durchzuführen und Ansprüche für die Anwendung bereitzustellen. In diesem Beispiel verwendet der Tokenauthentifizierer für Kreditkarten `CreditCardTokenAuthorizationPolicy` für diesen Zweck.  
   
- Das Token\-Serialisierungsprogramm ist zuständig für das Abrufen der Objektdarstellung des Tokens von der Verbindung und zum Einbinden der Darstellung in die Verbindung.  Dies wird im vorherigen Abschnitt erläutert.  
+ Das Token-Serialisierungsprogramm ist zuständig für das Abrufen der Objektdarstellung des Tokens von der Verbindung und zum Einbinden der Darstellung in die Verbindung. Dies wird im vorherigen Abschnitt erläutert.  
   
  In diesem Beispiel wird ein Tokenanbieter nur für den Client und ein Tokenauthentifizierer nur für den Dienst verwendet, da ein Kreditkartentoken nur in der Richtung vom Client zum Dienst übertragen werden soll.  
   
@@ -506,11 +507,10 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
             return true;  
         }  
     }  
-  
 ```  
   
-## Anzeigen der Aufruferinformationen  
- Um die Informationen zu den Aufrufern anzuzeigen, können Sie `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` verwenden, wie im folgenden Beispielcode gezeigt.  `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` enthält dem aktuellen Aufrufer zugeordnete Autorisierungsansprüche.  Die Ansprüche werden von der `CreditCardToken`\-Klasse in der `AuthorizationPolicies`\-Auflistung angegeben.  
+## <a name="displaying-the-callers-information"></a>Anzeigen der Aufruferinformationen  
+ Um die Informationen zu den Aufrufern anzuzeigen, können Sie `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` verwenden, wie im folgenden Beispielcode gezeigt. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` enthält dem aktuellen Aufrufer zugeordnete Autorisierungsansprüche. Die Ansprüche werden von der `CreditCardToken`-Klasse in der `AuthorizationPolicies`-Auflistung angegeben.  
   
 ```  
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)  
@@ -551,21 +551,20 @@ string GetCallerCreditCardNumber()
 }  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.  Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-## Setupbatchdatei  
- Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer IIS\-gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.  Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
+## <a name="setup-batch-file"></a>Setupbatchdatei  
+ Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer IIS-gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
   
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.  
   
 -   Erstellen des Serverzertifikats  
   
-     Mit den folgenden Zeilen aus der Batchdatei `Setup.bat` wird das zu verwendende Serverzertifikat erstellt.  Die Variable `%SERVER_NAME%`  gibt den Servernamen an.  Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an.  Standardmäßig lautet die Variable in dieser Batchdatei localhost.  Wenn Sie die Variable `%SERVER_NAME%` ändern, müssen Sie die Dateien Client.cs und Service.cs durchgehen und alle Vorkommnisse von localhost durch den Servernamen ersetzen, den Sie im Setup.bat\-Skript verwenden.  
+     Mit den folgenden Zeilen aus der Batchdatei `Setup.bat` wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Standardmäßig lautet die Variable in dieser Batchdatei localhost. Wenn Sie die Variable `%SERVER_NAME%` ändern, müssen Sie die Dateien Client.cs und Service.cs durchgehen und alle Vorkommnisse von localhost durch den Servernamen ersetzen, den Sie im Setup.bat-Skript verwenden.  
   
-     Das Zertifikat wird im persönlichen Speicher unter dem Speicherort `LocalMachine` gespeichert.  Das Zertifikat wird für die IIS\-gehosteten Dienste im LocalMachine\-Speicher gespeichert.  Für selbst gehostete Dienste sollten Sie die Batchdatei so ändern, dass das Clientzertifikat im Speicherort CurrentUser gespeichert wird. Ersetzen Sie hierzu die Zeichenfolge LocalMachine durch CurrentUser.  
+     Das Zertifikat wird im persönlichen Speicher unter dem Speicherort `LocalMachine` gespeichert. Das Zertifikat wird für die IIS-gehosteten Dienste im LocalMachine-Speicher gespeichert. Für selbst gehostete Dienste sollten Sie die Batchdatei so ändern, dass das Clientzertifikat im Speicherort CurrentUser gespeichert wird. Ersetzen Sie hierzu die Zeichenfolge LocalMachine durch CurrentUser.  
   
     ```  
-  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -573,23 +572,20 @@ string GetCallerCreditCardNumber()
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
 -   Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:  
   
-     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.  Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.  Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
+     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
   
     ```  
-  
     echo ************  
     echo copying server cert to client's TrustedPeople store  
     echo ************  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
--   Um den Zugriff vom IIS\-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS\-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden.  Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.  
+-   Um den Zugriff vom IIS-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden. Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.  
   
     ```  
     echo ************  
@@ -603,49 +599,49 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung ausgeführt zu werden.  Die innerhalb der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung festgelegte PATH\-Umgebungsvariable zeigt auf das Verzeichnis mit den ausführbaren Dateien, die für das Skript Setup.bat erforderlich sind.  
+>  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung ausgeführt zu werden. Die innerhalb der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung festgelegte PATH-Umgebungsvariable zeigt auf das Verzeichnis mit den ausführbaren Dateien, die für das Skript Setup.bat erforderlich sind.  
   
-#### So richten Sie das Beispiel ein und erstellen es  
+#### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Projektmappe zu erstellen.  
+2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-#### So führen Sie das Beispiel auf demselben Computer aus  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1.  Öffnen Sie eine [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem Beispielinstallationsordner aus.  Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.  
+1.  Öffnen Sie eine [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem Beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.  
   
 > [!NOTE]
->  Entfernen Sie nach Abschluss des Beispiels unbedingt die Zertifikate, indem Sie Cleanup.bat ausführen.  In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
+>  Entfernen Sie nach Abschluss des Beispiels unbedingt die Zertifikate, indem Sie Cleanup.bat ausführen. In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
   
-1.  Starten Sie Client.exe im Verzeichnis \\client\\bin.  In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+1.  Starten Sie Client.exe im Verzeichnis \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-2.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### So führen Sie das Beispiel computerübergreifend aus  
+#### <a name="to-run-the-sample-across-computer"></a>So führen Sie das Beispiel computerübergreifend aus  
   
 1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
   
-2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer.  Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen.  Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält.  Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird.  Beachten Sie, dass die Datei Setup.bat an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten ausgeführt werden muss.  
+3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird. Beachten Sie, dass die Datei Setup.bat an einer Visual Studio-Eingabeaufforderung mit Administratorrechten ausgeführt werden muss.  
   
-4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser\-TrustedPeople auf dem Client.  Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
+4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser-TrustedPeople auf dem Client. Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
   
 5.  Ändern Sie in der Datei EchoServiceHost.cs den Wert des Zertifikatsantragstellers, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
   
-6.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \\client\\bin\\ \(unterhalb des sprachspezifischen Ordners\) auf den Clientcomputer.  
+6.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
   
 7.  Ändern Sie in der Datei Client.cs den Adresswert des Endpunkts, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
-8.  Ändern Sie in der Datei Client.cs den Antragstellernamen des X.509\-Dienstzertifikats, und geben Sie anstelle von localhost den vollqualifizierten Computernamen des Remotehosts an.  
+8.  Ändern Sie in der Datei Client.cs den Antragstellernamen des X.509-Dienstzertifikats, und geben Sie anstelle von localhost den vollqualifizierten Computernamen des Remotehosts an.  
   
 9. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.  
   
-10. Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+#### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

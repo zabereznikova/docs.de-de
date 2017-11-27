@@ -1,49 +1,50 @@
 ---
-title: "Gewusst wie: Erstellen von zusammengesetzten Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zusammengesetzte Steuerelemente, Erstellen"
-  - "Benutzersteuerelemente [Windows Forms], Erstellen"
-  - "Benutzersteuerelemente [Windows Forms], Erben von"
-  - "UserControl-Klasse, Erstellen von zusammengesetzten Steuerelementen"
+title: 'Gewusst wie: Erstellen von zusammengesetzten Steuerelementen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UserControl class [Windows Forms], creating composite controls
+- user controls [Windows Forms], creating
+- user controls [Windows Forms], inheriting from
+- composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72c68568f0178956d6154f0b3a070e69b6ff0502
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von zusammengesetzten Steuerelementen
-Zusammengesetzte Steuerelemente können auf vielfältige Weise eingesetzt werden.  Einerseits können sie als Teil eines Projekts für Windows\-Desktopanwendungen erstellt und lediglich in Formularen des Projekts verwendet werden.  Andererseits können sie in einem Windows\-Steuerelementbibliothek\-Projekt erstellt werden. Daraufhin wird das Projekt in eine Assembly kompiliert und die Steuerelemente in anderen Projekten verwendet.  Es kann sogar von ihnen geerbt werden. Durch visuelle Vererbung können sie schnell für besondere Aufgaben angepasst werden.  
+# <a name="how-to-author-composite-controls"></a>Gewusst wie: Erstellen von zusammengesetzten Steuerelementen
+Zusammengesetzte Steuerelemente können auf viele Arten eingesetzt werden. Sie können sie als Teil eines Desktopanwendungsprojekts von Windows erstellen und nur für Formulare im Projekt verwenden. Oder Sie können sie in einem Windows-Steuerelementbibliothek-Projekt erstellen, das Projekt in eine Assembly kompilieren und die Steuerelemente in anderen Projekten verwenden. Sie können sogar von ihnen erben und visuelle Vererbung verwenden, um sie schnell für besondere Zwecke anzupassen.  
   
 > [!NOTE]
->  Informationen über das Erstellen eines zusammengesetzten Steuerelements zur Verwendung in Web Forms finden Sie unter [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md).  
+>  Wenn Sie ein zusammengesetztes Steuerelement erstellen möchten, das in Web Forms verwendet werden soll, sollten Sie [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef) lesen.  
 >   
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So erstellen Sie ein zusammengesetztes Steuerelement  
+### <a name="to-author-a-composite-control"></a>So erstellen Sie ein zusammengesetztes Steuerelement  
   
-1.  Erstellen Sie ein neues **Windows\-Anwendung**\-Projekt mit dem Namen `DemoControlHost`.  
+1.  Öffnen Sie ein neues **Windows-Anwendungsprojekt** namens `DemoControlHost`.  
   
 2.  Klicken Sie im Menü **Projekt** auf **Benutzersteuerelement hinzufügen**.  
   
-3.  Geben Sie im Dialogfeld **Neues Element hinzufügen** der Klassendatei \(VB\- oder CS\-Datei\) den Namen, den das zusammengesetzte Steuerelement haben soll.  
+3.  Geben Sie im Dialogfeld **Neues Element hinzufügen** der Klassendatei (VB- oder CS-Datei) den Namen, den das zusammengesetzte Steuerelement tragen soll.  
   
 4.  Klicken Sie auf die Schaltfläche **Hinzufügen**, um die Klassendatei für das zusammengesetzte Steuerelement zu erstellen.  
   
 5.  Fügen Sie Steuerelemente aus der **Toolbox** zur Oberfläche des zusammengesetzten Steuerelements hinzu.  
   
-6.  Platzieren Sie Code in Ereignisprozeduren, um Ereignisse zu behandeln, die durch das zusammengesetzte Steuerelement oder eines seiner Steuerelemente ausgelöst werden.  
+6.  Platzieren Sie Code in Ereignisprozeduren, um Ereignisse zu behandeln, die vom zusammengesetzten Steuerelement oder konstituierenden Steuerelementen ausgelöst wurden.  
   
 7.  Schließen Sie den Designer für das zusammengesetzte Steuerelement, und speichern Sie die Datei, wenn Sie dazu aufgefordert werden.  
   
@@ -51,47 +52,47 @@ Zusammengesetzte Steuerelemente können auf vielfältige Weise eingesetzt werden
   
      Das Projekt muss erstellt werden, damit benutzerdefinierte Steuerelemente in der **Toolbox** angezeigt werden.  
   
-9. Fügen Sie `Form1` mithilfe der Registerkarte **DemoControlHost** der **Toolbox** Instanzen des Steuerelements hinzu.  
+9. Verwenden Sie die Registerkarte **DemoControlHost** der **Toolbox**, um Instanzen Ihres Steuerelements zu `Form1` hinzuzufügen.  
   
-### So erstellen Sie eine Klassenbibliothek für Steuerelemente  
+### <a name="to-author-a-control-class-library"></a>So erstellen Sie eine Steuerelementklassenbibliothek  
   
-1.  Öffnen Sie ein neues **Windows\-Steuerelementbibliothek**\-Projekt.  
+1.  Öffnen Sie ein neues **Windows-Steuerelementbibliothek**-Projekt.  
   
-     Standardmäßig ist ein zusammengesetztes Steuerelement im Projekt enthalten.  
+     Standardmäßig enthält das Projekt ein zusammengesetztes Steuerelement.  
   
-2.  Fügen Sie Steuerelemente und Code hinzu, wie in der obenstehenden Prozedur beschrieben ist.  
+2.  Fügen Sie Steuerelemente und Code wie im beschriebenen Verfahren hinzu.  
   
-3.  Wählen Sie ein Steuerelement, dessen geerbte Klassen nicht geändert werden sollen, und legen Sie die **Modifiers**\-Eigenschaft des Steuerelements auf **Private** fest.  
+3.  Wählen Sie ein Steuerelement aus, das von vererbenden Klassen nicht geändert werden soll, und legen Sie die Eigenschaft des **Modifizierers** auf **Privat** fest.  
   
 4.  Erstellen Sie die DLL.  
   
-### So erben Sie von einem zusammengesetzten Steuerelement in einer Klassenbibliothek für Steuerelemente  
+### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>So erben Sie in einer Steuerelementklassenbibliothek von einem zusammengesetzten Steuerelement  
   
-1.  Zeigen Sie im Menü **Datei** auf **Hinzufügen**, und wählen Sie **Neues Projekt**, um der Projektmappe ein neues **Windows\-Anwendung**\-Projekt hinzuzufügen.  
+1.  Zeigen Sie im Menü **Datei** mit der Maus auf **Hinzufügen**, und wählen Sie **Neues Projekt** aus, um ein neues **Windows-Anwendungs**-Projekt zur Projektmappe hinzuzufügen.  
   
-2.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf den Ordner **Verweise** für das neue Projekt, und wählen Sie **Verweis hinzufügen**, um das Dialogfeld **Verweis hinzufügen** zu öffnen.  
+2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Ordner **Verweise** für das neue Projekt, und wählen Sie **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** zu öffnen.  
   
-3.  Wählen Sie die Registerkarte **Projekte** aus, und doppelklicken Sie auf das Steuerelementbibliothek\-Projekt.  
+3.  Wählen Sie die Registerkarte **Projekte** aus, und doppelklicken Sie auf Ihr Steuerelementbibliotheksprojekt.  
   
 4.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
   
-5.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf das Steuerelementbibliothek\-Projekt, und klicken Sie im Kontextmenü auf **Neues Element hinzufügen**.  
+5.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Steuerelementbibliotheksprojekt, und wählen Sie dann **Neues Element hinzufügen** aus dem Kontextmenü aus.  
   
-6.  Wählen Sie die Vorlage **Geerbtes Benutzersteuerelement** im Dialogfeld **Neues Element hinzufügen** aus.  
+6.  Wählen Sie die Vorlage **Geerbtes Benutzersteuerelement** aus dem Dialogfeld **Neues Element hinzufügen** aus.  
   
-7.  Doppelklicken Sie im Dialogfeld **Vererbungsauswahl** auf das Steuerelement, von dem geerbt werden soll.  
+7.  Doppelklicken Sie im Dialogfeld **Vererbungsauswahl** auf das Steuerelement, von dem Sie erben möchten.  
   
-     Ein neues Steuerelement wird dem Projekt hinzugefügt.  
+     Ein neues Steuerelement wird zu Ihrem Projekt hinzugefügt.  
   
-8.  Öffnen Sie den visuellen Designer für das neue Steuerelement, und fügen Sie anschließend zusätzliche konstituierende Steuerelemente hinzu.  
+8.  Öffnen Sie den visuellen Designer für das neue Steuerelement, und fügen Sie zusätzliche konstituierende Steuerelemente hinzu.  
   
-     Die konstituierenden Steuerelemente, die vom zusammengesetzten Steuerelement geerbt wurden, sind in der DLL sichtbar. Die Eigenschaften der Steuerelemente, deren **Modifiers**\-Eigenschaft auf **Public** festgelegt wurde, können geändert werden.  Die Eigenschaften eines Steuerelements, dessen **Modifiers**\-Eigenschaft auf **Private** festgelegt wurde, können nicht geändert werden.  
+     Die konstituierenden Steuerelemente, die vom zusammengesetzten Steuerelement geerbt wurden, werden in Ihrer DLL angezeigt und Sie können die Eigenschaften von Steuerelementen ändern, deren Eigenschaft **Modifizierer** auf **Öffentlich** festgelegt ist. Sie können keine Eigenschaften von Steuerelementen ändern, deren Eigenschaft **Modifizierer** auf **Privat** festgelegt ist.  
   
-## Siehe auch  
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)   
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C\#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)   
- [Exemplarische Vorgehensweise: Vererben eines Windows Forms\-Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)   
- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms\-Steuerelement mit Visual C\#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)   
- [Empfehlungen zum Typ von Steuerelementen](../../../../docs/framework/winforms/controls/control-type-recommendations.md)   
- [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Siehe auch  
+ [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [Empfehlungen zum Typ von Steuerelementen](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
+ [Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

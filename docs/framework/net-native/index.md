@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +15,22 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 76645ae43ce6754ffdf505729ec1198785a71561
-ms.contentlocale: de-de
-ms.lasthandoff: 09/18/2017
-
+ms.openlocfilehash: a79744d99571fa1428da1fade8f63c4c80ae7b6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilieren von Anwendungen mit .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] ist eine Vorkompilierungstechnologie für die Erstellung und Bereitstellung von Windows-Apps, die in [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]enthalten ist. Die in verwaltetem Code (C# oder Visual Basic) geschriebene Releaseversion von Apps mit .NET Framework und Windows 10 als Ziel für systemeigenen Code werden automatisch kompiliert.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)]ist eine vorkompilierungstechnologie für die Erstellung und Bereitstellung von Windows-apps, die mit Visual Studio 2015 und höher enthalten ist. Die in verwaltetem Code (C# oder Visual Basic) geschriebene Releaseversion von Apps mit .NET Framework und Windows 10 als Ziel für systemeigenen Code werden automatisch kompiliert.  
   
  In der Regel werden Anwendungen, die auf .NET Framework ausgerichtet sind, in Intermediate Language (IL) kompiliert. Zur Laufzeit übersetzt ein JIT-Compiler (Just-In-Time) die IL in systemeigenen Code. Im Gegensatz dazu kompiliert [!INCLUDE[net_native](../../../includes/net-native-md.md)] Windows-Apps direkt in systemeigenen Code. Für Entwickler bedeutet das Folgendes:  
   
--   Ihre Anwendungen bieten die überragende Leistung von systemeigenem Code.  
+-   Ihre apps an Funktionen der Leistung von systemeigenem Code. In der Regel wird Leistung überlegen Code sein, die zuerst in IL kompiliert und anschließend vom JIT-Compiler in systemeigenen Code kompiliert wird. 
   
 -   Sie können weiterhin in C# oder Visual Basic programmieren.  
   
@@ -40,19 +38,22 @@ ms.lasthandoff: 09/18/2017
   
  Für Benutzer Ihrer Anwendungen bietet [!INCLUDE[net_native](../../../includes/net-native-md.md)] die folgenden Vorteile:  
   
--   Schnelle Ausführungszeiten  
+-   Schnellere Ausführungszeiten für die meisten apps und Szenarien.
   
--   Gleichbleibend schnelle Startzeiten  
+-   Schnellere Startzeiten für die meisten apps und Szenarien. 
   
--   Niedrige Kosten für Bereitstellung und Update  
+-   Niedrige Kosten für Bereitstellung und Update.  
   
--   Optimierte Anwendungsspeichernutzung  
-  
- Aber [!INCLUDE[net_native](../../../includes/net-native-md.md)] umfasst mehr als nur eine Kompilierung in systemeigenem Code. Es ändert die Art und Weise, in der .NET Framework-Anwendungen erstellt und ausgeführt werden. Insbesondere:  
+-   Optimierte anwendungsspeichernutzung.  
+
+> [!IMPORTANT]
+> Für die meisten apps und Szenarien bietet .NET Native, bedeutend schneller Startzeiten und eine überragende Leistung im Vergleich zu einer app kompilierte IL oder ein NGEN-Image. Allerdings können die Ergebnisse variieren. Um sicherzustellen, dass Ihre app von .NET native die Leistungssteigerungen profitiert hat, sollten Sie seine Leistung, die nicht .NET Native Version Ihrer app vergleichen. Weitere Informationen finden Sie unter [Übersicht über Leistungssitzungen](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+ 
+Aber [!INCLUDE[net_native](../../../includes/net-native-md.md)] umfasst mehr als nur eine Kompilierung in systemeigenem Code. Es ändert die Art und Weise, in der .NET Framework-Anwendungen erstellt und ausgeführt werden. Insbesondere:  
   
 -   Bei der Vorkompilierung werden erforderlichen Bestandteile von .NET Framework statisch mit Ihrer App verknüpft. Dadurch kann die Anwendung mit lokalen Appbibliotheken von .NET Framework ausgeführt werden, und der Compiler kann eine globale Analyse ausführen, um Leistungszuwächse bereitzustellen. Daher starten Anwendungen konsistent schneller – sogar nach .NET Framework-Updates.  
   
--   Die [!INCLUDE[net_native](../../../includes/net-native-md.md)] -Laufzeit ist für die statische Vorkompilierung optimiert und kann somit eine bessere Leistung bieten. Gleichzeitig werden aber die zentralen Reflektionsfeatures beibehalten, die Entwickler so produktiv finden.  
+-   Die [!INCLUDE[net_native](../../../includes/net-native-md.md)] Common Language Runtime ist für die statische Vorkompilierung optimiert und bietet eine bessere Leistung in der Mehrzahl der Fälle. Gleichzeitig werden aber die zentralen Reflektionsfeatures beibehalten, die Entwickler so produktiv finden.  
   
 -   [!INCLUDE[net_native](../../../includes/net-native-md.md)] verwendet das gleiche Back-End wie der C++-Compiler, der für statische Vorkompilierungsszenarios optimiert ist.  
   
@@ -90,4 +91,3 @@ ms.lasthandoff: 09/18/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [.NET systemeigen – häufig gestellte Fragen](http://msdn.microsoft.com/vstudio/dn642499.aspx)
-

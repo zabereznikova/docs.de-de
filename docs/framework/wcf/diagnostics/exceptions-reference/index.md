@@ -1,47 +1,50 @@
 ---
-title: "Ausnahmenreferenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ausnahmenreferenz
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2f21511fc95860c2513af96e1cb368a75e13386c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Ausnahmenreferenz
+# <a name="exceptions-reference"></a>Ausnahmenreferenz
 In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] generierten Ausnahmen aufgeführt.  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
- [COM\+\-Integration](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [COM+-Integration](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
   
  [Konfiguration](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Kernkommunikationen: Kanalframework](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Kernkommunikation: Kanalframeworks](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
  [Kernkommunikation: Verbindungsframework](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
- [Kernkommunikation: HTTP\/HTTPS\-Transportkanäle](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-http-https-transport-channels.md)  
+ Kernkommunikation: HTTP/HTTPS-Transportkanäle  
   
  [Kernkommunikation: Interne Duplextransportkanäle](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Kernkommunikation: Named Pipe\-Transportkanäle](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Kernkommunikation: Named Pipe-Transportkanäle](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Kernkommunikationen: TCP\-Transportkanäle](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Kernkommunikationen: TCP-Transportkanäle](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
  [Kernkommunikationen: Transportframework](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
  [Kernkommunikation: Hilfsprogramme](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Kernkommunikationen: Webhost\-Unterstützung](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Kernkommunikationen: Webhost-Unterstützung](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [Transaktion](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
@@ -49,9 +52,9 @@ In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo
   
  [Peerkanal](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/peer-channel.md)  
   
- [MSMQ\-Integrationstransport](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
+ [MSMQ-Integrationstransport](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
   
- [MSMQ\-Transport.](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [MSMQ-Transport](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
   
  [Zuverlässiges Messaging](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
   
@@ -63,4 +66,4 @@ In diesem Thema werden alle in [!INCLUDE[indigo1](../../../../../includes/indigo
   
  [Transaktionsformatierung](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
   
- [Tools](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)
+ [Extras](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)

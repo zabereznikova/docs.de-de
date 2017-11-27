@@ -1,70 +1,69 @@
 ---
-title: "Overridable (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overridable"
-  - "vb.Overridable"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "elements, concrete"
-  - "properties [Visual Basic], redefining"
-  - "overriding, Overridable keyword"
-  - "elements, virtual"
-  - "virtual elements"
-  - "procedures, overriding"
-  - "concrete elements"
-  - "procedures, redefining"
-  - "Overridable keyword"
-  - "properties [Visual Basic], overriding"
+title: Overridable (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overridable
+- vb.Overridable
+helpviewer_keywords:
+- elements [Visual Basic], concrete
+- properties [Visual Basic], redefining
+- overriding, Overridable keyword
+- elements [Visual Basic], virtual
+- virtual [elements VB]
+- procedures [Visual Basic], overriding
+- concrete [elements VB]
+- procedures [Visual Basic], redefining
+- Overridable keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Overridable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt an, dass eine Eigenschaft oder eine Prozedur von einer identisch benannten Eigenschaft oder Prozedur in einer abgeleiteten Klasse überschrieben werden kann.  
+# <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
+Gibt an, dass eine Eigenschaft oder Prozedur von einer gleichnamigen Eigenschaft oder Prozedur in einer abgeleiteten Klasse überschrieben werden kann.  
   
-## Hinweise  
- Der `Overridable`\-Modifizierer kann eine Eigenschaft oder eine Methode in einer in einer abgeleiteten Klasse überschrieben werden, um Klasse.  Der [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)\-Modifizierer hat zur Folge, dass eine Eigenschaft oder eine Methode in einer abgeleiteten Klasse überschrieben wird.  Weitere Informationen finden Sie unter [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+## <a name="remarks"></a>Hinweise  
+ Die `Overridable` Modifizierer ermöglicht einer Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben werden. Die [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) Modifizierer verhindert, dass eine Eigenschaft oder Methode in einer abgeleiteten Klasse überschrieben wird.  Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Wenn der `Overridable` oder `NotOverridable`\-Modifizierer nicht angegeben, ist die Standardeinstellung, hängt davon ab, ob die Eigenschaft oder Methode der Basisklasse eine Eigenschaft oder eine Methode überschreibt.  Wenn die Eigenschaft oder Methode der Basisklasse eine Eigenschaft oder eine Methode überschreibt, ist die Standardeinstellung `Overridable`. andernfalls ist es `NotOverridable`.  
+ Wenn die `Overridable` oder `NotOverridable` Modifizierer nicht angegeben wird, hängt von der Standardeinstellung gibt an, ob die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt. Wenn die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt, die Standardeinstellung ist `Overridable`ist, andernfalls ist er `NotOverridable`.  
   
- Sowohl mit Shadowing als auch mit Überschreiben kann ein geerbtes Element neu definiert werden. Es gibt jedoch bedeutende Unterschiede zwischen den beiden Vorgehensweisen.  Weitere Informationen finden Sie unter [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Sie können zu überschatten oder überschreiben, um ein geerbtes Element neu definieren allerdings bestehen bedeutende Unterschiede zwischen den beiden Ansätzen. Weitere Informationen finden Sie unter [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Ein Element, das überschrieben werden kann, wird manchmal als *virtuelles* Element bezeichnet.  Wenn es überschrieben werden kann, aber nicht überschrieben werden muss, wird es auch manchmal als *konkretes* Element bezeichnet.  
+ Ein Element, das überschrieben werden kann wird manchmal als bezeichnet eine *virtuellen* Element. Kann überschrieben werden, jedoch keine sein, ist es auch manchmal bezeichnet eine *konkrete* Element.  
   
- Sie können `Overridable` nur in einer Deklarationsanweisung für eine Eigenschaft oder Prozedur verwenden.  
+ Sie können `Overridable` nur in einer Eigenschaft oder einer Prozedurdeklarationsanweisung verwenden.  
   
-## Kombinierte Modifizierer  
- Sie können `Overridable` oder `NotOverridable` für eine `Private`\-Methode angeben.  
+## <a name="combined-modifiers"></a>Kombinierte Modifizierer  
+ Sie können keine angeben `Overridable` oder `NotOverridable` für eine `Private` Methode.  
   
- `Overridable` kann nicht zusammen mit `MustOverride`, `NotOverridable` oder `Shared` in derselben Deklaration verwendet werden.  
+ Sie können keine angeben `Overridable` zusammen mit `MustOverride`, `NotOverridable`, oder `Shared` in der gleichen Deklaration.  
   
- Da ein überschreibendes Element implizit überschreibbar ist, können Sie `Overridable` nicht mit `Overrides`kombinieren.  
+ Da ein überschreibendes Element implizit überschreibbar ist, können Sie `Overridable` nicht mit `Overrides` kombinieren.  
   
-## Verwendung  
- Der `Overridable`\-Modifizierer kann in folgenden Kontexten verwendet werden:  
+## <a name="usage"></a>Verwendung  
+ Der `Overridable`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Siehe auch  
- [Modifiers](../../../visual-basic/language-reference/modifiers/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Modifizierer](../../../visual-basic/language-reference/modifiers/index.md)  
+ [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
  [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

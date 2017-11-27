@@ -1,59 +1,60 @@
 ---
-title: "Gr&#246;&#223;en&#228;nderungsoptionen im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Größenanpassung von Spalten"
-  - "Datenblätter, Größenanpassung von Zeilen"
-  - "Datenblätter, Größenanpassungsoptionen"
-  - "DataGridView-Steuerelement [Windows Forms], Größenanpassung von Spalten"
-  - "DataGridView-Steuerelement [Windows Forms], Größenanpassung von Zeilen"
-  - "DataGridView-Steuerelement [Windows Forms], Größenanpassungsoptionen"
+title: "Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], row sizing
+- data grids [Windows Forms], column sizing
+- DataGridView control [Windows Forms], column sizing
+- DataGridView control [Windows Forms], sizing options
+- data grids [Windows Forms], row sizing
+- data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a4819f0c4596c34312bf689d57cca687641d6a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gr&#246;&#223;en&#228;nderungsoptionen im DataGridView-Steuerelement in Windows Forms
-Die Zeilen, Spalten und Header von <xref:System.Windows.Forms.DataGridView> können aus zahlreichen Gründen ihre Größe ändern.  In der folgenden Tabelle sind die Ursachen für eine Größenänderung zusammengefasst.  
+# <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms
+<xref:System.Windows.Forms.DataGridView>Zeilen, Spalten und Header können aus zahlreichen Gründen ihre Größe ändern. Die folgende Tabelle zeigt diese vorkommen.  
   
-|Ursache|Beschreibung|  
-|-------------|------------------|  
-|Größenänderung durch Benutzer|Benutzer können Größenanpassungen vornehmen, indem sie den Unterteiler einer Zeile, einer Spalte oder eines Headers ziehen oder darauf doppelklicken.|  
-|Größenänderungen bei Steuerelementen|Im Spaltenfüllmodus ändert sich die Spaltenbreite parallel zur Breite des Steuerelements, beispielsweise, wenn das Steuerelement an das übergeordnete Formular angedockt ist und der Benutzer die Formulargröße ändert.|  
-|Änderung von Zellenwerten|In inhaltsbasierten automatischen Größenanpassungsmodi ändert sich die Größe in Anpassung an neue display\-Werte.|  
-|Methodenaufruf|Bei der programmgesteuerten inhaltsbasierten Größenänderung können Sie die Größe bequem auf der Grundlage der während des Methodenaufrufs aktuellen Zellenwerte anpassen.|  
-|Eigenschafteneinstellung|Sie können auch bestimmte Werte für Höhe und Breite festlegen.|  
+|Vorkommen|Beschreibung|  
+|----------------|-----------------|  
+|Benutzer zum Ändern der Größe|Benutzer können die Größe Anpassungen vornehmen, durch Ziehen oder auf Zeilen-, Spalten- oder Header Trennblättern doppelklicken.|  
+|Größe des Steuerelements|Ändern der Spaltenbreite im Spaltenfüllmodus Wenn die Breite des Steuerelements geändert wird; beispielsweise ändert beim übergeordneten Formulars und dem Benutzer das Steuerelement angedockt ist die Form.|  
+|Änderung in der Zelle Wert|Ändern Sie in inhaltsbasierten automatischen Größenanpassungsmodi Größen entsprechend der neuen Werte ein.|  
+|Methodenaufruf|Programmgesteuerten größenanpassung inhaltsbasierten ermöglicht es Ihnen basierte auf Zellenwerten zum Zeitpunkt des Methodenaufrufs opportunistische Größe-Anpassungen vorzunehmen.|  
+|Einstellung der Eigenschaft|Sie können auch bestimmte Höhe und Breitenwerte festlegen.|  
   
- Standardeinstellungen: Die Größenänderung durch den Benutzer ist aktiviert, die automatische Größenanpassung deaktiviert, und Zellenwerte, die über die Spaltenbreite hinausgehen, werden abgeschnitten.  
+ Standardmäßig Ändern der Größe von Benutzer aktiviert ist, Größenänderung ist deaktiviert und Zellwerte, die größer sind als ihre Spalten werden abgeschnitten.  
   
- Die folgende Tabelle enthält Szenarien, die Sie zum Anpassen des Standardverhaltens oder zur Verwendung bestimmter Größenänderungsoptionen einsetzen können, um bestimmte Effekte zu erzielen.  
+ In der folgenden Tabelle werden Szenarien beschrieben, die Sie verwenden können, um das Standardverhalten anzupassen oder zu bestimmten Größenanpassungsoptionen zu verwenden, um bestimmte Ergebnisse zu erzielen.  
   
 |Szenario|Implementierung|  
-|--------------|---------------------|  
-|Verwenden des Spaltenfüllmodus zur Anzeige von Daten mit ähnlichem Umfang in einer relativ kleinen Anzahl von Spalten, die sich über die gesamte Breite des Steuerelements erstrecken, ohne dass die vertikale Schiebeleiste eingeblendet wird.|Legen Sie die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode> fest.|  
-|Verwenden des Spaltenfüllmodus mit display\-Werten unterschiedlicher Größe|Legen Sie die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode> fest.  Initialisieren Sie relative Spaltenbreiten, indem Sie die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>\-Eigenschaften der Spalte festlegen oder die <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>\-Methode des Steuerelements aufrufen, nachdem das Steuerelement mit Daten gefüllt wurde.|  
-|Verwenden des Spaltenfüllmodus mit Werten unterschiedlicher Wichtigkeit|Legen Sie die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode> fest.  Legen Sie hohe <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>\-Werte für Spalten fest, in denen immer einige Daten angezeigt werden müssen, oder verwenden Sie für bestimmte Spalten eine andere Größenänderungsoption als den Füllmodus.|  
-|Verwenden des Spaltenfüllmodus, um zu vermeiden, dass der Steuerelementhintergrund angezeigt wird|Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>\-Eigenschaft der letzten Spalte auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> fest, und verwenden Sie für die übrigen Spalten andere Größenänderungsoptionen.  Wenn die übrigen Spalten zu viel Platz in Anspruch nehmen, legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>\-Eigenschaft der letzten Spalte fest.|  
-|Anzeigen einer Spalte mit fester Breite, z. B. eines Symbols oder einer ID\-Spalte|Legen Sie für die Spalte <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> und <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> auf <xref:System.Windows.Forms.DataGridViewTriState> fest.  Initialisieren Sie die Breite, indem Sie die <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>\-Eigenschaft festlegen oder die <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>\-Methode des Steuerelements aufrufen, nachdem das Steuerelement mit Daten gefüllt wurde.|  
-|Automatische Größenanpassung, sobald sich der Zelleninhalt ändert, um das Abschneiden von Daten zu verhindern und die verfügbare Fläche optimal zu nutzen|Legen Sie eine Eigenschaft für die automatische Größenanpassung auf einen Wert fest, der einen inhaltsbasierten Größenanpassungsmodus darstellt.  Um bei der Verarbeitung großer Datenmengen Leistungseinbußen zu vermeiden, verwenden Sie einen Größenanpassungsmodus, in dem nur angezeigte Zeilen berechnet werden.|  
-|Größenanpassung an Werte in angezeigten Zeilen, um Leistungseinbußen bei der Arbeit mit zahlreichen Zeilen zu vermeiden|Verwenden Sie die entsprechenden Enumerationswerte für einen Größenanpassungsmodus mit automatischer oder programmgesteuerter Größenanpassung.  Um die Größe beim Durchführen eines Bildlaufs an Werte in neu angezeigten Zellen anzupassen, rufen Sie eine Größenänderungsmethode in einem <xref:System.Windows.Forms.DataGridView.Scroll>\-Ereignishandler auf.  Um die vom Benutzer durch Doppelklicken ausgeführte Größenänderung anzupassen, damit die neue Größe nur durch Werte in angezeigten Zeilen bestimmt wird, rufen Sie eine Größenänderungsmethode in einem <xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick>\-Ereignishandler oder einem <xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick>\-Ereignishandler auf.|  
-|Anpassen der Größe an den Zelleninhalt nur in bestimmten Situationen, um Leistungseinbußen zu verhindern oder Größenänderungen durch den Benutzer zu ermöglichen|Rufen Sie eine inhaltsbasierte Größenänderungsmethode in einem Ereignishandler auf.  Verwenden Sie beispielsweise das <xref:System.Windows.Forms.DataGridView.DataBindingComplete>\-Ereignis, um die Größe nach dem Binden zu initialisieren, und behandeln Sie das <xref:System.Windows.Forms.DataGridView.CellValidated>\-Ereignis oder das <xref:System.Windows.Forms.DataGridView.CellValueChanged>\-Ereignis, damit Bearbeitungen von Benutzern oder Änderungen in einer gebundenen Datenquelle berücksichtigt werden.|  
-|Anpassen der Zeilenhöhe bei mehrzeiligen Zelleninhalten|Stellen Sie sicher, dass die Spaltenbreite für die Anzeige von Textabsätzen geeignet ist, und verwenden Sie eine automatische oder programmgesteuerte inhaltsbasierte Größenanpassung für Zeilen, um die Höhe anzupassen.  Achten Sie zusätzlich darauf, dass Zellen mit mehrzeiligem Inhalt mit dem <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>\-Wert <xref:System.Windows.Forms.DataGridViewTriState> für den Zellenstil angezeigt werden.<br /><br /> In der Regel verwenden Sie einen automatischen Größenanpassungsmodus für Spalten, um die Spaltenbreite beizubehalten, oder legen die Spalten auf eine bestimmte Breite fest, bevor Sie die Zeilenhöhe anpassen.|  
+|--------------|--------------------|  
+|Spaltenfüllmodus verwenden, für die Anzeige von Größe auf ähnliche Weise Daten in einer relativ kleinen Anzahl von Spalten, die die gesamte Breite des Steuerelements zu belegen, ohne dass die horizontale Bildlaufleiste angezeigt.|Legen Sie die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> fest.|  
+|Verwenden von Spaltenfüllmodus mit Werte mit unterschiedlichen Größen anzeigen|Legen Sie die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> fest. Initialisieren Sie relative Spaltenbreiten, indem Sie die Spalte <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Eigenschaften oder durch Aufrufen des Steuerelements <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> Methode auf, nachdem das Steuerelement mit Daten gefüllt.|  
+|Verwenden Sie Spaltenfüllmodus mit Werten von unterschiedliche Bedeutung.|Legen Sie die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> fest. Legen Sie große <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> Werte für Spalten, die immer einige Daten angezeigt werden müssen, oder verwenden Sie die gewünschte Option nur im Modus für bestimmte Spalten ausfüllen.|  
+|Verwenden Sie Spaltenfüllmodus, um zu vermeiden, den Hintergrund des Steuerelements anzeigen.|Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Eigenschaft der letzten Spalte, die <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> und andere Optionen für die anderen Spalten verwenden. Wenn die anderen Spalten zu viel des verfügbaren Speicherplatzes verwenden, legen die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> -Eigenschaft der letzten Spalte.|  
+|Zeigt eine Spalte mit fester Breite, z. B. ein Symbol oder eine ID-Spalte.|Legen Sie <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> auf <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None> und <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> zu <xref:System.Windows.Forms.DataGridViewTriState.False> für die Spalte. Initialisieren Sie die Breite durch Festlegen der <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> Eigenschaft oder durch Aufrufen des Steuerelements <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> Methode auf, nachdem das Steuerelement mit Daten gefüllt.|  
+|Stellen Sie die Größe automatisch Änderung Zelleninhalt Clipping zu vermeiden und die Verwendung von Speicherplatz zu optimieren.|Legen Sie eine automatische größenanpassung-Eigenschaft auf einen Wert, der einen inhaltsbasierten Größenanpassungsmodus darstellt. Um Leistungseinbußen zu vermeiden, bei der Arbeit mit großen Mengen von Daten, verwenden Sie einen Größenanpassungsmodus, die nur die angezeigte Zeilen berechnet.|  
+|Stellen Sie die Größe um die Werte in Zeilen angezeigt, um Leistungseinbußen zu vermeiden, bei der Arbeit mit vielen Zeilen passen.|Verwenden Sie die geeignete Größenanpassungsmodus Enumerationswerte, mit der automatischen oder eine programmgesteuerte Ändern der Größe. Rufen Sie zum Anpassen der Größe an, dass beim Ausführen eines Bildlaufs in Zeilen neu angezeigten Werte eine Größe Methode in einer <xref:System.Windows.Forms.DataGridView.Scroll> -Ereignishandler. Benutzer doppelklicken anpassen ändern der Größe, damit nur die Werte in Zeilen angezeigt, die neue Größe bestimmen rufen Sie eine Größe Methode in einer <xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick> oder <xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick> -Ereignishandler.|  
+|Stellen Sie die Größe angepasst Zelleninhalt nur zu bestimmten Zeitpunkten, um Leistungseinbußen zu vermeiden oder das Ändern der Größe von Benutzer aktivieren.|Eine inhaltsbasierte Größe-Methode in einem Ereignishandler aufrufen. Beispielsweise verwenden die <xref:System.Windows.Forms.DataGridView.DataBindingComplete> Ereignis zu Größen nach der Bindung zu initialisieren, und behandeln die <xref:System.Windows.Forms.DataGridView.CellValidated> oder <xref:System.Windows.Forms.DataGridView.CellValueChanged> Ereignis anpassen Größen zur Kompensierung benutzerbearbeitungen oder Änderungen in einer gebundenen Datenquelle.|  
+|Passen Sie die Zeilenhöhe für mehrzeiligen Zelleninhalt.|Stellen Sie sicher, dass die Spaltenbreite für die Anzeige von Absätzen des Texts geeignet sind, und verwenden Sie automatische oder eine programmgesteuerte inhaltsbasierten Zeilengröße die Höhe anpassen. Stellen Sie außerdem sicher, dass Zellen mit mehrzeiligen Inhalt mit angezeigt werden eine <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> Formatwert der Zelle <xref:System.Windows.Forms.DataGridViewTriState.True>.<br /><br /> In der Regel verwenden Sie einen automatischen Größenanpassungsmodus Spaltenbreite verwalten oder sie auf eine bestimmte Breite festlegen, bevor die Zeilenhöhen angepasst werden.|  
   
-## Größenänderung mit der Maus  
- Benutzer können standardmäßig die Größe von Zeilen, Spalten und Headern ändern, für die kein automatischer, auf Zellenwerten basierender Größenanpassungsmodus verwendet wird.  Um zu verhindern, dass Benutzer andere Größenanpassungsmodi verwenden, z. B. den Spaltenfüllmodus, legen Sie eine oder mehrere der folgenden <xref:System.Windows.Forms.DataGridView>\-Eigenschaften fest:  
+## <a name="resizing-with-the-mouse"></a>Ändern der Größe, mit der Maus  
+ Standardmäßig können Benutzer ändern, Zeilen, Spalten und Header, die eine automatische Größenanpassungsmodus basierend auf den Zellenwerten nicht verwenden. Um zu verhindern, dass Benutzer andere Größenanpassungsmodi verwenden, z. B. Spaltenfüllmodus, legen Sie eine oder mehrere der folgenden <xref:System.Windows.Forms.DataGridView> Eigenschaften:  
   
 -   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
@@ -63,25 +64,25 @@ Die Zeilen, Spalten und Header von <xref:System.Windows.Forms.DataGridView> kön
   
 -   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
- Sie können auch verhindern, dass Benutzer die Größe einzelner Zeilen oder Spalten ändern, indem Sie die zugehörigen <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>\-Eigenschaften festlegen.  Der <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>\-Eigenschaftswert basiert standardmäßig auf dem <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>\-Eigenschaftswert für Spalten und dem <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>\-Eigenschaftswert für Zeilen.  Wenn Sie <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> jedoch explizit auf <xref:System.Windows.Forms.DataGridViewTriState> oder <xref:System.Windows.Forms.DataGridViewTriState> festlegen, wird der Steuerelementwert für die jeweilige Zeile oder Spalte jedoch durch den angegebenen Wert überschrieben.  Legen Sie <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> auf <xref:System.Windows.Forms.DataGridViewTriState> fest, um die Vererbung wiederherzustellen.  
+ Sie können auch verhindern, dass Benutzer von der Größe der einzelnen Zeilen oder Spalten durch Festlegen ihrer <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaften. Wird standardmäßig die <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaftswert basiert auf der <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> Eigenschaftswert für Spalten und die <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> Eigenschaftswert für Zeilen. Wenn Sie explizit festlegen <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> auf <xref:System.Windows.Forms.DataGridViewTriState.True> oder <xref:System.Windows.Forms.DataGridViewTriState.False>, jedoch die angegebene Wert überschreibt die Control-Wert für diese Zeile oder Spalte ist. Legen Sie <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> zu <xref:System.Windows.Forms.DataGridViewTriState.NotSet> um die Vererbung wiederherzustellen.  
   
- Da die Vererbung von Werten durch <xref:System.Windows.Forms.DataGridViewTriState> wiederhergestellt wird, gibt die <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>\-Eigenschaft nur dann einen <xref:System.Windows.Forms.DataGridViewTriState>\-Wert zurück, wenn die Zeile oder Spalte einem <xref:System.Windows.Forms.DataGridView>\-Steuerelement hinzugefügt wurde.  Wenn Sie feststellen müssen, ob der <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>\-Eigenschaftswert einer Zeile oder Spalte vererbt wurde, überprüfen Sie die zugehörige <xref:System.Windows.Forms.DataGridViewElement.State%2A>\-Eigenschaft.  Wenn der <xref:System.Windows.Forms.DataGridViewElement.State%2A>\-Wert das <xref:System.Windows.Forms.DataGridViewElementStates>\-Flag beinhaltet, wurde der <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>\-Eigenschaftswert nicht vererbt.  
+ Da <xref:System.Windows.Forms.DataGridViewTriState.NotSet> Vererbung wiederhergestellt wird der Wert, der <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaft wird nie zurückgegeben. ein <xref:System.Windows.Forms.DataGridViewTriState.NotSet> Wert, es sei denn, die Zeile oder Spalte nicht hinzugefügt wurde eine <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn Sie bestimmen müssen, ob die <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaftswert, der eine Zeile oder Spalte geerbt wird, überprüfen Sie die <xref:System.Windows.Forms.DataGridViewElement.State%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.DataGridViewElement.State%2A> Wert umfasst die <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> Flag, das <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaftswert nicht geerbt.  
   
-## Automatische Größenanpassung  
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement bietet zwei Arten der automatischen Größenanpassung: Spaltenfüllmodus und inhaltsbasierte automatische Größenanpassung.  
+## <a name="automatic-sizing"></a>Automatische Größenanpassung  
+ Es gibt zwei Arten der automatischen Größenänderung in die <xref:System.Windows.Forms.DataGridView> Steuerelement: Spaltenfüllmodus und inhaltsbasierte Größenänderung.  
   
- Im Spaltenfüllmodus füllen die sichtbaren Spalten im Steuerelement dessen Anzeigebereich in der vollen Breite aus.  Weitere Informationen zu diesem Modus finden Sie unter [Spaltenfüllmodus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Spaltenfüllmodus bewirkt, dass die sichtbaren Spalten im Steuerelement, füllen Sie die Breite der Anzeigebereich des Steuerelements. Weitere Informationen zu diesem Modus finden Sie unter [Spalte ausfüllen Modus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
- Sie können Zeilen, Spalten und Header auch so konfigurieren, dass ihre Größe automatisch in Anpassung an den Zelleninhalt geändert wird.  In diesem Fall wird die Größe angepasst, sobald sich der Zelleninhalt ändert.  
+ Sie können auch Zeilen, Spalten und Header automatisch ihre Größe an ihre Zelleninhalt anpassen konfigurieren. In diesem Fall tritt auf, Größe, wenn der Inhalt der Zelle ändern.  
   
 > [!NOTE]
->  Wenn Sie die Zellenwerte unter Verwendung des virtuellen Modus in einem benutzerdefinierten Datencache verwalten, wird eine automatische Größenanpassung ausgeführt, wenn der Benutzer einen Zellenwert bearbeitet. Wenn Sie einen zwischengespeicherten Wert außerhalb eines <xref:System.Windows.Forms.DataGridView.CellValuePushed>\-Ereignishandlers ändern, wird sie jedoch nicht ausgeführt.  Rufen Sie in diesem Fall die <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>\-Methode auf, um die Aktualisierung der Zellenanzeige und die Anwendung der aktuellen automatischen Größenanpassungsmodi im Steuerelement zu erzwingen.  
+>  Wenn Sie die Werte von Zellen in einem benutzerdefinierten Datencache Verwendung des virtuellen Modus verwalten, tritt automatische größenanpassung auf, wenn der Benutzer einen Zellwert bearbeitet, jedoch tritt nicht auf, wenn Sie einen zwischengespeicherten Wert außerhalb des alter eine <xref:System.Windows.Forms.DataGridView.CellValuePushed> -Ereignishandler. In diesem Fall rufen die <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> Methode, um das Steuerelement aktualisiert die Zellenanzeige und Anwenden der aktuellen Modi zur Größenänderung zu erzwingen.  
   
- Wenn die inhaltsbasierte automatische Größenanpassung nur für eine Dimension, d. h., für Zeilen, aber nicht für Spalten, oder für Spalten, aber nicht für Zeilen, aktiviert ist und zusätzlich <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> aktiviert ist, wird auch eine Größenanpassung durchgeführt, wenn sich die andere Dimension ändert.  Wenn beispielsweise nur Zeilen, jedoch keine Spalten für die automatische Größenanpassung konfiguriert sind und <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> aktiviert ist, können Benutzer Spaltenunterteiler ziehen, um die Breite einer Spalte zu ändern. Dabei wird die Zeilenhöhe automatisch angepasst, sodass weiterhin der gesamte Zelleninhalt sichtbar ist.  
+ Wenn automatische größenanpassung inhaltsbasierten für nur eine Dimension aktiviert ist – d. h. für Zeilen, jedoch keine Spalten oder für Spalten, jedoch keine Zeilen – und <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> ist auch aktiviert, Größe Anpassung tritt auch bei jeder Änderung die anderen Dimension. Angenommen, wenn Zeilen, jedoch keine Spalten für die automatische größenanpassung konfiguriert sind und <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> ist aktiviert, Benutzer können Spaltenunterteiler zum Ändern der Breite einer Spalte ziehen und Zeilenhöhe werden automatisch angepasst, sodass Zelleninhalt noch vollständig angezeigt werden.  
   
- Wenn Sie sowohl Zeilen als auch Spalten für die inhaltsbasierte automatische Größenanpassung konfigurieren und <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> aktiviert ist, passt das <xref:System.Windows.Forms.DataGridView>\-Steuerelement die Größe an, sobald sich der Zelleninhalt ändert, und verwendet beim Berechnen der neuen Größe ein optimales Verhältnis zwischen Zellenhöhe und \-breite.  
+ Wenn Sie Zeilen und Spalten für die automatische größenanpassung inhaltsbasierten konfigurieren und <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> aktiviert ist, die <xref:System.Windows.Forms.DataGridView> Steuerelement wird Größen angepasst, sobald Inhalt der Zelle geändert und es ein Zelle ideale Höhe und Breite Verhältnis verwendet werden, bei der Berechnung der neuer Größen.  
   
- Um den Größenanpassungsmodus für Header, Zeilen und Spalten zu konfigurieren, durch die der Wert des Steuerelements nicht überschrieben wird, legen Sie eine oder mehrere der folgenden <xref:System.Windows.Forms.DataGridView>\-Eigenschaften fest:  
+ So konfigurieren den Größenanpassungsmodus für Kopf- und Zeilen und Spalten, die nicht den Steuerelementwert außer Kraft setzen, legen Sie eine oder mehrere der folgenden <xref:System.Windows.Forms.DataGridView> Eigenschaften:  
   
 -   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
@@ -91,26 +92,26 @@ Die Zeilen, Spalten und Header von <xref:System.Windows.Forms.DataGridView> kön
   
 -   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
- Um den Größenanpassungsmodus des Steuerelements für eine einzelne Spalte zu überschreiben, legen Sie deren <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>\-Eigenschaft auf einen anderen Wert als <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> fest.  Der Größenanpassungsmodus für eine Spalte wird von deren <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>\-Eigenschaft bestimmt.  Der Wert dieser Eigenschaft basiert auf dem <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>\-Eigenschaftswert der Spalte, sofern er nicht <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> entspricht. In diesem Fall wird der <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>\-Wert des Steuerelements geerbt.  
+ Um das Steuerelement Größenanpassungsmodus für eine einzelne Spalte zu überschreiben, legen dessen <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> -Eigenschaft auf einen anderen Wert als <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. Der Größenänderungsmodus für eine Spalte wird tatsächlich durch bestimmt dessen <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaft. Der Wert dieser Eigenschaft basiert auf der Spaltenwerts <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Eigenschaftswert, es sei denn, dass der Wert <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, in diesem Fall des Steuerelements <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> Wert geerbt wird.  
   
- Verwenden Sie die inhaltsbasierte automatische Größenanpassung mit Vorsicht, wenn Sie mit großen Datenmengen arbeiten.  Um Leistungseinbußen zu vermeiden, sollten Sie automatische Größenanpassungsmodi verwenden, in denen die Größe nur auf der Grundlage der angezeigten Zeilen berechnet wird, anstatt jede Zeile im Steuerelement zu analysieren.  Optimale Leistung erzielen Sie stattdessen mit der programmgesteuerten Größenanpassung, bei der die Größe in bestimmten Situationen angepasst werden kann, beispielsweise direkt nach dem Laden neuer Daten.  
+ Verwenden Sie die inhaltsbasierte automatische Größenänderung mit Vorsicht bei der Arbeit mit großen Mengen von Daten. Um Leistungseinbußen zu vermeiden, verwenden Sie die Modi zur Größenänderung, die Größen analysiert jede Zeile im Steuerelement, statt anhand der angezeigten Zeilen zu berechnen. Um eine optimale Leistung wird die Verwendung programmgesteuerten größenanpassung stattdessen, damit Sie zu bestimmten Zeitpunkten, z. B. unmittelbar auf neue Daten ändern können geladen.  
   
- Inhaltsbasierte automatische Größenanpassungsmodi haben keine Auswirkungen auf Zeilen, Spalten oder Header, die ausgeblendet wurden, indem die <xref:System.Windows.Forms.DataGridViewBand.Visible%2A>\-Eigenschaft der Zeile oder Spalte bzw. die <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A>\-Eigenschaft oder <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A>\-Eigenschaft des Steuerelements auf `false` festgelegt wurde.  Wenn eine Spalte ausgeblendet wurde, nachdem ihre Größe in Anpassung an einen umfangreichen Zellenwert automatisch geändert wurde, wird die Größe der ausgeblendeten Spalte nicht geändert, wenn die Zeile mit dem umfangreichen Zellenwert gelöscht wird.  Es tritt keine automatische Größenanpassung auf, wenn sich die Sichtbarkeit von Daten ändert. Wenn Sie die <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>\-Eigenschaft der Spalte wieder in `true` ändern, wird daher keine Neuberechnung der Spaltengröße auf der Grundlage ihres aktuellen Inhalts erzwungen.  
+ Modi zur Größenänderung inhaltsbasierten haben keine Auswirkungen auf Zeilen, Spalten und Header, die Sie durch Festlegen der Zeile oder Spalte ausgeblendet haben <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> Eigenschaft oder das Steuerelement <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> oder <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> Eigenschaften `false`. Z. B. wenn eine Spalte ausgeblendet ist, nachdem er automatisch für einen großen Zellenwert angepasst wird, wird die ausgeblendete Spalte nicht seine Größe ändern, wenn die Zeile mit dem Wert große Zelle gelöscht wird. Automatische größenanpassung tritt nicht auf, wenn Sichtbarkeit geändert wird, also durch Ändern der Spalte <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> -Eigenschaft zurück auf `true` wird nicht erzwingen, dessen Größe basierend auf den aktuellen Inhalt neu zu berechnen.  
   
- Auf Zeilen, Spalten und Header wirkt sich die programmgesteuerte inhaltsbasierte Größenanpassung unabhängig von deren Sichtbarkeit aus.  
+ Programmgesteuerten größenanpassung inhaltsbasierten wirkt sich auf Zeilen, Spalten und Header unabhängig von ihrer Sichtbarkeit.  
   
-## Programmgesteuerte Größenanpassung  
- Wenn die automatische Größenanpassung deaktiviert ist, können Sie die exakte Breite oder Höhe von Zeilen, Spalten oder Headern mithilfe der folgenden Eigenschaften programmgesteuert festlegen:  
+## <a name="programmatic-resizing"></a>Programmgesteuerte Ändern der Größe  
+ Wenn automatische größenanpassung deaktiviert ist, können Sie programmgesteuert die genaue Breite oder Höhe der Zeilen, Spalten und Header über die folgenden Eigenschaften festlegen:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
- Mit den folgenden Methoden können Sie die Größe von Zeilen, Spalten und Headern auch programmgesteuert an ihren Inhalt anpassen:  
+ Sie können auch programmgesteuert Zeilen, Spalten und Header an ihren Inhalt mithilfe der folgenden Methoden ändern:  
   
 -   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
@@ -124,45 +125,45 @@ Die Zeilen, Spalten und Header von <xref:System.Windows.Forms.DataGridView> kön
   
 -   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
- Mit diesen Methoden wird die Größe von Zeilen, Spalten oder Headern einmalig geändert, anstatt sie für die kontinuierliche Größenanpassung zu konfigurieren.  Die neuen Größen werden automatisch so berechnet, dass der gesamte Zelleninhalt angezeigt wird, ohne dass Daten abgeschnitten werden.  Wenn Sie die Größe von Spalten, die über den <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>\-Eigenschaftswert <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> verfügen, programmgesteuert ändern, werden jedoch die berechneten inhaltsbasierten Breiten verwendet, um die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>\-Eigenschaftswerte der Spalten proportional anzupassen. Anschließend werden die tatsächlichen Spaltenbreiten entsprechend diesen neuen Proportionen berechnet, sodass der verfügbare Anzeigebereich des Steuerelements von der Gesamtheit der Spalten ausgefüllt wird.  
+ Diese Methoden werden die Größe Zeilen, Spalten oder Kopfzeilen einmal anstatt sie kontinuierliche Größe zu konfigurieren. Die neuen Größen werden automatisch berechnet, um alle Zelleninhalt ohne Clipping anzuzeigen. Wenn Sie programmgesteuert Größe ändern, Spalten mit <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftswerte des <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, berechneten Breiten inhaltsbasierten dienen jedoch zum proportionalen Anpassen der Spalte <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Eigenschaftswerte, und die Spalte tatsächlich breiten sind Klicken Sie dann berechnet gemäß diesen neuen Proportionen, damit, dass alle Spalten mit den verfügbaren Anzeigebereich des Steuerelements ausfüllen.  
   
- Die programmgesteuerte Größenanpassung ist hilfreich, um eine Leistungsminderung bei kontinuierlicher Größenanpassung zu vermeiden.  Außerdem ist sie geeignet, um eine Anfangsgröße für Zeilen, Spalten und Header bereitzustellen, deren Größe vom Benutzer geändert werden kann, sowie für den Spaltenfüllmodus.  
+ Programmgesteuerte Ändern der Größe ist hilfreich, die mit kontinuierlichen Größenänderung Leistungseinbußen zu vermeiden. Es ist auch nützlich, um die Anfangsgröße Benutzer veränderbare Größen von Zeilen, Spalten und Header, und zur Spaltenfüllmodus bereitzustellen.  
   
- In der Regel werden die programmgesteuerten Größenänderungsmethoden in bestimmten Situationen aufgerufen.  Beispielsweise, wenn Sie die Größe sämtlicher Spalten direkt nach dem Laden von Daten oder eine bestimmte Zeile nach dem Ändern eines bestimmten Zellenwerts programmgesteuert ändern möchten.  
+ Rufen Sie in der Regel die programmgesteuerten Größenänderungsmethoden zu bestimmten Zeitpunkten. Angenommen, Sie die Größe aller Spalten direkt nach dem Laden von Daten, oder Sie die Größe einer bestimmten Zeile nach ein bestimmten Zellwert geändert wurde.  
   
-## Anpassen des Verhaltens bei der inhaltsbasierten Größenanpassung  
- Beim Arbeiten mit abgeleiteten <xref:System.Windows.Forms.DataGridView>\-Zellen\-, \-Zeilen\- und \-Spaltentypen können Sie das Größenänderungsverhalten anpassen, indem Sie die Methode <xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=fullName>, <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=fullName> oder <xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=fullName> überschreiben oder Überladungen für geschützte Größenänderungsmethoden in einem abgeleiteten <xref:System.Windows.Forms.DataGridView>\-Steuerelement aufrufen.  Die Überladungen für geschützte Größenänderungsmethoden sind für die paarweise Ausführung ausgelegt, um ein ideales Verhältnis zwischen Zellenhöhe und \-breite zu erzielen und übermäßig breite oder hohe Zellen zu vermeiden.  Wenn Sie beispielsweise die `AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)`\-Überladung der <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>\-Methode aufrufen und den Wert `false` für den <xref:System.Boolean>\-Parameter übergeben, berechnet die Überladung die ideale Höhe und Breite für Zellen in der Zeile, passt jedoch nur die Zeilenhöhe an.  Anschließend müssen Sie die <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>\-Methode aufrufen, um die Spaltenbreite auf den berechneten Idealwert einzustellen.  
+## <a name="customizing-content-based-sizing-behavior"></a>Anpassen von inhaltsbasierten Größenanpassungsverhalten  
+ Können Sie Sizing Verhalten anpassen, wenn mit abgeleiteten arbeiten <xref:System.Windows.Forms.DataGridView> Zellen-, Zeilen- und Spalte Typen durch Überschreiben der <xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=nameWithType>, oder <xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=nameWithType> Methoden oder durch Aufrufen geschützt Größe Überladungen der Methode in einer abgeleiteten <xref:System.Windows.Forms.DataGridView> -Steuerelement. Geschützte Größe methodenüberladungen dienen zum Arbeiten in Paaren erzielen eine ideale Zelle Höhe und Breite Ratio übermäßig Breite oder Höhe Zellen vermeiden sind. Angenommen, Sie rufen die `AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)` Überladung der der <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A> -Methode und übergeben Sie den Wert `false` für die <xref:System.Boolean> Parameter, die Überladung berechnet die ideale Höhe und Breite für Zellen in der Zeile, aber es werden die Zeilenhöhen angepasst nur. Sie müssen dann rufen Sie die <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> Methode, um die Spaltenbreite auf den berechneten Idealwert anzupassen.  
   
-## Inhaltsbasierte Größenäderungsoptionen  
- Die Enumerationen, die von den Eigenschaften und Methoden für die Größenänderung verwendet werden, verfügen über ähnliche Werte für die inhaltsbasierte Größenanpassung.  Mit diesen Werten können Sie die Zellen einschränken, die zur Berechnung der bevorzugten Größen verwendet werden.  Bei allen Enumerationen für die Größenanpassung werden Berechnungen bei Werten mit Namen, die sich auf angezeigte Zellen beziehen, auf Zellen in angezeigten Zeilen beschränkt.  Das Ausschließen von Zeilen erweist sich als hilfreich, um Leistungseinbußen bei der Bearbeitung vieler Zeilen zu vermeiden.  Sie können Berechnungen auch auf Zellenwerte in Headerzellen oder außerhalb von Headerzellen beschränken.  
+## <a name="content-based-sizing-options"></a>Content-based Größenanpassungsoptionen  
+ Die Enumerationen von Größeneigenschaften und Methoden verwendet, oftmals ähnliche Werte für inhaltsbasierte Größe aufweisen. Mit diesen Werten können Sie einschränken, welche Zellen verwendet werden, um die bevorzugte Größe zu berechnen. Für alle Sizing Enumerationen Grenzwerte mit Namen, die auf der angezeigten Zellen verweisen ihren Berechnungen für Zellen in Zeilen angezeigt. Ausschließen von Zeilen ist nützlich, um Leistungseinbußen zu vermeiden, bei der Arbeit mit einer großen Menge von Zeilen. Sie können auch Berechnungen durch, um Werte von Zellen in der Kopf- oder Tabellenzelle Zellen beschränken.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeRowMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>   
- <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>   
- <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>   
- [Größenanpassung bei Spalten und Zeilen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)   
- [Spaltenfüllmodus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Festlegen der Größenanpassungsmodi des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeRowMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>  
+ <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>  
+ <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>  
+ [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ [Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [Gewusst wie: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

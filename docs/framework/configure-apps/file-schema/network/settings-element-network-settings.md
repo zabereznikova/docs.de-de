@@ -1,79 +1,80 @@
 ---
-title: "&lt;settings&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#settings"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<settings>-Element"
-  - "settings-Element"
+title: '&lt;Einstellungen&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings
+helpviewer_keywords:
+- settings element
+- <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-caps.latest.revision: 21
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 07f356c0425b071ac320e702a9ba7cd6b9537341
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;settings&gt;-Element (Netzwerkeinstellungen)
-Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=fullName>\-Namespace.  
+# <a name="ltsettingsgt-element-network-settings"></a>&lt;Einstellungen&gt; -Element (Netzwerkeinstellungen)
+Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<Einstellungen >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <settings>  
-..<httpListener> … </httpListener>  
-..<httpWebRequest> … </httpWebRequest>  
-..<ipv6> … </ipv6>  
-..<performanceCounters> … </performanceCounters>  
+```xml  
+<settings>  
+  <httpListener> … </httpListener>  
+  <httpWebRequest> … </httpWebRequest>  
+  <ipv6> … </ipv6>  
+  <performanceCounters> … </performanceCounters>  
   <servicePointManager> … </servicePointManager>  
-..<socket> … </socket>  
-..<webProxyScript> … </webProxyScript>  
+  <socket> … </socket>  
+  <webProxyScript> … </webProxyScript>  
 </settings>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
  Keine.  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Passt die von der <xref:System.Net.HttpListener>\-Klasse verwendeten Parameter an.|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Passt Webanforderungsparameter an.|  
-|[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Aktiviert IPv6\-Unterstützung \(Internet Protocol, Version 6\).|  
-|[\<performanceCounters\>\-Element \(Netzwerkeinstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Aktiviert Netzwerkleistungsindikatoren.|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Konfiguriert Verbindungen zu Netzwerkressourcen.|  
-|[Socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Gibt an, ob Socketvorgänge Abschlussanschlüsse verwenden.|  
-|[\<webProxyScript\>\-Element \(Netzwerkeinstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Konfiguriert die Eigenschaften des zum Zugreifen auf Webproxys verwendeten Skripts.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Passt die vom verwendeten Parameter an die <xref:System.Net.HttpListener> Klasse.|  
+|[HttpWebRequest-Anforderung](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Passt die Anforderungsparameter werden Web an.|  
+|[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Ermöglicht Internetprotokoll Version 6 (IPv6) unterstützen.|  
+|[\<PerformanceCounter >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Ermöglicht das Netzwerk-Leistungsindikatoren.|  
+|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Konfiguriert die Verbindungen mit Netzwerkressourcen.|  
+|[Socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.|  
+|[\<WebProxyScript >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Konfiguriert die Eigenschaften des Skripts verwendet, um Webproxys zu ermitteln.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie .NET Framework eine Verbindung mit dem Netzwerk herstellt.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Siehe auch  
- <xref:System.Net?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

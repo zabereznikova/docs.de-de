@@ -1,25 +1,28 @@
 ---
-title: "TraceListenerArgument | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TraceListenerArgument
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b6c84090-bf96-43f4-9fb0-1ce8fd9c8efe
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8b12a3f95110b4767777ec0825057996fdd333b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# TraceListenerArgument
+# <a name="tracelistenerargument"></a>TraceListenerArgument
 TraceListenerArgument  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class TraceListenerArgument  
@@ -29,28 +32,28 @@ class TraceListenerArgument
 };  
 ```  
   
-## Methoden  
- Die TraceListenerArgument\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die TraceListenerArgument-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die TraceListenerArgument\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die TraceListenerArgument-Klasse verfügt über die folgenden Eigenschaften:  
   
-### Name  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="name"></a>Name  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Name des Arguments.  
   
-### Wert  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="value"></a>Wert  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Wert des Arguments.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|

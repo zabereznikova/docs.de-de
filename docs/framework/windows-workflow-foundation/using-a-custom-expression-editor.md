@@ -1,39 +1,42 @@
 ---
-title: "Verwenden eines benutzerdefinierten Ausdrucks-Editors | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dcf9970b2b4986c3948704d848c67d8a3c6f7d9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden eines benutzerdefinierten Ausdrucks-Editors
-Ein benutzerdefinierter Ausdrucks\-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen.Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks\-Editor nützlich ist:  
+# <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
+Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
   
--   Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow\-Designer.Diese Funktionalität muss bereitgestellt werden, da der standardmäßige [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]\-Ausdrucks\-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.  
+-   Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss bereitgestellt werden, da der standardmäßige [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Ausdrucks-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.  
   
--   Zur Vereinfachung der Ausdrucksbearbeitungsumgebung z. B. für Wirtschaftsanalysten, sodass diese nicht die Arbeit mit [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] oder [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\-Ausdrücken lernen müssen.  
+-   Zur Vereinfachung der Ausdrucksbearbeitungsumgebung z. B. für Wirtschaftsanalysten, sodass diese nicht die Arbeit mit [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] oder [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Ausdrücken lernen müssen.  
   
- Zur Implementierung eines benutzerdefinierten Ausdrucks\-Editors sind drei einfache Schritte erforderlich:  
+ Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:  
   
-1.  Implementieren der <xref:System.Activities.Presentation.View.IExpressionEditorService>\-Schnittstelle.Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks\-Editoren verwaltet.  
+1.  Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle. Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.  
   
-2.  Implementieren der <xref:System.Activities.Presentation.View.IExpressionEditorInstance>\-Schnittstelle.Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.  
+2.  Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle. Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.  
   
 3.  Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.  
   
-## Implementieren eines benutzerdefinierten Ausdrucks\-Editors in einer Klassenbibliothek  
- Es folgt ein Codebeispiel für eine `MyEditorService`\-Klasse \(Machbarkeitsstudie\) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>\-Schnittstelle, die in einem MyExpressionEditorService\-Bibliotheksprojekt enthalten ist.  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementieren eines benutzerdefinierten Ausdrucks-Editors in einer Klassenbibliothek  
+ Es folgt ein Codebeispiel für eine `MyEditorService`-Klasse (Machbarkeitsstudie) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Activities.Presentation.View;  
@@ -75,13 +78,11 @@ namespace MyExpressionEditorService
   
     }  
 }  
-  
 ```  
   
- Im Folgenden ist der Code für eine `MyExpressionEditorInstance`\-Klasse zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorInstance>\-Schnittstelle dargestellt, die in einem MyExpressionEditorService\-Bibliotheksprojekt enthalten ist.  
+ Im Folgenden finden Sie den Code für eine `MyExpressionEditorInstance`-Klasse zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.  
   
 ```  
-  
 using System;  
 using System.Activities.Presentation.View;  
 using System.Windows;  
@@ -227,14 +228,12 @@ namespace MyExpressionEditorService
         }  
     }  
 }  
-  
 ```  
   
-### Veröffentlichen eines benutzerdefinierten Ausdrucks\-Editors in einem WPF\-Projekt  
- Dieser Code zeigt, wie der Designer in einer [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]\-Anwendung neu gehostet wird und wie der `MyEditorService`\-Dienst erstellt und veröffentlicht wird.Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService\-Bibliotheksprojekt hinzu.  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Veröffentlichen eines benutzerdefinierten Ausdrucks-Editors in einem WPF-Projekt  
+ Dieser Code zeigt, wie der Designer in einer [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]-Anwendung neu gehostet wird und wie der `MyEditorService`-Dienst erstellt und veröffentlicht wird. Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.  
   
 ```  
-  
 using System.Windows;  
 using System.Windows.Controls;  
 using System.Activities.Presentation;  
@@ -283,13 +282,12 @@ namespace WpfApplication1
         }  
     }  
 }  
-  
 ```  
   
-### Hinweise  
- Wenn Sie in einem benutzerdefinierten Aktivitäts\-Designer ein **ExpressionTextBox**\-Steuerelement verwenden, ist es nicht erforderlich, Ausdrucks\-Editoren mithilfe der <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>\-Methode und <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>\-Methode der <xref:System.Activities.Presentation.View.IExpressionEditorService>\-Schnittstelle zu erstellen und zu löschen.Die <xref:System.Activities.Presentation.View.ExpressionTextBox>\-Klasse übernimmt dies für Sie.  
+### <a name="notes"></a>Hinweise  
+ Bei Verwendung einer **ExpressionTextBox** Steuerelement in einem benutzerdefinierten Aktivitätsdesigner ist es nicht erforderlich, erstellen und Zerstören von Ausdrucks-Editoren mithilfe der <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> und <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> Methoden die <xref:System.Activities.Presentation.View.IExpressionEditorService> Schnittstelle. Die <xref:System.Activities.Presentation.View.ExpressionTextBox>-Klasse übernimmt dies für Sie.  
   
-## Siehe auch  
- <xref:System.Activities.Presentation.View.IExpressionEditorService>   
- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>   
- [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Activities.Presentation.View.IExpressionEditorService>  
+ <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
+ [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitäts-Designer](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

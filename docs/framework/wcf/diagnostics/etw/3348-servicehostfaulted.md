@@ -1,35 +1,38 @@
 ---
-title: "3348 - ServiceHostFaulted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3348 - ServiceHostFaulted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1b58ab2e-4b11-4967-ad16-724d509814a1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 75081ceaf9d0c8b05351d1cf765dc420894fe671
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3348 - ServiceHostFaulted
-## Eigenschaften  
+# <a name="3348---servicehostfaulted"></a>3348 - ServiceHostFaulted
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|3348|  
 |Stichwörter|TCP|  
 |Ebene|Kritisch|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Dieses Ereignis wird ausgegeben, wenn im Diensthost ein Fehler auftritt.  
   
-## Meldung  
+## <a name="message"></a>Meldung  
  Fehler beim Diensthost.  
   
-## Details
+## <a name="details"></a>Details

@@ -1,63 +1,62 @@
 ---
-title: "#Const Directive | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.#Const"
-  - "#vb.Const"
-  - "#Const"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "#Const directive"
-  - "conditional compilation, directives"
-  - "Const directive (#Const)"
-  - "Visual Basic compiler, compiler directives"
-  - "constants, Const directive"
-  - "constants, declaring"
-  - "Const statement [Visual Basic], directive (#Const)"
-  - "declaring constants, #const directive"
+title: '#<a name="const-directive"></a>#Const-Direktive'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.#Const
+- '#vb.Const'
+- '#Const'
+helpviewer_keywords:
+- '#Const directive'
+- conditional compilation [Visual Basic], directives
+- Const directive (#Const)
+- Visual Basic compiler, compiler directives
+- constants [Visual Basic], Const directive
+- constants [Visual Basic], declaring
+- Const statement [Visual Basic], directive (#Const)
+- 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a6e162b01dc5c99fb7708337d259f9e66ddd6b64
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# #Const Directive
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Definiert Konstanten für die bedingte Kompilierung in Visual Basic.  
+# <a name="const-directive"></a>#Const-Anweisung
+Definiert Konstanten für die bedingte Kompilierung für Visual Basic.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #Const constname = expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `constname`  
- Erforderlich.  Der Name der Konstanten, die definiert wird.  
+ Erforderlich. Die Namen der Konstanten definiert wird.  
   
  `expression`  
- Erforderlich.  Literalzeichen, andere Konstanten für die bedingte Kompilierung oder jede Kombination, die alle arithmetischen oder logischen Operatoren außer `Is` enthalten kann.  
+ Erforderlich. Literalzeichen, andere Konstanten für die bedingte Kompilierung oder eine beliebige Kombination, die alle arithmetische oder logische Operatoren außer enthält `Is`.  
   
-## Hinweise  
- Konstanten für die bedingte Kompilierung sind immer **Private** für die Datei, in der sie enthalten sind.  Public\-Compilerkonstanten können nicht mit der `#Const`\-Direktive erstellt werden. Sie werden ausschließlich mithilfe der Benutzeroberfläche oder mit der `/define`\-Compileroption erstellt.  
+## <a name="remarks"></a>Hinweise  
+ Konstanten für die bedingte Kompilierung sind immer privat für die Datei, in der sie angezeigt werden. Mithilfe von öffentlichen Compilerkonstanten kann nicht erstellt werden die `#Const` Richtlinie; Sie können diese erstellen, nur in der Benutzeroberfläche oder mit der `/define` -Compileroption.  
   
- Als `expression` dürfen nur Konstanten für die bedingte Kompilierung und Literalzeichen angegeben werden.  Bei einer mit `Const` definierten Standardkonstante wird ein Fehler ausgegeben.  Mit dem `#Const`\-Schlüsselwort definierte Konstanten sind entsprechend nur für die bedingte Kompilierung einzusetzen.  Es gibt auch nicht definierte Konstanten mit dem Wert `Nothing`.  
+ Können Sie nur Konditionelle Compilerkonstanten und Literale in `expression`. Mithilfe einer standard-konstantes definiert mit `Const` verursacht einen Fehler. Umgekehrt können Sie mit definierte Konstanten verwenden die `#Const` Schlüsselwort nur für die bedingte Kompilierung. Konstanten können auch nicht definiert sein, in diesem Fall haben einen Wert von `Nothing`.  
   
-## Beispiel  
- In diesem Beispiel wird die `#Const`\-Direktive verwendet.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet die `#Const`-Direktive.  
   
  [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
-## Siehe auch  
- [\/define](../../../visual-basic/reference/command-line-compiler/define.md)   
- [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)   
- [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md)   
- [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [If...Then...Else Statement](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [#If...Then...#Else-Anweisungen](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

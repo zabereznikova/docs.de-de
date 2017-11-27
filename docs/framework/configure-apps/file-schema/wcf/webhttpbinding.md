@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 76883fd9702e475bd6afd9629fb4702ca42395d4
-ms.openlocfilehash: 61eaf6ba83b94724555ca3fee53e3a4d538ee11a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5fa93919bfc6f7f078fd2de4653e8b9e878a84fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Definiert ein Bindungselement, das zum Konfigurieren von Endpunkten für [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Webdienste verwendet wird, die auf HTTP-Anforderungen und nicht auf SOAP-Nachrichten reagieren.  
@@ -104,11 +102,10 @@ Definiert ein Bindungselement, das zum Konfigurieren von Endpunkten für [!INCLU
  Die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Unterstützung für Syndication und ASP.AJAX-Integration ist über dem Webprogrammiermodell implementiert. Weitere Informationen über das Modell finden Sie unter [WCF Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WebHttpBinding>   
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>   
- [WCF-Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WebHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
+ [WCF-Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Binden von >](../../../../../docs/framework/misc/binding.md)
-

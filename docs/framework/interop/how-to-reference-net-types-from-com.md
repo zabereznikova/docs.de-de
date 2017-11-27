@@ -5,15 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - importing type library
 - COM interop, referencing .NET types
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 345a698a4d45093dfb873a8303712a7bff5046cd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f58225e41d7e09471685395dd6e2194ee5de123c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Gewusst wie: Verweisen auf .NET-Typen in COM
 Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM und .NET Framework. Microsoft Visual Basic-Clients können ein .NET-Objekt im Objektkatalog anzeigen. Dort werden Objektmethoden und –syntax sowie Eigenschaften und Felder in gleicher Weise angegeben wie für ein beliebiges anderes COM-Objekt.  
@@ -57,8 +51,7 @@ Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM u
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md)   
- [Aufrufen eines .NET-Objekts](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
- [Bereitstellung einer Anwendung für COM-Zugriff](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
-
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [Aufrufen eines.](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
+ [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)

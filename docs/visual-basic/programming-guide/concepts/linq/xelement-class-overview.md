@@ -1,47 +1,39 @@
 ---
-title: "Übersicht über die XElement-Klasse (Visual Basic) | Microsoft-Dokumentation"
+title: "Übersicht über die XElement-Klasse (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b46f3cb5e0d59105fbc31424a0408c3421d9cac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: decd7c4f805de0d23b091972ee95a323baf0b7d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xelement-class-overview-visual-basic"></a>Übersicht über die XElement-Klasse (Visual Basic)
-Die <xref:System.Xml.Linq.XElement>-Klasse ist eine der wichtigsten Klassen in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</xref:System.Xml.Linq.XElement> Sie stellt ein XML-Element dar. Diese Klasse kann zum Erstellen von Elementen, zum Ändern des Inhalts des Elements, zum Hinzufügen, Ändern oder Löschen untergeordneter Elemente, zum Hinzufügen von Attributen zu einem Element oder zum Serialisieren des Inhalts eines Elements in Textform verwendet werden. Sie können außerdem Interoperabilität mit anderen Klassen in <xref:System.Xml?displayProperty=fullName>, wie z. B. <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, und <xref:System.Xml.Xsl.XslCompiledTransform>.</xref:System.Xml.Xsl.XslCompiledTransform> </xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> </xref:System.Xml?displayProperty=fullName>  
+Die <xref:System.Xml.Linq.XElement>-Klasse ist eine der wichtigsten Klassen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Sie stellt ein XML-Element dar. Diese Klasse kann zum Erstellen von Elementen, zum Ändern des Inhalts des Elements, zum Hinzufügen, Ändern oder Löschen untergeordneter Elemente, zum Hinzufügen von Attributen zu einem Element oder zum Serialisieren des Inhalts eines Elements in Textform verwendet werden. Die Klasse kann auch mit anderen Klassen in <xref:System.Xml?displayProperty=nameWithType> zusammenarbeiten, wie <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> und <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="xelement-functionality"></a>"XElement"-Funktionalität  
- In diesem Thema wird beschrieben, die Funktionalität von der <xref:System.Xml.Linq.XElement>Klasse.</xref:System.Xml.Linq.XElement>  
+ In diesem Thema wird die von der <xref:System.Xml.Linq.XElement>-Klasse bereitgestellte Funktionalität beschrieben.  
   
 ### <a name="constructing-xml-trees"></a>Konstruieren von XML-Strukturen  
  Für das Konstruieren von XML-Strukturen stehen Ihnen verschiedene Möglichkeiten zur Verfügung. So können Sie z. B. Folgendes tun:  
   
 -   XML-Strukturen in Code konstruieren Weitere Informationen finden Sie unter [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
--   Sie können XML-Daten aus verschiedenen Quellen, z. B. Analysieren einer <xref:System.IO.TextReader>, Textdateien oder Internetadressen (URLs).</xref:System.IO.TextReader> Weitere Informationen finden Sie unter [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).  
+-   XML aus verschiedenen Quellen, wie <xref:System.IO.TextReader>, Textdateien oder Internetadressen (URLs), analysieren Weitere Informationen finden Sie unter [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).  
   
--   Sie können eine <xref:System.Xml.XmlReader>um die Struktur aufzufüllen.</xref:System.Xml.XmlReader> Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XNode.ReadFrom%2A>.</xref:System.Xml.Linq.XNode.ReadFrom%2A>  
+-   einen <xref:System.Xml.XmlReader> verwenden, um die Struktur aufzufüllen Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
--   Wenn Sie ein Modul haben, den Inhalt zu schreiben, können ein <xref:System.Xml.XmlWriter>, können Sie die <xref:System.Xml.Linq.XContainer.CreateWriter%2A>-Methode einen Writer erstellen, den Writer an das Modul übergeben und verwenden Sie die Inhalte, um die die <xref:System.Xml.XmlWriter>Auffüllen der XML-Struktur.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XContainer.CreateWriter%2A> </xref:System.Xml.XmlWriter>  
+-   mit der <xref:System.Xml.XmlWriter>-Methode einen Writer erstellen, den Writer an das Modul übergeben und dann den in den <xref:System.Xml.Linq.XContainer.CreateWriter%2A> geschriebenen Inhalt zum Auffüllen der XML-Struktur verwenden, sofern ein Modul vorhanden ist, das Inhalt in einen <xref:System.Xml.XmlWriter> schreiben kann  
   
  Die verbreitetste Variante, eine XML-Struktur zu erstellen, sieht aber wie folgt aus:  
   
@@ -61,7 +53,7 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
- Umfasst die anderen häufig verwendeten Technik zum Erstellen einer XML-Struktur mit den Ergebnissen einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfrage um eine XML-Struktur aufzufüllen, wie im folgenden Beispiel gezeigt:  
+ Bei einer weiteren häufig verwendeten Technik zum Erstellen einer XML-Struktur wird die XML-Struktur anhand der Ergebnisse einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage aufgefüllt, wie im folgenden Beispiel dargestellt wird:  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -96,17 +88,17 @@ Console.WriteLine(xmlTree)
 ```  
   
 ### <a name="serializing-xml-trees"></a>Serialisieren von XML-Strukturen  
- Sie können die XML-Struktur Serialisieren einer <xref:System.IO.File>, <xref:System.IO.TextWriter>, oder eine <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.IO.TextWriter> </xref:System.IO.File>  
+ Sie können die XML-Struktur in eine <xref:System.IO.File>, in einen <xref:System.IO.TextWriter> oder in einen <xref:System.Xml.XmlWriter> serialisieren.  
   
  Weitere Informationen finden Sie unter [Serialisieren von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>Abrufen von XML-Daten über Achsenmethoden  
- Mit Achsenmethoden können Sie Attribute, untergeordnete Elemente, Nachfolgerelemente und Vorgängerelemente abrufen. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]-Abfragen verwenden Achsenmethoden und bieten verschiedene flexible und leistungsstarke Möglichkeiten zum Navigieren durch eine XML-Struktur und zu deren Verarbeitung.  
+ Mit Achsenmethoden können Sie Attribute, untergeordnete Elemente, Nachfolgerelemente und Vorgängerelemente abrufen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen verwenden Achsenmethoden und bieten verschiedene flexible und leistungsstarke Möglichkeiten zum Navigieren durch eine XML-Struktur und zu deren Verarbeitung.  
   
  Weitere Informationen finden Sie unter [LINQ to XML-Achsen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   
 ### <a name="querying-xml-trees"></a>Abfragen von XML-Strukturen  
- Sie können schreiben [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen, die Daten aus einer XML-Struktur zu extrahieren.  
+ Sie können [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen schreiben, die Daten aus einer XML-Struktur abrufen.  
   
  Weitere Informationen finden Sie unter [Abfragen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
   

@@ -1,31 +1,34 @@
 ---
-title: "Permanente Duplexkorrelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Permanente Duplexkorrelation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fc7a6655467fccf924783fea9110bdaf1b788675
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Permanente Duplexkorrelation
-Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wird, ist nützlich, wenn für einen Workflowdienst eine Anforderung besteht, einen Rückruf an den ursprünglichen Aufrufer zu senden.Im Gegensatz zu WCF\-Duplex kann der Rückruf jederzeit in der Zukunft geschehen und ist nicht an den gleichen Kanal bzw. die Kanallebensdauer gebunden. Die einzige Anforderung besteht darin, dass der Aufrufer über einen aktiven Endpunkt verfügt, der die Rückrufnachricht überwacht.Auf diese Weise können zwei Workflowdienste eine lange Konversation führen.Dieses Thema bietet eine Übersicht über die permanente Duplexkorrelation.  
+# <a name="durable-duplex-correlation"></a>Permanente Duplexkorrelation
+Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wird, ist nützlich, wenn für einen Workflowdienst eine Anforderung besteht, einen Rückruf an den ursprünglichen Aufrufer zu senden. Im Gegensatz zu WCF-Duplex kann der Rückruf jederzeit in der Zukunft geschehen und ist nicht an den gleichen Kanal bzw. die Kanallebensdauer gebunden. Die einzige Anforderung besteht darin, dass der Aufrufer über einen aktiven Endpunkt verfügt, der die Rückrufnachricht überwacht. Auf diese Weise können zwei Workflowdienste eine lange Konversation führen. Dieses Thema bietet eine Übersicht über die permanente Duplexkorrelation.  
   
-## Verwenden der permanenten Duplexkorrelation  
- Um die permanente Duplexkorrelation zu verwenden, müssen die beiden Dienste eine kontextfähige Bindung verwenden, die bidirektionale Vorgänge unterstützt, z. B. <xref:System.ServiceModel.NetTcpContextBinding> oder <xref:System.ServiceModel.WSHttpContextBinding>.Der aufrufende Dienst registriert eine <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> mit der gewünschten Bindung auf dem <xref:System.ServiceModel.Endpoint> des Clients.Der empfangende Dienst empfängt diese Daten mit dem ersten Aufruf und verwendet diese dann auf seinem eigenen <xref:System.ServiceModel.Endpoint> in der <xref:System.ServiceModel.Activities.Send>\-Aktivität, die den Rückruf zum aufrufenden Dienst ausführt.In diesem Beispiel kommunizieren zwei Dienste miteinander.Der erste Dienst ruft eine Methode auf dem zweiten Dienst auf und wartet dann auf eine Antwort.Der zweite Dienst kennt den Namen der Rückrufmethode, aber der Endpunkt des Diensts, der diese Methode implementiert, ist zur Entwurfszeit nicht bekannt.  
+## <a name="using-durable-duplex-correlation"></a>Verwenden der permanenten Duplexkorrelation  
+ Um die permanente Duplexkorrelation zu verwenden, müssen die beiden Dienste eine kontextfähige Bindung verwenden, die bidirektionale Vorgänge unterstützt, z. B. <xref:System.ServiceModel.NetTcpContextBinding> oder <xref:System.ServiceModel.WSHttpContextBinding>. Der aufrufende Dienst registriert eine <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> mit der gewünschten Bindung auf dem <xref:System.ServiceModel.Endpoint> des Clients. Der empfangende Dienst empfängt diese Daten mit dem ersten Aufruf und verwendet diese dann auf seinem eigenen <xref:System.ServiceModel.Endpoint> in der <xref:System.ServiceModel.Activities.Send>-Aktivität, die den Rückruf zum aufrufenden Dienst ausführt. In diesem Beispiel kommunizieren zwei Dienste miteinander. Der erste Dienst ruft eine Methode auf dem zweiten Dienst auf und wartet dann auf eine Antwort. Der zweite Dienst kennt den Namen der Rückrufmethode, aber der Endpunkt des Diensts, der diese Methode implementiert, ist zur Entwurfszeit nicht bekannt.  
   
 > [!NOTE]
->  Permanenter Duplex kann nur verwendet werden, wenn die <xref:System.ServiceModel.Channels.AddressingVersion> des Endpunkts mit <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> konfiguriert wird.Andernfalls wird eine <xref:System.InvalidOperation>\-Ausnahme mit der folgenden Meldung ausgelöst: "Die Meldung enthält einen Rückrufkontextheader mit einem Endpunktverweis für AddressingVersion 'Addressing200408 \(http:\/\/schemas.xmlsoap.org\/ws\/2004\/08\/addressing\)'.Der Rückrufkontext kann nur übertragen werden, wenn AddressingVersion mit 'WSAddressing10' konfiguriert ist."  
+>  Permanenter Duplex kann nur verwendet werden, wenn die <xref:System.ServiceModel.Channels.AddressingVersion> des Endpunkts mit <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> konfiguriert wird. Ist dies nicht der Fall, wird eine <xref:System.InvalidOperationException> Ausnahme wird mit der folgenden Meldung ausgelöst: "die Nachricht enthält einen rückrufkontextheader mit einem Endpunktverweis für AddressingVersion ' Addressing200408 (HYPERLINK"http://schemas.xmlsoap.org/ws/2004/08/ Adressierung"http://schemas.xmlsoap.org/ws/2004/08/addressing)'. Der Rückrufkontext kann nur übertragen werden, wenn AddressingVersion mit 'WSAddressing10' konfiguriert ist."  
   
- Im folgenden Beispiel wird ein Workflowdienst gehostet, der mithilfe von <xref:System.ServiceModel.WSHttpContextBinding> einen <xref:System.ServiceModel.Endpoint> für den Rückruf erstellt.  
+ Im folgenden Beispiel wird ein Workflowdienst gehostet, der mithilfe von <xref:System.ServiceModel.Endpoint> einen <xref:System.ServiceModel.WSHttpContextBinding> für den Rückruf erstellt.  
   
 ```csharp  
 // Host WF Service 1.  
@@ -44,7 +47,7 @@ host1.Open();
 Console.WriteLine("Service1 waiting at: {0}", baseAddress1);  
 ```  
   
- Der Workflow, der diesen Workflowdienst implementiert, initialisiert die Rückrufkorrelation mit seiner <xref:System.ServiceModel.Activities.Send>\-Aktivität. Er verweist in der <xref:System.ServiceModel.Activities.Receive>\-Aktivität, die mit <xref:System.ServiceModel.Activities.Send> korreliert, auf diesen Rückrufendpunkt.Im folgenden Beispiel ist der Workflow dargestellt, der von der `GetWF1`\-Methode zurückgegeben wird.  
+ Der Workflow, der diesen Workflowdienst implementiert, initialisiert die Rückrufkorrelation mit seiner <xref:System.ServiceModel.Activities.Send>-Aktivität. Er verweist in der <xref:System.ServiceModel.Activities.Receive>-Aktivität, die mit <xref:System.ServiceModel.Activities.Send> korreliert, auf diesen Rückrufendpunkt. Im folgenden Beispiel ist der Workflow dargestellt, der von der `GetWF1`-Methode zurückgegeben wird.  
   
 ```csharp  
 Variable<CorrelationHandle> CallbackHandle = new Variable<CorrelationHandle>();  
@@ -127,7 +130,7 @@ host2.Open();
 Console.WriteLine("Service2 waiting at: {0}", baseAddress2);  
 ```  
   
- Der Workflow, der diesen Workflowdienst implementiert, beginnt mit einer <xref:System.ServiceModel.Activities.Receive>\-Aktivität.Diese Empfangsaktivität initialisiert die Rückrufkorrelation für diesen Dienst, verwendet eine Verzögerung als Simulation eines längeren Arbeitsvorgangs und führt dann den Rückruf an den ersten Dienst aus. Dafür wird der Rückrufkontext verwendet, der beim ersten Aufruf an den Dienst übergeben wurde.Im folgenden Beispiel ist der Workflow dargestellt, der bei einem Aufruf der `GetWF2`\-Methode zurückgegeben wird.Beachten Sie, dass die <xref:System.ServiceModel.Activities.Send>\-Aktivität über die Platzhalteradresse `http://www.contoso.com` verfügt. Die zur Laufzeit verwendete tatsächliche Adresse ist die angegebene Rückrufadresse.  
+ Der Workflow, der diesen Workflowdienst implementiert, beginnt mit einer <xref:System.ServiceModel.Activities.Receive>-Aktivität. Diese Empfangsaktivität initialisiert die Rückrufkorrelation für diesen Dienst, verwendet eine Verzögerung als Simulation eines längeren Arbeitsvorgangs und führt dann den Rückruf an den ersten Dienst aus. Dafür wird der Rückrufkontext verwendet, der beim ersten Aufruf an den Dienst übergeben wurde. Im folgenden Beispiel ist der Workflow dargestellt, der bei einem Aufruf der `GetWF2`-Methode zurückgegeben wird. Beachten Sie, dass die <xref:System.ServiceModel.Activities.Send>-Aktivität über die Platzhalteradresse `http://www.contoso.com` verfügt. Die zur Laufzeit verwendete tatsächliche Adresse ist die angegebene Rückrufadresse.  
   
 ```csharp  
 Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle>();  
@@ -191,7 +194,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Wenn die `StartOrder`\-Methode für den ersten Workflow aufgerufen wird, wird die folgende Ausgabe angezeigt. Die Ausgabe verdeutlicht den Ausführungsfluss durch die beiden Workflows.  
+ Wenn die `StartOrder`-Methode für den ersten Workflow aufgerufen wird, wird die folgende Ausgabe angezeigt. Die Ausgabe verdeutlicht den Ausführungsfluss durch die beiden Workflows.  
   
 ```Output  
 Service1 waiting at: http://localhost:8080/Service1  
@@ -203,10 +206,9 @@ WF1 - Request Submitted
 WF2 - Sending items  
 WF2 - Items sent  
 WF1 - Items Received  
-  
 ```  
   
- In diesem Beispiel verwalten beide Workflows die Korrelation explizit mithilfe eines <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>\-Objekts.Da in diesen Beispielworkflows nur eine einzelne Korrelation vorhanden war, reicht die <xref:System.ServiceModel.Activities.CorrelationHandle>\-Standardverwaltung in diesem Fall aus.  
+ In diesem Beispiel verwalten beide Workflows die Korrelation explizit mithilfe eines <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>-Objekts. Da in diesen Beispielworkflows nur eine einzelne Korrelation vorhanden war, reicht die <xref:System.ServiceModel.Activities.CorrelationHandle>-Standardverwaltung in diesem Fall aus.  
   
-## Siehe auch  
- [Permanenter Duplex &#91;WF\-Beispiele&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+## <a name="see-also"></a>Siehe auch  
+ [Permanenter Duplex &#91; WF-Beispiele &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

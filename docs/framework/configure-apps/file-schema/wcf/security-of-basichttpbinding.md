@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; von &lt;basicHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; von &lt;basicHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-caps.latest.revision: 16
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c4f8449d99ce897cc1be9adc2e6dad5f98498743
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; von &lt;basicHttpBinding&gt;
-Definiert die Sicherheitsfunktionen für [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;security&gt; von &lt;basicHttpBinding&gt;
+Definiert die Sicherheitsfunktionen des der [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Bindungen >  
+\<BasicHttpBinding >  
+\<Binden von >  
+\<Sicherheit >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <security mode="Message/None/Transport/TransportWithCredential">  
    <transport  
       clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
@@ -34,49 +42,49 @@ Definiert die Sicherheitsfunktionen für [\<basicHttpBinding\>](../../../../../d
 </security>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|Modus|Dies ist optional.  Gibt den verwendeten Sicherheitstyp an.  Die Standardeinstellung ist `None`.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
+|---------------|-----------------|  
+|Modus|Dies ist optional. Gibt den verwendeten Sicherheitstyp an. Die Standardeinstellung ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
   
-## mode\-Attribut  
+## <a name="mode-attribute"></a>mode-Attribut  
   
 |Wert|Beschreibung|  
-|----------|------------------|  
-|Keine|-   Nachrichten werden nicht während der Übertragung gesichert.|  
-|Transport|Die Sicherheit wird über HTTPS bereitgestellt.  Die SOAP\-Nachrichten werden über HTTPS gesichert.  Der Dienst wird über das X.509\-Zertifikat beim Client authentifiziert.  Der Client wird über ClientCredentialType authentifiziert.  Weitere Informationen zu diesem Thema finden Sie im [\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
-|Meldung|Sicherheit wird über die SOAP\-Nachrichtensicherheit bereitgestellt.  Standardmäßig wird der Text verschlüsselt und signiert.  Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out\-of\-band zur Verfügung gestellt wird.  Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.|  
-|TransportWithMessageCredential|Integrität, Vertraulichkeit und Serverauthentifizierung werden über die Transportsicherheit bereitgestellt.  Die Clientauthentifizierung wird über die SOAP\-Nachrichtensicherheit bereitgestellt.  Dieser Modus ist relevant, wenn sich der Benutzer mit Benutzername\/Kennwort authentifiziert und eine vorhandene HTTP\-Bereitstellung für die Absicherung der Nachrichtenübertragung vorhanden ist.|  
-|TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit.  Er bietet dagegen HTTP\-basierte Clientauthentifizierung.  Dieser Modus sollte mit Vorsicht angewendet werden.  Er ist nur für Umgebungen geeignet, in denen die Transportsicherheit mit anderen Mitteln sichergestellt wird \(z.&\#160;B. durch IPSec\) und nur die Clientauthentifizierung über die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Infrastruktur bereitgestellt wird.|  
+|-----------|-----------------|  
+|Keine|-Nachrichten werden während der Übertragung nicht gesichert.|  
+|Transport|Die Sicherheit wird über HTTPS bereitgestellt. Die SOAP-Nachrichten werden über HTTPS gesichert. Der Dienst wird über das X.509-Zertifikat beim Client authentifiziert. Der Client wird über ClientCredentialType authentifiziert. Finden Sie unter der [ \<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
+|Meldung|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out-of-band zur Verfügung gestellt wird. Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.|  
+|TransportWithMessageCredential|Integrität, Vertraulichkeit und Serverauthentifizierung werden über die Transportsicherheit bereitgestellt. Die Clientauthentifizierung wird über die SOAP-Nachrichtensicherheit bereitgestellt. Dieser Modus ist relevant, wenn sich der Benutzer mit Benutzername/Kennwort authentifiziert und eine vorhandene HTTP-Bereitstellung für die Absicherung der Nachrichtenübertragung vorhanden ist.|  
+|TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit. Er bietet dagegen HTTP-basierte Clientauthentifizierung. Dieser Modus sollte mit Vorsicht angewendet werden. Er ist nur für Umgebungen geeignet, in denen die Transportsicherheit mit anderen Mitteln sichergestellt wird (z.&#160;B. durch IPSec) und nur die Clientauthentifizierung über die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Infrastruktur bereitgestellt wird.|  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard\-HTTP\-Dienst.  Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Definiert die Nachrichtensicherheitseinstellungen für einen Standard\-HTTP\-Dienst.  Dieses Element entspricht <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|Bindung|Das Bindungselement von [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|-------------|-----------------|  
+|[\<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|  
+|[\<Meldung >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Definiert die Nachrichtensicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
   
-## Hinweise  
- Standardmäßig wird die SOAP\-Nachricht nicht geschützt, und der Client wird nicht authentifiziert.  Dieses Element ermöglicht es Ihnen, zusätzliche Sicherheitseinstellungen für das `basicHttpBinding`\-Element zu konfigurieren.  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-## Siehe auch  
- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>   
- <xref:System.ServiceModel.BasicHttpSecurity>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Wählen eines Typs von Anmeldeinformationen](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|Bindung|Das Bindungselement, das von der [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig wird die SOAP-Nachricht nicht geschützt, und der Client wird nicht authentifiziert. Dieses Element ermöglicht es Ihnen, zusätzliche Sicherheitseinstellungen für das `basicHttpBinding`-Element zu konfigurieren.  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.BasicHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>  
+ <xref:System.ServiceModel.BasicHttpSecurity>  
+ [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Auswählen eines Anmeldeinformationentyps](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)

@@ -1,29 +1,24 @@
 ---
-title: 'Gewusst wie: Suchen aller Knoten in einem Namespace (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Suchen aller Knoten in einem Namespace (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4216ba0ab8c8026705a82f505807fb4b1f31e424
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 8664d29e27673e1ad08d3d72b29d8dc9c711a9fb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Gewusst wie: Suchen aller Knoten in einem Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Vorgehensweise: Suchen aller Knoten in einem Namespace (Visual Basic)
 Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  
   
 ## <a name="example"></a>Beispiel  
@@ -68,7 +63,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Beispiel  
  Die XML-Datei, auf die die folgende Abfrage zugreift, enthält Aufträge in zwei verschiedenen Namespaces. Die Abfrage erstellt eine neue Struktur, die nur die Elemente in einem der Namespaces enthält.  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: konsolidierte Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Konsolidierte Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -125,4 +120,3 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch  
  [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

@@ -1,70 +1,71 @@
 ---
-title: "Gewusst wie: Festlegen der Aktivierreihenfolge in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TabStop"
-  - "TabIndex"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Festlegen der Aktivierreihenfolge"
-  - "Aktivierreihenfolge, Steuerelemente in Windows Forms"
-  - "Windows Forms-Steuerelemente, Festlegen der Aktivierreihenfolge"
-  - "Windows Forms, Festlegen der Aktivierreihenfolge"
+title: "Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TabStop
+- TabIndex
+helpviewer_keywords:
+- tab order [Windows Forms], controls on Windows forms
+- Windows Forms controls, setting tab order
+- controls [Windows Forms], setting tab order
+- Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen der Aktivierreihenfolge in Windows&#160;Forms
-Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus durch Drücken der TAB\-TASTE von einem Steuerelement zum nächsten bewegt.  Jedes Formular verfügt über eine eigene Aktivierreihenfolge.  Normalerweise entspricht die Aktivierreihenfolge der Reihenfolge, in der die Steuerelemente erstellt wurden.  Die Nummerierung der Aktivierreihenfolge beginnt mit Null.  
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms
+Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer von einem Steuerelement zu einem anderen Fokus durch Drücken der TAB-Taste. Jedes Formular verfügt über eine eigene Aktivierreihenfolge. Standardmäßig ist die Reihenfolge der Registerkarten identisch mit der Reihenfolge, in der Sie die Steuerelemente erstellt. Reihenfolge der Registerkarten Nummerierung beginnt mit 0 (null).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So legen Sie die Aktivierreihenfolge eines Steuerelements fest  
+### <a name="to-set-the-tab-order-of-a-control"></a>Festlegen die Aktivierreihenfolge eines Steuerelements  
   
-1.  Klicken Sie im Menü **Ansicht** auf **Aktivierreihenfolge**.  
+1.  Auf der **Ansicht** Menü klicken Sie auf **Aktivierreihenfolge**.  
   
-     Auf diese Weise wird der Modus zur Auswahl der Aktivierreihenfolge im Formular aktiviert.  In der oberen linken Ecke der einzelnen Kontrollkästchen wird eine Ziffer \(für die <xref:System.Windows.Forms.Control.TabIndex%2A>\-Eigenschaft\) angezeigt.  
+     Dadurch wird den Auswahlmodus Reihenfolge der Registerkarten auf dem Formular aktiviert. Eine Zahl (darstellt der <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft) wird in der oberen linken Ecke der einzelnen Steuerelemente angezeigt.  
   
-2.  Klicken Sie nacheinander auf die Steuerelemente, um die gewünschte Aktivierreihenfolge festzulegen.  
-  
-    > [!NOTE]
-    >  Die Position eines Steuerelements innerhalb der Aktivierreihenfolge kann auf einen beliebigen Wert größer oder gleich 0 festgelegt werden.  Beim Auftreten von Duplikaten wird die Z\-Anordnung der beiden Steuerelemente ausgewertet, und das obere Steuerelement wird als erstes angesteuert.  \(Bei der Z\-Anordnung handelt es sich um die visuelle Überlagerung von Steuerelementen auf einem Formular entlang der Z\-Achse des Formulars \[Tiefenebene\].  Die Z\-Anordnung bestimmt, welche Steuerelemente vor anderen angezeigt werden.\) Weitere Informationen zur Z\-Anordnung finden Sie unter [Überlagern von Objekten in Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
-  
-3.  Nachdem der Vorgang abgeschlossen ist, klicken Sie im Menü **Ansicht** erneut auf **Aktivierreihenfolge**, um den Modus zur Auswahl der Aktivierreihenfolge zu beenden.  
+2.  Klicken Sie auf die Steuerelemente nacheinander, um die Reihenfolge der Registerkarten herstellen soll.  
   
     > [!NOTE]
-    >  Steuerelemente, die den Fokus nicht erhalten können, sowie deaktivierte und nicht sichtbare Steuerelemente haben keine <xref:System.Windows.Forms.Control.TabIndex%2A>\-Eigenschaft und sind nicht in der Aktivierreihenfolge enthalten.  Diese Steuerelemente werden übersprungen, wenn der Benutzer die TAB\-TASTE drückt.  
+    >  Die Position eines Steuerelements in der Aktivierreihenfolge kann auf einen beliebigen Wert größer als oder gleich 0 festgelegt werden. Beim Auftreten von Duplikaten wird die Z-Reihenfolge von zwei Steuerelementen wird ausgewertet, und das Steuerelement an erster Stelle wird zuerst im Registerkartenformat. (Z-Reihenfolge ist die Schichtung der Steuerelemente in einem Formular auf das Formular z-Achse [Tiefe]. Die Z-Reihenfolge bestimmt, welche Steuerelemente vor anderen Steuerelemente sind.) Weitere Informationen auf der Z-Reihenfolge finden Sie unter [Überlagern von Objekten in Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
- Alternativ kann die Aktivierreihenfolge im Eigenschaftenfenster über die <xref:System.Windows.Forms.Control.TabIndex%2A>\-Eigenschaft festgelegt werden.  Durch die <xref:System.Windows.Forms.Control.TabIndex%2A>\-Eigenschaft eines Steuerelements wird bestimmt, an welcher Stelle in der Aktivierreihenfolge sich das Element befindet.  Das zuerst gezeichnete Steuerelement verfügt standardmäßig über den <xref:System.Windows.Forms.Control.TabIndex%2A>\-Wert 0, das zweite über den <xref:System.Windows.Forms.Control.TabIndex%2A>\-Wert 1 usw.  
-  
- Ein <xref:System.Windows.Forms.GroupBox>\-Steuerelement verfügt standardmäßig über einen eigenen <xref:System.Windows.Forms.Control.TabIndex%2A>\-Wert, der einer ganzen Zahl entspricht.  Ein <xref:System.Windows.Forms.GroupBox>\-Steuerelement selbst kann zur Laufzeit nicht den Fokus erhalten.  Daher verfügt jedes Steuerelement innerhalb eines <xref:System.Windows.Forms.GroupBox>s über einen eigenen <xref:System.Windows.Forms.Control.TabIndex%2A>\-Dezimalwert, der mit 0,0 beginnt.  Wenn der <xref:System.Windows.Forms.Control.TabIndex%2A>\-Wert eines <xref:System.Windows.Forms.GroupBox>\-Steuerelements erhöht wird, erhöhen sich die Werte der darin enthaltenen Steuerelemente natürlich entsprechend.  Wenn Sie einen <xref:System.Windows.Forms.Control.TabIndex%2A>\-Wert von 5 in 6 ändern, ändert sich der <xref:System.Windows.Forms.Control.TabIndex%2A>\-Wert des ersten Steuerelements innerhalb der Gruppe automatisch in 6.0 usw.  
-  
- Schließlich sollte beachtet werden, dass jedes der zahlreichen, im Formular enthaltenen Steuerelemente in der Aktivierreihenfolge übersprungen werden kann.  Normalerweise werden die Steuerelemente nacheinander in der Aktivierreihenfolge ausgewählt, wenn Sie die TAB\-TASTE zur Laufzeit wiederholt drücken.  Sie können vermeiden, dass ein Steuerelement in der formularspezifischen Aktivierreihenfolge den Fokus erhält, indem Sie seine <xref:System.Windows.Forms.Control.TabStop%2A>\-Eigenschaft deaktivieren.  
-  
-#### So entfernen Sie ein Steuerelement aus der Aktivierreihenfolge  
-  
-1.  Legen Sie für die <xref:System.Windows.Forms.Control.TabStop%2A>\-Eigenschaft des Steuerelements im Eigenschaftenfenster `false` fest.  
-  
-     Ein Steuerelement, dessen <xref:System.Windows.Forms.Control.TabStop%2A>\-Eigenschaft auf `false` festgelegt wurde, behält weiterhin seine Position in der Aktivierreihenfolge bei, wird jedoch übersprungen, wenn der Benutzer die Steuerelemente durch Drücken der TAB\-TASTE durchläuft.  
+3.  Wenn Sie fertig sind, klicken Sie auf **Aktivierreihenfolge** auf die **Ansicht** Menü erneut aus, um die Registerkarte Reihenfolge Modus zu verlassen.  
   
     > [!NOTE]
-    >  Eine Optionsfeldgruppe entspricht zur Laufzeit genau einer Position in der Aktivierreihenfolge.  Die <xref:System.Windows.Forms.Control.TabStop%2A>\-Eigenschaft der ausgewählten Schaltfläche \(d. h. der Schaltfläche, deren <xref:System.Windows.Forms.RadioButton.Checked%2A>\-Eigenschaft auf `true` festgelegt ist\) wird automatisch auf `true` festgelegt, während die <xref:System.Windows.Forms.Control.TabStop%2A>\-Eigenschaft der anderen Schaltflächen auf `false` festgelegt wird.  Weitere Informationen zum Gruppieren von <xref:System.Windows.Forms.RadioButton>\-Steuerelementen finden Sie unter [Gruppieren von RadioButton\-Steuerelementen in Windows Forms für die Verwendung als Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Steuerelemente, die den Fokus erhalten können nicht als auch deaktivierte und nicht sichtbare Steuerelemente verfügen nicht über eine <xref:System.Windows.Forms.Control.TabIndex%2A> -Eigenschaft und sind nicht in der Aktivierreihenfolge enthalten. Diese Steuerelemente werden übersprungen, da ein Benutzer die TAB-Taste drückt.  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ Alternativ kann Aktivierreihenfolge festgelegt werden, in das Eigenschaften unter Verwendung der <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft. Die <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft eines Steuerelements bestimmt, wo es positioniert ist, in der Aktivierreihenfolge. Wird standardmäßig das erste Steuerelement gezeichnet wurde eine <xref:System.Windows.Forms.Control.TabIndex%2A> Wert von 0 (null) hat die zweite eine <xref:System.Windows.Forms.Control.TabIndex%2A> 1 und So weiter.  
+  
+ Darüber hinaus wird standardmäßig ein <xref:System.Windows.Forms.GroupBox> Steuerelement verfügt über eine eigene <xref:System.Windows.Forms.Control.TabIndex%2A> Wert, der eine ganze Zahl ist. Ein <xref:System.Windows.Forms.GroupBox> Steuerelement selbst keine Fokus zur Laufzeit. Deshalb jedes Steuerelement in ein <xref:System.Windows.Forms.GroupBox> verfügt über einen eigenen Decimal <xref:System.Windows.Forms.Control.TabIndex%2A> Wert.0 ab. Natürlich als die <xref:System.Windows.Forms.Control.TabIndex%2A> von einem <xref:System.Windows.Forms.GroupBox> Steuerelement erhöht wird, werden der darin enthaltenen Steuerelemente entsprechend erhöht werden. Wenn Sie geändert haben eine <xref:System.Windows.Forms.Control.TabIndex%2A> Wert zwischen 5 und 6, die <xref:System.Windows.Forms.Control.TabIndex%2A> Wert des ersten Steuerelements in einer Gruppe, die automatisch in 6.0 usw. geändert werden.  
+  
+ Schließlich kann Kontrolle über die zahlreichen auf dem Formular in der Aktivierreihenfolge übersprungen werden. In der Regel Drücken von TAB nacheinander zur Laufzeit wählt jedes Steuerelement in der Aktivierreihenfolge. Durch das Deaktivieren der <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft, können Sie ein Steuerelement in der Aktivierreihenfolge des Formulars vornehmen.  
+  
+#### <a name="to-remove-a-control-from-the-tab-order"></a>So entfernen Sie ein Steuerelement aus der Aktivierreihenfolge  
+  
+1.  Legen Sie das Steuerelement <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft `false` im Eigenschaftenfenster angezeigt.  
+  
+     Ein Steuerelement, dessen <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft vorsieht `false` weiterhin seine Position in der Aktivierreihenfolge verwaltet, auch wenn das Steuerelement wird übersprungen, wenn Sie die Steuerelemente mit der TAB-Taste durchlaufen.  
+  
+    > [!NOTE]
+    >  Eine Gruppe von Optionsfeldern verfügt über eine einzelne Registerkarte zur Laufzeit zu beenden. Die Schaltfläche mit den ausgewählten (also auf die Schaltfläche mit seine <xref:System.Windows.Forms.RadioButton.Checked%2A> -Eigenschaftensatz auf `true`) hat seine <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft automatisch festgelegt, um `true`, während die anderen Schaltflächen haben ihre <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaftensatz auf `false`. Weitere Informationen zum Gruppieren <xref:System.Windows.Forms.RadioButton> -Steuerelemente finden Sie unter [gruppieren "RadioButton" Steuerelementen in Windows Forms-Funktion als ein Satz](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
+ [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

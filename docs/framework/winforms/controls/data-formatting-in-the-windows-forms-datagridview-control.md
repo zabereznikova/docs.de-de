@@ -1,49 +1,50 @@
 ---
-title: "Datenformatierung im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Daten [Windows Forms], Formatieren in Datenblättern"
-  - "Datenblätter, Formatieren von Daten"
-  - "DataGridView-Steuerelement [Windows Forms], Formatieren von Daten"
+title: Datenformatierung im DataGridView-Steuerelement in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], formatting data
+- data [Windows Forms], formatting in grids
+- data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e716dc74946ac6f18ab82c6834518f0bd6bbea76
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Datenformatierung im DataGridView-Steuerelement in Windows Forms
-Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement ermöglicht die automatische Konvertierung zwischen Zellenwerten und den Datentypen, die in den übergeordneten Spalten angezeigt werden.  In den Textfeldspalten werden beispielsweise Zeichenfolgenentsprechungen von Datums\-, Uhrzeit\-, Zahlen\- und Enumerationswerten angezeigt und vom Benutzer eingegebene Zeichenfolgenwerte in die für den Datastore erforderlichen Typen konvertiert.  
+# <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Datenformatierung im DataGridView-Steuerelement in Windows Forms
+Die <xref:System.Windows.Forms.DataGridView> -Steuerelement ermöglicht die automatische Konvertierung zwischen Zellenwerten und die Datentypen, die den übergeordneten Spalten angezeigt. Feld Textspalten, z. B. zeichenfolgenentsprechungen von Date, Time, Anzahl und Enumerationswerte anzuzeigen, und konvertieren Benutzereingaben Zeichenfolgenwerte in der Typen, die erforderlich sind, durch den Datenspeicher.  
   
-## Formatieren mit der DataGridViewCellStyle\-Klasse  
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement stellt grundlegende Datenformatierungen von Zellenwerten durch die <xref:System.Windows.Forms.DataGridViewCellStyle>\-Klasse bereit.  Mit der <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>\-Eigenschaft können Sie Datums\-, Uhrzeit\-, Zahlen\- und Enumerationswerte für die aktuelle Standardkultur mithilfe der unter [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md) beschriebenen Formatspezifizierer formatieren.  Sie können diese Werte auch für bestimmte Kulturen mithilfe der <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>\-Eigenschaft formatieren.  Das angegebene Format wird sowohl zur Anzeige von Daten als auch zur Analyse von Daten verwendet, die der Benutzer im angegebenen Format eingibt.  
+## <a name="formatting-with-the-datagridviewcellstyle-class"></a>Formatierung mit der DataGridViewCellStyle-Klasse  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement stellt grundlegende datenformatierung von Zellenwerten durch die <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse. Sie können die <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Eigenschaft zur Formatierung von Datum, Uhrzeit, Zahl und Enumeration Werten für die aktuelle Standardkultur mithilfe von Formatbezeichnern, die in beschriebenen [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md). Sie können ebenso formatieren, diese Werte für bestimmte Kulturen mithilfe der <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> Eigenschaft. Das angegebene Format wird verwendet, zum Anzeigen von Daten und Daten zu analysieren, die der Benutzer, im angegebenen Format eingibt.  
   
- Die <xref:System.Windows.Forms.DataGridViewCellStyle>\-Klasse stellt zusätzliche Formatierungseigenschaften für den Zeilenumbruch, die Textausrichtung und die benutzerdefinierte Anzeige von NULL\-Datenbankwerten bereit.  Weitere Informationen finden Sie unter [Gewusst wie: Formatieren von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md).  
+ Die <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse bietet zusätzliche Formatierungseigenschaften für Wordwrap, Ausrichtung und die benutzerdefinierte Anzeige der null-Datenbankwerte. Weitere Informationen finden Sie unter [Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md).  
   
-## Formatieren mit dem CellFormatting\-Ereignis  
- Wenn die grundlegende Formatierung nicht Ihren Vorstellungen entspricht, können Sie in einem Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>\-Ereignis benutzerdefinierte Datenformatierungen bereitstellen.  Das an den Handler übergebene <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> verfügt über eine <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>\-Eigenschaft, die anfangs den Zellenwert enthält.  Normalerweise wird dieser Wert automatisch in den Anzeigetyp konvertiert.  Um den Wert selbst zu konvertieren, legen Sie die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>\-Eigenschaft auf einen Wert des Anzeigetyps fest.  
+## <a name="formatting-with-the-cellformatting-event"></a>Mit dem Ereignis CellFormatting Formatierung  
+ Bei der einfache Formatierung nicht Ihren Anforderungen entspricht, können Sie angeben, dass benutzerdefinierte Formatieren von Daten in einen Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis. Die <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> an den Ereignishandler übergeben hat eine <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> -Eigenschaft, die zunächst der Wert der Zelle enthält. Normalerweise ist dieser Wert automatisch in den Anzeigetyp konvertiert. Um den Wert selbst zu konvertieren, legen Sie die <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft auf einen Wert des Anzeigetyps.  
   
 > [!NOTE]
->  Wenn für die Zelle eine Formatzeichenfolge ausgewählt ist, wird der geänderte <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>\-Eigenschaftswert damit überschrieben, sofern Sie die <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A>\-Eigenschaft nicht auf `true` festlegen.  
+>  Wenn eine Formatzeichenfolge für die Zelle gültig ist, überschreibt er die Änderung von der <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaftswert, es sei denn, Sie legen die <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A> Eigenschaft `true`.  
   
- Das <xref:System.Windows.Forms.DataGridView.CellFormatting>\-Ereignis ist außerdem hilfreich, wenn Sie <xref:System.Windows.Forms.DataGridViewCellStyle>\-Eigenschaften für einzelne Zellen anhand ihrer Werte festlegen möchten.  Weitere Informationen finden Sie unter [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ Die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis ist auch nützlich, wenn Sie festlegen möchten <xref:System.Windows.Forms.DataGridViewCellStyle> Eigenschaften für einzelne Zellen basierend auf ihren Werten. Weitere Informationen finden Sie unter [wie: Anpassen der Datenformatierung im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
- Wenn die herkömmliche Analyse der vom Benutzer angegebenen Werte nicht Ihren Vorstellungen entspricht, können Sie das <xref:System.Windows.Forms.DataGridView.CellParsing>\-Ereignis des <xref:System.Windows.Forms.DataGridView>\-Steuerelements behandeln, um eine benutzerdefinierte Analyse bereitzustellen.  
+ Wenn die Standard-Analyse von Benutzer angegebene Werte nicht Ihren Anforderungen entspricht, können Sie behandeln die <xref:System.Windows.Forms.DataGridView.CellParsing> -Ereignis für die <xref:System.Windows.Forms.DataGridView> Steuerelement zum Analysieren von benutzerdefinierten zu ermöglichen.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- [Anzeigen von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Zellstile im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Formatieren von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ [Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

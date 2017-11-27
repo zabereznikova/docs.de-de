@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a53900d8305352a1122efda1abc75ce2b1626fe6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ea17e384ecb4536ed544e3b874631db6fe54e0e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Übersicht über das WSFederation-Authentifizierungsmodul
 Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NET-Anwendungen über das WS-Verbundauthentifizierungsmodul (WS-FAM). In diesem Thema wird beschrieben, wie Verbundauthentifizierung funktioniert und verwendet wird.  
@@ -48,7 +46,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
   
 1.  Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, auf eine geschützte Ressource zuzugreifen, Sie den Benutzer aber einfach auf einen STS umleiten möchten, ohne eine Anmeldeseite zu benötigen, ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Sie können die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=fullName>-Methode oder die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A>-Methode aus dem zugrunde liegenden Code einer Anmeldeseite in der Anwendung der vertrauenden Seiten aufrufen.  
+2.  Sie können die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType>-Methode oder die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A>-Methode aus dem zugrunde liegenden Code einer Anmeldeseite in der Anwendung der vertrauenden Seiten aufrufen.  
   
  In der passiven Umleitung wird die gesamte Kommunikation durch Antwort/Umleitung vom Client ausgeführt (in der Regel ein Browser). Sie können der HTTP-Pipeline der Anwendung das WS-FAM hinzufügen. Hier sucht es nach nicht authentifizierten Benutzeranforderungen und leitet die Benutzer an den angegebenen STS um.  
   
@@ -76,7 +74,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
   
 -   Die ASP.NET-Infrastruktur ruft die <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A>-Methode des Moduls auf, um das Modul zu initialisieren.  
   
--   Das <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=fullName>-Ereignis wird ausgelöst, wenn die ASP.NET-Infrastruktur die <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A>-Methode zum ersten Mal für eines der Anwendungsmodule aufruft, die von <xref:System.IdentityModel.Services.HttpModuleBase> abgeleitet sind. Diese Methode greift auf die statische <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>-Eigenschaft zu, mit der die Konfiguration aus der Datei Web.config geladen wird. Dieses Ereignis wird beim ersten Zugriff auf die Eigenschaft ausgelöst. Auf das <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>-Objekt, das durch die Konfiguration initialisiert wird, kann durch die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName>-Eigenschaft in einem Ereignishandler zugegriffen werden. Mit diesem Ereignis können Sie die Konfiguration ändern, bevor sie in allen Modulen angewendet wird. Sie können einen Handler für dieses Ereignis in der Application_Start-Methode hinzufügen:  
+-   Das <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType>-Ereignis wird ausgelöst, wenn die ASP.NET-Infrastruktur die <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A>-Methode zum ersten Mal für eines der Anwendungsmodule aufruft, die von <xref:System.IdentityModel.Services.HttpModuleBase> abgeleitet sind. Diese Methode greift auf die statische <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>-Eigenschaft zu, mit der die Konfiguration aus der Datei Web.config geladen wird. Dieses Ereignis wird beim ersten Zugriff auf die Eigenschaft ausgelöst. Auf das <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>-Objekt, das durch die Konfiguration initialisiert wird, kann durch die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>-Eigenschaft in einem Ereignishandler zugegriffen werden. Mit diesem Ereignis können Sie die Konfiguration ändern, bevor sie in allen Modulen angewendet wird. Sie können einen Handler für dieses Ereignis in der Application_Start-Methode hinzufügen:  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -85,7 +83,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
     }  
     ```  
   
-     Jedes Modul überschreibt die abstrakten Methoden <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=fullName> und <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=fullName>. Die erste dieser Methoden fügt Handler für ASP.NET-Pipelineereignisse hinzu, die für das Modul von Interesse sind. In den meisten Fällen genügt die Standardimplementierung des Moduls. Die zweite dieser Methoden initialisiert die Eigenschaften des Moduls aus der <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=fullName>-Eigenschaft. (Hierbei handelt es sich um eine Kopie der Konfiguration, die bereits geladen wurde). Sie müssen möglicherweise die zweite Methode überschreiben, wenn die Initialisierung neuer Eigenschaften aus einer Konfiguration in Klassen unterstützt werden soll, die Sie von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> oder <xref:System.IdentityModel.Services.SessionAuthenticationModule> ableiten. In solchen Fällen müssen Sie auch von den entsprechenden Konfigurationsobjekten ableiten, damit die hinzugefügten Konfigurationseigenschaften unterstützt werden; zum Beispiel von <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> oder <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
+     Jedes Modul überschreibt die abstrakten Methoden <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> und <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType>. Die erste dieser Methoden fügt Handler für ASP.NET-Pipelineereignisse hinzu, die für das Modul von Interesse sind. In den meisten Fällen genügt die Standardimplementierung des Moduls. Die zweite dieser Methoden initialisiert die Eigenschaften des Moduls aus der <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType>-Eigenschaft. (Hierbei handelt es sich um eine Kopie der Konfiguration, die bereits geladen wurde). Sie müssen möglicherweise die zweite Methode überschreiben, wenn die Initialisierung neuer Eigenschaften aus einer Konfiguration in Klassen unterstützt werden soll, die Sie von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> oder <xref:System.IdentityModel.Services.SessionAuthenticationModule> ableiten. In solchen Fällen müssen Sie auch von den entsprechenden Konfigurationsobjekten ableiten, damit die hinzugefügten Konfigurationseigenschaften unterstützt werden; zum Beispiel von <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> oder <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
   
 -   Das WS-FAM löst das <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived>-Ereignis aus, wenn ein Sicherheitstoken abgefangen wird, das durch den STS ausgegeben wurde.  
   
@@ -102,7 +100,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 -   Das WS-FAM löst das <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut>-Ereignis einmal pro Sitzung aus, da die Sitzung für jeden Benutzer geschlossen wird. Es wird nicht ausgelöst, wenn die Sitzung clientseitig geschlossen wird (beispielsweise durch Löschen des Sitzungscookie). In einer SSO-Umgebung kann der IP-STS auch anfordern, dass sich jede vertrauende Seite abmeldet. Damit wird dieses Ereignis ebenfalls ausgelöst, wenn <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> auf `true` festgelegt ist.  
   
 > [!NOTE]
->  Sie sollten die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName>-Eigenschaft nicht während jedes Ereignisses verwenden, das von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> oder <xref:System.IdentityModel.Services.SessionAuthenticationModule> ausgelöst wird. Der Grund dafür ist, dass <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> nach den Authentifizierungsprozess festgelegt wird, während Ereignisse während des Authentifizierungsprozesses ausgelöst werden.  
+>  Sie sollten die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft nicht während jedes Ereignisses verwenden, das von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> oder <xref:System.IdentityModel.Services.SessionAuthenticationModule> ausgelöst wird. Der Grund dafür ist, dass <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> nach den Authentifizierungsprozess festgelegt wird, während Ereignisse während des Authentifizierungsprozesses ausgelöst werden.  
   
 ### <a name="configuration-of-federated-authentication"></a>Konfiguration der Verbundauthentifizierung  
  Das WS-FAM und SAM werden über das [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)-Element konfiguriert. Das untergeordnete Element [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) konfiguriert Standardwerte für die WS-FAM-Eigenschaften; dazu gehören z.B. die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A>- und die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A>-Eigenschaft. (Diese Werte können für einzelne Anforderungen geändert werden. Dazu stellen Sie Handler für einige der WS-FAM-Ereignisse bereit; beispielsweise <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.) Der von SAM verwendete Cookiehandler wird über das untergeordnete [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)-Element konfiguriert. WIF stellt einen Standardcookiehandler bereit, der in der <xref:System.IdentityModel.Services.ChunkedCookieHandler>-Klasse implementiert wird, deren Segmentgröße über das [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)-Element festgelegt werden kann. Das `<federationConfiguration>`-Element verweist auf ein <xref:System.IdentityModel.Configuration.IdentityConfiguration>, das die Konfiguration für andere WIF-Komponenten bereitstellt, die in der Anwendung verwendet werden, wie z. B. <xref:System.Security.Claims.ClaimsAuthenticationManager> und <xref:System.Security.Claims.ClaimsAuthorizationManager>. Auf die Identitätskonfiguration kann explizit durch Angabe eines benannten [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)-Elements im `identityConfigurationName`-Attribut des `<federationConfiguration>`-Elements verwiesen werden. Wenn nicht explizit auf die Identitätskonfiguration verwiesen wird, wird die Standardidentitätskonfiguration verwendet.  
@@ -151,7 +149,6 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>   
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
+ <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
-

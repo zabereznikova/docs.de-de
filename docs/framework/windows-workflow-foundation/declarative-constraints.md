@@ -1,29 +1,33 @@
 ---
-title: "Deklarative Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Deklarative Einschränkungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a51f77864478dcefbe5b2742288f9cc91648f7bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Deklarative Einschr&#228;nkungen
-Deklarative Einschränkungen stellen eine leistungsstarke Validierungsmethode für eine Aktivität und ihre Beziehungen zu anderen Aktivitäten bereit.Einschränkungen werden während des Erstellungsprozesses für eine Aktivität konfiguriert. Der Workflowhost kann jedoch zusätzliche Einschränkungen angeben.Dieses Thema bietet eine Übersicht darüber, wie mit deklarativen Einschränkungen Aktivitätsvalidierung bereitgestellt werden kann.  
+# <a name="declarative-constraints"></a>Deklarative Einschränkungen
+Deklarative Einschränkungen stellen eine leistungsstarke Validierungsmethode für eine Aktivität und ihre Beziehungen zu anderen Aktivitäten bereit. Einschränkungen werden während des Erstellungsprozesses für eine Aktivität konfiguriert. Der Workflowhost kann jedoch zusätzliche Einschränkungen angeben. Dieses Thema bietet eine Übersicht darüber, wie mit deklarativen Einschränkungen Aktivitätsvalidierung bereitgestellt werden kann.  
   
-## Verwendung deklarativer Einschränkungen  
- Eine Einschränkung ist eine Aktivität, die Validierungslogik enthält.Die Einschränkungsaktivität kann in Code oder XAML erstellt werden.Nachdem eine Einschränkungsaktivität erstellt wurde, wird sie von Aktivitätsautoren der <xref:System.Activities.Activity.Constraints%2A>\-Eigenschaft hinzugefügt, die validiert werden soll, oder die Autoren verwenden die Einschränkung, um zusätzliche Validierung mithilfe der <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>\-Eigenschaft einer <xref:System.Activities.Validation.ValidationSettings>\-Instanz bereitzustellen.Die Validierungslogik kann aus einfachen Validierungen wie der Validierung der Metadaten einer Aktivität bestehen, sie kann jedoch auch eine Validierung ausführen, die die Beziehung der betreffenden Aktivität zum übergeordneten Element, den untergeordneten Elementen und den gleichgeordneten Aktivitäten berücksichtigt.Einschränkungen werden mit der <xref:System.Activities.Validation.Constraint%601>\-Aktivität erstellt. Es werden mehrere zusätzliche Validierungsaktivitäten bereitgestellt, um die Erstellung von Validierungsfehlern und \-warnungen zu unterstützen und Informationen zu verwandten Aktivitäten im Workflow zur Verfügung zu stellen.  
+## <a name="using-declarative-constraints"></a>Verwendung deklarativer Einschränkungen  
+ Eine Einschränkung ist eine Aktivität, die Validierungslogik enthält. Die Einschränkungsaktivität kann in Code oder in XAML erstellt werden. Nachdem eine Einschränkungsaktivität erstellt wurde, wird sie von Aktivitätsautoren der <xref:System.Activities.Activity.Constraints%2A>-Eigenschaft hinzugefügt, die validiert werden soll, oder die Autoren verwenden die Einschränkung, um zusätzliche Validierung mithilfe der <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>-Eigenschaft einer <xref:System.Activities.Validation.ValidationSettings>-Instanz bereitzustellen. Die Validierungslogik kann aus einfachen Validierungen wie der Validierung der Metadaten einer Aktivität bestehen, sie kann jedoch auch eine Validierung ausführen, die die Beziehung der betreffenden Aktivität zum übergeordneten Element, den untergeordneten Elementen und den gleichgeordneten Aktivitäten berücksichtigt. Einschränkungen werden mit der <xref:System.Activities.Validation.Constraint%601>-Aktivität erstellt. Es werden mehrere zusätzliche Validierungsaktivitäten bereitgestellt, um die Erstellung von Validierungsfehlern und -warnungen zu unterstützen und Informationen zu verwandten Aktivitäten im Workflow zur Verfügung zu stellen.  
   
-### AssertValidation und AddValidationError  
- Die <xref:System.Activities.Validation.AssertValidation>\-Aktivität wertet den Ausdruck aus, auf den von der <xref:System.Activities.Validation.AssertValidation.Assertion%2A>\-Eigenschaft verwiesen wird. Wenn der ausgewertete Ausdruck `false` ergibt, wird ein Validierungsfehler oder eine Warnung dem <xref:System.Activities.Validation.ValidationResults>\-Objekt hinzugefügt.Die <xref:System.Activities.Validation.AssertValidation.Message%2A>\-Eigenschaft beschreibt den Validierungsfehler, und die <xref:System.Activities.Validation.AssertValidation.IsWarning%2A>\-Eigenschaft gibt an, ob es sich dabei um einen Fehler oder eine Warnung handelt.Der Standardwert für <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> ist `false`.  
+### <a name="assertvalidation-and-addvalidationerror"></a>AssertValidation und AddValidationError  
+ Die <xref:System.Activities.Validation.AssertValidation>-Aktivität wertet den Ausdruck aus, auf den von der <xref:System.Activities.Validation.AssertValidation.Assertion%2A>-Eigenschaft verwiesen wird. Wenn der ausgewertete Ausdruck `false` ergibt, wird <xref:System.Activities.Validation.ValidationResults> ein Validierungsfehler oder eine Warnung hinzugefügt. Die <xref:System.Activities.Validation.AssertValidation.Message%2A>-Eigenschaft beschreibt den Validierungsfehler, und die <xref:System.Activities.Validation.AssertValidation.IsWarning%2A>-Eigenschaft gibt an, ob es sich dabei um einen Fehler oder eine Warnung handelt. Der Standardwert für <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> lautet `false`.  
   
- Im folgenden Beispiel wird eine Einschränkung deklariert, die eine Validierungswarnung zurückgibt, wenn der <xref:System.Activities.Activity.DisplayName%2A> der validierten Aktivität zwei Zeichen oder weniger umfasst.Der generische Typparameter, der für das <xref:System.Activities.Validation.Constraint%601>\-Objekt verwendet wird, gibt den Typ der Aktivität an, die von der Einschränkung validiert wird.Diese Einschränkung verwendet das <xref:System.Activities.Activity>\-Objekt als generischen Typ. Mit ihr können alle Aktivitätstypen validiert werden.  
+ Im folgenden Beispiel wird eine Einschränkung deklariert, die eine Validierungswarnung zurückgibt, wenn der <xref:System.Activities.Activity.DisplayName%2A> der validierten Aktivität zwei Zeichen oder weniger umfasst. Der generische Typparameter, der für das <xref:System.Activities.Validation.Constraint%601>-Objekt verwendet wird, gibt den Typ der Aktivität an, die von der Einschränkung validiert wird. Diese Einschränkung verwendet das <xref:System.Activities.Activity>-Objekt als generischen Typ. Mit ihr können alle Aktivitätstypen validiert werden.  
   
 ```csharp  
 public static Constraint ActivityDisplayNameIsNotSetWarning()  
@@ -60,14 +64,14 @@ public sealed class SampleActivity : CodeActivity
 }  
 ```  
   
- Der Host könnte diese Einschränkung auch mithilfe von <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> für Aktivitäten in einem Workflow angegeben. Dieses Thema wird im nächsten Abschnitt behandelt.  
+ Diese Einschränkung kann der Host auch mithilfe von <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> für Aktivitäten in einem Workflow angegeben. Dieses Thema wird im nächsten Abschnitt behandelt.  
   
- Mit der <xref:System.Activities.Validation.AddValidationError>\-Aktivität wird ein Validierungsfehler oder eine Validierungswarnung generiert, ohne dass ein Ausdruck ausgewertet werden muss.Ihre Eigenschaften stimmen zum großen Teil mit denen des <xref:System.Activities.Validation.AssertValidation>\-Objekts überein, und die Aktivität kann zusammen mit den Flusssteuerungsaktivitäten einer Einschränkung wie der <xref:System.Activities.Statements.If>\-Aktivität verwendet werden.  
+ Mit der <xref:System.Activities.Validation.AddValidationError>-Aktivität wird ein Validierungsfehler oder eine Validierungswarnung generiert, ohne dass ein Ausdruck ausgewertet werden muss. Ihre Eigenschaften stimmen zum großen Teil mit denen des <xref:System.Activities.Validation.AssertValidation>-Objekts überein, und die Aktivität kann zusammen mit den Flusssteuerungsaktivitäten einer Einschränkung wie der <xref:System.Activities.Statements.If>-Aktivität verwendet werden.  
   
-### Workflowbeziehungsaktivitäten  
- Es gibt mehrere Validierungsaktivitäten, die Informationen zu den anderen Aktivitäten im Workflow im Verhältnis zur validierten Aktivität bereitstellen.<xref:System.Activities.Validation.GetParentChain> gibt eine Auflistung von Aktivitäten zurück, die alle Aktivitäten zwischen der aktuellen Aktivität und der Stammaktivität enthält.<xref:System.Activities.Validation.GetChildSubtree> stellt eine Auflistung von Aktivitäten bereit, die die untergeordneten Aktivitäten in einem rekursiven Muster enthält, und <xref:System.Activities.Validation.GetWorkflowTree> ruft alle Aktivitäten im Workflow ab.  
+### <a name="workflow-relationship-activities"></a>Workflowbeziehungsaktivitäten  
+ Es gibt mehrere Validierungsaktivitäten, die Informationen zu den anderen Aktivitäten im Workflow im Verhältnis zur validierten Aktivität bereitstellen. <xref:System.Activities.Validation.GetParentChain> gibt eine Auflistung von Aktivitäten zurück, die alle Aktivitäten zwischen der aktuellen Aktivität und der Stammaktivität enthält. <xref:System.Activities.Validation.GetChildSubtree> stellt eine Auflistung von Aktivitäten bereit, die die untergeordneten Aktivitäten in einem rekursiven Muster enthält, und <xref:System.Activities.Validation.GetWorkflowTree> ruft alle Aktivitäten im Workflow ab.  
   
- Im folgenden Ausschnitt aus dem Beispiel [Validierung von Aktivitätsbeziehungen](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) wird eine `CreateState`\-Aktivität definiert.Die `CreateState`\-Aktivität muss in einer `CreateCountry`\-Aktivität enthalten sein, und die `GetParent`\-Methode gibt eine Einschränkung zurück, die diese Anforderung durchsetzt.`GetParent` verwendet die <xref:System.Activities.Validation.GetParentChain>\-Aktivität in Verbindung mit einer <xref:System.Activities.Statements.ForEach%601>\-Aktivität, um die übergeordneten Aktivitäten der `CreateState`\-Aktivität zu überprüfen und zu ermitteln, ob die Anforderung erfüllt wurde.  
+ Im folgenden Beispiel aus der [Validierung von Aktivitätsbeziehungen](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) Beispiel wird eine `CreateState` Aktivität definiert ist. Die `CreateState`-Aktivität muss in einer `CreateCountry`-Aktivität enthalten sein, und die `GetParent`-Methode gibt eine Einschränkung zurück, die diese Anforderung durchsetzt. `GetParent` verwendet die <xref:System.Activities.Validation.GetParentChain>-Aktivität in Verbindung mit einer <xref:System.Activities.Statements.ForEach%601>-Aktivität, um die übergeordneten Aktivitäten der `CreateState`-Aktivität zu überprüfen und zu ermitteln, ob die Anforderung erfüllt wurde.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -141,10 +145,10 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] Windows Workflow Foundation [Validierung](../../../docs/framework/windows-workflow-foundation/samples/validation.md)\-Beispiele.  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation [Überprüfung](../../../docs/framework/windows-workflow-foundation/samples/validation.md) Beispiele.  
   
-## Zusätzliche Einschränkungen  
- Workflowhostautoren können zusätzliche Validierungseinschränkungen für Aktivitäten in einem Workflow angeben, indem sie Einschränkungen erstellen und dem <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>\-Wörterbuch einer <xref:System.Activities.Validation.ValidationSettings>\-Instanz hinzufügen.Jedes Element in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> enthält den Typ der Aktivität, für den die Einschränkungen gültig sind, sowie eine Liste der zusätzlichen Einschränkungen für diesen Aktivitätstyp.Wenn die Validierung für den Workflow aufgerufen wird, wertet jede Aktivität des angegebenen Typs \(einschließlich der abgeleiteten Klassen\) die Einschränkungen aus.In diesem Beispiel wird die `ActivityDisplayNameIsNotSetWarning`\-Einschränkung aus dem vorherigen Abschnitt auf alle Aktivitäten in einem Workflow angewendet.  
+## <a name="additional-constraints"></a>Zusätzliche Einschränkungen  
+ Workflowhostautoren können zusätzliche Validierungseinschränkungen für Aktivitäten in einem Workflow angeben, indem sie Einschränkungen erstellen und dem <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>-Wörterbuch einer <xref:System.Activities.Validation.ValidationSettings>-Instanz hinzufügen. Jedes Element in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> enthält den Typ der Aktivität, für den die Einschränkungen gültig sind, sowie eine Liste der zusätzlichen Einschränkungen für diesen Aktivitätstyp. Wenn die Validierung für den Workflow aufgerufen wird, wertet jede Aktivität des angegebenen Typs (einschließlich der abgeleiteten Klassen) die Einschränkungen aus. In diesem Beispiel wird die `ActivityDisplayNameIsNotSetWarning`-Einschränkung aus dem vorherigen Abschnitt auf alle Aktivitäten in einem Workflow angewendet.  
   
 ```csharp  
 Activity wf = new Sequence  
@@ -182,4 +186,4 @@ else
 }  
 ```  
   
- Wenn die <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>\-Eigenschaft des <xref:System.Activities.Validation.ValidationSettings>\-Objekts `true` ist, werden nur die angegebenen zusätzlichen Einschränkungen ausgewertet, nachdem die Validierung über den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> aufgerufen wird.Dies kann hilfreich sein, wenn überprüft wird, ob Workflows über bestimmte Validierungskonfigurationen verfügen.Beachten Sie jedoch, dass beim Aufrufen des Workflows die im Workflow konfigurierte Validierungslogik ausgewertet wird und weitergegeben werden muss, damit der Workflow erfolgreich gestartet werden kann.[!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Aufrufen der Validierung finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation//invoking-activity-validation.md).
+ Wenn die <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>-Eigenschaft des <xref:System.Activities.Validation.ValidationSettings>-Objekts `true` ist, werden nur die angegebenen zusätzlichen Einschränkungen ausgewertet, nachdem die Validierung über den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> aufgerufen wird. Dies kann hilfreich sein, wenn überprüft wird, ob Workflows über bestimmte Validierungskonfigurationen verfügen. Beachten Sie jedoch, dass beim Aufrufen des Workflows die im Workflow konfigurierte Validierungslogik ausgewertet wird und weitergegeben werden muss, damit der Workflow erfolgreich gestartet werden kann. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Aufrufen der Validierung, finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

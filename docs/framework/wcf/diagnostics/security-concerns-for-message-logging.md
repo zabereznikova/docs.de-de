@@ -1,42 +1,45 @@
 ---
-title: "Sicherheitsaspekte f&#252;r Nachrichtenprotokollierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Sicherheitsaspekte für Nachrichtenprotokollierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: 17
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 1f3d62e8b6771666dd3a55855ca0c5e41853f439
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Sicherheitsaspekte f&#252;r Nachrichtenprotokollierung
-In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von Nachrichtenprotokollierung generiert werden.  
+# <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
+In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
   
-## Sicherheitsaspekte  
+## <a name="security-concerns"></a>Sicherheitsaspekte  
   
-### Protokollieren vertraulicher Informationen  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ändert keine Daten in anwendungsspezifischen Headern und Texten.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfolgt darüber hinaus keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten nach.  
+### <a name="logging-sensitive-information"></a>Protokollieren vertraulicher Informationen  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ändert keine Daten in anwendungsspezifischen Headern und dem Text. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verfolgt darüber hinaus keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten nach.  
   
- Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern, wie z. B. eine Abfragezeichenfolge, und Textdaten, wie z. B. eine Kreditkartennummer, u. U. in den Protokollen sichtbar.Der Anwendungsbereitsteller ist für das Erzwingen einer Zugriffssteuerung für die Konfigurations\- und Protokolldateien verantwortlich.Wenn Informationen dieser Art nicht sichtbar sein sollen, sollten Sie die Protokollierung deaktivieren, oder filtern Sie einen Teil der Daten heraus, wenn Sie die Protokolle freigeben möchten.  
+ Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern, wie z. B. eine Abfragezeichenfolge, und Textdaten, wie z. B. eine Kreditkartennummer, u. U. in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Erzwingen einer Zugriffssteuerung für die Konfigurations- und Protokolldateien verantwortlich. Wenn Informationen dieser Art nicht sichtbar sein sollen, sollten Sie die Protokollierung deaktivieren, oder filtern Sie einen Teil der Daten heraus, wenn Sie die Protokolle freigeben möchten.  
   
  Mithilfe der folgenden Tipps können Sie verhindern, dass der Inhalt einer Protokolldatei unbeabsichtigt verfügbar gemacht wird:  
   
--   Stellen Sie sicher, dass die Protokolldateien durch Access Control Lists \(ACL oder Zugriffssteuerungslisten\) sowohl bei im Internet gehosteten als auch bei selbst gehosteten Szenarien geschützt werden.  
+-   Stellen Sie sicher, dass die Protokolldateien durch Access Control Lists (ACL oder Zugriffssteuerungslisten) sowohl bei im Internet gehosteten als auch bei selbst gehosteten Szenarien geschützt werden.  
   
--   Wählen Sie eine Dateierweiterung aus, die nicht leicht mit einer Webanforderung ausgegeben werden kann.Die Dateierweiterung .xml ist z. B. nicht sicher.Sie finden im Administratorhandbuch von IIS \(Internet Information Services\) eine Liste aller Erweiterungen, die bereitgestellt werden können.  
+-   Wählen Sie eine Dateierweiterung aus, die nicht leicht mit einer Webanforderung ausgegeben werden kann. Die Dateierweiterung .xml ist z. B. nicht sicher. Sie finden im Administratorhandbuch von IIS (Internet Information Services) eine Liste aller Erweiterungen, die bereitgestellt werden können.  
   
--   Geben Sie einen absoluten Pfad für den Protokolldateispeicherort an, der sich außerhalb des öffentlichen vroot\-Verzeichnisses des Webhosts befinden sollte, um einen Zugriff von externer Seite mithilfe eines Webbrowsers zu verhindern.  
+-   Geben Sie einen absoluten Pfad für den Protokolldateispeicherort an, der sich außerhalb des öffentlichen vroot-Verzeichnisses des Webhosts befinden sollte, um einen Zugriff von externer Seite mithilfe eines Webbrowsers zu verhindern.  
   
- Standardmäßig werden Schlüssel und personenbezogene Informationen \(PII, personally identifiable information\), wie z. B. Benutzername und Passwort, nicht in Ablaufverfolgungen und protokollierten Nachrichten protokolliert.Ein Computeradministrator kann jedoch das `enableLoggingKnownPII`\-Attribut im `machineSettings`\-Element der Datei Machine.config verwenden, um Anwendungen, die auf dem Computer ausgeführt werden, das Protokollieren personenbezogener Informationen \(PII\) zu ermöglichen.Die folgende Konfiguration veranschaulicht diesen Vorgang:  
+ Standardmäßig werden Schlüssel und personenbezogene Informationen (PII, personally identifiable information), wie z. B. Benutzername und Passwort, nicht in Ablaufverfolgungen und protokollierten Nachrichten protokolliert. Ein Computeradministrator kann jedoch das `enableLoggingKnownPII`-Attribut im `machineSettings`-Element der Datei Machine.config verwenden, um Anwendungen, die auf dem Computer ausgeführt werden, das Protokollieren personenbezogener Informationen (PII) zu ermöglichen. Die folgende Konfiguration veranschaulicht diesen Vorgang:  
   
-```  
+```xml  
 <configuration>  
    <system.serviceModel>  
       <machineSettings enableLoggingKnownPii="true"/>  
@@ -44,9 +47,9 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 </configuration>   
 ```  
   
- Ein Anwendungsbereitsteller kann daraufhin das `logKnownPii`\-Attribut entweder in der Datei App.config oder der Datei Web.config verwenden, um die PII\-Protokollierung wie folgt zu ermöglichen:  
+ Ein Anwendungsbereitsteller kann daraufhin das `logKnownPii`-Attribut entweder in der Datei App.config oder in der Datei Web.config verwenden, um die PII-Protokollierung wie folgt zu ermöglichen:  
   
-```  
+```xml  
 <system.diagnostics>  
   <sources>  
       <source name="System.ServiceModel.MessageLogging"  
@@ -61,14 +64,14 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 </system.diagnostics>  
 ```  
   
- Nur wenn beide Einstellungen auf `true` festgelegt sind, wird die PII\-Protokollierung aktiviert.Die Kombination von zwei Schaltern ermöglicht, bekannte PII für jede Anwendung zu protokollieren.  
+ Nur wenn beide Einstellungen auf `true` festgelegt sind, wird die PII-Protokollierung aktiviert. Die Kombination von zwei Schaltern ermöglicht, bekannte PII für jede Anwendung zu protokollieren.  
   
 > [!IMPORTANT]
->  In [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] müssen das `logEntireMessage`\-Flag und das `logKnownPii`\-Flag in der Datei Web.config oder der Datei App.config auch auf `true` festgelegt werden, um die PII\-Protokollierung zu ermöglichen, wie im folgenden Beispiel gezeigt: `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
+>  In [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] müssen das `logEntireMessage`-Flag und das `logKnownPii`-Flag in der Datei Web.config oder der Datei App.config auch auf `true` festgelegt werden, um die PII-Protokollierung zu ermöglichen, wie im folgenden Beispiel gezeigt: `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
   
- Sie müssen berücksichtigen, dass nur die Attribute der ersten Quelle gelesen werden, wenn Sie zwei oder mehr benutzerdefinierte Quellen in einer Konfigurationsdatei angeben.Die anderen werden ignoriert.Dies bedeutet, dass PII für die folgende Datei App.config nicht für beide Quellen protokolliert wird, obwohl die PII\-Protokollierung explizit für die zweite Quelle aktiviert worden ist.  
+ Sie müssen berücksichtigen, dass nur die Attribute der ersten Quelle gelesen werden, wenn Sie zwei oder mehr benutzerdefinierte Quellen in einer Konfigurationsdatei angeben. Die anderen werden ignoriert. Dies bedeutet, dass PII für die folgende Datei App.config nicht für beide Quellen protokolliert wird, obwohl die PII-Protokollierung explizit für die zweite Quelle aktiviert worden ist.  
   
-```  
+```xml  
 <system.diagnostics>  
    <sources>  
       <source name="System.ServiceModel.MessageLogging"  
@@ -91,31 +94,31 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 </system.diagnostics>  
 ```  
   
- Wenn das `<machineSettings enableLoggingKnownPii="Boolean"/>`\-Element außerhalb der Datei Machine.config vorhanden ist, löst das System einen <xref:System.Configuration.ConfigurationErrorsException> aus.  
+ Wenn das `<machineSettings enableLoggingKnownPii="Boolean"/>`-Element außerhalb der Datei Machine.config vorhanden ist, löst das System einen <xref:System.Configuration.ConfigurationErrorsException> aus.  
   
- Die Änderungen sind nur wirksam, wenn die Anwendung gestartet oder neu gestartet wird.Ein Ereignis wird beim Start protokolliert, wenn beide Attribute auf `true` festgelegt werden.Ein Ereignis wird außerdem protokolliert, wenn `logKnownPii` auf `true` festgelegt wird, `enableLoggingKnownPii` jedoch `false` ist.  
+ Die Änderungen sind nur wirksam, wenn die Anwendung gestartet oder neu gestartet wird. Ein Ereignis wird beim Start protokolliert, wenn beide Attribute auf `true` festgelegt werden. Ein Ereignis wird außerdem protokolliert, wenn `logKnownPii` auf `true` festgelegt wird, `enableLoggingKnownPii` jedoch `false` ist.  
   
- Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden.Wenn die PII\-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert.Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und \-texten protokolliert.Eine ausführlichere Darstellung zum Datenschutz und zum Schutz von PII davor, verfügbar gemacht zu werden, finden Sie unter [User Privacy](http://go.microsoft.com/fwlink/?LinkID=94647) \(Seite möglicherweise auf Englisch\).  
+ Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden. Wenn die PII-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert. Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und -texten protokolliert. Eine ausführlichere Erläuterung zu Datenschutz und Schutz von PII verfügbar gemacht wird, finden Sie unter [Datenschutz](http://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
->  PII wird nicht in falsch formatierten Nachrichten ausgeblendet.Solche Nachrichten werden ohne Änderung protokolliert.Vorher erwähnte Attribute haben keine Auswirkungen darauf.  
+>  PII wird nicht in falsch formatierten Nachrichten ausgeblendet. Solche Nachrichten werden ohne Änderung protokolliert. Vorher erwähnte Attribute haben keine Auswirkungen darauf.  
   
-### Benutzerdefinierter Ablaufverfolgungslistener  
- Das Hinzufügen eines benutzerdefinierten Ablaufverfolgungslisteners auf eine Ablaufverfolgungsquelle für Nachrichtenprotokollierung ist ein Recht, das dem Administrator vorbehalten sein sollte.Grund hierfür ist, dass bösartige benutzerdefinierte Listener für das remote Senden von Nachrichten konfiguriert werden können, was zur Offenlegung vertraulicher Informationen führt.Darüber hinaus sollten Sie eine angemessene Zugangskontrolle für die Nachrichtenprotokolle auf einem Remotecomputer erstellen, wenn Sie einen benutzerdefinierten Listener für das Senden von Nachrichten beispielsweise zu einer Remotedatenbank konfigurieren.  
+### <a name="custom-trace-listener"></a>Benutzerdefinierter Ablaufverfolgungslistener  
+ Das Hinzufügen eines benutzerdefinierten Ablaufverfolgungslisteners auf eine Ablaufverfolgungsquelle für Nachrichtenprotokollierung ist ein Recht, das dem Administrator vorbehalten sein sollte. Grund hierfür ist, dass bösartige benutzerdefinierte Listener für das remote Senden von Nachrichten konfiguriert werden können, was zur Offenlegung vertraulicher Informationen führt. Darüber hinaus sollten Sie eine angemessene Zugangskontrolle für die Nachrichtenprotokolle auf einem Remotecomputer erstellen, wenn Sie einen benutzerdefinierten Listener für das Senden von Nachrichten beispielsweise zu einer Remotedatenbank konfigurieren.  
   
-## Von Nachrichtenprotokollierung ausgelöste Ereignisse  
+## <a name="events-triggered-by-message-logging"></a>Von Nachrichtenprotokollierung ausgelöste Ereignisse  
  Im Folgenden werden alle Ereignisse aufgelistet, die von der Nachrichtenprotokollierung ausgelöst werden.  
   
--   Nachrichtenprotokollierung ein: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung in der Konfiguration aktiviert wird, oder durch WMI.Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert".Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren \(beispielsweise Nachrichtentext\).  
+-   Nachrichtenprotokollierung ein: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung in der Konfiguration aktiviert wird, oder durch WMI. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert". Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren (beispielsweise Nachrichtentext).  
   
--   Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung durch WMI deaktiviert ist.Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
+-   Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung durch WMI deaktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
   
--   Protokollieren von bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist.Dies geschieht, wenn das `enableLoggingKnownPii` \-Attribut im `machineSettings`\-Element der Datei Machine.config auf `true` und das `logKnownPii`\-Attribut des `source`\-Elements der Dateien App.config oder Web.config auf `true` festgelegt sind.  
+-   Protokollieren von bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der App.config oder Web.config auf festgelegtist`true`.  
   
--   Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist.Dies geschieht, wenn das `logKnownPii`\-Attribut des `source`\-Elements in den Dateien App.config oder Web.config auf `true`, aber das `enableLoggingKnownPii` \-Attribut im `machineSettings`\-Element der Datei Machine.config auf `false` festgelegt ist.Es wird keine Ausnahme ausgelöst.  
+-   Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der App.config oder Web.config auf festgelegt ist `true`, aber die `enableLoggingKnownPii` Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `false`. Es werden keine Ausnahmen ausgelöst.  
   
- Diese Ereignisse können im Windows\-integrierten Tool der Ereignisanzeige angezeigt werden.Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen dazu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## Siehe auch  
- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

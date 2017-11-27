@@ -1,33 +1,39 @@
 ---
-title: "Gewusst wie: Freihand Drag&#160;&amp;&#160;Drop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Drag-and-Drop-Freihandeingaben"
-  - "Ziehen von Freihandeingaben"
-  - "Ablegen von Freihandeingaben"
-  - "Freihandeingaben, Drag & Drop"
-  - "Freihandeingaben, Ziehen"
-  - "Freihandeingaben, Ablegen"
+title: "Gewusst wie: Freihand Drag & Drop"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dragging ink [WPF]
+- ink [WPF], dragging
+- ink [WPF], drag-and-drop
+- ink [WPF], dropping
+- drag-and-drop ink
+- dropping ink [WPF]
 ms.assetid: 932dc410-2bf3-4486-ab31-13487ba59f60
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be27a465c53f09f460392df81e0c6a3fba5be2cb
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Freihand Drag&#160;&amp;&#160;Drop
-## Beispiel  
- Im folgenden Beispiel wird eine Anwendung erstellt, die es dem Benutzer ermöglicht, markiert Striche aus einem <xref:System.Windows.Controls.InkCanvas> in ein anderes zu ziehen.  
+# <a name="how-to-drag-and-drop-ink"></a>Gewusst wie: Freihand Drag & Drop
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, einen ausgewählten Striche ziehen <xref:System.Windows.Controls.InkCanvas> zum anderen.  
   
- [!code-xml[InkDragDrop#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkDragDrop/CSharp/Window1.xaml#1)]  
+ [!code-xaml[InkDragDrop#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkDragDrop/CSharp/Window1.xaml#1)]  
   
  [!code-csharp[InkDragDrop#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkDragDrop/CSharp/Window1.xaml.cs#2)]
  [!code-vb[InkDragDrop#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkDragDrop/VisualBasic/Window1.xaml.vb#2)]

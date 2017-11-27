@@ -1,35 +1,39 @@
 ---
-title: "&#39;GetSchema&#39; und Schemaauflistungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "\"GetSchema\" und Schemaauflistungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4790195d5f02ac1f68f8ab4c5ef39499052cd725
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;GetSchema&#39; und Schemaauflistungen
-Die **Connection**\-Klassen aller von .NET Framework verwalteten Anbieter implementieren eine **GetSchema**\-Methode, die zum Abrufen von Schemainformationen über die derzeit verbundene Datenbank verwendet wird und die von der **GetSchema**\-Methode zurückgegebenen Schemainformationen werden als <xref:System.Data.DataTable> abgerufen.  Bei der **GetSchema**\-Methode handelt es sich um eine überladene Methode, die optionale Parameter zum Angeben der zurückzugebenden Schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
+# <a name="getschema-and-schema-collections"></a>"GetSchema" und Schemaauflistungen
+Die **Verbindung** -Klassen aller von .NET Framework verwalteten Anbieter implementieren eine **GetSchema** Methode dient zum Abrufen von Schemainformationen über die Datenbank, die derzeit verbunden ist, und die Schemainformationen zurückgegeben, aus der **GetSchema** Methode kommt in Form von einer <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
   
-## Angeben der Schemaauflistungen  
- Bei dem ersten optionalen Parameter der **GetSchema**\-Methode handelt es sich um den Namen der Auflistung, der als Zeichenfolge angegeben wird.  Es gibt zwei Arten von Schemaauflistungen: allgemeine Schemaauflistungen, die von allen Anbietern verwendet werden, und besondere Schemaauflistungen, die für jeden Anbieter spezifisch sind.  
+## <a name="specifying-the-schema-collections"></a>Angeben der Schemaauflistungen  
+ Dem ersten optionalen Parameter von der **GetSchema** Methode ist der Name der als Zeichenfolge angegeben wird. Es gibt zwei Arten von Schemaauflistungen: allgemeine Schemaauflistungen, die von allen Anbietern verwendet werden, und besondere Schemaauflistungen, die für jeden Anbieter spezifisch sind.  
   
- Sie können einen verwalteten Anbieter für .NET Framework abfragen, um die Liste der unterstützten Schemaauflistungen zu ermitteln. Hierzu rufen Sie die **GetSchema**\-Methode ohne Argumente oder mit dem Schemaauflistungsnamen "MetaDataCollections" auf.  Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
+ Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
   
-### Beispiel zum Abrufen von Schemaauflistungen  
- In den folgenden Beispielen wird die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>\-Methode des .NET Framework\-Datenanbieters für die SQL Server\-Klasse <xref:System.Data.SqlClient.SqlConnection> veranschaulicht, die Schemainformationen zu allen in der **AdventureWorks**\-Beispieldatenbank enthaltenen Tabellen abruft.  
+### <a name="retrieving-schema-collections-example"></a>Beispiel zum Abrufen von Schemaauflistungen  
+ Die folgenden Beispiele veranschaulichen, wie Sie die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Methode von der .NET Framework-Datenanbieter für SQL Server <xref:System.Data.SqlClient.SqlConnection> -Klasse zum Abrufen von Schemainformationen zu allen enthaltenen Tabellen die **AdventureWorks**-Beispieldatenbank:  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -65,9 +69,7 @@ Module Module1
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -112,6 +114,6 @@ class Program
 }  
 ```  
   
-## Siehe auch  
- [Abrufen von Schemainformationen aus einer Datenbank](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

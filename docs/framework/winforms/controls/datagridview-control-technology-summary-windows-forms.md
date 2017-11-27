@@ -1,75 +1,76 @@
 ---
-title: "Zusammenfassung der DataGridView-Steuerelementtechnologie (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Informationen über Datenblätter"
-  - "DataGridView-Steuerelement [Windows Forms], Informationen über das DataGridView-Steuerelement"
+title: Zusammenfassung der DataGridView-Steuerelementtechnologie (Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], about DataGridView control
+- data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zusammenfassung der DataGridView-Steuerelementtechnologie (Windows Forms)
-In diesem Thema sind Informationen zum `DataGridView`\-Steuerelement und zu den Klassen zusammengefasst, die dessen Verwendung unterstützen.  
+# <a name="datagridview-control-technology-summary-windows-forms"></a>Zusammenfassung der DataGridView-Steuerelementtechnologie (Windows Forms)
+In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klassen zusammengefasst, die seine Verwendung unterstützen.  
   
- Das Anzeigen von Daten in einem tabellarischen Format gehört wahrscheinlich zu den häufiger ausgeführten Aufgaben.  Das `DataGridView`\-Steuerelement bietet die komplette Lösung zur Präsentation von Daten in einem Raster.  
+ Anzeigen von Daten in einem tabellarischen Format ist eine Aufgabe, die Sie wahrscheinlich häufig ausführen. Die `DataGridView` Steuerelement soll eine vollständige Lösung zum Darstellen von Daten in einem Raster.  
   
-## Schlüsselwörter  
- DataGridView, BindingSource, Tabelle, Zelle, Datenbindung, virtueller Modus  
+## <a name="keywords"></a>Stichwörter  
+ DataGridView, BindingSource-Komponente, Tabelle, Zelle, die Datenbindung, Virtueller Modus  
   
-## Namespaces  
- <xref:System.Windows.Forms?displayProperty=fullName>  
+## <a name="namespaces"></a>Namespaces  
+ <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
- <xref:System.Data?displayProperty=fullName>  
+ <xref:System.Data?displayProperty=nameWithType>  
   
-## Verwandte Technologien  
+## <a name="related-technologies"></a>Verwandte Technologien  
  `BindingSource`  
   
-## Hintergrundinformationen  
- Entwickler von Benutzeroberflächen sind oft darauf angewiesen, Benutzern Daten in tabellarischer Form zu präsentieren.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet mehrere Möglichkeiten, Daten in einer Tabelle oder einem Raster anzuzeigen.  Das `DataGridView`\-Steuerelement stellt die neueste Weiterentwicklung dieser Technologie für Windows Forms\-Anwendungen dar.  
+## <a name="background"></a>Hintergrund  
+ Benutzeroberflächen (UI)-Designer finden häufig zum Anzeigen von Tabellendaten für Benutzer erforderlich sind. Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet mehrere Möglichkeiten, um Daten in einer Tabelle oder einem Raster anzuzeigen. Die `DataGridView` Steuerelement darstellt, die neueste Entwicklung dieser Technologie für Windows Forms-Anwendungen.  
   
- Das `DataGridView`\-Steuerelement ist in der Lage, Datenzeilen aus einem Datenspeicher anzuzeigen.  Zahlreiche Datenspeichertypen werden unterstützt.  Der Datenspeicher kann einfache, nicht typisierte Daten, beispielsweise ein eindimensionales Array, oder typisierte Daten enthalten, beispielsweise <xref:System.Data.DataSet>.  Weitere Informationen finden Sie unter [Gewusst wie: Binden von Daten an das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ Die `DataGridView` -Steuerelement kann Zeilen mit Daten aus einem Datenspeicher anzeigen. Viele Arten von Datenspeichern werden unterstützt. Der Datenspeicher einfache, nicht typisierte Daten enthalten, z. B. ein eindimensionales Array, oder sie können typisierte Daten enthalten, z. B. eine <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
- Das `DataGridView`\-Steuerelement ist ein leistungsstarkes und flexibles Instrument zum Anzeigen von Daten in Tabellenform.  Sie können das Steuerelement zur Anzeige schreibgeschützter oder bearbeitbarer Ansichten mit kleineren bis sehr umfangreichen Datasets verwenden.  
+ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in tabellarischer Form. Das Steuerelement können Sie schreibgeschützt oder bearbeitbare Sichten klein, um sehr große Mengen von Daten angezeigt werden.  
   
- Sie können das `DataGridView`\-Steuerelement auf mehrere Weisen erweitern, um die Anwendungen mit benutzerdefiniertem Verhalten auszustatten.  Beispielsweise können Sie programmgesteuert eigene Sortieralgorithmen festlegen und eigene Zellentypen erstellen.  Die Darstellung des `DataGridView`\-Steuerelements lässt sich problemlos anpassen, indem Sie unter mehreren Eigenschaften auswählen.  Als Datenquelle können zahlreiche Datenspeichertypen genutzt werden. Alternativ kann das `DataGridView`\-Steuerelement auch ausgeführt werden, ohne dass eine Datenquelle daran gebunden ist.  
+ Sie erweitern die `DataGridView` Steuerelements auf unterschiedliche Weise benutzerdefiniertes Verhalten in Ihren Anwendungen zu integrieren. So können Sie beispielsweise programmgesteuert Ihre eigenen Sortieralgorithmen angeben und eigene Zelltypen erstellen. Die Darstellung des `DataGridView`-Steuerelements kann mithilfe mehrerer Eigenschaften ganz einfach angepasst werden. Viele Arten von Datenspeichern verwendet werden können, als Datenquelle, oder die `DataGridView` Steuerelement kann ohne eine Datenquelle gebunden ist, ausgeführt werden.  
   
-## Implementieren von DataGridView\-Klassen  
- Es gibt mehrere Möglichkeiten, die Erweiterbarkeitsfeatures des `DataGridView`\-Steuerelements optimal zu nutzen.  Viele Aspekte des Steuerelements können durch Ereignisse und Eigenschaften angepasst werden, für einige Anpassungen ist es jedoch erforderlich, neue Klassen zu erstellen, die von vorhandenen `DataGridView`\-Klassen abgeleitet sind.  
+## <a name="implementing-datagridview-classes"></a>Implementieren von DataGridView-Klassen  
+ Es gibt mehrere Möglichkeiten, die Sie nutzen die `DataGridView` Erweiterungsfunktionen des Steuerelements. Sie können viele Aspekte des Steuerelements über Ereignisse und Eigenschaften anpassen, aber einige Anpassungen erforderlich ist, erstellen Sie neue Klassen aus vorhandenen abgeleitet `DataGridView` Klassen.  
   
- Die am häufigsten verwendeten Basisklassen sind `DataGridViewCell` und `DataGridViewColumn`.  Sie können eigene Zellklassen von `DataGridViewCell` oder einer der untergeordneten Klassen ableiten.  Obwohl jeder Spalte ein beliebiger Zellentyp hinzugefügt werden kann, leiten Sie normalerweise auch eine Spaltenassistentenklasse von der `DataGridViewColumn`\-Klasse ab, in der standardmäßig die Zellen des benutzerdefinierten Zellentyps gehostet werden.  
+ Die häufigsten verwendeten Basisklassen sind `DataGridViewCell` und `DataGridViewColumn`. Sie können eine eigene Zellenklasse von ableiten `DataGridViewCell` oder dessen untergeordneten Klassen. Obwohl Sie Zellentyp auf keine Spalte hinzufügen können, Sie werden in der Regel auch Ableiten einer Assistentenspaltenklasse aus `DataGridViewColumn` , die Zellen des benutzerdefinierten Zellentyps standardmäßig hostet.  
   
- Sie können die `IDataGridViewEditingCell`\-Schnittstelle in der abgeleiteten Zellklasse implementieren, um einen Zellentyp zu erstellen, der Bearbeitungsfunktionen bietet, jedoch keine Steuerelemente im Bearbeitungsmodus hostet.  Zum Erstellen eines Steuerelements, das in einer Zelle im Bearbeitungsmodus gehostet werden kann, implementieren Sie die `IDataGridViewEditingControl`\-Schnittstelle in einer von <xref:System.Windows.Forms.Control> abgeleiteten Klasse.  
+ Sie implementieren können die `IDataGridViewEditingCell` -Schnittstelle in die abgeleitete Zelle-Klasse, um einen Zellentyp zu erstellen, die Bearbeitungsfunktionen wurde jedoch kein host ein Steuerelement im Bearbeitungsmodus befindet. Sie können zur Erstellung eines Steuerelements, das Sie in einer Zelle im Bearbeitungsmodus hosten können, implementieren die `IDataGridViewEditingControl` Schnittstelle in einer Klasse abgeleitet <xref:System.Windows.Forms.Control>.  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Anpassen von Zellen und Spalten im DataGridView\-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) und [Gewusst wie: Hosten von Steuerelementen in DataGridView\-Zellen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Weitere Informationen finden Sie unter [wie: Anpassen von Zellen und Spalten in Windows Forms-DataGridView-Steuerelements durch Erweitern von deren Verhalten und Aussehen](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) und [wie: Hosten-Steuerelementen in Windows Forms-DataGridView-Zellen](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## DataGridView\-Klassen auf einen Blick  
+## <a name="datagridview-classes-at-a-glance"></a>DataGridView-Klassen auf einen Blick  
  <xref:System.Windows.Forms>  
   
-|Technologiebereich|Klassen\/Schnittstellen\/Konfigurationselemente|  
-|------------------------|-----------------------------------------------------|  
+|Technologiebereich|Klassen/Schnittstellen/Konfigurationselemente|  
+|---------------------|-------------------------------------------------|  
 |Datenbindung|<xref:System.Windows.Forms.BindingSource>|  
-|Datenpräsentation|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|Erweiterbarkeit von <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridViewCell> und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|Darstellung von Daten|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell>und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewRow>und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView>Erweiterbarkeit|<xref:System.Windows.Forms.DataGridViewCell>und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>und abgeleitete Klassen<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## Neues  
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement ist als komplette Lösung für die Anzeige von Tabellendaten mit Windows Forms konzipiert.  Beim Entwickeln neuer Anwendungen sollten Sie dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement Vorzug vor anderen Lösungen geben, beispielsweise vor <xref:System.Windows.Forms.DataGrid>.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+## <a name="whats-new"></a>Neues  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement soll eine vollständige Lösung für die Anzeige von Tabellendaten mit Windows Forms. Verwenden Sie die <xref:System.Windows.Forms.DataGridView> steuern, bevor Sie andere Lösungen, z. B. <xref:System.Windows.Forms.DataGrid>, wenn Sie eine neue Anwendung erstellen. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement kann unmittelbar mit der <xref:System.Windows.Forms.BindingSource>\-Komponente zusammenwirken.  Diese Komponente ist als primäre Datenquelle für Formulare ausgelegt.  Diese Komponente kann die Interaktion zwischen einem <xref:System.Windows.Forms.DataGridView>\-Steuerelement und seiner Datenquelle unabhängig vom Typ der Datenquelle verwalten.  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement funktionieren schließen zusammen mit der <xref:System.Windows.Forms.BindingSource> Komponente. Diese Komponente dient als die primäre Datenquelle eines Formulars. Es dient zum Verwalten der Interaktion zwischen einem <xref:System.Windows.Forms.DataGridView> Steuerelement und seine Datenquelle, unabhängig von den Daten Datenquellentyp.  
   
-## Siehe auch  
- [Übersicht über das DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)   
- [Architektur des DataGridView\-Steuerelements](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)   
- [Schützen von Verbindungsinformationen](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über das DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [Architektur des DataGridView-Steuerelements](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)

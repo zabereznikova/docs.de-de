@@ -1,28 +1,35 @@
 ---
-title: "&lt;Host&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Host&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bded8d718259bf4fc84bfe790db069a77fc2a703
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Host&gt;
+# <a name="lthostgt"></a>&lt;Host&gt;
 Gibt die Einstellungen für einen Diensthost an.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Services >  
+\<Dienst >  
+\<Host >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <host>  
       <baseAddresses>  
          <baseAddress baseAddress="string" />  
@@ -32,29 +39,29 @@ Gibt die Einstellungen für einen Diensthost an.
 </host>  
 ```  
   
-## Typ  
+## <a name="type"></a>Typ  
  `Type`  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
- Keine  
+### <a name="attributes"></a>Attribute  
+ Keine.  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<baseAddresses\>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Eine Auflistung an `baseAddress`\-Elementen, die die vom Diensthost verwendeten Basisadressen angeben.|  
-|[\<timeOuts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|Ein Konfigurationselement, das das für das Öffnen und Schließen des Diensthosts zulässige Zeitintervall angibt.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<service\>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Gibt die Einstellungen für einen [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Dienst an.|  
+|-------------|-----------------|  
+|[\<BaseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Eine Auflistung an `baseAddress`-Elementen, die die vom Diensthost verwendeten Basisadressen angeben.|  
+|[\<TimeOuts >](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|Ein Konfigurationselement, das das für das Öffnen und Schließen des Diensthosts zulässige Zeitintervall angibt.|  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.HostElement>   
- <xref:System.ServiceModel.ServiceHost>   
+### <a name="parent-elements"></a>Übergeordnete Elemente  
+  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<Dienst >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Gibt die Einstellungen für einen [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienst an.|  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Configuration.HostElement>  
+ <xref:System.ServiceModel.ServiceHost>  
  [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)

@@ -1,63 +1,61 @@
 ---
-title: "Gleichheitsoperatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Klassenbibliotheken – Entwurfsrichtlinien [.NET Framework], Equals-Methode"
-  - "Klassenbibliotheken – Entwurfsrichtlinien [.NET Framework], Gleichheitsoperator"
-  - "Gleichheitsoperator (==) [.NET Framework]"
-  - "Equals-Methode"
-  - "Operator ==-Operator (Gleichheit) [.NET Framework]"
+title: Gleichheitsoperatoren
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- class library design guidelines [.NET Framework], Equals method
+- class library design guidelines [.NET Framework], equality operator
+- equality operator (==) [.NET Framework]
+- Equals method
+- == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 55c0505f5a06dfc87897fa59e9d6083cbd63c8ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gleichheitsoperatoren
-In diesem Abschnitt wird erläutert, das Überladen von Operatoren und bezieht sich auf `operator==` und `operator!=` als Gleichheitsoperatoren.  
+# <a name="equality-operators"></a>Gleichheitsoperatoren
+In diesem Abschnitt wird erläutert, das Überladen von Gleichheitsoperatoren und bezieht sich auf `operator==` und `operator!=` als Gleichheitsoperatoren.  
   
  **X nicht** die Gleichheitsoperatoren und die andere Überladung.  
   
- **✓ führen** sicher, dass <xref:System.Object.Equals%2A?displayProperty=fullName> und die Gleichheitsoperatoren haben genau die gleiche Semantik und vergleichbare Leistungsmerkmale.  
+ **Führen Sie ✓** sicher, dass <xref:System.Object.Equals%2A?displayProperty=nameWithType> und die Gleichheitsoperatoren haben genau die gleiche Semantik und ähnliche Leistungsmerkmale.  
   
- Dies bedeutet, dass häufig `Object.Equals` muss überschrieben werden, wenn die Operatoren überladen werden.  
+ Dies bedeutet, dass häufig `Object.Equals` außer Kraft gesetzt werden, wenn die Gleichheitsoperatoren überladen werden muss.  
   
  **X vermeiden** Auslösen von Ausnahmen von Gleichheitsoperatoren.  
   
- Z. B. false zurückgeben, wenn eines der Argumente null statt ist `NullReferenceException`.  
+ Gibt beispielsweise auf "false", wenn eines der Argumente null statt ist `NullReferenceException`.  
   
-## Gleichheitsoperatoren für Werttypen  
- **✓ führen** Überladen von Gleichheitsoperatoren für Werttypen, wenn Gleichheit sinnvoll ist.  
+## <a name="equality-operators-on-value-types"></a>Gleichheitsoperatoren für Werttypen  
+ **Führen Sie ✓** Überladen von Gleichheitsoperatoren für Werttypen, wenn Gleichheit sinnvoll ist.  
   
  In den meisten Programmiersprachen, es ist keine Standardimplementierung von `operator==` für Werttypen.  
   
-## Gleichheitsoperatoren für Verweistypen  
+## <a name="equality-operators-on-reference-types"></a>Gleichheitsoperatoren für Referenztypen  
  **X vermeiden** Überladen von Gleichheitsoperatoren auf änderbare Referenztypen.  
   
- Viele Sprachen haben integrierte Gleichheitsoperatoren für Verweistypen. Die integrierten Operatoren implementieren i. d. r. der Verweisgleichheit und viele Entwickler sind überrascht, wenn das Standardverhalten der Wertgleichheit geändert wird.  
+ Viele Sprachen haben integrierte Gleichheitsoperatoren für Verweistypen. Integrierte Operatoren in der Regel implementiert die Verweisgleichheit und viele Entwickler sind überrascht, wenn das Standardverhalten in der Wertgleichheit geändert wird.  
   
- Dieses Problem wird für unveränderliche Verweistypen verringert, da Unveränderlichkeit viel schwieriger, den Unterschied zwischen Verweisgleichheit und Wertgleichheit zu beachten ist.  
+ Dieses Problem wird für unveränderliche Verweistypen verringert, da Unveränderlichkeit viel schwieriger, den Unterschied zwischen Verweisgleichheit und Wertgleichheit beachtet wird.  
   
- **X vermeiden** Überladen von Gleichheitsoperatoren für Verweistypen wäre die Implementierung deutlich langsamer als der Verweisgleichheit.  
+ **X vermeiden** Überladen von Gleichheitsoperatoren für Verweistypen, bei die Implementierung wesentlich langsamer als der Verweisgleichheit wäre.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
  [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

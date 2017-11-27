@@ -1,88 +1,86 @@
 ---
-title: "&lt;iriParsing&gt;-Element (Uri-Einstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;IriParsing&gt; Element (Uri-Einstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: aad2ea9a9255a6fc11465bae92f693065db21cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;iriParsing&gt;-Element (Uri-Einstellungen)
-Gibt an, ob IRI\-Analysen \(International Resource Identifier\) auf einen <xref:System.Uri> angewendet werden sollen und ob IRI\-Analyseregeln beachtet werden sollen.  
+# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;IriParsing&gt; Element (Uri-Einstellungen)
+Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International Resource Identifier, IRI) auf <xref:System.Uri> angewendet wird und ob die IRI-Analyseregeln angewendet werden sollen.  
   
-## Schemahierarchie  
- [\<configuration\>\-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a>Schemahierarchie  
+ [\<configuration>-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<Uri\>\-Element \(Uri\-Einstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<URI >-Element (Uri-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<iriParsing\>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [\<IriParsing >](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-<idn  
+```xml  
+<iriParsing  
   enabled="true|false"  
-/idn>  
+/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|`enabled`|Gibt an, ob die IRI\-Analyse aktiviert ist.  Der Standardwert ist `false`.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|`enabled`|Gibt an, ob IRI-Analyse aktiviert ist. Der Standardwert ist `false`.|  
   
-### Untergeordnete Elemente  
- Kein  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie .NET Framework durch URIs \(Uniform Resource Identifier\) ausgedrückte Webadressen behandelt.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie .NET Framework Webadressen ausgedrückt mit uniform Resource Identifier (URIs) behandelt.|  
   
-## Hinweise  
- Die vorhandene <xref:System.Uri>\-Klasse wurde in .NET Framework 3.5, 3.0 SP1 und 2.0 SP1 so erweitert, dass nun IRI \(International Resource Identifiers\) und IDN \(Internationalized Domain Names\) bereitgestellt werden.  Aktuelle Benutzer werden keinen Unterschied zum .NET Framework 2.0\-Verhalten feststellen, es sei denn, sie aktivieren die IRI\- und IDN\-Unterstützung explizit.  Damit wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework gewährleistet.  
+## <a name="remarks"></a>Hinweise  
+ Die vorhandene <xref:System.Uri> Klasse in .NET Framework 3.5 erweitert wurde. 3.0 SP1 und 2.0 SP1 zur Unterstützung von International Resource Identifiers (IRI) und internationale Domänennamen (IDN). Aktuellen Benutzer sehen keine Änderungen des Verhaltens gegenüber den .NET Framework 2.0, es sei denn, sie explizit IRI und IDN aktivieren unterstützen. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
   
- Zum Aktivieren der Unterstützung für IRI müssen die folgenden zwei Änderungen vorgenommen werden:  
+ Um die Unterstützung für IRI aktivieren, sind die folgenden zwei Änderungen erforderlich:  
   
-1.  Fügen Sie der Datei machine.config im .NET Framework 2.0\-Verzeichnis folgende Zeile hinzu:  
+1.  Fügen Sie die folgende Zeile auf die Datei "Machine.config" im .NET Framework 2.0-Verzeichnis  
   
-    ```  
+    ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Geben Sie an, ob IRI\-Analyseregeln angewendet werden sollen.  Dies können Sie in der Datei machine.config oder in der Datei app.config festlegen.  
+2.  Geben Sie an, ob die IRI-Analyse Regeln angewendet werden soll. Dies kann in der Datei „machine.config“ oder in der Datei „App.config“ durchgeführt werden.  
   
- Durch das Aktivieren von IRI\-Analysen \(iriParsing enabled \= `true`\) werden Normalisierung und Zeichenüberprüfung gemäß den aktuellen IRI\-Regeln in RFC 3987 ausgeführt.  Der Standardwert ist `false`, bei dem Normalisierung und Zeichenüberprüfung gemäß RFC 2396 und RFC 3986 \(für IPv6\-Literale\) ausgeführt werden.  
+ Aktivieren die IRI-Analyse (IriParsing aktiviert = `true`) ist dies der Normalisierung und zeichenüberprüfung entsprechend der neuesten IRI Regeln in RFC 3987. Der Standardwert ist `false` und führen Sie die Normalisierung und Überprüfung gemäß RFC 2396 und RFC 3986 mit Escapezeichen (für IPv6-Literale) Zeichen.  
   
-### Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+### <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- Im folgenden Codebeispiel wird eine von der <xref:System.Uri>\-Klasse verwendete Konfiguration für die Unterstützung von IRI\-Analyse und IDN\-Namen veranschaulicht.  
+### <a name="description"></a>Beschreibung  
+ Das folgende Beispiel zeigt eine Konfiguration von verwendet die <xref:System.Uri> Klasse IRI-Analyse und IDN-Namen unterstützt.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -91,7 +89,7 @@ Gibt an, ob IRI\-Analysen \(International Resource Identifier\) auf einen <xref:
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

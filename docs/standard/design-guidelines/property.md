@@ -1,102 +1,100 @@
 ---
-title: "Eigenschaftenentwurf | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Entwurfsrichtlinien für Member, Eigenschaften"
-  - "[Eigenschaften [.NET Framework], Entwurfsrichtlinien"
+title: Eigenschaftenentwurf
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- member design guidelines, properties
+- properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 477b3b69ce1b8a3bb160e8e120885239e3d99e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Eigenschaftenentwurf
-Obwohl Eigenschaften, Methoden technisch sehr ähnlich sind, sind sie in Bezug auf ihre Szenarios für die Verwendung sehr unterschiedlich. Sie sollte als intelligente Felder angezeigt werden. Sie haben die Aufrufsyntax von Feldern und der Flexibilität der Methoden.  
+# <a name="property-design"></a>Eigenschaftenentwurf
+Obwohl die Eigenschaften, Methoden technisch sehr ähnlich sind, sind sie sehr unterschiedliche im Hinblick auf ihre Szenarien für die Verwendung. Sie sollte als intelligente Felder angezeigt werden. Sie verfügen über die Funktionsaufrufsyntax von Feldern und die Flexibilität der Methoden.  
   
- **✓ führen** schreibgeschützte Eigenschaften erstellen, wenn der Aufrufer nicht der Wert der Eigenschaft geändert werden soll.  
+ **Führen Sie ✓** schreibgeschützte Eigenschaften erstellen, wenn der Aufrufer nicht der Wert der Eigenschaft geändert werden soll.  
   
- Bedenken Sie, dass bei den Typ der Eigenschaft einen änderbaren Referenztyp ist, den Wert der Eigenschaft geändert werden kann, selbst wenn die Eigenschaft nur.  
+ Bedenken Sie, dass bei den Typ der Eigenschaft einen änderbaren Referenztyp ist, den Wert der Eigenschaft kann geändert werden, auch wenn die Eigenschaft nur Get-ist.  
   
- **X nicht** lesegeschützte Eigenschaften oder Eigenschaften mit dem Setter mit umfassenderen Zugriff als Getter\-Methode bereitstellen.  
+ **X nicht** Bereitstellen mit der Setter müssen umfassenderen Zugriff hat als der Getter für eine lesegeschützte Eigenschaften oder Eigenschaften.  
   
- Verwenden Sie z. B. Eigenschaften nicht mit einem öffentlichen Setter und eine geschützte Getter.  
+ Verwenden Sie z. B. Eigenschaften nicht mit einem öffentlichen Setter und einen geschützten Getter.  
   
- Wenn der Eigenschaftengetter nicht bereitgestellt werden kann, implementieren Sie stattdessen die Funktion als Methode. Möglicherweise sollten Sie den Namen der Methode mit `Set` und mit was Sie die Eigenschaft benannt haben würde. Z. B. <xref:System.AppDomain> eine Methode namens `SetCachePath` anstatt eine lesegeschützte Eigenschaft mit dem Namen `CachePath`.  
+ Wenn der Getter für eine Eigenschaft kann nicht bereitgestellt werden, implementieren Sie stattdessen die Funktionen wie eine Methode. Beachten Sie, beginnend mit den Methodennamen `Set` und führen Sie mit, was Sie die Eigenschaft mit dem Namen verfügen würde. Beispielsweise <xref:System.AppDomain> verfügt über eine Methode namens `SetCachePath` anstatt eine lesegeschützte Eigenschaft mit dem Namen `CachePath`.  
   
- **✓ führen** bieten sinnvolle Standardwerte für alle Eigenschaften, um sicherzustellen, dass die Standardwerte nicht in eine Sicherheitslücke oder furchtbar ineffizient Code führen.  
+ **Führen Sie ✓** sensibler Standardwerte für alle Eigenschaften, um sicherzustellen, dass die Standardwerte nicht in einer Sicherheitslücke oder sehr ineffizienten Code führen zur Verfügung gestellt.  
   
- **✓ führen** können Eigenschaften in einer beliebigen Reihenfolge festgelegt werden, auch wenn dies in einem temporären ungültigen Zustand des Objekts.  
+ **Führen Sie ✓** können Eigenschaften in beliebiger Reihenfolge festgelegt werden, auch wenn dadurch ein temporärer ungültigen Zustand des Objekts.  
   
- Es ist üblich, dass zwei oder mehr Eigenschaften zu einem Zeitpunkt zusammenhängender sein, in denen einige Werte einer Eigenschaft möglicherweise ungültig, angegebenen Werte anderer Eigenschaften für das gleiche Objekt. In solchen Fällen sollten Ausnahmen, die durch einen ungültigen Zustand verschoben werden, bis die zusammenhängenden Eigenschaften durch das Objekt tatsächlich zusammen verwendet werden.  
+ Es ist üblich für zwei oder mehr Eigenschaften zu einem Zeitpunkt zusammenhängende sein, in denen einige Werte einer Eigenschaft möglicherweise ungültig, die Werte der anderen Eigenschaften für das gleiche Objekt angegeben. In solchen Fällen sollten aufgrund von ungültigen Status ausgelösten Ausnahmen verschoben werden, bis die zusammenhängenden Eigenschaften zusammen tatsächlich vom Objekt verwendet werden.  
   
- **✓ führen** den vorherigen Wert beibehalten, wenn ein Eigenschaftensetter eine Ausnahme auslöst.  
+ **Führen Sie ✓** den vorherigen Wert beibehalten, wenn ein Eigenschaftensetter eine Ausnahme auslöst.  
   
- **X vermeiden** Auslösen von Ausnahmen von Eigenschaftengetter.  
+ **X vermeiden** Auslösen von Ausnahmen von den Eigenschaftengetter.  
   
- Eigenschaftengetter sollte sollten einfache Operationen sein und keiner Preconditions. Wenn eine Get\-Methode eine Ausnahme auslösen kann, müssen sie möglicherweise eine Methode überarbeitet werden. Beachten Sie, dass diese Regel nicht für Indexer ist gilt, in dem wir Ausnahmen durch Überprüfen der Argumente erwarten.  
+ Eigenschaftengetter darf sollten einfache Operationen sein und keine Vorbedingungen. Wenn eine getter-Methode eine Ausnahme auslösen kann, sollte es eine Methode wahrscheinlich überarbeitet. Beachten Sie, dass diese Regel nicht für Indexer ist gilt, in dem wir Ausnahmen als Ergebnis überprüft die Argumente erwarten.  
   
-### Entwurf indizierter Eigenschaften  
- Eine indizierte Eigenschaft ist eine spezielle Eigenschaft, die Parameter und kann mit speziellen Syntax ähnelt Arrayindizierung aufgerufen werden.  
+### <a name="indexed-property-design"></a>Indizierte Eigenschaftenentwurf  
+ Eine indizierte Eigenschaft ist eine spezielle Eigenschaft, die Parameter und kann mit speziellen Syntax ähnelt derjenigen Arrayindizierung aufgerufen werden.  
   
- Indizierte Eigenschaften werden häufig als Indexer bezeichnet. Indexer sollte nur in APIs verwendet werden, die Zugriff auf Elemente in einer logischen Auflistung bereitstellen. Z. B. eine Zeichenfolge ist eine Auflistung von Zeichen und der Indexer auf <xref:System.String?displayProperty=fullName> wurde hinzugefügt, um Zugriff auf die Zeichen.  
+ Indizierte Eigenschaften werden häufig als Indexer bezeichnet. Indexer sollte nur in-APIs verwendet werden, die Zugriff auf Elemente in einer logischen Auflistung bereitstellen. Eine Zeichenfolge ist z. B. eine Auflistung von Zeichen oder der Indexer auf <xref:System.String?displayProperty=nameWithType> wurde hinzugefügt, um die Zeichen zugreifen.  
   
- **✓ ggf.** mithilfe von Indexern Zugriff auf Daten in einem internen Array gespeichert.  
+ **✓ GGF.** Verwenden von Indexern für den Zugriff auf Daten in einem internen Array gespeichert.  
   
- **✓ ggf.** Indexer auf Typen, die Auflistungen von Elementen bereitstellen.  
+ **✓ GGF.** bereitstellen Indexer auf Typen, die Auflistungen von Elementen darstellt.  
   
- **X vermeiden** mithilfe von indizierten Eigenschaften mit mehreren Parametern.  
+ **X vermeiden** mit indizierten Eigenschaften mit mehreren Parametern.  
   
- Wenn der Entwurf mehrere Parameter erfordert, überprüfen Sie, ob die Eigenschaft einen Accessor tatsächlich auf eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie stattdessen Methoden. Möglicherweise sollten Sie den Namen der Methode mit `Get` oder `Set`.  
+ Wenn der Entwurf mehrere Parameter erfordert, überdenken Sie, ob die Eigenschaft wirklich einen Accessor einer logischen Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie stattdessen die Methoden. Beachten Sie, beginnend mit den Methodennamen `Get` oder `Set`.  
   
- **X vermeiden** Indexer mit Parametertypen außer <xref:System.Int32?displayProperty=fullName>, <xref:System.Int64?displayProperty=fullName>, <xref:System.String?displayProperty=fullName>, <xref:System.Object?displayProperty=fullName>, oder eine Enumeration.  
+ **X vermeiden** Indexer mit Parametertypen außer <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>, oder eine Enumeration.  
   
- Wenn der Entwurf andere Parametertypen erfordert, stark auswertet, ob die API einen Accessor tatsächlich auf eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie eine Methode. Möglicherweise sollten Sie den Namen der Methode mit `Get` oder `Set`.  
+ Wenn der Entwurf andere Parametertypen erfordert, auswerten Sie stark neu, ob die API tatsächlich einen Accessor einer logischen Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie eine Methode an. Beachten Sie, beginnend mit den Methodennamen `Get` oder `Set`.  
   
- **✓ führen** verwenden Sie den Namen `Item` für indizierte Eigenschaften, es sei denn, es kein offensichtlich geeigneterer Name ist \(z. B. finden Sie unter der <xref:System.String.Chars%2A> Eigenschaft `System.String`\).  
+ **Führen Sie ✓** verwenden Sie den Namen `Item` für indizierte Eigenschaften, es sei denn, es ein deutlich besserer Name ist (z. B. finden Sie unter der <xref:System.String.Chars%2A> Eigenschaft auf `System.String`).  
   
- Sind C\#\-Indexer standardmäßig mit dem Namen Item. Die <xref:System.Runtime.CompilerServices.IndexerNameAttribute> kann zum Anpassen dieser Name verwendet werden.  
+ Sind Indexer in c# ist standardmäßig mit dem Namen Element. Die <xref:System.Runtime.CompilerServices.IndexerNameAttribute> zum Anpassen dieses Namens verwendet werden können.  
   
- **X nicht** bieten einen Indexer und Methoden, die semantisch ähnlich sind.  
+ **X nicht** Geben Sie einen Indexer und Methoden, die semantisch gleichwertig sind.  
   
- **X nicht** bieten mehr als eine Gruppe überladener Indexer in einem Typ.  
+ **X nicht** bieten mehr als eine Familie von überladene Indexer in einem Typ.  
   
- Dies wird vom C\#\-Compiler erzwungen.  
+ Dies wird vom C#-Compiler erzwungen.  
   
- **X nicht** Verwendung nicht standardmäßiger indizierte Eigenschaften.  
+ **X nicht** verwenden nicht standardmäßiger indizierte Eigenschaften.  
   
- Dies wird vom C\#\-Compiler erzwungen.  
+ Dies wird vom C#-Compiler erzwungen.  
   
-### Property Change Notification Events  
- Manchmal ist es sinnvoll, ein Ereignis, das der Benutzer Änderungen eines Eigenschaftswerts bereitstellen. Z. B. `System.Windows.Forms.Control` löst ein `TextChanged` Ereignis nach dem Wert der `Text` \-Eigenschaft geändert hat.  
+### <a name="property-change-notification-events"></a>Eigenschaftenänderungsereignisse-Benachrichtigung  
+ Manchmal ist es nützlich, um ein Ereignis informiert den Benutzer über Änderungen eines Eigenschaftswerts bereitstellen. Beispielsweise `System.Windows.Forms.Control` löst eine `TextChanged` Ereignis nach dem Wert von dessen `Text` -Eigenschaft geändert hat.  
   
- **✓ ggf.** auslösen ändern Benachrichtigungsereignisse, wenn Eigenschaftswerte in APIs hoher Ebene \(normalerweise Designer\-Komponenten\) geändert werden.  
+ **✓ GGF.** auslösen ändern Benachrichtigungsereignisse Wenn Eigenschaftswerte in allgemeine APIs (in der Regel Designer-Komponenten) geändert werden.  
   
- Ist eine gute Szenario für einen Benutzer wissen, wenn eine Eigenschaft eines Objekts geändert wird, sollte das Objekt ein Änderungsereignis für die Eigenschaft auszulösen.  
+ Ist ein gutes Szenario für Benutzer erkennt, wenn eine Eigenschaft eines Objekts geändert wird, sollte das Objekt eine änderungsbenachrichtigung für die Eigenschaft auslösen.  
   
- Allerdings ist es unwahrscheinlich, sollte der Mehraufwand für Low\-Level\-APIs wie z. B. Basistypen oder Sammlungen solche Ereignisse ausgelöst werden. Z. B. <xref:System.Collections.Generic.List%601> würde nicht auslösen, solche Ereignisse, wenn der Liste ein neues Element hinzugefügt wird und die `Count` \-Eigenschaft ändert.  
+ Allerdings ist es unwahrscheinlich, lohnt des Mehraufwands für solche Ereignisse auslösen, für die Low-Level-APIs wie z. B. Basistypen oder Auflistungen sein. Beispielsweise <xref:System.Collections.Generic.List%601> solche Ereignisse aus, wenn der Liste ein neues Element hinzugefügt wird nicht ausgelöst werden soll und die `Count` -Eigenschaft ändert.  
   
- **✓ ggf.** auslösen Benachrichtigungsereignisse, wenn der Wert einer Eigenschaft über externe erzwingt ändert ändern.  
+ **✓ GGF.** Auslösen von Benachrichtigungsereignissen, wenn der Wert einer Eigenschaft über externe erzwingt ändert ändern.  
   
- Wenn die Änderung eines Eigenschaftswerts über einige externe erzwingen \(in einer Weise als durch Aufrufen von Methoden für das Objekt\) löst Ereignisse angegeben werden, der Entwickler, dass der Wert und hat sich geändert. Ein gutes Beispiel ist die `Text` Eigenschaft für ein Textfeld\-Steuerelement. Wenn der Benutzer Text eingibt ein `TextBox`, automatisch den Wert der Eigenschaft ändert.  
+ Wenn Sie ein Eigenschaftswert über einige externe Force (in einer Weise als durch Aufrufen von Methoden für das Objekt) geändert wird, löst Ereignisse für den Entwickler anzugeben, dass der Wert ändert sich und geändert hat. Ein gutes Beispiel ist die `Text` Eigenschaft für ein Textfeld-Steuerelement. Wenn der Benutzer eingibt Text in einem `TextBox`, der Eigenschaftswert automatisch geändert.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)   
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

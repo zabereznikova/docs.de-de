@@ -1,69 +1,71 @@
 ---
-title: "Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenuOpening-Ereignis"
+title: 'Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses
-Das <xref:System.Windows.FrameworkElement.ContextMenuOpening>\-Ereignis kann in einer Anwendung so behandelt werden, dass es entweder ein vorhandenes Kontextmenü vor dem Anzeigen anpasst oder das andernfalls angezeigte Menü unterdrückt, indem es die <xref:System.Windows.RoutedEventArgs.Handled%2A>\-Eigenschaft in den Ereignisdaten auf `true` festlegt.  In der Regel wird für <xref:System.Windows.RoutedEventArgs.Handled%2A> der Wert `true` in den Ereignisdaten festgelegt, wenn das Menü vollständig durch ein neues <xref:System.Windows.Controls.ContextMenu>\-Objekt ersetzt werden soll \(dafür ist manchmal das Abbrechen des Vorgangs und das Starten eines neuen Öffnungsvorgangs erforderlich\).  Wenn Sie Handler für das <xref:System.Windows.FrameworkElement.ContextMenuOpening>\-Ereignis schreiben, sollten Sie sich der Probleme bei der zeitlichen Steuerung zwischen einem <xref:System.Windows.Controls.ContextMenu>\-Steuerelement und dem Dienst bewusst sein, der zuständig für das Öffnen und Positionieren von Kontextmenüs für Steuerungen im Allgemeinen ist.  In diesem Thema werden einige Codetechniken für verschiedene Szenarien des Öffnens von Kontextmenüs veranschaulicht. Außerdem wird ein Fall dargestellt, in dem die Probleme der zeitlichen Steuerung eine Rolle spielen.  
+# <a name="how-to-handle-the-contextmenuopening-event"></a>Gewusst wie: Behandeln des ContextMenuOpening -Ereignisses
+Die <xref:System.Windows.FrameworkElement.ContextMenuOpening> -Ereignis behandelt werden, in einer Anwendung anpassen entweder ein vorhandenes Kontextmenü vor um anzuzeigen, oder klicken Sie im Menü zu unterdrücken, die andernfalls durch die Einstellung angezeigt werden soll die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft `true` in den Ereignisdaten. Die häufiger Grund für die Einstellung <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true` im Ereignis Daten sind, klicken Sie im Menü vollständig durch ein neues ersetzt <xref:System.Windows.Controls.ContextMenu> -Objekt, der in einigen Fällen erfordert der Vorgang abgebrochen wird, und starten eine neue geöffnet. Wenn Sie Handler schreiben der <xref:System.Windows.FrameworkElement.ContextMenuOpening> Ereignis, Sie sollten Probleme mit den Zeitabläufen zwischen beachtet werden ein <xref:System.Windows.Controls.ContextMenu> -Steuerelement und dem Dienst, der für das Öffnen und die Position des Kontextmenüs für Steuerelemente im Allgemeinen zuständig ist. Dieses Thema veranschaulicht einige der Methoden Code für verschiedene Szenarien des Öffnens Kontextmenü und veranschaulicht einen Fall, in dem das Problem der zeitlichen Steuerung eine sprachbasierte stammen.  
   
- Es gibt mehrere Szenarien, wie mit dem <xref:System.Windows.FrameworkElement.ContextMenuOpening>\-Ereignis umgegangen werden kann:  
+ Es gibt mehrere Szenarien für die Behandlung der <xref:System.Windows.FrameworkElement.ContextMenuOpening> Ereignis:  
   
--   Anpassen der Menüelemente vor dem Anzeigen  
+-   Anpassen der Menüelemente vor der Anzeige.  
   
--   Ersetzen des gesamten Menüs vor dem Anzeigen  
+-   Ersetzen das gesamte Menü vor der Anzeige.  
   
--   Vollständiges Löschen eines vorhandenen Kontextmenüs, sodass kein Kontextmenü angezeigt wird  
+-   Vollständig unterdrücken vorhandene Kontextmenü, und kein Kontextmenü angezeigt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-## Anpassen der Menüelemente vor dem Anzeigen  
- Das Anpassen der vorhandenen Menüelemente ist recht einfach und wahrscheinlich das häufigste Szenario.  Sie können so vorgehen, um Kontextmenüoptionen hinzuzufügen oder zu entfernen, als Reaktion auf aktuelle Statusinformationen in der Anwendung oder bestimmte Statusinformationen, die als Eigenschaft in dem Objekt verfügbar sind, in dem das Kontextmenü angefordert wird.  
+## <a name="adjusting-the-menu-items-before-display"></a>Anpassen der Menüelemente vor der Anzeige  
+ Anpassen der vorhandenen Menüelemente ist recht einfach gehalten und ist wahrscheinlich das häufigste Szenario. Sie können dies zum addieren oder subtrahieren als Antwort auf die aktuelle Statusinformationen in der Anwendung oder bestimmte Statusinformationen, die als Eigenschaft für das Objekt verfügbar ist, in dem im Kontextmenü den Befehl angefordert wird (Kontextmenüoptionen) vornehmen.  
   
- Die allgemeine Vorgehensweise besteht darin, die Quelle des Ereignisses abzurufen, d. h. das spezifische Steuerelement, auf das mit der rechten Maustaste geklickt wurde, und die <xref:System.Windows.FrameworkElement.ContextMenu%2A>\-Eigenschaft daraus abzurufen.  In der Regel wird die <xref:System.Windows.Controls.ItemsControl.Items%2A>\-Auflistung überprüft, um festzustellen, welche Kontextmenüelemente in dem Menü bereits vorhanden sind, und anschließend werden geeignete neue <xref:System.Windows.Controls.MenuItem>\-Elemente der Auflistung hinzugefügt bzw. daraus entfernt.  
+ Das allgemeine Verfahren ist, um die Quelle des Ereignisses, das das Steuerelement bestimmte, geklickt wurde, und erhalten die <xref:System.Windows.FrameworkElement.ContextMenu%2A> Eigenschaft daraus. In der Regel überprüfen möchten die <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung finden Sie unter welche Kontextmenüelemente bereits vorhanden sind, klicken Sie im Menü, und klicken Sie dann hinzufügen oder entfernen entsprechende neue <xref:System.Windows.Controls.MenuItem> von Elementen in oder aus der Auflistung.  
   
  [!code-csharp[ContextMenuOpeningHandlers#AddItemNoHandle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#additemnohandle)]  
   
-## Ersetzen des gesamten Menüs vor dem Anzeigen  
- Alternativ dazu ist es auch möglich, das gesamte Kontextmenü zu ersetzen.  Dazu könnten Sie natürlich auch eine Abwandlung des vorherigen Codes verwenden, alle Elemente eines vorhandenen Kontextmenüs entfernen und komplett neue Elemente hinzufügen.  Die intuitivere Vorgehensweise zum Ersetzen aller Elemente im Kontextmenü besteht jedoch darin, ein neues <xref:System.Windows.Controls.ContextMenu> zu erstellen, dieses mit Elementen zu füllen und anschließend die <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName>\-Eigenschaft eines Steuerelements auf das neue <xref:System.Windows.Controls.ContextMenu> festzulegen.  
+## <a name="replacing-the-entire-menu-before-display"></a>Ersetzen des gesamten Menüs vor der Anzeige  
+ Eine alternative Szenario ist das gesamte Kontextmenü ersetzen soll. Natürlich auch können Sie eine Variation des vorangehenden Codes entfernen Sie jedes Element der vorhandenen Kontextmenüs und neue hinzufügen, beginnend mit 0 (null)-Element. Die intuitivere Vorgehensweise zum Ersetzen aller Elemente im Kontextmenü besteht jedoch zum Erstellen eines neuen <xref:System.Windows.Controls.ContextMenu>mit Elementen zu füllen, und legen Sie dann die <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> Eigenschaft eines Steuerelements auf das neue <xref:System.Windows.Controls.ContextMenu>.  
   
- Im Folgenden wird ein einfacher Handlercode für das Ersetzen eines <xref:System.Windows.Controls.ContextMenu> aufgeführt.  Der Code verweist auf eine benutzerdefinierte `BuildMenu`\-Methode, die abgetrennt wird, weil sie von den Beispielhandlern mehrfach aufgerufen wird.  
+ Folgender Ausdruck ist der einfache Handlercode zum Ersetzen einer <xref:System.Windows.Controls.ContextMenu>. Der Code verweist auf ein benutzerdefiniertes `BuildMenu` -Methode, die ausgelagert wird, da sie aufgerufen wird, um mehr als eins der Beispiel-Handler.  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceNoReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacenoreopen)]  
   
  [!code-csharp[ContextMenuOpeningHandlers#BuildMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#buildmenu)]  
   
- Wenn Sie jedoch diesen Stil von Handler für <xref:System.Windows.FrameworkElement.ContextMenuOpening> verwenden, kann möglicherweise ein Problem mit der zeitlichen Steuerung auftreten, wenn das Objekt, in dem Sie das <xref:System.Windows.Controls.ContextMenu> festlegen, nicht über ein bereits bestehendes Kontextmenü verfügt.  Wenn ein Benutzer mit der rechten Maustaste auf ein Steuerelement klickt, wird <xref:System.Windows.FrameworkElement.ContextMenuOpening> ausgelöst, auch wenn das vorhandene <xref:System.Windows.Controls.ContextMenu> leer oder NULL ist.  Aber in diesem Fall erscheint das <xref:System.Windows.Controls.ContextMenu>, das Sie im Quellelement festlegen, zu spät, um angezeigt zu werden.  Auch wird, falls der Benutzer ein zweites Mal mit der rechten Maustaste klickt, das neue <xref:System.Windows.Controls.ContextMenu> angezeigt, der Wert ist ungleich NULL, und der Handler ersetzt das Menü und zeigt es ordnungsgemäß an, wenn der Handler ein zweites Mal ausgeführt wird.  Es gibt zwei Lösungen für diese Situation:  
+ Jedoch bei Verwendung dieses Format der Handler für <xref:System.Windows.FrameworkElement.ContextMenuOpening>, Sie können möglicherweise ein Problem der zeitlichen Steuerung bereitstellen, wenn das Objekt, das Sie, in dem Festlegen die <xref:System.Windows.Controls.ContextMenu> verfügt nicht über eine bereits vorhandene Kontextmenü. Wenn ein Benutzer ein Steuerelement klickt <xref:System.Windows.FrameworkElement.ContextMenuOpening> wird ausgelöst, selbst wenn die vorhandene <xref:System.Windows.Controls.ContextMenu> ist leer oder null. Aber in diesem Fall nach Belieben neue <xref:System.Windows.Controls.ContextMenu> Sie festlegen, in der Quelle Element zu spät eintrifft, um angezeigt zu werden. Auch wenn der Benutzer auf ein zweites Mal auftritt, dieses Mal Ihr neues <xref:System.Windows.Controls.ContextMenu> angezeigt wird, der Wert ist ungleich Null, und die Handler ordnungsgemäß ersetzen und zeigt das Menü, wenn der Handler ein zweites Mal ausgeführt wird. Dadurch ergibt sich zwei mögliche problemumgehungen:  
   
-1.  Stellen Sie sicher, dass die <xref:System.Windows.FrameworkElement.ContextMenuOpening>\-Handler immer mit Steuerelementen ausgeführt werden, für die mindestens ein <xref:System.Windows.Controls.ContextMenu>\-Platzhalter verfügbar ist, der durch den Handlercode ersetzt werden soll.  In diesem Fall können Sie zwar weiterhin den Handler aus dem vorherigen Beispiel verwenden, aber in der Regel weisen Sie ein Platzhalter\-<xref:System.Windows.Controls.ContextMenu> im anfänglichen Markup zu:  
+1.  Sicher, dass <xref:System.Windows.FrameworkElement.ContextMenuOpening> Handler immer für Steuerelemente, die über mindestens einen Platzhalter ausführen <xref:System.Windows.Controls.ContextMenu> verfügbar, die vom Handlercode ersetzt werden sollen. In diesem Fall können Sie weiterhin den Handler, die im vorherigen Beispiel dargestellt, aber Sie in der Regel einen Platzhalter zuweisen möchten <xref:System.Windows.Controls.ContextMenu> im anfänglichen Markup:  
   
-     [!code-xml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
+     [!code-xaml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
   
-2.  Angenommen, der anfängliche <xref:System.Windows.Controls.ContextMenu>\-Wert wäre auf Grundlage einer vorläufigen Logik NULL.  Sie können entweder das <xref:System.Windows.Controls.ContextMenu> auf NULL prüfen oder ein Flag in Ihrem Code verwenden, um zu überprüfen, ob Ihr Handler mindestens einmal ausgeführt wurde.  Da Sie annehmen, dass das <xref:System.Windows.Controls.ContextMenu> kurz vor dem Anzeigen steht, legt Ihr Handler dann für <xref:System.Windows.RoutedEventArgs.Handled%2A> den Wert `true` in den Ereignisdaten fest.  Für den <xref:System.Windows.Controls.ContextMenuService>, der für die Kontextmenüanzeige zuständig ist, bedeutet ein `true`\-Wert für <xref:System.Windows.RoutedEventArgs.Handled%2A> in den Ereignisdaten eine Anforderung, das Anzeigen der Kontextmenü\-Steuerelement\-Kombination abzubrechen, die das Ereignis ausgelöst hat.  
+2.  Vorausgesetzt, dass der ursprüngliche <xref:System.Windows.Controls.ContextMenu> Wert kann null sein, basierend auf einer vorläufigen Logik. Sie können entweder <xref:System.Windows.Controls.ContextMenu> für Null oder ein Flag in Ihrem Code zu überprüfen, ob der Handler wurde mindestens einmal ausgeführt. Da Sie davon, die ausgehen die <xref:System.Windows.Controls.ContextMenu> geht es um werden angezeigt, den Handler und legt dann <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true` in den Ereignisdaten. Um die <xref:System.Windows.Controls.ContextMenuService> , die dient zur Anzeige der Kontext des Menüs, eine `true` Wert für <xref:System.Windows.RoutedEventArgs.Handled%2A> im Ereignis Daten stellt eine Anforderung zum Abbrechen der Anzeige für das Kontextmenü / steuern Kombination, die das Ereignis ausgelöst hat.  
   
- Nachdem Sie nun das potenziell verdächtige Kontextmenü unterdrückt haben, ist der nächste Schritt das Bereitstellen eines neuen Menüs und dann das Anzeigen dieses Menüs.  Zum Einrichten des neuen Menüs wird wie beim vorherigen Handler vorgegangen: Sie erstellen ein neues <xref:System.Windows.Controls.ContextMenu> und legen die <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName>\-Eigenschaft der Steuerelementquelle dafür fest.  Zusätzlich müssen Sie nun die Anzeige des Kontextmenüs erzwingen, da Sie den ersten Versuch unterdrückt haben.  Um die Anzeige zu erzwingen, legen Sie die <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=fullName>\-Eigenschaft innerhalb des Handlers auf `true` fest.  Seien Sie vorsichtig, wenn Sie so vorgehen, da durch das Öffnen des Kontextmenüs im Handler das <xref:System.Windows.FrameworkElement.ContextMenuOpening>\-Ereignis erneut ausgelöst wird.  Wenn Sie den Handler erneut ausführen, wird er endlos rekursiv.  Daher müssen Sie immer auf `null` prüfen oder ein Flag verwenden, wenn Sie ein Kontextmenü innerhalb eines <xref:System.Windows.FrameworkElement.ContextMenuOpening>\-Ereignishandlers öffnen.  
+ Nun, da Sie potenziell verdächtige Kontextmenü unterdrückt haben, ist der nächste Schritt, geben Sie eine neue zeigen Sie es. Einrichten des neuen eine im Grunde identisch mit der vorherigen Handler ist: Sie erstellen ein neues <xref:System.Windows.Controls.ContextMenu> und legen Sie die Steuerelement-Quelle <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> Eigenschaft mit dem sie. Der zusätzliche Schritt ist, müssen Sie jetzt die Anzeige des Kontextmenüs, zwingen, da Sie beim ersten Versuch unterdrückt. Um die Anzeige zu erzwingen, legen Sie die <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=nameWithType> Eigenschaft `true` innerhalb der Handler. Vorsichtig sein, wenn Sie dies tun, da löst aus, öffnen das Kontextmenü im Handler der <xref:System.Windows.FrameworkElement.ContextMenuOpening> Ereignis erneut. Wenn Sie den Handler erneut ausführen, wird er endlos rekursiv. Daher müssen Sie immer zu suchende `null` oder ein Flag verwenden, wenn Sie ein Kontextmenü, innerhalb Öffnen einer <xref:System.Windows.FrameworkElement.ContextMenuOpening> -Ereignishandler.  
   
-## Löschen eines vorhandenen Kontextmenüs, sodass kein Kontextmenü angezeigt wird  
- Das letzte Szenario, beim dem ein Handler geschrieben wird, der ein Menü völlig unterdrückt, kommt nur selten vor.  Wenn ein bestimmtes Steuerelement in einem Kontextmenü nicht angezeigt werden soll, gibt es wahrscheinlich geeignetere Möglichkeiten, dies sicherzustellen, als das Menü dann zu unterdrücken, wenn es durch einen Benutzer angefordert wird.  Wenn Sie jedoch den Handler verwenden möchten, um ein Kontextmenü zu unterdrücken und nicht anzuzeigen, sollte Ihr Handler einfach für <xref:System.Windows.RoutedEventArgs.Handled%2A> den `true`\-Wert in den Ereignisdaten festlegen.  Der <xref:System.Windows.Controls.ContextMenuService>, der für die Kontextmenüanzeige zuständig ist, prüft die Ereignisdaten des Ereignisses, das er für das Steuerelement ausgelöst hat.  Wenn das Ereignis an irgendeiner Position während der Weiterleitung als <xref:System.Windows.RoutedEventArgs.Handled%2A> gekennzeichnet war, wird die Aktion des Öffnens des Kontextmenüs, die das Ereignis ausgelöst hat, unterdrückt.  
+## <a name="suppressing-any-existing-context-menu-and-displaying-no-context-menu"></a>Unterdrücken vorhandene Kontextmenü, und kein Kontextmenü angezeigt  
+ Das abschließende Szenario, schreiben einen Ereignishandler, der ein Menü völlig unterdrückt ist ungewöhnlich. Wenn ein bestimmtes Steuerelement nicht wird ein Kontextmenü anzuzeigen erwartet, sind wahrscheinlich besser Möglichkeiten, dies als indem Sie im Menü unterdrücken, sondern nur, wenn ein Benutzer fordert zu gewährleisten. Wenn jedoch den Handler verwenden, um ein Kontextmenü zu unterdrücken und nichts angezeigt werden sollen, legen Sie der Handler sollten einfach <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true` in den Ereignisdaten. Die <xref:System.Windows.Controls.ContextMenuService> , die ist verantwortlich für das Anzeigen eines Kontextmenüs die Ereignisdaten des Ereignisses sucht es für das Steuerelement ausgelöst. Wenn das Ereignis markiert wurde <xref:System.Windows.RoutedEventArgs.Handled%2A> an einer beliebigen Stelle entlang der Route dann Aktion des Kontextmenüs öffnen, die das Ereignis initiiert wird unterdrückt.  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.ContextMenu>   
- <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName>   
- [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.ContextMenu>  
+ <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>  
+ [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)

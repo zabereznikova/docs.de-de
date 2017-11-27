@@ -1,30 +1,22 @@
 ---
-title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 761967351cfc6292eb60a5941e213bfd90036f65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 038e2924603eba7250620bc2792ec87b8e978787
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Gewusst wie: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)
 In diesem Thema wird das Erstellen eines Dokuments mit Namespaces in Visual Basic beschrieben.  
@@ -96,7 +88,7 @@ End Module
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt ein Dokument, das zwei Namespaces enthält, die beide ein Namespacepräfix besitzen.  
   
- Beim Serialisieren in eine XML-Struktur gibt [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] je nach Bedarf Namespacedeklarationen aus, sodass sich jedes Element in dem für ihn vorgesehenen Namespace befindet.  
+ Beim Serialisieren in eine XML-Struktur gibt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] je nach Bedarf Namespacedeklarationen aus, sodass sich jedes Element in dem für ihn vorgesehenen Namespace befindet.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

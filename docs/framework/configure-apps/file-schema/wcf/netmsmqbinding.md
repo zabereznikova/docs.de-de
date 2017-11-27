@@ -5,24 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a789b9e6e026012f91873b47d2c6d4e7d31bc571
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32aa057f36786412a5569e7c9190ae6ed9c0aa99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Definiert eine Bindung in der Warteschlange, die für eine computerübergreifende Kommunikation geeignet ist.  
@@ -149,11 +144,10 @@ Definiert eine Bindung in der Warteschlange, die für eine computerübergreifend
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.NetMsmqBinding>   
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>   
- [\<Binden von >](../../../../../docs/framework/misc/binding.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.NetMsmqBinding>  
+ <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-

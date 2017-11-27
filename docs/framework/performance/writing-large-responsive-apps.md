@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ec275cb904b90b87193e3ed72ef89a127d1fbea
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler.  
@@ -33,7 +31,8 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
   
  Wenn Ihre Endbenutzer mit der App interagieren, erwarten sie, dass die App reaktionsfähig ist.  Eingaben oder Befehlsverarbeitung sollten nie blockiert sein.  Die Hilfe sollte schnell angezeigt oder geschlossen werden, wenn der Benutzer die Eingabe fortsetzt.  Ihre App sollte vermeiden, den UI-Thread mit langen Berechnungen zu blockieren, die Ihre App langsam machen.  
   
- Weitere Informationen zu den neuen Compilern finden Sie im [.NET Compiler Platform („Roslyn“)-Open-Source-Projekt](http://roslyn.codeplex.com/).  
+ Weitere Informationen zu Roslyn-Compiler, finden Sie auf der [Dotnet/Roslyn](https://github.com/dotnet/roslyn) Repository auf GitHub.
+ <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Reine Tatsachen  
  Berücksichtigen Sie die folgenden Tatsachen, wenn Sie die Leistung optimieren und reaktionsfähige .NET Framework-Apps erstellen.  
@@ -62,7 +61,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
 ### <a name="boxing"></a>Boxing  
  [Boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) findet statt, wenn Werttypen, die normalerweise im Stapel oder in Datenstrukturen vorkommen, in ein Objekt eingeschlossen werden.  Das heißt, Sie ordnen ein Objekt zu, das die Daten hält, und geben dann einen Zeiger zum Objekt zurück.  .NET Framework führt das Boxing von Werten manchmal aufgrund der Signatur einer Methode oder des Typs eines Speicherstandorts durch.  Das Einschließen eines Werttyps in ein Objekt führt zu einer Speicherbelegung.  Viele Boxingvorgänge können zu Speicherbelegungen mit mehrere Megabyte oder Gigabyte für Ihre App beitragen, was bedeutet, dass Ihre App mehr GCs verursacht. .NET Framework und die Sprachcompiler vermeiden das Boxing, wenn möglich, aber manchmal kommt es dazu, wenn Sie es am wenigsten erwarten.  
   
- Um Boxing in PerfView zu sehen, öffnen Sie eine Ablaufverfolgung, und sehen Sie sich GC-Heapbelegungsstapel unter dem Prozessnamen Ihrer App an (denken Sie daran, dass PerfView Berichte zu allen Prozessen erstellt).  Wenn Sie Typen wie <xref:System.Int32?displayProperty=fullName> und <xref:System.Char?displayProperty=fullName> unter Belegungen sehen, wird ein Boxing von Werttypen durchgeführt.  Wenn Sie einen dieser Typen auswählen, werden die Stapel und Funktionen angezeigt, in denen sie verschachtelt sind.  
+ Um Boxing in PerfView zu sehen, öffnen Sie eine Ablaufverfolgung, und sehen Sie sich GC-Heapbelegungsstapel unter dem Prozessnamen Ihrer App an (denken Sie daran, dass PerfView Berichte zu allen Prozessen erstellt).  Wenn Sie Typen wie <xref:System.Int32?displayProperty=nameWithType> und <xref:System.Char?displayProperty=nameWithType> unter Belegungen sehen, wird ein Boxing von Werttypen durchgeführt.  Wenn Sie einen dieser Typen auswählen, werden die Stapel und Funktionen angezeigt, in denen sie verschachtelt sind.  
   
  **Beispiel 1: Zeichenfolgenmethoden und Werttypargumente**  
   
@@ -135,7 +134,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- Eine andere übliche Quelle für das Boxing bei Enumerationstypen ist die <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName>-Methode.  Das an <xref:System.Enum.HasFlag%28System.Enum%29> übergebene Argument muss geschachtelt werden.  In den meisten Fällen ist es einfacher und zuordnungsfrei, Aufrufe an <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> durch einen bitweisen Test zu ersetzen.  
+ Eine andere übliche Quelle für das Boxing bei Enumerationstypen ist die <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType>-Methode.  Das an <xref:System.Enum.HasFlag%28System.Enum%29> übergebene Argument muss geschachtelt werden.  In den meisten Fällen ist es einfacher und zuordnungsfrei, Aufrufe an <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> durch einen bitweisen Test zu ersetzen.  
   
  Behalten Sie die erste Leistungstatsache im Hinterkopf (keine vorzeitige Optimierung), und fangen Sie nicht an, Ihren gesamten Code auf diese Weise umzuschreiben.    Ihnen sollten diese Boxingkosten bewusst sein, aber Sie sollten Ihren Code nur ändern, nachdem Sie ein Profil für Ihre App erstellt und die Hotspots gefunden haben.  
   
@@ -334,7 +333,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  Die zwei `new`-Zuordnungen (eine für die Umgebungsklasse und eine für den Delegaten) sind jetzt explizit.  
   
- Sehen Sie sich jetzt den Aufruf an `FirstOrDefault` an. Diese Erweiterungsmethode für den <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>-Typ ruft ebenfalls eine Zuordnung hervor.  Da `FirstOrDefault` ein <xref:System.Collections.Generic.IEnumerable%601>-Objekt als erstes Argument annimmt, können Sie den Aufruf in den folgenden Code erweitern (für die Darstellung etwas vereinfacht):  
+ Sehen Sie sich jetzt den Aufruf an `FirstOrDefault` an. Diese Erweiterungsmethode für den <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>-Typ ruft ebenfalls eine Zuordnung hervor.  Da `FirstOrDefault` ein <xref:System.Collections.Generic.IEnumerable%601>-Objekt als erstes Argument annimmt, können Sie den Aufruf in den folgenden Code erweitern (für die Darstellung etwas vereinfacht):  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -421,7 +420,7 @@ class Compilation { /*...*/
   
  **Korrektur für Beispiel 6**  
   
- Zum Entfernen der abgeschlossenen <xref:System.Threading.Tasks.Task>-Zuordnung können Sie das Task-Objekt mit dem abgeschlossenen Ergebnis zwischenspeichern:  
+ Zum Entfernen der abgeschlossenen <xref:System.Threading.Tasks.Task> Zuweisung, können Sie die Task-Objekt, mit dem abgeschlossenen Ergebnis Zwischenspeichern:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -471,13 +470,12 @@ class Compilation { /*...*/
 -   Es dreht sich alles um Zuordnungen: Hier hat das Compilerplattformteam die meiste Zeit mit der Optimierung der Leistung der neuen Compiler verbracht.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Video mit einer Darstellung dieses Themas](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)   
- [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Leistung](../../../docs/framework/performance/index.md)   
- [.NET-Leistungstipps](http://msdn.microsoft.com/library/ms973839.aspx)   
- [Windows Phone-Leistungsanalysetools](http://msdn.microsoft.com/magazine/hh781024.aspx)   
- [Aufspüren von Anwendungsengpässen mit Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)   
- [Channel 9 PerfView-Tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial)   
- [Tipps zur Leistungssteigerung auf hoher Ebene](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)   
- [.NET Compiler Platform („Roslyn“)-Open-Source-Projekt](http://roslyn.codeplex.com/)
-
+ [Video mit einer Darstellung der in diesem Thema](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [Leistung](../../../docs/framework/performance/index.md)  
+ [Tipps zur Leistungssteigerung von .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone Performance Analysetool](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Ermitteln von Anwendungsengpässen mit Visual Studio-Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 PerfView-Lernprogramme](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Tipps zur Leistungssteigerung auf hoher Ebene](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Dotnet/Roslyn-Repository auf GitHub](https://github.com/dotnet/roslyn)

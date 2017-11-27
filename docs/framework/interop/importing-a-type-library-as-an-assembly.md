@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - importing type library
 - type metadata
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a907e75785bb0eb9ced43466ef5e51e598d4f629
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a7657540991099cca29dc911c8e42e5ddcd22802
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importieren einer Typbibliothek als Assembly
 Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im Gegensatz dazu erzeugen CLS-kompatible Compiler Typmetadaten in einer Assembly. Die zwei Quellen von Typinformationen sind sehr unterschiedlich. In diesem Thema werden Techniken zum Generieren von Metadaten aus einer Typbibliothek beschrieben. Die sich ergebende Assembly wird Interop-Assembly genannt, und die darin enthaltenen Typinformationen erlauben .NET Framework-Anwendungen die Verwendung von COM-Typen.  
@@ -65,7 +58,7 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
   
      Das Type Library Importer-Tool stellt Befehlszeilenoptionen zum Anpassen von Metadaten in der resultierenden Interop-Datei zur Verfügung, importiert Typen aus einer vorhandenen Typbibliothek und generiert eine Interop-Assembly und einen Namespace. Weitere Informationen finden Sie unter [How to: Generate Interop Assemblies from Type Libraries (Vorgehensweise: Generieren von Interop-Assemblys aus Typbibliotheken)](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=fullName>-Klasse  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>-Klasse  
   
      Diese Klasse stellt Methoden zum Konvertieren von Co-Klassen und Schnittstellen in einer Typbibliothek in Metadaten in einer Assembly bereit. Sie erzeugt dieselbe Metadatenausgabe wie „Tlbimp.exe“. Anders als bei „Tlbimp.exe“, kann die <xref:System.Runtime.InteropServices.TypeLibConverter>-Klasse eine In-Memory-Typbibliothek in Metadaten konvertieren.  
   
@@ -86,15 +79,14 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
  Weitere Informationen zum COM-Interop-Importvorgang finden Sie unter [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.TypeLibConverter>   
- [Exposing COM Components to the .NET Framework (Verfügbarmachen von COM-Komponenten für .NET Framework)](../../../docs/framework/interop/exposing-com-components.md)   
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Anpassen von Standardwrappern](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
- [Verwenden von COM-Typen in verwaltetem Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [Compiling an Interop Project (Kompilieren eines Interop-Projekts)](../../../docs/framework/interop/compiling-an-interop-project.md)   
- [Deploying an Interop Application (Bereitstellen einer Interop-Anwendung)](../../../docs/framework/interop/deploying-an-interop-application.md)   
- [How to: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)   
- [How to: Generate Interop Assemblies from Type Libraries (Vorgehensweise: Generieren von Interop-Assemblys aus Typbibliotheken)](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)   
+ <xref:System.Runtime.InteropServices.TypeLibConverter>  
+ [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
+ [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Anpassen von Standardwrappern](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [Verwenden von COM-Typen in verwaltetem Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Kompilieren eines Interop-Projekts](../../../docs/framework/interop/compiling-an-interop-project.md)  
+ [Bereitstellen einer Interop-Anwendung](../../../docs/framework/interop/deploying-an-interop-application.md)  
+ [Gewusst wie: Hinzufügen von Verweisen zu Typbibliotheken](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
+ [Gewusst wie: Generieren von Interop-Assemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
  [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
-

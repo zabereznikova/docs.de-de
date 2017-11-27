@@ -1,37 +1,38 @@
 ---
-title: "How to: Create GenericPrincipal and GenericIdentity Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Creating Generic Identity Objects"
-  - "GenericPrincipal Objects"
-  - "Creating GenericPrincipal Objects"
-  - "GenericIdentity Objects"
+title: 'Gewusst wie: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Creating Generic Identity Objects
+- GenericPrincipal Objects
+- Creating GenericPrincipal Objects
+- GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 93cd88d0321133a8340864645954b450a8e530ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create GenericPrincipal and GenericIdentity Objects
-Sie können die <xref:System.Security.Principal.GenericIdentity>\-Klasse zusammen mit der <xref:System.Security.Principal.GenericPrincipal>\-Klasse verwenden, um ein von einer Windows NT\- oder Windows 2000\-Dom äne unabhängiges Autorisierungsschema zu erstellen.  
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Gewusst wie: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten
+Können Sie die <xref:System.Security.Principal.GenericIdentity> Klasse in Verbindung mit der <xref:System.Security.Principal.GenericPrincipal> Klasse, um ein Authentifizierungsschema, das vorhanden ist unabhängig von einer Windows-Domäne zu erstellen.  
   
-### So erstellen Sie ein GenericPrincipal\-Objekt  
+### <a name="to-create-a-genericprincipal-object"></a>So erstellen Sie ein GenericPrincipal-Objekt  
   
-1.  Erstellen Sie eine neue Instanz der Identitätsklasse, und initialisieren Sie diese mit dem Namen, der in der Instanz abgelegt werden soll.  Im folgenden Code wird ein neues **GenericIdentity**\-Objekt erstellt und mit dem Namen `MyUser` initialisiert.  
+1.  Erstellen Sie eine neue Instanz der Identitätsklasse, und initialisieren Sie diese mit dem Namen, der in der Instanz enthalten sein soll. Im folgenden Code wird ein neues **GenericIdentity**-Objekt erstellt und mit dem Namen `MyUser` initialisiert.  
   
     ```vb  
     Dim MyIdentity As New GenericIdentity("MyUser")  
@@ -41,7 +42,7 @@ Sie können die <xref:System.Security.Principal.GenericIdentity>\-Klasse zusamme
     GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
     ```  
   
-2.  Erstellen Sie eine neue Instanz der **GenericPrincipal**\-Klasse. Initialisieren Sie sie mit dem zuvor erstellten **GenericIdentity**\-Objekt und einem Zeichenfolgenarray, das die diesem Prinzipal zuzuordnenden Rollen darstellt.  Im folgenden Codebeispiel wird ein Zeichenfolgenarray definiert, dessen Zeichenfolgen eine Administrator\- und eine Benutzerrolle darstellen.  Das **GenericPrincipal** wird anschließend mit der vorherigen **GenericIdentity** sowie dem Zeichenfolgenarray initialisiert.  
+2.  Erstellen Sie eine neue Instanz der **GenericPrincipal**-Klasse, und initialisieren Sie diese mit dem zuvor erstellten **GenericIdentity**-Objekt und einem Zeichenfolgenarray, das den Rollen entspricht, die Sie diesem Prinzipal zuordnen möchten. Im folgenden Codebeispiel wird ein Array mit Zeichenfolgen definiert, die eine Administrator- und eine Benutzerrolle angeben. Die **GenericPrincipal**-Instanz wird dann mit der vorherigen **GenericIdentity**-Instanz und dem Zeichenfolgenarray initialisiert.  
   
     ```vb  
     Dim MyStringArray As String() = {"Manager", "Teller"}  
@@ -53,7 +54,7 @@ Sie können die <xref:System.Security.Principal.GenericIdentity>\-Klasse zusamme
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  Verwenden Sie folgenden Code, um den Prinzipal an den aktuellen Thread anzufügen.  Dies ist dann hilfreich, wenn der Principal mehrmals bzw. durch anderen in der Anwendung ausgeführten Code oder durch ein <xref:System.Security.Permissions.PrincipalPermission>\-Objekt geprüft werden muss.  Sie können auch eine rollenbasierte Validierung für das Principalobjekt durchführen, ohne es an den Thread anzufügen.  Weitere Informationen finden Sie unter [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md).  
+3.  Verwenden Sie den folgenden Code, um den Prinzipal an den aktuellen Thread anzufügen. Dies ist hilfreich in Situationen, in denen der Prinzipal mehrmals bzw. von anderem Code in Ihrer Anwendung ausgeführt wird oder durch geprüft werden muss, ein <xref:System.Security.Permissions.PrincipalPermission> Objekt. Sie können weiterhin rollenbasierte Überprüfung für das Prinzipalobjekt ausführen, ohne es an den Thread anzufügen. Weitere Informationen finden Sie unter [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md).  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -63,8 +64,8 @@ Sie können die <xref:System.Security.Principal.GenericIdentity>\-Klasse zusamme
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## Beispiel  
- Im folgenden Codebeispiel wird das Erstellen einer Instanz von **GenericPrincipal** und **GenericIdentity** veranschaulicht.  Der Code zeigt die Werte dieser Objekte in der Konsole an.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Instanz von **GenericPrincipal** und **GenericIdentity** erstellt wird. Mit diesem Code werden die Werte dieser Objekte in der Konsole angezeigt.  
   
 ```vb  
 Imports System  
@@ -138,7 +139,7 @@ public class Class1
 }  
 ```  
   
- Bei der Ausführung zeigt die Anwendung folgende Ausgabe an.  
+ Wird die Anwendung ausgeführt, zeit sie in etwa die folgende Ausgabe an.  
   
 ```  
 The Name is: MyIdentity  
@@ -146,9 +147,9 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## Siehe auch  
- <xref:System.Security.Principal.GenericIdentity>   
- <xref:System.Security.Principal.GenericPrincipal>   
- <xref:System.Security.Permissions.PrincipalPermission>   
- [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md)   
- [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Security.Principal.GenericIdentity>  
+ <xref:System.Security.Principal.GenericPrincipal>  
+ <xref:System.Security.Permissions.PrincipalPermission>  
+ [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)

@@ -1,40 +1,32 @@
 ---
-title: "Einführung in XML-Literalen in Visual Basic2 | Microsoft-Dokumentation"
+title: "Einführung in XML-Literalen in Visual Basic2"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Einführung in XML-Literale in Visual Basic
-Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- Informationen zur Verwendung der Ergebnisse von LINQ-Abfragen als Inhalt für eine XML-Struktur finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Informationen zur Verwendung der Ergebnisse der LINQ-Abfragen als Inhalt für eine XML-Struktur finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Weitere Informationen zu XML-Literalen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], finden Sie unter [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Weitere Informationen zu XML-Literalen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], finden Sie unter [Übersicht über die von LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Erstellen von XML-Strukturen  
- Das folgende Beispiel zeigt, wie Sie erstellen ein <xref:System.Xml.Linq.XElement>, in diesem Fall `contacts`:</xref:System.Xml.Linq.XElement>  
+ Im folgenden Beispiel wird gezeigt, wie Sie ein <xref:System.Xml.Linq.XElement>, in diesem Fall `contacts`, erstellen können.  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -53,7 +45,7 @@ Dim contacts As XElement = _
 ```  
   
 ### <a name="creating-an-xelement-with-simple-content"></a>Erstellen eines "XElement" mit einfachem Inhalt  
- Sie erstellen ein <xref:System.Xml.Linq.XElement>, der einfachen Inhalt wie folgt enthält:</xref:System.Xml.Linq.XElement>  
+ Ein <xref:System.Xml.Linq.XElement> mit einfachem Inhalt können Sie wie folgt erstellen:  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -67,7 +59,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>Erstellen eines leeren Elements  
- Sie können eine leere erstellen <xref:System.Xml.Linq.XElement>wie folgt:</xref:System.Xml.Linq.XElement>  
+ Ein leeres <xref:System.Xml.Linq.XElement> können Sie wie folgt erstellen:  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -81,7 +73,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>Verwenden von eingebetteten Ausdrücken  
- Ein wichtiges Merkmal von XML-Literalen besteht darin, dass sie eingebettete Ausdrücke zulassen. Mit eingebetteten Ausdrücken können Sie Ausdrücke auswerten und die Ergebnisse eines Ausdrucks in die XML-Struktur einfügen. Ergibt der Ausdruck einen Typ von <xref:System.Xml.Linq.XElement>, wird ein Element in die Struktur eingefügt.</xref:System.Xml.Linq.XElement> Ergibt der Ausdruck einen Typ von <xref:System.Xml.Linq.XAttribute>, ein Attribut in die Struktur eingefügt.</xref:System.Xml.Linq.XAttribute> Sie können Elemente und Attribute nur an den Stellen in die Struktur einfügen, an denen sie gültig sind.  
+ Ein wichtiges Merkmal von XML-Literalen besteht darin, dass sie eingebettete Ausdrücke zulassen. Mit eingebetteten Ausdrücken können Sie Ausdrücke auswerten und die Ergebnisse eines Ausdrucks in die XML-Struktur einfügen. Wenn die Auswertung des Ausdrucks einen <xref:System.Xml.Linq.XElement>-Typ ergibt, wird ein Element in die Struktur eingefügt. Wenn die Auswertung des Ausdrucks einen <xref:System.Xml.Linq.XAttribute>-Typ ergibt, wird ein Attribut in die Struktur eingefügt. Sie können Elemente und Attribute nur an den Stellen in die Struktur einfügen, an denen sie gültig sind.  
   
  Dabei muss beachtet werden, dass ein eingebetteter Ausdruck nur einen einzelnen Ausdruck enthalten kann. Das Einbetten mehrerer Anweisungen ist nicht möglich. Wenn ein Ausdruck sich über eine einzelne Zeile hinaus erstreckt, müssen Sie das Zeilenfortsetzungszeichen verwenden.  
   

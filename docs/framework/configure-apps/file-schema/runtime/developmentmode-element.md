@@ -1,75 +1,77 @@
 ---
-title: "&lt;developmentMode&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#developmentMode"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<developmentMode>-Element"
-  - "Containertags, <developmentMode>-Element"
-  - "developmentMode-Element"
+title: '&lt;DevelopmentMode&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#developmentMode
+helpviewer_keywords:
+- developmentMode element
+- container tags, <developmentMode> element
+- <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 4573c3a5e0cf64996f2a4e109736d966b754494a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;developmentMode&gt;-Element
-Gibt an, ob die Runtime in Verzeichnissen, die durch die DEVPATH\-Umgebungsvariable angegeben werden, nach Assemblys sucht.  
+# <a name="ltdevelopmentmodegt-element"></a>&lt;DevelopmentMode&gt; Element
+Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<DevelopmentMode >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <developmentMode developerInstallation="true | false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|**developerInstallation**|Gibt an, ob die Runtime in Verzeichnissen, die durch die DEVPATH\-Umgebungsvariable angegeben werden, nach Assemblys sucht.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|**developerInstallation**|Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.|  
   
-## developerInstallation\-Attribut  
+## <a name="developerinstallation-attribute"></a>developerInstallation-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|**true**|Die Runtime sucht in Verzeichnissen, die durch die DEVPATH\-Umgebungsvariable angegeben werden, nach Assemblys.|  
-|**false**|Die Runtime sucht nicht in Verzeichnissen, die durch die DEVPATH\-Umgebungsvariable angegeben werden, nach Assemblys.  Dies ist die Standardeinstellung.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|**true**|Sucht nach Assemblys die DEVPATH-Umgebungsvariable angegebenen Verzeichnisse.|  
+|**false**|Sucht nicht nach Assemblys die DEVPATH-Umgebungsvariable angegebenen Verzeichnisse. Dies ist die Standardeinstellung|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Verwenden Sie diese Einstellung nur zur Entwicklungszeit.  Die Runtime überprüft nicht die Versionen von Assemblys mit starken Namen in DEVPATH.  Sie verwendet einfach die erste Assembly, die sie findet.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Einstellung nur zum Zeitpunkt der Entwicklung. Die Common Language Runtime überprüft nicht die Versionen auf Assemblys mit starkem Namen in die DEVPATH gefunden. Sie verwendet einfach die erste Assembly gefundenen.  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht, wie Sie festlegen, dass die Runtime in Verzeichnissen, die durch die DEVPATH\-Umgebungsvariable angegeben werden, nach Assemblys sucht.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die dazu führen, dass die Common Language Runtime nach Assemblys die DEVPATH-Umgebungsvariable angegebenen Verzeichnisse suchen.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <developmentMode developerInstallation="true"/>  
@@ -77,7 +79,7 @@ Gibt an, ob die Runtime in Verzeichnissen, die durch die DEVPATH\-Umgebungsvaria
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Gewusst wie: Suchen von Assemblys mit DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

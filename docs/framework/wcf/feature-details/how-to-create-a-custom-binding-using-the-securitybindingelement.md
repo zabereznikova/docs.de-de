@@ -1,38 +1,43 @@
 ---
-title: "Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherheit [WCF], zum Erstellen benutzerdefinierter Bindungen"
+title: 'Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthält diverse, vom System bereitgestellte und konfigurierbare Bindungen, die jedoch in Bezug auf die Konfiguration aller Optionen, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt, nicht die volle Flexibilität aufweisen. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellen von benutzerdefinierten Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] enthält diverse, vom System bereitgestellte und konfigurierbare Bindungen, die jedoch in Bezug auf die Konfiguration aller Optionen, die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt, nicht die volle Flexibilität aufweisen. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Erstellung benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt nicht die <xref:System.ServiceModel.Channels.IDuplexSessionChannel> channel-Form, die die Verwendung für die Form von Kanal vom TCP ist beim transport <xref:System.ServiceModel.TransferMode> auf festgelegt ist <xref:System.ServiceModel.TransferMode.Buffered>. Sie müssen festlegen, <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> zur Verwendung <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt die <xref:System.ServiceModel.Channels.IDuplexSessionChannel>-Kanalform nicht, die der standardmäßig vom TCP-Transport verwendeten Kanalform entspricht, wenn <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Buffered> festgelegt ist. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
   
 ## <a name="creating-a-custom-binding"></a>Erstellen einer benutzerdefinierten Bindung  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Alle Bindungen bestehen aus *Bindungselementen*. Jedes Bindungselement leitet sich von der <xref:System.ServiceModel.Channels.BindingElement> Klasse. Bei den standardmäßigen, vom System bereitgestellten Bindungen werden die Bindungselemente für Sie erstellt und konfiguriert, einige der Eigenschaftseinstellungen können jedoch angepasst werden.  
+ In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Alle Bindungen bestehen aus *Bindungselementen*. Jedes Bindungselement wird von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse abgeleitet. Bei den standardmäßigen, vom System bereitgestellten Bindungen werden die Bindungselemente für Sie erstellt und konfiguriert, einige der Eigenschaftseinstellungen können jedoch angepasst werden.  
   
- Im Gegensatz dazu zum Erstellen einer benutzerdefinierten Bindung Bindungselemente erstellt und konfiguriert werden und ein <xref:System.ServiceModel.Channels.CustomBinding> aus den Bindungselementen erstellt wird.  
+ Im Gegensatz dazu werden zum Erstellen einer benutzerdefinierten Bindung Bindungselemente erstellt und konfiguriert, und aus den Bindungselementen wird eine <xref:System.ServiceModel.Channels.CustomBinding> erstellt.  
   
- Zu diesem Zweck fügen Sie die einzelnen Bindungselemente einer Auflistung dargestellt, die von einer Instanz von der <xref:System.ServiceModel.Channels.BindingElementCollection> Klasse, und legen Sie dann die `Elements` Eigenschaft der `CustomBinding` auf dieses Objekt. Die Bindungselemente müssen in der folgenden Reihenfolge hinzugefügt werden: Transaktionsfluss, zuverlässige Sitzung, Sicherheit, Composite Duplex, Unidirektional, Streamsicherheit, Nachrichtencodierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind.  
+ Fügen Sie hierzu die einzelnen Bindungselemente einer Auflistung hinzu, die durch eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse repräsentiert wird, und legen Sie anschließend die `Elements`-Eigenschaft der `CustomBinding` auf dieses Objekt fest. Die Bindungselemente müssen in der folgenden Reihenfolge hinzugefügt werden: Transaktionsfluss, zuverlässige Sitzung, Sicherheit, Composite Duplex, Unidirektional, Streamsicherheit, Nachrichtencodierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
- Drei Bindungselemente beziehen sich auf die Sicherheit auf Nachrichtenebene, leiten Sie die von der <xref:System.ServiceModel.Channels.SecurityBindingElement> Klasse. Die drei sind <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, und <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Die <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> wird verwendet, um die Sicherheit im gemischten Modus. Die anderen beiden Elemente werden verwendet, wenn die Nachrichtenebene Sicherheit bereitstellt.  
+ Drei Bindungselemente beziehen sich auf die Sicherheit auf Nachrichtenebene, wobei alle von der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse abgeleitet werden. Die drei sind <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> und <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Das <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> wird für Sicherheit im gemischten Modus verwendet. Die anderen beiden Elemente werden verwendet, wenn die Nachrichtenebene Sicherheit bereitstellt.  
   
  Zusätzliche Klassen werden verwendet, wenn Sicherheit auf Transportebene bereitgestellt wird:  
   
@@ -81,39 +86,39 @@ caps.handback.revision: 19
   
  Beachten Sie, dass für SecurityBindingElements eine Vielzahl konfigurierbarer Einstellungen zur Verfügung stehen. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sichere Konversationen und sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sichere Unterhaltungen und sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Verfahren  
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>So erstellen Sie eine benutzerdefinierte Bindung mit dem SymmetricSecurityBindingElement  
   
-1.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection> Klasse mit dem Namen `outputBec`.  
+1.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse mit dem Namen `outputBec`.  
   
-2.  Rufen Sie die statische Methode `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, womit eine Instanz von der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> Klasse.  
+2.  Rufen Sie die statische `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`-Methode auf, durch die eine Instanz der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>-Klasse zurückgegeben wird.  
   
-3.  Hinzufügen der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> der Auflistung (`outputBec`) durch Aufrufen der `Add` Methode der <xref:System.Collections.ObjectModel.Collection%601> von <xref:System.ServiceModel.Channels.BindingElement> Klasse.  
+3.  Fügen Sie das <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> zur Sammlung hinzu (`outputBec`), indem Sie die `Add`-Methode der <xref:System.Collections.ObjectModel.Collection%601> der <xref:System.ServiceModel.Channels.BindingElement>-Klasse aufrufen.  
   
-4.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> Klasse und fügen es der Auflistung hinzu (`outputBec`). Dies gibt die von der Bindung verwendete Codierung an.  
+4.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>-Klasse, und fügen Sie diese der Sammlung hinzu (`outputBec`). Dies gibt die von der Bindung verwendete Codierung an.  
   
-5.  Erstellen einer <xref:System.ServiceModel.Channels.HttpTransportBindingElement> und fügen es der Auflistung hinzu (`outputBec`). Dadurch wird angegeben, dass die Bindung den HTTP-Transport nutzt.  
+5.  Erstellen Sie ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, und fügen Sie es der Sammlung hinzu (`outputBec`). Dadurch wird angegeben, dass die Bindung den HTTP-Transport nutzt.  
   
-6.  Erstellen Sie eine neue benutzerdefinierte Bindung durch Erstellen einer Instanz von der <xref:System.ServiceModel.Channels.CustomBinding> -Klasse, und übergeben die Auflistung `outputBec` an den Konstruktor.  
+6.  Erstellen Sie eine neue benutzerdefinierte Bindung, indem Sie eine Instanz der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse erstellen und die Sammlung `outputBec` an den Konstruktor weitergeben.  
   
-7.  Die resultierende benutzerdefinierte Bindungen teilen sich viele Eigenschaften, die als Standard <xref:System.ServiceModel.WSHttpBinding>. Sicherheit wird auf Nachrichtenebene und Windows-Anmeldeinformationen festgelegt, aber sichere Sitzungen werden deaktiviert, eine Out-of-Band-Festlegung der Dienstanmeldeinformationen ist erforderlich und Signaturen werden nicht verschlüsselt. Die letzte kann gesteuert werden, nur durch Festlegen der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> -Eigenschaft wie in Schritt 4 angezeigt. Die anderen beiden können über Einstellungen auf der Standardbindung kontrolliert werden.  
+7.  Die resultierenden benutzerdefinierten Bindungen teilen sich viele Eigenschaften mit dem Standard <xref:System.ServiceModel.WSHttpBinding>. Sicherheit wird auf Nachrichtenebene und Windows-Anmeldeinformationen festgelegt, aber sichere Sitzungen werden deaktiviert, eine Out-of-Band-Festlegung der Dienstanmeldeinformationen ist erforderlich und Signaturen werden nicht verschlüsselt. Die letzte kann nur durch Festlegen der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>-Eigenschaft gesteuert werden, wie in Schritt 4 angezeigt. Die anderen beiden können über Einstellungen auf der Standardbindung kontrolliert werden.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel veranschaulicht eine vollständige Funktion um eine benutzerdefinierte Bindung erstellen, verwendet eine <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Das folgende Beispiel veranschaulicht eine vollständige Funktion zur Erstellung einer benutzerdefinierten Bindung, die ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> nutzt.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)   
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)

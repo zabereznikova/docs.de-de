@@ -1,33 +1,25 @@
 ---
-title: 'XML-Beispieldatei: Mehrere Bestellungen (LINQ to XML) | Microsoft-Dokumentation'
+title: 'Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e68f891bc0d6bc1368bc826e4a2fb9d49489d4a1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e1de6f44f246b64a23586962b2a7d94b47cff111
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)
-Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Dokumentation verwendet. Diese Datei enthält mehrere Aufträge.  
+Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält mehrere Aufträge.  
   
 ## <a name="purchaseordersxml"></a>PurchaseOrders.xml  
   

@@ -1,76 +1,75 @@
 ---
-title: "Gewusst wie: Festlegen des Eingabeformats | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.MaskPropertyEditor"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MaskedTextBox-Steuerelement [Windows Forms]"
+title: 'Gewusst wie: Festlegen des Eingabeformats'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.MaskPropertyEditor
+helpviewer_keywords: MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Gewusst wie: Festlegen des Eingabeformats
-Das maskierte Textfeld\-Steuerelement ist ein verbessertes Textfeld\-Steuerelement und unterstützt eine deklarative Syntax zum Akzeptieren oder Ablehnen von Benutzereingaben.  Mit der Mask\-Eigenschaft können Sie die zulässigen Benutzereingaben festlegen, ohne eine benutzerdefinierte Validierungslogik in der Anwendung zu schreiben.  Weitere Informationen finden Sie in den Hinweisen zur <xref:System.Windows.Forms.MaskedTextBox>\-Klasse.  
+# <a name="how-to-set-the-input-mask"></a>Gewusst wie: Festlegen des Eingabeformats
+Das maskierte Textfeld-Steuerelement ist eine verbesserte Textfeld-Steuerelement, die eine deklarative Syntax zum Akzeptieren oder ablehnen von Benutzereingaben unterstützt. Durch Festlegen der Mask-Eigenschaft, können Sie die zulässigen Benutzereingaben angeben, ohne dass eine benutzerdefinierte Validierungslogik in der Anwendung geschrieben. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Windows.Forms.MaskedTextBox> Klasse.  
   
-## Manuelles Festlegen der Mask\-Eigenschaft  
- Wenn Sie mit den von der Mask\-Eigenschaft unterstützten Zeichen vertraut sind, können Sie sie manuell eingeben.  Eine Übersicht der von der Mask\-Eigenschaft unterstützten Zeichen finden Sie in den Hinweisen zur <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>\-Eigenschaft.  
+## <a name="setting-the-mask-property-manually"></a>Manuelles Festlegen der Mask-Eigenschaft  
+ Wenn Sie mit den Zeichen vertraut, die die Mask-Eigenschaft unterstützt sind, können Sie es manuell eingeben. Eine Zusammenfassung der Zeichen, die die Mask-Eigenschaft unterstützt, finden Sie im Abschnitt "Hinweise" der <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft.  
   
-#### So legen Sie die Mask\-Eigenschaft manuell fest  
+#### <a name="to-set-the-mask-property-manually"></a>Die Mask-Eigenschaft manuell festlegen.  
   
-1.  Wählen Sie in der **Entwurfsansicht** <xref:System.Windows.Forms.MaskedTextBox> aus.  
+1.  In **Entwurf** wählen eine <xref:System.Windows.Forms.MaskedTextBox>.  
   
-2.  Suchen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>\-Eigenschaft.  
+2.  In der **Eigenschaften** Fenster, suchen Sie die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft.  
   
-3.  Geben Sie die gewünschte Maske ein.  Beispiel: `###`.  
+3.  Geben Sie die Maske, die Sie möchten. Geben Sie z. B. `###`.  
   
-## Verwenden des Dialogfelds Eingabeformat  
- Im Dialogfeld Eingabeformat werden einige vordefinierte Eingabeformate bereitgestellt.  Sie können die vordefinierten Masken auch ändern oder eine eigene Maske manuell eingeben.  
+## <a name="using-the-input-mask-dialog-box"></a>Mithilfe des Dialogfelds Eingabeformat  
+ Die Input Mask-Dialogfeld stellt einige vordefinierte Eingabeformate bereit. Sie können auch vordefinierten Masken ändern oder eigene Maske manuell eingeben.  
   
-#### So öffnen Sie das Dialogfeld Eingabeformat  
+#### <a name="to-open-the-input-mask-dialog-box"></a>So öffnen das Dialogfeld Eingabeformat  
   
-1.  Wählen Sie in der **Entwurfsansicht** <xref:System.Windows.Forms.MaskedTextBox> aus.  
+1.  In **Entwurf** wählen eine <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Klicken Sie auf das Smarttag, um den Bereich **MaskedTextBox\-Aufgaben** zu öffnen.  
+    1.  Klicken Sie auf das Smarttag, öffnen Sie die **MaskedTextBox-Aufgaben** Bereich.  
   
     2.  Klicken Sie auf **Maske festlegen**.  
   
-     \- oder \-  
+     \- oder –  
   
-    1.  Wählen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>\-Eigenschaft aus.  
+    1.  In der **Eigenschaften** wählen die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft.  
   
-    2.  Klicken Sie in der Spalte mit Eigenschaftswerten auf die Schaltfläche mit den Auslassungszeichen \(…\).  
+    2.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, in der Eigenschaft-Wert-Spalte.  
   
-     Das Dialogfeld **Eingabeformat** wird angezeigt.  
+     Die **Eingabeformat** Dialogfeld wird angezeigt.  
   
-#### So verwenden Sie das Dialogfeld Eingabeformat  
+#### <a name="to-use-the-input-mask-dialog-box"></a>Zum Verwenden der Input Mask-Dialogfelds  
   
-1.  \(Optional\) Klicken Sie in der Liste auf eine der vordefinierten Masken.  
+1.  (Optional) Klicken Sie auf eine der vordefinierten Masken in der Liste.  
   
-2.  \(Optional\) Bearbeiten Sie die vordefinierte Maske im Feld **Maske**.  
+2.  (Optional) Bearbeiten Sie die vordefinierte Maske in die **Maske** Feld.  
   
-3.  \(Optional\) Geben Sie im Feld **Maske** eine neue Maske ein.  Sie müssen also keine der vordefinierten Masken verwenden.  
+3.  (Optional) Geben Sie eine neue Maske in die **Maske** Feld. Sie haben also nicht eine der vordefinierten Masken verwenden.  
   
     > [!NOTE]
-    >  Das Feld Vorschau zeigt die Zeichen an, die der Benutzer im <xref:System.Windows.Forms.MaskedTextBox> sieht.  Diese Zeichen dienen als Leitfaden, damit der Benutzer die Daten ordnungsgemäß eingeben kann.  
+    >  Das Feld Vorschau zeigt die Zeichen, die dem Benutzer angezeigt, in wird der <xref:System.Windows.Forms.MaskedTextBox>. Diese Zeichen sind eine Anleitung für die Benutzer die Daten ordnungsgemäß eingeben helfen.  
   
-4.  Aktivieren oder deaktivieren Sie das Kontrollkästchen **ValidatingType verwenden**.  Das Kontrollkästchen **ValidatingType verwenden** gibt an, ob ein Datentyp verwendet wird, um die Dateneingabe des Benutzers zu überprüfen.  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>\-Eigenschaft.  
+4.  Aktivieren oder Deaktivieren der **verwenden ValidatingType** Kontrollkästchen. Die **verwenden ValidatingType** Kontrollkästchen gibt an, ob ein Datentyp verwendet wird, um zu überprüfen, ob die Dateneingabe vom Benutzer. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>-Eigenschaft.  
   
 5.  Klicken Sie auf **OK**.  
   
-     Die Maske wird in der **Mask**\-Eigenschaft im **Eigenschaftenfenster** eingegeben.  
+     Die Maske eingegeben wird, der **Maske** Eigenschaft in der **Eigenschaften** Fenster.  
   
-## Siehe auch  
- [Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a>Siehe auch  
+ [Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

@@ -1,27 +1,37 @@
 ---
-title: "&lt;transport&gt; von &lt;basicHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;transport&gt; von &lt;basicHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a69be01146e71e71ba7e901de288d84c533b1e1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transport&gt; von &lt;basicHttpBinding&gt;
-Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP\-Transport steuern.  
+# <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; von &lt;basicHttpBinding&gt;
+Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Bindungen >  
+\<BasicHttpBinding >  
+\<Binden von >  
+\<Sicherheit >  
+\<Transport >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <basicHttpBinding>  
     <binding>  
         <security  
@@ -39,53 +49,53 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP\-Transpor
 </basicHttpBinding>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|clientCredentialType|-   Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit HTTP\-Authentifizierung verwendet werden.  Die Standardeinstellung ist `None`.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-   Gibt den Anmeldeinformationstyp an, der bei der Clientauthentifizierung mit einem Proxy über HTTP innerhalb einer Domäne verwendet werden soll.  Dies Attribut trifft nur zu, wenn das `mode`\-Attribut dieses übergeordneten `security`\-Elements `Transport` oder `TransportCredentialsOnly` lautet.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|realm|Eine Zeichenfolge, die den vom HTTP\-Authentifizierungsschema verwendeten Bereich für die Digest\- oder Standardauthentifizierung angibt.  Der Standardwert ist eine leere Zeichenfolge.|  
-|policyEnforcement|Diese Enumeration gibt an, wann die <xref:System.Security.Authentication.ExtendedProtectionPolicy> erzwungen werden soll.<br /><br /> 1.  Never – die Richtlinie wird nie erzwungen \(erweiterter Schutz ist deaktiviert\).<br />2.  WhenSupported – die Richtlinie wird nur erzwungen, wenn der Client erweiterten Schutz unterstützt.<br />3.  Always – die Richtlinie wird immer erzwungen.  Clients, die erweiterten Schutz nicht unterstützen, werden nicht authentifiziert.|  
+|---------------|-----------------|  
+|clientCredentialType|-Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit HTTP-Authentifizierung verwendet werden.  Die Standardeinstellung ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|-Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung innerhalb einer Domäne mit einem Proxy über HTTP verwendet werden. Dies Attribut trifft nur zu, wenn das `mode`-Attribut dieses übergeordneten `security`-Elements `Transport` oder `TransportCredentialsOnly` lautet. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|realm|Eine Zeichenfolge, die den vom HTTP-Authentifizierungsschema verwendeten Bereich für die Digest- oder Standardauthentifizierung angibt. Der Standardwert ist eine leere Zeichenfolge.|  
+|policyEnforcement|Diese Enumeration gibt an, wann die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> erzwungen werden soll.<br /><br /> 1.  Never – die Richtlinie wird nie erzwungen (erweiterter Schutz ist deaktiviert).<br />2.  WhenSupported – die Richtlinie wird nur erzwungen, wenn der Client erweiterten Schutz unterstützt.<br />3.  Always – die Richtlinie wird immer erzwungen. Clients, die erweiterten Schutz nicht unterstützen, werden nicht authentifiziert.|  
 |protectionScenario|Diese Enumeration gibt das von der Richtlinie erzwungene Schutzszenario an.|  
   
-## clientCredentialType\-Attribut  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
 |Wert|Beschreibung|  
-|----------|------------------|  
+|-----------|-----------------|  
 |Keine|Nachrichten werden nicht während der Übertragung gesichert.|  
 |Standard|Gibt die Standardauthentifizierung an.|  
 |Digest|Gibt die Digestauthentifizierung an.|  
-|Ntlm|Gibt die NTLM\-Authentifizierung an, wenn möglich, und ob die Windows\-Authentifizierung fehlschlägt.|  
-|Windows|Gibt die integrierte Windows\-Authentifizierung an.|  
+|Ntlm|Gibt die NTLM-Authentifizierung an, wenn möglich, und ob die Windows-Authentifizierung fehlschlägt.|  
+|Windows|Gibt die integrierte Windows-Authentifizierung an.|  
   
-## proxyCredentialType\-Attribut  
+## <a name="proxycredentialtype-attribute"></a>proxyCredentialType-Attribut  
   
 |Wert|Beschreibung|  
-|----------|------------------|  
-|Keine|-   Nachrichten werden nicht während der Übertragung gesichert.|  
+|-----------|-----------------|  
+|Keine|-Nachrichten werden während der Übertragung nicht gesichert.|  
 |Standard|Gibt die Standardauthentifizierung an, wie definiert in RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
 |Digest|Gibt die Digestauthentifizierung an, wie definiert in RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
-|Ntlm|Gibt die NTLM\-Authentifizierung an, wenn möglich, und ob die Windows\-Authentifizierung fehlschlägt.|  
-|Windows|Gibt die integrierte Windows\-Authentifizierung an.|  
-|Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat aus.  Diese Option funktioniert nur, wenn das `Mode`\-Attribut des übergeordneten `security`\-Elements auf Transport gesetzt ist. Sie funktioniert nicht, wenn es auf TransportCredentialOnly gesetzt ist.|  
+|Ntlm|Gibt die NTLM-Authentifizierung an, wenn möglich, und ob die Windows-Authentifizierung fehlschlägt.|  
+|Windows|Gibt die integrierte Windows-Authentifizierung an.|  
+|Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat aus. Diese Option funktioniert nur, wenn das `Mode`-Attribut des übergeordneten `security`-Elements auf Transport gesetzt ist. Sie funktioniert nicht, wenn es auf TransportCredentialOnly gesetzt ist.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Sicherheit\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiert die Sicherheitsfunktionen für [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|-------------|-----------------|  
+|[\<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiert die Sicherheitsfunktionen für die [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung der SSL\-Transportsicherheit mit der Standardbindung veranschaulicht.  Standardmäßig unterstützt die Standardbindung die HTTP\-Kommunikation.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die Verwendung der SSL-Transportsicherheit mit der Standardbindung veranschaulicht. Standardmäßig unterstützt die Standardbindung die HTTP-Kommunikation.  
   
-```  
+```xml  
 <system.serviceModel>  
    <services>  
       <service   
@@ -117,13 +127,13 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP\-Transpor
 </system.serviceModel>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>   
- <xref:System.ServiceModel.HttpTransportSecurity>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
+ <xref:System.ServiceModel.HttpTransportSecurity>  
+ [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)

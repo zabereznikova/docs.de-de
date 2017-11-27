@@ -1,53 +1,53 @@
 ---
-title: "Find Private Key-Tool (FindPrivateKey.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: Find Private Key-Tool (FindPrivateKey.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5e2110e129b293ffb04c8e3eb69a5c3bfe83c17b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Find Private Key-Tool (FindPrivateKey.exe)
-Mit diesem Befehlszeilentool kann ein privater Schlüssel aus einem Zertifikatspeicher abgerufen werden.  FindPrivateKey.exe kann beispielsweise verwendet werden, um den Speicherort und Namen der privaten Schlüsseldatei zu finden, die mit einem bestimmten X.509\-Zertifikat im Zertifikatspeicher verknüpft ist.  
+# <a name="find-private-key-tool-findprivatekeyexe"></a>Find Private Key-Tool (FindPrivateKey.exe)
+Mit diesem Befehlszeilentool kann ein privater Schlüssel aus einem Zertifikatspeicher abgerufen werden. FindPrivateKey.exe kann beispielsweise verwendet werden, um den Speicherort und Namen der privaten Schlüsseldatei zu finden, die mit einem bestimmten X.509-Zertifikat im Zertifikatspeicher verknüpft ist.  
   
 > [!IMPORTANT]
->  Das FindPrivateKey\-Tool wird als WCF\-Beispiel zur Verfügung gestellt.  Weitere Informationen dazu, wo Sie das Beispiel finden und wie Sie es erstellen, finden Sie unter  
+>  Das FindPrivateKey-Tool wird als WCF-Beispiel zur Verfügung gestellt. Weitere Informationen dazu, wo Sie das Beispiel finden und wie Sie es erstellen, finden Sie unter  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]  
+FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]  
 ```  
   
-## Hinweise  
- In den folgenden Tabellen werden die Argumente und Optionen beschrieben, die mit dem Find Private Key\-Tool \(FindPrivateKey.exe\) verwendet werden können.  
+## <a name="remarks"></a>Hinweise  
+ In den folgenden Tabellen werden die Argumente und Optionen beschrieben, die mit dem Find Private Key-Tool (FindPrivateKey.exe) verwendet werden können.  
   
 |Argument|Beschreibung|  
-|--------------|------------------|  
+|--------------|-----------------|  
 |`storeName`|Der Name des Zertifikatspeichers.|  
 |`storeLocation`|Der Speicherort des Zertifikatspeichers.|  
   
 |Option|Beschreibung|  
-|------------|------------------|  
-|`/n <` *Betreffname* `>`|Gibt den Betreffnamen des Zertifikats an.|  
-|`/t <` *Fingerabdruck* `>`|Gibt den Fingerabdruck des Zertifikats an.  Verwenden Sie Certmgr.exe, um den Fingerabdruck des Zertifikats abzurufen.|  
+|------------|-----------------|  
+|`/n <`*SubjectName*`>`|Gibt den Betreffnamen des Zertifikats an.|  
+|`/t <`*Fingerabdruck*`>`|Gibt den Fingerabdruck des Zertifikats an. Verwenden Sie Certmgr.exe, um den Fingerabdruck des Zertifikats abzurufen.|  
 |`/f`|Gibt nur den Dateinamen aus.|  
 |`/d`|Gibt nur das Verzeichnis aus.|  
 |`/a`|Gibt nur den absoluten Dateinamen aus.|  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Mit dem folgenden Befehl wird der private Schlüssel für John Doe abgerufen.  
   
 ```  

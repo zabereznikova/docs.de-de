@@ -1,38 +1,41 @@
 ---
-title: "Zuordnen von XSD-Schl&#252;sseleinschr&#228;nkungen (XML-Schema) zu &#39;DataSet&#39;-Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zuordnen von XSD-Schl&#252;sseleinschr&#228;nkungen (XML-Schema) zu &#39;DataSet&#39;-Einschr&#228;nkungen
-In einem Schema können Sie mit dem **key**\-Element eine Schlüsseleinschränkung für ein Element oder ein Attribut angeben.  Das Element oder Attribut, für das Sie eine Schlüsseleinschränkung angeben, muss eindeutige Werte in jeder Schemainstanz aufweisen und darf keine NULL\-Werte enthalten.  
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
+In einem Schema können Sie geben eine schlüsseleinschränkung für ein Element oder-Attribut mit dem **Schlüssel** Element. Das Element oder Attribut, für das Sie eine Schlüsseleinschränkung angeben, muss eindeutige Werte in jeder Schemainstanz aufweisen und darf keine NULL-Werte enthalten.  
   
- Die Schlüsseleinschränkung ist der unique\-Einschränkung ähnlich, außer dass die Spalte, für die eine Schlüsseleinschränkung definiert wird, keine NULL\-Werte enthalten darf.  
+ Die Schlüsseleinschränkung ist der unique-Einschränkung ähnlich, außer dass die Spalte, für die eine Schlüsseleinschränkung definiert wird, keine NULL-Werte enthalten darf.  
   
- In der folgenden Tabelle werden die **msdata**\-Attribute aufgelistet, die im **key**\-Element angegeben werden können.  
+ Die folgende Tabelle enthält die **Msdata** Attribute, die Sie, in angeben können der **Schlüssel** Element.  
   
 |Attributname|Beschreibung|  
-|------------------|------------------|  
-|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet.  Andernfalls wird der Wert des Einschränkungsnamen vom **name**\-Attribut bereitgestellt.|  
-|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` vorhanden ist, wird die **IsPrimaryKey**\-Einschränkungseigenschaft auf **true** festgelegt, wodurch sie zu einem Primärschlüssel wird.  Die **AllowDBNull**\-Spalteneigenschaft ist auf **false** festgelegt, da Primärschlüssel keine NULL\-Werte enthalten dürfen.|  
+|--------------------|-----------------|  
+|**ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** Attribut den Wert des Einschränkungsnamen bereitstellt.|  
+|**msdata: PrimaryKey**|Wenn `PrimaryKey="true"` vorhanden ist, die **IsPrimaryKey** -Einschränkungseigenschaft auf festgelegt ist **"true"**, wodurch sie zu einen Primärschlüssel. Die **AllowDBNull** -Spalteneigenschaft ist auf **"false"**, da der Primärschlüssel null-Werte enthalten darf.|  
   
- Beim Konvertieren eines Schemas, in dem eine Schlüsseleinschränkung angegeben ist, erstellt der Zuordnungsprozess eine unique\-Einschränkung für die Tabelle, in der die **AllowDBNull**\-Spalteneigenschaft für jede Spalte in der Einschränkung auf **false** festgelegt ist.  Die **IsPrimaryKey**\-Eigenschaft der unique\-Einschränkung ist ebenfalls auf **false** festgelegt, wenn Sie für das **key**\-Element nicht `msdata:PrimaryKey="true"` angegeben haben.  Dies ist mit einer unique\-Einschränkung im Schema mit `PrimaryKey="true"` identisch.  
+ Beim Konvertieren eines Schemas, in denen eine Key-Einschränkung angegeben wird, erstellt der Zuordnungsprozess eine unique-Einschränkung für die Tabelle mit den **AllowDBNull** Spalteneigenschaft auf festgelegt **"false"** für jede Spalte in der Einschränkung. Die **IsPrimaryKey** gegen die unique-Einschränkung ist auch-Eigenschaftensatz auf **"false"** , sofern Sie angegeben haben `msdata:PrimaryKey="true"` auf die **Schlüssel** Element. Dies ist mit einer unique-Einschränkung im Schema mit `PrimaryKey="true"` identisch.  
   
- Im folgenden Schemabeispiel gibt das **key**\-Element die Schlüsseleinschränkung für das **CustomerID**\-Element an.  
+ Im folgenden Schemabeispiel der **Schlüssel** Element gibt die Key-Einschränkung für die **CustomerID** Element.  
   
-```  
+```xml  
 <xs:schema id="cod"  
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,15 @@ In einem Schema können Sie mit dem **key**\-Element eine Schlüsseleinschränku
 </xs:schema>   
 ```  
   
- Das **key**\-Element gibt an, dass es sich bei den Werten für das untergeordnete **CustomerID**\-Element des **Customers**\-Elements um eindeutige Werte handeln muss und dass keine NULL\-Werte vorhanden sein dürfen.  Beim Übertragen des XSD\-Schemas \(XML Schema Definition Language\) wird vom Zuordnungsprozess die folgende Tabelle erstellt:  
+ Die **Schlüssel** Element gibt an, dass die Werte der **CustomerID** untergeordnetes Element von der **Kunden** Element muss eindeutige Werte und keine null-Werte. Beim Übertragen des XSD-Schemas (XML Schema Definition Language) wird vom Zuordnungsprozess die folgende Tabelle erstellt:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- Die XML\-Schemazuordnung erstellt außerdem eine **UniqueConstraint** für die **CustomerID**\-Spalte. Dies wird im folgenden <xref:System.Data.DataSet> dargestellt.  \(Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.\)  
+ Die XML-schemazuordnung erstellt außerdem eine **UniqueConstraint** auf die **CustomerID** Spalte, wie im folgenden gezeigt <xref:System.Data.DataSet>. (Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.)  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: customers  
   ColumnName: CustomerID  
@@ -82,11 +84,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- Im generierten **DataSet** ist die **IsPrimaryKey**\-Eigenschaft der **UniqueConstraint** auf **true** festgelegt, da das Schema im **key**\-Element `msdata:PrimaryKey="true"` angibt.  
+ In der **DataSet** , das generiert wird, die **IsPrimaryKey** Eigenschaft von der **UniqueConstraint** auf festgelegt ist **"true"** da das Schema Gibt an, `msdata:PrimaryKey="true"` in der **Schlüssel** Element.  
   
- Der Wert der **ConstraintName**\-Eigenschaft der **UniqueConstraint** im **DataSet** ist der Wert des **msdata:ConstraintName**\-Attributs, das im **key**\-Element des Schemas angegeben wurde.  
+ Der Wert des der **ConstraintName** Eigenschaft der **UniqueConstraint** in der **DataSet** ist der Wert des der **ConstraintName** angegebene Attribut der **Schlüssel** -Element im Schema.  
   
-## Siehe auch  
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Generieren von DataSet-Beziehungen aus XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

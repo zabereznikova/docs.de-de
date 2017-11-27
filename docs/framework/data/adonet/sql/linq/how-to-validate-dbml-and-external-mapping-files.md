@@ -1,81 +1,84 @@
 ---
-title: "Vorgehensweise: Validierung von DBML und externen Zuordnungsdateien | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Überprüfen von DBML- und externen Zuordnungsdateien"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c4c17b41f9bee3ce43b7627343fec2b5a69dbba8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Validierung von DBML und externen Zuordnungsdateien
-Externe Zuordnungsdateien und von Ihnen geänderte .dbml\-Dateien müssen hinsichtlich ihrer jeweiligen Schemadefinitionen überprüft werden.  Dieser Abschnitt bietet [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]\-Benutzern Informationen zu den Schritten für das Implementieren des Validierungsprozesses.  
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Gewusst wie: Überprüfen von DBML- und externen Zuordnungsdateien
+Externe Zuordnungsdateien und von Ihnen geänderte .dbml-Dateien müssen hinsichtlich ihrer jeweiligen Schemadefinitionen überprüft werden. Dieser Abschnitt bietet [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]-Benutzern Informationen zu den Schritten für das Implementieren des Validierungsprozesses.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
-### So validieren Sie ein .dbml\- oder eine XML\-Datei  
+### <a name="to-validate-a-dbml-or-xml-file"></a>So validieren Sie ein .dbml- oder eine XML-Datei  
   
-1.  Zeigen Sie im Visual Studio\-Menü **Datei** auf **Öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Visual Studio **Datei** Sie im Menü **öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  Klicken Sie im Dialogfeld **Datei öffnen** auf die zu validierende .dbml\- oder XML\-Zuordnungsdatei.  
+2.  In der **Dateiöffnungsmodus** Dialogfeld klicken Sie auf der DBML- oder XML-Zuordnungsdatei, die Sie überprüfen möchten.  
   
-     Die Datei wird im **XML\-Editor** geöffnet.  
+     Die Datei wird geöffnet, der **XML-Editor**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das Fenster, und klicken Sie dann auf **Eigenschaften**.  
+3.  Mit der rechten Maustaste in des Fensters, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Fenster **Eigenschaften** in der **Schemata**\-Eigenschaft auf die Auslassungspunkte \(...\).  
+4.  In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche für die **Schemas** Eigenschaft.  
   
-     Das Dialogfeld **XML\-Schemata** wird geöffnet.  
+     Die **XML-Schemas** Dialogfeld wird geöffnet.  
   
 5.  Beachten Sie die entsprechende Schemadefinition für den Zweck.  
   
-    -   DbmlSchema.xsd ist die Schemadefinition zum Validieren einer .dbml\-Datei.  Weitere Informationen finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    -   DbmlSchema.xsd ist die Schemadefinition zum Validieren einer .dbml-Datei. Weitere Informationen finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   LinqToSqlMapping.xsd ist die Schemadefinition zum Überprüfen einer externen XML\-Zuordnungsdatei.  Weitere Informationen finden Sie unter [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    -   LinqToSqlMapping.xsd ist die Schemadefinition zum Überprüfen einer externen XML-Zuordnungsdatei. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
-6.  Klicken Sie in die Spalte **Verwenden** der gewünschten Zeile in der Schemadefinition, um das Listenfeld zu öffnen. Klicken Sie dann auf **Dieses Schema verwenden**.  
+6.  In der **verwenden** Spalte der gewünschten Schema Definition Zeile, klicken Sie zum Öffnen Sie das Dropdownfeld, und klicken Sie dann auf **dieses Schema verwenden**.  
   
-     Die Schemadefinitionsdatei ist nun der DBML\- oder XML\-Zuordnungsdatei zugeordnet.  
+     Die Schemadefinitionsdatei ist nun der DBML- oder XML-Zuordnungsdatei zugeordnet.  
   
      Stellen Sie sicher, dass keine anderen Schemadefinitionen ausgewählt werden.  
   
-7.  Klicken Sie im Menü **Ansicht** auf **Fehlerliste**.  
+7.  Auf der **Ansicht** Menü klicken Sie auf **Fehlerliste**.  
   
-     Ermitteln Sie, ob Fehler, Warnungen oder Meldungen erzeugt wurden.  Ist dies nicht der Fall, ist die XML\-Datei für die Schemadefinition gültig.  
+     Ermitteln Sie, ob Fehler, Warnungen oder Meldungen erzeugt wurden. Ist dies nicht der Fall, ist die XML-Datei für die Schemadefinition gültig.  
   
-## Alternative Methode zur Bereitstellung einer Schemadefinition  
- Erscheint die passende .xsd\-Datei aus irgendeinem Grund nicht im Dialogfeld **XML\-Schemata**, können Sie die xsd\-Datei aus einem Hilfethema herunterladen.  Die folgenden Schritte unterstützen Sie beim Speichern der heruntergeladenen Datei im Unicode\-Format des [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]\-XML\-Editors.  
+## <a name="alternate-method-for-supplying-schema-definition"></a>Alternative Methode zur Bereitstellung einer Schemadefinition  
+ Wenn aus irgendeinem Grund die passende .xsd Datei nicht in angezeigt wird der **XML-Schemas** (Dialogfeld), können Sie die XSD-Datei aus einem Hilfethema herunterladen. Die folgenden Schritte unterstützen Sie beim Speichern der heruntergeladenen Datei im Unicode-Format des [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]-XML-Editors.  
   
-#### So kopieren Sie eine Schemadefinitionsdatei aus einem Hilfethema  
+#### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>So kopieren Sie eine Schemadefinitionsdatei aus einem Hilfethema  
   
-1.  Suchen Sie das Hilfethema, das die Schemadefinition enthält \(siehe weiter oben in diesem Abschnitt\).  
+1.  Suchen Sie das Hilfethema, das die Schemadefinition enthält (siehe weiter oben in diesem Abschnitt).  
   
-    -   .dbml\-Dateien finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    -   DBML-Dateien finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Externe Zuordnungsdateien finden Sie unter [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    -   Externe Zuordnungsdateien finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
-2.  Klicken Sie auf **Code kopieren**, um die Codedatei in die Zwischenablage zu kopieren.  
+2.  Klicken Sie auf **Code kopieren** auf die Codedatei in die Zwischenablage zu kopieren.  
   
 3.  Starten Sie Editor, um eine neue Datei zu erstellen.  
   
-4.  Fügen Sie den Code aus der Zwischenablage in die Editor\-Datei ein.  
+4.  Fügen Sie den Code aus der Zwischenablage in die Editor-Datei ein.  
   
-5.  Klicken Sie im Editor\-Menü **Datei** auf **Speichern unter**.  
+5.  Klicken Sie im Editor **Datei** Menü klicken Sie auf **speichern unter**.  
   
-6.  Wählen Sie im Feld **Codierung** **Unicode** aus.  
+6.  In der **Codierung** wählen Sie im **Unicode**.  
   
     > [!IMPORTANT]
-    >  Diese Auswahl stellt sicher, dass die Unicode\-16\-Byte\-Sortierungsmarkierung \(`FFFE`\) der Textdatei vorangestellt wird.  
+    >  Diese Auswahl stellt sicher, dass die Unicode-16-Byte-Sortierungsmarkierung (`FFFE`) der Textdatei vorangestellt wird.  
   
-7.  Geben Sie im Feld **Dateiname** einen Dateinamen mit einer Erweiterung .xsd ein.  
+7.  In der **Dateiname** Feld, erstellen Sie einen Dateinamen mit der Erweiterung XSD.  
   
-## Siehe auch  
- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

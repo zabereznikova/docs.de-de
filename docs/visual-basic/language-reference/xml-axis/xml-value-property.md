@@ -1,64 +1,60 @@
 ---
-title: "XML Value Property (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.XmlPropertyExtensionValue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Value property [Visual Basic]"
-  - "Visual Basic code, accessing XML"
-  - "XML axis [Visual Basic], Value"
-  - "XML Value property [Visual Basic]"
+title: XML-Value-Eigenschaft (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.XmlPropertyExtensionValue
+helpviewer_keywords:
+- Value property [Visual Basic]
+- Visual Basic code, accessing XML
+- XML axis [Visual Basic], Value
+- XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6c52ac09e209d6e3f0cfd877a071cbbe3ab96f18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# XML Value Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Stellt den Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten bereit.  
+# <a name="xml-value-property-visual-basic"></a>XML-Value-Eigenschaft (Visual Basic)
+Bietet Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 object.Value  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`object`|Erforderlich.  Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten.|  
+|---|---|  
+|`object`|Erforderlich. Auflistung von <xref:System.Xml.Linq.XElement>-Objekten.|  
   
-## Rückgabewert  
- Ein `String`, der den Wert des ersten Elements der Auflistung enthält, bzw. bei einer leeren Auflistung `Nothing`.  
+## <a name="return-value"></a>Rückgabewert  
+ Ein `String` , den Wert des ersten Elements der Auflistung enthält oder `Nothing` , wenn die Auflistung leer ist.  
   
-## Hinweise  
- Mit der <xref:System.Xml.Linq.XElement.Value%2A>\-Eigenschaft erhalten Sie leicht Zugriff auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten.  Diese Eigenschaft überprüft zuerst, ob die Auflistung mindestens ein Objekt enthält.  Wenn die Auflistung leer ist, gibt diese Eigenschaft `Nothing` zurück.  Andernfalls gibt diese Eigenschaft den Wert der <xref:System.Xml.Linq.XElement.Value%2A>\-Eigenschaft des ersten Elements der Auflistung zurück.  
+## <a name="remarks"></a>Hinweise  
+ Die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft erleichtert das Zugriff auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte. Diese Eigenschaft überprüft zuerst, ob die Auflistung über mindestens ein Objekt enthält. Wenn die Auflistung leer ist, gibt diese Eigenschaft `Nothing`. Andernfalls gibt diese Eigenschaft den Wert der die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft des ersten Elements in der Auflistung.  
   
 > [!NOTE]
->  Wenn Sie mit dem '@'\-Bezeichner auf den Wert eines XML\-Attributs zugreifen, wird der Wert des Attributs als `String` zurückgegeben, und Sie müssen die <xref:System.Xml.Linq.XAttribute.Value%2A>\-Eigenschaft nicht explizit angeben.  
+>  Beim Zugriff auf den Wert eines XML-Attributs mithilfe der "@" Bezeichner, den Wert des Attributs wird zurückgegeben, als eine `String` und Sie müssen nicht explizit angeben der <xref:System.Xml.Linq.XAttribute.Value%2A> Eigenschaft.  
   
- Für den Zugriff auf andere Elemente in einer Auflistung können Sie die XML\-Erweiterungsindexereigenschaft verwenden.  Weitere Informationen finden Sie unter [Extension Indexer Property](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ Um andere Elemente in einer Auflistung zuzugreifen, können Sie die XML-Erweiterungsindexereigenschaft verwenden. Weitere Informationen finden Sie unter [Erweiterungsindexereigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
-## Vererbung  
- Die meisten Benutzer müssen <xref:System.Collections.Generic.IEnumerable%601> nicht implementieren und können diesen Abschnitt daher ignorieren.  
+## <a name="inheritance"></a>Vererbung  
+ Die meisten Benutzer müssen nicht implementieren <xref:System.Collections.Generic.IEnumerable%601>, und Sie können diesen Abschnitt daher ignorieren.  
   
- Die <xref:System.Xml.Linq.XElement.Value%2A>\-Eigenschaft ist eine Erweiterungseigenschaft für Typen, die `IEnumerable(Of XElement)` implementieren.  Die Bindung dieser Erweiterungseigenschaft entspricht der Bindung von Erweiterungsmethoden: Wenn ein Typ eine der Schnittstellen implementiert und eine Eigenschaft namens "Value" definiert, hat diese Eigenschaft Vorrang vor der Erweiterungseigenschaft.  Anders ausgedrückt kann diese <xref:System.Xml.Linq.XElement.Value%2A>\-Eigenschaft durch die Definition einer neuen Eigenschaft in einer Klasse, die `IEnumerable(Of XElement)` implementiert, überschrieben werden.  
+ Die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft ist eine Erweiterungseigenschaft für Typen, die implementieren `IEnumerable(Of XElement)`. Die Bindung dieser Eigenschaft für die Erweiterung wird wie die Bindung von Erweiterungsmethoden: Wenn ein Typ eine der Schnittstellen implementiert und definiert eine Eigenschaft mit dem Namen "Wert", hat diese Eigenschaft Vorrang vor der Erweiterungseigenschaft. Das heißt, diese <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft kann überschrieben werden, definieren Sie eine neue Eigenschaft in einer Klasse, die implementiert `IEnumerable(Of XElement)`.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie mit der <xref:System.Xml.Linq.XElement.Value%2A>\-Eigenschaft auf den ersten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement>\-Objekten zugegriffen werden kann.  In diesem Beispiel wird mithilfe der untergeordneten Achseneigenschaft die Auflistung aller untergeordneten Knoten mit dem Namen `phone` abgerufen, die sich im `contact`\-Objekt befinden.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft für den ersten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte. Im Beispiel wird die untergeordnete Achseneigenschaft beim Abrufen der Auflistung aller untergeordneten Knoten mit dem Namen `phone` , die sich in der `contact` Objekt.  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
@@ -66,8 +62,8 @@ object.Value
   
  `Phone number: 206-555-0144`  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie der Wert eines XML\-Attributs aus einer Auflistung von <xref:System.Xml.Linq.XAttribute>\-Objekten abgerufen wird.  In diesem Beispiel wird mithilfe der Attributachseneigenschaft der Wert des `type`\-Attributs für alle `phone`\-Elemente angezeigt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie der Wert für ein XML-Attribut aus einer Auflistung von abgerufen <xref:System.Xml.Linq.XAttribute> Objekte. Im Beispiel wird die Attribute Axis-Eigenschaft den Wert der anzuzeigenden der `type` Attribut für alle von der die `phone` Elemente.  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
@@ -77,13 +73,13 @@ object.Value
   
  `work`  
   
-## Siehe auch  
- <xref:System.Xml.Linq.XElement>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [XML Literals](../../../visual-basic/language-reference/xml-literals/index.md)   
- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Erweiterungsmethoden](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Extension Indexer Property](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)   
- [XML Child Axis Property](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)   
- [XML Attribute Axis Property](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Xml.Linq.XElement>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [Erstellen von XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [Erweiterungsmethoden](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+ [Erweiterungsindexereigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
+ [Untergeordnete XML-Achseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
+ [XML-Attributachseneigenschaft](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

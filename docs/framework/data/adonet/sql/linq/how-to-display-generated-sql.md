@@ -1,28 +1,34 @@
 ---
-title: "Vorgehensweise: Anzeigen von erzeugtem SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Anzeigen von generiertem SQL'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 523a6cbd0174da4c294e5fd2ab2d0217fc63cb5c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Anzeigen von erzeugtem SQL
-Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL\-Code mithilfe der <xref:System.Data.Linq.DataContext.Log%2A>\-Eigenschaft anzeigen.  Dieser Ansatz kann zum Verständnis der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Funktionalität und zum Debugging spezifischer Probleme beitragen.  
+# <a name="how-to-display-generated-sql"></a>Gewusst wie: Anzeigen von generiertem SQL
+Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mithilfe der <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft anzeigen. Dieser Ansatz kann zum Verständnis der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionalität und zum Debugging spezifischer Probleme beitragen.  
   
-## Beispiel  
- Im folgenden Beispiel wird die <xref:System.Data.Linq.DataContext.Log%2A>\-Eigenschaft verwendet, um SQL\-Code im Konsolenfenster anzuzeigen, bevor der Code ausgeführt wird.  Sie können diese Eigenschaft mit den Abfrage\-, Einfüge\-, Update\- und Löschbefehlen verwenden.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft verwendet, um SQL-Code im Konsolenfenster anzuzeigen, bevor der Code ausgeführt wird.  Sie können diese Eigenschaft mit den Abfrage-, Einfüge-, Update- und Löschbefehlen verwenden.  
   
- Die Zeilen im Konsolenfenster entsprechen der Ausgabe bei der Ausführung des folgenden [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]\-Codes oder C\#\-Codes.  
+ Die Zeilen im Konsolenfenster entsprechen der Ausgabe bei der Ausführung des folgenden [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]-Codes oder C#-Codes.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -46,5 +52,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## Siehe auch  
- [Debuggingunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Siehe auch  
+ [Debugging-Unterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

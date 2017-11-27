@@ -1,39 +1,37 @@
 ---
-title: "Constructor &#39;&lt;name&gt;&#39; cannot call itself | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30298"
-  - "vbc30298"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30298"
+title: Konstruktor &#39; &lt;Namen&gt;&#39; kann nicht sich selbst aufrufen
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30298
+- vbc30298
+helpviewer_keywords: BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2361d6f4d710e17a4f4e29ac03bfde523191fa83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Constructor &#39;&lt;name&gt;&#39; cannot call itself
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Eine `Sub New`\-Prozedur in einer Klasse oder Struktur ruft sich selbst auf.  
+# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>Konstruktor &#39; &lt;Namen&gt;&#39; kann nicht sich selbst aufrufen
+Ein `Sub New` Prozeduraufrufe in einer Klasse oder Struktur selbst.  
   
- Der Zweck eines Konstruktors besteht im Initialisieren der Instanz einer Klasse oder Struktur, wenn die Klasse bzw. Struktur das erste Mal erstellt wird.  Eine Klasse oder Struktur kann über mehrere Konstruktoren verfügen, sofern alle Konstruktoren unterschiedliche Parameterlisten aufweisen.  Ein Konstruktor kann einen anderen Konstruktor aufrufen, um zusätzlich zu den eigenen Funktionen die Funktionen dieses Konstruktor auszuführen.  Der Aufruf eines Konstruktors durch sich selbst ist jedoch sinnlos und führt zu einer Endlosschleife, falls solch ein Aufruf zugelassen wird.  
+ Der Zweck eines Konstruktors wird eine Instanz einer Klasse initialisiert werden, oder Struktur, die beim ersten erstellt. Eine Klasse oder Struktur kann mehrere Konstruktoren haben, sofern sie alle unterschiedlichen Parameterlisten aufweisen. Ein Konstruktor einen anderen Konstruktor, um seine Funktionen zusätzlich zu seiner eigenen auszuführen aufrufen darf. Jedoch ist dies bedeutungslos, nach einem Konstruktor selbst aufrufen, und in der Tat vielmehr ergibt der Aufruf in einer Endlosschleife, wenn zulässig.  
   
- **Fehler\-ID:** BC30298  
+ **Fehler-ID:** BC30298  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Überprüfen Sie die Parameterliste des aufgerufenen Konstruktors.  Sie muss sich von der Parameterliste des aufrufenden Konstruktors unterscheiden.  
+1.  Überprüfen Sie die Parameterliste des aufgerufenen Konstruktors. Sie sollten sich von dem des Konstruktors, die den Aufruf unterscheiden.  
   
-2.  Wenn Sie nicht beabsichtigen, einen anderen Konstruktor aufzurufen, entfernen Sie den `Sub New`\-Aufruf vollständig.  
+2.  Wenn Sie nicht beabsichtigen, einen anderen Konstruktor aufrufen, entfernen Sie die `Sub New` vollständig aufrufen.  
   
-## Siehe auch  
- [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a>Siehe auch  
+ [Objektlebensdauer: Erstellen und Zerstören von Objekten](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

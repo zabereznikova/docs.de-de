@@ -5,27 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fec340bf90eaf5b49f73e3af1281e7d6e3f35d5b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2f8bb112cb4277a59296cabdc495d45f40bb7e1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs, die auf Refelktion beruhen
 In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlich, und daher behält die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette zur Laufzeit benötigte Metadaten nicht bei. In diesem Thema werden einige gängige APIs oder Programmiermuster behandelt, die nicht als Teil der Reflektions-API betrachtet werden, aber Reflektion benötigen, um erfolgreich ausgeführt zu werden. Wenn Sie diese im Quellcode verwenden, können Sie Informationen darüber in die Laufzeitanweisungsdatei (*.rd.xml) einfügen, sodass Aufrufe dieser APIs zur Laufzeit keine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme oder sonstige Ausnahmen auslösen.  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType-Methode  
- Sie können einen generischen Typ `AppClass<T>` dynamisch instanziieren, indem Sie die <xref:System.Type.MakeGenericType%2A?displayProperty=fullName>-Methode aufrufen. Dazu verwenden Sie Code wie den folgenden:  
+ Sie können einen generischen Typ `AppClass<T>` dynamisch instanziieren, indem Sie die <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode aufrufen. Dazu verwenden Sie Code wie den folgenden:  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
   
@@ -35,9 +33,9 @@ In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlic
 <Type Name="App1.AppClass`1" Browse="Required PublicAndInternal" />  
 ```  
   
- Auf diese Weise kann der Aufruf der <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=fullName>-Methode erfolgreich sein und ein gültiges <xref:System.Type>-Objekt zurückgeben.  
+ Auf diese Weise kann der Aufruf der <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode erfolgreich sein und ein gültiges <xref:System.Type>-Objekt zurückgeben.  
   
- Aber auch wenn Sie Metadaten für den nicht instanziierten generischen Typ hinzufügen, löst der Aufruf der <xref:System.Type.MakeGenericType%2A?displayProperty=fullName>-Methode eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme aus:  
+ Aber auch wenn Sie Metadaten für den nicht instanziierten generischen Typ hinzufügen, löst der Aufruf der <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme aus:  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
@@ -45,14 +43,14 @@ This operation cannot be carried out as metadata for the following type was remo
 App1.AppClass`1<System.Int32>.  
 ```  
   
- Sie können der Laufzeitdirektivendatei die folgende Laufzeitdirektive hinzufügen, um `Activate`-Metadaten für die spezifische Instanziierung über `AppClass<T>` von <xref:System.Int32?displayProperty=fullName> hinzuzufügen:  
+ Sie können der Laufzeitdirektivendatei die folgende Laufzeitdirektive hinzufügen, um `Activate`-Metadaten für die spezifische Instanziierung über `AppClass<T>` von <xref:System.Int32?displayProperty=nameWithType> hinzuzufügen:  
   
 ```xml  
 <TypeInstantiation Name="App1.AppClass" Arguments="System.Int32"   
                    Activate="Required Public" />  
 ```  
   
- Jede andere Instanziierung über `AppClass<T>` erfordert eine separate Anweisung, wenn sie mit der <xref:System.Type.MakeGenericType%2A?displayProperty=fullName>-Methode erstellt und nicht statisch verwendet wird.  
+ Jede andere Instanziierung über `AppClass<T>` erfordert eine separate Anweisung, wenn sie mit der <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode erstellt und nicht statisch verwendet wird.  
   
 ## <a name="methodinfomakegenericmethod-method"></a>MethodInfo.MakeGenericMethod-Methode  
  In einer Klasse `Class1` mit einer generischen Methode `GetMethod<T>(T t)` kann `GetMethod` durch Reflektion mithilfe von Code wie dem folgenden aufgerufen werden:  
@@ -65,7 +63,7 @@ App1.AppClass`1<System.Int32>.
   
 -   `Browse`-Metadaten für die Methode, die Sie aufrufen möchten.  Ist es eine öffentliche Methode, umfasst das Hinzufügen von öffentlichen `Browse`-Metadaten für den enthaltenden Typ auch die Methode.  
   
--   Dynamische Metadaten für die Methode, die Sie aufrufen möchten, damit der Reflektionsaufrufdelegat nicht von der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette entfernt wird. Wenn dynamische Metadaten für die Methode fehlen, wird beim Aufruf der <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName>-Methode die folgende Ausnahme ausgelöst:  
+-   Dynamische Metadaten für die Methode, die Sie aufrufen möchten, damit der Reflektionsaufrufdelegat nicht von der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette entfernt wird. Wenn dynamische Metadaten für die Methode fehlen, wird beim Aufruf der <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>-Methode die folgende Ausnahme ausgelöst:  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
@@ -82,7 +80,7 @@ App1.AppClass`1<System.Int32>.
  Für jede unterschiedliche Instanziierung der Methode, die dynamisch aufgerufen wird, ist eine `MethodInstantiation`-Direktive erforderlich, und das `Arguments`-Element wird jedem unterschiedlichen Instanziierungsargument entsprechend aktualisiert.  
   
 ## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Methoden Array.CreateInstance und Type.MakeTypeArray  
- Das folgende Beispiel ruft die Methoden <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> und <xref:System.Array.CreateInstance%2A?displayProperty=fullName> für einen Typ `Class1` auf.  
+ Das folgende Beispiel ruft die Methoden <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> und <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> für einen Typ `Class1` auf.  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  
   
@@ -103,6 +101,5 @@ Unfortunately, no further information is available.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Getting Started (Erste Schritte)](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-

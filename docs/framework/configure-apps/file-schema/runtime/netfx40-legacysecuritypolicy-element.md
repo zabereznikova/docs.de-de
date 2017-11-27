@@ -1,88 +1,90 @@
 ---
-title: "&lt;NetFx40_LegacySecurityPolicy&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<NetFx40_LegacySecurityPolicy>-Element"
-  - "NetFx40_LegacySecurityPolicy-Element"
+title: '&lt;NetFx40_LegacySecurityPolicy&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <NetFx40_LegacySecurityPolicy> element
+- NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cb59eb6e2a5e831f603747b3e0f9435bd076fbf8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;NetFx40_LegacySecurityPolicy&gt;-Element
-Gibt an, ob die Laufzeit Legacyrichtlinien für die Codezugriffssicherheit \(CAS, Code Access Security\) verwendet.  
+# <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; Element
+Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) verwendet.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+< NetFx40_LegacySecurityPolicy >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <NetFx40_LegacySecurityPolicy  
    enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit Legacyrichtlinien für die Codezugriffssicherheit \(CAS\) verwendet.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime CAS-legacyrichtlinie verwendet.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`false`|Die Laufzeit verwendet keine Legacyrichtlinien für die Codezugriffssicherheit \(CAS\).  Dies ist der Standardwert.|  
-|`true`|Die Laufzeit verwendet Legacyrichtlinien für die Codezugriffssicherheit \(CAS\).|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`false`|Legacy-CAS-Richtlinie wird von die Laufzeit nicht verwendet. Dies ist die Standardeinstellung.|  
+|`true`|Die Laufzeit verwendet die legacy-CAS-Richtlinie.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
-## Hinweise  
- In .NET Framework 3.5 und älteren Versionen ist die CAS\-Richtlinie immer aktiv.  In [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] muss die CAS\-Richtlinie aktiviert werden.  
+## <a name="remarks"></a>Hinweise  
+ Die CAS-Richtlinie ist in .NET Framework, Version 3.5 und frühere Versionen müssen immer wirksam. In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS-Richtlinie muss aktiviert sein.  
   
- Die CAS\-Richtlinie ist versionsspezifisch.  Benutzerdefinierte CAS\-Richtlinien, die in früheren Versionen von .NET Framework vorhanden sind, müssen in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] erneut angegeben werden.  
+ Die CAS-Richtlinie ist versionsspezifisch. Benutzerdefinierte CAS-Richtlinien, die in früheren Versionen von .NET Framework vorhanden sein müssen erneut angegeben werden, der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- Anwenden des `<NetFx40_LegacySecurityPolicy>`\-Element auf eine [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]\-Assembly wirkt sich nicht auf [sicherheitstransparenten Code](../../../../../docs/framework/misc/security-transparent-code.md) aus; die Transparenzregeln gelten weiterhin.  
+ Anwenden der `<NetFx40_LegacySecurityPolicy>` Element um eine [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] Assembly hat keinen Einfluss auf [Sicherheitstransparenter Code](../../../../../docs/framework/misc/security-transparent-code.md); die Transparenzregeln gelten weiterhin.  
   
 > [!IMPORTANT]
->  Anwenden des `<NetFx40_LegacySecurityPolicy>`\-Elements kann zu bedeutenden Leistungseinbußen für systemeigene Image\-Assemblys führen, die vom [systemeigenen Image\-Generator \(Ngen.exe\)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellt wurden und nicht im [globalen Assemblycache](../../../../../docs/framework/app-domains/gac.md) installiert sind.  Der Leistungsabfall wird von der Unfähigkeit der Laufzeit verursacht, die Assemblys als systemeigene Images zu laden, wenn das Attribut übernommen wird, was dazu führt, dass sie als Just\-In\-Time\-Assemblys geladen werden.  
+>  Anwenden der `<NetFx40_LegacySecurityPolicy>` Element kann bedeutenden Leistungseinbußen führen, für die Assemblys von systemeigenen Images erstellt, indem die [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) , die nicht installiert sind die [globaler Assemblycache ](../../../../../docs/framework/app-domains/gac.md). Leistungsabfälle wird verursacht, wenn die Unfähigkeit der Laufzeit, Assemblys als systemeigene Images zu laden, wenn das Attribut angewendet wird, wodurch ihre wird als just-in-Time-Assemblys geladen.  
   
 > [!NOTE]
->  Wenn Sie in den Projekteinstellungen für das Visual Studio\-Projekt eine Ziel\-.NET Framework\-Version angeben, die älter als [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ist, wird CAS\-Richtlinie aktiviert, einschließlich aller benutzerdefinierten CAS\-Richtlinien, die Sie für diese Version angegeben haben.  Sie können jedoch keine neuen [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]\-Typen und \-Member verwenden.  Sie können eine frühere Version von .NET Framework angeben, indem Sie [\<supportedRuntime\>\-Element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) im Starteinstellungsschema in der [Anwendungskonfigurationsdatei](../../../../../docs/framework/configure-apps/index.md) verwenden.  
+>  Wenn Sie eine .NET Framework-Zielversion angeben, die älter ist als die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in den projekteinstellungen für Visual Studio-Projekts, die CAS-Richtlinie aktiviert, einschließlich alle benutzerdefinierten CAS-Richtlinien, die Sie für die jeweilige Version angegeben. Sie werden jedoch neue verwenden [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Typen und Member. Sie können auch eine frühere Version von .NET Framework angeben, mit der [ \<SupportedRuntime >-Element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in das Schema für starteinstellungen in Ihre [Anwendungskonfigurationsdatei](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
->  In der Syntax von Konfigurationsdateien wird Groß\- und Kleinschreibung berücksichtigt.  Verwenden Sie die Syntax wie in den Abschnitten Syntax und Beispiel angegeben.  
+>  Syntax von Konfigurationsdateien wird Groß-/Kleinschreibung beachtet. Sie sollten die Syntax verwenden, wie in den Abschnitten Syntax und ein Beispiel bereitgestellt.  
   
-## Konfigurationsdatei  
+## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie das Legacyverhalten für die Codezugriffssicherheit \(CAS\) für eine Anwendung aktiviert wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die legacy-CAS-Richtlinie für eine Anwendung zu aktivieren.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_LegacySecurityPolicy enabled="true"/>  
@@ -90,6 +92,6 @@ Gibt an, ob die Laufzeit Legacyrichtlinien für die Codezugriffssicherheit \(CAS
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

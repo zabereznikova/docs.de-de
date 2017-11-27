@@ -8,24 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c840792182c012ba74b3ba3ef297748f58e4b92a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2102fce150f512a49093eb2b214258ac35e276e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Gewusst wie: Senden von Daten mithilfe der WebRequest-Klasse
 In diesem Thema wird die Vorgehensweise zum Senden von Daten an einen Server beschrieben. Die Prozedur wird häufig verwendet, um einer Webseite Daten bereitzustellen.  
@@ -136,7 +133,7 @@ In diesem Thema wird die Vorgehensweise zum Senden von Daten an einen Server bes
     ```  
   
     > [!NOTE]
-    >  Wenn Sie ein <xref:System.Net.WebResponse>-Objekt nicht mehr benötigen, schließen Sie es durch Aufrufen der <xref:System.Net.WebResponse.Close%2A>-Methode. Wenn Sie den Antwortstream vom Antwortobjekt abgerufen haben, können Sie den Datenstrom alternativ dazu auch durch Aufrufen der <xref:System.IO.Stream.Close%2A?displayProperty=fullName>-Methode schließen. Wird die Antwort oder der Datenstrom nicht geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Verbindungen mit dem Server und kann somit weitere Anforderungen nicht mehr verarbeiten.  
+    >  Wenn Sie ein <xref:System.Net.WebResponse>-Objekt nicht mehr benötigen, schließen Sie es durch Aufrufen der <xref:System.Net.WebResponse.Close%2A>-Methode. Wenn Sie den Antwortstream vom Antwortobjekt abgerufen haben, können Sie den Datenstrom alternativ dazu auch durch Aufrufen der <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>-Methode schließen. Wird die Antwort oder der Datenstrom nicht geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Verbindungen mit dem Server und kann somit weitere Anforderungen nicht mehr verarbeiten.  
   
 10. Sie können die protokollspezifischen Eigenschaften lesen, indem Sie auf die Eigenschaften von **WebResponse** zugreifen oder **WebResponse** in eine protokollspezifische Instanz umwandeln. Sie können z.B. auf die HTTP-spezifischen Eigenschaften von <xref:System.Net.HttpWebResponse> zugreifen, indem Sie **WebRequest** in einen **HttpWebRequest**-Verweis umwandeln.  
   
@@ -268,9 +265,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Creating Internet Requests (Erstellen von Internetanforderungen)](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [Using Streams on the Network (Verwenden von Streams im Netzwerk)](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Accessing the Internet Through a Proxy (Zugreifen auf das Internet über einen Proxy)](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)   
- [How to: Request Data Using the WebRequest Class (Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse)](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-
+ [Erstellen von Internetanforderungen](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Zugreifen auf das Internet über einen Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)  
+ [Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

@@ -1,79 +1,82 @@
 ---
-title: "Gewusst wie: Anwenden von Transformationen auf Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Gedrehter Text"
-  - "Skalierter Text"
-  - "Schattierter Text"
-  - "Verzerrter Text"
-  - "Texttransformationen"
-  - "Übersetzter Text"
-  - "Typografie, Gedrehter Text"
-  - "Typografie, Skalierter Text"
-  - "Typografie, Schattierter Text"
-  - "Typografie, Verzerrter Text"
-  - "Typografie, Transformationen"
-  - "Typografie, Übersetzter Text"
+title: 'Gewusst wie: Anwenden von Transformationen auf Text'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], rotated text
+- typography [WPF], scaled text
+- skewed text [WPF]
+- typography [WPF], translated text
+- typography [WPF], shadowed text
+- rotated text [WPF]
+- translated text [WPF]
+- shadowed text [WPF]
+- transforms in text [WPF]
+- typography [WPF], transforms
+- scaled text [WPF]
+- typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ed10a00d3d62f7eae91e5932a917be692de868b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Anwenden von Transformationen auf Text
-Transformationen können die Darstellung von Text in der Anwendung ändern.  In den folgenden Beispielen wird mit verschiedenen Arten von Renderingtransformationen die Darstellung von Text in einem <xref:System.Windows.Controls.TextBlock>\-Steuerelement beeinflusst.  
+# <a name="how-to-apply-transforms-to-text"></a>Gewusst wie: Anwenden von Transformationen auf Text
+Transformationen können die Anzeige von Text in Ihrer Anwendung ändern. In den folgenden Beispielen verschiedene Arten von Renderingtransformationen verwenden, um zu beeinflussen, die Anzeige von Text in einem <xref:System.Windows.Controls.TextBlock> Steuerelement.  
   
-## Beispiel  
- Im folgenden Beispiel wird Text gezeigt, der um einen bestimmten Punkt in der zweidimensionalen x\-y\-Ebene gedreht ist.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt um einen bestimmten Punkt in der zweidimensionalen X-Y-Ebene gedrehten Text.  
   
- ![Gedrehter Text mithilfe einer RotateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext01.png "TransformedText01")  
-Beispiel für einen um 90 Grad gedrehten Text  
+ ![Gedrehter Text mithilfe einer RotateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext01.jpg "TransformedText01")  
+Beispiel für um 90 Grad gedrehten Text  
   
- Im folgenden Codebeispiel wird Text mithilfe von <xref:System.Windows.Media.RotateTransform> gedreht.  Durch einen <xref:System.Windows.Media.RotateTransform.Angle%2A>\-Wert von 90 wird das Element um 90 Grad im Uhrzeigersinn gedreht.  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Media.RotateTransform> Text gedreht. Ein <xref:System.Windows.Media.RotateTransform.Angle%2A> Wert 90 wird das Element um 90 Grad im Uhrzeigersinn.  
   
- [!code-xml[TextTransformSample#TextTransformSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
+ [!code-xaml[TextTransformSample#TextTransformSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
- Im folgenden Beispiel wird die zweite Textzeile entlang der x\-Achse und die dritte Textzeile entlang der y\-Achse um je 150 % skaliert.  
+ Das folgende Beispiel zeigt die zweite Textzeile, die um 150 % entlang der X-Achse skaliert ist, und die dritte Textzeile, die um 150 % entlang der Y-Achse skaliert ist.  
   
- ![Skalierter Text mithilfe einer ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.png "TransformedText02")  
+ ![Text mithilfe einer ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
 Beispiel für skalierten Text  
   
- Im folgenden Codebeispiel wird mithilfe von <xref:System.Windows.Media.ScaleTransform> Text ausgehend von seiner ursprünglichen Größe skaliert.  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Media.ScaleTransform> zum Skalieren von Text aus seiner ursprünglichen Größe.  
   
- [!code-xml[TextTransformSample#TextTransformSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
+ [!code-xaml[TextTransformSample#TextTransformSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
 > [!NOTE]
->  Das Skalieren von Text ist etwas anderes als das Vergrößern des Schriftgrads von Text.  Schriftgrade werden unabhängig voneinander berechnet, um bei unterschiedlichen Größen die beste Auflösung zu ermöglichen.  Skalierter Text hingegen behält die Proportionen der ursprünglichen Größe des Texts bei.  
+>  Das Skalieren von Text ist nicht identisch mit der Erhöhung des Schriftgrads des Texts. Schriftgrade werden unabhängig voneinander berechnet, um die beste Lösung in unterschiedlichen Größen bereitzustellen. Skalierter Text behält andererseits die Proportionen der ursprünglichen Textgröße bei.  
   
- Im folgenden Beispiel wird ein entlang der x\-Achse verzerrter Text dargestellt.  
+ Das folgende Beispiel zeigt einen entlang der X-Achse geneigten Text.  
   
- ![Geneigter Text mithilfe einer SkewTransform](../../../../docs/framework/wpf/advanced/media/transformedtext03.png "TransformedText03")  
+ ![Geneigter Text mithilfe einer SkewTransform](../../../../docs/framework/wpf/advanced/media/transformedtext03.jpg "TransformedText03")  
 Beispiel für verzerrten Text  
   
- Im folgenden Codebeispiel wird Text mithilfe von <xref:System.Windows.Media.SkewTransform> verzerrt.  Eine Verzerrung \(auch als Scherung bekannt\), ist eine Transformation, die den Koordinatenraum auf ungleichmäßige Art ausdehnt.  In diesem Beispiel werden die zwei Textzeichenfolgen um \-30° und 30° entlang der x\-Koordinate verzerrt.  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Media.SkewTransform> um Text zu verzerren. Eine Neigung ist eine Transformation, die den Koordinatenraum auf ungleichmäßige Art ausdehnt. In diesem Beispiel werden die zwei Textzeichenfolgen um -30 Grad und 30 Grad entlang der X-Koordinate geneigt.  
   
- [!code-xml[TextTransformSample#TextTransformSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
+ [!code-xaml[TextTransformSample#TextTransformSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
- Im folgenden Beispiel wird Text dargestellt, der entlang der x\- und y\-Achse übersetzt bzw. verschoben ist.  
+ Das folgende Beispiel zeigt Text, der entlang der X- und Y-Achse übersetzt oder verschoben wurde.  
   
- ![Textversatz mithilfe einer TranslateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext04.png "TransformedText04")  
+ ![Textversatz mithilfe einer TranslateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext04.jpg "TransformedText04")  
 Beispiel für übersetzten Text  
   
- Im folgenden Codebeispiel wird ein <xref:System.Windows.Media.TranslateTransform> verwendet, um Text zu versetzen.  In diesem Beispiel wird ein Schatteneffekt erzielt, indem die Kopie des Textes hinter dem primären Text geringfügig versetzt wird.  
+ Im folgenden Codebeispiel wird mit einem <xref:System.Windows.Media.TranslateTransform> um Text zu versetzen. In diesem Beispiel erstellt eine geringfügig versetzte Kopie des Textes hinter dem primären Text einen Schatteneffekt.  
   
- [!code-xml[TextTransformSample#TextTransformSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
+ [!code-xaml[TextTransformSample#TextTransformSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  Der <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> verfügt über einen umfangreichen Satz an Features zum Bereitstellen von Schatteneffekten.  Weitere Informationen finden Sie unter [Erstellen von Text mit einem Schatten](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
+>  Die <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> bietet einen umfangreichen Satz von Funktionen für das Bereitstellen von Schatteneffekten. Weitere Informationen finden Sie unter [Erstellen von Text mit einem Schatten](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anwenden von Animationen auf Text](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)

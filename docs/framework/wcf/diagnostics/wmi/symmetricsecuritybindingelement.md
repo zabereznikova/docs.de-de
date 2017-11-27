@@ -1,25 +1,28 @@
 ---
-title: "SymmetricSecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SymmetricSecurityBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e182b6-c041-4d80-a926-6058068d9f79
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: ab341f55947bfcfbc776143e3bbc33e125da89c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# SymmetricSecurityBindingElement
+# <a name="symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement
 SymmetricSecurityBindingElement  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class SymmetricSecurityBindingElement : SecurityBindingElement  
@@ -29,31 +32,31 @@ class SymmetricSecurityBindingElement : SecurityBindingElement
 };  
 ```  
   
-## Methoden  
- Die SymmetricSecurityBindingElement\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die SymmetricSecurityBindingElement-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die SymmetricSecurityBindingElement\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die SymmetricSecurityBindingElement-Klasse verfügt über die folgenden Eigenschaften:  
   
-### MessageProtectionOrder  
- Datentyp: Zeichenfolge  
+### <a name="messageprotectionorder"></a>MessageProtectionOrder  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Reihenfolge der Nachrichtenverschlüsselung und \-signatur für diese Bindung.  
+ Die Reihenfolge der Nachrichtenverschlüsselung und -signatur für diese Bindung.  
   
-### RequireSignatureConfirmation  
- Datentyp: Boolescher Wert  
+### <a name="requiresignatureconfirmation"></a>RequireSignatureConfirmation  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob die Bindung eine Signaturbestätigung erfordert.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>

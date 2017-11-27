@@ -1,68 +1,72 @@
 ---
-title: "Gewusst wie: Lesen von Bildmetadaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Metadaten, Eigenschaftenelement"
-  - "Metadaten, Lesen von Bildern"
+title: 'Gewusst wie: Lesen von Bildmetadaten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- metadata [Windows Forms], property item
+- metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Lesen von Bildmetadaten
-Einige Bilddateien enthalten lesbare Metadaten, mit deren Hilfe Features des Bildes bestimmt werden können.  Ein digitales Foto kann beispielsweise Metadaten enthalten, die Sie auslesen können, um Fabrikat und Modell der Kamera zu ermitteln, mit der das Bild aufgenommen wurde.  Mithilfe von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können vorhandene Metadaten gelesen sowie neue Metadaten in Bilddateien geschrieben werden.  
+# <a name="how-to-read-image-metadata"></a>Gewusst wie: Lesen von Bildmetadaten
+Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, die Funktionen des Bilds. Angenommen, enthält ein digitales Foto Metadaten, die Sie lesen können, um zu bestimmen, den Hersteller und Modell der Kamera verwendet, um das Abbild aufzeichnen. Mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], können Sie vorhandene Metadaten gelesen, und Sie können auch neue Metadaten in Bilddateien geschrieben.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] speichert individuelle Metadaten in einem <xref:System.Drawing.Imaging.PropertyItem>\-Objekt.  Um sämtliche Metadaten aus einer Datei abzurufen, kann die <xref:System.Drawing.Image.PropertyItems%2A>\-Eigenschaft eines <xref:System.Drawing.Image>\-Objekts gelesen werden.  Die <xref:System.Drawing.Image.PropertyItems%2A>\-Eigenschaft gibt ein Array von <xref:System.Drawing.Imaging.PropertyItem>\-Objekten zurück.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Speichert ein einzelnes Stück von Metadaten in einem <xref:System.Drawing.Imaging.PropertyItem> Objekt. Informieren Sie sich die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft ein <xref:System.Drawing.Image> Objekt, das alle Metadaten aus einer Datei abrufen. Die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft gibt ein Array von <xref:System.Drawing.Imaging.PropertyItem> Objekte.  
   
- Ein <xref:System.Drawing.Imaging.PropertyItem>\-Objekt verfügt über die folgenden vier Eigenschaften: `Id`, `Value`, `Len` und `Type`.  
+ Ein <xref:System.Drawing.Imaging.PropertyItem> Objekt hat die folgenden vier Eigenschaften: `Id`, `Value`, `Len`, und `Type`.  
   
-## Id  
- Ein Tag, das das Metadatenelement identifiziert.  In der folgenden Tabelle sind einige Werte aufgelistet, die der <xref:System.Drawing.Imaging.PropertyItem.Id%2A>\-Eigenschaft zugewiesen werden können.  
+## <a name="id"></a>ID  
+ Ein Tag, das Metadatenelement identifiziert. Einige Werte, die zugewiesen werden können <xref:System.Drawing.Imaging.PropertyItem.Id%2A> sind in der folgenden Tabelle gezeigt.  
   
 |Hexadezimalwert|Beschreibung|  
-|---------------------|------------------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Bildtitel<br /><br /> Gerätehersteller<br /><br /> Gerätemodell<br /><br /> ExifDTOriginal<br /><br /> Exif\-Belichtungszeit<br /><br /> Luminanztabelle<br /><br /> Chrominanztabelle|  
+|-----------------------|-----------------|  
+|0x0320<br /><br /> 0x010F<br /><br /> 0 x 0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Image-Titel<br /><br /> Gerätehersteller<br /><br /> Geräte-Modell<br /><br /> ExifDTOriginal<br /><br /> EXIF Offenlegung Zeit<br /><br /> Intensität-Tabelle<br /><br /> Chrominanz-Tabelle|  
   
-## Wert  
- Ein Wertearray.  Das Format der Werte wird von der <xref:System.Drawing.Imaging.PropertyItem.Type%2A>\-Eigenschaft bestimmt.  
+## <a name="value"></a>Wert  
+ Ein Array von Werten. Das Format der Werte wird bestimmt, indem die <xref:System.Drawing.Imaging.PropertyItem.Type%2A> Eigenschaft.  
   
-## Len  
- Die Länge des Wertearrays, auf das die <xref:System.Drawing.Imaging.PropertyItem.Value%2A>\-Eigenschaft zeigt \(in Bytes\).  
+## <a name="len"></a>Len  
+ Die Länge (in Bytes) des Arrays von Werten verweist die <xref:System.Drawing.Imaging.PropertyItem.Value%2A> Eigenschaft.  
   
-## Typ  
- Der Datentyp der Werte im Array, auf das die `Value`\-Eigenschaft zeigt.  In der folgenden Tabelle sind die durch die `Type`\-Eigenschaftswerte angegebenen Formate aufgeführt.  
+## <a name="type"></a>Typ  
+ Der Datentyp der Werte im Array verweist die `Value` Eigenschaft. Die Formate angegeben werden, durch die `Type` Eigenschaftswerte werden in der folgenden Tabelle angezeigt  
   
 |Numerischer Wert|Beschreibung|  
-|----------------------|------------------|  
-|1|Ein `Byte`|  
-|2|Ein Array von ASCII\-codierten `Byte`\-Objekten|  
-|3|Ganze 16\-Bit\-Zahl|  
-|4|Ganze 32\-Bit\-Zahl|  
-|5|Ein Array aus zwei `Byte`\-Objekten, die eine rationale Zahl darstellen|  
-|6|Nicht in Verwendung|  
+|-------------------|-----------------|  
+|1|Eine `Byte`|  
+|2|Ein Array von `Byte` als ASCII-codierte Objekte|  
+|3|Eine 16-Bit-Ganzzahl|  
+|4|Eine 32-Bit-Ganzzahl|  
+|5|Ein Array mit zwei `Byte` Objekte, die eine rationale Zahl darstellen.|  
+|6|Nicht verwendet|  
 |7|Nicht definiert|  
-|8|Nicht in Verwendung|  
+|8|Nicht verwendet|  
 |9|`SLong`|  
 |10|`SRational`|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Beschreibung  
- Im folgenden Codebeispiel werden die sieben Metadatenelemente aus der Datei `FakePhoto.jpg` eingelesen und angezeigt.  Das zweite Eigenschaftenelement in der Liste \(Index 1\) verfügt über die <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F \(Gerätehersteller\) und den <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 \(ASCII\-codiertes Bytearray\).  Im Codebeispiel wird der Wert dieses Eigenschaftenelements angezeigt.  
+### <a name="description"></a>Beschreibung  
+ Im folgenden Codebeispiel wird liest und zeigt die sieben Teile von Metadaten in der Datei `FakePhoto.jpg`. Das zweite Element der (Index 1)-Eigenschaft in der Liste hat <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (Gerätehersteller) und <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII-codiertes Bytearray). Das Codebeispiel zeigt den Wert des Eigenschaftenelements.  
   
- Durch den Code wird eine ähnliche Ausgabe wie im folgenden Beispiel erzeugt:  
+ Der Code erzeugt eine Ausgabe ähnlich der folgenden:  
   
  `Property Item 0`  
   
@@ -122,13 +126,13 @@ Einige Bilddateien enthalten lesbare Metadaten, mit deren Hilfe Features des Bil
   
  `The equipment make is Northwind Camera.`  
   
-### Code  
+### <a name="code"></a>Code  
  [!code-csharp[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  Behandeln Sie das <xref:System.Windows.Forms.Control.Paint>\-Ereignis des Formulars, und fügen Sie diesen Code in den Paint\-Ereignishandler ein.  Ersetzen Sie `FakePhoto.jpg` durch einen Bildnamen und einen auf Ihrem System gültigen Pfad, und importieren Sie den `System.Drawing.Imaging`\-Namespace.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Behandeln des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis und fügen Sie diesen Code in den Paint-Ereignishandler. Ersetzen Sie `FakePhoto.jpg` mit einem Image-Name und Pfad gültig ist, auf Ihrem System und Importieren der `System.Drawing.Imaging` Namespace.  
   
-## Siehe auch  
- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,66 +1,69 @@
 ---
-title: "&lt;probing&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#probing"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<probing>-Element"
-  - "Containertags, <probing>-Element"
-  - "probing-Element"
+title: '&lt;Probing&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#probing
+helpviewer_keywords:
+- <probing> element
+- container tags, <probing> element
+- probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7dd829fbbfbaa6f26b59e26d5a8b1d2b36593f57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;probing&gt;-Element
-Gibt Unterverzeichnisse der Anwendungsbasis an, die die Common Language Runtime beim Laden von Assemblys durchsucht.  
+# <a name="ltprobinggt-element"></a>&lt;Probing&gt; Element
+Gibt Unterverzeichnisse der Anwendungsbasis für die common Language Runtime beim Laden von Assemblys für die Suche an.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<AssemblyBinding >  
+\<Probing >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <probing privatePath="paths"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`privatePath`|Erforderliches Attribut.<br /><br /> Gibt Unterverzeichnisse des Basisverzeichnisses der Anwendung an, die möglicherweise Assemblys enthalten.  Trennen Sie die einzelnen Unterverzeichnisse durch Semikolons voneinander.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`privatePath`|Erforderliches Attribut.<br /><br /> Gibt die Unterverzeichnisse des Basisverzeichnisses der Anwendung, die Assemblys enthalten können. Begrenzen Sie die einzelnen Unterverzeichnissen mit einem Semikolon.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
 |`assemblyBinding`|Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht, wie Sie Unterverzeichnisse der Anwendungsbasis angeben, die die Runtime nach Assemblys durchsuchen soll.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Unterverzeichnisse der Anwendungsbasis angeben, die die Common Language Runtime nach Assemblys suchen soll.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -70,8 +73,8 @@ Gibt Unterverzeichnisse der Anwendungsbasis an, die die Common Language Runtime 
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Festlegen des Speicherortes einer Assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Festlegen des Speicherortes einer Assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

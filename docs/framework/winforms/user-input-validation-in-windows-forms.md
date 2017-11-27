@@ -1,107 +1,108 @@
 ---
-title: "Validierung von Benutzereingaben in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzereingabe, Validieren in Windows Forms"
-  - "Validieren von Benutzereingaben, Windows Forms"
-  - "Überprüfung, Windows Forms-Benutzereingabe"
-  - "Windows Forms, Validieren von Benutzereingaben"
+title: Validierung von Benutzereingaben in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, validating user input
+- validation [Windows Forms], Windows Forms user input
+- user input [Windows Forms], validating in Windows Forms
+- validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Validierung von Benutzereingaben in Windows Forms
-Wenn Benutzer Daten in Ihre Anwendung eingeben, möchten Sie vielleicht überprüfen, ob die Daten gültig sind, bevor sie von der Anwendung verwendet werden.  Beispielsweise kann es erforderlich sein, dass bestimmte Textfelder nicht die Länge 0 haben, dass ein Feld als Telefonnummer oder als ähnlich wohlgeformtes Datenformat formatiert wird oder dass eine Zeichenfolge keine unsicheren Zeichen enthält, die die Sicherheit einer Datenbank beeinträchtigen könnten.  Windows Forms bieten mehrere Möglichkeiten, um Eingaben in der Anwendung zu überprüfen.  
+# <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
+Wenn Benutzer Daten in die Anwendung eingeben, empfiehlt es sich um sicherzustellen, dass die Daten gültig sind, bevor Sie Ihre Anwendung verwendet. Sie können erforderlich, dass bestimmte Textfelder werden nicht mit der Länge Null, dass ein Feld als eine Telefonnummer oder andere Arten von wohlgeformte Daten formatiert werden, dass eine Zeichenfolge keine unsicheren Zeichen enthält, die verwendet werden können, um die Sicherheit einer Datenbank zu gefährden. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen der Eingabe in der Anwendung.  
   
-## Validierung mit dem MaskedTextBox\-Steuerelement  
- Wenn Sie Benutzereingaben in einem wohlgeformten Format benötigen, beispielsweise im Telefon\- oder Teilenummernformat, lässt sich dies schnell und mit wenig Programmieraufwand realisieren. Sie verwenden dazu das <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelement.  Eine *Maske* ist eine Zeichenfolge aus Zeichen in einer Maskingsprache, durch die festgelegt wird, welche Zeichen an einer bestimmten Position im Textfeld eingegeben werden dürfen.  Über das Steuerelement werden dem Benutzer eine Reihe von Aufforderungen angezeigt.  Wenn der Benutzer eine falsche Eingabe macht, also beispielsweise einen Buchstaben eingibt, während eine Ziffer benötigt wird, wird die Eingabe vom Steuerelement automatisch zurückgewiesen.  
+## <a name="validation-with-the-maskedtextbox-control"></a>Validierung mit dem MaskedTextBox-Steuerelement  
+ Wenn Sie Benutzer zur Eingabe von Daten in ein klar definiertes Format aufweisen, z. B. eine Telefonnummer oder eine Teilenummer erfordern müssen Sie erreichen dies schnell und mit minimalem Codeeinsatz mithilfe der <xref:System.Windows.Forms.MaskedTextBox> Steuerelement. Ein *Maske* ist eine Zeichenfolge, die aus der Zeichen in einer anderen Maskierungssprache, der angibt, welche Zeichen an einer bestimmten Position in das Textfeld eingegeben werden können. Das Steuerelement zeigt eine Reihe von Anweisungen für den Benutzer. Wenn der Benutzer einen unzulässigen Eintrag eingibt, z. B. der Benutzer einen Buchstaben eingibt, wenn eine Ziffer erforderlich ist, das Steuerelement die Eingabe automatisch abgelehnt.  
   
- Die von <xref:System.Windows.Forms.MaskedTextBox> verwendete Maskingsprache ist sehr flexibel.  Sie ermöglicht es Ihnen, obligatorische Zeichen, optionale Zeichen, literale Zeichen wie Bindestriche und Klammen, Währungszeichen und Datumstrennzeichen festzulegen.  Das Steuerelement funktioniert auch, wenn es an eine Datenquelle gebunden ist.  Das <xref:System.Windows.Forms.Binding.Format>\-Ereignis für eine Datenbindung kann auch zum Neuformatieren eingehender Daten entsprechend der Maske und das <xref:System.Windows.Forms.Binding.Parse>\-Ereignis zum Neuformatieren ausgehender Daten entsprechend den Spezifikationen des Datenfeldes verwendet werden.  
+ Die Maskierungssprache, die von verwendet wird, <xref:System.Windows.Forms.MaskedTextBox> ist sehr flexibel. Es ermöglicht Ihnen das Festlegen der erforderlichen Zeichen, optionale Zeichen, einem Literalzeichen, z. B. Bindestriche und Klammern, Währungszeichen und Datumstrennzeichen. Das Steuerelement funktioniert auch, auch wenn mit einer Datenquelle gebunden. Die <xref:System.Windows.Forms.Binding.Format> Ereignis auf einer Bindung kann verwendet werden, um eingehende Daten zur Einhaltung der Maske neu zu formatieren und die <xref:System.Windows.Forms.Binding.Parse> Ereignis kann verwendet werden, um die ausgehende Daten zur Einhaltung von der Spezifikationen des Datenfelds neu zu formatieren.  
   
- Weitere Informationen finden Sie unter [MaskedTextBox\-Steuerelement](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
+ Weitere Informationen finden Sie unter [MaskedTextBox-Steuerelement](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
   
-## Ereignisgesteuerte Validierung  
- Wenn die Validierung vollständig programmgesteuert ablaufen soll oder wenn umfangreiche Validierungen erforderlich sind, sollten Sie die Validierungsereignisse verwenden, die in die meisten Windows Forms\-Steuerelemente integriert sind.  Jedes Steuerelement, das formfreie Benutzereingaben akzeptiert, verfügt über ein <xref:System.Windows.Forms.Control.Validating>\-Ereignis, das eintritt, sobald das Steuerelement eine Datenvalidierung erfordert.  In der <xref:System.Windows.Forms.Control.Validating>\-Ereignisbehandlungsmethode können Sie Benutzereingaben auf mehrere Weisen überprüfen.  Wenn Sie beispielsweise über ein Textfeld verfügen, das eine Postleitzahl enthalten muss, können Sie die Validierung auf folgende Weisen ausführen:  
+## <a name="event-driven-validation"></a>Ereignisgesteuerte Validierung  
+ Wenn Sie vollständige programmgesteuerte Kontrolle über die Validierung möchten oder komplexe Überprüfungen durchführen müssen, sollten Sie die Validierungsereignisse integriert die meisten Windows Forms-Steuerelemente verwenden. Jedes Steuerelement, das Benutzereingaben Freiform-verfügt über eine <xref:System.Windows.Forms.Control.Validating> Ereignis, das erfolgt, wenn das Steuerelement die Validierung erfordert. In der <xref:System.Windows.Forms.Control.Validating> Ereignisbehandlungsmethode, überprüfen Sie Benutzereingaben auf unterschiedliche Weise. Wenn Sie ein Textfeld, die eine Postleitzahl enthalten muss verfügen, können Sie z. B. die Überprüfung auf folgende Weise ausführen:  
   
--   Wenn die Postleistzahl einer bestimmten Gruppe von PLZ\-Codes angehören muss, können Sie einen Zeichenfolgenvergleich für die Eingabe ausführen, um die vom Benutzer eingegebenen Daten zu überprüfen.  Wenn sich die Postleitzahl beispielsweise in der Menge {10001, 10002, 10003} befinden muss, können Sie zur Validierung der Daten einen Zeichenfolgenvergleich verwenden.  
+-   Wenn die Postleitzahl für eine bestimmte Gruppe von Postleitzahlen gehören muss, können Sie einen Zeichenfolgenvergleich für die Eingabe zum Überprüfen der vom Benutzer eingegebenen Daten ausführen. Z. B. wenn die Postleitzahl in der Menge {10001, 10002, 10003} sein muss, können klicken Sie dann einen Zeichenfolgenvergleich Sie zum Überprüfen der Daten.  
   
--   Wenn die Postleitzahl in einem bestimmten Format vorliegen muss, können Sie zur Validierung der vom Benutzer eingegebenen Daten reguläre Ausdrücke verwenden.  Um beispielsweise das Format `#####` oder `#####-####` zu überprüfen, können Sie den regulären Ausdruck `^(\d{5})(-\d{4})?$` verwenden.  Um beispielsweise das Format `A#A #A#` zu überprüfen, können Sie den regulären Ausdruck `[A-Z]\d[A-Z] \d[A-Z]\d` verwenden.  Weitere Informationen zu regulären Ausdrücken finden Sie unter [Reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md) und [Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md).  
+-   Wenn die Postleitzahl in einem bestimmten Format sein muss können Sie reguläre Ausdrücke, zum Überprüfen der Daten, die vom Benutzer eingegeben werden. So überprüfen Sie das Formular beispielsweise `#####` oder `#####-####`, können Sie den regulären Ausdruck `^(\d{5})(-\d{4})?$`. So überprüfen Sie das Formular `A#A #A#`, können Sie den regulären Ausdruck `[A-Z]\d[A-Z] \d[A-Z]\d`. Weitere Informationen zu regulären Ausdrücken finden Sie unter [reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md) und [Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md).  
   
--   Wenn die Postleitzahl eine in den USA gültige Postleitzahl sein muss, können Sie einen Postleitzahlen\-Webdienst aufrufen, um die vom Benutzer eingegebenen Daten zu überprüfen.  
+-   Wenn die Postleitzahl in eine gültige Postleitzahl für die USA sein muss, können Sie einen Postleitzahl-Webdienst zum Überprüfen der vom Benutzer eingegebenen Daten aufrufen.  
   
- Für das <xref:System.Windows.Forms.Control.Validating>\-Ereignis wird ein Objekt des Typs <xref:System.ComponentModel.CancelEventArgs> bereitgestellt.  Wenn Sie feststellen, dass die Daten des Steuerelements ungültig sind, können Sie das <xref:System.Windows.Forms.Control.Validating>\-Ereignis abbrechen, indem Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>\-Eigenschaft dieses Objekts auf `true` festlegen.  Wenn Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>\-Eigenschaft nicht festlegen, geht Windows Forms davon aus, dass die Validierung für dieses Steuerelement erfolgreich war, und das <xref:System.Windows.Forms.Control.Validated>\-Ereignis wird ausgelöst.  
+ Die <xref:System.Windows.Forms.Control.Validating> Ereignis angegeben wird ein Objekt des Typs <xref:System.ComponentModel.CancelEventArgs>. Wenn Sie feststellen, dass die Daten des Steuerelements nicht gültig ist, können Sie Abbrechen der <xref:System.Windows.Forms.Control.Validating> -Ereignisses durch Festlegen dieses Objekts <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Wenn Sie nicht festlegen, die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, Windows Forms werden angenommen, die Validierung für dieses Steuerelement war erfolgreich und Auslösen der <xref:System.Windows.Forms.Control.Validated> Ereignis.  
   
- Ein Codebeispiel, durch das eine E\-Mail\-Adresse in einem <xref:System.Windows.Controls.TextBox> überprüft wird, finden Sie unter <xref:System.Windows.Forms.Control.Validating>.  
+ Ein Codebeispiel, das überprüft eine e-Mail-Adresse in einem <xref:System.Windows.Controls.TextBox>, finden Sie unter <xref:System.Windows.Forms.Control.Validating>.  
   
-### Datenbindung und ereignisgesteuerte Validierung  
- Die Validierung ist sehr hilfreich, wenn Sie Steuerelemente an eine Datenquelle, z. B. eine Datenbanktabelle, gebunden haben.  Mithilfe der Validierung können Sie sicherstellen, dass die Daten des Steuerelements das Format aufweisen, das von der Datenquelle benötigt wird und dass keine Sonderzeichen wie Anführungszeichen und umgekehrte Schrägstriche enthalten sind, die sich als unsicher erweisen könnten.  
+### <a name="data-binding-and-event-driven-validation"></a>Datenbindung und das ereignisgesteuerte Validierung  
+ Validierung ist sehr nützlich, wenn Sie die Steuerelemente mit einer Datenquelle, z. B. eine Datenbanktabelle gebunden haben. Mithilfe der Validierung können Sie sicherstellen kann, dass Daten des Steuerelements erfüllt, die das Format von der Datenquelle erforderlich sind, und, dass sie keine Sonderzeichen wie z. B. Anführungszeichen enthalten und Sichern nicht, die Schrägstriche unsicher sein.  
   
- Wenn Sie die Datenbindung verwenden, werden die Daten im Steuerelement während der Ausführung des <xref:System.Windows.Forms.Control.Validating>\-Ereignisses mit der Datenquelle synchronisiert.  Wenn Sie das <xref:System.Windows.Forms.Control.Validating>\-Ereignis abbrechen, werden die Daten nicht mit der Datenquelle synchronisiert.  
+ Wenn Sie die Datenbindung verwenden, die Daten in das Steuerelement synchronisiert mit der Datenquelle während der Ausführung der <xref:System.Windows.Forms.Control.Validating> Ereignis. Wenn Sie "Abbrechen" die <xref:System.Windows.Forms.Control.Validating> Ereignis, die Daten nicht mit der Datenquelle synchronisiert werden.  
   
 > [!IMPORTANT]
->  Wenn Sie über eine benutzerdefinierte Validierung verfügen, die nach dem <xref:System.Windows.Forms.Control.Validating>\-Ereignis stattfindet, wirkt sich dies nicht auf die Datenbindung aus.  Wenn Sie beispielsweise über Code in einem <xref:System.Windows.Forms.Control.Validated>\-Ereignis verfügen, der versucht, die Datenbindung aufzuheben, bleibt die Datenbindung weiterhin bestehen.  Um in diesem Fall eine Validierung im <xref:System.Windows.Forms.Control.Validated>\-Ereignis auszuführen, ändern Sie die **Datenquellen\-Aktualisierungsmodus**\-Eigenschaft des Steuerelements \(**unter \(Databindings\)**\\**\(Advanced\)**\) von **OnValidation** in **Never** und fügen dem Validierungscode *Control*`.DataBindings["`*\<YOURFIELD\>*`"].WriteValue()` hinzu.  
+>  Wenn Sie benutzerdefinierte Validierung, der stattfindet verfügen, nach der <xref:System.Windows.Forms.Control.Validating> Ereignis, wirkt sich nicht dem Datenbindung. Angenommen, Sie über Code verfügen, einem <xref:System.Windows.Forms.Control.Validated> Ereignis, das versucht, die Datenbindung abzubrechen, die Datenbindung wird nach wie vor erfolgen. In diesem Fall wird die Validierung in der <xref:System.Windows.Forms.Control.Validated> Ereignis, ändern Sie das Steuerelement **Datenquellen-Aktualisierungsmodus** Eigenschaft (**unter (Databindings)**\\**(Erweitert)** ) von **OnValidation** auf **nie**, und fügen *Steuerelement*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` zu Validierungscodes.  
   
-### Implizite und explizite Validierung  
- Wann werden die Daten eines Steuerelements überprüft?  Dies hängt vom Entwickler ab.  Sie können entweder die implizite oder explizite Validierung verwenden, je nachdem, welche Anforderungen Sie an Ihre Anwendung stellen.  
+### <a name="implicit-and-explicit-validation"></a>Implizite und explizite Validierung  
+ Also wenn überprüft ein Steuerelement Daten? Dies ist bis zu Ihnen als Entwickler. Sie können die Überprüfung von entweder implizit oder explizit, je nach den Anforderungen Ihrer Anwendung verwenden.  
   
-#### Implizite Validierung  
- Bei der impliziten Validierung werden die Daten überprüft, wenn sie vom Benutzer eingegeben werden.  Sie können die Daten während der Eingabe in ein Steuerelement überprüfen, indem Sie die Tastatureingaben lesen oder, was häufiger der Fall ist, verfolgen, wann der Benutzer den Eingabefokus von einem Steuerelement zum nächsten verschiebt.  Dieser Ansatz ist hilfreich, wenn Sie dem Benutzer während der Arbeit direktes Feedback zu den Daten geben möchten.  
+#### <a name="implicit-validation"></a>Implizite Validierung  
+ Der impliziten Validierung überprüft Daten, wie vom Benutzer eingegeben. Sie können die Daten überprüfen, wie die Daten in mindestens ein Steuerelement durch Lesen die Schlüssel gedrückten eingegeben werden, häufig auf, wenn der Benutzer den Eingabefokus von einem Steuerelement hat, und zur nächsten wechselt. Dieser Ansatz ist hilfreich, wenn auf das Benutzer unmittelbar Feedback zu den Daten zu erhalten, wie sie funktionieren sollen.  
   
- Wenn Sie die implizite Validierung für ein Steuerelement verwenden möchten, müssen Sie die <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>\-Eigenschaft dieses Steuerelements auf `true` festlegen.  Wenn Sie das <xref:System.Windows.Forms.Control.Validating>\-Ereignis abbrechen, richtet sich das Verhalten des Steuerelements nach dem Wert, den Sie <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> zugewiesen haben.  Wenn Sie <xref:System.Windows.Forms.AutoValidate> zugewiesen haben, bewirkt das Abbrechen des Ereignisses, dass das <xref:System.Windows.Forms.Control.Validated>\-Ereignis nicht eintritt.  Der Eingabefokus verbleibt beim aktuellen Steuerelement, bis der Benutzer die Daten in eine gültige Eingabe ändert.  Wenn Sie <xref:System.Windows.Forms.AutoValidate> zugewiesen haben, tritt das <xref:System.Windows.Forms.Control.Validated>\-Ereignis beim Abbrechen des Ereignisses nicht ein, der Fokus wird jedoch trotzdem an das nächste Steuerelement übergeben.  
+ Wenn Sie für ein Steuerelement implizite Validierung verwenden möchten, müssen Sie festlegen, dass dieses Steuerelement <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> Eigenschaft `true`. Wenn Sie "Abbrechen" die <xref:System.Windows.Forms.Control.Validating> Ereignis, das Verhalten des Steuerelements sind davon abhängig, was Ihnen zugewiesene Wert <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>. Wenn Sie zugewiesen <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>, Abbrechen des Ereignisses führt dazu, dass die <xref:System.Windows.Forms.Control.Validated> Ereignis nicht auftreten. Eingabefokus verbleiben auf das aktuelle Steuerelement, bis der Benutzer die Daten in einen gültigen Wert ändert. Wenn Sie zugewiesen <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>die <xref:System.Windows.Forms.Control.Validated> Ereignis wird nicht auftreten, wenn Sie das Ereignis "Abbrechen", aber den Fokus sich weiterhin auf das nächste Steuerelement ändert.  
   
- Indem Sie <xref:System.Windows.Forms.AutoValidate> zur <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>\-Eigenschaft zuweisen, wird die implizite Validierung grundsätzlich verhindert.  Um Steuerelemente zu überprüfen, müssen Sie die explizite Validierung verwenden.  
+ Zuweisen von <xref:System.Windows.Forms.AutoValidate.Disable> auf die <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> Eigenschaft wird die implizite Validierung grundsätzlich verhindert. Um Steuerelemente zu überprüfen, müssen Sie die explizite Validierung verwenden.  
   
-#### Explizite Validierung  
- Bei der expliziten Validierung werden die Daten zu einem bestimmten Zeitpunkt überprüft.  Sie können die Daten in Reaktion auf eine Benutzeraktion überprüfen, z. B. das Klicken auf eine Schaltfläche zum Speichern oder auf einen weiterführenden Link.  Wenn die Benutzeraktion eintritt, können Sie die explizite Validierung auf eine der folgenden Weisen auslösen:  
+#### <a name="explicit-validation"></a>Explizite Validierung  
+ Der expliziten Validierung überprüft Daten gleichzeitig an. Sie können die Daten als Antwort auf eine Benutzeraktion, wie das Klicken auf eine Schaltfläche "Speichern" oder einen Link weiter überprüfen. Wenn die Benutzeraktion auftritt, können Sie in einem der folgenden Arten explizite Validierung auslösen:  
   
--   Rufen Sie <xref:System.Windows.Forms.ContainerControl.Validate%2A> auf, um das letzte Steuerelement zu überprüfen, das den Fokus hatte.  
+-   Rufen Sie <xref:System.Windows.Forms.ContainerControl.Validate%2A> So überprüfen Sie das letzte Steuerelement aus, um den Fokus verloren haben.  
   
--   Rufen Sie <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> auf, um alle untergeordneten Steuerelemente in einem Formular\- oder Containersteuerelement zu überprüfen.  
+-   Rufen Sie <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> So überprüfen Sie alle untergeordneten Steuerelemente in einem Formular oder Container-Steuerelement.  
   
--   Rufen Sie eine benutzerdefinierte Methode auf, um die Daten in den Steuerelementen manuell zu überprüfen.  
+-   Rufen Sie eine benutzerdefinierte Methode, um die Daten in den Steuerelementen manuell überprüfen.  
   
-#### Standardverhalten für Windows Forms\-Steuerelemente bei der impliziten Validierung  
- Windows Forms\-Steuerelemente verfügen jeweils über unterschiedliche Standardwerte für die <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>\-Eigenschaft.  In der folgenden Tabelle werden die am häufigsten verwendeten Steuerelemente mit ihren Standardwerten aufgeführt.  
+#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Implizite Validierung Standardverhalten für Windows Forms-Steuerelementen  
+ Windows Forms-Steuerelemente haben unterschiedliche Standardwerte für ihre <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> Eigenschaft. Die folgende Tabelle zeigt die am häufigsten verwendeten Steuerelemente mit ihren Standardwerten.  
   
 |Steuerelement|Standardverhalten für die Validierung|  
-|-------------------|-------------------------------------------|  
-|<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.PropertyGrid>|In Visual Studio nicht verfügbar gemachte Eigenschaft|  
-|<xref:System.Windows.Forms.ToolStripContainer>|In Visual Studio nicht verfügbar gemachte Eigenschaft|  
-|<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate>|  
+|-------------|---------------------------------|  
+|<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
+|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
+|<xref:System.Windows.Forms.PropertyGrid>|Eigenschaft, die nicht in Visual Studio verfügbar gemacht.|  
+|<xref:System.Windows.Forms.ToolStripContainer>|Eigenschaft, die nicht in Visual Studio verfügbar gemacht.|  
+|<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
+|<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
   
-## Schließen des Formulars und Überschreiben der Validierung  
- Wenn ein Steuerelement den Fokus behält, weil die enthaltenen Daten ungültig sind, kann das übergeordnete Formular nicht auf eine der üblichen Weisen geschlossen werden:  
+## <a name="closing-the-form-and-overriding-validation"></a>Das Formular geschlossen, und Überschreiben der Validierung  
+ Wenn ein Steuerelement den Fokus verwaltet, da die darin enthaltenen Daten ungültig sind, ist es unmöglich, schließen Sie das übergeordnete Formular in einer der üblichen Methoden:  
   
--   Durch Klicken auf die Schaltfläche **Schließen**  
+-   Durch Klicken auf die **schließen** Schaltfläche.  
   
--   Durch Auswählen von **Schließen** im **Systemmenü**  
+-   Durch Auswahl **schließen** in der **System** Menü.  
   
--   Durch programmgesteuertes Aufrufen der <xref:System.Windows.Forms.Form.Close%2A>\-Methode  
+-   Durch Aufrufen der <xref:System.Windows.Forms.Form.Close%2A> -Methode programmgesteuert.  
   
- In einigen Fällen soll der Benutzer jedoch möglicherweise das Formular unabhängig davon schließen können, ob die Werte in den Steuerelementen gültig sind.  Die Validierung kann überschrieben und ein Formular mit ungültigen Daten geschlossen werden, wenn Sie einen Handler für das <xref:System.Windows.Forms.Form.Closing>\-Ereignis des Formulars erstellen.  Legen Sie für das Ereignis die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>\-Eigenschaft auf `false` fest.  Dadurch wird das Formular in jedem Fall geschlossen.  Weitere Informationen und ein Beispiel finden Sie unter <xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>.  
+ In einigen Fällen möchten jedoch möglicherweise kann der Benutzer, schließen Sie das Formular unabhängig davon, ob die Werte in den Steuerelementen gültig sind. Sie Überschreiben der Überprüfung und schließen Sie ein Formular, das immer noch ungültige Daten enthält, indem Sie einen Handler für des Formulars erstellen können <xref:System.Windows.Forms.Form.Closing> Ereignis. Legen Sie das Ereignis die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `false`. Dies erzwingt, dass das Formular zu schließen. Weitere Informationen und ein Beispiel finden Sie unter <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Wenn das Schließen des Formulars auf diese Weise erzwungen wird, gehen alle nicht gespeicherten Daten in den Steuerelementen des Formulars verloren.  Außerdem wird in modalen Formularen der Inhalt der Steuerelemente beim Schließen nicht überprüft.  Sie können die Validierung von Steuerelementen trotzdem verwenden, um den Fokus auf ein Steuerelement zu fixieren, ohne dass Sie das Verhalten beim Schließen des Formulars beachten müssen.  
+>  Wenn Sie das Formular, um auf diese Weise schließen erzwingen, ist Daten in die Steuerelemente des Formulars, die nicht bereits gespeichert wurde, verloren. Darüber hinaus überprüfen modale Formulare nicht den Inhalt von Steuerelementen geschlossen werden. Weiterhin können Sie Steuerelement-Überprüfung So sperren Sie den Fokus auf ein Steuerelement, aber Sie müssen keine Gedanken über das Verhalten zugeordnet, die das Formular geschlossen werden.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>   
- <xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>   
- <xref:System.ComponentModel.CancelEventArgs?displayProperty=fullName>   
- [MaskedTextBox\-Steuerelement](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
+ <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>  
+ [MaskedTextBox-Steuerelement](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
  [Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md)

@@ -1,72 +1,74 @@
 ---
-title: "&lt;ipv6&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<ipv6>-Element"
-  - "ipv6-Element"
+title: '&lt;IPv6&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6
+helpviewer_keywords:
+- <ipv6> element
+- ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-caps.latest.revision: 19
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: dd5366b4110d9ec2290e2669919575e07e8ec98a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;ipv6&gt;-Element (Netzwerkeinstellungen)
-Aktiviert Internet Protocol Version 6 Responses \(IPv6\) von veralteten Membern der <xref:System.Net.Dns>\-Klasse.  
+# <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; -Element (Netzwerkeinstellungen)
+Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, der die <xref:System.Net.Dns> Klasse.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<Einstellungen >  
+\<IPv6 >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <ipv6  
+```xml  
+<ipv6  
   enabled="true|false"  
-/ipv6>  
+/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|`enabled`|Gibt an, ob Member der <xref:System.Net.Dns>\-Klasse Internet Protocol Version 6 \(IPv6\)\-Adressen zurückgeben.  Der Standardwert ist `false`.|  
+|**Attribut**|**Beschreibung**|  
+|-------------------|---------------------|  
+|`enabled`|Gibt an, ob Mitglieder der <xref:System.Net.Dns> Klasse zurückgeben Internetprotokoll Version 6 (IPv6)-Adressen. Der Standardwert ist `false`.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>\-Namespace.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
-## Hinweise  
- Diese Einstellung aktiviert IPv6\-Unterstützung für die veralteten Member der <xref:System.Net.Dns>\-Klasse: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> und <xref:System.Net.Dns.Resolve%2A>.  Bei anderen Membern des <xref:System.Net?displayProperty=fullName>\-Namespace könnten IPv6\-Adressen möglicherweise zurückgegeben werden, wenn IPv6 im Betriebssystem aktiviert ist.  
+## <a name="remarks"></a>Hinweise  
+ Diese Einstellung aktiviert, IPv6-Unterstützung für die veralteten Member von der <xref:System.Net.Dns> Klasse: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, und <xref:System.Net.Dns.Resolve%2A>. Für andere Mitglieder der <xref:System.Net?displayProperty=nameWithType> Namespace, IPv6-Adressen können zurückgegeben werden, wenn IPv6 im Betriebssystem aktiviert ist.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Das folgende Codebeispiel zeigt, wie IPv6\-Unterstützung für die <xref:System.Net.Dns>\-Klasse aktiviert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie zum Aktivieren der IPv6-Unterstützung für die <xref:System.Net.Dns> Klasse.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -76,8 +78,8 @@ Aktiviert Internet Protocol Version 6 Responses \(IPv6\) von veralteten Membern 
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net?displayProperty=fullName>   
- <xref:System.Net.Dns?displayProperty=fullName>   
- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net?displayProperty=nameWithType>  
+ <xref:System.Net.Dns?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

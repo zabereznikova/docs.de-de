@@ -1,66 +1,67 @@
 ---
-title: "Gewusst wie: Erstellen einer Oberfl&#228;che im Stil von Windows Explorer in einem Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Formulare, Windows Explorer-Typ"
-  - "SplitContainer-Steuerelement [Windows Forms], Explorer-style-Schnittstelle"
-  - "Windows Explorer, Erstellen mit Windows Forms"
+title: "Gewusst wie: Erstellen einer Oberfläche im Stil von Windows Explorer in einem Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Explorer [Windows Forms], creating with Windows Forms
+- SplitContainer control [Windows Forms], Explorer-style interface
+- forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 96f2ca8189d6840bc68f063ef9b97539c24b0e6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer Oberfl&#228;che im Stil von Windows Explorer in einem Windows Form
-Wegen der Vertrautheit der Benutzer mit der Benutzeroberfläche von Windows Explorer bietet diese sich als Vorbild für die Benutzeroberfläche von Anwendungen an.  
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Gewusst wie: Erstellen einer Oberfläche im Stil von Windows Explorer in einem Windows Form
+Windows-Explorer wird eine gemeinsame Benutzeroberfläche Wahl für Anwendungen aufgrund seiner Kenntnisse in bereit.  
   
- Windows Explorer besteht im Grunde aus einem <xref:System.Windows.Forms.TreeView>\-Steuerelement und einem <xref:System.Windows.Forms.ListView>\-Steuerelement, die sich jeweils in getrennten Bereichen befinden.  Die Größe der Bereiche kann durch einen Splitter geändert werden.  Diese Anordnung von Steuerelementen eignet sich sehr gut für das Anzeigen und Durchsuchen von Informationen.  
+ Windows-Explorer ist im Wesentlichen eine <xref:System.Windows.Forms.TreeView> Steuerelement und ein <xref:System.Windows.Forms.ListView> Steuerelement auf separate Bereiche. Die Bereiche sind durch eine Trennleiste in der Größe veränderbaren vorgenommen. Diese Anordnung von Steuerelementen ist sehr gut für die Anzeige und das Durchsuchen von Informationen.  
   
- Im Folgenden werden die Schritte erläutert, die zum Anordnen von Steuerelementen in einer Windows Explorer\-ähnlichen Weise erforderlich sind.  Dabei wird nicht auf die Funktionalität von Windows Explorer zum Anzeigen und Durchsuchen von Dateien eingegangen.  
+ Die folgenden Schritte zeigen, wie zum Anordnen von Steuerelementen in einer Windows-Explorer-ähnlichen Format. Enthalten sie die Datei durchsuchen Funktionalität von Windows Explorer-Anwendung hinzufügen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So erstellen Sie ein Windows Form im Stil von Windows Explorer  
+### <a name="to-create-a-windows-explorer-style-windows-form"></a>So erstellen ein Windows Explorer-ähnliche Windows Form  
   
-1.  Erstellen Sie ein neues Projekt vom Typ **Windows\-Anwendung**.  Ausführliche Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen Sie ein neues Windows-Anwendungsprojekt. Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Aus der **Toolbox**:  
   
-    1.  Ziehen Sie ein <xref:System.Windows.Forms.SplitContainer>\-Steuerelement auf das Formular.  
+    1.  Ziehen Sie ein <xref:System.Windows.Forms.SplitContainer> Steuerelement auf das Formular.  
   
-    2.  Ziehen Sie ein <xref:System.Windows.Forms.TreeView>\-Steuerelement in **SplitterPanel1** \(in den als **Panel1** markierten Bereich des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements\).  
+    2.  Ziehen Sie eine <xref:System.Windows.Forms.TreeView> steuern in **SplitterPanel1** (der Bereich des der <xref:System.Windows.Forms.SplitContainer> Steuerelement markiert **Panel1**).  
   
-    3.  Ziehen Sie ein <xref:System.Windows.Forms.ListView>\-Steuerelement in **SplitterPanel2** \(in den als **Panel2** markierten Bereich des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements\).  
+    3.  Ziehen Sie eine <xref:System.Windows.Forms.ListView> steuern in **SplitterPanel2** (der Bereich des der <xref:System.Windows.Forms.SplitContainer> Steuerelement markiert **Panel2**).  
   
-3.  Klicken Sie bei gedrückter STRG\-TASTE nacheinander auf alle drei Steuerelemente, um diese auszuwählen.  Klicken Sie zum Auswählen des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements auf die Splitterleiste und nicht auf die Bereiche.  
+3.  Wählen Sie alle drei Steuerelemente, indem Sie die STRG-Taste drücken, und klicken sie dann auf. Bei Auswahl der <xref:System.Windows.Forms.SplitContainer> steuern, und klicken Sie auf die Teilerleiste, anstatt die Bereiche.  
   
     > [!NOTE]
-    >  Verwenden Sie nicht den Befehl **Alle auswählen** aus dem Menü **Bearbeiten**.  Wenn Sie diesen Befehl verwenden, wird im nächsten Schritt im **Eigenschaftenfenster** nicht die erforderliche Eigenschaft angezeigt.  
+    >  Verwenden Sie nicht die **Alles markieren** Befehl die **bearbeiten** Menü. In diesem Fall die Eigenschaft, die im nächsten Schritt benötigt erscheint nicht der **Eigenschaften** Fenster.  
   
-4.  Legen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.SplitContainer.Dock%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DockStyle> fest.  
+4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 5.  Drücken Sie F5, um die Anwendung auszuführen.  
   
-     Das Formular zeigt eine zweiteilige Benutzeroberfläche an, die der Benutzeroberfläche von Windows Explorer ähnelt.  
+     Das Formular zeigt eine zweiteilige Benutzeroberfläche ähnelt der von der Windows-Explorer.  
   
     > [!NOTE]
-    >  Durch Ziehen des Splitters können Sie die Größe der Bereiche ändern.  
+    >  Wenn Sie den Splitter ziehen, Größe der Bereiche selbst ändern.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>   
- [Gewusst wie: Erstellen einer Multipane\-Benutzeroberfläche mit Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)   
- [Gewusst wie: Definieren des Verhaltens bei Größen\- und Positionsänderungen in einem geteilten Fenster](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)   
- [Gewusst wie: Horizontales Teilen eines Fensters](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)   
- [SplitContainer\-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Gewusst wie: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Gewusst wie: Horizontales Teilen eines Fensters](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

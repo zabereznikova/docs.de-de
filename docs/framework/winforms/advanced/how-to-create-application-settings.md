@@ -1,43 +1,47 @@
 ---
-title: "Gewusst wie: Erstellen von Anwendungseinstellungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anwendungseinstellungen, Erstellen"
-  - "Anwendungseinstellungen, Windows Forms"
+title: 'Gewusst wie: Erstellen von Anwendungseinstellungen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 481239b472ced5ef6251b665dad16e83a170607d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Anwendungseinstellungen
+# <a name="how-to-create-application-settings"></a>Gewusst wie: Erstellen von Anwendungseinstellungen
 Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen und diese an Eigenschaften für Ihr Formular oder die Steuerelemente Ihres Formulars binden, damit diese Einstellungen zur Laufzeit automatisch geladen und gespeichert werden.  
   
- Im folgenden Verfahren erstellen Sie manuell eine Wrapperklasse, die von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet ist.  Dieser Klasse fügen Sie für jede Anwendungseinstellung, die Sie verfügbar machen möchten, eine Eigenschaft hinzu, auf die öffentlich zugegriffen werden kann.  
+ Im folgenden Verfahren erstellen Sie manuell eine Wrapperklasse, die von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet ist. Dieser Klasse fügen Sie für jede Anwendungseinstellung, die Sie verfügbar machen möchten, eine Eigenschaft hinzu, auf die öffentlich zugegriffen werden kann.  
   
- Sie können dieses Verfahren auch mit minimalem Programmieraufwand in Visual Studio\-Designer ausführen.  Siehe auch [Gewusst wie: Erstellen von Anwendungseinstellungen mithilfe des Designers](http://msdn.microsoft.com/library/wabtadw6%20\(v=vs.110\)).  
+ Sie können dieses Verfahren auch mit minimalem Programmieraufwand in Visual Studio-Designer ausführen.  Siehe auch [Vorgehensweise: Erstellen von Anwendungseinstellungen mithilfe der Designer](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
-### So erstellen Sie programmgesteuert neue Anwendungseinstellungen  
+### <a name="to-create-new-application-settings-programmatically"></a>So erstellen Sie programmgesteuert neue Anwendungseinstellungen  
   
-1.  Fügen Sie dem Projekt eine neue Klasse hinzu, und benennen Sie diese um.  Für dieses Verfahren wird diese Klasse `MyUserSettings` aufgerufen.  Ändern Sie die Klassendefinition so, dass die Klasse von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet wird.  
+1.  Fügen Sie dem Projekt eine neue Klasse hinzu, und benennen Sie diese um. Für dieses Verfahren müssen wir diese Klasse rufen `MyUserSettings`. Ändern Sie die Klassendefinition so, dass die Klasse von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet wird.  
   
-2.  Definieren Sie eine Eigenschaft für diese Wrapperklasse für jede benötigte Anwendungseinstellung, und wenden Sie diese Eigenschaft mit <xref:System.Configuration.ApplicationScopedSettingAttribute> oder mit <xref:System.Configuration.UserScopedSettingAttribute>, abhängig vom Bereich der Einstellung an.  Weitere Informationen zum Einstellungsbereich finden Sie unter [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md).  Ihr Code sollte jetzt wie folgt aussehen.  
+2.  Definieren Sie eine Eigenschaft für diese Wrapperklasse für jede benötigte Anwendungseinstellung, und wenden Sie diese Eigenschaft mit <xref:System.Configuration.ApplicationScopedSettingAttribute> oder mit <xref:System.Configuration.UserScopedSettingAttribute>, abhängig vom Bereich der Einstellung an. Weitere Informationen zum Einstellungsbereich finden Sie unter [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md). Ihr Code sollte jetzt wie folgt aussehen.  
   
      [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  Erstellen Sie eine Instanz dieser Wrapperklasse in Ihrer Anwendung.  Sie wird in der Regel ein privates Element des Hauptformulars sein.  Nachdem Sie nun Ihre Klasse definiert haben, müssen Sie sie an eine Eigenschaft binden. In diesem Fall ist dies die Eigenschaft <xref:System.Windows.Forms.Form.BackColor%2A> des Formulars.  Sie können dies im `Load` \-Ereignishandler des Formulars ausführen.  
+3.  Erstellen Sie eine Instanz dieser Wrapperklasse in Ihrer Anwendung. Sie wird in der Regel ein privates Element des Hauptformulars sein. Nachdem Sie nun Ihre Klasse definiert haben, müssen Sie sie an eine Eigenschaft binden. In diesem Fall ist dies die Eigenschaft <xref:System.Windows.Forms.Form.BackColor%2A> des Formulars. Sie können dies bewerkstelligen, in des Formulars `Load` -Ereignishandler.  
   
      [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
@@ -49,11 +53,11 @@ Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen
   
      Sie haben nun erfolgreich eine neue Anwendungseinstellung erstellt und diese an die angegebene Eigenschaft gebunden.  
   
-## .NET Framework-Sicherheit  
- Der Standardeinstellungsanbieter \(<xref:System.Configuration.LocalFileSettingsProvider>\) speichert Informationen in Konfigurationsdateien als Nur\-Text persistent.  Auf diese Weise wird die Sicherheit für die Dateizugriffssicherheit eingeschränkt, die vom Betriebssystem für den aktuellen Benutzer bereitgestellt wird.  Aus diesem Grund müssen die Informationen, die in Konfigurationsdateien gespeichert werden, sorgfältig ausgewählt werden.  Häufig werden z. B. Anwendungseinstellungen zum Speichern von Verbindungszeichenfolgen verwendet, die auf den Datenspeicher der Anwendung zeigen.  Allerdings sollten diese Zeichenfolgen aus Sicherheitsgründen keine Kennwörter enthalten.  Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter <xref:System.Configuration.SpecialSetting>.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Der Standardeinstellungsanbieter (<xref:System.Configuration.LocalFileSettingsProvider>) speichert Informationen in Konfigurationsdateien als Nur-Text persistent. Auf diese Weise wird die Sicherheit für die Dateizugriffssicherheit eingeschränkt, die vom Betriebssystem für den aktuellen Benutzer bereitgestellt wird. Aus diesem Grund müssen die Informationen, die in Konfigurationsdateien gespeichert werden, sorgfältig ausgewählt werden. Häufig werden z. B. Anwendungseinstellungen zum Speichern von Verbindungszeichenfolgen verwendet, die auf den Datenspeicher der Anwendung zeigen. Allerdings sollten diese Zeichenfolgen aus Sicherheitsgründen keine Kennwörter enthalten. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter <xref:System.Configuration.SpecialSetting>.  
   
-## Siehe auch  
- <xref:System.Configuration.SpecialSettingAttribute>   
- <xref:System.Configuration.LocalFileSettingsProvider>   
- [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Configuration.SpecialSettingAttribute>  
+ <xref:System.Configuration.LocalFileSettingsProvider>  
+ [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [Gewusst wie: Überprüfen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

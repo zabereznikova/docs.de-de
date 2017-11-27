@@ -1,46 +1,44 @@
 ---
-title: "Unicode (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Unicode"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Unicode, external references"
-  - "Declare statement, marshaling strings"
-  - "Unicode keyword"
-  - "Unicode, marshaling strings"
+title: Unicode (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Unicode
+helpviewer_keywords:
+- Unicode, external references
+- Declare statement [Visual Basic], marshaling strings
+- Unicode keyword [Visual Basic]
+- Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 042908b8427de2de0de96bbb32df7be018bb915c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Unicode (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt an, dass Visual Basic unabhängig vom Namen der externen Prozedur, die deklariert wird, alle Zeichenfolgen in Unicode\-Werte marshallen soll.  
+# <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
+Gibt an, dass Visual Basic alle Zeichenfolgen in Unicode-Werte unabhängig von den Namen der die deklarierte externe Prozedur marshallen soll.  
   
- Wenn eine Prozedur aufgerufen wird, die außerhalb des Projekts definiert wurde, hat der Visual Basic\-Compiler keinen Zugriff auf bestimmet Informationen, die zum korrekten Aufrufen der Prozedur erforderlich sind.  Dies umfasst Informationen über den Speicherort der Prozedur, ihre Identifikationsmerkmale, ihre Aufrufsequenz und ihren Rückgabetyp sowie den von ihr für Zeichenfolgen verwendeten Zeichensatz.  Die [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese notwendigen Informationen zur Verfügung.  
+ Wenn Sie eine Prozedur, die außerhalb des Projekts definiert aufrufen, Visual Basic-Compiler keinen Zugriff auf die Informationen, die sie benötigen, um die Prozedur ordnungsgemäß aufrufen. Diese Informationen umfassen, auf dem sich die Prozedur befindet, wie festgestellt wird, werden der Aufrufsequenz und Rückgabetyp und die Zeichenfolge verwendeten Zeichensatz. Die [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.  
   
- Im `charsetmodifier`\-Teil der `Declare`\-Anweisung werden Zeichensatzinformationen bereitgestellt, mit denen Zeichenfolgen bei einem externen Prozeduraufruf gemarshallt werden.  Der Abschnitt hat auch Einfluss darauf, wie Visual Basic die externe Datei nach dem externen Prozedurnamen durchsucht.  Der Modifizierer `Unicode` legt fest, dass Visual Basic alle Zeichenfolgen in Unicode\-Werte marshallen und die Prozedur nachschlagen soll, ohne während der Suche ihren Namen zu ändern.  
+ Die `charsetmodifier` teilweise in die `Declare` -Anweisung gibt die Zeichen zum Marshallen von Zeichenfolgen während eines Aufrufs an die externe Prozedur Informationen. Er wirkt sich auch, wie Visual Basic die externe Datei für den externen Prozedurnamen durchsucht. Die `Unicode` Modifizierer gibt an, dass Visual Basic alle Zeichenfolgen in Unicode-Werte marshallen und die Prozedur nachschlagen soll, ohne den Namen ändern, während der Suche.  
   
- Wenn kein Zeichensatzmodifizierer angegeben ist, wird standardmäßig `Ansi` verwendet.  
+ Wenn kein Modifizierer angegeben ist, `Ansi` ist die Standardeinstellung.  
   
-## Hinweise  
- Der `Unicode`\-Modifizierer kann in diesem Kontext verwendet werden:  
+## <a name="remarks"></a>Hinweise  
+ Die `Unicode` Modifizierer kann in diesem Kontext verwendet werden:  
   
- [Declare\-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## Hinweise für Entwickler intelligenter Geräte  
+## <a name="smart-device-developer-notes"></a>Entwicklerhinweise für intelligente Geräte  
  Dieses Schlüsselwort wird nicht unterstützt.  
   
-## Siehe auch  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)   
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
+ [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,64 +1,66 @@
 ---
-title: "-= Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.-="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "-= operator [Visual Basic]"
-  - "assignment statements, compound"
-  - "statements [Visual Basic], compound assignment"
-  - "operator -="
-  - "compound assignment statements"
+title: '\=Operator'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- '\='
+- vb.\=
+helpviewer_keywords:
+- '\= operator [Visual Basic]'
+- assignment statements [Visual Basic], compound
+- statements [Visual Basic], compound assignment
+- operator \= [Visual Basic]
+- compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5ba74f7a433687b306e8b4273f3a2a6d60583396
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# -= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Subtrahiert den Wert eines Ausdrucks vom Wert einer Variablen oder Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft zu.  
+# <a name="-operator"></a>\\=-Operator
+Dividiert den Wert einer Variablen oder Eigenschaft durch den Wert eines Ausdrucks und weist das ganzzahlige Ergebnis der Variablen oder Eigenschaft.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-variableorproperty -= expression  
+variableorproperty \= expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich.  Beliebige numerische Variable oder Eigenschaft.  
+ Erforderlich. Eine beliebige numerische Variable oder eine Eigenschaft.  
   
  `expression`  
- Erforderlich.  Ein beliebiger numerischer Ausdruck.  
+ Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
-## Hinweise  
- Der Name auf der linken Seite des Operators `-=` kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein.  Die Variable oder die Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)sein.  
+## <a name="remarks"></a>Hinweise  
+ Das Element auf der linken Seite von der `\=` Operator kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Der Operator `-=` subtrahiert zuerst den Wert des Ausdrucks auf der rechten Seite des Operators\) vom Wert der Variablen oder Eigenschaft auf der linken Seite des Operators\).  Der Operator weist dann das Ergebnis dieses Vorgangs zur Variablen oder Eigenschaft zu.  
+ Die `\=` Operator dividiert durch den Wert auf der rechten Seite den Wert einer Variablen oder Eigenschaft auf der linken und weist das ganzzahlige Ergebnis der Variablen oder Eigenschaft auf der linken Seite  
   
-## Überladen  
- Der Operator [\- Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Wenn der Operator `-` überladen wird, wirkt sich dies auf das Verhalten des Operators `-=` aus.  Wenn im Code `-=` auf eine Klasse oder Struktur angewendet wird, die `-` überlädt, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Weitere Informationen zu ganzzahligen Division, finden Sie unter [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird der Operator **–\=** verwendet, um eine `Integer`\-Variable von einer anderen abzuziehen und das Ergebnis der zweiten Variablen zuzuweisen.  
+## <a name="overloading"></a>Überladen  
+ Die `\` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Überladen der `\` Operator wirkt sich auf das Verhalten der `\=` Operator. Wenn im Code verwendet `\=` auf eine Klasse oder Struktur, die Überladungen `\`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
- [!code-vb[VbVbalrOperators#11](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `\=` Operator, um einen unterteilen `Integer` Variable, indem das zweite und das ganzzahlige Ergebnis der ersten Variablen zuweisen.  
   
-## Siehe auch  
- [\- Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)
+ [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
+  
+## <a name="see-also"></a>Siehe auch  
+ [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+ [/ =-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

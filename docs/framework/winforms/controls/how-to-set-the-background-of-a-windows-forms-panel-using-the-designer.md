@@ -1,53 +1,54 @@
 ---
-title: "Gewusst wie: Festlegen des Hintergrunds eines Windows Forms-Bereichs mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Hintergrundfarben, Panel-Steuerelemente in Windows Forms"
-  - "Hintergrundbilder, Panel-Steuerelemente in Windows Forms"
-  - "Farben, Panel-Steuerelemente in Windows Forms"
-  - "Panel-Steuerelement [Windows Forms], Hintergrund"
+title: 'Gewusst wie: Festlegen des Hintergrunds eines Windows Forms-Bereichs mithilfe des Designers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- background colors [Windows Forms], Windows Forms Panel controls
+- background images [Windows Forms], Windows Forms Panel controls
+- Panel control [Windows Forms], background
+- colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 56cb6f7ee9a7c52ff4763c0c310d679e4889dbd2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen des Hintergrunds eines Windows Forms-Bereichs mithilfe des Designers
-Mithilfe eines <xref:System.Windows.Forms.Panel>\-Steuerelements kann in Windows Forms sowohl eine Hintergrundfarbe als auch ein Hintergrundbild angezeigt werden.  Über die <xref:System.Windows.Forms.Control.BackColor%2A>\-Eigenschaft wird die Hintergrundfarbe der im Bereich enthaltenen Steuerelemente, z. B. Bezeichnungsfelder und Optionsfelder, festgelegt.  Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A>\-Eigenschaft nicht festgelegt wird, füllt die <xref:System.Windows.Forms.Control.BackColor%2A>\-Auswahl den gesamten Auswahlbereich aus.  Ist die <xref:System.Windows.Forms.Control.BackgroundImage%2A>\-Eigenschaft jedoch festgelegt, wird das Bild hinter den im Bereich enthaltenen Steuerelementen angezeigt.  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Gewusst wie: Festlegen des Hintergrunds eines Windows Forms-Bereichs mithilfe des Designers
+Eine Windows Forms <xref:System.Windows.Forms.Panel> -Steuerelement kann eine Hintergrundfarbe und ein Hintergrundbild anzeigen. Die <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft legt die Hintergrundfarbe für Steuerelemente, die in der Systemsteuerung, wie Beschriftungen enthalten sind und Optionsfelder fest. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Windows.Forms.Control.BackColor%2A> Auswahl werden alle im Bereich auszufüllen. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft festgelegt ist, wird das Bild angezeigt, hinter den Steuerelementen, die im Bereich enthalten sind.  
   
- Für das folgende Verfahren wird ein Projekt vom Typ **Windows\-Anwendung** mit einem Formular benötigt, das ein <xref:System.Windows.Forms.Panel>\-Steuerelement enthält.  Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Das folgende Verfahren erfordert eine **Windows-Anwendung** -Projekts mit einem Formular, enthält ein <xref:System.Windows.Forms.Panel> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So legen Sie den Hintergrund im Windows Forms\-Designer fest  
+### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Der Hintergrund in Windows Forms-Designer festlegen.  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.Panel>\-Steuerelement aus.  
+1.  Wählen Sie das <xref:System.Windows.Forms.Panel>-Steuerelement.  
   
-2.  Klicken Sie im **Eigenschaftenfenster** auf die Pfeilschaltfläche neben der <xref:System.Windows.Forms.Control.BackColor%2A>\-Eigenschaft, um ein Fenster mit drei Registerkarten anzuzeigen.  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf der Pfeil neben der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft, um ein Fenster mit drei Registerkarten angezeigt.  
   
-3.  Wählen Sie die Registerkarte **Benutzerdefiniert** aus, um eine Farbpalette anzuzeigen.  
+3.  Wählen Sie die **benutzerdefinierte** Tab, um ein Farben-Palette anzuzeigen.  
   
-4.  Wählen Sie die Registerkarte **Web** oder **System** aus, um eine Liste mit vordefinierten Farbbezeichnungen anzuzeigen, und wählen Sie dann eine Farbe aus.  
+4.  Wählen Sie die **Web** oder **System** Registerkarte, um eine Liste der vordefinierten Namen für Farben anzuzeigen, und klicken Sie dann eine andere Farbe auswählen.  
   
-5.  Klicken Sie im **Eigenschaftenfenster** auf die Pfeilschaltfläche neben der <xref:System.Windows.Forms.Control.BackgroundImage%2A>\-Eigenschaft.  
+5.  In der **Eigenschaften** Fenster, klicken Sie auf der Pfeil neben der <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft.  
   
-6.  Wählen Sie im Dialogfeld **Öffnen** die Datei aus, die Sie anzeigen möchten.  
+6.  In der **öffnen** Dialogfeld wählen die Datei, die Sie anzeigen möchten.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.BackColor%2A>   
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>   
- [Panel\-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)   
- [Übersicht über das Panel\-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [Gewusst wie: Gruppieren von Steuerelementen mit dem Windows Forms\-Bereichssteuerelement im Designer](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Control.BackColor%2A>  
+ <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
+ [Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Übersicht über das Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [Gewusst wie: Gruppieren von Steuerelementen mit dem Windows Forms-Bereichssteuerelement im Designer](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)

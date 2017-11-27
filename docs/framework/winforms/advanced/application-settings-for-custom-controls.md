@@ -1,48 +1,49 @@
 ---
-title: "Anwendungseinstellungen f&#252;r benutzerdefinierte Steuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anwendungseinstellungen [Windows Forms], Benutzerdefinierte Steuerelemente"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Anwendungseinstellungen"
+title: "Anwendungseinstellungen für benutzerdefinierte Steuerelemente"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], application settings
+- application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3f8292ac459a2943376229ef62466b0a772430dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Anwendungseinstellungen f&#252;r benutzerdefinierte Steuerelemente
-Sie müssen bestimmte Aufgaben ausführen, damit die benutzerdefinierten Steuerelemente in den Anwendungseinstellungen erhalten bleiben, wenn die Steuerelemente in Anwendungen von Drittanbietern gehostet werden.  
+# <a name="application-settings-for-custom-controls"></a>Anwendungseinstellungen für benutzerdefinierte Steuerelemente
+Führen Sie die bestimmte Aufgaben aus, um der benutzerdefinierten Steuerelemente bieten die Möglichkeit, Anwendungseinstellungen beizubehalten, wenn die Steuerelemente in der Anwendung eines Drittanbieters gehostet werden.  
   
- Der Großteil der Dokumentation über das Feature Anwendungseinstellungen wird in der Annahme geschrieben, dass Sie eine eigenständige Anwendung erstellen.  Wenn Sie aber ein Steuerelement erstellen, das von anderen Entwicklern in deren Anwendungen gehostet wird, müssen Sie einige zusätzliche Schritte beachten, damit die Einstellungseigenschaft des Steuerelements erhalten bleibt.  
+ Unter der Annahme, dass Sie eine eigenständige Anwendung erstellen, wird ein Großteil der Dokumentation über die Funktion "Anwendungseinstellungen" geschrieben. Jedoch, wenn Sie in ihren Anwendungen ein Steuerelement, das als host für andere Entwickler fungiert erstellen, müssen Sie einige zusätzliche Schritte ausführen, für das Steuerelement seine Einstellungen beibehalten werden ordnungsgemäß.  
   
-## Anwendungseinstellungen und benutzerdefinierte Steuerelemente  
- Damit die Einstellungen des Steuerelements erhalten bleiben, muss es den Prozess kapseln, indem es eine eigene Wrapperklasse für dedizierte Anwendungseinstellungen erstellt, die von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet ist.  Zusätzlich muss die Hauptsteuerelementklasse <xref:System.Configuration.IPersistComponentSettings> implementieren.  Die Schnittstelle enthält mehrere Eigenschaften sowie zwei Methoden, nämlich <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> und <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>.  Wenn Sie das Steuerelement dem Formular mit dem **Windows Forms\-Designer** in Visual Studio hinzufügen, ruft Windows Forms <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> automatisch auf, wenn das Steuerelement initialisiert wird. Sie müssen <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> in der  `Dispose` \-Methode des Steuerelements selbst aufrufen.  
+## <a name="application-settings-and-custom-controls"></a>Anwendungseinstellungen und benutzerdefinierte Steuerelemente  
+ Für das Steuerelement, um die Einstellungen korrekt persistent zu speichern, müssen sie den Prozess kapseln, durch das Erstellen von eigenen dedizierten Anwendungen Wrapperklasse für Anwendungseinstellungen, abgeleitet <xref:System.Configuration.ApplicationSettingsBase>. Darüber hinaus muss die wichtigsten Steuerelementklasse implementieren die <xref:System.Configuration.IPersistComponentSettings>. Die Schnittstelle enthält mehrere Eigenschaften sowie zwei Methoden <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> und <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>. Wenn Sie das Steuerelement dem Formular mit Hinzufügen der **Windows Forms-Designer** in Visual Studio, Windows Forms rufen <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> automatisch Wenn das Steuerelement initialisiert wird, rufen Sie <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> selbst in der `Dispose` die Methode des Steuerelements.  
   
- Zusätzlich sollten Sie die folgenden Elemente implementieren, sodass die Anwendungseinstellungen für benutzerdefinierte Steuerelemente in Entwurfszeitumgebungen wie Visual Studio ordnungsgemäß funktionieren:  
+ Darüber hinaus sollten Sie Folgendes in der Reihenfolge für Anwendungseinstellungen für benutzerdefinierte Steuerelemente zur Entwurfszeit Umgebungen wie Visual Studio ordnungsgemäß implementieren:  
   
-1.  Eine benutzerdefinierte Anwendungseinstellungsklasse mit einem Konstruktor, der eine <xref:System.ComponentModel.IComponent> als einzelnen Parameter verwendet.  Mit dieser Klasse können Sie alle Anwendungseinstellungen speichern und laden.  Wenn Sie eine neue Instanz dieser Klasse erstellen, übergeben Sie das benutzerdefinierte Steuerelement mithilfe des Konstruktors.  
+1.  Eine benutzerdefinierte Anwendung Settings-Klasse mit einem Konstruktor, akzeptiert eine <xref:System.ComponentModel.IComponent> als einen einzelnen Parameter. Verwenden Sie diese Klasse zum Speichern und laden alle Einstellungen Ihrer Anwendung. Wenn Sie eine neue Instanz dieser Klasse erstellen, übergeben Sie das benutzerdefinierte Steuerelement mit dem Konstruktor.  
   
-2.  Erstellen Sie diese benutzerdefinierte Einstellungsklasse, nachdem das Steuerelement erstellt und in einem Formular platziert wurde, z. B. im <xref:System.Windows.Forms.Form.Load>\-Ereignishandler des Formulars.  
+2.  Diese Klasse benutzerdefinierte Einstellungen erstellen, nachdem das Steuerelement erstellt und in einem Formular wie in der Form platziert wurde <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
   
- Anweisungen zum Erstellen einer benutzerdefinierten Einstellungsklasse finden Sie unter [Gewusst wie: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Anweisungen zum Erstellen einer CustomSettings-Klasse, finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
-## Einstellungsschlüssel und freigegebene Einstellungen  
- Einige Steuerelemente können im gleichen Formular mehrfach verwendet werden.  In der Regel sollen die Einstellungen dieser Steuerelemente erhalten bleiben.  Mithilfe der <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>\-Eigenschaft von <xref:System.Configuration.IPersistComponentSettings> können Sie eine eindeutige Zeichenfolge bereitstellen, mit der Sie mehrere Versionen eines Steuerelements auf einem Formular eindeutig machen können.  
+## <a name="settings-keys-and-shared-settings"></a>Gemeinsam genutzte Einstellungen und Einstellungsschlüssel  
+ Einige Steuerelemente können mehrere Male in derselben Form verwendet werden. In den meisten Fällen, sollten Sie diese Steuerelemente eigene individuellen Einstellungen beibehalten werden. Mit der <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> Eigenschaft <xref:System.Configuration.IPersistComponentSettings>, Sie können angeben, dass eine eindeutige Zeichenfolge, die fungiert, um mehrere Versionen eines Steuerelements in einem Formular eindeutig zu machen.  
   
- Die einfachste Art, <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> zu implementieren, besteht darin, die <xref:System.Windows.Forms.Control.Name%2A>\-Eigenschaft des Steuerelements für den <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> zu verwenden.  Wenn Sie die Einstellungen des Steuerelements laden oder speichern, übernehmen Sie den <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>\-Wert für die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>\-Eigenschaft der <xref:System.Configuration.ApplicationSettingsBase>\-Klasse.  Anwendungseinstellungen verwenden diesen eindeutigen Schlüssel, wenn die Einstellungen des Benutzers in XML erhalten bleiben.  Im folgenden Codebeispiel wird gezeigt, wie ein  `<userSettings>` \-Abschnitt für ein benutzerdefiniertes Steuerelement mit dem Namen  `CustomControl1`  aussehen könnte, das eine Einstellung für die  `Text` \-Eigenschaft speichert.  
+ Die einfachste Methode zum Implementieren <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> ist die Verwendung der <xref:System.Windows.Forms.Control.Name%2A> Eigenschaft des Steuerelements für die <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>. Beim Laden oder speichern die Einstellungen des Steuerelements, übergeben Sie den Wert des <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> auf die <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> Eigenschaft von der <xref:System.Configuration.ApplicationSettingsBase> Klasse. Anwendungseinstellungen verwendet diesen eindeutigen Schlüssel an, wenn sie die Einstellungen des Benutzers in XML beibehalten wird. Das folgende Codebeispiel zeigt, wie eine `<userSettings>` Abschnitt sähe für eine Instanz eines benutzerdefinierten Steuerelements, das mit dem Namen `CustomControl1` , speichert eine Einstellung für die `Text` Eigenschaft.  
   
-```  
+```xml  
 <userSettings>  
     <CustomControl1>  
         <setting name="Text" serializedAs="string">  
@@ -52,9 +53,9 @@ Sie müssen bestimmte Aufgaben ausführen, damit die benutzerdefinierten Steuere
 </userSettings>  
 ```  
   
- Alle Instanzen eines Steuerelements, die keinen Wert für <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> bereitstellen, verfügen über die gleichen Einstellungen.  
+ Alle Instanzen eines Steuerelements, die keinen Wert für bereitstellen <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> werden die gleichen Einstellungen verwenden.  
   
-## Siehe auch  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.IPersistComponentSettings>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.IPersistComponentSettings>  
  [Architektur der Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

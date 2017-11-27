@@ -1,24 +1,26 @@
 ---
-title: "Die Umwandlung des Typs &lt;Typname1&gt; in den Typ &lt;Typname2&gt; ist ung&#252;ltig. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrInvalidCast_FromTo"
+title: "Umwandlung von Typ &#39; &lt;Typname1&gt;&#39; Eingabe &#39;&lt; Typname2&gt;&#39; ist ungültig"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d97aeac3618cb2b9d37ee14ec080d135f1bc5901
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Die Umwandlung des Typs &lt;Typname1&gt; in den Typ &lt;Typname2&gt; ist ung&#252;ltig.
+# <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a>Umwandlung von Typ &#39; &lt;Typname1&gt;&#39; Eingabe &#39;&lt; Typname2&gt;&#39; ist ungültig
 Ein Versuch, eine Variable aus einem in einen anderen Typ zu konvertieren, ist ungültig.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 1.  Überprüfen Sie die von der Konvertierung betroffenen Typen, und stellen Sie sicher, dass Sie eine Konvertierung in einen sinnvollen Typ durchführen.  
   
-## Siehe auch  
- [Type Conversions in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Konvertierungen in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
