@@ -1,39 +1,42 @@
 ---
-title: "Gewusst wie: Zeichnen einer Linie | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zeichnen, Linien"
-  - "Grafiken [WPF], Linien"
-  - "Linien, Zeichnen"
+title: 'Gewusst wie: Zeichnen einer Linie'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [WPF], lines
+- graphics [WPF], lines
+- lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4911aea91416fb84e9a18d54c145b494737ef9dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zeichnen einer Linie
-In diesem Beispiel wird veranschaulicht, wie Sie mithilfe des <xref:System.Windows.Shapes.Line>\-Elements Linien zeichnen.  
+# <a name="how-to-draw-a-line"></a>Gewusst wie: Zeichnen einer Linie
+Dieses Beispiel zeigt, wie Sie zum Zeichnen von Linien mit dem <xref:System.Windows.Shapes.Line> Element.  
   
- Zum Zeichnen einer Linie erstellen Sie ein <xref:System.Windows.Shapes.Line>\-Element.  Verwenden Sie die <xref:System.Windows.Shapes.Line.X1%2A>\-Eigenschaft und die <xref:System.Windows.Shapes.Line.Y1%2A>\-Eigenschaft des Elements, um dessen Startpunkt festzulegen, und verwenden Sie die <xref:System.Windows.Shapes.Line.X2%2A>\-Eigenschaft und die <xref:System.Windows.Shapes.Line.Y2%2A>\-Eigenschaft, um den Endpunkt festzulegen.  Legen Sie abschließend <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> für das Element fest, da eine Linie ohne einen Strich nicht sichtbar ist.  
+ Um eine Linie zeichnen, erstellen Sie eine <xref:System.Windows.Shapes.Line> Element. Verwenden der <xref:System.Windows.Shapes.Line.X1%2A> und <xref:System.Windows.Shapes.Line.Y1%2A> Eigenschaften legen Sie dessen Startpunkt; und verwenden seiner <xref:System.Windows.Shapes.Line.X2%2A> und <xref:System.Windows.Shapes.Line.Y2%2A> Endpunkt festzulegenden Eigenschaften. Legen Sie schließlich die <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> da eine Linie ohne einen Strich nicht sichtbar ist.  
   
- Das Festlegen des <xref:System.Windows.Shapes.Shape.Fill%2A>\-Elements für eine Linie hat keine Auswirkungen, da Linien keinen Innenbereich aufweisen.  
+ Festlegen der <xref:System.Windows.Shapes.Shape.Fill%2A> -Element für eine Zeile hat keine Auswirkungen, da eine Linie ohne innere aufweist.  
   
- Im folgenden Beispiel werden drei Linien in einem <xref:System.Windows.Controls.Canvas>\-Element gezeichnet.  
+ Im folgende Beispiel zeichnet drei Zeilen innerhalb einer <xref:System.Windows.Controls.Canvas> Element.  
   
-## Beispiel  
- [!code-xml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+## <a name="example"></a>Beispiel  
+ [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- Dieses Beispiel gehört zu einem größeren Beispiel. Das vollständige Beispiel finden Sie unter [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Form-Elemente-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## Siehe auch  
- <xref:System.Windows.Shapes.Line>   
- [Beispiel für Formelemente](http://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Shapes.Line>  
+ [Beispiel für Form-Elemente](http://go.microsoft.com/fwlink/?LinkID=160037)

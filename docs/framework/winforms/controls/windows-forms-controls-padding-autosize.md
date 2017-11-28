@@ -1,204 +1,205 @@
 ---
-title: "Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abst&#228;nden, R&#228;ndern und der AutoSize-Eigenschaft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Margin.Bottom"
-  - "Margin.Left"
-  - "Margin.Top"
-  - "Margin.All"
-  - "Margin.Right"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "AutoSize-Eigenschaft, Exemplarische Vorgehensweisen"
-  - "Layout [Windows Forms], Ränder und Abstand"
-  - "Margin-Eigenschaft [Windows Forms], Exemplarische Vorgehensweisen"
-  - "Padding-Eigenschaft [Windows Forms], Exemplarische Vorgehensweisen"
-  - "Exemplarische Vorgehensweisen [Windows Forms], Layout"
-  - "Windows Forms, Layout"
+title: "Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Margin.Bottom
+- Margin.Left
+- Margin.Top
+- Margin.All
+- Margin.Right
+helpviewer_keywords:
+- Margin property [Windows Forms], walkthroughs
+- walkthroughs [Windows Forms], layout
+- AutoSize property [Windows Forms], walkthroughs
+- Padding property [Windows Forms], walkthroughs
+- layout [Windows Forms], margins and padding
+- Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dce58776af84b1f4c733ddce2553e4b18b1b824
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abst&#228;nden, R&#228;ndern und der AutoSize-Eigenschaft
-Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert.  Der **Windows Forms\-Designer** bietet Ihnen hierfür zahlreiche Layouttools.  Drei der wichtigsten Tools sind die Eigenschaften <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A> und <xref:System.Windows.Forms.Control.AutoSize%2A>, über die jedes Windows Forms\-Steuerelement verfügt.  
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft
+Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Die **Windows Forms-Designer** bietet Ihnen viele Layouttools, um dies zu erreichen. Drei der wichtigsten sind die <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, und <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaften, die auf alle Windows Forms-Steuerelemente vorhanden sind.  
   
- Die <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft definiert den Bereich um das Steuerelement, durch den andere Steuerelemente in einem bestimmten Abstand von den Rändern des Steuerelements entfernt bleiben.  
+ Die <xref:System.Windows.Forms.Control.Margin%2A>-Eigenschaft definiert den Bereich um das Steuerelement, durch den andere Steuerelemente einen bestimmten Abstand von den Rändern des Steuerelements einhalten müssen.  
   
- Die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft definiert den Bereich innerhalb eines Steuerelements, durch den der Inhalt des Steuerelements \(z. B. der Wert seiner <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft\) in einem bestimmten Abstand von den Rändern des Steuerelements entfernt bleibt.  
+ Die <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft definiert den Bereich innerhalb eines Steuerelements, durch den der Inhalt des Steuerelements (z. B. der Wert seiner <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft) einen bestimmten Abstand von den Rändern des Steuerelements einhalten muss.  
   
- Die folgende Abbildung zeigt die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft und die <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft für ein Steuerelement.  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.Margin%2A>-Eigenschaft für ein Steuerelement.  
   
- ![Ränder und Abstände bei Windows Forms&#45;Steuerelementen](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS\_WinFormPadMargin")  
+ ![Ränder und Abstände bei Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft weist ein Steuerelement an, seine Größe automatisch an seinen Inhalt anzupassen.  Seine Größe entspricht jedoch mindestens dem Wert der ursprünglichen <xref:System.Windows.Forms.Control.Size%2A>\-Eigenschaft. Außerdem wird bei der Anpassung der Wert der <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft berücksichtigt.  
+ Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft weist ein Steuerelement an, seine Größe automatisch an seinen Inhalt angepasst. Es wird nicht seine kleiner sein als der Wert der ursprünglichen Größe <xref:System.Windows.Forms.Control.Size%2A> -Eigenschaft, und es wird der Wert der berücksichtigen seine <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms\-Projekts  
+-   Erstellen eines Windows Forms-Projekts  
   
--   Festlegen von Rändern für die Steuerelemente  
+-   Festlegen von Rändern für Ihre Steuerelemente  
   
--   Festlegen eines Abstands für die Steuerelemente  
+-   Festlegen der Auffüllung für Ihre Steuerelemente  
   
--   Automatisches Anpassen der Größe der Steuerelemente  
+-   Automatisches Anpassen der Größe Ihrer Steuerelemente  
   
- Anschließend werden Sie verstehen, welche Rolle diese wichtigen Layoutfeatures spielen.  
+ Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms\-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
+-   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
   
-## Erstellen des Projekts  
- Zunächst wird das Projekt erstellt und das Formular eingerichtet.  
+## <a name="creating-the-project"></a>Erstellen des Projekts  
+ Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
   
-#### So erstellen Sie das Projekt  
+#### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen Sie ein Projekt vom Typ **Windows\-Anwendung** mit dem Namen `LayoutExample`.  Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen einer **Windows-Anwendung** Projekt mit der Bezeichnung `LayoutExample`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
-2.  Wählen Sie im **Windows Forms\-Designer** das Formular aus.  
+2.  Wählen Sie das Formular in der **Windows Forms-Designer**.  
   
-## Festlegen von Rändern für die Steuerelemente  
- Sie können den standardmäßigen Abstand zwischen den Steuerelementen mithilfe der <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft festlegen.  Wenn Sie ein Steuerelement nahe genug an ein anderes Steuerelement verschieben, wird eine Ausrichtungslinie angezeigt, die die Ränder zwischen den beiden Steuerelement angibt.  Das Steuerelement, das Sie verschieben, wird ebenfalls mit dem von den Rändern definierten Abstand ausgerichtet.  
+## <a name="setting-margins-for-your-controls"></a>Festlegen von Rändern für Ihre Steuerelemente  
+ Sie können den Standardabstand zwischen den Steuerelementen mithilfe Festlegen der <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft. Wenn Sie ein Steuerelement verschieben genug, um ein anderes Steuerelement zu schließen, wird eine Ausrichtungslinie, die die Ränder für die beiden Steuerelemente angezeigt werden. Das Steuerelement, das Sie verschieben möchten, wird auch an den Abstand von den Rändern definierten ausgerichtet.  
   
-#### So ordnen Sie Steuerelemente auf dem Formular mithilfe der Margin\-Eigenschaft an  
+#### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>Anordnen von Steuerelementen auf dem Formular mithilfe der Margin-Eigenschaft  
   
-1.  Ziehen Sie zwei <xref:System.Windows.Forms.Button>\-Steuerelemente aus der **Toolbox** auf das Formular.  
+1.  Ziehen Sie zwei <xref:System.Windows.Forms.Button> -Steuerelemente aus der **Toolbox** auf das Formular.  
   
-2.  Wählen Sie eines der <xref:System.Windows.Forms.Button>\-Steuerelemente aus, und verschieben Sie es in die Nähe des jeweils anderen, bis sie sich beinahe berühren.  
+2.  Wählen Sie eine von der <xref:System.Windows.Forms.Button> -Steuerelemente sowie die in der Nähe der anderen zu verschieben, bis sie fast berühren.  
   
-     Beachten Sie die Ausrichtungslinie, die zwischen ihnen angezeigt wird.  Dieser Abstand entspricht der Summe der <xref:System.Windows.Forms.Control.Margin%2A>\-Werte der beiden Steuerelemente.  Das Steuerelement, das Sie verschieben, wird mit diesem Abstand ausgerichtet.  Ausführliche Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Beachten Sie die Ausrichtungslinie, die zwischen ihnen angezeigt wird. Dieser Abstand wird die Summe der beiden Steuerelemente <xref:System.Windows.Forms.Control.Margin%2A> Werte. Das Steuerelement, das Sie verschieben möchten, wird dieser Abstand ausgerichtet. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-3.  Ändern Sie die <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft eines der beiden Steuerelemente, indem Sie den <xref:System.Windows.Forms.Control.Margin%2A>\-Eintrag im **Eigenschaftenfenster** erweitern und die <xref:System.Windows.Forms.Padding.All%2A>\-Eigenschaft auf 20 festlegen.  
+3.  Ändern der <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft eines der Steuerelemente erweitern die <xref:System.Windows.Forms.Control.Margin%2A> Eintrag in der **Eigenschaften** Fenster und die Einstellung der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft bis 20.  
   
-4.  Wählen Sie eines der <xref:System.Windows.Forms.Button>\-Steuerelemente aus, und verschieben Sie es in die Nähe des anderen.  
+4.  Wählen Sie eine der der <xref:System.Windows.Forms.Button> -Steuerelemente sowie die in der Nähe der anderen zu verschieben.  
   
-     Die Ausrichtungslinie, die die Summer der Werte für die Ränder definiert, ist länger, d. h., das Steuerelement wird mit einem größeren Abstand zum anderen Steuerelement ausgerichtet.  
+     Der Ausrichtungslinie steuern länger ist die Summe der Werte für Ränder definieren und, dass das Steuerelement mit einem größeren Abstand von den anderen ausgerichtet wird.  
   
-5.  Ändern Sie die <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft des ausgewählten Steuerelements, indem Sie den <xref:System.Windows.Forms.Control.Margin%2A>\-Eintrag im **Eigenschaftenfenster** erweitern und die <xref:System.Windows.Forms.Padding.Top%2A>\-Eigenschaft auf 5 festlegen.  
+5.  Ändern der <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft des ausgewählten Steuerelements durch Erweitern der <xref:System.Windows.Forms.Control.Margin%2A> Eintrag in der **Eigenschaften** Fenster und die Einstellung der <xref:System.Windows.Forms.Padding.Top%2A> Eigenschaft bis 5.  
   
-6.  Verschieben Sie das ausgewählte Steuerelement unter das andere Steuerelement, und beachten Sie, dass die Ausrichtungslinie kürzer ist.  Verschieben Sie das ausgewählte Steuerelement links neben das andere Steuerelement, und beobachten Sie, dass die Ausrichtungslinie den Wert aus Schritt 4 beibehält.  
+6.  Bewegen Sie des ausgewählten Steuerelements unter dem anderen Steuerelement, und beachten Sie, dass die Ausrichtungslinie kürzer ist. Bewegen Sie des ausgewählten Steuerelements auf der linken Seite eines anderen Steuerelements, und beachten Sie, dass der Ausrichtungslinie den Wert aus Schritt 4 beibehält.  
   
-7.  Sie können für alle Aspekte der <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft, d. h. für <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A> und <xref:System.Windows.Forms.Padding.Bottom%2A>, verschiedene Werte festlegen oder mit der <xref:System.Windows.Forms.Padding.All%2A>\-Eigenschaft für alle denselben Wert festlegen.  
+7.  Legen Sie alle Aspekte von der <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, um unterschiedliche Werte, oder Sie können alle auf den gleichen Wert mit Festlegen der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft.  
   
-## Festlegen eines Abstands für die Steuerelemente  
- Um das für die Anwendung erforderliche präzise Layout zu erreichen, enthalten die Steuerelemente häufig untergeordnete Steuerelemente.  Wenn Sie den Abstand zwischen den Rändern des untergeordneten Steuerelements und den Rändern des übergeordneten Steuerelements festlegen möchten, verwenden Sie die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft des übergeordneten Steuerelements zusammen mit der <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft des untergeordneten Steuerelements.  Die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft wird außerdem verwendet, um den Abstand des Inhalts eines Steuerelements \(z. B. die <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft eines <xref:System.Windows.Forms.Button>\-Steuerelements\) zu seinen Rändern zu steuern.  
+## <a name="setting-padding-for-your-controls"></a>Festlegen der Auffüllung für Ihre Steuerelemente  
+ Um die genaue Layout für Ihre Anwendung erforderliche zu erreichen, werden die Steuerelemente häufig untergeordneten Steuerelemente enthalten. Wenn Sie den Abstand des Rahmens des untergeordneten Steuerelements auf das übergeordnete Steuerelement Rahmen angeben möchten, verwenden Sie des übergeordnete Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft in Verbindung mit des untergeordneten Steuerelements <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft. Die <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft wird auch verwendet, um den Abstand des Inhalts eines Steuerelements zu steuern (z. B. eine <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft) zu seinen Rändern.  
   
-#### So ordnen Sie Steuerelemente auf dem Formular mithilfe des Abstands an  
+#### <a name="to-arrange-controls-on-your-form-using-padding"></a>Anordnen von Steuerelementen auf dem Formular mithilfe der Auffüllung  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** auf das Formular.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in `true`.  
+2.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>-Eigenschaft des <xref:System.Windows.Forms.Button>-Steuerelements in `true`.  
   
-3.  Ändern Sie die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft, indem Sie den <xref:System.Windows.Forms.Control.Padding%2A>\-Eintrag im **Eigenschaftenfenster** erweitern und die <xref:System.Windows.Forms.Padding.All%2A>\-Eigenschaft auf 5 festlegen.  
+3.  Ändern der <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft durch Erweitern der <xref:System.Windows.Forms.Control.Padding%2A> Eintrag in der **Eigenschaften** Fenster und die Einstellung der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft bis 5.  
   
-     Das Steuerelement wird gemäß dem neuen Abstand erweitert.  
+     Das Steuerelement wird erweitert, um Raum für die neue Auffüllung bereitzustellen.  
   
-4.  Ziehen Sie ein <xref:System.Windows.Forms.GroupBox>\-Steuerelement aus der **Toolbox** auf das Formular.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** in das <xref:System.Windows.Forms.GroupBox>\-Steuerelement.  Positionieren Sie das <xref:System.Windows.Forms.Button>\-Steuerelement so, dass es an der rechten unteren Ecke des <xref:System.Windows.Forms.GroupBox>\-Steuerelements ausgerichtet ist.  
+4.  Ziehen Sie eine <xref:System.Windows.Forms.GroupBox> -Steuerelement aus der **Toolbox** auf das Formular. Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in die <xref:System.Windows.Forms.GroupBox> Steuerelement. Position der <xref:System.Windows.Forms.Button> steuern, daher ist es schließt bündig mit der rechten unteren Ecke des der <xref:System.Windows.Forms.GroupBox> Steuerelement.  
   
-     Beachten Sie die Ausrichtungslinien, die angezeigt werden, wenn sich das <xref:System.Windows.Forms.Button>\-Steuerelement dem unteren und rechten Rand des <xref:System.Windows.Forms.GroupBox>\-Steuerelements nähert.  Diese Ausrichtungslinien entsprechen der <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>.  
+     Beachten Sie die Ausrichtungslinien, die als angezeigt werden die <xref:System.Windows.Forms.Button> Steuerelement nähert sich dem unteren und rechten Rahmen der <xref:System.Windows.Forms.GroupBox> Steuerelement. Diese Ausrichtungslinien entsprechen den <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft von der <xref:System.Windows.Forms.Button>.  
   
-5.  Ändern Sie die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft des <xref:System.Windows.Forms.GroupBox>\-Steuerelements, indem Sie den <xref:System.Windows.Forms.Control.Padding%2A>\-Eintrag im **Eigenschaftenfenster** erweitern und die <xref:System.Windows.Forms.Padding.All%2A>\-Eigenschaft auf 20 festlegen.  
+5.  Ändern der <xref:System.Windows.Forms.GroupBox> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft durch Erweitern der <xref:System.Windows.Forms.Control.Padding%2A> Eintrag in der **Eigenschaften** Fenster und der Einstellung der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft bis 20.  
   
-6.  Wählen Sie das <xref:System.Windows.Forms.Button>\-Steuerelement innerhalb des <xref:System.Windows.Forms.GroupBox>\-Steuerelements aus, und verschieben Sie es in Richtung der Mitte des <xref:System.Windows.Forms.GroupBox>\-Steuerelements.  
+6.  Wählen Sie die <xref:System.Windows.Forms.Button> -Steuerelement innerhalb der <xref:System.Windows.Forms.GroupBox> steuern und verschieben Sie sie an der Mitte des der <xref:System.Windows.Forms.GroupBox>.  
   
-     Die Ausrichtungslinien werden mit einem größeren Abstand von den Rändern des <xref:System.Windows.Forms.GroupBox>\-Steuerelements angezeigt.  Dieser Abstand entspricht der Summe der <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements und der <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft des <xref:System.Windows.Forms.GroupBox>\-Steuerelements.  
+     Die Ausrichtungslinien angezeigt werden mit einem größeren Abstand von den Rändern des der <xref:System.Windows.Forms.GroupBox> Steuerelement. Dieser Abstand wird die Summe der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft und die <xref:System.Windows.Forms.GroupBox> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft.  
   
-## Automatisches Anpassen der Größe der Steuerelemente  
- In einigen Anwendungen ist die Größe eines Steuerelements zur Laufzeit nicht dieselbe wie zur Entwurfszeit.  Der Text eines <xref:System.Windows.Forms.Button>\-Steuerelements kann beispielsweise aus einer Datenbank abgerufen werden, ohne dass seine Länge vorab bekannt ist.  
+## <a name="automatically-sizing-your-controls"></a>Automatisches Anpassen der Größe Ihrer Steuerelemente  
+ In einigen Anwendungen wird die Größe eines Steuerelements identisch zur Laufzeit nicht zur Entwurfszeit vorlag. Der Text, der eine <xref:System.Windows.Forms.Button> -Steuerelement, z. B. möglicherweise ausgeführt werden aus einer Datenbank, und seine Länge wird nicht im Voraus bekannt sein.  
   
- Wenn die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft auf `true` festgelegt ist, passt sich die Größe des Steuerelements an seinen Inhalt an.  Weitere Informationen finden Sie unter [Übersicht über die AutoSize\-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ Wenn die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaftensatz auf `true`, wird die Größe des Steuerelements selbst zum jeweiligen Inhalt. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
-#### So ordnen Sie Steuerelemente auf dem Formular mithilfe der AutoSize\-Eigenschaft an  
+#### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>Anordnen von Steuerelementen auf dem Formular mithilfe der AutoSize-Eigenschaft  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** auf das Formular.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in `true`.  
+2.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>-Eigenschaft des <xref:System.Windows.Forms.Button>-Steuerelements in `true`.  
   
-3.  Ändern Sie die <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in "This button has a long string for its Text property".  
+3.  Ändern der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft auf "**Schaltfläche befindet sich eine lange Zeichenfolge für seine Texteigenschaft**."  
   
-     Wenn Sie die Änderung anwenden, passt sich die Größe des <xref:System.Windows.Forms.Button>\-Steuerelements an den neuen Text an.  
+     Wenn Sie die Änderung zu übernehmen die <xref:System.Windows.Forms.Button> Steuerelement angepasst, damit der neue Text passt.  
   
-4.  Ziehen Sie ein weiteres <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** auf das Formular.  
+4.  Ziehen Sie ein weiteres <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-5.  Ändern Sie die <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in "This button has a long string for its Text property".  
+5.  Ändern der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft auf "**Schaltfläche befindet sich eine lange Zeichenfolge für seine Texteigenschaft.**"  
   
-     Wenn Sie die Änderung anwenden, passt sich die Größe des <xref:System.Windows.Forms.Button>\-Steuerelements nicht an, und der Text wird am rechten Rand des Steuerelements abgeschnitten.  
+     Wenn Sie die Änderung zu übernehmen die <xref:System.Windows.Forms.Button> Steuerelement ändert die Größe nicht selbst, und der Text wird am rechten Rand des Steuerelements abgeschnitten.  
   
-6.  Ändern Sie die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft, indem Sie den <xref:System.Windows.Forms.Control.Padding%2A>\-Eintrag im **Eigenschaftenfenster** erweitern und die <xref:System.Windows.Forms.Padding.All%2A>\-Eigenschaft auf 5 festlegen.  
+6.  Ändern der <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft durch Erweitern der <xref:System.Windows.Forms.Control.Padding%2A> Eintrag in der **Eigenschaften** Fenster und die Einstellung der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft bis 5.  
   
-     Der Text innerhalb des Steuerelements wird an allen vier Seiten abgeschnitten.  
+     Der Text in das Steuerelement innere wird auf allen vier Seiten abgeschnitten.  
   
-7.  Ändern Sie die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in `true`.  
+7.  Ändern der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft `true`.  
   
-     Die Größe des <xref:System.Windows.Forms.Button>\-Steuerelements passt sich an die Zeichenfolge an, sodass es diese vollständig umschließt.  Zudem wurde um den Text herum ein Abstand hinzugefügt, wodurch das <xref:System.Windows.Forms.Button>\-Steuerelement in alle vier Richtungen erweitert wird.  
+     Die <xref:System.Windows.Forms.Button> Steuerelements angepasst, damit die gesamte Zeichenfolge enthält. Darüber hinaus Auffüllung zwischen dem Text hinzugefügt wurde verursacht die <xref:System.Windows.Forms.Button> Steuerelement in alle vier Richtungen erweitern.  
   
-8.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** auf das Formular.  Positionieren Sie es in der Nähe der rechten unteren Ecke des Formulars.  
+8.  Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular. Positionieren Sie es in der Nähe der rechten unteren Ecke des Formulars.  
   
-9. Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in `true`.  
+9. Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>-Eigenschaft des <xref:System.Windows.Forms.Button>-Steuerelements in `true`.  
   
-10. Legen Sie die <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements auf <xref:System.Windows.Forms.AnchorStyles> und <xref:System.Windows.Forms.AnchorStyles> fest.  
+10. Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>.  
   
-11. Ändern Sie die <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in "This button has a long string for its Text property".  
+11. Ändern der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft auf "**Schaltfläche befindet sich eine lange Zeichenfolge für seine Texteigenschaft.**"  
   
-     Wenn Sie die Änderung anwenden, passt sich die Größe des <xref:System.Windows.Forms.Button>\-Steuerelements nach links an.  Im Allgemeinen bewirkt die automatische Größenanpassung, dass sich die Größe eines Steuerelements in entgegengesetzter Richtung zur Einstellung der <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft erhöht.  
+     Wenn Sie die Änderung zu übernehmen die <xref:System.Windows.Forms.Button> Steuerelement passt sich an der linken Seite. Automatische größenanpassung im Allgemeinen wird die Größe eines Steuerelements in die entgegengesetzte Richtung erhöhen die <xref:System.Windows.Forms.Control.Anchor%2A> Einstellung der Eigenschaft.  
   
-## AutoSize\-Eigenschaft und AutoSizeMode\-Eigenschaft  
- Einige Steuerelemente unterstützen die `AutoSizeMode`\-Eigenschaft, mit der Sie die automatische Anpassung eines Steuerelements genauer steuern können.  
+## <a name="autosize-and-autosizemode-properties"></a>AutoSize und AutoSizeMode-Eigenschaft  
+ Einige Steuerelemente unterstützen die `AutoSizeMode` -Eigenschaft, die eine präzisere Kontrolle über das automatische Größenanpassungsverhalten eines Steuerelements enthält.  
   
-#### So verwenden Sie die AutoSizeMode\-Eigenschaft  
+#### <a name="to-use-the-autosizemode-property"></a>Verwenden Sie die AutoSizeMode-Eigenschaft  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.Panel>\-Steuerelement aus der **Toolbox** auf das Formular.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.Panel> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Legen Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft des <xref:System.Windows.Forms.Panel>\-Steuerelements auf `true` fest.  
+2.  Legen Sie den Wert, der die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft `true`.  
   
-3.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** in das <xref:System.Windows.Forms.Panel>\-Steuerelement.  
+3.  Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in die <xref:System.Windows.Forms.Panel> Steuerelement.  
   
-4.  Platzieren Sie das <xref:System.Windows.Forms.Button>\-Steuerelement in der Nähe der rechten unteren Ecke des <xref:System.Windows.Forms.Panel>\-Steuerelements.  
+4.  Ort der <xref:System.Windows.Forms.Button> in der Nähe der rechten unteren Ecke des Steuerelements die <xref:System.Windows.Forms.Panel> Steuerelement.  
   
-5.  Wählen Sie das <xref:System.Windows.Forms.Panel>\-Steuerelement aus, und klicken Sie auf den rechten unteren Ziehpunkt.  Vergrößern oder verkleinern Sie das <xref:System.Windows.Forms.Panel>\-Steuerelement.  
+5.  Wählen Sie die <xref:System.Windows.Forms.Panel> steuern, und ziehen Sie den unteren rechten Ziehpunkt. Ändern Sie die Größe der <xref:System.Windows.Forms.Panel> Steuerelement größere und kleinere befinden.  
   
     > [!NOTE]
-    >  Sie können die Größe des <xref:System.Windows.Forms.Panel>\-Steuerelements bis zur Position der rechten unteren Ecke des <xref:System.Windows.Forms.Button>\-Steuerelements beliebig ändern.  Dieses Verhalten wird vom Standardwert der `AutoSizeMode`\-Eigenschaft festgelegt, d. h. von <xref:System.Windows.Forms.AutoSizeMode>.  
+    >  Sie können beliebig ändern die <xref:System.Windows.Forms.Panel> -Steuerelement, aber Sie können keine Ändern der Größe kleiner als die Position des der <xref:System.Windows.Forms.Button> die unteren rechten Ecke des Steuerelements. Dieses Verhalten wird angegeben, indem der Wert von der `AutoSizeMode` Eigenschaft, die <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.  
   
-6.  Legen Sie den Wert der `AutoSizeMode`\-Eigenschaft des <xref:System.Windows.Forms.Panel>\-Steuerelements auf <xref:System.Windows.Forms.AutoSizeMode> fest.  
+6.  Legen Sie den Wert, der die <xref:System.Windows.Forms.Panel> des Steuerelements `AutoSizeMode` Eigenschaft <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
   
-     Die Größe des <xref:System.Windows.Forms.Panel>\-Steuerelements passt sich so an, dass es das <xref:System.Windows.Forms.Button>\-Steuerelement umgibt.  Sie können die Größe des <xref:System.Windows.Forms.Panel>\-Steuerelements nicht ändern.  
+     Die <xref:System.Windows.Forms.Panel> -Steuerelement passt sich zum Umschließen der <xref:System.Windows.Forms.Button> Steuerelement. Kann nicht geändert werden die <xref:System.Windows.Forms.Panel> Steuerelement.  
   
-7.  Ziehen Sie das <xref:System.Windows.Forms.Button>\-Steuerelement in die linke obere Ecke des <xref:System.Windows.Forms.Panel>\-Steuerelements.  
+7.  Ziehen Sie die <xref:System.Windows.Forms.Button> in Richtung der oberen linken Ecke des Steuerelements die <xref:System.Windows.Forms.Panel> Steuerelement.  
   
-     Die Größe des <xref:System.Windows.Forms.Panel>\-Steuerelements passt sich an die neue Position des <xref:System.Windows.Forms.Button>\-Steuerelements an.  
+     Die <xref:System.Windows.Forms.Panel> Registerkartensteuerelements der <xref:System.Windows.Forms.Button> neue Position des Steuerelements.  
   
-## Nächste Schritte  
- Es gibt zahlreiche weitere Layoutfeatures zum Anordnen von Steuerelementen in Windows Forms\-Anwendungen.  Probieren Sie beispielsweise folgende Kombinationen aus:  
+## <a name="next-steps"></a>Nächste Schritte  
+ Es gibt zahlreiche Layoutfunktionen zum Anordnen von Steuerelementen in Windows Forms-Anwendungen. Hier sind einige Kombinationen, die Sie ausprobieren können:  
   
--   Erstellen Sie ein Formular mithilfe eines <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements.  Ausführliche Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  Versuchen Sie, die Werte der <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements sowie die <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft der untergeordneten Steuerelemente zu ändern.  
+-   Erstellen eines Formulars mit einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Ändern Sie die Werte der <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft, als auch die <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft der untergeordneten Steuerelemente.  
   
--   Versuchen Sie dies mit einem <xref:System.Windows.Forms.FlowLayoutPanel>\-Steuerelement.  Ausführliche Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+-   Wiederholen Sie die gleiche Experiment mit einem <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Docken Sie untergeordnete Steuerelemente in einem <xref:System.Windows.Forms.Panel>\-Steuerelement an.  Die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft ist eine allgemeinere Variante der <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>\-Eigenschaft. Sie können sich hiervon überzeugen, indem Sie ein untergeordnetes Steuerelement in ein <xref:System.Windows.Forms.Panel>\-Steuerelement einfügen und die <xref:System.Windows.Forms.Control.Dock%2A>\-Eigenschaft des untergeordneten Steuerelements auf <xref:System.Windows.Forms.DockStyle> festlegen.  Legen Sie die <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft des <xref:System.Windows.Forms.Panel>\-Steuerelements auf verschiedene Werte fest, und beachten Sie die Auswirkung.  
+-   Experimentieren Sie mit dem Andocken von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.Panel> Steuerelement. Die <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft ist eine allgemeinere Realisierung der der <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> -Eigenschaft, und Sie können vorgegebene selbst, dass dies der Fall ist, verlegen Sie ein untergeordnetes Steuerelement einer <xref:System.Windows.Forms.Panel> Steuerelement und Festlegen des untergeordneten Steuerelements <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>. Legen Sie die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft verschiedene Werte und beobachten Sie die Auswirkung.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.AutoSize%2A>   
- <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>   
- <xref:System.Windows.Forms.Control.Margin%2A>   
- <xref:System.Windows.Forms.Control.Padding%2A>   
- [Übersicht über die AutoSize\-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>  
+ <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>  
+ <xref:System.Windows.Forms.Control.Margin%2A>  
+ <xref:System.Windows.Forms.Control.Padding%2A>  
+ [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

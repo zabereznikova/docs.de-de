@@ -1,30 +1,33 @@
 ---
-title: "Gewusst wie: Transformieren von Punkten und Vektoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grafiken, Transformieren von Point-Objekten"
-  - "Grafiken, Transformieren von Vector-Objekten"
-  - "Point-Objekte, Transformieren"
-  - "Transformieren von Point-Objekten"
-  - "Transformieren von Vector-Objekten"
-  - "Vector-Objekte, Transformieren"
+title: 'Gewusst wie: Transformieren von Punkten und Vektoren'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Vector objects [WPF], transforming
+- transforming Point objects [WPF]
+- transforming Vector objects [WPF]
+- graphics [WPF], transforming Vector objects [WPF]
+- Point objects [WPF], transforming
+- graphics [WPF], transforming Point objects [WPF]
 ms.assetid: 9fff2742-9162-46be-bc88-310fc3900af4
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d2c3443855f32b89c3f6cb34647a47cf50a34cee
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Transformieren von Punkten und Vektoren
-Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.Matrix> verwenden, um <xref:System.Windows.Point>\- und <xref:System.Windows.Vector>\-Objekte zu transformieren.  
+# <a name="how-to-transform-points-and-vectors"></a>Gewusst wie: Transformieren von Punkten und Vektoren
+Dieses Beispiel zeigt, wie eine <xref:System.Windows.Media.Matrix> transformieren <xref:System.Windows.Point> und <xref:System.Windows.Vector> Objekte.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]

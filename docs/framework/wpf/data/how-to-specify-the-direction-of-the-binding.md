@@ -1,52 +1,55 @@
 ---
-title: "Gewusst wie: Angeben der Bindungsrichtung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bindungsrichtung"
-  - "Datenbindung, Richtung der Bindung"
-  - "Richtung der Bindung"
+title: 'Gewusst wie: Angeben der Bindungsrichtung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- direction of binding [WPF]
+- binding direction [WPF]
+- data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdcda02a61f0114bfbbe5d5c411cb397cddcf683
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Angeben der Bindungsrichtung
-In diesem Beispiel wird erläutert, wie sich angeben lässt, ob die Bindung nur die Eigenschaft [Bindungsziel](GTMT) \(Ziel\), [Bindungsquelle](GTMT) \(Quelle\) oder sowohl Ziel\- als auch Quelleigenschaft aktualisiert.  
+# <a name="how-to-specify-the-direction-of-the-binding"></a>Gewusst wie: Angeben der Bindungsrichtung
+In diesem Beispiel wird erläutert, wie sich angeben lässt, ob die Bindung nur die Eigenschaft „Bindungsziel (Ziel)“, „Bindungsquelle (Quelle)“ oder sowohl die Ziel- als auch die Quelleigenschaft aktualisiert.  
   
-## Beispiel  
- Mit der <xref:System.Windows.Data.Binding.Mode%2A>\-Eigenschaft geben Sie die Bindungsrichtung an.  In der folgenden Enumerationsliste werden die verfügbaren Optionen für Bindungsaktualisierungen angezeigt:  
+## <a name="example"></a>Beispiel  
+ Verwenden Sie die <xref:System.Windows.Data.Binding.Mode%2A> Eigenschaft, um die Richtung der Bindung anzugeben. In der folgenden Enumerationsliste werden die verfügbaren Optionen für Bindungsaktualisierungen angezeigt:  
   
--   <xref:System.Windows.Data.BindingMode> aktualisiert die Zieleigenschaft bzw. die Quelleigenschaft dann, wenn sich die Ziel\- oder die Quelleigenschaft ändert.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay>Wenn die Zieleigenschaft oder die Quelleigenschaft ändert die Zieleigenschaft oder der Eigenschaft aktualisiert werden soll.  
   
--   <xref:System.Windows.Data.BindingMode> aktualisiert die Zieleigenschaft nur dann, wenn sich die Quelleigenschaft ändert.  
+-   <xref:System.Windows.Data.BindingMode.OneWay>aktualisiert die Eigenschaft an, sobald sich die Quelleigenschaft ändert.  
   
--   <xref:System.Windows.Data.BindingMode> aktualisiert die Zieleigenschaft nur dann, wenn die Anwendung gestartet wird oder wenn sich der <xref:System.Windows.FrameworkElement.DataContext%2A> ändert.  
+-   <xref:System.Windows.Data.BindingMode.OneTime>aktualisiert die Eigenschaft nur verwendet werden, wenn die Anwendung gestartet oder der <xref:System.Windows.FrameworkElement.DataContext%2A> eine Änderung vorgenommen.  
   
--   <xref:System.Windows.Data.BindingMode> aktualisiert die Quelleigenschaft, wenn sich die Zieleigenschaft ändert.  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource>aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft geändert wird.  
   
--   <xref:System.Windows.Data.BindingMode> bewirkt, dass der <xref:System.Windows.Data.Binding.Mode%2A>\-Standardwert der Zieleigenschaft verwendet wird.  
+-   <xref:System.Windows.Data.BindingMode.Default>bewirkt, dass der <xref:System.Windows.Data.Binding.Mode%2A> Wert der Zieleigenschaft verwendet werden.  
   
- Weitere Informationen finden Sie unter der <xref:System.Windows.Data.BindingMode>\-Enumeration.  
+ Weitere Informationen finden Sie unter der <xref:System.Windows.Data.BindingMode>-Enumeration.  
   
- Im folgenden Beispiel wird das Festlegen der <xref:System.Windows.Data.Binding.Mode%2A>\-Eigenschaft veranschaulicht.  
+ Im folgenden Beispiel wird das Festlegen der <xref:System.Windows.Data.Binding.Mode%2A>-Eigenschaft veranschaulicht.  
   
- [!code-xml[DirectionalBinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
+ [!code-xaml[DirectionalBinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
   
- Um Quelländerungen zu erkennen \(das gilt für die <xref:System.Windows.Data.BindingMode>\-Bindung und die <xref:System.Windows.Data.BindingMode>\-Bindung\), muss die Quelle einen geeigneten Mechanismus für Benachrichtigungen bei Eigenschaftenänderungen implementieren, z. B. <xref:System.ComponentModel.INotifyPropertyChanged>.  Unter [Implementieren von Benachrichtigungen bei Eigenschaftenänderungen](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) finden Sie ein Beispiel für eine <xref:System.ComponentModel.INotifyPropertyChanged>\-Implementierung.  
+ Datenquellenänderungen erkannt (gilt für <xref:System.Windows.Data.BindingMode.OneWay> und <xref:System.Windows.Data.BindingMode.TwoWay> Bindungen), muss die Quelle einen Änderungsbenachrichtigungsmechanismus geeignete Eigenschaft z. B. implementieren <xref:System.ComponentModel.INotifyPropertyChanged>. Finden Sie unter [implementieren Änderungsbenachrichtigung](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) ein Beispiel für eine <xref:System.ComponentModel.INotifyPropertyChanged> Implementierung.  
   
- Für eine <xref:System.Windows.Data.BindingMode>\-Bindung oder eine <xref:System.Windows.Data.BindingMode>Bindung können Sie das Zeitverhalten der Quellaktualisierungen durch Festlegen der <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>\-Eigenschaft steuern.  Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+ Für <xref:System.Windows.Data.BindingMode.TwoWay> oder <xref:System.Windows.Data.BindingMode.OneWayToSource> Bindungen, Sie können die zeitliche Steuerung der Quelle Updates durch Festlegen der <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
-## Siehe auch  
- <xref:System.Windows.Data.Binding>   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Data.Binding>  
+ [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

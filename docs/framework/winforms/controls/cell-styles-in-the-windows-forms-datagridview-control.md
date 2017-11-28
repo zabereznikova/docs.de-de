@@ -1,34 +1,35 @@
 ---
-title: "Zellstile im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zellen, Formate"
-  - "Datenblätter, Zellenstile"
-  - "DataGridView-Steuerelement [Windows Forms], Zellenstile"
+title: Zellstile im DataGridView-Steuerelement in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell styles
+- cells [Windows Forms], styles
+- data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: 33
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zellstile im DataGridView-Steuerelement in Windows Forms
-Jede Zelle im <xref:System.Windows.Forms.DataGridView>\-Steuerelement kann über ihren eigenen Stil verfügen, z. B. Textformat, Hintergrundfarbe, Vordergrundfarbe und Schriftart.  In der Regel weisen jedoch mehrere Zellen die gleichen Stilmerkmale auf.  
+# <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Zellstile im DataGridView-Steuerelement in Windows Forms
+Jede Zelle innerhalb der <xref:System.Windows.Forms.DataGridView> Steuerelement kann über einen eigenen Stil, z. B. Textformat, Hintergrundfarbe, Vordergrundfarbe und Schriftart verfügen. In der Regel werden jedoch mehrere Zellen Stilmerkmale.  
   
- Zellengruppen mit gemeinsamen Stilen können alle Zellen in bestimmten Zeilen oder Spalten, alle Zellen mit bestimmten Werten oder alle Zellen im Steuerelement umfassen.  Da sich diese Gruppen überschneiden, kann jede Zelle ihre Stilinformationen von mehreren Stellen abrufen.  Beispielsweise möchten Sie, dass jede Zelle in einem <xref:System.Windows.Forms.DataGridView>\-Steuerelement dieselbe Schriftart verwendet, aber nur Zellen in Währungsspalten das Währungsformat und nur Währungszellen mit negativen Zahlen eine rote Vordergrundfarbe verwenden sollen.  
+ Gruppen von Zellen, die Stile freigeben können alle Zellen innerhalb bestimmter Zeilen oder Spalten, alle, die bestimmte Werte enthalten, oder alle Zellen im Steuerelement enthalten. Da diese Gruppen überschneiden, kann jede Zelle ihre Stilinformationen von mehr als einem zentralen Ort abrufen. Sie können z. B. jede Zelle einer <xref:System.Windows.Forms.DataGridView> Steuerelement in den gleichen Schriftart, aber nur Zellen in den Currency-Spalten das Währungsformat und nur Währungszellen mit negativen Zahlen zu verwenden, um eine rote Vordergrundfarbe verwenden.  
   
-## Die DataGridViewCellStyle\-Klasse  
- Die <xref:System.Windows.Forms.DataGridViewCellStyle>\-Klasse enthält die folgenden Eigenschaften für den visuellen Stil:  
+## <a name="the-datagridviewcellstyle-class"></a>Die DataGridViewCellStyle-Klasse  
+ Die <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse enthält die folgenden Eigenschaften im Zusammenhang mit den visuellen Stil:  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> und <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
@@ -36,7 +37,7 @@ Jede Zelle im <xref:System.Windows.Forms.DataGridView>\-Steuerelement kann über
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
- Diese Klasse enthält außerdem die folgenden Eigenschaften für die Formatierung:  
+ Diese Klasse enthält auch die folgenden Eigenschaften im Zusammenhang mit der Formatierung:  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> und <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
@@ -48,129 +49,129 @@ Jede Zelle im <xref:System.Windows.Forms.DataGridView>\-Steuerelement kann über
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
- Weitere Informationen über diese Eigenschaften und andere Zellstileigenschaften finden Sie in der <xref:System.Windows.Forms.DataGridViewCellStyle>\-Referenzdokumentation und den unter Siehe auch aufgeführten Themen.  
+ Weitere Informationen für diese und andere Zellstil Eigenschaften finden Sie unter der <xref:System.Windows.Forms.DataGridViewCellStyle> Referenz-Dokumentation und in den Themen auch finden Sie unten im Abschnitt aufgeführt.  
   
-## Verwenden von DataGridViewCellStyle\-Objekten  
- Sie können <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekte von verschiedenen Eigenschaften der <xref:System.Windows.Forms.DataGridView>\-, <xref:System.Windows.Forms.DataGridViewColumn>\-, <xref:System.Windows.Forms.DataGridViewRow>\- und <xref:System.Windows.Forms.DataGridViewCell>\-Klassen und deren abgeleiteten Klassen abrufen.  Wenn eine dieser Eigenschaften noch nicht festgelegt wurde, wird durch Abrufen ihres Werts ein neues <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt erstellt.  Sie können auch Ihre eigenen <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekte instanziieren und sie diesen Eigenschaften zuordnen.  
+## <a name="using-datagridviewcellstyle-objects"></a>Verwenden von DataGridViewCellStyle-Objekten  
+ Können Sie abrufen <xref:System.Windows.Forms.DataGridViewCellStyle> von verschiedenen Eigenschaften der Objekte die <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>, und <xref:System.Windows.Forms.DataGridViewCell> Klassen und deren abgeleiteten Klassen. Wenn eine dieser Eigenschaften noch nicht festgelegt wurde, der Wert abgerufen wird erstellen Sie ein neues <xref:System.Windows.Forms.DataGridViewCellStyle> Objekt. Eigene instanziieren <xref:System.Windows.Forms.DataGridViewCellStyle> -Objekte und weisen Sie sie auf diese Eigenschaften.  
   
- Sie können unnötige Duplizierungen von Stilinformationen vermeiden, indem Sie <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekte für mehrere <xref:System.Windows.Forms.DataGridView>\-Elemente freigeben.  Da die auf Steuerelement\-, Spalten\- und Zeilenebene festgelegten Stile bis auf Zellebene filtern, können Sie außerdem doppelte Stile vermeiden, indem Sie auf jeder Ebene nur die Stileigenschaften festlegen, die sich von den höheren Ebenen unterscheiden.  Dies wird ausführlicher im Abschnitt Stilvererbung weiter unten beschrieben.  
+ Sie können unnötige Verdoppelungen von Formatinformationen vermeiden, indem Sie die Freigabe <xref:System.Windows.Forms.DataGridViewCellStyle> für mehrere Objekte <xref:System.Windows.Forms.DataGridView> Elemente. Da die Stile auf das Steuerelement, Spalte und Ebenen Zeilenfilter nach unten bis auf Zellenebene festgelegt, können Sie auch Zellebene vermeiden, indem Sie nur die Stileigenschaften auf jeder Ebene, die von den höheren Ebenen unterscheiden. Dies wird ausführlicher im Abschnitt Stil Vererbung folgenden beschrieben.  
   
- In der folgenden Tabelle werden die primären Eigenschaften aufgelistet, die die <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekte abrufen oder festlegen.  
+ Die folgende Tabelle enthält die primären Eigenschaften, die abzurufenden oder festzulegenden <xref:System.Windows.Forms.DataGridViewCellStyle> Objekte.  
   
-|Property|Klassen|Beschreibung|  
-|--------------|-------------|------------------|  
-|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow> und abgeleitete Klassen|Ruft Standardstile ab bzw. legt Standardstile fest, die von allen Zellen im gesamten Steuerelement \(einschließlich Headerzellen\), in einer Spalte oder in einer Zeile verwendet werden.|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ruft Standardstile ab bzw. legt Standardstile fest, die von allen Zeilen im Steuerelement verwendet werden.  Dies umfasst keine Headerzellen.|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ruft Standardstile ab bzw. legt Standardstile fest, die von abwechselnden Zeilen im Steuerelement verwendet werden.  Wird verwendet, um einen Effekt wie in einem Ledger zu erstellen.|  
-|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ruft Standardzellstile ab bzw. legt Standardzellstile fest, die von den Zeilenheadern des Steuerelements verwendet werden.  Wird vom aktuellen Design überschrieben, wenn visuelle Stile aktiviert sind.|  
-|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ruft Standardzellstile ab bzw. legt Standardzellstile fest, die von den Spaltenheadern des Steuerelements verwendet werden.  Wird vom aktuellen Design überschrieben, wenn visuelle Stile aktiviert sind.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> und abgeleitete Klassen|Ruft Stile ab bzw. legt Stile fest, die auf Zellenebene festgelegt wurden.  Diese Stile überschreiben diejenigen, die von höheren Ebenen geerbt wurden.|  
-|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn> und abgeleitete Klassen|Ruft alle Stile ab, die derzeit auf die Zelle, Zeile oder Spalte angewendet werden, einschließlich von höheren Ebenen geerbte Stile.|  
+|Eigenschaft|Klassen|Beschreibung|  
+|--------------|-------------|-----------------|  
+|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>, und die abgeleiteten Klassen|Ruft ab, oder legt ihn fest Standardstile verwendet, die für alle Zellen in das gesamte Steuerelement (einschließlich der Headerzellen) in einer Spalte oder in einer Zeile.|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Abrufen oder Festlegen von standardmäßigen Zellenstilen verwendet, die für alle Zeilen im Steuerelement. Dies schließt nicht die Kopfzeilenzellen.|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Abrufen oder Festlegen von standardmäßigen Zellenstilen von abwechselnden Zeilen im Steuerelement verwendet. Dient zum Erstellen von eines Ledger-ähnlichen Effekts.|  
+|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Abrufen oder Festlegen von standardmäßigen Zellenstilen von Zeilenheader für das Steuerelement verwendet. Durch das aktuelle Design überschrieben, wenn visuelle Stile aktiviert sind.|  
+|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Abrufen oder Festlegen von standardmäßigen Zellenstilen von Spaltenüberschriften für das Steuerelement verwendet. Durch das aktuelle Design überschrieben, wenn visuelle Stile aktiviert sind.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>und abgeleitete Klassen|Ruft ab, oder legt ihn fest Formatvorlagen auf Zellenebene angegeben. Diese Stile überschreiben von höheren Ebenen geerbte.|  
+|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>, und die abgeleiteten Klassen|Ruft die Stile, die derzeit auf die Zelle, Zeile oder Spalte, einschließlich von höheren Ebenen geerbte Stile angewendet.|  
   
- Wie bereits erwähnt, wird durch das Abrufen des Werts einer Stileigenschaft automatisch ein neues <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt instanziiert, wenn die Eigenschaft nicht zuvor festgelegt wurde.  Damit diese Objekte nicht unnötig erstellt werden, verfügen die Zeilen\- und Spaltenklassen über eine <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A>\-Eigenschaft, anhand derer Sie überprüfen können, ob die <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A>\-Eigenschaft festgelegt wurde.  Ebenso verfügen die Zellenklassen über eine <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A>\-Eigenschaft, die angibt, ob die <xref:System.Windows.Forms.DataGridViewCell.Style%2A>\-Eigenschaft festgelegt wurde.  
+ Wie bereits erwähnt, Abrufen des Werts der Style-Eigenschaft automatisch eine neue instanziiert <xref:System.Windows.Forms.DataGridViewCellStyle> Objekt, wenn die Eigenschaft nicht zuvor festgelegt wurde. Um zu vermeiden, diese Objekte nicht unnötig erstellt, die Zeilen- und Klassen verfügen über eine <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> -Eigenschaft, die Sie überprüfen können, um zu bestimmen, ob die <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> Eigenschaft festgelegt wurde. Auf ähnliche Weise die Zellenklassen verfügen über eine <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> Eigenschaft, die angibt, ob die <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft festgelegt wurde.  
   
- Jede der Stileigenschaften verfügt über ein entsprechendes *PropertyName*`Changed`\-Ereignis auf dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement.  Für Zeilen\-, Spalten\- und Zelleneigenschaften fängt der Name des Ereignisses mit "`Row`", "`Column`" oder "`Cell`" an \(z. B. <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>\).  Jedes dieser Ereignisse tritt auf, wenn die entsprechende Stileigenschaft auf ein anderes <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt festgelegt ist.  Diese Ereignisse treten nicht auf, wenn Sie ein <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt von einer Stileigenschaft abrufen und seine Eigenschaftswerte ändern.  Um auf Änderungen an den Zellstilobjekten selbst zu reagieren, behandeln Sie das <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged>\-Ereignis.  
+ Jede der Stileigenschaften verfügt über ein entsprechendes *PropertyName* `Changed` Ereignis auf der <xref:System.Windows.Forms.DataGridView> Steuerelement. Für Zeilen-, Spalten- und Zelleigenschaften, der der Namen des Ereignisses beginnt mit "`Row`","`Column`", oder "`Cell`" (z. B. <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>). Jedes dieser Ereignisse tritt auf, wenn die entsprechende Style-Eigenschaft, auf einen anderen festgelegt ist <xref:System.Windows.Forms.DataGridViewCellStyle> Objekt. Diese Ereignisse treten nicht beim Abrufen einer <xref:System.Windows.Forms.DataGridViewCellStyle> -Objekt aus einem Style-Eigenschaft und ihre Eigenschaftswerte ändern. Um Änderungen an die Zelle stilobjekte selbst zu behandeln, behandeln die <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> Ereignis.  
   
-## Stilvererbung  
- Jede <xref:System.Windows.Forms.DataGridViewCell> ruft ihre Darstellung von der zugehörigen <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>\-Eigenschaft ab.  Das von dieser Eigenschaft zurückgegebene <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt erbt seine Werte von einer Eigenschaftenhierarchie des Typs <xref:System.Windows.Forms.DataGridViewCellStyle>.  Diese Eigenschaften werden unten in der Reihenfolge aufgelistet, in der der <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> für Nicht\-Headerzellen seine Werte abruft.  
+## <a name="style-inheritance"></a>Stil-Vererbung  
+ Jede <xref:System.Windows.Forms.DataGridViewCell> ruft seine Darstellung von dessen <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> Eigenschaft. Die <xref:System.Windows.Forms.DataGridViewCellStyle> von dieser Eigenschaft zurückgegebene Objekt erbt die Werte aus einer Hierarchie der Eigenschaften des Typs <xref:System.Windows.Forms.DataGridViewCellStyle>. Diese Eigenschaften sind unten aufgeführt, in der Reihenfolge, in der die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> für nicht-Headerzellen seine Werte abruft.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName> \(nur für Zellen in Zeilen mit ungeraden Indexnummern\)  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(nur für Zellen in Zeilen mit ungerader Indexnummern)  
   
-4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>  
+5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Für Zeilen\- und Spaltenheaderzellen wird die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>\-Eigenschaft mit Werten aus der folgenden Liste mit Quelleigenschaften in der angegebenen Reihenfolge gefüllt.  
+ Für Zeilen- und Headerzellen der <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> Eigenschaft wird angegeben, nach Werten in der folgenden Liste von Datenquelleneigenschaften in der angegebenen Reihenfolge.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=fullName> oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.  
+ Das folgende Diagramm veranschaulicht diesen Prozess.  
   
- ![Eigenschaften des DataGridViewCellStyle&#45;Typs](../../../../docs/framework/winforms/controls/media/datagridviewcells1.png "DataGridViewCells1")  
+ ![Eigenschaften des DataGridViewCellStyle-Typs](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
   
- Sie können auch auf die Stile zugreifen, die von bestimmten Zeilen und Spalten geerbt wurden.  Die <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A>\-Spalteneigenschaft erbt die Werte von den folgenden Eigenschaften.  
+ Sie können auch die Stile, die von bestimmten Zeilen und Spalten geerbt zugreifen. Die Spalte <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> -Eigenschaft erbt seine Werte aus den folgenden Eigenschaften.  
   
-1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Die <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>\-Zeileneigenschaft erbt die Werte von den folgenden Eigenschaften.  
+ Die Zeile <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> -Eigenschaft erbt seine Werte aus den folgenden Eigenschaften.  
   
-1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName> \(nur für Zellen in Zeilen mit ungeraden Indexnummern\)  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(nur für Zellen in Zeilen mit ungerader Indexnummern)  
   
-3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>  
+3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Für jede Eigenschaft in einem <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt, das von einer `InheritedStyle`\-Eigenschaft zurückgegeben wird, wird der Eigenschaftswert vom ersten Zellstil in der entsprechenden Liste abgerufen, deren Eigenschaft auf einen anderen Wert als die Standardwerte der <xref:System.Windows.Forms.DataGridViewCellStyle>\-Klasse festgelegt ist.  
+ Für jede Eigenschaft in ein <xref:System.Windows.Forms.DataGridViewCellStyle> zurückgegebenes Objekt ein `InheritedStyle` -Eigenschaft den Wert der Eigenschaft wird abgerufen, vom ersten Zellstil in der entsprechenden Liste aus, die die entsprechende Eigenschaft nicht auf einen Wert festgelegt wurde der <xref:System.Windows.Forms.DataGridViewCellStyle> -Klasse Standardwerte.  
   
- Die folgende Tabelle zeigt, wie der <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>\-Eigenschaftswert für eine Beispielzelle von der Spalte geerbt wird, in der er enthalten ist.  
+ Die folgende Tabelle verdeutlicht, wie die <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> Eigenschaftswert für eine Beispielzelle wird von der enthaltenden Spalte vererbt.  
   
-|Eigenschaft vom Typ `DataGridViewCellStyle`|`ForeColor`\-Beispielwert für abgerufenes Objekt|  
-|-------------------------------------------------|------------------------------------------------------|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Red%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Black%2A?displayProperty=fullName>|  
+|Eigenschaft vom Typ`DataGridViewCellStyle`|Beispiel `ForeColor` Wert für das abgerufene Objekt|  
+|----------------------------------------------|----------------------------------------------------|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType>|  
   
- In diesem Fall ist der <xref:System.Drawing.Color.Red%2A?displayProperty=fullName>\-Wert aus der Zeile der Zelle der erste reale Wert in der Liste.  Dieser wird zum <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>\-Eigenschaftswert des <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> der Zelle.  
+ In diesem Fall die <xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType> Wert aus der Zeile der Zelle wird der erste reale Wert in der Liste. Dies ist die <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> Eigenschaftswert, der der Zelle <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>.  
   
- Im folgenden Diagramm wird gezeigt, wie verschiedene <xref:System.Windows.Forms.DataGridViewCellStyle>\-Eigenschaften ihre Werte von verschiedenen Stellen erben können.  
+ Im folgende Diagramm wird veranschaulicht, wie mit verschiedenen <xref:System.Windows.Forms.DataGridViewCellStyle> Eigenschaften können ihre Werte aus verschiedenen Quellen erben.  
   
- ![Vererbung von DataGridView&#45;Eigenschaftswerten](../../../../docs/framework/winforms/controls/media/datagridviewcells2.png "DataGridViewCells2")  
+ ![DataGridView-Eigenschaft &#45; die Vererbung von Eigenschaftenwerten](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
- Mithilfe der Stilvererbung können Sie geeignete Stile für das gesamte Steuerelement bereitstellen, ohne dieselben Informationen an mehreren Stellen angeben zu müssen.  
+ Durch nutzen die Vererbung von Stilen, können Sie die entsprechenden Stile für das gesamte Steuerelement bereitstellen, ohne die gleiche Informationen an mehreren Orten angeben zu müssen.  
   
- Obwohl Headerzellen bei der Stilvererbung wie beschrieben mitwirken, verfügen die von der <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>\-Eigenschaft und der <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>\-Eigenschaft des <xref:System.Windows.Forms.DataGridView>\-Steuerelements zurückgegebenen Objekte anfänglich über Eigenschaftswerte, die die Eigenschaftswerte des von der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>\-Eigenschaft zurückgegebenen Objekts überschreiben.  Wenn die Eigenschaften, die für das von der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>\-Eigenschaft zurückgegebene Objekt festgelegt sind, auf Zeilen\- und Spaltenheader angewendet werden sollen, müssen Sie die entsprechenden Eigenschaften der Objekte, die von der <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>\-Eigenschaft und der <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>\-Eigenschaft zurückgegeben werden, auf die für die <xref:System.Windows.Forms.DataGridViewCellStyle>\-Klasse angegebenen Standardwerte festlegen.  
-  
-> [!NOTE]
->  Wenn visuelle Stile aktiviert sind, wird auf die Zeilen\- und Spaltenheader \(mit Ausnahme der <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>\) automatisch das aktuelle Design angewendet, das alle Stile überschreibt, die von diesen Eigenschaften festgelegt wurden.  
-  
- Die <xref:System.Windows.Forms.DataGridViewButtonColumn>\-, <xref:System.Windows.Forms.DataGridViewImageColumn>\- und <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>\-Typen initialisieren auch einige Werte des Objekts, das von der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>\-Spalteneigenschaft zurückgegeben wird.  Weitere Informationen finden Sie in der Referenzdokumentation für diese Typen.  
-  
-## Dynamisches Festlegen von Stilen  
- Um die Stile der Zellen mit bestimmten Werten anzupassen, implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>\-Ereignis.  Handler für dieses Ereignis empfangen ein Argument des <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>\-Typs.  Dieses Objekt enthält Eigenschaften, mit denen Sie den Wert der formatierten Zelle sowie ihre Position im <xref:System.Windows.Forms.DataGridView>\-Steuerelement bestimmen können.  Dieses Objekt enthält außerdem eine <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A>\-Eigenschaft, die auf den Wert der <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>\-Eigenschaft der formatierten Zelle initialisiert wird.  Sie können die Zellstileigenschaften ändern, um für den Wert und die Position der Zelle geeignete Stilinformationen anzugeben.  
+ Obwohl Headerzellen an der Stil Vererbung teilnehmen möchten, wie beschrieben, die Objekte zurückgegeben, durch die <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> und <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaften der <xref:System.Windows.Forms.DataGridView> Kontrolle haben die anfänglichen Eigenschaftenwerte, die die Eigenschaftswerte des Objekts zurückgegeben wird, durch Überschreiben die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft. Wenn Sie die Eigenschaften für das zurückgegebene Objekt festgelegt werden soll die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft zuweisen von Zeilen- und Spaltenüberschriften, müssen Sie die entsprechenden Eigenschaften des vom zurückgegebenen Objekte Festlegen der <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> und <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaften auf die Standardwerte angegeben für die <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse.  
   
 > [!NOTE]
->  Das <xref:System.Windows.Forms.DataGridView.RowPrePaint>\-Ereignis und das <xref:System.Windows.Forms.DataGridView.RowPostPaint>\-Ereignis empfangen ebenfalls ein <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekt in den Ereignisdaten. In ihrem Fall handelt es sich aber um eine schreibgeschützte Kopie der <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>\-Zeileneigenschaft, deren Änderungen sich nicht auf das Steuerelement auswirken.  
+>  Wenn visuelle Stile aktiviert sind, die Zeilen- und Spaltenüberschriften (mit Ausnahme der <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) automatisch durch das aktuelle Design, überschreiben alle diese Eigenschaften gemäß Formatvorlagen formatiert sind.  
   
- Sie können auch die Stile einzelner Zellen als Reaktion auf Ereignisse wie das <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=fullName>\-Ereignis und das <xref:System.Windows.Forms.DataGridView.CellMouseLeave>\-Ereignis dynamisch bearbeiten.  Beispielsweise könnten Sie in einem Handler für das <xref:System.Windows.Forms.DataGridView.CellMouseEnter>\-Ereignis den aktuellen Wert für die Hintergrundfarbe der Zelle speichern \(der durch die <xref:System.Windows.Forms.DataGridViewCell.Style%2A>\-Eigenschaft der Zelle abgerufen wird\) und ihn anschließend auf eine neue Farbe festlegen, mit der die Zelle hervorgehoben wird, wenn mit der Maus darauf gezeigt wird.  In einem Handler für das <xref:System.Windows.Forms.DataGridView.CellMouseLeave>\-Ereignis können Sie dann die Hintergrundfarbe auf den ursprünglichen Wert zurücksetzen.  
+ Die <xref:System.Windows.Forms.DataGridViewButtonColumn>, <xref:System.Windows.Forms.DataGridViewImageColumn>, und <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> -Typen initialisieren auch einige Werte des Objekts, das von der Spalte zurückgegeben <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Weitere Informationen finden Sie in der Referenzdokumentation für diese Typen.  
+  
+## <a name="setting-styles-dynamically"></a>Dynamisches Festlegen von Stilen  
+ Implementieren Sie zum Anpassen der Stile eines Zellen mit bestimmten Werten einen Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis. Handler für dieses Ereignis empfängt ein Argument der <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> Typ. Dieses Objekt enthält Eigenschaften, mit denen Sie den Wert des zusammen mit ihrem Speicherort im formatierten Zelle bestimmen die <xref:System.Windows.Forms.DataGridView> Steuerelement. Dieses Objekt enthält auch eine <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A> -Eigenschaft, die auf den Wert des initialisiert wird die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> -Eigenschaft der Zelle formatiert wird. Sie können die Eigenschaften für den Zellstil zum Angeben von Formatinformationen für den Wert der Zelle und den Speicherort ändern.  
   
 > [!NOTE]
->  Unabhängig davon, ob ein bestimmter Stilwert festgelegt wurde, ist es wichtig, die in der <xref:System.Windows.Forms.DataGridViewCell.Style%2A>\-Eigenschaft der Zelle gespeicherten Werte zwischenzuspeichern.  Wenn Sie eine Stileinstellung vorübergehend ersetzen, wird durch das Wiederherstellen des ursprünglichen, nicht festgelegten Zustands sichergestellt, dass die Zelle die Stileinstellung wieder von einer höheren Ebene erbt.  Wenn Sie den tatsächlichen Stil einer Zelle unabhängig davon bestimmen müssen, ob der Stil geerbt wird, verwenden Sie die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>\-Eigenschaft der Zelle.  
+>  Die <xref:System.Windows.Forms.DataGridView.RowPrePaint> und <xref:System.Windows.Forms.DataGridView.RowPostPaint> empfangen von Ereignissen auch eine <xref:System.Windows.Forms.DataGridViewCellStyle> Objektdaten im Ereignis allerdings in Großschreibung, handelt es sich, eine Kopie der Zeile <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> Eigenschaft für Lesezwecke und Änderungen an sie wirken sich nicht auf das Steuerelement.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=fullName>   
- [Grundlegende Formatierungen und Formate im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)   
- [Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+ Sie können auch dynamisch die Formatvorlagen der einzelnen Zellen als Antwort auf Ereignisse ändern, wie z. B. die <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataGridView.CellMouseLeave> Ereignisse. Z. B. in einen Handler für das <xref:System.Windows.Forms.DataGridView.CellMouseEnter> -Ereignis können Sie den aktuellen Wert der Hintergrundfarbe der Zelle speichern (über der Zelle abgerufen <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft), legen Sie sie dann auf eine neue Farbe, die die Zelle hervorgehoben wird, wenn der Mauszeiger darüber bewegt wird. In einem Ereignishandler für das <xref:System.Windows.Forms.DataGridView.CellMouseLeave> -Ereignis können Sie die Farbe des Hintergrunds klicken Sie dann auf den ursprünglichen Wert wiederherstellen.  
+  
+> [!NOTE]
+>  In der Zelle gespeicherten Werte zwischenspeichern <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft ist wichtig, unabhängig davon, ob ein bestimmter Stilwert festgelegt wird. Wenn Sie vorübergehend eine stileinstellung ersetzen, stellt sicher in den Originalzustand "nicht konfiguriert" wiederhergestellt wird, dass die Zelle zurückzukehren erben von der Einstellung von einer höheren Ebene. Wenn Sie bestimmen die Formatvorlage für eine Zelle, unabhängig davon, ob der Stil geerbt wird, verwenden Sie der Zelle <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> Eigenschaft.  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>  
+ [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Datenformatierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)

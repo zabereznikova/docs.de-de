@@ -1,37 +1,40 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListItem"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], ListView-Steuerelement"
-  - "Beispiele [Windows Forms], TreeView-Steuerelement"
-  - "ListView-Steuerelement [Windows Forms], Hinzufügen von benutzerdefinierten Informationen"
-  - "Tag-Eigenschaft"
-  - "TreeView-Steuerelement [Windows Forms], Hinzufügen von benutzerdefinierten Informationen"
+title: "Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: ListItem
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- examples [Windows Forms], ListView control
+- ListView control [Windows Forms], adding custom information
+- TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows&#160;Forms)
-Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeView>\-Steuerelement von Windows Forms oder ein abgeleitetes Element in einem <xref:System.Windows.Forms.ListView>\-Steuerelement erstellen.  Bei einer Ableitung können Sie alle erforderlichen Felder sowie benutzerdefinierten Methoden und Konstruktoren für deren Behandlung hinzufügen.  Sie könnten z. B. ein **Customer**\-Objekt an alle Strukturknoten oder Listenelemente anhängen.  Die genannten Beispiele beziehen sich zwar auf ein <xref:System.Windows.Forms.TreeView>\-Steuerelement, derselbe Ansatz kann aber auch für ein <xref:System.Windows.Forms.ListView>\-Steuerelement verwendet werden.  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)
+Sie können einen abgeleiteten Knoten erstellen, in einer Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement oder ein abgeleitetes Element in einem <xref:System.Windows.Forms.ListView> Steuerelement. Durch Ableitung können Sie jegliche Felder, die Sie benötigen, sowie die benutzerdefinierten Methoden und Konstruktoren für deren Behandlung hinzufügen. Eine Verwendung dieser Funktion ist das Anfügen eines Customer-Objekts an jeden Strukturknoten oder jedes Listenelement. Die hier dargestellten Beispiele sind für eine <xref:System.Windows.Forms.TreeView> Steuerelement jedoch den gleichen Ansatz für verwendet werden kann ein <xref:System.Windows.Forms.ListView> Steuerelement.  
   
-### So leiten Sie einen Strukturknoten ab  
+### <a name="to-derive-a-tree-node"></a>So leiten Sie einen Strukturknoten ab  
   
--   Erstellen Sie eine neue Knotenklasse, die von der <xref:System.Windows.Forms.TreeNode>\-Klasse abgeleitet ist und über ein benutzerdefiniertes Feld für einen Dateipfad verfügt.  
+-   Erstellen Sie eine neue Knotenklasse abgeleitet wurde. die <xref:System.Windows.Forms.TreeNode> -Klasse, die ein benutzerdefiniertes Feld für einen Dateipfad verfügt.  
   
     ```vb  
     Class myTreeNode  
@@ -45,7 +48,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
           Me.Text = fp.Substring(fp.LastIndexOf("\"))  
        End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -59,7 +61,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
           this.Text = fp.Substring(fp.LastIndexOf("\\"));  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -76,11 +77,11 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
     };  
     ```  
   
-### So verwenden Sie einen abgeleiteten Strukturknoten  
+### <a name="to-use-a-derived-tree-node"></a>So verwenden Sie einen abgeleiteten Strukturknoten  
   
 1.  Sie können den neuen abgeleiteten Strukturknoten als Parameter für Funktionsaufrufe verwenden.  
   
-     Im unten stehenden Beispiel wurde als Speicherort für die Textdatei der Ordner **Eigene Dateien** festgelegt.  Dieser Speicherort wird verwendet, weil vorausgesetzt werden kann, dass die meisten Computer mit dem Betriebssystem Windows über dieses Verzeichnis verfügen.  Auf diese Weise können auch Benutzer mit minimalen Systemzugriffsberechtigungen die Anwendung sicher ausführen.  
+     Im folgenden Beispiel ist der Pfad für den Speicherort der Textdatei der Ordner „Eigene Dateien“. Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Betriebssystem Windows ausgeführt wird, über dieses Verzeichnis verfügen. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen.  
   
     ```vb  
     ' You should replace the bold text file   
@@ -88,7 +89,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\ TextFile.txt ") )  
-  
     ```  
   
     ```csharp  
@@ -98,7 +98,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
     treeView1.Nodes.Add(new myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\TextFile.txt") );  
-  
     ```  
   
     ```cpp  
@@ -110,7 +109,7 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
        "\\TextFile.txt")));  
     ```  
   
-2.  Wenn der Strukturknoten an Sie übergeben wurde und als <xref:System.Windows.Forms.TreeNode>\-Klasse festgelegt ist, müssen Sie eine Umwandlung in Ihre abgeleitete Klasse vornehmen.  Die Umwandlung ist eine explizite Konvertierung eines Objekttyps in einen anderen Objekttyp.  Weitere Informationen zum Umwandeln finden Sie unter [Implicit and Explicit Conversions](../Topic/Implicit%20and%20Explicit%20Conversions%20\(Visual%20Basic\).md) \([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\), [Operator \(\)](../Topic/\(\)%20Operator%20\(C%23%20Reference\).md) \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) oder [Umwandlungsoperator: \(\)](../../../../amples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/spec_withstructure-xps/_rels/.rels) \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\).  
+2.  Wenn Sie den Strukturknoten übergeben werden, und es als typisiert ist, sind eine <xref:System.Windows.Forms.TreeNode> Klasse, und klicken Sie dann in die abgeleitete Klasse umgewandelt werden sollen. Die Umwandlung ist eine explizite Konvertierung von einem Objekt in ein anderes. Weitere Informationen zum Umwandeln finden Sie unter [Implizite und explizite Konvertierungen](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), [() Operator](~/docs/csharp/language-reference/operators/invocation-operator.md) ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]), oder [Umwandlungsoperator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -118,7 +117,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
        mynode = CType(e.node, myTreeNode)  
        MessageBox.Show("Node selected is " & mynode.filepath)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -128,7 +126,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
        myTreeNode myNode = (myTreeNode)e.Node;  
        MessageBox.Show("Node selected is " + myNode.FilePath);  
     }  
-  
     ```  
   
     ```cpp  
@@ -142,6 +139,6 @@ Sie können einen abgeleiteten Knoten in einem <xref:System.Windows.Forms.TreeVi
        }  
     ```  
   
-## Siehe auch  
- [TreeView\-Steuerelement](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [ListView\-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ [TreeView-Steuerelement](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [ListView-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

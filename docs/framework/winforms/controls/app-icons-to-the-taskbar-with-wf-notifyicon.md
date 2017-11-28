@@ -1,49 +1,51 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TrayIcon"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Symbole, Hinzufügen zur Taskleiste"
-  - "NotifyIcon-Komponente"
-  - "Statusbereichsymbole"
-  - "Taskleiste, Hinzufügen von Symbolen"
+title: "Gewusst wie: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: TrayIcon
+helpviewer_keywords:
+- status area icons
+- icons [Windows Forms], adding to taskbar
+- NotifyIcon component
+- taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows&#160;Forms
-Die <xref:System.Windows.Forms.NotifyIcon>\-Komponente in Windows Forms zeigt ein einzelnes Symbol im Statusbereich der Taskleiste an.  Wenn Sie im Statusbereich mehrere Symbole anzeigen möchten, muss Ihr Formular mehrere <xref:System.Windows.Forms.NotifyIcon>\-Komponenten enthalten.  Verwenden Sie zum Festlegen des für ein Steuerelement angezeigten Symbols die <xref:System.Windows.Forms.NotifyIcon.Icon%2A>\-Eigenschaft.  Darüber hinaus können Sie in den <xref:System.Windows.Forms.NotifyIcon.DoubleClick>\-Ereignishandler Code schreiben, um beim Doppelklicken des Symbols den gewünschten Vorgang auszulösen.  Beispielsweise könnten Sie ein Dialogfeld anzeigen lassen, in dem die Benutzer den Hintergrundprozess, für den das Symbol steht, konfigurieren können.  
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Gewusst wie: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms
+Windows Forms <xref:System.Windows.Forms.NotifyIcon> Komponente zeigt ein einzelnes Symbol im Statusbereich der Taskleiste. Um mehrere Symbole im Statusbereich anzuzeigen, benötigen Sie mehrere <xref:System.Windows.Forms.NotifyIcon> Komponenten auf dem Formular. Um das Symbol angezeigt, die für ein Steuerelement festzulegen, verwenden die <xref:System.Windows.Forms.NotifyIcon.Icon%2A> Eigenschaft. Sie können auch Code schreiben, der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> -Ereignishandler so, dass etwas passiert, wenn der Benutzer auf das Symbol doppelklickt. Beispielsweise können Sie ein Dialogfeld für den Benutzer so konfigurieren Sie die im Hintergrund ausgeführten Prozess, dargestellt durch das Symbol angezeigt vornehmen.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Forms.NotifyIcon>\-Komponente wird nur zu Benachrichtigungszwecken verwendet, um Benutzer darauf hinzuweisen, dass eine Aktion ausgeführt wurde bzw. ein Ereignis aufgetreten ist oder sich der Status in irgendeiner Weise geändert hat.  Es empfiehlt sich, Menüs, Symbolleisten und andere Elemente der Benutzeroberfläche für Standardinteraktionen mit Anwendungen zu verwenden.  
+>  Die <xref:System.Windows.Forms.NotifyIcon> Komponente nur aus Gründen der Benachrichtigung verwendet wird, um Benutzer darauf aufmerksam, die eine Aktion oder ein Ereignis aufgetreten ist oder eine Änderung des Status von irgendeine stattgefunden hat. Sie sollten Menüs, Symbolleisten und andere Elemente der Benutzeroberfläche für die standard-Interaktion mit Anwendungen verwenden.  
   
-### So stellen Sie das Symbol ein  
+### <a name="to-set-the-icon"></a>Das Symbol "festlegen  
   
-1.  Weisen Sie der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>\-Eigenschaft einen Wert zu.  Dieser Wert muss vom Typ `System.Drawing.Icon` sein und kann aus einer ICO\-Datei geladen werden.  Sie können die Symboldatei entweder im Code angeben oder durch Klicken der Schaltfläche zum Durchsuchen \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) neben der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>\-Eigenschaft im **Eigenschaftenfenster** und anschließendes Auswählen der Datei im Dialogfeld **Öffnen**.  
+1.  Weisen Sie einen Wert an die <xref:System.Windows.Forms.NotifyIcon.Icon%2A> Eigenschaft. Der Wert muss vom Typ `System.Drawing.Icon` und kann aus einer ICO‑Datei geladen werden. Sie können die Symboldatei angeben, im Code oder durch Klicken auf die Schaltfläche mit den Auslassungspunkten (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) neben der <xref:System.Windows.Forms.NotifyIcon.Icon%2A> Eigenschaft in der  **Eigenschaften** Fenster, und wählen Sie dann die Datei in die **öffnen** im daraufhin geöffneten Dialogfeld.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.NotifyIcon.Visible%2A>\-Eigenschaft auf `true` fest.  
+2.  Legen Sie die <xref:System.Windows.Forms.NotifyIcon.Visible%2A>-Eigenschaft auf `true` fest.  
   
-3.  Legen Sie für die <xref:System.Windows.Forms.NotifyIcon.Text%2A>\-Eigenschaft eine geeignete QuickInfo\-Zeichenfolge fest.  
+3.  Legen Sie die <xref:System.Windows.Forms.NotifyIcon.Text%2A> Eigenschaft, um eine entsprechende QuickInfo-Zeichenfolge.  
   
-     Im folgenden Codebeispiel wurde als Speicherort für das Symbol der Ordner **Eigene Dateien** festgelegt.  Dieser Speicherort wird verwendet, weil vorausgesetzt werden kann, dass die meisten Computer mit Windows als Betriebssystem über einen Ordner mit diesem Namen verfügen.  Dieser Speicherort ermöglicht auch Benutzern mit minimalen Systemzugriffsberechtigungen, die Anwendung sicher auszuführen.  Im folgenden Beispiel wird davon ausgegangen, dass einem Formular bereits ein <xref:System.Windows.Forms.NotifyIcon>\-Steuerelement hinzugefügt wurde.  Zudem ist eine Symboldatei mit dem Namen `Icon.ico` erforderlich.  
+     Im folgenden Codebeispiel legen der Pfad für der Speicherort des Symbols wird die **eigene** Ordner. Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass dieser Ordner die meisten Computer das Windows-Betriebssystem ausgeführt wird enthält. Dieser Speicherort kann auch Benutzer mit minimalen sicher auf die Anwendung auszuführen. Das folgende Beispiel erfordert ein Formular mit einem <xref:System.Windows.Forms.NotifyIcon> Steuerelement bereits hinzugefügt. Darüber hinaus müssen eine Symboldatei mit dem Namen `Icon.ico`.  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     ' You should replace the bold icon in the sample below  
     ' with an icon of your own choosing.  
     NotifyIcon1.Icon = New _   
@@ -52,12 +54,9 @@ Die <xref:System.Windows.Forms.NotifyIcon>\-Komponente in Windows Forms zeigt e
        & "\Icon.ico")  
     NotifyIcon1.Visible = True  
     NotifyIcon1.Text = "Antivirus program"  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // You should replace the bold icon in the sample below  
     // with an icon of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
@@ -67,12 +66,9 @@ Die <xref:System.Windows.Forms.NotifyIcon>\-Komponente in Windows Forms zeigt e
        + @"\Icon.ico");  
     notifyIcon1.Visible = true;  
     notifyIcon1.Text = "Antivirus program";  
-  
     ```  
   
-     \[cpp\]  
-  
-    ```  
+    ```cpp  
     // You should replace the bold icon in the sample below  
     // with an icon of your own choosing.  
     notifyIcon1->Icon = gcnew   
@@ -84,9 +80,9 @@ Die <xref:System.Windows.Forms.NotifyIcon>\-Komponente in Windows Forms zeigt e
     notifyIcon1->Text = "Antivirus program";  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.NotifyIcon>   
- <xref:System.Windows.Forms.NotifyIcon.Icon%2A>   
- [Gewusst wie: Zuordnen eines Kontextmenüs zu einer NotifyIcon\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)   
- [NotifyIcon\-Komponente](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)   
- [Übersicht über die NotifyIcon\-Komponente](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.NotifyIcon>  
+ <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
+ [Gewusst wie: Zuordnen eines Kontextmenüs zu einer NotifyIcon-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ [NotifyIcon-Komponente](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ [Übersicht über die NotifyIcon-Komponente](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

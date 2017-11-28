@@ -1,145 +1,148 @@
 ---
-title: "Eingabearchitektur f&#252;r die Interoperabilit&#228;t zwischen Windows Forms und WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost-Tastatur und -Meldungen"
-  - "Eingabearchitektur [WPF-Interoperabilität]"
-  - "Interoperabilität [WPF], Windows Forms"
-  - "Tastaturinteroperation [WPF]"
-  - "Meldungen [WPF]"
-  - "Nicht modale Dialogfelder [WPF]"
-  - "Nicht modale Formulare"
-  - "Windows Forms [WPF], Interoperabilität mit"
-  - "Windows Forms, WPF-Interoperation"
-  - "WindowsFormsHost-Tastatur und -Meldungen"
+title: "Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input architecture [WPF interoperability]
+- messages [WPF]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- modeless forms [WPF]
+- ElementHost keyboard and messages [WPF]
+- keyboard interoperation [WPF]
+- WindowsFormsHost keyboard and messages [WPF]
+- modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b48b5d78ce3136146f7ad17f859a489b5556a000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Eingabearchitektur f&#252;r die Interoperabilit&#228;t zwischen Windows Forms und WPF
-Die Interoperation zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] erfordert, dass beide Technologien über die entsprechende Verarbeitung von Tastatureingaben verfügen.  In diesem Thema wird beschrieben, wie diese Technologien die Tastatur\- und Meldungsverarbeitung implementieren, um eine reibungslose Interoperation in hybriden Anwendungen zu ermöglichen.  
+# <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF
+Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] erfordert, dass beide Technologien auf die entsprechende Tastenkombination Eingabeverarbeitung haben. In diesem Thema wird beschrieben, wie diese Technologien Tastatur und der Nachrichtenverarbeitung, die zum Aktivieren von smooth Interoperation in hybridanwendungen implementieren.  
   
  Dieses Thema enthält folgende Unterabschnitte:  
   
--   Nicht modale Formulare und Dialogfelder  
+-   Nicht modale Formularen und Dialogfeldern  
   
--   Tastatur\- und Meldungsverarbeitung von WindowsFormsHost  
+-   WindowsFormsHost-Tastatur und Verarbeitung von Nachrichten  
   
--   Tastatur\- und Meldungsverarbeitung von ElementHost  
+-   ElementHost-Tastatur und Verarbeitung von Nachrichten  
   
-## Nicht modale Formulare und Dialogfelder  
- Rufen Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>\-Methode für das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element auf, um ein nicht modales Formular oder Dialogfeld aus einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-basierten Anwendung zu öffnen.  
+## <a name="modeless-forms-and-dialog-boxes"></a>Nicht modale Formularen und Dialogfeldern  
+ Rufen Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> Methode für die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element um ein nicht modales Formular oder Dialogfeld Feld aus zu öffnen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]--basierten Anwendung.  
   
- Rufen Sie die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>\-Methode für das <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement auf, um eine nicht modale [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite in einer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-basierten Anwendung zu öffnen.  
+ Rufen Sie die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Methode auf die <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement um einen ohne Modus zu öffnen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auf der Seite eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]--basierten Anwendung.  
   
-## Tastatur\- und Meldungsverarbeitung von WindowsFormsHost  
- Wenn die Tastatur\- und Meldungsverarbeitung von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] von einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-basierten Anwendung gehostet wird, umfasst sie Folgendes:  
+## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost-Tastatur und Verarbeitung von Nachrichten  
+ Beim Hosten durch eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierende Anwendung, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Tastatur und der Meldung, die Verarbeitung besteht aus folgenden Komponenten:  
   
--   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Klasse ruft Meldungen von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Meldungsschleife ab, die von der <xref:System.Windows.Interop.ComponentDispatcher>\-Klasse implementiert wird.  
+-   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Klasse erhält Nachrichten von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Nachrichtenschleife, die durch implementiert wird die <xref:System.Windows.Interop.ComponentDispatcher> Klasse.  
   
--   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Klasse erstellt eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Ersatzmeldungsschleife, um die übliche [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Tastaturverarbeitung sicherzustellen.  
+-   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasse erstellt ein Ersatzzeichen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Nachrichtenschleife aus, um sicherzustellen, dass normale [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Tastatur Verarbeitung erfolgt.  
   
--   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Klasse implementiert die <xref:System.Windows.Interop.IKeyboardInputSink>\-Schnittstelle, um die Fokusverwaltung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu koordinieren.  
+-   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Klasse implementiert die <xref:System.Windows.Interop.IKeyboardInputSink> Schnittstelle zum Koordinieren der fokusverwaltung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Steuerelemente registrieren sich und starten ihre Meldungsschleifen.  
+-   Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelemente registrieren und starten Sie ihre Nachrichtenschleifen.  
   
- In den folgenden Abschnitten werden diese Teile des Vorgangs ausführlicher beschrieben.  
+ In den folgenden Abschnitten werden diese Teile des Prozesses im Detail beschrieben.  
   
-### Abrufen von Meldungen aus der WPF\-Meldungsschleife  
- Die <xref:System.Windows.Interop.ComponentDispatcher>\-Klasse implementiert den Meldungsschleifen\-Manager für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Die <xref:System.Windows.Interop.ComponentDispatcher>\-Klasse stellt Hooks bereit, damit externe Clients Meldungen filtern können, bevor sie von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verarbeitet werden.  
+### <a name="acquiring-messages-from-the-wpf-message-loop"></a>Abrufen von Nachrichten aus der WPF-Nachrichtenschleife  
+ Die <xref:System.Windows.Interop.ComponentDispatcher> Klasse implementiert die Meldungsschleifen-Manager für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Die <xref:System.Windows.Interop.ComponentDispatcher> Klasse bietet Hooks damit externe Clients zum Filtern von Nachrichten vor dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verarbeitet sie.  
   
- Die Implementierung der Interoperation behandelt das <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>\-Ereignis, mit dem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente Meldungen vor [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelementen verarbeiten können.  
+ Die Handles für die Interoperation zwischen der Implementierung der <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> Ereignis, wodurch [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente zum Verarbeiten von Nachrichten vor dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente.  
   
-### Windows Forms\-Ersatzmeldungsschleife  
- Standardmäßig enthält die <xref:System.Windows.Forms.Application?displayProperty=fullName>\-Klasse die primäre Meldungsschleife für [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Anwendungen.  Während der Interoperation verarbeitet die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Meldungsschleife keine Meldungen.  Deshalb muss diese Logik reproduziert werden.  Der Handler für das <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>\-Ereignis führt die folgenden Schritte aus:  
+### <a name="surrogate-windows-forms-message-loop"></a>Windows Forms-Nachrichtenschleife Ersatzzeichen  
+ Wird standardmäßig die <xref:System.Windows.Forms.Application?displayProperty=nameWithType> Klasse enthält die primären Nachrichtenschleife für [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendungen. Während der Interoperation die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Nachricht Schleife verarbeitet keine Nachrichten. Deshalb muss diese Logik reproduziert werden. Der Handler für das <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> Ereignis führt die folgenden Schritte aus:  
   
-1.  Filtern der Meldung mithilfe der <xref:System.Windows.Forms.IMessageFilter>\-Schnittstelle.  
+1.  Filtert die Nachricht mithilfe der <xref:System.Windows.Forms.IMessageFilter> Schnittstelle.  
   
-2.  Aufruf der <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>\-Methode.  
+2.  Ruft die <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> Methode.  
   
-3.  Übersetzen und Weiterleiten der Meldung, wenn erforderlich.  
+3.  Übersetzt, und die Nachricht sendet, wenn es erforderlich ist.  
   
-4.  Übergeben der Meldung ans Hostingsteuerelement, wenn keine anderen Steuerelemente die Meldung verarbeiten.  
+4.  Übergibt die Nachricht an das hostende Steuerelement an, wenn keine weiteren Steuerelemente die Nachricht zu verarbeiten.  
   
-### IKeyboardInputSink\-Implementierung  
- Die Ersatzmeldungsschleife behandelt die Tastaturverwaltung.  Deshalb ist die <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName>\-Methode der einzige <xref:System.Windows.Interop.IKeyboardInputSink>\-Member, der eine Implementierung in der <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Klasse erfordert.  
+### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink-Implementierung  
+ Die Nachrichtenschleife Ersatzzeichen verarbeitet Tastatur Management. Aus diesem Grund die <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> Methode ist die einzige <xref:System.Windows.Interop.IKeyboardInputSink> Element, das eine Implementierung in erfordert die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasse.  
   
- Standardmäßig gibt die <xref:System.Windows.Interop.HwndHost>\-Klasse `false` für ihre <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>\-Implementierung zurück.  Dadurch wird das Wechseln mit der TAB\-TASTE von einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement zu einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelement verhindert.  
+ Wird standardmäßig die <xref:System.Windows.Interop.HwndHost> zurück `false` für seine <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> Implementierung. Dies verhindert die TAB-Taste aus einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die Steuerung an eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.  
   
- Die <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Implementierung der <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName>\-Methode führt die folgenden Schritte aus:  
+ Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Implementierung der <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> Methode führt die folgenden Schritte aus:  
   
-1.  Suchen des ersten oder letzten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelements, das im <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Steuerelement enthalten ist und den Fokus erhalten kann.  Die Auswahl des Steuerelements hängt von Informationen zum Traversieren ab.  
+1.  Sucht das erste oder letzte [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement, das enthalten ist das <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Steuerelement und den Fokus erhalten kann. Die Auswahl des Steuerelements abhängig von Durchlauf Informationen ab.  
   
-2.  Festlegen des Fokus auf das Steuerelement und Rückgabe von `true`.  
+2.  Legt den Fokus auf das Steuerelement und gibt `true`.  
   
-3.  Rückgabe von `false`, wenn kein Steuerelement den Fokus erhalten kann.  
+3.  Gibt zurück, wenn kein Steuerelement den Fokus erhalten kann, `false`.  
   
-### WindowsFormsHost\-Registrierung  
- Wenn das Fensterhandle für ein <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Steuerelement erstellt wird, ruft das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Steuerelement eine interne statische Methode auf, die ihr Vorhandensein für die Meldungsschleife registriert.  
+### <a name="windowsformshost-registration"></a>WindowsFormsHost-Registrierung  
+ Wenn das Fenster zu verarbeiten, um eine <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement erstellt, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement ruft eine interne statische Methode, die ihr Vorhandensein für das die Meldungsschleife registriert.  
   
- Während der Registrierung untersucht das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Steuerelement die Meldungsschleife.  Wenn die Meldungsschleife nicht gestartet wurde, wird der <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>\-Ereignishandler erstellt.  Es wird angenommen, dass die Meldungsschleife ausgeführt wird, wenn der <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>\-Ereignishandler angefügt wird.  
+ Während der Registrierung der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement untersucht die Meldungsschleife. Wenn die Nachrichtenschleife nicht gestartet wurde, die <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> -Ereignishandler erstellt wird. Die Nachrichtenschleife gilt beim Ausführen der <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> Ereignishandler angefügt ist.  
   
- Wenn das Fensterhandle zerstört wird, entfernt das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Steuerelement sich aus der Registrierung.  
+ Wenn das Fensterhandle zerstört wird, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement selbst aus der Registrierung entfernt.  
   
-## Tastatur\- und Meldungsverarbeitung von ElementHost  
- Wenn die Tastatur\- und Meldungsverarbeitung von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] von einer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Anwendung gehostet wird, besteht sie aus Folgendem:  
+## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost-Tastatur und Verarbeitung von Nachrichten  
+ Beim Hosten durch eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tastatur und der Meldung, die Verarbeitung besteht aus folgenden Komponenten:  
   
--   Schnittstellenimplementierungen <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink> und <xref:System.Windows.Interop.IKeyboardInputSite>.  
+-   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, und <xref:System.Windows.Interop.IKeyboardInputSite> schnittstellenimplementierungen.  
   
--   TAB\-TASTE und Pfeiltasten.  
+-   TAB-Taste und Tasten.  
   
--   Befehlstasten und Tastatureingaben im Dialogfeld.  
+-   Befehl Schlüssel und Tastatureingaben im Dialogfeld.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Zugriffstastenverarbeitung.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Accelerator-Verarbeitung.  
   
  In den folgenden Abschnitten werden diese Teile ausführlicher beschrieben.  
   
-### Schnittstellenimplementierungen  
- In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] werden Tastaturmeldungen zum Fensterhandle des Steuerelements weitergeleitet, das den Fokus besitzt.  Im <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement werden diese Meldungen zum gehosteten Element weitergeleitet.  Um dies zu erreichen, stellt das <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement eine <xref:System.Windows.Interop.HwndSource>\-Instanz bereit.  Wenn das <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement den Fokus besitzt, leitet die <xref:System.Windows.Interop.HwndSource>\-Instanz die meisten Tastatureingaben weiter, sodass sie von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>\-Klasse verarbeitet werden können.  
+### <a name="interface-implementations"></a>Schnittstellenimplementierungen  
+ In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], Tastatur Nachrichten werden weitergeleitet, um das Fensterhandle des Steuerelements, das Fokus besitzt. In der <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement, diese Nachrichten zum gehosteten Element weitergeleitet werden. Um dies zu erreichen der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement verfügt über eine <xref:System.Windows.Interop.HwndSource> Instanz. Wenn die <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement den Fokus, hat die <xref:System.Windows.Interop.HwndSource> Instanz weiterleitet, die meisten Tastatur-, damit er von verarbeitet werden kann die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> Klasse.  
   
- Die <xref:System.Windows.Interop.HwndSource>\-Klasse implementiert die <xref:System.Windows.Interop.IKeyboardInputSink>\-Schnittstelle und die <xref:System.Windows.Interop.IKeyboardInputSite>\-Schnittstelle.  
+ Die <xref:System.Windows.Interop.HwndSource> -Klasse implementiert die <xref:System.Windows.Interop.IKeyboardInputSink> und <xref:System.Windows.Interop.IKeyboardInputSite> Schnittstellen.  
   
- Die Tastaturinteroperation hängt von der Implementierung der <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>\-Methode ab, um die mittels TAB\-TASTE und Pfeiltasten vorgenommene Eingabe, die bewirkt, dass gehostete Elemente den Fokus verlieren, zu behandeln.  
+ Tastaturinteroperation hängt von der Implementierung der <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> Methode, um das Handle TAB-Taste und Pfeil Schlüssel Eingabe, die außerhalb des gehosteten Elemente Fokus.  
   
-### TAB\-TASTE und Pfeiltasten  
- Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Auswahllogik wird der <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>\-Methode und der <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>\-Methode zugeordnet, um die Navigation mit der TAB\-TASTE und den Pfeiltasten zu implementieren.  Durch das Überschreiben der <xref:System.Windows.Forms.Integration.ElementHost.Select%2A>\-Methode wird diese Zuordnung erreicht.  
+### <a name="tabbing-and-arrow-keys"></a>Tabstopptaste drücken und den Pfeiltasten  
+ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Auswahllogik zugeordnet ist die <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> und <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> Methoden zum Implementieren der TAB-Taste oder Schlüssel Navigation. Überschreiben der <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> Methode umfasst diese Zuordnung.  
   
-### Befehlstasten und Tastatureingaben im Dialogfeld.  
- Damit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die erste Möglichkeit erhält, Befehlstasten und Tastatureingaben im Dialogfeld zu verarbeiten, wird die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Befehlsvorverarbeitung mit der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>\-Methode verbunden.  Durch das Überschreiben der <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=fullName>\-Methode werden die zwei Technologien verbunden.  
+### <a name="command-keys-and-dialog-box-keys"></a>Befehl Schlüssel und Tastatureingaben im Dialogfeld  
+ So erteilen Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die erste Gelegenheit zur Verarbeitung von Befehl Schlüssel und das Dialogfeld Schlüssel, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] vorverarbeitung Befehl verbunden ist, um die <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> Methode. Überschreiben der <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> verbindet die beiden Technologien.  
   
- Mit der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>\-Methode können die gehosteten Elemente jede Tastenmeldung behandeln, z. B. WM\_KEYDOWN, WM\_KEYUP, WM\_SYSKEYDOWN oder WM\_SYSKEYUP, einschließlich Befehlstasten, z. B. TAB\-TASTE, EINGABETASTE, ESC\-TASTE und Pfeiltasten.  Wenn eine Tastenmeldung nicht behandelt wird, wird sie in der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Vorgängerhierarchie nach oben zur Behandlung gesendet.  
+ Mit der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> -Methode, die gehosteten Elemente können alle tastenmeldung, z. B. WM_KEYDOWN, WM_SYSKEYDOWN, WM_KEYUP oder WM_SYSKEYUP, einschließlich Befehlstasten, z. B. Registerkarte, EINGABETASTE ESC und Pfeil behandeln. Wenn eine tastenmeldung nicht behandelt wird, wird er gesendet, wird die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Vorgänger Hierarchie für die Behandlung von.  
   
-### Zugriffstastenverarbeitung  
- Um Zugriffstasten ordnungsgemäß zu verarbeiten, muss die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Zugriffstastenverarbeitung mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>\-Klasse verbunden werden.  Außerdem müssen alle WM\_CHAR\-Meldungen ordnungsgemäß zu gehosteten Elementen weitergeleitet werden.  
+### <a name="accelerator-processing"></a>Accelerator-Verarbeitung  
+ Zugriffstasten ordnungsgemäß verarbeiten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Accelerator Verarbeitung muss eine Verbindung mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> Klasse. Darüber hinaus müssen alle WM_CHAR Nachrichten richtig weitergeleitet gehostete Elemente.  
   
- Da die <xref:System.Windows.Interop.HwndSource>\-Standardimplementierung der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>\-Methode `false` zurückgibt, werden WM\_CHAR\-Meldungen unter Verwendung der folgenden Logik verarbeitet:  
+ Da der Standardwert <xref:System.Windows.Interop.HwndSource> Implementierung der <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> -Methode zurückkehrt `false`, WM_CHAR-Nachrichten verarbeitet werden, verwenden die folgende Logik:  
   
--   Die <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=fullName>\-Methode wird überschrieben, um sicherzustellen, dass alle WM\_CHAR\-Meldungen zu gehosteten Elementen weitergeleitet werden.  
+-   Die <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Methode wird überschrieben, um sicherzustellen, dass alle WM_CHAR-Nachrichten an den gehosteten Elemente weitergeleitet werden.  
   
--   Wenn die ALT\-TASTE gedrückt wird, lautet die Meldung WM\_SYSCHAR.  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] führt keine Vorverarbeitung dieser Meldung durch die <xref:System.Windows.Forms.Control.IsInputChar%2A>\-Methode aus.  Deshalb wird die <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>\-Methode überschrieben, um eine registrierte Zugriffstaste von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager> abzufragen.  Wenn eine registrierte Zugriffstaste gefunden wird, wird sie von <xref:System.Windows.Input.AccessKeyManager> verarbeitet.  
+-   Wenn Sie die ALT-Taste gedrückt wird, wird die Meldung WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Diese Meldung über nicht zuvor verarbeitet die <xref:System.Windows.Forms.Control.IsInputChar%2A> Methode. Aus diesem Grund die <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> Methode wird überschrieben, abzufragende der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> für eine registrierte Zugriffstaste. Wenn eine registrierte Zugriffstaste gefunden wird, <xref:System.Windows.Input.AccessKeyManager> verarbeitet.  
   
--   Wenn die ALT\-TASTE nicht gedrückt wird, wird die unbehandelte Eingabe von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Input.InputManager>\-Klasse verarbeitet.  Wenn die Eingabe eine Zugriffstaste ist, wird sie von <xref:System.Windows.Input.AccessKeyManager> verarbeitet.  Das <xref:System.Windows.Input.InputManager.PostProcessInput>\-Ereignis wird für WM\_CHAR\-Meldungen behandelt, die nicht verarbeitet wurden.  
+-   Wenn Sie nicht die ALT-Taste gedrückt wird, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> Klasse verarbeitet, die nicht behandelte Eingabe. Wenn die Eingabe eine Zugriffstaste ist die <xref:System.Windows.Input.AccessKeyManager> verarbeitet. Die <xref:System.Windows.Input.InputManager.PostProcessInput> Ereignis behandelt wird, WM_CHAR-Nachrichten, die nicht verarbeitet wurden.  
   
- Wenn der Benutzer die ALT\-TASTE drückt, werden im ganzen Formular visuelle Hinweise für Zugriffstasten angezeigt.  Um dieses Verhalten zu unterstützen, erhalten alle <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelemente im aktiven Formular WM\_SYSKEYDOWN\-Meldungen, unabhängig davon, welches Steuerelement den Fokus besitzt.  
+ Wenn der Benutzer die ALT-Taste drückt, werden die Zugriffstaste visuellen Hinweise auf das gesamte Formular angezeigt. Um dieses Verhalten zu unterstützen alle <xref:System.Windows.Forms.Integration.ElementHost> Steuerelemente in das aktive Formular Empfangsnachrichten WM_SYSKEYDOWN, unabhängig davon, welche Steuerelement den Fokus hat.  
   
- Meldungen werden nur an <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelemente im aktiven Formular gesendet.  
+ Nachrichten werden nur für gesendet <xref:System.Windows.Forms.Integration.ElementHost> Steuerelemente in das aktive Formular.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms\-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF\-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
  [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

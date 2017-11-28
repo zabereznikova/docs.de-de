@@ -1,38 +1,43 @@
 ---
-title: "Gewusst wie: Verbessern der Leistung von TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView-Steuerelement [WPF], Verbessern der Leistung"
+title: 'Gewusst wie: Verbessern der Leistung von TreeView'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 209f2c5645758aba4d1e10fc36fe773faa975e6b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Verbessern der Leistung von TreeView
-Falls eine <xref:System.Windows.Controls.TreeView> viele Elemente enthält, kann die Zeit, die zum Laden benötigt wird, zu einer erheblichen Verzögerung in der Benutzeroberfläche führen.  Sie können die Ladezeit verbessern, indem Sie die angefügte <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName>\-Eigenschaft auf `true` festlegen.  Die Reaktion der Benutzeroberfläche kann auch langsam sein, wenn der Benutzer den Bildlauf von <xref:System.Windows.Controls.TreeView> durch Bewegen des Mausrads oder Ziehen des Bildlauffelds ausführt.  Die Leistung von <xref:System.Windows.Controls.TreeView> wird verbessert, wenn der Benutzer einen Bildlauf durch Festlegen der angefügten <xref:System.Windows.Controls.VirtualizingStackPanel.VirtualizationMode%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.Windows.Controls.VirtualizationMode> ausführt.  
+# <a name="how-to-improve-the-performance-of-a-treeview"></a>Gewusst wie: Verbessern der Leistung von TreeView
+Wenn eine <xref:System.Windows.Controls.TreeView> viele Elemente enthält, die Menge der zum Laden benötigte Zeit kann dazu führen, dass einen erheblichen Verzögerung in der Benutzeroberfläche. Sie können die Ladezeit verbessern, indem Sie die Einstellung der `VirtualizingStackPanel.IsVirtualizing` angefügten Eigenschaft, um `true`.  Die Benutzeroberfläche möglicherweise auch nur langsam reagiert, wenn ein Benutzer einen Bildlauf der <xref:System.Windows.Controls.TreeView> verwenden das Mausrad oder ziehen den Ziehpunkt einer Bildlaufleiste. Sie können die Leistung verbessern die <xref:System.Windows.Controls.TreeView> beim Bildlauf durch Festlegen der `VirtualizingStackPanel.VirtualizationMode` angefügten Eigenschaft, um <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-## Beschreibung  
- Im folgenden Beispiel wird eine <xref:System.Windows.Controls.TreeView> erstellt, die zur Leistungsoptimierung <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName> auf wahr und <xref:System.Windows.Controls.VirtualizingStackPanel.VirtualizationMode%2A?displayProperty=fullName> auf <xref:System.Windows.Controls.VirtualizationMode> festlegt.  
+## <a name="description"></a>Beschreibung  
+Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TreeView> festlegt, die `VirtualizingStackPanel.IsVirtualizing` -Eigenschaft auf "true" und die `VirtualizingStackPanel.VirtualizationMode` angefügten Eigenschaft, um <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType> um die Leistung zu optimieren.  
   
-## Code  
- [!code-xml[RecycleItemContainerShippets#VirtualizingTreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizingtreeview)]  
+## <a name="code"></a>Code  
+ [!code-xaml[RecycleItemContainerShippets#VirtualizingTreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizingtreeview)]  
   
- Im folgenden Beispiel werden die im vorherigen Beispiel verwendeten Daten veranschaulicht.  
+ Das folgende Beispiel zeigt den Daten, die im vorherigen Beispiel verwendet.  
   
  [!code-csharp[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml.cs#treeviewdata)]
  [!code-vb[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Steuerelemente](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

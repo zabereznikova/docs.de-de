@@ -1,27 +1,33 @@
 ---
-title: "Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GridView-Steuerelemente"
-  - "ListView-Steuerelemente"
-  - "ListView-Steuerelemente, Sortieren von GridView-Spalten"
-  - "GridView-Steuerelemente, ListView-Steuerelement"
+title: 'Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], GridView
+- controls [WPF], ListView
+- ListView controls [WPF], sorting GridView columns
+- GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header
 In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.ListView> -Steuerelement, implementiert eine <xref:System.Windows.Controls.GridView> anzeigen, Modus und sortiert die Daten zu Inhalten, wenn ein Benutzer auf einen Spaltenheader klickt.  
   
 ## <a name="example"></a>Beispiel  
@@ -41,7 +47,7 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Co
 </GridView>  
 ```  
   
- Das folgende Beispiel zeigt die Datenelemente, die sich aus einer <xref:System.Collections.ArrayList> von <xref:System.DateTime> Objekte. Die <xref:System.Collections.ArrayList> ist definiert als die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> für die <xref:System.Windows.Controls.ListView> Steuerelement.  
+ Das folgende Beispiel zeigt die Datenelemente, die als definiert sind ein <xref:System.Collections.ArrayList> von <xref:System.DateTime> Objekte. Die <xref:System.Collections.ArrayList> ist definiert als die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> für die <xref:System.Windows.Controls.ListView> Steuerelement.  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -62,7 +68,7 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Co
 </ListView.ItemsSource>  
 ```  
   
- Die `s` und `p` Bezeichner in die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Tags finden Sie unter Namespacezuordnungen, die in den Metadaten definiert sind die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite. Das folgende Beispiel zeigt die Metadatendefinition.  
+ Die Bezeichner `s` und `p` in den [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Tags beziehen sich auf Namespacezuordnungen, die in den Metadaten der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seite definiert sind. Das folgende Beispiel zeigt die Metadatendefinition.  
   
 ```xaml  
 <Window        
@@ -73,7 +79,7 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Co
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Um die Daten gemäß den Inhalt einer Spalte zu sortieren, definiert das Beispiel einen Ereignishandler zur Behandlung der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis tritt auf, wenn Sie die Spaltenheader-Schaltfläche drücken. Das folgende Beispiel zeigt, wie einen Ereignishandler für das <xref:System.Windows.Controls.GridViewColumnHeader> Steuerelement.  
+ Um die Daten gemäß den Inhalt einer Spalte zu sortieren, im Beispiel definiert einen Ereignishandler zur Behandlung der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> das Ereignis tritt bei der Sie die Spalte-Header-Taste drücken. Im folgende Beispiel wird gezeigt, wie an einen Ereignishandler für das <xref:System.Windows.Controls.GridViewColumnHeader> Steuerelement.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -82,7 +88,7 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Co
  >  
 ```  
   
- Das Beispiel definiert den Ereignishandler, um die Sortierreihenfolge zu ändern, zwischen aufsteigend und absteigend Sie jedes Mal aus, die die Spaltenheader-Schaltfläche drücken. Im folgende Beispiel wird der Ereignishandler veranschaulicht.  
+ Das Beispiel definiert den Ereignishandler, sodass sich die Sortierreihenfolge zwischen absteigender und aufsteigender Reihenfolge jedes Mal ändert, wenn Sie auf die Schaltfläche „Spaltenüberschrift“ klicken. Das folgende Beispiel zeigt den Ereignishandler.  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -196,7 +202,7 @@ Partial Public Class Window1
         End Sub  
 ```  
   
- Das folgende Beispiel zeigt die sortieren-Algorithmus, der vom Ereignishandler zum Sortieren der Daten aufgerufen wird. Die Sortierung erfolgt durch Erstellen eines neuen <xref:System.ComponentModel.SortDescription> Struktur.  
+ Das folgende Beispiel zeigt den Sortieralgorithmus, der vom Ereignishandler aufgerufen wird, um die Daten zu sortieren. Die Sortierung erfolgt durch Erstellen eines neuen <xref:System.ComponentModel.SortDescription> Struktur.  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -209,7 +215,6 @@ private void Sort(string sortBy, ListSortDirection direction)
     dataView.SortDescriptions.Add(sd);  
     dataView.Refresh();  
 }  
-  
 ```  
   
 ```vb  
@@ -224,8 +229,8 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [Gewusst-wie-Themen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

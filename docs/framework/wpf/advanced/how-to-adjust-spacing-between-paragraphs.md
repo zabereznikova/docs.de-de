@@ -1,33 +1,36 @@
 ---
-title: "Gewusst wie: Anpassen des Abstands zwischen Abs&#228;tzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dokumente, Anpassen des Abstands zwischen Absätzen"
-  - "Absätze, Abstand zwischen"
-  - "Abstand zwischen Absätzen"
+title: "Gewusst wie: Anpassen des Abstands zwischen Absätzen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- spacing between paragraphs [WPF]
+- paragraphs [WPF], spacing between
+- documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1936426b44ed667d03e4881e66a081d5097a2880
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Anpassen des Abstands zwischen Abs&#228;tzen
-Dieses Beispiel zeigt, wie in einem fortlaufenden Inhalt der Abstand zwischen den Absätzen angepasst oder unterbunden wird.  
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>Gewusst wie: Anpassen des Abstands zwischen Absätzen
+Dieses Beispiel zeigt, wie anpassen oder Abstände zwischen den Absätzen in fortlaufendem Inhalt zunichte gemacht werden.  
   
- In einem fortlaufenden Inhalt ergibt sich der zusätzliche Abstand, der zwischen Absätzen angezeigt wird, aus den in diesen Absätzen festgelegten Rändern. So kann der Abstand zwischen den Absätzen durch die Anpassung der Absatzränder gesteuert werden.  Um einen zusätzlichen Abstand zwischen zwei Absätzen ganz zu unterbinden, legen Sie die Ränder der Absätze auf **0** fest.  Wenn im gesamten <xref:System.Windows.Documents.FlowDocument> ein einheitlicher Abstand zwischen den Absätzen erreicht werden soll, müssen Sie anhand der Formatierung einen einheitlichen Rand für alle Absätze im <xref:System.Windows.Documents.FlowDocument> festlegen.  
+ In fortlaufendem Inhalt ist zusätzlicher Speicherplatz, der zwischen Absätzen angezeigt wird das Ergebnis der Ränder auf diese Absätze festgelegt; Daher kann der Abstand zwischen den Absätzen durch Anpassen der Ränder auf diesen Absätzen gesteuert werden.  Um einen zusätzlichen Abstand zwischen zwei Absätzen vollständig zu vermeiden, legen Sie die Seitenränder für die Absätze **0**.  Einheitliche Abstand zwischen den Absätzen in der gesamten eine gesamte erzielen <xref:System.Windows.Documents.FlowDocument>, mithilfe der Formatvorlage fest einen uniform Margin-Wert für alle Absätze in der <xref:System.Windows.Documents.FlowDocument>.  
   
- Beachten Sie, dass die Ränder von zwei angrenzenden Absätzen auf den größeren der beiden Ränder "zusammengelegt" und nicht verdoppelt werden.  Wenn also zwei angrenzende Absätze Ränder mit 20 Pixel bzw. 40 Pixel aufweisen, ergibt sich ein Abstand von 40 Pixel, d. h., der Abstand zwischen den Absätzen wird auf den größeren der beiden Randwerte festgelegt.  
+ Es ist wichtig zu beachten, dass die Ränder von zwei angrenzenden Absätzen "reduzieren" werden die größere von zwei Ränder anstatt verdoppelt werden. Wenn also zwei angrenzende Absätze Ränder eines 20 Pixel und 40 Pixel aufweisen, der sich ergebenden Abstand zwischen den Absätzen 40 Pixel, das größere der beiden Randwerte festgelegt.  
   
-## Beispiel  
- Im folgenden Beispiel wird die Formatierung verwendet, um den Rand für alle <xref:System.Windows.Documents.Paragraph>\-Elemente in einem <xref:System.Windows.Documents.FlowDocument> auf **0** festzulegen, wodurch zusätzliche Abstände zwischen den im <xref:System.Windows.Documents.FlowDocument> enthaltenen Absätzen effektiv unterbunden werden.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird formatieren, legen Sie den Rand für alle <xref:System.Windows.Documents.Paragraph> Elemente in einer <xref:System.Windows.Documents.FlowDocument> auf **0**, wodurch effektiv einen zusätzlichen Abstand zwischen den Absätzen in entfällt die <xref:System.Windows.Documents.FlowDocument>.  
   
- [!code-xml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]
+ [!code-xaml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]

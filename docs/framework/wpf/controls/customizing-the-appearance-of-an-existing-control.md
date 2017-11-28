@@ -1,104 +1,109 @@
 ---
-title: "Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelementvertrag [WPF]"
-  - "Steuerelemente [WPF], Nach Zustand angegebene Darstellung"
-  - "Steuerelemente [WPF], Änderungen der visuellen Struktur"
-  - "ControlTemplate [WPF], Anpassen an vorhandene Steuerelemente"
-  - "Skins für Steuerelemente [WPF]"
-  - "Vorlagen [WPF], Anpassen an vorhandene Steuerelemente"
+title: Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- control contract [WPF]
+- controls [WPF], visual structure changes
+- ControlTemplate [WPF], customizing for existing controls
+- skinning controls [WPF]
+- controls [WPF], appearance specified by state
+- templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
-<a name="introduction"></a> Eine <xref:System.Windows.Controls.ControlTemplate> gibt die visuelle Struktur und das visuelle Verhalten eines Steuerelements an.  Sie können die Darstellung eines Steuerelements anpassen, indem Sie diesem eine neue <xref:System.Windows.Controls.ControlTemplate> zuweisen.  Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate> ersetzen Sie die Darstellung eines vorhandenen Steuerelements, ohne dessen Funktionalität zu ändern.  Beispielsweise können Sie festlegen, dass die Schaltflächen rund und nicht in der quadratischen Standardform angezeigt werden, mit den Schaltflächen wird jedoch trotzdem das jeweilige <xref:System.Windows.Controls.Primitives.ButtonBase.Click>\-Ereignis ausgelöst.  
+# <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
+<a name="introduction"></a>Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie ein neues zuweisen <xref:System.Windows.Controls.ControlTemplate>. Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung von einem vorhandenen Steuerelement, ohne seine Funktionalität zu ändern. Z. B. möglich die Schaltflächen in der Anwendung anstelle der quadratischen Standardform round, aber die Schaltfläche "" weiterhin löst die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
- In diesem Thema werden die verschiedenen Teile einer <xref:System.Windows.Controls.ControlTemplate> erklärt, das Erstellen einer einfachen <xref:System.Windows.Controls.ControlTemplate> für einen <xref:System.Windows.Controls.Button> wird veranschaulicht, und zudem wird erläutert, wie der Steuerelementvertrag eines Steuerelements interpretiert wird, sodass Sie dessen Darstellung anpassen können.  Da Sie eine <xref:System.Windows.Controls.ControlTemplate> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellen, können Sie die Darstellung eines Steuerelements ändern, ohne Code schreiben zu müssen.  Sie können einen Designer, z. B. Microsoft Expression Blend verwenden, um benutzerdefinierte Steuerelementvorlagen zu erstellen.  Dieses Thema zeigt Beispiele in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] an, die die Darstellung einer <xref:System.Windows.Controls.Button> anpassen. Am Ende des Themas wird das vollständige Beispiel aufgeführt.  Weitere Informationen zum Verwenden von Expression Blend finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](http://go.microsoft.com/fwlink/?LinkId=161153).  
+ In diesem Thema wird erläutert, die verschiedenen Bestandteile einer <xref:System.Windows.Controls.ControlTemplate>, veranschaulicht das Erstellen einer einfaches <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Button>, und erläutert, wie das Steuerelementvertrag eines Steuerelements zu verstehen, sodass Sie dessen Darstellung anpassen können. Da Sie erstellen eine <xref:System.Windows.Controls.ControlTemplate> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Sie können die Darstellung eines Steuerelements ändern, ohne Code schreiben zu müssen. Benutzerdefinierte Steuerelementvorlagen können Sie auch mit Designern erstellen, z.B. mit dem Microsoft Expression Blend. In diesem Thema wird gezeigt, in Beispielen der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , das Anpassen der Darstellung von einer <xref:System.Windows.Controls.Button> und das vollständige Beispiel am Ende dieses Themas aufgeführt. Weitere Informationen zum Verwenden von Expression Blend finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
- Die folgenden Abbildungen zeigen eine <xref:System.Windows.Controls.Button>, die die <xref:System.Windows.Controls.ControlTemplate> verwendet, die in diesem Thema erstellt wird.  
+ Die folgenden Abbildungen zeigen ein <xref:System.Windows.Controls.Button> , verwendet die <xref:System.Windows.Controls.ControlTemplate> , die in diesem Thema erstellt wird.  
   
- ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage.](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP\_ButtonNormal")  
+ ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage. ] (../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet  
   
- ![Schaltfläche mit einem roten Rahmen.](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
-Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet und auf der sich der Mauszeiger befindet  
+ ![Eine Schaltfläche mit einem roten Rahmen. ] (../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, und über der sich ein Mauszeiger befindet.  
   
-   
   
 <a name="prerequisites"></a>   
-## Vorbereitungsmaßnahmen  
- In diesem Thema wird davon ausgegangen, dass Sie wissen, wie Steuerelemente und Formate erstellt und verwendet werden, wie unter [Steuerelemente](../../../../docs/framework/wpf/controls/index.md) erläutert.  Die in diesem Thema erläuterten Begriffe gelten für Elemente, die von der <xref:System.Windows.Controls.UserControl>\-Klasse ergeben, mit Ausnahme von <xref:System.Windows.Controls.Control>.  Eine <xref:System.Windows.Controls.ControlTemplate> kann auf ein <xref:System.Windows.Controls.UserControl> nicht angewendet werden.  
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen  
+ Es wird vorausgesetzt, dass Sie sich mit dem Erstellen und mit der Verwendung von Steuerelementen und Formaten auskennen. Anweisungen dazu finden Sie unter [Steuerelemente](../../../../docs/framework/wpf/controls/index.md). Die in diesem Thema erläuterten Konzepte gelten auch für Elemente, die von erben die <xref:System.Windows.Controls.Control> -Klasse, mit Ausnahme der <xref:System.Windows.Controls.UserControl>. Sie können nicht angewendet werden eine <xref:System.Windows.Controls.ControlTemplate> auf eine <xref:System.Windows.Controls.UserControl>.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
-## Zeitpunkt zum Erstellen einer ControlTemplate  
- Steuerelemente besitzen zahlreiche Eigenschaften, z. B. <xref:System.Windows.Controls.Border.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, und <xref:System.Windows.Controls.Control.FontFamily%2A>, die Sie festlegen können, um andere Aspekte der Steuerelementdarstellung anzugeben, jedoch sind die Änderungen, die Sie durch Festlegen dieser Eigenschaften vornehmen können, beschränkt.  Zum Beispiel können Sie für eine <xref:System.Windows.Controls.CheckBox> die <xref:System.Windows.Controls.Control.Foreground%2A>\-Eigenschaft auf blau und <xref:System.Windows.Controls.Control.FontStyle%2A> auf kursiv festlegen.  
+## <a name="when-you-should-create-a-controltemplate"></a>Der richtige Zeitpunkt für das Erstellen einer ControlTemplate  
+ Steuerelemente verfügen über zahlreiche Eigenschaften wie z. B. <xref:System.Windows.Controls.Border.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, und <xref:System.Windows.Controls.Control.FontFamily%2A>, die Sie können festlegen, um verschiedene Aspekte der Darstellung des Steuerelements angeben, aber die Änderungen, die Sie vornehmen können, durch Festlegen dieser Eigenschaften sind beschränkt. Sie können z. B. Festlegen der <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft Blau und <xref:System.Windows.Controls.Control.FontStyle%2A> auf kursiv auf eine <xref:System.Windows.Controls.CheckBox>.  
   
- Ohne die Möglichkeit, für Steuerelemente eine neue <xref:System.Windows.Controls.ControlTemplate> zu erstellen, würden alle Steuerelemente in jeder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-basierten Anwendung die gleiche allgemeine Darstellung aufweisen. Dies würde das Erstellen von Anwendungen mit benutzerdefiniertem Aussehen und Verhalten stark einschränken.  Standardmäßig besitzt jede <xref:System.Windows.Controls.CheckBox> ähnliche Merkmale.  Beispielsweise befindet sich der Inhalt der <xref:System.Windows.Controls.CheckBox> stets rechts vom Auswahlindikator, und das Häkchen wird immer für die Angabe verwendet, dass die <xref:System.Windows.Controls.CheckBox> aktiviert ist.  
+ Ohne die Fähigkeit zum Erstellen eines neuen <xref:System.Windows.Controls.ControlTemplate> für Steuerelemente, alle Steuerelemente in jeder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]--basierten Anwendung, die Fähigkeit zum Erstellen einer Anwendung mit einem benutzerdefinierten Aussehen und Verhalten zu begrenzen, würde die gleiche allgemeine Darstellung aufweisen. Standardmäßig jede <xref:System.Windows.Controls.CheckBox> verfügt über ähnliche Merkmale aufweisen. Z. B. den Inhalt der <xref:System.Windows.Controls.CheckBox> ist immer auf der rechten Seite des Indikators, Auswahl, und Sie auf das Häkchen wird immer verwendet, um anzugeben, dass die <xref:System.Windows.Controls.CheckBox> ausgewählt ist.  
   
- Eine <xref:System.Windows.Controls.ControlTemplate> erstellen Sie, wenn Sie die Darstellung des Steuerelements in einem Grad anpassen möchten, der über das Festlegen der anderen Steuerelementeigenschaften hinaus geht.  Im Beispiel mit der <xref:System.Windows.Controls.CheckBox> wird angenommen, dass der Inhalt des Kontrollkästchens über dem Auswahlindikator angezeigt werden soll, und mit einem X angegeben werden soll, dass die <xref:System.Windows.Controls.CheckBox> aktiviert ist.  Sie geben diese Änderungen in der <xref:System.Windows.Controls.ControlTemplate> des <xref:System.Windows.Controls.CheckBox> an.  
+ Sie erstellen eine <xref:System.Windows.Controls.ControlTemplate> Wenn Sie die Darstellung des Steuerelements hinter festlegen die anderen Eigenschaften tut anpassen möchten. Im Beispiel für die <xref:System.Windows.Controls.CheckBox>, angenommen, Sie wünschen, dass der Inhalt dieses Kontrollkästchen, um über den Auswahlindikator liegen und Sie möchten ein X an, dass die <xref:System.Windows.Controls.CheckBox> ausgewählt ist. Geben Sie diese Änderungen in der <xref:System.Windows.Controls.ControlTemplate> von der <xref:System.Windows.Controls.CheckBox>.  
   
- Die folgende Abbildung zeigt ein <xref:System.Windows.Controls.CheckBox>, das eine Standard\- <xref:System.Windows.Controls.ControlTemplate> verwendet.  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet den Standardwert <xref:System.Windows.Controls.ControlTemplate>.  
   
- ![Kontrollkästchen mit der Standardsteuerelementvorlage.](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP\_CheckBoxDefault")  
+ ![Kontrollkästchen mit der Standardsteuerelementvorlage. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Ein Kontrollkästchen, das die Standardsteuerelementvorlage verwendet  
   
- Die folgende Abbildung zeigt ein <xref:System.Windows.Controls.CheckBox>, das eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> verwendet, um den Inhalt des  <xref:System.Windows.Controls.CheckBox> über dem Auswahlindikator zu platzieren, und ein X anzeigt, wenn die <xref:System.Windows.Controls.CheckBox> ausgewählt wird.  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> , platzieren den Inhalt der <xref:System.Windows.Controls.CheckBox> über den Auswahlindikator für die und zeigt ein "X" bei der <xref:System.Windows.Controls.CheckBox> ausgewählt ist.  
   
- ![Kontrollkästchen mit einer benutzerdefinierten Steuerelementvorlage.](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP\_CheckBoxCustom")  
+ ![Kontrollkästchen mit einer benutzerdefinierten Steuerelementvorlage. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwendet  
   
- Die <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.CheckBox> in diesem Beispiel ist relativ komplex, deshalb wird in diesem Thema ein einfacheres Beispiel zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für einen <xref:System.Windows.Controls.Button> verwendet.  
+ Die <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.CheckBox> in diesem Beispiel ist relativ komplex, deshalb in diesem Thema wird, ein einfacheres Beispiel zum Erstellen verwendet einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Button>.  
   
 <a name="changing_the_visual_structure_of_a_control"></a>   
-## Ändern der visuellen Struktur eines Steuerelements  
- In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] besteht ein Steuerelement häufig aus zusammengesetzten <xref:System.Windows.FrameworkElement>\-Objekten.  Wenn Sie eine <xref:System.Windows.Controls.ControlTemplate> erstellen, kombinieren Sie <xref:System.Windows.FrameworkElement>\-Objekte, um ein einzelnes Steuerelement zu erstellen.  Eine <xref:System.Windows.Controls.ControlTemplate> darf nur ein <xref:System.Windows.FrameworkElement> als Stammelement besitzen.  Das Stammelement enthält normalerweise weitere <xref:System.Windows.FrameworkElement>\-Objekte.  Die Kombination der Objekte bestimmt die visuelle Struktur des Steuerelements.  
+## <a name="changing-the-visual-structure-of-a-control"></a>Ändern der visuellen Struktur eines Steuerelements  
+ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ein Steuerelement ist häufig eine zusammengesetzte <xref:System.Windows.FrameworkElement> Objekte. Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, kombinieren Sie <xref:System.Windows.FrameworkElement> Objekte, um ein einzelnes Steuerelement zu erstellen. Ein <xref:System.Windows.Controls.ControlTemplate> benötigen nur einen <xref:System.Windows.FrameworkElement> als Stammelement. Das Stammelement enthält in der Regel andere <xref:System.Windows.FrameworkElement> Objekte. Die visuelle Struktur wird durch die Kombination dieser Objekte bestimmt.  
   
- Im folgenden Beispiel wird eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> für den <xref:System.Windows.Controls.Button> erstellt.  Die <xref:System.Windows.Controls.ControlTemplate> bestimmt die visuelle Struktur des <xref:System.Windows.Controls.Button>.  In diesem Beispiel wird die Darstellung der Schaltfläche nicht geändert, wenn Sie den Mauszeiger darüber platzieren oder darauf klicken.  Das Ändern der Schaltflächendarstellung, wenn sich diese in einem anderen Zustand befindet, wird weiter unten in diesem Thema erläutert.  
+ Das folgende Beispiel erstellt eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.Button>. Die <xref:System.Windows.Controls.ControlTemplate> erstellt die visuelle Struktur eines der <xref:System.Windows.Controls.Button>. In diesem Beispiel wird die Darstellung der Schaltfläche nicht geändert, wenn Sie den Mauszeiger darüber bewegen oder sie anklicken. Das Ändern der Darstellung einer Schaltfläche, die sich in einem anderen Zustand befindet, wird weiter unten in diesem Thema erläutert.  
   
- In diesem Beispiel besteht die visuelle Struktur aus den folgenden Teilen:  
+ In diesem Beispiel besteht die visuelle Struktur aus den folgenden Bausteinen:  
   
--   Eine <xref:System.Windows.Controls.Border> mit dem Namen `RootElement`, die als Stamm\-<xref:System.Windows.FrameworkElement> der Vorlage verwendet wird.  
+-   Ein <xref:System.Windows.Controls.Border> mit dem Namen `RootElement` , dient als Grundlage für die Vorlage Stamm <xref:System.Windows.FrameworkElement>.  
   
--   Ein <xref:System.Windows.Controls.Grid>, das dem `RootElement` untergeordnet ist.  
+-   Ein <xref:System.Windows.Controls.Grid> d. h. ein untergeordnetes Element des `RootElement`.  
   
--   Ein <xref:System.Windows.Controls.ContentPresenter> für die Anzeige des Schaltflächeninhalts.  Der <xref:System.Windows.Controls.ContentPresenter> aktiviert einen beliebigen Objekttyp für die Anzeige.  
+-   Ein <xref:System.Windows.Controls.ContentPresenter> , die die Schaltfläche Inhalte anzeigt. Die <xref:System.Windows.Controls.ContentPresenter> können jede Art von Objekt angezeigt werden.  
   
- [!code-xml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
-### Beibehalten der Funktionalität von Steuerelementeigenschaften mit TemplateBinding  
- Beim Erstellen einer neuen <xref:System.Windows.Controls.ControlTemplate> können Sie weiterhin die öffentlichen Eigenschaften verwenden, um die Darstellung des Steuerelements zu ändern.  Die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)\-Markuperweiterung bindet eine Eigenschaft eines Elements in der <xref:System.Windows.Controls.ControlTemplate> an eine vom Steuerelement definierte öffentliche Eigenschaft.  Bei Verwendung von [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) können Eigenschaften des Steuerelements als Parameter der Vorlage fungieren.  Wenn eine Eigenschaft für ein Steuerelement festgelegt wird, wird dieser Wert somit an das Element übergeben, für das [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) angegeben ist.  
+### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>Beibehalten der Funktionalität von Steuerelementeigenschaften durch die Verwendung von TemplateBinding  
+ Beim Erstellen einer neuen <xref:System.Windows.Controls.ControlTemplate>, dennoch empfiehlt die öffentlichen Eigenschaften verwenden, um die Darstellung des Steuerelements zu ändern. Die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) Markuperweiterung bindet eine Eigenschaft eines Elements, das in der <xref:System.Windows.Controls.ControlTemplate> an eine öffentliche Eigenschaft, die vom Steuerelement definiert ist. Bei der Verwendung von [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) können Steuerelementeigenschaften als Parameter der Vorlage fungieren. D.h., beim Festlegen einer Steuerelementeigenschaft wird dieser Wert an das Element mit [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) übergeben.  
   
- Im folgenden  Beispiel wird der Teil des vorherigen Beispiels wiederholt, der die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)\-Markuperweiterung verwendet, um Eigenschaften von Elementen in der <xref:System.Windows.Controls.ControlTemplate> an von der Schaltfläche definierte öffentliche Eigenschaften zu binden.  
+ Im folgende Beispiel wird der Teil des vorherigen Beispiels, das verwendet wiederholt der [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) Markuperweiterung Eigenschaften von Elementen zu binden, der in der <xref:System.Windows.Controls.ControlTemplate> auf öffentlichen Eigenschaften, die durch die Schaltfläche definiert werden.  
   
- [!code-xml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
- In diesem Beispiel ist die <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=fullName>\-Eigenschaftenvorlage für das <xref:System.Windows.Controls.Grid> an <xref:System.Windows.Controls.Control.Background%2A?displayProperty=fullName> gebunden.  Da <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=fullName> vorlagengebunden ist, können Sie mehrere Schaltflächen erstellen, die dieselbe <xref:System.Windows.Controls.ControlTemplate> verwenden, und den <xref:System.Windows.Controls.Control.Background%2A?displayProperty=fullName> für jede Schaltfläche auf einen anderen Wert festlegen.  Wenn <xref:System.Windows.Controls.Control.Background%2A?displayProperty=fullName> in der <xref:System.Windows.Controls.ControlTemplate> nicht an die Eigenschaft  eines Elements vorlagengebunden ist, hat das Festlegen des <xref:System.Windows.Controls.Control.Background%2A?displayProperty=fullName> einer Schaltfläche keine Auswirkungen auf die Darstellung der Schaltfläche.  
+ In diesem Beispiel wird die <xref:System.Windows.Controls.Grid> hat seine <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> eigenschaftsvorlage gebunden <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Da <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> ist Vorlage gebunden werden, können Sie mehrere Schaltflächen, die die gleiche erstellen <xref:System.Windows.Controls.ControlTemplate> und legen Sie die <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> auf jede Schaltfläche unterschiedliche Werte. Wenn <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> wurde nicht von einer Vorlage gebunden an eine Eigenschaft eines Elements in der <xref:System.Windows.Controls.ControlTemplate>wird durch das Festlegen der <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> einer Schaltfläche würde haben keine Auswirkung auf die Darstellung der Schaltfläche.  
   
- Beachten Sie, dass die Namen der zwei Eigenschaften nicht identisch sein müssen.  Im vorherigen Beispiel ist die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=fullName>\-Eigenschaft der <xref:System.Windows.Controls.Button> an die  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=fullName>\-Eigenschaft des  <xref:System.Windows.Controls.ContentPresenter> vorlagengebunden.  Dadurch kann der Inhalt der Schaltfläche horizontal positioniert werden.  <xref:System.Windows.Controls.ContentPresenter> verfügt nicht über eine Eigenschaft mit dem Namen `HorizontalContentAlignment`, aber <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=fullName> kann an <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=fullName> gebunden werden.  Wenn Sie eine Eigenschaft an eine Vorlage binden, stellen Sie sicher, dass die Ziel und Quelleigenschaften denselben Typ aufweisen.  
+ Beachten Sie, dass die Namen der beiden Eigenschaften nicht identisch sein müssen. Im vorherigen Beispiel der <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Windows.Controls.Button> Vorlage gebunden ist die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> Eigenschaft der <xref:System.Windows.Controls.ContentPresenter>. Dadurch kann der Inhalt der Schaltfläche horizontal positioniert werden. <xref:System.Windows.Controls.ContentPresenter>verfügt nicht über eine Eigenschaft mit dem Namen `HorizontalContentAlignment`, aber <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> gebunden werden kann, um <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Stellen Sie sicher, dass die Ziel und Quelleigenschaften dem selben Typ entsprechen, wenn Sie eine Eigenschaft an eine Vorlage binden.  
   
- Die <xref:System.Windows.Controls.Control>\-Klasse definiert eine Reihe von Eigenschaften, die von der Steuerelementvorlage verwendet werden müssen und Auswirkungen auf das Steuerelement haben, wenn sie festgelegt werden.  Die Verwendung der Eigenschaft durch die <xref:System.Windows.Controls.ControlTemplate> ist von der Eigenschaft abhängig.  Die <xref:System.Windows.Controls.ControlTemplate> muss die Eigenschaft auf eine der folgenden Weisen verwenden:  
+ Die <xref:System.Windows.Controls.Control> Klasse definiert verschiedene Eigenschaften, die von der Steuerelementvorlage verwendet werden müssen, damit sich auf das Steuerelement aus, wenn sie festgelegt wurden. Wie die <xref:System.Windows.Controls.ControlTemplate> verwendet die Eigenschaft hängt von der Eigenschaft. Die <xref:System.Windows.Controls.ControlTemplate> muss die Eigenschaft in einem der folgenden Methoden verwenden:  
   
--   Ein Element in der <xref:System.Windows.Controls.ControlTemplate>\-Vorlage ist an die Eigenschaft gebunden.  
+-   Ein Element in der <xref:System.Windows.Controls.ControlTemplate> Vorlage für die Eigenschaft bindet.  
   
 -   Ein Element in der <xref:System.Windows.Controls.ControlTemplate> erbt die Eigenschaft von einem übergeordneten <xref:System.Windows.FrameworkElement>.  
   
- In der folgenden Tabelle sind die visuellen Eigenschaften aufgelistet, die ein Steuerelement von der <xref:System.Windows.Controls.Control>\-Klasse geerbt hat.  Sie gibt auch an, ob die standardmäßige Steuerelementvorlage eines Steuerelements den geerbten Eigenschaftswert verwendet oder ob es vorlagengebunden sein muss.  
+ Die folgende Tabelle enthält die visuellen Eigenschaften geerbt, die ein Steuerelement von der <xref:System.Windows.Controls.Control> Klasse. In der Tabelle wird außerdem angegeben, ob die standardmäßige Steuerelementvorlage eines Steuerelements den geerbten Eigenschaftswert verwendet, oder ob er vorlagengebunden sein muss.  
   
-|Eigenschaft|Verwendungsart|  
-|-----------------|--------------------|  
+|Eigenschaft|Verwendete Methode|  
+|--------------|------------------|  
 |<xref:System.Windows.Controls.Control.Background%2A>|Vorlagenbindung|  
 |<xref:System.Windows.Controls.Control.BorderThickness%2A>|Vorlagenbindung|  
 |<xref:System.Windows.Controls.Control.BorderBrush%2A>|Vorlagenbindung|  
@@ -111,101 +116,101 @@ Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwende
 |<xref:System.Windows.Controls.Control.Padding%2A>|Vorlagenbindung|  
 |<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>|Vorlagenbindung|  
   
- In der Tabelle werden nur die von der <xref:System.Windows.Controls.Control>\-Klasse geerbten visuellen Eigenschaften aufgelistet.  Abgesehen von den in der Tabelle aufgelisteten Eigenschaften kann ein Steuerelement möglicherweise auch die Eigenschaften <xref:System.Windows.FrameworkElement.DataContext%2A>, <xref:System.Windows.FrameworkElement.Language%2A> und <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> vom übergeordneten Frameworkelement erben.  
+ Die Tabelle enthält nur die visuellen Eigenschaften geerbt von der <xref:System.Windows.Controls.Control> Klasse. Abgesehen von den in der Tabelle aufgeführten Eigenschaften ein Steuerelements kann auch erben die <xref:System.Windows.FrameworkElement.DataContext%2A>, <xref:System.Windows.FrameworkElement.Language%2A>, und <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> Eigenschaften vom Framework übergeordneten Element.  
   
- Wenn sich zudem der <xref:System.Windows.Controls.ContentPresenter> in der <xref:System.Windows.Controls.ControlTemplate> eines <xref:System.Windows.Controls.ContentControl> befindet, wird der <xref:System.Windows.Controls.ContentPresenter> automatisch an die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>\-Eigenschaft und die <xref:System.Windows.Controls.ContentControl.Content%2A>\-Eigenschaft gebunden.  Entsprechend wird ein <xref:System.Windows.Controls.ItemsPresenter>, der sich in der <xref:System.Windows.Controls.ControlTemplate> eines <xref:System.Windows.Controls.ItemsControl> befindet, automatisch an die <xref:System.Windows.Controls.ItemsControl.Items%2A>\-Eigenschaft und die <xref:System.Windows.Controls.ItemsPresenter>\-Eigenschaft gebunden.  
+ Auch, wenn die <xref:System.Windows.Controls.ContentPresenter> befindet sich in der <xref:System.Windows.Controls.ControlTemplate> von einer <xref:System.Windows.Controls.ContentControl>, die <xref:System.Windows.Controls.ContentPresenter> automatisch eine Bindung an die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> und <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaften. Ebenso eine <xref:System.Windows.Controls.ItemsPresenter> , die sich in der <xref:System.Windows.Controls.ControlTemplate> von einer <xref:System.Windows.Controls.ItemsControl> automatisch eine Bindung an die <xref:System.Windows.Controls.ItemsControl.Items%2A> und <xref:System.Windows.Controls.ItemsPresenter> Eigenschaften.  
   
- Im folgenden Beispiel werden zwei Schaltflächen erstellt, für die die im vorherigen Beispiel definierte <xref:System.Windows.Controls.ControlTemplate> verwendet wird.  Im folgenden Beispiel werden die Eigenschaften <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.FontSize%2A> für die einzelnen Schaltflächen festgelegt.  Das Festlegen der <xref:System.Windows.Controls.Control.Background%2A>\-Eigenschaft wirkt sich aus, da diese in der <xref:System.Windows.Controls.ControlTemplate> vorlagengebunden ist.  Obwohl die <xref:System.Windows.Controls.Control.Foreground%2A>\-Eigenschaft und die <xref:System.Windows.Controls.Control.FontSize%2A>\-Eigenschaft nicht vorlagengebunden sind, wirkt sich das Festlegen aus, da deren Werte geerbt werden.  
+ Das folgende Beispiel erstellt zwei Schaltflächen, mit denen die <xref:System.Windows.Controls.ControlTemplate> im vorherigen Beispiel definiert. Im Beispiel wird die <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, und <xref:System.Windows.Controls.Control.FontSize%2A> Eigenschaften auf jeder Schaltfläche. Festlegen der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft wirkt sich ist Vorlage gebunden, der <xref:System.Windows.Controls.ControlTemplate>. Obwohl die <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.FontSize%2A> Eigenschaften nicht Vorlage gebunden sind, wird diese Einstellung wirkt sich da ihre Werte geerbt werden.  
   
- [!code-xml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
- Die Ausgabe im vorhergehenden Beispiel ähnelt der folgenden Abbildung.  
+ Das Ergebnis des vorhergehenden Beispiels ähnelt der folgenden Abbildung.  
   
- ![Zwei Schaltflächen, eine blaue und eine violette.](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP\_ButtonTwo")  
+ ![Zwei Schaltflächen, eine blaue und eine violette. ] (../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
 Zwei Schaltflächen mit unterschiedlichen Hintergrundfarben  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
-## Ändern der Darstellung eines Steuerelements in Abhängigkeit von dessen Zustand  
- Der Unterschied zwischen einer Schaltfläche in der Standarddarstellung und der Schaltfläche im vorherigen Beispiel besteht darin, dass die Standardschaltfläche je nach Zustand leicht geändert wird.  Zum Beispiel wird die Darstellung der Standardschaltfläche geändert, wenn auf die Schaltfläche geklickt wird oder sich der Mauszeiger über der Schaltfläche befindet.  Zwar wird mit der <xref:System.Windows.Controls.ControlTemplate> nicht die Funktionalität eines Steuerelements, aber das visuelle Verhalten des Steuerelements geändert.  Das visuelle Verhalten beschreibt die Darstellung eines Steuerelements in bestimmten Zuständen.  Zur Verdeutlichung des Unterschieds zwischen Funktionalität und visuellem Verhalten eines Steuerelements betrachten Sie das Schaltflächenbeispiel.  Die Funktionalität der Schaltfläche besteht im Auslösen des <xref:System.Windows.Controls.Primitives.ButtonBase.Click>\-Ereignisses, wenn auf sie geklickt wird. Das visuelle Verhalten der Schaltfläche hingegen besteht in der Änderung der Darstellung, wenn auf sie gezeigt oder geklickt wird.  
+## <a name="changing-the-appearance-of-a-control-depending-on-its-state"></a>Ändern der Darstellung eines Steuerelements in Abhängigkeit von dessen Zustand  
+ Der Unterschied zwischen einer Schaltfläche in der Standarddarstellung und der Schaltfläche aus dem vorhergehenden Beispiel besteht darin, dass die Darstellung der Standardschaltfläche je nach Zustand leicht geändert wird. So wird zum Beispiel die Standarddarstellung der Schaltfläche geändert, wenn sie angeklickt wird, oder wenn sich der Mauszeiger über der Schaltfläche befindet. Obwohl die <xref:System.Windows.Controls.ControlTemplate> ändert sich nicht auf die Funktionalität eines Steuerelements ändert sich das Verhalten des Steuerelements visual. Das visuelle Verhalten beschreibt die Darstellung des Steuerelements in bestimmten Zuständen. Betrachten Sie das Schaltflächenbeispiel, um den Unterschied zwischen der Funktionalität und dem visuellen Verhalten besser zu verstehen. Die Funktionalität der Schaltfläche ist zum Auslösen der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn darauf geklickt wird, aber die Schaltfläche visual Verhalten besteht darin, dessen Darstellung geändert wird, wenn er verweist oder gedrückt.  
   
- Sie verwenden <xref:System.Windows.VisualState>\-Objekte, um die Darstellung eines Steuerelements anzugeben, wenn sich dieses in einem bestimmten Zustand befindet.  Ein <xref:System.Windows.VisualState> enthält ein <xref:System.Windows.Media.Animation.Storyboard>, das die Darstellung der Elemente in der <xref:System.Windows.Controls.ControlTemplate> ändert.  Sie müssen zu diesem Zweck keinen Code schreiben, da aufgrund der Logik des Steuerelements der Zustand über den <xref:System.Windows.VisualStateManager> geändert wird.  Wenn das Steuerelement in den von der <xref:System.Windows.VisualState.Name%2A?displayProperty=fullName>\-Eigenschaft angegebenen Zustand eintritt, wird das <xref:System.Windows.Media.Animation.Storyboard> gestartet.  Wenn das Steuerelement den Zustand verlässt, wird das <xref:System.Windows.Media.Animation.Storyboard> beendet.  
+ Verwenden Sie <xref:System.Windows.VisualState> -Objekten, die Darstellung eines Steuerelements angeben, wenn es in einem bestimmten Zustand befindet. Ein <xref:System.Windows.VisualState> enthält eine <xref:System.Windows.Media.Animation.Storyboard> ändert die Darstellung der Elemente, die in der <xref:System.Windows.Controls.ControlTemplate>. Sie müssen keinen zusätzlichen Code dazu auftreten, da die Logik des Steuerelements mit Zustandsänderungen schreiben, die <xref:System.Windows.VisualStateManager>. Wenn das Steuerelement wechselt in den Status, die von angegeben wird die <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> -Eigenschaft, die <xref:System.Windows.Media.Animation.Storyboard> beginnt. Wenn das Steuerelement den Zustand verlässt den <xref:System.Windows.Media.Animation.Storyboard> beendet.  
   
- Im folgenden Beispiel wird der <xref:System.Windows.VisualState> veranschaulicht, der die Darstellung einer <xref:System.Windows.Controls.Button> ändert, wenn sich die Mauszeiger darüber befindet.  Das <xref:System.Windows.Media.Animation.Storyboard> ändert die Rahmenfarbe der Schaltfläche durch Änderung der Farbe des `BorderBrush`.  Erinnern Sie sich an das Beispiel mit der <xref:System.Windows.Controls.ControlTemplate> am Anfang dieses Themas. `BorderBrush` ist der Name des <xref:System.Windows.Media.SolidColorBrush>, der dem <xref:System.Windows.Controls.Border.Background%2A> der <xref:System.Windows.Controls.Border> zugewiesen wurde.  
+ Das folgende Beispiel zeigt die <xref:System.Windows.VisualState> , die ändert die Darstellung von einem <xref:System.Windows.Controls.Button> Wenn der Mauszeiger befindet, darauf. Die <xref:System.Windows.Media.Animation.Storyboard> ändert die Rahmenfarbe der Schaltfläche durch Ändern der Farbe der `BorderBrush`. Wenn Sie in finden der <xref:System.Windows.Controls.ControlTemplate> Beispiel am Anfang dieses Themas, erinnern Sie sich `BorderBrush` ist der Name des der <xref:System.Windows.Media.SolidColorBrush> zugewiesen ist, die <xref:System.Windows.Controls.Border.Background%2A> von der <xref:System.Windows.Controls.Border>.  
   
- [!code-xml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
- Das Steuerelement ist für die Definition der Zustände als Teil des Steuerelementvertrags verantwortlich. Dies wird weiter unten in diesem Thema detailliert unter [Anpassen anderer Steuerelemente durch Kenntnisse des Steuerelementvertrags](#customizing_other_controls_by_understanding_the_control_contract) besprochen.  In der folgenden Tabelle werden die für <xref:System.Windows.Controls.Button> angegebenen Zustände aufgelistet.  
+ Die Zustände werden für ein Steuerelement innerhalb des Steuerelementvertrags definiert. Weitere Informationen diesbezüglich finden Sie im weiteren Verlauf dieses Themas unter [Anpassen von anderen Steuerelementen mit Steuerelementverträgen](#customizing_other_controls_by_understanding_the_control_contract). Die folgende Tabelle enthält die Zustände, die für die angegeben sind die <xref:System.Windows.Controls.Button>.  
   
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|-----------------------|----------------------------|------------------|  
-|Normal|CommonStates|Der Standardzustand.|  
+|VisualState-Name|VisualStateGroup-Name|Beschreibung|  
+|----------------------|---------------------------|-----------------|  
+|Normal|CommonStates|Der Standardzustand|  
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|  
-|Pressed|CommonStates|Das Steuerelement wird gedrückt.|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
-|Focused|FocusStates|Das Steuerelement besitzt den Fokus.|  
-|Unfocused|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
+|Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|  
+|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|  
+|Focused|FocusStates|Der Fokus liegt auf dem Steuerelement.|  
+|Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
   
- Die <xref:System.Windows.Controls.Button> definiert zwei Zustandsgruppen: die Gruppe `CommonStates` enthält die Zustände `Normal`, `MouseOver`, `Pressed` und `Disabled`.  Die Gruppe `FocusStates` enthält die Zustände `Focused` und `Unfocused`.  Zustände in derselben Zustandsgruppe schließen sich gegenseitig aus.  Das Steuerelement befindet sich immer in genau einem Zustand aus jeder Gruppe.  Zum Beispiel kann ein <xref:System.Windows.Controls.Button> den Fokus selbst dann besitzen, wenn sich der Mauszeiger nicht darüber befindet. Daher kann sich ein <xref:System.Windows.Controls.Button> im Zustand `Focused` im Zustand `MouseOver`, `Pressed` oder `Normal` befinden.  
+ Die <xref:System.Windows.Controls.Button> definiert zwei Statusgruppen: die `CommonStates` Gruppe enthält die `Normal`, `MouseOver`, `Pressed`, und `Disabled` Status. Die Gruppe `FocusStates` enthält die Zustände `Focused` und `Unfocused`. Zustände innerhalb einer Zustandsgruppe schließen sich gegenseitig aus. Das Steuerelement befindet sich immer in genau einem Zustand aus jeder Gruppe. Z. B. eine <xref:System.Windows.Controls.Button> können den Fokus haben, auch wenn der Mauszeiger nicht darauf, also eine <xref:System.Windows.Controls.Button> in der `Focused` kann die `MouseOver`, `Pressed`, oder `Normal` Zustand.  
   
- Sie fügen <xref:System.Windows.VisualState>\-Objekte <xref:System.Windows.VisualStateGroup>\-Objekten hinzu.  Sie fügen der angefügten <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=fullName>\-Eigenschaft <xref:System.Windows.VisualStateGroup>\-Objekte hinzu.  Im folgenden Beispiel werden die <xref:System.Windows.VisualState>\-Objekte für die Zustände `Normal`, `MouseOver` und `Pressed` definiert, die jeweils der `CommonStates`\-Gruppe angehören.  Der <xref:System.Windows.VisualState.Name%2A> von jedem <xref:System.Windows.VisualState> stimmt mit dem Namen in der vorangehenden Tabelle überein.  Der Zustand `Disabled` sowie die Zustände in der `FocusStates`\-Gruppe werden ausgelassen, um das Beispiel kurz zu halten, im vollständigen Beispiel am Ende dieses Themas sind diese jedoch enthalten.  
+ Sie fügen <xref:System.Windows.VisualState> -Objekte <xref:System.Windows.VisualStateGroup> Objekte. Sie fügen <xref:System.Windows.VisualStateGroup> Datenbankobjekte in der <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> -Eigenschaft. Das folgende Beispiel definiert die <xref:System.Windows.VisualState> von Objekten für die `Normal`, `MouseOver`, und `Pressed` Zustände, die alle in der `CommonStates` Gruppe. Die <xref:System.Windows.VisualState.Name%2A> jedes <xref:System.Windows.VisualState> mit dem Namen in der obigen Tabelle übereinstimmt. Der Zustand `Disabled` sowie die Zustände der `FocusStates`-Gruppe wurden ausgelassen, um das Beispiel kurz zu halten. Sie werden jedoch vom vollständigen Beispiel am Ende dieses Themas umfasst.  
   
 > [!NOTE]
->  Die angefügte <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=fullName>\-Eigenschaft muss für das Stamm\-<xref:System.Windows.FrameworkElement> der <xref:System.Windows.Controls.ControlTemplate> festgelegt werden.  
+>  Achten Sie darauf, dass Sie festlegen der <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> -Eigenschaft auf den Stamm <xref:System.Windows.FrameworkElement> von der <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-xml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
- Die Ausgabe im vorhergehenden Beispiel ähnelt den folgenden Abbildungen.  
+ Das Ergebnis des vorhergehenden Beispiels ähnelt den folgenden Abbildungen.  
   
- ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage.](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP\_ButtonNormal")  
-Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage im normalen Zustand verwendet  
+ ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage. ] (../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet  
   
- ![Schaltfläche mit einem roten Rahmen.](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
-Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage im MouseOver\-Zustand verwendet  
+ ![Eine Schaltfläche mit einem roten Rahmen. ] (../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, wenn darüber sich der Mauszeiger befindet  
   
- ![Der Rahmen ist bei Klicken auf Schaltfläche transparent.](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP\_ButtonPressed")  
-Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage im gedrückten Zustand verwendet  
+ ![Der Rahmen ist auf Schaltfläche transparent. ] (../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, wenn sie gedrückt wird  
   
- Die visuellen Zustände für Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Steuerelementformate und \-vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Die visuellen Zustände für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente finden Sie unter [Steuerelementformate und -vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
-## Angeben des Steuerelementverhaltens beim Wechsel zwischen Zuständen  
- Im vorausgehenden Beispiel ändert sich die Darstellung der Schaltfläche auch, wenn der Benutzer darauf klickt, jedoch sieht der Benutzer den Effekt nur, wenn die Schaltfläche eine volle Sekunde lang gedrückt wird.  Standardmäßig benötigt die Animation eine Sekunde, bevor sie sichtbar wird.  Da Benutzer wahrscheinlich in einer wesentlich kürzeren Zeit auf eine Schaltfläche klicken und diese wieder loslassen, wird das visuelle Feedback nicht sichtbar, wenn Sie die <xref:System.Windows.Controls.ControlTemplate> im Standardzustand belassen.  
+## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Festlegen des Steuerelementverhaltens beim Wechsel zwischen Zuständen  
+ Im vorhergehenden Beispiel wird die Darstellung der Schaltfläche auch beim Anklicken der Schaltfläche geändert. Diesen Effekt sieht der Nutzer allerdings nicht, falls die Schaltfläche kürzer als eine ganze Sekunde lang gedrückt wird. Standardmäßig wird die Animation nach einer Sekunde sichtbar. Da Benutzer wahrscheinlich klicken und eine Schaltfläche in viel weniger Zeit freizugeben, visuelle Feedback werden wirksam, wenn Sie lassen die <xref:System.Windows.Controls.ControlTemplate> im Standardzustand.  
   
- Sie können den Zeitraum angeben, den eine Animation für den Übergang eines Steuerelements von einem Zustand in einen anderen benötigt, indem Sie der <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.VisualTransition>\-Objekte hinzufügen.  Beim Erstellen einer <xref:System.Windows.VisualTransition> können Sie eines oder mehrere der folgenden Elemente angeben:  
+ Sie können angeben, dass die Menge an Zeit, die eine Animation für ein Steuerelement von einem Zustand zu einem anderen durch Hinzufügen von reibungslosen Übergang <xref:System.Windows.VisualTransition> -Objekte und die <xref:System.Windows.Controls.ControlTemplate>. Beim Erstellen einer <xref:System.Windows.VisualTransition>, Sie geben eine oder mehrere der folgenden:  
   
--   Die Zeit für einen Wechsel zwischen Zuständen  
+-   Die Zeitspanne für einen Wechsel zwischen Zuständen.  
   
--   Zusätzliche Änderungen in der Darstellung des Steuerelements zur Zeit des Übergangs  
+-   Zusätzliche Änderungen der Darstellung des Steuerelements im Moment des Übergangs.  
   
--   Die Zustände, auf die der <xref:System.Windows.VisualTransition> angewendet wird  
+-   Welche Zustände der <xref:System.Windows.VisualTransition> auf angewendet wird.  
   
-### Angeben der Dauer eines Übergangs  
- Sie können die Dauer eines Übergangs angeben, indem Sie die <xref:System.Windows.VisualTransition.GeneratedDuration%2A>\-Eigenschaft festlegen.  Das vorherige Beispiel hat einen <xref:System.Windows.VisualState>, der angibt, dass der Rahmen der Schaltfläche beim Klicken auf die Schaltfläche transparent wird. Die Animation dauert jedoch zu lang, um bemerkt zu werden, wenn schnell auf die Schaltfläche geklickt und wieder losgelassen wird.  Mit einer <xref:System.Windows.VisualTransition> können Sie die Zeitdauer angeben, die das Steuerelement für den Übergang in den gedrückten Zustand benötigt.  Im folgenden Beispiel wird angegeben, dass das Steuerelement für den Übergang in den gedrückten Zustand eine Hundertstelsekunde benötigt.  
+### <a name="specifying-the-duration-of-a-transition"></a>Festlegen der Dauer eines Übergangs  
+ Sie können angeben, wie lange dauert ein Übergang durch Festlegen der <xref:System.Windows.VisualTransition.GeneratedDuration%2A> Eigenschaft. Im vorherige Beispiel wurde ein <xref:System.Windows.VisualState> , der angibt, dass die Rahmen der Schaltfläche wird transparent, wenn die Schaltfläche geklickt wird, aber die Animation dauert zu lange bestehen, bemerkbar, wenn die schnell gedrückt und losgelassen wird. Sie können eine <xref:System.Windows.VisualTransition> an die Zeitspanne dauert das Steuerelement für den Übergang in den Zustand "gedrückt". Im folgenden Beispiel wird die Zeitspanne für den Übergang in den gedrückten Zustand auf eine Hundertstelsekunde festgelegt.  
   
- [!code-xml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
-### Angeben von Änderungen an der Steuerelementdarstellung während eines Übergangs  
- Der <xref:System.Windows.VisualTransition> enthält ein <xref:System.Windows.Media.Animation.Storyboard>, das gestartet wird, wenn das Steuerelement den Zustand wechselt.  Zum Beispiel können Sie angeben, dass eine bestimmte Animation ausgeführt wird, wenn das Steuerelement aus dem Zustand `MouseOver` in den Zustand `Normal` übergeht.  Im folgenden Beispiel wird ein <xref:System.Windows.VisualTransition> erstellt, der angibt, dass der Rahmen der Schaltfläche in 1,5 Sekunden von blau über gelb nach schwarz wechselt, wenn der Benutzer den Mauszeiger von der Schaltfläche weg bewegt.  
+### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Festlegen von Änderungen an der Darstellung der Steuerelemente während eines Übergangs  
+ Die <xref:System.Windows.VisualTransition> enthält eine <xref:System.Windows.Media.Animation.Storyboard> , die beginnt, wenn das Steuerelement den Zustand wechselt. Sie können beispielsweise eine bestimmte Animation festlegen, die bei einem Übergang aus dem Zustand `MouseOver` in den Zustand `Normal` angezeigt wird. Das folgende Beispiel erstellt eine <xref:System.Windows.VisualTransition> , der angibt, dass bei der Benutzer den Mauszeiger Weg von der Schaltfläche bewegt, Rahmen der Schaltfläche in Blau, dann zu Gelb, dann auf Schwarz in 1,5 Sekunden ändert.  
   
- [!code-xml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
-### Angeben, wann ein visueller Übergang angewendet wird  
- Die Anwendung eines <xref:System.Windows.VisualTransition> kann auf bestimmte Zustände beschränkt werden oder auch bei jedem Wechsel des Steuerelements zwischen Zuständen ausgeführt werden.  Im vorherigen Beispiel wird der <xref:System.Windows.VisualTransition> angewendet, wenn das Steuerelement aus dem Zustand `MouseOver` in den Zustand `Normal` wechselt. Im Beispiel davor wird der <xref:System.Windows.VisualTransition> angewendet, wenn das Steuerelement in den Zustand `Pressed` wechselt.  Die Anwendung eines <xref:System.Windows.VisualTransition> schränken Sie ein, indem Sie die <xref:System.Windows.VisualTransition.To%2A>\-Eigenschaft und die <xref:System.Windows.VisualTransition.From%2A>\-Eigenschaft festlegen.  In der folgenden Tabelle werden die Beschränkungsebenen von der restriktivsten bis zur am wenigsten restriktiven beschrieben.  
+### <a name="specifying-when-a-visualtransition-is-applied"></a>Festlegen der Bedingungen für einen visuellen Übergang  
+ Ein <xref:System.Windows.VisualTransition> kann für bestimmte Zustände gelten beschränkt werden, oder kann angewendet werden jedes Mal, wenn das Steuerelement Übergänge zwischen Zuständen. Im vorherigen Beispiel der <xref:System.Windows.VisualTransition> wird angewendet, wenn das Steuerelement aus wechselt der `MouseOver` Zustands, in der `Normal` Status; im Beispiel vor, dass die <xref:System.Windows.VisualTransition> wird angewendet, wenn das Steuerelement Gunsten der `Pressed` Zustand. Schränken Sie ein <xref:System.Windows.VisualTransition> angewendet, indem die <xref:System.Windows.VisualTransition.To%2A> und <xref:System.Windows.VisualTransition.From%2A> Eigenschaften. In der folgenden Tabelle sind die Beschränkungsebenen aufgelistet, von der restriktivsten bis zu der am wenigsten restriktiven.  
   
-|Beschränkungstyp|From\-Wert|To\-Wert|  
-|----------------------|----------------|--------------|  
-|Aus einem angegebenen Zustand in einen anderen angegebenen Zustand|Der Name eines <xref:System.Windows.VisualState>.|Der Name eines <xref:System.Windows.VisualState>.|  
-|Aus einem beliebigen Zustand in einen angegebenen Zustand|Nicht festgelegt|Der Name eines <xref:System.Windows.VisualState>.|  
-|Aus einem angegebenen Zustand in einen beliebigen Zustand|Der Name eines <xref:System.Windows.VisualState>.|Nicht festgelegt|  
-|Aus einem beliebigen Zustand in einen beliebigen anderen Zustand|Nicht festgelegt|Nicht festgelegt|  
+|Art der Einschränkung|From-Wert|To-Wert|  
+|-------------------------|-------------------|-----------------|  
+|Aus einem angegebenen Zustand in einen anderen angegebenen Zustand|Der Name des ein<xref:System.Windows.VisualState>|Der Name des ein<xref:System.Windows.VisualState>|  
+|Aus einem beliebigen Zustand in einen angegebenen Zustand|Nicht festgelegt|Der Name des ein<xref:System.Windows.VisualState>|  
+|Aus einem angegebenen Zustand in einen beliebigen Zustand|Der Name des ein<xref:System.Windows.VisualState>|Nicht festgelegt|  
+|Aus einem beliebigen Zustand in einen beliebigen Zustand|Nicht festgelegt|Nicht festgelegt|  
   
- Mehrere <xref:System.Windows.VisualTransition>\-Objekte in einer <xref:System.Windows.VisualStateGroup> können auf denselben Zustand verweisen, doch werden diese in der Reihenfolge verwendet, die in der vorherigen Tabelle angegeben ist.  Im folgenden Beispiel sind zwei <xref:System.Windows.VisualTransition>\-Objekte vorhanden.  Wenn das Steuerelement aus dem Zustand `Pressed` in den Zustand `MouseOver` übergeht, wird die <xref:System.Windows.VisualTransition> verwendet, für die <xref:System.Windows.VisualTransition.From%2A> und <xref:System.Windows.VisualTransition.To%2A> festgelegt sind.  Wenn das Steuerelement aus einem anderen Zustand als `Pressed` in den Zustand `MouseOver` übergeht, wird der andere Zustand verwendet.  
+ Haben Sie mehrere <xref:System.Windows.VisualTransition> Objekte in eine <xref:System.Windows.VisualStateGroup> mit Verweisen auf den gleichen Status, aber sie in der Reihenfolge, der angibt, die vorherige Tabelle verwendet werden. Im folgenden Beispiel werden zwei <xref:System.Windows.VisualTransition> Objekte. Beim Übergang des Steuerelements von der `Pressed` Zustands, in der `MouseOver` Zustand, der <xref:System.Windows.VisualTransition> , besitzt sowohl <xref:System.Windows.VisualTransition.From%2A> und <xref:System.Windows.VisualTransition.To%2A> Satz verwendet wird. Wenn das Steuerelement von einem anderen Zustand als `Pressed` in den Zustand `MouseOver` wechselt, wird der andere Zustand verwendet.  
   
- [!code-xml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
- Die <xref:System.Windows.VisualStateGroup> besitzt eine <xref:System.Windows.VisualStateGroup.Transitions%2A>\-Eigenschaft, die die <xref:System.Windows.VisualTransition>\-Objekte enthält, die auf die <xref:System.Windows.VisualState>\-Objekte in der <xref:System.Windows.VisualStateGroup> angewendet werden.  Als Autor der <xref:System.Windows.Controls.ControlTemplate> können Sie eine beliebige <xref:System.Windows.VisualTransition> einfügen.  Wenn die <xref:System.Windows.VisualTransition.To%2A>\-Eigenschaft und die <xref:System.Windows.VisualTransition.From%2A>\-Eigenschaft jedoch auf Zustandsnamen festgelegt sind, die in der <xref:System.Windows.VisualStateGroup> nicht enthalten sind, wird die <xref:System.Windows.VisualTransition> ignoriert.  
+ Die <xref:System.Windows.VisualStateGroup> hat eine <xref:System.Windows.VisualStateGroup.Transitions%2A> -Eigenschaft, enthält die <xref:System.Windows.VisualTransition> Objekte, die zum Anwenden der <xref:System.Windows.VisualState> Objekte in der <xref:System.Windows.VisualStateGroup>. Als die <xref:System.Windows.Controls.ControlTemplate> Autor, Sie sind kostenlos einschließen <xref:System.Windows.VisualTransition> werden sollen. Jedoch, wenn die <xref:System.Windows.VisualTransition.To%2A> und <xref:System.Windows.VisualTransition.From%2A> Eigenschaften werden festgelegt, um Namen, die nicht Bestandteil der <xref:System.Windows.VisualStateGroup>, die <xref:System.Windows.VisualTransition> wird ignoriert.  
   
- Im folgenden Beispiel wird die <xref:System.Windows.VisualStateGroup> für die `CommonStates` veranschaulicht.  Im Beispiel wird eine <xref:System.Windows.VisualTransition> für jeden der folgenden Übergänge der Schaltfläche definiert.  
+ Das folgende Beispiel zeigt die <xref:System.Windows.VisualStateGroup> für die `CommonStates`. Im Beispiel definiert eine <xref:System.Windows.VisualTransition> für die Schaltfläche folgenden geht.  
   
 -   In den Zustand `Pressed`.  
   
@@ -215,56 +220,56 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage im gedrück
   
 -   Aus dem Zustand `MouseOver` in den Zustand `Normal`.  
   
- [!code-xml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
-## Anpassen anderer Steuerelemente durch Kenntnisse des Steuerelementvertrags  
- Für ein Steuerelement, dessen visuelle Struktur \(über <xref:System.Windows.FrameworkElement>\-Objekte\) und visuelles Verhalten \(über <xref:System.Windows.VisualState>\-Objekte\) in einer <xref:System.Windows.Controls.ControlTemplate> angegeben werden, wird das Parts\-Steuerelementmodell verwendet.  Viele der Steuerelemente, die in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 4 enthalten sind, verwenden dieses Modell.  Die Teile, auf die <xref:System.Windows.Controls.ControlTemplate>\-Autoren achten müssen, sind im Steuerelementvertrag aufgeführt.  Wenn Sie mit den Teilen eines Steuerelementvertrags vertraut sind, können Sie die Darstellung jedes Steuerelements anpassen, für das das Parts\-Steuerelementmodell verwendet wird.  
+## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Anpassen von anderen Steuerelementen mit Steuerelementverträgen  
+ Ein Steuerelement, das verwendet eine <xref:System.Windows.Controls.ControlTemplate> seiner visuellen Struktur an (mit <xref:System.Windows.FrameworkElement> Objekte) und visuelle Verhalten (mit <xref:System.Windows.VisualState> Objekte) verwendet das Modell Teile. Viele Steuerelemente des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 4 verwenden dieses Modell. Die Teile, die eine <xref:System.Windows.Controls.ControlTemplate> Autor Anforderungen zu berücksichtigen sind über den Steuerelementvertrag kommuniziert. Sobald Sie sich mit den Bausteinen des Steuerelementvertrags auskennen, können Sie die Darstellung beliebiger Steuerelemente anpassen, die das Teilsteuerelementen-Modell verwenden.  
   
  Ein Steuerelementvertrag besteht aus drei Elementen:  
   
--   Den von der Logik des Steuerelements verwendeten visuellen Elementen  
+-   Den visuellen Elementen, die die Logik des Steuerelements verwenden.  
   
--   Den Zuständen des Steuerelements und den Gruppen, zu denen die einzelnen Zustände gehören  
+-   Den Zuständen des Steuerelements und den Gruppen, zu denen die einzelnen Zustände gehören.  
   
--   Die öffentlichen Eigenschaften, die sich auf das Steuerelement visuell auswirken  
+-   Den öffentlichen Eigenschaften, die die visuelle Darstellung des Steuerelements beeinflussen.  
   
-### Visuelle Elemente im Steuerelementvertrag  
- In manchen Fällen interagiert die Logik eines Steuerelements mit einem <xref:System.Windows.FrameworkElement> in der <xref:System.Windows.Controls.ControlTemplate>.  Zum Beispiel kann das Steuerelement ein Ereignis für eines der zugehörigen Elemente behandeln.  Wenn ein Steuerelement in der <xref:System.Windows.Controls.ControlTemplate> ein bestimmtes <xref:System.Windows.FrameworkElement> erwartet, muss es diese Informationen an den <xref:System.Windows.Controls.ControlTemplate>\-Autor leiten.  Das Steuerelement übermittelt den erwarteten Elementtyp und den geforderten Elementnamen über das <xref:System.Windows.TemplatePartAttribute>.  Im Steuerelementvertrag sind für den <xref:System.Windows.Controls.Button> keine <xref:System.Windows.FrameworkElement>\-Teile vorhanden, jedoch für andere Steuerelemente, beispielsweise die <xref:System.Windows.Controls.ComboBox>.  
+### <a name="visual-elements-in-the-control-contract"></a>Visuelle Elemente im Steuerelementvertrag  
+ In einigen Fällen Logik eines Steuerelements interagiert mit einer <xref:System.Windows.FrameworkElement> , die sich in der <xref:System.Windows.Controls.ControlTemplate>. Das Steuerelement kann z.B. ein Ereignis für ein zugehöriges Element behandeln. Wenn ein Steuerelement davon ausgeht, einen bestimmten <xref:System.Windows.FrameworkElement> in der <xref:System.Windows.Controls.ControlTemplate>, müssen sie diese Informationen, um übermitteln der <xref:System.Windows.Controls.ControlTemplate> Autor. Das Steuerelement verwendet die <xref:System.Windows.TemplatePartAttribute> vermitteln Sie den Typ eines Elements, der erwartet wird, und wie der Name des Elements sein soll. Die <xref:System.Windows.Controls.Button> verfügt nicht über <xref:System.Windows.FrameworkElement> Teile in die Steuerelementvertrag, aber andere Steuerelemente wie z. B. die <xref:System.Windows.Controls.ComboBox>, führen.  
   
- Im folgenden Beispiel werden die für die <xref:System.Windows.Controls.ComboBox>\-Klasse angegebenen <xref:System.Windows.TemplatePartAttribute>\-Objekte veranschaulicht.  Die Logik von <xref:System.Windows.Controls.ComboBox> erwartet in der <xref:System.Windows.Controls.ControlTemplate> das <xref:System.Windows.Controls.TextBox> mit dem Namen `PART_EditableTextBox` und den <xref:System.Windows.Controls.Primitives.Popup> mit dem Namen `PART_Popup`.  
+ Das folgende Beispiel zeigt die <xref:System.Windows.TemplatePartAttribute> Objekte, die auf angegeben sind die <xref:System.Windows.Controls.ComboBox> Klasse. Die Logik der <xref:System.Windows.Controls.ComboBox> davon ausgeht, eine <xref:System.Windows.Controls.TextBox> mit dem Namen `PART_EditableTextBox` und ein <xref:System.Windows.Controls.Primitives.Popup> mit dem Namen `PART_Popup` in seiner <xref:System.Windows.Controls.ControlTemplate>.  
   
  [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
  [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
- Im folgenden Beispiel wird eine vereinfachte <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox> veranschaulicht, die die von den <xref:System.Windows.TemplatePartAttribute>\-Objekten für die <xref:System.Windows.Controls.ComboBox>\-Klasse angegebenen Elemente enthält.  
+ Das folgende Beispiel zeigt eine vereinfachte <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox> , enthält die Elemente, die vom angegebenen der <xref:System.Windows.TemplatePartAttribute> Objekte auf der <xref:System.Windows.Controls.ComboBox> Klasse.  
   
- [!code-xml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
-### Zustände im Steuerelementvertrag  
- Die Zustände eines Steuerelements sind ebenfalls Teil des Steuerelementvertrags.  Im Beispiel zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für einen <xref:System.Windows.Controls.Button> wird gezeigt, wie die Darstellung eines <xref:System.Windows.Controls.Button> in Abhängigkeit von dessen Zuständen angegeben wird.  Sie erstellen einen <xref:System.Windows.VisualState> für jeden angegebenen Zustand und haben alle <xref:System.Windows.VisualState>\-Objekte gesetzt, für die ein <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> in einem <xref:System.Windows.VisualStateGroup> freigegeben ist, wie unter [Ändern der Darstellung eines Steuerelements in Abhängigkeit von dessen Zustand](#changing_the_appearance_of_a_control_depending_on_its_state) weiter oben in diesem Thema beschrieben.  Steuerelemente von Drittanbietern sollten Zustände festlegen, indem sie <xref:System.Windows.TemplateVisualStateAttribute>verwenden, die Designertools, z. B. Expression Blend die Zustände des Steuerelements zum Erstellen von Steuerelementvorlagen verfügbar zu machen.  
+### <a name="states-in-the-control-contract"></a>Zustände im Steuerelementvertrag  
+ Die Zustände eines Steuerelements sind ebenfalls Teil des Steuerelementvertrags. Das Beispiel zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Button> wird gezeigt, wie die Darstellung des ein <xref:System.Windows.Controls.Button> je nach ihrer Status. Sie erstellen eine <xref:System.Windows.VisualState> für jeden Zustand angegebenen und versetzen Sie alle <xref:System.Windows.VisualState> Objekte dieser Freigabe eine <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> in einer <xref:System.Windows.VisualStateGroup>, wie in beschrieben [Ändern der Darstellung des Steuerelements in Abhängigkeit von dessen Zustand](#changing_the_appearance_of_a_control_depending_on_its_state) weiter oben in dieser Thema. Steuerelemente von Drittanbietern sollten Zustände angeben, indem die <xref:System.Windows.TemplateVisualStateAttribute>, wodurch die Designer-Tools, z. B. Expression Blend, um die Zustände des Steuerelements für die Erstellung von Steuerelementvorlagen verfügbar zu machen.  
   
- Den Steuerelementvertrag für Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Steuerelementformate und \-vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Den Steuerelementvertrag für Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Steuerelementformate und -vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
   
-### Eigenschaften im Steuerelementvertrag  
- Die öffentlichen Eigenschaften, die sich auf das Steuerelement visuell auswirken, sind ebenfalls im Steuerelementvertrag enthalten.  Diese Eigenschaften können Sie festlegen, um die Darstellung des Steuerelements zu ändern, ohne eine neue <xref:System.Windows.Controls.ControlTemplate> erstellen zu müssen.  Sie können auch die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)\-Markuperweiterung verwenden, um Eigenschaften von Elementen in der <xref:System.Windows.Controls.ControlTemplate> an öffentliche Eigenschaften zu binden, die vom <xref:System.Windows.Controls.Button> definiert werden.  
+### <a name="properties-in-the-control-contract"></a>Eigenschaften im Steuerelementvertrag  
+ Die öffentlichen Eigenschaften, die sich auf das Steuerelement visuell auswirken, sind ebenfalls im Steuerelementvertrag enthalten. Sie können diese Eigenschaften, die Darstellung des Steuerelements zu ändern, ohne das Erstellen einer neuen festlegen <xref:System.Windows.Controls.ControlTemplate>. Können Sie auch die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) Markuperweiterung Eigenschaften von Elementen zu binden, der in der <xref:System.Windows.Controls.ControlTemplate> auf öffentlichen Eigenschaften, die von definiert werden die <xref:System.Windows.Controls.Button>.  
   
  Das folgende Beispiel zeigt den Steuerelementvertrag für die Schaltfläche.  
   
  [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
  [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
- Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate> ist es oft am einfachsten, mit einer vorhandenen <xref:System.Windows.Controls.ControlTemplate> zu beginnen und an dieser Änderungen vorzunehmen.  Zum Ändern einer vorhandenen <xref:System.Windows.Controls.ControlTemplate> können Sie wie folgt vorgehen:  
+ Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, ist es oft am einfachsten, beginnen mit einem vorhandenen <xref:System.Windows.Controls.ControlTemplate> und, Änderungen daran vornehmen. Führen Sie eine der folgenden Optionen zum Ändern einer vorhandenen <xref:System.Windows.Controls.ControlTemplate>:  
   
--   Verwenden Sie einen Designer, z. B. Expression Blend, der eine grafische Benutzeroberfläche zum Erstellen von Steuerelementvorlagen bereitstellt.  Weitere Informationen finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](http://go.microsoft.com/fwlink/?LinkId=161153).  
+-   Verwenden Sie einen Designer, z.B. Expression Blend, der eine grafische Benutzeroberfläche zum Erstellen von Steuerelementvorlagen bereitstellt. Weitere Informationen finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
--   Rufen Sie die Standard\-<xref:System.Windows.Controls.ControlTemplate> ab, und bearbeiten Sie diese.  Die standardmäßigen Steuerelementvorlagen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Standard\-WPF\-Designs](http://go.microsoft.com/fwlink/?LinkID=158252) \(möglicherweise in englischer Sprache\).  
+-   Rufen Sie die Standard- <xref:System.Windows.Controls.ControlTemplate> und bearbeiten. Standard-Steuerelementvorlagen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter [Default WPF Themes](http://go.microsoft.com/fwlink/?LinkID=158252) (Standard-WPF-Designs).  
   
 <a name="complete_example"></a>   
-## Vollständiges Beispiel  
- Im folgenden Beispiel wird die vollständige <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> dargestellt, die in diesem Thema erläutert wird.  
+## <a name="complete-example"></a>Vollständiges Beispiel  
+ Das folgende Beispiel zeigt die vollständige <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , die in diesem Thema erläutert wird.  
   
- [!code-xml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)

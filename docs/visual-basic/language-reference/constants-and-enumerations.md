@@ -1,106 +1,89 @@
 ---
-title: Konstanten und Enumerationen (Visual Basic) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Konstanten und Enumerationen (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - enumerations [Visual Basic]
-- constants
-- constants, list of
+- constants [Visual Basic]
+- constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e37ef2e3c51e96e85cb214054195016e69d52382
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Konstanten und Enumerationen (Visual Basic)
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Stellt eine Reihe vordefinierter Konstanten und Enumerationen für Entwickler. Konstanten speichern Werte, die während der Ausführung einer Anwendung konstant bleiben. Enumerationen bieten eine bequeme Möglichkeit, mit Gruppen verwandter Konstanten zu arbeiten und Konstantenwerte mit Namen zu verknüpfen.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Stellt eine Reihe vordefinierter Konstanten und Enumerationen für Entwickler bereit. Konstanten speichern Werte, die während der Ausführung einer Anwendung konstant bleiben. Durch Enumerationen wird ein bequemer Weg bereitgestellt, um mit Sätzen verknüpfter Konstanten zu arbeiten, und um konstanten Werten Namen zuzuweisen.  
   
 ## <a name="constants"></a>Konstanten  
   
-### <a name="conditional-compilation-constants"></a>Konstanten für bedingte Kompilierung  
- Die folgende Tabelle enthält die vordefinierten Konstanten für die bedingte Kompilierung zur Verfügung.  
+### <a name="conditional-compilation-constants"></a>Konstanten für die bedingte Kompilierung  
+ In der folgenden Tabelle enthält die vordefinierten Konstanten, die für die bedingte Kompilierung zur Verfügung.  
   
 |**Konstante**|**Beschreibung**|  
 |---|---|  
-|`CONFIG`|Eine Zeichenfolge, die die aktuelle Einstellung entspricht, der **Konfiguration der aktuellen Projektmappe** Feld der **Configuration Manager**.|  
-|`DEBUG`|Ein `Boolean` -Wert, der festgelegt werden kann, in der **Projekteigenschaften** Dialogfeld. Standardmäßig definiert die Debugkonfiguration für ein Projekt `DEBUG`. Wenn `DEBUG` definiert ist, <xref:System.Diagnostics.Debug>Klassenmethoden Generieren der **Ausgabe** Fenster.</xref:System.Diagnostics.Debug> Wenn sie nicht definiert ist, <xref:System.Diagnostics.Debug>-Klassenmethoden nicht kompiliert und keine Debugausgabe generiert.</xref:System.Diagnostics.Debug>|  
-|`TARGET`|Eine Zeichenfolge, die den Ausgabetyp für das Projekt oder die Einstellung von der Befehlszeile **/target** Option. Die möglichen Werte für `TARGET` sind:<br /><br /> -"Winexe" für eine Windows-Anwendung.<br />-"Exe" für eine Konsolenanwendung.<br />-"Library" für eine Klassenbibliothek.<br />-"Modul" für ein Modul.<br />– Der **/target** Option kann festgelegt werden, der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] -IDE. Weitere Informationen finden Sie unter [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|Ein `Boolean` -Wert, der festgelegt werden kann, in der **Projekteigenschaften** Dialogfeld. Standardmäßig definieren alle Konfigurationen für ein Projekt `TRACE`. Wenn `TRACE` definiert ist, <xref:System.Diagnostics.Trace>Klassenmethoden Generieren der **Ausgabe** Fenster.</xref:System.Diagnostics.Trace> Wenn sie nicht definiert ist, <xref:System.Diagnostics.Trace>Klasse-Klassenmethoden nicht kompiliert und keine `Trace` Ausgabe generiert.</xref:System.Diagnostics.Trace>|  
-|`VBC_VER`|Eine Zahl, die [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Version im *wichtigsten*.* kleinere* Format. Die Versionsnummer für [!INCLUDE[vbprvblong](../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)] ist 8.0.|  
+|`CONFIG`|Eine Zeichenfolge, die die aktuelle Einstellung der entspricht der **aktive Projektmappenkonfiguration** Feld der **Configuration Manager**.|  
+|`DEBUG`|Ein `Boolean` -Wert, der festgelegt werden kann, in der **Projekteigenschaften** (Dialogfeld). Definiert das Debug-Konfiguration für ein Projekt standardmäßig `DEBUG`. Wenn `DEBUG` definiert ist, <xref:System.Diagnostics.Debug> Klassenmethoden Ausgabewerte erzeugt werden, die **Ausgabe** Fenster. Wenn sie nicht definiert ist, <xref:System.Diagnostics.Debug> Klassenmethoden nicht kompiliert werden und keine Debug-Ausgabe generiert wird.|  
+|`TARGET`|Eine Zeichenfolge, die den Ausgabetyp für das Projekt oder die Einstellung von der Befehlszeile **/target** Option. Die möglichen Werte der `TARGET` sind:<br /><br /> -"Winexe" für eine Windows-Anwendung.<br />-"Exe" für eine Konsolenanwendung.<br />-"Library" für eine Klassenbibliothek.<br />-"Modul" für ein Modul.<br />– Der **/target** Option kann festgelegt werden, der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung. Weitere Informationen finden Sie unter [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TRACE`|Ein `Boolean` -Wert, der festgelegt werden kann, in der **Projekteigenschaften** (Dialogfeld). Standardmäßig alle Konfigurationen für ein Projekt definieren `TRACE`. Wenn `TRACE` definiert ist, <xref:System.Diagnostics.Trace> Klassenmethoden Ausgabewerte erzeugt werden, die **Ausgabe** Fenster. Wenn sie nicht definiert ist, <xref:System.Diagnostics.Trace> Klasse Methoden werden nicht kompiliert und keine `Trace` Ausgabe generiert wird.|  
+|`VBC_VER`|Eine Zahl, die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Version im *wichtigen*. *kleinere* Format. Die Versionsnummer für [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0 ist.|  
   
-### <a name="print-and-display-constants"></a>Drucken und Anzeigekonstanten  
+### <a name="print-and-display-constants"></a>Druck- und Anzeigekonstanten  
  Beim Aufrufen von Druck- und Anzeigefunktionen, können Sie die folgenden Konstanten in Ihrem Code anstelle der eigentlichen Werte.  
   
 |**Konstante**|**Beschreibung**|  
 |---|---|  
-|`vbCrLf`|Wagenrücklauf und Zeilenvorschub-Kombination.|  
+|`vbCrLf`|Wagenrücklauf/Zeilenvorschub-Zeichenkombination.|  
 |`vbCr`|Wagenrücklaufzeichen.|  
 |`vbLf`|Zeilenvorschubzeichen.|  
 |`vbNewLine`|Neue-Zeile-Zeichen.|  
 |`vbNullChar`|NULL-Zeichen.|  
-|`vbNullString`|Nicht identisch mit einer Zeichenfolge der Länge&0; (""); zum Aufrufen externer Prozeduren verwendet.|  
-|`vbObjectError`|Fehlernummer. Benutzerdefinierte Fehlernummern sollten größer als dieser Wert sein. Beispiel:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbNullString`|Nicht derselbe wie eine leere Zeichenfolge (""); für Aufrufe von externen Prozeduren verwendet.|  
+|`vbObjectError`|Fehlernummer. Benutzerdefinierte Fehlernummern müssen größer als dieser Wert sein. Zum Beispiel:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|Tabstoppzeichen.|  
 |`vbBack`|Rücktastenzeichen.|  
 |`vbFormFeed`|In Microsoft Windows verwendet nicht.|  
-|`vbVerticalTab`|In Microsoft Windows nicht sinnvoll.|  
+|`vbVerticalTab`|In Microsoft Windows nicht nützlich.|  
   
 ## <a name="enumerations"></a>Enumerationen  
- In der folgenden Tabelle aufgelistet und beschreibt die Enumerationen von bereitgestellten [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ In der folgenden Tabelle aufgeführt und beschreibt die Enumerationen von bereitgestellten [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 |Enumeration|Beschreibung|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle></xref:Microsoft.VisualBasic.AppWinStyle>|Gibt den Fensterstil für das aufgerufene Programm verwendet werden soll, beim Aufrufen der <xref:Microsoft.VisualBasic.Interaction.Shell%2A>Funktion.</xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
-|<xref:Microsoft.VisualBasic.AudioPlayMode></xref:Microsoft.VisualBasic.AudioPlayMode>|Gibt an, wie Sounds wiederzugeben, wenn audio-Methoden aufgerufen.|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole></xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|Gibt den Typ der Rolle, überprüfen Sie beim Aufrufen der <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>-Methode.</xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
-|<xref:Microsoft.VisualBasic.CallType></xref:Microsoft.VisualBasic.CallType>|Gibt den Typ der Prozedur, die aufgerufen wird, beim Aufrufen der <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>Funktion.</xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
-|<xref:Microsoft.VisualBasic.CompareMethod></xref:Microsoft.VisualBasic.CompareMethod>|Gibt an, wie Zeichenfolgen beim Aufrufen von Vergleichsfunktionen verglichen.|  
-|<xref:Microsoft.VisualBasic.DateFormat></xref:Microsoft.VisualBasic.DateFormat>|Gibt an, wie Datumsangaben beim Aufrufen der <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>Funktion.</xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|  
-|<xref:Microsoft.VisualBasic.DateInterval></xref:Microsoft.VisualBasic.DateInterval>|Gibt an, wie Datumsintervalle beim Aufrufen von Datumsfunktionen festgelegt und formatiert werden.|  
-|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption></xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Gibt an, was geschehen soll, wenn ein Verzeichnis, das gelöscht werden soll, Dateien oder Verzeichnisse enthält.|  
-|<xref:Microsoft.VisualBasic.DueDate></xref:Microsoft.VisualBasic.DueDate>|Gibt an, wann Zahlungen fällig sind beim finanzielle Methoden aufrufen.|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType></xref:Microsoft.VisualBasic.FileIO.FieldType>|Gibt an, ob Textfelder durch Trennzeichen begrenzt werden oder eine feste Breite.|  
-|<xref:Microsoft.VisualBasic.FileAttribute></xref:Microsoft.VisualBasic.FileAttribute>|Gibt die Dateiattribute beim Dateizugriff Funktionen aufrufen.|  
-|<xref:Microsoft.VisualBasic.FirstDayOfWeek></xref:Microsoft.VisualBasic.FirstDayOfWeek>|Gibt den ersten Tag der Woche beim Aufrufen von Datumsfunktionen verwendet.|  
-|<xref:Microsoft.VisualBasic.FirstWeekOfYear></xref:Microsoft.VisualBasic.FirstWeekOfYear>|Gibt die erste Woche des Jahres beim Aufrufen von Datumsfunktionen verwendet.|  
-|<xref:Microsoft.VisualBasic.MsgBoxResult></xref:Microsoft.VisualBasic.MsgBoxResult>|Gibt an, welche Taste gedrückt wurde, in einem Meldungsfeld zurückgegeben, indem die <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>Funktion.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|<xref:Microsoft.VisualBasic.MsgBoxStyle></xref:Microsoft.VisualBasic.MsgBoxStyle>|Gibt an, welche Schaltflächen angezeigt werden, beim Aufrufen der <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>Funktion.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|<xref:Microsoft.VisualBasic.OpenAccess></xref:Microsoft.VisualBasic.OpenAccess>|Gibt an, wie eine Datei zu öffnen, wenn Dateizugriff Funktionen aufgerufen.|  
-|<xref:Microsoft.VisualBasic.OpenMode></xref:Microsoft.VisualBasic.OpenMode>|Gibt an, wie eine Datei zu öffnen, wenn Dateizugriff Funktionen aufgerufen.|  
-|<xref:Microsoft.VisualBasic.OpenShare></xref:Microsoft.VisualBasic.OpenShare>|Gibt an, wie eine Datei zu öffnen, wenn Dateizugriff Funktionen aufgerufen.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption></xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Gibt an, ob eine Datei permanent gelöscht oder im Papierkorb abgelegt werden soll.|  
-|<xref:Microsoft.VisualBasic.FileIO.SearchOption></xref:Microsoft.VisualBasic.FileIO.SearchOption>|Gibt an, ob alle oder nur die Verzeichnisse der obersten Ebene.|  
-|<xref:Microsoft.VisualBasic.TriState></xref:Microsoft.VisualBasic.TriState>|Gibt einen `Boolean` Wert oder ob die Standardeinstellung beim Aufrufen von Funktionen Formatieren von Zahlen verwendet werden soll.|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption></xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Gibt an, welche werden soll, wenn der Benutzer klickt auf **Abbrechen** während eines Vorgangs.|  
-|<xref:Microsoft.VisualBasic.FileIO.UIOption></xref:Microsoft.VisualBasic.FileIO.UIOption>|Gibt an, ob eine Fortschrittsanzeige beim Kopieren, löschen oder Verschieben von Dateien oder Verzeichnisse zu angezeigt.|  
-|<xref:Microsoft.VisualBasic.VariantType></xref:Microsoft.VisualBasic.VariantType>|Gibt den Typ des von zurückgegebenen variant-Objekts die <xref:Microsoft.VisualBasic.Information.VarType%2A>Funktion.</xref:Microsoft.VisualBasic.Information.VarType%2A>|  
-|<xref:Microsoft.VisualBasic.VbStrConv></xref:Microsoft.VisualBasic.VbStrConv>|Gibt den Typ der Konvertierung ausgeführt wird, beim Aufrufen der <xref:Microsoft.VisualBasic.Strings.StrConv%2A>Funktion.</xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|Gibt den Fensterstil für die aufgerufenen Programm verwenden, beim Aufrufen der <xref:Microsoft.VisualBasic.Interaction.Shell%2A> Funktion.|  
+|<xref:Microsoft.VisualBasic.AudioPlayMode>|Gibt an, wie Sounds wiederzugeben, wenn audio Methoden aufrufen.|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|Gibt den Typ der Rolle ein, überprüfen Sie beim Aufrufen der <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> Methode.|  
+|<xref:Microsoft.VisualBasic.CallType>|Gibt den Typ der Prozedur, die aufgerufen werden, beim Aufrufen der <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> Funktion.|  
+|<xref:Microsoft.VisualBasic.CompareMethod>|Gibt an, wie Zeichenfolgen verglichen, beim von Vergleichsfunktionen aufrufen.|  
+|<xref:Microsoft.VisualBasic.DateFormat>|Gibt an, wie zum Anzeigen von Datumsangaben beim Aufrufen der <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> Funktion.|  
+|<xref:Microsoft.VisualBasic.DateInterval>|Gibt an, wie Datumsintervalle beim Aufrufen von Datumsfunktionen festgelegt und formatiert werden.|  
+|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Gibt an, was geschehen soll, wenn ein Verzeichnis, das gelöscht werden soll, Dateien oder Verzeichnisse enthält.|  
+|<xref:Microsoft.VisualBasic.DueDate>|Gibt an, wann Zahlungen fällig sind beim finanzielle Methoden aufrufen.|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Gibt an, ob Textfelder Trennzeichen sind oder fester Breite.|  
+|<xref:Microsoft.VisualBasic.FileAttribute>|Gibt an, die Dateiattribute zu verwendende Dateizugriff Funktionen aufrufen.|  
+|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|Gibt den ersten Tag der Woche beim Aufrufen von Datumsfunktionen verwenden.|  
+|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|Gibt die erste Woche des Jahres beim Aufrufen von Datumsfunktionen verwenden.|  
+|<xref:Microsoft.VisualBasic.MsgBoxResult>|Gibt gemäß Rückgabe durch die <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>-Funktion an, welche Schaltfläche in einem Meldungsfeld gedrückt wurde.|  
+|<xref:Microsoft.VisualBasic.MsgBoxStyle>|Gibt an, welche Schaltflächen beim Aufrufen der <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>-Funktion angezeigt werden.|  
+|<xref:Microsoft.VisualBasic.OpenAccess>|Gibt an, wie eine Datei zu öffnen, beim Dateizugriff Funktionen aufrufen.|  
+|<xref:Microsoft.VisualBasic.OpenMode>|Gibt an, wie eine Datei zu öffnen, beim Dateizugriff Funktionen aufrufen.|  
+|<xref:Microsoft.VisualBasic.OpenShare>|Gibt an, wie eine Datei zu öffnen, beim Dateizugriff Funktionen aufrufen.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Gibt an, ob eine Datei dauerhaft gelöscht oder in den Papierkorb platziert werden soll.|  
+|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Gibt an, ob alle oder nur die Verzeichnisse der obersten Ebene.|  
+|<xref:Microsoft.VisualBasic.TriState>|Gibt eine `Boolean` Wert oder gibt an, ob die Standardeinstellung beim Aufrufen von Funktionen Formatieren von Zahlen verwendet werden soll.|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Gibt an, wie sein soll, wenn der Benutzer klickt auf **"Abbrechen"** während eines Vorgangs.|  
+|<xref:Microsoft.VisualBasic.FileIO.UIOption>|Gibt an, ob ein Statusdialogfeld angezeigt, beim Kopieren, löschen oder Verschieben von Dateien oder Verzeichnisse.|  
+|<xref:Microsoft.VisualBasic.VariantType>|Gibt den Typ des variant-Objekts zurückgegeben wird, indem Sie die <xref:Microsoft.VisualBasic.Information.VarType%2A> Funktion.|  
+|<xref:Microsoft.VisualBasic.VbStrConv>|Gibt an, welche Art der Konvertierung beim Aufruf der <xref:Microsoft.VisualBasic.Strings.StrConv%2A>-Funktion ausgeführt werden soll.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Sprachreferenz](../../visual-basic/language-reference/index.md)   
- [Visual Basic](../../visual-basic/index.md)   
- [Übersicht über Konstanten](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
+ [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
+ [Visual Basic](../../visual-basic/index.md)  
+ [Übersicht über Konstanten](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
  [Übersicht über Enumerationen](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

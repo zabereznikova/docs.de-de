@@ -1,98 +1,81 @@
 ---
-title: "Überladungsauflösung (Visual Basic) | Microsoft-Dokumentation"
+title: "Überladungsauflösung (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, procedures
 - overload resolution
-- procedures, overloading
-- procedures, calling
-- procedure overloading, overload resolution
-- signatures, procedure
-- overloads, resolution
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], calling
+- procedure overloading [Visual Basic], overload resolution
+- signatures [Visual Basic], procedure
+- overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0de3a603fa84a72018a566f6e7182b45e53ec89e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
-Wenn die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler erkennt einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert ist, muss der Compiler entscheiden, welche Überladung aufrufen. Dazu werden die folgenden Schritte ausführen:  
+Wenn die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler erkennt einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert wird, der Compiler muss entscheiden, welche der Überladungen aufrufen. Dies geschieht durch die folgenden Schritte ausführen:  
   
-1.  **Eingabehilfen.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
+1.  **Für die Barrierefreiheit.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
   
-2.  **Anzahl von Parametern.** Überladung, die eine andere Anzahl von Parametern definiert als geliefert werden im Aufruf beseitigt.  
+2.  **Die Anzahl von Parametern.** Überladung, die eine andere Anzahl von Parametern definiert als angegeben wird, werden im Aufruf beseitigt.  
   
-3.  **Parameter-Datentypen.** Der Compiler zieht Instanzmethoden gegenüber Erweiterungsmethoden. Wenn eine beliebige Instanzmethode, erfordert nur erweiterungskonvertierungen entsprechend den Prozeduraufruf gefunden wird, alle Erweiterungsmethoden gelöscht, und der Compiler fährt mit der Instanzmethoden. Wenn keine solche Instanzmethode gefunden wird, weiterhin mit der Instanz und Erweiterungsmethoden.  
+3.  **Parameterdatentypen.** Der Compiler gibt Instanzmethoden über Erweiterungsmethoden. Wenn Instanzmethode, dass erfordert, dass nur erweiterungskonvertierungen entsprechend den Prozeduraufruf gefunden wird, alle Erweiterungsmethoden werden gelöscht, und der Compiler fährt mit nur die Methode Kandidaten Instanz. Wenn keine solche Instanzmethode gefunden wird, wird er mit Instanz- und Erweiterungsmethoden fortgesetzt.  
   
-     In diesem Schritt schließt es eine Überladung für die die Datentypen der aufrufenden Argumente nicht in die Parametertypen, die in der Überladung definiert konvertiert werden können.  
+     In diesem Schritt aber es wird Überladung für die die Datentypen der aufrufenden Argumente in die Parametertypen, die in der Überladung definiert konvertiert werden können.  
   
-4.  **Einschränkende Konvertierungen.** Überladung, die eine einschränkende Konvertierung aus der aufrufenden Argumenttypen mit den Parametertypen definierten erfordert beseitigt. Dies ist der Fall, ob die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On` oder `Off`.  
+4.  **Einschränkende Konvertierungen.** Überladung, die eine einschränkende Konvertierung aus dem aufrufenden Argumenttypen mit den definierten Parametertypen erfordert beseitigt. Dies ist "true" gibt an, ob die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On` oder `Off`.  
   
-5.  **Geringste Erweiterung.** Der Compiler betrachtet die verbleibenden Überladungen paarweise. Für jedes Paar werden die Datentypen der definierten Parameter verglichen. Wenn die entsprechenden Typen in den anderen Typen in einer Überladung alle erweitert werden, beseitigt der Compiler die letztere. Wird beibehalten, also die Überladung, die am wenigsten erweiternde erforderlich sind.  
+5.  **Geringste Erweiterung.** Der Compiler betrachtet die verbleibenden Überladungen paarweise zugeordnet. Für jedes Paar vergleicht er die Datentypen der definierten Parameter. Wenn die Typen in eine der Überladungen, die alle auf die entsprechenden Typen in den anderen erweitert werden, entfällt der Compiler letztere. D. h., behält es die Überladung, die am wenigsten erweiternde erforderlich sind.  
   
-6.  **Einzelne Betrachtung.** Angesichts Überladungen paarweise bis nur eine bleibt Überladung und der Aufruf in diese Überladung löst wird fortgesetzt. Wenn der Compiler die Überladungen, die einem einzelnen Kandidaten reduziert werden kann, wird einen Fehler generiert.  
+6.  **Einzelne geeignet.** Sollten Überladungen paarweise zugeordnet, bis die einzige bleibt Überladung und des Aufrufs an diese Überladung löst wird fortgesetzt. Wenn der Compiler nicht die Überladungen, die einem einzelnen Kandidaten reduziert werden kann, wird einen Fehler generiert.  
   
- Die folgende Abbildung zeigt den Prozess, der bestimmt, welche eine Gruppe von überladenen Versionen aufgerufen.  
+ Die folgende Abbildung zeigt den Prozess, der bestimmt, die eine Reihe von überladenen Versionen aufrufen.  
   
  ![Flussdiagramm des überladungsauflösungsprozesses](./media/overloadres.gif "OverloadRes")  
-Auflösung bei überladenen Versionen  
+Bei überladenen Versionen auflösen  
   
- Das folgende Beispiel veranschaulicht diese überladungsauflösungsprozesses.  
+ Das folgende Beispiel veranschaulicht dieses überladungsauflösungsprozesses.  
   
- [!code-vb[VbVbcnProcedures&#62;](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures&#63;](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
- Im ersten Aufruf beseitigt der Compiler die erste Überladung, da der Typ des ersten Arguments (`Short`) wird in den Typ des entsprechenden Parameters (`Byte`). Klicken Sie dann die dritte Überladung beseitigt, da jeder Argumenttyp der zweiten Überladung (`Short` und `Single`) in den entsprechenden Typ der dritten Überladung erweitert (`Integer` und `Single`). Die zweite Überladung eine geringere Erweiterung erfordert, damit der Compiler für den Aufruf verwendet.  
+ Beim ersten Aufruf beseitigt der Compiler die erste Überladung, da der Typ des ersten Arguments (`Short`) in den Typ des entsprechenden Parameters schränkt (`Byte`). Sie klicken Sie dann die dritte Überladung beseitigt, da jeder Argumenttyp der zweiten Überladung (`Short` und `Single`) in den entsprechenden Typ in die dritte Überladung erweitert (`Integer` und `Single`). Die zweite Überladung eine geringere Erweiterung erfordert, damit der Compiler für den Funktionsaufruf verwendet.  
   
- Im zweiten Aufruf kann nicht der Compiler keine Überladung durch Einschränken beseitigen. Die dritte Überladung beseitigt aus demselben Grund wie im ersten Aufruf, da die zweite Überladung mit geringerer Erweiterung der Argumenttypen aufgerufen werden kann. Jedoch kann der Compiler zwischen der ersten und zweiten Überladung nicht auflösen. Jede verfügt über einen definierten Parametertyp, der in den entsprechenden Typ in einer anderen erweitert wird (`Byte` auf `Short`, aber `Single` , `Double`). Aus diesem Grund generiert der Compiler einen Überladungsauflösungsfehler.  
+ Im zweiten Aufruf kann nicht vom Compiler der Überladungen Einschränken vermieden. Die dritte Überladung beseitigt aus demselben Grund wie der erste Aufruf, da die zweite Überladung mit geringerer Erweiterung der Argumenttypen aufgerufen werden kann. Der Compiler kann nicht zwischen den ersten und zweiten Überladungen jedoch aufgelöst werden. Jede verfügt über einen definierten Parametertyp in den entsprechenden Typ in den anderen erweitert (`Byte` auf `Short`, aber `Single` auf `Double`). Aus diesem Grund generiert der Compiler Fehler Auflösung Überladung.  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>Überladene optionale und ParamArray-Argumente  
- Wenn zwei Überladungen einer Prozedur identische Signaturen verfügen, mit der Ausnahme, dass der letzte Parameter deklariert ist [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in einer anderen, löst der Compiler einen Aufruf an die Prozedur wie folgt:  
+ Wenn zwei Überladungen einer Prozedur identische Signaturen verfügen, mit dem Unterschied, dass der letzte Parameter deklariert wird [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in anderen, löst der Compiler einen Aufruf an diese Prozedur als lautet folgendermaßen:  
   
 |Wenn der Aufruf wird des letzten Arguments als|Der Compiler löst den Aufruf an die Überladung, die das letzte Argument als deklarieren|  
 |---|---|  
-|Kein Wert (Argument ausgelassen)|`Optional`|  
-|Ein einzelner Wert|`Optional`|  
+|Kein Wert (Argument weggelassen)|`Optional`|  
+|ein einzelner Wert|`Optional`|  
 |Zwei oder mehr Werte in einer durch Trennzeichen getrennte Liste|`ParamArray`|  
-|Ein Array von beliebiger Länge (einschließlich eines leeren Arrays)|`ParamArray`|  
+|Ein Array mit beliebiger Länge (einschließlich ein leeres Array)|`ParamArray`|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Optionale Parameter](./optional-parameters.md)   
- [Parameterarrays](./parameter-arrays.md)   
- [Prozedurüberladung](./procedure-overloading.md)   
- [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)   
- [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)   
- [Gewusst wie: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)   
- [Gewusst wie: überladen eine Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [Gewusst wie: überladen eine Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Überlegungen zur prozedurüberladung](./considerations-in-overloading-procedures.md)   
- [Überladungen](../../../../visual-basic/language-reference/modifiers/overloads.md)   
+ [Optionale Parameter](./optional-parameters.md)  
+ [Parameterarrays](./parameter-arrays.md)  
+ [Prozedurüberladung](./procedure-overloading.md)  
+ [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)  
+ [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Gewusst wie: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)  
+ [Gewusst wie: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)  
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
  [Erweiterungsmethoden](./extension-methods.md)

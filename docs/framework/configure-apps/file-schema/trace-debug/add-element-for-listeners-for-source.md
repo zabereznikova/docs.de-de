@@ -1,103 +1,107 @@
 ---
-title: "&lt;add&gt;-Element f&#252;r &lt;listeners&gt; f&#252;r &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add>-Element für <listeners> für <source>"
-  - "add-Element für <listeners> für <source>"
-  - "initializeData-Attribut"
+title: "&lt;Hinzufügen&gt; -Element für &lt;Listener&gt; für &lt;Quelle&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
+helpviewer_keywords:
+- initializeData attribute
+- add element for <listeners> for <source>
+- <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 69a5f855251f1f2c9c94ae3b571b8b78881631fb
+ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/23/2017
 ---
-# &lt;add&gt;-Element f&#252;r &lt;listeners&gt; f&#252;r &lt;source&gt;
-Fügt der `Listeners`\-Auflistung für eine Ablaufverfolgungsquelle einen Listener hinzu.  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Hinzufügen&gt; -Element für &lt;Listener&gt; für &lt;Quelle&gt;
+Fügt einen Listener zu der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.  
   
-## Syntax  
+ \<configuration>  
+\<System.Diagnostics >  
+\<Quellen >  
+\<Quelle >  
+\<Listener >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
   initializeData="data"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Listeners an.  Sie müssen eine Zeichenfolge verwenden, die die in [Angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) angegebenen Anforderungen erfüllt.|  
-|`initializeData`|Optionales Attribut.<br /><br /> Die für die angegebene Klasse an den Konstruktor übergebene Zeichenfolge.  Wenn die Klasse über keinen Konstruktor verfügt, der eine Zeichenfolge akzeptiert, wird eine <xref:System.Configuration.ConfigurationException> ausgelöst.|  
-|`name`|Optionales Attribut.<br /><br /> Gibt den Namen des Listeners an.|  
-|`traceOutputOptions`|Optionales Attribut.<br /><br /> Gibt den <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>\-Eigenschaftswert für den Ablaufverfolgungslistener an.|  
-|\[benutzerdefinierte Attribute\]|Optionale Attribute.<br /><br /> Gibt den Wert der für den Listener spezifischen Attribute an, die von der <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>\-Methode für diesen Listener ermittelt werden.  <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> ist ein Beispiel für ein zusätzliches Attribut, das für die <xref:System.Diagnostics.DelimitedListTraceListener>\-Klasse eindeutig ist.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`type`|Attribut erforderlich, es sei denn, Sie einen Listener im verweisen die `sharedListeners` Auflistung, in dem Fall müssen nur anhand des Namens darauf verwiesen (finden Sie unter der [Beispiel](#example)).<br /><br /> Gibt den Typ des Listeners. Müssen Sie eine Zeichenfolge, die im angegebenen Anforderungen erfüllt verwenden [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebene Klasse an den Konstruktor übergeben werden. Ein <xref:System.Configuration.ConfigurationException> wird ausgelöst, wenn die Klasse keinen Konstruktor verfügt, der eine Zeichenfolge akzeptiert.|  
+|`name`|Optionales Attribut.<br /><br /> Gibt den Namen des Listeners.|  
+|`traceOutputOptions`|Optionales Attribut.<br /><br /> Gibt an, die <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaftswert für den Ablaufverfolgungslistener.|  
+|[benutzerdefinierte Attribute]|Optionale Attribute.<br /><br /> Gibt den Wert für den Listener-spezifische Attribute durch die <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> Methode für diesen Listener. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>ist ein Beispiel für ein zusätzliches Attribut nur für die <xref:System.Diagnostics.DelimitedListTraceListener> Klasse.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Fügt einem Listener in der `Listeners`\-Auflistung für eine Ablaufverfolgungsquelle einen Filter hinzu.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`system.diagnostics`|Gibt die Ablaufverfolgungslistener, die Meldungen sammeln, speichern und weiterleiten, sowie die Ebene an, auf der ein Ablaufverfolgungsschalter festgelegt wird.|  
-|`sources`|Enthält Ablaufverfolgungsquellen, die Ablaufverfolgungsmeldungen initiieren.|  
-|`source`|Gibt eine Ablaufverfolgungsquelle an, die Ablaufverfolgungsmeldungen initiiert.|  
-|`listeners`|Gibt Listener an, die Meldungen sammeln, speichern und weiterleiten.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
+|`sources`|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
+|`source`|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
+|`listeners`|Gibt die Listener, mit die sammeln, speichern und Weiterleiten von Nachrichten an.|  
   
-## Hinweise  
- Die im Lieferumfang des .NET Framework enthaltenen Listenerklassen sind von der <xref:System.Diagnostics.TraceListener>\-Klasse abgeleitet.  
+## <a name="remarks"></a>Hinweise  
+ Die Listenerklassen, die im Lieferumfang von .NET Framework abgeleitet werden, aus der <xref:System.Diagnostics.TraceListener> Klasse.  
   
- Wenn Sie kein `name`\-Attribut des Ablaufverfolgungslisteners angeben, entspricht die <xref:System.Diagnostics.TraceListener.Name%2A>\-Eigenschaft des Ablaufverfolgungslisteners standardmäßig einer leeren Zeichenfolge \(""\).  Wenn die Anwendung über nur einen Listener verfügt, können Sie ihn ohne Angabe eines Namens hinzufügen und unter Angabe einer leeren Zeichenfolge für den Namen entfernen.  Wenn die Anwendung hingegen mehrere Listener aufweist, müssen Sie für jeden Ablaufverfolgungslistener einen eindeutigen Namen angeben, sodass die einzelnen Ablaufverfolgungslistener in der <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=fullName>\-Auflistung ermittelt und verwaltet werden können.  
-  
-> [!NOTE]
->  Wenn Sie mehrere Ablaufverfolgungslistener mit dem gleichen Typ und Namen hinzufügen, wird der `Listeners`\-Auflistung nur ein einziger Ablaufverfolgungslistener dieses Typs und Namens hinzugefügt.  Sie können der `Listeners`\-Auflistung jedoch programmgesteuert mehrere identische Listener hinzufügen.  
-  
- Der Wert des `initializeData`\-Attributs hängt von der Art des erstellten Listeners ab.  `initializeData` muss nicht für alle Ablaufverfolgungslistener angegeben werden.  
+ Wenn Sie keinen angeben der `name` Attribut des Ablaufverfolgungslisteners, die <xref:System.Diagnostics.TraceListener.Name%2A> -Eigenschaft des Ablaufverfolgungslisteners verwendet standardmäßig eine leere Zeichenfolge (""). Wenn die Anwendung nur einen Listener verfügt, können Sie ihn ohne Angabe eines Namens hinzufügen und können Sie diesen entfernen, indem Sie eine leere Zeichenfolge für den Namen angeben. Wenn die Anwendung mehr als einen Listener verfügt, Sie sollten jedoch angeben einen eindeutigen Namen für jeden Ablaufverfolgungslistener, wodurch Sie zum Erkennen und Verwalten einzelner Ablaufverfolgungslistener in der <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> Auflistung.  
   
 > [!NOTE]
->  Wenn Sie das `initializeData`\-Attribut verwenden, wird möglicherweise die Compilerwarnung "Das Attribut "initializeData" ist nicht deklariert" angezeigt. Diese Warnung wird angezeigt, da die Konfigurationseinstellungen anhand der abstrakten Basisklasse <xref:System.Diagnostics.TraceListener> überprüft werden, die das `initializeData`\-Attribut nicht erkennt.  In der Regel können Sie diese Warnung für Implementierungen von Ablaufverfolgungslistenern ignorieren, die über einen Konstruktor mit einem Parameter verfügen.  
+>  Hinzufügen von mehr als ein Ablaufverfolgungslistener des gleichen Typs und mit dem gleichen Namen nur ein einziger Ablaufverfolgungslistener dieses Typs, und nennen Sie die hinzugefügte der `Listeners` Auflistung. Allerdings können Sie programmgesteuert mehrere identische Listener hinzufügen der `Listeners` Auflistung.  
   
- In der folgenden Tabelle werden die im Lieferumfang des .NET Framework enthaltenen Ablaufverfolgungslistener aufgeführt und die Werte der zugehörigen `initializeData`\-Attribute erläutert.  
+ Der Wert für die `initializeData` Attribut hängt vom Typ des Listeners, die Sie erstellen. Nicht alle Ablaufverfolgungslistener erfordern die Angabe `initializeData`.  
   
-|Ablaufverfolgungslistener\-Klasse|initializeData\-Attributwert|  
-|---------------------------------------|----------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>|Der `useErrorStream`\-Wert für den <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>\-Konstruktor.  Legen Sie das `initializeData`\-Attribut auf "`true`" fest, um die Ablaufverfolgungs\- und Debugausgabe in den Standardfehlerstream zu schreiben, oder legen Sie es auf "`false`" fest, um in den Standardausgabestream zu schreiben.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>|Der Name der Datei, in die der <xref:System.Diagnostics.DelimitedListTraceListener> schreibt.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|Der Name einer vorhandenen Ereignisprotokollquelle.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|Der Name der Datei, in die von <xref:System.Diagnostics.EventSchemaTraceListener> geschrieben wird.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|Der Name der Datei, in die von <xref:System.Diagnostics.TextWriterTraceListener> geschrieben wird.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>|Der Name der Datei, in die von <xref:System.Diagnostics.XmlWriterTraceListener> geschrieben wird.|  
+> [!NOTE]
+>  Bei Verwendung der `initializeData` -Attribut, erhalten Sie möglicherweise die compilerwarnung "das Attribut"InitializeData"ist nicht deklariert." Diese Warnung tritt auf, da die Konfigurationseinstellungen für die abstrakte Basisklasse überprüft werden <xref:System.Diagnostics.TraceListener>, die nicht erkennt die `initializeData` Attribut. In der Regel können Sie diese Warnung für Trace-Listener-Implementierungen ignorieren, die über einen Konstruktor verfügen, der einen Parameter akzeptiert.  
   
-## Konfigurationsdatei  
- Dieses Element kann in der Computerkonfigurationsdatei \(**Machine.config**\) und in der Anwendungskonfigurationsdatei verwendet werden.  
+ In der folgenden Tabelle werden die Ablaufverfolgungslistener, die mit .NET Framework enthalten sind, und beschreibt den Wert der ihre `initializeData` Attribute.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie der `Listeners`\-Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp` mithilfe der `<add>`\-Elemente die Listener `console` und `textListener` hinzugefügt werden.  Der `textListener`\-Listener schreibt die Ablaufverfolgungsausgabe in die Datei myListener.log.  
+|Trace Listenerklasse|InitializeData-Attribut-Wert|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|Die `useErrorStream` Wert für die <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> Konstruktor.  Legen Sie die `initializeData` -Attribut auf "`true`"zum Schreiben von Ablaufverfolgung und Debuggen die Ausgabe des Standardfehlerstreams; legen Sie sie auf"`false`" zum Schreiben in den Standardausgabestream.|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Der Name der Datei die <xref:System.Diagnostics.DelimitedListTraceListener> schreibt in.|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Der Name einer vorhandenen Ereignisprotokoll-Quelle.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Der Name der Datei, die die <xref:System.Diagnostics.EventSchemaTraceListener> schreibt in.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Der Name der Datei, die die <xref:System.Diagnostics.TextWriterTraceListener> schreibt in.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Der Name der Datei, die die <xref:System.Diagnostics.XmlWriterTraceListener> schreibt in.|  
   
-```  
+## <a name="configuration-file"></a>Konfigurationsdatei  
+ Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.  
+  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie `<add>` Elemente, die Listener hinzugefügt `console` und `textListener` auf die `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`. Die `textListener` Listener schreibt die Ablaufverfolgungsausgabe in die Datei myListener.log.  
+  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -123,8 +127,8 @@ Fügt der `Listeners`\-Auflistung für eine Ablaufverfolgungsquelle einen Listen
 </configuration>   
 ```  
   
-## Siehe auch  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Schema für Ablaufverfolgungs\- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

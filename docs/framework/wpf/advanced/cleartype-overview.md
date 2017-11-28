@@ -1,78 +1,80 @@
 ---
-title: "&#220;bersicht &#252;ber ClearType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ClearType, Technologie"
-  - "Typografie, ClearType-Technologie"
+title: "Übersicht über ClearType"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], ClearType technology
+- ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c6881482203d86beb3b32b9650ed58b5f7562b8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# &#220;bersicht &#252;ber ClearType
-Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]\-Technologie im [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="cleartype-overview"></a>Übersicht über ClearType
+Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]-Technologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
-   
   
 <a name="overview"></a>   
-## Übersicht über die Technologie  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit auf LCD\-Bildschirmen \(Liquid Crystal Displays\) verbessert wird, z. B. auf Laptopbildschirmen, Pocket PC\-Bildschirmen und Flachbildschirmen.  Dazu greift [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] auf die einzelnen vertikalen Farbstreifenelemente in jedem Pixel auf einem LCD\-Bildschirm zu.  Vor der Einführung von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] war das kleinste Detail, das ein Computer anzeigen konnte, ein einzelnes Pixel. Wird jedoch [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] auf einem LCD\-Monitor ausgeführt, können Textfeatures angezeigt werden, die nur einen Bruchteil eines Pixels breit sind.  Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details bei der Textanzeige, wodurch der Text viel leichter über lange Zeiträume gelesen werden kann.  
+## <a name="technology-overview"></a>Übersicht über die Technologie  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] greift dabei auf die einzelnen vertikalen Farbstreifenelemente in jedem Pixel auf einem LCD-Bildschirm zu. Vor [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] war ein einzelnes Pixel das kleinste Detail, das auf einem Computer angezeigt werden konnte. Mithilfe von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] können Texteigenschaften, die nur einen Bruchteil eines Pixels groß sind, auf einem LCD-Bildschirm dargestellt werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert.  
   
- Die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Version, die in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verfügbar ist, ist die neueste Generation von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] und bietet eine Reihe von Verbesserungen gegenüber der in [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] enthaltenen Version.  
+ Die in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verfügbare [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Technologie gehört der aktuellsten Generation von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] an, die gegenüber der Version in [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] zahlreiche Verbesserungen enthält.  
   
 <a name="sub-pixel_positioning"></a>   
-## Subpixelpositionierung  
- Eine wesentliche Verbesserung gegenüber der Vorgängerversion von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] liegt in der Verwendung der Subpixelpositionierung.  Im Unterschied zu der in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] enthaltenen [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Implementierung gestattet es die in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enthaltene [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Version, dass Symbole innerhalb des Pixels starten und nicht nur am Außenrand des Pixels.  Aufgrund dieser zusätzlichen Auflösung bei der Positionierung von Symbolen sind die Abstände und Proportionen der Symbole präziser und konsistenter.  
+## <a name="sub-pixel-positioning"></a>Subpixel-Positionierung  
+ Eine erhebliche Verbesserung gegenüber der vorherigen Version von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist die Subpixel-Positionierung. Im Gegensatz zur [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Implementierung in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] können Glyphen in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] innerhalb des Pixels beginnen und nicht erst an der Pixelgrenze. Aufgrund dieser zusätzlichen Auflösung bei der Positionierung von Glyphen sind deren Abstände und Proportionen präziser und einheitlicher.  
   
- In den beiden folgenden Beispielen wird veranschaulicht, wie Symbole am Subpixelrand beginnen können, wenn die Subpixelpositionierung verwendet wird.  Im Beispiel links erfolgt das Rendering unter Verwendung der Vorgängerversion des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Renderers, der keine Subpixelpositionierung eingesetzt hat.  Im Beispiel rechts erfolgt das Rendering mit der neuen Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Renderers, der die Subpixelpositionierung verwendet.  Beachten Sie, wie die Buchstaben **e** und **l** im Bild rechts leicht unterschiedlich gerendert werden, weil die Wiedergabe jeweils bei einem anderen Subpixel startet.  Bei der Anzeige des Texts in Normalgröße auf dem Bildschirm ist dieser Unterschied aufgrund des hohen Kontrasts des Symbolbilds nicht bemerkbar.  Dies ist nur dank der ausgereiften Farbfilterung möglich, die in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] integriert ist.  
+ In den folgenden zwei Beispielen wird gezeigt, dass Glyphen auf jeder Subpixelgrenze beginnen können, wenn die Subpixel-Positionierung verwendet wird. Das Beispiel links wird mithilfe der früheren Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers gerendert, der keine Subpixel-Positionierung verwendete. Das Beispiel rechts wird mithilfe der neuen Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers mit der Subpixel-Positionierung gerendert. Beachten Sie, dass die Buchstaben **e** und **l** im Bild rechts minimal anders gerendert werden, da jedes auf einem anderen Subpixel beginnt. Wenn den Text in Normalgröße auf dem Bildschirm angezeigt wird, ist dieser Unterschied aufgrund des hohen Kontrasts des Glyphenbilds nicht wahrnehmbar. Dies ist nur wegen der komplexen, in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] integrierten Farbfilterung möglich.  
   
- ![Text, der mit zwei Versionen von ClearType angezeigt wird](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_01")  
-Mit älterer und neuerer Version von ClearType angezeigter Text  
+ ![Text mit zwei Versionen von ClearType angezeigt](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+Mit zwei Versionen von ClearType angezeigter Text  
   
- In den beiden folgenden Beispielen wird die Ausgabe des älteren [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Renderers mit der neuen Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Renderers verglichen.  Die Subpixelpositionierung \(rechts dargestellt\) verbessert den Zeichenabstand auf dem Bildschirm deutlich, insbesondere bei kleinen Zeichengrößen, bei denen der Unterschied zwischen einem Subpixel und einem ganzen Pixel einen signifikanten Anteil der Zeichenbreite darstellt.  Beachten Sie, dass der Abstand zwischen den Buchstaben im zweiten Bild gleichmäßiger ist.  Der Vorteil, den die Subpixelpositionierung insgesamt für die Darstellung von Text auf dem Bildschirm bringt, ist deutlich größer und stellt eine bedeutsame Weiterentwicklung der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Technologie dar.  
+ In den folgenden beiden Beispielen wird die Ausgabe des älteren [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers mit der neuen Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers verglichen. Die rechts dargestellte Subpixel-Positionierung verbessert den Abstand zwischen Buchstaben auf dem Bildschirm erheblich, insbesondere bei kleinen Schriftgrößen, bei denen der Unterschied zwischen einem Subpixel und einem Pixel einen bedeutenden Anteil an der Glyphenbreite ausmacht. Es ist deutlich zu sehen, dass der Abstand zwischen den Buchstaben im zweiten Bild gleichmäßiger ist. Der kumulierte Vorteil der Subpixel-Positionierung für die Gesamtdarstellung eines Texts auf einem Bildschirm erhöht sich damit beträchtlich und stellt eine wesentliche Weiterentwicklung der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Technologie dar.  
   
- ![Text, der mit einer früheren Version von ClearType angezeigt wird](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_02")  
-Text in älterer und neuerer Version von ClearType  
+ ![Text mit einer früheren Version von ClearType angezeigt](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+Mit einer früheren Version von ClearType angezeigter Text  
   
 <a name="y-direction_antialiasing"></a>   
-## Antialiasing in y\-Richtung  
- Eine weitere Verbesserung durch [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist das Antialiasing in y\-Richtung.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ohne Antialiasing in y\-Richtung liefert eine bessere Auflösung auf der x\-Achse, nicht jedoch auf der y\-Achse.  Oben und unten an den flachen Kurven beeinträchtigen die gezackten Kanten die Lesbarkeit.  
+## <a name="y-direction-antialiasing"></a>Antialiasing auf der y-Achse  
+ Eine weitere Verbesserung von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist das Antialiasing in y-Richtung. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ohne Antialiasing in y-Richtung liefert zwar eine bessere Auflösung auf der x-Achse, nicht jedoch auf der y-Achse. Die Lesbarkeit wird über und unter flachen Kurven durch gezackte Kanten beeinträchtigt.  
   
- Im folgenden Beispiel wird die Darstellung ohne Antialiasing in y\-Richtung veranschaulicht.  Hier fallen die gezackten Kanten oben und unten am Buchstaben deutlich ins Auge.  
+ Im folgenden Beispiel werden die Auswirkungen von fehlendem Antialiasing auf der y-Achse dargestellt. Die gezackten Kanten oben und unten am Buchstaben treten deutlich hervor.  
   
- ![Text mit Flatterrändern an flachen Kurven](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_03")  
-Text mit gezackten Kanten an flachen Kurven  
+ ![Text mit Flatterrändern an flachen Kurven](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+Text mit Flatterrändern an flachen Kurven  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] liefert ein Antialiasing in der y\-Richtung, um die gezackten Kanten zu glätten.  Dies ist besonders wichtig zur Verbesserung der Lesbarkeit ostasiatischer Sprachen, in denen Ideogramme über nahezu gleiche Anteile von horizontalen und vertikalen flachen Kurven verfügen.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt Antialiasing auf der y-Achse zum Glätten der gezackten Kanten bereit. Dies ist besonders für die Verbesserung der Lesbarkeit ostasiatischer Sprachen wichtig, in denen Ideogramme über nahezu gleiche Anteile von horizontalen und vertikalen flachen Kurven verfügen.  
   
- Im folgenden Beispiel wird die Auswirkung eines Antialiasing in y\-Richtung veranschaulicht.  In diesem Fall weist der Buchstabe oben und unten eine geglättete Kurvenlinie auf.  
+ Im folgenden Beispiel wird die Auswirkung von Antialiasing auf der y-Achse gezeigt. In diesem Fall weisen der obere und untere Rand des Buchstabens eine glatte Kurve auf.  
   
- ![Text mit ClearType&#45;Y&#45;Richtung&#45;Antialiasing](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_04")  
-Text mit ClearType\-Antialiasing in y\-Richtung  
+ ![Text mit ClearType-y &#45; Richtung anti &#45; Aliasing](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+Text mit ClearType-Antialiasing auf der y-Achse  
   
 <a name="hardware_acceleration"></a>   
-## Hardwarebeschleunigung  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kann die Hardwarebeschleunigung zur Steigerung der Leistung und zur Reduzierung von CPU\-Auslastung und Systemarbeitsspeicheranforderungen nutzen.  Durch Verwendung der Pixel\-Shader und des Videoarbeitsspeichers der Grafikkarte ermöglicht [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ein schnelleres Rendering von Text, insbesondere bei Animationen.  
+## <a name="hardware-acceleration"></a>Hardwarebeschleunigung  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kann die Hardwarebeschleunigung nutzen, um eine bessere Leistung zu erzielen und die CPU-Auslastung und die Systemspeicheranforderungen zu verringern. Mithilfe der Pixelshader und Videospeicher einer Grafikkarte stellt [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] schnelleres Rendering von Text bereit, besonders bei Animationen.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ändert die systemweiten [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]\-Einstellungen nicht.  Durch Deaktivieren von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] wird für das Antialiasing in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] der Graustufenmodus festgelegt. Außerdem ändert [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] die Einstellungen des [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) nicht.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ändert die systemweiten [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Einstellungen nicht. Durch das Deaktivieren von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] wird das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Antialiasing auf den Graustufenmodus festgelegt. Darüber hinaus ändert [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nicht die Einstellungen von [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
- Für das Architekturdesign von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wurde die Entscheidung getroffen, ein auflösungsunabhängiges Layout mit besserer Unterstützung für DPI\-Monitore mit höherer Auflösung zu erreichen, die immer mehr Verbreitung finden.  Dies hat zur Folge, dass [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] das Textrendering mit Aliasing oder die Bitmaps in bestimmten ostasiatischen Schriftarten nicht unterstützt, da diese Funktionen auflösungsabhängig sind.  
+ Eine der Designentscheidungen hinsichtlich der Architektur von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bestand darin, dass das von Auflösung unabhängige Layout höher auflösende DPI-Monitore besser unterstützen soll, da diese immer mehr Verbreitung finden. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] unterstützt daher weder Textrendering mit Aliasing noch die Bitmaps in bestimmten ostasiatischen Schriftarten, da beides von der Auflösung abhängt.  
   
 <a name="further_information"></a>   
-## Weitere Informationen  
- [ClearType\-Informationen](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
+## <a name="further-information"></a>Weitere Informationen  
+ [ClearType Information (ClearType-Informationen)](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
  [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
-## Siehe auch  
- [ClearType\-Registrierungseinstellungen](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+## <a name="see-also"></a>Siehe auch  
+ [ClearType Registry Settings (ClearType-Registrierungseinstellungen)](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

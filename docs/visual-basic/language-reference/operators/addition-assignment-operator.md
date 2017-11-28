@@ -1,76 +1,73 @@
 ---
-title: "+= Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.+="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "+= operator [Visual Basic]"
-  - "assignment statements, compound"
-  - "statements [Visual Basic], compound assignment"
-  - "+= operator [Visual Basic], appending strings"
-  - "compound assignment statements"
+title: +=-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.+=
+helpviewer_keywords:
+- += operator [Visual Basic]
+- assignment statements [Visual Basic], compound
+- statements [Visual Basic], compound assignment
+- += operator [Visual Basic], appending strings
+- compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4ac8f5679aa90c50c15c33a957cfc75d9ccecde6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# += Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Addiert den Wert eines numerischen Ausdrucks zum Wert einer numerischen Variablen oder Eigenschaft und weist der Variablen bzw. der Eigenschaft das Ergebnis zu.  Kann auch verwendet werden, um einen `String`\-Ausdruck mit einer `String`\-Variablen oder String\-Eigenschaft zu verketten und der Variablen bzw. Eigenschaft das Ergebnis zuzuweisen.  
+# <a name="-operator-visual-basic"></a>+=-Operator (Visual Basic)
+Fügt den Wert eines numerischen Variablen oder einer Eigenschaft den Wert eines numerischen Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft. Kann auch zum Verketten verwendet eine `String` Ausdruck, der eine `String` Variablen oder einer Eigenschaft und das Ergebnis der Variablen oder Eigenschaft zuzuweisen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 variableorproperty += expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich.  Beliebige numerische Variable\/Eigenschaft oder beliebige `String`\-Variable\/\-Eigenschaft.  
+ Erforderlich. Ein beliebiges numerisches oder `String` Variablen oder Eigenschaft.  
   
  `expression`  
- Erforderlich.  Beliebiger numerischer oder `String`\-Ausdruck.  
+ Erforderlich. Ein beliebiges numerisches oder `String` Ausdruck.  
   
-## Hinweise  
- Das Element auf der linken Seite des Operators `+=` kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein.  Die Variable oder die Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)sein.  
+## <a name="remarks"></a>Hinweise  
+ Das Element auf der linken Seite von der `+=` Operator kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Der `+=`\-Operator fügt den Wert für das Recht der Variablen oder Eigenschaft auf der linken Seite hinzu und weist das Ergebnis der Variablen oder Eigenschaft auf der linken Seite.  Der `+=`\-Operator kann auch verwendet werden, um den `String` Ausdruck für das Recht zur `String`\-Variablen oder Eigenschaft auf der linken Seite zu verketten und weist das Ergebnis der Variablen oder Eigenschaft auf der linken Seite.  
+ Die `+=` Operator fügt den Wert auf der rechten Seite der Variablen oder Eigenschaft auf der linken und weist das Ergebnis der Variablen oder Eigenschaft auf der linken Seite. Die `+=` -Operator kann auch zum Verketten verwendet werden die `String` Ausdruck auf der rechten Seite, um die `String` Variable oder die Eigenschaft auf der linken Seite und weisen das Ergebnis der Variablen oder Eigenschaft auf der linken Seite.  
   
 > [!NOTE]
->  Wenn Sie den Operator `+=` verwenden, können Sie nicht immer bestimmen, ob eine Addition oder eine Zeichenverkettung erfolgt.  Verwenden Sie für die Verkettung den Operator `&=`, um Mehrdeutigkeiten zu vermeiden und sich selbst dokumentierenden Code zu erhalten.  
+>  Bei Verwendung der `+=` -Operator, Sie möglicherweise nicht zu bestimmen, ob die Addition oder Zeichenfolge Verkettung erfolgt. Verwenden der `&=` Operator zum Verketten, um Mehrdeutigkeit zu vermeiden und sich selbst dokumentierenden Code bereitzustellen.  
   
- Dieser Zuweisungsoperator führt implizit erweiternde Konvertierungen durch, jedoch keine einschränkende Konvertierungen, wenn die Kompilierungsumgebung eine strikte Semantik zwingend vorgibt.  Weitere Informationen zu diesen Konvertierungen finden Sie unter [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  Weitere Informationen zur strikten und zur freien Semantik finden Sie unter [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ Dieser Zuweisungsoperator führt implizit erweiternde jedoch keine einschränkende Konvertierungen, wenn der kompilierungsumgebung strikte Semantik erzwingt. Weitere Informationen zu dieser Konvertierungen finden Sie unter [Widening und einschränkende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Weitere Informationen zu strikte und flexible Semantik, finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
- Wenn eine freie Semantik erlaubt ist, führt der Operator `+=` implizit eine Reihe von Zeichenfolgenkonvertierungen und numerischen Konvertierungen durch, die mit denen des Operators `+` identisch sind.  Ausführliche Informationen zu diesen Konvertierungen finden Sie unter [\+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md).  
+ Wenn Semantik zulässig sind, die `+=` Operator führt implizit eine Vielzahl von Zeichenfolgen und numerische Konvertierungen identisch, mit denen die `+` Operator. Ausführliche Informationen zu dieser Konvertierungen, finden Sie unter [+-Operator](../../../visual-basic/language-reference/operators/addition-operator.md).  
   
-## Überladen  
- Der Operator `+` kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Das Überladen des Operators `+` hat Auswirkungen auf das Verhalten des Operators `+=`.  Wenn im Code `+=` für eine Klasse oder Struktur verwendet wird, die `+` überlädt, müssen Sie das neu definierte Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Überladen  
+ Die `+` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Überladen der `+` Operator wirkt sich auf das Verhalten der `+=` Operator. Wenn im Code verwendet `+=` auf eine Klasse oder Struktur, die Überladungen `+`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Beispiel  
- Im folgenden Beispielen wird der Operator `+=` verwendet, um die Werte zweier Variablen zu kombinieren.  Der erste Teil verwendet `+=` mit numerischen Variablen, um einen Wert zu einem anderen hinzuzuaddieren.  Der zweite Teil verwendet `+=` mit `String`\-Variablen, um einen Wert mit einem anderen Wert zu verketten.  In beiden Fällen wird das Ergebnis der ersten Variablen zugewiesen.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `+=` Operator, um den Wert einer Variablen mit einem anderen zu kombinieren. Der erste Teil verwendet `+=` mit numerischen Variablen einen Wert in einen anderen hinzufügen. Der zweite Teil verwendet `+=` mit `String` Variablen einen Wert mit einem anderen zu verketten. In beiden Fällen ist das Ergebnis der ersten Variablen zugewiesen.  
   
  [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
   
  [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
   
- Der Wert von `num1` ist jetzt 13, und der Wert von `str1` ist jetzt "103".  
+ Der Wert der `num1` ist jetzt 13 und den Wert des `str1` ist jetzt "103".  
   
-## Siehe auch  
- [\+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Concatenation Operators](../../../visual-basic/language-reference/operators/concatenation-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Siehe auch  
+ [+-Operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

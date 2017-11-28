@@ -1,63 +1,62 @@
 ---
-title: "Iterator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Iterator"
-helpviewer_keywords: 
-  - "Iterator keyword [Visual Basic]"
+title: Iterator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Iterator
+helpviewer_keywords: Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Iterator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt an, dass eine Funktion oder ein `Get` Accessor ein Iterator ist.  
+# <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
+Gibt an, dass eine Funktion oder `Get` Accessor, der ein Iterator.  
   
-## Hinweise  
- Ein *Iterator* führt eine benutzerdefinierte Iteration durch eine Auflistung aus.  Ein Iterator verwendet die [Ertrag](../../../visual-basic/language-reference/statements/yield-statement.md)\-Anweisung, um jedes einzelne Element in der Auflistung zurückgegeben werden soll.  Wenn eine `Yield`\-Anweisung erreicht wird, wird der aktuelle Position im Code beibehalten.  Die Ausführung wird von diesem Speicherort beim nächsten Mal neu gestartet, dass die Iterator Funktion aufgerufen wird.  
+## <a name="remarks"></a>Hinweise  
+ Ein *Iterator* führt eine benutzerdefinierte Iteration durch eine Auflistung. Ein Iterator verwendet die [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) Anweisung, um jedes Element in der Auflistung zu einem Zeitpunkt zurückzugeben. Wenn eine `Yield` Anweisung erreicht wird, wird die aktuelle Position im Code wird beibehalten. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
   
- Ein Iterator kann als Funktion oder als `Get` Accessor einer Eigenschaftendefinition implementiert werden.  Der `Iterator`\-Modifizierer wird in der Deklaration der Iterator `Get`\-Funktion oder des Accessors.  
+ Ein Iterator kann implementiert werden, wie eine Funktion oder als eine `Get` Accessor, der eine Eigenschaftsdefinition. Die `Iterator` Modifizierer wird angezeigt, in der Deklaration der Iteratorfunktion oder `Get` Accessor.  
   
- Sie rufen den Iterator im Clientcode an, indem Sie [For Each...Next\-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md) verwenden.  
+ Sie rufen einen Iterator im Clientcode mithilfe einer [für jede... Nächste Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- Der Rückgabetyp einer Funktion oder eines `Get` Iterator <xref:System.Collections.IEnumerable> Accessors kann, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.  
+ Der Rückgabetyp einer Funktion Iterator oder `Get` Accessor kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, oder <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Ein Iterator `ByRef` darf keine Parameter enthalten.  
+ Ein Iterator keine `ByRef` Parameter.  
   
- Ein Iterator kann nicht in einem Ereignis in einem Instanzenkonstruktor, in einem statischen Konstruktor oder Destruktor in einem statischen auftreten.  
+ Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Destruktor vorkommen.  
   
- Ein Iterator kann eine anonyme Funktion sein.  Weitere Informationen finden Sie unter [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+ Ein Iterator kann mit einer anonymen Funktion sein. Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
- Weitere Informationen zu Iteratoren finden Sie unter [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen zu Iteratoren finden Sie unter [Iterators (Iteratoren)](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
-## Verwendung  
- Der `Iterator`\-Modifizierer kann in folgenden Kontexten verwendet werden:  
+## <a name="usage"></a>Verwendung  
+ Der `Iterator`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
--   [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## Beispiel  
- Im folgenden Beispiel wird ein Iterator für Reservierungen.  Die Iterator `Yield`\-Funktion ist eine Anweisung, die innerhalb einer Schleife [Weitere… Next](../../../visual-basic/language-reference/statements/for-next-statement.md) ist.  Jede Iteration des Anweisungstexts [Für jedes](../../../visual-basic/language-reference/statements/for-each-next-statement.md) in `Main` erstellt einen Aufruf der `Power` Iterator für Reservierungen.  Jeder Aufruf der Iterator zur nächsten wechselt das Feature für die Ausführung der Anweisung über `Yield`, die während der nächsten Iteration der Schleife `For…Next` auftritt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird eine Iteratorfunktion veranschaulicht. Der Iteratorfunktion verfügt über eine `Yield` -Anweisung, die innerhalb einer [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. Jede Iteration der der [für jede](../../../visual-basic/language-reference/statements/for-each-next-statement.md) -Anweisungstexts in `Main` erzeugt einen Aufruf an die `Power` Iteratorfunktion. Jeder Aufruf der Iteratorfunktion führt bei der nächsten Iteration der `Yield`-Schleife zur nächsten Ausführung der `For…Next`-Anweisung.  
   
  [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird ein `Get` Accessor, der einen Iterator ist.  Der `Iterator`\-Modifizierer ist in die Eigenschaftendeklaration.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt einen `Get`-Accessor, der ein Iterator ist. Die `Iterator` Modifizierer ist in der Eigenschaftendeklaration.  
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- Weitere Beispiele finden Sie unter [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Beispiele finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
-## Siehe auch  
- <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>   
- [Iteratoren](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)   
- [Yield\-Anweisung](../../../visual-basic/language-reference/statements/yield-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
+ [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [Yield-Anweisung](../../../visual-basic/language-reference/statements/yield-statement.md)

@@ -1,38 +1,30 @@
 ---
-title: 'Gewusst wie: Erstellen einer Struktur aus XmlReader (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Erstellen einer Struktur aus XmlReader (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8dff4e518d8850b4050389e5677ac81ecd1e074
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4ceae7c2bee85e7b368322c8ba195dea9feff672
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Gewusst wie: Erstellen einer Struktur aus XmlReader (Visual Basic)
-In diesem Thema veranschaulicht, wie eine XML-Struktur direkt in eine <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> erstellen Erstellen einer <xref:System.Xml.Linq.XElement>aus einer <xref:System.Xml.XmlReader>, müssen Sie Positionieren der <xref:System.Xml.XmlReader>auf einem Elementknoten.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XElement> Die <xref:System.Xml.XmlReader>überspringt Kommentare und verarbeitungsanweisungen, aber wenn die <xref:System.Xml.XmlReader>befindet sich in einem Textknoten kann ein Fehler ausgelöst.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> Um solche Fehler zu vermeiden, immer die positionieren Sie <xref:System.Xml.XmlReader>auf ein Element vor dem Erstellen einer XML-Struktur aus der <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader>  
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Vorgehensweise: Erstellen einer Struktur aus XmlReader (Visual Basic)
+In diesem Thema wird erläutert, wie Sie direkt aus einem <xref:System.Xml.XmlReader> eine XML-Struktur erstellen können. Um aus einem <xref:System.Xml.Linq.XElement> ein <xref:System.Xml.XmlReader> zu erstellen, müssen Sie den <xref:System.Xml.XmlReader> in einem Elementknoten positionieren. Der <xref:System.Xml.XmlReader> überspringt Kommentare und Verarbeitungsanweisungen, aber wenn der <xref:System.Xml.XmlReader> in einem Textknoten positioniert wird, wird eine Fehlermeldung ausgegeben. Diese Fehlermeldung können Sie vermeiden, indem Sie den <xref:System.Xml.XmlReader> immer in einem Element platzieren, bevor Sie ihn als Grundlage für das Erstellen einer XML-Struktur verwenden aus der <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Bücher (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
- Der folgende Code erstellt ein `T:System.Xml.XmlReader`-Objekt und liest dann so lange Knoten, bis er den ersten Elementknoten findet. Daraufhin lädt er das <xref:System.Xml.Linq.XElement>Objekt.</xref:System.Xml.Linq.XElement>  
+ Der folgende Code erstellt ein `T:System.Xml.XmlReader`-Objekt und liest dann so lange Knoten, bis er den ersten Elementknoten findet. Daraufhin lädt er das <xref:System.Xml.Linq.XElement>-Objekt.  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  

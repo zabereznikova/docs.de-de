@@ -1,78 +1,73 @@
 ---
-title: "* Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.*"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arithmetic operators, multiplication"
-  - "operators [Visual Basic], multiplication"
-  - "* operator [Visual Basic]"
-  - "multiplication operator, syntax"
-  - "math operators"
+title: '* Operator (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.*
+helpviewer_keywords:
+- arithmetic operators [Visual Basic], multiplication
+- operators [Visual Basic], multiplication
+- '* operator [Visual Basic]'
+- multiplication operator [Visual Basic], syntax
+- math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 450d728e44ef5639d75369e05b47cb3009b4d769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# * Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="-operator-visual-basic"></a>*-Operator (Visual Basic)
 Multipliziert zwei Zahlen miteinander.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 number1 * number2  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`number1`|Erforderlich.  Ein beliebiger numerischer Ausdruck.|  
-|`number2`|Erforderlich.  Ein beliebiger numerischer Ausdruck.|  
+|---|---|  
+|`number1`|Erforderlich. Ein beliebiger numerischer Ausdruck.|  
+|`number2`|Erforderlich. Ein beliebiger numerischer Ausdruck.|  
   
-## Ergebnis  
- Das Ergebnis ist das Produkt von `number1` und `number2`.  
+## <a name="result"></a>Ergebnis  
+ Das Ergebnis ist das Produkt der `number1` und `number2`.  
   
-## Unterstützte Typen  
- Alle numerischen Typen, einschließlich Typen ohne Vorzeichen, Gleitkommatypen sowie `Decimal`.  
+## <a name="supported-types"></a>Unterstützte Typen  
+ Alle numerischen Typen, einschließlich der Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
   
-## Hinweise  
- Der Datentyp des Ergebnisses hängt von den Typen der Operanden ab.  Die folgende Tabelle zeigt, wie der Datentyp des Ergebnisses bestimmt wird.  
+## <a name="remarks"></a>Hinweise  
+ Der Datentyp des Ergebnisses hängt von den Typen der Operanden ab. Die folgende Tabelle zeigt, wie der Datentyp des Ergebnisses bestimmt wird.  
   
-|||  
-|-|-|  
-|Operandendatentypen|Ergebnisdatentyp|  
-|Beide Ausdrücke sind ganzzahlige Datentypen \([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)\).|Ein numerischer Datentyp, der sich für die Datentypen `number1` und `number2` eignet.  Siehe die "Ganzzahlarithmetik"\-Tabellen in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Beide Ausdrücke sind [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md).|`Decimal`|  
-|Beide Ausdrücke sind [Single](../../../visual-basic/language-reference/data-types/single-data-type.md).|`Single`|  
-|Beide Ausdrücke sind Gleitkomma\-Datentypen \(`Single` oder [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)\), sie sind jedoch nicht beide `Single`. \(Beachten Sie, dass `Decimal` keinen Gleitkomma\-Datentyp darstellt.\)|`Double`|  
+|Datentypen der Operanden|Der Ergebnisdatentyp|  
+|---|---|  
+|Beide Ausdrücke sind ganzzahlige Datentypen (["SByte"](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [kurze](../../../visual-basic/language-reference/data-types/short-data-type.md), ["ushort"](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Ganzzahl](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [lange](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|Einen numerischen Datentyp aufweisen, die für die Datentypen der entsprechenden `number1` und `number2`. Finden Sie in den Tabellen "Ganzzahlarithmetik" in [Datentypen von Operatorergebnissen Daten](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Beide Ausdrücke [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
+|Beide Ausdrücke [einzelne](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
+|Einer der Ausdrücke ist ein Gleitkomma-Datentyp (`Single` oder [doppelte](../../../visual-basic/language-reference/data-types/double-data-type.md)), aber nicht beides `Single` (Hinweis `Decimal` kein Gleitkommadatentyp)|`Double`|  
   
- Wenn ein Ausdruck [Nothing](../../../visual-basic/language-reference/nothing.md) ergibt, wird er wie 0 behandelt.  
+ Wenn ein Ausdruck ergibt [nichts](../../../visual-basic/language-reference/nothing.md), wird dies als 0 (null) behandelt.  
   
-## Überladen  
- Der Operator `*` kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Wenn Sie diesen Operator im Code auf eine solche Klasse oder Struktur anwenden, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Überladen  
+ Die `*` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Wenn im Code dieser Operator auf eine solche Klasse oder Struktur verwendet, achten Sie darauf, dass Sie dessen neu definierten Verhalten verstehen. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Beispiel  
- In diesem Beispiel werden mit dem Operator `*` zwei Zahlen multipliziert.  Das Ergebnis ist das Produkt der zwei Operanden.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet die `*` Operator zum Multiplizieren zweier Zahlen. Das Ergebnis ist das Produkt der beiden Operanden.  
   
  [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
-## Siehe auch  
- [\*\= Operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Siehe auch  
+ [* =-Operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

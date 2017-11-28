@@ -1,48 +1,55 @@
 ---
-title: "Benutzerdefinierte zusammengesetzte Designer – Workflowelementpr&#228;sentation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5390aed3af9146700a4dca7c5b56ddabdca993dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Benutzerdefinierte zusammengesetzte Designer – Workflowelementpr&#228;sentation
-<xref:System.Activities.Design.WorkflowItemsPresenter> ist ein Haupttyp im WF\-Designer\-Programmiermodell, der die Bearbeitung einer Auflistung enthaltener Elemente zulässt.In dem Beispiel wird veranschaulicht, wie ein Aktivitätsdesigner erstellt wird, der eine solche bearbeitbare Auflistung aufweist.  
+# <a name="custom-composite-designers---workflow-items-presenter"></a>Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation
+<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> ist ein Haupttyp im WF-Designer-Programmiermodell, der die Bearbeitung einer Auflistung enthaltener Elemente zulässt. In dem Beispiel wird veranschaulicht, wie ein Aktivitätsdesigner erstellt wird, der eine solche bearbeitbare Auflistung aufweist.  
   
  Dieses Beispiel veranschaulicht Folgendes:  
   
--   Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Design.WorkflowItemsPresenter>.  
+-   Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.  
   
 -   Erstellen eines Aktivitätsdesigners mit einer "reduzierten" und "erweiterten" Ansicht.  
   
 -   Überschreiben eines standardmäßigen Designers in einer neu gehosteten Anwendung.  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Öffnen Sie die Beispielprojektmappe **UsingWorkflowItemsPresenter.sln** für C\# oder VB in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Öffnen der **UsingWorkflowItemsPresenter.sln** Beispielprojektmappe für c# oder VB in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Erstellen Sie die Projektmappe, und führen Sie sie aus.Eine neu gehostete Workflow\-Designer\-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.  
+2.  Erstellen Sie die Projektmappe, und führen Sie sie aus. Eine neu gehostete Workflow-Designer-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.  
   
-## Das Wichtigste zum Beispiel  
+## <a name="sample-highlights"></a>Das Wichtigste zum Beispiel  
  Der Code für dieses Beispiel zeigt Folgendes:  
   
 -   Die Aktivität, für die ein Designer erstellt wird: `Parallel`  
   
--   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Design.WorkflowItemsPresenter>.Einige wichtige Punkte:  
+-   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Einige wichtige Punkte:  
   
-    -   Beachten Sie die Verwendung der WPF\-Datenbindung, um eine Bindung an `ModelItem.Branches` auszuführen.`ModelItem` ist die Eigenschaft im <xref:System.Activities.Design.WorkflowElementDesigner>, die auf das zugrunde liegende Objekt verweist, für das der Designer verwendet wird; in diesem Fall `Parallel`.  
+    -   Beachten Sie die Verwendung der WPF-Datenbindung, um eine Bindung an `ModelItem.Branches` auszuführen. `ModelItem` ist die Eigenschaft im `WorkflowElementDesigner`, die auf das zugrunde liegende Objekt verweist, für das der Designer verwendet wird; in diesem Fall `Parallel`.  
   
-    -   <xref:System.Activities.Design.WorkflowItemsPresenter.SpacerTemplate%2A> kann verwendet werden, um ein visuelle Trennung festzulegen, die zwischen den einzelnen Elementen in der Auflistung angezeigt werden soll.  
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> kann verwendet werden, um ein visuelle Trennung festzulegen, die zwischen den einzelnen Elementen in der Auflistung angezeigt werden soll.  
   
-    -   <xref:System.Activities.Design.WorkflowItemsPresenter.ItemsPanel%2A> ist eine Vorlage, die bereitgestellt werden kann, um das Layout der Elemente in der Auflistung zu bestimmen.In diesem Fall wird ein horizontaler Stapelbereich verwendet.  
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> ist eine Vorlage, die bereitgestellt werden kann, um das Layout der Elemente in der Auflistung zu bestimmen. In diesem Fall wird ein horizontaler Stapelbereich verwendet.  
   
  Dies wird im folgenden Codebeispiel gezeigt.  
   
@@ -60,10 +67,9 @@ caps.handback.revision: 12
       </ItemsPanelTemplate>  
     </sad:WorkflowItemsPresenter.ItemsPanel>  
   </sad:WorkflowItemsPresenter>  
-  
 ```  
   
--   Führen Sie eine Zuordnung von `DesignerAttribute` zum `Parallel`\-Typ aus, und geben Sie dann die gemeldeten Attribute aus.  
+-   Führen Sie eine Zuordnung von `DesignerAttribute` zum `Parallel`-Typ aus, und geben Sie dann die gemeldeten Attribute aus.  
   
     -   Registrieren Sie zuerst alle standardmäßigen Designer.  
   
@@ -73,7 +79,6 @@ caps.handback.revision: 12
 // register metadata  
 (new DesignerMetadata()).Register();  
 RegisterCustomMetadata();  
-  
 ```  
   
 ```vb  
@@ -82,15 +87,12 @@ Dim metadata = New DesignerMetadata()
 metadata.Register()  
 ' register custom metadata  
 RegisterCustomMetadata()  
-  
 ```  
   
--   -   Überschreiben Sie dann "Parallel" in der `RegisterCustomMetadata`\-Methode.  
+    -   Überschreiben Sie dann "Parallel" in der `RegisterCustomMetadata`-Methode.  
   
- Im folgenden Code wird dies in C\# und Visual Basic veranschaulicht.  
-  
- C\#  
-  
+ Im folgenden Code wird dies in C# und Visual Basic veranschaulicht.  
+ 
 ```csharp  
 void RegisterCustomMetadata()  
 {  
@@ -98,7 +100,6 @@ void RegisterCustomMetadata()
       builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));  
       MetadataStore.AddAttributeTable(builder.CreateTable());  
 }  
-  
 ```  
   
 ```vb  
@@ -107,10 +108,9 @@ Sub RegisterCustomMetadata()
    builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))  
    MetadataStore.AddAttributeTable(builder.CreateTable())  
 End Sub  
-  
 ```  
   
--   Beachten Sie schließlich die Verwendung unterschiedlicher Datenvorlagen und Trigger, um die entsprechende Vorlage auf Grundlage der `IsRootDesigner`\-Eigenschaft auszuwählen.  
+-   Beachten Sie schließlich die Verwendung unterschiedlicher Datenvorlagen und Trigger, um die entsprechende Vorlage auf Grundlage der `IsRootDesigner`-Eigenschaft auszuwählen.  
   
  Nachfolgend ist das Codebeispiel angegeben.  
   
@@ -155,18 +155,17 @@ End Sub
     <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
   </Grid>  
 </sad: ActivityDesigner>  
-  
 ```  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
-## Siehe auch  
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>   
- [Entwickeln von Anwendungen mit dem Workflow\-Designer](../Topic/Developing%20Applications%20with%20the%20Workflow%20Designer.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
+ [Entwickeln von Anwendungen mit dem Workflow-Designer](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

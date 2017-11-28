@@ -1,45 +1,37 @@
 ---
-title: Funktionale Konstruktion (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation
+title: Funktionale Konstruktion (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fa8cb3c97a1e23a863296c828c82b240e9ab5db
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d5c68fb71fd59d08574cee9eec933cee25e504d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Funktionale Konstruktion (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]bietet eine leistungsfähige Möglichkeit zur Erstellung von XML-Elementen *funktionale Konstruktion*. Funktionale Konstruktion ist die Fähigkeit, eine XML-Struktur in einer einzelnen Anweisung zu erstellen.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet mit der *funktionalen Konstruktion* eine leistungsfähige Möglichkeit zur Erstellung von XML-Elementen. Funktionale Konstruktion ist die Fähigkeit, eine XML-Struktur in einer einzelnen Anweisung zu erstellen.  
   
- Es gibt mehrere wichtige Features der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Programmierschnittstelle, die für die funktionale Konstruktion verantwortlich sind:  
+ Es gibt mehrere wichtige Features der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Programmierschnittstelle, die für die funktionale Konstruktion verantwortlich sind:  
   
--   Die <xref:System.Xml.Linq.XElement>Konstruktor akzeptiert verschiedene Argumentarten als Inhalt.</xref:System.Xml.Linq.XElement> Sie können z. B. übergeben einer anderen <xref:System.Xml.Linq.XElement>-Objekt, das ein untergeordnetes Element wird.</xref:System.Xml.Linq.XElement> Sie können übergeben ein <xref:System.Xml.Linq.XAttribute>-Objekt, das ein Attribut des Elements wird.</xref:System.Xml.Linq.XAttribute> Oder Sie übergeben ein beliebiges anderes Objekt, das in eine Zeichenfolge konvertiert wird und zum Textinhalt des Elements wird.  
+-   Der <xref:System.Xml.Linq.XElement>-Konstruktor akzeptiert verschiedene Argumentarten als Inhalt. So können Sie z. B. ein anderes <xref:System.Xml.Linq.XElement>-Objekt übergeben, das zu einem untergeordneten Element wird. Sie können auch ein <xref:System.Xml.Linq.XAttribute>-Objekt übergeben, das zu einem Attribut des Elements wird. Oder Sie übergeben ein beliebiges anderes Objekt, das in eine Zeichenfolge konvertiert wird und zum Textinhalt des Elements wird.  
   
--   Die <xref:System.Xml.Linq.XElement>Konstruktor akzeptiert ein `params` Array vom Typ <xref:System.Object>, sodass Sie beliebig viele Objekte an den Konstruktor übergeben können.</xref:System.Object> </xref:System.Xml.Linq.XElement> Auf diese Weise können Sie ein Element erstellen, das über komplexen Inhalt verfügt.  
+-   Der <xref:System.Xml.Linq.XElement>-Konstruktor verwendet ein `params`-Array vom Typ <xref:System.Object>, sodass Sie beliebig viele Objekte an den Konstruktor übergeben können. Auf diese Weise können Sie ein Element erstellen, das über komplexen Inhalt verfügt.  
   
--   Wenn ein Objekt implementiert <xref:System.Collections.Generic.IEnumerable%601>, die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung hinzugefügt werden.</xref:System.Collections.Generic.IEnumerable%601> Wenn die Auflistung enthält <xref:System.Xml.Linq.XElement>oder <xref:System.Xml.Linq.XAttribute>Objekte, die jedes Element in der Auflistung getrennt hinzugefügt.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> Dies ist wichtig, da Sie die Übergabe der Ergebnisse von können eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfrage an den Konstruktor.  
+-   Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XElement>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Dies ist wichtig, da Sie auf diese Weise die Ergebnisse einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage an den Konstruktor übergeben können.  
   
  Im Folgenden finden Sie ein Beispiel dazu:  
   
- Diese Funktionen ermöglichen Ihnen das Schreiben von Code mit XML-Literalen, um eine XML-Struktur zu erstellen und Code schreiben, der die Ergebnisse der [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen, wenn Sie eine XML-Struktur erstellen:  
+ Diese Funktionen ermöglichen es Ihnen das Schreiben von Code mit XML-Literale, eine XML-Struktur erstellen und Code schreiben, verwendet die Ergebnisse der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen, wenn Sie eine XML-Struktur erstellen:  
   
 ```vb  
 Dim srcTree As XElement = _  

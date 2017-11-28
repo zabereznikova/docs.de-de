@@ -1,45 +1,43 @@
 ---
-title: "Ansi (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Ansi"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Declare statement, marshaling strings"
-  - "ANSI, Visual Basic"
-  - "ANSI"
+title: Ansi (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Ansi
+helpviewer_keywords:
+- Declare statement [Visual Basic], marshaling strings [Visual Basic]
+- ANSI, Visual Basic
+- ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aa5724eb9123b2776c3a579e4244c55b3129816b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Ansi (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Legt fest, dass Visual Basic alle Zeichenfolgen unabhängig von dem Namen der deklarierten externen Prozedur als ANSI\-Werte \(American National Standards Institute\) marshallen soll.  
+# <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
+Gibt an, dass Visual Basic alle Zeichenfolgen in American National Standards Institute (ANSI)-Werte unabhängig von den Namen der die deklarierte externe Prozedur marshallen soll.  
   
- Wenn Sie eine außerhalb Ihres Projekts definierte Prozedur aufrufen, hat der Visual Basic\-Compiler keinen Zugriff auf die Informationen, die er benötigt, um die Prozedur ordnungsgemäß aufzurufen.  Dies umfasst Informationen über den Speicherort der Prozedur, ihre Identifikationsmerkmale, ihre Aufrufsequenz und ihren Rückgabetyp sowie den von ihr für Zeichenfolgen verwendeten Zeichensatz.  Die [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese notwendigen Informationen zur Verfügung.  
+ Wenn Sie eine Prozedur, die außerhalb des Projekts definiert aufrufen, Visual Basic-Compiler keinen Zugriff auf die Informationen zum ordnungsgemäßen Aufrufen der Prozedur benötigt. Diese Informationen umfassen, auf dem sich die Prozedur befindet, wie festgestellt wird, werden der Aufrufsequenz und Rückgabetyp und die Zeichenfolge verwendeten Zeichensatz. Die [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.  
   
- Der `charsetmodifier`\-Abschnitt in der `Declare`\-Anweisung stellt Informationen über den Zeichensatz bereit, die benötigt werden, um Zeichenfolgen bei einem Aufruf der externen Prozedur zu marshallen.  Der Abschnitt hat auch Einfluss darauf, wie Visual Basic die externe Datei nach dem externen Prozedurnamen durchsucht.  Mit dem `Ansi`\-Modifizierer wird angegeben, dass Visual Basic alle Zeichenfolgen als ANSI\-Werte marshallen und die Prozedur suchen soll, ohne deren Namen während der Suche zu ändern.  
+ Die `charsetmodifier` teilweise in die `Declare` Anweisung liefert die Informationen für das Marshalling von Zeichenfolgen bei einem Aufruf an die externe Prozedur Zeichen. Er wirkt sich auch, wie Visual Basic die externe Datei für den externen Prozedurnamen durchsucht. Die `Ansi` Modifizierer gibt an, dass Visual Basic alle Zeichenfolgen in ANSI-Werte marshallen und die Prozedur nachschlagen soll, ohne den Namen ändern, während der Suche.  
   
- Wenn kein Zeichensatzmodifizierer angegeben ist, wird standardmäßig `Ansi` verwendet.  
+ Wenn kein Modifizierer angegeben ist, `Ansi` ist die Standardeinstellung.  
   
-## Hinweise  
- Der `Ansi`\-Modifizierer kann im folgenden Kontext verwendet werden:  
+## <a name="remarks"></a>Hinweise  
+ Die `Ansi` Modifizierer kann in diesem Kontext verwendet werden:  
   
- [Declare\-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## Hinweise für Entwickler intelligenter Geräte  
+## <a name="smart-device-developer-notes"></a>Entwicklerhinweise für intelligente Geräte  
  Dieses Schlüsselwort wird nicht unterstützt.  
   
-## Siehe auch  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

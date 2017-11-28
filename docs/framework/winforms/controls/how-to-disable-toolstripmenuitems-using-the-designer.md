@@ -1,43 +1,44 @@
 ---
-title: "Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Menüelemente, Deaktivieren"
-  - "Menüs, Deaktivieren von Elementen"
-  - "MenuStrip-Steuerelement [Windows Forms], Deaktivieren von Menüelementen im Designer"
-  - "ToolStripMenuItems, Deaktivieren im Designer"
+title: 'Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], disabling in designer
+- MenuStrip control [Windows Forms], disabling menu items in designer
+- menu items [Windows Forms], disabling
+- menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4958f315ff0415c3964d22dffff2553c0901eb91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers
-Sie können die Befehle, die ein Benutzer ausführen kann, einschränken oder erweitern, indem Sie Menüelemente bei bestimmten Benutzeraktivitäten aktivieren oder deaktivieren.  Menüelemente sind bei der Erstellung standardmäßig aktiviert. Sie können diesen Zustand jedoch mithilfe der <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>\-Eigenschaft anpassen.  Diese Eigenschaft kann zur Entwurfszeit im **Eigenschaftenfenster** oder programmgesteuert über entsprechende Codeanweisungen geändert werden.  Weitere Informationen hierzu finden Sie unter [Gewusst wie: Deaktivieren von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md).  
+# <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers
+Sie können begrenzen oder erweitern die Befehle, die ein Benutzer durch das Aktivieren und Deaktivieren von Menüelementen in Reaktion auf Benutzeraktivitäten treffen. Menüelemente sind standardmäßig aktiviert, wenn sie erstellt werden, aber dies die angepasst werden kann, durch die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> Eigenschaft. Sie können diese Eigenschaft zur Entwurfszeit im Bearbeiten der **Eigenschaften** Fenster oder programmgesteuert im Code festlegen. Weitere Informationen finden Sie unter [Vorgehensweise: Deaktivieren von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So deaktivieren Sie ein Menüelement zur Entwurfszeit  
+### <a name="to-disable-a-menu-item-at-design-time"></a>So deaktivieren Sie ein Menüelement zur Entwurfszeit  
   
-1.  Wählen Sie das Menüelement auf dem Formular aus, und legen Sie die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>\-Eigenschaft auf `false` fest.  
+1.  Legen Sie mit dem Menüelement, das auf dem Formular ausgewählt, die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> Eigenschaft `false`.  
   
     > [!TIP]
-    >  Wenn Sie das erste bzw. das Menüelement der obersten Ebene in einem Menü deaktivieren, werden alle in dem Menü enthaltenen Menüelemente deaktiviert.  Entsprechend werden durch das Deaktivieren eines Menüelements, das Untermenüelemente aufweist, diese Untermenüelemente deaktiviert.  Wenn der Benutzer keinen der Befehle in einem bestimmten Menü ausführen kann, sollte das gesamte Menü durch eine entsprechende Programmierung ausgeblendet und deaktiviert werden, um die Benutzeroberfläche übersichtlicher zu gestalten.  Sie sollten das Menü ausblenden und deaktivieren, da der Zugriff auf einen Menübefehl über eine Tastenkombination durch das bloße Ausblenden nicht verhindert wird.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Visible%2A>\-Eigenschaft eines Menüelements der obersten Ebene auf `false` fest, um das ganze Menü auszublenden.  
+    >  Deaktivieren das erste oder der obersten Ebene Menüelement in einem Menü deaktiviert alle Menüelemente, die innerhalb des Menüs enthalten. Ebenso wird beim Deaktivieren eines Menüelements, das Untermenüelemente verfügt Untermenüelemente deaktiviert. Wenn alle Befehle in einem bestimmten Menü für den Benutzer nicht verfügbar sind, gilt die guten Programmierstil, ausgeblendet und deaktiviert das gesamte Menü, wie dies eine saubere Benutzeroberfläche dar. Sowohl sollten ausblenden und deaktivieren Sie im Menü aus, da ausblenden allein Zugriff auf einen Menübefehl über eine Tastenkombination nicht verhindert wird. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Visible%2A> Eigenschaft für ein Menüelement der obersten Ebene auf `false` das gesamte Menü ausblenden.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Gewusst wie: Ausblenden von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)   
- [Übersicht über das MenuStrip\-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [Gewusst wie: Ausblenden von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

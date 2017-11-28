@@ -1,37 +1,43 @@
 ---
-title: "Gewusst wie: Programmgesteuertes Einf&#252;gen eines Elements in Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Elemente, Einfügen in Text"
-  - "Einfügen von Elementen in Text"
-  - "Beispiel zu Textanimation"
-  - "Text, Einfügen von Elementen"
-  - "TextPointer-Objekte"
+title: "Gewusst wie: Programmgesteuertes Einfügen eines Elements in Text"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Text Animation sample [WPF]
+- elements [WPF], inserting into text
+- inserting elements into text [WPF]
+- TextPointer objects [WPF]
+- text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b99b4f77f43f8ca9ac1516be2bf6a671810e7d90
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Programmgesteuertes Einf&#252;gen eines Elements in Text
-Im folgenden Beispiel wird gezeigt, wie mit zwei <xref:System.Windows.Documents.TextPointer>\-Objekten ein Bereich innerhalb von Text angegeben wird, auf den ein <xref:System.Windows.Documents.Span>\-Element angewendet wird.  
+# <a name="how-to-insert-an-element-into-text-programmatically"></a>Gewusst wie: Programmgesteuertes Einfügen eines Elements in Text
+Das folgende Beispiel zeigt, wie zwei <xref:System.Windows.Documents.TextPointer> Objekte an einen Bereich innerhalb von Text anzuwendende ein <xref:System.Windows.Documents.Span> Element.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-csharp[FlowMiscSnippets_procedural_snip#InsertInlineIntoTextExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_procedural_snip/CSharp/InsertInlineIntoTextExample.cs#insertinlineintotextexamplewholepage)]
  [!code-vb[FlowMiscSnippets_procedural_snip#InsertInlineIntoTextExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowMiscSnippets_procedural_snip/VisualBasic/InsertInlineIntoTextExample.vb#insertinlineintotextexamplewholepage)]  
   
- Die unten stehende Abbildung zeigt, wie dieses Beispiel aussieht.  
+ In der folgenden Abbildung wird gezeigt, wie dieses Beispiel aussieht.  
   
- ![Ein auf einen Textbereich angewandtes SPAN&#45;Element](../../../../docs/framework/wpf/advanced/media/flow-insertelementintotextprogrammatically.png "Flow\_InsertElementIntoTextProgrammatically")  
+ ![Ein auf einen Textbereich angewandtes SPAN-Element](../../../../docs/framework/wpf/advanced/media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

@@ -1,75 +1,75 @@
 ---
-title: "Exemplarische Vorgehensweise: Vererben eines Windows&#160;Forms-Steuerelements mit Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Vererbung"
-  - "Vererbung, Steuerelement"
-  - "Vererbung, Benutzerdefinierte Steuerelemente"
-  - "Vererbung, Exemplarische Vorgehensweisen"
-  - "Windows Forms-Steuerelemente, Vererbung"
+title: "Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- inheritance [Windows Forms], custom controls
+- inheritance [Windows Forms], control
+- Windows Forms controls, inheritance
+- inheritance [Windows Forms], walkthroughs
+- custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0625695933b776b8cdbe5488adc116723b930dd0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Vererben eines Windows&#160;Forms-Steuerelements mit Visual Basic
-Mit [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] können Sie leistungsstarke benutzerdefinierte Steuerelemente durch *Vererbung* erstellen.  Durch Vererbung können Sie Steuerelemente mit der gesamten Funktionalität von standardmäßigen Windows Forms\-Steuerelementen erstellen, die zusätzlich über benutzerdefinierte Funktionalität verfügen.  In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit der Bezeichnung `ValueButton`.  Diese Schaltfläche erbt die Funktionalität des standardmäßigen Windows Forms\-Steuerelements <xref:System.Windows.Forms.Button> und macht eine benutzerdefinierte Eigenschaft mit der Bezeichnung `ButtonValue` verfügbar.  
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic
+Mit [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] können Sie leistungsstarke benutzerdefinierte Steuerelemente durch *Vererbung* erstellen. Durch Vererbung können Sie Steuerelemente erstellen, die die gesamte Funktionalität der standardmäßigen Windows Forms-Steuerelemente, aber auch benutzerdefinierte Funktionen enthalten. In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit dem Namen `ValueButton`. Diese Schaltfläche erbt die Funktionalität der standardmäßigen Windows Forms <xref:System.Windows.Forms.Button> steuern und macht eine benutzerdefinierte Eigenschaft mit dem Namen `ButtonValue`.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Erstellen des Projekts  
- Wenn Sie ein neues Projekt erstellen, geben Sie dessen Namen an, um Stammnamespace, Assemblyname und Projektname einzurichten und sicherzustellen, dass die Standardkomponente sich im richtigen Namespace befindet.  
+## <a name="creating-the-project"></a>Erstellen des Projekts  
+ Geben Sie beim Erstellen des Projekts den Namen an, um den Stammnamespace, Assemblynamen und Projektnamen festzulegen und sicherzustellen, dass sich die Standardkomponente im richtigen Namespace befindet.  
   
-#### So erstellen Sie die ValueButtonLib\-Steuerelementbibliothek und das ValueButton\-Steuerelement  
+#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>So erstellen Sie die „ValueButtonLib“-Steuerelementbibliothek und das „ValueButton“-Steuerelement  
   
 1.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.  
   
-2.  Wählen Sie in der Liste der [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\-Projekte die Projektvorlage **Windows Forms\-Steuerelementbibliothek** aus, und geben Sie im Feld **Name** die Zeichenfolge `ValueButtonLib` ein.  
+2.  Wählen Sie aus der Liste der [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]-Projekte die Projektvorlage **Windows Forms**-Steuerelementbibliothek aus, und geben Sie im Feld **Name** `ValueButtonLib` ein.  
   
-     Der Projektname `ValueButtonLib` wird standardmäßig auch dem Stammnamespace zugewiesen.  Der Stammnamespace wird dazu verwendet, die Namen der Komponenten in der Assembly zu qualifizieren.  Wenn beispielsweise zwei Assemblys Komponenten mit der Bezeichnung `ValueButton` bereitstellen, können Sie die zu verwendende `ValueButton`\-Komponente mit `ValueButtonLib.ValueButton` spezifizieren.  Weitere Informationen finden Sie unter [Namespaces in Visual Basic](../Topic/Namespaces%20in%20Visual%20Basic.md).  
+     Der Projektname `ValueButtonLib` wird standardmäßig auch dem Stammnamespace zugewiesen. Der Stammnamespace wird verwendet, um die Namen der Komponenten in der Assembly zu qualifizieren. Wenn z.B. zwei Assemblys Komponenten mit dem Namen `ValueButton` bereitstellen, können Sie Ihre `ValueButton`-Komponente mithilfe von `ValueButtonLib.ValueButton` überprüfen. Weitere Informationen finden Sie unter [Namespaces in Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
-3.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **UserControl1.vb**, und wählen Sie im Kontextmenü **Umbenennen** aus.  Ändern Sie den Dateinamen in `ValueButton.vb`.  Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob Sie alle Verweise auf das Codeelement 'UserControl1' umbenennen möchten.  
+3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **UserControl1.vb**, und wählen Sie im Kontextmenü **Umbenennen** aus. Ändern Sie den Dateinamen in `ValueButton.vb`. Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob alle Verweise auf das Codeelement „UserControl1“ umbenannt werden sollen.  
   
-4.  Klicken Sie im **Projektmappen\-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
+4.  Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
   
-5.  Öffnen Sie den Knoten **ValueButton.vb**, um die vom Designer generierte Codedatei **ValueButton.Designer.vb** anzuzeigen.  Öffnen Sie diese Datei im **Code\-Editor**.  
+5.  Öffnen Sie den Knoten **ValueButton.vb**, um die vom Designer generierte Codedatei **ValueButton.Designer.vb** anzuzeigen. Öffnen Sie diese Datei im **Code-Editor**.  
   
-6.  Suchen Sie die `Class`\-Anweisung `Partial Public Class ValueButton`, und ändern Sie den Typ, von dem dieses Steuerelement von <xref:System.Windows.Forms.UserControl> erbt, in <xref:System.Windows.Forms.Button>.  Dadurch kann das geerbte Steuerelement die gesamte Funktionalität des <xref:System.Windows.Forms.Button>\-Steuerelements erben.  
+6.  Suchen Sie die `Class` -Anweisung `Partial Public Class ValueButton`, und ändern Sie den Typ, von dem dieses Steuerelement von erbt <xref:System.Windows.Forms.UserControl> auf <xref:System.Windows.Forms.Button>. Dadurch können Ihre geerbte Steuerelement erben die Funktionalität von der <xref:System.Windows.Forms.Button> Steuerelement.  
   
-7.  Suchen Sie die `InitializeComponent`\-Methode, und entfernen Sie die Zeile, die die <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>\-Eigenschaft zuweist.  Diese Eigenschaft ist im <xref:System.Windows.Forms.Button>\-Steuerelement nicht vorhanden.  
+7.  Suchen Sie die `InitializeComponent` -Methode, und entfernen Sie die Zeile, die weist die <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> Eigenschaft. Diese Eigenschaft ist nicht vorhanden, der <xref:System.Windows.Forms.Button> Steuerelement.  
   
-8.  Klicken Sie im Menü **Datei** auf **Alle speichern**, um das Projekt zu speichern.  
+8.  Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.  
   
-     Beachten Sie, dass kein visueller Designer mehr verfügbar ist.  Da sich das <xref:System.Windows.Forms.Button>\-Steuerelement selbst zeichnet, können Sie dessen Darstellung im Designer nicht ändern.  Die visuelle Darstellung des Steuerelements entspricht genau der Klasse, von der es erbt \(in diesem Fall <xref:System.Windows.Forms.Button>\), sofern im Code keine Änderung vorgenommen wurde.  
+     Beachten Sie, dass kein visueller Designer mehr verfügbar ist. Da die <xref:System.Windows.Forms.Button> Steuerelement bewirkt einen eigenen zeichnen, müssen Sie seine Darstellung im Designer nicht ändern. Die visuelle Darstellung wird genau, der sie erbt Klasse identisch sein (d. h. <xref:System.Windows.Forms.Button>), wenn im Code geändert.  
   
 > [!NOTE]
->  Sie können weiterhin Komponenten, die über keine Benutzeroberflächenelemente verfügen, der Entwurfsoberfläche hinzufügen.  
+>  Sie können trotzdem Komponenten, die über keine Benutzeroberflächenelemente verfügen, zur Entwurfsoberfläche hinzufügen.  
   
-## Hinzufügen einer Eigenschaft zum geerbten Steuerelement  
- Eine Möglichkeit, geerbte Windows Forms\-Steuerelemente zu verwenden, besteht darin, Steuerelemente zu erstellen, die in Darstellung und Verhalten mit den standardmäßigen Windows Forms\-Steuerelementen identisch sind, dabei aber benutzerdefinierte Eigenschaften verfügbar machen.  In diesem Abschnitt fügen Sie dem Steuerelement eine Eigenschaft mit der Bezeichnung `ButtonValue` hinzu.  
+## <a name="adding-a-property-to-your-inherited-control"></a>Hinzufügen einer Eigenschaft zum geerbten Steuerelement  
+ Eine Verwendungsmöglichkeit von geerbten Windows Forms-Steuerelementen ist das Erstellen von Steuerelementen, die in Aussehen und Verhalten mit den standardmäßigen Windows Forms-Steuerelementen identisch sind, aber benutzerdefinierte Eigenschaften verfügbar machen. In diesem Abschnitt fügen Sie eine Eigenschaft namens `ButtonValue` zum Steuerelement hinzu.  
   
-#### So fügen Sie die Value\-Eigenschaft hinzu  
+#### <a name="to-add-the-value-property"></a>So fügen Sie die Value-Eigenschaft hinzu  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **ValueButton.vb**, und klicken Sie dann im Kontextmenü auf **Code anzeigen**.  
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **ValueButton.vb**, und klicken Sie im Kontextmenü auf **Code anzeigen**.  
   
-2.  Suchen Sie die `Public Class ValueButton`\-Anweisung.  Fügen Sie direkt darunter den folgenden Code ein:  
+2.  Suchen Sie die `Public Class ValueButton`-Anweisung. Geben Sie unmittelbar unter dieser Anwendung den folgenden Code ein:  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     ' Creates the private variable that will store the value of your   
     ' property.  
     Private varValue as integer  
@@ -86,80 +86,78 @@ Mit [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] können Sie leistungss
     End Property  
     ```  
   
-     Durch diesen Code werden die Methoden festgelegt, mit denen die `ButtonValue`\-Eigenschaft gespeichert und abgerufen wird.  Die `Get`\-Anweisung legt den Wert fest, der für den in der privaten Variable `varValue` gespeicherten Wert zurückgegeben wird, und die `Set`\-Anweisung legt den Wert der privaten Variable mithilfe des `Value`\-Schlüsselworts fest.  
+     Dieser Code legt die Methoden fest, mit denen die Eigenschaft `ButtonValue` gespeichert und abgerufen wird. Die `Get`-Anweisung legt den zurückgegebenen Wert auf den Wert fest, der in der privaten Variablen `varValue` gespeichert ist. Die `Set`-Anweisung legt den Wert der privaten Variablen mithilfe des Schlüsselworts `Value` fest.  
   
-3.  Klicken Sie im Menü **Datei** auf **Alle speichern**, um das Projekt zu speichern.  
+3.  Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.  
   
-## Testen des Steuerelements  
- Steuerelemente sind keine eigenständigen Projekte und müssen daher in einem Container untergebracht werden.  Zum Testen des Steuerelements müssen Sie ein Testprojekt erstellen, in dem das Steuerelement ausgeführt wird.  Außerdem müssen Sie das Steuerelement für das Testprojekt zugänglich machen, indem Sie es erstellen \(kompilieren\).  In diesem Abschnitt erstellen Sie das Steuerelement und testen es in einem Windows Form.  
+## <a name="testing-your-control"></a>Testen des Steuerelements  
+ Steuerelemente sind keine eigenständigen Projekte. Sie müssen in einem Container gehostet werden. Sie müssen ein Testprojekt erstellen, in dem das Steuerelement getestet werden kann. Sie müssen das Steuerelement auch für das Testprojekt zugänglich machen, indem Sie es erstellen (Kompilieren). In diesem Abschnitt erstellen Sie das Steuerelement und testen es in einem Windows Form.  
   
-#### So erstellen Sie das Steuerelement  
+#### <a name="to-build-your-control"></a>So erstellen Sie das Steuerelement  
   
 1.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
   
-     Das Build sollte erfolgreich und ohne Compilerfehler oder \-warnungen abgeschlossen werden.  
+     Der Build sollte ohne Compilerfehler oder Warnungen erfolgreich sein.  
   
-#### So erstellen Sie ein Testprojekt  
+#### <a name="to-create-a-test-project"></a>So Erstellen Sie ein Testprojekt  
   
-1.  Zeigen Sie im Menü **Datei** auf **Hinzufügen**, und klicken Sie auf **Neues Projekt**, um das Dialogfeld **Neues Projekt hinzufügen** zu öffnen.  
+1.  Zeigen Sie im Menü **Datei** mit der Maus auf **Hinzufügen**, und klicken Sie dann auf **Neues Projekt**, um das Dialogfeld **Neues Projekt hinzufügen** zu öffnen.  
   
-2.  Wählen Sie den Projektknoten [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] aus, und klicken Sie auf **Windows Forms\-Anwendung**.  
+2.  Wählen Sie den Projektknoten [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] aus, und klicken Sie auf **Windows Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `Test` ein.  
+3.  Geben Sie im Feld **Name** `Test`ein.  
   
-4.  Klicken Sie im **Projektmappen\-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
+4.  Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
   
-5.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf den Knoten **Verweise** für das Testprojekt, und klicken Sie im Kontextmenü auf **Verweis hinzufügen**, um das Dialogfeld **Verweis hinzufügen** anzuzeigen.  
+5.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Verweise** für Ihr Testprojekt, und wählen Sie dann im Kontextmenü **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** anzuzeigen.  
   
 6.  Klicken Sie auf die Registerkarte **Projekte**.  
   
-7.  Klicken Sie auf die Registerkarte **Projekte**.  Das `ValueButtonLib`\-Projekt wird unter **Projektname** aufgeführt.  Doppelklicken Sie auf das Projekt, um dem Testprojekt den Verweis hinzuzufügen.  
+7.  Klicken Sie auf die Registerkarte mit der Bezeichnung **Projekte**. Ihr `ValueButtonLib`-Projekt wird unter **Projektname** aufgelistet. Doppelklicken Sie auf das Projekt, um den Verweis auf das Testprojekt hinzuzufügen.  
   
-8.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **Test**, und wählen Sie **Erstellen** aus.  
+8.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Test,**, und wählen Sie dann **Erstellen** aus.  
   
-#### So fügen Sie das Steuerelement dem Formular hinzu  
+#### <a name="to-add-your-control-to-the-form"></a>So fügen Sie dem Formular ein Steuerelement hinzu  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **Form1.vb**, und wählen Sie im Kontextmenü **Designer anzeigen** aus.  
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Form1.vb**, und wählen Sie im Kontextmenü **Designer anzeigen** aus.  
   
-2.  Klicken Sie in der **Toolbox** auf **ValueButtonLib Components**.  Doppelklicken Sie auf **ValueButton**.  
+2.  Klicken Sie in der **Toolbox** auf **ValueButtonLib Components**. Doppelklicken Sie auf **ValueButton**.  
   
-     In dem Formular wird ein **ValueButton** angezeigt.  
+     Ein **ValueButton** wird im Formular angezeigt.  
   
 3.  Klicken Sie mit der rechten Maustaste auf **ValueButton**, und wählen Sie im Kontextmenü **Eigenschaften** aus.  
   
-4.  Prüfen Sie im **Eigenschaftenfenster** die Eigenschaften des Steuerelements.  Beachten Sie, dass diese mit Ausnahme einer Eigenschaft \(der `ButtonValue`\-Eigenschaft\) mit den durch eine standardmäßige Schaltfläche verfügbar gemachten Eigenschaften übereinstimmen.  
+4.  Untersuchen Sie im Fenster **Eigenschaften** die Eigenschaften dieses Steuerelements. Beachten Sie, dass sie mit den Eigenschaften identisch sind, die von einer Standardschaltfläche verfügbar gemacht werden, außer es besteht eine zusätzliche Eigenschaft `ButtonValue`.  
   
-5.  Legen Sie für die `ButtonValue`\-Eigenschaft `5` fest.  
+5.  Legen Sie die `ButtonValue`-Eigenschaft auf `5` fest.  
   
-6.  Doppelklicken Sie auf der Registerkarte **Alle Windows Forms** der **Toolbox** auf **Label**, um dem Formular ein <xref:System.Windows.Forms.Label>\-Steuerelement hinzuzufügen.  
+6.  Auf der **alle Windows Forms** auf der Registerkarte die **Toolbox**, doppelklicken Sie auf **Bezeichnung** Hinzufügen einer <xref:System.Windows.Forms.Label> Steuerelement dem Formular.  
   
-7.  Verschieben Sie das Label\-Steuerelement in die Mitte des Formulars.  
+7.  Verschieben Sie die Bezeichnung in die Mitte des Formulars.  
   
 8.  Doppelklicken Sie auf `ValueButton1`.  
   
-     Der **Code\-Editor** wird geöffnet und springt zum `ValueButton1_Click`\-Ereignis.  
+     Der **Code-Editor** wird im Ereignis `ValueButton1_Click` geöffnet.  
   
-9. Geben Sie folgende Codezeile ein.  
+9. Geben Sie die folgende Codezeile ein.  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Label1.Text = CStr(ValueButton1.ButtonValue)  
     ```  
   
-10. Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf **Test**, und wählen Sie im Kontextmenü **Als Startprojekt festlegen**.  
+10. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Test**, und wählen Sie im Kontextmenü **Als Startprojekt festlegen** aus.  
   
-11. Wählen Sie im Menü **Debuggen** die Option **Debuggen starten**.  
+11. Wählen Sie im Menü **Debuggen** die Option **Debugging starten**.  
   
      `Form1` wird angezeigt.  
   
 12. Klicken Sie auf `Valuebutton1`.  
   
-     In `Label1` wird die Zahl '5' angezeigt, was darauf hinweist, dass die `ButtonValue`\-Eigenschaft des geerbten Steuerelements mithilfe der `ValueButton1_Click`\-Methode an `Label1` übergeben wurde.  Somit erbt das `ValueButton`\-Steuerelement alle Funktionen der Windows Forms\-Standardschaltfläche, macht jedoch eine zusätzliche benutzerdefinierte Eigenschaft verfügbar.  
+     Die Zahl '5' wird in `Label1` angezeigt und zeigt, dass die Eigenschaft `ButtonValue` Ihres geerbten Steuerelements mit der Methode `ValueButton1_Click` an `Label1` weitergegeben wurde. Daher erbt Ihr `ValueButton`-Steuerelement die gesamte Funktionalität der standardmäßigen Windows Forms-Schaltfläche und macht eine zusätzliche benutzerdefinierte Eigenschaft verfügbar.  
   
-## Siehe auch  
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)   
- [Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld "Toolboxelemente auswählen"](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [Entwickeln benutzerdefinierter Windows Forms\-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [NOT IN BUILD: Inheritance in Visual Basic](http://msdn.microsoft.com/de-de/e5e6e240-ed31-4657-820c-079b7c79313c)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)
+## <a name="see-also"></a>Siehe auch  
+ [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [Grundlagen der Vererbung (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Exemplarische Vorgehensweise: Erstellen von Komponenten](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

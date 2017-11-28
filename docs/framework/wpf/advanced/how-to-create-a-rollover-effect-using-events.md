@@ -1,39 +1,45 @@
 ---
-title: "Gewusst wie: Erstellen eines Rollovereffekts mit Ereignissen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Farben von Elementen, Ändern"
-  - "Elementfarben, Ändern"
-  - "Rollovereffekt"
+title: 'Gewusst wie: Erstellen eines Rollovereffekts mit Ereignissen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors of elements [WPF], changing
+- rollover effect [WPF]
+- element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c82d993c31174419793319da74ffa38d122ef203
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Erstellen eines Rollovereffekts mit Ereignissen
-Dieses Beispiel zeigt, wie Sie die Farbe eines Elements ändern können, wenn der Mauszeiger in den durch das Element belegten Bereich kommt bzw. diesen verlässt.  
+# <a name="how-to-create-a-rollover-effect-using-events"></a>Gewusst wie: Erstellen eines Rollovereffekts mit Ereignissen
+In diesem Beispiel wird gezeigt, wie die Farbe eines Elements ändern, wie der Mauszeiger die Form eintritt und diese verlässt des Bereichs, der vom Element eingenommene wird.  
   
- Dieses Beispiel besteht aus einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Datei und einer Code\-Behind\-Datei.  
+ In diesem Beispiel besteht aus einem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und eine Code-Behind-Datei.  
   
 > [!NOTE]
->  In diesem Beispiel wird die Verwendung von Ereignissen veranschaulicht. Es wird jedoch empfohlen, diesen Effekt über einen <xref:System.Windows.Trigger> in einem Stil zu erzielen.  Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+>  In diesem Beispiel wird veranschaulicht, wie Ereignisse, aber die empfohlene Methode, um diesen Effekt zu erreichen ist die Verwendung einer <xref:System.Windows.Trigger> in einem Format. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## Beispiel  
- Der folgende [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]\-Code erstellt die Benutzeroberfläche, die aus einem <xref:System.Windows.Controls.Border> rund um einen <xref:System.Windows.Controls.TextBlock> besteht und den <xref:System.Windows.Input.Mouse.MouseEnter>\-Ereignishandler und den <xref:System.Windows.UIElement.MouseLeave>\-Ereignishandler an den <xref:System.Windows.Controls.Border> anfügt.  
+## <a name="example"></a>Beispiel  
+ Die folgenden [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] erstellt die Benutzeroberfläche, die sich aus <xref:System.Windows.Controls.Border> um eine <xref:System.Windows.Controls.TextBlock>, und fügt die <xref:System.Windows.Input.Mouse.MouseEnter> und <xref:System.Windows.UIElement.MouseLeave> Ereignishandler an das <xref:System.Windows.Controls.Border>.  
   
- [!code-xml[mouseenterMouseleave#MouseEnterLeaveSampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml#mouseenterleavesamplexaml)]  
+ [!code-xaml[mouseenterMouseleave#MouseEnterLeaveSampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml#mouseenterleavesamplexaml)]  
   
- Der folgende Code\-Behind erstellt die Ereignishandler <xref:System.Windows.UIElement.MouseEnter> und <xref:System.Windows.UIElement.MouseLeave>.  Wenn der Mauszeiger in den <xref:System.Windows.Controls.Border> gelangt, wird der Hintergrund des <xref:System.Windows.Controls.Border> rot .  Wenn der Mauszeiger den <xref:System.Windows.Controls.Border> verlässt, wird der Hintergrund des <xref:System.Windows.Controls.Border> wieder weiß.  
+ Der folgende Code-behind erstellt die <xref:System.Windows.UIElement.MouseEnter> und <xref:System.Windows.UIElement.MouseLeave> -Ereignishandler.  Wenn der Mauszeiger wird die <xref:System.Windows.Controls.Border>, den Hintergrund der <xref:System.Windows.Controls.Border> in Rot geändert wird.  Wenn der Mauszeiger die Form verlässt die <xref:System.Windows.Controls.Border>, den Hintergrund der <xref:System.Windows.Controls.Border> nicht wieder in Weiß geändert wird.  
   
  [!code-csharp[mouseenterMouseleave#MouseEnterLeaveSampleEventHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml.cs#mouseenterleavesampleeventhandlers)]
  [!code-vb[mouseenterMouseleave#MouseEnterLeaveSampleEventHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseenterMouseleave/VisualBasic/Window1.xaml.vb#mouseenterleavesampleeventhandlers)]

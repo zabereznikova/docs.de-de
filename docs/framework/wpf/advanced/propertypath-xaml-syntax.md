@@ -1,210 +1,212 @@
 ---
-title: "XAML-Syntax von PropertyPath | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PropertyPath-Objekt"
-  - "XAML, PropertyPath-Objekt"
+title: XAML-Syntax von PropertyPath
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PropertyPath object [WPF]
+- XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1dc58845a78607090002467e3aa63d4c549ec116
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# XAML-Syntax von PropertyPath
-Das <xref:System.Windows.PropertyPath>\-Objekt unterstützt eine komplexe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Inlinesyntax, mit der verschiedene Eigenschaften festgelegt werden können, die den <xref:System.Windows.PropertyPath>\-Typ als Wert verwenden.  In diesem Thema wird die <xref:System.Windows.PropertyPath>\-Syntax und deren Anwendung auf Bindungs\- und Animationssyntax dargestellt.  
-  
-   
+# <a name="propertypath-xaml-syntax"></a>XAML-Syntax von PropertyPath
+Die <xref:System.Windows.PropertyPath> Objekt unterstützt eine komplexe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Syntax zum Festlegen verschiedener Eigenschaften, die <xref:System.Windows.PropertyPath> Typ als ihren Wert. Dieses Thema zeigt die <xref:System.Windows.PropertyPath> Syntax, um die Syntax der Bindung und der Animation angewendet.  
+    
   
 <a name="where"></a>   
-## Verwendung von PropertyPath  
- <xref:System.Windows.PropertyPath> ist ein allgemeines Objekt, das in verschiedenen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Features verwendet wird.  Das allgemeine <xref:System.Windows.PropertyPath>\-Objekt wird zum Vermitteln von Informationen zu dem Eigenschaftenpfad genutzt. Die Verwendung in den einzelnen Featurebereichen, in denen <xref:System.Windows.PropertyPath> als Typ eingesetzt wird, variiert jedoch.  Die Syntax wird daher nach Funktionen unterteilt dokumentiert.  
+## <a name="where-propertypath-is-used"></a>Verwendung von PropertyPath  
+ <xref:System.Windows.PropertyPath>ist ein allgemeines Objekt, das in mehreren verwendet wird [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Funktionen. Das allgemeine <xref:System.Windows.PropertyPath> um Informationen zu vermitteln, die Markuperweiterungsverwendungen für jeden Funktionsbereich, in denen <xref:System.Windows.PropertyPath> dient als ein Typ unterscheiden. Daher ist es praktischer, die Syntaxen pro Funktion zu dokumentieren.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet <xref:System.Windows.PropertyPath> hauptsächlich, um Objektmodellpfade zum Traversieren der Eigenschaften einer Objektdatenquelle anzugeben und um den Zielpfad für zielgerichtete Animationen anzugeben.  
+ In erster Linie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet <xref:System.Windows.PropertyPath> Objektmodells Pfade zum Traversieren der Eigenschaften einer Objektdatenquelle beschreiben und den Zielpfad für zielgerichtete Animationen beschreiben.  
   
- Einige Format\- und Vorlageneigenschaften, z. B. <xref:System.Windows.Setter.Property%2A?displayProperty=fullName>, haben einen qualifizierten Eigenschaftennamen, der auf den ersten Blick einem <xref:System.Windows.PropertyPath> ähnelt.  Hierbei handelt es sich jedoch nicht um einen echten <xref:System.Windows.PropertyPath>, sondern um eine qualifizierte Verwendung des *Besitzer.Eigenschaft*\-Zeichenfolgenformats, das vom [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-WPF\-Prozessor in Kombination mit dem Typkonverter für <xref:System.Windows.DependencyProperty> aktiviert wird.  
+ Einige Eigenschaften Stil und einem Vorlage wie z. B. <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> haben einen qualifizierten Eigenschaftennamen, die oberflächlich ähnelt einer <xref:System.Windows.PropertyPath>. Dies ist jedoch keine echten <xref:System.Windows.PropertyPath>; stattdessen wird ein qualifizierter *owner.property* Zeichenfolge Format Nutzungsarten, die aktiviert ist, indem der WPF [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor in Kombination mit den Typkonverter für <xref:System.Windows.DependencyProperty>.  
   
 <a name="databinding_s"></a>   
-## PropertyPath für Objekte in einer Datenbindung  
- Die Datenbindung ist ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Feature, durch das Sie eine Bindung zu dem Zielwert einer beliebigen [Abhängigkeitseigenschaft](GTMT) herstellen können.  Die Quelle einer solchen Datenbindung muss jedoch keine [Abhängigkeitseigenschaft](GTMT) sein. Es kann sich auch um einen anderen Eigenschaftentyp handeln, der vom Anwendungsdatenanbieter erkannt wird.  Eigenschaftenpfade werden vor allem für den <xref:System.Windows.Data.ObjectDataProvider> verwendet, der zum Abrufen von Bindungsquellen aus [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Objekten und von zugehörigen Eigenschaften genutzt wird.  
+## <a name="propertypath-for-objects-in-data-binding"></a>PropertyPath für Objekte in der Datenbindung  
+ Datenbindung ist eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Funktion, bei der Sie an den Zielwert einer beliebigen Abhängigkeitseigenschaft binden können. Allerdings muss die Quelle einer solchen Datenbindung keine Abhängigkeitseigenschaft sein. Es kann sich um einen beliebigen Eigenschaftstyp handeln, der vom Anwendungsdatenanbieter erkannt wird. Eigenschaftspfade werden vor allem verwendet, für die <xref:System.Windows.Data.ObjectDataProvider>, dient zum Abrufen von Bindungsquellen aus [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Objekte und ihre Eigenschaften.  
   
- Beachten Sie, dass die Datenbindung mit [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] <xref:System.Windows.PropertyPath> nicht verwendet, da <xref:System.Windows.Data.Binding.Path%2A> in <xref:System.Windows.Data.Binding> nicht genutzt wird.  Stattdessen verwenden Sie die <xref:System.Windows.Data.Binding.XPath%2A>\-Eigenschaft, und Sie geben gültige XPath\-Syntax in den [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] der Daten an.  <xref:System.Windows.Data.Binding.XPath%2A> wird auch als Zeichenfolge angegeben, aber wird nicht hier dokumentiert; sehen Sie [Binden an XML\-Daten mithilfe von XMLDataProvider und XPath\-Abfragen](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Beachten Sie, um die Datenbindung [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verwendet keine <xref:System.Windows.PropertyPath>, da sie nicht verwendet <xref:System.Windows.Data.Binding.Path%2A> in der <xref:System.Windows.Data.Binding>. Verwenden Sie stattdessen <xref:System.Windows.Data.Binding.XPath%2A> , und geben Sie gültigen XPath-Syntax in der [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] der Daten. <xref:System.Windows.Data.Binding.XPath%2A>wird auch als Zeichenfolge angegeben, jedoch wird hier nicht dokumentiert; finden Sie unter [Binden mit XML-Daten mithilfe einer XMLDataProvider und XPath-Abfragen](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
- Um Eigenschaftenpfade in der Datenbindung zu verstehen, müssen Sie wissen, dass Sie einen individuellen Eigenschaftswert als Ziel für die Bindung festlegen können. Alternativ können Sie eine Bindung zu Zieleigenschaften herstellen, die Listen oder Auflistungen übernehmen.  Wenn Sie Auflistungen binden und z. B. eine <xref:System.Windows.Controls.ListBox> binden, die abhängig von der Anzahl der Datenelemente in der Auflistung erweitert wird, sollte der Eigenschaftenpfad auf das Auflistungsobjekt verweisen und nicht auf einzelne Auflistungselemente.  Das Datenbindungsmodul ordnet die als Datenquelle verwendeten Auflistungen automatisch dem Typ des Bindungsziels zu und hat ein ähnliches Verhalten wie beim Eingeben eines Elementarrays in eine <xref:System.Windows.Controls.ListBox> zur Folge.  
+ Für das Verständnis von Eigenschaftspfaden in der Datenbindung ist es wichtig zu wissen, dass Sie einen individuellen Eigenschaftswert als Ziel für die Bindung festlegen oder stattdessen Bindung zu Zieleigenschaften herstellen können, die Listen oder Auflistungen verwenden. Wenn Sie Sammlungen binden, z. B. Binden einer <xref:System.Windows.Controls.ListBox> , die erweitert, je nachdem, wie viele Datenelemente in der Auflistung werden und dann Ihre Eigenschaftspfad sollte das Auflistungsobjekt, nicht für die einzelnen Sammelelemente verweisen. Das Datenbindungsmodul entspricht die Auflistung verwendet werden, wie die Daten automatisch in den Typ der Bindungsziel Datenquelle Verhalten wie z. B. das Auffüllen einer <xref:System.Windows.Controls.ListBox> mit einem Array von Elementen.  
   
 <a name="singlecurrent"></a>   
-### Einzelne Eigenschaft auf dem unmittelbaren Objekt als Datenkontext  
+### <a name="single-property-on-the-immediate-object-as-data-context"></a>Einzelne Eigenschaft auf dem unmittelbaren Objekt als Datenkontext  
   
-```  
-<Binding Path="propertyName" .../>  
+```xml  
+<Binding Path="propertyName" .../>  
 ```  
   
- *propertyName* muss in den Namen einer Eigenschaft aufgelöst werden, die im aktuellen <xref:System.Windows.FrameworkElement.DataContext%2A> für eine <xref:System.Windows.Data.Binding.Path%2A>\-Verwendung enthalten ist.  Wenn die Bindung die Quelle aktualisiert, müssen für diese Eigenschaft Schreib\- und Leseberechtigungen festgelegt sein, und das Quellobjekt muss geändert werden können.  
+ *PropertyName* muss den Namen einer Eigenschaft zu sein, die in der aktuellen auflösen <xref:System.Windows.FrameworkElement.DataContext%2A> für eine <xref:System.Windows.Data.Binding.Path%2A> Verwendung. Wenn die Bindung die Quelle aktualisiert, müssen für diese Eigenschaft Schreib- und Leseberechtigungen festgelegt sein, und das Quellobjekt muss geändert werden können.  
   
 <a name="singleindex"></a>   
-### Einzelner Indexer auf dem unmittelbaren Objekt als Datenkontext  
+### <a name="single-indexer-on-the-immediate-object-as-data-context"></a>Einzelner Indexer auf dem unmittelbaren Objekt als Datenkontext  
   
+```xml  
+<Binding Path="[key]" .../>  
 ```  
-<Binding Path="[key]" .../>  
-```  
   
- `key` muss der eingegebene Index zu einem Wörterbuch oder einer Hashtabelle oder der ganzzahlige Index eines Arrays sein.  Zudem muss der Wert des Schlüssels einem Typ entsprechen, der direkt an die Eigenschaft, auf die er angewendet wird, gebunden werden kann.  Eine Hashtabelle mit Zeichenfolgenschlüsseln und Zeichenfolgenwerten kann beispielsweise auf diese Art verwendet werden, um eine Bindung zu Text für ein <xref:System.Windows.Controls.TextBox> herzustellen.  Verweist der Schlüssel auf eine Auflistung oder einen Unterindex, können Sie mit dieser Syntax eine Bindung zu einer Zielauflistungseigenschaft herstellen.  Andernfalls müssen Sie mithilfe einer Syntax wie `<Binding Path="[``key``].``propertyName``" .../>` auf eine bestimmte Eigenschaft verweisen.  
+ `key` muss der eingegebene Index zu einem Wörterbuch oder einer Hashtabelle oder der ganzzahlige Index eines Arrays sein. Zudem muss der Wert des Schlüssels ein Typ sein, der direkt an die Eigenschaft, auf die er angewendet wird, gebunden werden kann. Z. B. eine Hashtabelle, das Zeichenfolgenschlüssel und Zeichenfolgenwerte enthält kann auf diese Weise für die in Text für die Bindung verwendet ein <xref:System.Windows.Controls.TextBox>. Wenn der Schlüssel auf eine Auflistung oder einen Unterindex verweist, können Sie mit dieser Syntax eine Bindung zu einer Zielauflistungseigenschaft herstellen. Andernfalls müssen Sie mithilfe einer Syntax wie `<Binding Path="[``key``].``propertyName``" .../>` auf eine bestimmte Eigenschaft verweisen.  
   
- Sie können bei Bedarf den Typ des Indexes angeben.  Weitere Informationen zu diesem Aspekt eines indizierten Eigenschaftenpfads finden Sie unter <xref:System.Windows.Data.Binding.Path%2A?displayProperty=fullName>.  
+ Sie können falls erforderlich den Typ des Index angeben. Weitere Informationen zu diesem Aspekt eines Pfads indizierte Eigenschaft finden Sie unter <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.  
   
 <a name="multipleindirect"></a>   
-### Mehrere Eigenschaften \(indirekte Eigenschaftenverwendung\)  
+### <a name="multiple-property-indirect-property-targeting"></a>Mehrere Eigenschaften (indirekte Eigenschaftsziele)  
   
-```  
-<Binding Path="propertyName.propertyName2" .../>  
+```xml  
+<Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName` muss in den Namen einer Eigenschaft aufgelöst werden, die dem aktuellen <xref:System.Windows.FrameworkElement.DataContext%2A> entspricht.  Für die Pfadeigenschaften `propertyName` und `propertyName2` können alle Eigenschaften in einer Beziehung verwendet werden, wobei `propertyName2` eine Eigenschaft in dem Typ ist, der dem Wert von `propertyName` entspricht.  
+ `propertyName`muss in den Namen einer Eigenschaft zu sein, die die aktuelle aufgelöst <xref:System.Windows.FrameworkElement.DataContext%2A>. Bei den Pfadeigenschaften `propertyName` und `propertyName2` kann es sich um alle Eigenschaften handeln, die in einer Beziehung vorhanden sind, wobei `propertyName2` eine Eigenschaft in dem Typ ist, der dem Wert von `propertyName` entspricht.  
   
 <a name="singleattached"></a>   
-### Einzelne Eigenschaft, angefügt oder anderweitig typqualifiziert  
+### <a name="single-property-attached-or-otherwise-type-qualified"></a>Einzelne angefügte oder anderweitig typqualifizierte Eigenschaft  
   
+```xml  
+<object property="(ownerType.propertyName)" .../>  
 ```  
-<object property="(ownerType.propertyName)" .../>  
-```  
   
- Die Klammern kennzeichnen, dass diese Eigenschaft in einem <xref:System.Windows.PropertyPath> mit einer Teilqualifikation erstellt werden sollte.  Es kann ein XML\-Namespace verwendet werden, um den Typ mit einer entsprechenden Zuordnung zu suchen.  Der `ownerType` sucht Typen, auf die ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor zugreifen kann, mithilfe der <xref:System.Windows.Markup.XmlnsDefinitionAttribute>\-Deklarationen in jeder Assembly.  In den meisten Anwendungen ist dem [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]\-Namespace ein standardmäßiger XML\-Namespace zugeordnet. Ein Präfix ist daher normalerweise nur für benutzerdefinierte Typen oder andere Typen erforderlich, die sich andernfalls außerhalb dieses Namespaces befinden würden.  `propertyName` muss in den Namen einer Eigenschaft aufgelöst werden, die in `ownerType` existiert.  Diese Syntax wird zumeist in einem der folgenden Fälle verwendet:  
+ Die Klammern geben an, die diese Eigenschaft in einer <xref:System.Windows.PropertyPath> teilweise Modulmember erstellt werden soll. Es kann ein XML-Namespace verwendet werden, um den Typ mit einer entsprechenden Zuordnung zu suchen. Die `ownerType` sucht Typen, die eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor verfügt über Zugriff auf, bis die <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Deklarationen in den jeweiligen Assemblys. In den meisten Anwendungen ist dem [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]-Namespace der XML-Standardnamespace zugeordnet. Ein Präfix ist daher normalerweise nur für benutzerdefinierte Typen oder andere Typen erforderlich, die sich anderweitig außerhalb dieses Namespace befinden.  `propertyName` muss in den Namen einer Eigenschaft aufgelöst werden, die im `ownerType`-Objekt vorhanden ist. Diese Syntax wird in der Regel für einen der folgenden Fälle verwendet:  
   
--   Dieser Pfad wird in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] angegeben, d. h. in einem Format oder einer Vorlage, die keinen spezifischen Zieltyp aufweist.  Eine qualifizierte Verwendung ist normalerweise in anderen Fällen als diesem nicht zulässig, da in Fällen ohne Format bzw. Vorlage die Eigenschaft in einer Instanz anstatt in einem Typ enthalten ist.  
+-   Der Pfad wird in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] angegeben, d.h. in einem Stil oder einer Vorlage, die keinen spezifischen Zieltyp aufweist. Eine qualifizierte Verwendung ist normalerweise in anderen Fällen als diesem nicht zulässig, da in Fällen ohne Stil bzw. Vorlage die Eigenschaft in einer Instanz anstatt in einem Typ enthalten ist.  
   
 -   Die Eigenschaft ist eine angefügte Eigenschaft.  
   
 -   Sie binden an eine statische Eigenschaft.  
   
- Für die Verwendung als Storyboardziel muss die als `propertyName` angegebene Eigenschaft eine <xref:System.Windows.DependencyProperty> sein.  
+ Für die Verwendung als Storyboardziel, die Eigenschaft angegeben, als `propertyName` muss eine <xref:System.Windows.DependencyProperty>.  
   
 <a name="sourcetraversal"></a>   
-### Quellentraversal \(Binden an Auflistungshierarchien\)  
+### <a name="source-traversal-binding-to-hierarchies-of-collections"></a>Quellendurchlauf (Binden an Auflistungshierarchien)  
   
-```  
-<object Path="propertyName/propertyNameX" .../>  
+```xml  
+<object Path="propertyName/propertyNameX" .../>  
 ```  
   
- Das Zeichen \/ in dieser Syntax ermöglicht die Navigation in einem hierarchischen Datenquellenobjekt. In der Hierarchie werden mehrere Schritte mit aufeinander folgenden Schrägstrichen \(\/\) unterstützt.  Das Quellentraversal kennzeichnet die Zeigerposition des aktuellen Datensatzes, welche durch die Synchronisation der Daten mit der Benutzeroberfläche der Ansicht ermittelt wird.  Weitere Informationen zum Binden mit hierarchischen Datenquellenobjekten und zu der Bedeutung des Zeigers für den aktuellen Datensatz in der Datenbindung finden Sie unter [Verwenden des Master\-\/Detailmusters mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) oder [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Das Zeichen / in dieser Syntax ermöglicht die Navigation in einem hierarchischen Datenquellenobjekt. In der Hierarchie werden mehrere Schritte mit aufeinanderfolgenden Schrägstrichen (/) unterstützt. Der Quellendurchlauf kennzeichnet die Zeigerposition des aktuellen Datensatzes, welche durch die Synchronisation der Daten mit der Benutzeroberfläche der Ansicht ermittelt wird. Weitere Informationen zum Binden mit hierarchischen Datenquellenobjekten und zur Bedeutung des Zeigers für den aktuellen Datensatz in der Datenbindung finden Sie unter [Verwenden des Master-Detail-Musters mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) und [Übersicht über die Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  Auf den ersten Blick ähnelt diese Syntax [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)].  Ein echter [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]\-Ausdruck für das Binden an eine [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]\-Datenquelle wird jedoch nicht als <xref:System.Windows.Data.Binding.Path%2A>\-Wert verwendet. Er sollte stattdessen für die sich ausschließende <xref:System.Windows.Data.Binding.XPath%2A>\-Eigenschaft verwendet werden.  
+>  Auf den ersten Blick ähnelt diese Syntax [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Eine "true" [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] Ausdruck für die Bindung an eine [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] -Datenquelle dient nicht als eine <xref:System.Windows.Data.Binding.Path%2A> -Wert und sollte stattdessen verwendet werden, für die sich gegenseitig ausschließende <xref:System.Windows.Data.Binding.XPath%2A> Eigenschaft.  
   
-### Auflistungsansichten  
- Um auf eine benannte Auflistungsansicht zu verweisen, stellen Sie dem Auflistungsansichtsnamen das Hashzeichen \(`#`\) voran.  
+### <a name="collection-views"></a>Auflistungsansichten  
+ Stellen Sie dem Namen der Auflistungsansicht das Hashzeichen (`#`) voran, um auf eine benannte Auflistungsansicht zu verweisen.  
   
-### Zeiger auf den aktuellen Datensatz  
- Um für eine Auflistungsansicht auf den Zeiger auf den aktuellen Datensatz oder Master\-Detaildatenbindungsszenario zu verweisen, beginnen Sie die Pfadzeichenfolge mit einem Schrägstrich \(`/`\).  Ein beliebiger Pfad nach dem Schrägstrich wird ab dem Zeiger auf den aktuellen Datensatz durchlaufen.  
+### <a name="current-record-pointer"></a>Zeiger auf den aktuellen Datensatz  
+ Beginnen Sie die Pfadzeichenfolge mit einem Schrägstrich (`/`), um für eine Auflistungsansicht oder ein Master-Detail-Datenbindungsszenario auf den Zeiger für den aktuellen Datensatz zu verweisen. Ein beliebiger Pfad nach dem Schrägstrich wird ab dem Zeiger auf den aktuellen Datensatz durchlaufen.  
   
-### Mehrere Indexer  
+### <a name="multiple-indexers"></a>Mehrere Indexer  
   
 ```  
-<object Path="[index1,index2...]" .../>  
+<object Path="[index1,index2...]" .../>  
 or  
-<object Path="propertyName[index,index2...]" .../>  
+<object Path="propertyName[index,index2...]" .../>  
 ```  
   
- Wenn ein bestimmtes Objekt mehrere Indexer unterstützt, können diese in der richtigen Reihenfolge angegeben werden, ähnlich wie ein auf Syntax verweisendes Array.  Bei dem betreffenden Objekt handelt es sich entweder um den aktuellen Kontext oder um den Wert einer Eigenschaft, die ein Objekt mit mehreren Indizes enthält.  
+ Wenn ein bestimmtes Objekt mehrere Indexer unterstützt, können diese Indexer in der richtigen Reihenfolge angegeben werden, ähnlich wie ein Array, das auf Syntax verweist. Bei diesem Objekt kann es sich entweder um den aktuellen Kontext oder um den Wert einer Eigenschaft handeln, die ein Objekt mit mehreren Indizes enthält.  
   
- Standardmäßig werden die Indexerwerte eingegeben, indem die Eigenschaften des zugrunde liegenden Objekts verwendet werden.  Sie können bei Bedarf den Typ des Indexes angeben.  Weitere Informationen zum Eingeben der Indexer finden Sie unter <xref:System.Windows.Data.Binding.Path%2A?displayProperty=fullName>.  
+ In der Standardeinstellung werden die Indexerwerte durch Verwendung der Eigenschaften des zugrunde liegenden Objekts eingegeben. Sie können falls erforderlich den Typ des Index angeben. Weitere Informationen zum Eingeben der Indexer finden Sie unter <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.  
   
 <a name="mixing"></a>   
-### Kombinieren von Syntax  
- Jede oben angegebene Syntax kann mit anderer Syntax kombiniert werden.  Im folgenden Beispiel wird beispielsweise ein Eigenschaftenpfad zu der Farbe an einem bestimmten XY\-Punkt einer `ColorGrid`\-Eigenschaft erstellt, die ein Pixelrasterarray von <xref:System.Windows.Media.SolidColorBrush>\-Objekten enthält:  
+### <a name="mixing-syntaxes"></a>Kombinieren von Syntaxen  
+ Jede der oben angegebenen Syntaxen kann mit einer anderen Syntax kombiniert werden. Beispielsweise ist im folgenden ein Beispiel, das einen Eigenschaftenpfad mit der Farbe auf einem bestimmten x-und y erstellt eine `ColorGrid` Eigenschaft, die ein Array des Pixel-Raster von enthält <xref:System.Windows.Media.SolidColorBrush> Objekte:  
   
+```xml  
+<Rectangle Fill="{Binding ColorGrid[20,30].SolidColorBrushResult}" .../>  
 ```  
-<Rectangle Fill="{Binding ColorGrid[20,30].SolidColorBrushResult}" .../>  
-```  
   
-### Escapes für Eigenschaftenpfadzeichenfolgen  
- Bei bestimmten Geschäftsobjekten könnten Sie auf einen Fall stoßen, in dem die Eigenschaftenpfadzeichenfolge eine Escapesequenz erfordert, um ordnungsgemäß analysiert werden zu können.  Die Anforderung für Escapezeichen sollte selten sein, da viele dieser Zeichen ähnliche Benennungsinteraktionsprobleme in Sprachen aufweisen, die in der Regel verwendet werden würden, um das Geschäftsobjekt zu definieren.  
+### <a name="escapes-for-property-path-strings"></a>Escapezeichen für Eigenschaftspfadzeichenfolgen  
+ Bei bestimmten Geschäftsobjekten kann es vorkommen, dass die Eigenschaftspfadzeichenfolge eine Escapesequenz erfordert, um ordnungsgemäß analysiert werden zu können. Der Bedarf an Escapezeichen sollte gering sein, da viele dieser Zeichen ähnliche Benennungsinteraktionsprobleme in Sprachen aufweisen, die normalerweise verwendet werden würden, um das Geschäftsobjekt zu definieren.  
   
--   In Indexern \(\[ \]\) Indexern dient das Caretzeichen \(^\) als Ecsapezeichen für das nächste Zeichen.  
+-   In Indexern ([ ]) dient das Caretzeichen (^) als Escapezeichen für das nächste Zeichen.  
   
--   Sie müssen bestimmte Zeichen \(mit XML\-Entitäten\), die in der XML\-Sprachdefinitionen eine besondere Bedeutung haben, mit Escapezeichen versehen.  Verwenden Sie `&`, um das Zeichen "&" mit Escapezeichen zu versehen.  Verwenden Sie `>`, um das Endtag "\>" mit Escapezeichen zu versehen.  
+-   Sie müssen bestimmte Zeichen (mit XML-Entitäten), die für die XML-Sprachdefinition von besonderer Bedeutung sind, mit Escapezeichen versehen. Verwenden Sie `&`, um das Zeichen „&“ mit Escapezeichen zu versehen. Verwenden Sie `>`, um das Endtag „>“ mit Escapezeichen zu versehen.  
   
--   Sie müssen Escapezeichen \(mit dem umgekehrten Schrägstrich `\`\) zu Zeichen hinzufügen, die für das WPF XAML\-Parserverhalten beim Verarbeiten einer Markuperweiterung eine besondere Bedeutung haben.  
+-   Sie müssen Escapezeichen (mit dem umgekehrten Schrägstrich `\`) zu Zeichen hinzufügen, die für das WPF-XAML-Parserverhalten beim Verarbeiten einer Markuperweiterung von besonderer Bedeutung sind.  
   
-    -   Der umgekehrte Schrägstrich \(`\`\) ist das eigentliche Escapezeichen.  
+    -   Der umgekehrte Schrägstrich (`\`) ist das eigentliche Escapezeichen.  
   
-    -   Das Gleichheitszeichen \(`=`\) trennt den Eigenschaftennamen vom Eigenschaftswert.  
+    -   Das Gleichheitszeichen (`=`) trennt den Eigenschaftsnamen vom Eigenschaftswert.  
   
-    -   Mit einem Komma \(`,`\) werden Eigenschaften getrennt.  
+    -   Das Komma (`,`) trennt Eigenschaften.  
   
-    -   Die rechte geschweifte Klammer \(`}`\) gibt das Ende einer Markuperweiterung an.  
+    -   Die rechte geschweifte Klammer (`}`) gibt das Ende einer Markuperweiterung an.  
   
 > [!NOTE]
->  Praktisch funktionieren diese Escapes auch für einen Storyboardeigenschaftenpfad, aber Sie durchlaufen normalerweise Objektmodelle für vorhandene WPF\-Objekte, und Escapezeichen sollten unnötig sein.  
+>  Technisch gesehen funktionieren diese Escapezeichen auch für einen Storyboardeigenschaftspfad, aber da Sie normalerweise Objektmodelle für vorhandene WPF-Objekte durchlaufen, sollten Escapezeichen unnötig sein.  
   
 <a name="databinding_sa"></a>   
-## PropertyPath für Animationsziele  
- Die Zieleigenschaft einer Animation muss eine [Abhängigkeitseigenschaft](GTMT) sein, die einen <xref:System.Windows.Freezable>\-Typ oder einen primitiven Typ aufweist.  Die Zieleigenschaft für einen Typ und die ggf. animierte Eigenschaft können sich jedoch auf unterschiedlichen Objekten befinden.  Bei Animationen wird ein Eigenschaftenpfad verwendet, um die Verbindung zwischen der Eigenschaft des benannten Animationszielobjekts und der Eigenschaft der gewünschten Zielanimation zu definieren. Hierzu werden die Objekt\-\/Eigenschaftenbeziehungen in den Eigenschaftswerten durchlaufen.  
+## <a name="propertypath-for-animation-targets"></a>PropertyPath für Animationsziele  
+ Die Zieleigenschaft einer Animation muss eine Abhängigkeitseigenschaft, die entweder akzeptiert eine <xref:System.Windows.Freezable> oder einen primitiven Typ. Die Zieleigenschaft für einen Typ und gegebenenfalls die animierte Eigenschaft können sich jedoch auf unterschiedlichen Objekten befinden. Bei Animationen wird ein Eigenschaftspfad verwendet, um die Verbindung zwischen der Eigenschaft des benannten Animationszielobjekts und der Eigenschaft der gewünschten Zielanimation zu definieren. Hierzu werden die Objekteigenschaftsbeziehungen in den Eigenschaftswerten durchlaufen.  
   
 <a name="general"></a>   
-### Allgemeine Überlegungen zu Objekten\/Eigenschaften für Animationen  
+### <a name="general-object-property-considerations-for-animations"></a>Allgemeine Überlegungen zu Objekteigenschaften für Animationen  
  Weitere Informationen zu Animationskonzepten im Allgemeinen finden Sie unter [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) und [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
- Der Werttyp oder die animierte Eigenschaft muss ein <xref:System.Windows.Freezable>\-Typ oder primitiver Typ sein.  Die Eigenschaft, die den Pfad beginnt, muss in den Namen einer [Abhängigkeitseigenschaft](GTMT) aufgelöst werden, die in dem angegebenen <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>\-Typ vorhanden ist.  
+ Der Werttyp oder der zu animierenden Eigenschaft muss entweder eine <xref:System.Windows.Freezable> Typ oder ein primitiver Wert. Die Eigenschaft, die den Pfad beginnt, muss in den Namen einer Abhängigkeitseigenschaft sein, auf dem angegebenen aufgelöst werden <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Typ.  
   
- Um das Klonen für die Animation eines <xref:System.Windows.Freezable>\-Typs zu unterstützen, der bereits gesperrt ist, muss das durch <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> angegebene Objekt eine abgeleitete <xref:System.Windows.FrameworkElement>\- oder <xref:System.Windows.FrameworkContentElement>\-Klasse sein.  
+ Um das Klonen für die Animation unterstützt eine <xref:System.Windows.Freezable> , die bereits gesperrt ist, das vom angegebenen Objekt <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> muss ein <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleitete Klasse.  
   
 <a name="singlestepanim"></a>   
-### Einzelne Eigenschaft auf dem Zielobjekt  
+### <a name="single-property-on-the-target-object"></a>Einzelne Eigenschaft auf dem Zielobjekt  
   
-```  
-<animation Storyboard.TargetProperty="propertyName" .../>  
+```xml  
+<animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName` muss in den Namen einer [Abhängigkeitseigenschaft](GTMT) aufgelöst werden, die in dem angegebenen <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>\-Typ vorhanden ist.  
+ `propertyName`muss in den Namen einer Abhängigkeitseigenschaft sein, auf dem angegebenen aufgelöst <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Typ.  
   
 <a name="indirectanim"></a>   
-### Indirekte Eigenschaftenverwendung  
+### <a name="indirect-property-targeting"></a>Indirekte Eigenschaftsziele  
   
+```xml  
+<animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
-<animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
-```  
   
- `propertyName` muss eine Eigenschaft sein, die entweder ein <xref:System.Windows.Freezable>\-Werttyp oder ein primitiver Werttyp ist, der in dem angegebenen <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>\-Typ vorhanden ist.  
+ `propertyName`muss eine Eigenschaft, die entweder eine <xref:System.Windows.Freezable> Werttyp oder ein primitiver, die auf dem angegebenen vorhanden ist <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Typ.  
   
- `propertyName2` muss dem Namen einer [Abhängigkeitseigenschaft](GTMT) entsprechen, die in dem Objekt vorhanden ist, das den Wert von `propertyName` angibt.  Mit anderen Worten, `propertyName2` muss als Abhängigkeitseigenschaft des Typs vorhanden sein, der den `propertyName`<xref:System.Windows.DependencyProperty.PropertyType%2A> kennzeichnet.  
+ `propertyName2` muss der Name einer Abhängigkeitseigenschaft sein, die auf dem Objekt vorhanden ist, das dem Wert von `propertyName` entspricht. Das heißt, `propertyName2` muss vorhanden sein, als Abhängigkeitseigenschaft des Typs, der die `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   
- Die indirekte Verwendung von Animationen ist aufgrund der angewendeten Formate und Vorlagen erforderlich.  Um eine Animation zu verwenden, benötigen Sie einen <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> auf einem Zielobjekt. Dieser Name wird durch [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) oder <xref:System.Windows.FrameworkElement.Name%2A> festgelegt.  Vorlagen\- und Formatelemente können zwar ebenfalls Namen aufweisen, diese sind jedoch nur innerhalb des Namescope für das Format bzw. die Vorlage gültig.  \(Wenn Vorlagen und Formate den gleichen Namescope wie Anwendungsmarkup verwenden würden, wären die Namen nicht eindeutig.  Die Formate und Vorlagen würden dann von verschiedenen Instanzen gleichzeitig verwendet und doppelte Namen weitergeben.\) Wenn die spezifischen Eigenschaften eines zu animierenden Elements aus einem Format oder einer Vorlage stammen, müssen Sie daher mit einer benannten Elementinstanz beginnen, die nicht aus der Formatvorlage stammt. Geben Sie dann als Ziel die visuelle Struktur des Formats oder der Vorlage an, um die Eigenschaft zu kennzeichnen, die Sie animieren möchten.  
+ Die indirekte Verwendung von Animationen als Ziel ist aufgrund der angewendeten Stile und Vorlagen erforderlich. Um eine Animation abzielen möchten, müssen Sie eine <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ein Zielobjekt, und diesem Namen wird hergestellt [X: Name](../../../../docs/framework/xaml-services/x-name-directive.md) oder <xref:System.Windows.FrameworkElement.Name%2A>. Vorlagen- und Stilelemente können zwar ebenfalls Namen haben, aber diese Namen sind nur innerhalb des Namescope des Stils bzw. der Vorlage gültig. (Wenn Vorlagen und Stile den gleichen Namescope wie das Anwendungsmarkup verwenden würden, wären die Namen nicht eindeutig. Die Stile und Vorlagen würden dann von verschiedenen Instanzen gleichzeitig verwendet werden und würden doppelte Namen weitergeben.) Wenn die spezifischen Eigenschaften eines zu animierenden Elements aus einem Stil oder einer Vorlage stammen, müssen Sie daher mit einer benannten Elementinstanz beginnen, die nicht aus der Formatvorlage stammt, und dann als Ziel die visuelle Struktur des Stils oder der Vorlage angeben, um zu der Eigenschaft zu gelangen, die Sie animieren möchten.  
   
- Beispiel: Die <xref:System.Windows.Controls.Panel.Background%2A>\-Eigenschaft eines <xref:System.Windows.Controls.Panel> ist ein vollständiger <xref:System.Windows.Media.Brush> \(um genau zu sein ein <xref:System.Windows.Media.SolidColorBrush>\), der aus einer Designvorlage stammt.  Um einen <xref:System.Windows.Media.Brush> vollständig zu animieren, benötigen Sie eine BrushAnimation \(zumeist eine für jeden <xref:System.Windows.Media.Brush>\-Typ\), ein solcher Typ ist jedoch nicht vorhanden.  Sie animieren daher statt des Pinsels die Eigenschaften eines bestimmten <xref:System.Windows.Media.Brush>\-Typs.  Sie müssen von dem <xref:System.Windows.Media.SolidColorBrush> zu der entsprechenden <xref:System.Windows.Media.SolidColorBrush.Color%2A> gelangen, um auf diese eine <xref:System.Windows.Media.Animation.ColorAnimation> anzuwenden.  Der Eigenschaftenpfad für dieses Beispiel wäre `Background.Color`.  
+ Z. B. die <xref:System.Windows.Controls.Panel.Background%2A> Eigenschaft eine <xref:System.Windows.Controls.Panel> ein vollständiges <xref:System.Windows.Media.Brush> (tatsächlich ein <xref:System.Windows.Media.SolidColorBrush>), die aus einer Designvorlage stammt. Zum Animieren einer <xref:System.Windows.Media.Brush> vollständig, benötigen Sie eine BrushAnimation, (wahrscheinlich eine für jede <xref:System.Windows.Media.Brush> Typ) und kein solcher Typ vorhanden ist. Einen Pinsel, Sie stattdessen animieren Eigenschaften eines bestimmten <xref:System.Windows.Media.Brush> Typ. Müssen Sie zum Abrufen von <xref:System.Windows.Media.SolidColorBrush> auf seine <xref:System.Windows.Media.SolidColorBrush.Color%2A> anzuwendende eine <xref:System.Windows.Media.Animation.ColorAnimation> vorhanden. Der Eigenschaftspfad für dieses Beispiel wäre `Background.Color`.  
   
 <a name="attachedanim"></a>   
-### Angefügte Eigenschaften  
+### <a name="attached-properties"></a>Angefügte Eigenschaften  
   
-```  
+```xml  
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- Die Klammern kennzeichnen, dass diese Eigenschaft in einem <xref:System.Windows.PropertyPath> mit einer Teilqualifikation erstellt werden sollte.  Es kann ein XML\-Namespace verwendet werden, um den Typ zu suchen.  Der `ownerType` sucht Typen, auf die ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor zugreifen kann, mithilfe der <xref:System.Windows.Markup.XmlnsDefinitionAttribute>\-Deklarationen in jeder Assembly.  In den meisten Anwendungen ist dem [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]\-Namespace ein standardmäßiger XML\-Namespace zugeordnet. Ein Präfix ist daher normalerweise nur für benutzerdefinierte Typen oder andere Typen erforderlich, die sich andernfalls außerhalb dieses Namespaces befinden würden.  `propertyName` muss in den Namen einer Eigenschaft aufgelöst werden, die in `ownerType` existiert.  Die als `propertyName` angegebene Eigenschaft muss eine <xref:System.Windows.DependencyProperty> sein.  \(Alle angefügten Eigenschaften in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] werden als Abhängigkeitseigenschaften implementiert. Diese Frage ist daher nur für benutzerdefinierte, angefügte Eigenschaften relevant.\)  
+ Die Klammern geben an, die diese Eigenschaft in einer <xref:System.Windows.PropertyPath> teilweise Modulmember erstellt werden soll. Es kann ein XML-Namespace verwendet werden, um nach dem Typ zu suchen. Die `ownerType` sucht Typen, die eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor verfügt über Zugriff auf, bis die <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Deklarationen in den jeweiligen Assemblys. In den meisten Anwendungen ist dem [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]-Namespace der XML-Standardnamespace zugeordnet. Ein Präfix ist daher normalerweise nur für benutzerdefinierte Typen oder andere Typen erforderlich, die sich anderweitig außerhalb dieses Namespace befinden. `propertyName` muss in den Namen einer Eigenschaft aufgelöst werden, die im `ownerType`-Objekt vorhanden ist. Als die angegebene Eigenschaft `propertyName` muss eine <xref:System.Windows.DependencyProperty>. (Alle in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] angefügten Eigenschaften werden als Abhängigkeitseigenschaften implementiert, weshalb dies nur bei benutzerdefinierten, angefügten Eigenschaften relevant ist.)  
   
 <a name="indexanim"></a>   
-### Indexer  
+### <a name="indexers"></a>Indexer  
   
-```  
-<animation Storyboard.TargetProperty="propertyName.propertyName2[index].propertyName3" .../>  
+```xml  
+<animation Storyboard.TargetProperty="propertyName.propertyName2[index].propertyName3" .../>  
 ```  
   
- Die meisten Abhängigkeitseigenschaften oder <xref:System.Windows.Freezable>\-Typen unterstützen keinen Indexer.  Indexer können daher in einem Animationspfad nur an einer Zwischenposition zwischen der Eigenschaft, mit der die Kette am benannten Ziel beginnt, und der ggf. animierten Eigenschaft verwendet werden.  In der dargestellten Syntax ist dies `propertyName2`.  Ein Indexer kann beispielsweise erforderlich sein, wenn die Zwischeneigenschaft eine Auflistung, z. B. <xref:System.Windows.Media.TransformGroup>, in einem Eigenschaftenpfad wie `RenderTransform.Children[1].Angle` ist.  
+ Die meisten Abhängigkeitseigenschaften oder <xref:System.Windows.Freezable> Typen einen Indexer nicht unterstützt. Indexer können deshalb in einem Animationspfad nur an einer Zwischenposition zwischen der Eigenschaft, mit der die Kette am benannten Ziel beginnt, und gegebenenfalls der animierten Eigenschaft verwendet werden. In der dargestellten Syntax ist dies `propertyName2`. Z. B. möglicherweise die Verwendung als Indexer erforderlich, wenn die intermediate-Eigenschaft eine Auflistung wie z. B. <xref:System.Windows.Media.TransformGroup>, in einem Eigenschaftenpfad, z. B. `RenderTransform.Children[1].Angle`.  
   
 <a name="ppincode"></a>   
-## PropertyPath im Code  
- Die Verwendung von Code für <xref:System.Windows.PropertyPath>, einschließlich Angaben zur Erstellung eines <xref:System.Windows.PropertyPath>, ist im Referenzthema für <xref:System.Windows.PropertyPath> dokumentiert.  
+## <a name="propertypath-in-code"></a>PropertyPath im Code  
+ Verwendung von Code für <xref:System.Windows.PropertyPath>, einschließlich Informationen zum Erstellen einer <xref:System.Windows.PropertyPath>, finden Sie im Referenzthema für <xref:System.Windows.PropertyPath>.  
   
- In der Regel verwendet <xref:System.Windows.PropertyPath> zwei unterschiedliche Konstruktoren, einen für die Verwendung von Bindungen und einfachen Animationen und einen für die Verwendung komplexer Animationen.  Verwenden Sie die <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>\-Signatur für Bindungsverwendungen, wenn das Objekt eine Zeichenfolge ist.  Verwenden Sie die <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>\-Signatur für Animationspfade mit einem Schritt, wenn das Objekt eine <xref:System.Windows.DependencyProperty> ist.  Verwenden Sie die [PropertyPath\(String, Object\<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>\-Signatur für komplexe Animationen.  Der zuletzt genannte Konstruktor nutzt eine Tokenzeichenfolge für den ersten Parameter und ein Array mit Objekten, die die Positionen in der Tokenzeichenfolge füllen, um eine Eigenschaftenpfadbeziehung zu definieren.  
+ Im allgemeinen <xref:System.Windows.PropertyPath> zwei verschiedene Konstruktoren, für die Bindung Verwendungen und die einfachsten Verwendungsmöglichkeiten der Animation und eine für die komplexe Animation Verwendungen verwenden soll. Verwenden der <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> Signatur zum Binden von Verwendungen, in dem das Objekt eine Zeichenfolge ist. Verwenden der <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> Signatur für die einstufige Animationspfade werden, in dem das Objekt ist eine <xref:System.Windows.DependencyProperty>. Verwenden der <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> Signatur für komplexe Animationen. Dieser zweite Konstruktor verwendet eine Tokenzeichenfolge für den ersten Parameter und ein Array von Objekten, die Positionen in der Tokenzeichenfolge füllen, um eine Eigenschaftspfadbeziehung zu definieren.  
   
-## Siehe auch  
- <xref:System.Windows.PropertyPath>   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.PropertyPath>  
+ [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

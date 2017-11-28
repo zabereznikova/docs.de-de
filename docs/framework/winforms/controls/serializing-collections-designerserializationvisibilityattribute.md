@@ -1,159 +1,154 @@
 ---
-title: "Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Auflistungen, Serialisieren"
-  - "Auflistungen, Standardtypen"
-  - "DesiginerSerializationVisibilityAttribute-Klasse"
-  - "Serialisierung, Auflistungen"
-  - "Standardtypen, Auflistungen"
+title: 'Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- serialization [Windows Forms], collections
+- standard types [Windows Forms], collections
+- collections [Windows Forms], serializing
+- collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9efad2da27f4003632b643b9f5f0602be0d55480
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute
-Die benutzerdefinierten Steuerelemente machen manchmal eine Auflistung als Eigenschaft verfügbar.  Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mit der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>\-Klasse steuern können, wie eine Auflistung zur Entwurfszeit serialisiert wird.  Wenn Sie den <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>\-Wert auf die Auflistungseigenschaft anwenden, ist gewährleistet, dass die Eigenschaft serialisiert wird.  
+# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute
+Der benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eigenschaft verfügbar machen. Diese exemplarische Vorgehensweise veranschaulicht, wie die <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> Klasse steuern, wie eine Auflistung zur Entwurfszeit serialisiert wird. Anwenden der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Wert auf die Auflistungseigenschaft wird sichergestellt, dass die Eigenschaft serialisiert wird.  
   
- Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](../Topic/How%20to:%20Serialize%20Collections%20of%20Standard%20Types%20with%20the%20DesignerSerializationVisibilityAttribute.md).  
+ Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [wie: Serialisieren Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms\-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
+-   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
   
-## Erstellen eines Steuerelements, das über eine serialisierbare Auflistung verfügt  
- Der erste Schritt besteht darin, ein Steuerelement zu erstellen, das über eine serialisierbare Auflistung als Eigenschaft verfügt.  Sie können den Inhalt dieser Auflistung mithilfe des **Auflistungs\-Editors** bearbeiten, den Sie über das **Eigenschaftenfenster** aufrufen können.  
+## <a name="creating-a-control-that-has-a-serializable-collection"></a>Erstellen eines Steuerelements, verfügt über eine serialisierbare Auflistung  
+ Der erste Schritt besteht darin ein Steuerelement zu erstellen, die eine serialisierbare Auflistung als Eigenschaft verfügt. Können Sie den Inhalt dieser Auflistung mit Bearbeiten der **Auflistungs-Editor**, das Sie zugreifen können, aus der **Eigenschaften** Fenster.  
   
-#### So erstellen Sie ein Steuerelement, das über eine serialisierbare Auflistung verfügt  
+#### <a name="to-create-a-control-with-a-serializable-collection"></a>So erstellen Sie ein Steuerelement über eine serialisierbare Auflistung  
   
-1.  Erstellen Sie ein Windows\-Steuerelementbibliothek\-Projekt mit dem Namen `SerializationDemoControlLib`.  Weitere Informationen finden Sie unter [Windows Control Library Template](http://msdn.microsoft.com/de-de/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt aufgerufen `SerializationDemoControlLib`. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Benennen Sie `UserControl1` in `SerializationDemoControl` um.  Weitere Informationen finden Sie unter [How to: Rename Identifiers](http://msdn.microsoft.com/de-de/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Benennen Sie `UserControl1` auf `SerializationDemoControl`. Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
-3.  Legen Sie im Fenster **Eigenschaften** den Wert der <xref:System.Windows.Forms.Padding.All%2A?displayProperty=fullName>\-Eigenschaft auf `10` fest.  
+3.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> Eigenschaft `10`.  
   
-4.  Fügen Sie ein <xref:System.Windows.Forms.TextBox>\-Steuerelement in das `SerializationDemoControl` ein.  
+4.  Stelle eine <xref:System.Windows.Forms.TextBox> steuern, der `SerializationDemoControl`.  
   
-5.  Wählen Sie das <xref:System.Windows.Forms.TextBox>\-Steuerelement aus.  Legen Sie im **Eigenschaftenfenster** die folgenden Eigenschaften fest.  
+5.  Wählen Sie das <xref:System.Windows.Forms.TextBox>-Steuerelement. In der **Eigenschaften** die folgenden Eigenschaften fest.  
   
-    |Property|Ändern in|  
+    |Eigenschaft|Ändern in|  
     |--------------|---------------|  
     |**Multiline**|`true`|  
-    |**Dock**|<xref:System.Windows.Forms.DockStyle>|  
-    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars>|  
+    |**Andocken**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**Bildlaufleisten**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
-6.  Deklarieren Sie im **Code\-Editor** ein Zeichenfolgenarrayfeld mit dem Namen `stringsValue` im `SerializationDemoControl`.  
+6.  In der **Code-Editor**, deklarieren Sie ein Array, mit dem Namen Zeichenfolgenfeld `stringsValue` in `SerializationDemoControl`.  
   
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
-7.  Definieren Sie die `Strings`\-Eigenschaft für das `SerializationDemoControl`.  
+7.  Definieren der `Strings` Eigenschaft auf die `SerializationDemoControl`.  
   
 > [!NOTE]
->  Der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>\-Wert wird verwendet, um die Serialisierung der Auflistung zu ermöglichen.  
+>  Die <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Wert wird verwendet, um die Serialisierung der Auflistung zu aktivieren.  
   
  [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
  [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
  [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
-1.  Drücken Sie F5, um das Projekt zu erstellen und das Steuerelement im **UserControl\-Testcontainer** auszuführen.  
+1.  Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl-Testcontainer** aus.  
   
-2.  Suchen Sie die `Strings`\-Eigenschaft im <xref:System.Windows.Forms.PropertyGrid> **UserControl\-Testcontainer**.  Klicken Sie auf die `Strings`\-Eigenschaft und anschließend auf die Schaltfläche mit den Auslassungszeichen \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\), um den **Zeichenfolgen\-Editor** zu öffnen.  
+2.  Suchen der `Strings` Eigenschaft in der <xref:System.Windows.Forms.PropertyGrid> von der **UserControl-Testcontainer**. Klicken Sie auf die `Strings` -Eigenschaft, klicken Sie dann auf die Auslassungspunkte (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) die Schaltfläche, um die **Zeichenfolgen-Editor**.  
   
-3.  Geben Sie mehrere Zeichenfolgen in den **Zeichenfolgen\-Editor** ein.  Trennen Sie sie, indem Sie am Ende jeder Zeichenfolge die EINGABETASTE drücken.  Klicken Sie auf **OK**, wenn Sie alle Zeichenfolgen eingegeben haben.  
-  
-> [!NOTE]
->  Die von Ihnen eingegebenen Zeichenfolgen werden in der <xref:System.Windows.Forms.TextBox> des `SerializationDemoControl` angezeigt.  
-  
-## Serialisieren einer Auflistungseigenschaft  
- Um das Serialisierungsverhalten des Steuerelements zu testen, fügen Sie es auf einem Formular ein und ändern den Inhalt der Auflistung mit dem **Auflistungs\-Editor**.  Sie können den Zustand der serialisierten Auflistung anhand einer speziellen Designer\-Datei erkennen, in die der **Windows Forms\-Designer** Code ausgibt.  
-  
-#### So serialisieren Sie eine Auflistung  
-  
-1.  Fügen Sie der Projektmappe ein neues Windows\-Anwendungsprojekt hinzu.  Geben Sie dem Projekt die Bezeichnung `SerializationDemoControlTest`.  
-  
-2.  Suchen Sie in der **Toolbox** die Registerkarte mit dem Namen **SerializationDemoControlLib Components**.  Auf dieser Registerkarte befindet sich das `SerializationDemoControl`.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
-  
-3.  Fügen Sie ein `SerializationDemoControl` auf dem Formular ein.  
-  
-4.  Suchen Sie die `Strings`\-Eigenschaft im **Eigenschaftenfenster**.  Klicken Sie auf die `Strings`\-Eigenschaft und anschließend auf die Schaltfläche mit den Auslassungszeichen \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\), um den **Zeichenfolgen\-Editor** zu öffnen.  
-  
-5.  Geben Sie mehrere Zeichenfolgen in den **Zeichenfolgen\-Editor** ein.  Trennen Sie sie, indem Sie am Ende jeder Zeichenfolge die EINGABETASTE drücken.  Klicken Sie auf **OK**, wenn Sie alle Zeichenfolgen eingegeben haben.  
+3.  Geben Sie mehrere Zeichenfolgen in die **Zeichenfolgen-Editor**. Trennen sie durch Drücken der EINGABETASTE am Ende einer Zeichenfolge. Klicken Sie auf **OK** , wenn Sie alle Zeichenfolgen eingegeben haben.  
   
 > [!NOTE]
->  Die von Ihnen eingegebenen Zeichenfolgen werden in der <xref:System.Windows.Forms.TextBox> des `SerializationDemoControl` angezeigt.  
+>  Die eingegebene Zeichenfolgen angezeigt, der <xref:System.Windows.Forms.TextBox> von der `SerializationDemoControl`.  
   
-1.  Klicken Sie im **Projektmappen\-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
+## <a name="serializing-a-collection-property"></a>Serialisieren einer Auflistungseigenschaft  
+ Um die Serialisierung des Verhaltens eines Steuerelements zu testen, werden Sie ihn in einem Formular platzieren und ändern Sie den Inhalt der Auflistung mit den **Auflistungs-Editor**. Sehen Sie den Zustand der serialisierten Auflistung durch einen Blick auf eine spezielle-Designer-Datei, in dem die **Windows Forms-Designer** Code ausgibt.  
   
-2.  Öffnen Sie den Knoten **Form1**.  Darunter befindet sich eine Datei mit dem Namen **Form1.Designer.cs** oder **Form1.Designer.vb**.  Dies ist die Datei, in die der **Windows Forms\-Designer** Code ausgibt, der den Zustand des Formulars und dessen untergeordneten Steuerelemente zur Entwurfszeit wiedergibt.  Öffnen Sie diese Datei im **Code\-Editor**.  
+#### <a name="to-serialize-a-collection"></a>Um eine Auflistung zu serialisieren.  
   
-3.  Öffnen Sie den Bereich **Vom Windows Form\-Designer generierter Code**, und suchen Sie den Abschnitt **serializationDemoControl1**.  Unter dieser Bezeichnung befindet sich der Code, der dem serialisierten Zustand des Steuerelements entspricht.  Die Zeichenfolgen, die Sie in Schritt 5 eingegeben haben, werden in einer Zuweisung zur `Strings`\-Eigenschaft angezeigt.  Der Code im folgenden Beispiel entspricht in etwa dem Code, der angezeigt würde, wenn Sie die Zeichenfolgen "red", "orange" und "yellow" eingegeben hätten.  
+1.  Fügen Sie der Projektmappe ein Windows-Anwendungsprojekt. Benennen Sie das Projekt mit `SerializationDemoControlTest`.  
   
-4.  \[Visual Basic\]  
+2.  In der **Toolbox**, suchen Sie die Registerkarte mit dem Namen **SerializationDemoControlLib Components**. Auf dieser Registerkarte finden Sie die `SerializationDemoControl`. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-    ```  
-    Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
-    ```  
+3.  Stelle eine `SerializationDemoControl` auf dem Formular.  
   
-5.  \[C\#\]  
+4.  Suchen der `Strings` Eigenschaft in der **Eigenschaften** Fenster. Klicken Sie auf die `Strings` -Eigenschaft, klicken Sie dann auf die Auslassungspunkte (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) die Schaltfläche, um die **Zeichenfolgen-Editor**.  
   
-    ```  
+5.  Geben Sie mehrere Zeichenfolgen in die **Zeichenfolgen-Editor**. Trennen sie durch Drücken der EINGABETASTE am Ende einer Zeichenfolge. Klicken Sie auf **OK** , wenn Sie alle Zeichenfolgen eingegeben haben.  
+  
+> [!NOTE]
+>  Die eingegebene Zeichenfolgen angezeigt, der <xref:System.Windows.Forms.TextBox> von der `SerializationDemoControl`.  
+  
+1.  Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
+  
+2.  Öffnen der **Form1** Knoten. Darunter befindet sich eine Datei namens **Form1.Designer.cs** oder **Form1.Designer.vb**. Dies ist die Datei in dem die **Windows Forms-Designer** gibt Code aus, das den Entwurfszeitzustand des Formulars und seiner untergeordneten Steuerelemente darstellt. Öffnen Sie diese Datei im **Code-Editor**.  
+  
+3.  Öffnen Sie den Bereich **Windows Form Designer generierter Code** und suchen Sie den Abschnitt mit der Bezeichnung **serializationDemoControl1**. Unter dieser Bezeichnung befindet sich der Code, der serialisierten Zustand des Steuerelements darstellt. Die Zeichenfolgen, die in Schritt 5 eingegebene angezeigt werden, in einer Zuordnung zu den `Strings` Eigenschaft. Die folgenden Codebeispiele in c# und Visual Basic-Code anzeigen ähnelt, was Sie sehen, wenn Sie die Zeichenfolgen "Red", "orange" und "Gelb" eingegeben haben.  
+  
+    ```csharp  
     this.serializationDemoControl1.Strings = new string[] {  
             "red",  
             "orange",  
             "yellow"};  
     ```  
+    
+    ```vb  
+    Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
+    ```
   
-6.  Ändern Sie im **Code\-Editor** in der `Strings`\-Eigenschaft den Wert von <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> auf <xref:System.ComponentModel.DesignerSerializationVisibility>.  
+4.  In der **Code-Editor**, ändern Sie den Wert von der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> auf die `Strings` Eigenschaft <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.  
   
-7.  \[Visual Basic\]  
-  
+    ```csharp  
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  
     ```  
+    ```vb  
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _  
     ```  
   
-8.  \[C\#\]  
-  
-    ```  
-    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  
-    ```  
-  
-9. Erstellen Sie die Projektmappe neu, und wiederholen Sie die Schritte 4 bis 8.  
+5. Erneutes Erstellen von Projektmappen und wiederholen Sie die Schritte 3 und 4.  
   
 > [!NOTE]
->  In diesem Fall gibt der **Windows Forms\-Designer** keine Zuweisung zur `Strings`\-Eigenschaft aus.  
+>  In diesem Fall die **Windows Forms-Designer** gibt keine Zuweisung zur der `Strings` Eigenschaft.  
   
-## Nächste Schritte  
- Nachdem Sie wissen, wie Sie eine Auflistung von Standardtypen serialisieren können, sollten Sie es in Erwägung ziehen, Ihre benutzerdefinierten Steuerelemente stärker in die Entwurfszeitumgebung zu integrieren.  In den folgenden Themen wird beschrieben, wie Sie die Entwurfszeitintegrierung der benutzerdefinierten Steuerelemente verbessern können:  
+## <a name="next-steps"></a>Nächste Schritte  
+ Sobald Sie wissen, wie eine Auflistung von standardmäßigen Typen serialisieren, sollten Sie besser Integrieren von benutzerdefinierten Steuerelementen in der entwurfszeitumgebung. In den folgenden Themen wird beschrieben, wie die während der Entwurfszeit-Integration von der benutzerdefinierten Steuerelemente zu verbessern:  
   
--   [Design\-Time Architecture](../Topic/Design-Time%20Architecture.md)  
+-   [Architektur zur Entwurfszeit](http://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
   
--   [Attribute in Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [Attribute in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
--   [Designer Serialization Overview](../Topic/Designer%20Serialization%20Overview.md)  
+-   [Übersicht über die Designer-Serialisierung](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [Exemplarische Vorgehensweise: Erstellen eines Windows Forms\-Steuerelements, das Visual Studio\-Entwurfszeitfeatures nutzt](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## Siehe auch  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>   
- [Designer Serialization Overview](../Topic/Designer%20Serialization%20Overview.md)   
- [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](../Topic/How%20to:%20Serialize%20Collections%20of%20Standard%20Types%20with%20the%20DesignerSerializationVisibilityAttribute.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
+ [Übersicht über die Designer-Serialisierung](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
+ [Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
  [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

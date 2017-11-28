@@ -1,60 +1,64 @@
 ---
-title: "Gewusst wie: Drehen von Farben | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farben, Drehen"
-  - "Beispiele [Windows Forms], Drehen von Farben"
+title: 'Gewusst wie: Drehen von Farben'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors [Windows Forms], rotating
+- examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Drehen von Farben
-Die Drehung in einem vierdimensionalen Farbraum ist schwer zu visualisieren.  Sie ist jedoch leichter vorstellbar, wenn vereinbart wird, dass ein Farbanteil stets einen festen Wert beibehält.  Angenommen, der Alphaanteil behält einen festen Wert von 1 \(vollständig deckend\) bei.  In diesem Fall lässt sich ein dreidimensionaler Farbraum mit Rot\-, Grün\- und Blauachsen, wie in der folgenden Abbildung, einfach visualisieren.  
+# <a name="how-to-rotate-colors"></a>Gewusst wie: Drehen von Farben
+Drehungswinkel in einem vierdimensionalen Farbraum ist schwer zu visualisieren. Wir können Drehung zu visualisieren, indem Sie einverstanden sind, behalten Sie eine der festen Farbe Komponenten vereinfachen. Angenommen Sie, wir akzeptieren Sie den Alphaanteil auf 1 festgesetzt (vollständig deckend) beibehalten. Dann können wir einen dreidimensionale Farbraum mit Rot-, Grün- und Blau-Achsen darstellen, in der folgenden Abbildung dargestellt.  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")  
+ ![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")  
   
- Eine Farbe kann man sich im 3D\-Raum wie einen Punkt vorstellen.  Der Punkt \(1, 0, 0\) stellt im Raum beispielsweise die Farbe Rot und der Punkt \(0, 1, 0\) die Farbe Grün dar.  
+ Eine Farbe kann als ein Punkt im 3D-Raum betrachtet werden. Z. B. den Punkt (1, 0, 0) im Raum darstellt, die Farbe Rot und der Punkt im Raum (0, 1, 0) stellt die Farbe Grün.  
   
- Die folgende Abbildung veranschaulicht, welche Auswirkungen die Drehung der Farbe \(1, 0, 0\) in einem Winkel von 60 Grad in der Rot\-Grün\-Ebene hat.  Die Drehung in einer Ebene parallel zur Rot\-Grün\-Ebene können Sie sich wie eine Drehung um die Blauachse vorstellen.  
+ Die folgende Abbildung zeigt worum es sich dabei um die Farbe (1, 0, 0) drehen, durch einen Winkel von 60 Grad in Rot-Grün-Ebene. Drehungswinkel in einer Ebene Parallel zur Rot-Grün-Ebene kann als Drehung der blauen Achse betrachtet werden.  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")  
+ ![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")  
   
- In der folgenden Abbildung wird veranschaulicht, wie Sie eine Farbmatrix initialisieren, um Drehungen um jede der drei Koordinatenachsen \(Rot, Grün, Blau\) auszuführen.  
+ Die folgende Abbildung zeigt, wie eine Farbmatrix zum Ausführen von Drehungen zu jeder der drei-Koordinate Achsen (Rot, Grün, Blau) initialisiert werden.  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
+ ![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
   
-## Beispiel  
- Im folgenden Beispiel wird eine 60\-Grad\-Drehung um die Blauachse auf ein komplett einfarbiges Bild \(1, 0, 0.6\) angewendet.  In einer Ebene, die parallel zur Rot\-Grün\-Ebene verläuft, wird der Drehwinkel aufgehoben.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird ein Bild, das alle einfarbig (1, 0, 0,6) und eine Drehung 60 Grad der blauen Achse gilt. Der Winkel der Drehung ist in einer Ebene, die parallel zur Rot-Grün ist, out überflüssig.  
   
- In der folgenden Abbildung ist das ursprüngliche Bild auf der linken und das Bild, dessen Farben gedreht wurden, auf der rechten Seite zu sehen.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die Farbe gedreht Bild auf der rechten Seite.  
   
  ![Drehen von Farben](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")  
   
- In der folgenden Abbildung wird die im nachstehenden Code ausgeführte Farbdrehung veranschaulicht.  
+ Die folgende Abbildung zeigt eine Visualisierung der Drehung Farbe, die in den folgenden Code ausgeführt.  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")  
+ ![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")  
   
  [!code-csharp[System.Drawing.RotateColors#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  Ersetzen Sie `RotationInput.bmp` durch einen für das System gültigen Dateinamen und Pfad.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie `RotationInput.bmp` mit einem Dateinamen und Pfad auf Ihrem System gültig.  
   
-## Siehe auch  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Neueinfärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Neufärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)

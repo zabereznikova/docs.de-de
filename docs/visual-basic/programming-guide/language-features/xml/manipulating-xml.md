@@ -1,74 +1,57 @@
 ---
-title: Bearbeiten von XML in Visual Basic | Microsoft-Dokumentation
+title: Bearbeiten von XML in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], manipulating XML
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a47bed5ecbf1e82c19748af34b6bac23aa97e1b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 061617524659ac2f8793e2030f26a2d6b2724a64
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Bearbeiten von XML in Visual Basic
-Sie können *XML-Literale* beim Laden von XML aus einer externen Quelle wie z. B. eine Zeichenfolge, die Datei oder den Stream. Anschließend können Sie [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] den XML-Code bearbeitet und mit [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] abgefragt.  
+Sie können *XML-Literale* beim Laden von XML aus einer externen Quelle, z. B. eine Zeichenfolge, die Datei oder den Stream. Anschließend können Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] den XML-Code bearbeitet und mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zum Abfragen des XML-Codes.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Laden von XML aus einer Datei, einer Zeichenfolge oder einem Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Veranschaulicht, wie beim Laden von XML in ein <xref:System.Xml.Linq.XDocument>oder <xref:System.Xml.Linq.XElement>Objekt aus einer Textdatei, die Zeichenfolge oder den Stream.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument>  
+ Veranschaulicht, wie beim Laden von XML in eine <xref:System.Xml.Linq.XDocument> oder <xref:System.Xml.Linq.XElement> Objekt aus einer Textdatei, die Zeichenfolge oder den Stream.  
   
  [Gewusst wie: Transformieren von XML unter Verwendung von LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- Veranschaulicht, wie der Inhalt der Transformation ein <xref:System.Xml.Linq.XDocument>Objekt in ein neues XML-Dokument.</xref:System.Xml.Linq.XDocument>  
+ Veranschaulicht, wie der Inhalt der Transformation ein <xref:System.Xml.Linq.XDocument> Objekt in ein neues XML-Dokument.  
   
  [Gewusst wie: Ändern von XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
  Veranschaulicht, wie die Elemente, Attribute und Werte in einem XML-Literal zu ändern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [XML-Achseneigenschaften](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- Enthält Links zu Abschnitten, in denen die verschiedenen XML-Zugriffseigenschaften beschrieben.  
+ Enthält Links zu Abschnitten, die die verschiedenen Eigenschaften der XML-Zugriff zu beschreiben.  
   
  [Übersicht über LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Bietet eine Einführung zur Verwendung [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] in Visual Basic.  
+ Bietet eine Einführung zur Verwendung [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
  [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Bietet eine Einführung zur Verwendung von XML-Literalen in Visual Basic.  
+ Bietet eine Einführung in die Verwendung von XML-Literalen in Visual Basic.  
   
  [Zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
  Veranschaulicht, wie Teile eines XML-Elements oder Dokuments in Visual Basic zugreifen.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Enthält Links zu Abschnitten, die beschreiben, wie Sie [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] in Visual Basic.  
+ Enthält Links zu Abschnitten, die beschreiben, wie Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
+ [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
