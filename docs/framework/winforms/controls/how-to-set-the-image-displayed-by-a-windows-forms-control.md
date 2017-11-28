@@ -1,37 +1,42 @@
 ---
-title: "Gewusst wie: Festlegen des durch ein Windows&#160;Forms-Steuerelement angezeigten Bildes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button-Steuerelement [Windows Forms], Bilder"
-  - "Steuerelemente [Windows Forms], Bilder"
-  - "Beispiele [Windows Forms], Steuerelemente"
-  - "Bilder [Windows Forms], Windows Forms-Steuerelemente"
-  - "Windows Forms-Steuerelemente, Bilder"
+title: "Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Button control [Windows Forms], images
+- Windows Forms controls, images
+- controls [Windows Forms], images
+- images [Windows Forms], Windows Forms controls
+- examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d9f4d806b39e6e1272ddbb60befdaf8c76e46b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen des durch ein Windows&#160;Forms-Steuerelement angezeigten Bildes
-Einige Windows Forms\-Steuerelemente können Bilder anzeigen.  Diese Bilder können Symbole sein, die den Zweck eines Steuerelements verdeutlichen, z. B. ein Diskettensymbol auf einer Schaltfläche für den Befehl **Speichern**.  Alternativ können die Symbole Hintergrundbilder sein, um dem Steuerelement das gewünschte Aussehen und Verhalten zuzuweisen.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="31150-102">Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes</span><span class="sxs-lookup"><span data-stu-id="31150-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="31150-103">Einige Windows Forms-Steuerelemente können Bilder anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="31150-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="31150-104">Diese Bilder können Symbole, die Erläuterung des Zwecks des Steuerelements, wie z. B. ein Diskettensymbol auf eine Schaltfläche, werden die **speichern** Befehl.</span><span class="sxs-lookup"><span data-stu-id="31150-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="31150-105">Alternativ kann die Symbole Hintergrundbilder zum Steuern der Darstellung und das gewünschte Verhalten.</span><span class="sxs-lookup"><span data-stu-id="31150-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
   
-### So legen Sie das von einem Steuerelement angezeigte Bild fest  
+### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="31150-106">Das von einem Steuerelement angezeigte Bild festlegen</span><span class="sxs-lookup"><span data-stu-id="31150-106">To set the image displayed by a control</span></span>  
   
-1.  Legen Sie die `Image`\-Eigenschaft oder die `BackgroundImage`\-Eigenschaft des Steuerelements auf ein Objekt des Typs <xref:System.Drawing.Image> fest.  Im Allgemeinen laden Sie das Bild mithilfe der <xref:System.Drawing.Image.FromFile%2A>\-Methode aus einer Datei.  
+1.  <span data-ttu-id="31150-107">Legen Sie das Steuerelement `Image` oder `BackgroundImage` Eigenschaft, um ein Objekt vom Typ <xref:System.Drawing.Image>.</span><span class="sxs-lookup"><span data-stu-id="31150-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="31150-108">Im Allgemeinen, laden Sie das Bild aus einer Datei mithilfe der <xref:System.Drawing.Image.FromFile%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31150-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
   
-     Im folgenden Codebeispiel wurde als Speicherort für das Bild der Ordner **Eigene Bilder** festgelegt.  Dieses Verzeichnis ist auf den meisten Computer verfügbar, auf denen das Windows\-Betriebssystem ausgeführt wird.  Dieser Speicherort ermöglicht auch Benutzern mit minimalen Systemzugriffsebenen, die Anwendung sicher auszuführen.  Im folgenden Codebeispiel wird vorausgesetzt, dass Sie bereits über ein Formular verfügen, dem das <xref:System.Windows.Forms.PictureBox>\-Steuerelement hinzugefügt wurde.  
+     <span data-ttu-id="31150-109">Im folgenden Codebeispiel legen der Pfad für der Speicherort des Bilds wird die **eigene Bilder** Ordner.</span><span class="sxs-lookup"><span data-stu-id="31150-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="31150-110">Die meisten Computer das Windows-Betriebssystem ausgeführt wird, werden dieses Verzeichnis enthalten.</span><span class="sxs-lookup"><span data-stu-id="31150-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="31150-111">Außerdem können Benutzer mit minimalen problemlos die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="31150-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="31150-112">Das folgende Codebeispiel erfordert, dass Sie bereits ein Formular mit einem <xref:System.Windows.Forms.PictureBox> ein Steuerelement hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="31150-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
   
     ```vb  
     ' Replace the image named below  
@@ -40,7 +45,6 @@ Einige Windows Forms\-Steuerelemente können Bilder anzeigen.  Diese Bilder kö
        (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.MyPictures) _  
        & "\Image.gif")  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ Einige Windows Forms\-Steuerelemente können Bilder anzeigen.  Diese Bilder kö
        (System.Environment.GetFolderPath  
        (System.Environment.SpecialFolder.MyPictures)  
        + @"\Image.gif");  
-  
     ```  
   
     ```cpp  
@@ -63,7 +66,7 @@ Einige Windows Forms\-Steuerelemente können Bilder anzeigen.  Diese Bilder kö
        "\\Image.gif"));  
     ```  
   
-## Siehe auch  
- <xref:System.Drawing.Image.FromFile%2A>   
- <xref:System.Drawing.Image>   
+## <a name="see-also"></a><span data-ttu-id="31150-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="31150-113">See Also</span></span>  
+ <xref:System.Drawing.Image.FromFile%2A>  
+ <xref:System.Drawing.Image>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>

@@ -1,73 +1,79 @@
 ---
-title: "Gewusst wie: &#220;berpr&#252;fen und Zusammenf&#252;hren von PrintTickets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zusammenführen von PrintTickets"
-  - "PrintTicket, Zusammenführen"
-  - "PrintTicket, Überprüfung"
-  - "Überprüfung von PrintTickets"
+title: "Gewusst wie: Überprüfen und Zusammenführen von PrintTickets"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- merging PrintTickets [WPF]
+- PrintTicket [WPF], merging
+- validation of PrintTickets [WPF]
+- PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a2c2929f37895f0dee5529a5bf90f84146585032
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#220;berpr&#252;fen und Zusammenf&#252;hren von PrintTickets
-Das [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) von [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] enthält die flexiblen und erweiterbaren Elemente <xref:System.Printing.PrintCapabilities> und <xref:System.Printing.PrintTicket>.  Das erste Element legt die Funktionen eines Druckgeräts einzeln fest, während das zweite Element angibt, wie das Gerät diese Funktionen im Hinblick auf eine bestimmte Folge von Dokumenten, ein einzelnes Dokument oder eine einzelne Seite nutzt.  
+# <a name="how-to-validate-and-merge-printtickets"></a><span data-ttu-id="b637f-102">Gewusst wie: Überprüfen und Zusammenführen von PrintTickets</span><span class="sxs-lookup"><span data-stu-id="b637f-102">How to: Validate and Merge PrintTickets</span></span>
+<span data-ttu-id="b637f-103">Die [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) enthält, die flexibel und erweiterbar sind <xref:System.Printing.PrintCapabilities> und <xref:System.Printing.PrintTicket> Elemente.</span><span class="sxs-lookup"><span data-stu-id="b637f-103">The [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397) includes the flexible and extensible <xref:System.Printing.PrintCapabilities> and <xref:System.Printing.PrintTicket> elements.</span></span> <span data-ttu-id="b637f-104">Zählt die Funktionen von einem Druckgerät erstere auf und gibt der zweite Wert an, wie das Gerät für diese Funktionen in Bezug auf eine bestimmte Sequenz von Dokumenten, einzelnes Dokument oder eine einzelne Seite verwenden, sollten.</span><span class="sxs-lookup"><span data-stu-id="b637f-104">The former itemizes the capabilities of a print device and the latter specifies how the device should use those capabilities with respect to a particular sequence of documents, individual document, or individual page.</span></span>  
   
- Eine typische Aufgabenfolge für eine Anwendung, die das Drucken unterstützt, sieht wie folgt aus.  
+ <span data-ttu-id="b637f-105">Eine typische Sequenz von Aufgaben für eine Anwendung, die unterstützt drucken würde wie folgt aussehen:</span><span class="sxs-lookup"><span data-stu-id="b637f-105">A typical sequence of tasks for an application that supports printing would be as follows.</span></span>  
   
-1.  Bestimmen Sie die Funktionen eines Druckers.  
+1.  <span data-ttu-id="b637f-106">Bestimmen Sie die Leistungsmerkmale des Druckers.</span><span class="sxs-lookup"><span data-stu-id="b637f-106">Determine a printer's capabilities.</span></span>  
   
-2.  Konfigurieren Sie ein <xref:System.Printing.PrintTicket> für die Verwendung dieser Funktionen.  
+2.  <span data-ttu-id="b637f-107">Konfigurieren einer <xref:System.Printing.PrintTicket> zum Verwenden dieser Funktionen.</span><span class="sxs-lookup"><span data-stu-id="b637f-107">Configure a <xref:System.Printing.PrintTicket> to use those capabilities.</span></span>  
   
-3.  Überprüfen Sie das <xref:System.Printing.PrintTicket>.  
+3.  <span data-ttu-id="b637f-108">Überprüfen der <xref:System.Printing.PrintTicket>.</span><span class="sxs-lookup"><span data-stu-id="b637f-108">Validate the <xref:System.Printing.PrintTicket>.</span></span>  
   
- In diesem Artikel wird die Vorgehensweise veranschaulicht.  
+ <span data-ttu-id="b637f-109">Dieser Artikel zeigt, wie dies.</span><span class="sxs-lookup"><span data-stu-id="b637f-109">This article shows how to do this.</span></span>  
   
-## Beispiel  
- Im nächsten einfachen Beispiel interessiert nur, ob ein Drucker den Duplexdruck unterstützt, d. h. doppelseitig drucken kann.  Dazu müssen Sie die folgenden Hauptschritte ausführen.  
+## <a name="example"></a><span data-ttu-id="b637f-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b637f-110">Example</span></span>  
+ <span data-ttu-id="b637f-111">Im folgenden einfachen Beispiel, interessieren uns nur, ob ein Drucker Duplexdruck unterstützt – zweiseitigen drucken.</span><span class="sxs-lookup"><span data-stu-id="b637f-111">In the simple example below, we are interested only in whether a printer can support duplexing — two-sided printing.</span></span> <span data-ttu-id="b637f-112">Die wichtigsten Schritte sind wie folgt aus.</span><span class="sxs-lookup"><span data-stu-id="b637f-112">The major steps are as follows.</span></span>  
   
-1.  Rufen Sie ein <xref:System.Printing.PrintCapabilities>\-Objekt mit der <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>\-Methode ab.  
+1.  <span data-ttu-id="b637f-113">Abrufen einer <xref:System.Printing.PrintCapabilities> -Objekt mit den <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="b637f-113">Get a <xref:System.Printing.PrintCapabilities> object with the <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> method.</span></span>  
   
-2.  Testen Sie, ob die gewünschte Funktion verfügbar ist.  Im folgenden Beispiel testen wir, ob die <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>\-Eigenschaft des <xref:System.Printing.PrintCapabilities>\-Objekts die Funktion bietet, beide Seiten eines Blatts so zu bedrucken, dass an der langen Seite des Blatts umgeblättert wird.  Da <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> eine Auflistung ist, wird die `Contains`\-Methode von <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> verwendet.  
+2.  <span data-ttu-id="b637f-114">Testen Sie das Vorhandensein der gewünschten Funktion.</span><span class="sxs-lookup"><span data-stu-id="b637f-114">Test for the presence of the capability you want.</span></span> <span data-ttu-id="b637f-115">Im folgenden Beispiel wir testen die <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> Eigenschaft von der <xref:System.Printing.PrintCapabilities> -Objekt für das Vorhandensein der Funktion des Druckens auf beiden Seiten des Blatts mit "Deaktivieren der Seite" entlang der langen Seite des Blatts.</span><span class="sxs-lookup"><span data-stu-id="b637f-115">In the example below, we test the <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> property of the <xref:System.Printing.PrintCapabilities> object for the presence of the capability of printing on both sides of a sheet of paper with the "page turning" along the long side of the sheet.</span></span> <span data-ttu-id="b637f-116">Da <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> ist eine Auflistung, verwenden wir die `Contains` Methode <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.</span><span class="sxs-lookup"><span data-stu-id="b637f-116">Since <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> is a collection, we use the `Contains` method of <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.</span></span>  
   
     > [!NOTE]
-    >  Dieser Schritt ist nicht unbedingt erforderlich.  Die unten verwendete <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>\-Methode vergleicht jede Anforderung <xref:System.Printing.PrintTicket> mit den Funktionen des Druckers.  Wenn die angeforderte Funktion vom Drucker nicht unterstützt wird, verwendet der Druckertreiber eine alternative Anforderung im von der Methode zurückgebenen <xref:System.Printing.PrintTicket>.  
+    >  <span data-ttu-id="b637f-117">Dieser Schritt ist nicht unbedingt erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b637f-117">This step is not strictly necessary.</span></span> <span data-ttu-id="b637f-118">Die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> unten verwendete Methode überprüft jede Anforderung die <xref:System.Printing.PrintTicket> gegenüber den Möglichkeiten des Druckers.</span><span class="sxs-lookup"><span data-stu-id="b637f-118">The <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> method used below will check each request in the <xref:System.Printing.PrintTicket> against the capabilities of the printer.</span></span> <span data-ttu-id="b637f-119">Wenn die angeforderte Funktion vom Drucker nicht unterstützt wird, ersetzt der Druckertreiber wird eine alternative Anforderung in die <xref:System.Printing.PrintTicket> von der Methode zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="b637f-119">If the requested capability is not supported by printer, the printer driver will substitute an alternative request in the <xref:System.Printing.PrintTicket> returned by the method.</span></span>  
   
-3.  Wenn der Drucker den Duplexdruck unterstützt, wird im Beispielcode ein <xref:System.Printing.PrintTicket> erstellt, das den Duplexdruck anfordert.  Die Anwendung gibt jedoch nicht jede mögliche Druckereinstellung im <xref:System.Printing.PrintTicket>\-Element an.  Dieser Aufwand wäre für den Programmierer wie für das Programm zu groß.  Stattdessen legt der Code nur die Duplexdruckanforderung fest und führt dieses <xref:System.Printing.PrintTicket> anschließend mit einem vorhandenen, vollständig konfigurierten und überprüften <xref:System.Printing.PrintTicket> zusammen, in diesem Fall dem Standard\-<xref:System.Printing.PrintTicket> des Benutzers.  
+3.  <span data-ttu-id="b637f-120">Wenn der Drucker Duplexdruck unterstützt, wird der Beispielcode erstellt eine <xref:System.Printing.PrintTicket> , die fordert Duplexdruck.</span><span class="sxs-lookup"><span data-stu-id="b637f-120">If the printer supports duplexing, the sample code creates a <xref:System.Printing.PrintTicket> that asks for duplexing.</span></span> <span data-ttu-id="b637f-121">Aber die Anwendung gibt keinen jede mögliche Drucker, die Einstellung in der <xref:System.Printing.PrintTicket> Element.</span><span class="sxs-lookup"><span data-stu-id="b637f-121">But the application does not specify every possible printer setting available in the <xref:System.Printing.PrintTicket> element.</span></span> <span data-ttu-id="b637f-122">Das wäre gehen zu Lasten der Programmierer und Programm.</span><span class="sxs-lookup"><span data-stu-id="b637f-122">That would be wasteful of both programmer and program time.</span></span> <span data-ttu-id="b637f-123">Stattdessen der Code legt nur die Duplex-Anforderung und führt Sie dies <xref:System.Printing.PrintTicket> mit einem vorhandenen, vollständig konfiguriert und überprüft, <xref:System.Printing.PrintTicket>, in diesem Fall den Benutzer standardmäßig <xref:System.Printing.PrintTicket>.</span><span class="sxs-lookup"><span data-stu-id="b637f-123">Instead, the code sets only the duplexing request and then merges this <xref:System.Printing.PrintTicket> with an existing, fully configured and validated, <xref:System.Printing.PrintTicket>, in this case, the user's default <xref:System.Printing.PrintTicket>.</span></span>  
   
-4.  Entsprechend wird im Beispiel die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>\-Methode aufgerufen, um das neue, minimale <xref:System.Printing.PrintTicket> mit dem Standard\-<xref:System.Printing.PrintTicket> des Benutzers zusammenzuführen.  Daraufhin wird ein <xref:System.Printing.ValidationResult> mit einem neuen <xref:System.Printing.PrintTicket> als eine Eigenschaft zurückgegeben.  
+4.  <span data-ttu-id="b637f-124">Dementsprechend im Beispiel ruft die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode, um die neue zusammenzuführen minimale <xref:System.Printing.PrintTicket> Standardwert des Benutzers <xref:System.Printing.PrintTicket>.</span><span class="sxs-lookup"><span data-stu-id="b637f-124">Accordingly, the sample calls the <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> method to merge the new, minimal, <xref:System.Printing.PrintTicket> with the user's default <xref:System.Printing.PrintTicket>.</span></span> <span data-ttu-id="b637f-125">Dies gibt eine <xref:System.Printing.ValidationResult> , enthält das neue <xref:System.Printing.PrintTicket> als eine seiner Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="b637f-125">This returns a <xref:System.Printing.ValidationResult> that includes the new <xref:System.Printing.PrintTicket> as one of its properties.</span></span>  
   
-5.  Anschließend wird im Beispiel getestet, ob das neue <xref:System.Printing.PrintTicket> den Duplexdruck anfordert.  Wenn dies der Fall ist, wird es im Beispiel als neues Standarddruckticket für den Benutzer definiert.  Wenn Sie Schritt 2 oben übersprungen und der Drucker den Duplexdruck entlang der langen Seite nicht unterstützt hat, würde das Testergebnis `false` lauten  \(siehe Hinweis oben\).  
+5.  <span data-ttu-id="b637f-126">Das Beispiel testet dann die neue <xref:System.Printing.PrintTicket> Duplexdruck anfordert.</span><span class="sxs-lookup"><span data-stu-id="b637f-126">The sample then tests that the new <xref:System.Printing.PrintTicket> requests duplexing.</span></span> <span data-ttu-id="b637f-127">Wenn dies der Fall ist, erleichtert klicken Sie dann das Beispiel den neuen Standardwert Druckticket für den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="b637f-127">If it does, then the sample makes it the new default print ticket for the user.</span></span> <span data-ttu-id="b637f-128">Wenn Schritt 2 oben wurde ausgelassen und Duplexdruck entlang der langen Seite wurde von der Drucker nicht unterstützt, dann die Tests zurückzuführen sein würden `false`.</span><span class="sxs-lookup"><span data-stu-id="b637f-128">If step 2 above had been left out and the printer did not support duplexing along the long side, then the test would have resulted in `false`.</span></span> <span data-ttu-id="b637f-129">(Siehe Hinweis oben).</span><span class="sxs-lookup"><span data-stu-id="b637f-129">(See the note above.)</span></span>  
   
-6.  Der letzte wichtige Schritt besteht darin, die Änderung mit der <xref:System.Printing.PrintQueue.Commit%2A>\-Methode auf die <xref:System.Printing.PrintQueue.UserPrintTicket%2A>\-Eigenschaft von <xref:System.Printing.PrintQueue> anzuwenden.  
+6.  <span data-ttu-id="b637f-130">Der letzte wichtige Schritt ist, um die Änderung zu übernehmen die <xref:System.Printing.PrintQueue.UserPrintTicket%2A> Eigenschaft von der <xref:System.Printing.PrintQueue> mit der <xref:System.Printing.PrintQueue.Commit%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="b637f-130">The last significant step is to commit the change to the <xref:System.Printing.PrintQueue.UserPrintTicket%2A> property of the <xref:System.Printing.PrintQueue> with the <xref:System.Printing.PrintQueue.Commit%2A> method.</span></span>  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- Damit Sie dieses Beispiel schnell testen können, finden Sie unten den restlichen Code.  Erstellen Sie ein Projekt und einen Namespace, und fügen Sie anschließend die Codeausschnitte aus diesem Artikel in den Namespaceblock ein.  
+ <span data-ttu-id="b637f-131">Damit Sie schnell in diesem Beispiel testen können, wird im weiteren Verlauf unten dargestellt.</span><span class="sxs-lookup"><span data-stu-id="b637f-131">So that you can quickly test this example, the remainder of it is presented below.</span></span> <span data-ttu-id="b637f-132">Erstellen Sie ein Projekt und einen Namespace, und fügen Sie die Codeausschnitte in diesem Artikel in den Namespaceblock.</span><span class="sxs-lookup"><span data-stu-id="b637f-132">Create a project and a namespace and then paste both the code snippets in this article into the namespace block.</span></span>  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## Siehe auch  
- <xref:System.Printing.PrintCapabilities>   
- <xref:System.Printing.PrintTicket>   
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>   
- <xref:System.Printing.PrintServer>   
- <xref:System.Printing.EnumeratedPrintQueueTypes>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>   
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)   
- [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)
+## <a name="see-also"></a><span data-ttu-id="b637f-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b637f-133">See Also</span></span>  
+ <xref:System.Printing.PrintCapabilities>  
+ <xref:System.Printing.PrintTicket>  
+ <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
+ <xref:System.Printing.PrintServer>  
+ <xref:System.Printing.EnumeratedPrintQueueTypes>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
+ [<span data-ttu-id="b637f-134">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="b637f-134">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="b637f-135">Übersicht über das Drucken</span><span class="sxs-lookup"><span data-stu-id="b637f-135">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [<span data-ttu-id="b637f-136">Drucken von Schemas</span><span class="sxs-lookup"><span data-stu-id="b637f-136">Print Schema</span></span>](http://go.microsoft.com/fwlink/?LinkId=186397)

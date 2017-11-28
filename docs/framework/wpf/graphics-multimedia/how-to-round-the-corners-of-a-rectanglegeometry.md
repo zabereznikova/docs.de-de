@@ -1,38 +1,41 @@
 ---
-title: "Gewusst wie: Abrunden der Ecken einer &quot;RectangleGeometry&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ecken, Runden von"
-  - "Grafiken, Runden der Ecken von RectangleGeometry-Objekten"
-  - "RectangleGeometry-Klasse, Runden von Ecken"
-  - "Runden der Ecken von RectangleGeometry-Objekten"
+title: 'Gewusst wie: Abrunden der Ecken einer "RectangleGeometry"'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- corners [WPF], rounding
+- RectangleGeometry class [WPF], rounding corners
+- graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
+- rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4cd857f7ce886095bcbe92ae57c350ce83bb5c7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrunden der Ecken einer &quot;RectangleGeometry&quot;
-Um die Ecken einer <xref:System.Windows.Media.RectangleGeometry> abzurunden, setzen Sie ihre Eigenschaften <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> auf einen Wert, der größer als 0 ist.  Je größer die Werte, desto runder die Ecken des Rechtecks.  
+# <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a><span data-ttu-id="0cbc3-102">Gewusst wie: Abrunden der Ecken einer "RectangleGeometry"</span><span class="sxs-lookup"><span data-stu-id="0cbc3-102">How to: Round the Corners of a RectangleGeometry</span></span>
+<span data-ttu-id="0cbc3-103">Um das Abrunden der Ecken des eine <xref:System.Windows.Media.RectangleGeometry>legen seine <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Eigenschaften auf einen Wert größer als 0 (null).</span><span class="sxs-lookup"><span data-stu-id="0cbc3-103">To round the corners of a <xref:System.Windows.Media.RectangleGeometry>, set its <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> and <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> properties to a value greater than zero.</span></span> <span data-ttu-id="0cbc3-104">Je größer die Werte, desto runder die Ecken des Rechtecks.</span><span class="sxs-lookup"><span data-stu-id="0cbc3-104">The larger the values, the rounder the rectangle's corners.</span></span>  
   
-## Beispiel  
- Das folgende Beispiel zeigt mehrere <xref:System.Windows.Media.RectangleGeometry>\-Objekte mit verschiedenen Einstellungen für <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>.  Die <xref:System.Windows.Media.RectangleGeometry>\-Objekte werden mithilfe von <xref:System.Windows.Shapes.Path>\-Elementen angezeigt.  
+## <a name="example"></a><span data-ttu-id="0cbc3-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0cbc3-105">Example</span></span>  
+ <span data-ttu-id="0cbc3-106">Das folgende Beispiel zeigt mehrere <xref:System.Windows.Media.RectangleGeometry> Objekte mit unterschiedlichen <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="0cbc3-106">The following example shows several <xref:System.Windows.Media.RectangleGeometry> objects with different <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> and <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> settings.</span></span> <span data-ttu-id="0cbc3-107">Die <xref:System.Windows.Media.RectangleGeometry> Objekte angezeigt werden, mit <xref:System.Windows.Shapes.Path> Elemente.</span><span class="sxs-lookup"><span data-stu-id="0cbc3-107">The <xref:System.Windows.Media.RectangleGeometry> objects are displayed using <xref:System.Windows.Shapes.Path> elements.</span></span>  
   
- [!code-xml[GeometryOverviewSamples_snip#GraphicsMMRoundedRectangleGeometryExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/RectangleGeometryRoundedCornerExample.xaml#graphicsmmroundedrectanglegeometryexamplewholepage)]  
+ [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRoundedRectangleGeometryExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/RectangleGeometryRoundedCornerExample.xaml#graphicsmmroundedrectanglegeometryexamplewholepage)]  
   
- ![Rechtecke mit unterschiedlichen RadiusX&#47;RadiusY&#45;Einstellungen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "graphicsmm\_rounded")  
-Rechtecke mit abgerundeten Ecken  
+ <span data-ttu-id="0cbc3-108">![Rechtecke mit verschiedenen RadiusX &#47; RadiusY-Einstellungen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "Graphicsmm_rounded")</span><span class="sxs-lookup"><span data-stu-id="0cbc3-108">![Rectangles with different RadiusX&#47;RadiusY settings](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "graphicsmm_rounded")</span></span>  
+<span data-ttu-id="0cbc3-109">Rechtecke mit abgerundeten Ecken</span><span class="sxs-lookup"><span data-stu-id="0cbc3-109">Rectangles with Rounded Corners</span></span>  
   
-## Siehe auch  
- [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Erstellen einer zusammengesetzten Form](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)   
- [Erstellen einer Form mithilfe von PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)
+## <a name="see-also"></a><span data-ttu-id="0cbc3-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0cbc3-110">See Also</span></span>  
+ [<span data-ttu-id="0cbc3-111">Übersicht über Geometrien</span><span class="sxs-lookup"><span data-stu-id="0cbc3-111">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="0cbc3-112">Erstellen einer zusammengesetzten Form</span><span class="sxs-lookup"><span data-stu-id="0cbc3-112">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="0cbc3-113">Erstellen einer Form mithilfe von PathGeometry</span><span class="sxs-lookup"><span data-stu-id="0cbc3-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)

@@ -1,41 +1,44 @@
 ---
-title: "Gewusst wie: Verwenden der BetweenShowDelay-Eigenschaft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BetweenShowDelay-Uhrzeiteigenschaft"
-  - "ToolStrip-Steuerelement, BetweenShowDelay-Uhrzeiteigenschaft"
+title: 'Gewusst wie: Verwenden der BetweenShowDelay-Eigenschaft'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolTip control [WPF], BetweenShowDelay time property
+- BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dca6dc7c6238ef4accc921818090237d17ce1cbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden der BetweenShowDelay-Eigenschaft
-Dieses Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>\-Zeiteigenschaft, um QuickInfos schnell — ohne oder ohne große Verzögerung — anzuzeigen, wenn ein Benutzer den Mauszeiger von einer QuickInfo direkt auf eine andere Quickinfo bewegt.  
+# <a name="how-to-use-the-betweenshowdelay-property"></a><span data-ttu-id="d9bd4-102">Gewusst wie: Verwenden der BetweenShowDelay-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="d9bd4-102">How to: Use the BetweenShowDelay Property</span></span>
+<span data-ttu-id="d9bd4-103">Dieses Beispiel zeigt, wie die <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> endzeiteigenschaft, sodass schnell QuickInfos angezeigt werden – mit nur wenig oder keine Verzögerung – Wenn ein Benutzer den Mauszeiger von einer QuickInfo bewegt direkt in eine andere.</span><span class="sxs-lookup"><span data-stu-id="d9bd4-103">This example shows how to use the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> time property so that tooltips appear quickly—with little or no delay—when a user moves the mouse pointer from one tooltip directly to another.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>\-Eigenschaft auf eine Sekunde \(1000 Millisekunden\) und die <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>\-Eigenschaft auf zwei Sekunden \(2000 Millisekunden\) festgelegt, für die QuickInfo beider <xref:System.Windows.Shapes.Ellipse> \-Steuerelemente.  Wenn die QuickInfo für eine der Ellipsen angezeigt wird, und Sie dann den Mauszeiger innerhalb von zwei Sekunden über eine andere Ellipse bewegen und dort halten, wird die QuickInfo für die zweite Ellipse sofort angezeigt.  
+## <a name="example"></a><span data-ttu-id="d9bd4-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d9bd4-104">Example</span></span>  
+ <span data-ttu-id="d9bd4-105">Im folgenden Beispiel die <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> Eigenschaft auf eine Sekunde (1000 Millisekunden) festgelegt ist und die <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> festgelegt ist, auf zwei Sekunden (2000 Millisekunden) für die QuickInfo beider <xref:System.Windows.Shapes.Ellipse> Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="d9bd4-105">In the following example, the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> property is set to one second (1000 milliseconds) and the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> is set to two seconds (2000 milliseconds) for the tooltips of both <xref:System.Windows.Shapes.Ellipse> controls.</span></span> <span data-ttu-id="d9bd4-106">Wenn Sie die QuickInfo für eine Schaltfläche mit den Auslassungszeichen angezeigt, und klicken Sie dann den Mauszeiger auf einen anderen Ellipse innerhalb von zwei Sekunden und Anhalten darauf, zeigt die QuickInfo für die zweite Ellipse sofort an.</span><span class="sxs-lookup"><span data-stu-id="d9bd4-106">If you display the tooltip for one of the ellipses and then move the mouse pointer to another ellipse within two seconds and pause on it, the tooltip of the second ellipse displays immediately.</span></span>  
   
- In den folgenden beiden Szenarien wird <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> angewendet, wodurch die QuickInfo der zweiten Ellipse mit einer Sekunde Verzögerung angezeigt wird:  
+ <span data-ttu-id="d9bd4-107">In den folgenden Szenarien die <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> angewendet wird, wodurch die QuickInfo für die zweite Ellipse warten Sie mindestens eine Sekunde, bevor er angezeigt wird:</span><span class="sxs-lookup"><span data-stu-id="d9bd4-107">In either of the following scenarios, the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> applies, which causes the tooltip for the second ellipse to wait one second before it appears:</span></span>  
   
--   Wenn mehr als zwei Sekunden vergehen, bevor der Mauszeiger auf die zweite Schaltfläche bewegt wird.  
+-   <span data-ttu-id="d9bd4-108">Wenn die Zeit zum Verschieben ist für die zweite Schaltfläche mehr als zwei Sekunden.</span><span class="sxs-lookup"><span data-stu-id="d9bd4-108">If the time it takes to move to the second button is more than two seconds.</span></span>  
   
--   Wenn die QuickInfo am Anfang des Zeitintervalls für die erste Ellipse nicht angezeigt wird.  
+-   <span data-ttu-id="d9bd4-109">Wenn die QuickInfo am Anfang des Zeitintervalls für die erste Ellipse nicht sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="d9bd4-109">If the tooltip is not visible at the beginning of the time interval for the first ellipse.</span></span>  
   
- [!code-xml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
-[!code-xml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+[!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.ToolTip>   
- <xref:System.Windows.Controls.ToolTipService>   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)   
- [Übersicht über die QuickInfo](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+## <a name="see-also"></a><span data-ttu-id="d9bd4-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9bd4-110">See Also</span></span>  
+ <xref:System.Windows.Controls.ToolTip>  
+ <xref:System.Windows.Controls.ToolTipService>  
+ [<span data-ttu-id="d9bd4-111">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="d9bd4-111">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [<span data-ttu-id="d9bd4-112">Übersicht über QuickInfo</span><span class="sxs-lookup"><span data-stu-id="d9bd4-112">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)

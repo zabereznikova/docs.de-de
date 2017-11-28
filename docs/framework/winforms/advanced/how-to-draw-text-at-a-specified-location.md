@@ -1,58 +1,62 @@
 ---
-title: "Gewusst wie: Zeichnen von Text an einer angegebenen Position | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zeichnen von Text"
-  - "Zeichnen von Text, Angegebene Positionen [Windows Forms]"
-  - "Text, Zeichnen an angegebenen Positionen [Windows Forms]"
-  - "Windows Forms, Zeichen von Text an einer angegebenen Position"
+title: 'Gewusst wie: Zeichnen von Text an einer angegebenen Position'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing at specified locations [Windows Forms]
+- drawing text
+- drawing text [Windows Forms], specified locations [Windows Forms]
+- Windows Forms, drawing text a a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aab9570b98caec5b3975a5b3ff6f1e62d4ad303b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zeichnen von Text an einer angegebenen Position
-Beim benutzerdefinierten Zeichnen können Sie Text in einer einzelnen Zeile zeichnen, die an einem angegebenen Punkt beginnt.  Verwenden Sie hierfür die überladene <xref:System.Drawing.Graphics.DrawString%2A>\-Methode der <xref:System.Drawing.Graphics>\-Klasse, die einen <xref:System.Drawing.Point>\-Parameter oder <xref:System.Drawing.PointF>\-Parameter akzeptiert.  Für die <xref:System.Drawing.Graphics.DrawString%2A>\-Methode sind zudem ein <xref:System.Drawing.Brush> und ein <xref:System.Drawing.Font> erforderlich.  
+# <a name="how-to-draw-text-at-a-specified-location"></a><span data-ttu-id="6d291-102">Gewusst wie: Zeichnen von Text an einer angegebenen Position</span><span class="sxs-lookup"><span data-stu-id="6d291-102">How to: Draw Text at a Specified Location</span></span>
+<span data-ttu-id="6d291-103">Wenn Sie benutzerdefinierte Zeichnung zu erstellen, können Sie Text in einer einzelnen horizontalen Linie ab, zu einem bestimmten Zeitpunkt zeichnen.</span><span class="sxs-lookup"><span data-stu-id="6d291-103">When you perform custom drawing, you can draw text in a single horizontal line starting at a specified point.</span></span> <span data-ttu-id="6d291-104">Sie können auf diese Weise Text zeichnen, mithilfe der <xref:System.Drawing.Graphics.DrawString%2A> überladene Methode, der die <xref:System.Drawing.Graphics> -Klasse, akzeptiert eine <xref:System.Drawing.Point> oder <xref:System.Drawing.PointF> Parameter.</span><span class="sxs-lookup"><span data-stu-id="6d291-104">You can draw text in this manner by using the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method of the <xref:System.Drawing.Graphics> class that takes a <xref:System.Drawing.Point> or <xref:System.Drawing.PointF> parameter.</span></span> <span data-ttu-id="6d291-105">Die <xref:System.Drawing.Graphics.DrawString%2A> Methode erfordert außerdem eine <xref:System.Drawing.Brush> und<xref:System.Drawing.Font></span><span class="sxs-lookup"><span data-stu-id="6d291-105">The <xref:System.Drawing.Graphics.DrawString%2A> method also requires a <xref:System.Drawing.Brush> and <xref:System.Drawing.Font></span></span>  
   
- Sie können auch die überladene <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode von <xref:System.Windows.Forms.TextRenderer> verwenden, die einen <xref:System.Drawing.Point> akzeptiert.  Für <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sind zudem eine <xref:System.Drawing.Color> und ein <xref:System.Drawing.Font> erforderlich.  
+ <span data-ttu-id="6d291-106">Können Sie auch die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> überladene Methode, der die <xref:System.Windows.Forms.TextRenderer> , akzeptiert eine <xref:System.Drawing.Point>.</span><span class="sxs-lookup"><span data-stu-id="6d291-106">You can also use the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method of the <xref:System.Windows.Forms.TextRenderer> that takes a <xref:System.Drawing.Point>.</span></span> <span data-ttu-id="6d291-107"><xref:System.Windows.Forms.TextRenderer.DrawText%2A>Außerdem erfordert eine <xref:System.Drawing.Color> und ein <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="6d291-107"><xref:System.Windows.Forms.TextRenderer.DrawText%2A> also requires a <xref:System.Drawing.Color> and a <xref:System.Drawing.Font>.</span></span>  
   
- Die folgende Abbildung zeigt die Ausgabe des Textes, der mit der <xref:System.Drawing.Graphics.DrawString%2A>\-Methode an einem angegebenen Punkt gezeichnet wurde.  
+ <span data-ttu-id="6d291-108">Die folgende Abbildung zeigt die Ausgabe von Text zu einem bestimmten Zeitpunkt gezeichnet werden, bei der Verwendung der <xref:System.Drawing.Graphics.DrawString%2A> überladene Methode.</span><span class="sxs-lookup"><span data-stu-id="6d291-108">The following illustration shows the output of text drawn at a specified point when you use the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method.</span></span>  
   
- ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/csfontstext1.png "csfontstext1")  
+ <span data-ttu-id="6d291-109">![Schriftartentext](../../../../docs/framework/winforms/advanced/media/csfontstext1.png "csfontstext1")</span><span class="sxs-lookup"><span data-stu-id="6d291-109">![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext1.png "csfontstext1")</span></span>  
   
-### So zeichnen Sie eine Textzeile mit GDI\+  
+### <a name="to-draw-a-line-of-text-with-gdi"></a><span data-ttu-id="6d291-110">Zum Zeichnen einer Linie von Text mit GDI +</span><span class="sxs-lookup"><span data-stu-id="6d291-110">To draw a line of text with GDI+</span></span>  
   
-1.  Verwenden Sie die <xref:System.Drawing.Graphics.DrawString%2A>\-Methode, und übergeben Sie den gewünschten Text, <xref:System.Drawing.Point> oder <xref:System.Drawing.PointF>, <xref:System.Drawing.Font> und <xref:System.Drawing.Brush>.  
+1.  <span data-ttu-id="6d291-111">Verwenden der <xref:System.Drawing.Graphics.DrawString%2A> -Methode, und übergeben Sie den gewünschten Text, <xref:System.Drawing.Point> oder <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, und <xref:System.Drawing.Brush>.</span><span class="sxs-lookup"><span data-stu-id="6d291-111">Use the <xref:System.Drawing.Graphics.DrawString%2A> method, passing the text you want, <xref:System.Drawing.Point> or <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, and <xref:System.Drawing.Brush>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#30)]
      [!code-vb[System.Drawing.AlignDrawnText#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#30)]  
   
-### So zeichnen Sie eine Textzeile mit GDI\+  
+### <a name="to-draw-a-line-of-text-with-gdi"></a><span data-ttu-id="6d291-112">Zum Zeichnen einer Linie von Text mit GDI</span><span class="sxs-lookup"><span data-stu-id="6d291-112">To draw a line of text with GDI</span></span>  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode, und übergeben Sie den gewünschten Text, <xref:System.Drawing.Point>, <xref:System.Drawing.Font> und <xref:System.Drawing.Color>.  
+1.  <span data-ttu-id="6d291-113">Verwenden der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> -Methode, und übergeben Sie den gewünschten Text, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, und <xref:System.Drawing.Color>.</span><span class="sxs-lookup"><span data-stu-id="6d291-113">Use the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method, passing the text you want, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, and <xref:System.Drawing.Color>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#40)]
      [!code-vb[System.Drawing.AlignDrawnText#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#40)]  
   
-## Kompilieren des Codes  
- Für die vorherigen Beispiele ist Folgendes erforderlich:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6d291-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="6d291-114">Compiling the Code</span></span>  
+ <span data-ttu-id="6d291-115">Die vorherigen Beispiele erfordern Folgendes:</span><span class="sxs-lookup"><span data-stu-id="6d291-115">The previous examples require:</span></span>  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`, ein Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+-   <span data-ttu-id="6d291-116"><xref:System.Windows.Forms.PaintEventArgs>  `e`, ein Parameter des <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="6d291-116"><xref:System.Windows.Forms.PaintEventArgs>  `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## Siehe auch  
- [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)   
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)   
- [Gewusst wie: Zeichnen von umbrochenem Text in einem Rechteck](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)
+## <a name="see-also"></a><span data-ttu-id="6d291-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6d291-117">See Also</span></span>  
+ [<span data-ttu-id="6d291-118">Gewusst wie: Zeichnen von Text mit GDI</span><span class="sxs-lookup"><span data-stu-id="6d291-118">How to: Draw Text with GDI</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [<span data-ttu-id="6d291-119">Verwenden von Schriftarten und Text</span><span class="sxs-lookup"><span data-stu-id="6d291-119">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [<span data-ttu-id="6d291-120">Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten</span><span class="sxs-lookup"><span data-stu-id="6d291-120">How to: Construct Font Families and Fonts</span></span>](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [<span data-ttu-id="6d291-121">Gewusst wie: Zeichnen von umbrochenem Text in einem Rechteck</span><span class="sxs-lookup"><span data-stu-id="6d291-121">How to: Draw Wrapped Text in a Rectangle</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)

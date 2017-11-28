@@ -1,92 +1,75 @@
 ---
-title: / bugreport | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: /bugreport
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - -bugreport compiler option [Visual Basic]
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c64ec49d7e6842edbc0fed7407a34132a8f5a88
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7090142f940ae42f554fc0ba16bcc80d8537e38a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="bugreport"></a>/bugreport
-Erstellt eine Datei, die Sie verwenden können, wenn Sie einen Fehlerbericht speichern.  
+# <a name="bugreport"></a><span data-ttu-id="41007-102">/bugreport</span><span class="sxs-lookup"><span data-stu-id="41007-102">/bugreport</span></span>
+<span data-ttu-id="41007-103">Erstellt eine Datei, die Sie verwenden können, wenn Sie einen Fehlerbericht einreichen.</span><span class="sxs-lookup"><span data-stu-id="41007-103">Creates a file that you can use when you file a bug report.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="41007-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="41007-104">Syntax</span></span>  
   
 ```  
 /bugreport:file  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="41007-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="41007-105">Arguments</span></span>  
   
-|Begriff|Definition|  
+|<span data-ttu-id="41007-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="41007-106">Term</span></span>|<span data-ttu-id="41007-107">Definition</span><span class="sxs-lookup"><span data-stu-id="41007-107">Definition</span></span>|  
 |---|---|  
-|`file`|Erforderlich. Der Name der Datei, die den Problembericht enthalten wird. Schließen Sie den Dateinamen in Anführungszeichen (""), wenn der Name ein Leerzeichen enthält.|  
+|`file`|<span data-ttu-id="41007-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="41007-108">Required.</span></span> <span data-ttu-id="41007-109">Der Name der Datei, die den Problembericht enthalten wird.</span><span class="sxs-lookup"><span data-stu-id="41007-109">The name of the file that will contain your bug report.</span></span> <span data-ttu-id="41007-110">Setzen Sie den Dateinamen in Anführungszeichen (""), wenn der Name ein Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="41007-110">Enclose the file name in quotation marks (" ") if the name contains a space.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Die folgenden Informationen hinzugefügt `file`:  
+## <a name="remarks"></a><span data-ttu-id="41007-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="41007-111">Remarks</span></span>  
+ <span data-ttu-id="41007-112">Die folgende Informationen hinzugefügt `file`:</span><span class="sxs-lookup"><span data-stu-id="41007-112">The following information is added to `file`:</span></span>  
   
--   Eine Kopie der alle Quellcodedateien in der Kompilierung.  
+-   <span data-ttu-id="41007-113">Eine Kopie des alle Quellcodedateien in der Kompilierung.</span><span class="sxs-lookup"><span data-stu-id="41007-113">A copy of all source-code files in the compilation.</span></span>  
   
--   Eine Liste der Compileroptionen in der Kompilierung verwendet werden soll.  
+-   <span data-ttu-id="41007-114">Eine Liste der Compileroptionen, die in der Kompilierung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="41007-114">A list of the compiler options used in the compilation.</span></span>  
   
--   Versionsinformationen über den Compiler, gemeinsame Sprachlaufzeit und Betriebssystem.  
+-   <span data-ttu-id="41007-115">Versionsinformationen zur Compiler, common Language Runtime und Betriebssystem.</span><span class="sxs-lookup"><span data-stu-id="41007-115">Version information about your compiler, common language runtime, and operating system.</span></span>  
   
--   Compilerausgabe, falls vorhanden.  
+-   <span data-ttu-id="41007-116">Compilerausgabe, falls vorhanden.</span><span class="sxs-lookup"><span data-stu-id="41007-116">Compiler output, if any.</span></span>  
   
--   Eine Beschreibung des Problems, für die Sie dazu aufgefordert werden.  
+-   <span data-ttu-id="41007-117">Eine Beschreibung des Problems ist, für die Sie dazu aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="41007-117">A description of the problem, for which you are prompted.</span></span>  
   
--   Eine Beschreibung Ihres das Problem Vorschlags sollte behoben werden, für die Sie dazu aufgefordert werden.  
+-   <span data-ttu-id="41007-118">Eine Beschreibung, wie Sie das Problem vermuten sollten korrigiert werden, für die Sie dazu aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="41007-118">A description of how you think the problem should be fixed, for which you are prompted.</span></span>  
   
- Da eine Kopie aller Quellcodedateien in enthaltene `file`, Sie möchten den (vermuteten) Codefehler in einem möglichst kurzen Programm zu reproduzieren.  
+ <span data-ttu-id="41007-119">Da eine Kopie für alle Quellcodedateien in enthalten ist `file`, Sie möchten den (vermuteten) Codefehler in der kürzestmöglichen Programm zu reproduzieren.</span><span class="sxs-lookup"><span data-stu-id="41007-119">Because a copy of all source-code files is included in `file`, you may want to reproduce the (suspected) code defect in the shortest possible program.</span></span>  
   
 > [!IMPORTANT]
->  Die `/bugreport` -Option erstellt eine Datei, die möglicherweise vertrauliche Informationen enthält. Dies schließt die aktuelle Uhrzeit, Compilerversion [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Version, Betriebssystemversion, Benutzername, die Befehlszeilenargumente, mit denen der Compiler ausgeführt wurde, der gesamte Quellcode und die binäre Form eines referenzierten Assemblys. Diese Option kann durch Angabe von Befehlszeilenoptionen in der Datei Web.config für eine serverseitige Kompilierung zugegriffen werden eine [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] Anwendung. Um dies zu verhindern, ändern Sie die Datei Machine.config zum Verweigern von Benutzern auf dem Server zu kompilieren.  
+>  <span data-ttu-id="41007-120">Die `/bugreport` Option erstellt eine Datei, die möglicherweise vertrauliche Informationen enthält.</span><span class="sxs-lookup"><span data-stu-id="41007-120">The `/bugreport` option produces a file that contains potentially sensitive information.</span></span> <span data-ttu-id="41007-121">Dies schließt die aktuelle Uhrzeit, Compilerversion, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version, Betriebssystemversion, Benutzername, die Befehlszeilenargumente, mit denen der Compiler ausgeführt wurde, werden alle Quellcode, und die binäre Form eines referenzierten Assemblys.</span><span class="sxs-lookup"><span data-stu-id="41007-121">This includes current time, compiler version, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] version, OS version, user name, the command-line arguments with which the compiler was run, all source code, and the binary form of any referenced assembly.</span></span> <span data-ttu-id="41007-122">Diese Option kann zugegriffen werden, durch Angabe von Befehlszeilenoptionen in der Datei "Web.config" für eine serverseitige Kompilierung einer [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Anwendung.</span><span class="sxs-lookup"><span data-stu-id="41007-122">This option can be accessed by specifying command-line options in the Web.config file for a server-side compilation of an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] application.</span></span> <span data-ttu-id="41007-123">Um dies zu verhindern, ändern Sie die Datei "Machine.config", um Benutzer an der Kompilierung auf dem Server zu unterbinden.</span><span class="sxs-lookup"><span data-stu-id="41007-123">To prevent this, modify the Machine.config file to disallow users from compiling on the server.</span></span>  
   
- Wenn diese Option verwendet wird, mit `/errorreport:prompt`, `/errorreport:queue`, oder `/errorreport:send`, und der Anwendung auftritt, einen interner Compilerfehler, die Informationen im `file` an die Microsoft Corporation gesendet. Diese Informationen helfen Microsoft-Technikern, die Ursache des Fehlers zu identifizieren und die nächste Version von zu verbessern [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Standardmäßig ist keine Informationen an Microsoft gesendet. Allerdings beim Kompilieren einer Anwendung mit `/errorreport:queue`, die standardmäßig aktiviert ist, sammelt die Anwendung ihre Fehlerberichte. Klicken Sie dann, wenn der Administrator des Computers anmeldet, wird Fehler reporting ein Popup-Fenster, mit der Administratoren zum Weiterleiten an Microsoft Fehler meldet, die seit der Anmeldung aufgetreten sind.  
+ <span data-ttu-id="41007-124">Wenn diese Option verwendet wird, mit `/errorreport:prompt`, `/errorreport:queue`, oder `/errorreport:send`, und die Anwendung erkennt, die Informationen in einen interner Compilerfehler `file` wird gesendet, um Microsoft Corporation.</span><span class="sxs-lookup"><span data-stu-id="41007-124">If this option is used with `/errorreport:prompt`, `/errorreport:queue`, or `/errorreport:send`, and your application encounters an internal compiler error, the information in `file` is sent to Microsoft Corporation.</span></span> <span data-ttu-id="41007-125">Diese Informationen helfen Microsoft-Experten, die die Ursache des Fehlers zu identifizieren und die nächste Version von zu verbessern [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="41007-125">That information will help Microsoft engineers identify the cause of the error and may help improve the next release of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="41007-126">Standardmäßig werden keine Informationen an Microsoft gesendet.</span><span class="sxs-lookup"><span data-stu-id="41007-126">By default, no information is sent to Microsoft.</span></span> <span data-ttu-id="41007-127">Allerdings beim Kompilieren einer Anwendung mit `/errorreport:queue`, die standardmäßig aktiviert ist, sammelt die Anwendung ihre Fehlerberichte.</span><span class="sxs-lookup"><span data-stu-id="41007-127">However, when you compile an application by using `/errorreport:queue`, which is enabled by default, the application collects its error reports.</span></span> <span data-ttu-id="41007-128">Klicken Sie dann bei dem Computer anmeldet, zeigt Berichtssystems Fehler ein Popup-Fenster, das ermöglicht dem Administrator die Weiterleitung an Microsoft, die alle Fehler meldet, die seit der Anmeldung aufgetreten sind.</span><span class="sxs-lookup"><span data-stu-id="41007-128">Then, when the computer's administrator logs in, the error reporting system displays a pop-up window that enables the administrator to forward to Microsoft any error reports that occurred since the logon.</span></span>  
   
 > [!NOTE]
->  Die `/bugreport` Option ist nicht verfügbar in der Visual Studio Development Environment; es kann nur, wenn Sie über die Befehlszeile kompilieren.  
+>  <span data-ttu-id="41007-129">Die `/bugreport` Option ist nicht innerhalb der Visual Studio-Entwicklungsumgebung verfügbar, steht er nur, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="41007-129">The `/bugreport` option is not available from within the Visual Studio development environment; it is available only when you compile from the command line.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel kompiliert `T2.vb` und alle Informationen in der Datei `Problem.txt`.  
+## <a name="example"></a><span data-ttu-id="41007-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="41007-130">Example</span></span>  
+ <span data-ttu-id="41007-131">Im folgende Beispiel kompiliert `T2.vb` und alle Fehlerberichte Informationen in der Datei `Problem.txt`.</span><span class="sxs-lookup"><span data-stu-id="41007-131">The following example compiles `T2.vb` and puts all bug-reporting information in the file `Problem.txt`.</span></span>  
   
 ```  
 vbc /bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)   
- [/ errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)   
- [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [TrustLevel-Element für SecurityPolicy ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/729ab04c-03da-4ee5-86b1-be9d08a09369)
+## <a name="see-also"></a><span data-ttu-id="41007-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="41007-132">See Also</span></span>  
+ [<span data-ttu-id="41007-133">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="41007-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="41007-134">"/ Debug" (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41007-134">/debug (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)  
+ [<span data-ttu-id="41007-135">/errorreport</span><span class="sxs-lookup"><span data-stu-id="41007-135">/errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
+ [<span data-ttu-id="41007-136">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="41007-136">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="41007-137">TrustLevel Element für SecurityPolicy ((ASP.NET Settings Schema)</span><span class="sxs-lookup"><span data-stu-id="41007-137">trustLevel Element for securityPolicy (ASP.NET Settings Schema)</span></span>](http://msdn.microsoft.com/en-us/729ab04c-03da-4ee5-86b1-be9d08a09369)

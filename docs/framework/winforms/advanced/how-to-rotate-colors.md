@@ -1,60 +1,64 @@
 ---
-title: "Gewusst wie: Drehen von Farben | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farben, Drehen"
-  - "Beispiele [Windows Forms], Drehen von Farben"
+title: 'Gewusst wie: Drehen von Farben'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors [Windows Forms], rotating
+- examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Drehen von Farben
-Die Drehung in einem vierdimensionalen Farbraum ist schwer zu visualisieren.  Sie ist jedoch leichter vorstellbar, wenn vereinbart wird, dass ein Farbanteil stets einen festen Wert beibehält.  Angenommen, der Alphaanteil behält einen festen Wert von 1 \(vollständig deckend\) bei.  In diesem Fall lässt sich ein dreidimensionaler Farbraum mit Rot\-, Grün\- und Blauachsen, wie in der folgenden Abbildung, einfach visualisieren.  
+# <a name="how-to-rotate-colors"></a><span data-ttu-id="0be41-102">Gewusst wie: Drehen von Farben</span><span class="sxs-lookup"><span data-stu-id="0be41-102">How to: Rotate Colors</span></span>
+<span data-ttu-id="0be41-103">Drehungswinkel in einem vierdimensionalen Farbraum ist schwer zu visualisieren.</span><span class="sxs-lookup"><span data-stu-id="0be41-103">Rotation in a four-dimensional color space is difficult to visualize.</span></span> <span data-ttu-id="0be41-104">Wir können Drehung zu visualisieren, indem Sie einverstanden sind, behalten Sie eine der festen Farbe Komponenten vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="0be41-104">We can make it easier to visualize rotation by agreeing to keep one of the color components fixed.</span></span> <span data-ttu-id="0be41-105">Angenommen Sie, wir akzeptieren Sie den Alphaanteil auf 1 festgesetzt (vollständig deckend) beibehalten.</span><span class="sxs-lookup"><span data-stu-id="0be41-105">Suppose we agree to keep the alpha component fixed at 1 (fully opaque).</span></span> <span data-ttu-id="0be41-106">Dann können wir einen dreidimensionale Farbraum mit Rot-, Grün- und Blau-Achsen darstellen, in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0be41-106">Then we can visualize a three-dimensional color space with red, green, and blue axes as shown in the following illustration.</span></span>  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")  
+ <span data-ttu-id="0be41-107">![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")</span><span class="sxs-lookup"><span data-stu-id="0be41-107">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")</span></span>  
   
- Eine Farbe kann man sich im 3D\-Raum wie einen Punkt vorstellen.  Der Punkt \(1, 0, 0\) stellt im Raum beispielsweise die Farbe Rot und der Punkt \(0, 1, 0\) die Farbe Grün dar.  
+ <span data-ttu-id="0be41-108">Eine Farbe kann als ein Punkt im 3D-Raum betrachtet werden.</span><span class="sxs-lookup"><span data-stu-id="0be41-108">A color can be thought of as a point in 3-D space.</span></span> <span data-ttu-id="0be41-109">Z. B. den Punkt (1, 0, 0) im Raum darstellt, die Farbe Rot und der Punkt im Raum (0, 1, 0) stellt die Farbe Grün.</span><span class="sxs-lookup"><span data-stu-id="0be41-109">For example, the point (1, 0, 0) in space represents the color red, and the point (0, 1, 0) in space represents the color green.</span></span>  
   
- Die folgende Abbildung veranschaulicht, welche Auswirkungen die Drehung der Farbe \(1, 0, 0\) in einem Winkel von 60 Grad in der Rot\-Grün\-Ebene hat.  Die Drehung in einer Ebene parallel zur Rot\-Grün\-Ebene können Sie sich wie eine Drehung um die Blauachse vorstellen.  
+ <span data-ttu-id="0be41-110">Die folgende Abbildung zeigt worum es sich dabei um die Farbe (1, 0, 0) drehen, durch einen Winkel von 60 Grad in Rot-Grün-Ebene.</span><span class="sxs-lookup"><span data-stu-id="0be41-110">The following illustration shows what it means to rotate the color (1, 0, 0) through an angle of 60 degrees in the Red-Green plane.</span></span> <span data-ttu-id="0be41-111">Drehungswinkel in einer Ebene Parallel zur Rot-Grün-Ebene kann als Drehung der blauen Achse betrachtet werden.</span><span class="sxs-lookup"><span data-stu-id="0be41-111">Rotation in a plane parallel to the Red-Green plane can be thought of as rotation about the blue axis.</span></span>  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")  
+ <span data-ttu-id="0be41-112">![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")</span><span class="sxs-lookup"><span data-stu-id="0be41-112">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")</span></span>  
   
- In der folgenden Abbildung wird veranschaulicht, wie Sie eine Farbmatrix initialisieren, um Drehungen um jede der drei Koordinatenachsen \(Rot, Grün, Blau\) auszuführen.  
+ <span data-ttu-id="0be41-113">Die folgende Abbildung zeigt, wie eine Farbmatrix zum Ausführen von Drehungen zu jeder der drei-Koordinate Achsen (Rot, Grün, Blau) initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="0be41-113">The following illustration shows how to initialize a color matrix to perform rotations about each of the three coordinate axes (red, green, blue).</span></span>  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
+ <span data-ttu-id="0be41-114">![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")</span><span class="sxs-lookup"><span data-stu-id="0be41-114">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird eine 60\-Grad\-Drehung um die Blauachse auf ein komplett einfarbiges Bild \(1, 0, 0.6\) angewendet.  In einer Ebene, die parallel zur Rot\-Grün\-Ebene verläuft, wird der Drehwinkel aufgehoben.  
+## <a name="example"></a><span data-ttu-id="0be41-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0be41-115">Example</span></span>  
+ <span data-ttu-id="0be41-116">Im folgenden Beispiel wird ein Bild, das alle einfarbig (1, 0, 0,6) und eine Drehung 60 Grad der blauen Achse gilt.</span><span class="sxs-lookup"><span data-stu-id="0be41-116">The following example takes an image that is all one color (1, 0, 0.6) and applies a 60-degree rotation about the blue axis.</span></span> <span data-ttu-id="0be41-117">Der Winkel der Drehung ist in einer Ebene, die parallel zur Rot-Grün ist, out überflüssig.</span><span class="sxs-lookup"><span data-stu-id="0be41-117">The angle of the rotation is swept out in a plane that is parallel to the red-green plane.</span></span>  
   
- In der folgenden Abbildung ist das ursprüngliche Bild auf der linken und das Bild, dessen Farben gedreht wurden, auf der rechten Seite zu sehen.  
+ <span data-ttu-id="0be41-118">Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die Farbe gedreht Bild auf der rechten Seite.</span><span class="sxs-lookup"><span data-stu-id="0be41-118">The following illustration shows the original image on the left and the color-rotated image on the right.</span></span>  
   
- ![Drehen von Farben](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")  
+ <span data-ttu-id="0be41-119">![Drehen von Farben](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")</span><span class="sxs-lookup"><span data-stu-id="0be41-119">![Rotate Colors](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")</span></span>  
   
- In der folgenden Abbildung wird die im nachstehenden Code ausgeführte Farbdrehung veranschaulicht.  
+ <span data-ttu-id="0be41-120">Die folgende Abbildung zeigt eine Visualisierung der Drehung Farbe, die in den folgenden Code ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="0be41-120">The following illustration shows a visualization of the color rotation performed in the following code.</span></span>  
   
- ![Neueinfärbung](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")  
+ <span data-ttu-id="0be41-121">![Neufärben von](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")</span><span class="sxs-lookup"><span data-stu-id="0be41-121">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")</span></span>  
   
  [!code-csharp[System.Drawing.RotateColors#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  Ersetzen Sie `RotationInput.bmp` durch einen für das System gültigen Dateinamen und Pfad.  
+## <a name="compiling-the-code"></a><span data-ttu-id="0be41-122">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="0be41-122">Compiling the Code</span></span>  
+ <span data-ttu-id="0be41-123">Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="0be41-123">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="0be41-124">Ersetzen Sie `RotationInput.bmp` mit einem Dateinamen und Pfad auf Ihrem System gültig.</span><span class="sxs-lookup"><span data-stu-id="0be41-124">Replace `RotationInput.bmp` with an image file name and path valid on your system.</span></span>  
   
-## Siehe auch  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Neueinfärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a><span data-ttu-id="0be41-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0be41-125">See Also</span></span>  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [<span data-ttu-id="0be41-126">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0be41-126">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="0be41-127">Neufärben von Bildern</span><span class="sxs-lookup"><span data-stu-id="0be41-127">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)

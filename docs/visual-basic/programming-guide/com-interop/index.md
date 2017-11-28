@@ -1,87 +1,68 @@
 ---
 title: COM-Interop (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, COM interop
-- COM interop, in Visual Basic
+- COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 87c87852024412b7a7ed55a2c429842ce75a13a8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
-Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. Dieser Abschnitt behandelt einige Themen, die mit der Erstellung und Verwendung von COM-Objekten mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zusammenhängen.  
+# <a name="com-interop-visual-basic"></a><span data-ttu-id="f442a-102">COM-Interop (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f442a-102">COM Interop (Visual Basic)</span></span>
+<span data-ttu-id="f442a-103">Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="f442a-103">The Component Object Model (COM) allows an object to expose its functionality to other components and to host applications.</span></span> <span data-ttu-id="f442a-104">Die moderne Software enthält in der Regel COM-Objekte.</span><span class="sxs-lookup"><span data-stu-id="f442a-104">Most of today's software includes COM objects.</span></span> <span data-ttu-id="f442a-105">Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen.</span><span class="sxs-lookup"><span data-stu-id="f442a-105">Although .NET assemblies are the best choice for new applications, you may at times need to employ COM objects.</span></span> <span data-ttu-id="f442a-106">Dieser Abschnitt behandelt einige Themen, die mit der Erstellung und Verwendung von COM-Objekten mit [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zusammenhängen.</span><span class="sxs-lookup"><span data-stu-id="f442a-106">This section covers some of the issues associated with creating and using COM objects with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- Stellt eine Übersicht der COM-Interoperabilität bereit.  
+## <a name="in-this-section"></a><span data-ttu-id="f442a-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="f442a-107">In This Section</span></span>  
+ [<span data-ttu-id="f442a-108">Einführung in COM-Interop</span><span class="sxs-lookup"><span data-stu-id="f442a-108">Introduction to COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+ <span data-ttu-id="f442a-109">Stellt eine Übersicht der COM-Interoperabilität bereit.</span><span class="sxs-lookup"><span data-stu-id="f442a-109">Provides an overview of COM interoperability.</span></span>  
   
- [Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
- Beschreibt, wie COM-Objekten Verweise hinzugefügt werden, die über Typbibliotheken verfügen.  
+ [<span data-ttu-id="f442a-110">Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f442a-110">How to: Reference COM Objects from Visual Basic</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ <span data-ttu-id="f442a-111">Beschreibt, wie COM-Objekten Verweise hinzugefügt werden, die über Typbibliotheken verfügen.</span><span class="sxs-lookup"><span data-stu-id="f442a-111">Covers how to add references to COM objects that have type libraries.</span></span>  
   
- [Gewusst wie: Arbeiten mit ActiveX-Steuerelementen](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Veranschaulicht, wie vorhandene ActiveX-Steuerelemente verwendet werden, um der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Toolbox Funktionen hinzuzufügen.  
+ [<span data-ttu-id="f442a-112">Gewusst wie: Arbeiten mit ActiveX-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="f442a-112">How to: Work with ActiveX Controls</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ <span data-ttu-id="f442a-113">Veranschaulicht, wie vorhandene ActiveX-Steuerelemente verwendet werden, um der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Toolbox Funktionen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="f442a-113">Demonstrates how to use existing ActiveX controls to add features to the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Toolbox.</span></span>  
   
- [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Führt Sie durch den Prozess, APIs aufzurufen, die Teil des Windows-Betriebssystems sind.  
+ [<span data-ttu-id="f442a-114">Exemplarische Vorgehensweise: Aufrufen von Windows-APIs</span><span class="sxs-lookup"><span data-stu-id="f442a-114">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ <span data-ttu-id="f442a-115">Führt Sie durch den Prozess, APIs aufzurufen, die Teil des Windows-Betriebssystems sind.</span><span class="sxs-lookup"><span data-stu-id="f442a-115">Steps you through the process of calling the APIs that are part of the Windows operating system.</span></span>  
   
- [Gewusst wie: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
- Veranschaulicht, wie die `MessageBox`-Funktion in User32.dll definiert und aufgerufen wird.  
+ [<span data-ttu-id="f442a-116">Gewusst wie: Aufrufen von Windows-APIs</span><span class="sxs-lookup"><span data-stu-id="f442a-116">How to: Call Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ <span data-ttu-id="f442a-117">Veranschaulicht, wie die `MessageBox`-Funktion in User32.dll definiert und aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="f442a-117">Demonstrates how to define and call the `MessageBox` function in User32.dll.</span></span>  
   
- [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- Veranschaulicht, wie eine Windows-Funktion aufgerufen wird, die über einen Parameter eines unsignierten Typs verfügt.  
+ [<span data-ttu-id="f442a-118">Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert</span><span class="sxs-lookup"><span data-stu-id="f442a-118">How to: Call a Windows Function that Takes Unsigned Types</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ <span data-ttu-id="f442a-119">Veranschaulicht, wie eine Windows-Funktion aufgerufen wird, die über einen Parameter eines unsignierten Typs verfügt.</span><span class="sxs-lookup"><span data-stu-id="f442a-119">Demonstrates how to call a Windows function that has a parameter of an unsigned type.</span></span>  
   
- [Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Führt Sie durch den Prozess zum Erstellen von COM-Objekten mit und ohne die COM-Klassenvorlage.  
+ [<span data-ttu-id="f442a-120">Exemplarische Vorgehensweise: Erstellen von COM-Objekten in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f442a-120">Walkthrough: Creating COM Objects with Visual Basic</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ <span data-ttu-id="f442a-121">Führt Sie durch den Prozess zum Erstellen von COM-Objekten mit und ohne die COM-Klassenvorlage.</span><span class="sxs-lookup"><span data-stu-id="f442a-121">Steps you through the process of creating COM objects with and without the COM class template.</span></span>  
   
- [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- Behandelt einige Probleme, die bei der Verwendung von COM auftreten können.  
+ [<span data-ttu-id="f442a-122">Problembehandlung bei der Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="f442a-122">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ <span data-ttu-id="f442a-123">Behandelt einige Probleme, die bei der Verwendung von COM auftreten können.</span><span class="sxs-lookup"><span data-stu-id="f442a-123">Covers some of the problems you may encounter when using COM.</span></span>  
   
- [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- Bietet eine Übersicht, wie COM-Objekte und .NET Framework-Objekte in derselben Anwendung verwendet werden.  
+ [<span data-ttu-id="f442a-124">COM-Interoperabilität in .NET Framework-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="f442a-124">COM Interoperability in .NET Framework Applications</span></span>](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ <span data-ttu-id="f442a-125">Bietet eine Übersicht, wie COM-Objekte und .NET Framework-Objekte in derselben Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f442a-125">Provides an overview of how to use COM objects and .NET Framework objects in the same application.</span></span>  
   
- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Beschreibt die Verwendung vorhandener COM-Objekte als Grundlage für neue Objekte.  
+ [<span data-ttu-id="f442a-126">Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten</span><span class="sxs-lookup"><span data-stu-id="f442a-126">Walkthrough: Implementing Inheritance with COM Objects</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ <span data-ttu-id="f442a-127">Beschreibt die Verwendung vorhandener COM-Objekte als Grundlage für neue Objekte.</span><span class="sxs-lookup"><span data-stu-id="f442a-127">Describes using existing COM objects as the basis for new objects.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)  
- Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.  
+## <a name="related-sections"></a><span data-ttu-id="f442a-128">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="f442a-128">Related Sections</span></span>  
+ [<span data-ttu-id="f442a-129">Interoperabilität mit nicht verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="f442a-129">Interoperating with Unmanaged Code</span></span>](https://msdn.microsoft.com/library/sd10k43k)  
+ <span data-ttu-id="f442a-130">Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="f442a-130">Describes interoperability services provided by the common language runtime.</span></span>  
   
- [Verfügbarmachen von COM-Komponenten für .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
- Beschreibt den Prozess, wie COM-Typen über COM-Interop aufgerufen werden.  
+ [<span data-ttu-id="f442a-131">Verfügbarmachen von COM-Komponenten für .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f442a-131">Exposing COM Components to the .NET Framework</span></span>](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ <span data-ttu-id="f442a-132">Beschreibt den Prozess, wie COM-Typen über COM-Interop aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="f442a-132">Describes the process of calling COM types through COM interop.</span></span>  
   
- [Verfügbarmachen von .NET Framework-Komponenten in COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
- Beschreibt die Vorbereitung und Verwendung von verwalteten Typen von COM.  
+ [<span data-ttu-id="f442a-133">Verfügbarmachen von .NET Framework-Komponenten in COM</span><span class="sxs-lookup"><span data-stu-id="f442a-133">Exposing .NET Framework Components to COM</span></span>](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ <span data-ttu-id="f442a-134">Beschreibt die Vorbereitung und Verwendung von verwalteten Typen von COM.</span><span class="sxs-lookup"><span data-stu-id="f442a-134">Describes the preparation and use of managed types from COM.</span></span>  
   
- [Anwenden von Interop-Attributen](https://msdn.microsoft.com/library/d4w8x20h)  
- Behandelt Attribute, die Sie verwenden können, wenn Sie mit nicht verwaltetem Code arbeiten.
-
+ [<span data-ttu-id="f442a-135">Anwenden von Interop-Attributen</span><span class="sxs-lookup"><span data-stu-id="f442a-135">Applying Interop Attributes</span></span>](https://msdn.microsoft.com/library/d4w8x20h)  
+ <span data-ttu-id="f442a-136">Behandelt Attribute, die Sie verwenden können, wenn Sie mit nicht verwaltetem Code arbeiten.</span><span class="sxs-lookup"><span data-stu-id="f442a-136">Covers attributes you can use when working with unmanaged code.</span></span>

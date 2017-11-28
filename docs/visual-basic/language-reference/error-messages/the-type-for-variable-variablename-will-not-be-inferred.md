@@ -1,51 +1,31 @@
 ---
-title: "Der Typ für die Variable &quot;&lt;Variablename&gt;&quot; wird nicht abgeleitet werden, da es an ein Feld in einem einschließenden Bereich gebunden ist | Microsoft-Dokumentation"
-ms.date: 2015-07-20
+title: "Der Typ für die Variable &#39; &lt;Variablename&gt;&#39; wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC42110
+helpviewer_keywords: BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ab7d69c34a58dc898553868258c4fdf6b81db343
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable "&lt;Variablename&gt;' wird nicht abgeleitet werden, da es an ein Feld in einem einschließenden Bereich gebunden ist
-Der Typ für die Variable "\<Variablename >' wird nicht abgeleitet werden, da es an ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie entweder den Namen des "\<Variablename >', oder verwenden Sie den vollqualifizierten Namen (z. B. 'Me.Variablenname' oder 'MyBase.Variablenname').  
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a><span data-ttu-id="96a50-102">Der Typ für die Variable &#39; &lt;Variablename&gt;&#39; wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist</span><span class="sxs-lookup"><span data-stu-id="96a50-102">The type for variable &#39;&lt;variablename&gt;&#39; will not be inferred because it is bound to a field in an enclosing scope</span></span>
+<span data-ttu-id="96a50-103">Der Typ für die Variable "\<Variablename >' wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist.</span><span class="sxs-lookup"><span data-stu-id="96a50-103">The type for variable '\<variablename>' will not be inferred because it is bound to a field in an enclosing scope.</span></span> <span data-ttu-id="96a50-104">Ändern Sie entweder den Namen des "\<Variablename >', oder verwenden Sie den vollqualifizierten Namen (z. B. 'Me.Variablenname' oder 'MyBase.Variablenname').</span><span class="sxs-lookup"><span data-stu-id="96a50-104">Either change the name of '\<variablename>', or use the fully qualified name (for example, 'Me.variablename' or 'MyBase.variablename').</span></span>  
   
- Eine Schleifensteuerungsvariable im Code hat den gleichen Namen wie ein Feld der Klasse oder andere einschließende Bereiche. Da die Steuerelementvariable ohne eine `As`-Klausel verwendet wird, ist sie an das Feld im einschließenden Bereich gebunden, und der Compiler erstellt weder eine neue Variable für sie noch leitet er ihren Typ ab.  
+ <span data-ttu-id="96a50-105">Eine Schleifensteuerungsvariable im Code hat den gleichen Namen wie ein Feld der Klasse oder andere einschließende Bereiche.</span><span class="sxs-lookup"><span data-stu-id="96a50-105">A loop control variable in your code has the same name as a field of the class or other enclosing scope.</span></span> <span data-ttu-id="96a50-106">Da die Steuerelementvariable ohne eine `As`-Klausel verwendet wird, ist sie an das Feld im einschließenden Bereich gebunden, und der Compiler erstellt weder eine neue Variable für sie noch leitet er ihren Typ ab.</span><span class="sxs-lookup"><span data-stu-id="96a50-106">Because the control variable is used without an `As` clause, it is bound to the field in the enclosing scope, and the compiler does not create a new variable for it or infer its type.</span></span>  
   
- Im folgenden Beispiel `Index` ist die Steuerelementvariable in der `For`-Anweisung an das `Index`-Feld in der `Customer`-Klasse gebunden. Vom Compiler wird keine neue Variable für die Steuerelementvariable `Index` erstellt und ihr Typ nicht abgeleitet.  
+ <span data-ttu-id="96a50-107">Im folgenden Beispiel `Index` ist die Steuerelementvariable in der `For`-Anweisung an das `Index`-Feld in der `Customer`-Klasse gebunden.</span><span class="sxs-lookup"><span data-stu-id="96a50-107">In the following example, `Index`, the control variable in the `For` statement, is bound to the `Index` field in the `Customer` class.</span></span> <span data-ttu-id="96a50-108">Vom Compiler wird keine neue Variable für die Steuerelementvariable `Index` erstellt und ihr Typ nicht abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="96a50-108">The compiler does not create a new variable for the control variable `Index` or infer its type.</span></span>  
   
 ```  
 Class Customer  
@@ -64,32 +44,32 @@ Class Customer
 End Class  
 ```  
   
- Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder Warnungen als Fehler behandeln, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="96a50-109">Standardmäßig ist diese Meldung eine Warnung.</span><span class="sxs-lookup"><span data-stu-id="96a50-109">By default, this message is a warning.</span></span> <span data-ttu-id="96a50-110">Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="96a50-110">For information about how to hide warnings or how to treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Fehler-ID:** BC42110  
+ <span data-ttu-id="96a50-111">**Fehler-ID:** BC42110</span><span class="sxs-lookup"><span data-stu-id="96a50-111">**Error ID:** BC42110</span></span>  
   
-### <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung  
+### <a name="to-address-this-warning"></a><span data-ttu-id="96a50-112">So reagieren Sie auf diese Warnung</span><span class="sxs-lookup"><span data-stu-id="96a50-112">To address this warning</span></span>  
   
--   Machen Sie die Schleifensteuerungsvariable lokal verfügbar, indem Sie ihren Namen in einen Bezeichner ändern, der nicht mit dem Feldnamen der Klasse übereinstimmt.  
+-   <span data-ttu-id="96a50-113">Machen Sie die Schleifensteuerungsvariable lokal verfügbar, indem Sie ihren Namen in einen Bezeichner ändern, der nicht mit dem Feldnamen der Klasse übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="96a50-113">Make the loop control variable local by changing its name to an identifier that is not also the name of a field of the class.</span></span>  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Stellen Sie sicher, dass die Schleifensteuerungsvariable an das Klassenfeld gebunden ist, indem Sie dem Variablennamen als Präfix `Me.` voranstellen.  
+-   <span data-ttu-id="96a50-114">Stellen Sie sicher, dass die Schleifensteuerungsvariable an das Klassenfeld gebunden ist, indem Sie dem Variablennamen als Präfix `Me.` voranstellen.</span><span class="sxs-lookup"><span data-stu-id="96a50-114">Clarify that the loop control variable binds to the class field by prefixing `Me.` to the variable name.</span></span>  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Verwenden Sie eine `As`-Klausel, um einen Typ für die Schleifensteuerungsvariable festzulegen, anstatt sich auf den lokalen Typrückschluss zu verlassen.  
+-   <span data-ttu-id="96a50-115">Verwenden Sie eine `As`-Klausel, um einen Typ für die Schleifensteuerungsvariable festzulegen, anstatt sich auf den lokalen Typrückschluss zu verlassen.</span><span class="sxs-lookup"><span data-stu-id="96a50-115">Instead of relying on local type inference, use an `As` clause to specify a type for the loop control variable.</span></span>  
   
     ```  
     For Index As Integer = 1 To 10  
     ```  
   
-## <a name="example"></a>Beispiel  
- Der folgende Code veranschaulicht das vorherige Beispiel mit der ersten Korrektur.  
+## <a name="example"></a><span data-ttu-id="96a50-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="96a50-116">Example</span></span>  
+ <span data-ttu-id="96a50-117">Der folgende Code veranschaulicht das vorherige Beispiel mit der ersten Korrektur.</span><span class="sxs-lookup"><span data-stu-id="96a50-117">The following code shows the earlier example with the first correction in place.</span></span>  
   
 ```  
 Class Customer  
@@ -107,11 +87,10 @@ Class Customer
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [Für jede... Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Für... Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Me, My, MyBase und MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-
+## <a name="see-also"></a><span data-ttu-id="96a50-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="96a50-118">See Also</span></span>  
+ [<span data-ttu-id="96a50-119">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="96a50-119">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="96a50-120">For Each...Next-Anweisung</span><span class="sxs-lookup"><span data-stu-id="96a50-120">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="96a50-121">For...Next-Anweisung</span><span class="sxs-lookup"><span data-stu-id="96a50-121">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="96a50-122">Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts</span><span class="sxs-lookup"><span data-stu-id="96a50-122">How to: Refer to the Current Instance of an Object</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
+ [<span data-ttu-id="96a50-123">Lokaler Typrückschluss</span><span class="sxs-lookup"><span data-stu-id="96a50-123">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="96a50-124">Me, My, MyBase und MyClass</span><span class="sxs-lookup"><span data-stu-id="96a50-124">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
