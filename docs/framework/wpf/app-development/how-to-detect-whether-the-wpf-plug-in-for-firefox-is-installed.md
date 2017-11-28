@@ -1,35 +1,38 @@
 ---
-title: "Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins f&#252;r Firefox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Suchen nach dem Firefox-Plug-In [WPF]"
-  - "Erkennen einer Firefox-Installation [WPF]"
-  - "Erkennen einer Installation des WPF-Plug-Ins für Firefox [WPF]"
-  - "Firefox [WPF], Erkennen einer Installation"
-  - "Plug-In für Firefox [WPF]"
+title: "Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins für Firefox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plug-in for Firefox [WPF]
+- detecting Firefox installation [WPF]
+- checking for the Firefox plug-in [WPF]
+- Firefox [WPF], detecting installation
+- detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3012afc118420a83c869785d26c28f1eee969cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins f&#252;r Firefox
-Das [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Plug\-In für Firefox ermöglicht die Ausführung von [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und Loose XAML\-Dateien im Browser Mozilla Firefox.  In diesem Thema wird ein in HTML und JavaScript geschriebenes Skript bereitgestellt, mit dem Administratoren ermitteln können, ob das WPF\-Plug\-In für Firefox installiert ist.  
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>Gewusst wie: Erkennen einer Installation des WPF-Plug-Ins für Firefox
+Die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] -Plug-In für Firefox ermöglicht [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose XAML-Dateien in den Mozilla Firefox-Browser ausgeführt werden. Dieses Thema enthält ein Skript geschrieben in HTML und JavaScript, die Administratoren verwenden können, um zu bestimmen, ob das WPF-Plug-In für Firefox installiert ist.  
   
 > [!NOTE]
->  Weitere Informationen zum Installieren, Bereitstellen und Erkennen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] finden Sie unter [Installieren von .NET Framework](../../../../docs/framework/install/guide-for-developers.md).  
+>  Weitere Informationen zum Installieren und Bereitstellen von erkennen die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], finden Sie unter [installieren Sie .NET Framework für Entwickler](../../../../docs/framework/install/guide-for-developers.md).  
   
-## Beispiel  
- Wenn [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] installiert ist, wird der Clientcomputer mit einem WPF\-Plug\-In für Firefox konfiguriert.  Das folgende Beispielskript sucht das WPF\-Plug\-In für Firefox und zeigt dann eine entsprechende Statusmeldung an.  
+## <a name="example"></a>Beispiel  
+ Wenn die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] ist installiert, der Clientcomputer mit einem WPF-Plug-In für Firefox konfiguriert ist. Das folgende Beispielskript überprüft das WPF-Plug-In für Firefox und zeigt dann eine Nachricht des entsprechenden Status.  
   
 ```  
 <HTML>  
@@ -61,15 +64,15 @@ Das [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Plug\-I
 </HTML>  
 ```  
   
- Bei erfolgreicher Suche nach dem WPF\-Plug\-In für Firefox wird die folgende Statusmeldung angezeigt:  
+ Wenn das Kontrollkästchen für die WPF-Plug-In für Firefox erfolgreich ist, wird die folgende Statusmeldung angezeigt:  
   
  `The WPF plug-in for Firefox is installed.`  
   
  Andernfalls wird die folgende Statusmeldung angezeigt:  
   
- `The WPF plug-in for Firefox is not installed.  Please install or reinstall the .NET Framework 3.5.`  
+ `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`  
   
-## Siehe auch  
- [Erkennen einer .NET Framework 3.0\-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)   
- [Erkennen einer .NET Framework 3.5\-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)   
- [Übersicht über WPF\-XAML\-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erkennen einer .NET Framework 3.0-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [Erkennen einer .NET Framework 3.5-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Übersicht über WPF-XAML-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)

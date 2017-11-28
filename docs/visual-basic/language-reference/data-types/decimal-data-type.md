@@ -1,56 +1,54 @@
 ---
-title: "Decimal Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Decimal"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "literal type characters, D"
-  - "trailing zeros"
-  - "real numbers"
-  - "trailing 0 characters"
-  - "Decimal data type"
-  - "D literal type character"
-  - "decimals, Decimal data type"
-  - "0 characters, trailing"
-  - "data types [Visual Basic], assigning"
-  - "decimal keyword"
-  - "numbers, real"
-  - "variable-precision numbers"
-  - "zeros, trailing"
-  - "@ identifier type character"
-  - "identifier type characters, @"
+title: Decimal-Datentyp (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Decimal
+helpviewer_keywords:
+- literal type characters [Visual Basic], D
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- Decimal data type
+- D literal type character [Visual Basic]
+- decimals, Decimal data type
+- 0 characters [Visual Basic], trailing
+- data types [Visual Basic], assigning
+- decimal keyword [Visual Basic]
+- numbers [Visual Basic], real
+- variable-precision numbers
+- zeros, trailing
+- '@ identifier type character'
+- identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Decimal Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Speichert 128\-Bit \(16\-Byte\)\-Werte mit Vorzeichen, die 96\-Bit \(12\-Bytes\)\-Ganzzahlnummern darstellen, deren Einteilung durch eine variable Zehnerpotenz erfolgt.  Der Skalierungsfaktor gibt die Anzahl der Ziffern rechts neben dem Dezimaltrennzeichen an. Sie reicht von 0 bis 28.  Bei einer Skala von 0 \(keine Dezimalstellen\) ist der größtmögliche Wert \+\/\-79,228,162,514,264,337,593,543,950,335 \(\+\/\-7.9228162514264337593543950335E\+28\).  Bei 28 Dezimalstellen ist der größte Wert \+\/\-7,9228162514264337593543950335, und der kleinste Wert ungleich 0 \(null\) ist \+\/\-0.0000000000000000000000000001 \(\+\/\-1E\-28\).  
+# <a name="decimal-data-type-visual-basic"></a>Decimal-Datentyp (Visual Basic)
+Speichert signierte 128-Bit (16-Byte)-Werte, die ganze Zahl (12-Byte) der 96-Bit-Zahlen mit einer Variablen Potenz von 10 skaliert darstellt. Der Skalierungsfaktor gibt die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an. Es reicht von 0 bis 28. Mit einer Skala von 0 (keine Dezimalstellen), ist der größtmögliche Wert +/-Wert 79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). Klicken Sie mit 28 Dezimalstellen +/-7,9228162514264337593543950335 und der Höchstwert ist, und den kleinsten Wert ungleich NULL ist, +/-0,0000000000000000000000000001 (+/-1E-28).  
   
-## Hinweise  
- Der `Decimal`\-Datentyp stellt die größte Anzahl von signifikaten Stellen für eine Zahl bereit.  Er unterstützt bis zu 29 signifikante Stellen und kann Werte über 7.9228 x 10^28 darstellen.  Er eignet sich besonders für Berechnungen, die sehr viele Stellen erfordern und bei denen keine Rundungsfehler auftreten dürfen \(z. B. finanzielle Berechnungen\).  
+## <a name="remarks"></a>Hinweise  
+ Die `Decimal` -Datentyp bietet die größte Anzahl von signifikanten Stellen für eine Zahl. Es unterstützt bis zu 29 signifikanten Stellen und Werte oberhalb 7,9228 x 10 darstellen kann ^ 28. Sie eignet sich besonders für Berechnungen, z. B. Finanzen, die eine große Anzahl von Ziffern erfordern jedoch Rundungsfehler tolerieren kann nicht.  
   
- Der Standardwert von `Decimal` ist 0 \(null\).  
+ Der Standardwert von `Decimal` lautet 0.  
   
-## Programmiertipps  
+## <a name="programming-tips"></a>Programmiertipps  
   
--   **Genauigkeit.** `Decimal` ist kein Gleitkommadatentyp.  Die `Decimal`\-Struktur enthält einen binären ganzzahligen Wert zusammen mit einem Vorzeichenbit und einem Skalierungsfaktor, der festlegt, welcher Teil des Werts ein Dezimalbruch ist.  Deswegen verfügen `Decimal`\-Zahlen über eine genauere Darstellung im Arbeitsspeicher als Gleitkommatypen \(`Single` und `Double`\).  
+-   **Mit einfacher Genauigkeit.** `Decimal`ist kein Typ Gleitkommadaten. Die `Decimal` Struktur enthält einen binären ganzzahligen Wert zusammen mit einem Vorzeichenbit und eine ganze Zahl Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimalbruch ist. Aus diesem Grund `Decimal` Zahlen haben eine feiner abgestimmte Darstellung im Arbeitsspeicher als Gleitkommatypen (`Single` und `Double`).  
   
--   **Leistung.** Der `Decimal`\-Datentyp wird unter allen numerischen Typen am langsamsten verarbeitet.  Wägen Sie vor der Wahl eines Datentyps die Kriterien Genauigkeit und Leistung gegeneinander ab.  
+-   **Leistung:** Die `Decimal` -Datentyp ist der langsamste aller numerischen Typen. Wägen Sie die Wichtigkeit der Genauigkeit gegenüber der Leistung aufzufordern, einen Datentyp auf.  
   
--   **Erweiterung.** Der `Decimal`\-Datentyp wird zu `Single` oder `Double` erweitert.  Dies bedeutet, dass Sie `Decimal` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
+-   **Widening.** Die `Decimal` -Datentyp zu `Single` oder `Double`. Dies bedeutet, Sie können konvertieren `Decimal` zu diesen Typen, ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Nachgestellte Nullen.** Visual Basic speichert keine nacfolgenden Nullen in einem `Decimal`\-Literal.  Eine `Decimal`\-Variable behält jedoch alle nachgestellten Nullen bei, die aus Berechnungen resultieren.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+-   **Nachfolgende Nullen.** Visual Basic speichert keine nachfolgende Nullen in einer `Decimal` literal. Allerdings eine `Decimal` Variablen werden beibehalten, nachfolgenden Nullen rechnerisch abgerufen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -62,16 +60,16 @@ Speichert 128\-Bit \(16\-Byte\)\-Werte mit Vorzeichen, die 96\-Bit \(12\-Bytes\)
           ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))  
     ```  
   
-     Im vorausgehenden Beispiel lautet die Ausgabe von `MsgBox` wie folgt:  
+     Die Ausgabe des `MsgBox` im vorherigen Beispiel lautet wie folgt:  
   
-     d1 \= 2.375, d2 \= 1.625, d3 \= 4.000, d4 \= 4  
+     D1 = 2.375, d2 = 1.625, d3 = 4.000 d4 = 4  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `D` an ein Literal wird der `Decimal`\-Datentyp erzwungen.  Durch Anhängen des Typkennzeichens `@` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Decimal`\-Datentyp erzwungen.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `D` an ein Literal wird der `Decimal`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `@` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Decimal`-Datentyp erzwungen.  
   
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Decimal?displayProperty=fullName>\-Struktur.  
+-   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Decimal?displayProperty=nameWithType>-Struktur.  
   
-## Bereich  
- Sie müssen möglicherweise das `D`\-Typzeichen verwenden, um einer `Decimal`\-Variablen oder einer Konstanten einen großen Wert zuzuweisen.  Diese Anforderung ist, da der Compiler ein Literal als `Long`, es sei denn, ein Literalzeichen dem Literal folgt, wie im folgenden Beispiel gezeigt interpretiert.  
+## <a name="range"></a>Bereich  
+ Müssen Sie möglicherweise verwenden Sie die `D` -Typzeichen weisen einen hohen Wert ein, um eine `Decimal` Variable oder Konstante. Diese Anforderung ist, da der Compiler als Literal interpretiert `Long` , wenn ein literal-Typzeichen wie im folgenden Beispiel gezeigt das Literal folgt.  
   
 ```  
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.  
@@ -79,19 +77,19 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.  
 ```  
   
- Die Deklaration für `bigDec1` keinen Überlauf, da der Wert, der zugewiesen wird, innerhalb des Bereichs für `Long` fällt.  Der `Long`\-Wert kann zur `Decimal`\-Variablen zugewiesen werden.  
+ Die Deklaration für `bigDec1` Überlauf keine erzeugt werden, da der Wert, der ihm zugewiesenen innerhalb des Bereichs liegt `Long`. Die `Long` Wert zugewiesen werden kann, um die `Decimal` Variable.  
   
- Die Deklaration für `bigDec2` generiert einen Sammelfehler, da der Wert, der zugewiesen wird, für `Long` zu groß ist.  Da das numerische Literal nicht als `Long` zuerst interpretiert werden kann, kann es nicht zur `Decimal`\-Variablen zugewiesen werden.  
+ Die Deklaration für `bigDec2` einen Überlauffehler generiert, weil der Wert, der ihm zugewiesen ist zu groß für `Long`. Da die numerische Literale zuerst als interpretiert werden kann ein `Long`, er kann nicht zugewiesen werden die `Decimal` Variable.  
   
- Für `bigDec3` löst das Literaltypzeichen `D` das Problem, indem Sie den Compiler anweisen, die das Literal als `Decimal` statt als `Long` zu interpretieren.  
+ Für `bigDec3`, des Literaltypzeichens `D` löst das Problem durch den Compiler, das Literal als interpretieren Erzwingen einer `Decimal` statt als ein `Long`.  
   
-## Siehe auch  
- <xref:System.Decimal?displayProperty=fullName>   
- <xref:System.Decimal.%23ctor%2A?displayProperty=fullName>   
- <xref:System.Math.Round%2A?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Decimal?displayProperty=nameWithType>  
+ <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
+ <xref:System.Math.Round%2A?displayProperty=nameWithType>  
+ [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Single-Datentyp](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [Double-Datentyp](../../../visual-basic/language-reference/data-types/double-data-type.md)  
+ [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

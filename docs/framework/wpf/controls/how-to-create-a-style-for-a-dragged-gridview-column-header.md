@@ -1,47 +1,49 @@
 ---
-title: "Gewusst wie: Erstellen eines Stils f&#252;r einen gezogenen GridView-Spaltenheader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView-Steuerelemente, Formatierung"
+title: "Gewusst wie: Erstellen eines Stils für einen gezogenen GridView-Spaltenheader"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 503683de875b8853e219139800eef2a5417a1574
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines Stils f&#252;r einen gezogenen GridView-Spaltenheader
-In diesem Beispiel wird erläutert, wie Sie die Darstellung eines gezogenen <xref:System.Windows.Controls.GridViewColumnHeader> ändern, wenn der Benutzer die Position einer Spalte ändert.  
+# <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Gewusst wie: Erstellen eines Stils für einen gezogenen GridView-Spaltenheader
+In diesem Beispiel wird gezeigt, wie die Darstellung eines gezogenen geändert <xref:System.Windows.Controls.GridViewColumnHeader> Wenn der Benutzer die Position einer Spalte ändert.  
   
-## Beispiel  
- Wenn Sie einen Spaltenheader in einer <xref:System.Windows.Controls.ListView> im <xref:System.Windows.Controls.GridView>\-Ansichtmodus an eine neue Position ziehen, wird die Spalte an die neue Position verschoben.  Beim Ziehen des Spaltenheaders wird zusätzlich zum ursprünglichen Header eine unverankerte Kopie des Headers angezeigt.  Ein Spaltenheader in einem <xref:System.Windows.Controls.GridView> wird durch ein <xref:System.Windows.Controls.GridViewColumnHeader>\-Objekt dargestellt.  
+## <a name="example"></a>Beispiel  
+ Wenn Sie eine Spaltenüberschrift ziehen, an einen anderen Speicherort in einer <xref:System.Windows.Controls.ListView> , verwendet <xref:System.Windows.Controls.GridView> für den Ansichtsmodus an, die für die Spalte an die neue Position verschoben wird. Während Sie den Spaltenüberschrift ziehen, wird eine unverankerte Kopie des Headers zusätzlich zu der ursprünglichen Überschrift angezeigt. Eine Spaltenüberschrift in einer <xref:System.Windows.Controls.GridView> wird dargestellt, indem Sie eine <xref:System.Windows.Controls.GridViewColumnHeader> Objekt.  
   
- Um die Darstellung des unverankerten und des ursprünglichen Headers anzupassen, können Sie <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> zum Ändern des <xref:System.Windows.Controls.GridViewColumnHeader> <xref:System.Windows.Style> festlegen.  Diese <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> werden angewendet, wenn der <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A>\-Eigenschaftswert `true` und der <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>\-Eigenschaftswert <xref:System.Windows.Controls.GridViewColumnHeaderRole> ist.  
+ Sie können zum Anpassen der Darstellung der Gleitkomma- und ursprünglichen Header festlegen <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> so ändern Sie die <xref:System.Windows.Controls.GridViewColumnHeader> <xref:System.Windows.Style>. Diese <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> werden angewendet, wenn die <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> Eigenschaftswert ist `true` und <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> Eigenschaftswert ist <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.  
   
- Wenn der Benutzer die Maustaste gedrückt hält, während sich der Mauszeiger über dem <xref:System.Windows.Controls.GridViewColumnHeader> befindet, wird der <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A>\-Eigenschaftswert auf `true` geändert.  Wenn der Benutzer den Ziehvorgang startet, wird die <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>\-Eigenschaft entsprechend auf <xref:System.Windows.Controls.GridViewColumnHeaderRole> geändert.  
+ Wenn der Benutzer die Maustaste drückt und gedrückt hält, während sich der Mauszeiger auf die <xref:System.Windows.Controls.GridViewColumnHeader>, <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> Eigenschaftswert geändert wird, um `true`. Ebenso, wenn der Benutzer beginnt des Ziehvorgangs wird, die <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> eigenschaftsänderungen <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.  
   
- Im folgenden Beispiel wird erläutert, wie Sie <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> so festlegen, dass die Farben für <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.Background%2A> des ursprünglichen und unverankerten Headers geändert werden, wenn der Benutzer eine Spalte an eine neue Position zieht.  
+ Im folgende Beispiel wird gezeigt, wie festzulegende <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> so ändern Sie die <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.Background%2A> Farben, der die ursprünglichen "oder" floating-Header, wenn eine Spalte an eine neue Position bewegt.  
   
- [!code-xml[ListViewHeaderRoleStyle#GVCHControlTemplateStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplatestart)]  
-[!code-xml[ListViewHeaderRoleStyle#ControlTemplateTriggersStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersstart)]  
-[!code-xml[ListViewHeaderRoleStyle#IsPressed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#ispressed)]  
-[!code-xml[ListViewHeaderRoleStyle#Floating](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#floating)]  
-[!code-xml[ListViewHeaderRoleStyle#ControlTemplateTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersend)]  
-[!code-xml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
+ [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplatestart)]  
+[!code-xaml[ListViewHeaderRoleStyle#ControlTemplateTriggersStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersstart)]  
+[!code-xaml[ListViewHeaderRoleStyle#IsPressed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#ispressed)]  
+[!code-xaml[ListViewHeaderRoleStyle#Floating](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#floating)]  
+[!code-xaml[ListViewHeaderRoleStyle#ControlTemplateTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersend)]  
+[!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.GridViewColumnHeader>   
- <xref:System.Windows.Controls.GridViewColumnHeaderRole>   
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.GridViewColumnHeader>  
+ <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

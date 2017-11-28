@@ -1,39 +1,45 @@
 ---
-title: "Gewusst wie: &#214;ffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Drag & Drop [WPF], Öffnen einer abgelegten Datei"
-  - "Drag & Drop [WPF], RichTextBox"
-  - "RichTextBox [WPF], Drag &amp; Drop"
+title: "Gewusst wie: Öffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drag-and-drop [WPF], RichTextBox
+- RichTextBox [WPF], drag-and-drop
+- drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f65ecaf9c6ef34176967e1ebf9134ceee195036b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: &#214;ffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist
-In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verfügen die <xref:System.Windows.Controls.TextBox>\-, <xref:System.Windows.Controls.RichTextBox>\- und <xref:System.Windows.Documents.FlowDocument>\-Steuerelemente über eine integrierte Drag & Drop\-Funktion.  Die integrierte Funktion ermöglicht das Drag & Drop von Text in und zwischen den Steuerelementen.  Es ist jedoch nicht möglich, eine Datei durch Ablegen auf dem Steuerelement zu öffnen.  Diese Steuerelemente markieren auch die Drag & Drop\-Ereignisse als behandelt.  Daher können Sie standardmäßig keine eigenen Ereignishandler hinzufügen, um Funktionen zum Öffnen abgelegter Dateien bereitzustellen.  
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Gewusst wie: Öffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist
+In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, und <xref:System.Windows.Documents.FlowDocument> steuert den gesamten über integrierte Drag-and-Drop-Funktionalität verfügen. Die integrierte Funktion ermöglicht die Drag & Drop von Text innerhalb und zwischen den Steuerelementen. Es wird jedoch nicht aktiviert das Öffnen einer Datei durch das Löschen der Datei auf das Steuerelement. Diese Steuerelemente werden auch die Drag & Drop-Ereignisse als behandelt markiert. Standardmäßig können nicht Sie daher Ihren eigenen--Ereignishandler, um die Funktionalität zum Öffnen von abgelegten Dateien hinzufügen.  
   
- Um eine zusätzliche Behandlung für Drag & Drop\-Ereignisse in diesen Steuerelementen hinzuzufügen, fügen Sie die Ereignishandler für die Drag & Drop\-Ereignisse mithilfe der <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>\-Methode hinzu.  Legen Sie den `handledEventsToo`\-Parameter auf `true` fest, damit der angegebene Handle für ein Routingereignis aufgerufen wird, das bereits von einem anderen Element auf der Ereignisroute als behandelt markiert wurde.  
+ Verwenden Sie zum Hinzufügen zusätzlichen Schritt für Drag & Drop-Ereignisse in diesen Steuerelementen die <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> Methode, um die Ereignishandler für die Drag & Drop-Ereignisse hinzuzufügen. Legen Sie die `handledEventsToo` Parameter `true` fest, damit der angegebene Handler für ein Routingereignis aufgerufen werden, die bereits von einem anderen Element auf der Ereignisroute als behandelt markiert wurde.  
   
 > [!TIP]
->  Sie können die integrierte Drag & Drop\-Funktion von <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Documents.FlowDocument> ersetzen, indem Sie die Vorschauversionen der Drag & Drop\-Ereignisse behandeln und die Vorschauereignisse als behandelt markieren.  Da dadurch jedoch die integrierte Drag & Drop\-Funktion deaktiviert wird, wird diese Vorgehensweise nicht empfohlen.  
+>  Sie können die integrierte Drag-and-Drop-Funktionalität der ersetzen <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, und <xref:System.Windows.Documents.FlowDocument> durch die Preview-Versionen der Drag & Drop-Ereignisse behandeln, und markieren die Vorschauereignisse als behandelt. Allerdings wird die integrierte Drag-and-Drop-Funktionalität deaktiviert, es wird nicht empfohlen.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie Handler für die <xref:System.Windows.DragDrop.Drop>\- und <xref:System.Windows.DragDrop.DragOver>\-Ereignisse eines <xref:System.Windows.Controls.RichTextBox> hinzugefügt werden.  In diesem Beispiel wird die <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>\-Methode verwendet und der `handledEventsToo`\-Parameter auf `true` festgelegt, sodass die Ereignishandler aufgerufen werden, obwohl das <xref:System.Windows.Controls.RichTextBox> diese Ereignisse als behandelt markiert.  Durch den Code in den Ereignishandlern werden Funktionen zum Öffnen einer auf dem <xref:System.Windows.Controls.RichTextBox> abgelegten Textdatei hinzugefügt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie das hinzuzufügende Handler für das <xref:System.Windows.DragDrop.DragOver> und <xref:System.Windows.DragDrop.Drop> Ereignisse auf einem <xref:System.Windows.Controls.RichTextBox>. Dieses Beispiel verwendet die <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> -Methode und legt die `handledEventsToo` Parameter `true` so, dass, obwohl die Ereignishandler aufgerufen werden die <xref:System.Windows.Controls.RichTextBox> diese Ereignisse als behandelt markiert. Der Code in den Ereignishandlern fügt Funktionen, um eine Textdatei öffnen, die auf abgelegt wird die <xref:System.Windows.Controls.RichTextBox>.  
   
- Um dieses Beispiel zu testen, ziehen Sie eine Textdatei oder eine RTF\-Datei von Windows\-Explorer auf das <xref:System.Windows.Controls.RichTextBox>.  Die Datei wird im <xref:System.Windows.Controls.RichTextBox> geöffnet.  Wenn Sie die UMSCHALTTASTE vor dem Ablegen der Datei drücken, wird die Datei als Nur\-Text geöffnet.  
+ Ziehen Sie zum Testen dieses Beispiels eine Textdatei oder eine rich-Text-Format (RTF)-Datei von Windows-Explorer, um die <xref:System.Windows.Controls.RichTextBox>. Die Datei wird geöffnet, der <xref:System.Windows.Controls.RichTextBox>. Wenn Sie die UMSCHALT-vor dem Ablegen Taste der Datei, die Datei wird als nur-Text geöffnet werden.  
   
- [!code-xml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
+ [!code-xaml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
   
  [!code-csharp[DragDropSnippets#RtbHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#rtbhandlers)]
  [!code-vb[DragDropSnippets#RtbHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#rtbhandlers)]

@@ -1,37 +1,29 @@
 ---
-title: 'Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2e67a03d5826d7d93e04b6c20a09cbbcabc8629
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 267e348ac528b210e25c5b8b6e01294a225bc48e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Gewusst wie: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)
-Dieses Beispiel zeigt, wie Sie LINQ verwenden, um zwei Zeichenfolgen vergleichen und die Zeilen, die in names1.txt, aber nicht in names2.txt enthalten sind.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Vorgehensweise: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)
+In diesem Beispiel wird veranschaulicht, wie Sie mit LINQ zwei Listen mit Zeichenfolgen vergleichen und die Zeilen ausgeben, die in names1.txt, aber nicht in names2.txt enthalten sind.  
   
-### <a name="to-create-the-data-files"></a>Um die Datendateien zu erstellen.  
+### <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien  
   
-1.  Kopieren Sie names1.txt und names2.txt in den Projektmappenordner, siehe [Gewusst wie: kombinieren und vergleichen String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Kopieren Sie names1.txt und names2.txt in den Projektmappenordner entsprechend [wie: kombinieren und vergleichen Zeichenfolge Sammlungen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -68,10 +60,10 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Einige Arten von Abfrageoperationen in Visual Basic, z. B. <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, und <xref:System.Linq.Enumerable.Concat%2A>, können nur in methodenbasierter Syntax ausgedrückt werden.</xref:System.Linq.Enumerable.Concat%2A> </xref:System.Linq.Enumerable.Union%2A> </xref:System.Linq.Enumerable.Distinct%2A> </xref:System.Linq.Enumerable.Except%2A>  
+ Einige Arten von Abfrageoperationen in Visual Basic, z. B. <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, und <xref:System.Linq.Enumerable.Concat%2A>, nur in eine methodenbasierte Syntax ausgedrückt werden können.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+ Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -1,63 +1,64 @@
 ---
-title: "Gewusst wie: Sperren von Steuerelementen f&#252;r Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Sperren"
-  - "Windows Forms-Steuerelemente, Sperren"
+title: "Gewusst wie: Sperren von Steuerelementen für Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, locking
+- controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 30808d2102a1be41381f0e07c9f0f37bfb4a5a56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Sperren von Steuerelementen f&#252;r Windows&#160;Forms
-Während Sie die Benutzeroberfläche der Windows\-Anwendung entwerfen, können Sie die Steuerelemente sperren, sobald sie über die richtige Position verfügen. Auf diese Weise wird verhindert, dass die Elemente versehentlich verschoben, vergrößert oder verkleinert werden, wenn Sie andere Eigenschaften festlegen.  
+# <a name="how-to-lock-controls-to-windows-forms"></a>Gewusst wie: Sperren von Steuerelementen für Windows Forms
+Wenn Sie die Benutzeroberfläche (UI) von der Windows-Anwendung entwerfen, können Sie die Steuerelemente sperren, sobald sie ordnungsgemäß positioniert sind, sodass Sie nicht versehentlich verschieben oder deren Größe ändern, wenn Sie andere Eigenschaften festlegen.  
   
- Außerdem können Sie alle Steuerelemente im Formular gleichzeitig sperren und entsperren – dies ist besonders bei Formularen mit zahlreichen Steuerelementen von Vorteil – oder einzelne Steuerelemente entsperren.  Nachdem Sie alle Steuerelemente an der gewünschten Stelle im Formular positioniert haben, sperren Sie diese, um zu vermeiden, dass sie versehentlich verschoben werden.  
+ Darüber hinaus können Sie sperren und entsperren Sie alle Steuerelemente im Formular gleichzeitig, was für Formulare mit vielen Steuerelementen hilfreich ist, oder Sie einzelne Steuerelemente entsperren. Nachdem Sie alle Steuerelemente platziert haben, möchten Sie sie auf dem Formular, Sperren Sie diese um fehlerhafte Bewegung zu verhindern.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So sperren Sie ein Steuerelement  
+### <a name="to-lock-a-control"></a>So sperren Sie ein Steuerelement  
   
-1.  Klicken Sie im **Eigenschaftenfenster** auf die **Locked**\-Eigenschaft, und wählen Sie `true` aus.  \(Durch Doppelklicken auf den Eigenschaftennamen wird zwischen **true** und **false** gewechselt.\)  
+1.  In der **Eigenschaften** Fenster, klicken Sie auf die **gesperrt** Eigenschaft, und wählen `true`. (Doppelklicken auf den Namen wird die Einstellung der Eigenschaft.)  
   
-     Alternativ klicken Sie mit der rechten Maustaste auf das Steuerelement und wählen **Steuerelemente sperren**.  
-  
-    > [!NOTE]
-    >  Durch das Sperren wird verhindert, dass Steuerelemente auf eine neue Größe oder Position auf der Entwurfsoberfläche gezogen werden.  Die Größe oder Position der Steuerelemente kann jedoch weiterhin im **Eigenschaftenfenster** bzw. im Code geändert werden.  
-  
-### So sperren Sie alle Steuerelemente in einem Formular  
-  
-1.  Wählen Sie im Menü **Format** die Option **Steuerelemente sperren**.  
+     Alternativ können Sie mit der rechten Maustaste in des Steuerelements, und wählen Sie **Steuerelemente sperren**.  
   
     > [!NOTE]
-    >  Durch diesen Befehl wird zusätzlich die Größe des Formulars gesperrt, da es sich bei einem Formular auch um ein Steuerelement handelt.  
+    >  Sperren von Steuerelementen, die sie zu einer neuen Größe oder Position auf der Entwurfsoberfläche gezogenen verhindert. Sie können jedoch immer noch ändern die Größe oder Position von Steuerelementen mithilfe von der **Eigenschaften** Fenster oder im Code.  
   
-### So heben Sie die Sperrung aller gesperrten Steuerelemente in einem Formular auf  
+### <a name="to-lock-all-the-controls-on-a-form"></a>So sperren Sie alle Steuerelemente in einem Formular  
   
-1.  Wählen Sie im Menü **Format** die Option **Steuerelemente sperren**.  
+1.  Aus der **Format** Menü wählen **Steuerelemente sperren**.  
   
-     Die Sperrung aller zuvor im Formular gesperrten Steuerelemente wird aufgehoben.  
+    > [!NOTE]
+    >  Mit diesem Befehl wird auch die Größe des Formulars gesperrt, da ein Formular ein Steuerelement handelt.  
   
-### So heben Sie die Sperrung einzelner gesperrter Steuerelemente auf  
+### <a name="to-unlock-all-locked-controls-on-a-form"></a>Gesperrt, um alle Steuerelemente in einem Formular  
   
-1.  Klicken Sie im **Eigenschaftenfenster** auf die **Locked**\-Eigenschaft, und wählen Sie `false` aus.  \(Durch Doppelklicken auf den Eigenschaftennamen wird zwischen **true** und **false** gewechselt.\)  
+1.  Aus der **Format** Menü wählen **Steuerelemente sperren**.  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+     Alle zuvor gesperrten Steuerelemente im Formular sind jetzt entsperrt.  
+  
+### <a name="to-unlock-locked-controls-individually"></a>Zum Entsperren Steuerelemente einzeln gesperrt werden  
+  
+1.  In der **Eigenschaften** Fenster, klicken Sie auf die **gesperrt** Eigenschaft, und wählen `false`. (Doppelklicken auf den Namen wird die Einstellung der Eigenschaft.)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
+ [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

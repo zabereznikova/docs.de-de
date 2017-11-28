@@ -1,45 +1,44 @@
 ---
-title: "Keywords as Element Names in Code (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, naming conventions"
-  - "keywords [Visual Basic], in code"
-  - "name conflicts"
-  - "element names, in code"
+title: "Schlüsselwörter als Elementnamen in Code (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Visual Basic code, naming conventions
+- keywords [Visual Basic], in code
+- name conflicts [Visual Basic]
+- element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f410a0eaac0dcc034d406a89ed1d01a8f228a583
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Keywords as Element Names in Code (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Jedes Programmelement \(z. B. Variablen, Klassen oder Member\) kann denselben Namen wie ein eingeschränktes Schlüsselwort haben.  Beispielsweise können Sie eine Variable mit dem Namen `Loop` erstellen.  Um jedoch auf diese Version der Variablen verweisen zu können, die denselben Namen wie das geschützte `Loop`\-Schlüsselwort aufweist, müssen Sie dem Namen entweder die vollständige qualifizierende Zeichenfolge voranstellen, oder ihn wie im folgenden Beispiel in eckige Klammern \(`[ ]`\) einschließen:  
+# <a name="keywords-as-element-names-in-code-visual-basic"></a>Schlüsselwörter als Elementnamen in Code (Visual Basic)
+Jedem Programmelement, z. B. eine Variable, eine Klasse oder ein Member – kann den gleichen Namen wie ein eingeschränktes Schlüsselwort haben. Sie können z. B. erstellen eine Variablen namens `Loop`. Allerdings zum Verweisen auf die Version zu – die hat des gleichen Namens wie die eingeschränkte `Loop` Schlüsselwort – müssen Sie ein vollständiger Qualifizierungspfad voran oder schließen Sie ihn in eckige Klammern (`[ ]`), wie das folgende Beispiel zeigt.  
   
  [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
- Wenn Sie keinen der beiden Schritte ausführen, geht Visual Basic davon aus, dass das systeminterne `Loop`\-Schlüsselwort verwendet wurde, und erzeugt einen Fehler, wie im folgenden Beispiel gezeigt:  
+ Wenn Sie nicht eine dieser Optionen, und klicken Sie dann Visual Basic davon aus, die systeminterne Funktion dass `Loop` Schlüsselwort und erzeugt einen Fehler, wie im folgenden Beispiel gezeigt:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- Die eckigen Klammern können beim Verweisen auf Formulare und Steuerelemente sowie bei der Deklaration einer Variablen oder der Definition einer Prozedur mit demselben Namen wie ein eingeschränktes Schlüsselwort verwendet werden.  Vollständige Namen oder eckige Klammern werden schnell einmal vergessen, und so kann es leicht passieren, dass sich Codefehler einschleichen und die Lesbarkeit leidet.  Deshalb wird davon abgeraten, eingeschränkte Schlüsselwörter als Namen von Programmelementen zu verwenden.  Falls jedoch in einer zukünftigen Version von Visual Basic ein neues Schlüsselwort definiert wird, das einen Konflikt mit dem Namen eines vorhandenen Formulars oder Steuerelements verursacht, können Sie mit diesem Verfahren Code so aktualisieren, dass er in der neuen Version fehlerfrei ausgeführt wird.  
+ Eckige Klammern können beim Verweisen auf Formularen und Steuerelementen und beim Deklarieren einer Variablen oder eine Prozedur mit dem gleichen Namen wie ein eingeschränktes Schlüsselwort definieren. Es kann leicht vergessen, qualifizieren Namen oder eckige Klammern einschließen und somit einführen von Fehlern in Ihren Code und schwieriger zu lesen sein. Aus diesem Grund wird empfohlen, dass Sie eingeschränkte Schlüsselwörter nicht als den Namen der Anwendung Elemente verwenden. Jedoch wenn eine zukünftige Version von Visual Basic einem neuen Schlüsselwort, steht in Konflikt mit vorhandenen Steuerelementnamen eines Formulars oder definiert, können klicken Sie dann diese Technik Sie beim Aktualisieren von Code mit der neuen Version funktioniert.  
   
 > [!NOTE]
->  Ein Programm kann auch Elementnamen enthalten, die aus anderen Assemblys stammen, auf die verwiesen wird.  Wenn diese Namen einen Konflikt mit eingeschränkten Schlüsselwörtern verursachen, führt das Einschließen der Namen in eckige Klammern dazu, dass sie von Visual Basic als die von Ihnen definierten Elemente interpretiert werden.  
+>  Das Programm kann auch Elementnamen, die von anderen Assemblys verwiesen wird bereitgestellt enthalten. Wenn diese Namen mit eingeschränkte Schlüsselwörter in Konflikt stehen, führt dazu, dass Platzieren von eckigen Klammern darum Visual Basic, um sie als Ihre definierten Elemente interpretiert werden soll.  
   
-## Siehe auch  
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

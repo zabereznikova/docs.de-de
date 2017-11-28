@@ -1,74 +1,80 @@
 ---
-title: "Gewusst wie: Erstellen einer Textdekoration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Baseline-Typ"
-  - "Schriftarten, Baseline"
-  - "Schriftarten, Überstrich"
-  - "Schriftarten, Durchgestrichen"
-  - "Schriftarten, Unterstrich"
-  - "Überstrich-Typ"
-  - "Durchgestrichen-Typ"
-  - "Text, Ergänzungen"
-  - "Typografie, Textergänzungen"
-  - "Unterstrich-Typ"
+title: 'Gewusst wie: Erstellen einer Textdekoration'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [WPF], baseline
+- text [WPF], decorations
+- fonts [WPF], underline
+- fonts [WPF], overline
+- strikethrough type [WPF]
+- fonts [WPF], strikethrough
+- overline type [WPF]
+- underline type [WPF]
+- typography [WPF], text decorations
+- baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e9229ce86dbe640c4eb960c455dd049ff40b38d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer Textdekoration
-Ein <xref:System.Windows.TextDecoration>\-Objekt ist eine visuelle Verzierung, die dem Text hinzugefügt werden kann.  Es gibt vier Typen von Textdekorationen: Unterstrichen, Baseline, Durchgestrichen und Überstrichen.  Im folgenden Beispiel werden die Positionen der Textdekorationen relativ zum Text dargestellt.  
+# <a name="how-to-create-a-text-decoration"></a>Gewusst wie: Erstellen einer Textdekoration
+Ein <xref:System.Windows.TextDecoration> Objekt ist eine visuelle Verzierung können Sie Text hinzufügen. Es gibt vier Arten von Textdekorationen: "Unterstreichen", die Baseline, durchgestrichen und Überstrichen. Das folgende Beispiel zeigt die Speicherorte der Textdekorationen relativ zu dem Text.  
   
- ![Diagramm der Textergänzungsstellen](../../../../docs/framework/wpf/advanced/media/textdecoration01.png "TextDecoration01")  
-Beispiel für Textdekorationstypen  
+ ![Diagramm der Textergänzungsstellen](../../../../docs/framework/wpf/advanced/media/textdecoration01.gif "TextDecoration01")  
+Beispiel für die Text-Decoration-Typen  
   
- Um Text eine Textdekoration hinzuzufügen, erstellen Sie ein <xref:System.Windows.TextDecoration>\-Objekt, und ändern Sie seine Eigenschaften.  Verwenden Sie die <xref:System.Windows.TextDecoration.Location%2A>\-Eigenschaft, um anzugeben, wo die Textdekoration angezeigt wird, z. B. Unterstrich.  Verwenden Sie die <xref:System.Windows.TextDecoration.Pen%2A>\-Eigenschaft, um die Darstellung der Textdekoration anzugeben, z. B. eine Volltonfüllung oder ein Farbverlauf.  Wenn Sie keinen Wert für die <xref:System.Windows.TextDecoration.Pen%2A>\-Eigenschaft angeben, übernehmen die Dekorationen standardmäßig die Textfarbe.  Nachdem Sie ein <xref:System.Windows.TextDecoration>\-Objekt definiert haben, fügen Sie es zur <xref:System.Windows.TextDecorations>\-Auflistung des gewünschten Textobjekts hinzu.  
+ Ein Text-Decoration Text hinzufügen, erstellen Sie ein <xref:System.Windows.TextDecoration> -Objekt und dessen Eigenschaften ändern. Verwenden der <xref:System.Windows.TextDecoration.Location%2A> Eigenschaft, um anzugeben, wo die Textdekoration angezeigt wird, z. B. "Unterstreichen". Verwenden der <xref:System.Windows.TextDecoration.Pen%2A> Eigenschaft, um die Darstellung der Textdekoration, z. B. einer einfarbigen Füllung oder Verlaufsfarbe anzugeben. Wenn Sie einen Wert für nicht angeben der <xref:System.Windows.TextDecoration.Pen%2A> -Eigenschaft, die standardmäßig Ergänzungen, die die gleiche Farbe wie der Text. Sobald Sie definiert haben, eine <xref:System.Windows.TextDecoration> Objekt, fügen Sie diese der <xref:System.Windows.TextDecorations> Auflistung des gewünschten Text-Objekts.  
   
- Im folgenden Beispiel wird eine Textdekoration gezeigt, die mit einem Pinsel für lineare Verläufe und einem gestrichelten Stift formatiert wurde.  
+ Das folgende Beispiel zeigt einen Text-Decoration, die mit einem linearen Farbverlaufspinsel und einem gestrichelten Stift formatiert wurde.  
   
- ![Textergänzung mit linearer Farbverlaufsunterstreichung](../../../../docs/framework/wpf/advanced/media/textdecoration02.png "TextDecoration02")  
-Beispiel für eine Unterstreichung mithilfe eines Pinsels für lineare Verläufe und eines gestrichelten Stifts  
+ ![Textergänzung mit linearer farbverlaufsunterstreichung](../../../../docs/framework/wpf/advanced/media/textdecoration02.png "TextDecoration02")  
+Beispiel einer Unterstreichung formatiert mit einem linearen Farbverlauf Pinsel und gestrichelt  
   
- Das <xref:System.Windows.Documents.Hyperlink>\-Objekt stellt ein fortlaufendes Inhaltselement auf Inlineebene dar, das Ihnen das Hosten von Links im fortlaufenden Inhalt ermöglicht.  Standardmäßig verwendet <xref:System.Windows.Documents.Hyperlink> ein <xref:System.Windows.TextDecoration>\-Objekt, um eine Unterstreichung anzuzeigen.  Die Instanziierung von <xref:System.Windows.TextDecoration>\-Objekten kann ressourcenintensiv sein, insbesondere bei vielen <xref:System.Windows.Documents.Hyperlink>\-Objekten.  Wenn Sie <xref:System.Windows.Documents.Hyperlink>\-Elemente häufig einsetzen, sollten Sie einen Unterstrich nur anzeigen, wenn Sie ein Ereignis, z. B. das <xref:System.Windows.ContentElement.MouseEnter>\-Ereignis, auslösen.  
+ Die <xref:System.Windows.Documents.Hyperlink> Objekt ist ein Inhaltselement Inlineebene, der Ihnen das Hosten von links im fortlaufenden Inhalt ermöglicht. Standardmäßig <xref:System.Windows.Documents.Hyperlink> verwendet ein <xref:System.Windows.TextDecoration> Objekt, das eine Unterstreichung anzuzeigen. <xref:System.Windows.TextDecoration>Objekte können ressourcenintensiv sein zu instanziieren, insbesondere, wenn Sie viele haben <xref:System.Windows.Documents.Hyperlink> Objekte. Wenn Sie eine umfangreiche nutzen <xref:System.Windows.Documents.Hyperlink> Elemente, Sie sollten in Betracht ziehen einen Unterstrich nur, wenn ein Ereignis auslösen, z. B. Anzeigen der <xref:System.Windows.ContentElement.MouseEnter> Ereignis.  
   
- Im folgenden Beispiel ist der Unterstrich für den Link "My MSN" dynamisch. Er wird nur angezeigt, wenn das <xref:System.Windows.ContentElement.MouseEnter>\-Ereignis ausgelöst wird.  
+ Im folgenden Beispiel wird die Unterstreichung für den Link "My MSN" dynamische – es wird nur angezeigt, wenn die <xref:System.Windows.ContentElement.MouseEnter> Ereignis wird ausgelöst.  
   
  ![Links mit TextDecorations](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
-Mit Textdekorationen definierte Links  
+Links mit TextDecorations definiert  
   
- Weitere Informationen finden Sie unter [Angeben, ob ein Hyperlink unterstrichen wird](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+ Weitere Informationen finden Sie unter [Specify Whether a Hyperlink is Underlined (Angeben, ob ein Link unterstrichen wird)](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
-## Beispiel  
- Im folgenden Codebeispiel wird für eine unterstrichene Textdekoration der Standardschriftartwert verwendet.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird ein "Unterstreichen" Text-Decoration den Standardwert für die Schriftart verwendet.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
   
- Im folgenden Codebeispiel wird eine Textdekoration für Unterstreichung mit einem Volltonfarbenpinsel für den Stift erstellt.  
+ Im folgenden Codebeispiel wird ein "Unterstreichen" Text-Decoration mit einem Pinsel mit Volltonfarbe für den Stift erstellt.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
   
- Im folgenden Codebeispiel wird eine Textdekoration für Unterstreichungen mithilfe eines Pinsels für lineare Verläufe für den gestrichelten Stift erstellt.  
+ Im folgenden Codebeispiel wird ein "Unterstreichen" Text-Decoration mit einem linearen Farbverlaufspinsel für die gestrichelt erstellt.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## Siehe auch  
- <xref:System.Windows.TextDecoration>   
- <xref:System.Windows.Documents.Hyperlink>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.TextDecoration>  
+ <xref:System.Windows.Documents.Hyperlink>  
  [Angeben, ob ein Hyperlink unterstrichen wird](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)

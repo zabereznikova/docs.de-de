@@ -1,58 +1,56 @@
 ---
-title: "Call Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Call"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, Call statement"
-  - "Call statement"
-  - "procedures, calling"
+title: Call-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Call
+helpviewer_keywords:
+- procedures [Visual Basic], Call statement
+- Call statement [Visual Basic]
+- procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c72450fd6f931f36f640d3e384a6fd38d57a7a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Call Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Überträgt die Steuerung an eine `Function`\-Prozedur, eine `Sub`\-Prozedur oder eine Prozedur in einer DLL \(Dynamic Link Library\).  
+# <a name="call-statement-visual-basic"></a>Call-Anweisung (Visual Basic)
+Überträgt die Steuerung an eine `Function`, `Sub`, oder eine Dynamic Link Library (DLL)-Prozedur.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-[ Call ] procedureName [ (argumentList) ]  
+[ Call ] procedureName [ (argumentList) ]  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `procedureName`  
- Erforderlich.  Name der aufzurufenden Prozedur.  
+ Erforderlich. Der Name der Prozedur aufrufen.  
   
  `argumentList`  
- Optional.  Variablen\- oder Ausdrucksliste mit den Argumenten, die beim Aufruf an die Prozedur übergeben werden.  Mehrere Argumente werden durch Komma voneinander getrennt.  Wenn Sie einen Wert für `argumentList` angeben, müssen Sie ihn in Klammern setzen.  
+ Dies ist optional. Liste der Variablen oder Ausdrücke, die Argumente, die an die Prozedur übergeben werden, wenn sie aufgerufen wird, darstellt. Mehrere Argumente werden durch Kommas getrennt. Wenn Sie aufnehmen `argumentList`, müssen Sie es in Klammern einschließen.  
   
-## Hinweise  
- Sie können das `Call`\-Schlüsselwort verwenden, wenn Sie eine Prozedur aufrufen.  Für die meisten Prozedur ist es nicht erforderlich, das Schlüsselwort zu verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Sie können die `Call` -Schlüsselwort, wenn Sie eine Prozedur aufrufen. Für die meisten Prozeduraufrufe müssen Sie keine dieses Schlüsselwort verwenden.  
   
- Üblicherweise wird das Schlüsselwort `Call` aufgerufen, wenn der Ausdruck nicht mit einem Bezeichner beginnt.  Die Verwendung des Schlüsselworts für andere `Call` wird nicht empfohlen.  
+ In der Regel die `Call` -Schlüsselwort, wenn der aufgerufene Ausdruck nicht mit einem Bezeichner gestartet. Verwenden der `Call` Schlüsselwort für andere Zwecke nicht empfohlen.  
   
- Wenn die Prozedur einen Wert zurückgibt, wird er von der `Call`\-Anweisung verworfen.  
+ Wenn die Prozedur einen Wert zurückgibt, der `Call` Anweisung wird diese verworfen.  
   
-## Beispiel  
- Der folgende Code zeigt zwei Beispielen gezeigt, wobei das `Call`\-Schlüsselwort ist erforderlich, um eine Prozedur aufrufen.  In beiden Beispielen wird der aufgerufene Ausdruck nicht mit einem Bezeichner.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt zwei Beispiele, in denen die `Call` Schlüsselwort ist erforderlich, um eine Prozedur aufrufen. In beiden Beispielen beginnt der aufgerufene Ausdruck mit einem Bezeichner nicht.  
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## Siehe auch  
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

@@ -1,41 +1,47 @@
 ---
-title: "Gewusst wie: Implementieren einer Abh&#228;ngigkeitseigenschaft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abhängigkeitseigenschaften, Sichern von Eigenschaften mit"
-  - "Eigenschaften, Sichern mit Abhängigkeitseigenschaften"
+title: "Gewusst wie: Implementieren einer Abhängigkeitseigenschaft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], backing properties with
+- properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9bc4dee8f0b2eef76e5769ae7da3a13edf7c3300
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Implementieren einer Abh&#228;ngigkeitseigenschaft
-Dieses Beispiel zeigt, wie Sie eine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Eigenschaft mit einem <xref:System.Windows.DependencyProperty>\-Feld unterstützen und auf diese Weise eine [Abhängigkeitseigenschaft](GTMT) definieren.  Wenn Sie Ihre eigenen Eigenschaften definieren und möchten, dass diese viele Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Funktionalität unterstützen, zum Beispiel Stile, Datenbindung, Vererbung, Animation und Standardwerte, sollten Sie die Eigenschaften als [Abhängigkeitseigenschaften](GTMT) implementieren.  
+# <a name="how-to-implement-a-dependency-property"></a>Gewusst wie: Implementieren einer Abhängigkeitseigenschaft
+Dieses Beispiel zeigt, wie Sie eine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Eigenschaft mit einer <xref:System.Windows.DependencyProperty> Feld, definieren daher eine Abhängigkeitseigenschaft. Wenn Sie eigene Eigenschaften definieren und diese viele Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Funktionalität unterstützen sollen, einschließlich Stile, Datenbindung, Vererbung, Animation und Standardwerte, müssen Sie sie als eine Abhängigkeitseigenschaft implementieren.  
   
-## Beispiel  
- Im folgenden Beispiel wird zuerst eine [Abhängigkeitseigenschaft](GTMT) registriert, indem die <xref:System.Windows.DependencyProperty.Register%2A>\-Methode aufgerufen wird.  Der Name des Bezeichnerfelds, das Sie zum Speichern des Namens und der Merkmale der [Abhängigkeitseigenschaft](GTMT) verwenden, muss der <xref:System.Windows.DependencyProperty.Name%2A> sein, den Sie für die Abhängigkeitseigenschaft als Teil des <xref:System.Windows.DependencyProperty.Register%2A>\-Aufrufs gewählt haben. Daran muss das Zeichenfolgenliteral `Property` angehängt werden.  Wenn Sie zum Beispiel eine Abhängigkeitseigenschaft mit dem <xref:System.Windows.DependencyProperty.Name%2A> `Location` registrieren, muss das Bezeichnerfeld, das Sie für die Abhängigkeitseigenschaft definieren, den Namen `LocationProperty` haben.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel registriert eine Abhängigkeitseigenschaft zunächst durch Aufrufen der <xref:System.Windows.DependencyProperty.Register%2A> Methode. Der Name des Bezeichnerfelds, mit denen Sie den Namen zu speichern und Merkmale der Abhängigkeitseigenschaft muss die <xref:System.Windows.DependencyProperty.Name%2A> gewählten für die Abhängigkeitseigenschaft als Teil der <xref:System.Windows.DependencyProperty.Register%2A> Aufruf, der von der literalen Zeichenfolge angefügt `Property`. Z. B., wenn Sie eine Abhängigkeitseigenschaft mit dem Registrieren einer <xref:System.Windows.DependencyProperty.Name%2A> von `Location`, muss den Namen das ID-Feld, die Sie für die Abhängigkeitseigenschaft definieren `LocationProperty`.  
   
- In diesem Beispiel lautet der Name der [Abhängigkeitseigenschaft](GTMT) und ihres [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]\-Accessors `State`. Das Bezeichnerfeld ist `StateProperty`. Der Typ der Eigenschaft lautet <xref:System.Boolean>, und der Typ, der die [Abhängigkeitseigenschaft](GTMT) registriert, lautet `MyStateControl`.  
+ In diesem Beispiel den Namen der Abhängigkeitseigenschaft und die zugehörige [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Accessor `State`; der Feld-ID ist `StateProperty`; der Typ der Eigenschaft ist <xref:System.Boolean>; und der Typ, der die Abhängigkeitseigenschaft registriert wird `MyStateControl`.  
   
- Wenn Sie diese Konventionen der Namensgebung nicht befolgen, melden Designer Ihre Eigenschaft ggf. nicht richtig, und es kann sein, dass bestimmte Aspekte des Stilanwendungsmodus des Eigenschaftensystems sich nicht wie erwartet verhalten.  
+ Wenn Sie dieses Benennungsmuster nicht befolgen, melden Designer Ihre Eigenschaft womöglich nicht ordnungsgemäß, und bestimmte Aspekte der Stilanwendung des Eigenschaftensystems verhalten sich möglicherweise anders als erwartet.  
   
- Sie können für eine [Abhängigkeitseigenschaft](GTMT) auch Standardmetadaten angeben.  Dieses Beispiel registriert den Standardwert der `State` [Abhängigkeitseigenschaft](GTMT) als `false`.  
+ Sie können auch die standardmäßigen Metadaten für eine Abhängigkeitseigenschaft angeben. Dieses Beispiel registriert den Standardwert der `State`-Abhängigkeitseigenschaft als `false`.  
   
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
   
- Weitere Informationen dazu, wie und warum Sie eine [Abhängigkeitseigenschaft](GTMT) implementieren sollten, anstatt eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]\-Eigenschaft mit einem privaten Feld zu versehen, finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Weitere Informationen dazu, wie und warum eine Abhängigkeitseigenschaft implementiert wird, anstatt eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Eigenschaft nur mit einem privaten Feld zu sichern, finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
-## Siehe auch  
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

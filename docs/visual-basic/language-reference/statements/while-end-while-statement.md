@@ -1,100 +1,98 @@
 ---
-title: "While...End While Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.While"
-  - "vb.While...EndWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "While statement, While...End While"
-  - "While statement"
-  - "While...End While statements"
+title: While...End While-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.While
+- vb.While...EndWhile
+helpviewer_keywords:
+- While statement [Visual Basic], While...End While
+- While statement [Visual Basic]
+- While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# While...End While Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Führt eine Reihe von Anweisungen aus, solange eine bestimmte Bedingung `True` ist.  
+# <a name="whileend-while-statement-visual-basic"></a>While...End While-Anweisung (Visual Basic)
+Führt eine Reihe von Anweisungen, solange eine angegebene Bedingung ist `True`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 While condition  
-    [ statements ]  
+    [ statements ]  
     [ Continue While ]  
     [ statements ]  
-    [ Exit While ]  
-    [ statements ]  
+    [ Exit While ]  
+    [ statements ]  
 End While  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`condition`|Erforderlich.  `Boolean`\-Ausdruck.  Wenn `condition` `Nothing` ist, behandelt Visual Basic den Ausdruck als `False`.|  
-|`statements`|Dies ist optional.  Eine oder mehrere Anweisungen nach `While`, die immer ausgeführt werden, wenn `condition` `True` ist.|  
-|`Continue While`|Dies ist optional.  Die Steuerung wird zur nächsten Iteration des `While`\-Blocks.|  
-|`Exit While`|Dies ist optional.  Überträgt die Steuerung aus dem `While`\-Block.|  
-|`End While`|Erforderlich.  Beendet die Definition des `While`\-Blocks.|  
+|---|---|  
+|`condition`|Erforderlich. `Boolean`Ausdruck. Wenn `condition` ist `Nothing`, Visual Basic behandelt sie als `False`.|  
+|`statements`|Dies ist optional. Eine oder mehrere Anweisungen nach `While`, die jedes Mal ausgeführt `condition` ist `True`.|  
+|`Continue While`|Dies ist optional. Überträgt die Steuerung an die nächste Iteration der der `While` Block.|  
+|`Exit While`|Dies ist optional. Überträgt die Steuerung von der `While` Block.|  
+|`End While`|Erforderlich. Beendet die Definition des `While`-Blocks.|  
   
-## Hinweise  
- Verwenden Sie eine `While...End While`\-Struktur, wenn ein Satz von Anweisungen wiederholt werden soll, solange eine Bedingung `True` bleibt.  Wenn Sie festlegen, wo die Bedingung getestet und welches Ergebnis getestet werden soll, und hierfür größere Flexibilität wünschen, empfiehlt sich möglicherweise die [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).  Wenn die Anweisungen mit einer festgelegten Anzahl von Wiederholungen ausgeführt werden sollen, ist die [For...Next\-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md) i. d. R. vorzuziehen.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden einer `While...End While` Struktur, wenn Sie eine Reihe von Anweisungen eine unbestimmte Anzahl an, wie oft wiederholen möchten, solange eine Bedingung ist `True`. Testen, wenn eine größere Flexibilität, mit dem Sie die Bedingung testen oder welches Ergebnis sie für die Sie lieber die [werden... Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md). Wenn Sie den Anweisungen eine festgelegten Anzahl an, wie oft wiederholen möchten die [für... Nächste Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md) ist in der Regel eine bessere Wahl.  
   
 > [!NOTE]
->  Das `While`\-Schlüsselwort wird auch in der [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md), der [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md) und der [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md) verwendet.  
+>  Die `While` Schlüsselwort werden auch in der [werden... Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While-Klausel](../../../visual-basic/language-reference/queries/skip-while-clause.md) und [Take While-Klausel](../../../visual-basic/language-reference/queries/take-while-clause.md).  
   
- Wenn `condition` `True` ist, werden alle `statements` ausgeführt, bis die `End While`\-Anweisung auftritt.  Steuerelement gibt dann zu `While` die \- Anweisung zurück, und `condition` wird erneut überprüft.  Wenn `condition` noch `True` ist, wird der Vorgang wiederholt.  Wenn es `False` ist, wird die Steuerung an die Anweisung, die der `End While`\-Anweisung folgt.  
+ Wenn `condition` ist `True`, dass alle von der `statements` ausgeführt, bis die `End While` Anweisung gefunden wird. Klicken Sie dann zurück zum Steuern der `While` -Anweisung und `condition` erneut aktiviert ist. Wenn `condition` ist immer noch `True`, der Vorgang wird wiederholt. Wenn sie verfügt `False`, steuern Durchläufe auszuführen, um die Anweisung mit der `End While` Anweisung.  
   
- Die `While`\-Anweisung prüft die Bedingung stets, bevor die Schleife beginnt.  Die Schleife wird ausgeführt, solange die Bedingung `True` bleibt.  Wenn `condition``False` ist, wenn Sie die Schleife eingeben, wird sie nicht noch einmal ausgeführt.  
+ Die `While` Anweisung immer überprüft die Bedingung aus, bevor die Schleife gestartet wird. Die Schleife wird ausgeführt, während die Bedingung bleibt `True`. Wenn `condition` ist `False` bei der Eingabe von der schleifenstatus nicht es noch einmal ausgeführt.  
   
- `condition` ergibt sich normalerweise durch einen Vergleich von zwei Werten, aber es kann ein beliebiger Ausdruck sein, der zu [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) einen Wert ergibt `True` \(oder `False`\).  Dieser Ausdruck kann einen Wert eines anderen Datentyps, wie ein numerischer Typ umfassen, der zu `Boolean` konvertiert wurde.  
+ Die `condition` in der Regel werden Ergebnisse aus einem Vergleich von zwei Werten, aber sie können ein beliebiger Ausdruck, der ergibt eine [booleschen Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md) Wert (`True` oder `False`). Dieser Ausdruck kann einen Wert mit einem anderen Datentyp, z. B. eines numerischen Typs, der in konvertiert wurde enthalten `Boolean`.  
   
- Sie können `While`\-Schleifen schachteln, indem Sie eine Schleife in eine andere einfügen.  Sie können auch unterschiedliche Arten von Steuerungsstrukturen in einer anderen Steuerungsstruktur schachteln.  Weitere Informationen finden Sie unter [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Sie können schachteln `While` Schleifen, indem Sie eine Schleife in einem anderen platzieren. Sie können auch verschiedene Arten von Steuerungsstrukturen in anderen schachteln. Weitere Informationen finden Sie unter [geschachtelten Steuerungsstrukturen](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
-## Beenden während  
- Die [Beenden während](../../../visual-basic/language-reference/statements/exit-statement.md)\-Anweisung kann eine andere Möglichkeit bereitstellen, eine `While` Schleife zu beenden.  Er `Exit While` unmittelbar auf die Anweisung, die der `End While`\-Anweisung folgt.  
+## <a name="exit-while"></a>Beim Beenden  
+ Die [zu beenden, während](../../../visual-basic/language-reference/statements/exit-statement.md) Anweisung bieten eine weitere Möglichkeit zum Beenden einer `While` Schleife. `Exit While`überträgt die Steuerung sofort an die Anweisung mit der `End While` Anweisung.  
   
- Sie verwenden in der Regel `Exit While`, nachdem eine Bedingung ausgewertet ist \(beispielsweise, in einer `If...Then...Else`\-Struktur\).  Möglicherweise möchten Sie eine Schleife beenden, wenn Sie eine Bedingung feststellen, die das Fortsetzen des Durchlaufs unnötig oder unmöglich macht, z. B. ein fehlerhafter Wert oder eine Anforderung zum Beenden.  Sie können `Exit While` verwenden, wenn Sie für eine Bedingung testen, die eine *Endlosschleife* verursachen könnte, die eine Schleife ist, die eine sehr große oder sogar unbegrenzte Häufigkeit ausführen konnte.  Sie können `Exit While` dann verwenden, um die Schleife zu werden.  
+ In der Regel `Exit While` nach eine Bedingung ausgewertet wird (z. B. in einer `If...Then...Else` Struktur). Möglicherweise möchten eine Schleife zu beenden, wenn Sie eine Bedingung, in dem unnötige oder überhaupt nicht erkennen zu fortfahren, Iteration, z. B. einen fehlerhaften Wert oder eine Anforderung zum Beenden können. Können Sie `Exit While` beim Testen für eine Bedingung, die möglicherweise eine *Endlosschleife*, also in einer Schleife, auf denen eine extrem große oder sogar unendliche Anzahl von Zeiten ausgeführt werden konnte. Anschließend können Sie `Exit While` um die Schleife zu verlassen.  
   
- Sie können eine beliebige Anzahl von `Exit While`\-Anweisungen an einer beliebigen Stelle in der `While`\-Schleife platzieren.  
+ Sie können eine beliebige Anzahl von platzieren `Exit While` Anweisungen, die an einer beliebigen Stelle in der `While` Schleife.  
   
- Bei Verwendung in geschachtelten `While`\-Schleifen überträgt `Exit While` die Steuerung aus der innersten Schleife auf die nächsthöhere Schachtelungsebene.  
+ Bei Verwendung in geschachtelten `While` Schleifen, `Exit While` überträgt die Steuerung aus der innersten Schleife und in der nächsthöheren Ebene der Schachtelung.  
   
- Das Steuerelement `Continue While`\-Anweisung sofort Übergangszur folgenden Iteration der Schleife.  Weitere Informationen finden Sie unter [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ Die `Continue While` Anweisung überträgt die Steuerung sofort an die nächste Iteration der Schleife. Weitere Informationen finden Sie unter [Continue-Anweisung](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
-## Beispiel  
- Im folgenden Beispiel werden weiterhin die Anweisungen in der Schleife ausgeführt, bis die `index`\-Variable größer als 10 ist.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel die Anweisungen in der Schleife weiterhin ausgeführt werden, bis die `index` Variable größer als 10 ist.  
   
  [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht die Verwendung der `Continue While`\-Anweisung und der `Exit While`\-Anweisung.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die Verwendung der `Continue While` und `Exit While` Anweisungen.  
   
  [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
-## Beispiel  
- Im folgende Beispiel werden alle Zeilen in einer Textdatei gelesen.  Die <xref:System.IO.File.OpenText%2A>\-Methode öffnet die Datei und gibt einen <xref:System.IO.StreamReader> zurück, der die Zeichen liest.  In `While` Zustand bestimmt die <xref:System.IO.StreamReader.Peek%2A>\-Methode `StreamReader`, ob die Datei zusätzliche Zeichen enthält.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel liest alle Zeilen in einer Textdatei. Die <xref:System.IO.File.OpenText%2A> -Methode öffnet die Datei und gibt eine <xref:System.IO.StreamReader> , liest die Zeichen. In der `While` Bedingung, die <xref:System.IO.StreamReader.Peek%2A> Methode von der `StreamReader` bestimmt, ob die Datei mit zusätzliche Zeichen enthält.  
   
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
-## Siehe auch  
- [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next\-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)   
- [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schleifenstruktur](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Do...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [Geschachtelte Steuerungsstrukturen](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Continue-Anweisung](../../../visual-basic/language-reference/statements/continue-statement.md)

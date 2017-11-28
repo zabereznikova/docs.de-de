@@ -1,45 +1,48 @@
 ---
-title: "Gewusst wie: Angeben, ob ein Hyperlink unterstrichen wird | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen, TextDecoration"
-  - "HyperLink-Steuerelementtyp"
-  - "TextDecoration-Klasse"
+title: 'Gewusst wie: Angeben, ob ein Hyperlink unterstrichen wird'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7914b3b3332b7ea0abe05b3048b5016888e2d93e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Angeben, ob ein Hyperlink unterstrichen wird
-Das <xref:System.Windows.Documents.Hyperlink>\-Objekt stellt ein fortlaufendes Inhaltselement auf Inlineebene dar, das Ihnen das Hosten von Links im fortlaufenden Inhalt ermöglicht.  Standardmäßig verwendet <xref:System.Windows.Documents.Hyperlink> ein <xref:System.Windows.TextDecoration>\-Objekt, um eine Unterstreichung anzuzeigen.  Die Instanziierung von <xref:System.Windows.TextDecoration>\-Objekten kann ressourcenintensiv sein, insbesondere bei vielen <xref:System.Windows.Documents.Hyperlink>\-Objekten.  Wenn Sie <xref:System.Windows.Documents.Hyperlink>\-Elemente häufig einsetzen, sollten Sie einen Unterstrich nur anzeigen, wenn Sie ein Ereignis, z. B. das <xref:System.Windows.ContentElement.MouseEnter>\-Ereignis, auslösen.  
+# <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Gewusst wie: Angeben, ob ein Hyperlink unterstrichen wird
+Die <xref:System.Windows.Documents.Hyperlink> Objekt ist ein Inhaltselement Inlineebene, der Ihnen das Hosten von links im fortlaufenden Inhalt ermöglicht. Standardmäßig <xref:System.Windows.Documents.Hyperlink> verwendet ein <xref:System.Windows.TextDecoration> Objekt, das eine Unterstreichung anzuzeigen. <xref:System.Windows.TextDecoration>Objekte können ressourcenintensiv sein zu instanziieren, insbesondere, wenn Sie viele haben <xref:System.Windows.Documents.Hyperlink> Objekte. Wenn Sie eine umfangreiche nutzen <xref:System.Windows.Documents.Hyperlink> Elemente, Sie sollten in Betracht ziehen einen Unterstrich nur, wenn ein Ereignis auslösen, z. B. Anzeigen der <xref:System.Windows.ContentElement.MouseEnter> Ereignis.  
   
- Im folgenden Beispiel ist der Unterstrich für den Link "My MSN" dynamisch. Er wird nur angezeigt, wenn das <xref:System.Windows.ContentElement.MouseEnter>\-Ereignis ausgelöst wird.  
+ Im folgenden Beispiel wird die Unterstreichung für den Link "My MSN" dynamische – es wird nur angezeigt, wenn die <xref:System.Windows.ContentElement.MouseEnter> Ereignis wird ausgelöst.  
   
  ![Links mit TextDecorations](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
-Mit Textdekorationen definierte Links  
+Links mit TextDecorations definiert  
   
-## Beispiel  
- Im folgenden Markupbeispiel wird ein <xref:System.Windows.Documents.Hyperlink> mit und ohne Unterstreichung definiert:  
+## <a name="example"></a>Beispiel  
+ Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Documents.Hyperlink> mit und ohne Unterstreichung definiert:  
   
- [!code-xml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+ [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
- Im folgenden Beispiel wird das Erstellen einer Unterstreichung für den <xref:System.Windows.Documents.Hyperlink> bei Eintreten des <xref:System.Windows.ContentElement.MouseEnter>\-Ereignisses und das Entfernen dieser Unterstreichung bei Eintreten des <xref:System.Windows.ContentElement.MouseLeave>\-Ereignisses veranschaulicht.  
+ Im folgenden Codebeispiel wird gezeigt, wie zum Erstellen einer Unterstreichung für die <xref:System.Windows.Documents.Hyperlink> auf die <xref:System.Windows.ContentElement.MouseEnter> Ereignis, und entfernen Sie es auf die <xref:System.Windows.ContentElement.MouseLeave> Ereignis.  
   
  [!code-csharp[Performance#PerformanceSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml.cs#performancesnippet15)]
  [!code-vb[Performance#PerformanceSnippet15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/hyperlink.xaml.vb#performancesnippet15)]  
   
-## Siehe auch  
- <xref:System.Windows.TextDecoration>   
- <xref:System.Windows.Documents.Hyperlink>   
- [Optimieren der WPF\-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.TextDecoration>  
+ <xref:System.Windows.Documents.Hyperlink>  
+ [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [Erstellen einer Textdekoration](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)

@@ -1,50 +1,33 @@
 ---
-title: Problembehandlung bei Prozeduren (Visual Basic) | Microsoft-Dokumentation
+title: Problembehandlung bei Prozeduren (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
-- procedures, troubleshooting
+- procedures [Visual Basic], troubleshooting
 - Visual Basic code, procedures
 - troubleshooting procedures
-- procedures, about procedures
+- procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5445d6da982e4eea5b1047505e4bee3380ed472
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Problembehandlung bei Prozeduren (Visual Basic)
-Diese Seite listet einige der häufigsten Probleme, die beim Arbeiten mit Prozeduren auftreten können.  
+Auf dieser Seite sind einige allgemeine Probleme, die beim Arbeiten mit Prozeduren auftreten können.  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Zurückgeben eines Arraytyps aus einer Function-Prozedur  
- Wenn ein `Function` -Prozedur einen Arraydatentyp zurückgibt, können Sie verwenden die `Function` Namen zum Speichern von Werten in den Elementen des Arrays. Wenn Sie dies dennoch versuchen, legt der Compiler als Aufruf der `Function`. Im folgende Beispiel werden Compilerfehler generiert.  
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Rückgabe eines Arraytyps aus einer Funktionsprozedur  
+ Wenn eine `Function` Prozedur gibt den Datentyp eines Arrays, können Sie verwenden die `Function` Namen zum Speichern der Werte in der Elemente des Arrays. Wenn Sie dies dennoch versuchen, interpretiert der Compiler ihn als einen Aufruf der `Function`. Im folgende Beispiel werden Compilerfehler generiert.  
   
  `Function allOnes(ByVal n As Integer) As Integer()`  
   
@@ -62,99 +45,99 @@ Diese Seite listet einige der häufigsten Probleme, die beim Arbeiten mit Prozed
   
  `End Function`  
   
- Die Anweisung `allOnes(i) = 1` generiert einen Compilerfehler, da sie aufrufen, `allOnes` mit einem Argument des falschen Datentyps (Singleton `Integer` anstelle von einer `Integer` Array). Die Anweisung `Return allOnes()` generiert einen Compilerfehler, da sie aufrufen, `allOnes` ohne Argument.  
+ Die Anweisung `allOnes(i) = 1` generiert einen Compilerfehler, weil sie anscheinend Aufrufen `allOnes` mit dem Argument den falschen Datentyp (ein Singleton `Integer` anstelle von einer `Integer` Array). Die Anweisung `Return allOnes()` generiert einen Compilerfehler, weil sie anscheinend Aufrufen `allOnes` ohne Argument.  
   
- **Richtige Ansatz:** um die Elemente eines Arrays zu ändern, die zurückgegeben werden soll, definieren Sie ein internes Array als lokale Variable. Im folgenden Beispiel wird ohne Fehler kompiliert wird.  
+ **Richtige Ansatz:** um in der Lage, die Elemente eines Arrays zu ändern, die zurückgegeben werden soll, definieren Sie ein internes Array als lokale Variable. Im folgende Beispiel wird ohne Fehler kompiliert.  
   
- [!code-vb[VbVbcnProcedures&#66;](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
-## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nicht geändert wird vom Prozeduraufruf  
- Wenn Sie beabsichtigen, eine Prozedur ein Programmierelement zugrunde liegende Argument im aufrufenden Code ändern können, müssen Sie es als Verweis übergeben. Aber eine Prozedur kann auf die Elemente eines Typarguments Verweis zugreifen, selbst wenn er als Wert übergeben.  
+## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nicht geändert wird durch Prozeduraufruf  
+ Wenn Sie beabsichtigen, eine Prozedur so ändern Sie ein Programmierelement ein Argument im aufrufenden Code zugrunde liegt, zu ermöglichen, müssen Sie als Verweis übergeben werden. Aber eine Prozedur kann die Elemente eines Typarguments Verweis zugreifen, selbst wenn er als Wert übergeben.  
   
--   **Zugrunde liegende Variable**. Um die Prozedur den Wert des zugrunde liegenden Variablenelement ersetzen soll, muss die Prozedur deklarieren Sie den Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Auch der aufrufende Code muss nicht setzen Sie das Argument in Klammern ein, da dies überschreiben würde die `ByRef` Mechanismus übergeben.  
+-   **Zugrunde liegende Variable**. Damit wird die Prozedur den Wert des zugrunde liegenden Variable Elements selbst zu ersetzen, muss die Prozedur deklarieren Sie den Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Darüber hinaus der aufrufende Code muss nicht setzen Sie das Argument in Klammern, da dies überschreiben würde die `ByRef` Übergabemechanismus.  
   
--   **Verweisen Sie Elemente vom Typ**. Wenn Sie einen Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), die Prozedur nicht das zugrunde liegende Variablenelement nicht ändern. Jedoch, wenn das Argument ein Verweistyp ist, kann die Prozedur ändern die Member des Objekts, die es verweist, obwohl er nicht den Wert der Variablen ersetzen kann. Ist das Argument eine Arrayvariable, z. B. die Prozedur ein neues Array kann nicht zugewiesen werden, damit, jedoch kann es sich mindestens eines seiner Elemente ändern. Die geänderten Elemente werden in der zugrunde liegenden Arrayvariablen im Aufrufcode wiedergegeben.  
+-   **Verweisen auf Elementen des Typs**. Wenn Sie einen Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), die Prozedur den zugrunde liegenden Variable-Element selbst kann nicht geändert werden. Jedoch wenn das Argument ein Verweistyp ist, kann die Prozedur ändern die Member des Objekts auf den er zeigt, obwohl er nicht den Wert der Variablen ersetzen kann. Wenn das Argument eine Arrayvariable ist, z. B. die Prozedur kann nicht weisen Sie ein neues Array zu, aber können sie eine oder mehrere der Elemente ändern. Die geänderten Elemente werden in der zugrunde liegenden Arrayvariablen im aufrufenden Code widergespiegelt.  
   
- Das folgende Beispiel definiert zwei Prozeduren, die eine Arrayvariable als Wert übernehmen und ausgeführt werden, auf deren Elemente. Prozedur `increase` einfach zu jedem Element hinzufügt. Prozedur `replace` weist ein neues Array an den Parameter `a()` und fügt dann jedem Element&1; hinzu. Die erneute Zuweisung ist jedoch nicht der zugrunde liegenden Arrayvariablen im Aufrufcode beeinträchtigen, da `a()` deklariert `ByVal`.  
+ Im folgende Beispiel werden zwei Prozeduren, die eine Arrayvariable als Wert übernehmen und den Betrieb auf seine Elemente definiert. Prozedur `increase` einfach zu jedem Element hinzufügt. Prozedur `replace` weist ein neues Array an den Parameter `a()` , und klicken Sie dann auf jedes Element hinzugefügt. Die erneute Zuweisung ist jedoch nicht die zugrunde liegende Arrayvariable im aufrufenden Code beeinträchtigen, da `a()` deklariert `ByVal`.  
   
- [!code-vb[VbVbcnProcedures&#35;](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures&#38;](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
- Im folgenden Beispiel werden Aufrufe von `increase` und `replace`.  
+ Im folgenden Beispiel wird die Aufrufe an `increase` und `replace`.  
   
- [!code-vb[VbVbcnProcedures&#37;](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
- Die erste `MsgBox` -Aufruf zeigt "After increase(n):: 11, 21, 31, 41". Da `n` ist ein Verweistyp, `increase` kann seine Member ändern, obwohl es übergeben wird `ByVal`.  
+ Die erste `MsgBox` -Aufruf zeigt "After increase(n):: 11, 21, 31, 41". Da `n` ist ein Verweistyp `increase` können Membern, ändern, obwohl sie übergeben wird `ByVal`.  
   
- Die zweite `MsgBox` -Aufruf zeigt "After replace(n):: 11, 21, 31, 41". Da `n` übergeben `ByVal`, `replace` die Variable kann nicht geändert werden `n` durch ein neues Array zuweisen. Wenn `replace` neue Arrayinstanz erstellt `k` und weist sie auf die lokale Variable `a`, verliert den Verweis auf `n` vom aufrufenden Code übergeben. Wenn es erhöht die Mitglieder `a`, nur auf das lokale Array `k` betroffen ist.  
+ Die zweite `MsgBox` -Aufruf zeigt "After replace(n):: 11, 21, 31, 41". Da `n` übergeben `ByVal`, `replace` die Variable kann nicht geändert werden `n` indem Sie ein neues Array zuweisen. Wenn `replace` die Instanz des neuen Arrays erstellt `k` und weist sie auf die lokale Variable `a`, geht den Verweis auf `n` vom aufrufenden Code übergeben. Wenn sie die Mitglieder der erhöht `a`, nur die lokale Array `k` betroffen ist.  
   
- **Richtige Ansatz:** um ein zugrunde liegendes Variablenelement selbst ändern können, als Verweis übergeben. Das folgende Beispiel zeigt die Änderung in der Deklaration von `replace` , die ein Array mit einem anderen in der aufrufende Code ersetzen können.  
+ **Richtige Ansatz:** um eine zugrunde liegende Variable-Element selbst ändern zu können, als Verweis übergeben. Das folgende Beispiel zeigt die Änderung in der Deklaration eines `replace` , die ein Array mit einem anderen im aufrufenden Code ersetzen können.  
   
- [!code-vb[VbVbcnProcedures&#64;](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
-## <a name="unable-to-define-an-overload"></a>Definieren eine Überladung kann nicht  
- Wenn Sie eine überladene Version einer Prozedur definieren möchten, müssen Sie den gleichen Namen, jedoch eine andere Signatur verwenden. Wenn der Compiler die Deklaration nicht von einer Überladung mit der gleichen Signatur unterscheiden kann, wird einen Fehler generiert.  
+## <a name="unable-to-define-an-overload"></a>Definieren Sie eine Überladung kann nicht  
+ Wenn Sie eine überladene Version einer Prozedur definieren möchten, müssen Sie den gleichen Namen, aber einer anderen Signatur verwenden. Wenn der Compiler die Deklaration aus einer Überladung mit der gleichen Signatur unterscheiden kann, wird einen Fehler generiert.  
   
- Die *Signatur* einer Prozedur wird durch den Prozedurnamen und die Parameterliste bestimmt. Jede Überladung muss den gleichen Namen wie die anderen Überladungen, allerdings muss sich von allen in mindestens einer der anderen Komponenten der Signatur unterscheiden. Weitere Informationen finden Sie unter [Prozedurüberladung](./procedure-overloading.md).  
+ Die *Signatur* einer Prozedur wird durch den Namen der Prozedur und der Parameterliste bestimmt. Jede Überladung muss den gleichen Namen wie die anderen Überladungen haben, muss von allen von ihnen in mindestens einer der anderen Komponenten der Signatur unterscheiden sich jedoch. Weitere Informationen finden Sie unter [Prozedurüberladung](./procedure-overloading.md).  
   
- Die folgenden Elemente sind, obwohl sie die Parameterliste betreffen nicht Komponenten der Signatur einer Prozedur:  
+ Die folgenden Elemente sind, obwohl sie die Parameterliste gehören keine Komponenten der Signatur einer Prozedur:  
   
 -   Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und`Static`  
   
 -   Parameternamen  
   
--   Schlüsselwörter für Parametermodifizierer, z. B. `ByRef` und`Optional`  
+-   Parametermodifiziererschlüsselwörter, wie z. B. `ByRef` und`Optional`  
   
--   Der Datentyp des Rückgabewerts (außer einem Konvertierungsoperator)  
+-   Der Datentyp des Rückgabewerts (mit Ausnahme eines Konvertierungsoperators)  
   
- Eine Prozedur kann nicht durch die Veränderung nur eine oder mehrere der vorhergehenden Elemente überladen werden.  
+ Eine Prozedur kann nicht durch Variierung der nur eine oder mehrere der vorhergehenden Elemente überladen werden.  
   
- **Richtige Ansatz:** um eine Überladung Prozedur definieren können, müssen Sie die Signatur variieren. Da Sie den gleichen Namen verwenden müssen, müssen Sie die Anzahl, Reihenfolge oder Datentypen der Parameter variieren. In einer generischen Prozedur können Sie die Anzahl von Typparametern variieren. In einem Konvertierungsoperator ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)), können Sie den Rückgabetyp variieren.  
+ **Richtige Ansatz:** um eine Überladung Prozedur definieren können, müssen Sie die Signatur variieren. Da Sie den gleichen Namen verwenden müssen, müssen Sie die Anzahl, Reihenfolge oder Datentypen der Parameter variieren. In einer generischen Prozedur können Sie die Anzahl von Typparametern variieren. In einem Konvertierungsoperator ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)), Sie können den Rückgabetyp unterscheiden.  
   
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Überladen Sie, Auflösung und optionale und ParamArray-Argumente  
- Wenn Sie eine Prozedur mit einem oder mehreren überladen werden [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter oder ein [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) -Parameter müssen Sie vermeiden Duplizieren eines der *implizite Überladungen*. Weitere Informationen finden Sie unter [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Überladen von Auflösung mit optionalen und ParamArray-Argumente  
+ Wenn Sie eine Prozedur mit einem oder mehreren überladen werden [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter oder eine [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Parameter müssen vermeiden Duplizieren eines der *implizite Überladungen*. Informationen finden Sie unter [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  
   
-## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Aufrufen einer falschen Version einer überladenen Prozedur  
- Wenn eine Prozedur mehrere überlastete Versionen aufweist, sollten Sie mit ihre Parameterlisten vertraut sein und verstehen, wie [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] löst Aufrufe zwischen Überladungen. Andernfalls können Sie eine Überladung als dem beabsichtigten aufrufen.  
+## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Eine falsche Version einer überladenen Prozedur aufrufen  
+ Wenn eine Prozedur mehrere überladene Versionen aufweist, sollten Sie mit ihren Parameterlisten vertraut sein und zu verstehen wie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst Aufrufe zwischen Überladungen. Andernfalls können Sie eine Überladung als der vorgesehene aufrufen.  
   
- Wenn Sie die Überladung, die für Sie aufrufen möchten ermittelt haben, achten Sie darauf, dass Sie die folgenden Regeln beachten:  
+ Wenn Sie die Überladung, die für Sie aufrufen möchten bestimmt haben, achten Sie darauf, dass Sie die folgenden Regeln beachten:  
   
--   Geben Sie die richtige Anzahl von Argumenten und in der richtigen Reihenfolge.  
+-   Geben Sie die richtige Anzahl von Argumenten, und klicken Sie in der richtigen Reihenfolge.  
   
--   Im Idealfall sollten die Argumente den genau gleichen Datentypen wie die entsprechenden Parameter aufweisen. In jedem Fall muss der Datentyp der einzelnen Argumente, des entsprechenden Parameters erweitert werden. Dies gilt auch für die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) festgelegt `Off`. Wenn eine Überladung erfordert eine einschränkende Konvertierung aus der Argumentliste, die überladen ist nicht berechtigt, die aufgerufen werden.  
+-   Im Idealfall sollten die Argumente genau dieselben Datentypen wie die entsprechenden Parameter aufweisen. In jedem Fall muss der Datentyp der einzelnen Argumente, des entsprechenden Parameters erweitert werden. Dies gilt auch bei der [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) festgelegt `Off`. Wenn eine Überladung erfordert einschränkende Konvertierung aus Ihrer Typargumentliste, die überladen ist nicht berechtigt, die aufgerufen wird.  
   
--   Wenn Sie Argumente, die Erweiterung benötigen angeben, sollten Sie deren Datentypen sich so nah wie möglich an die entsprechenden Parameterdatentypen. Wenn zwei oder mehr Überladungen Argumentdatentypen akzeptieren, löst der Compiler den Aufruf an die Überladung, die für den geringsten erweiternde aufruft.  
+-   Wenn Sie Argumente, die erweiternde erfordern angeben, stellen Sie Datentypen, die so nah wie möglich an den entsprechenden Parameterdatentypen an. Wenn zwei oder mehr Überladungen Ihre Argumentdatentypen annehmen, löst der Compiler den Aufruf an die Überladung, die für die Argumentdatentypen am wenigsten aufruft.  
   
- Sie können die Wahrscheinlichkeit von Datentypenkonflikten reduzieren, indem Sie mit der [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) Konvertierungsschlüsselwort bei der Vorbereitung der Argumente.  
+ Reduziert die Wahrscheinlichkeit von Datentypenkonflikten können mithilfe der [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) Konvertierungsschlüsselwort bei der Vorbereitung Ihrer Argumente.  
   
-### <a name="overload-resolution-failure"></a>Überladen aufgelöst werden konnte  
- Beim Aufrufen einer überladenen Prozedur versucht der Compiler, alle außer einer Überladung zu beseitigen. Wenn dies gelingt, den Aufruf in diese Überladung aufgelöst. Wenn alle Überladungen beseitigt oder geeignete Überladung, die einem einzelnen Kandidaten reduziert werden kann, wird einen Fehler generiert.  
+### <a name="overload-resolution-failure"></a>Fehlers beim Auflösen der Überladung  
+ Wenn Sie eine überladene Prozedur aufrufen, versucht der Compiler alle bis auf eine der Überladungen zu vermeiden. Wenn er erfolgreich ausgeführt wird, löst den Aufruf an diese Überladung auf. Wenn sie alle Überladungen eliminiert oder geeigneten Überladungen, die einem einzelnen Kandidaten nicht reduziert werden kann, wird einen Fehler generiert.  
   
  Das folgende Beispiel veranschaulicht die überladungsauflösungsprozesses.  
   
- [!code-vb[VbVbcnProcedures&#62;](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures&#63;](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
- Im ersten Aufruf beseitigt der Compiler die erste Überladung, da der Typ des ersten Arguments (`Short`) wird in den Typ des entsprechenden Parameters (`Byte`). Klicken Sie dann die dritte Überladung beseitigt, da jeder Argumenttyp der zweiten Überladung (`Short` und `Single`) in den entsprechenden Typ der dritten Überladung erweitert (`Integer` und `Single`). Die zweite Überladung eine geringere Erweiterung erfordert, damit der Compiler für den Aufruf verwendet.  
+ Beim ersten Aufruf beseitigt der Compiler die erste Überladung, da der Typ des ersten Arguments (`Short`) in den Typ des entsprechenden Parameters schränkt (`Byte`). Sie klicken Sie dann die dritte Überladung beseitigt, da jeder Argumenttyp der zweiten Überladung (`Short` und `Single`) in den entsprechenden Typ in die dritte Überladung erweitert (`Integer` und `Single`). Die zweite Überladung eine geringere Erweiterung erfordert, damit der Compiler für den Funktionsaufruf verwendet.  
   
- Im zweiten Aufruf kann nicht der Compiler keine Überladung durch Einschränken beseitigen. Die dritte Überladung beseitigt aus demselben Grund wie im ersten Aufruf, da die zweite Überladung mit geringerer Erweiterung der Argumenttypen aufgerufen werden kann. Jedoch kann der Compiler zwischen der ersten und zweiten Überladung nicht auflösen. Jede verfügt über einen definierten Parametertyp, der in den entsprechenden Typ in einer anderen erweitert wird (`Byte` auf `Short`, aber `Single` , `Double`). Aus diesem Grund generiert der Compiler einen Überladungsauflösungsfehler.  
+ Im zweiten Aufruf kann nicht vom Compiler der Überladungen Einschränken vermieden. Die dritte Überladung beseitigt aus demselben Grund wie der erste Aufruf, da die zweite Überladung mit geringerer Erweiterung der Argumenttypen aufgerufen werden kann. Der Compiler kann nicht zwischen den ersten und zweiten Überladungen jedoch aufgelöst werden. Jede verfügt über einen definierten Parametertyp in den entsprechenden Typ in den anderen erweitert (`Byte` auf `Short`, aber `Single` auf `Double`). Aus diesem Grund generiert der Compiler Fehler Auflösung Überladung.  
   
- **Richtige Vorgehensweise:** verwenden, um eine überladene Prozedur ohne Zweideutigkeit aufrufen zu können, [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) die Argumentdatentypen mit den Parametertypen übereinstimmen. Das folgende Beispiel zeigt einen Aufruf von `z` , die Auflösung in die zweite Überladung erzwingt.  
+ **Richtige Ansatz:** verwenden, um zu eine überladene Prozedur ohne Mehrdeutigkeit aufrufen können, [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) mit die Argumenttypen für die Daten in die Parametertypen übereinstimmen. Das folgende Beispiel zeigt einen Aufruf von `z` Auflösung in die zweite Überladung erzwingt.  
   
- [!code-vb[VbVbcnProcedures&#65;](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Überladen Sie, Auflösung und optionale und ParamArray-Argumente  
- Wenn zwei Überladungen einer Prozedur identische Signaturen verfügen, mit der Ausnahme, dass der letzte Parameter deklariert ist [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in einer anderen, löst der Compiler einen Aufruf für diese Prozedur entsprechend am ehesten entspricht. Weitere Informationen finden Sie unter [Overload Resolution](./overload-resolution.md).  
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Überladen von Auflösung mit optionalen und ParamArray-Argumente  
+ Wenn zwei Überladungen einer Prozedur identische Signaturen verfügen, mit dem Unterschied, dass der letzte Parameter deklariert wird [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in anderen, löst der Compiler einen Aufruf der Prozedur nach der nächsten Übereinstimmung. Weitere Informationen finden Sie unter [überladen Auflösung](./overload-resolution.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)   
- [Sub-Prozeduren](./sub-procedures.md)   
- [Function-Prozeduren](./function-procedures.md)   
- [Property-Prozeduren](./property-procedures.md)   
- [Operatorprozeduren](./operator-procedures.md)   
- [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
- [Prozedurüberladung](./procedure-overloading.md)   
- [Überlegungen zur prozedurüberladung](./considerations-in-overloading-procedures.md)   
+ [Verfahren](./index.md)  
+ [Sub-Prozeduren](./sub-procedures.md)  
+ [Function-Prozeduren](./function-procedures.md)  
+ [Eigenschaftenprozeduren](./property-procedures.md)  
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
+ [Prozedurüberladung](./procedure-overloading.md)  
+ [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)  
  [Überladungsauflösung](./overload-resolution.md)

@@ -1,99 +1,102 @@
 ---
-title: "Gr&#246;&#223;en&#228;nderungsoptionen im DataGrid-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Automatische Größenanpassung von DataGrid"
-  - "DataGrid-Steuerelement [WPF], Größe anpassen"
-  - "Größe [WPF], DataGrid"
+title: "Größenänderungsoptionen im DataGrid-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGrid control [WPF], sizing
+- size [WPF], DataGrid
+- automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eee894b536b19ec38a9809ab5dc49f5682c1df9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gr&#246;&#223;en&#228;nderungsoptionen im DataGrid-Steuerelement
-Zum Steuern der Größenanpassung für das <xref:System.Windows.Controls.DataGrid> stehen verschiedene Optionen zur Verfügung.  Das <xref:System.Windows.Controls.DataGrid> sowie einzelne Zeilen und Spalten im <xref:System.Windows.Controls.DataGrid> können so festgelegt werden, dass deren Größe automatisch an den jeweiligen Inhalt angepasst wird, sie können aber auch auf bestimmte Werte festgelegt werden.  In der Standardeinstellung wird das <xref:System.Windows.Controls.DataGrid> je nach Größe des Inhalts vergrößert oder verkleinert.  
+# <a name="sizing-options-in-the-datagrid-control"></a>Größenänderungsoptionen im DataGrid-Steuerelement
+Verschiedene Optionen stehen in Steuerelement wie die <xref:System.Windows.Controls.DataGrid> passt sich. Die <xref:System.Windows.Controls.DataGrid>, und einzelne Zeilen und Spalten in der <xref:System.Windows.Controls.DataGrid>, kann festgelegt werden, automatisch auf ihren Inhalt angepasst, oder auf bestimmte Werte festgelegt werden. Wird standardmäßig die <xref:System.Windows.Controls.DataGrid> vergrößern und verkleinern Sie die Größe seines Inhalts angepasst wird.  
   
-## Anpassen der Größe für ein DataGrid  
+## <a name="sizing-the-datagrid"></a>Ändern der Größe des DataGrid-Steuerelement  
   
-### Vorsichtsmaßnahmen beim Verwenden der automatischen Größenanpassung  
- Standardmäßig werden die <xref:System.Windows.FrameworkElement.Height%2A>\-Eigenschaft und die <xref:System.Windows.FrameworkElement.Width%2A>\-Eigenschaft des <xref:System.Windows.Controls.DataGrid> auf <xref:System.Double.NaN?displayProperty=fullName> \("`Auto`" in XAML\) festgelegt, und die Größe des <xref:System.Windows.Controls.DataGrid> wird an die Größe des jeweiligen Inhalts angepasst.  
+### <a name="cautions-when-using-automatic-sizing"></a>Vorsichtsmaßnahmen bei Verwendung der automatischen Größenänderung  
+ Wird standardmäßig die <xref:System.Windows.FrameworkElement.Height%2A> und <xref:System.Windows.FrameworkElement.Width%2A> Eigenschaften der <xref:System.Windows.Controls.DataGrid> festgelegt <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" in XAML), und die <xref:System.Windows.Controls.DataGrid> wird auf die Größe seines Inhalts angepasst.  
   
- Wenn ein <xref:System.Windows.Controls.DataGrid> in einem Container platziert wird, der die Größe der untergeordneten Elemente, z. B. eines <xref:System.Windows.Controls.Canvas> oder eines <xref:System.Windows.Controls.StackPanel>, nicht einschränkt, wird es über die sichtbaren Grenzen des Containers hinweg gestreckt, und es werden keine Bildlaufleisten angezeigt.  Diese Bedingung wirkt sich auf die Verwendbarkeit und auf die Leistung aus.  
+ Wenn in einem Container platziert werden, die nicht die Größe der untergeordneten Elemente, wie z. B. einschränkt eine <xref:System.Windows.Controls.Canvas> oder <xref:System.Windows.Controls.StackPanel>, die <xref:System.Windows.Controls.DataGrid> wird über die sichtbaren Grenzen des Containers gestreckt und Bildlaufleisten nicht angezeigt werden. Diese Bedingung hat Auswirkungen auf die benutzerfreundlichkeit und Qualität.  
   
- Wenn bei Bindung an ein Dataset die <xref:System.Windows.FrameworkElement.Height%2A> des <xref:System.Windows.Controls.DataGrid> nicht eingeschränkt wird, werden weiterhin Zeilen für jedes Datenelement im gebundenen Dataset hinzugefügt.  Auf diese Weise kann das <xref:System.Windows.Controls.DataGrid> beim Hinzufügen weiterer Zeilen über die sichtbaren Begrenzungen der Anwendung hinweg reichen.  Für das <xref:System.Windows.Controls.DataGrid> werden in diesem Fall keine Bildlaufleisten angezeigt, da dessen <xref:System.Windows.FrameworkElement.Height%2A> beim Hinzufügen neuer Zeilen weiterhin steigt.  
+ Wenn auf ein Dataset gebunden werden, wenn die <xref:System.Windows.FrameworkElement.Height%2A> von der <xref:System.Windows.Controls.DataGrid> ist nicht eingeschränkt wird, ist sie weiterhin eine Zeile für jedes Datenelement im gebundenen Dataset hinzugefügt. Dies kann dazu führen, dass die <xref:System.Windows.Controls.DataGrid> sichtbar außerhalb der Anwendung wächst, wenn Zeilen hinzugefügt werden. Die <xref:System.Windows.Controls.DataGrid> wird nicht angezeigt werden, Bildlaufleisten in diesem Fall weil seine <xref:System.Windows.FrameworkElement.Height%2A> weiterhin wachsen, um die neuen Zeilen aufzunehmen.  
   
- Für jede Zeile im <xref:System.Windows.Controls.DataGrid> wird ein Objekt erstellt.  Wenn Sie mit einem umfangreichen Dataset arbeiten und die automatische Größenanpassung des <xref:System.Windows.Controls.DataGrid> zulassen, kann sich das Erstellen zahlreicher Objekte auf die Leistung der Anwendung auswirken.  
+ Ein Objekt wird erstellt für jede Zeile in der <xref:System.Windows.Controls.DataGrid>. Wenn Sie mit einer großen Datasets arbeiten und Sie können die <xref:System.Windows.Controls.DataGrid> selbst automatisch die Größe, kann die Erstellung einer großen Anzahl von Objekten die Leistung Ihrer Anwendung auswirken.  
   
- Zur Vermeidung solcher Probleme wird bei der Arbeit mit umfangreichen Datasets empfohlen, die <xref:System.Windows.FrameworkElement.Height%2A> des <xref:System.Windows.Controls.DataGrid> explizit festzulegen oder dieses in einem Container zu platzieren, in dem dessen <xref:System.Windows.FrameworkElement.Height%2A> eingeschränkt wird, z. B. in einem <xref:System.Windows.Controls.Grid>.  Wenn die <xref:System.Windows.FrameworkElement.Height%2A> beschränkt wird, erstellt das <xref:System.Windows.Controls.DataGrid> nur die Zeilen, die in die angegebene <xref:System.Windows.FrameworkElement.Height%2A> passen, und verwendet diese Zeilen bei Bedarf wieder, um neue Daten anzuzeigen.  
+ Um diese Probleme zu vermeiden, wenn Sie mit großen Datasets arbeiten, wird empfohlen, dass Sie ausdrücklich Festlegen der <xref:System.Windows.FrameworkElement.Height%2A> von der <xref:System.Windows.Controls.DataGrid> , oder platzieren Sie es in einem Container, die einschränken, seine <xref:System.Windows.FrameworkElement.Height%2A>, z. B. eine <xref:System.Windows.Controls.Grid>. Wenn die <xref:System.Windows.FrameworkElement.Height%2A> eingeschränkt, die <xref:System.Windows.Controls.DataGrid> erstellt nur die Zeilen, die innerhalb der angegebenen passen <xref:System.Windows.FrameworkElement.Height%2A>, und verwendet dann die Zeilen wieder nach Bedarf, um neue Daten anzuzeigen.  
   
-### Festlegen der DataGrid\-Größe  
- Das <xref:System.Windows.Controls.DataGrid> kann so festgelegt werden, dass die Größe innerhalb angegebener Begrenzungen automatisch angepasst wird, das <xref:System.Windows.Controls.DataGrid> kann jedoch auch auf eine bestimmte Größe festgelegt werden.  In der folgenden Tabelle sind die Eigenschaften aufgeführt, mit denen die Größe des <xref:System.Windows.Controls.DataGrid> gesteuert werden kann.  
+### <a name="setting-the-datagrid-size"></a>Festlegen der DataGrid-Größe  
+ Die <xref:System.Windows.Controls.DataGrid> kann festgelegt werden, um automatisch die Größe innerhalb der angegebenen Grenzen oder <xref:System.Windows.Controls.DataGrid> kann auf eine bestimmte Größe festgelegt werden. Die folgende Tabelle zeigt die Eigenschaften, die auf das Steuerelement festgelegt werden können die <xref:System.Windows.Controls.DataGrid> Größe.  
   
-|Property|Beschreibung|  
-|--------------|------------------|  
-|<xref:System.Windows.FrameworkElement.Height%2A>|Legt eine bestimmte Höhe für das <xref:System.Windows.Controls.DataGrid> fest.|  
-|<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Legt die obere Begrenzung für die Höhe des <xref:System.Windows.Controls.DataGrid> fest.  Das <xref:System.Windows.Controls.DataGrid> wird vertikal vergrößert, bis es diese Höhe erreicht.|  
-|<xref:System.Windows.FrameworkElement.MinHeight%2A>|Legt die untere Begrenzung für die Höhe des <xref:System.Windows.Controls.DataGrid> fest.  Das <xref:System.Windows.Controls.DataGrid> wird vertikal verkleinert, bis es diese Höhe erreicht.|  
-|<xref:System.Windows.FrameworkElement.Width%2A>|Legt eine bestimmte Breite für das <xref:System.Windows.Controls.DataGrid> fest.|  
-|<xref:System.Windows.FrameworkElement.MaxWidth%2A>|Legt die obere Begrenzung für die Breite des <xref:System.Windows.Controls.DataGrid> fest.  Das <xref:System.Windows.Controls.DataGrid> wird horizontal vergrößert, bis es diese Breite erreicht.|  
-|<xref:System.Windows.FrameworkElement.MinWidth%2A>|Legt die untere Begrenzung für die Breite des <xref:System.Windows.Controls.DataGrid> fest.  Das <xref:System.Windows.Controls.DataGrid> wird horizontal verkleinert, bis es diese Breite erreicht.|  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Windows.FrameworkElement.Height%2A>|Legt eine bestimmte Höhe für den <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Legt die Obergrenze für die Höhe der <xref:System.Windows.Controls.DataGrid>. Die <xref:System.Windows.Controls.DataGrid> wird vertikal vergrößert, bis es diese Höhe erreicht.|  
+|<xref:System.Windows.FrameworkElement.MinHeight%2A>|Legt die untere Grenze für die Höhe der <xref:System.Windows.Controls.DataGrid>. Die <xref:System.Windows.Controls.DataGrid> wird vertikal verkleinern, bis diese Höhe erreicht.|  
+|<xref:System.Windows.FrameworkElement.Width%2A>|Legt eine feste Breite für das <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.FrameworkElement.MaxWidth%2A>|Legt die Obergrenze für die Breite der <xref:System.Windows.Controls.DataGrid>. Die <xref:System.Windows.Controls.DataGrid> wird horizontal vergrößert, bis diese Breite erreicht.|  
+|<xref:System.Windows.FrameworkElement.MinWidth%2A>|Legt die untere Grenze für die Breite der <xref:System.Windows.Controls.DataGrid>. Die <xref:System.Windows.Controls.DataGrid> wird horizontal verkleinern, bis diese Breite erreicht.|  
   
-## Größenanpassungen für Zeilen und Zeilenheader  
+## <a name="sizing-rows-and-row-headers"></a>Größenanpassung von Zeilen und Zeilenheader  
   
-### DataGrid\-Zeilen  
- Standardmäßig wird die <xref:System.Windows.FrameworkElement.Height%2A>\-Eigenschaft einer <xref:System.Windows.Controls.DataGrid>\-Zeile auf <xref:System.Double.NaN?displayProperty=fullName> \("`Auto`" in XAML\) festgelegt, und die Zeilenhöhe wird auf die Größe des jeweiligen Inhalts vergrößert.  Die Höhe aller Zeilen im <xref:System.Windows.Controls.DataGrid> kann angegeben werden, indem die <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=fullName>\-Eigenschaft festgelegt wird.  Benutzer können die Zeilenhöhe durch Ziehen der Zeilenüberschriftsteiler ändern.  
+### <a name="datagrid-rows"></a>DataGrid-Zeilen  
+ Wird standardmäßig ein <xref:System.Windows.Controls.DataGrid> Zeile <xref:System.Windows.FrameworkElement.Height%2A> -Eigenschaftensatz auf <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" in XAML), und die Zeilenhöhe wird erweitert, um die Größe ihrer Inhalte. Die Höhe aller Zeilen in der <xref:System.Windows.Controls.DataGrid> können angegeben werden, indem die <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=nameWithType> Eigenschaft. Benutzer können die Zeilenhöhe durch Ziehen der Zeile Header Trennblättern ändern.  
   
-### DataGrid\-Zeilenheader  
- Wenn Zeilenheader angezeigt werden sollen, muss die <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A>\-Eigenschaft auf <xref:System.Windows.Controls.DataGridHeadersVisibility?displayProperty=fullName> oder <xref:System.Windows.Controls.DataGridHeadersVisibility?displayProperty=fullName> festgelegt werden.  Zeilenüberschriften werden standardmäßig angezeigt, und ihre Größe wird automatisch an den jeweiligen Inhalt angepasst.  Den Zeilenheadern kann eine bestimmte Breite zugewiesen werden, indem die <xref:System.Windows.Controls.DataGrid.RowHeaderWidth%2A?displayProperty=fullName>\-Eigenschaft festgelegt wird.  
+### <a name="datagrid-row-headers"></a>DataGrid-Zeilenheader  
+ Anzuzeigende Zeilenüberschriften, die <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> Eigenschaft muss festgelegt werden, um <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> oder <xref:System.Windows.Controls.DataGridHeadersVisibility.All?displayProperty=nameWithType>. Standardmäßig Zeilenköpfe angezeigt werden, und sie Größe automatisch an ihren Inhalt angepasst. Die Zeilenköpfe können durch Festlegen eine bestimmte Breite weitergegeben werden die <xref:System.Windows.Controls.DataGrid.RowHeaderWidth%2A?displayProperty=nameWithType> Eigenschaft.  
   
-## Größenanpassungen für Spalten und Spaltenheader  
+## <a name="sizing-columns-and-column-headers"></a>Größenanpassung von Spalten und Spaltenüberschriften  
   
-### DataGrid\-Spalten  
- Das <xref:System.Windows.Controls.DataGrid> verwendet Werte der <xref:System.Windows.Controls.DataGridLength>\-Struktur und der <xref:System.Windows.Controls.DataGridLengthUnitType>\-Struktur, um absolute oder automatische Größenanpassungsmodi anzugeben.  
+### <a name="datagrid-columns"></a>DataGrid-Spalten  
+ Die <xref:System.Windows.Controls.DataGrid> verwendet Werte von der <xref:System.Windows.Controls.DataGridLength> und <xref:System.Windows.Controls.DataGridLengthUnitType> Struktur absolute oder automatische Größenanpassungsmodi angeben.  
   
- In der folgenden Tabelle werden die von der <xref:System.Windows.Controls.DataGridLengthUnitType>\-Struktur bereitgestellten Werte angezeigt.  
+ Die folgende Tabelle zeigt die Werte gemäß der <xref:System.Windows.Controls.DataGridLengthUnitType> Struktur.  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType>|Mit dem Standardmodus für automatische Größenanpassungen wird die Größe von <xref:System.Windows.Controls.DataGrid>\-Spalten anhand des Inhalts von Zellen und Spaltenheadern angepasst.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType>|Mit dem Modus für zellbasierte automatische Größenanpassungen wird die Größe von <xref:System.Windows.Controls.DataGrid>\-Spalten anhand des Inhalts von Zellen in der Spalte, nicht anhand von Spaltenheadern angepasst.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType>|Mit dem Modus für die headerbasierte automatische Größenanpassung wird die Größe von <xref:System.Windows.Controls.DataGrid>\-Spalten nur anhand des Inhalts von Spaltenheadern angepasst.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType>|Mit dem Modus für pixelbasierte Größenanpassungen werden <xref:System.Windows.Controls.DataGrid>\-Spalten anhand des bereitgestellten numerischen Werts angepasst.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType>|Der Modus für die Größenanpassung mit einer Sternvariablen wird verwendet, um den verfügbaren Platz nach gewichteten Proportionen zu verteilen.<br /><br /> In XAML werden Sternwerte als "n\*" ausgedrückt, wobei n einen numerischen Wert darstellt.  1\* ist gleichbedeutend mit \*.  Wenn z. B. zwei Spalten in einem <xref:System.Windows.Controls.DataGrid> Breiten von \* und 2\* aufweisen, erhält die erste Spalte einen Teil des verfügbaren Platzes, während der zweiten Spalte zwei Teile des verfügbaren Platzes zugewiesen werden.|  
+|----------|-----------------|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Die Standardeinstellung automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> Spalten basierend auf den Inhalt von Zellen und Spaltenheader.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Die Zelle-basierte automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> Spalten basierend auf den Inhalt der Zellen in der Spalte, z. B. nicht die Spaltenheader.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToHeader>|Die Header-basierte automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> Spalten basierend auf den Inhalt nur Spaltenheader.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Pixel>|Die Pixel-basierten Modus Größen Größe <xref:System.Windows.Controls.DataGrid> Spalten basierend auf den numerischen Wert bereitgestellt.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Star>|Der Stern Größenanpassungsmodus dient zum Verteilen der verfügbare Platz von gewichteten Proportionen.<br /><br /> In XAML werden Sternwerte als n * angegeben, wobei n für einen numerischen Wert darstellt. 1\* entspricht \*. Angenommen, zwei Spalten in einer <xref:System.Windows.Controls.DataGrid> Breiten von \* und 2\*, die erste Spalte erhält einen Teil des verfügbaren Platzes und die zweite Spalte erhielten zwei Teile des verfügbaren Speicherplatzes.|  
   
- Mit der <xref:System.Windows.Controls.DataGridLengthConverter>\-Klasse können Sie Daten zwischen numerischen oder Zeichenfolgenwerten und <xref:System.Windows.Controls.DataGridLength>\-Werten konvertieren.  
+ Die <xref:System.Windows.Controls.DataGridLengthConverter> -Klasse kann verwendet werden, um Daten zwischen numerisch oder String-Werte zu konvertieren und <xref:System.Windows.Controls.DataGridLength> Werte.  
   
- Standardmäßig ist die <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.Windows.Controls.DataGridLength.SizeToHeader%2A> und die <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.Windows.Controls.DataGridLength.Auto%2A> festgelegt.  Wenn der Größenanpassungsmodus auf <xref:System.Windows.Controls.DataGridLength.Auto%2A> oder <xref:System.Windows.Controls.DataGridLength.SizeToCells%2A> festgelegt ist, werden Spalten bis zur Breite ihres breitesten sichtbaren Inhalts vergrößert.  Bei Bildläufen bewirken diese Größenanpassungsmodi, dass Spalten vergrößert werden, wenn Inhalt, der die aktuelle Spaltengröße übersteigt, per Bildlauf sichtbar wird.  Wenn der Inhalt per Bildlauf aus dem sichtbaren Bereich entfernt wird, wird die Spalte nicht verkleinert.  
+ Wird standardmäßig die <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Controls.DataGridLength.SizeToHeader%2A>, und die <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> -Eigenschaftensatz auf <xref:System.Windows.Controls.DataGridLength.Auto%2A>. Wenn der Größenanpassungsmodus auf festgelegt ist <xref:System.Windows.Controls.DataGridLength.Auto%2A> oder <xref:System.Windows.Controls.DataGridLength.SizeToCells%2A>, Spalten vergrößert, um die Breite des ihre breitesten sichtbaren Inhalt. Beim Durchführen eines Bildlaufs, bewirkt diese Größenanpassungsmodi, Spalten, wenn Inhalt, der größer als die aktuelle Spaltengröße einen Bildlauf angezeigt wird. Die Spalte wird nicht verkleinert werden, nachdem der Inhalt aus der Sicht Bildlauf durchgeführt wird.  
   
- Spalten im <xref:System.Windows.Controls.DataGrid> können auch so festgelegt werden, dass automatische Größenanpassungen nur innerhalb angegebener Begrenzungen vorgenommen werden. Spalten können aber auch auf eine bestimmte Größe festgelegt werden.  In der folgenden Tabelle sind die Eigenschaften aufgeführt, mit denen die Spaltengrößen gesteuert werden können.  
+ Spalten in der <xref:System.Windows.Controls.DataGrid> kann auch festgelegt werden, um automatisch die Größe nur innerhalb der angegebenen Grenzen oder Spalten auf einer bestimmten Größe festgelegt werden können. Die folgende Tabelle zeigt die Eigenschaften, die zum Steuern der Spaltengröße festgelegt werden können.  
   
-|Property|Beschreibung|  
-|--------------|------------------|  
-|<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=fullName>|Legt die Obergrenze für alle Spalten im <xref:System.Windows.Controls.DataGrid> fest.|  
-|<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=fullName>|Legt die Obergrenze für eine einzelne Spalte fest.  Überschreibt <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=fullName>.|  
-|<xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=fullName>|Legt die Untergrenze für alle Spalten im <xref:System.Windows.Controls.DataGrid> fest.|  
-|<xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=fullName>|Legt die Untergrenze für eine einzelne Spalte fest.  Überschreibt <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=fullName>.|  
-|<xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=fullName>|Legt für alle Spalten im <xref:System.Windows.Controls.DataGrid> eine bestimmte Breite fest.|  
-|<xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=fullName>|Legt für eine einzelne Spalte eine bestimmte Breite fest.  Überschreibt <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=fullName>.|  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Legt die Obergrenze für alle Spalten in der <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Legt die Obergrenze für eine einzelne Spalte fest. Überschreibt <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  
+|<xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>|Legt die Untergrenze für alle Spalten in der <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>|Legt fest, der die Untergrenze für eine einzelne Spalte. Überschreibt <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>.|  
+|<xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>|Legt eine feste Breite für alle Spalten in der <xref:System.Windows.Controls.DataGrid>.|  
+|<xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType>|Legt eine feste Breite für eine einzelne Spalte fest. Überschreibt <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>.|  
   
-### DataGrid\-Spaltenheader  
- Standardmäßig werden <xref:System.Windows.Controls.DataGrid>\-Spaltenheader angezeigt.  Wenn Spaltenheader ausgeblendet werden sollen, muss die <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A>\-Eigenschaft auf <xref:System.Windows.Controls.DataGridHeadersVisibility?displayProperty=fullName> oder <xref:System.Windows.Controls.DataGridHeadersVisibility?displayProperty=fullName> festgelegt werden.  Wenn Spaltenheader angezeigt werden, wird deren Größe in der Standardeinstellung automatisch an den jeweiligen Inhalt angepasst.  Den Spaltenheadern kann eine bestimmte Höhe zugewiesen werden, indem die <xref:System.Windows.Controls.DataGrid.ColumnHeaderHeight%2A?displayProperty=fullName>\-Eigenschaft festgelegt wird.  
+### <a name="datagrid-column-headers"></a>DataGrid-Spaltenheader  
+ Standardmäßig <xref:System.Windows.Controls.DataGrid> Spaltenüberschriften angezeigt werden. So blenden Sie die Spaltenüberschriften, aus der <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> Eigenschaft muss festgelegt werden, um <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> oder <xref:System.Windows.Controls.DataGridHeadersVisibility.None?displayProperty=nameWithType>. Standardmäßig wenn Spaltenüberschriften angezeigt werden, deren Größe automatisch an ihren Inhalt angepasst. Die Spaltenüberschriften können durch Festlegen eine bestimmte Höhe zugewiesen werden die <xref:System.Windows.Controls.DataGrid.ColumnHeaderHeight%2A?displayProperty=nameWithType> Eigenschaft.  
   
-### Größenänderung mit der Maus  
- Benutzer können die Größe von Zeilen und Spalten im <xref:System.Windows.Controls.DataGrid> mithilfe der Zeilen\- oder Spaltenüberschriftsteiler ändern.  Das <xref:System.Windows.Controls.DataGrid> unterstützt auch die automatische Größenanpassung von Zeilen und Spalten per Doppelklick auf den Zeilen\- oder Spaltenüberschriftsteiler.  Wenn Sie verhindern möchten, dass ein Benutzer die Größe bestimmter Spalten ändert, legen Sie die <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=fullName>\-Eigenschaft für die betreffenden Spalten auf `false` fest.  Wenn Sie verhindern möchten, dass Benutzer die Größe aller Spalten ändern, legen Sie die <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=fullName>\-Eigenschaft auf `false` fest.  Wenn Sie verhindern möchten, dass Benutzer die Größe aller Zeilen ändern, legen Sie die <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=fullName>\-Eigenschaft auf `false` fest.  
+### <a name="resizing-with-the-mouse"></a>Ändern der Größe, mit der Maus  
+ Benutzer können die Größe <xref:System.Windows.Controls.DataGrid> Zeilen und Spalten durch Ziehen der Header Trennblättern Zeile oder Spalte. Die <xref:System.Windows.Controls.DataGrid> unterstützt auch die automatische größenanpassung von Zeilen und Spalten durch Doppelklicken auf den Unterteiler der Header Zeile oder Spalte. Um zu verhindern, dass einen Benutzer bestimmte Spalten Größenänderung, legen Sie die <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> Eigenschaft `false` für die einzelnen Spalten. Um zu verhindern, dass Benutzer die Größe aller Spalten ändern, legen Sie die <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> Eigenschaft `false`. Um zu verhindern, dass Benutzer die Größe aller Zeilen ändern, legen Sie die <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> Eigenschaft `false`.  
   
-## Siehe auch  
- <xref:System.Windows.Controls.DataGrid>   
- <xref:System.Windows.Controls.DataGridColumn>   
- <xref:System.Windows.Controls.DataGridLength>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.DataGrid>  
+ <xref:System.Windows.Controls.DataGridColumn>  
+ <xref:System.Windows.Controls.DataGridLength>  
  <xref:System.Windows.Controls.DataGridLengthConverter>

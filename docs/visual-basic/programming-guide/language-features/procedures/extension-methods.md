@@ -1,73 +1,54 @@
 ---
-title: Erweiterungsmethoden (Visual Basic) | Microsoft-Dokumentation
+title: Erweiterungsmethoden (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.ExtensionMethods
-dev_langs:
-- VB
+f1_keywords: vb.ExtensionMethods
 helpviewer_keywords:
-- extending data types
+- extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 381fa0db2d92590d23ebd71a7823a8465e94a6e6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
-Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungsmethoden ermöglichen das Schreiben einer Methode, die aufgerufen werden können, als wäre es eine Instanzenmethode des vorhandenen Typs.  
+Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne dass einen neuen abgeleiteten Typ erstellt. Erweiterungsmethoden ermöglichen das Schreiben einer Methode, die aufgerufen werden können, als wäre sie eine des vorhandenen Typs Instanzenmethode.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Erweiterungsmethode kann ausschließlich eine `Sub`-Prozedur oder eine `Function`-Prozedur sein. Erweiterungseigenschaften, -felder oder -ereignisse können nicht definiert werden. Alle Erweiterungsmethoden müssen mit dem Extension-Attribut markiert werden `<Extension()>` aus der <xref:System.Runtime.CompilerServices?displayProperty=fullName>Namespace.</xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ Eine Erweiterungsmethode kann ausschließlich eine `Sub`-Prozedur oder eine `Function`-Prozedur sein. Erweiterungseigenschaften, -felder oder -ereignisse können nicht definiert werden. Alle Erweiterungsmethoden müssen mit dem Erweiterungsattribut `<Extension()>` aus dem <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace markiert werden.  
   
  Der erste Parameter in der Definition einer Erweiterungsmethode gibt den Datentyp an, der von der Methode erweitert wird. Beim Ausführen der Methode wird der erste Parameter an die Instanz des Datentyps gebunden, der die Methode aufruft.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel definiert eine `Print` Erweiterung der <xref:System.String>-Datentyp.</xref:System.String> Die Methode verwendet `Console.WriteLine`, um eine Zeichenfolge anzuzeigen. Die Parameter von der `Print` -Methode `aString`, legt fest, dass die Methode der <xref:System.String>Klasse</xref:System.String> erweitert  
+ Im folgenden Beispiel wird eine `Print`-Erweiterung für den <xref:System.String>-Datentyp definiert. Die Methode verwendet `Console.WriteLine`, um eine Zeichenfolge anzuzeigen. Durch den `Print`-Parameter der `aString`-Methode wird festgelegt, dass die <xref:System.String>-Klasse von der Methode erweitert wird.  
   
- [!code-vb[VbVbalrExtensionMethods&#1;](./codesnippet/VisualBasic/extension-methods_1.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Beachten Sie, dass die Definition der Erweiterungsmethode mit dem Erweiterungsattribut `<Extension()>` markiert ist. Die Markierung des Moduls, in dem die Methode definiert ist, ist optional, aber jede Erweiterungsmethode muss markiert werden. <xref:System.Runtime.CompilerServices>muss Zugriff auf das Erweiterungsattribut importiert werden.</xref:System.Runtime.CompilerServices>  
+ Beachten Sie, dass die Definition der Erweiterungsmethode mit dem Erweiterungsattribut `<Extension()>` markiert ist. Die Markierung des Moduls, in dem die Methode definiert ist, ist optional, aber jede Erweiterungsmethode muss markiert werden. Zum Zugriff auf das Erweiterungsattribut muss <xref:System.Runtime.CompilerServices> importiert werden.  
   
  Erweiterungsmethoden können nur innerhalb von Modulen deklariert werden. Bei dem Modul, in dem eine Erweiterungsmethode definiert wird, handelt es sich normalerweise um ein anderes Modul als das, in dem sie aufgerufen wird. Stattdessen wird das Modul, in dem die Erweiterungsmethode enthalten ist, ggf. importiert, um es in den Gültigkeitsbereich einzubinden. Nachdem sich das Modul, in dem `Print` enthalten ist, im Gültigkeitsbereich befindet, kann die Methode wie jede andere gewöhnliche Instanzenmethode, die keine Argumente verwendet (z. B. `ToUpper`) aufgerufen werden:  
   
- [!code-vb[VbVbalrExtensionMethods&#2;](./codesnippet/VisualBasic/extension-methods_2.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
   
- Das nächste Beispiel `PrintAndPunctuate`, ist auch eine Erweiterung für <xref:System.String>, dieses Mal mit zwei Parametern definiert.</xref:System.String> Der erste Parameter, `aString`, legt fest, dass die Erweiterungsmethode <xref:System.String>.</xref:System.String> erweitert Mit dem zweiten Parameter, `punc`, wird eine aus Satzzeichen bestehende Zeichenfolge bereitgestellt, die beim Aufruf der Methode als Argument übergeben wird. Durch die Methode wird die Zeichenfolge gefolgt von den Satzzeichen angezeigt.  
+ Das nächste Beispiel, `PrintAndPunctuate`, ist auch eine Erweiterung für <xref:System.String> und wird dieses Mal mit zwei Parametern definiert. Der erste Parameter, `aString`, legt fest, dass die Erweiterungsmethode <xref:System.String> erweitert. Mit dem zweiten Parameter, `punc`, wird eine aus Satzzeichen bestehende Zeichenfolge bereitgestellt, die beim Aufruf der Methode als Argument übergeben wird. Durch die Methode wird die Zeichenfolge gefolgt von den Satzzeichen angezeigt.  
   
- [!code-vb[VbVbalrExtensionMethods&3;](./codesnippet/VisualBasic/extension-methods_3.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
  Die Methode wird aufgerufen, indem ein Zeichenfolgenargument für `punc` gesendet wird: `example.PrintAndPunctuate(".")`  
   
- Im folgenden Beispiel werden `Print` und `PrintAndPunctuate` definiert und aufgerufen. <xref:System.Runtime.CompilerServices>wird in das Definitionsmodul importiert, um Zugriff auf das Erweiterungsattribut zu ermöglichen.</xref:System.Runtime.CompilerServices>  
+ Im folgenden Beispiel werden `Print` und `PrintAndPunctuate` definiert und aufgerufen. <xref:System.Runtime.CompilerServices> wird in das Definitionsmodul importiert, um den Zugriff auf das Erweiterungsattribut zu ermöglichen.  
   
 ### <a name="code"></a>Code  
   
@@ -135,9 +116,9 @@ End Module
   
  Da der erste Parameter den Datentyp angibt, der durch die Erweiterungsmethode erweitert wird, ist er erforderlich und kann nicht ausgelassen werden. Aus diesem Grund kann ein `Optional`-Parameter oder ein `ParamArray`-Parameter nicht der erste Parameter in der Parameterliste sein.  
   
- Erweiterungsmethoden werden bei der späten Bindung nicht berücksichtigt. Im folgenden Beispiel wird die Anweisung `anObject.PrintMe()` löst eine <xref:System.MissingMemberException>Ausnahme, die gleiche Ausnahme angezeigt wird, wenn die zweite `PrintMe` Definition Erweiterungsmethode wurden gelöscht.</xref:System.MissingMemberException>  
+ Erweiterungsmethoden werden bei der späten Bindung nicht berücksichtigt. Im folgenden Beispiel löst die `anObject.PrintMe()`-Anweisung eine <xref:System.MissingMemberException>-Ausnahme aus. Dieselbe Ausnahme wird angezeigt, wenn die zweite `PrintMe`-Erweiterungsmethodendefinition gelöscht würde.  
   
- [!code-vb[VbVbalrExtensionMethods&#9;](./codesnippet/VisualBasic/extension-methods_4.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Erweiterungsmethoden bieten eine einfache und leistungsstarke Möglichkeit zur Erweiterung eines vorhandenen Typs. Um sie erfolgreich zu verwenden, sind jedoch einige Punkte zu beachten. Obwohl sich diese Überlegungen hauptsächlich auf Autoren von Klassenbibliotheken beziehen, können sie gleichzeitig Anwendungen betreffen, die Erweiterungsmethoden verwenden.  
@@ -157,23 +138,23 @@ End Module
 ## <a name="extension-methods-instance-methods-and-properties"></a>Erweiterungsmethoden, Instanzmethoden und Eigenschaften  
  Wenn eine Instanzmethode im Gültigkeitsbereich über eine Signatur verfügt, die mit den Argumenten einer Aufrufanweisung kompatibel ist, wird die Instanzmethode vor den Erweiterungsmethoden bevorzugt ausgewählt. Die Instanzmethode hat auch dann Vorrang, wenn die Erweiterungsmethode eine bessere Übereinstimmung aufweist. Im folgenden Beispiel enthält die `ExampleClass` eine Instanzmethode mit der Bezeichnung `ExampleMethod`, die über einen Parameter des Typs `Integer` verfügt. Die Erweiterungsmethode `ExampleMethod` erweitert die `ExampleClass` und verfügt über einen Parameter des Typs `Long`.  
   
- [!code-vb[VbVbalrExtensionMethods&4;](./codesnippet/VisualBasic/extension-methods_5.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
   
  Mit dem ersten Aufruf an `ExampleMethod` im folgenden Code wird die Erweiterungsmethode aufgerufen, da `arg1` den Wert `Long` hat und nur mit dem `Long`-Parameter in der Erweiterungsmethode kompatibel ist. Der zweite Aufruf von `ExampleMethod` verfügt über ein `Integer`-Argument, `arg2`, und es ruft die Instanzmethode auf.  
   
- [!code-vb[VbVbalrExtensionMethods&5;](./codesnippet/VisualBasic/extension-methods_6.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
   
  Kehren Sie nun die Datentypen der Parameter in den zwei Methoden um:  
   
- [!code-vb[VbVbalrExtensionMethods&6;](./codesnippet/VisualBasic/extension-methods_7.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
   
  Dieses Mal ruft der Code in `Main` beide Male die Instanzmethode auf. Das liegt daran, dass sowohl `arg1` und `arg2` über eine Erweiterungskonvertierung zu `Long` verfügen, und die Instanzmethode in beiden Fällen Vorrang vor der Erweiterungsmethode hat.  
   
- [!code-vb[VbVbalrExtensionMethods&#7;](./codesnippet/VisualBasic/extension-methods_8.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
   
  Dies bedeutet, dass eine Erweiterungsmethode keine vorhandene Instanzmethode ersetzen kann. Wenn eine Erweiterungsmethode jedoch über denselben Namen wie eine Instanzmethode verfügt, die Signaturen aber keine Konflikte verursachen, kann auf beide Methoden zugegriffen werden. Wenn die `ExampleClass` beispielsweise eine Methode mit dem Namen `ExampleMethod` enthält, die keine Argumente verwendet, sind Erweiterungsmethoden mit demselben Namen aber unterschiedlichen Signaturen zulässig, wie in folgendem Code dargestellt.  
   
- [!code-vb[VbVbalrExtensionMethods&#8;](./codesnippet/VisualBasic/extension-methods_9.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
   
  Dieser Code generiert folgende Ausgabe:  
   
@@ -201,12 +182,12 @@ End Module
  Wenn sich die Mehrdeutigkeit durch die Anwendung einer Rangfolge nicht auflösen lässt, können Sie den vollqualifizierten Namen zum Festlegen der aufgerufenen Methode verwenden. Wenn die `Print`-Methode aus dem vorherigen Beispiel in einem Modul mit dem Namen `StringExtensions` definiert wird, lautet der vollqualifizierte Name `StringExtensions.Print(example)` und nicht `example.Print()`.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices></xref:System.Runtime.CompilerServices>   
- <xref:System.Runtime.CompilerServices.ExtensionAttribute></xref:System.Runtime.CompilerServices.ExtensionAttribute>   
- [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)   
- [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
- [Optionale Parameter](./optional-parameters.md)   
- [Parameterarrays](./parameter-arrays.md)   
- [Übersicht über Attribute](../../../../visual-basic/programming-guide/concepts/attributes/index.md)   
+ <xref:System.Runtime.CompilerServices>  
+ <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
+ [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
+ [Optionale Parameter](./optional-parameters.md)  
+ [Parameterarrays](./parameter-arrays.md)  
+ [Übersicht über Attribute](../../../../visual-basic/programming-guide/concepts/attributes/index.md)  
  [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

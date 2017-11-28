@@ -1,143 +1,141 @@
 ---
-title: "Richtlinien f&#252;r Auflistungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Richtlinien für Auflistungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9eea60dafef508748df53e23c211f5778250e7f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Richtlinien f&#252;r Auflistungen
-Vor allem zum Bearbeiten einer Gruppenstatus von Objekten müssen einige gemeinsame Eigenschaften haben keinerlei kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt wird nur eine oder beide dieser Schnittstellen implementieren Sammlungen zu berücksichtigen.  
+# <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
+Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten müssen einige gemeinsame Eigenschaften haben, kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt wird nur Typen, die eine oder beide dieser Schnittstellen implementieren, die Auflistungen werden berücksichtigt.  
   
- **X nicht** mithilfe von schwach typisierten Sammlungen von öffentlichen APIs.  
+ **X nicht** schwach typisierte Auflistungen in öffentlichen APIs verwenden.  
   
- Der Typ aller Rückgabewerte und Parameter, die Auflistungselemente darstellen sollte der genaue Typ, keine seine Basistypen \(Dies gilt nur für öffentliche Member der Auflistung\).  
+ Der Typ aller Rückgabewerte und Parameter, die Sammelelemente darstellen sollte der genaue Elementtyp, der keine seine Basistypen (Dies gilt nur für öffentliche Member der Auflistung).  
   
  **X nicht** verwenden <xref:System.Collections.ArrayList> oder <xref:System.Collections.Generic.List%601> in öffentlichen APIs.  
   
- Diese Typen sind Datenstrukturen, die in der internen Implementierung von öffentlichen APIs nicht verwendet werden soll.`List<T>` ist für Leistung und Energieverbrauch auf Kosten der APIs und Flexibilität Voraussichten optimiert. Wenn Sie zurückgeben, z. B. `List<T>`, nicht einmal werden benachrichtigt, wenn der Clientcode die Auflistung geändert werden können. Darüber hinaus `List<T>` verfügbar macht viele Member, wie z. B. <xref:System.Collections.Generic.List%601.BinarySearch%2A>, nicht hilfreich oder in vielen Szenarien anwendbar sind. Die folgenden zwei Abschnitte beschreiben die Typen \(Abstraktionen\), die speziell für die Verwendung in öffentlichen APIs vorgesehen.  
+ Diese Typen sind Datenstrukturen, die in der internen Implementierung, die in öffentlichen APIs nicht verwendet werden soll. `List<T>`ist optimiert für Leistung und Energieverbrauch auf Kosten eines erhöhten Voraussichten-APIs und Flexibilität. Wenn Sie zurückkehren, z. B. `List<T>`, nicht jemals werden können, um Benachrichtigungen zu empfangen, wenn Clientcode auf die Auflistung ändert. Darüber hinaus `List<T>` viele Elemente wie z. B. macht <xref:System.Collections.Generic.List%601.BinarySearch%2A>, nicht nützlich oder in vielen Szenarien anwendbar sind. In den folgenden beiden Abschnitten werden die Typen (Abstraktionen) entwickelt, die speziell zur Verwendung in öffentlichen APIs beschrieben.  
   
  **X nicht** verwenden `Hashtable` oder `Dictionary<TKey,TValue>` in öffentlichen APIs.  
   
- Diese Typen sind Datenstrukturen, die in der internen Implementierung verwendet werden soll. Öffentliche APIs sollten verwenden <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`, oder ein benutzerdefinierter Typ, der eine oder beide der Schnittstellen implementieren.  
+ Diese Typen sind Datenstrukturen, die in der internen Implementierung verwendet werden soll. Öffentliche API zu verwendende <xref:System.Collections.IDictionary>, `IDictionary <TKey, TValue>`, oder ein benutzerdefinierter Typ, der eine oder beide der Schnittstellen implementieren.  
   
- **X nicht** verwenden <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Collections.IEnumerator>, oder einen anderen Typ, die eine dieser Schnittstellen außer, als den Rückgabetyp implementiert einer `GetEnumerator` Methode.  
+ **X nicht** verwenden <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Collections.IEnumerator>, oder eines anderen Typs, die entweder dieser Schnittstellen außer, als den Rückgabetyp implementiert einer `GetEnumerator` Methode.  
   
- Typen, die Methoden als Enumeratoren Remoteanmeldeversuch `GetEnumerator` kann nicht verwendet werden, mit der `foreach` Anweisung.  
+ Zurückgeben von Enumeratoren aus Methoden außer Typen `GetEnumerator` kann nicht verwendet werden, mit der `foreach` Anweisung.  
   
- **X nicht** implementieren beide `IEnumerator<T>` und `IEnumerable<T>` auf dem gleichen Typ. Das gleiche gilt für den nicht generischen Schnittstellen `IEnumerator` und `IEnumerable`.  
+ **X nicht** implementieren sowohl `IEnumerator<T>` und `IEnumerable<T>` für den gleichen Typ. Das gleiche gilt für die nicht generischen Schnittstellen `IEnumerator` und `IEnumerable`.  
   
-## Auflistung von Parametern  
- **✓ führen** verwenden Sie als Parametertyp die wenigsten spezialisierte Typ möglich. Die meisten Member Sammlungen benötigt, als Parameter verwendet die `IEnumerable<T>` Schnittstelle.  
+## <a name="collection-parameters"></a>Parameter für die Datensammlung  
+ **Führen Sie ✓** verwenden Sie die möglichen Least spezialisierten Typ als Parametertyp. Die meisten Member, die Auflistungen, der als Parameter verwenden, die `IEnumerable<T>` Schnittstelle.  
   
  **X vermeiden** mit <xref:System.Collections.Generic.ICollection%601> oder <xref:System.Collections.ICollection> als Parameter nur für den Zugriff auf die `Count` Eigenschaft.  
   
- Verwenden Sie stattdessen `IEnumerable<T>` oder `IEnumerable` und dynamisch überprüfen, ob das Objekt implementiert `ICollection<T>` oder `ICollection`.  
+ Verwenden Sie stattdessen `IEnumerable<T>` oder `IEnumerable` und dynamisch wird überprüft, ob das Objekt implementiert `ICollection<T>` oder `ICollection`.  
   
-## Von Auflistungseigenschaften und Rückgabewerte  
- **X nicht** festlegbare Auflistungseigenschaften bereitstellen.  
+## <a name="collection-properties-and-return-values"></a>Sammlungseigenschaften und Rückgabewerte  
+ **X nicht** festlegbaren Auflistungseigenschaften bereitstellen.  
   
- Benutzer können den Inhalt der Auflistung ersetzen, indem die Auflistung zuerst löschen und dann den neuen Inhalt hinzufügen. Falls die ganze Auflistung ersetzen ein häufiges Szenario ist, sollten Sie die `AddRange` \-Methode für die Auflistung.  
+ Benutzer können den Inhalt der Auflistung ersetzen, indem zuerst das Löschen der Sammlung, und fügen den neuen Inhalt. Ist das Ersetzen der gesamten Sammlung ein häufiges Szenario, in Erwägung ziehen die `AddRange` Methode für die Auflistung.  
   
- **✓ führen** verwenden `Collection<T>` oder eine Unterklasse von `Collection<T>` Eigenschaften oder des Rückgabewerts für Lese\-\/Schreibzugriff Sammlungen Werte.  
+ **Führen Sie ✓** verwenden `Collection<T>` oder eine Unterklasse von `Collection<T>` für Eigenschaften oder des Rückgabewerts darstellen Schreib-Lese-Sammlungen Werte.  
   
- Wenn `Collection<T>` einige Voraussetzung nicht erfüllt \(z. B. die Auflistung muss nicht implementieren <xref:System.Collections.IList>\), verwenden Sie eine benutzerdefinierte Auflistung durch die Implementierung `IEnumerable<T>`, `ICollection<T>`, oder <xref:System.Collections.Generic.IList%601>.  
+ Wenn `Collection<T>` wird eine Anforderung nicht erfüllt (z. B. der Sammlung muss nicht implementiert <xref:System.Collections.IList>), verwenden Sie durch die Implementierung eine benutzerdefinierte Sammlung `IEnumerable<T>`, `ICollection<T>`, oder <xref:System.Collections.Generic.IList%601>.  
   
- **✓ führen** verwenden <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, eine Unterklasse von `ReadOnlyCollection<T>`, oder in seltenen Fällen `IEnumerable<T>` Eigenschaften oder des Rückgabewerts Werte darstellen schreibgeschützten Auflistungen.  
+ **Führen Sie ✓** verwenden <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, eine Unterklasse von `ReadOnlyCollection<T>`, oder in seltenen Fällen `IEnumerable<T>` für Eigenschaften oder des Rückgabewerts darstellen schreibgeschützten Auflistungen Werte.  
   
- Im Allgemeinen verwenden `ReadOnlyCollection<T>`. Wenn sie eine Anforderung nicht erfüllt \(z. B. die Auflistung muss nicht implementieren `IList`\), verwenden Sie eine benutzerdefinierte Auflistung durch die Implementierung `IEnumerable<T>`, `ICollection<T>`, oder `IList<T>`. Wenn Sie eine benutzerdefinierte Auflistung schreibgeschützt implementieren, implementieren `ICollection<T>.ReadOnly` "false" zurückgibt.  
+ Im Allgemeinen verwenden `ReadOnlyCollection<T>`. Wenn sie einige Anforderungen nicht erfüllt (z. B. der Sammlung muss nicht implementiert `IList`), verwenden Sie durch die Implementierung eine benutzerdefinierte Sammlung `IEnumerable<T>`, `ICollection<T>`, oder `IList<T>`. Wenn Sie eine benutzerdefinierte schreibgeschützte Auflistung implementieren, implementieren `ICollection<T>.ReadOnly` "false" zurückgibt.  
   
- In Fällen, in denen Sie sicher, dass das einzige Szenario Sie jemals unterstützen möchten Vorwärtscursor Iteration ist, können Sie einfach `IEnumerable<T>`.  
+ In Fällen, in denen sind Sie sicher, dass das einzige Szenario, die jemals unterstützen möchten Vorwärtscursor Iteration ist, können Sie einfach `IEnumerable<T>`.  
   
- **✓ ggf.** mit Unterklassen von generischen Basisklasse Auflistungen statt direkt unter Verwendung der Auflistung.  
+ **✓ GGF.** Unterklassen des generischen Basisklasse Auflistungen anstatt Auflistungen direkt verwenden.  
   
- Dadurch können für einen besseren und zum Hinzufügen von Mitgliedern Helfer, die nicht auf die grundlegenden Typen vorhanden sind. Dies gilt insbesondere für allgemeine APIs.  
+ Dadurch kann für ein besserer Name und zum Hinzufügen von Mitgliedern Hilfsfunktion, die nicht auf die grundlegenden Typen vorhanden sind. Dies gilt insbesondere für allgemeine APIs.  
   
- **✓ ggf.** zurückgeben eine Unterklasse von `Collection<T>` oder `ReadOnlyCollection<T>` von häufig verwendeten Methoden und Eigenschaften.  
+ **✓ GGF.** zurückgeben eine Unterklasse von `Collection<T>` oder `ReadOnlyCollection<T>` aus sehr häufig verwendeter Methoden und Eigenschaften.  
   
- Dadurch wird es, Sie Hilfsmethoden hinzufügen oder ändern Sie die Sammlung\-Implementierung in der Zukunft.  
+ Dies wird erleichtern Sie fügen Hilfsmethoden hinzu, oder ändern Sie die Sammlung-Implementierung in der Zukunft.  
   
- **✓ ggf.** eine schlüsselgebundene Sammlung verwenden, wenn in der Auflistung gespeicherten Elemente einen eindeutigen Schlüssel aufweisen \(Namen, IDs usw..\). Schlüsselgebundene Auflistungen sind Sammlungen, die indiziert werden können, indem Sie eine ganze Zahl und einen Schlüssel und werden normalerweise durch Erben von implementiert `KeyedCollection<TKey,TItem>`.  
+ **✓ GGF.** eine schlüsselgebundene Sammlung verwenden, wenn die in der Auflistung gespeicherten Elemente einen eindeutigen Schlüssel aufweisen (Namen, IDs usw..). Schlüsselgebundene Auflistungen sind Sammlungen, die indiziert werden können, indem Sie eine ganze Zahl und einen Schlüssel und sind in der Regel durch Vererben von implementiert `KeyedCollection<TKey,TItem>`.  
   
- Schlüsselgebundene Auflistungen in der Regel größeren Arbeitsspeicher Speicherbedarf haben und sollte nicht verwendet werden, wenn der Speicher\-Overhead die Vorteile der Schlüssel überwiegt.  
+ Schlüsselgebundene Auflistungen in der Regel größeren Arbeitsspeicher belegen nur wenig Arbeitsspeicher haben und sollte nicht verwendet werden, wenn der Speicher-Overhead ergeben sich folgende Vorteile die Schlüssel überwiegt.  
   
- **X nicht** null\-Werte zurück, aus der Auflistungseigenschaften oder aus Methoden Auflistungen zurückgeben. Eine leere Auflistung oder ein leeres Array stattdessen zurück.  
+ **X nicht** null-Werte zurück, aus der Auflistungseigenschaften oder Methoden Auflistungen zurückgeben. Eine leere Auflistung oder ein leeres Array stattdessen zurückgeben.  
   
- Als allgemeine Regel gilt, dass null und leere \(Element 0\)\-Sammlungen und Arrays ist die gleiche Weise behandelt.  
+ Als allgemeine Regel gilt, dass null und leere (0) elementauflistungen oder Arrays sein soll, die gleiche Weise behandelt.  
   
-### Momentaufnahmen im Vergleich zu Live\-Sammlungen  
- Sammlungen, Zeitpunkt von einem Zustand zu einem bestimmten Zeitpunkt darstellt, werden Snapshot Sammlungen bezeichnet. Zum Beispiel wäre eine Auflistung von einer Datenbankabfrage zurückgegebenen Zeilen mit einer Momentaufnahme. Sammlungen, die immer den aktuellen Zustand darstellen, werden live Sammlungen bezeichnet. Zum Beispiel eine Auflistung von `ComboBox` Elemente ist eine live\-Auflistung.  
+### <a name="snapshots-versus-live-collections"></a>Momentaufnahmen im Vergleich zu Live Sammlungen  
+ Sammlungen, die einen Status zu einem Zeitpunkt darstellt, werden als Momentaufnahme Sammlungen bezeichnet. Beispielsweise wäre eine Auflistung von einer Datenbankabfrage zurückgegebenen Zeilen mit einer Momentaufnahme ab. Sammlungen, die immer den aktuellen Status darstellen sind live Sammlungen aufgerufen. Angenommen, eine Auflistung von `ComboBox` Elemente wird eine live-Auflistung.  
   
- **X nicht** Snapshot Auflistungen von Eigenschaften zurückgeben. Eigenschaften sollten live Auflistungen zurückgeben.  
+ **X nicht** Momentaufnahme Auflistungen aus Eigenschaften zurückgegeben. Eigenschaften sollten live Auflistungen zurückgeben.  
   
- Eigenschaftengetter sollten sehr einfache Operationen ausgeführt werden. Zurückgeben einer momentaufnahmes erfordert, erstellen eine Kopie einer internen Auflistung in einem Vorgang O\(n\).  
+ Eigenschaftengetter sollte sehr einfache Vorgänge. Zurückgeben einer Momentaufnahme erfordert, erstellen eine Kopie einer internen Auflistung in einem Vorgang O(n).  
   
- **✓ führen** verwenden eine Snapshot\-Auflistung oder ein `IEnumerable<T>` \(oder den Untertyp\) Sammlungen dar, die flüchtig sind \(d. h., die können ändern, ohne explizit ändern der Auflistung\).  
+ **✓ FÜHREN** verwenden Sie eine Momentaufnahme-Auflistung oder ein live `IEnumerable<T>` (oder dessen Untertyp) zur Darstellung von Auflistungen, die flüchtig sind (d. h., die können ändern, ohne die Auflistung explizit ändern).  
   
- Im Allgemeinen sind alle Sammlungen, die eine freigegebene Ressource \(z. B. Dateien in einem Verzeichnis\) darstellt flüchtig. Diese Sammlungen sind sehr schwierig oder unmöglich ist, als live Sammlungen zu implementieren, es sei denn, die Implementierung einfach einen vorwärtsgerichteten\-Enumerator ist.  
+ Im Allgemeinen sind alle Sammlungen, die eine freigegebene Ressource (z. B. Dateien in einem Verzeichnis) darstellt flüchtig. Solche Sammlungen sind sehr schwer oder gar nicht als live-Auflistungen implementieren, es sei denn, die Implementierung einfach einen Vorwärtscursor Enumerator ist.  
   
-## Auswählen zwischen Arrays und Sammlungen  
- **✓ führen** Arrays vorziehen Sammlungen.  
+## <a name="choosing-between-arrays-and-collections"></a>Auswählen zwischen Arrays und Sammlungen  
+ **Führen Sie ✓** Arrays vorziehen Sammlungen.  
   
- Sammlungen bieten mehr Kontrolle über den Inhalt, können mit der Zeit weiterentwickelt und mehr verwendet werden können. Verwenden von Arrays für nur\-Lese Szenarien ist darüber hinaus abzuraten, da die Kosten für das Klonen des Arrays zu hoch sind. Nutzbarkeit Studien, dass manche Entwickler mehr mithilfe von Sammlungen basierende APIs vertraut.  
+ Sammlungen bieten mehr Kontrolle über den Inhalt, können mit der Zeit weiterentwickelt und mehr verwendet werden können. Verwenden von Arrays für nur-Lese Szenarien wird darüber hinaus abgeraten, da die Kosten für das Array zu klonen hoch ist. Nutzbarkeit Studien haben gezeigt, dass einige Entwickler nachrichtenorientierten Auflistung basierende APIs verwenden können.  
   
- Wenn Sie Low\-Level\-APIs entwickeln, es besser, Arrays für Lese\-\/ Schreib\-Szenarien verwenden möglicherweise jedoch. Arrays haben einen geringeren Speicherbedarf, wodurch das Workingset zu reduzieren, und den Zugriff auf Elemente in einem Array ist schneller, da er von der Laufzeit optimiert ist.  
+ Jedoch wenn Sie Low-Level-APIs entwickeln, kann es besser für Szenarien mit Lese-/ Schreibzugriff Arrays zu verwenden sein. Arrays haben einen weniger Speicher beansprucht, was hilft, das Workingset zu reduzieren, und den Zugriff auf Elemente in einem Array ist schneller, da er von der Laufzeit optimiert ist.  
   
- **✓ ggf.** mithilfe von Arrays in Low\-Level\-APIs zur Minimierung der Speicherbedarf und die Leistung optimieren.  
+ **✓ GGF.** Verwenden von Arrays in Low-Level-APIs Speicherverbrauch minimieren und Maximieren der Leistung.  
   
- **✓ führen** Bytearrays anstelle von Sammlungen von Bytes verwenden.  
+ **Führen Sie ✓** Bytearrays anstelle von Sammlungen von Bytes verwenden.  
   
- **X nicht** Arrays für Eigenschaften verwenden, wenn die Eigenschaft müsste ein neues Array \(z. B. eine Kopie eines internen Arrays\) jedes Mal zurück, der Eigenschaften\-Getter aufgerufen wird.  
+ **X nicht** Arrays für Eigenschaften verwenden, wenn die Eigenschaft müsste ein neues Array (z. B. eine Kopie eines internen Arrays) jedes Mal zurückgeben, das Eigenschaften-Getter aufgerufen wird.  
   
-## Implementieren von benutzerdefinierten Sammlungen  
- **✓ ggf.** erben von `Collection<T>`, `ReadOnlyCollection<T>`, oder `KeyedCollection<TKey,TItem>` beim Entwerfen von neuer Sammlungen.  
+## <a name="implementing-custom-collections"></a>Implementieren benutzerdefinierte Sammlungen  
+ **✓ GGF.** erben von `Collection<T>`, `ReadOnlyCollection<T>`, oder `KeyedCollection<TKey,TItem>` beim Entwerfen der neuer Sammlungen.  
   
- **✓ führen** implementieren `IEnumerable<T>` beim Entwerfen von neuer Sammlungen. Implementieren Sie `ICollection<T>` oder sogar `IList<T>` in denen es sinnvoll.  
+ **Führen Sie ✓** implementieren `IEnumerable<T>` beim Entwerfen der neuer Sammlungen. Implementieren Sie `ICollection<T>` oder sogar `IList<T>` , in denen es sinnvoll.  
   
- Wenn Sie eine solche benutzerdefinierte Auflistung implementieren, führen Sie das API\-Muster wird hergestellt `Collection<T>` und `ReadOnlyCollection<T>` so weit wie möglich. Das heißt, implementieren Sie dieselben Member explizit zu, benennen Sie die Parameter zu, wie diese beiden Sammlungen diese usw. nennen.  
+ Wenn Sie solche benutzerdefinierten Auflistung implementieren zu können, führen Sie das API-Muster, die durch die `Collection<T>` und `ReadOnlyCollection<T>` so getreu wie möglich. Das heißt, implementieren Sie das dieselben Member explizit zu, benennen Sie die Parameter aus, wie diese beiden Auflistungen werden usw. benennen.  
   
- **✓ ggf.** generischen Schnittstellen implementieren \(`IList` und `ICollection`\), wenn die Auflistung häufig an APIs übergeben werden diese Schnittstellen als Eingabe annimmt.  
+ **✓ GGF.** Implementieren von Schnittstellen für nicht generische Auflistung (`IList` und `ICollection`), wenn die Auflistung häufig an APIs übergeben werden diese Schnittstellen als Eingabe annimmt.  
   
- **X vermeiden** Implementieren von Auflistungsschnittstellen für Typen mit komplexen APIs, die nicht mit dem Konzept einer Auflistung.  
+ **X vermeiden** Collection-Schnittstellen auf Typen mit komplexen APIs, die unabhängig vom stagingstatus des Konzepts einer Auflistung implementieren.  
   
- **X nicht** erben von nicht generischen Basisklasse Auflistungen, wie z. B. `CollectionBase`. Mit `Collection<T>`, `ReadOnlyCollection<T>`, und `KeyedCollection<TKey,TItem>` stattdessen.  
+ **X nicht** erben von nicht generischen Basisklasse Auflistungen wie z. B. `CollectionBase`. Verwendung `Collection<T>`, `ReadOnlyCollection<T>`, und `KeyedCollection<TKey,TItem>` stattdessen.  
   
-### Benennen benutzerdefinierte Sammlungen  
- Sammlungen \(Typen implementiert `IEnumerable`\) werden in erster Linie aus zwei Gründen erstellt: \(1\), erstellen Sie eine neue Datenstruktur mit Struktur\-spezifische Vorgänge und oft unterschiedliche Leistungsmerkmale als vorhandene Datenstrukturen \(z. B.  <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>\), und \(2\) eine spezielle Auflistung enthält einen bestimmten Satz von Elementen zu erstellen \(z. B.  <xref:System.Collections.Specialized.StringCollection>\). Datenstrukturen werden meist in der internen Implementierung von Anwendungen und Bibliotheken verwendet. Spezialisierte Auflistungen sind in erster Linie zum in\-APIs \(als Eigenschaft und Parametertypen\) verfügbar gemacht werden.  
+### <a name="naming-custom-collections"></a>Benennen benutzerdefinierte Sammlungen  
+ Auflistungen (Typen implementiert, `IEnumerable`), die hauptsächlich aus zwei Gründen erstellt werden: (1), um eine neue Datenstruktur mit Vorgängen Struktur und häufig unterschiedlichen Leistungsmerkmalen als vorhandenen Datenstrukturen erstellen (z. B. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), und (2), um eine spezielle Auflistung für die Aufnahme von einer bestimmten Gruppe von Elementen zu erstellen (z. B. <xref:System.Collections.Specialized.StringCollection>). Datenstrukturen werden am häufigsten in die interne Implementierung der Anwendungen und Bibliotheken verwendet. Spezialisierte Auflistungen werden hauptsächlich in APIs (als Eigenschaft und Parametertypen) verfügbar gemacht werden.  
   
- **✓ führen** verwenden Sie das Suffix "Wörterbuch" im Namen von Abstraktionen implementieren `IDictionary` oder `IDictionary<TKey,TValue>`.  
+ **Führen Sie ✓** verwenden Sie das Suffix "Wörterbuch" in Namen von Abstraktionen implementieren `IDictionary` oder `IDictionary<TKey,TValue>`.  
   
- **✓ führen** verwenden Sie das Suffix "Collection" im Namen von Typen implementieren `IEnumerable` \(oder eines seiner untergeordneten Elemente\) und eine Liste von Elementen darstellt.  
+ **Führen Sie ✓** verwenden Sie das Suffix "Collection" im Namen von Typen implementieren `IEnumerable` (oder eines seiner Nachfolger) und eine Liste von Elementen darstellt.  
   
- **✓ führen** verwenden Sie den Namen der entsprechenden Struktur für benutzerdefinierte Datenstrukturen.  
+ **Führen Sie ✓** verwenden Sie den Namen der entsprechenden Struktur für benutzerdefinierte Datenstrukturen.  
   
- **X vermeiden** alle Suffixe, dass bestimmte Implementierung, z. B. "LinkedList" oder "Hashtable" im Namen der Auflistung Abstraktionen verwenden.  
+ **X vermeiden** Suffixe Gleichzeichen bestimmte Implementierung, z. B. "LinkedList" oder "Hashtable", im Namen der Auflistung Abstraktionen verwenden.  
   
- **✓ ggf.** Sammlungsnamen mit dem Namen des Elementtyps voranstellen. Z. B. eine Auflistung, die Speichern von Elementen des Typs `Address` \(implementieren `IEnumerable<Address>`\) sollte mit dem Namen `AddressCollection`. Wenn der Typ eine Schnittstelle ist, das "I"\-Präfix des Artikels Typ ausgelassen werden. Folglich eine Auflistung von <xref:System.IDisposable> Elemente können aufgerufen werden, `DisposableCollection`.  
+ **✓ GGF.** Sammlungsnamen mit dem Namen des Elementtyps voranstellen. Angenommen, eine Auflistung, die Speichern von Elementen des Typs `Address` (implementieren `IEnumerable<Address>`) heißen `AddressCollection`. Wenn der Typ eine Schnittstelle ist, das "I" als Präfix des Elements Art ausgelassen werden kann. Daher wird eine Auflistung von <xref:System.IDisposable> Elemente können aufgerufen werden, `DisposableCollection`.  
   
- **✓ ggf.** das Präfix "ReadOnly" in Namen von schreibgeschützten Auflistungen verwenden, wenn eine entsprechende beschreibbare Auflistung hinzugefügt oder bereits im Framework vorhanden ist.  
+ **✓ GGF.** das Präfix "ReadOnly" in Namen von schreibgeschützten Auflistungen verwenden, wenn eine entsprechende beschreibbare Auflistung hinzugefügt werden kann oder bereits im Framework vorhanden ist.  
   
  Angenommen, eine schreibgeschützte Auflistung von Zeichenfolgen aufgerufen werden `ReadOnlyStringCollection`.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
  [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

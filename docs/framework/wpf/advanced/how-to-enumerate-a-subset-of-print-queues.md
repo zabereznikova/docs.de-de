@@ -1,33 +1,40 @@
 ---
-title: "Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Auflisten, Untermenge von Druckwarteschlangen"
-  - "Druckwarteschlangen, Auflisten von Untermengen von"
+title: 'Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- enumerating [WPF], subset of print queues
+- print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 393d1692526551b1eb9aa16f48d3c78c3cd6692f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen
-IT\-Experten, die für die unternehmensweite Verwaltung von Druckern verantwortlich sind, müssen häufig eine Liste von Druckern erstellen, die bestimmte Eigenschaften aufweisen.  Diese Funktionalität wird von der <xref:System.Printing.PrintServer.GetPrintQueues%2A>\-Methode eines <xref:System.Printing.PrintServer>\-Objekts und der <xref:System.Printing.EnumeratedPrintQueueTypes>\-Enumeration bereitgestellt.  
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen
+Eine allgemeine Situation gegenüberstehen (IT) Spezialisten verwalten einen Satz unternehmensweiten der Drucker ist zum Generieren einer Liste von Druckern mit bestimmten Merkmalen. Diese Funktionalität wird bereitgestellt, indem Sie die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode von einer <xref:System.Printing.PrintServer> Objekt und die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration.  
   
-## Beispiel  
- In den folgenden Beispielen wird durch den Code zunächst ein Array von Flags erstellt, die die Eigenschaften der aufzulistenden Druckwarteschlangen angeben.  In diesem Beispiel wird nach Druckwarteschlangen gesucht, die lokal auf dem Druckerserver installiert und freigegeben sind.  Die <xref:System.Printing.EnumeratedPrintQueueTypes>\-Enumeration stellt viele andere Möglichkeiten bereit.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird zuerst im Code erstellen ein Array von Flags, die die Merkmale der Druckerwarteschlangen angeben, die wir auflisten möchten. In diesem Beispiel werden wir Druckwarteschlangen gesucht, die lokal installiert sind, auf dem Druckserver und freigegeben werden. Die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration bietet viele weitere Möglichkeiten.  
   
- Im Code wird dann ein <xref:System.Printing.LocalPrintServer>\-Objekt erstellt, eine von <xref:System.Printing.PrintServer> abgeleitete Klasse.  Der lokale Druckerserver ist der Computer, auf dem die Anwendung ausgeführt wird.  
+ Anschließend erstellt der Code eine <xref:System.Printing.LocalPrintServer> -Objekt, eine abgeleitete Klasse <xref:System.Printing.PrintServer>. Der lokale Druckerserver ist der Computer, auf dem die Anwendung ausgeführt wird.  
   
- Der letzte wichtige Schritt besteht darin, das Array an die <xref:System.Printing.PrintServer.GetPrintQueues%2A>\-Methode zu übergeben.  
+ Der letzte wichtige Schritt ist zum Übergeben des Arrays an die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode.  
   
  Abschließend werden dem Benutzer die Ergebnisse präsentiert.  
   
@@ -35,15 +42,15 @@ IT\-Experten, die für die unternehmensweite Verwaltung von Druckern verantwortl
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- Sie können dieses Beispiel erweitern, indem Sie die `foreach`\-Schleife verwenden, die jede Druckwarteschlange durchläuft und weitere Prüfungen ausführt.  Sie könnten z. B. Drucker aussortieren, die das doppelseitige Drucken nicht unterstützen, indem die Schleife jede <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>\-Methode der Druckwarteschlange aufruft und den zurückgegebenen Wert auf Duplexdruck prüft.  
+ Könnten Sie in diesem Beispiel erweitern, indem Sie die `foreach` -Schleife, die weiter über jede Druckerwarteschlange Schritte ausblenden. Angenommen, Sie konnte Bildschirm, Drucker, die nicht drucken zweiseitigen unterstützen, durch die Verwendung des Schleife Aufrufs jede Druckerwarteschlange <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> -Methode und Testen der zurückgegebene Wert auf das Vorhandensein des Duplexdruck.  
   
-## Siehe auch  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>   
- <xref:System.Printing.PrintServer>   
- <xref:System.Printing.LocalPrintServer>   
- <xref:System.Printing.EnumeratedPrintQueueTypes>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>   
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)   
- [Microsoft XPS\-Dokument\-Generator](http://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
+ <xref:System.Printing.PrintServer>  
+ <xref:System.Printing.LocalPrintServer>  
+ <xref:System.Printing.EnumeratedPrintQueueTypes>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
+ [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)

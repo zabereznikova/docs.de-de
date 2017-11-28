@@ -1,60 +1,61 @@
 ---
-title: "Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows&#160;Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenbindung, Einfache Datenbindung"
-  - "Windows Forms-Steuerelemente, Datenbindung"
+title: "Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [Windows Forms], simple data binding
+- Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b95892641000287f57840ec57cd65147b986829
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows&#160;Form
-Durch die *einfache Bindung* können Sie ein einzelnes Datenelement – z. B. einen Spaltenwert aus einer DataSet\-Tabelle – in einem Steuerelement anzeigen.  Alle Eigenschaften von Steuerelementen können einfach an einen Datenwert gebunden werden.  
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form
+Mit *einfache Bindung*, können Sie ein einzelnes Datenelement, z. B. einen Spaltenwert in einer Dataset-Tabelle in einem Steuerelement anzuzeigen. Sie können einfache-eine Eigenschaft eines Steuerelements an einen Datenwert binden.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So binden Sie Steuerelemente einfach  
+### <a name="to-simple-bind-a-control"></a>Simple-eines Steuerelements binden.  
   
-1.  Bauen Sie eine Verbindung zu einer Datenquelle auf.  Weitere Informationen finden Sie unter [Aufbauen der Verbindung zu einer Datenquelle](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Stellen Sie die Verbindung zu einer Datenquelle her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
   
-2.  Markieren Sie das Steuerelement auf dem Formular, und rufen Sie das **Eigenschaftenfenster** auf.  
+2.  Klicken Sie im Formular, wählen Sie das Steuerelement, und Anzeigen der **Eigenschaften** Fenster.  
   
-3.  Erweitern Sie die Eigenschaft **\(DataBindings\)**.  
+3.  Erweitern Sie die **(DataBindings)** Eigenschaft.  
   
-     Die am häufigsten gebundenen Eigenschaften werden unterhalb der Eigenschaft **\(DataBindings\)** angezeigt.  So ist in den meisten Steuerelementen beispielsweise die **Text**\-Eigenschaft am häufigsten gebunden.  
+     Die Eigenschaften, die am häufigsten gebunden werden angezeigt, darunter die **(DataBindings)** Eigenschaft. Beispielsweise ist in den meisten Steuerelementen die **Text** am häufigsten Eigenschaft gebunden ist.  
   
-4.  Wenn die zu bindende Eigenschaft nicht zu den häufig gebundenen Eigenschaften gehört, klicken Sie im Dialogfeld **\(Erweitert\)** auf die Schaltfläche **Auslassungspunkte** \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\), um das Dialogfeld **Formatierung und erweiterte Bindung** mit einer vollständigen Liste der Eigenschaften für dieses Steuerelement anzuzeigen.  
+4.  Die Eigenschaft Sie nach Bedarf Bindung ist nicht der häufig gebundenen Eigenschaften, klicken Sie auf die **Auslassungszeichen** Schaltfläche (![von VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton") ) in der **(Erweitert)** Feld zum Anzeigen der **Formatierung und erweiterte Bindung** Dialogfeld mit einer vollständigen Liste der Eigenschaften dieses Steuerelements.  
   
-5.  Wählen Sie die zu bindende Eigenschaft aus, und klicken Sie unter **Bindung** auf den Dropdownpfeil.  
+5.  Wählen Sie die Eigenschaft zu binden, und klicken Sie auf den Dropdownpfeil unter **binden**.  
   
-     Eine Liste der verfügbaren Datenquellen wird angezeigt.  
+     Nun wird eine Liste verfügbarer Datenquellen angezeigt.  
   
-6.  Erweitern Sie die Datenquelle, die Sie binden möchten, bis Sie das gewünschte Datenelement gefunden haben.  Wenn Sie beispielsweise an den Spaltenwert einer DataSet\-Tabelle binden, erweitern Sie zuerst den Namen des DataSets und dann den Tabellennamen, um die Spaltennamen anzuzeigen.  
+6.  Erweitern Sie die Datenquelle, die Sie für die Bindung verwenden möchten, bis Sie das gewünschte einzelne Datenelement finden. Wenn die Bindung beispielsweise an einen Spaltenwert in einer Dataset-Tabelle erfolgen soll, erweitern Sie den Namen des Datasets, und erweitern sie dann den Tabellennamen, um die Spaltennamen anzuzeigen.  
   
-7.  Klicken Sie auf den Namen des Elements, an das gebunden werden soll.  
+7.  Klicken Sie auf den Namen des Elements, das gebunden werden soll.  
   
-8.  Wenn Sie das Dialogfeld **Formatierung und erweiterte Bindung** verwendet haben, klicken Sie auf **OK**, um zum Fenster **Eigenschaften** zurückzukehren.  
+8.  Wenn Sie, in bearbeitet haben der **Formatierung und erweiterte Bindung** (Dialogfeld), klicken Sie auf **OK** wieder die **Eigenschaften** Fenster.  
   
-9. Wenn Sie weitere Eigenschaften des Steuerelements binden möchten, wiederholen Sie die Schritte 3 bis 7.  
+9. Wenn Sie zusätzliche Eigenschaften für das Steuerelement binden möchten, wiederholen Sie Schritte 3 bis 7.  
   
     > [!NOTE]
-    >  Da einfach gebundene Steuerelemente nur ein Datenelement anzeigen, wird in Windows Forms mit einfach gebundenen Steuerelementen normalerweise Navigationslogik verwendet.  
+    >  Da einfach gebundene Steuerelemente nur ein einzelnes Datenelement anzuzeigen, ist es sehr typisch Navigationslogik in einem Windows Form mit einfach gebundenen Steuerelementen eingeschlossen werden sollen.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Binding>   
- [Datenbindung in Web Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Binding>  
+ [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

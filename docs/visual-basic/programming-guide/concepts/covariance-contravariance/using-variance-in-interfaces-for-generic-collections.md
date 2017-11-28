@@ -1,44 +1,65 @@
 ---
-title: "Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic) | Microsoft-Dokumentation"
+title: "Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 86184c7de3fe16148bf954b16d703ca682216337
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b8944bf8f6377ddc633f81dccd9f379bf176d9f3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)
-Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen als die in der Schnittstelle zurückzugeben. Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger stark abgeleiteten Typen als die angegebenen in der Schnittstelle zu akzeptieren.  
+Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben, als in der Schnittstelle angegeben sind. Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger abgeleiteten Typen anzunehmen, als in der Schnittstelle angegeben sind.  
   
- In .NET Framework 4 wurden mehrere vorhandene Schnittstellen kovariante und kontravariante. Dazu gehören <xref:System.Collections.Generic.IEnumerable%601>und <xref:System.IComparable%601>.</xref:System.IComparable%601> </xref:System.Collections.Generic.IEnumerable%601> Dadurch können Sie Methoden wiederverwenden, die mit generischen Auflistungen von Basistypen für Sammlungen von abgeleiteten Typen ausgeführt werden.  
+ In .NET Framework 4 wurden mehrere vorhandene Schnittstellen kovariant und kontravariant. Dazu gehören <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.IComparable%601>. Dadurch können Sie Methoden wiederverwenden, die mit generischen Auflistungen von Basistypen für Sammlungen von abgeleiteten Typen verwendet werden.  
   
  Eine Liste der Varianten Schnittstellen in .NET Framework, finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Konvertieren von generischen Auflistungen  
- Das folgende Beispiel veranschaulicht die Vorteile der Kovarianz-Unterstützung in der <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle.</xref:System.Collections.Generic.IEnumerable%601> Die `PrintFullName` -Methode akzeptiert eine Auflistung der `IEnumerable(Of Person)` Typ als Parameter. Sie können jedoch wiederverwenden, es für eine Sammlung von der `IEnumerable(Of Person)` eingeben, da `Employee` erbt `Person`.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable(Of Person)` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable(Of Person)` wiederverwenden, da `Employee` `Person` erbt.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+' Simple hierarchy of classes.  
+Public Class Person  
+    Public Property FirstName As String  
+    Public Property LastName As String  
+End Class  
+  
+Public Class Employee  
+    Inherits Person  
+End Class  
+  
+' The method has a parameter of the IEnumerable(Of Person) type.  
+Public Sub PrintFullName(ByVal persons As IEnumerable(Of Person))  
+    For Each person As Person In persons  
+        Console.WriteLine(  
+            "Name: " & person.FirstName & " " & person.LastName)  
+    Next  
+End Sub  
+  
+Sub Main()  
+    Dim employees As IEnumerable(Of Employee) = New List(Of Employee)  
+  
+    ' You can pass IEnumerable(Of Employee),   
+    ' although the method expects IEnumerable(Of Person).  
+  
+    PrintFullName(employees)  
+  
+End Sub  
+```  
+  
 ## <a name="comparing-generic-collections"></a>Vergleichen von generischen Auflistungen  
- Das folgende Beispiel veranschaulicht die Vorteile der Kontravarianz-Unterstützung in der <xref:System.Collections.Generic.IComparer%601>Schnittstelle.</xref:System.Collections.Generic.IComparer%601> Die `PersonComparer`-Klasse implementiert die `IComparer(Of Person)`-Schnittstelle. Jedoch können Sie diese Klasse, um eine Sequenz von Objekten eines vergleichen Wiederverwenden der `Employee` eingeben, da `Employee` erbt `Person`.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle. Die `PersonComparer`-Klasse implementiert die `IComparer(Of Person)`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.  
   
 ```vb  
 ' Simple hierarhcy of classes.  
@@ -98,4 +119,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+ [Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

@@ -1,73 +1,79 @@
 ---
-title: "Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anordnen von Steuerelementen"
-  - "Hybridanwendungen [WPF-Interoperabilität]"
+title: 'Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f78da83657c4c1bd913f67c9e612264cc5dbdf99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layoutfeatures verwendet werden, um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente in einer Hybridanwendung anzuordnen.  
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutfunktionen anordnen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente in einer hybridanwendung.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
 -   Erstellen des Projekts.  
   
--   Verwenden der Standardlayouteinstellungen  
+-   Verwenden der Standardlayouteinstellungen.  
   
--   Größenanpassung an den Inhalt  
+-   Anpassen der Größe an Inhalt.  
   
--   Verwenden der absoluten Positionierung  
+-   Verwenden der absoluten Positionierung.  
   
--   Explizites Angeben der Größe  
+-   Explizites Angeben der Größe.  
   
--   Festlegen von Layouteigenschaften  
+-   Festlegen der Layouteigenschaften.  
   
--   Grundlagen der Z\-Reihenfolge\-Einschränkungen  
+-   Grundlegendes zu Einschränkungen der Z-Reihenfolge.  
   
--   Andocken  
+-   Andocken.  
   
--   Einstellen der Sichtbarkeit  
+-   Einstellen der Sichtbarkeit.  
   
--   Hosten eines Steuerelements, das nicht gestreckt wird  
+-   Hosten eines Steuerelements, das nicht gestreckt wird.  
   
--   Skalieren  
+-   Skalieren.  
   
--   Drehen  
+-   Drehen.  
   
--   Einstellen von Textabständen und Rändern  
+-   Einstellen von Abständen und Rändern.  
   
--   Verwenden von dynamischen Layoutcontainern  
+-   Verwenden von dynamischen Layoutcontainern.  
   
- Eine vollständige Codeauflistung der Aufgaben, die in dieser exemplarischen Vorgehensweise veranschaulicht wurden, finden Sie unter [Beispiel für das Anordnen von Windows Forms\-Steuerelementen in WPF](http://go.microsoft.com/fwlink/?LinkID=159971).  
+ Vollständige Codeliste der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Anordnen von Windows Forms-Steuerelementen im WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159971).  
   
- Anschließend werden Sie die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Layoutfeatures in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-basierten Anwendungen verstehen.  
+ Wenn Sie fertig sind, müssen Sie einen Überblick über [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Layout-Funktionen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierten Anwendungen.  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
-## Erstellen des Projekts  
+## <a name="creating-the-project"></a>Erstellen des Projekts  
   
-#### So erstellen Sie das Projekt und richten es ein  
+#### <a name="to-create-and-set-up-the-project"></a>So erstellen und richten Sie das Projekt ein  
   
-1.  Erstellen Sie ein WPF\-Anwendungsprojekt mit dem Namen `WpfLayoutHostingWf`.  
+1.  Erstellen Sie ein WPF-Anwendungsprojekt mit dem Namen `WpfLayoutHostingWf`.  
   
-2.  Fügen Sie im Projektmappen\-Explorer Verweise auf die folgenden Assemblys hinzu.  
+2.  Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.  
   
     -   WindowsFormsIntegration  
   
@@ -75,221 +81,221 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie [!INCLUDE[TLA2#tla_win
   
     -   System.Drawing  
   
-3.  Doppelklicken Sie auf "MainWindow.xaml", um die Datei in der XAML\-Ansicht zu öffnen.  
+3.  Doppelklicken Sie auf „MainWindow.xaml“, um die Datei in der XAML-Ansicht zu öffnen.  
   
-4.  Fügen Sie im <xref:System.Windows.Window>\-Element die folgende [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Namespacezuordnung hinzu.  
+4.  In der <xref:System.Windows.Window> Element, fügen Sie die folgenden [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Namespacezuordnung.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Legen Sie im <xref:System.Windows.Controls.Grid>\-Element die <xref:System.Windows.Controls.Grid.ShowGridLines%2A>\-Eigenschaft auf `true` fest, und definieren Sie fünf Zeilen und drei Spalten.  
+5.  In der <xref:System.Windows.Controls.Grid> Elementsatz die <xref:System.Windows.Controls.Grid.ShowGridLines%2A> Eigenschaft `true` fünf Zeilen und drei Spalten definieren.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
-## Verwenden der Standardlayouteinstellungen  
- Standardmäßig behandelt das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element das Layout für das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement.  
+## <a name="using-default-layout-settings"></a>Verwenden der Standardlayouteinstellungen  
+ Wird standardmäßig die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element behandelt das Layout für das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.  
   
-#### So verwenden Sie Standardlayouteinstellungen  
+#### <a name="to-use-default-layout-settings"></a>Verwenden der Standardlayouteinstellungen  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-<xref:System.Windows.Forms.Button?displayProperty=fullName>\-Steuerelement wird im <xref:System.Windows.Controls.Canvas> angezeigt.  Die Größe des gehosteten Steuerelements basiert auf dessen Inhalt, und die Größe des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements wird an das gehostete Steuerelement angepasst.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Steuerelement wird in der <xref:System.Windows.Controls.Canvas>. Das gehostete Steuerelement wird basierend auf seinen Inhalt angepasst und der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird angepasst, um das gehostete Steuerelement aufzunehmen.  
   
-## Größenanpassung an den Inhalt  
- Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element stellt sicher, dass die Größe des gehosteten Steuerelements so angepasst wird, dass sein Inhalt ordnungsgemäß angezeigt wird.  
+## <a name="sizing-to-content"></a>Anpassen der Größe an Inhalt  
+ Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Elements sicher, dass das gehostete Steuerelement festgelegt wird, um seinen Inhalt ordnungsgemäß angezeigt.  
   
-#### So passen Sie die Größe an den Inhalt an  
+#### <a name="to-size-to-content"></a>Anpassen der Größe an Inhalt  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Die Größe der zwei neuen Schaltflächen wird so angepasst, dass die längere Textzeichenfolge und der größere Schriftgrad ordnungsgemäß angezeigt werden, und die Größe der <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elemente wird an die gehosteten Steuerelemente angepasst.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die zwei neue Schaltflächen-Steuerelemente sind Größe angepasst, um die Textzeichenfolge länger und größere Schriftgröße ordnungsgemäß angezeigt werden und die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente werden geändert, um die gehosteten Steuerelemente angepasst.  
   
-## Verwenden der absoluten Positionierung  
- Mit der absoluten Positionierung können Sie das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element beliebig in der Benutzeroberfläche einfügen.  
+## <a name="using-absolute-positioning"></a>Verwenden der absoluten Positionierung  
+ Sie können absolute Positionierung Platzieren der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element an einer beliebigen Stelle in der Benutzeroberfläche (UI).  
   
-#### So verwenden Sie die absolute Positionierung  
+#### <a name="to-use-absolute-positioning"></a>Verwenden der absoluten Positionierung  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird 20 Pixel vom oberen Rand der Rasterzelle und 20 Pixel vom linken Rand platziert.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> 20 Pixel vom oberen Rand der Rasterzelle und 20 Pixel vom linken Element befindet.  
   
-## Explizites Angeben der Größe  
- Sie können die Größe des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements mit der <xref:System.Windows.FrameworkElement.Width%2A>\-Eigenschaft und der <xref:System.Windows.FrameworkElement.Height%2A>\-Eigenschaft angeben.  
+## <a name="specifying-size-explicitly"></a>Explizites Angeben der Größe  
+ Sie können die Größe der angeben der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element mit der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften.  
   
-#### So geben Sie die Größe explizit an  
+#### <a name="to-specify-size-explicitly"></a>Explizites Angeben der Größe  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird auf eine Größe von 50 x 70 Pixel \(Breite x Höhe\) festgelegt und liegt damit unter den Standardlayouteinstellungen.  Der Inhalt des [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelements wird entsprechend neu angeordnet.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element festgelegt, wird er auf eine Größe von 50 Pixel breit und 70 Pixel hoch, die kleiner als die Standardeinstellungen für das Layout. Der Inhalt der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement wird entsprechend neu angeordnet.  
   
-## Festlegen von Layouteigenschaften  
- Legen Sie layoutbezogene Eigenschaften immer für das gehostete Steuerelement fest, und verwenden Sie dabei die Eigenschaften des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements.  Das Festlegen der Layouteigenschaften direkt für das gehostete Steuerelement führt zu unbeabsichtigten Ergebnissen.  
+## <a name="setting-layout-properties"></a>Festlegen der Layouteigenschaften  
+ Layout-bezogene Eigenschaften immer im gehosteten Steuerelement festgelegt, wird mit den Eigenschaften des der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element. Das Festlegen der Layouteigenschaften direkt für das gehostete Steuerelement führt zu unbeabsichtigten Ergebnissen.  
   
- Das Festlegen der layoutbezogenen Eigenschaften für das gehostete Steuerelement in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hat keine Auswirkungen.  
+ Festlegen von layoutbezogenen Eigenschaften für das gehostete Steuerelement im [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hat keine Auswirkungen.  
   
-#### So zeigen Sie die Auswirkungen des Festlegens der Eigenschaften für das gehostete Steuerelement an  
+#### <a name="to-see-the-effects-of-setting-properties-on-the-hosted-control"></a>Anzeigen der Auswirkungen des Festlegens der Eigenschaften für das gehostete Steuerelement  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
-2.  Doppelklicken Sie im Projektmappen\-Explorer auf "MainWindow.xaml.  vb" oder "MainWindow.xaml.cs", um die Datei im Code\-Editor zu öffnen.  
+2.  Doppelklicken Sie in Projektmappen-Explorer „MainWindow.xaml. vb“ oder „MainWindow.Xaml.cs“, um die Datei im Code-Editor zu öffnen.  
   
-3.  Kopieren Sie den folgenden Code in die `MainWindow`\-Klassendefinition.  
+3.  Kopieren Sie den folgenden Code in die `MainWindow` Klassendefinition.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]  
   
 4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
   
-5.  Klicken Sie auf die Schaltfläche **Hier klicken**.  Der `button1_Click`\-Ereignishandler legt die <xref:System.Windows.Forms.Control.Top%2A>\-Eigenschaft und die <xref:System.Windows.Forms.Control.Left%2A>\-Eigenschaft für das gehostete Steuerelement fest.  Dadurch wird das gehostete Steuerelement innerhalb des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements neu angeordnet.  Der Host behält den gleichen Bildschirmbereich bei, das gehostete Steuerelement wird jedoch abgeschnitten.  Das gehostete Steuerelement sollte jedoch immer das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element ausfüllen.  
+5.  Klicken Sie auf die **Click me** Schaltfläche. Die `button1_Click` Ereignishandler legt die <xref:System.Windows.Forms.Control.Top%2A> und <xref:System.Windows.Forms.Control.Left%2A> Eigenschaften im gehosteten Steuerelement. Dies bewirkt, dass das gehostete Steuerelement innerhalb neu angeordnet werden die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element. Der Host behält den gleichen Bildschirmbereich bei, jedoch wird das gehostete Steuerelement abgeschnitten. Das gehostete Steuerelement sollte jedoch immer ausfüllen der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.  
   
-## Grundlagen der Z\-Reihenfolge\-Einschränkungen  
- Standardmäßig werden sichtbare <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elemente immer an der obersten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elemente gezeichnet, und sie sind mit Z\-Reihenfolge nicht beeinflusst.  Um Z Reihenfolge zu aktivieren, legen Sie die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A>\-Eigenschaft fest <xref:System.Windows.Forms.Integration.WindowsFormsHost> und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A>\-Eigenschaft auf <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>auszurichten.  
+## <a name="understanding-z-order-limitations"></a>Grundlegendes zu Einschränkungen der Z-Reihenfolge  
+ Standardmäßig sichtbar <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente werden immer gezeichnet, zusätzlich zu anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente, und Z-Reihenfolge nicht betroffen sind. Legen Sie zum Aktivieren der Z-Reihenfolge der <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> Eigenschaft von der <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf "true" und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> Eigenschaft <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
   
-#### Um das standardmäßige finden z\-Reihenfolgen\-Verhalten  
+#### <a name="to-see-the-default-z-order-behavior"></a>Anzeigen des Standardverhaltens für die Z-Reihenfolge  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird über das Bezeichnungselement gezeichnet.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element über das Label-Element gezeichnet wird.  
   
-#### Um das z\-Reihenfolgen\-Verhalten finden, wenn IsRedirected auf true festgelegt ist  
+#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>Anzeigen des Verhaltens der Z-Reihenfolge, wenn IsRedirected auf true festgelegt ist  
   
-1.  Ersetzen Sie das vorherige z\-Reihenfolgen\-Beispiel durch den folgenden XAML\-Code.  
+1.  Ersetzen Sie im vorherigen Beispiel der Z-Reihenfolge durch Folgendes XAML.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
   
-     Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Die Bezeichnung wird über dem Element <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element gezeichnet.  
+     Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das Label-Element gezeichnet wird, über die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.  
   
-## Andocken  
- Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element unterstützt das Andocken von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Legen Sie die angefügte <xref:System.Windows.Controls.DockPanel.Dock%2A>\-Eigenschaft so fest, dass das gehostete Steuerelement in einem <xref:System.Windows.Controls.DockPanel>\-Element angedockt wird.  
+## <a name="docking"></a>Andocken  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>Element unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] andocken. Legen Sie die <xref:System.Windows.Controls.DockPanel.Dock%2A> angefügte Eigenschaft, um das gehostete Steuerelement im Andocken ein <xref:System.Windows.Controls.DockPanel> Element.  
   
-#### So docken Sie ein gehostetes Steuerelement an  
+#### <a name="to-dock-a-hosted-control"></a>Andocke eines gehosteten Steuerelements  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird an der rechten Seite des <xref:System.Windows.Controls.DockPanel>\-Elements angedockt.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element auf der rechten Seite des angedockt ist die <xref:System.Windows.Controls.DockPanel> Element.  
   
-## Einstellen der Sichtbarkeit  
- Sie können das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement ausblenden oder reduzieren, indem Sie die <xref:System.Windows.UIElement.Visibility%2A>\-Eigenschaft für das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element festlegen.  Wenn ein Steuerelement nicht sichtbar ist, wird es nicht angezeigt, aber es belegt Platz im Layoutbereich.  Wenn ein Steuerelement reduziert ist, wird es nicht angezeigt und belegt auch keinen Platz im Layoutbereich.  
+## <a name="setting-visibility"></a>Einstellen der Sichtbarkeit  
+ Sie vornehmen können Ihre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] unsichtbar zu steuern oder zu reduzieren, indem Sie festlegen der <xref:System.Windows.UIElement.Visibility%2A> Eigenschaft auf die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element. Wenn ein Steuerelement unsichtbar ist, wird es nicht angezeigt, es belegt jedoch Platz im Layoutbereich. Wenn ein Steuerelement reduziert ist, wird es nicht angezeigt, und es belegt auch keinen Platz im Layoutbereich.  
   
-#### So legen Sie die Sichtbarkeit eines gehosteten Steuerelements fest  
+#### <a name="to-set-the-visibility-of-a-hosted-control"></a>Festlegen der Sichtbarkeit eines gehosteten Steuerelements  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
   
-2.  Kopieren Sie in "MainWindow.xaml.vb" oder "MainWindow.xaml.cs" den folgenden Code in die Klassendefinition.  
+2.  Kopieren Sie in „MainWindow.xaml.vb“ oder „MainWindow.xaml.cs“ den folgenden Code in die Klassendefinition.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
      [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]  
   
 3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
   
-4.  Klicken Sie auf die Schaltfläche **Zum Ausblenden klicken**, um das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element auszublenden.  
+4.  Klicken Sie auf die **klicken Sie hier, um unsichtbar zu machen** Schaltfläche stellen die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element nicht sichtbar.  
   
-5.  Klicken Sie auf die Schaltfläche **Zum Reduzieren klicken**, um das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element vollständig im Layout auszublenden.  Wenn das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement reduziert ist, werden die umgebenden Elemente neu angeordnet, um dessen Bereich einzunehmen.  
+5.  Klicken Sie auf die **zum Reduzieren** Schaltfläche Ausblenden der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element aus dem Layout vollständig. Wenn die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement reduziert ist, werden die umgebenden Elemente neu angeordnet, um seine Platz einnehmen.  
   
-## Hosten eines Steuerelements, das nicht gestreckt wird  
- Einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente haben eine feste Größe und können nicht gestreckt werden, um den verfügbaren Bereich im Layout auszufüllen.  Das <xref:System.Windows.Forms.MonthCalendar>\-Steuerelement zeigt beispielsweise einen Monat in einem festen Bereich an.  
+## <a name="hosting-a-control-that-does-not-stretch"></a>Hosten eines Steuerelements, das nicht gestreckt wird  
+ Einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente verfügen über eine feste Größe und können nicht gestreckt werden, um das Layout verfügbaren Platz auszufüllen. Z. B. die <xref:System.Windows.Forms.MonthCalendar> Steuerelement ein Monats in einem festen Bereich angezeigt.  
   
-#### So hosten Sie ein Steuerelement, das nicht gestreckt wird  
+#### <a name="to-host-a-control-that-does-not-stretch"></a>Hosten eines Steuerelements, das nicht gestreckt wird  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird in der Rasterzeile zentriert. Es wird jedoch nicht gestreckt, um den verfügbaren Bereich auszufüllen.  Wenn das Fenster groß genug ist, werden möglicherweise zwei oder mehr Monate vom gehosteten <xref:System.Windows.Forms.MonthCalendar>\-Steuerelement angezeigt, die jedoch in der Zeile zentriert sind.  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layoutmodul zentriert Elemente, deren Größe nicht angepasst werden kann, um den verfügbaren Bereich auszufüllen.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird in der Rasterzeile zentriert, aber es ist nicht gestreckt, um den verfügbaren Platz auszufüllen. Wenn das Fenster groß genug ist, werden möglicherweise zwei oder mehr Monate angezeigt, die von der gehosteten <xref:System.Windows.Forms.MonthCalendar> -Steuerelement, doch diese sind in der Zeile zentriert. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutmodul zentriert Elemente, deren Größe geändert werden können nicht um den verfügbaren Platz auszufüllen.  
   
-## Skalieren  
- Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elementen sind die meisten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente nicht kontinuierlich skalierbar.  Standardmäßig skaliert das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element sein gehostetes Steuerelement, sofern dies möglich ist.  Um klar entwickelte Skalierung zu aktivieren, legen Sie die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A>\-Eigenschaft fest <xref:System.Windows.Forms.Integration.WindowsFormsHost> und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A>\-Eigenschaft auf <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>auszurichten.  
+## <a name="scaling"></a>Skalieren  
+ Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente, die meisten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente können nicht fortlaufend. Wird standardmäßig die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element skaliert sein gehostetes Steuerelement, wenn möglich.  Um vollwertige Skalierung zu aktivieren, legen die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> Eigenschaft von der <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf "true" und der <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> Eigenschaft <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
   
-#### So fügen Sie ein gehostetes Steuerelement mithilfe des Standardverhaltens skalieren  
+#### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>Skalieren eines gehosteten Steuerelements mithilfe des Standardverhaltens  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement und die umgebenden Elemente werden um den Faktor 0,5 skaliert.  Die Schriftart des gehosteten Steuerelements wird jedoch nicht skaliert.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das gehostete Steuerelement und die umgebenden Elemente werden um den Faktor 0,5 skaliert. Allerdings wird die Schriftart des gehosteten Steuerelements nicht skaliert.  
   
-#### So fügen Sie ein gehostetes Steuerelement durch Festlegen von IsRedirected skalieren True  
+#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>Skalieren eines gehosteten Steuerelements durch Festlegen von IsRedirected auf True  
   
-1.  Ersetzen Sie das vorherige Beispiel mit Skalierungs durch den folgenden XAML\-Code.  
+1.  Ersetzen Sie das vorherige Beispiel für die Skalierung durch das folgende XAML.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement, dessen umgebenden Elemente und die Schriftart des gehosteten Steuerelements wird durch den Faktor 0.5 skaliert.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das gehostete Steuerelement, die umgebenden Elemente und die Schriftart des gehosteten Steuerelements werden durch den Faktor 0,5 skaliert.  
   
-## Drehen  
- Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elementen unterstützen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente keine Drehung.  Standardmäßig dreht sich das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element nicht mit anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elementen, wenn eine Drehungstransformation angewendet wird.  Jeder andere Drehungswert als 180 Grad löst das <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>\-Ereignis aus.  Um das Drehen zu jedem Winkel zu aktivieren, legen Sie die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A>\-Eigenschaft fest <xref:System.Windows.Forms.Integration.WindowsFormsHost> und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A>\-Eigenschaft auf <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>auszurichten.  
+## <a name="rotating"></a>Drehen  
+ Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente unterstützen nicht die Drehung. Wird standardmäßig die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element dreht sich nicht mit anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente angezeigt, wenn eine Drehtransformation angewendet wird. Jeder andere Drehungswert als 180 Grad löst die <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> Ereignis.  Legen Sie zum Aktivieren, um einen beliebigen Winkel drehen der <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> Eigenschaft von der <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf "true" und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> Eigenschaft <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
   
-#### So zeigen Sie die Auswirkung der Drehung in einer Hybridanwendung an  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>Anzeigen der Auswirkung der Drehung in einer Hybridanwendung  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement wird nicht gedreht. Die umgebenden Elemente werden jedoch um 180 Grad gedreht.  Die Größe des Fensters muss möglicherweise geändert werden, damit die Elemente sichtbar sind.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das gehostete Steuerelement wird nicht gedreht, die umgebenden Elemente werden jedoch um einen Winkel von 180 Grad gedreht. Sie müssen möglicherweise die Fenstergröße anpassen, um die Elemente zu sehen.  
   
-#### So zeigen Sie die Auswirkung der Drehung in einer Hybridanwendung ermitteln, ob IsRedirected auf true festgelegt ist  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>Anzeigen der Auswirkung der Drehung in einer Hybridanwendung, wenn IsRedirected auf true festgelegt ist  
   
-1.  Ersetzen Sie das vorherige Beispiel mit Drehungs durch den folgenden XAML\-Code.  
+1.  Ersetzen das vorherige Beispiel für die Drehung durch das folgende XAML.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement wird deaktiviert.  Beachten Sie, dass die <xref:System.Windows.Media.RotateTransform.Angle%2A>\-Eigenschaft auf einen beliebigen Wert festgelegt werden kann.  Die Größe des Fensters muss möglicherweise geändert werden, damit die Elemente sichtbar sind.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das gehostete Steuerelement wird gedreht.  Beachten Sie, dass die <xref:System.Windows.Media.RotateTransform.Angle%2A> Eigenschaft kann auf einen beliebigen Wert festgelegt werden. Sie müssen möglicherweise die Fenstergröße anpassen, um die Elemente zu sehen.  
   
-## Einstellen von Textabständen und Rändern  
- Textabstände und Ränder im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layout sind mit den Textabständen und Rändern in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] vergleichbar.  Legen Sie einfach die <xref:System.Windows.Controls.Control.Padding%2A>\-Eigenschaft und die <xref:System.Windows.FrameworkElement.Margin%2A>\-Eigenschaft für das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element fest.  
+## <a name="setting-padding-and-margins"></a>Einstellen von Abständen und Rändern  
+ Auffüllung und Rändern in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout ähneln Auffüllung und Rändern in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Legen Sie einfach die <xref:System.Windows.Controls.Control.Padding%2A> und <xref:System.Windows.FrameworkElement.Margin%2A> Eigenschaften auf der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.  
   
-#### So legen Sie Textabstände und Ränder für ein gehostetes Steuerelement fest  
+#### <a name="to-set-padding-and-margins-for-a-hosted-control"></a>Festlegen von Abstand und Rändern für ein gehostetes Steuerelement  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
-    [!code-xml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Die Einstellungen für Textabstände und Ränder werden wie in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] auf die gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente angewendet.  
+2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die Ränder und Abstände Einstellungen angewendet, das vom gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente auf die gleiche Weise, die sie werden, in angewendet würden [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
-## Verwenden von dynamischen Layoutcontainern  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] stellt zwei dynamische Layoutcontainer, <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>, zur Verfügung.  Sie können diese Container auch in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layouts verwenden.  
+## <a name="using-dynamic-layout-containers"></a>Verwenden von dynamischen Layoutcontainern  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]stellt zwei dynamische Layoutcontainer <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>. Sie können auch diese Container in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layouts.  
   
-#### So verwenden Sie einen dynamischen Layoutcontainer  
+#### <a name="to-use-a-dynamic-layout-container"></a>Verwenden von dynamischen Layoutcontainern  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
   
-2.  Kopieren Sie in "MainWindow.xaml.vb" oder "MainWindow.xaml.cs" den folgenden Code in die Klassendefinition.  
+2.  Kopieren Sie in „MainWindow.xaml.vb“ oder „MainWindow.xaml.cs“ den folgenden Code in die Klassedefinition.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]  
   
-3.  Fügen Sie dem Konstruktor einen Aufruf der `InitializeFlowLayoutPanel`\-Methode hinzu.  
+3.  Fügen Sie einen Aufruf an die `InitializeFlowLayoutPanel` -Methode im Konstruktor.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
-4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element füllt <xref:System.Windows.Controls.DockPanel> aus, und <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seine untergeordneten Steuerelemente in der Standard\-<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> an.  
+4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element füllt die <xref:System.Windows.Controls.DockPanel>, und <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seine untergeordneten Steuerelemente in der standardmäßigen <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [WPF\-Designer](http://msdn.microsoft.com/de-de/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Überlegungen zum Layout für das WindowsFormsHost\-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)   
- [Beispiel für das Anordnen von Windows Forms\-Steuerelementen in WPF](http://go.microsoft.com/fwlink/?LinkID=159971)   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms\-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF\-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [WPF-Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [Anordnen von Windows Forms-Steuerelementen in WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

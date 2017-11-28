@@ -1,75 +1,79 @@
 ---
-title: "WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream"
-apilocation: 
-  - "System.Runtime.WindowsRuntime.dll"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+api_name: System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream
+api_location: System.Runtime.WindowsRuntime.dll
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
-caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: be93ddc0f3bf0a5079f31bfa0ff5caa882342c37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode
-\[Wird nur in .NET Framework 4.5.1 und neueren Versionen unterstützt\]  
+# <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode
+[Wird nur in .NET Framework 4.5.1 und neueren Versionen unterstützt]  
   
- Konvertiert den angegebenen Stream in einen Random\-Access\-Stream.  
+ Konvertiert den angegebenen Stream in einen Random-Access-Stream.  
   
- **Namespace:** <xref:System.IO?displayProperty=fullName>   
- **Assembly:** System.Runtime.WindowsRuntime \(in System.Runtime.WindowsRuntime.dll\)  
+ **Namespace:**<xref:System.IO?displayProperty=nameWithType>  
+ **Assembly:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```csharp  
-[CLSCompliantAttribute(false)] public static  IRandomAccessStream AsRandomAccessStream(Stream stream)   
+[CLSCompliantAttribute(false)]  
+public static  IRandomAccessStream AsRandomAccessStream(Stream stream)  
 ```  
   
 ```vb  
-'Declaration <ExtensionAttribute> _ <CLSCompliantAttribute(False)> _ Public Shared Function AsRandomAccessStream ( _         stream As Stream) As IRandomAccessStream   
+'Declaration  
+<ExtensionAttribute> _  
+<CLSCompliantAttribute(False)> _  
+Public Shared Function AsRandomAccessStream ( _  
+        stream As Stream) As IRandomAccessStream  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
   
- Typ: <xref:System.IO.Stream?displayProperty=fullName>   
- Der zu konvertierende Stream.  
+ Typ: <xref:System.IO.Stream?displayProperty=nameWithType>  
+Der zu konvertierende Stream.  
   
-## Rückgabewert  
- Typ: [Windows.Storage.Streams.RandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstream.aspx)   
- Ein Random\-Access\-Stream in [!INCLUDE[wrt](../../../includes/wrt-md.md)], der den konvertierten Stream darstellt.  
+## <a name="return-value"></a>Rückgabewert  
+ Typ: [Windows.Storage.Streams.RandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstream.aspx)  
+Ein [!INCLUDE[wrt](../../../includes/wrt-md.md)] random-Access-Stream, der den konvertierten Stream darstellt.  
   
-## Ausnahmen  
+## <a name="exceptions"></a>Ausnahmen  
   
 |Ausnahme|Bedingung|  
-|--------------|---------------|  
+|---------------|---------------|  
 |<xref:System.NotSupportedException>|Der zu konvertierende Stream unterstützt keine Suchvorgänge.|  
   
-## Hinweise  
- Diese Erweiterungsmethode ist nur verfügbar, wenn Sie Windows Store\-Apps entwickeln.  Diese Methode stellt eine komfortable Möglichkeit des Arbeitens mit Streams in Windows Store\-Apps dar.  Der .NET\-Framework, den Sie konvertieren möchten, muss Suchvorgänge unterstützen.  Weitere Informationen finden Sie unter der Methode <xref:System.IO.Stream.Seek%2A?displayProperty=fullName>.  
+## <a name="remarks"></a>Hinweise  
+ Diese Erweiterungsmethode ist nur verfügbar, wenn Sie Windows Store-Apps entwickeln. Diese Methode stellt eine komfortable Möglichkeit des Arbeitens mit Streams in Windows Store-Apps dar. Der .NET-Framework, den Sie konvertieren möchten, muss Suchvorgänge unterstützen. Weitere Informationen finden Sie unter der Methode <xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 >  Diese API wird in .NET Framework 4.5.1 und neuer, aber nicht in Version 4.5 unterstützt.  
   
-## Versionsinformationen  
- **.NET für Windows Store\-Apps**  
+## <a name="version-information"></a>Versionsinformationen  
+ **.NET für Windows Store-apps**  
   
  Unterstützt in: Windows 8.1  
   
-## Siehe auch  
- <xref:System.IO.WindowsRuntimeStreamExtensions>   
- [Gewusst wie: Konvertieren zwischen .NET Framework\-Streams und Windows\-Runtime\-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+## <a name="see-also"></a>Siehe auch  
+ <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions`  
+ [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

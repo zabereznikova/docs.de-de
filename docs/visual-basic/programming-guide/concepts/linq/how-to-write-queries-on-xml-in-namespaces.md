@@ -1,37 +1,29 @@
 ---
-title: "Gewusst wie: Schreiben von Abfragen für XML in Namespaces (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5708a2a162132262722f390842f59c9c6a6838e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Gewusst wie: Schreiben von Abfragen für XML in Namespaces (Visual Basic)
-Um eine Abfrage für XML zu schreiben, die in einem Namespace befindet, verwenden Sie <xref:System.Xml.Linq.XName>Objekte, die den richtigen Namespace enthalten.</xref:System.Xml.Linq.XName>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)
+Wenn Sie eine Abfrage für XML in einem Namespace schreiben möchten, müssen Sie <xref:System.Xml.Linq.XName>-Objekte verwenden, die den richtigen Namespace enthalten.  
   
  In Visual Basic wird meist ein globaler Namespace definiert, und anschließend werden XML-Literale und XML-Eigenschaften verwendet, die den globalen Namespace nutzen. Sie können einen globalen Standardnamespace definieren. Die Elemente in den XML-Literalen sind dann standardmäßig im Namespace vorhanden. Stattdessen können Sie auch einen globalen Namespace mit einem Präfix definieren und dann das Präfix den Anforderungen entsprechend in den XML-Literalen und in den XML-Eigenschaften verwenden. Wie bei anderen XML-Formen auch befinden sich Attribute standardmäßig nicht in einem Namespace.  
   
- Der erste Satz von Beispielen in diesem Thema veranschaulicht, wie eine XML-Struktur in einem Standardnamespace erstellen. Der zweite Satz veranschaulicht, wie eine XML-Struktur in einem Namespace mit einem Präfix zu erstellen.  
+ Die erste Gruppe der Beispiele in diesem Thema zeigt,wie Sie eine XML-Struktur in einem Standardnamespace erstellen. Die zweite Gruppe der Beispiele zeigt, wie Sie eine XML-Struktur in einem Namespace mit einem Präfix erstellen.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt eine XML-Struktur, die sich in einem Standardnamespace befindet. Anschließend ruft das Beispiel eine Auflistung der Elemente ab.  

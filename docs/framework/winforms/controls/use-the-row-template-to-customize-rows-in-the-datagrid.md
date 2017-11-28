@@ -1,55 +1,60 @@
 ---
-title: "Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Anpassen von Zeilen"
-  - "DataGridView-Steuerelement [Windows Forms], Anpassen von Zeilen"
+title: 'Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- data grids [Windows Forms], customizing rows
+- DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bed37026578c739bdc07beb039ec83f091587535
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms
-Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement verwendet die Zeilenvorlage als Basis für alle Zeilen, die es dem Steuerelement entweder durch Datenbindung oder durch Aufrufen der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=fullName>\-Methode ohne Angabe einer vorhandenen Zelle hinzufügt.  
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms
+Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet die Zeilenvorlage als Grundlage für alle Zeilen, die an das Steuerelement hinzufügt, über die Datenbindung oder beim Aufrufen der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> -Methode ohne Angabe einer vorhandenen Zeile verwenden.  
   
- Die Zeilenvorlage ermöglicht Ihnen größere Kontrolle über das Aussehen und Verhalten von Zeilen als die <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>\-Eigenschaft.  Mit der Zeilenvorlage können Sie alle <xref:System.Windows.Forms.DataGridViewRow>\-Eigenschaften festlegen, einschließlich <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
+ Die Zeilenvorlage bietet Ihnen eine bessere Kontrolle über das Aussehen und Verhalten von Zeilen als die <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> Eigenschaft ermöglicht. Mit der Zeilenvorlage können Sie festlegen, eine <xref:System.Windows.Forms.DataGridViewRow> Eigenschaften, einschließlich <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
   
- Es gibt Situationen, in denen Sie die Zeilenvorlage verwenden müssen, um einen speziellen Effekt zu erreichen.  Beispielsweise können Informationen über die Zeilenhöhe in einem <xref:System.Windows.Forms.DataGridViewCellStyle> gespeichert sein, sodass Sie die von allen Zeilen verwendete Standardhöhe mithilfe einer Zeilenvorlage ändern müssen.  Die Zeilenvorlage ist zudem hilfreich, wenn Sie Ihre eigenen von <xref:System.Windows.Forms.DataGridViewRow> abgeleiteten Klassen erstellen und möchten, dass der benutzerdefinierte Typ verwendet wird, wenn neue Zeilen zum Steuerelement hinzugefügt werden.  
+ Es gibt einige Situationen, in denen Sie die Zeilenvorlage verwenden müssen, um einen bestimmten Effekt zu erzielen. Z. B. kann keine Informationen über die Zeilenhöhe gespeichert werden, einem <xref:System.Windows.Forms.DataGridViewCellStyle>, sodass Sie eine Zeilenvorlage verwenden müssen, um die Standardhöhe verwendet, die für alle Zeilen zu ändern. Die Zeilenvorlage ist auch nützlich, wenn Sie Ihren eigenen Klassen abgeleitet erstellen <xref:System.Windows.Forms.DataGridViewRow> und Ihren benutzerdefinierten Typ verwendet werden, wenn das Steuerelement neue Zeilen hinzugefügt werden sollen.  
   
 > [!NOTE]
->  Die Zeilenvorlage wird nur verwendet, wenn Zeilen hinzugefügt werden.  Sie können keine vorhandenen Zeilen ändern, indem Sie die Zeilenvorlage ändern.  
+>  Die Zeilenvorlage wird verwendet, nur, wenn Zeilen hinzugefügt werden. Sie können nicht vorhandene Zeilen ändern, indem Sie die Zeilenvorlage ändern.  
   
-### So verwenden Sie die Zeilenvorlage  
+### <a name="to-use-the-row-template"></a>Verwenden der Zeilenvorlage  
   
--   Legen Sie für das von der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=fullName>\-Eigenschaft abgerufene Objekt Eigenschaften fest.  
+-   Legen Sie Eigenschaften für das Objekt abgerufen, die von der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> Eigenschaft.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
      [!code-vb[System.Windows.Forms.DataGridView.RowTemplate#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/VB/datagridviewrowtemplate.vb#1)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit dem Namen`dataGridView1` muss vorhanden sein.  
+-   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
--   Verweise auf die Assemblys <xref:System?displayProperty=fullName>, <xref:System.Drawing?displayProperty=fullName> und <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridViewRow>   
- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=fullName>   
- [Grundlegende Formatierungen und Formate im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)   
- [Zellstile im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridViewRow>  
+ <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>  
+ [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)

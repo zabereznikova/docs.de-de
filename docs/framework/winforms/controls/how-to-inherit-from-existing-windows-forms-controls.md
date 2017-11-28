@@ -1,53 +1,57 @@
 ---
-title: "Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Vererbung"
-  - "Vererbung, Benutzerdefinierte Windows Forms-Steuerelemente"
+title: 'Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- inheritance [Windows Forms], Windows Forms custom controls
+- custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e6133576d65e95ac42a1680de152d84892e2c5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen
-Wenn die Funktionalität eines vorhandenen Steuerelements erweitert werden soll, kann ein Steuerelement erstellt werden, das durch Vererbung von einem vorhandenen Steuerelement abgeleitet ist.  Mit einem vorhandenen Steuerelement werden die gesamte Funktionalität und die visuellen Eigenschaften dieses Steuerelements geerbt.  Wenn beispielsweise ein Steuerelement erstellt wird, das von <xref:System.Windows.Forms.Button> geerbt wird, wird das neue Steuerelement ebenso dargestellt wie ein standardmäßiges <xref:System.Windows.Forms.Button>\-Steuerelement und wird sich ebenso verhalten.  Anschließend kann die Funktionalität des neuen Steuerelements durch Implementierung benutzerdefinierter Methoden und Eigenschaften erweitert oder geändert werden.  Bei einigen Steuerelementen kann auch die visuelle Darstellung des geerbten Steuerelements geändert werden, indem die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode überschrieben wird.  
+# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen
+Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten, können Sie ein Steuerelement erstellen, dass durch Vererbung von einem vorhandenen Steuerelement abgeleitet ist. Beim Erben von einem vorhandenen Steuerelement erben Sie die gesamte Funktionalität und die visuellen Eigenschaften dieses Steuerelements. Angenommen, Sie Erstellen eines Steuerelements, die vom geerbt <xref:System.Windows.Forms.Button>, sieht das neue Steuerelement und Act genau wie ein standardmäßiges <xref:System.Windows.Forms.Button> Steuerelement. Sie können die Funktionalität Ihres neuen Steuerelements durch Implementieren von benutzerdefinierten Methoden und Eigenschaften erweitern oder ändern. Bei einigen Steuerelementen können Sie auch die visuelle Darstellung des geerbten Steuerelements ändern, durch Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So erstellen Sie ein geerbtes Steuerelement  
+### <a name="to-create-an-inherited-control"></a>So erstellen Sie ein geerbtes Steuerelement  
   
-1.  Erstellen eines neuen **Windows Forms\-Anwendung**\-Projekts.  
+1.  Erstellen Sie ein neues **Windows Forms-Anwendungsprojekt**.  
   
-2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+2.  Wählen Sie im Menü **Projekt** die Option **Neues Element hinzufügen** aus.  
   
      Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
 3.  Doppelklicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Benutzerdefiniertes Steuerelement**.  
   
-     Ein neues benutzerdefiniertes Steuerelement wird dem Projekt hinzugefügt.  
+     Ein neues benutzerdefiniertes Steuerelement wird zu Ihrem Projekt hinzugefügt.  
   
-4.  Klicken Sie in Visual Basic oben im **Projektmappen\-Explorer** auf **Alle Dateien anzeigen**.  Erweitern Sie CustomControl1.vb, und öffnen Sie dann CustomControl1.Designer.vb im Code\-Editor.  
+4.  Wenn Sie Visual Basic verwenden, klicken Sie am Anfang des **Projektmappen-Explorers** auf **Alle Dateien anzeigen**. Erweitern Sie „CustomControl1.vb“ und öffnen Sie „CustomControl1.Designer.vb“ im Code-Editor.  
   
-5.  Wenn Sie C\# verwenden, öffnen Sie CustomControl1.cs im Code\-Editor.  
+5.  Wenn Sie C# verwenden, öffnen Sie „CustomControl1.cs“ im Code-Editor.  
   
-6.  Suchen Sie die Klassendeklaration, die von <xref:System.Windows.Forms.Control> erbt.  
+6.  Suchen Sie die Klassendeklaration, die erbt <xref:System.Windows.Forms.Control>.  
   
-7.  Ändern Sie die Basisklasse in das Steuerelement, von dem geerbt werden soll.  
+7.  Ändern Sie die Basisklasse in das Steuerelement, von dem Sie erben möchten.  
   
-     Angenommen, Sie möchten von <xref:System.Windows.Forms.Button> erben. In diesem Fall ändern Sie die Klassendeklaration wie folgt:  
+     Angenommen, Sie erben möchten <xref:System.Windows.Forms.Button>, ändern Sie die Klassendeklaration, der dem folgenden:  
   
     ```vb  
     Partial Class CustomControl1  
@@ -58,14 +62,14 @@ Wenn die Funktionalität eines vorhandenen Steuerelements erweitert werden soll,
     public partial class CustomControl1 : System.Windows.Forms.Button  
     ```  
   
-8.  Wenn Sie Visual Basic verwenden, speichern und schließen Sie CustomControl1.Designer.vb.  Öffnen Sie CustomControl1.vb im Code\-Editor.  
+8.  Wenn Sie Visual Basic verwenden, speichern und schließen Sie „CustomControl1.Designer.vb“. Öffnen Sie „CustomControl1.vb“ im Code-Editor.  
   
-9. Implementieren Sie alle benutzerdefinierten Methoden oder Eigenschaften, die in das Steuerelement eingebunden werden.  
+9. Implementieren Sie alle benutzerdefinierten Methoden oder Eigenschaften, die in das Steuerelement eingebunden werden sollen.  
   
-10. Wenn Sie die grafische Darstellung des Steuerelements ändern möchten, überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode.  
+10. Wenn Sie die grafische Darstellung des Steuerelements ändern möchten, überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.  
   
     > [!NOTE]
-    >  Durch Überschreiben von <xref:System.Windows.Forms.Control.OnPaint%2A> ist es nicht möglich, die Darstellung aller Steuerelemente zu ändern.  Von den Steuerelementen, die vollständig von Windows gezeichnet werden, z. B. <xref:System.Windows.Forms.TextBox>, wird die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode nie aufgerufen. Daher wird benutzerdefinierter Code von diesen nie verwendet.  Ob die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode verfügbar ist, entnehmen Sie der Hilfedokumentation zu dem Steuerelement, das Sie ändern möchten.  Eine Liste aller Windows Form\-Steuerelemente finden Sie unter [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).  Die Darstellung eines Steuerelements, in dem <xref:System.Windows.Forms.Control.OnPaint%2A> nicht als Membermethode aufgeführt wird, können Sie nicht durch Überschreiben dieser Methode ändern.  Weitere Informationen über benutzerdefiniertes Zeichnen finden Sie unter [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
+    >  Überschreiben von <xref:System.Windows.Forms.Control.OnPaint%2A> nicht können Sie die Darstellung aller Steuerelemente zu ändern. Diese Steuerelemente, die alle vollständig von Windows gezeichnet werden (z. B. <xref:System.Windows.Forms.TextBox>) niemals aufrufen ihre <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, und daher wird nie mit den benutzerdefinierten Code. Finden Sie in der Hilfedokumentation für das bestimmte Steuerelement zu ändern, um festzustellen, wenn die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode verfügbar ist. Eine Liste aller Windows Form-Steuerelemente finden Sie unter [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Wenn ein Steuerelement keinen <xref:System.Windows.Forms.Control.OnPaint%2A> als eine Membermethode aufgeführt, Sie können nicht geändert werden seine Darstellung durch diese Methode überschreiben. Weitere Informationen über benutzerdefinierte Darstellung finden Sie unter [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
   
     ```vb  
     Protected Overrides Sub OnPaint(ByVal e As _  
@@ -75,7 +79,6 @@ Wenn die Funktionalität eines vorhandenen Steuerelements erweitert werden soll,
        ' If you want to completely change the appearance of your control,  
        ' do not call MyBase.OnPaint(e).  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -90,11 +93,11 @@ Wenn die Funktionalität eines vorhandenen Steuerelements erweitert werden soll,
   
 11. Speichern und testen Sie das Steuerelement.  
   
-## Siehe auch  
- [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [Gewusst wie: Erben von der Control\-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)   
- [Gewusst wie: Erben von der UserControl\-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)   
- [Gewusst wie: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [Troubleshooting Inherited Event Handlers in Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)   
- [Exemplarische Vorgehensweise: Vererben eines Windows Forms\-Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)   
- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms\-Steuerelement mit Visual C\#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Vorgehensweise: Erben von der Control-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [Vorgehensweise: Erben von der UserControl-Klasse](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

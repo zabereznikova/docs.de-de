@@ -1,41 +1,44 @@
 ---
-title: "Gewusst wie: Verwenden eines Dienstmonikers mit WSDL-Vertr&#228;gen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Verwenden eines Dienstmonikers mit WSDL-Verträgen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d98fb82984fec4acbb8b95d4bc4667468804ff9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden eines Dienstmonikers mit WSDL-Vertr&#228;gen
-Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabhängigen COM Interop\-Client wünschen.Der Dienst, den Sie aufrufen möchten, stellt vielleicht keinen MEX\-Endpunkt bereit, oder die WCF\-Client\-DLL ist nicht für COM\-Interop registriert.In diesen Fällen können Sie eine WSDL\-Datei erstellen, die den Dienst beschreibt, und die Datei an den WCF\-Dienstmoniker übergeben.In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit WCF zur Verwendung eines WSDL\-Monikers in WCF aufgerufen wird.  
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Gewusst wie: Verwenden eines Dienstmonikers mit WSDL-Verträgen
+Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabhängigen COM Interop-Client wünschen. Der Dienst, den Sie aufrufen möchten, stellt vielleicht keinen MEX-Endpunkt bereit, oder die WCF-Client-DLL ist nicht für COM-Interop registriert. In diesen Fällen können Sie eine WSDL-Datei erstellen, die den Dienst beschreibt, und die Datei an den WCF-Dienstmoniker übergeben. In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit WCF zur Verwendung eines WSDL-Monikers in WCF aufgerufen wird.  
   
-### Verwenden des WSDL\-Dienstmonikers  
+### <a name="using-the-wsdl-service-moniker"></a>Verwenden des WSDL-Dienstmonikers  
   
-1.  Öffnen und erstellen Sie die GettingStarted\-Beispiellösung.  
+1.  Öffnen und erstellen Sie die GettingStarted-Beispiellösung.  
   
-2.  Öffnen Sie Internet Explorer, wechseln Sie zu http:\/\/localhost\/ServiceModelSamples\/Service.svc, und stellen Sie sicher, dass der Dienst funktioniert.  
+2.  Öffnen Sie Internet Explorer, wechseln Sie zu http://localhost/ServiceModelSamples/Service.svc, und stellen Sie sicher, dass der Dienst funktioniert.  
   
-3.  Fügen Sie in der Datei Service.cs der CalculatorService\-Klasse das folgende Attribut hinzu:  
+3.  Fügen Sie in der Datei Service.cs der CalculatorService-Klasse das folgende Attribut hinzu:  
   
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
-4.  Fügen Sie dem Dienst App.config einen Bindungsnamespace hinzu:  
+4.  Fügen Sie der Datei „App.config“ des Diensts einen Bindungsnamespace hinzu:  
   
   
   
-5.  Erstellen Sie eine WSDL\-Datei, die von der Anwendung gelesen wird.Da die Namespaces in den Schritten 3 und 4 hinzugefügt werden, können Sie die gesamte WSDL\-Beschreibung des Dienstes in Internet Explorer abfragen, indem Sie zu http:\/\/localhost\/ServiceModelSamples\/Service.svc?wsdl wechseln.Sie können die Datei dann in Internet Explorer als serviceWSDL.xml speichern.Wenn Sie die Namespaces nicht in den Schritten 3 und 4 angeben, ist das von der Abfrage der obigen URL zurückgegebene WSDL\-Dokument nicht vollständig.Das zurückgegebene WSDL\-Dokument enthält verschiedene Importanweisungen, die andere WSDL\-Dokumente importieren.Sie müssen dann die einzelnen Importanweisungen durchgehen und das vollständige WSDL\-Dokument erstellen, wobei Sie das vom Dienst zurückgegebene WSDL mit dem importierten WSDL kombinieren.  
+5.  Erstellen Sie eine WSDL-Datei, die von der Anwendung gelesen wird. Da die Namespaces in den Schritten 3 und 4 hinzugefügt werden, können Sie die gesamte WSDL-Beschreibung des Dienstes in Internet Explorer abfragen, indem Sie zu http://localhost/ServiceModelSamples/Service.svc?wsdl wechseln. Sie können die Datei dann in Internet Explorer als serviceWSDL.xml speichern. Wenn Sie die Namespaces nicht in den Schritten 3 und 4 angeben, ist das von der Abfrage der obigen URL zurückgegebene WSDL-Dokument nicht vollständig. Das zurückgegebene WSDL-Dokument enthält verschiedene Importanweisungen, die andere WSDL-Dokumente importieren. Sie müssen dann die einzelnen Importanweisungen durchgehen und das vollständige WSDL-Dokument erstellen, wobei Sie das vom Dienst zurückgegebene WSDL mit dem importierten WSDL kombinieren.  
   
-6.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard\-EXE\-Datei.Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click\-Handler den folgenden Code hinzuzufügen:  
+6.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
     ```  
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
@@ -59,10 +62,10 @@ Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabh�
     ```  
   
     > [!NOTE]
-    >  Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`\-Aufruf ein Syntaxfehler zurückgegeben.Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
+    >  Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben.  Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
   
-7.  Führen Sie die Visual Basic\-Anwendung aus.Ein Meldungsfeld wird mit den Ergebnissen des Aufrufs Subtract\(145, 76.54\) angezeigt.  
+7.  Führen Sie die Visual Basic-Anwendung aus. Ein Meldungsfeld wird mit den Ergebnissen des Aufrufs Subtract(145, 76.54) angezeigt.  
   
-## Siehe auch  
- [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Übersicht über die Integration von COM\-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Integrieren von COM-Anwendungen (Übersicht)](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

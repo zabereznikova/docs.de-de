@@ -1,59 +1,64 @@
 ---
-title: "Gewusst wie: Positionieren von Steuerelementen in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Location"
-  - "Location.Y"
-  - "Location.X"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms]"
-  - "Steuerelemente [Windows Forms], Verschieben"
-  - "Steuerelemente [Windows Forms], Positionieren"
-  - "Ausrichtungslinien"
+title: "Gewusst wie: Positionieren von Steuerelementen in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords:
+- Location
+- Location.Y
+- Location.X
+helpviewer_keywords:
+- controls [Windows Forms]
+- controls [Windows Forms], moving
+- snaplines
+- controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ff1096e6397f4422e0fbf6400a87041cfac6470
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Positionieren von Steuerelementen in Windows&#160;Forms
-Verwenden Sie zum Positionieren von Steuerelementen den Windows Forms\-Designer, oder legen Sie die <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft fest.  
+# <a name="how-to-position-controls-on-windows-forms"></a>Gewusst wie: Positionieren von Steuerelementen in Windows Forms
+Positionieren von Steuerelementen, die Windows Forms-Designer verwenden, oder geben den <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So positionieren Sie ein Steuerelement auf der Entwurfsoberfläche des Windows Forms\-Designers  
+### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Um ein Steuerelement auf der Entwurfsoberfläche der Windows Forms-Designer zu positionieren.  
   
--   Ziehen Sie das Steuerelement mit der Maus an die geeignete Position.  
-  
-    > [!NOTE]
-    >  Wählen Sie das Steuerelement aus, und verschieben Sie es mithilfe der Pfeiltasten, um es exakter zu positionieren.  Darüber hinaus lassen sich Steuerelemente mithilfe von *Ausrichtungslinien* genauer auf dem Formular positionieren.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
-  
-### So positionieren Sie ein Steuerelement über das Eigenschaftenfenster  
-  
-1.  Klicken Sie auf das zu positionierende Steuerelement.  
-  
-2.  Geben Sie im **Eigenschaftenfenster** durch Kommas getrennte Werte für die <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft ein, um das Steuerelement innerhalb seines Containers zu positionieren.  
-  
-     Der erste Wert \(X\) entspricht dem Abstand vom linken Containerrand und der zweite Wert \(Y\) dem Abstand vom oberen Rand des Containerbereichs in Pixel.  
+-   Ziehen Sie das Steuerelement an die gewünschte Position mit der Maus ein.  
   
     > [!NOTE]
-    >  Erweitern Sie die <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft, um die **X**\- und **Y**\-Werte einzeln einzugeben.  
+    >  Wählen Sie das Steuerelement, und verschieben Sie es mit dem Pfeil Schlüssel, um genauer zu positionieren. Darüber hinaus *Ausrichtungslinien* unterstützen Sie beim Einfügen von Steuerelementen auf dem Formular genau. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-### So positionieren Sie ein Steuerelement programmgesteuert  
+### <a name="to-position-a-control-using-the-properties-window"></a>Um ein Steuerelement über das Eigenschaftenfenster zu positionieren.  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft des Steuerelements <xref:System.Drawing.Point> fest.  
+1.  Klicken Sie auf das Steuerelement, das Sie positionieren möchten.  
+  
+2.  In der **Eigenschaften** Fenster geben Werte für die <xref:System.Windows.Forms.Control.Location%2A> -Eigenschaft, getrennt durch ein Komma, um das Steuerelement innerhalb des Containers zu positionieren.  
+  
+     Die erste Zahl (X) entspricht dem Abstand vom linken Rand des Containers; die zweite Zahl (Y) entspricht dem Abstand vom oberen Rand der Containerbereich, gemessen in Pixel.  
+  
+    > [!NOTE]
+    >  Sie erweitern, können die <xref:System.Windows.Forms.Control.Location%2A> -Eigenschaft, um die **X** und **Y** einzeln Werte.  
+  
+### <a name="to-position-a-control-programmatically"></a>Um ein Steuerelement programmgesteuert zu positionieren.  
+  
+1.  Legen Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft des Steuerelements ein <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -67,7 +72,7 @@ Verwenden Sie zum Positionieren von Steuerelementen den Windows Forms\-Designer,
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Ändern Sie die X\-Koordinate der Steuerelementposition mithilfe der untergeordneten <xref:System.Windows.Forms.Control.Left%2A>\-Eigenschaft.  
+2.  Ändern Sie die X-Koordinate der Position des Steuerelements mithilfe der <xref:System.Windows.Forms.Control.Left%2A> Untereigenschaften.  
   
     ```vb  
     Button1.Left = 300  
@@ -81,9 +86,9 @@ Verwenden Sie zum Positionieren von Steuerelementen den Windows Forms\-Designer,
     button1->Left = 300;  
     ```  
   
-### So inkrementieren Sie die Position eines Steuerelements programmgesteuert  
+### <a name="to-increment-a-controls-location-programmatically"></a>Um die Position eines Steuerelements programmgesteuert erhöht  
   
-1.  Legen Sie die untergeordnete <xref:System.Windows.Forms.Control.Left%2A>\-Eigenschaft fest, um die X\-Koordinate des Steuerelements zu inkrementieren.  
+1.  Legen Sie die <xref:System.Windows.Forms.Control.Left%2A> untergeordnete Eigenschaft, um die X-Koordinate des Steuerelements zu erhöhen.  
   
     ```vb  
     Button1.Left += 200  
@@ -98,15 +103,15 @@ Verwenden Sie zum Positionieren von Steuerelementen den Windows Forms\-Designer,
     ```  
   
     > [!NOTE]
-    >  Verwenden Sie die <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft, um die X\- und Y\-Position eines Steuerelements gleichzeitig festzulegen.  Um eine Position individuell festzulegen, verwenden Sie die untergeordnete <xref:System.Windows.Forms.Control.Left%2A>\-Eigenschaft \(**X**\) oder die untergeordnete <xref:System.Windows.Forms.Control.Top%2A>\-Eigenschaft \(**Y**\) des Steuerelements.  Die X\- und Y\-Koordinaten der <xref:System.Drawing.Point>\-Struktur, die die Position der Schaltfläche darstellt, sollten keinesfalls implizit definiert werden, da diese Struktur eine Kopie der Koordinaten der Schaltfläche enthält.  
+    >  Verwenden der <xref:System.Windows.Forms.Control.Location%2A> -Eigenschaft festzulegende eines Steuerelements X- und Y-Positionen gleichzeitig. Um eine Position einzeln festzulegen, verwenden Sie des Steuerelements <xref:System.Windows.Forms.Control.Left%2A> (**X**) oder <xref:System.Windows.Forms.Control.Top%2A> (**Y**) Untereigenschaften. Versuchen Sie nicht implizit die X- und Y-Koordinaten der Festlegen der <xref:System.Drawing.Point> -Struktur, die Position der Schaltfläche, darstellt, da diese Struktur eine Kopie der Schaltfläche Koordinaten enthält.  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [How to: Set the Screen Location of Windows Forms](http://msdn.microsoft.com/de-de/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Vorgehensweise: festlegen die Bildschirmposition von Windows Forms](http://msdn.microsoft.com/en-us/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

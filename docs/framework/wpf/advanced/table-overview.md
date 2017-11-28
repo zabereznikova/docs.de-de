@@ -1,33 +1,39 @@
 ---
-title: "&#220;bersicht &#252;ber Tabellen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dokumente, Tabellen"
-  - "Fortlaufende Inhaltselemente [WPF], Tabelle"
-  - "Tabellen"
+title: "Übersicht über Tabellen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flow content elements [WPF], Table
+- documents [WPF], tables
+- tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb9edf0439c985af015d6badd11c026449a82f57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber Tabellen
-<xref:System.Windows.Documents.Table> ist ein Element auf Blockebene, das die rasterbasierte Darstellung von Flussdokumentinhalten unterstützt.  Aufgrund seiner Flexibilität ist dieses Element sehr nützlich, seine richtige Anwendung ist jedoch relativ schwierig.  
+# <a name="table-overview"></a>Übersicht über Tabellen
+<xref:System.Windows.Documents.Table>ist ein Block-Level-Element, das rasterbasierte Darstellung des Dokumentinhalts Fluss unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  
   
- Dieses Thema enthält folgende Abschnitte.  
+ Dieses Thema enthält folgende Abschnitte:  
   
 -   [Grundlagen zu Tabellen](#table_basics)  
   
--   [Was unterscheidet eine Tabelle von einem Raster?](#table_vs_Grid)  
+-   [Worin unterscheidet sich eine Tabelle von einem Raster?](#table_vs_Grid)  
   
 -   [Grundlegende Tabellenstruktur](#basic_table_structure)  
   
@@ -35,24 +41,24 @@ caps.handback.revision: 15
   
 -   [Zeilengruppen](#row_groupings)  
   
--   [Hintergrundrendering\-Rangfolge](#rednering_precedence)  
+-   [Hintergrundrendering-Rangfolge](#rendering_precedence)  
   
 -   [Überspannen von Zeilen oder Spalten](#spanning_rows_or_columns)  
   
 -   [Erstellen einer Tabelle mit Code](#building_a_table_with_code)  
   
--   [Verwandte Themen](#see_also)  
+-   [Verwandte Themen] 
   
 <a name="table_basics"></a>   
-## Grundlagen zu Tabellen  
+## <a name="table-basics"></a>Grundlagen zu Tabellen  
   
 <a name="table_vs_Grid"></a>   
-### Was unterscheidet eine Tabelle von einem Raster?  
- <xref:System.Windows.Documents.Table> und <xref:System.Windows.Controls.Grid> haben einige allgemeine Funktionen gemeinsam, sind jedoch beide für unterschiedliche Szenarien geeignet.  Eine <xref:System.Windows.Documents.Table> ist für die Verwendung innerhalb von fortlaufenden Inhalten vorgesehen. \(Weitere Informationen über fortlaufenden Inhalt finden Sie unter [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md).\)  Raster eignen sich am besten für die Verwendung in Formularen \(bzw. außerhalb von fortlaufendem Inhalt\).  In einem <xref:System.Windows.Documents.FlowDocument> unterstützt eine <xref:System.Windows.Documents.Table> verschiedene Verhaltensweisen von fortlaufendem Inhalt wie Paginierung, Tabellenflussrichtung und Inhaltsauswahl, ein <xref:System.Windows.Controls.Grid> dagegen unterstützt dies nicht.  Ein <xref:System.Windows.Controls.Grid> sollte aus verschiedenen Gründen außerhalb eines <xref:System.Windows.Documents.FlowDocument> verwendet werden. Unter anderem fügt ein <xref:System.Windows.Controls.Grid> im Gegensatz zu einer <xref:System.Windows.Documents.Table> Elemente auf Grundlage eines Zeilen\- und Spaltenindexes hinzu.  Das <xref:System.Windows.Controls.Grid>\-Element ermöglicht es, untergeordnete Inhalte überlagernd anzuordnen, sodass mehrere Elemente in einer "Zelle" enthalten sein können. <xref:System.Windows.Documents.Table> unterstützt die Überlagerung nicht.  Die untergeordneten Elemente für ein <xref:System.Windows.Controls.Grid>\-Element können absolut zum Bereich ihrer Zellenbegrenzung positioniert werden.  <xref:System.Windows.Documents.Table> unterstützt dieses Feature nicht.  Schließlich erfordert ein <xref:System.Windows.Controls.Grid> weniger Ressourcen als eine <xref:System.Windows.Documents.Table>. Deshalb sollten Sie zur Verbesserung der Leistung die Verwendung von einem <xref:System.Windows.Controls.Grid> in Betracht ziehen.  
+### <a name="how-is-table-different-then-grid"></a>Worin unterscheidet sich eine Tabelle von einem Raster?  
+ <xref:System.Windows.Documents.Table>und <xref:System.Windows.Controls.Grid> haben einige allgemeine Funktionen gemeinsam, aber jede eignet sich optimal für verschiedene Szenarien. Ein <xref:System.Windows.Documents.Table> dient zur Verwendung innerhalb des fortlaufenden Inhalts (finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](../../../../docs/framework/wpf/advanced/flow-document-overview.md) für Weitere Informationen zu fortlaufendem Inhalt). Raster eignen sich am besten für den Einsatz in Formularen (also eigentlich überall dort, wo es keinen fortlaufenden Inhalt gibt). Innerhalb einer <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> unterstützt flow Content Verhalten wie die Paginierung Spalte Umfließen und Inhaltsauswahl beim eine <xref:System.Windows.Controls.Grid> hingegen nicht. Ein <xref:System.Windows.Controls.Grid> andererseits wird außerhalb der am besten verwendet eine <xref:System.Windows.Documents.FlowDocument> vielen Gründen <xref:System.Windows.Controls.Grid> fügt Elemente basierend auf einer Zeile und Spalte Index <xref:System.Windows.Documents.Table> hingegen nicht. Die <xref:System.Windows.Controls.Grid> -Element ermöglicht die Anordnung von untergeordnetem Inhalt, sodass mehr als ein Element in einer "Zelle" vorhanden sein <xref:System.Windows.Documents.Table>Ebenenstruktur unterstützt nicht. Untergeordnete Elemente von einem <xref:System.Windows.Controls.Grid> relativ zum Bereich des Umrisslinien "Zelle" absolut positioniert werden kann. <xref:System.Windows.Documents.Table>Dieses Feature wird nicht unterstützt werden. Schließlich eine <xref:System.Windows.Controls.Grid> weniger Ressourcen erfordert ein <xref:System.Windows.Documents.Table> daher sollten Sie mithilfe einer <xref:System.Windows.Controls.Grid> zur Verbesserung der Leistung.  
   
 <a name="basic_table_structure"></a>   
-### Grundlegende Tabellenstruktur  
- <xref:System.Windows.Documents.Table> ermöglicht die rasterbasierte Darstellung von Spalten \(dargestellt durch <xref:System.Windows.Documents.TableColumn>\-Elemente\) und Zeilen \(dargestellt durch <xref:System.Windows.Documents.TableRow>\-Elemente\).  <xref:System.Windows.Documents.TableColumn>\-Elemente hosten keinen Inhalt. Sie dienen lediglich zur Definition von Spalten und deren Eigenschaften.  <xref:System.Windows.Documents.TableRow>\-Elemente müssen in einem <xref:System.Windows.Documents.TableRowGroup>\-Element gehostet sein, das eine Zeilengruppe für die Tabelle definiert.  <xref:System.Windows.Documents.TableCell>\-Elemente, die den eigentlichen Inhalt beinhalten, der von der Tabelle dargestellt werden soll, müssen in einem <xref:System.Windows.Documents.TableRow>\-Element gehostet sein.  <xref:System.Windows.Documents.TableCell> kann nur Elemente beinhalten, die von <xref:System.Windows.Documents.Block> abgeleitet sind.  Beispiele für gültige untergeordnete Elemente für eine <xref:System.Windows.Documents.TableCell>:  
+### <a name="basic-table-structure"></a>Grundlegende Tabellenstruktur  
+ <xref:System.Windows.Documents.Table>Stellt eine rasterbasierte Darstellung aus Spalten besteht (dargestellt durch <xref:System.Windows.Documents.TableColumn> Elemente) und Zeilen (dargestellt durch <xref:System.Windows.Documents.TableRow> Elemente). <xref:System.Windows.Documents.TableColumn>Elemente hosten keinen Inhalt. einfach definieren die Spalten und die Eigenschaften der Spalten. <xref:System.Windows.Documents.TableRow>Elemente müssen gehostet werden, einem <xref:System.Windows.Documents.TableRowGroup> -Element, das eine Gruppe von Zeilen für die Tabelle definiert. <xref:System.Windows.Documents.TableCell>Elemente, die enthalten, den tatsächlichen Inhalt der Tabelle dargestellt werden soll, müssen gehostet werden, einem <xref:System.Windows.Documents.TableRow> Element. <xref:System.Windows.Documents.TableCell>kann nur Elemente enthalten, die Ableitung <xref:System.Windows.Documents.Block>.  Gültige untergeordnete Elemente für eine <xref:System.Windows.Documents.TableCell> enthalten.  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -65,22 +71,22 @@ caps.handback.revision: 15
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>\-Elemente hosten Textinhalt möglicherweise nicht direkt.  Weitere Informationen über die Kapselungsregeln für fortlaufende Inhaltselemente wie <xref:System.Windows.Documents.TableCell> finden Sie unter [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+>  <xref:System.Windows.Documents.TableCell>Elemente können nicht direkt-Text-Inhalt hosten. Weitere Informationen über die Kapselungsregeln für fortlaufenden Inhaltselemente wie <xref:System.Windows.Documents.TableCell>, finden Sie unter [Nachrichtenfluss-Dokument (Übersicht)](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table> ähnelt dem <xref:System.Windows.Controls.Grid>\-Element, besitzt jedoch mehr Fähigkeiten und benötigt deshalb mehr Ressourcen.  
+>  <xref:System.Windows.Documents.Table>ähnelt der <xref:System.Windows.Controls.Grid> Element aber verfügt über weitere Funktionen und daher benötigt größer Ressourcenaufwand.  
   
- Im folgenden Beispiel wird eine einfache 2x3\-Tabelle mit [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] definiert.  
+ Das folgende Beispiel definiert eine einfache 2 x 3-Tabelle mit [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
- [!code-xml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
+ [!code-xaml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
- In der folgenden Abbildung wird gezeigt, wie dieses Beispiel gerendert wird.  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Bildschirmabbildung: Rendern einer Basistabelle](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
+ ![Screenshot: Rendern einer Basistabelle](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
   
 <a name="table_containment"></a>   
-### Tabellenkapselung  
- <xref:System.Windows.Documents.Table> wird vom <xref:System.Windows.Documents.Block>\-Element abgeleitet und befolgt die allgemeinen Regeln für Elemente auf <xref:System.Windows.Documents.Block>\-Ebene.  Ein <xref:System.Windows.Documents.Table>\-Element ist möglicherweise in einem der folgenden Elemente enthalten:  
+### <a name="table-containment"></a>Tabellenkapselung  
+ <xref:System.Windows.Documents.Table>leitet sich von der <xref:System.Windows.Documents.Block> Element, und befolgt die allgemeinen Regeln für <xref:System.Windows.Documents.Block> Elemente der Ebene.  Ein <xref:System.Windows.Documents.Table> Element kann eines der folgenden Elemente enthalten sein:  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   
@@ -97,20 +103,20 @@ caps.handback.revision: 15
 -   <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
-### Zeilengruppen  
- Mit dem <xref:System.Windows.Documents.TableRowGroup>\-Element können Zeilen in einer Tabelle beliebig gruppiert werden, wobei jede Zeile einer Tabelle zu einer Zeilengruppierung gehören muss.  Zeilen in einer Zeilengruppe dienen häufig einem gemeinsamen Zweck und können als Gruppe formatiert werden.  Häufig werden durch Zeilengruppen Zeilen verschiedenen Zwecks voneinander getrennt, z. B. der Hauptinhalt der Tabelle vom Titel, der Überschrift und den Fußzeilen.  
+### <a name="row-groupings"></a>Zeilengruppen  
+ Die <xref:System.Windows.Documents.TableRowGroup> -Element stellt eine Möglichkeit zum Gruppieren von Zeilen in einer Tabelle nach dem Zufallsprinzip bereit; jede Zeile in einer Tabelle muss eine zeilengruppierung angehören.  Zeilen in einer Zeilengruppe dienen häufig einem gemeinsamen Zweck und können als Gruppe formatiert werden.  Eine häufige Verwendung für Zeilengruppen ist die Trennung von Zeilen mit verschiedenen Zwecken, um z.B. Titel, Kopfzeilen und Fußzeilen vom Hauptinhalt der Tabelle zu trennen.  
   
- Im folgenden Beispiel wird [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] verwendet, um eine Tabelle mit formatierten Kopf\- und Fußzeilen zu definieren.  
+ Im folgenden Beispiel wird [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] zum Definieren einer Tabelle mit formatierten Kopf- und Fußzeile Zeilen.  
   
- [!code-xml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
+ [!code-xaml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
- In der folgenden Abbildung wird gezeigt, wie dieses Beispiel gerendert wird.  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Bildschirmabbildung: Tabellenzeilengruppen](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table\_RowGroups")  
+ ![Screenshot: Tabellenzeilengruppen](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")  
   
-<a name="renderning_precedence"></a>   
-### Hintergrundrendering\-Rangfolge  
- Tabellenelemente rendern in der folgenden Reihenfolge \([z\-Reihenfolge](GTMT), vom niedrigsten zum höchsten\).  Diese Reihenfolge kann nicht geändert werden.  Zum Beispiel gibt es keine "z\-Reihenfolge"\-Eigenschaft für diese Elemente, die zum Überschreiben dieser festgelegten Reihenfolge verwendet werden könnte.  
+<a name="rendering_precedence"></a>   
+### <a name="background-rendering-precedence"></a>Hintergrundrendering-Rangfolge  
+ Tabellenelemente rendern in der folgenden Reihenfolge (Z-Reihenfolge, vom niedrigsten zum höchsten). Diese Reihenfolge kann nicht geändert werden. Beispielsweise gibt es keine „Z-Reihenfolge“-Eigenschaft für diese Elemente, die Sie zum Überschreiben dieser festgelegten Reihenfolge verwenden können.  
   
 1.  <xref:System.Windows.Documents.Table>  
   
@@ -122,65 +128,65 @@ caps.handback.revision: 15
   
 5.  <xref:System.Windows.Documents.TableCell>  
   
- Betrachten Sie das folgende Beispiel, in dem Hintergrundfarben für jedes dieser Elemente innerhalb einer Tabelle definiert werden.  
+ Betrachten Sie das folgende Beispiel, das Hintergrundfarben für jedes dieser Elemente in einer Tabelle definiert.  
   
- [!code-xml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
+ [!code-xaml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
   
- Die folgende Abbildung veranschaulicht, wie dieses Beispiel rendert \(nur Hintergrundfarben werden angezeigt\).  
+ Die folgende Abbildung zeigt, wie dieses Beispiel (nur Hintergrundfarben werden angezeigt) gerendert wird.  
   
- ![Bildschirmabbildung: Tabellen&#45;Z&#45;Reihenfolge](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table\_ZOrder")  
+ ![Screenshot: Tabellen-Z-Reihenfolge](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
-### Überspannen von Zeilen oder Spalten  
- Tabellenzellen können mit den Attributen <xref:System.Windows.Documents.TableCell.RowSpan%2A> oder <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> so konfiguriert werden, dass sie mehrere Zeilen oder Spalten überspannen.  
+### <a name="spanning-rows-or-columns"></a>Überspannen von Zeilen oder Spalten  
+ Tabellenzellen können konfiguriert werden, damit mehrere Zeilen oder Spalten mit umfassen die <xref:System.Windows.Documents.TableCell.RowSpan%2A> oder <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> -Attribute.  
   
- Betrachten Sie das folgende Beispiel, in dem eine Zelle drei Spalten überspannt.  
+ Betrachten Sie das folgende Beispiel, in dem eine Zelle drei Spalten umfasst.  
   
- [!code-xml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
- In der folgenden Abbildung wird gezeigt, wie dieses Beispiel gerendert wird.  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Bildschirmabbildung: Zelle umfasst alle drei Spalten](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table\_ColumnSpan")  
+ ![Screenshot: Zelle umfasst alle drei Spalten](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")  
   
 <a name="building_a_table_with_code"></a>   
-## Erstellen einer Tabelle mit Code  
- Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Documents.Table> programmgesteuert erstellt und mit Inhalt gefüllt wird.  Die Inhalte der Tabelle sind auf fünf Zeilen \(dargestellt durch <xref:System.Windows.Documents.TableRow>\-Objekte, die in einem <xref:System.Windows.Documents.Table.RowGroups%2A>\-Objekt enthalten sind\) und sechs Spalten \(dargestellt durch <xref:System.Windows.Documents.TableColumn>\-Objekte\) aufgeteilt.  Die Zeilen werden für verschiedene Darstellungszwecke verwendet. Unter anderem gibt es eine Titelzeile, die als Überschrift für die gesamte Tabelle dient, eine Kopfzeile, die die Datenspalten der Tabelle beschreibt, und eine Fußzeile mit Zusammenfassungsinformationen.  Beachten Sie, dass die Begriffe "Titelzeile", "Kopfzeile" und "Fußzeile" keine spezifischen Bestandteile der Tabelle sind. Es handelt sich lediglich um Zeilen mit unterschiedlichen Eigenschaften.  Tabellenzellen enthalten den eigentlichen Inhalt, der aus Text, Bildern oder nahezu jedem beliebigen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]\-Element bestehen kann.  
+## <a name="building-a-table-with-code"></a>Erstellen einer Tabelle mit Code  
+ Den folgenden Beispielen wird veranschaulicht, wie Sie programmgesteuert erstellen eine <xref:System.Windows.Documents.Table> und füllen sie mit dem Inhalt. Der Inhalt der Tabelle in fünf Zeilen aufgeteilt werden (dargestellte <xref:System.Windows.Documents.TableRow> enthaltenen Objekte eine <xref:System.Windows.Documents.Table.RowGroups%2A> Objekt) und sechs Spalten (dargestellt durch <xref:System.Windows.Documents.TableColumn> Objekte). Die Zeilen werden für die unterschiedlichen Präsentationszwecke verwendet, einschließlich einer Titelzeile für die Betitelung der gesamten Tabelle, einer Kopfzeile zur Beschreibung der Spalten in der Tabelle und einer Fußzeile mit Zusammenfassungsinformationen.  Beachten Sie, dass die Angabe der Zeilen „Titel“, „Kopf“ und „Fuß“ in der Tabelle nicht vorhanden ist. Hierbei handelt es sich nur um Zeilen mit unterschiedlichen Eigenschaften. Tabellenzellen enthalten den tatsächlichen Inhalt, der der Text, Bilder oder fast jeder beliebigen anderen bestehen kann [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Element.  
   
- Zuerst wird ein <xref:System.Windows.Documents.FlowDocument>, das die <xref:System.Windows.Documents.Table> hostet, sowie eine neue <xref:System.Windows.Documents.Table> erstellt und zu den Inhalten von <xref:System.Windows.Documents.FlowDocument> hinzugefügt.  
+ Zuerst eine <xref:System.Windows.Documents.FlowDocument> wird erstellt, auf Host der <xref:System.Windows.Documents.Table>, und eine neue <xref:System.Windows.Documents.Table> erstellt und hinzugefügt werden, um den Inhalt des der <xref:System.Windows.Documents.FlowDocument>.  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
- Anschließend werden sechs <xref:System.Windows.Documents.TableColumn>\-Objekte erstellt und mit einigen Formatierungen zur <xref:System.Windows.Documents.Table.Columns%2A>\-Auflistung der Tabelle hinzugefügt.  
+ Als Nächstes sechs <xref:System.Windows.Documents.TableColumn> -Objekte erstellt und der Tabelle hinzugefügt <xref:System.Windows.Documents.Table.Columns%2A> -Auflistung, mit einigen Formatierung angewendet.  
   
 > [!NOTE]
->  Beachten Sie, dass die <xref:System.Windows.Documents.Table.Columns%2A>\-Auflistung der Tabelle nullbasierte Standardindizierung verwendet.  
+>  Beachten Sie, dass der Tabelle <xref:System.Windows.Documents.Table.Columns%2A> Auflistung verwendet standardmäßige nullbasierter Indizierung.  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
- Anschließend wird eine Titelzeile erstellt und mit etwas Formatierung zur Tabelle hinzugefügt.  Die Titelzeile enthält eine einzelne Zelle, die alle sechs Spalten in der Tabelle überspannt.  
+ Als Nächstes wird eine Titelzeile erstellt und mit angewandter Formatierung zur Tabelle hinzugefügt.  Die Titelzeile enthält eine einzelne Zelle, die alle sechs Spalten in der Tabelle umfasst.  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
- Anschließend wird ein Header erstellt und zur Tabelle hinzugefügt. Die Zellen im Header werden erstellt und mit Inhalt gefüllt.  
+ Als Nächstes eine Kopfzeile erstellt und zur Tabelle hinzugefügt, und die Zellen in der Kopfzeile werden erstellt und mit Inhalt gefüllt.  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
- Anschließend wird eine Zeile für Daten erstellt und zur Tabelle hinzugefügt. Die Zellen in dieser Zeile werden erstellt und mit Inhalt gefüllt.  Das Erstellen dieser Zeile ähnelt der Erstellung des Headers, mit leichten Unterschieden bei der Formatierung.  
+ Als Nächstes wird eine Zeile für Daten erstellt und zur Tabelle hinzugefügt, und die Zellen in dieser Zeile werden erstellt und mit Inhalt gefüllt.  Das Erstellen dieser Zeile ähnelt der Erstellung der Kopfzeile, mit einer leicht verschiedenen angewandten Formatierung.  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
- Schließlich wird eine Fußzeile erstellt, hinzugefügt und formatiert.  Genau wie die Titelzeile enthält auch die Fußzeile eine einzelne Zelle, die alle sechs Spalten in der Tabelle überspannt.  
+ Schließlich wird eine Fußzeile erstellt, hinzugefügt und formatiert.  Genau wie die Titelzeile enthält die Fußzeile eine einzelne Zelle, die alle sechs Spalten in der Tabelle umfasst.  
   
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## Siehe auch  
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [Definieren einer Tabelle mit XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)   
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [Definieren einer Tabelle mit XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Verwenden von fortlaufenden Inhaltselementen](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)

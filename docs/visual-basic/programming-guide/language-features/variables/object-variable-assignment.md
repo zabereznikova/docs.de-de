@@ -1,37 +1,36 @@
 ---
-title: "Object Variable Assignment (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing keyword, object variable assignment"
-  - "object variables, initializing"
-  - "variables [Visual Basic], initializing"
-  - "objects [Visual Basic], current instance"
-  - "object variables, assigning"
-  - "variables [Visual Basic], object variables"
-  - "current instance, defined"
-  - "variables [Visual Basic], assigning"
-  - "assignment statements, object variable assignment"
-  - "Me keyword, as object variable"
+title: Zuweisen von Objektvariablen (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Nothing keyword [Visual Basic], object variable assignment
+- object variables [Visual Basic], initializing
+- variables [Visual Basic], initializing
+- objects [Visual Basic], current instance
+- object variables [Visual Basic], assigning
+- variables [Visual Basic], object variables
+- current instance [Visual Basic], defined
+- variables [Visual Basic], assigning
+- assignment statements [Visual Basic], object variable assignment
+- Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Object Variable Assignment (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Ein Objekt wird einer Objektvariablen mit einer normalen Zuweisungsanweisung zugewiesen.  Sie können einen Objektausdruck oder das [Nothing](../../../../visual-basic/language-reference/nothing.md)\-Schlüsselwort zuweisen, wie im folgenden Beispiel veranschaulicht wird.  
+# <a name="object-variable-assignment-visual-basic"></a>Zuweisen von Objektvariablen (Visual Basic)
+Sie verwenden eine normale zuweisungsanweisung Objektvariable ein Objekt zuweisen. Sie können ein Objektausdrücke zuweisen oder die [nichts](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, wie im folgenden Beispiel veranschaulicht.  
   
 ```  
 Dim thisObject As Object  
@@ -41,20 +40,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` bedeutet, dass der Variablen gegenwärtig kein Objekt zugewiesen ist.  
+ `Nothing`bedeutet, es wurde kein Objekt, das der Variablen zugewiesen.  
   
-## Initialisierung  
- Wenn mit der Ausführung des Codes begonnen wird, werden die Objektvariablen mit `Nothing` initialisiert.  Während der Ausführung der Deklarationsanweisungen werden die Variablen, deren Deklarationen die Initialisierung enthält, mit den angegebenen Werten neu initialisiert.  
+## <a name="initialization"></a>Initialisierung  
+ Wenn Ihr Code beginnt die Ausführung, Ihr Objekts Variablen werden initialisiert, um `Nothing`. Diejenigen, deren Deklarationen Initialisierung enthalten, sind, die Werte erneut initialisiert, die Sie angeben, wenn die deklarationsanweisungen ausgeführt werden.  
   
- Sie können unter Verwendung des Schlüsselworts [New](../../../../visual-basic/language-reference/operators/new-operator.md) die Initialisierung in die Deklaration einschließen.  Mit den folgenden Deklarationsanweisungen werden die Objektvariablen `testUri` und `ver` deklariert und diesen Variablen spezielle Objekte zugewiesen.  Zur Initialisierung des Objekts wird jeweils einer der überladenen Konstruktoren der entsprechenden Klasse verwendet.  
+ Sie können die Initialisierung in der Deklaration einschließen, mit der [neu](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort. Die folgende deklarationsanweisungen deklarieren Objektvariablen `testUri` und `ver` und bestimmte Objekte zuzuweisen. Jede verwendet eine der überladenen Konstruktoren der entsprechenden Klasse zum Initialisieren des Objekts.  
   
 ```  
 Dim testUri As New System.Uri("http://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## Disassoziation  
- Wenn eine Objektvariable auf `Nothing` festgelegt wird, wird die Zuordnung der Variablen zu einem speziellen Objekt beendet.  So wird verhindert, dass das Objekt durch eine Variablenänderung versehentlich geändert wird.  Außerdem können Sie testen, ob die Objektvariable auf ein gültiges Objekt zeigt; das folgende Beispiel veranschaulicht dies:  
+## <a name="disassociation"></a>Disassocation  
+ Festlegen einer Objektvariablen auf `Nothing` reagiert nicht mehr, die Zuordnung der Variablen mit bestimmten Objekts. Dies verhindert, dass Sie fälschlicherweise das Objekt durch Ändern der Variablen ändert. Zudem können Sie zum Überprüfen, ob die Objektvariable auf ein gültiges Objekt, wie im folgenden Beispiel gezeigt verweist.  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -62,16 +61,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Wenn die Variable auf ein Objekt in einer anderen Anwendung verweist, kann mit diesem Test nicht festgestellt werden, ob die betreffende Anwendung beendet wurde oder ob das Objekt dort lediglich ungültig wurde.  
+ Wenn das Objekt, auf dem die Variable verweist in einer anderen Anwendung, kann nicht diesen Test bestimmen, ob die Anwendung beendet wurde, oder das Objekt nur für ungültig zu erklären.  
   
- Eine Objektvariable mit dem Wert `Nothing` wird auch als *Nullverweis* bezeichnet.  
+ Ein Object-Variablen mit einem Wert von `Nothing` steht eine *null-Verweis*.  
   
-## Aktuelle Instanz  
- Die *aktuelle Instanz* eines Objekts ist diejenige, in der der Code gegenwärtig ausgeführt wird.  Da Code immer innerhalb einer Prozedur ausgeführt wird, handelt es sich bei der aktuellen Instanz um diejenige, in der die Prozedur aufgerufen wurde.  
+## <a name="current-instance"></a>Aktuelle Instanz  
+ Die *aktuelle Instanz* eines Objekts wird in dem der Code derzeit ausgeführt wird. Da der gesamte Code innerhalb einer Prozedur ausgeführt wird, wird die aktuelle Instanz in der die Prozedur aufgerufen wurde.  
   
- Das `Me`\-Schlüsselwort fungiert als auf die aktuelle Instanz verweisende Objektvariable.  Sofern eine Prozedur nicht als [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) deklariert wurde, kann sie mithilfe des `Me`\-Schlüsselworts einen Zeiger auf die aktuelle Instanz abrufen.  Freigegebene Prozeduren können nicht einzelnen Objektinstanzen zugeordnet werden.  
+ Die `Me` -Schlüsselwort fungiert als eine Objektvariable verweist auf die aktuelle Instanz. Eine Prozedur ist nicht [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), kann die `Me` Schlüsselwort, um einen Zeiger auf die aktuelle Instanz. Freigegebene Prozeduren können nicht mit einer bestimmten Instanz einer Klasse zugeordnet werden.  
   
- `Me` ist vor allem bei der Übergabe der aktuellen Instanz an eine Prozedur in einem anderen Modul hilfreich.  Nehmen wir beispielsweise an, es sind einige XML\-Dokumente vorhanden, und jedem dieser Dokumente soll ein Standardtext hinzugefügt werden.  Im folgenden Beispiel wird eine Prozedur definiert, die dies leistet.  
+ Mithilfe von `Me` ist besonders nützlich für die aktuelle Instanz an eine Prozedur in einem anderen Modul übergeben. Nehmen wir beispielsweise an, Sie verfügen über eine Reihe von XML-Dokumenten und einige standard-Text hinzufügen möchten. Das folgende Beispiel definiert eine Prozedur zu diesem Zweck.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -79,16 +78,16 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Daraufhin kann jedes XML\-Dokumentobjekt die Prozedur aufrufen und ihr seine aktuelle Instanz mit der folgenden Anweisung als Argument übergeben:  Das folgende Beispiel veranschaulicht dies.  
+ Jedes XML-Dokumentobjekt kann dann rufen Sie die Prozedur und die aktuelle Instanz als Argument übergeben. Dies wird im folgenden Beispiel veranschaulicht:  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## Siehe auch  
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Object Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Object Variable Values](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)   
- [How to: Make an Object Variable Not Refer to Any Instance](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)   
- [Me, My, MyBase, and MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Siehe auch  
+ [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [Vorgehensweise: Deklarieren einer Objektvariablen und Zuweisen eines entsprechenden Objekts in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [Gewusst wie: Entfernen aller Verweise einer Objektvariablen auf Instanzen](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
+ [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

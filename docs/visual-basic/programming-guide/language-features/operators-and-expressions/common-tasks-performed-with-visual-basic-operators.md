@@ -1,96 +1,91 @@
 ---
-title: "Common Tasks Performed with Visual Basic Operators | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operators [Visual Basic], logical"
-  - "operators [Visual Basic], string concatenation"
-  - "operators [Visual Basic], bitwise"
-  - "operators [Visual Basic], bit-shift"
-  - "operators [Visual Basic], arithmetic"
-  - "operators [Visual Basic], string comparison"
-  - "operators [Visual Basic], concatenation"
-  - "Visual Basic code, operators"
-  - "operators [Visual Basic], comparison"
-  - "operators [Visual Basic], short-circuiting logical"
+title: "Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], logical
+- operators [Visual Basic], string concatenation
+- operators [Visual Basic], bitwise
+- operators [Visual Basic], bit-shift
+- operators [Visual Basic], arithmetic
+- operators [Visual Basic], string comparison
+- operators [Visual Basic], concatenation
+- Visual Basic code, operators
+- operators [Visual Basic], comparison
+- operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Common Tasks Performed with Visual Basic Operators
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Operatoren führen viele allgemeine Aufgaben mit einem oder mehreren als *Operanden* bezeichneten Ausdrücken aus.  
+# <a name="common-tasks-performed-with-visual-basic-operators"></a>Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden
+Operatoren führen viele allgemeine Aufgaben, die im Zusammenhang mit einem oder mehreren Ausdrücken aufgerufen *Operanden*.  
   
-## Arithmetische Aufgaben und Bitverschiebungsaufgaben  
- In der folgenden Tabelle werden die verfügbaren arithmetischen und Bitschiebeoperationen aufgeführt.  
+## <a name="arithmetic-and-bit-shift-tasks"></a>Arithmetische und bitverschiebung Aufgaben  
+ In der folgenden Tabelle werden die verfügbaren Vorgänge für arithmetische und bitverschiebung zusammengefasst.  
   
-|||  
-|-|-|  
-|To|Siehe|  
-|Addieren eines numerischen Werts zu einem anderen numerischen Wert|[\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Subtrahieren eines numerischen Werts von einem anderen numerischen Wert|[\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Umkehren des Vorzeichens eines numerischen Werts|[\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Multiplizieren eines numerischem Werts mit einem anderen numerischen Wert|[\* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|Dividieren eines numerischen Werts durch einen anderen numerischen Wert|[\/ Operator](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|Ermitteln des Quotienten eines numerischen Werts, der durch einen anderen numerischen Wert dividiert wird \(ohne Rest\)|[\\ Operator](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|Ermitteln des Rests eines numerischen Werts, der durch einen anderen numerischen Wert dividiert wird \(ohne Quotient\)|[Operator Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|Erheben eines numerischen Werts in die Potenz eines anderen numerischen Werts|[^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Verschieben des Bitmusters eines numerischen Werts nach links|[\<\< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|Verschieben des Bitmusters eines numerischen Werts nach rechts|[\>\> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|Beschreibung|Siehe|  
+|---|---|  
+|Fügen Sie einen numerischen Wert in eine andere|[+-Operator](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
+|Subtrahiert einen numerischen Wert von einem anderen|[--Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|Die Vorzeichen eines numerischen Werts umkehren|[--Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|Multiplizieren Sie einen numerischen Wert mit einem anderen|[*-Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
+|Teilen Sie einen numerischen Wert in eine andere|[/-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|Ermitteln des Quotienten eines numerischen Werts durch eine andere (ohne Rest) unterteilt|[\-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
+|Ermittelt den Rest eines numerischen Werts durch eine andere (ohne Quotient) unterteilt|[Mod-Operator](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
+|Lösen Sie einen numerischen Wert zur Potenz einer anderen|[^-Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
+|Verschieben des Bitmusters eines numerischen Werts nach links|[<\<Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|Verschieben Sie das Bitmuster eines numerischen Werts nach rechts|[>>-Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
-## Vergleichsaufgaben  
- Die folgende Tabelle bietet einen Überblick über die verfügbaren Vergleichsoperationen:  
+## <a name="comparison-tasks"></a>Vergleich von Aufgaben  
+ In der folgenden Tabelle werden die verfügbaren Vergleichsoperationen zusammengefasst.  
   
-|||  
-|-|-|  
-|To|Siehe|  
-|Bestimmen, ob zwei Werte gleich sind|Operator `=` \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Bestimmen, ob zwei Werte ungleich sind|Operator `<>` \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Bestimmen, ob ein Wert kleiner als ein anderer Wert ist|Operator `<` \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Bestimmen, ob ein Wert größer als ein anderer Wert ist|Operator `>` \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Bestimmen, ob ein Wert kleiner oder gleich einem anderen Wert ist|Operator `<=` \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Bestimmen, ob ein Wert größer oder gleich einem anderen Wert ist|Operator `>=` \([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Bestimmen, ob zwei Objektvariablen auf die gleiche Objektinstanz verweisen|[Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Bestimmen, ob zwei Objektvariablen auf verschiedene Objektinstanzen verweisen|[IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|Bestimmen, ob ein Objekt einem bestimmten Typ angehört|[TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|Beschreibung|Siehe|  
+|---|---|  
+|Bestimmen Sie, ob zwei Werte gleich sind.|`=`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob zwei Werte ungleich sind.|`<>`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert kleiner als ein anderes ist.|`<`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert größer als ein anderes ist.|`>`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert kleiner oder gleich einem anderen ist.|`<=`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob ein Wert größer als oder gleich einem anderen ist.|`>=`Operator ([Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|Bestimmen Sie, ob zwei Objektvariablen auf die gleiche Objektinstanz verweisen|[Is-Operator](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|Ermitteln Sie, ob zwei Objektvariablen auf unterschiedliche Objektinstanzen verweisen|[IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|Bestimmen Sie, ob ein Objekt eines bestimmten Typs|[TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
-## Verkettungsaufgaben  
- Die folgende Tabelle bietet einen Überblick über die verfügbaren Verkettungsoperationen:  
+## <a name="concatenation-tasks"></a>Verketten von Aufgaben  
+ In der folgenden Tabelle werden die verfügbaren Verkettungsvorgänge zusammengefasst.  
   
-|||  
-|-|-|  
-|To|Siehe|  
-|Verknüpfen mehrerer Zeichenfolgen zu einer einzigen Zeichenfolge|`&` Operator \([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
-|Verknüpfen numerischer Werte mit Zeichenfolgenwerten|Operator `+` \([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
+|Beschreibung|Siehe|  
+|---|---|  
+|Verbinden Sie mehrere Zeichenfolgen zu einer einzelnen Zeichenfolge|`&`Operator ([Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Verknüpfen Sie numerische Werte mit Zeichenfolgenwerten|`+`Operator ([Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
   
-## Logische und bitweise Aufgaben  
- Die folgende Tabelle bietet einen Überblick über die verfügbaren logischen und bitweisen Operationen.  
+## <a name="logical-and-bitwise-tasks"></a>Logische und bitweise Aufgaben  
+ In der folgenden Tabelle werden die verfügbaren logische und bitweise Vorgänge zusammengefasst.  
   
-|||  
-|-|-|  
-|To|Siehe|  
-|Ausführen von logischer Negation für einen booleschen Wert|[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|Ausführen von logischer Konjunktion für zwei booleschen Werte|[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Ausführen von inklusiver logischer Disjunktion für zwei boolesche Werte|[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Ausführen von exklusiver logischer Disjunktion für zwei boolesche Werte|[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Ausführen von logischer Kurzschlusskonjunktion für zwei boolesche Werte|[AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|Ausführen von inklusiver logischer Kurzschlussdisjunktion für zwei boolesche Werte|[OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Ausführen von logischer bitweiser Konjunktion für zwei ganzzahlige Werte|[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Ausführen von inklusiver logischer bitweiser Disjunktion für zwei ganzzahlige Werte|[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Ausführen von exklusiver logischer bitweiser Disjunktion für zwei ganzzahlige Werte|[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Ausführen von logischer bitweiser Negation für einen ganzzahligen Wert|[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|Beschreibung|Siehe|  
+|---|---|  
+|Führen Sie die logischen Negation für einen booleschen Wert|[Not-Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|Führen Sie die logischen Konjunktion auf zwei boolesche Werte|[And-Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|Führen Sie die inklusiven logischen Disjunktion auf zwei boolesche Werte|[Or-Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|Führen Sie die exklusiven logischen Disjunktion auf zwei boolesche Werte|[Xor-Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|Führen Sie logischen Kurzschlusskonjunktion auf zwei boolesche Werte|[AndAlso-Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
+|Ausführen von inklusiver logischer Kurzschlussdisjunktion für zwei boolesche Werte|[OrElse-Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|Führen Sie die logischen Konjunktion Bit für Bit auf zwei ganzzahligen Werten|[And-Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|Bit für Bit inklusiven logischen Disjunktion für zwei ganzzahlige Werte ausführen|[Or-Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|Bit für Bit exklusiven logischen Disjunktion für zwei ganzzahlige Werte ausführen|[Xor-Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|Bit für Bit logischen Negation für einen ganzzahligen Wert ausführen|[Not-Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## Siehe auch  
- [Operators and Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Operators Listed by Functionality](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren und Ausdrücke](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

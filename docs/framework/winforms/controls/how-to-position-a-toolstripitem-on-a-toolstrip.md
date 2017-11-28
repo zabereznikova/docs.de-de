@@ -1,40 +1,41 @@
 ---
-title: "Gewusst wie: Positionieren eines ToolStripItem auf einem ToolStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Symbolleisten [Windows Forms], Positionieren von Elementen"
-  - "ToolStrip-Steuerelement [Windows Forms], Ausrichten von Elementen"
+title: 'Gewusst wie: Positionieren eines ToolStripItem auf einem ToolStrip'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], aligning items
+- toolbars [Windows Forms], positioning items
 ms.assetid: 11fd7c5b-ee5c-4993-9a11-89127ff0aa7a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0740bb4f4ce5a5e801f14ceb50c68d57b9986969
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Positionieren eines ToolStripItem auf einem ToolStrip
-Sie können ein <xref:System.Windows.Forms.ToolStripItem> auf die linke oder rechte Seite eines <xref:System.Windows.Forms.ToolStrip> verschieben oder dort hinzufügen.  
+# <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>Gewusst wie: Positionieren eines ToolStripItem auf einem ToolStrip
+Können Sie verschieben oder Hinzufügen einer <xref:System.Windows.Forms.ToolStripItem> nach links oder rechts neben einem <xref:System.Windows.Forms.ToolStrip>.  
   
-### So verschieben Sie ein ToolStripItem auf die linke Seite eines ToolStrip oder fügen es dort hinzu  
+### <a name="to-move-or-add-a-toolstripitem-to-the-left-side-of-a-toolstrip"></a>So verschieben oder hinzufügen ein ToolStripItem auf der linken Seite eines ToolStrip  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ToolStripItemAlignment>\-Eigenschaft von <xref:System.Windows.Forms.ToolStripItem> auf <xref:System.Windows.Forms.ToolStripItemAlignment> fest.  
+1.  Festlegen der <xref:System.Windows.Forms.ToolStripItemAlignment> Eigenschaft von der <xref:System.Windows.Forms.ToolStripItem> auf <xref:System.Windows.Forms.ToolStripItemAlignment.Left>.  
   
-### So verschieben Sie ein ToolStripItem auf die rechte Seite eines ToolStrip oder fügen es dort hinzu  
+### <a name="to-move-or-add-a-toolstripitem-to-the-right-side-of-a-toolstrip"></a>So verschieben oder hinzufügen ein ToolStripItem auf die rechte Seite eines ToolStrip  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ToolStripItemAlignment>\-Eigenschaft von <xref:System.Windows.Forms.ToolStripItem> auf <xref:System.Windows.Forms.ToolStripItemAlignment> fest.  
+1.  Festlegen der <xref:System.Windows.Forms.ToolStripItemAlignment> Eigenschaft von der <xref:System.Windows.Forms.ToolStripItem> auf <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ToolStripItem>   
- <xref:System.Windows.Forms.ToolStripItemAlignment>   
- <xref:System.Windows.Forms.ToolStripItemAlignment>   
- <xref:System.Windows.Forms.ToolStripItemAlignment>   
- [Übersicht über das ToolStrip\-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.ToolStripItem>  
+ <xref:System.Windows.Forms.ToolStripItemAlignment>  
+ <xref:System.Windows.Forms.ToolStripItemAlignment.Left>  
+ <xref:System.Windows.Forms.ToolStripItemAlignment.Right>  
+ [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
