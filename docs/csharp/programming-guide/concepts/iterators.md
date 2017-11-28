@@ -1,36 +1,27 @@
 ---
 title: Iteratoren (C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="iterators-c"></a>Iteratoren (C#)
-Ein *Iterator* kann verwendet werden, um Auflistungen wie Listen und Arrays schrittweise durchzugehen.  
+# <a name="iterators-c"></a><span data-ttu-id="598c7-102">Iteratoren (C#)</span><span class="sxs-lookup"><span data-stu-id="598c7-102">Iterators (C#)</span></span>
+<span data-ttu-id="598c7-103">Ein *Iterator* kann verwendet werden, um Auflistungen wie Listen und Arrays schrittweise durchzugehen.</span><span class="sxs-lookup"><span data-stu-id="598c7-103">An *iterator* can be used to step through collections such as lists and arrays.</span></span>  
   
- Eine Iteratormethode oder eine `get`-Zugriffsmethode führt eine benutzerdefinierte Iteration einer Auflistung durch. Eine Iteratormethode verwendet die [yield return](../../../csharp/language-reference/keywords/yield.md)-Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
+ <span data-ttu-id="598c7-104">Eine Iteratormethode oder eine `get`-Zugriffsmethode führt eine benutzerdefinierte Iteration einer Auflistung durch.</span><span class="sxs-lookup"><span data-stu-id="598c7-104">An iterator method or `get` accessor performs a custom iteration over a collection.</span></span> <span data-ttu-id="598c7-105">Eine Iteratormethode verwendet die [yield return](../../../csharp/language-reference/keywords/yield.md)-Anweisung, um jedes Element einzeln nacheinander zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="598c7-105">An iterator method uses the [yield return](../../../csharp/language-reference/keywords/yield.md) statement to return each element one at a time.</span></span> <span data-ttu-id="598c7-106">Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert.</span><span class="sxs-lookup"><span data-stu-id="598c7-106">When a `yield return` statement is reached, the current location in code is remembered.</span></span> <span data-ttu-id="598c7-107">Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.</span><span class="sxs-lookup"><span data-stu-id="598c7-107">Execution is restarted from that location the next time the iterator function is called.</span></span>  
   
- Sie erzeugen einen Iterator aus einem Clientcode, indem Sie eine [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung oder eine LINQ-Abfrage verwenden.  
+ <span data-ttu-id="598c7-108">Sie erzeugen einen Iterator aus einem Clientcode, indem Sie eine [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung oder eine LINQ-Abfrage verwenden.</span><span class="sxs-lookup"><span data-stu-id="598c7-108">You consume an iterator from client code by using a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement or by using a LINQ query.</span></span>  
   
- In folgendem Beispiel führt die erste Iteration der `foreach`-Schleife dazu, dass die Ausführung solange in der Iteratormethode `SomeNumbers` fortschreitet, bis der ersten `yield return`-Anweisung erreicht wird. Diese Iteration gibt den Wert 3 zurück, und die aktuelle Postion in der Iteratormethode wird beibehalten. In der nächsten Iteration der Schleife wird die Ausführung in der Iteratormethode da fortgesetzt, wo sie beendet wurde, und endet dann wieder an einem `yield return`-Ausdruck. Diese Iteration gibt den Wert 5 zurück, und die aktuelle Postion in der Iteratormethode wird beibehalten. Die Schleife wird beendet, wenn das Ende der Iteratormethode erreicht wird.  
+ <span data-ttu-id="598c7-109">In folgendem Beispiel führt die erste Iteration der `foreach`-Schleife dazu, dass die Ausführung solange in der Iteratormethode `SomeNumbers` fortschreitet, bis der ersten `yield return`-Anweisung erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="598c7-109">In the following example, the first iteration of the `foreach` loop causes execution to proceed  in the `SomeNumbers` iterator method until the first `yield return` statement is reached.</span></span> <span data-ttu-id="598c7-110">Diese Iteration gibt den Wert 3 zurück, und die aktuelle Postion in der Iteratormethode wird beibehalten.</span><span class="sxs-lookup"><span data-stu-id="598c7-110">This iteration returns a value of 3, and the current location in the iterator method is retained.</span></span> <span data-ttu-id="598c7-111">In der nächsten Iteration der Schleife wird die Ausführung in der Iteratormethode da fortgesetzt, wo sie beendet wurde, und endet dann wieder an einem `yield return`-Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="598c7-111">On the next iteration of the loop, execution in the iterator method continues from where it left off, again stopping when it reaches a `yield return` statement.</span></span> <span data-ttu-id="598c7-112">Diese Iteration gibt den Wert 5 zurück, und die aktuelle Postion in der Iteratormethode wird beibehalten.</span><span class="sxs-lookup"><span data-stu-id="598c7-112">This iteration returns a value of 5, and the current location in the iterator method is again retained.</span></span> <span data-ttu-id="598c7-113">Die Schleife wird beendet, wenn das Ende der Iteratormethode erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="598c7-113">The loop completes when the end of the iterator method is reached.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -51,31 +42,31 @@ public static System.Collections.IEnumerable SomeNumbers()
 }  
 ```  
   
- Der Rückgabetyp einer Iteratormethode oder einer `get`-Zugriffsmethode kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.  
+ <span data-ttu-id="598c7-114">Der Rückgabetyp einer Iteratormethode oder einer `get`-Zugriffsmethode kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.</span><span class="sxs-lookup"><span data-stu-id="598c7-114">The return type of an iterator method or `get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.</span></span>  
   
- Sie verwenden eine `yield break`-Anweisung, um die Iteration zu beenden.  
+ <span data-ttu-id="598c7-115">Sie verwenden eine `yield break`-Anweisung, um die Iteration zu beenden.</span><span class="sxs-lookup"><span data-stu-id="598c7-115">You can use a `yield break` statement to end the iteration.</span></span>  
   
- Iteratoren wurden in C# in Visual Studio 2005 eingeführt.  
+ <span data-ttu-id="598c7-116">Iteratoren wurden in C# in Visual Studio 2005 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="598c7-116">Iterators were introduced in C# in Visual Studio 2005.</span></span>  
   
- **Inhalt**  
+ <span data-ttu-id="598c7-117">**Inhalt**</span><span class="sxs-lookup"><span data-stu-id="598c7-117">**In this topic**</span></span>  
   
--   [Einfacher Iterator](#BKMK_SimpleIterator)  
+-   [<span data-ttu-id="598c7-118">Einfacher Iterator</span><span class="sxs-lookup"><span data-stu-id="598c7-118">Simple Iterator</span></span>](#BKMK_SimpleIterator)  
   
--   [Erstellen einer Auflistungsklasse](#BKMK_CollectionClass)  
+-   [<span data-ttu-id="598c7-119">Erstellen einer Auflistungsklasse</span><span class="sxs-lookup"><span data-stu-id="598c7-119">Creating a Collection Class</span></span>](#BKMK_CollectionClass)  
   
--   [Verwenden von Iteratoren mit einer generischen Liste](#BKMK_GenericList)  
+-   [<span data-ttu-id="598c7-120">Verwenden von Iteratoren mit einer generischen Liste</span><span class="sxs-lookup"><span data-stu-id="598c7-120">Using Iterators with a Generic List</span></span>](#BKMK_GenericList)  
   
--   [Syntaxinformationen](#BKMK_SyntaxInformation)  
+-   [<span data-ttu-id="598c7-121">Syntaxinformationen</span><span class="sxs-lookup"><span data-stu-id="598c7-121">Syntax Information</span></span>](#BKMK_SyntaxInformation)  
   
--   [Technische Implementierung](#BKMK_Technical)  
+-   [<span data-ttu-id="598c7-122">Technische Implementierung</span><span class="sxs-lookup"><span data-stu-id="598c7-122">Technical Implementation</span></span>](#BKMK_Technical)  
   
--   [Verwendung von Iteratoren](#BKMK_UseOfIterators)  
+-   [<span data-ttu-id="598c7-123">Verwendung von Iteratoren</span><span class="sxs-lookup"><span data-stu-id="598c7-123">Use of Iterators</span></span>](#BKMK_UseOfIterators)  
   
 > [!NOTE]
->  Verwenden Sie in allen Beispielen dieses Themas, außer Einfacher Iterator, die Direktiven [using](../../../csharp/language-reference/keywords/using-directive.md) für die Namespaces `System.Collections` und `System.Collections.Generic`.  
+>  <span data-ttu-id="598c7-124">Verwenden Sie in allen Beispielen dieses Themas, außer Einfacher Iterator, die Direktiven [using](../../../csharp/language-reference/keywords/using-directive.md) für die Namespaces `System.Collections` und `System.Collections.Generic`.</span><span class="sxs-lookup"><span data-stu-id="598c7-124">For all examples in this topic except the Simple Iterator example, include [using](../../../csharp/language-reference/keywords/using-directive.md) directives for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>  
   
-##  <a name="BKMK_SimpleIterator"></a> Einfacher Iterator  
- In folgendem Beispiel wird eine `yield return`-Anweisung verwendet, die sich innerhalb einer [for](../../../csharp/language-reference/keywords/for.md)-Schleife befindet. In der `Main`-Methode erstellt jede Iteration des `foreach`-Anweisungstexts einen Aufruf der Iteratorfunktion, die zur nächsten `yield return`-Anweisung übergeht.  
+##  <span data-ttu-id="598c7-125"><a name="BKMK_SimpleIterator"></a> Einfacher Iterator</span><span class="sxs-lookup"><span data-stu-id="598c7-125"><a name="BKMK_SimpleIterator"></a> Simple Iterator</span></span>  
+ <span data-ttu-id="598c7-126">In folgendem Beispiel wird eine `yield return`-Anweisung verwendet, die sich innerhalb einer [for](../../../csharp/language-reference/keywords/for.md)-Schleife befindet.</span><span class="sxs-lookup"><span data-stu-id="598c7-126">The following example has a single `yield return` statement that is inside a [for](../../../csharp/language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="598c7-127">In der `Main`-Methode erstellt jede Iteration des `foreach`-Anweisungstexts einen Aufruf der Iteratorfunktion, die zur nächsten `yield return`-Anweisung übergeht.</span><span class="sxs-lookup"><span data-stu-id="598c7-127">In `Main`, each iteration of the `foreach` statement body creates a call to the iterator function, which proceeds to the next `yield return` statement.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -102,10 +93,10 @@ public static System.Collections.Generic.IEnumerable<int>
 }  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a> Erstellen einer Auflistungsklasse  
- In folgendem Beispiel implementiert die `DaysOfTheWeek`-Klasse die <xref:System.Collections.IEnumerable>-Schnittstelle, die eine <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode erfordert. Der Compiler ruft die Methode `GetEnumerator` implizit auf, die <xref:System.Collections.IEnumerator> zurückgibt.  
+##  <span data-ttu-id="598c7-128"><a name="BKMK_CollectionClass"></a> Erstellen einer Auflistungsklasse</span><span class="sxs-lookup"><span data-stu-id="598c7-128"><a name="BKMK_CollectionClass"></a> Creating a Collection Class</span></span>  
+ <span data-ttu-id="598c7-129">In folgendem Beispiel implementiert die `DaysOfTheWeek`-Klasse die <xref:System.Collections.IEnumerable>-Schnittstelle, die eine <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode erfordert.</span><span class="sxs-lookup"><span data-stu-id="598c7-129">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="598c7-130">Der Compiler ruft die Methode `GetEnumerator` implizit auf, die <xref:System.Collections.IEnumerator> zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="598c7-130">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>  
   
- Die Methode `GetEnumerator` gibt jede Zeichenfolge einzeln nacheinander mithilfe der Anweisung `yield return` zurück.  
+ <span data-ttu-id="598c7-131">Die Methode `GetEnumerator` gibt jede Zeichenfolge einzeln nacheinander mithilfe der Anweisung `yield return` zurück.</span><span class="sxs-lookup"><span data-stu-id="598c7-131">The `GetEnumerator` method returns each string one at a time by using the `yield return` statement.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -135,9 +126,9 @@ public class DaysOfTheWeek : IEnumerable
 }  
 ```  
   
- Im folgenden Beispiel wird eine `Zoo`-Klasse erstellt, die eine Auflistung von Tieren enthält.  
+ <span data-ttu-id="598c7-132">Im folgenden Beispiel wird eine `Zoo`-Klasse erstellt, die eine Auflistung von Tieren enthält.</span><span class="sxs-lookup"><span data-stu-id="598c7-132">The following example creates a `Zoo` class that contains a collection of animals.</span></span>  
   
- Die Anweisung `foreach`, die auf die Instanz der Klasse verweist (`theZoo`), ruft die Methode `GetEnumerator` implizit auf. Die Anweisung `foreach`, die auf die Eigenschaften `Birds` und `Mammals` verweist, verwenden die Iteratormethode `AnimalsForType`.  
+ <span data-ttu-id="598c7-133">Die Anweisung `foreach`, die auf die Instanz der Klasse verweist (`theZoo`), ruft die Methode `GetEnumerator` implizit auf.</span><span class="sxs-lookup"><span data-stu-id="598c7-133">The `foreach` statement that refers to the class instance (`theZoo`) implicitly calls the `GetEnumerator` method.</span></span> <span data-ttu-id="598c7-134">Die Anweisung `foreach`, die auf die Eigenschaften `Birds` und `Mammals` verweist, verwenden die Iteratormethode `AnimalsForType`.</span><span class="sxs-lookup"><span data-stu-id="598c7-134">The `foreach` statements that refer to the `Birds` and `Mammals` properties use the `AnimalsForType` named iterator method.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -231,14 +222,14 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <a name="BKMK_GenericList"></a> Verwenden von Iteratoren mit einer generischen Liste  
- In folgendem Beispiel implementiert die generische Klasse `Stack(Of T)` die generische Schnittstelle <xref:System.Collections.Generic.IEnumerable%601>. Die Methode `Push` weist Werte an Arrays des Typs `T` zu. Die <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>-Methode gibt die Arraywerte mit der `yield return`-Anweisung zurück.  
+##  <span data-ttu-id="598c7-135"><a name="BKMK_GenericList"></a> Verwenden von Iteratoren mit einer generischen Liste</span><span class="sxs-lookup"><span data-stu-id="598c7-135"><a name="BKMK_GenericList"></a> Using Iterators with a Generic List</span></span>  
+ <span data-ttu-id="598c7-136">In folgendem Beispiel implementiert die generische Klasse `Stack(Of T)` die generische Schnittstelle <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="598c7-136">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="598c7-137">Die Methode `Push` weist Werte an Arrays des Typs `T` zu.</span><span class="sxs-lookup"><span data-stu-id="598c7-137">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="598c7-138">Die <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>-Methode gibt die Arraywerte mit der `yield return`-Anweisung zurück.</span><span class="sxs-lookup"><span data-stu-id="598c7-138">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `yield return` statement.</span></span>  
   
- Zusätzlich zur generischen Methode <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> muss auch die nicht generische Methode <xref:System.Collections.IEnumerable.GetEnumerator%2A> implementiert werden. Dies liegt daran, dass <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Collections.IEnumerable> erbt. Die nicht generische Implementierung verzögert die generische Implementierung.  
+ <span data-ttu-id="598c7-139">Zusätzlich zur generischen Methode <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> muss auch die nicht generische Methode <xref:System.Collections.IEnumerable.GetEnumerator%2A> implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="598c7-139">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="598c7-140">Dies liegt daran, dass <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Collections.IEnumerable> erbt.</span><span class="sxs-lookup"><span data-stu-id="598c7-140">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="598c7-141">Die nicht generische Implementierung verzögert die generische Implementierung.</span><span class="sxs-lookup"><span data-stu-id="598c7-141">The non-generic implementation defers to the generic implementation.</span></span>  
   
- In diesem Beispiel werden benannte Iteratoren verwendet, um verschiedene Arten der Iteration in der selben Datenauflistung zu unterstützen. Diese benannten Iteratoren sind die Eigenschaften `TopToBottom` und `BottomToTop` und die Methode `TopN`.  
+ <span data-ttu-id="598c7-142">In diesem Beispiel werden benannte Iteratoren verwendet, um verschiedene Arten der Iteration in der selben Datenauflistung zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="598c7-142">The example uses named iterators to support various ways of iterating through the same collection of data.</span></span> <span data-ttu-id="598c7-143">Diese benannten Iteratoren sind die Eigenschaften `TopToBottom` und `BottomToTop` und die Methode `TopN`.</span><span class="sxs-lookup"><span data-stu-id="598c7-143">These named iterators are the `TopToBottom` and `BottomToTop` properties, and the `TopN` method.</span></span>  
   
- Die Eigenschaft `BottomToTop` verwendet einen Iterator in einer `get`-Zugriffsmethode.  
+ <span data-ttu-id="598c7-144">Die Eigenschaft `BottomToTop` verwendet einen Iterator in einer `get`-Zugriffsmethode.</span><span class="sxs-lookup"><span data-stu-id="598c7-144">The `BottomToTop` property uses an iterator in a `get` accessor.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -348,42 +339,41 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> Syntaxinformationen  
- Ein Iterator kann als Methode oder als `get`-Zugriffsmethode vorkommen. Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Finalizer vorkommen.  
+##  <span data-ttu-id="598c7-145"><a name="BKMK_SyntaxInformation"></a> Syntaxinformationen</span><span class="sxs-lookup"><span data-stu-id="598c7-145"><a name="BKMK_SyntaxInformation"></a> Syntax Information</span></span>  
+ <span data-ttu-id="598c7-146">Ein Iterator kann als Methode oder als `get`-Zugriffsmethode vorkommen.</span><span class="sxs-lookup"><span data-stu-id="598c7-146">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="598c7-147">Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Finalizer vorkommen.</span><span class="sxs-lookup"><span data-stu-id="598c7-147">An iterator cannot occur in an event, instance constructor, static constructor, or static finalizer.</span></span>  
   
- Es muss eine implizite Konvertierung vom Typ des Ausdrucks in der `yield return`-Anweisung in den Rückgabetyp des Iterators vorhanden sein.  
+ <span data-ttu-id="598c7-148">Es muss eine implizite Konvertierung vom Typ des Ausdrucks in der `yield return`-Anweisung in den Rückgabetyp des Iterators vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="598c7-148">An implicit conversion must exist from the expression type in the `yield return` statement to the return type of the iterator.</span></span>  
   
- In C# kann eine Iteratormethode nicht die Parameter `ref` oder `out` aufweisen.  
+ <span data-ttu-id="598c7-149">In C# kann eine Iteratormethode nicht die Parameter `ref` oder `out` aufweisen.</span><span class="sxs-lookup"><span data-stu-id="598c7-149">In C#, an iterator method cannot have any `ref` or `out` parameters.</span></span>  
   
- In C# ist „yield“ kein reserviertes Wort, und es hat nur besondere Bedeutung, wenn es vor den Schlüsselwörtern `return` und `break` verwendet wird.  
+ <span data-ttu-id="598c7-150">In C# ist „yield“ kein reserviertes Wort, und es hat nur besondere Bedeutung, wenn es vor den Schlüsselwörtern `return` und `break` verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="598c7-150">In C#, "yield" is not a reserved word and has special meaning only when it is used before a `return` or `break` keyword.</span></span>  
   
-##  <a name="BKMK_Technical"></a> Technische Implementierung  
- Auch wenn Sie einen Iterator als Methode schreiben, führt der Compiler für diesen eine Translation in eine geschachtelte Klasse durch, die tatsächlich ein Zustandsautomat ist. Diese Klasse überwacht die Position des Iterators solange, wie die `foreach`-Schleife im Clientcode weiter ausgeführt wird.  
+##  <span data-ttu-id="598c7-151"><a name="BKMK_Technical"></a> Technische Implementierung</span><span class="sxs-lookup"><span data-stu-id="598c7-151"><a name="BKMK_Technical"></a> Technical Implementation</span></span>  
+ <span data-ttu-id="598c7-152">Auch wenn Sie einen Iterator als Methode schreiben, führt der Compiler für diesen eine Translation in eine geschachtelte Klasse durch, die tatsächlich ein Zustandsautomat ist.</span><span class="sxs-lookup"><span data-stu-id="598c7-152">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="598c7-153">Diese Klasse überwacht die Position des Iterators solange, wie die `foreach`-Schleife im Clientcode weiter ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="598c7-153">This class keeps track of the position of the iterator as long the `foreach` loop in the client code continues.</span></span>  
   
- Um zu sehen, was der Compiler macht, können Sie das Tool Ildasm.exe verwenden, um den Intermediate Language-Code von Microsoft anzuzeigen, der für eine Iteratormethode generiert wird.  
+ <span data-ttu-id="598c7-154">Um zu sehen, was der Compiler macht, können Sie das Tool Ildasm.exe verwenden, um den Intermediate Language-Code von Microsoft anzuzeigen, der für eine Iteratormethode generiert wird.</span><span class="sxs-lookup"><span data-stu-id="598c7-154">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>  
   
- Wenn Sie einen Iterator für eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) erstellen, müssen Sie die gesamte <xref:System.Collections.IEnumerator>-Schnittstelle implementieren. Wenn der Compiler einer Iterator erkennt, generiert er automatisch die Methoden `Current`, `MoveNext` und `Dispose` der <xref:System.Collections.IEnumerator>- und <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle.  
+ <span data-ttu-id="598c7-155">Wenn Sie einen Iterator für eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) erstellen, müssen Sie die gesamte <xref:System.Collections.IEnumerator>-Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="598c7-155">When you create an iterator for a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md), you don't have to implement the whole <xref:System.Collections.IEnumerator> interface.</span></span> <span data-ttu-id="598c7-156">Wenn der Compiler einer Iterator erkennt, generiert er automatisch die Methoden `Current`, `MoveNext` und `Dispose` der <xref:System.Collections.IEnumerator>- und <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="598c7-156">When the compiler detects the iterator, it automatically generates the `Current`, `MoveNext`, and `Dispose` methods of the <xref:System.Collections.IEnumerator> or <xref:System.Collections.Generic.IEnumerator%601> interface.</span></span>  
   
- In jeder aufeinanderfolgenden Iteration der `foreach`-Schleife (oder im direkten Aufruf von `IEnumerator.MoveNext`) setzt der nächste Iteratorcodetext den Prozess nach der letzten `yield return`-Anweisung fort. Er springt dann zur nächsten `yield return`-Anweisung weiter, bis das Ende des Iteratortexts erreicht ist, oder bis er auf eine `yield break`-Anweisung trifft.  
+ <span data-ttu-id="598c7-157">In jeder aufeinanderfolgenden Iteration der `foreach`-Schleife (oder im direkten Aufruf von `IEnumerator.MoveNext`) setzt der nächste Iteratorcodetext den Prozess nach der letzten `yield return`-Anweisung fort.</span><span class="sxs-lookup"><span data-stu-id="598c7-157">On each successive iteration of the `foreach` loop (or the direct call to `IEnumerator.MoveNext`), the next iterator code body resumes after the previous `yield return` statement.</span></span> <span data-ttu-id="598c7-158">Er springt dann zur nächsten `yield return`-Anweisung weiter, bis das Ende des Iteratortexts erreicht ist, oder bis er auf eine `yield break`-Anweisung trifft.</span><span class="sxs-lookup"><span data-stu-id="598c7-158">It then continues to the next `yield return` statement until the end of the iterator body is reached, or until a `yield break` statement is encountered.</span></span>  
   
- Iteratoren unterstützen die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>-Methode nicht. Um den Prozess erneut von Anfang an zu durchlaufen, müssen Sie einen neuen Iterator erstellen.  
+ <span data-ttu-id="598c7-159">Iteratoren unterstützen die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>-Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="598c7-159">Iterators don't support the <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="598c7-160">Um den Prozess erneut von Anfang an zu durchlaufen, müssen Sie einen neuen Iterator erstellen.</span><span class="sxs-lookup"><span data-stu-id="598c7-160">To re-iterate from the start, you must obtain a new iterator.</span></span>  
   
- Weitere Informationen finden Sie unter [C#-Programmiersprachenspezifikation](../../../csharp/language-reference/language-specification/index.md).  
+ <span data-ttu-id="598c7-161">Weitere Informationen finden Sie unter [C#-Programmiersprachenspezifikation](../../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="598c7-161">For additional information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-##  <a name="BKMK_UseOfIterators"></a> Verwendung von Iteratoren  
- Mit Iteratoren können Sie die Einfachheit einer `foreach`-Schleife beibehalten, wenn Sie komplexen Code verwenden müssen, um eine Listensequenz aufzufüllen. Das kann für Folgende Aktionen nützlich sein:  
+##  <span data-ttu-id="598c7-162"><a name="BKMK_UseOfIterators"></a> Verwendung von Iteratoren</span><span class="sxs-lookup"><span data-stu-id="598c7-162"><a name="BKMK_UseOfIterators"></a> Use of Iterators</span></span>  
+ <span data-ttu-id="598c7-163">Mit Iteratoren können Sie die Einfachheit einer `foreach`-Schleife beibehalten, wenn Sie komplexen Code verwenden müssen, um eine Listensequenz aufzufüllen.</span><span class="sxs-lookup"><span data-stu-id="598c7-163">Iterators enable you to maintain the simplicity of a `foreach` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="598c7-164">Das kann für Folgende Aktionen nützlich sein:</span><span class="sxs-lookup"><span data-stu-id="598c7-164">This can be useful when you want to do the following:</span></span>  
   
--   Das Modifizieren der Listensequenz nach der ersten Iteration einer `foreach`-Schleife.  
+-   <span data-ttu-id="598c7-165">Das Modifizieren der Listensequenz nach der ersten Iteration einer `foreach`-Schleife.</span><span class="sxs-lookup"><span data-stu-id="598c7-165">Modify the list sequence after the first `foreach` loop iteration.</span></span>  
   
--   Das Vermeiden des kompletten Ladens einer großen Liste vor der ersten Iteration einer `foreach`-Schleife. Ein Beispiel dafür ist das ausgelagerte Abrufen, um einen Batch von Tabellenzeilen zu laden. Ein anderes Beispiel ist die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>-Methode, die Iteratoren im .NET Framework implementiert.  
+-   <span data-ttu-id="598c7-166">Das Vermeiden des kompletten Ladens einer großen Liste vor der ersten Iteration einer `foreach`-Schleife.</span><span class="sxs-lookup"><span data-stu-id="598c7-166">Avoid fully loading a large list before the first iteration of a `foreach` loop.</span></span> <span data-ttu-id="598c7-167">Ein Beispiel dafür ist das ausgelagerte Abrufen, um einen Batch von Tabellenzeilen zu laden.</span><span class="sxs-lookup"><span data-stu-id="598c7-167">An example is a paged fetch to load a batch of table rows.</span></span> <span data-ttu-id="598c7-168">Ein anderes Beispiel ist die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>-Methode, die Iteratoren im .NET Framework implementiert.</span><span class="sxs-lookup"><span data-stu-id="598c7-168">Another example is the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> method, which implements iterators within the .NET Framework.</span></span>  
   
--   Das Einschließen des Erstellens der Liste im Iterator. In der Iteratormethode können Sie die Liste erstellen und anschließend jedes Ergebnis in eine Schleife liefern.  
+-   <span data-ttu-id="598c7-169">Das Einschließen des Erstellens der Liste im Iterator.</span><span class="sxs-lookup"><span data-stu-id="598c7-169">Encapsulate building the list in the iterator.</span></span> <span data-ttu-id="598c7-170">In der Iteratormethode können Sie die Liste erstellen und anschließend jedes Ergebnis in eine Schleife liefern.</span><span class="sxs-lookup"><span data-stu-id="598c7-170">In the iterator method, you can build the list and then yield each result in a loop.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [Verwenden von foreach mit Arrays](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
- [Generika](../../../csharp/programming-guide/generics/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="598c7-171">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="598c7-171">See Also</span></span>  
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [<span data-ttu-id="598c7-172">foreach, in</span><span class="sxs-lookup"><span data-stu-id="598c7-172">foreach, in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [<span data-ttu-id="598c7-173">yield</span><span class="sxs-lookup"><span data-stu-id="598c7-173">yield</span></span>](../../../csharp/language-reference/keywords/yield.md)  
+ [<span data-ttu-id="598c7-174">Verwenden von foreach mit Arrays</span><span class="sxs-lookup"><span data-stu-id="598c7-174">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+ [<span data-ttu-id="598c7-175">Generika</span><span class="sxs-lookup"><span data-stu-id="598c7-175">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)

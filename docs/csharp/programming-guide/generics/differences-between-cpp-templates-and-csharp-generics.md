@@ -1,62 +1,42 @@
 ---
 title: Unterschiede zwischen C++-Vorlagen und C#-Generika (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], vs. C++ templates
+helpviewer_keywords: generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: aea1b51c26a8f3de56ea66b9cf89e75bfeb59d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 483d33531141127e083c5b75789f405427e46890
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Unterschiede zwischen C++-Vorlagen und C#-Generika (C#-Programmierhandbuch)
-C#-Generika und C++-Vorlagen sind Sprachfunktionen, die Unterstützung für parametrisierte Typen ermöglichen. Es gibt jedoch viele Unterschiede zwischen den beiden. Auf der Syntaxebene sind C#-Generika ein einfacherer Ansatz für parametrisierte Typen ohne die Komplexität von C++-Vorlagen. Darüber hinaus versucht C# nicht alle Funktionen bereitzustellen, die C++-Vorlagen bereitstellen. Auf der Ebene der Implementierung ist der wichtigste Unterschied, dass C#-Ersetzungen des generischen Typs zur Laufzeit durchgeführt werden und allgemeine Informationen für die instanziierten Objekte beibehalten werden. Weitere Informationen finden Sie unter [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+# <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a><span data-ttu-id="5263f-102">Unterschiede zwischen C++-Vorlagen und C#-Generika (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="5263f-102">Differences Between C++ Templates and C# Generics (C# Programming Guide)</span></span>
+<span data-ttu-id="5263f-103">C#-Generika und C++-Vorlagen sind Sprachfunktionen, die Unterstützung für parametrisierte Typen ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="5263f-103">C# Generics and C++ templates are both language features that provide support for parameterized types.</span></span> <span data-ttu-id="5263f-104">Es gibt jedoch viele Unterschiede zwischen den beiden.</span><span class="sxs-lookup"><span data-stu-id="5263f-104">However, there are many differences between the two.</span></span> <span data-ttu-id="5263f-105">Auf der Syntaxebene sind C#-Generika ein einfacherer Ansatz für parametrisierte Typen ohne die Komplexität von C++-Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="5263f-105">At the syntax level, C# generics are a simpler approach to parameterized types without the complexity of C++ templates.</span></span> <span data-ttu-id="5263f-106">Darüber hinaus versucht C# nicht alle Funktionen bereitzustellen, die C++-Vorlagen bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="5263f-106">In addition, C# does not attempt to provide all of the functionality that C++ templates provide.</span></span> <span data-ttu-id="5263f-107">Auf der Ebene der Implementierung ist der wichtigste Unterschied, dass C#-Ersetzungen des generischen Typs zur Laufzeit durchgeführt werden und allgemeine Informationen für die instanziierten Objekte beibehalten werden.</span><span class="sxs-lookup"><span data-stu-id="5263f-107">At the implementation level, the primary difference is that C# generic type substitutions are performed at runtime and generic type information is thereby preserved for instantiated objects.</span></span> <span data-ttu-id="5263f-108">Weitere Informationen finden Sie unter [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span><span class="sxs-lookup"><span data-stu-id="5263f-108">For more information, see [Generics in the Run Time](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span></span>  
   
- Die folgenden sind die Hauptunterschiede zwischen C#-Generika und C++-Vorlagen:  
+ <span data-ttu-id="5263f-109">Die folgenden sind die Hauptunterschiede zwischen C#-Generika und C++-Vorlagen:</span><span class="sxs-lookup"><span data-stu-id="5263f-109">The following are the key differences between C# Generics and C++ templates:</span></span>  
   
--   C#-Generika bieten nicht die gleiche Menge an Flexibilität wie C++-Vorlagen. Es ist z.B. nicht möglich, arithmetische Operatoren in einer generischen Klasse von C# aufzurufen, obwohl es möglich ist, benutzerdefinierte Operatoren aufzurufen.  
+-   <span data-ttu-id="5263f-110">C#-Generika bieten nicht die gleiche Menge an Flexibilität wie C++-Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="5263f-110">C# generics do not provide the same amount of flexibility as C++ templates.</span></span> <span data-ttu-id="5263f-111">Es ist z.B. nicht möglich, arithmetische Operatoren in einer generischen Klasse von C# aufzurufen, obwohl es möglich ist, benutzerdefinierte Operatoren aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="5263f-111">For example, it is not possible to call arithmetic operators in a C# generic class, although it is possible to call user defined operators.</span></span>  
   
--   C# lässt keine Nichttyp-Vorlagenparameter zu, wie z.B. `template C<int i> {}`.  
+-   <span data-ttu-id="5263f-112">C# lässt keine Nichttyp-Vorlagenparameter zu, wie z.B. `template C<int i> {}`.</span><span class="sxs-lookup"><span data-stu-id="5263f-112">C# does not allow non-type template parameters, such as `template C<int i> {}`.</span></span>  
   
--   C# unterstützt keine explizite Spezialisierung; d.h. eine benutzerdefinierte Implementierung einer Vorlage für einen bestimmten Typ.  
+-   <span data-ttu-id="5263f-113">C# unterstützt keine explizite Spezialisierung; d.h. eine benutzerdefinierte Implementierung einer Vorlage für einen bestimmten Typ.</span><span class="sxs-lookup"><span data-stu-id="5263f-113">C# does not support explicit specialization; that is, a custom implementation of a template for a specific type.</span></span>  
   
--   C# unterstützt keine partielle Spezialisierung: Eine benutzerdefinierte Implementierung für eine Teilmenge der Typargumente.  
+-   <span data-ttu-id="5263f-114">C# unterstützt keine partielle Spezialisierung: Eine benutzerdefinierte Implementierung für eine Teilmenge der Typargumente.</span><span class="sxs-lookup"><span data-stu-id="5263f-114">C# does not support partial specialization: a custom implementation for a subset of the type arguments.</span></span>  
   
--   C# lässt nicht zu, dass der Typparameter als Basisklasse für den generischen Typ verwendet wird.  
+-   <span data-ttu-id="5263f-115">C# lässt nicht zu, dass der Typparameter als Basisklasse für den generischen Typ verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5263f-115">C# does not allow the type parameter to be used as the base class for the generic type.</span></span>  
   
--   C# lässt nicht zu, dass Typparameter über Standardtypen verfügen.  
+-   <span data-ttu-id="5263f-116">C# lässt nicht zu, dass Typparameter über Standardtypen verfügen.</span><span class="sxs-lookup"><span data-stu-id="5263f-116">C# does not allow type parameters to have default types.</span></span>  
   
--   In C# kann kein generischer Typparameter selbst generisch sein, obwohl konstruierte Typen als Generika verwendet werden können. C++ lässt Vorlagenparameter zu.  
+-   <span data-ttu-id="5263f-117">In C# kann kein generischer Typparameter selbst generisch sein, obwohl konstruierte Typen als Generika verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="5263f-117">In C#, a generic type parameter cannot itself be a generic, although constructed types can be used as generics.</span></span> <span data-ttu-id="5263f-118">C++ lässt Vorlagenparameter zu.</span><span class="sxs-lookup"><span data-stu-id="5263f-118">C++ does allow template parameters.</span></span>  
   
--   C++ lässt Code zu, der möglicherweise nicht für alle Typparameter in der Vorlage gültig ist, die anschließend auf den spezifischen Typ, der als Typparameter verwendet wird, geprüft wird. In C# muss Code in einer Klasse in einer Weise geschrieben werden, dass er mit einem beliebigen Typ arbeiten kann, der die Einschränkungen erfüllt. Zum Beispiel kann in C++ eine Funktion geschrieben werden, die die arithmetischen Operatoren `+` und `-` für Objekte des Typparameters verwendet, was einen Fehler bei der Instanziierung der Vorlage mit einem Typ, der diese Operatoren nicht unterstützt, erzeugt. C# lässt dies zu; die einzigen zulässigen Sprachkonstrukte sind die, die von den Einschränkungen abgeleitet werden können.  
+-   <span data-ttu-id="5263f-119">C++ lässt Code zu, der möglicherweise nicht für alle Typparameter in der Vorlage gültig ist, die anschließend auf den spezifischen Typ, der als Typparameter verwendet wird, geprüft wird.</span><span class="sxs-lookup"><span data-stu-id="5263f-119">C++ allows code that might not be valid for all type parameters in the template, which is then checked for the specific type used as the type parameter.</span></span> <span data-ttu-id="5263f-120">In C# muss Code in einer Klasse in einer Weise geschrieben werden, dass er mit einem beliebigen Typ arbeiten kann, der die Einschränkungen erfüllt.</span><span class="sxs-lookup"><span data-stu-id="5263f-120">C# requires code in a class to be written in such a way that it will work with any type that satisfies the constraints.</span></span> <span data-ttu-id="5263f-121">Zum Beispiel kann in C++ eine Funktion geschrieben werden, die die arithmetischen Operatoren `+` und `-` für Objekte des Typparameters verwendet, was einen Fehler bei der Instanziierung der Vorlage mit einem Typ, der diese Operatoren nicht unterstützt, erzeugt.</span><span class="sxs-lookup"><span data-stu-id="5263f-121">For example, in C++ it is possible to write a function that uses the arithmetic operators `+` and `-` on objects of the type parameter, which will produce an error at the time of instantiation of the template with a type that does not support these operators.</span></span> <span data-ttu-id="5263f-122">C# lässt dies zu; die einzigen zulässigen Sprachkonstrukte sind die, die von den Einschränkungen abgeleitet werden können.</span><span class="sxs-lookup"><span data-stu-id="5263f-122">C# disallows this; the only language constructs allowed are those that can be deduced from the constraints.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Vorlagen](/cpp/cpp/templates-cpp)
-
+## <a name="see-also"></a><span data-ttu-id="5263f-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5263f-123">See Also</span></span>  
+ [<span data-ttu-id="5263f-124">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="5263f-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="5263f-125">Einführung in Generika</span><span class="sxs-lookup"><span data-stu-id="5263f-125">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [<span data-ttu-id="5263f-126">Vorlagen</span><span class="sxs-lookup"><span data-stu-id="5263f-126">Templates</span></span>](/cpp/cpp/templates-cpp)

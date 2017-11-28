@@ -1,62 +1,42 @@
 ---
 title: "Zugriffsdomäne (C#-Referenz)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- accessibility domain [C#]
+helpviewer_keywords: accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 127bacda4bf8363fccff3dd3ef6770ad50984cfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 90faf22d8a7d515ae8bd062f0b95f4be5e051f79
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="accessibility-domain-c-reference"></a>Zugriffsdomäne (C#-Referenz)
-Die Zugriffsdomäne eines Members gibt an, in welche Teile des Programms ein Member verwiesen werden kann. Wenn der Member in einem anderen Typ geschachtelt ist, wird seine Zugriffsdomäne sowohl durch das [Zugriffslevel](../../../csharp/language-reference/keywords/accessibility-levels.md) des Members als auch durch die Zugriffsdomäne des direkt enthaltenden Typs bestimmt.  
+# <a name="accessibility-domain-c-reference"></a><span data-ttu-id="b99e5-102">Zugriffsdomäne (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="b99e5-102">Accessibility Domain (C# Reference)</span></span>
+<span data-ttu-id="b99e5-103">Die Zugriffsdomäne eines Members gibt an, in welche Teile des Programms ein Member verwiesen werden kann.</span><span class="sxs-lookup"><span data-stu-id="b99e5-103">The accessibility domain of a member specifies in which program sections a member can be referenced.</span></span> <span data-ttu-id="b99e5-104">Wenn der Member in einem anderen Typ geschachtelt ist, wird seine Zugriffsdomäne sowohl durch das [Zugriffslevel](../../../csharp/language-reference/keywords/accessibility-levels.md) des Members als auch durch die Zugriffsdomäne des direkt enthaltenden Typs bestimmt.</span><span class="sxs-lookup"><span data-stu-id="b99e5-104">If the member is nested within another type, its accessibility domain is determined by both the [accessibility level](../../../csharp/language-reference/keywords/accessibility-levels.md) of the member and the accessibility domain of the immediately containing type.</span></span>  
   
- Die Zugriffsdomäne eines Typs der obersten Ebene ist mindestens der Programmtext des Projekts, in dem er deklariert ist. Das bedeutet, dass die Domäne alle Quelldateien des Projekts enthält. Die Zugriffsdomäne eines geschachtelten Typs ist mindestens der Programmtext des Typs, in dem er deklariert ist. Das bedeutet, dass die Domäne der Typkörper ist, der alle geschachtelten Typen enthält. Die Zugriffsdomäne eines geschachtelten Typs geht nie über die des enthaltenden Typs hinaus. Diese Konzepte werden im folgenden Beispiel dargestellt.  
+ <span data-ttu-id="b99e5-105">Die Zugriffsdomäne eines Typs der obersten Ebene ist mindestens der Programmtext des Projekts, in dem er deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="b99e5-105">The accessibility domain of a top-level type is at least the program text of the project that it is declared in.</span></span> <span data-ttu-id="b99e5-106">Das bedeutet, dass die Domäne alle Quelldateien des Projekts enthält.</span><span class="sxs-lookup"><span data-stu-id="b99e5-106">That is, the domain includes all of the source files of this project.</span></span> <span data-ttu-id="b99e5-107">Die Zugriffsdomäne eines geschachtelten Typs ist mindestens der Programmtext des Typs, in dem er deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="b99e5-107">The accessibility domain of a nested type is at least the program text of the type in which it is declared.</span></span> <span data-ttu-id="b99e5-108">Das bedeutet, dass die Domäne der Typkörper ist, der alle geschachtelten Typen enthält.</span><span class="sxs-lookup"><span data-stu-id="b99e5-108">That is, the domain is the type body, which includes all nested types.</span></span> <span data-ttu-id="b99e5-109">Die Zugriffsdomäne eines geschachtelten Typs geht nie über die des enthaltenden Typs hinaus.</span><span class="sxs-lookup"><span data-stu-id="b99e5-109">The accessibility domain of a nested type never exceeds that of the containing type.</span></span> <span data-ttu-id="b99e5-110">Diese Konzepte werden im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="b99e5-110">These concepts are demonstrated in the following example.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Dieses Beispiel enthält einen Typ der obersten Ebene `T1`, und zwei geschachtelte Klassen `M1` und `M2`. Die Klassen enthalten Felder mit unterschiedlichen deklarierten Zugriffen. In der `Main`-Methode folgt jeder Anweisung ein Kommentar, der die Zugriffsdomäne jedes Members angibt. Beachten Sie, dass die Anweisungen, die versuchen, auf die Member zu verweisen, auf die nicht zugegriffen werden kann, auskommentiert werden. Wenn Sie die Compilerfehler anzeigen möchten, die durch Verweisen auf einen Member verursacht werden, auf den nicht zugegriffen werden kann, entfernen Sie die Kommentare nacheinander.  
+## <a name="example"></a><span data-ttu-id="b99e5-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b99e5-111">Example</span></span>  
+ <span data-ttu-id="b99e5-112">Dieses Beispiel enthält einen Typ der obersten Ebene `T1`, und zwei geschachtelte Klassen `M1` und `M2`.</span><span class="sxs-lookup"><span data-stu-id="b99e5-112">This example contains a top-level type, `T1`, and two nested classes, `M1` and `M2`.</span></span> <span data-ttu-id="b99e5-113">Die Klassen enthalten Felder mit unterschiedlichen deklarierten Zugriffen.</span><span class="sxs-lookup"><span data-stu-id="b99e5-113">The classes contain fields that have different declared accessibilities.</span></span> <span data-ttu-id="b99e5-114">In der `Main`-Methode folgt jeder Anweisung ein Kommentar, der die Zugriffsdomäne jedes Members angibt.</span><span class="sxs-lookup"><span data-stu-id="b99e5-114">In the `Main` method, a comment follows each statement to indicate the accessibility domain of each member.</span></span> <span data-ttu-id="b99e5-115">Beachten Sie, dass die Anweisungen, die versuchen, auf die Member zu verweisen, auf die nicht zugegriffen werden kann, auskommentiert werden. Wenn Sie die Compilerfehler anzeigen möchten, die durch Verweisen auf einen Member verursacht werden, auf den nicht zugegriffen werden kann, entfernen Sie die Kommentare nacheinander.</span><span class="sxs-lookup"><span data-stu-id="b99e5-115">Notice that the statements that try to reference the inaccessible members are commented out. If you want to see the compiler errors caused by referencing an inaccessible member, remove the comments one at a time.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="b99e5-116">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="b99e5-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Zugriffsmodifizierer](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Einschränkungen bei der Verwendung von Zugriffsebenen](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)   
- [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)
-
+## <a name="see-also"></a><span data-ttu-id="b99e5-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b99e5-117">See Also</span></span>  
+ [<span data-ttu-id="b99e5-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="b99e5-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="b99e5-119">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="b99e5-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b99e5-120">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="b99e5-120">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="b99e5-121">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="b99e5-121">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [<span data-ttu-id="b99e5-122">Zugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="b99e5-122">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [<span data-ttu-id="b99e5-123">Einschränkungen bei der Verwendung von Zugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="b99e5-123">Restrictions on Using Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
+ [<span data-ttu-id="b99e5-124">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="b99e5-124">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [<span data-ttu-id="b99e5-125">public</span><span class="sxs-lookup"><span data-stu-id="b99e5-125">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
+ [<span data-ttu-id="b99e5-126">private</span><span class="sxs-lookup"><span data-stu-id="b99e5-126">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
+ [<span data-ttu-id="b99e5-127">protected</span><span class="sxs-lookup"><span data-stu-id="b99e5-127">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
+ [<span data-ttu-id="b99e5-128">internal</span><span class="sxs-lookup"><span data-stu-id="b99e5-128">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)

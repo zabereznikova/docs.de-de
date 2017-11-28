@@ -1,70 +1,71 @@
 ---
-title: "Sicherheit in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zugriffssteuerung, Windows Forms"
-  - "Zugriffssicherheit für Designer"
-  - "Berechtigungen, Windows Forms"
-  - "Sicherheit [Windows Forms]"
-  - "Sicherheitsrichtlinie, Windows Forms"
-  - "Windows Forms, Sicherheit"
+title: "Sicherheit in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designer access security [Windows Forms]
+- permissions [Windows Forms], Windows Forms
+- Windows Forms, security
+- security [Windows Forms]
+- access control [Windows Forms], Windows Forms
+- security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Sicherheit in Windows&#160;Forms
-Windows Forms bieten ein codebasiertes Sicherheitsmodell \(es werden Sicherheitsebenen für den Code festgelegt, unabhängig vom Benutzer, der den Code ausführt\).  Dies ergänzt die Sicherheitsschemas, die bereits im Computersystem wirksam sind.  Dazu können die Sicherheitsschemas des Browsers \(z. B. die auf Zonen beruhende Sicherheit in Internet Explorer\) oder diejenigen des Betriebssystems \(z. B. die auf Anmeldeinformationen beruhende Sicherheit unter Windows NT\) gehören.  
+# <a name="windows-forms-security"></a><span data-ttu-id="73c22-102">Sicherheit in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="73c22-102">Windows Forms Security</span></span>
+<span data-ttu-id="73c22-103">Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festgelegte Ebenen für Code kann unabhängig von der Benutzer, den Code ausführt, ist.</span><span class="sxs-lookup"><span data-stu-id="73c22-103">Windows Forms features a security model that is code-based (security levels are set for code, regardless of the user running the code).</span></span> <span data-ttu-id="73c22-104">Dies erfolgt zusätzlich zu Sicherheit Schemas, die bereits auf Ihrem Computer vorhanden sein können.</span><span class="sxs-lookup"><span data-stu-id="73c22-104">This is in addition to any security schemas that may be in place already on your computer system.</span></span> <span data-ttu-id="73c22-105">Diese können in den Browser (z. B. die Zone-basierte Sicherheit in Internet Explorer verfügbar) oder des Betriebssystems (z. B. die Anmeldeinformationen-basierte Sicherheit von Windows NT) umfassen.</span><span class="sxs-lookup"><span data-stu-id="73c22-105">These can include those in the browser (such as the zone-based security available in Internet Explorer) or the operating system (such as the credential-based security of Windows NT).</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- Erläutert kurz das .NET Framework\-Sicherheitsmodell sowie die grundlegenden Schritte, die für die Sicherheit der Windows Forms in der Anwendung erforderlich sind.  
+## <a name="in-this-section"></a><span data-ttu-id="73c22-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="73c22-106">In This Section</span></span>  
+ [<span data-ttu-id="73c22-107">Übersicht über die Sicherheit in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="73c22-107">Security in Windows Forms Overview</span></span>](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ <span data-ttu-id="73c22-108">Eine kurze Erläuterung, dass das .NET Framework-Sicherheitsmodell und die grundlegenden Schritte erforderlich, um sicherzustellen, dass die Windows Forms in Ihrer Anwendung gesichert werden.</span><span class="sxs-lookup"><span data-stu-id="73c22-108">Briefly explains the .NET Framework security model and the basic steps necessary to ensure the Windows Forms in your application are secure.</span></span>  
   
- [Mehr Sicherheit beim Datei\- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- Beschreibt, wie in einer halb vertrauenswürdigen Umgebung auf Dateien und Daten zugegriffen wird.  
+ [<span data-ttu-id="73c22-109">Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="73c22-109">More Secure File and Data Access in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ <span data-ttu-id="73c22-110">Beschreibt, wie Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung zugreifen.</span><span class="sxs-lookup"><span data-stu-id="73c22-110">Describes how to access files and data in a semi-trusted environment.</span></span>  
   
- [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- Beschreibt, wie in einer halb vertrauenswürdigen Umgebung auf Druckfunktionen zugegriffen wird.  
+ [<span data-ttu-id="73c22-111">Mehr Sicherheit beim Drucken in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="73c22-111">More Secure Printing in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ <span data-ttu-id="73c22-112">Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung Druckfeatures zugegriffen.</span><span class="sxs-lookup"><span data-stu-id="73c22-112">Describes how to access printing features in a semi-trusted environment.</span></span>  
   
- [Weitere Überlegungen zur Sicherheit in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- Beschreibt das Bearbeiten von Fenstern mit der Zwischenablage und das Aufrufen von nicht verwaltetem Code in einer halb vertrauenswürdigen Umgebung.  
+ [<span data-ttu-id="73c22-113">Weitere Überlegungen zur Sicherheit in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="73c22-113">Additional Security Considerations in Windows Forms</span></span>](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ <span data-ttu-id="73c22-114">Beschreibt Fenstern, verwenden der Zwischenablage und das Aufrufen von nicht verwaltetem Code in einer teilweise vertrauenswürdigen Umgebung.</span><span class="sxs-lookup"><span data-stu-id="73c22-114">Describes performing window manipulation, using the Clipboard, and making calls to unmanaged code in a semi-trusted environment.</span></span>  
   
-## Verwandte Abschnitte  
- [NIB: Default Security Policy](http://msdn.microsoft.com/de-de/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
- Listet die Standardberechtigungen auf, die in den Berechtigungssätzen Voll vertrauenswürdig, Lokales Intranet und Internet gewährt werden.  
+## <a name="related-sections"></a><span data-ttu-id="73c22-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="73c22-115">Related Sections</span></span>  
+ [<span data-ttu-id="73c22-116">NIB: Standardsicherheitsrichtlinie</span><span class="sxs-lookup"><span data-stu-id="73c22-116">NIB: Default Security Policy</span></span>](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ <span data-ttu-id="73c22-117">Listet die Standardberechtigungen, die in die volle Vertrauenswürdigkeit, Lokales Intranet und Internet Berechtigungssätze gewährt.</span><span class="sxs-lookup"><span data-stu-id="73c22-117">Lists the default permissions granted in the Full Trust, Local Intranet, and Internet permission sets.</span></span>  
   
- [NIB: General Security Policy Administration](http://msdn.microsoft.com/de-de/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
- Enthält Informationen über die Verwaltung der .NET Framework\-Sicherheitsrichtlinie und das Erhöhen von Berechtigungen.  
+ [<span data-ttu-id="73c22-118">NIB: Allgemein Security Policy-Verwaltung</span><span class="sxs-lookup"><span data-stu-id="73c22-118">NIB: General Security Policy Administration</span></span>](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ <span data-ttu-id="73c22-119">Bietet Informationen zum Verwalten von der .NET Framework-Sicherheitsrichtlinie und erhöhen von Berechtigungen.</span><span class="sxs-lookup"><span data-stu-id="73c22-119">Gives information about the administering the .NET Framework security policy and elevating permissions.</span></span>  
   
- [Dangerous Permissions and Policy Administration](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
- Erläutert einige .NET Framework\-Berechtigungen, die eine Umgehung des Sicherheitssystems zulassen.  
+ [<span data-ttu-id="73c22-120">Problematische Berechtigungen und richtlinienverwaltung</span><span class="sxs-lookup"><span data-stu-id="73c22-120">Dangerous Permissions and Policy Administration</span></span>](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
+ <span data-ttu-id="73c22-121">Erläutert einige der.NET Framework-Berechtigungen, die potenziell das Sicherheitssystem umgangen werden, ermöglichen können.</span><span class="sxs-lookup"><span data-stu-id="73c22-121">Discusses some of the.NET Framework permissions that can potentially allow the security system to be circumvented.</span></span>  
   
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)  
- Stellt Links zu Themen bereit, die optimale Vorgehensweisen zum sicheren Schreiben von Code für NET. Framework erläutern.  
+ [<span data-ttu-id="73c22-122">Richtlinien für das Schreiben von sicherem Code</span><span class="sxs-lookup"><span data-stu-id="73c22-122">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="73c22-123">Enthält Links zu Themen, in denen die bewährten Methoden zum Schreiben von sicheren Code für .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="73c22-123">Links to topics that explain the best practices for securely writing code against the .NET Framework.</span></span>  
   
- [NIB: Requesting Permissions](http://msdn.microsoft.com/de-de/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
- Erläutert die Verwendung von Attributen, um der Laufzeit zu übermitteln, welche Berechtigungen für das Ausführen des Codes erforderlich sind.  
+ [<span data-ttu-id="73c22-124">NIB: Anfordern von Berechtigungen</span><span class="sxs-lookup"><span data-stu-id="73c22-124">NIB: Requesting Permissions</span></span>](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ <span data-ttu-id="73c22-125">Erläutert die Verwendung von Attributen, die der Laufzeit wissen, welche Berechtigungen Code ausgeführt werden muss.</span><span class="sxs-lookup"><span data-stu-id="73c22-125">Discusses the use of attributes to let the runtime know what permissions your code needs to run.</span></span>  
   
- [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)  
- Stellt Links zu Themen bereit, die grundlegende Aspekte der Codesicherheit behandeln.  
+ [<span data-ttu-id="73c22-126">Schlüsselbegriffe der Sicherheit</span><span class="sxs-lookup"><span data-stu-id="73c22-126">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="73c22-127">Links zu Themen, die die grundlegenden Aspekte der codesicherheit abdecken.</span><span class="sxs-lookup"><span data-stu-id="73c22-127">Links to topics that cover the basic aspects of code security.</span></span>  
   
- [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md)  
- Erläutert die Grundlagen für das Arbeiten mit der .NET Framework\-Laufzeitsicherheitsrichtlinie.  
+ [<span data-ttu-id="73c22-128">Grundlagen der Codezugriffssicherheit</span><span class="sxs-lookup"><span data-stu-id="73c22-128">Code Access Security Basics</span></span>](../../../docs/framework/misc/code-access-security-basics.md)  
+ <span data-ttu-id="73c22-129">Erläutert die Grundlagen der Arbeit mit .NET Framework Sicherheitsrichtlinie von Zeit ausführen.</span><span class="sxs-lookup"><span data-stu-id="73c22-129">Discusses the basics of working with the .NET Framework run time security policy.</span></span>  
   
- [NIB: Determining When to Modify Security Policy](http://msdn.microsoft.com/de-de/af749b17-e461-409d-84b9-a3d44789db16)  
- Beschreibt die Vorgehensweise, um zu bestimmen, wann die Anwendungen von den standardmäßig vorgegebenen Sicherheitsrichtlinien abweichen müssen.  
+ [<span data-ttu-id="73c22-130">NIB: Bestimmen des Zeitpunkts für die Sicherheitsrichtlinien ändern</span><span class="sxs-lookup"><span data-stu-id="73c22-130">NIB: Determining When to Modify Security Policy</span></span>](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ <span data-ttu-id="73c22-131">Erläutert, wie Sie feststellen, wann Ihre Anwendungen von der Standardsicherheitsrichtlinie voneinander abweichen müssen.</span><span class="sxs-lookup"><span data-stu-id="73c22-131">Explains how to determine when your applications need to diverge from the default security policy.</span></span>  
   
- [NIB: Deploying Security Policy](http://msdn.microsoft.com/de-de/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
- Erläutert die beste Methode für die Bereitstellung von Änderungen in den Sicherheitsrichtlinien.
+ [<span data-ttu-id="73c22-132">NIB: Bereitstellen von Sicherheitsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="73c22-132">NIB: Deploying Security Policy</span></span>](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ <span data-ttu-id="73c22-133">Erläutert die beste Art und Weise zum Bereitstellen von Änderungen von Sicherheitsrichtlinien an.</span><span class="sxs-lookup"><span data-stu-id="73c22-133">Discusses the best manner for deploying security policy changes.</span></span>

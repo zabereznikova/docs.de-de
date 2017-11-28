@@ -1,53 +1,52 @@
 ---
-title: "How to: Convert an Array of Bytes into a String in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "string conversion, arrays"
-  - "byte arrays, converting to strings"
-  - "examples [Visual Basic], strings"
-  - "arrays [Visual Basic], converting to strings"
+title: 'Gewusst wie: Konvertieren eines Bytearrays in eine Zeichenfolge in Visual Basic'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- string conversion [Visual Basic], arrays
+- byte arrays [Visual Basic], converting to strings
+- examples [Visual Basic], strings
+- arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4133109ef334c7e87884deb7db963db3291da1d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Convert an Array of Bytes into a String in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Dieses Thema zeigt, wie die Bytes eines Bytearrays in eine Zeichenfolge konvertiert werden.  
+# <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a><span data-ttu-id="d2910-102">Gewusst wie: Konvertieren eines Bytearrays in eine Zeichenfolge in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d2910-102">How to: Convert an Array of Bytes into a String in Visual Basic</span></span>
+<span data-ttu-id="d2910-103">In diesem Thema wird gezeigt, wie die Bytes aus einem Bytearray in eine Zeichenfolge zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="d2910-103">This topic shows how to convert the bytes from a byte array into a string.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel werden mit der <xref:System.Text.Encoding.GetString%2A>\-Methode der <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName>\-Codierungsklasse alle Bytes eines Bytearrays in eine Zeichenfolge konvertiert.  
+## <a name="example"></a><span data-ttu-id="d2910-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d2910-104">Example</span></span>  
+ <span data-ttu-id="d2910-105">Dieses Beispiel verwendet die <xref:System.Text.Encoding.GetString%2A> Methode der <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding-Klasse, um alle Bytes aus einem Bytearray in eine Zeichenfolge zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="d2910-105">This example uses the <xref:System.Text.Encoding.GetString%2A> method of the <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding class to convert all the bytes from a byte array into a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-an-array-of-bytes-into-a-string_1.vb)]  
   
- Sie können unter mehreren Codierungsoptionen wählen, wenn Sie ein Bytearray in eine Zeichenfolge konvertieren möchten:  
+ <span data-ttu-id="d2910-106">Sie können aus mehreren Codierungsoptionen ein Bytearray in eine Zeichenfolge zu konvertieren:</span><span class="sxs-lookup"><span data-stu-id="d2910-106">You can choose from several encoding options to convert a byte array into a string:</span></span>  
   
--   <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName>: Ruft eine Codierung für den ASCII\-Zeichensatz \(7 Bits\) ab.  
+-   <span data-ttu-id="d2910-107"><xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Ruft eine Codierung für den ASCII-Zeichensatz (7-Bit) festlegen.</span><span class="sxs-lookup"><span data-stu-id="d2910-107"><xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Gets an encoding for the ASCII (7-bit) character set.</span></span>  
   
--   <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=fullName>: Ruft eine Codierung für das UTF\-16\-Format mit Big\-Endian\-Bytereihenfolge ab.  
+-   <span data-ttu-id="d2910-108"><xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Ruft eine Codierung für das UTF-16-Format mit big-Endian-Bytereihenfolge ab.</span><span class="sxs-lookup"><span data-stu-id="d2910-108"><xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the big-endian byte order.</span></span>  
   
--   <xref:System.Text.Encoding.Default%2A?displayProperty=fullName>: Ruft eine Codierung für die aktuelle ANSI\-Codepage des Systems ab.  
+-   <span data-ttu-id="d2910-109"><xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Ruft eine Codierung für die aktuelle ANSI-Codepage des Systems ab.</span><span class="sxs-lookup"><span data-stu-id="d2910-109"><xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Gets an encoding for the system's current ANSI code page.</span></span>  
   
--   <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName>: Ruft eine Codierung für das UTF\-16\-Format mit Little\-Endian\-Bytereihenfolge ab.  
+-   <span data-ttu-id="d2910-110"><xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Ruft eine Codierung für das UTF-16-Format mit little-Endian-Bytereihenfolge ab.</span><span class="sxs-lookup"><span data-stu-id="d2910-110"><xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-16 format using the little-endian byte order.</span></span>  
   
--   <xref:System.Text.Encoding.UTF32%2A?displayProperty=fullName>: Ruft eine Codierung für das UTF\-32\-Format mit Little\-Endian\-Bytereihenfolge ab.  
+-   <span data-ttu-id="d2910-111"><xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Ruft eine Codierung für das UTF-32-Format mit little-Endian-Bytereihenfolge ab.</span><span class="sxs-lookup"><span data-stu-id="d2910-111"><xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-32 format using the little-endian byte order.</span></span>  
   
--   <xref:System.Text.Encoding.UTF7%2A?displayProperty=fullName>: Ruft eine Codierung für das UTF\-7\-Format ab.  
+-   <span data-ttu-id="d2910-112"><xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Ruft eine Codierung für das UTF-7-Format ab.</span><span class="sxs-lookup"><span data-stu-id="d2910-112"><xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-7 format.</span></span>  
   
--   <xref:System.Text.Encoding.UTF8%2A?displayProperty=fullName>: Ruft eine Codierung für das UTF\-8\-Format ab.  
+-   <span data-ttu-id="d2910-113"><xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Ruft eine Codierung für das UTF-8-Format ab.</span><span class="sxs-lookup"><span data-stu-id="d2910-113"><xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Gets an encoding for the UTF-8 format.</span></span>  
   
-## Siehe auch  
- <xref:System.Text.Encoding?displayProperty=fullName>   
- <xref:System.Text.Encoding.GetString%2A>   
- [How to: Convert Strings into an Array of Bytes in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)
+## <a name="see-also"></a><span data-ttu-id="d2910-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2910-114">See Also</span></span>  
+ <xref:System.Text.Encoding?displayProperty=nameWithType>  
+ <xref:System.Text.Encoding.GetString%2A>  
+ [<span data-ttu-id="d2910-115">Vorgehensweise: Konvertieren von Zeichenfolgen in ein Array von Bytes in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d2910-115">How to: Convert Strings into an Array of Bytes in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)

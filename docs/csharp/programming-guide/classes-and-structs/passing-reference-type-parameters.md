@@ -1,70 +1,51 @@
 ---
 title: "Übergeben von Verweistypparametern (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2cd862a9179e027ab82631631784203993d0465a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f57dc9f0de6fae6da3ec8e6e6cfdc3a21baeaea
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="passing-reference-type-parameters-c-programming-guide"></a>Übergeben von Verweistypparametern (C#-Programmierhandbuch)
-Eine Variable eines [Verweistyps](../../../csharp/language-reference/keywords/reference-types.md) enthält direkt keine Daten. Sie enthält einen Verweis auf die Daten. Wenn Sie einen Verweistypparameter nach Wert übergeben, ist es möglich, die Daten zu ändern, auf die die Daten zeigen, z.B. den Wert eines Klassenmembers. Sie können jedoch nicht den Wert des Verweises selbst ändern. Das bedeutet, dass Sie nicht mit dem gleichen Verweis einer neuen Klasse Arbeitsspeicher zuweisen und ihn außerhalb des Blocks beibehalten können. Dazu müssen Sie den Parameter mit den Schlüsselwörtern [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out.md) übergeben. Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.  
+# <a name="passing-reference-type-parameters-c-programming-guide"></a><span data-ttu-id="0d876-102">Übergeben von Verweistypparametern (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="0d876-102">Passing Reference-Type Parameters (C# Programming Guide)</span></span>
+<span data-ttu-id="0d876-103">Eine Variable eines [Verweistyps](../../../csharp/language-reference/keywords/reference-types.md) enthält direkt keine Daten. Sie enthält einen Verweis auf die Daten.</span><span class="sxs-lookup"><span data-stu-id="0d876-103">A variable of a [reference type](../../../csharp/language-reference/keywords/reference-types.md) does not contain its data directly; it contains a reference to its data.</span></span> <span data-ttu-id="0d876-104">Wenn Sie einen Verweistypparameter nach Wert übergeben, ist es möglich, die Daten zu ändern, auf die die Daten zeigen, z.B. den Wert eines Klassenmembers.</span><span class="sxs-lookup"><span data-stu-id="0d876-104">When you pass a reference-type parameter by value, it is possible to change the data pointed to by the reference, such as the value of a class member.</span></span> <span data-ttu-id="0d876-105">Sie können jedoch nicht den Wert des Verweises selbst ändern. Das bedeutet, dass Sie nicht mit dem gleichen Verweis einer neuen Klasse Arbeitsspeicher zuweisen und ihn außerhalb des Blocks beibehalten können.</span><span class="sxs-lookup"><span data-stu-id="0d876-105">However, you cannot change the value of the reference itself; that is, you cannot use the same reference to allocate memory for a new class and have it persist outside the block.</span></span> <span data-ttu-id="0d876-106">Dazu müssen Sie den Parameter mit den Schlüsselwörtern [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out.md) übergeben.</span><span class="sxs-lookup"><span data-stu-id="0d876-106">To do that, pass the parameter using the [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) keyword.</span></span> <span data-ttu-id="0d876-107">Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.</span><span class="sxs-lookup"><span data-stu-id="0d876-107">For simplicity, the following examples use `ref`.</span></span>  
   
-## <a name="passing-reference-types-by-value"></a>Übergeben von Verweistypen nach Wert  
- Im folgenden Beispiel wird gezeigt, wie Verweistypparameter, `arr`, nach Wert an eine Methode, `Change`, übergeben werden. Da der Parameter ein Verweis auf `arr` ist, ist es möglich, die Werte der Arrayelemente zu ändern. Der Versuch, den Parameter einem anderen Speicherort zuzuweisen, funktioniert aber nur innerhalb der Methode und wirkt sich nicht auf die ursprüngliche Variable `arr` aus.  
+## <a name="passing-reference-types-by-value"></a><span data-ttu-id="0d876-108">Übergeben von Verweistypen nach Wert</span><span class="sxs-lookup"><span data-stu-id="0d876-108">Passing Reference Types by Value</span></span>  
+ <span data-ttu-id="0d876-109">Im folgenden Beispiel wird gezeigt, wie Verweistypparameter, `arr`, nach Wert an eine Methode, `Change`, übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="0d876-109">The following example demonstrates passing a reference-type parameter, `arr`, by value, to a method, `Change`.</span></span> <span data-ttu-id="0d876-110">Da der Parameter ein Verweis auf `arr` ist, ist es möglich, die Werte der Arrayelemente zu ändern.</span><span class="sxs-lookup"><span data-stu-id="0d876-110">Because the parameter is a reference to `arr`, it is possible to change the values of the array elements.</span></span> <span data-ttu-id="0d876-111">Der Versuch, den Parameter einem anderen Speicherort zuzuweisen, funktioniert aber nur innerhalb der Methode und wirkt sich nicht auf die ursprüngliche Variable `arr` aus.</span><span class="sxs-lookup"><span data-stu-id="0d876-111">However, the attempt to reassign the parameter to a different memory location only works inside the method and does not affect the original variable, `arr`.</span></span>  
   
- [!code-cs[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
+ [!code-csharp[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
   
- Im vorherigen Beispiel, wurde das Verweistyp-Array `arr` ohne den `ref`-Parameter an die Methode übergeben. In diesem Fall wird eine Kopie des Verweises, die auf `arr` zeigt, an die Methode übergeben. Die Ausgabe zeigt, dass die Methode den Inhalt eines Arrayelements ändern kann, in diesem Fall von `1` in `888`. Durch das Zuweisen eines neuen Teils des Arbeitsspeichers mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) innerhalb der `Change`-Methode verweist die Variable `pArray` jedoch auf ein neues Array. Alle nachfolgenden Änderungen wirken sich daher nicht auf das ursprüngliche Array `arr` aus, das in `Main` erstellt wird. Tatsächlich werden in diesem Beispiel zwei Arrays erstellt, eines in der `Main`, und das andere in der `Change`-Methode.  
+ <span data-ttu-id="0d876-112">Im vorherigen Beispiel, wurde das Verweistyp-Array `arr` ohne den `ref`-Parameter an die Methode übergeben.</span><span class="sxs-lookup"><span data-stu-id="0d876-112">In the preceding example, the array, `arr`, which is a reference type, is passed to the method without the `ref` parameter.</span></span> <span data-ttu-id="0d876-113">In diesem Fall wird eine Kopie des Verweises, die auf `arr` zeigt, an die Methode übergeben.</span><span class="sxs-lookup"><span data-stu-id="0d876-113">In such a case, a copy of the reference, which points to `arr`, is passed to the method.</span></span> <span data-ttu-id="0d876-114">Die Ausgabe zeigt, dass die Methode den Inhalt eines Arrayelements ändern kann, in diesem Fall von `1` in `888`.</span><span class="sxs-lookup"><span data-stu-id="0d876-114">The output shows that it is possible for the method to change the contents of an array element, in this case from `1` to `888`.</span></span> <span data-ttu-id="0d876-115">Durch das Zuweisen eines neuen Teils des Arbeitsspeichers mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) innerhalb der `Change`-Methode verweist die Variable `pArray` jedoch auf ein neues Array.</span><span class="sxs-lookup"><span data-stu-id="0d876-115">However, allocating a new portion of memory by using the [new](../../../csharp/language-reference/keywords/new.md) operator inside the `Change` method makes the variable `pArray` reference a new array.</span></span> <span data-ttu-id="0d876-116">Alle nachfolgenden Änderungen wirken sich daher nicht auf das ursprüngliche Array `arr` aus, das in `Main` erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="0d876-116">Thus, any changes after that will not affect the original array, `arr`, which is created inside `Main`.</span></span> <span data-ttu-id="0d876-117">Tatsächlich werden in diesem Beispiel zwei Arrays erstellt, eines in der `Main`, und das andere in der `Change`-Methode.</span><span class="sxs-lookup"><span data-stu-id="0d876-117">In fact, two arrays are created in this example, one inside `Main` and one inside the `Change` method.</span></span>  
   
-## <a name="passing-reference-types-by-reference"></a>Übergeben von Verweistypen nach Verweis  
- Das folgende Beispiel entspricht dem vorherigen, mit dem Unterschied, dass dem Methodenheader und -aufruf das `ref`-Schlüsselwort hinzugefügt wird. Alle Änderungen in der Methode haben Auswirkungen auf die ursprüngliche Variable im aufrufenden Programm.  
+## <a name="passing-reference-types-by-reference"></a><span data-ttu-id="0d876-118">Übergeben von Verweistypen nach Verweis</span><span class="sxs-lookup"><span data-stu-id="0d876-118">Passing Reference Types by Reference</span></span>  
+ <span data-ttu-id="0d876-119">Das folgende Beispiel entspricht dem vorherigen, mit dem Unterschied, dass dem Methodenheader und -aufruf das `ref`-Schlüsselwort hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="0d876-119">The following example is the same as the previous example, except that the `ref` keyword is added to the method header and call.</span></span> <span data-ttu-id="0d876-120">Alle Änderungen in der Methode haben Auswirkungen auf die ursprüngliche Variable im aufrufenden Programm.</span><span class="sxs-lookup"><span data-stu-id="0d876-120">Any changes that take place in the method affect the original variable in the calling program.</span></span>  
   
- [!code-cs[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
+ [!code-csharp[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
   
- Alle Änderungen innerhalb der Methode haben Auswirkungen auf das ursprüngliche Array in `Main`. Das ursprüngliche Array wird in der Tat mit dem `new`-Operator neu zugewiesen. Nach dem Aufruf der `Change`-Methode zeigt jeder Verweis auf `arr` auf die fünf Elemente umfassendes Array, das in der `Change`-Methode erstellt wird.  
+ <span data-ttu-id="0d876-121">Alle Änderungen innerhalb der Methode haben Auswirkungen auf das ursprüngliche Array in `Main`.</span><span class="sxs-lookup"><span data-stu-id="0d876-121">All of the changes that take place inside the method affect the original array in `Main`.</span></span> <span data-ttu-id="0d876-122">Das ursprüngliche Array wird in der Tat mit dem `new`-Operator neu zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="0d876-122">In fact, the original array is reallocated using the `new` operator.</span></span> <span data-ttu-id="0d876-123">Nach dem Aufruf der `Change`-Methode zeigt jeder Verweis auf `arr` auf die fünf Elemente umfassendes Array, das in der `Change`-Methode erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="0d876-123">Thus, after calling the `Change` method, any reference to `arr` points to the five-element array, which is created in the `Change` method.</span></span>  
   
-## <a name="swapping-two-strings"></a>Austauschen von zwei Zeichenfolgen  
- Das Austauschen von Zeichenfolgen ist ein gutes Beispiel für das Übergeben von Verweistypparametern nach Verweis. Im Beispiel werden zwei Zeichenfolgen, `str1` und `str2`, in `Main` initialisiert und der `SwapStrings`-Methode als Parameter übergeben, die vom `ref`-Schlüsselwort geändert wurden. Die beiden Zeichenfolgen werden innerhalb der Methode und auch in `Main` ausgetauscht.  
+## <a name="swapping-two-strings"></a><span data-ttu-id="0d876-124">Austauschen von zwei Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="0d876-124">Swapping Two Strings</span></span>  
+ <span data-ttu-id="0d876-125">Das Austauschen von Zeichenfolgen ist ein gutes Beispiel für das Übergeben von Verweistypparametern nach Verweis.</span><span class="sxs-lookup"><span data-stu-id="0d876-125">Swapping strings is a good example of passing reference-type parameters by reference.</span></span> <span data-ttu-id="0d876-126">Im Beispiel werden zwei Zeichenfolgen, `str1` und `str2`, in `Main` initialisiert und der `SwapStrings`-Methode als Parameter übergeben, die vom `ref`-Schlüsselwort geändert wurden.</span><span class="sxs-lookup"><span data-stu-id="0d876-126">In the example, two strings, `str1` and `str2`, are initialized in `Main` and passed to the `SwapStrings` method as parameters modified by the `ref` keyword.</span></span> <span data-ttu-id="0d876-127">Die beiden Zeichenfolgen werden innerhalb der Methode und auch in `Main` ausgetauscht.</span><span class="sxs-lookup"><span data-stu-id="0d876-127">The two strings are swapped inside the method and inside `Main` as well.</span></span>  
   
- [!code-cs[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
+ [!code-csharp[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
   
- In diesem Beispiel müssen die Parameter nach Verweis übergeben werden, damit die Variablen im aufrufenden Programm beeinflusst werden. Wenn Sie das `ref`-Schlüsselwort aus dem Methodenheader und dem Methodenaufruf entfernen, erfolgen keine Änderungen im aufrufenden Programm.  
+ <span data-ttu-id="0d876-128">In diesem Beispiel müssen die Parameter nach Verweis übergeben werden, damit die Variablen im aufrufenden Programm beeinflusst werden.</span><span class="sxs-lookup"><span data-stu-id="0d876-128">In this example, the parameters need to be passed by reference to affect the variables in the calling program.</span></span> <span data-ttu-id="0d876-129">Wenn Sie das `ref`-Schlüsselwort aus dem Methodenheader und dem Methodenaufruf entfernen, erfolgen keine Änderungen im aufrufenden Programm.</span><span class="sxs-lookup"><span data-stu-id="0d876-129">If you remove the `ref` keyword from both the method header and the method call, no changes will take place in the calling program.</span></span>  
   
- Weitere Informationen zu Zeichenfolgen finden Sie unter [string](../../../csharp/language-reference/keywords/string.md).  
+ <span data-ttu-id="0d876-130">Weitere Informationen zu Zeichenfolgen finden Sie unter [string](../../../csharp/language-reference/keywords/string.md).</span><span class="sxs-lookup"><span data-stu-id="0d876-130">For more information about strings, see [string](../../../csharp/language-reference/keywords/string.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Übergeben von Parametern](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [Übergeben von Arrays mithilfe von „ref“ und „out“](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
- [ref](../../../csharp/language-reference/keywords/ref.md)   
- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
-
+## <a name="see-also"></a><span data-ttu-id="0d876-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d876-131">See Also</span></span>  
+ [<span data-ttu-id="0d876-132">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="0d876-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0d876-133">Übergeben von Parametern</span><span class="sxs-lookup"><span data-stu-id="0d876-133">Passing Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [<span data-ttu-id="0d876-134">Übergeben von Arrays mithilfe von "ref" und "out"</span><span class="sxs-lookup"><span data-stu-id="0d876-134">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
+ [<span data-ttu-id="0d876-135">ref</span><span class="sxs-lookup"><span data-stu-id="0d876-135">ref</span></span>](../../../csharp/language-reference/keywords/ref.md)  
+ [<span data-ttu-id="0d876-136">Verweistypen</span><span class="sxs-lookup"><span data-stu-id="0d876-136">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)

@@ -1,60 +1,66 @@
 ---
-title: "Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datumsangaben [.NET Framework], Millisekunden"
-  - "DateTime.ToString-Methode"
-  - "Anzeigen von Datums- und Uhrzeitdaten"
-  - "Millisekunden [.NET Framework]"
-  - "Zeit [.NET Framework], Millisekunden"
+title: 'Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DateTime.ToString method
+- displaying date and time data
+- time [.NET Framework], milliseconds
+- dates [.NET Framework], milliseconds
+- milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 260d202eb0a218a6657bc719e36da6f39138e54e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten
-Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.DateTime.ToString?displayProperty=fullName>, werden die Stunden, Minuten und Sekunden eines Uhrzeitwerts berücksichtigt, deren Millisekundenkomponente jedoch nicht.  In diesem Thema wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums\- und Uhrzeitzeichenfolge eingefügt wird.  
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a><span data-ttu-id="5b952-102">Gewusst wie: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten</span><span class="sxs-lookup"><span data-stu-id="5b952-102">How to: Display Milliseconds in Date and Time Values</span></span>
+<span data-ttu-id="5b952-103">Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.DateTime.ToString?displayProperty=nameWithType>, werden die Stunden, Minuten und Sekunden eines Uhrzeitwerts berücksichtigt, deren Millisekundenkomponente jedoch nicht.</span><span class="sxs-lookup"><span data-stu-id="5b952-103">The default date and time formatting methods, such as <xref:System.DateTime.ToString?displayProperty=nameWithType>, include the hours, minutes, and seconds of a time value but exclude its milliseconds component.</span></span> <span data-ttu-id="5b952-104">In diesem Thema wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums- und Uhrzeitzeichenfolge eingefügt wird.</span><span class="sxs-lookup"><span data-stu-id="5b952-104">This topic shows how to include a date and time's millisecond component in formatted date and time strings.</span></span>  
   
-### So zeigen Sie die Millisekundenkomponente eines DateTime\-Werts an  
+### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a><span data-ttu-id="5b952-105">So zeigen Sie die Millisekundenkomponente eines DateTime-Werts an</span><span class="sxs-lookup"><span data-stu-id="5b952-105">To display the millisecond component of a DateTime value</span></span>  
   
-1.  Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName>\-Methode oder <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=fullName>\-Methode in einen <xref:System.DateTime>\-Wert oder einen <xref:System.DateTimeOffset>\-Wert.  
+1.  <span data-ttu-id="5b952-106">Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>-Methode oder <xref:System.DateTimeOffset>-Methode in einen <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>-Wert oder einen <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>-Wert.</span><span class="sxs-lookup"><span data-stu-id="5b952-106">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> method.</span></span>  
   
-2.  Um die Zeichenfolgendarstellung einer Millisekundenkomponente für die Uhrzeit zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName>\-Methode oder <xref:System.DateTimeOffset.ToString%2A>\-Methode des Datums\- oder Uhrzeitwerts auf und übergeben das benutzerdefinierte Formatmuster `fff` oder `FFF` alleine oder zusammen mit anderen benutzerdefinierten Formatbezeichnern als `format`\-Parameter.  
+2.  <span data-ttu-id="5b952-107">Um die Zeichenfolgendarstellung einer Millisekundenkomponente für die Uhrzeit zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>-Methode oder <xref:System.DateTimeOffset.ToString%2A>-Methode des Datums- oder Uhrzeitwerts auf und übergeben das benutzerdefinierte Formatmuster `fff` oder `FFF` alleine oder zusammen mit anderen benutzerdefinierten Formatbezeichnern als `format`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="5b952-107">To extract the string representation of a time's millisecond component, call the date and time value's <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%2A> method, and pass the `fff` or `FFF` custom format pattern either alone or with other custom format specifiers as the `format` parameter.</span></span>  
   
-## Beispiel  
- Im Beispiel wird die Millisekundenkomponente von <xref:System.DateTime> und ein <xref:System.DateTimeOffset>\-Wert für die Konsole angezeigt, und zwar sowohl alleine als auch als Bestandteil einer längeren Datums\- und Uhrzeitzeichenfolge.  
+## <a name="example"></a><span data-ttu-id="5b952-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5b952-108">Example</span></span>  
+ <span data-ttu-id="5b952-109">Im Beispiel wird die Millisekundenkomponente von <xref:System.DateTime> und ein <xref:System.DateTimeOffset>-Wert für die Konsole angezeigt, und zwar sowohl alleine als auch als Bestandteil einer längeren Datums- und Uhrzeitzeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="5b952-109">The example displays the millisecond component of a <xref:System.DateTime> and a <xref:System.DateTimeOffset> value to the console, both alone and included in a longer date and time string.</span></span>  
   
  [!code-csharp[Formatting.HowTo.Millisecond#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#1)]
  [!code-vb[Formatting.HowTo.Millisecond#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#1)]  
   
- Das `fff`\-Formatmuster schließt alle nachfolgenden Nullen \(0\) in den Millisekundenwert ein.  Diese werden vom `FFF`\-Formatmuster unterdrückt.  Der Unterschied wird im folgenden Beispiel veranschaulicht.  
+ <span data-ttu-id="5b952-110">Das `fff`-Formatmuster schließt alle nachfolgenden Nullen (0) in den Millisekundenwert ein.</span><span class="sxs-lookup"><span data-stu-id="5b952-110">The `fff` format pattern includes any trailing zeros in the millisecond value.</span></span> <span data-ttu-id="5b952-111">Diese werden vom `FFF`-Formatmuster unterdrückt.</span><span class="sxs-lookup"><span data-stu-id="5b952-111">The `FFF` format pattern suppresses them.</span></span> <span data-ttu-id="5b952-112">Der Unterschied wird im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="5b952-112">The difference is illustrated in the following example.</span></span>  
   
  [!code-csharp[Formatting.HowTo.Millisecond#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#2)]
  [!code-vb[Formatting.HowTo.Millisecond#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#2)]  
   
- Ein Problem beim Festlegen eines vollständigen benutzerdefinierten Formatbezeichners, der die Millisekundenkomponente für Datum und Uhrzeit umfasst, besteht darin, dass ein hartcodiertes Format festgelegt wird, das möglicherweise nicht der Anordnung der Uhrzeitelemente in der aktuellen Kultur der Anwendung entspricht.  Die bessere Alternative besteht darin, eines der Anzeigemuster für Datum und Uhrzeit abzurufen, die durch das <xref:System.Globalization.DateTimeFormatInfo>\-Objekt der aktuellen Kultur definiert sind, und es so zu bearbeiten, dass die Millisekunden berücksichtigt werden.  Diese Herangehensweise wird im Beispiel ebenfalls verdeutlicht.  Dabei wird das vollständige Datums\- und Uhrzeitmuster der aktuellen Kultur aus der <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=fullName>\-Eigenschaft abgerufen und das benutzerdefinierte Muster `.ffff` nach dem Sekundenmuster eingefügt.  Beachten Sie, dass im Beispiel ein regulärer Ausdruck verwendet wird, um diesen Vorgang in einem einzelnen Methodenaufruf auszuführen.  
+ <span data-ttu-id="5b952-113">Ein Problem beim Festlegen eines vollständigen benutzerdefinierten Formatbezeichners, der die Millisekundenkomponente für Datum und Uhrzeit umfasst, besteht darin, dass ein hartcodiertes Format festgelegt wird, das möglicherweise nicht der Anordnung der Uhrzeitelemente in der aktuellen Kultur der Anwendung entspricht.</span><span class="sxs-lookup"><span data-stu-id="5b952-113">A problem with defining a complete custom format specifier that includes the millisecond component of a date and time is that it defines a hard-coded format that may not correspond to the arrangement of time elements in the application's current culture.</span></span> <span data-ttu-id="5b952-114">Die bessere Alternative besteht darin, eines der Anzeigemuster für Datum und Uhrzeit abzurufen, die durch das <xref:System.Globalization.DateTimeFormatInfo>-Objekt der aktuellen Kultur definiert sind, und es so zu bearbeiten, dass die Millisekunden berücksichtigt werden.</span><span class="sxs-lookup"><span data-stu-id="5b952-114">A better alternative is to retrieve one of the date and time display patterns defined by the current culture's <xref:System.Globalization.DateTimeFormatInfo> object and modify it to include milliseconds.</span></span> <span data-ttu-id="5b952-115">Diese Herangehensweise wird im Beispiel ebenfalls verdeutlicht.</span><span class="sxs-lookup"><span data-stu-id="5b952-115">The example also illustrates this approach.</span></span> <span data-ttu-id="5b952-116">Dabei wird das vollständige Datums- und Uhrzeitmuster der aktuellen Kultur aus der <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType>-Eigenschaft abgerufen und das benutzerdefinierte Muster `.ffff` nach dem Sekundenmuster eingefügt.</span><span class="sxs-lookup"><span data-stu-id="5b952-116">It retrieves the current culture's full date and time pattern from the <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> property, and then inserts the custom pattern `.ffff` after its seconds pattern.</span></span> <span data-ttu-id="5b952-117">Beachten Sie, dass im Beispiel ein regulärer Ausdruck verwendet wird, um diesen Vorgang in einem einzelnen Methodenaufruf auszuführen.</span><span class="sxs-lookup"><span data-stu-id="5b952-117">Note that the example uses a regular expression to perform this operation in a single method call.</span></span>  
   
- Sie können auch einen benutzerdefinierten Formatbezeichner verwenden, um einen anderen Sekundenbruchteil als Millisekunden anzuzeigen.  Durch den benutzerdefinierten Formatbezeichner `f` oder `F` werden beispielsweise Zehntelsekunden, durch den benutzerdefinierten Formatbezeichner `ff` oder `FF` Hundertstelsekunden und durch den benutzerdefinierten Formatbezeichner `ffff` oder `FFFF` Zehntausendstelsekunden angezeigt.  Bruchteile einer Millisekunde werden abgeschnitten und nicht in der zurückgegebenen Zeichenfolge gerundet.  Diese Formatbezeichner werden im folgenden Beispiel verwendet.  
+ <span data-ttu-id="5b952-118">Sie können auch einen benutzerdefinierten Formatbezeichner verwenden, um einen anderen Sekundenbruchteil als Millisekunden anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="5b952-118">You can also use a custom format specifier to display a fractional part of seconds other than milliseconds.</span></span> <span data-ttu-id="5b952-119">Durch den benutzerdefinierten Formatbezeichner `f` oder `F` werden beispielsweise Zehntelsekunden, durch den benutzerdefinierten Formatbezeichner `ff` oder `FF` Hundertstelsekunden und durch den benutzerdefinierten Formatbezeichner `ffff` oder `FFFF` Zehntausendstelsekunden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5b952-119">For example, the `f` or `F` custom format specifier displays tenths of a second, the `ff` or `FF` custom format specifier displays hundredths of a second, and the `ffff` or `FFFF` custom format specifier displays ten thousandths of a second.</span></span> <span data-ttu-id="5b952-120">Bruchteile einer Millisekunde werden abgeschnitten und nicht in der zurückgegebenen Zeichenfolge gerundet.</span><span class="sxs-lookup"><span data-stu-id="5b952-120">Fractional parts of a millisecond are truncated instead of rounded in the returned string.</span></span> <span data-ttu-id="5b952-121">Diese Formatbezeichner werden im folgenden Beispiel verwendet.</span><span class="sxs-lookup"><span data-stu-id="5b952-121">These format specifiers are used in the following example.</span></span>  
   
  [!code-csharp[Formatting.HowTo.Millisecond#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#3)]
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
->  Es besteht die Möglichkeit, sehr kleine Sekundenbruchteile wie Zehntausendstelsekunden oder Hunderttausendstelsekunden anzuzeigen.  Diese Werte sind jedoch möglicherweise nicht sinnvoll.  Die Genauigkeit der Datums\- und Uhrzeitwerte hängt von der Auflösung der Systemuhr ab.  Unter Windows NT 3.5 und höher und in [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]\-Betriebssystemen beträgt die Auflösung der Uhr etwa 10\-15 Millisekunden.  
+>  <span data-ttu-id="5b952-122">Es besteht die Möglichkeit, sehr kleine Sekundenbruchteile wie Zehntausendstelsekunden oder Hunderttausendstelsekunden anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="5b952-122">It is possible to display very small fractional units of a second, such as ten thousandths of a second or hundred-thousandths of a second.</span></span> <span data-ttu-id="5b952-123">Diese Werte sind jedoch möglicherweise nicht sinnvoll.</span><span class="sxs-lookup"><span data-stu-id="5b952-123">However, these values may not be meaningful.</span></span> <span data-ttu-id="5b952-124">Die Genauigkeit der Datums- und Uhrzeitwerte hängt von der Auflösung der Systemuhr ab.</span><span class="sxs-lookup"><span data-stu-id="5b952-124">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="5b952-125">Unter Windows NT 3.5 und höher und in [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]-Betriebssystemen beträgt die Auflösung der Uhr etwa 10-15 Millisekunden.</span><span class="sxs-lookup"><span data-stu-id="5b952-125">On Windows NT 3.5 and later, and [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
-## Kompilieren des Codes  
- Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile.  Um den Code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
+## <a name="compiling-the-code"></a><span data-ttu-id="5b952-126">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="5b952-126">Compiling the Code</span></span>  
+ <span data-ttu-id="5b952-127">Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="5b952-127">Compile the code at the command line using csc.exe or vb.exe.</span></span> <span data-ttu-id="5b952-128">Um den Code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.</span><span class="sxs-lookup"><span data-stu-id="5b952-128">To compile the code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], put it in a console application project template.</span></span>  
   
-## Siehe auch  
- <xref:System.Globalization.DateTimeFormatInfo>   
- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a><span data-ttu-id="5b952-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5b952-129">See Also</span></span>  
+ <xref:System.Globalization.DateTimeFormatInfo>  
+ [<span data-ttu-id="5b952-130">Custom Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="5b952-130">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

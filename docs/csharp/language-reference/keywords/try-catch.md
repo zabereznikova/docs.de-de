@@ -1,53 +1,34 @@
 ---
 title: try-catch (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - try
 - try_CSharpKeyword
 - catch
 - catch_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 753beb554796ad0aa2c5e15c715240453de9a3e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
-Die try-catch-Anweisung besteht aus einem `try`-Block gefolgt von einer oder mehreren `catch`-Klauseln, die Handler für verschiedene Ausnahmen angeben.  
+# <a name="try-catch-c-reference"></a><span data-ttu-id="79f32-102">try-catch (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="79f32-102">try-catch (C# Reference)</span></span>
+<span data-ttu-id="79f32-103">Die try-catch-Anweisung besteht aus einem `try`-Block gefolgt von einer oder mehreren `catch`-Klauseln, die Handler für verschiedene Ausnahmen angeben.</span><span class="sxs-lookup"><span data-stu-id="79f32-103">The try-catch statement consists of a `try` block followed by one or more `catch` clauses, which specify handlers for different exceptions.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Wenn eine Ausnahme ausgelöst wird, sucht die Common Language Runtime (CLR) nach der `catch`-Anweisung, die diese Ausnahme behandelt. Wenn die derzeit ausgeführte Methode keinen solchen `catch`-Block enthält, betrachtet die CLR die Methode, die die aktuelle Methode aufgerufen hat, dann die vorhergehende in der Aufrufliste usw. Wenn kein `catch`-Block gefunden wird, zeigt die CLR dem Benutzer eine Meldung über eine nicht behandelte Ausnahme an und beendet die Ausführung des Programms.  
+## <a name="remarks"></a><span data-ttu-id="79f32-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="79f32-104">Remarks</span></span>  
+ <span data-ttu-id="79f32-105">Wenn eine Ausnahme ausgelöst wird, sucht die Common Language Runtime (CLR) nach der `catch`-Anweisung, die diese Ausnahme behandelt.</span><span class="sxs-lookup"><span data-stu-id="79f32-105">When an exception is thrown, the common language runtime (CLR) looks for the `catch` statement that handles this exception.</span></span> <span data-ttu-id="79f32-106">Wenn die derzeit ausgeführte Methode keinen solchen `catch`-Block enthält, betrachtet die CLR die Methode, die die aktuelle Methode aufgerufen hat, dann die vorhergehende in der Aufrufliste usw.</span><span class="sxs-lookup"><span data-stu-id="79f32-106">If the currently executing method does not contain such a `catch` block, the CLR looks at the method that called the current method, and so on up the call stack.</span></span> <span data-ttu-id="79f32-107">Wenn kein `catch`-Block gefunden wird, zeigt die CLR dem Benutzer eine Meldung über eine nicht behandelte Ausnahme an und beendet die Ausführung des Programms.</span><span class="sxs-lookup"><span data-stu-id="79f32-107">If no `catch` block is found, then the CLR displays an unhandled exception message to the user and stops execution of the program.</span></span>  
   
- Der `try` -Block enthält den überwachten Code, der möglicherweise die Ausnahme verursacht. Der Block wird ausgeführt, bis eine Ausnahme ausgelöst wird, oder bis er erfolgreich abgeschlossen wird. Beispielsweise löst der folgende Versuch, ein `null`-Objekt umzuwandeln, die <xref:System.NullReferenceException>-Ausnahme aus:  
+ <span data-ttu-id="79f32-108">Der `try` -Block enthält den überwachten Code, der möglicherweise die Ausnahme verursacht.</span><span class="sxs-lookup"><span data-stu-id="79f32-108">The `try` block contains the guarded code that may cause the exception.</span></span> <span data-ttu-id="79f32-109">Der Block wird ausgeführt, bis eine Ausnahme ausgelöst wird, oder bis er erfolgreich abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="79f32-109">The block is executed until an exception is thrown or it is completed successfully.</span></span> <span data-ttu-id="79f32-110">Beispielsweise löst der folgende Versuch, ein `null`-Objekt umzuwandeln, die <xref:System.NullReferenceException>-Ausnahme aus:</span><span class="sxs-lookup"><span data-stu-id="79f32-110">For example, the following attempt to cast a `null` object raises the <xref:System.NullReferenceException> exception:</span></span>  
   
 ```csharp  
 object o2 = null;  
@@ -57,7 +38,7 @@ try
 }  
 ```  
   
- Zwar kann die `catch`-Klausel ohne Argumente verwendet werden, um jeden beliebigen Ausnahmetyp abfangen, dies wird jedoch nicht empfohlen. Im Allgemeinen sollten Sie nur solche Ausnahmen abfangen, bei denen Sie wissen, wie die Wiederherstellung durchgeführt wird. Daher sollten Sie immer ein von <xref:System.Exception?displayProperty=nameWithType> abgeleitetes Objektargument angeben, zum Beispiel:  
+ <span data-ttu-id="79f32-111">Zwar kann die `catch`-Klausel ohne Argumente verwendet werden, um jeden beliebigen Ausnahmetyp abfangen, dies wird jedoch nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="79f32-111">Although the `catch` clause can be used without arguments to catch any type of exception, this usage is not recommended.</span></span> <span data-ttu-id="79f32-112">Im Allgemeinen sollten Sie nur solche Ausnahmen abfangen, bei denen Sie wissen, wie die Wiederherstellung durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="79f32-112">In general, you should only catch those exceptions that you know how to recover from.</span></span> <span data-ttu-id="79f32-113">Daher sollten Sie immer ein von <xref:System.Exception?displayProperty=nameWithType> abgeleitetes Objektargument angeben, zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="79f32-113">Therefore, you should always specify an object argument derived from <xref:System.Exception?displayProperty=nameWithType> For example:</span></span>  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -65,9 +46,9 @@ catch (InvalidCastException e)
 }  
 ```  
   
- Es ist möglich, mehrere spezifische `catch`-Klauseln in derselben try-catch-Anweisung zu verwenden. In diesem Fall ist die Reihenfolge der `catch`-Klauseln wichtig, da die `catch`-Klauseln nacheinander überprüft werden. Fangen Sie spezifischere Ausnahmen vor den weniger spezifischen ab. Der Compiler erzeugt einen Fehler, wenn Sie Ihre catch-Blöcke so anordnen, dass ein neuerer Block nie erreicht werden kann.  
+ <span data-ttu-id="79f32-114">Es ist möglich, mehrere spezifische `catch`-Klauseln in derselben try-catch-Anweisung zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="79f32-114">It is possible to use more than one specific `catch` clause in the same try-catch statement.</span></span> <span data-ttu-id="79f32-115">In diesem Fall ist die Reihenfolge der `catch`-Klauseln wichtig, da die `catch`-Klauseln nacheinander überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="79f32-115">In this case, the order of the `catch` clauses is important because the `catch` clauses are examined in order.</span></span> <span data-ttu-id="79f32-116">Fangen Sie spezifischere Ausnahmen vor den weniger spezifischen ab.</span><span class="sxs-lookup"><span data-stu-id="79f32-116">Catch the more specific exceptions before the less specific ones.</span></span> <span data-ttu-id="79f32-117">Der Compiler erzeugt einen Fehler, wenn Sie Ihre catch-Blöcke so anordnen, dass ein neuerer Block nie erreicht werden kann.</span><span class="sxs-lookup"><span data-stu-id="79f32-117">The compiler produces an error if you order your catch blocks so that a later block can never be reached.</span></span>  
   
- Die Verwendung von `catch`-Argumenten ist eine Möglichkeit zum Filtern der Ausnahmen, die Sie behandeln möchten.  Sie können auch einen Prädikatausdruck verwenden, der die Ausnahme weiter untersucht, um zu entscheiden, ob Sie sie behandeln möchten.  Wenn der Prädikatausdruck „false“ zurückgibt, wird die Suche nach einem Ausnahmehandler fortgesetzt.  
+ <span data-ttu-id="79f32-118">Die Verwendung von `catch`-Argumenten ist eine Möglichkeit zum Filtern der Ausnahmen, die Sie behandeln möchten.</span><span class="sxs-lookup"><span data-stu-id="79f32-118">Using `catch` arguments is one way to filter for the exceptions you want to handle.</span></span>  <span data-ttu-id="79f32-119">Sie können auch einen Prädikatausdruck verwenden, der die Ausnahme weiter untersucht, um zu entscheiden, ob Sie sie behandeln möchten.</span><span class="sxs-lookup"><span data-stu-id="79f32-119">You can also use a predicate expression that further examines the exception to decide whether to handle it.</span></span>  <span data-ttu-id="79f32-120">Wenn der Prädikatausdruck „false“ zurückgibt, wird die Suche nach einem Ausnahmehandler fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="79f32-120">If the predicate expression returns false, then the search for a handler continues.</span></span>  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -75,9 +56,9 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.  Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.  Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.  Sie können eine Prädikatfunktion erstellen, die immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.  
+ <span data-ttu-id="79f32-121">Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.</span><span class="sxs-lookup"><span data-stu-id="79f32-121">Exception filters are preferable to catching and rethrowing (explained below) because filters leave the stack unharmed.</span></span>  <span data-ttu-id="79f32-122">Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="79f32-122">If a later handler dumps the stack, you can see where the exception originally came from, rather than just the last place it was rethrown.</span></span>  <span data-ttu-id="79f32-123">Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.</span><span class="sxs-lookup"><span data-stu-id="79f32-123">A common use of exception filter expressions is logging.</span></span>  <span data-ttu-id="79f32-124">Sie können eine Prädikatfunktion erstellen, die immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.</span><span class="sxs-lookup"><span data-stu-id="79f32-124">You can create a predicate function that always returns false that also outputs to a log, you can log exceptions as they go by without having to handle them and rethrow.</span></span>  
   
- Eine [throw`catch`-Anweisung kann in einem ](../../../csharp/language-reference/keywords/throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.  
+ <span data-ttu-id="79f32-125">Eine [throw`catch`-Anweisung kann in einem ](../../../csharp/language-reference/keywords/throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen.</span><span class="sxs-lookup"><span data-stu-id="79f32-125">A [throw](../../../csharp/language-reference/keywords/throw.md) statement can be used in a `catch` block to re-throw the exception that is caught by the `catch` statement.</span></span> <span data-ttu-id="79f32-126">Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="79f32-126">The following example extracts source information from an <xref:System.IO.IOException> exception, and then throws the exception to the parent method.</span></span>  
   
 ```csharp  
 catch (FileNotFoundException e)  
@@ -94,7 +75,7 @@ catch (IOException e)
 }  
 ```  
   
- Sie können eine Ausnahme abfangen und eine andere Ausnahme auslösen. Wenn Sie dies tun, geben Sie die abgefangene Ausnahme als innere Ausnahme an, wie im folgenden Beispiel gezeigt.  
+ <span data-ttu-id="79f32-127">Sie können eine Ausnahme abfangen und eine andere Ausnahme auslösen.</span><span class="sxs-lookup"><span data-stu-id="79f32-127">You can catch one exception and throw a different exception.</span></span> <span data-ttu-id="79f32-128">Wenn Sie dies tun, geben Sie die abgefangene Ausnahme als innere Ausnahme an, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="79f32-128">When you do this, specify the exception that you caught as the inner exception, as shown in the following example.</span></span>  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -104,7 +85,7 @@ catch (InvalidCastException e)
 }  
 ```  
   
- Sie können eine Ausnahme auch erneut auslösen, wenn eine angegebene Bedingung erfüllt ist, wie im folgenden Beispiel gezeigt.  
+ <span data-ttu-id="79f32-129">Sie können eine Ausnahme auch erneut auslösen, wenn eine angegebene Bedingung erfüllt ist, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="79f32-129">You can also re-throw an exception when a specified condition is true, as shown in the following example.</span></span>  
   
 ```csharp  
 catch (InvalidCastException e)  
@@ -120,7 +101,7 @@ catch (InvalidCastException e)
  }  
 ```  
   
- Initialisieren Sie innerhalb eines `try`-Blocks nur Variablen, die auch in diesem deklariert sind. Andernfalls kann eine Ausnahme auftreten, bevor die Ausführung des Blocks abgeschlossen ist. Beispiel: Im folgenden Codebeispiel wird die `n`-Variable innerhalb des `try`-Blocks initialisiert. Beim Versuch, diese Variable außerhalb des `try`-Blocks in der `Write(n)`-Anweisung zu verwenden, wird ein Compilerfehler generiert.  
+ <span data-ttu-id="79f32-130">Initialisieren Sie innerhalb eines `try`-Blocks nur Variablen, die auch in diesem deklariert sind.</span><span class="sxs-lookup"><span data-stu-id="79f32-130">From inside a `try` block, initialize only variables that are declared therein.</span></span> <span data-ttu-id="79f32-131">Andernfalls kann eine Ausnahme auftreten, bevor die Ausführung des Blocks abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="79f32-131">Otherwise, an exception can occur before the execution of the block is completed.</span></span> <span data-ttu-id="79f32-132">Beispiel: Im folgenden Codebeispiel wird die `n`-Variable innerhalb des `try`-Blocks initialisiert.</span><span class="sxs-lookup"><span data-stu-id="79f32-132">For example, in the following code example, the variable `n` is initialized inside the `try` block.</span></span> <span data-ttu-id="79f32-133">Beim Versuch, diese Variable außerhalb des `try`-Blocks in der `Write(n)`-Anweisung zu verwenden, wird ein Compilerfehler generiert.</span><span class="sxs-lookup"><span data-stu-id="79f32-133">An attempt to use this variable outside the `try` block in the `Write(n)` statement will generate a compiler error.</span></span>  
   
 ```csharp  
 static void Main()   
@@ -139,59 +120,58 @@ static void Main()
 }  
 ```  
   
- Weitere Informationen zu „catch“ finden Sie unter [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
+ <span data-ttu-id="79f32-134">Weitere Informationen zu „catch“ finden Sie unter [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).</span><span class="sxs-lookup"><span data-stu-id="79f32-134">For more information about catch, see [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).</span></span>  
   
-## <a name="exceptions-in-async-methods"></a>Ausnahmen in asynchronen Methoden  
- Eine asynchrone Methode wird mit einem [async](../../../csharp/language-reference/keywords/async.md)-Modifizierer gekennzeichnet und enthält in der Regel eine oder mehrere await-Ausdrücke oder -Anweisungen. Ein „await“-Ausdruck wendet den [await](../../../csharp/language-reference/keywords/await.md)-Operator auf ein <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> an.  
+## <a name="exceptions-in-async-methods"></a><span data-ttu-id="79f32-135">Ausnahmen in asynchronen Methoden</span><span class="sxs-lookup"><span data-stu-id="79f32-135">Exceptions in Async Methods</span></span>  
+ <span data-ttu-id="79f32-136">Eine asynchrone Methode wird mit einem [async](../../../csharp/language-reference/keywords/async.md)-Modifizierer gekennzeichnet und enthält in der Regel eine oder mehrere await-Ausdrücke oder -Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="79f32-136">An async method is marked  by an  [async](../../../csharp/language-reference/keywords/async.md) modifier and usually contains one or more await expressions or statements.</span></span> <span data-ttu-id="79f32-137">Ein „await“-Ausdruck wendet den [await](../../../csharp/language-reference/keywords/await.md)-Operator auf ein <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> an.</span><span class="sxs-lookup"><span data-stu-id="79f32-137">An await expression applies the [await](../../../csharp/language-reference/keywords/await.md) operator to a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span>  
   
- Wenn ein `await`-Ausdruck in der asynchchronen Methode erreicht wird, wird die Ausführung der Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md) und [Ablaufsteuerung in asynchronen Programmen](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ <span data-ttu-id="79f32-138">Wenn ein `await`-Ausdruck in der asynchchronen Methode erreicht wird, wird die Ausführung der Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="79f32-138">When control reaches an `await` in the async method, progress in the method is suspended until the awaited task completes.</span></span> <span data-ttu-id="79f32-139">Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="79f32-139">When the task  is complete, execution can resume in the method.</span></span> <span data-ttu-id="79f32-140">Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md) und [Ablaufsteuerung in asynchronen Programmen](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).</span><span class="sxs-lookup"><span data-stu-id="79f32-140">For more information, see [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md) and [Control Flow in Async Programs](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).</span></span>  
   
- Die abgeschlossene Aufgabe, auf die `await` angewendet wird, kann sich aufgrund einer unbehandelten Ausnahme in der Methode, die die Aufgabe zurückgibt, in einem fehlerhaften Zustand befinden. Das Warten auf die Aufgabe löst eine Ausnahme aus. Eine Aufgabe kann auch in einem abgebrochenen Zustand enden, wenn der asynchrone Prozess, der sie zurückgibt, abgebrochen wird. Das Warten auf eine abgebrochene Aufgabe löst eine `OperationCanceledException` aus. Weitere Informationen zum Abbrechen eines asynchronen Prozesses finden Sie unter [Feinabstimmung der Async-Anwendung](http://msdn.microsoft.com/library/daaa32ea-c84c-4761-8230-c8292ffebd74).  
+ <span data-ttu-id="79f32-141">Die abgeschlossene Aufgabe, auf die `await` angewendet wird, kann sich aufgrund einer unbehandelten Ausnahme in der Methode, die die Aufgabe zurückgibt, in einem fehlerhaften Zustand befinden.</span><span class="sxs-lookup"><span data-stu-id="79f32-141">The completed task to which `await` is applied might be in a faulted state because of an unhandled exception in the method that returns the task.</span></span> <span data-ttu-id="79f32-142">Das Warten auf die Aufgabe löst eine Ausnahme aus.</span><span class="sxs-lookup"><span data-stu-id="79f32-142">Awaiting the task throws an exception.</span></span> <span data-ttu-id="79f32-143">Eine Aufgabe kann auch in einem abgebrochenen Zustand enden, wenn der asynchrone Prozess, der sie zurückgibt, abgebrochen wird.</span><span class="sxs-lookup"><span data-stu-id="79f32-143">A task can also end up in a canceled state if the asynchronous process that returns it is canceled.</span></span> <span data-ttu-id="79f32-144">Das Warten auf eine abgebrochene Aufgabe löst eine `OperationCanceledException` aus.</span><span class="sxs-lookup"><span data-stu-id="79f32-144">Awaiting a canceled task throws  an `OperationCanceledException`.</span></span> <span data-ttu-id="79f32-145">Weitere Informationen zum Abbrechen eines asynchronen Prozesses finden Sie unter [Feinabstimmung der Async-Anwendung](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="79f32-145">For more information about how to cancel an asynchronous process, see [Fine-Tuning Your Async Application](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
   
- Um die Ausnahme abzufangen, warten Sie in einem `try`-Block auf die Aufgabe, und fangen Sie die Ausnahme im zugehörigen `catch`-Block ab. Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.  
+ <span data-ttu-id="79f32-146">Um die Ausnahme abzufangen, warten Sie in einem `try`-Block auf die Aufgabe, und fangen Sie die Ausnahme im zugehörigen `catch`-Block ab.</span><span class="sxs-lookup"><span data-stu-id="79f32-146">To catch the exception, await the task in a `try` block, and catch the exception in the associated `catch` block.</span></span> <span data-ttu-id="79f32-147">Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.</span><span class="sxs-lookup"><span data-stu-id="79f32-147">For an example, see the "Example" section.</span></span>  
   
- Eine Aufgabe kann sich in einem fehlerhaften Zustand befinden, da mehrere Ausnahmen in der erwarteten asynchronen Methode aufgetreten sind. Beispielsweise kann die Aufgabe das Ergebnis eines Aufrufs an <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> sein. Wenn Sie auf eine solche Aufgabe warten, wird nur eine der Ausnahmen abgefangen, und Sie können nicht vorhersagen, welche Ausnahme abgefangen wird. Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.  
+ <span data-ttu-id="79f32-148">Eine Aufgabe kann sich in einem fehlerhaften Zustand befinden, da mehrere Ausnahmen in der erwarteten asynchronen Methode aufgetreten sind.</span><span class="sxs-lookup"><span data-stu-id="79f32-148">A task can be in a faulted state because multiple exceptions occurred in the awaited async method.</span></span> <span data-ttu-id="79f32-149">Beispielsweise kann die Aufgabe das Ergebnis eines Aufrufs an <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> sein.</span><span class="sxs-lookup"><span data-stu-id="79f32-149">For example, the task might be the result of a call to <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="79f32-150">Wenn Sie auf eine solche Aufgabe warten, wird nur eine der Ausnahmen abgefangen, und Sie können nicht vorhersagen, welche Ausnahme abgefangen wird.</span><span class="sxs-lookup"><span data-stu-id="79f32-150">When you await such a task, only one of the exceptions is caught, and you can't predict which exception will be caught.</span></span> <span data-ttu-id="79f32-151">Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.</span><span class="sxs-lookup"><span data-stu-id="79f32-151">For an example, see the "Example" section.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel enthält der `try`-Block einen Aufruf der `ProcessString`-Methode, die eine Ausnahme verursachen kann. Die `catch`-Klausel enthält den Ausnahmehandler, der lediglich eine Meldung auf dem Bildschirm anzeigt. Wenn die `throw`-Anweisung aus `MyMethod` heraus aufgerufen wird, sucht das System nach der `catch`-Anweisung und zeigt die Meldung `Exception caught` an.  
+## <a name="example"></a><span data-ttu-id="79f32-152">Beispiel</span><span class="sxs-lookup"><span data-stu-id="79f32-152">Example</span></span>  
+ <span data-ttu-id="79f32-153">Im folgenden Beispiel enthält der `try`-Block einen Aufruf der `ProcessString`-Methode, die eine Ausnahme verursachen kann.</span><span class="sxs-lookup"><span data-stu-id="79f32-153">In the following example, the `try` block contains a call to the `ProcessString` method that may cause an exception.</span></span> <span data-ttu-id="79f32-154">Die `catch`-Klausel enthält den Ausnahmehandler, der lediglich eine Meldung auf dem Bildschirm anzeigt.</span><span class="sxs-lookup"><span data-stu-id="79f32-154">The `catch` clause contains the exception handler that just displays a message on the screen.</span></span> <span data-ttu-id="79f32-155">Wenn die `throw`-Anweisung aus `MyMethod` heraus aufgerufen wird, sucht das System nach der `catch`-Anweisung und zeigt die Meldung `Exception caught` an.</span><span class="sxs-lookup"><span data-stu-id="79f32-155">When the `throw` statement is called from inside `MyMethod`, the system looks for the `catch` statement and displays the message `Exception caught`.</span></span>  
   
- [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden zwei catch-Blöcke verwendet, und die spezifischste Ausnahme, die an erster Stelle steht, wird abgefangen.  
+## <a name="example"></a><span data-ttu-id="79f32-156">Beispiel</span><span class="sxs-lookup"><span data-stu-id="79f32-156">Example</span></span>  
+ <span data-ttu-id="79f32-157">Im folgenden Beispiel werden zwei catch-Blöcke verwendet, und die spezifischste Ausnahme, die an erster Stelle steht, wird abgefangen.</span><span class="sxs-lookup"><span data-stu-id="79f32-157">In the following example, two catch blocks are used, and the most specific exception, which comes first, is caught.</span></span>  
   
- Um die allgemeinste Ausnahme abzufangen, können Sie die throw-Anweisung in `ProcessString` durch die folgende Anweisung ersetzen: `throw new Exception()`.  
+ <span data-ttu-id="79f32-158">Um die allgemeinste Ausnahme abzufangen, können Sie die throw-Anweisung in `ProcessString` durch die folgende Anweisung ersetzen: `throw new Exception()`.</span><span class="sxs-lookup"><span data-stu-id="79f32-158">To catch the least specific exception, you can replace the throw statement in `ProcessString` with the following statement: `throw new Exception()`.</span></span>  
   
- Wenn Sie den allgemeinsten catch-Block im Beispiel an erster Stelle platzieren, wird die folgende Fehlermeldung angezeigt: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
+ <span data-ttu-id="79f32-159">Wenn Sie den allgemeinsten catch-Block im Beispiel an erster Stelle platzieren, wird die folgende Fehlermeldung angezeigt: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.</span><span class="sxs-lookup"><span data-stu-id="79f32-159">If you place the least-specific catch block first in the example, the following  error message appears: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.</span></span>  
   
- [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Ausnahmebehandlung für asynchrone Methoden veranschaulicht. Um eine von einer asynchronen Aufgabe ausgelöste Ausnahme abzufangen, platzieren Sie den `await`-Ausdruck in einem `try`-Block, und fangen Sie die Ausnahme in einem `catch`-Block ab.  
+## <a name="example"></a><span data-ttu-id="79f32-160">Beispiel</span><span class="sxs-lookup"><span data-stu-id="79f32-160">Example</span></span>  
+ <span data-ttu-id="79f32-161">Im folgenden Beispiel wird die Ausnahmebehandlung für asynchrone Methoden veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="79f32-161">The following example illustrates exception handling for async methods.</span></span> <span data-ttu-id="79f32-162">Um eine von einer asynchronen Aufgabe ausgelöste Ausnahme abzufangen, platzieren Sie den `await`-Ausdruck in einem `try`-Block, und fangen Sie die Ausnahme in einem `catch`-Block ab.</span><span class="sxs-lookup"><span data-stu-id="79f32-162">To catch an exception that an async task throws, place the `await` expression in a `try` block, and catch the exception in a `catch` block.</span></span>  
   
- Heben Sie die Auskommentierung der Zeile `throw new Exception` im Beispiel auf, um die Ausnahmebehandlung zu veranschaulichen. Die `IsFaulted`-Eigenschaft der Aufgabe wird auf `True` festgelegt, die `Exception.InnerException`-Eigenschaft der Aufgabe auf die Ausnahme, und die Ausnahme wird im `catch`-Block abgefangen.  
+ <span data-ttu-id="79f32-163">Heben Sie die Auskommentierung der Zeile `throw new Exception` im Beispiel auf, um die Ausnahmebehandlung zu veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="79f32-163">Uncomment the `throw new Exception` line in the example to demonstrate exception handling.</span></span> <span data-ttu-id="79f32-164">Die `IsFaulted`-Eigenschaft der Aufgabe wird auf `True` festgelegt, die `Exception.InnerException`-Eigenschaft der Aufgabe auf die Ausnahme, und die Ausnahme wird im `catch`-Block abgefangen.</span><span class="sxs-lookup"><span data-stu-id="79f32-164">The task's `IsFaulted` property is set to `True`, the task's `Exception.InnerException` property is set to the exception, and the exception is caught in the `catch` block.</span></span>  
   
- Heben Sie die Auskommentierung der Zeile `throw new OperationCancelledException` auf, um zu veranschaulichen, was beim Abbrechen eines asynchronen Prozesses passiert. Die `IsCanceled`-Eigenschaft der Aufgabe wird auf `true` festgelegt, und die Ausnahme wird im `catch`-Block abgefangen. Unter bestimmten Bedingungen, die für dieses Beispiel nicht gelten, wird die `IsFaulted`-Eigenschaft der Aufgabe auf `true` und `IsCanceled` auf `false` festgelegt.  
+ <span data-ttu-id="79f32-165">Heben Sie die Auskommentierung der Zeile `throw new OperationCancelledException` auf, um zu veranschaulichen, was beim Abbrechen eines asynchronen Prozesses passiert.</span><span class="sxs-lookup"><span data-stu-id="79f32-165">Uncomment the `throw new OperationCancelledException` line to demonstrate what happens when you cancel an asynchronous process.</span></span> <span data-ttu-id="79f32-166">Die `IsCanceled`-Eigenschaft der Aufgabe wird auf `true` festgelegt, und die Ausnahme wird im `catch`-Block abgefangen.</span><span class="sxs-lookup"><span data-stu-id="79f32-166">The task's `IsCanceled` property is set to `true`, and the exception is caught in the `catch` block.</span></span> <span data-ttu-id="79f32-167">Unter bestimmten Bedingungen, die für dieses Beispiel nicht gelten, wird die `IsFaulted`-Eigenschaft der Aufgabe auf `true` und `IsCanceled` auf `false` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="79f32-167">Under some conditions that don't apply to this example, the task's `IsFaulted` property is set to `true` and `IsCanceled` is set to `false`.</span></span>  
   
- [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
+ [!code-csharp[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Behandlung von Ausnahmen in Fällen, in denen mehrere Aufgaben zu mehreren Ausnahmen führen können. Der `try`-Block wartet auf die Aufgabe, die von einem Aufruf von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> zurückgegeben wird. Die Aufgabe ist abgeschlossen, wenn die drei Aufgaben abgeschlossen sind, auf die WhenAll angewendet wird.  
+## <a name="example"></a><span data-ttu-id="79f32-168">Beispiel</span><span class="sxs-lookup"><span data-stu-id="79f32-168">Example</span></span>  
+ <span data-ttu-id="79f32-169">Das folgende Beispiel veranschaulicht die Behandlung von Ausnahmen in Fällen, in denen mehrere Aufgaben zu mehreren Ausnahmen führen können.</span><span class="sxs-lookup"><span data-stu-id="79f32-169">The following example illustrates exception handling where multiple tasks can result in multiple exceptions.</span></span> <span data-ttu-id="79f32-170">Der `try`-Block wartet auf die Aufgabe, die von einem Aufruf von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="79f32-170">The `try` block awaits the task that's returned by a call to <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="79f32-171">Die Aufgabe ist abgeschlossen, wenn die drei Aufgaben abgeschlossen sind, auf die WhenAll angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="79f32-171">The task is complete when the three tasks to which WhenAll is applied are complete.</span></span>  
   
- Jede der drei Aufgaben löst eine Ausnahme aus. Der `catch`-Block iteriert durch die Ausnahmen, die in der `Exception.InnerExceptions`-Eigenschaft der Aufgabe stehen, die von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> zurückgegeben wurde.  
+ <span data-ttu-id="79f32-172">Jede der drei Aufgaben löst eine Ausnahme aus.</span><span class="sxs-lookup"><span data-stu-id="79f32-172">Each of the three tasks causes an exception.</span></span> <span data-ttu-id="79f32-173">Der `catch`-Block iteriert durch die Ausnahmen, die in der `Exception.InnerExceptions`-Eigenschaft der Aufgabe stehen, die von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="79f32-173">The `catch` block iterates through the exceptions, which are found in the `Exception.InnerExceptions` property of the task that was returned by <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.</span></span>  
   
- [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
+ [!code-csharp[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="79f32-174">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="79f32-174">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
- [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [Vorgehensweise: Explizites Auslösen von Ausnahmen](https://msdn.microsoft.com/library/xhcbs8fz)
-
+## <a name="see-also"></a><span data-ttu-id="79f32-175">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="79f32-175">See Also</span></span>  
+ [<span data-ttu-id="79f32-176">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="79f32-176">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="79f32-177">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="79f32-177">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="79f32-178">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="79f32-178">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="79f32-179">try-, throw- und catch-Anweisungen (C++)</span><span class="sxs-lookup"><span data-stu-id="79f32-179">try, throw, and catch Statements (C++)</span></span>](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [<span data-ttu-id="79f32-180">Ausnahmebehandlungsanweisungen</span><span class="sxs-lookup"><span data-stu-id="79f32-180">Exception Handling Statements</span></span>](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [<span data-ttu-id="79f32-181">throw</span><span class="sxs-lookup"><span data-stu-id="79f32-181">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
+ [<span data-ttu-id="79f32-182">try-finally</span><span class="sxs-lookup"><span data-stu-id="79f32-182">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
+ [<span data-ttu-id="79f32-183">Vorgehensweise: Explizites Auslösen von Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="79f32-183">How to: Explicitly Throw Exceptions</span></span>](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

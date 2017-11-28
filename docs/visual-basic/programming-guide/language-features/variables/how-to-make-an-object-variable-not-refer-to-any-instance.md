@@ -1,33 +1,32 @@
 ---
-title: "How to: Make an Object Variable Not Refer to Any Instance (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing keyword, variable assignment"
-  - "object variables, null reference"
+title: 'Gewusst wie: Entfernen aller Verweise einer Objektvariablen auf Instanzen (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Nothing keyword [Visual Basic], variable assignment
+- object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3b33aef06300bf35b7138ec5b40747532a77140a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Sie können die Zuordnung einer Objektvariablen zu allen Objektinstanzen aufheben, indem Sie sie auf [Nothing](../../../../visual-basic/language-reference/nothing.md) festlegen.  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="98dd1-102">Gewusst wie: Entfernen aller Verweise einer Objektvariablen auf Instanzen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="98dd1-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
+<span data-ttu-id="98dd1-103">Sie können die Zuordnung einer Objektvariablen in jeder Objektinstanz aufheben, durch Festlegen auf [nichts](../../../../visual-basic/language-reference/nothing.md).</span><span class="sxs-lookup"><span data-stu-id="98dd1-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).</span></span>  
   
-### So heben Sie die Zuordnung einer Objektvariablen zu allen Objektinstanzen auf  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="98dd1-104">Trennen Sie die Objektvariable in jeder Objektinstanz</span><span class="sxs-lookup"><span data-stu-id="98dd1-104">To disassociate an object variable from any object instance</span></span>  
   
--   Legen Sie die Variable in einer Zuweisungsanweisung auf `Nothing` fest.  
+-   <span data-ttu-id="98dd1-105">Legen Sie die Variable auf `Nothing` in einer zuweisungsanweisung.</span><span class="sxs-lookup"><span data-stu-id="98dd1-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
   
     ```  
     ' Assume account is a defined class  
@@ -35,16 +34,16 @@ Sie können die Zuordnung einer Objektvariablen zu allen Objektinstanzen aufhebe
     currentAccount = Nothing  
     ```  
   
-## Robuste Programmierung  
- Wenn Ihr Code versucht, auf einen Member einer Objektvariablen zuzugreifen, die auf `Nothing` festgelegt wurde, wird eine <xref:System.NullReferenceException> ausgelöst.  Wenn Sie eine Objektvariable häufig auf `Nothing` festlegen oder wenn die Variable möglicherweise nicht initialisiert wurde, empfiehlt es sich, Memberzugriffe in einen `Try...Catch...Finally`\-Block einzuschließen.  
+## <a name="robust-programming"></a><span data-ttu-id="98dd1-106">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="98dd1-106">Robust Programming</span></span>  
+ <span data-ttu-id="98dd1-107">Wenn Ihr Code versucht, einen Member einer Objektvariablen zuzugreifen, die festgelegt wurde, dass `Nothing`ein <xref:System.NullReferenceException> auftritt.</span><span class="sxs-lookup"><span data-stu-id="98dd1-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="98dd1-108">Wenn Sie eine Objektvariable auf `Nothing` häufig, oder wenn es möglich, die Variable wird nicht initialisiert ist, ist es eine gute Idee, schließen Sie die Memberzugriffe in einem `Try...Catch...Finally` Block.</span><span class="sxs-lookup"><span data-stu-id="98dd1-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
   
-## .NET Framework-Sicherheit  
- Wenn Sie eine Objektvariable für Objekte mit vertraulichen oder sensiblen Daten verwenden, können Sie diese Variable auf `Nothing` festlegen, wenn Sie nicht aktiv mit einem dieser Objekte arbeiten.  Hierdurch verringert sich die Wahrscheinlichkeit, dass schädlicher Code auf die Daten zugreift.  
+## <a name="net-framework-security"></a><span data-ttu-id="98dd1-109">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="98dd1-109">.NET Framework Security</span></span>  
+ <span data-ttu-id="98dd1-110">Wenn Sie eine Objektvariable für Objekte, die vertrauliche oder sensible Daten enthalten verwenden, können Sie die Variable festlegen, um `Nothing` Wenn Sie nicht aktiv zuständig sind mit einem dieser Objekte.</span><span class="sxs-lookup"><span data-stu-id="98dd1-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="98dd1-111">Dies reduziert die Wahrscheinlichkeit von bösartigem Code, die den Zugriff auf die Daten.</span><span class="sxs-lookup"><span data-stu-id="98dd1-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
   
-## Siehe auch  
- <xref:System.NullReferenceException>   
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Object Variable Assignment](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Nothing](../../../../visual-basic/language-reference/nothing.md)   
- [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Problembehandlung bei Ausnahmen: System.NullReferenceException](../Topic/Troubleshooting%20Exceptions:%20System.NullReferenceException.md)
+## <a name="see-also"></a><span data-ttu-id="98dd1-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="98dd1-112">See Also</span></span>  
+ <xref:System.NullReferenceException>  
+ [<span data-ttu-id="98dd1-113">Objektvariablen</span><span class="sxs-lookup"><span data-stu-id="98dd1-113">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="98dd1-114">Zuweisen von Objektvariablen</span><span class="sxs-lookup"><span data-stu-id="98dd1-114">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [<span data-ttu-id="98dd1-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="98dd1-115">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)  
+ [<span data-ttu-id="98dd1-116">Try...Catch...Finally-Anweisung</span><span class="sxs-lookup"><span data-stu-id="98dd1-116">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="98dd1-117">Problembehandlung bei Ausnahmen: System.NullReferenceException</span><span class="sxs-lookup"><span data-stu-id="98dd1-117">Troubleshooting Exceptions: System.NullReferenceException</span></span>](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)

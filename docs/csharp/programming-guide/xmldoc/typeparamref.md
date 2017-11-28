@@ -1,64 +1,44 @@
 ---
 title: '&lt;typeparamref&gt; (C#-Programmierhandbuch)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- typeparamref
-dev_langs:
-- CSharp
+f1_keywords: typeparamref
 helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 296761f72d3d306c4f37632d7110e31b62c44734
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ce2aba7a14047066decf85675233a48a08bfd605
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lttypeparamrefgt-c-programming-guide"></a>&lt;typeparamref&gt; (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
+# <a name="lttypeparamrefgt-c-programming-guide"></a><span data-ttu-id="2045e-102">&lt;typeparamref&gt; (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="2045e-102">&lt;typeparamref&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="2045e-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="2045e-103">Syntax</span></span>  
   
 ```xml  
 <typeparamref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="2045e-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="2045e-104">Parameters</span></span>  
  `name`  
- Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
+ <span data-ttu-id="2045e-105">Der Name des Typparameters.</span><span class="sxs-lookup"><span data-stu-id="2045e-105">The name of the type parameter.</span></span> <span data-ttu-id="2045e-106">Setzen Sie den Namen in doppelte Anführungszeichen (" ").</span><span class="sxs-lookup"><span data-stu-id="2045e-106">Enclose the name in double quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den Typparametern in generischen Typen und Methoden, finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).  
+## <a name="remarks"></a><span data-ttu-id="2045e-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2045e-107">Remarks</span></span>  
+ <span data-ttu-id="2045e-108">Weitere Informationen zu den Typparametern in generischen Typen und Methoden, finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="2045e-108">For more information on type parameters in generic types and methods, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- Verwenden Sie dieses Tag, um Consumern der Dokumentationsdatei zu ermöglichen, das Wort auf unterschiedliche Weise zu formatieren, z.B. in Kursivschrift.  
+ <span data-ttu-id="2045e-109">Verwenden Sie dieses Tag, um Consumern der Dokumentationsdatei zu ermöglichen, das Wort auf unterschiedliche Weise zu formatieren, z.B. in Kursivschrift.</span><span class="sxs-lookup"><span data-stu-id="2045e-109">Use this tag to enable consumers of the documentation file to format the word in some distinct way, for example in italics.</span></span>  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ <span data-ttu-id="2045e-110">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="2045e-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[CsProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
+## <a name="example"></a><span data-ttu-id="2045e-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2045e-111">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="2045e-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2045e-112">See Also</span></span>  
+ [<span data-ttu-id="2045e-113">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2045e-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2045e-114">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="2045e-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assembly manifest, viewing information
 - Ildasm.exe
@@ -18,38 +21,39 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ddbbf9fda01328986bf586203116fdabbcd9b55e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3583e69e90080eb830bb61a5e0c7b6e944f7d654
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-view-assembly-contents"></a>Gewusst wie: Ansichtsassemblyinhalt
-Sie können den [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um Microsoft Intermediate Language-Informationen (MSIL) in einer Datei anzuzeigen. Wenn die untersuchte Datei eine Assembly ist, kann die Information die Attribute der Assembly enthalten sowie Verweise auf andere Module und Assemblys. Dieses Information kann Ihnen helfen, zu bestimmen, ob eine Datei eine Assembly oder Teil einer Assembly ist und ob die Datei über Verweise auf andere Module oder Assemblys verfügt.  
+# <a name="how-to-view-assembly-contents"></a><span data-ttu-id="b8707-102">Gewusst wie: Ansichtsassemblyinhalt</span><span class="sxs-lookup"><span data-stu-id="b8707-102">How to: View Assembly Contents</span></span>
+<span data-ttu-id="b8707-103">Sie können den [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um Microsoft Intermediate Language-Informationen (MSIL) in einer Datei anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="b8707-103">You can use the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) information in a file.</span></span> <span data-ttu-id="b8707-104">Wenn die untersuchte Datei eine Assembly ist, kann die Information die Attribute der Assembly enthalten sowie Verweise auf andere Module und Assemblys.</span><span class="sxs-lookup"><span data-stu-id="b8707-104">If the file being examined is an assembly, this information can include the assembly's attributes, as well as references to other modules and assemblies.</span></span> <span data-ttu-id="b8707-105">Dieses Information kann Ihnen helfen, zu bestimmen, ob eine Datei eine Assembly oder Teil einer Assembly ist und ob die Datei über Verweise auf andere Module oder Assemblys verfügt.</span><span class="sxs-lookup"><span data-stu-id="b8707-105">This information can be helpful in determining whether a file is an assembly or part of an assembly, and whether the file has references to other modules or assemblies.</span></span>  
   
-### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>So zeigen Sie die Inhalte einer Assembly mithilfe von „Ildasm.exe“ an  
+### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a><span data-ttu-id="b8707-106">So zeigen Sie die Inhalte einer Assembly mithilfe von „Ildasm.exe“ an</span><span class="sxs-lookup"><span data-stu-id="b8707-106">To display the contents of an assembly using Ildasm.exe</span></span>  
   
-1.  Geben Sie **ildasm** \<*assemblyname*> an der Eingabeaufforderung ein. Beispielsweise disassembliert der folgende Befehl die `Hello.exe`-Assembly.  
+1.  <span data-ttu-id="b8707-107">Geben Sie **ildasm** \<*assemblyname*> an der Eingabeaufforderung ein.</span><span class="sxs-lookup"><span data-stu-id="b8707-107">Type **ildasm** \<*assembly name*> at the command prompt.</span></span> <span data-ttu-id="b8707-108">Beispielsweise disassembliert der folgende Befehl die `Hello.exe`-Assembly.</span><span class="sxs-lookup"><span data-stu-id="b8707-108">For example, the following command disassembles the `Hello.exe` assembly.</span></span>  
   
     ```  
     ildasm Hello.exe  
     ```  
   
-### <a name="to-view-assembly-manifest-information"></a>So zeigen Sie Informationen aus dem Assemblymanifest an  
+### <a name="to-view-assembly-manifest-information"></a><span data-ttu-id="b8707-109">So zeigen Sie Informationen aus dem Assemblymanifest an</span><span class="sxs-lookup"><span data-stu-id="b8707-109">To view assembly manifest information</span></span>  
   
-1.  Klicken Sie doppelt auf das Symbol MANIFEST im Fenster „MSIL-Disassembler“.  
+1.  <span data-ttu-id="b8707-110">Klicken Sie doppelt auf das Symbol MANIFEST im Fenster „MSIL-Disassembler“.</span><span class="sxs-lookup"><span data-stu-id="b8707-110">Double-click the MANIFEST icon in the MSIL Disassembler window.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel beginnt mit einem einfachen „Hello, World“-Programm. Nachdem Sie das Programm kompiliert haben, verwenden Sie „Ildasm.exe“, um das „Hello.exe“-Assembly zu disassemblieren, und zeigen Sie das Assemblymanifest an.  
+## <a name="example"></a><span data-ttu-id="b8707-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b8707-111">Example</span></span>  
+ <span data-ttu-id="b8707-112">Das folgende Beispiel beginnt mit einem einfachen „Hello, World“-Programm.</span><span class="sxs-lookup"><span data-stu-id="b8707-112">The following example starts with a basic "Hello, World" program.</span></span> <span data-ttu-id="b8707-113">Nachdem Sie das Programm kompiliert haben, verwenden Sie „Ildasm.exe“, um das „Hello.exe“-Assembly zu disassemblieren, und zeigen Sie das Assemblymanifest an.</span><span class="sxs-lookup"><span data-stu-id="b8707-113">After compiling the program, use Ildasm.exe to disassemble the Hello.exe assembly and view the assembly manifest.</span></span>  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)]
+ [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)]
+ [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
   
- Führen Sie den Befehl „ildasm.exe“ erneut auf dem „Hello.exe“-Assembly aus, und führen Sie eine Doppelklick auf das Symbol MANIFEST in Fenster IL DASM aus, wodurch folgende Ausgabe erzeugt wird:  
+ <span data-ttu-id="b8707-114">Führen Sie den Befehl „ildasm.exe“ erneut auf dem „Hello.exe“-Assembly aus, und führen Sie eine Doppelklick auf das Symbol MANIFEST in Fenster IL DASM aus, wodurch folgende Ausgabe erzeugt wird:</span><span class="sxs-lookup"><span data-stu-id="b8707-114">Running the command ildasm.exe on the Hello.exe assembly and double-clicking the MANIFEST icon in the IL DASM window produces the following output:</span></span>  
   
 ```  
 // Metadata version: v4.0.30319  
@@ -76,24 +80,23 @@ Sie können den [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ild
 // Image base: 0x00600000  
 ```  
   
- In der folgenden Tabelle wird jede Direktive im Assemblymanifest des „Hello.exe“-Assemblys beschrieben, das im Beispiel verwendet wird.  
+ <span data-ttu-id="b8707-115">In der folgenden Tabelle wird jede Direktive im Assemblymanifest des „Hello.exe“-Assemblys beschrieben, das im Beispiel verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b8707-115">The following table describes each directive in the assembly manifest of the Hello.exe assembly used in the example.</span></span>  
   
-|Direktive|Beschreibung|  
+|<span data-ttu-id="b8707-116">Direktive</span><span class="sxs-lookup"><span data-stu-id="b8707-116">Directive</span></span>|<span data-ttu-id="b8707-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b8707-117">Description</span></span>|  
 |---------------|-----------------|  
-|**.assembly extern \<** *assemblyname* **>**|Gibt eine andere Assembly an, die Elemente enthält, auf die vom aktuellen Modul verwiesen wird (in diesem Beispiel `mscorlib`).|  
-|**.publickeytoken \<** *token* **>**|Gibt den Token des tatsächlichen Schlüssels der verwiesenen Assembly an.|  
-|**.ver \<** *versionsnummer* **>**|Gibt die Versionsnummer der verwiesenen Assembly an.|  
-|**.assembly \<** *assemblyname* **>**|Gibt den Assemblynamen an.|  
-|**.hash algorithm \<** *int32-wert* **>**|Gibt den verwendeten Hashalgorithmus an.|  
-|**.ver \<** *versionsnummer* **>**|Gibt die Versionsnummer der Assembly an.|  
-|**.module \<** *dateiname* **>**|Gibt den Namen der Module an, aus die eine Assembly besteht. In diesem Beispiel besteht die Assembly aus nur einer Datei.|  
-|**.subsystem \<** *wert* **>**|Gibt die Anwendungsumgebung an, die für das Programm erforderlich ist. In diesem Beispiel gibt der Wert 3 an, dass diese ausführbare Datei von einer Konsole aus ausgeführt wird.|  
-|**.corflags**|Derzeit ein reserviertes Feld in den Metadaten.|  
+|<span data-ttu-id="b8707-118">**.assembly extern \<** *assemblyname* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-118">**.assembly extern \<** *assembly name* **>**</span></span>|<span data-ttu-id="b8707-119">Gibt eine andere Assembly an, die Elemente enthält, auf die vom aktuellen Modul verwiesen wird (in diesem Beispiel `mscorlib`).</span><span class="sxs-lookup"><span data-stu-id="b8707-119">Specifies another assembly that contains items referenced by the current module (in this example, `mscorlib`).</span></span>|  
+|<span data-ttu-id="b8707-120">**.publickeytoken \<** *token* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-120">**.publickeytoken \<** *token* **>**</span></span>|<span data-ttu-id="b8707-121">Gibt den Token des tatsächlichen Schlüssels der verwiesenen Assembly an.</span><span class="sxs-lookup"><span data-stu-id="b8707-121">Specifies the token of the actual key of the referenced assembly.</span></span>|  
+|<span data-ttu-id="b8707-122">**.ver \<** *versionsnummer* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-122">**.ver \<** *version number* **>**</span></span>|<span data-ttu-id="b8707-123">Gibt die Versionsnummer der verwiesenen Assembly an.</span><span class="sxs-lookup"><span data-stu-id="b8707-123">Specifies the version number of the referenced assembly.</span></span>|  
+|<span data-ttu-id="b8707-124">**.assembly \<** *assemblyname* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-124">**.assembly \<** *assembly name* **>**</span></span>|<span data-ttu-id="b8707-125">Gibt den Assemblynamen an.</span><span class="sxs-lookup"><span data-stu-id="b8707-125">Specifies the assembly name.</span></span>|  
+|<span data-ttu-id="b8707-126">**.hash algorithm \<** *int32-wert* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-126">**.hash algorithm \<** *int32 value* **>**</span></span>|<span data-ttu-id="b8707-127">Gibt den verwendeten Hashalgorithmus an.</span><span class="sxs-lookup"><span data-stu-id="b8707-127">Specifies the hash algorithm used.</span></span>|  
+|<span data-ttu-id="b8707-128">**.ver \<** *versionsnummer* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-128">**.ver \<** *version number* **>**</span></span>|<span data-ttu-id="b8707-129">Gibt die Versionsnummer der Assembly an.</span><span class="sxs-lookup"><span data-stu-id="b8707-129">Specifies the version number of the assembly.</span></span>|  
+|<span data-ttu-id="b8707-130">**.module \<** *dateiname* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-130">**.module \<** *file name* **>**</span></span>|<span data-ttu-id="b8707-131">Gibt den Namen der Module an, aus die eine Assembly besteht.</span><span class="sxs-lookup"><span data-stu-id="b8707-131">Specifies the name of the modules that make up the assembly.</span></span> <span data-ttu-id="b8707-132">In diesem Beispiel besteht die Assembly aus nur einer Datei.</span><span class="sxs-lookup"><span data-stu-id="b8707-132">In this example, the assembly consists of only one file.</span></span>|  
+|<span data-ttu-id="b8707-133">**.subsystem \<** *wert* **>**</span><span class="sxs-lookup"><span data-stu-id="b8707-133">**.subsystem \<** *value* **>**</span></span>|<span data-ttu-id="b8707-134">Gibt die Anwendungsumgebung an, die für das Programm erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="b8707-134">Specifies the application environment required for the program.</span></span> <span data-ttu-id="b8707-135">In diesem Beispiel gibt der Wert 3 an, dass diese ausführbare Datei von einer Konsole aus ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b8707-135">In this example, the value 3 indicates that this executable is run from a console.</span></span>|  
+|<span data-ttu-id="b8707-136">**.corflags**</span><span class="sxs-lookup"><span data-stu-id="b8707-136">**.corflags**</span></span>|<span data-ttu-id="b8707-137">Derzeit ein reserviertes Feld in den Metadaten.</span><span class="sxs-lookup"><span data-stu-id="b8707-137">Currently a reserved field in the metadata.</span></span>|  
   
- Ein Assemblymanifest kann eine Reihe unterschiedlicher Direktiven enthalten, je nach den Inhalten der Assembly. Eine ausführliche Liste mit den Direktiven im Assemblymanifest finden Sie in der ECMA-Dokumentation, besonders unter „Partition II: Metadata Definition and Semantics“ (Partition II: Matadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (Partition III: CIL-Anweisungssatz). Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+ <span data-ttu-id="b8707-138">Ein Assemblymanifest kann eine Reihe unterschiedlicher Direktiven enthalten, je nach den Inhalten der Assembly.</span><span class="sxs-lookup"><span data-stu-id="b8707-138">An assembly manifest can contain a number of different directives, depending on the contents of the assembly.</span></span> <span data-ttu-id="b8707-139">Eine ausführliche Liste mit den Direktiven im Assemblymanifest finden Sie in der ECMA-Dokumentation, besonders unter „Partition II: Metadata Definition and Semantics“ (Partition II: Matadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (Partition III: CIL-Anweisungssatz).</span><span class="sxs-lookup"><span data-stu-id="b8707-139">For an extensive list of the directives in the assembly manifest, see the ECMA documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set".</span></span> <span data-ttu-id="b8707-140">Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.</span><span class="sxs-lookup"><span data-stu-id="b8707-140">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Anwendungsdomänen und Assemblys](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
- [Themen zur Vorgehensweise zu Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
- [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-
+## <a name="see-also"></a><span data-ttu-id="b8707-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b8707-141">See Also</span></span>  
+ [<span data-ttu-id="b8707-142">Anwendungsdomänen und Assemblys</span><span class="sxs-lookup"><span data-stu-id="b8707-142">Application Domains and Assemblies</span></span>](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)  
+ [<span data-ttu-id="b8707-143">Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys</span><span class="sxs-lookup"><span data-stu-id="b8707-143">Application Domains and Assemblies How-to Topics</span></span>](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
+ [<span data-ttu-id="b8707-144">Ildasm.exe (IL-Disassembler)</span><span class="sxs-lookup"><span data-stu-id="b8707-144">Ildasm.exe (IL Disassembler)</span></span>](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

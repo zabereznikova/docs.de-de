@@ -10,49 +10,46 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: dd4c68fb4f960d0c2d5cbdc9e699650070cacaf1
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="introduction-to-delegates"></a><span data-ttu-id="09858-104">Einführung in Delegaten</span><span class="sxs-lookup"><span data-stu-id="09858-104">Introduction to Delegates</span></span>
 
-# <a name="introduction-to-delegates"></a>Einführung in Delegaten
+[<span data-ttu-id="09858-105">Vorheriges</span><span class="sxs-lookup"><span data-stu-id="09858-105">Previous</span></span>](delegates-events.md)
 
-[Vorheriges](delegates-events.md)
+<span data-ttu-id="09858-106">Delegaten bieten einen Mechanismus mit *später Bindung* in .NET.</span><span class="sxs-lookup"><span data-stu-id="09858-106">Delegates provide a *late binding* mechanism in .NET.</span></span> <span data-ttu-id="09858-107">Späte Bindung bedeutet, dass Sie einen Algorithmus erstellen, in dem der Aufrufer auch mindestens eine Methode bereitstellt, die einen Teil des Algorithmus implementiert.</span><span class="sxs-lookup"><span data-stu-id="09858-107">Late Binding means that you create an algorithm where the caller also supplies at least one method that implements part of the algorithm.</span></span>
 
-Delegaten bieten einen Mechanismus mit *später Bindung* in .NET. Späte Bindung bedeutet, dass Sie einen Algorithmus erstellen, in dem der Aufrufer auch mindestens eine Methode bereitstellt, die einen Teil des Algorithmus implementiert.
+<span data-ttu-id="09858-108">Sie können z.B. eine Liste von Sternen in einer Astronomie-Anwendung sortieren.</span><span class="sxs-lookup"><span data-stu-id="09858-108">For example, consider sorting a list of stars in an astronomy application.</span></span>
+<span data-ttu-id="09858-109">Sie können diese Sterne nach ihrer Entfernung von der Erde, nach der Größe des Sterns oder ihrer wahrgenommenen Helligkeit sortieren.</span><span class="sxs-lookup"><span data-stu-id="09858-109">You may choose to sort those stars by their distance from the earth, or the magnitude of the star, or their perceived brightness.</span></span>
 
-Sie können z.B. eine Liste von Sternen in einer Astronomie-Anwendung sortieren.
-Sie können diese Sterne nach ihrer Entfernung von der Erde, nach der Größe des Sterns oder ihrer wahrgenommenen Helligkeit sortieren.
+<span data-ttu-id="09858-110">In all diesen Fällen macht die Sort()-Methode im Prinzip das Gleiche: Sie ordnet die Elemente in der Liste basierend auf einen Vergleich.</span><span class="sxs-lookup"><span data-stu-id="09858-110">In all those cases, the Sort() method does essentially the same thing: arranges the items in the list based on some comparison.</span></span> <span data-ttu-id="09858-111">Der Code, der zwei Sterne vergleicht, ist bei jeder Sortierreihenfolge unterschiedlich.</span><span class="sxs-lookup"><span data-stu-id="09858-111">The code that compares two stars is different for each of the sort orderings.</span></span>
 
-In all diesen Fällen macht die Sort()-Methode im Prinzip das Gleiche: Sie ordnet die Elemente in der Liste basierend auf einen Vergleich. Der Code, der zwei Sterne vergleicht, ist bei jeder Sortierreihenfolge unterschiedlich.
+<span data-ttu-id="09858-112">Diese Arten von Lösungen wurden in der Softwareentwicklung für ein halbes Jahrhundert verwendet.</span><span class="sxs-lookup"><span data-stu-id="09858-112">These kinds of solutions have been used in software for half a century.</span></span>
+<span data-ttu-id="09858-113">Das Delegatenkonzept von C# bietet erstklassige Sprachunterstützung und Typsicherheit rund um das Konzept.</span><span class="sxs-lookup"><span data-stu-id="09858-113">The C# language delegate concept provides first class language support, and type safety around the concept.</span></span>
 
-Diese Arten von Lösungen wurden in der Softwareentwicklung für ein halbes Jahrhundert verwendet.
-Das Delegatenkonzept von C# bietet erstklassige Sprachunterstützung und Typsicherheit rund um das Konzept.
+<span data-ttu-id="09858-114">Wie Sie später in dieser Serie sehen werden, ist der C#-Code, den Sie für Algorithmen wie diesen schreiben, typsicher und nutzt die Sprache und den Compiler, um sicherzustellen, dass die Typen mit Argumenten und Rückgabetypen übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="09858-114">As you'll see later in this series, the C# code you write for algorithms like this is type safe, and leverages the language and the compiler to ensure that the types match for arguments and return types.</span></span>
 
-Wie Sie später in dieser Serie sehen werden, ist der C#-Code, den Sie für Algorithmen wie diesen schreiben, typsicher und nutzt die Sprache und den Compiler, um sicherzustellen, dass die Typen mit Argumenten und Rückgabetypen übereinstimmen.
+## <a name="language-design-goals-for-delegates"></a><span data-ttu-id="09858-115">Sprachliche Entwurfsziele für Delegaten</span><span class="sxs-lookup"><span data-stu-id="09858-115">Language Design Goals for Delegates</span></span>
 
-## <a name="language-design-goals-for-delegates"></a>Sprachliche Entwurfsziele für Delegaten
+<span data-ttu-id="09858-116">Die Sprachentwickler haben mehrere Ziele für die Funktion aufgezählt, die schließlich Delegaten geworden sind.</span><span class="sxs-lookup"><span data-stu-id="09858-116">The language designers enumerated several goals for the feature that eventually became delegates.</span></span>
 
-Die Sprachentwickler haben mehrere Ziele für die Funktion aufgezählt, die schließlich Delegaten geworden sind.
+<span data-ttu-id="09858-117">Das Team wollte ein allgemeines Sprachkonstrukt entwerfen, das für alle Algorithmen mit später Bindung verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="09858-117">The team wanted a common language construct that could be used for any late binding algorithms.</span></span> <span data-ttu-id="09858-118">Dadurch können Softwareentwickler ein Konzept erlernen und dasselbe Konzept bei vielen verschiedenen Softwareproblemen anwenden.</span><span class="sxs-lookup"><span data-stu-id="09858-118">That enables developers to learn one concept, and use that same concept across many different software problems.</span></span>
 
-Das Team wollte ein allgemeines Sprachkonstrukt entwerfen, das für alle Algorithmen mit später Bindung verwendet werden kann. Dadurch können Softwareentwickler ein Konzept erlernen und dasselbe Konzept bei vielen verschiedenen Softwareproblemen anwenden.
+<span data-ttu-id="09858-119">Außerdem sollten sowohl einzelne als auch Multicast-Methodenaufrufe unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="09858-119">Second, the team wanted to support both single and multi-cast method calls.</span></span> <span data-ttu-id="09858-120">Multicastdelegaten sind Delegaten, in denen mehrere Methoden miteinander verbunden wurden.</span><span class="sxs-lookup"><span data-stu-id="09858-120">(Multicast delegates are delegates where multiple methods have been chained together.</span></span> <span data-ttu-id="09858-121">Beispiele dafür finden Sie [später in dieser Serie](delegate-class.md).</span><span class="sxs-lookup"><span data-stu-id="09858-121">You'll see examples [later in this series](delegate-class.md).</span></span> 
 
-Außerdem sollten sowohl einzelne als auch Multicast-Methodenaufrufe unterstützt werden. Multicastdelegaten sind Delegaten, in denen mehrere Methoden miteinander verbunden wurden. Beispiele dafür finden Sie [später in dieser Serie](delegate-class.md). 
+<span data-ttu-id="09858-122">Delegaten sollten dieselbe Typsicherheit unterstützen, die Entwickler von allen C#-Konstrukten erwarten.</span><span class="sxs-lookup"><span data-stu-id="09858-122">The team wanted delegates to support the same type safety that developers expect from all C# constructs.</span></span> 
 
-Delegaten sollten dieselbe Typsicherheit unterstützen, die Entwickler von allen C#-Konstrukten erwarten. 
+<span data-ttu-id="09858-123">Die Sprachentwickler erkannten schließlich, dass ein Ereignismuster ein bestimmtes Muster ist, in dem Delegaten (oder jeder beliebige Algorithmus mit später Bindung) sehr nützlich sind.</span><span class="sxs-lookup"><span data-stu-id="09858-123">Finally, the team recognized that an event pattern is one specific pattern where delegates, or any late binding algorithm) is very useful.</span></span> <span data-ttu-id="09858-124">Daher sollte sichergestellt werden, dass der Code für den Delegaten die Basis für das .NET-Ereignismuster bereitstellen konnte.</span><span class="sxs-lookup"><span data-stu-id="09858-124">The team wanted to ensure that the code for delegates could provide the basis for the .NET event pattern.</span></span>
 
-Die Sprachentwickler erkannten schließlich, dass ein Ereignismuster ein bestimmtes Muster ist, in dem Delegaten (oder jeder beliebige Algorithmus mit später Bindung) sehr nützlich sind. Daher sollte sichergestellt werden, dass der Code für den Delegaten die Basis für das .NET-Ereignismuster bereitstellen konnte.
+<span data-ttu-id="09858-125">Das Ergebnis dieser Arbeit war die Delegat- und Ereignisunterstützung in C# und .NET.</span><span class="sxs-lookup"><span data-stu-id="09858-125">The result of all that work was the delegate and event support in C# and .NET.</span></span> <span data-ttu-id="09858-126">Die übrigen Artikel in diesem Abschnitt behandeln die Sprachfunktionen, die Bibliotheksunterstützung und die allgemeinen Ausdrücke, die bei der Arbeit mit Delegaten verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="09858-126">The remaining articles in this section will cover the language features, the library support, and the common idioms that are used when you work with delegates.</span></span>
 
-Das Ergebnis dieser Arbeit war die Delegat- und Ereignisunterstützung in C# und .NET. Die übrigen Artikel in diesem Abschnitt behandeln die Sprachfunktionen, die Bibliotheksunterstützung und die allgemeinen Ausdrücke, die bei der Arbeit mit Delegaten verwendet werden.
+<span data-ttu-id="09858-127">Sie werden das `delegate`-Schlüsselwort kennenlernen und erfahren, welchen Code es generiert.</span><span class="sxs-lookup"><span data-stu-id="09858-127">You'll learn about the `delegate` keyword and what code it generates.</span></span> <span data-ttu-id="09858-128">Außerdem werden Sie die Funktionen der `System.Delegate`-Klasse kennenlernen und erfahren, wie diese Funktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="09858-128">You'll learn about the features in the `System.Delegate` class, and how those features are used.</span></span> <span data-ttu-id="09858-129">Darüber hinaus erfahren Sie, wie Sie typsichere Delegaten erstellen und wie Sie Methoden erstellen, die durch Delegaten aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="09858-129">You'll learn how to create type safe delegates, and how to create methods that can be invoked through delegates.</span></span> <span data-ttu-id="09858-130">Sie erfahren, wie Sie mithilfe von Lambdaausdrücken mit Delegaten und Ereignissen arbeiten und</span><span class="sxs-lookup"><span data-stu-id="09858-130">You'll also learn how to work with delegates and events by using Lambda expressions.</span></span> <span data-ttu-id="09858-131">an welcher Stelle Delegaten einer der Bausteine für LINQ werden.</span><span class="sxs-lookup"><span data-stu-id="09858-131">You'll see where delegates become one of the building blocks for LINQ.</span></span> <span data-ttu-id="09858-132">Darüber hinaus erfahren Sie, warum Delegaten die Grundlage für das .NET-Ereignismuster sind und wie sie sich unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="09858-132">You'll learn how delegates are the basis for the .NET event pattern, and how they are different.</span></span>
 
-Sie werden das `delegate`-Schlüsselwort kennenlernen und erfahren, welchen Code es generiert. Außerdem werden Sie die Funktionen der `System.Delegate`-Klasse kennenlernen und erfahren, wie diese Funktionen verwendet werden. Darüber hinaus erfahren Sie, wie Sie typsichere Delegaten erstellen und wie Sie Methoden erstellen, die durch Delegaten aufgerufen werden können. Sie erfahren, wie Sie mithilfe von Lambdaausdrücken mit Delegaten und Ereignissen arbeiten und an welcher Stelle Delegaten einer der Bausteine für LINQ werden. Darüber hinaus erfahren Sie, warum Delegaten die Grundlage für das .NET-Ereignismuster sind und wie sie sich unterscheiden.
+<span data-ttu-id="09858-133">Alles in allem wird erläutert, warum Delegaten ein wesentlicher Bestandteil in der .NET-Programmierung sind und wie sie mit den Framework-APIs arbeiten.</span><span class="sxs-lookup"><span data-stu-id="09858-133">Overall, you'll see how delegates are an integral part of programming in .NET and working with the framework APIs.</span></span>
 
-Alles in allem wird erläutert, warum Delegaten ein wesentlicher Bestandteil in der .NET-Programmierung sind und wie sie mit den Framework-APIs arbeiten.
+<span data-ttu-id="09858-134">Fangen wir also an.</span><span class="sxs-lookup"><span data-stu-id="09858-134">Let's get started.</span></span>
 
-Fangen wir also an.
-
-[Weiter](delegate-class.md)
-
+[<span data-ttu-id="09858-135">Weiter</span><span class="sxs-lookup"><span data-stu-id="09858-135">Next</span></span>](delegate-class.md)

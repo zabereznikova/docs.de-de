@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,73 +15,71 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="assembly-versioning"></a>Assemblyversionen
-Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
+# <a name="assembly-versioning"></a><span data-ttu-id="1cf46-102">Assemblyversionen</span><span class="sxs-lookup"><span data-stu-id="1cf46-102">Assembly Versioning</span></span>
+<span data-ttu-id="1cf46-103">Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt.</span><span class="sxs-lookup"><span data-stu-id="1cf46-103">All versioning of assemblies that use the common language runtime is done at the assembly level.</span></span> <span data-ttu-id="1cf46-104">Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet.</span><span class="sxs-lookup"><span data-stu-id="1cf46-104">The specific version of an assembly and the versions of dependent assemblies are recorded in the assembly's manifest.</span></span> <span data-ttu-id="1cf46-105">Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="1cf46-105">The default version policy for the runtime is that applications run only with the versions they were built and tested with, unless overridden by explicit version policy in configuration files (the application configuration file, the publisher policy file, and the computer's administrator configuration file).</span></span>  
   
 > [!NOTE]
->  Versionen werden nur bei Assemblys mit starken Namen erstellt.  
+>  <span data-ttu-id="1cf46-106">Versionen werden nur bei Assemblys mit starken Namen erstellt.</span><span class="sxs-lookup"><span data-stu-id="1cf46-106">Versioning is done only on assemblies with strong names.</span></span>  
   
- Zur Auflösung einer Assemblybindungsanforderung werden von der Laufzeit mehrere Schritte ausgeführt:  
+ <span data-ttu-id="1cf46-107">Zur Auflösung einer Assemblybindungsanforderung werden von der Laufzeit mehrere Schritte ausgeführt:</span><span class="sxs-lookup"><span data-stu-id="1cf46-107">The runtime performs several steps to resolve an assembly binding request:</span></span>  
   
-1.  Überprüft den ursprünglichen Assemblyverweis, um zu bestimmen, welche Version der Assembly gebunden werden soll.  
+1.  <span data-ttu-id="1cf46-108">Überprüft den ursprünglichen Assemblyverweis, um zu bestimmen, welche Version der Assembly gebunden werden soll.</span><span class="sxs-lookup"><span data-stu-id="1cf46-108">Checks the original assembly reference to determine the version of the assembly to be bound.</span></span>  
   
-2.  Überprüft alle anwendbaren Konfigurationsdateien, um die Versionsrichtlinie anzuwenden.  
+2.  <span data-ttu-id="1cf46-109">Überprüft alle anwendbaren Konfigurationsdateien, um die Versionsrichtlinie anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="1cf46-109">Checks for all applicable configuration files to apply version policy.</span></span>  
   
-3.  Ermittelt die richtige Assembly aus dem ursprünglichen Assemblyverweis und allen Umleitungen, die in den Konfigurationsdateien angegeben sind, und bestimmt die Version, die an die aufrufende Assembly gebunden werden soll.  
+3.  <span data-ttu-id="1cf46-110">Ermittelt die richtige Assembly aus dem ursprünglichen Assemblyverweis und allen Umleitungen, die in den Konfigurationsdateien angegeben sind, und bestimmt die Version, die an die aufrufende Assembly gebunden werden soll.</span><span class="sxs-lookup"><span data-stu-id="1cf46-110">Determines the correct assembly from the original assembly reference and any redirection specified in the configuration files, and determines the version that should be bound to the calling assembly.</span></span>  
   
-4.  Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.  
+4.  <span data-ttu-id="1cf46-111">Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.</span><span class="sxs-lookup"><span data-stu-id="1cf46-111">Checks the global assembly cache, codebases specified in configuration files, and then checks the application's directory and subdirectories using the probing rules explained in [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- Diese Schritte sind in der folgenden Abbildung dargestellt.  
+ <span data-ttu-id="1cf46-112">Diese Schritte sind in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="1cf46-112">The following illustration shows these steps.</span></span>  
   
- ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-Auflösen einer Assemblybindungsanforderung  
+ <span data-ttu-id="1cf46-113">![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")</span><span class="sxs-lookup"><span data-stu-id="1cf46-113">![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")</span></span>  
+<span data-ttu-id="1cf46-114">Auflösen einer Assemblybindungsanforderung</span><span class="sxs-lookup"><span data-stu-id="1cf46-114">Resolving an assembly binding request</span></span>  
   
- Weitere Informationen zum Konfigurieren von Anwendungen finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md). Weitere Informationen finden Sie unter [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ <span data-ttu-id="1cf46-115">Weitere Informationen zum Konfigurieren von Anwendungen finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md).</span><span class="sxs-lookup"><span data-stu-id="1cf46-115">For more information about configuring applications, see [Configuring Apps](../../../docs/framework/configure-apps/index.md).</span></span> <span data-ttu-id="1cf46-116">Weitere Informationen finden Sie unter [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="1cf46-116">For more information about binding policy, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
-## <a name="version-information"></a>Versionsinformationen  
- Jede Assembly besitzt zwei unterschiedliche Methoden zur Darstellung der Versionsinformationen:  
+## <a name="version-information"></a><span data-ttu-id="1cf46-117">Versionsinformationen</span><span class="sxs-lookup"><span data-stu-id="1cf46-117">Version Information</span></span>  
+ <span data-ttu-id="1cf46-118">Jede Assembly besitzt zwei unterschiedliche Methoden zur Darstellung der Versionsinformationen:</span><span class="sxs-lookup"><span data-stu-id="1cf46-118">Each assembly has two distinct ways of expressing version information:</span></span>  
   
--   Die Versionsnummer der Assembly, die zusammen mit dem Assemblynamen und den Kulturinformationen zur Identität der Assembly gehört. Diese Nummer wird von der Common Language Runtime zum Erzwingen von Versionsrichtlinien verwendet und spielt zur Laufzeit eine Schlüsselrolle im Vorgang der Typauflösung.  
+-   <span data-ttu-id="1cf46-119">Die Versionsnummer der Assembly, die zusammen mit dem Assemblynamen und den Kulturinformationen zur Identität der Assembly gehört.</span><span class="sxs-lookup"><span data-stu-id="1cf46-119">The assembly's version number, which, together with the assembly name and culture information, is part of the assembly's identity.</span></span> <span data-ttu-id="1cf46-120">Diese Nummer wird von der Common Language Runtime zum Erzwingen von Versionsrichtlinien verwendet und spielt zur Laufzeit eine Schlüsselrolle im Vorgang der Typauflösung.</span><span class="sxs-lookup"><span data-stu-id="1cf46-120">This number is used by the runtime to enforce version policy and plays a key part in the type resolution process at run time.</span></span>  
   
--   Eine Informationsversion, d. h. eine Zeichenfolge, die zusätzliche Versionsinformationen enthält und ausschließlich Informationszwecken dient.  
+-   <span data-ttu-id="1cf46-121">Eine Informationsversion, d. h. eine Zeichenfolge, die zusätzliche Versionsinformationen enthält und ausschließlich Informationszwecken dient.</span><span class="sxs-lookup"><span data-stu-id="1cf46-121">An informational version, which is a string that represents additional version information included for informational purposes only.</span></span>  
   
-### <a name="assembly-version-number"></a>Assemblyversionsnummer  
- Die Versionsnummer ist Teil der Identität einer Assembly. Daher betrachtet die Common Language Runtime zwei Assemblys mit unterschiedlichen Versionsnummern als zwei völlig verschiedene Assemblys. Diese Versionsnummer wird physisch als vierteilige Zeichenfolge im folgenden Format dargestellt:  
+### <a name="assembly-version-number"></a><span data-ttu-id="1cf46-122">Assemblyversionsnummer</span><span class="sxs-lookup"><span data-stu-id="1cf46-122">Assembly Version Number</span></span>  
+ <span data-ttu-id="1cf46-123">Die Versionsnummer ist Teil der Identität einer Assembly.</span><span class="sxs-lookup"><span data-stu-id="1cf46-123">Each assembly has a version number as part of its identity.</span></span> <span data-ttu-id="1cf46-124">Daher betrachtet die Common Language Runtime zwei Assemblys mit unterschiedlichen Versionsnummern als zwei völlig verschiedene Assemblys.</span><span class="sxs-lookup"><span data-stu-id="1cf46-124">As such, two assemblies that differ by version number are considered by the runtime to be completely different assemblies.</span></span> <span data-ttu-id="1cf46-125">Diese Versionsnummer wird physisch als vierteilige Zeichenfolge im folgenden Format dargestellt:</span><span class="sxs-lookup"><span data-stu-id="1cf46-125">This version number is physically represented as a four-part string with the following format:</span></span>  
   
- \<*hauptversion*>.\<*nebenversion*>.\<*buildnummer*>.\<*revision*>  
+ <span data-ttu-id="1cf46-126">\<*hauptversion*>.\<*nebenversion*>.\<*buildnummer*>.\<*revision*></span><span class="sxs-lookup"><span data-stu-id="1cf46-126">\<*major version*>.\<*minor version*>.\<*build number*>.\<*revision*></span></span>  
   
- Die Version 1.5.1254.0 z. B. gibt 1 als Hauptversion, 5 als Nebenversion, 1254 als Buildnummer und 0 als Revisionsnummer an.  
+ <span data-ttu-id="1cf46-127">Die Version 1.5.1254.0 z. B. gibt 1 als Hauptversion, 5 als Nebenversion, 1254 als Buildnummer und 0 als Revisionsnummer an.</span><span class="sxs-lookup"><span data-stu-id="1cf46-127">For example, version 1.5.1254.0 indicates 1 as the major version, 5 as the minor version, 1254 as the build number, and 0 as the revision number.</span></span>  
   
- Die Versionsnummer wird im Assemblymanifest zusammen mit anderen Informationen zur Identität gespeichert, einschließlich des Assemblynamens und des öffentlichen Schlüssels sowie der Informationen über Beziehungen und Identitäten anderer Assemblys, die mit der Anwendung verbunden sind.  
+ <span data-ttu-id="1cf46-128">Die Versionsnummer wird im Assemblymanifest zusammen mit anderen Informationen zur Identität gespeichert, einschließlich des Assemblynamens und des öffentlichen Schlüssels sowie der Informationen über Beziehungen und Identitäten anderer Assemblys, die mit der Anwendung verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="1cf46-128">The version number is stored in the assembly manifest along with other identity information, including the assembly name and public key, as well as information on relationships and identities of other assemblies connected with the application.</span></span>  
   
- Beim Erstellen einer Assembly zeichnet das Entwicklungstool die Abhängigkeitsinformationen für jede Assembly auf, auf die im Assemblymanifest verwiesen wird. Die Laufzeit verwendet diese Versionsnummern zusammen mit den Konfigurationsinformationen, die von einem Administrator, einer Anwendung oder einem Herausgeber festgelegt wurden, um die richtige Version einer Assembly zu laden, auf die verwiesen wird.  
+ <span data-ttu-id="1cf46-129">Beim Erstellen einer Assembly zeichnet das Entwicklungstool die Abhängigkeitsinformationen für jede Assembly auf, auf die im Assemblymanifest verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="1cf46-129">When an assembly is built, the development tool records dependency information for each assembly that is referenced in the assembly manifest.</span></span> <span data-ttu-id="1cf46-130">Die Laufzeit verwendet diese Versionsnummern zusammen mit den Konfigurationsinformationen, die von einem Administrator, einer Anwendung oder einem Herausgeber festgelegt wurden, um die richtige Version einer Assembly zu laden, auf die verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="1cf46-130">The runtime uses these version numbers, in conjunction with configuration information set by an administrator, an application, or a publisher, to load the proper version of a referenced assembly.</span></span>  
   
- Die Laufzeit unterscheidet zum Zweck der Versionskontrolle zwischen normalen Assemblys und Assemblys mit starkem Namen. Die Version wird nur bei Assemblys mit starkem Namen überprüft.  
+ <span data-ttu-id="1cf46-131">Die Laufzeit unterscheidet zum Zweck der Versionskontrolle zwischen normalen Assemblys und Assemblys mit starkem Namen.</span><span class="sxs-lookup"><span data-stu-id="1cf46-131">The runtime distinguishes between regular and strong-named assemblies for the purposes of versioning.</span></span> <span data-ttu-id="1cf46-132">Die Version wird nur bei Assemblys mit starkem Namen überprüft.</span><span class="sxs-lookup"><span data-stu-id="1cf46-132">Version checking only occurs with strong-named assemblies.</span></span>  
   
- Weitere Informationen zum Festlegen von Versionsbindungsrichtlinien finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md). Informationen darüber, wie die Runtime die Versionsinformationen bei der Suche nach einer bestimmten Assembly verwendet, finden Sie unter [So sucht die Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ <span data-ttu-id="1cf46-133">Weitere Informationen zum Festlegen von Versionsbindungsrichtlinien finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md).</span><span class="sxs-lookup"><span data-stu-id="1cf46-133">For information about specifying version binding policies, see [Configuring Apps](../../../docs/framework/configure-apps/index.md).</span></span> <span data-ttu-id="1cf46-134">Informationen darüber, wie die Runtime die Versionsinformationen bei der Suche nach einer bestimmten Assembly verwendet, finden Sie unter [So sucht die Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="1cf46-134">For information about how the runtime uses version information to find a particular assembly, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
-### <a name="assembly-informational-version"></a>Assemblyinformationsversion  
- Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformationen an eine Assembly anfügt und ausschließlich Informationszwecken dient. Die Informationen werden nicht zur Laufzeit verwendet. Die textbasierte Informationsversion entspricht dem Marketingtext des Produkts, der Verpackung oder dem Produktnamen und wird nicht zur Laufzeit verwendet. Eine Informationsversion könnte z. B. wie folgt lauten: "Common Language Runtime Version 1.0" oder "NET Control SP 2". Diese Angabe wird in Microsoft Windows im Eigenschaftendialogfeld der Datei auf der Registerkarte Version als Eintrag "Produktversion" angezeigt.  
+### <a name="assembly-informational-version"></a><span data-ttu-id="1cf46-135">Assemblyinformationsversion</span><span class="sxs-lookup"><span data-stu-id="1cf46-135">Assembly Informational Version</span></span>  
+ <span data-ttu-id="1cf46-136">Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformationen an eine Assembly anfügt und ausschließlich Informationszwecken dient. Die Informationen werden nicht zur Laufzeit verwendet.</span><span class="sxs-lookup"><span data-stu-id="1cf46-136">The informational version is a string that attaches additional version information to an assembly for informational purposes only; this information is not used at run time.</span></span> <span data-ttu-id="1cf46-137">Die textbasierte Informationsversion entspricht dem Marketingtext des Produkts, der Verpackung oder dem Produktnamen und wird nicht zur Laufzeit verwendet.</span><span class="sxs-lookup"><span data-stu-id="1cf46-137">The text-based informational version corresponds to the product's marketing literature, packaging, or product name and is not used by the runtime.</span></span> <span data-ttu-id="1cf46-138">Eine Informationsversion könnte z. B. wie folgt lauten: "Common Language Runtime Version 1.0" oder "NET Control SP 2".</span><span class="sxs-lookup"><span data-stu-id="1cf46-138">For example, an informational version could be "Common Language Runtime version 1.0" or "NET Control SP 2".</span></span> <span data-ttu-id="1cf46-139">Diese Angabe wird in Microsoft Windows im Eigenschaftendialogfeld der Datei auf der Registerkarte Version als Eintrag "Produktversion" angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1cf46-139">On the Version tab of the file properties dialog in Microsoft Windows, this information appears in the item "Product Version".</span></span>  
   
 > [!NOTE]
->  Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält. Sie können diese Warnung ignorieren.  
+>  <span data-ttu-id="1cf46-140">Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="1cf46-140">Although you can specify any text, a warning message appears on compilation if the string is not in the format used by the assembly version number, or if it is in that format but contains wildcards.</span></span> <span data-ttu-id="1cf46-141">Sie können diese Warnung ignorieren.</span><span class="sxs-lookup"><span data-stu-id="1cf46-141">This warning is harmless.</span></span>  
   
- Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ <span data-ttu-id="1cf46-142">Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> dargestellt.</span><span class="sxs-lookup"><span data-stu-id="1cf46-142">The informational version is represented using the custom attribute <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1cf46-143">Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="1cf46-143">For more information about the informational version attribute, see [Setting Assembly Attributes](../../../docs/framework/app-domains/set-assembly-attributes.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)   
- [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md)   
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-
+## <a name="see-also"></a><span data-ttu-id="1cf46-144">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1cf46-144">See Also</span></span>  
+ [<span data-ttu-id="1cf46-145">So sucht Common Language Runtime nach Assemblys</span><span class="sxs-lookup"><span data-stu-id="1cf46-145">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="1cf46-146">Konfigurieren von Apps</span><span class="sxs-lookup"><span data-stu-id="1cf46-146">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
+ [<span data-ttu-id="1cf46-147">Festlegen von Assemblyattributen</span><span class="sxs-lookup"><span data-stu-id="1cf46-147">Setting Assembly Attributes</span></span>](../../../docs/framework/app-domains/set-assembly-attributes.md)  
+ [<span data-ttu-id="1cf46-148">Assemblys in der Common Language Runtime (CLR)</span><span class="sxs-lookup"><span data-stu-id="1cf46-148">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

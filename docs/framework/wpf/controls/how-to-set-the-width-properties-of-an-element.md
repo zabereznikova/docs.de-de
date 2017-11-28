@@ -1,49 +1,55 @@
 ---
-title: "Gewusst wie: Festlegen der Breiteneigenschaften eines Elements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Panel-Steuerelement, Width-Eigenschaften von Elementen"
-  - "Width-Eigenschaften"
+title: 'Gewusst wie: Festlegen der Breiteneigenschaften eines Elements'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- width properties [WPF]
+- Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 830289f13ac89601f0d3539e2f4400e56a2476f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen der Breiteneigenschaften eines Elements
-## Beispiel  
- In diesem Beispiel werden die Unterschiede im Renderingverhalten zwischen den vier breitenbezogenen Eigenschaften in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] visuell veranschaulicht.  
+# <a name="how-to-set-the-width-properties-of-an-element"></a><span data-ttu-id="c69a9-102">Gewusst wie: Festlegen der Breiteneigenschaften eines Elements</span><span class="sxs-lookup"><span data-stu-id="c69a9-102">How to: Set the Width Properties of an Element</span></span>
+## <a name="example"></a><span data-ttu-id="c69a9-103">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c69a9-103">Example</span></span>  
+ <span data-ttu-id="c69a9-104">In diesem Beispiel werden die Unterschiede im Renderingverhalten zwischen den vier Breite-bezogene Eigenschaften im visuell dargestellt [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c69a9-104">This example visually shows the differences in rendering behavior among the four width-related properties in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
- Die Breitenmerkmale eines Elements werden von vier Eigenschaften beschrieben, die von der <xref:System.Windows.FrameworkElement>\-Klasse verfügbar gemacht werden.  Diese vier Eigenschaften können zu Konflikten führen. Sollte dies der Fall sein, wird der vorrangige Wert folgendermaßen definiert: Der <xref:System.Windows.FrameworkElement.MinWidth%2A>\-Wert hat Vorrang vor dem <xref:System.Windows.FrameworkElement.MaxWidth%2A>\-Wert, der wiederum Vorrang vor dem <xref:System.Windows.FrameworkElement.Width%2A>\-Wert hat.  Die vierte Eigenschaft <xref:System.Windows.FrameworkElement.ActualWidth%2A> ist schreibgeschützt und meldet die tatsächliche Breite, wie von Interaktionen mit dem Layoutprozess bestimmt.  
+ <span data-ttu-id="c69a9-105">Die <xref:System.Windows.FrameworkElement> Klasse macht vier Eigenschaften, die die Breitenmerkmale eines Elements zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="c69a9-105">The <xref:System.Windows.FrameworkElement> class exposes four properties that describe the width characteristics of an element.</span></span> <span data-ttu-id="c69a9-106">Diese vier Eigenschaften können es zu Konflikten, und wenn dies der Fall, wird der Wert, der Vorrang hat wie folgt bestimmt: die <xref:System.Windows.FrameworkElement.MinWidth%2A> Wert hat Vorrang vor den <xref:System.Windows.FrameworkElement.MaxWidth%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.FrameworkElement.Width%2A> Wert.</span><span class="sxs-lookup"><span data-stu-id="c69a9-106">These four properties can conflict, and when they do, the value that takes precedence is determined as follows: the <xref:System.Windows.FrameworkElement.MinWidth%2A> value takes precedence over the <xref:System.Windows.FrameworkElement.MaxWidth%2A> value, which in turn takes precedence over the <xref:System.Windows.FrameworkElement.Width%2A> value.</span></span> <span data-ttu-id="c69a9-107">Eine vierte Eigenschaft <xref:System.Windows.FrameworkElement.ActualWidth%2A>ist schreibgeschützt und meldet die tatsächliche Breite von Interaktionen mit dem Layoutprozess bestimmt.</span><span class="sxs-lookup"><span data-stu-id="c69a9-107">A fourth property, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, is read-only, and reports the actual width as determined by interactions with the layout process.</span></span>  
   
- In den folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Beispielen wird ein <xref:System.Windows.Shapes.Rectangle>\-Element \(`rect1`\) als untergeordnetes Element der <xref:System.Windows.Controls.Canvas> dargestellt.  Die Breiteneigenschaften von einem <xref:System.Windows.Shapes.Rectangle> können mithilfe einer Reihe von <xref:System.Windows.Controls.ListBox>\-Elementen geändert werden, die die Eigenschaftswerte von <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A> und <xref:System.Windows.FrameworkElement.Width%2A> darstellen.  Auf diese Weise wird die Rangfolge jeder Eigenschaft visuell angezeigt.  
+ <span data-ttu-id="c69a9-108">Die folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] -Beispielen eine <xref:System.Windows.Shapes.Rectangle> Element (`rect1`) als untergeordnetes Element des <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="c69a9-108">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] examples draw a <xref:System.Windows.Shapes.Rectangle> element (`rect1`) as a child of <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="c69a9-109">Sie können die Breiteneigenschaften des ändern eine <xref:System.Windows.Shapes.Rectangle> mithilfe einer Reihe von <xref:System.Windows.Controls.ListBox> Elemente, die die Eigenschaftswerte darstellen <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, und <xref:System.Windows.FrameworkElement.Width%2A>.</span><span class="sxs-lookup"><span data-stu-id="c69a9-109">You can change the width properties of a <xref:System.Windows.Shapes.Rectangle> by using a series of <xref:System.Windows.Controls.ListBox> elements that represent the property values of <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, and <xref:System.Windows.FrameworkElement.Width%2A>.</span></span> <span data-ttu-id="c69a9-110">Auf diese Weise wird die Rangfolge jeder Eigenschaft visuell angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c69a9-110">In this manner, the precedence of each property is visually displayed.</span></span>  
   
- [!code-xml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
-[!code-xml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
+ [!code-xaml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
+[!code-xaml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
   
- In den folgenden CodeBehind\-Beispielen werden die Ereignisse behandelt, die das <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>\-Ereignis auslöst.  Jede benutzerdefinierte Methode übernimmt die Eingabe vom <xref:System.Windows.Controls.ListBox>, analysiert den Wert als <xref:System.Double> und wendet den Wert auf die angegebene breitenbezogene Eigenschaft an.  Die Breitenwerte werden außerdem in eine Zeichenfolge konvertiert und in verschiedene <xref:System.Windows.Controls.TextBlock>\-Elemente geschrieben \(die Definition dieser Elemente wird nicht im ausgewählten XAML angezeigt\).  
+ <span data-ttu-id="c69a9-111">In den folgenden Code-Behind-Beispielen die Ereignisse behandeln, die die <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> -Ereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="c69a9-111">The following code-behind examples handle the events that the <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event raises.</span></span> <span data-ttu-id="c69a9-112">Jede benutzerdefinierte Methode verarbeitet die Eingabe aus der <xref:System.Windows.Controls.ListBox>, analysiert den Wert als eine <xref:System.Double>, und der Wert der angegebenen Breite bezogene-Eigenschaft angewendet.</span><span class="sxs-lookup"><span data-stu-id="c69a9-112">Each custom method takes the input from the <xref:System.Windows.Controls.ListBox>, parses the value as a <xref:System.Double>, and applies the value to the specified width-related property.</span></span> <span data-ttu-id="c69a9-113">Die Breitenwerte werden auch in eine Zeichenfolge konvertiert und auf verschiedenen festgeschrieben <xref:System.Windows.Controls.TextBlock> Elemente (die Definition dieser Elemente wird in der ausgewählten XAML nicht angezeigt).</span><span class="sxs-lookup"><span data-stu-id="c69a9-113">The width values are also converted to a string and written to various <xref:System.Windows.Controls.TextBlock> elements (definition of those elements is not shown in the selected XAML).</span></span>  
   
  [!code-csharp[WidthMinWidthMaxWidth#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
  [!code-vb[WidthMinWidthMaxWidth#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für den Vergleich von Breiteneigenschaften](http://go.microsoft.com/fwlink/?LinkID=160050).  
+ <span data-ttu-id="c69a9-114">Das vollständige Beispiel finden Sie unter [Width Properties Comparison Sample](http://go.microsoft.com/fwlink/?LinkID=160050).</span><span class="sxs-lookup"><span data-stu-id="c69a9-114">For the complete sample, see [Width Properties Comparison Sample](http://go.microsoft.com/fwlink/?LinkID=160050).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Controls.ListBox>   
- <xref:System.Windows.FrameworkElement>   
- <xref:System.Windows.FrameworkElement.ActualWidth%2A>   
- <xref:System.Windows.FrameworkElement.MaxWidth%2A>   
- <xref:System.Windows.FrameworkElement.MinWidth%2A>   
- <xref:System.Windows.FrameworkElement.Width%2A>   
- [Übersicht über Panel\-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [Festlegen der Höheneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)   
- [Beispiel für den Vergleich von Breiteneigenschaften](http://go.microsoft.com/fwlink/?LinkID=160050)
+## <a name="see-also"></a><span data-ttu-id="c69a9-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c69a9-115">See Also</span></span>  
+ <xref:System.Windows.Controls.ListBox>  
+ <xref:System.Windows.FrameworkElement>  
+ <xref:System.Windows.FrameworkElement.ActualWidth%2A>  
+ <xref:System.Windows.FrameworkElement.MaxWidth%2A>  
+ <xref:System.Windows.FrameworkElement.MinWidth%2A>  
+ <xref:System.Windows.FrameworkElement.Width%2A>  
+ [<span data-ttu-id="c69a9-116">Übersicht über Panel-Elemente</span><span class="sxs-lookup"><span data-stu-id="c69a9-116">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="c69a9-117">Festlegen der Höheneigenschaften eines Elements</span><span class="sxs-lookup"><span data-stu-id="c69a9-117">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="c69a9-118">Beispiel für Breite Vergleich</span><span class="sxs-lookup"><span data-stu-id="c69a9-118">Width Properties Comparison Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160050)

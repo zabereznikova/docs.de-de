@@ -1,122 +1,105 @@
 ---
-title: Vergleichsoperatoren in Visual Basic | Microsoft-Dokumentation
+title: Vergleichsoperatoren in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- comparison operators, comparing strings
-- comparison operators, comparing objects
+- comparison operators [Visual Basic], comparing strings
+- comparison operators [Visual Basic], comparing objects
 - strings [Visual Basic], comparing
-- comparison operators
+- comparison operators [Visual Basic]
 - string comparison [Visual Basic], operators
 - objects [Visual Basic], comparing
-- numbers, comparing
+- numbers [Visual Basic], comparing
 - Visual Basic code, operators
 - string comparison [Visual Basic]
-- numeric values, comparing
-- comparison operators, comparing numeric values
+- numeric values [Visual Basic], comparing
+- comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6185d1676f2cd160c9c3e855cce4a6d2bbe2ffb4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d8bf37ad30f410251f18aea6747734fc24d42cd0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
-Vergleichsoperatoren vergleichen zwei Ausdrücke und geben einen `Boolean` Wert, der die Beziehung zwischen ihren Werten darstellt. Es gibt Operatoren für das Vergleichen von numerischen Werten, Operatoren für Zeichenfolgen und Operatoren zum Vergleichen von Objekten. Alle drei Typen von Operatoren werden in diesem Dokument erläutert.  
+# <a name="comparison-operators-in-visual-basic"></a><span data-ttu-id="679bd-102">Vergleichsoperatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="679bd-102">Comparison Operators in Visual Basic</span></span>
+<span data-ttu-id="679bd-103">Vergleichsoperatoren vergleichen zwei Ausdrücke und Zurückgeben einer `Boolean` Wert, der die Beziehung zwischen ihren Werten darstellt.</span><span class="sxs-lookup"><span data-stu-id="679bd-103">Comparison operators compare two expressions and return a `Boolean` value that represents the relationship of their values.</span></span> <span data-ttu-id="679bd-104">Es sind Operatoren zum Vergleichen von numerischen Werten, Operatoren zum Vergleichen von Zeichenfolgen und Operatoren zum Vergleichen von Objekten.</span><span class="sxs-lookup"><span data-stu-id="679bd-104">There are operators for comparing numeric values, operators for comparing strings, and operators for comparing objects.</span></span> <span data-ttu-id="679bd-105">Alle drei Typen von Operatoren werden in diesem Dokument erläutert.</span><span class="sxs-lookup"><span data-stu-id="679bd-105">All three types of operators are discussed herein.</span></span>  
   
-## <a name="comparing-numeric-values"></a>Vergleichen von numerischen Werten  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Vergleicht numerische Werte mithilfe von sechs numerischen Vergleichsoperatoren. Jeder Operator akzeptiert zwei Ausdrücke, die numerische Werte ergeben, als Operanden. In der folgenden Tabelle werden die Operatoren aufgelistet und zeigt Beispiele für jeden.  
+## <a name="comparing-numeric-values"></a><span data-ttu-id="679bd-106">Vergleichen von numerischen Werten</span><span class="sxs-lookup"><span data-stu-id="679bd-106">Comparing Numeric Values</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="679bd-107">Vergleicht numerische Werte mithilfe von sechs numerischen Vergleichsoperatoren.</span><span class="sxs-lookup"><span data-stu-id="679bd-107"> compares numeric values using six numeric comparison operators.</span></span> <span data-ttu-id="679bd-108">Jeder Operator akzeptiert zwei Ausdrücke, die numerische Werte ergeben, als Operanden aus.</span><span class="sxs-lookup"><span data-stu-id="679bd-108">Each operator takes as operands two expressions that evaluate to numeric values.</span></span> <span data-ttu-id="679bd-109">In der folgenden Tabelle werden die Operatoren aufgeführt, und zeigt Beispiele für jeden.</span><span class="sxs-lookup"><span data-stu-id="679bd-109">The following table lists the operators and shows examples of each.</span></span>  
   
-|Operator|Getestete Bedingung|Beispiele|  
+|<span data-ttu-id="679bd-110">Operator</span><span class="sxs-lookup"><span data-stu-id="679bd-110">Operator</span></span>|<span data-ttu-id="679bd-111">Bedingung getestet</span><span class="sxs-lookup"><span data-stu-id="679bd-111">Condition tested</span></span>|<span data-ttu-id="679bd-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="679bd-112">Examples</span></span>|  
 |--------------|----------------------|--------------|  
-|`=`(Gleichheit)|Ist der Wert des ersten Ausdrucks gleich dem Wert des zweiten?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>`(Ungleichheit)|Ist der Wert des ersten Ausdrucks ungleich dem Wert des zweiten?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<`(Kleiner als)|Ist der Wert des ersten Ausdrucks kleiner als der Wert des zweiten?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>`(Größer als)|Ist der Wert des ersten Ausdrucks größer als der Wert des zweiten?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=`(Kleiner als oder gleich)|Ist der Wert des ersten Ausdrucks kleiner oder gleich dem Wert des zweiten?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=`(Größer als oder gleich)|Ist der Wert des ersten Ausdrucks, größer als oder gleich dem Wert des zweiten?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|<span data-ttu-id="679bd-113">`=`(Gleich)</span><span class="sxs-lookup"><span data-stu-id="679bd-113">`=` (Equality)</span></span>|<span data-ttu-id="679bd-114">Ist der Wert des ersten Ausdrucks gleich dem Wert des zweiten?</span><span class="sxs-lookup"><span data-stu-id="679bd-114">Is the value of the first expression equal to the value of the second?</span></span>|<span data-ttu-id="679bd-115">`23`   `=`   `33    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-115">`23`   `=`   `33    ' False`</span></span><br /><br /> <span data-ttu-id="679bd-116">`23`   `=`   `23    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-116">`23`   `=`   `23    ' True`</span></span><br /><br /> <span data-ttu-id="679bd-117">`23`   `=`   `12    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-117">`23`   `=`   `12    ' False`</span></span>|  
+|<span data-ttu-id="679bd-118">`<>`(Ungleichheit)</span><span class="sxs-lookup"><span data-stu-id="679bd-118">`<>` (Inequality)</span></span>|<span data-ttu-id="679bd-119">Ist der Wert des ersten Ausdrucks ungleich dem Wert des zweiten?</span><span class="sxs-lookup"><span data-stu-id="679bd-119">Is the value of the first expression unequal to the value of the second?</span></span>|<span data-ttu-id="679bd-120">`23`   `<>`   `33    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-120">`23`   `<>`   `33    ' True`</span></span><br /><br /> <span data-ttu-id="679bd-121">`23`   `<>`   `23    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-121">`23`   `<>`   `23    ' False`</span></span><br /><br /> <span data-ttu-id="679bd-122">`23`   `<>`   `12    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-122">`23`   `<>`   `12    ' True`</span></span>|  
+|<span data-ttu-id="679bd-123">`<`(Kleiner als)</span><span class="sxs-lookup"><span data-stu-id="679bd-123">`<` (Less than)</span></span>|<span data-ttu-id="679bd-124">Ist der Wert des ersten Ausdrucks kleiner als der Wert des zweiten?</span><span class="sxs-lookup"><span data-stu-id="679bd-124">Is the value of the first expression less than the value of the second?</span></span>|<span data-ttu-id="679bd-125">`23`   `<`   `33    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-125">`23`   `<`   `33    ' True`</span></span><br /><br /> <span data-ttu-id="679bd-126">`23`   `<`   `23    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-126">`23`   `<`   `23    ' False`</span></span><br /><br /> <span data-ttu-id="679bd-127">`23`   `<`   `12    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-127">`23`   `<`   `12    ' False`</span></span>|  
+|<span data-ttu-id="679bd-128">`>`(Größer als)</span><span class="sxs-lookup"><span data-stu-id="679bd-128">`>` (Greater than)</span></span>|<span data-ttu-id="679bd-129">Ist der Wert des ersten Ausdrucks größer als der Wert des zweiten?</span><span class="sxs-lookup"><span data-stu-id="679bd-129">Is the value of the first expression greater than the value of the second?</span></span>|<span data-ttu-id="679bd-130">`23`   `>`   `33    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-130">`23`   `>`   `33    ' False`</span></span><br /><br /> <span data-ttu-id="679bd-131">`23`   `>`   `23    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-131">`23`   `>`   `23    ' False`</span></span><br /><br /> <span data-ttu-id="679bd-132">`23`   `>`   `12    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-132">`23`   `>`   `12    ' True`</span></span>|  
+|<span data-ttu-id="679bd-133">`<=`(Kleiner als oder gleich)</span><span class="sxs-lookup"><span data-stu-id="679bd-133">`<=` (Less than or equal to)</span></span>|<span data-ttu-id="679bd-134">Ist der Wert des ersten Ausdrucks kleiner oder gleich dem Wert des zweiten?</span><span class="sxs-lookup"><span data-stu-id="679bd-134">Is the value of the first expression less than or equal to the value of the second?</span></span>|<span data-ttu-id="679bd-135">`23`   `<=`   `33    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-135">`23`   `<=`   `33    ' True`</span></span><br /><br /> <span data-ttu-id="679bd-136">`23`   `<=`   `23    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-136">`23`   `<=`   `23    ' True`</span></span><br /><br /> <span data-ttu-id="679bd-137">`23`   `<=`   `12    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-137">`23`   `<=`   `12    ' False`</span></span>|  
+|<span data-ttu-id="679bd-138">`>=`(Größer als oder gleich)</span><span class="sxs-lookup"><span data-stu-id="679bd-138">`>=` (Greater than or equal to)</span></span>|<span data-ttu-id="679bd-139">Ist der Wert des ersten Ausdrucks, größer als oder gleich dem Wert des zweiten?</span><span class="sxs-lookup"><span data-stu-id="679bd-139">Is the value of the first expression greater than or equal to the value of the second?</span></span>|<span data-ttu-id="679bd-140">`23`   `>=`   `33    ' False`</span><span class="sxs-lookup"><span data-stu-id="679bd-140">`23`   `>=`   `33    ' False`</span></span><br /><br /> <span data-ttu-id="679bd-141">`23`   `>=`   `23    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-141">`23`   `>=`   `23    ' True`</span></span><br /><br /> <span data-ttu-id="679bd-142">`23`   `>=`   `12    ' True`</span><span class="sxs-lookup"><span data-stu-id="679bd-142">`23`   `>=`   `12    ' True`</span></span>|  
   
-## <a name="comparing-strings"></a>Vergleichen von Zeichenfolgen  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]vergleicht Zeichenfolgen anhand der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md) sowie den numerischen Vergleichsoperatoren. Die `Like` Operator können Sie ein Muster angeben. Die Zeichenfolge wird dann mit dem Muster verglichen, und bei Übereinstimmung ist das Ergebnis ist `True`. Andernfalls das Ergebnis ist `False`. Mit den numerischen Operatoren können Sie vergleichen `String` Werte basierend auf ihrer Sortierreihenfolge wie im folgenden Beispiel gezeigt.  
+## <a name="comparing-strings"></a><span data-ttu-id="679bd-143">Vergleichen von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="679bd-143">Comparing Strings</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="679bd-144">vergleicht Zeichenfolgen mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md) sowie die numerische Vergleichsoperatoren.</span><span class="sxs-lookup"><span data-stu-id="679bd-144"> compares strings using the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) as well as the numeric comparison operators.</span></span> <span data-ttu-id="679bd-145">Die `Like` Operators können Sie ein Muster angeben.</span><span class="sxs-lookup"><span data-stu-id="679bd-145">The `Like` operator allows you to specify a pattern.</span></span> <span data-ttu-id="679bd-146">Die Zeichenfolge wird dann mit dem Muster verglichen, und wenn es übereinstimmt, ist das Ergebnis `True`.</span><span class="sxs-lookup"><span data-stu-id="679bd-146">The string is then compared against the pattern, and if it matches, the result is `True`.</span></span> <span data-ttu-id="679bd-147">Andernfalls entsteht `False`.</span><span class="sxs-lookup"><span data-stu-id="679bd-147">Otherwise, the result is `False`.</span></span> <span data-ttu-id="679bd-148">Numerische Operatoren können Sie die vergleichen `String` Werte basierend auf ihrer Sortierreihenfolge wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="679bd-148">The numeric operators allow you to compare `String` values based on their sort order, as the following example shows.</span></span>  
   
  `"73" < "9"`  
   
  `' The result of the preceding comparison is True.`  
   
- Das Ergebnis im vorherigen Beispiel ist `True` , da das erste Zeichen in der ersten Zeichenfolge vor dem ersten Zeichen in der zweiten Zeichenfolge sortiert. Wenn die ersten Zeichen gleich wären, würde der Vergleich weiterhin auf das nächste Zeichen in beiden Zeichenfolgen usw.. Sie können auch mit dem Gleichheitsoperator, wie im folgenden Beispiel gezeigt Zeichenfolgen auf Gleichheit testen.  
+ <span data-ttu-id="679bd-149">Das Ergebnis im vorherigen Beispiel ist `True` , da das erste Zeichen in der ersten Zeichenfolge vor dem ersten Zeichen in der zweiten Zeichenfolge sortiert.</span><span class="sxs-lookup"><span data-stu-id="679bd-149">The result in the preceding example is `True` because the first character in the first string sorts before the first character in the second string.</span></span> <span data-ttu-id="679bd-150">Wären die ersten Zeichen entspricht, würde der Vergleich weiterhin das nächste Zeichen in Zeichenfolgen und so weiter.</span><span class="sxs-lookup"><span data-stu-id="679bd-150">If the first characters were equal, the comparison would continue to the next character in both strings, and so on.</span></span> <span data-ttu-id="679bd-151">Sie können auch Testen der Gleichheit von Zeichenfolgen, die mit dem Gleichheitsoperator, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="679bd-151">You can also test equality of strings using the equality operator, as the following example shows.</span></span>  
   
  `"734" = "734"`  
   
  `' The result of the preceding comparison is True.`  
   
- Wenn eine Zeichenfolge einer anderen vorangestellt, z. B. "aa" und "aaa", gilt die längere Zeichenfolge größer als die kürzere Zeichenfolge sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ <span data-ttu-id="679bd-152">Ist eine Zeichenfolge einer anderen vorangestellt, z. B. "aa" und "aaa", gilt die längere Zeichenfolge größer als die kürzere Zeichenfolge sein.</span><span class="sxs-lookup"><span data-stu-id="679bd-152">If one string is a prefix of another, such as "aa" and "aaa", the longer string is considered to be greater than the shorter string.</span></span> <span data-ttu-id="679bd-153">Dies wird anhand des folgenden Beispiels veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="679bd-153">The following example illustrates this.</span></span>  
   
  `"aaa" > "aa"`  
   
  `' The result of the preceding comparison is True.`  
   
- Die Sortierreihenfolge basiert auf einem binären Vergleich oder einen Textvergleich abhängig von der Einstellung des `Option Compare`. Weitere Informationen finden Sie unter [Option Compare-Anweisung](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+ <span data-ttu-id="679bd-154">Die Sortierreihenfolge basiert auf einen binären Vergleich oder ein Textvergleich entsprechend der Einstellung von `Option Compare`.</span><span class="sxs-lookup"><span data-stu-id="679bd-154">The sort order is based on either a binary comparison or a textual comparison depending on the setting of `Option Compare`.</span></span> <span data-ttu-id="679bd-155">Weitere Informationen finden Sie unter [Option Compare-Anweisung](../../../../visual-basic/language-reference/statements/option-compare-statement.md).</span><span class="sxs-lookup"><span data-stu-id="679bd-155">For more information see [Option Compare Statement](../../../../visual-basic/language-reference/statements/option-compare-statement.md).</span></span>  
   
-## <a name="comparing-objects"></a>Vergleichen von Objekten  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Vergleicht zwei Objektverweisvariablen mit dem [Is-Operator](../../../../visual-basic/language-reference/operators/is-operator.md) und [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md). Sie können beiden Operatoren verwenden, um festzustellen, ob zwei Verweisvariablen auf die gleiche Objektinstanz verweisen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+## <a name="comparing-objects"></a><span data-ttu-id="679bd-156">Vergleichen von Objekten</span><span class="sxs-lookup"><span data-stu-id="679bd-156">Comparing Objects</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="679bd-157">Vergleicht zwei Objektverweisvariablen mit der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) und [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md).</span><span class="sxs-lookup"><span data-stu-id="679bd-157"> compares two object reference variables with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md).</span></span> <span data-ttu-id="679bd-158">Sie können entweder diese Operatoren verwenden, um festzustellen, ob die beiden Verweisvariablen auf die gleiche Objektinstanz verweisen.</span><span class="sxs-lookup"><span data-stu-id="679bd-158">You can use either of these operators to determine if two reference variables refer to the same object instance.</span></span> <span data-ttu-id="679bd-159">Dies wird anhand des folgenden Beispiels veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="679bd-159">The following example illustrates this.</span></span>  
   
- [!code-vb[VbVbalrOperators&#65;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
- Im vorangehenden Beispiel `x Is y` ergibt `True`, da beide Variablen auf dieselbe Instanz verweisen. Vergleichen Sie dieses Ergebnis mit dem folgenden Beispiel.  
+ <span data-ttu-id="679bd-160">Im vorherigen Beispiel `x Is y` ergibt `True`, da beide Variablen auf dieselbe Instanz verweisen.</span><span class="sxs-lookup"><span data-stu-id="679bd-160">In the preceding example, `x Is y` evaluates to `True`, because both variables refer to the same instance.</span></span> <span data-ttu-id="679bd-161">Vergleichen Sie dieses Ergebnis durch den folgenden Beispielcode.</span><span class="sxs-lookup"><span data-stu-id="679bd-161">Contrast this result with the following example.</span></span>  
   
- [!code-vb[VbVbalrOperators&#66;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
- Im vorangehenden Beispiel `x Is y` ergibt `False`, da die Variablen zwar auf Objekte vom gleichen Typ, jedoch auf unterschiedliche Instanzen dieses Typs verweisen.  
+ <span data-ttu-id="679bd-162">Im vorherigen Beispiel `x Is y` ergibt `False`, da Sie zwar die Variablen auf Objekte vom gleichen Typ zu verweisen, jedoch auf unterschiedliche Instanzen dieses Typs verweisen.</span><span class="sxs-lookup"><span data-stu-id="679bd-162">In the preceding example, `x Is y` evaluates to `False`, because although the variables refer to objects of the same type, they refer to different instances of that type.</span></span>  
   
- Wenn Sie zwei Objekte nicht auf dieselbe Instanz verweisen möchten die `IsNot` Operator können Sie eine umständliche Grammatik einer Kombination von vermeiden `Not` und `Is`. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ <span data-ttu-id="679bd-163">Wenn Sie für zwei Objekte, die nicht auf dieselbe Instanz verweisen testen möchten die `IsNot` -Operators können Sie eine umständliche Grammatik einer Kombination von vermeiden `Not` und `Is`.</span><span class="sxs-lookup"><span data-stu-id="679bd-163">When you want to test for two objects not pointing to the same instance, the `IsNot` operator lets you avoid a grammatically clumsy combination of `Not` and `Is`.</span></span> <span data-ttu-id="679bd-164">Dies wird anhand des folgenden Beispiels veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="679bd-164">The following example illustrates this.</span></span>  
   
- [!code-vb[VbVbalrOperators&#67;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
- Im vorangehenden Beispiel `If a IsNot b` entspricht `If Not a Is b`.  
+ <span data-ttu-id="679bd-165">Im vorherigen Beispiel `If a IsNot b` entspricht `If Not a Is b`.</span><span class="sxs-lookup"><span data-stu-id="679bd-165">In the preceding example, `If a IsNot b` is equivalent to `If Not a Is b`.</span></span>  
   
-### <a name="comparing-object-type"></a>Vergleichen des Objekttyps  
- Sie können testen, ob ein Objekt eines bestimmten Typs mit der `TypeOf`... `Is` Ausdruck. Die Syntax lautet wie folgt:  
+### <a name="comparing-object-type"></a><span data-ttu-id="679bd-166">Vergleichen des Objekttyps</span><span class="sxs-lookup"><span data-stu-id="679bd-166">Comparing Object Type</span></span>  
+ <span data-ttu-id="679bd-167">Sie können testen, ob ein Objekt eines bestimmten Typs mit dem `TypeOf`... `Is` Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="679bd-167">You can test whether an object is of a particular type with the `TypeOf`...`Is` expression.</span></span> <span data-ttu-id="679bd-168">Die Syntax lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="679bd-168">The syntax is as follows:</span></span>  
   
  `TypeOf <objectexpression> Is <typename>`  
   
- Wenn `typename` gibt einen Schnittstellentyp, der `TypeOf`... `Is` gibt `True` , wenn das Objekt den Schnittstellentyp implementiert. Wenn `typename` ein Klassentyp ist, gibt der Ausdruck `True` Wenn das Objekt eine Instanz der angegebenen Klasse oder eine Klasse, die von der angegebenen Klasse abgeleitet wird. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ <span data-ttu-id="679bd-169">Wenn `typename` gibt einen Schnittstellentyp, und klicken Sie dann die `TypeOf`... `Is` Ausdruck gibt `True` , wenn das Objekt den Schnittstellentyp implementiert.</span><span class="sxs-lookup"><span data-stu-id="679bd-169">When `typename` specifies an interface type, then the `TypeOf`...`Is` expression returns `True` if the object implements the interface type.</span></span> <span data-ttu-id="679bd-170">Wenn `typename` ein Klassentyp ist, gibt der Ausdruck `True` Wenn das Objekt eine Instanz der angegebenen Klasse oder einer Klasse, die von der angegebenen Klasse abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="679bd-170">When `typename` is a class type, then the expression returns `True` if the object is an instance of the specified class or of a class that derives from the specified class.</span></span> <span data-ttu-id="679bd-171">Dies wird anhand des folgenden Beispiels veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="679bd-171">The following example illustrates this.</span></span>  
   
- [!code-vb[VbVbalrOperators&#68;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
- Im vorhergehenden Beispiel die `TypeOf x Is Control` Ausdruck ergibt `True` da der Typ des `x` ist `Button`, erbt von `Control`.  
+ <span data-ttu-id="679bd-172">Im vorherigen Beispiel der `TypeOf x Is Control` Ausdruck wird zu `True` da der Typ des `x` ist `Button`, geerbt von `Control`.</span><span class="sxs-lookup"><span data-stu-id="679bd-172">In the preceding example, the `TypeOf x Is Control` expression evaluates to `True` because the type of `x` is `Button`, which inherits from `Control`.</span></span>  
   
- Weitere Informationen finden Sie unter [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
+ <span data-ttu-id="679bd-173">Weitere Informationen finden Sie unter [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span><span class="sxs-lookup"><span data-stu-id="679bd-173">For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Wertvergleiche](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [Vergleichsoperatoren](../../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Operatoren](../../../../visual-basic/language-reference/operators/index.md)   
- [Arithmetische Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Verkettungsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)   
- [Logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="679bd-174">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="679bd-174">See Also</span></span>  
+ [<span data-ttu-id="679bd-175">Wertvergleiche</span><span class="sxs-lookup"><span data-stu-id="679bd-175">Value Comparisons</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [<span data-ttu-id="679bd-176">Vergleichsoperatoren</span><span class="sxs-lookup"><span data-stu-id="679bd-176">Comparison Operators</span></span>](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [<span data-ttu-id="679bd-177">Operatoren</span><span class="sxs-lookup"><span data-stu-id="679bd-177">Operators</span></span>](../../../../visual-basic/language-reference/operators/index.md)  
+ [<span data-ttu-id="679bd-178">Arithmetische Operatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="679bd-178">Arithmetic Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="679bd-179">Verkettungsoperatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="679bd-179">Concatenation Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
+ [<span data-ttu-id="679bd-180">Logische und bitweise Operatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="679bd-180">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

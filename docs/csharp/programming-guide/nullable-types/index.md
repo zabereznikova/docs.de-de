@@ -1,89 +1,70 @@
 ---
 title: Nullable-Typen (C#-Programmierhandbuch)
-ms.date: 2017-05-15
+ms.date: 05/15/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 6d99bffc74cbcce04d725b8f225a4a4b175973be
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nullable-types-c-programming-guide"></a>Nullable-Typen (C#-Programmierhandbuch)
-Auf NULL festlegbare Typen sind Instanzen der <xref:System.Nullable%601?displayProperty=nameWithType>-Struktur. Ein Nullable-Typ kann den richtigen Bereich an Werten für den zugrunde liegenden Werttyp plus einen zusätzlichen `null`-Wert darstellen. Einem `Nullable<Int32>` (ausgesprochen „Nullable von Int32“) kann jeder Wert im Bereich von -2147483648 bis 2147483647 oder ein `null`-Wert zugewiesen werden. Einem `Nullable<bool>` können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden. Die Möglichkeit, `null` zu numerischen und booleschen Typen zuzuweisen, ist besonders nützlich, wenn Sie mit Datenbanken und anderen Datentypen mit Elementen arbeiten, denen möglicherweise kein Wert zugewiesen wurde. Ein boolesches Feld in einer Datenbank kann beispielsweise die Werte `true` oder `false` speichern oder nicht definiert sein. 
+# <a name="nullable-types-c-programming-guide"></a><span data-ttu-id="5cea4-102">Nullable-Typen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="5cea4-102">Nullable Types (C# Programming Guide)</span></span>
+<span data-ttu-id="5cea4-103">Auf NULL festlegbare Typen sind Instanzen der <xref:System.Nullable%601?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="5cea4-103">Nullable types are instances of the <xref:System.Nullable%601?displayProperty=nameWithType> struct.</span></span> <span data-ttu-id="5cea4-104">Ein Nullable-Typ kann den richtigen Bereich an Werten für den zugrunde liegenden Werttyp plus einen zusätzlichen `null`-Wert darstellen.</span><span class="sxs-lookup"><span data-stu-id="5cea4-104">A nullable type can represent the correct range of values for its underlying value type, plus an additional `null` value.</span></span> <span data-ttu-id="5cea4-105">Einem `Nullable<Int32>` (ausgesprochen „Nullable von Int32“) kann jeder Wert im Bereich von -2147483648 bis 2147483647 oder ein `null`-Wert zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="5cea4-105">For example, a `Nullable<Int32>`, pronounced "Nullable of Int32," can be assigned any value from -2147483648 to 2147483647, or it can be assigned the `null` value.</span></span> <span data-ttu-id="5cea4-106">Einem `Nullable<bool>` können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="5cea4-106">A `Nullable<bool>` can be assigned the values [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), or [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="5cea4-107">Die Möglichkeit, `null` zu numerischen und booleschen Typen zuzuweisen, ist besonders nützlich, wenn Sie mit Datenbanken und anderen Datentypen mit Elementen arbeiten, denen möglicherweise kein Wert zugewiesen wurde.</span><span class="sxs-lookup"><span data-stu-id="5cea4-107">The ability to assign `null` to numeric and Boolean types is especially useful when you are dealing with databases and other data types that contain elements that may not be assigned a value.</span></span> <span data-ttu-id="5cea4-108">Ein boolesches Feld in einer Datenbank kann beispielsweise die Werte `true` oder `false` speichern oder nicht definiert sein.</span><span class="sxs-lookup"><span data-stu-id="5cea4-108">For example, a Boolean field in a database can store the values `true` or `false`, or it may be undefined.</span></span> 
   
-[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
-Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
+<span data-ttu-id="5cea4-109">Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).</span><span class="sxs-lookup"><span data-stu-id="5cea4-109">For more examples, see [Using Nullable Types](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)</span></span>  
   
-## <a name="nullable-types-overview"></a>Übersicht über Nullable-Typen  
- Nullable-Typen weisen die folgenden Eigenschaften auf:  
+## <a name="nullable-types-overview"></a><span data-ttu-id="5cea4-110">Übersicht über Nullable-Typen</span><span class="sxs-lookup"><span data-stu-id="5cea4-110">Nullable Types Overview</span></span>  
+ <span data-ttu-id="5cea4-111">Nullable-Typen weisen die folgenden Eigenschaften auf:</span><span class="sxs-lookup"><span data-stu-id="5cea4-111">Nullable types have the following characteristics:</span></span>  
   
--   Nullable-Typen stellen Werttypvariablen dar, denen der Wert `null` zugewiesen werden kann. Sie können keinen Nullable-Typ basierend auf einem Verweistyp erstellen. (Verweistypen unterstützen immer den `null`-Wert.)  
+-   <span data-ttu-id="5cea4-112">Nullable-Typen stellen Werttypvariablen dar, denen der Wert `null` zugewiesen werden kann.</span><span class="sxs-lookup"><span data-stu-id="5cea4-112">Nullable types represent value-type variables that can be assigned the value of `null`.</span></span> <span data-ttu-id="5cea4-113">Sie können keinen Nullable-Typ basierend auf einem Verweistyp erstellen.</span><span class="sxs-lookup"><span data-stu-id="5cea4-113">You cannot create a nullable type based on a reference type.</span></span> <span data-ttu-id="5cea4-114">(Verweistypen unterstützen immer den `null`-Wert.)</span><span class="sxs-lookup"><span data-stu-id="5cea4-114">(Reference types already support the `null` value.)</span></span>  
   
--   Die Syntax `T?` ist die Kurzform für <xref:System.Nullable%601>, wobei `T` ein Werttyp ist. Die beiden Formen sind austauschbar.  
+-   <span data-ttu-id="5cea4-115">Die Syntax `T?` ist die Kurzform für <xref:System.Nullable%601>, wobei `T` ein Werttyp ist.</span><span class="sxs-lookup"><span data-stu-id="5cea4-115">The syntax `T?` is shorthand for <xref:System.Nullable%601>, where `T` is a value type.</span></span> <span data-ttu-id="5cea4-116">Die beiden Formen sind austauschbar.</span><span class="sxs-lookup"><span data-stu-id="5cea4-116">The two forms are interchangeable.</span></span>  
   
--   Sie weisen einem Nullable-Typ einen Wert genauso zu, wie Sie es für einen regulären Werttyp tun würden, z.B. `int? x = 10;` oder `double? d = 4.108`. Einem Nullable-Typ kann auch der Wert `null`:`int? x = null.` zugewiesen werden.  
+-   <span data-ttu-id="5cea4-117">Sie weisen einem Nullable-Typ einen Wert genauso zu, wie Sie es für einen regulären Werttyp tun würden, z.B. `int? x = 10;` oder `double? d = 4.108`.</span><span class="sxs-lookup"><span data-stu-id="5cea4-117">Assign a value to a nullable type just as you would for an ordinary value type, for example `int? x = 10;` or `double? d = 4.108`.</span></span> <span data-ttu-id="5cea4-118">Einem Nullable-Typ kann auch der Wert `null`:`int? x = null.` zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="5cea4-118">A nullable type can also be assigned the value `null`: `int? x = null.`</span></span>  
   
--   Verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType>-Methode, um entweder den zugewiesenen Wert oder den Standardwert für den zugrunde liegenden Typ zurückzugeben, wenn der Wert `null` ist, z.B. `int j = x.GetValueOrDefault();`  
+-   <span data-ttu-id="5cea4-119">Verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType>-Methode, um entweder den zugewiesenen Wert oder den Standardwert für den zugrunde liegenden Typ zurückzugeben, wenn der Wert `null` ist, z.B. `int j = x.GetValueOrDefault();`</span><span class="sxs-lookup"><span data-stu-id="5cea4-119">Use the <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> method to return either the assigned value, or the default value for the underlying type if the value is `null`, for example `int j = x.GetValueOrDefault();`</span></span>  
   
--   Verwenden Sie die schreibgeschützten Eigenschaften <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A>, um auf NULL zu prüfen und den Wert abzurufen, wie im folgenden Beispiel gezeigt: `if(x.HasValue) j = x.Value;`  
+-   <span data-ttu-id="5cea4-120">Verwenden Sie die schreibgeschützten Eigenschaften <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A>, um auf NULL zu prüfen und den Wert abzurufen, wie im folgenden Beispiel gezeigt: `if(x.HasValue) j = x.Value;`</span><span class="sxs-lookup"><span data-stu-id="5cea4-120">Use the <xref:System.Nullable%601.HasValue%2A> and <xref:System.Nullable%601.Value%2A> read-only properties to test for null and retrieve the value, as shown in the following example: `if(x.HasValue) j = x.Value;`</span></span>  
   
-    -   Die Eigenschaft `HasValue` gibt `true` zurück, wenn die Variable einen Wert enthält, oder sie gibt `false` zurück, wenn die Variable `null` ist.  
+    -   <span data-ttu-id="5cea4-121">Die Eigenschaft `HasValue` gibt `true` zurück, wenn die Variable einen Wert enthält, oder sie gibt `false` zurück, wenn die Variable `null` ist.</span><span class="sxs-lookup"><span data-stu-id="5cea4-121">The `HasValue` property returns `true` if the variable contains a value, or `false` if it is `null`.</span></span>  
   
-    -   Die Eigenschaft `Value` gibt einen Wert zurück, sofern einer zugewiesen ist. Andernfalls wird eine <xref:System.InvalidOperationException?displayProperty=nameWithType> ausgelöst.  
+    -   <span data-ttu-id="5cea4-122">Die Eigenschaft `Value` gibt einen Wert zurück, sofern einer zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="5cea4-122">The `Value` property returns a value if one is assigned.</span></span> <span data-ttu-id="5cea4-123">Andernfalls wird eine <xref:System.InvalidOperationException?displayProperty=nameWithType> ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="5cea4-123">Otherwise, a <xref:System.InvalidOperationException?displayProperty=nameWithType> is thrown.</span></span>  
   
-    -   Der Standardwert für `HasValue` lautet `false`. Die Eigenschaft `Value` hat keinen Standardwert.  
+    -   <span data-ttu-id="5cea4-124">Der Standardwert für `HasValue` lautet `false`.</span><span class="sxs-lookup"><span data-stu-id="5cea4-124">The default value for `HasValue` is `false`.</span></span> <span data-ttu-id="5cea4-125">Die Eigenschaft `Value` hat keinen Standardwert.</span><span class="sxs-lookup"><span data-stu-id="5cea4-125">The `Value` property has no default value.</span></span>  
   
-    -   Sie können auch die Operatoren `==` und `!=` mit einem Nullable-Typ verwenden, wie im folgenden Beispiel gezeigt: `if (x != null) y = x;`  
+    -   <span data-ttu-id="5cea4-126">Sie können auch die Operatoren `==` und `!=` mit einem Nullable-Typ verwenden, wie im folgenden Beispiel gezeigt: `if (x != null) y = x;`</span><span class="sxs-lookup"><span data-stu-id="5cea4-126">You can also use the `==` and `!=` operators with a nullable type, as shown in the following example: `if (x != null) y = x;`</span></span>  
   
--   Verwenden Sie den Operator `??`, um einen Standardwert zuzuweisen, der angewendet wird, wenn ein Nullable-Typ, dessen aktueller Wert`null` lautet, einem Nicht-Nullable-Typ zugewiesen wird, z.B.: `int? x = null; int y = x ?? -1;`  
+-   <span data-ttu-id="5cea4-127">Verwenden Sie den Operator `??`, um einen Standardwert zuzuweisen, der angewendet wird, wenn ein Nullable-Typ, dessen aktueller Wert`null` lautet, einem Nicht-Nullable-Typ zugewiesen wird, z.B.: `int? x = null; int y = x ?? -1;`</span><span class="sxs-lookup"><span data-stu-id="5cea4-127">Use the `??` operator to assign a default value that will be applied when a nullable type whose current value is `null` is assigned to a non-nullable type, for example `int? x = null; int y = x ?? -1;`</span></span>  
   
--   Geschachtelte Nullable-Typen sind nicht zulässig. Die folgende Zeile wird nicht kompiliert: `Nullable<Nullable<int>> n;`  
+-   <span data-ttu-id="5cea4-128">Geschachtelte Nullable-Typen sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="5cea4-128">Nested nullable types are not allowed.</span></span> <span data-ttu-id="5cea4-129">Die folgende Zeile wird nicht kompiliert: `Nullable<Nullable<int>> n;`</span><span class="sxs-lookup"><span data-stu-id="5cea4-129">The following line will not compile: `Nullable<Nullable<int>> n;`</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- Weitere Informationen finden Sie unter:   
+## <a name="related-sections"></a><span data-ttu-id="5cea4-130">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="5cea4-130">Related Sections</span></span>  
+ <span data-ttu-id="5cea4-131">Weitere Informationen finden Sie unter: </span><span class="sxs-lookup"><span data-stu-id="5cea4-131">For more information:</span></span>  
   
--   [Verwenden von Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+-   [<span data-ttu-id="5cea4-132">Verwenden von Typen mit Nullwert</span><span class="sxs-lookup"><span data-stu-id="5cea4-132">Using Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
--   [Boxing von Typen mit Nullwerten](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
+-   [<span data-ttu-id="5cea4-133">Boxing von Typen mit Nullwerten</span><span class="sxs-lookup"><span data-stu-id="5cea4-133">Boxing Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
   
--   [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)  
+-   [<span data-ttu-id="5cea4-134">?? Operator</span><span class="sxs-lookup"><span data-stu-id="5cea4-134">?? Operator</span></span>](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="5cea4-135">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="5cea4-135">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Nullable>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md)   
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [What exactly does 'lifted' mean?](http://go.microsoft.com/fwlink/?LinkId=112382) (Was bedeutet „Lifted“ genau?)
-
+## <a name="see-also"></a><span data-ttu-id="5cea4-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5cea4-136">See Also</span></span>  
+ <xref:System.Nullable>  
+ [<span data-ttu-id="5cea4-137">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="5cea4-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="5cea4-138">C#</span><span class="sxs-lookup"><span data-stu-id="5cea4-138">C#</span></span>](../../../csharp/index.md)  
+ [<span data-ttu-id="5cea4-139">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="5cea4-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ <span data-ttu-id="5cea4-140">[What exactly does 'lifted' mean?](http://go.microsoft.com/fwlink/?LinkId=112382) (Was bedeutet „Lifted“ genau?)</span><span class="sxs-lookup"><span data-stu-id="5cea4-140">[What exactly does 'lifted' mean?](http://go.microsoft.com/fwlink/?LinkId=112382)</span></span>

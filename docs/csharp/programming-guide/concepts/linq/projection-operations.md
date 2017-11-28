@@ -1,47 +1,38 @@
 ---
 title: "Projektionsvorgänge (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a05a4f228e64405ba24d967193d9e7a487ae473
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b95072bf6e53ef090a7a7b398fa873bb0bf5b46
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="projection-operations-c"></a>Projektionsvorgänge (C#)
-Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.  
+# <a name="projection-operations-c"></a><span data-ttu-id="9733c-102">Projektionsvorgänge (C#)</span><span class="sxs-lookup"><span data-stu-id="9733c-102">Projection Operations (C#)</span></span>
+<span data-ttu-id="9733c-103">Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="9733c-103">Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used.</span></span> <span data-ttu-id="9733c-104">Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="9733c-104">By using projection, you can construct a new type that is built from each object.</span></span> <span data-ttu-id="9733c-105">Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen.</span><span class="sxs-lookup"><span data-stu-id="9733c-105">You can project a property and perform a mathematical function on it.</span></span> <span data-ttu-id="9733c-106">Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.</span><span class="sxs-lookup"><span data-stu-id="9733c-106">You can also project the original object without changing it.</span></span>  
   
- Die Methoden des Standardabfrageoperators, die Projektion ausführen, sind im folgenden Abschnitt aufgeführt.  
+ <span data-ttu-id="9733c-107">Die Methoden des Standardabfrageoperators, die Projektion ausführen, sind im folgenden Abschnitt aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="9733c-107">The standard query operator methods that perform projection are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Methoden  
+## <a name="methods"></a><span data-ttu-id="9733c-108">Methoden</span><span class="sxs-lookup"><span data-stu-id="9733c-108">Methods</span></span>  
   
-|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|<span data-ttu-id="9733c-109">Methodenname</span><span class="sxs-lookup"><span data-stu-id="9733c-109">Method Name</span></span>|<span data-ttu-id="9733c-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9733c-110">Description</span></span>|<span data-ttu-id="9733c-111">C#-Abfrageausdruckssyntax</span><span class="sxs-lookup"><span data-stu-id="9733c-111">C# Query Expression Syntax</span></span>|<span data-ttu-id="9733c-112">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="9733c-112">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Auswählen|Projektwerte, die auf einer Transform-Funktion basieren.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
-|SelectMany|Projiziert Sequenzen von Werten, die auf einer Transform-Funktion basieren, und fasst diese dann in eine Sequenz zusammen.|Mehrere `from`-Klauseln verwenden|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="9733c-113">Auswählen</span><span class="sxs-lookup"><span data-stu-id="9733c-113">Select</span></span>|<span data-ttu-id="9733c-114">Projektwerte, die auf einer Transform-Funktion basieren.</span><span class="sxs-lookup"><span data-stu-id="9733c-114">Projects values that are based on a transform function.</span></span>|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="9733c-115">SelectMany</span><span class="sxs-lookup"><span data-stu-id="9733c-115">SelectMany</span></span>|<span data-ttu-id="9733c-116">Projiziert Sequenzen von Werten, die auf einer Transform-Funktion basieren, und fasst diese dann in eine Sequenz zusammen.</span><span class="sxs-lookup"><span data-stu-id="9733c-116">Projects sequences of values that are based on a transform function and then flattens them into one sequence.</span></span>|<span data-ttu-id="9733c-117">Mehrere `from`-Klauseln verwenden</span><span class="sxs-lookup"><span data-stu-id="9733c-117">Use multiple `from` clauses</span></span>|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
+## <a name="query-expression-syntax-examples"></a><span data-ttu-id="9733c-118">Beispiele für die Abfrageausdruckssyntax</span><span class="sxs-lookup"><span data-stu-id="9733c-118">Query Expression Syntax Examples</span></span>  
   
-### <a name="select"></a>Auswählen  
- Im folgenden Beispiel wird die `select`-Klausel verwendet, um den ersten Buchstaben jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.  
+### <a name="select"></a><span data-ttu-id="9733c-119">Auswählen</span><span class="sxs-lookup"><span data-stu-id="9733c-119">Select</span></span>  
+ <span data-ttu-id="9733c-120">Im folgenden Beispiel wird die `select`-Klausel verwendet, um den ersten Buchstaben jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.</span><span class="sxs-lookup"><span data-stu-id="9733c-120">The following example uses the `select` clause to project the first letter from each string in a list of strings.</span></span>  
   
 ```csharp  
 List<string> words = new List<string>() { "an", "apple", "a", "day" };  
@@ -61,8 +52,8 @@ foreach (string s in query)
 */  
 ```  
   
-### <a name="selectmany"></a>SelectMany  
- Im folgenden Beispiel wird die `from`-Klausel verwendet, um jedes Wort aus jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.  
+### <a name="selectmany"></a><span data-ttu-id="9733c-121">SelectMany</span><span class="sxs-lookup"><span data-stu-id="9733c-121">SelectMany</span></span>  
+ <span data-ttu-id="9733c-122">Im folgenden Beispiel wird die `from`-Klausel verwendet, um jedes Wort aus jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.</span><span class="sxs-lookup"><span data-stu-id="9733c-122">The following example uses multiple `from` clauses  to project each word from each string in a list of strings.</span></span>  
   
 ```csharp  
 List<string> phrases = new List<string>() { "an apple a day", "the quick brown fox" };  
@@ -87,21 +78,21 @@ foreach (string s in query)
 */  
 ```  
   
-## <a name="select-versus-selectmany"></a>Select im Vergleich zu SelectMany  
- Die Arbeit von jeweils `Select()` und `SelectMany()` besteht darin, einen Ergebniswert (oder Werte) aus den Quellwerten zu erstellen. `Select()` generiert einen Ergebniswert für jeden Quellwert. Das Ergebnis ist daher eine Auflistung, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt. Im Gegensatz dazu erzeugt `SelectMany()` ein einziges Gesamtergebnis, das verkettete untergeordnete Auflistungen aus jedem Quellwert enthält. Die Transform-Funktion, die als Argument an `SelectMany()` übergeben wird, muss eine aufzählbare Sequenz von Werten für jeden Quellwert zurückgeben. Diese aufzählbaren Sequenzen werden anschließend von `SelectMany()` zu einer großen Sequenz verkettet.  
+## <a name="select-versus-selectmany"></a><span data-ttu-id="9733c-123">Select im Vergleich zu SelectMany</span><span class="sxs-lookup"><span data-stu-id="9733c-123">Select versus SelectMany</span></span>  
+ <span data-ttu-id="9733c-124">Die Arbeit von jeweils `Select()` und `SelectMany()` besteht darin, einen Ergebniswert (oder Werte) aus den Quellwerten zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="9733c-124">The work of both `Select()` and `SelectMany()` is to produce a result value (or values) from source values.</span></span> <span data-ttu-id="9733c-125">`Select()` generiert einen Ergebniswert für jeden Quellwert.</span><span class="sxs-lookup"><span data-stu-id="9733c-125">`Select()` produces one result value for every source value.</span></span> <span data-ttu-id="9733c-126">Das Ergebnis ist daher eine Auflistung, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt.</span><span class="sxs-lookup"><span data-stu-id="9733c-126">The overall result is therefore a collection that has the same number of elements as the source collection.</span></span> <span data-ttu-id="9733c-127">Im Gegensatz dazu erzeugt `SelectMany()` ein einziges Gesamtergebnis, das verkettete untergeordnete Auflistungen aus jedem Quellwert enthält.</span><span class="sxs-lookup"><span data-stu-id="9733c-127">In contrast, `SelectMany()` produces a single overall result that contains concatenated sub-collections from each source value.</span></span> <span data-ttu-id="9733c-128">Die Transform-Funktion, die als Argument an `SelectMany()` übergeben wird, muss eine aufzählbare Sequenz von Werten für jeden Quellwert zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="9733c-128">The transform function that is passed as an argument to `SelectMany()` must return an enumerable sequence of values for each source value.</span></span> <span data-ttu-id="9733c-129">Diese aufzählbaren Sequenzen werden anschließend von `SelectMany()` zu einer großen Sequenz verkettet.</span><span class="sxs-lookup"><span data-stu-id="9733c-129">These enumerable sequences are then concatenated by `SelectMany()` to create one large sequence.</span></span>  
   
- Die folgenden zwei Abbildungen zeigen den konzeptionellen Unterschied zwischen den Aktionen der beiden Methoden. In jedem Fall wird davon ausgegangen, dass die Auswahlfunktion (Transform) das Array von Blumen aus jedem Quellwert auswählt.  
+ <span data-ttu-id="9733c-130">Die folgenden zwei Abbildungen zeigen den konzeptionellen Unterschied zwischen den Aktionen der beiden Methoden.</span><span class="sxs-lookup"><span data-stu-id="9733c-130">The following two illustrations show the conceptual difference between the actions of these two methods.</span></span> <span data-ttu-id="9733c-131">In jedem Fall wird davon ausgegangen, dass die Auswahlfunktion (Transform) das Array von Blumen aus jedem Quellwert auswählt.</span><span class="sxs-lookup"><span data-stu-id="9733c-131">In each case, assume that the selector (transform) function selects the array of flowers from each source value.</span></span>  
   
- Die Abbildung zeigt, wie `Select()` eine Auflistung zurückgibt, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt.  
+ <span data-ttu-id="9733c-132">Die Abbildung zeigt, wie `Select()` eine Auflistung zurückgibt, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt.</span><span class="sxs-lookup"><span data-stu-id="9733c-132">This illustration depicts how `Select()` returns a collection that has the same number of elements as the source collection.</span></span>  
   
- ![Konzeptionelle Abbildung der Aktion Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ <span data-ttu-id="9733c-133">![Konzeptionelle Abbildung der Aktion Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")</span><span class="sxs-lookup"><span data-stu-id="9733c-133">![Conceptual illustration of the action of Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")</span></span>  
   
- Diese Abbildung zeigt, wie `SelectMany()` die Zwischenmodus-Sequenz von Arrays in einem Endergebniswert verkettet, der jeden Wert aus jedem Zwischenmodus-Array enthält.  
+ <span data-ttu-id="9733c-134">Diese Abbildung zeigt, wie `SelectMany()` die Zwischenmodus-Sequenz von Arrays in einem Endergebniswert verkettet, der jeden Wert aus jedem Zwischenmodus-Array enthält.</span><span class="sxs-lookup"><span data-stu-id="9733c-134">This illustration depicts how `SelectMany()` concatenates the intermediate sequence of arrays into one final result value that contains each value from each intermediate array.</span></span>  
   
- ![Grafische Darstellung der Aktion SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ <span data-ttu-id="9733c-135">![Grafische Darstellung der Aktion SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")</span><span class="sxs-lookup"><span data-stu-id="9733c-135">![Graphic showing the action of SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")</span></span>  
   
-### <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel wird das Verhalten von `Select()` und `SelectMany()` verglichen. Der Code erstellt eine „Bouquet“ von Blumen, indem er die ersten beiden Elemente aus jeder Liste der Blumennamen in der Quellauflistung aufführt. In diesem Beispiel ist der „einzelne Wert“, den die Transformationsfunktion <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> verwendet, selbst eine Auflistung von Werten. Dies erfordert die zusätzliche `foreach`-Schleife, um jede Zeichenfolge in den einzelnen Untersequenzen aufzulisten.  
+### <a name="code-example"></a><span data-ttu-id="9733c-136">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="9733c-136">Code Example</span></span>  
+ <span data-ttu-id="9733c-137">Im folgenden Beispiel wird das Verhalten von `Select()` und `SelectMany()` verglichen.</span><span class="sxs-lookup"><span data-stu-id="9733c-137">The following example compares the behavior of `Select()` and `SelectMany()`.</span></span> <span data-ttu-id="9733c-138">Der Code erstellt eine „Bouquet“ von Blumen, indem er die ersten beiden Elemente aus jeder Liste der Blumennamen in der Quellauflistung aufführt.</span><span class="sxs-lookup"><span data-stu-id="9733c-138">The code creates a "bouquet" of flowers by taking the first two items from each list of flower names in the source collection.</span></span> <span data-ttu-id="9733c-139">In diesem Beispiel ist der „einzelne Wert“, den die Transformationsfunktion <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> verwendet, selbst eine Auflistung von Werten.</span><span class="sxs-lookup"><span data-stu-id="9733c-139">In this example, the "single value" that the transform function <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> uses is itself a collection of values.</span></span> <span data-ttu-id="9733c-140">Dies erfordert die zusätzliche `foreach`-Schleife, um jede Zeichenfolge in den einzelnen Untersequenzen aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="9733c-140">This requires the extra `foreach` loop in order to enumerate each string in each sub-sequence.</span></span>  
   
 ```csharp  
 class Bouquet  
@@ -176,10 +167,9 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>   
- [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)   
- [How to: Populate Object Collections from Multiple Sources (LINQ) (C#) (Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
- [How to: Split a File Into Many Files by Using Groups (LINQ) (C#) (Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="9733c-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9733c-141">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="9733c-142">Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))</span><span class="sxs-lookup"><span data-stu-id="9733c-142">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="9733c-143">select-Klausel</span><span class="sxs-lookup"><span data-stu-id="9733c-143">select clause</span></span>](../../../../csharp/language-reference/keywords/select-clause.md)  
+ [<span data-ttu-id="9733c-144">Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9733c-144">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ [<span data-ttu-id="9733c-145">Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9733c-145">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

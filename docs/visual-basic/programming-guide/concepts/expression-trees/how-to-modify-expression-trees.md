@@ -1,41 +1,33 @@
 ---
-title: "Gewusst wie: Ändern von Ausdrucksbaumstrukturen (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb4e818eed7d6547e091c914d40b3ce87af59512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 28a79a2dc8817a3fc6c7f3e2e01c1270d2981334
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Gewusst wie: Ändern von Ausdrucksbaumstrukturen (Visual Basic)
-In diesem Thema wird gezeigt, wie eine Ausdrucksbaumstruktur ändern. Ausdrucksbaumstrukturen sind unveränderlich, was bedeutet, dass sie nicht direkt geändert werden können. Um eine Ausdrucksbaumstruktur ändern möchten, müssen Sie eine Kopie einer vorhandenen Ausdrucksbaumstruktur zu erstellen und die erforderlichen Änderungen vorzunehmen, wenn Sie die Kopie erstellen. Sie können die <xref:System.Linq.Expressions.ExpressionVisitor>Klasse, um eine vorhandene Ausdrucksbaumstruktur zu durchlaufen und jeden Knoten zu kopieren.</xref:System.Linq.Expressions.ExpressionVisitor>  
+# <a name="how-to-modify-expression-trees-visual-basic"></a><span data-ttu-id="d7296-102">Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7296-102">How to: Modify Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="d7296-103">In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können.</span><span class="sxs-lookup"><span data-stu-id="d7296-103">This topic shows you how to modify an expression tree.</span></span> <span data-ttu-id="d7296-104">Ausdrucksbaumstrukturen sind unveränderlich, d.h. sie können nicht direkt modifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="d7296-104">Expression trees are immutable, which means that they cannot be modified directly.</span></span> <span data-ttu-id="d7296-105">Um eine Ausdrucksbaumstruktur zu verändern, müssen Sie eine Kopie eines vorhandenen Ausdrucksbaumstruktur erstellen und währenddessen die erforderlichen Änderungen vornehmen.</span><span class="sxs-lookup"><span data-stu-id="d7296-105">To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes.</span></span> <span data-ttu-id="d7296-106">Sie können die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse verwenden, um einen vorhandenen Ausdrucksbaum zu durchlaufen und jeden Knoten zu kopieren, der durchlaufen wird.</span><span class="sxs-lookup"><span data-stu-id="d7296-106">You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.</span></span>  
   
-### <a name="to-modify-an-expression-tree"></a>So ändern Sie eine Ausdrucksbaumstruktur  
+### <a name="to-modify-an-expression-tree"></a><span data-ttu-id="d7296-107">So ändern Sie Ausdrucksbaumstrukturen</span><span class="sxs-lookup"><span data-stu-id="d7296-107">To modify an expression tree</span></span>  
   
-1.  Erstellen Sie ein neues **Konsolenanwendung** Projekt.  
+1.  <span data-ttu-id="d7296-108">Erstellen Sie ein neues **Konsolenanwendungsprojekt**.</span><span class="sxs-lookup"><span data-stu-id="d7296-108">Create a new **Console Application** project.</span></span>  
   
-2.  Hinzufügen einer `Imports` Anweisung, um die Datei für die `System.Linq.Expressions` Namespace.  
+2.  <span data-ttu-id="d7296-109">Hinzufügen einer `Imports` Anweisung, um die Datei für die `System.Linq.Expressions` Namespace.</span><span class="sxs-lookup"><span data-stu-id="d7296-109">Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.</span></span>  
   
-3.  Hinzufügen der `AndAlsoModifier` Klasse zu Ihrem Projekt.  
+3.  <span data-ttu-id="d7296-110">Fügen Sie die `AndAlsoModifier`-Klasse in Ihr Projekt ein.</span><span class="sxs-lookup"><span data-stu-id="d7296-110">Add the `AndAlsoModifier` class to your project.</span></span>  
   
     ```vb  
     Public Class AndAlsoModifier  
@@ -61,11 +53,11 @@ In diesem Thema wird gezeigt, wie eine Ausdrucksbaumstruktur ändern. Ausdrucksb
     End Class  
     ```  
   
-     Diese Klasse erbt die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse und wird spezialisiert, um Ausdrücke zu ändern, die bedingte darstellen `AND` Operations.</xref:System.Linq.Expressions.ExpressionVisitor> Es ändert diese Operationen von einem bedingten `AND` , eine bedingte `OR`. Die Klasse überschreibt Sie dazu die <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>Methode des Basistyps, da bedingte `AND` -Ausdrücke als binäre Ausdrücke dargestellt werden.</xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> In der `VisitBinary` -Methode, wenn der Ausdruck, der an sie übergeben wird, eine bedingte darstellt `AND` Vorgang, der Code erstellt einen neuen Ausdruck, der die bedingte enthält `OR` anstelle des bedingten Operators `AND` Operator. Wenn der Ausdruck, der an `VisitBinary` keine bedingte darstellt `AND` Vorgang, der-Methode verzögert Implementierung der Basisklasse. Die Methoden der Basisklasse erstellt Knoten, die auch die Ausdrucksbaumstrukturen, die übergeben werden, aber die Knoten haben ihre Sub-Strukturen, die mit der Ausdrucksbaumstrukturen, die ersetzt erzeugt rekursiv vom Besucher.  
+     <span data-ttu-id="d7296-111">Diese Klasse erbt die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse und ist darauf spezialisiert, Ausdrücke zu verändern, die bedingte `AND`-Vorgänge darstellen.</span><span class="sxs-lookup"><span data-stu-id="d7296-111">This class inherits the <xref:System.Linq.Expressions.ExpressionVisitor> class and is specialized to modify expressions that represent conditional `AND` operations.</span></span> <span data-ttu-id="d7296-112">Es ändert diese Vorgänge von einem bedingten `AND` in ein bedingtes `OR`.</span><span class="sxs-lookup"><span data-stu-id="d7296-112">It changes these operations from a conditional `AND` to a conditional `OR`.</span></span> <span data-ttu-id="d7296-113">Zu diesem Zweck setzt die Klasse die <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>-Methode der Basisklasse außer Kraft, weil bedingte `AND`-Ausdrücke als binäre Ausdrücke dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="d7296-113">To do this, the class overrides the <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> method of the base type, because conditional `AND` expressions are represented as binary expressions.</span></span> <span data-ttu-id="d7296-114">Für die `VisitBinary`-Methode gilt Folgendes: Wenn der an die Methode übergebene Ausdruck eine bedingte `AND`-Operation darstellt, erstellt der Code einen neuen Ausdruck, der den bedingten Operator `OR` anstelle des bedingten Operators `AND` enthält.</span><span class="sxs-lookup"><span data-stu-id="d7296-114">In the `VisitBinary` method, if the expression that is passed to it represents a conditional `AND` operation, the code constructs a new expression that contains the conditional `OR` operator instead of the conditional `AND` operator.</span></span> <span data-ttu-id="d7296-115">Wenn der an `VisitBinary` übergebene Ausdruck keinen bedingten `AND`-Vorgang darstellt, verzögert die Methode die Implementierung der Basisklasse.</span><span class="sxs-lookup"><span data-stu-id="d7296-115">If the expression that is passed to `VisitBinary` does not represent a conditional `AND` operation, the method defers to the base class implementation.</span></span> <span data-ttu-id="d7296-116">Die Basisklassenmethode erstellt Knoten, die den übergebenen Ausdrucksbaumstrukturen gleichen. In diesem Fall sind die Teilstrukturen der Knoten jedoch durch die Ausdrucksbaumstrukturen ersetzt, die vom Besucher rekursiv erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="d7296-116">The base class methods construct nodes that are like the expression trees that are passed in, but the nodes have their sub trees replaced with the expression trees that are produced recursively by the visitor.</span></span>  
   
-4.  Hinzufügen einer `Imports` Anweisung, um die Datei für die `System.Linq.Expressions` Namespace.  
+4.  <span data-ttu-id="d7296-117">Hinzufügen einer `Imports` Anweisung, um die Datei für die `System.Linq.Expressions` Namespace.</span><span class="sxs-lookup"><span data-stu-id="d7296-117">Add an `Imports` statement to the file for the `System.Linq.Expressions` namespace.</span></span>  
   
-5.  Fügen Sie Code in der `Main` -Methode in der Datei "Module1.vb", um eine Ausdrucksbaumstruktur zu erstellen und es an die Methode übergeben, die sie ändern.  
+5.  <span data-ttu-id="d7296-118">Hinzufügen von Code für die `Main` Methode in der Datei "Module1.vb", um eine Ausdrucksbaumstruktur zu erstellen sowie deren Übergabe an die Methode, die sie ändern.</span><span class="sxs-lookup"><span data-stu-id="d7296-118">Add code to the `Main` method in the Module1.vb file to create an expression tree and pass it to the method that will modify it.</span></span>  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -83,10 +75,10 @@ In diesem Thema wird gezeigt, wie eine Ausdrucksbaumstruktur ändern. Ausdrucksb
     ' name => ((name.Length > 10) || name.StartsWith("G"))  
     ```  
   
-     Der Code erstellt einen Ausdruck, der eine bedingte enthält `AND` Vorgang. Er erstellt dann eine Instanz der `AndAlsoModifier` -Klasse und den Ausdruck, der `Modify` Methode dieser Klasse. Sowohl das Original als auch die geänderte Ausdrucksbaumstruktur werden ausgegeben, um die Änderung anzuzeigen.  
+     <span data-ttu-id="d7296-119">Der Code erstellt einen Ausdruck, der einen bedingten `AND`-Vorgang enthält.</span><span class="sxs-lookup"><span data-stu-id="d7296-119">The code creates an expression that contains a conditional `AND` operation.</span></span> <span data-ttu-id="d7296-120">Er erstellt anschließend eine Instanz der `AndAlsoModifier`-Klasse und übergibt den Ausdruck an die `Modify`-Methode dieser Klasse.</span><span class="sxs-lookup"><span data-stu-id="d7296-120">It then creates an instance of the `AndAlsoModifier` class and passes the expression to the `Modify` method of this class.</span></span> <span data-ttu-id="d7296-121">Sowohl der ursprüngliche als auch der geänderte Ausdrucksbaum werden ausgegeben, um die Änderungen zu zeigen.</span><span class="sxs-lookup"><span data-stu-id="d7296-121">Both the original and the modified expression trees are outputted to show the change.</span></span>  
   
-6.  Kompilieren Sie die Anwendung, und führen Sie sie aus.  
+6.  <span data-ttu-id="d7296-122">Kompilieren Sie die Anwendung, und führen Sie sie aus.</span><span class="sxs-lookup"><span data-stu-id="d7296-122">Compile and run the application.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+## <a name="see-also"></a><span data-ttu-id="d7296-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d7296-123">See Also</span></span>  
+ [<span data-ttu-id="d7296-124">Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7296-124">How to: Execute Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [<span data-ttu-id="d7296-125">Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7296-125">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

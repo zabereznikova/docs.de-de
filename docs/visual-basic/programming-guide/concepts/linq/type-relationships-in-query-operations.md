@@ -1,16 +1,13 @@
 ---
-title: Typbeziehungen in Abfrageoperationen (Visual Basic) | Microsoft-Dokumentation
+title: Typbeziehungen in Abfrageoperationen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
 - type information inferred [LINQ in Visual Basic]
@@ -21,99 +18,118 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: 34
-author: stevehoag
-ms.author: shoag
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a966b69feca7a7021cafbccb7971913ea781c479
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
-Variablen in [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] Abfrage Vorgänge sind stark typisiert und müssen miteinander kompatibel sein. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden. Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfrage. Weitere Informationen über die Teile einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+# <a name="type-relationships-in-query-operations-visual-basic"></a><span data-ttu-id="591d4-102">Typbeziehungen in Abfrageoperationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="591d4-102">Type Relationships in Query Operations (Visual Basic)</span></span>
+<span data-ttu-id="591d4-103">Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgänge sind stark typisiert und müssen miteinander kompatibel sein.</span><span class="sxs-lookup"><span data-stu-id="591d4-103">Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other.</span></span> <span data-ttu-id="591d4-104">Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="591d4-104">Strong typing is used in the data source, in the query itself, and in the query execution.</span></span> <span data-ttu-id="591d4-105">Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage.</span><span class="sxs-lookup"><span data-stu-id="591d4-105">The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span></span> <span data-ttu-id="591d4-106">Weitere Informationen über die Teile einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).</span><span class="sxs-lookup"><span data-stu-id="591d4-106">For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).</span></span>  
   
- ![Pseudocode-Abfrage mit hervorgehobenen Elementen.](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-Teile einer LINQ-Abfrage  
+ <span data-ttu-id="591d4-107">![Pseudocode-Abfrage mit hervorgehobenen Elementen. ] (../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")</span><span class="sxs-lookup"><span data-stu-id="591d4-107">![Pseudocode query with elements highlighted.](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")</span></span>  
+<span data-ttu-id="591d4-108">Teile einer LINQ-Abfrage</span><span class="sxs-lookup"><span data-stu-id="591d4-108">Parts of a LINQ query</span></span>  
   
- Der Typ der Bereichsvariablen in der Abfrage muss mit dem Typ der Elemente in der Datenquelle übereinstimmen. Der Typ der Abfragevariablen muss kompatibel mit dem Sequenzelement gemäß der `Select` Klausel. Schließlich der Typ der Sequenzelemente auch muss kompatibel mit dem Typ, der die Loop-Steuerelementvariable, die in verwendet wird die `For Each` -Anweisung, die die Abfrage ausgeführt wird. Diese starke Typisierung erleichtert die Identifizierung von Typfehler zur Kompilierzeit.  
+ <span data-ttu-id="591d4-109">Der Typ der Bereichsvariablen in der Abfrage muss mit dem Typ der Elemente in der Datenquelle kompatibel sein.</span><span class="sxs-lookup"><span data-stu-id="591d4-109">The type of the range variable in the query must be compatible with the type of the elements in the data source.</span></span> <span data-ttu-id="591d4-110">Der Typ der Abfragevariablen muss kompatibel mit dem Sequenzelement definiert, der `Select` Klausel.</span><span class="sxs-lookup"><span data-stu-id="591d4-110">The type of the query variable must be compatible with the sequence element defined in the `Select` clause.</span></span> <span data-ttu-id="591d4-111">Schließlich der Typ der Elemente der Sequenz auch muss kompatibel mit dem Typ des Loop-Steuerelementvariable, die verwendet wird die `For Each` -Anweisung, die die Abfrage ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="591d4-111">Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query.</span></span> <span data-ttu-id="591d4-112">Diese starke Typisierung erleichtert die Identifizierung der Typfehler zur Kompilierzeit.</span><span class="sxs-lookup"><span data-stu-id="591d4-112">This strong typing facilitates identification of type errors at compile time.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]erleichtert eine starke Typisierung durch die Implementierung von lokaler Typrückschluss, auch bekannt als *implizite Typisierung*. Feature im vorherigen Beispiel verwendet wird, und sehen Sie in allen verwendet die [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Beispiele und Dokumentation. Der lokale Typrückschluss erfolgt in Visual Basic einfach mithilfe einer `Dim` -Anweisung ohne ein `As` Klausel. Im folgenden Beispiel `city` als Zeichenfolge stark typisiert ist.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="591d4-113">erleichtert eine starke Typisierung durch Implementieren von lokaler Typrückschluss, auch bekannt als *implizite Typisierung*.</span><span class="sxs-lookup"><span data-stu-id="591d4-113"> makes strong typing convenient by implementing local type inference, also known as *implicit typing*.</span></span> <span data-ttu-id="591d4-114">Funktion wird im vorherigen Beispiel verwendet, und sehen Sie in der gesamten verwendet die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Beispiele und Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="591d4-114">That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation.</span></span> <span data-ttu-id="591d4-115">Lokaler Typrückschluss erfolgt in Visual Basic einfach mithilfe einer `Dim` -Anweisung ohne eine `As` Klausel.</span><span class="sxs-lookup"><span data-stu-id="591d4-115">In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause.</span></span> <span data-ttu-id="591d4-116">Im folgenden Beispiel `city` stark typisiert ist, als Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="591d4-116">In the following example, `city` is strongly typed as a string.</span></span>  
   
- [!code-vb[VbLINQTypeRels&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
->  Der lokale Typrückschluss funktioniert nur, wenn `Option Infer` Wert `On`. Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+>  <span data-ttu-id="591d4-117">Lokaler Typrückschluss funktioniert nur, wenn `Option Infer` festgelegt ist, um `On`.</span><span class="sxs-lookup"><span data-stu-id="591d4-117">Local type inference works only when `Option Infer` is set to `On`.</span></span> <span data-ttu-id="591d4-118">Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span><span class="sxs-lookup"><span data-stu-id="591d4-118">For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span></span>  
   
- Auch wenn Sie den lokalen Typrückschluss in einer Abfrage verwenden, sind jedoch die gleichen typbeziehungen zwischen den Variablen in der Datenquelle, die Abfragevariable und der Ausführungsschleife Abfrage vorhanden. Es empfiehlt sich, ein grundlegendes Verständnis dieser Typ Beziehungen haben, wenn Sie schreiben [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfragen oder Arbeiten mit den Beispielen und Codebeispielen in der Dokumentation.  
+ <span data-ttu-id="591d4-119">Selbst bei Verwendung von lokalem Typrückschluss in einer Abfrage gibt jedoch die gleichen typbeziehungen zwischen den Variablen in der Datenquelle, die Abfragevariable und der Ausführungsschleife Abfrage vorhanden.</span><span class="sxs-lookup"><span data-stu-id="591d4-119">However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop.</span></span> <span data-ttu-id="591d4-120">Es ist sinnvoll, einen grundlegenden Überblick über diese typbeziehungen zu verwenden, wenn Sie schreiben [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen oder Arbeiten mit den Beispielen und Codebeispielen in der Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="591d4-120">It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.</span></span>  
   
- Sie müssen möglicherweise einen expliziten Typ für eine Bereichsvariable angeben, der nicht den Typ der Datenquelle übereinstimmt. Sie können den Typ der Bereichsvariablen angeben, mit einem `As` Klausel. Dies führt jedoch zu einem Fehler, wenn die Konvertierung ist ein [einschränkende Konvertierung](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) und `Option Strict` Wert `On`. Wir empfehlen daher, die aus der Datenquelle abgerufenen Werte die Konvertierung ausführen. Sie können die Werte in den Typ der expliziten Bereich aus der Datenquelle konvertieren, mithilfe der <xref:System.Linq.Enumerable.Cast%2A>-Methode.</xref:System.Linq.Enumerable.Cast%2A> Sie können auch die Werte in ausgewählten Umwandeln der `Select` -Klausel, um einen expliziten Typ, der den Typ der Bereichsvariablen unterscheidet. Diese Punkte werden im folgenden Code veranschaulicht.  
+ <span data-ttu-id="591d4-121">Sie müssen möglicherweise einen expliziten Typ für eine Bereichsvariable angeben, die nicht aus der Datenquelle zurückgegebenen Typ übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="591d4-121">You may need to specify an explicit type for a range variable that does not match the type returned from the data source.</span></span> <span data-ttu-id="591d4-122">Sie können den Typ der Bereichsvariablen angeben, mit einem `As` Klausel.</span><span class="sxs-lookup"><span data-stu-id="591d4-122">You can specify the type of the range variable by using an `As` clause.</span></span> <span data-ttu-id="591d4-123">Dies führt jedoch zu einem Fehler, wenn die Konvertierung ist ein [einschränkende Konvertierung](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) und `Option Strict` festgelegt ist, um `On`.</span><span class="sxs-lookup"><span data-stu-id="591d4-123">However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`.</span></span> <span data-ttu-id="591d4-124">Aus diesem Grund wird empfohlen, dass Sie die Konvertierung, auf den Werten aus der Datenquelle abgerufen durchführen.</span><span class="sxs-lookup"><span data-stu-id="591d4-124">Therefore, we recommend that you perform the conversion on the values retrieved from the data source.</span></span> <span data-ttu-id="591d4-125">Sie können die Werte in den Variablentyp expliziten Bereich aus der Datenquelle konvertieren, mithilfe der <xref:System.Linq.Enumerable.Cast%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="591d4-125">You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="591d4-126">Sie können auch die Werte, die im ausgewählten Umwandeln der `Select` -Klausel, um einen expliziten Typ, der den Typ der Bereichsvariablen unterscheidet.</span><span class="sxs-lookup"><span data-stu-id="591d4-126">You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable.</span></span> <span data-ttu-id="591d4-127">Diese Punkte werden in den folgenden Code veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="591d4-127">These points are illustrated in the following code.</span></span>  
   
- [!code-vb[VbLINQTypeRels&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Abfragen, die ganze Elemente der Quelldaten zurückgeben  
- Das folgende Beispiel zeigt eine [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] Abfrageoperation, die eine Sequenz von Elementen, die aus den Quelldaten ausgewählt zurückgibt. Die Quelle `names`, enthält ein Array von Zeichenfolgen, und die Abfrageausgabe ist eine Sequenz mit Zeichenfolgen, die mit dem Buchstaben M beginnen.  
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a><span data-ttu-id="591d4-128">Abfragen, die ganze Elemente der Quelldaten zurückgeben</span><span class="sxs-lookup"><span data-stu-id="591d4-128">Queries That Return Entire Elements of the Source Data</span></span>  
+ <span data-ttu-id="591d4-129">Das folgende Beispiel zeigt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrageoperation, die eine Sequenz von Elementen, die aus den Quelldaten ausgewählt zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="591d4-129">The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data.</span></span> <span data-ttu-id="591d4-130">Die Quelle `names`, enthält ein Array von Zeichenfolgen, und die Abfrageausgabe ist eine Sequenz mit Zeichenfolgen, die mit dem Buchstaben M beginnen.</span><span class="sxs-lookup"><span data-stu-id="591d4-130">The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.</span></span>  
   
- [!code-vb[VbLINQTypeRels&#2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
- Dies entspricht dem folgenden Code, aber viel kürzer und einfacher zu schreiben. Abhängigkeit von lokalem Typrückschluss in Abfragen ist das bevorzugte Format in Visual Basic.  
+ <span data-ttu-id="591d4-131">Dies entspricht dem folgenden Code, aber es ist sehr viel kürzer und einfacher zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="591d4-131">This is equivalent to the following code, but is much shorter and easier to write.</span></span> <span data-ttu-id="591d4-132">Abhängigkeit von lokalem Typrückschluss in Abfragen ist das bevorzugte Format in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="591d4-132">Reliance on local type inference in queries is the preferred style in Visual Basic.</span></span>  
   
- [!code-vb[VbLINQTypeRels&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
- In den beiden vorherigen Codebeispielen, bestehen die folgenden Beziehungen, ob Typen implizit oder explizit bestimmt werden.  
+ <span data-ttu-id="591d4-133">Die folgenden Beziehungen vorhanden sind in den beiden vorherigen Codebeispielen, ob die Datentypen implizit oder explizit bestimmt werden.</span><span class="sxs-lookup"><span data-stu-id="591d4-133">The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.</span></span>  
   
-1.  Der Typ der Elemente in der Datenquelle `names`, ist der Typ der Bereichsvariablen `name`, in der Abfrage.  
+1.  <span data-ttu-id="591d4-134">Der Typ der Elemente in der Datenquelle `names`, ist der Typ der Bereichsvariablen, `name`, in der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="591d4-134">The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.</span></span>  
   
-2.  Der Typ des Objekts, das ausgewählt ist, `name`, bestimmt den Typ der Abfragevariablen, `mNames`. Hier `name` ist eine Zeichenfolge, daher ist die Abfragevariable IEnumerable (Of String) in Visual Basic.  
+2.  <span data-ttu-id="591d4-135">Der Typ des Objekts, das ausgewählt ist, `name`, bestimmt den Typ der Abfragevariablen, `mNames`.</span><span class="sxs-lookup"><span data-stu-id="591d4-135">The type of the object that is selected, `name`, determines the type of the query variable, `mNames`.</span></span> <span data-ttu-id="591d4-136">Hier `name` ist eine Zeichenfolge, daher ist die Abfragevariable IEnumerable (Of String) in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="591d4-136">Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.</span></span>  
   
-3.  Die in definierte Abfrage `mNames` ausgeführt wird, der `For Each` Schleife. Die Schleife durchläuft das Ergebnis der Ausführung der Abfrage. Da `mNames`, wenn er ausgeführt wird, gibt eine Sequenz von Zeichenfolgen, die Schleifeniterationsvariable `nm`, ist auch eine Zeichenfolge.  
+3.  <span data-ttu-id="591d4-137">Die Abfrage, die in definierten `mNames` ausgeführt wird, der `For Each` Schleife.</span><span class="sxs-lookup"><span data-stu-id="591d4-137">The query defined in `mNames` is executed in the `For Each` loop.</span></span> <span data-ttu-id="591d4-138">Die Schleife durchläuft das Ergebnis der Ausführung der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="591d4-138">The loop iterates over the result of executing the query.</span></span> <span data-ttu-id="591d4-139">Da `mNames`, wenn er ausgeführt wird, wird eine Sequenz von Zeichenfolgen, die Schleifeniterationsvariable zurückgegeben `nm`, ist auch eine Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="591d4-139">Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.</span></span>  
   
-## <a name="queries-that-return-one-field-from-selected-elements"></a>Abfragen, die ein Feld aus ausgewählten Elementen zurückgeben  
- Das folgende Beispiel zeigt eine [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] Abfrageoperation, die eine Sequenz zurückgibt, enthält nur ein Teil jedes Element aus der Datenquelle ausgewählt. Die Abfrage nimmt eine Auflistung von `Customer` Objekte als Datenquelle und projiziert nur die `Name` -Eigenschaft im Ergebnis. Da der Kundenname eine Zeichenfolge ist, erzeugt die Abfrage eine Sequenz von Zeichenfolgen als Ausgabe.  
+## <a name="queries-that-return-one-field-from-selected-elements"></a><span data-ttu-id="591d4-140">Abfragen, die ein Feld aus ausgewählten Elementen zurückgeben</span><span class="sxs-lookup"><span data-stu-id="591d4-140">Queries That Return One Field from Selected Elements</span></span>  
+ <span data-ttu-id="591d4-141">Das folgende Beispiel zeigt eine [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] Abfrageoperation, die eine Sequenz zurückgibt, enthält nur ein Teil jedes Element aus der Datenquelle ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="591d4-141">The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source.</span></span> <span data-ttu-id="591d4-142">Die Abfrage nimmt eine Auflistung von `Customer` Objekte als Datenquelle und projiziert nur die `Name` im Ergebnis.</span><span class="sxs-lookup"><span data-stu-id="591d4-142">The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result.</span></span> <span data-ttu-id="591d4-143">Da der Kundenname eine Zeichenfolge ist, erzeugt die Abfrage eine Sequenz von Zeichenfolgen als Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="591d4-143">Because the customer name is a string, the query produces a sequence of strings as output.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Die Beziehung zwischen Variablen sind vergleichbar mit der einfacher wird.  
+```vb  
+' Method GetTable returns a table of Customer objects.  
+Dim customers = db.GetTable(Of Customer)()  
+Dim custNames = From cust In customers   
+                Where cust.City = "London"   
+                Select cust.Name  
   
-1.  Der Typ der Elemente in der Datenquelle `customers`, ist der Typ der Bereichsvariablen `cust`, in der Abfrage. In diesem Beispiel ist `Customer`.  
+For Each custName In custNames  
+    Console.WriteLine(custName)  
+Next  
+```  
   
-2.  Die `Select` Anweisung gibt die `Name` -Eigenschaft jedes `Customer` Objekt anstelle des gesamten Objekts. Da `Name` ist eine Zeichenfolge, die Abfragevariable `custNames`, werden nicht erneut IEnumerable (Of String), der `Customer`.  
+ <span data-ttu-id="591d4-144">Die Beziehungen zwischen den Variablen werden wie im Beispiel einfacher.</span><span class="sxs-lookup"><span data-stu-id="591d4-144">The relationships between variables are like those in the simpler example.</span></span>  
   
-3.  Da `custNames` stellt eine Sequenz von Zeichenfolgen, die `For Each` die Iterationsvariable-Schleife, `custName`, muss eine Zeichenfolge sein.  
+1.  <span data-ttu-id="591d4-145">Der Typ der Elemente in der Datenquelle `customers`, ist der Typ der Bereichsvariablen, `cust`, in der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="591d4-145">The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query.</span></span> <span data-ttu-id="591d4-146">In diesem Beispiel wird der Typ `Customer`.</span><span class="sxs-lookup"><span data-stu-id="591d4-146">In this example, that type is `Customer`.</span></span>  
   
- Ohne lokaler Typrückschluss wäre das vorherige Beispiel komplizierter zu schreiben und zu verstehen, wie im folgenden Beispiel gezeigt.  
+2.  <span data-ttu-id="591d4-147">Die `Select` Anweisung gibt die `Name` -Eigenschaft jedes `Customer` Objekt anstatt als ganzes Objekt.</span><span class="sxs-lookup"><span data-stu-id="591d4-147">The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object.</span></span> <span data-ttu-id="591d4-148">Da `Name` ist eine Zeichenfolge, die Abfragevariable `custNames`, werden nicht erneut IEnumerable (Of String), der `Customer`.</span><span class="sxs-lookup"><span data-stu-id="591d4-148">Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-## <a name="queries-that-require-anonymous-types"></a>Abfragen, die anonyme Typen erfordern  
- Das folgende Beispiel zeigt eine komplexere Situation. Im vorherigen Beispiel war es unpraktisch, Typen für alle Variablen explizit angeben. In diesem Beispiel ist es unmöglich. Anstelle des gesamten `Customer` Elemente aus der Datenquelle oder ein einzelnes Feld aus jedem Element der `Select` -Klausel in dieser Abfrage gibt zwei Eigenschaften des ursprünglichen `Customer` Objekt: `Name` und `City`. Als Antwort auf die `Select` -Klausel, definiert der Compiler einen anonymen Typ, der diese beiden Eigenschaften enthält. Das Ergebnis der Ausführung `nameCityQuery` in den `For Each` Schleife ist eine Auflistung von Instanzen des neuen anonymen Typs. Da der anonyme Typ keinen verwendbaren Namen hat, kann nicht, geben Sie den Typ des `nameCityQuery` oder `custInfo` explizit. Mit einem anonymen Typ, haben Sie also keinen Typnamen anstelle der `String` in `IEnumerable(Of String)`. Weitere Informationen finden Sie unter [anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+3.  <span data-ttu-id="591d4-149">Da `custNames` stellt eine Sequenz von Zeichenfolgen, die `For Each` -Schleife Iterationsvariable, `custName`, muss eine Zeichenfolge sein.</span><span class="sxs-lookup"><span data-stu-id="591d4-149">Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.</span></span>  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- Obwohl es nicht möglich, Typen für alle Variablen im vorherigen Beispiel angegeben ist, werden die Beziehungen nicht geändert.  
+ <span data-ttu-id="591d4-150">Ohne lokaler Typrückschluss wäre das vorherige Beispiel umständlicher zum Schreiben von und zu verstehen, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="591d4-150">Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.</span></span>  
   
-1.  Der Typ der Elemente in der Datenquelle ist erneut den Typ der Bereichsvariablen in der Abfrage. In diesem Beispiel `cust` ist eine Instanz von `Customer`.  
+```vb  
+' Method GetTable returns a table of Customer objects.  
+ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)()  
+ Dim custNames As IEnumerable(Of String) =  
+     From cust As Customer In customers   
+     Where cust.City = "London"   
+     Select cust.Name  
   
-2.  Da die `Select` -Anweisung erstellt einen anonymen Typ der Abfragevariablen `nameCityQuery`, implizit als anonymer Typ typisiert sein. Ein anonymer Typ hat keinen verwendbaren Namen und kann daher nicht explizit angegeben werden.  
+ For Each custName As String In custNames  
+     Console.WriteLine(custName)  
+ Next  
+```  
   
-3.  Der Typ der Iterationsvariablen in der `For Each` Schleife wird in Schritt 2 erstellten anonymen Typs. Da der Typ keinen verwendbaren Namen aufweist, muss der Typ der Schleifeniterationsvariablen implizit bestimmt werden.  
+## <a name="queries-that-require-anonymous-types"></a><span data-ttu-id="591d4-151">Abfragen, die anonyme Typen erfordern</span><span class="sxs-lookup"><span data-stu-id="591d4-151">Queries That Require Anonymous Types</span></span>  
+ <span data-ttu-id="591d4-152">Das folgende Beispiel zeigt eine komplexere Situation.</span><span class="sxs-lookup"><span data-stu-id="591d4-152">The following example shows a more complex situation.</span></span> <span data-ttu-id="591d4-153">Im vorherigen Beispiel war es unpraktisch, Typen für alle Variablen explizit anzugeben.</span><span class="sxs-lookup"><span data-stu-id="591d4-153">In the previous example, it was inconvenient to specify types for all the variables explicitly.</span></span> <span data-ttu-id="591d4-154">In diesem Beispiel ist es unmöglich.</span><span class="sxs-lookup"><span data-stu-id="591d4-154">In this example, it is impossible.</span></span> <span data-ttu-id="591d4-155">Anstelle des gesamten `Customer` Elemente aus der Datenquelle oder ein einzelnes Feld aus jedem Element der `Select` -Klausel in der diese Abfrage gibt zwei Eigenschaften des ursprünglichen `Customer` Objekt: `Name` und `City`.</span><span class="sxs-lookup"><span data-stu-id="591d4-155">Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`.</span></span> <span data-ttu-id="591d4-156">Als Antwort auf die `Select` -Klausel, definiert der Compiler einen anonymen Typ, der diese beiden Eigenschaften enthält.</span><span class="sxs-lookup"><span data-stu-id="591d4-156">In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties.</span></span> <span data-ttu-id="591d4-157">Das Ergebnis der Ausführung `nameCityQuery` in die `For Each` Schleife ist eine Auflistung von Instanzen des neuen anonymen Typs.</span><span class="sxs-lookup"><span data-stu-id="591d4-157">The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type.</span></span> <span data-ttu-id="591d4-158">Da der anonyme Typ keinen verwendbaren Namen aufweist, kann nicht, geben Sie den Typ des `nameCityQuery` oder `custInfo` explizit.</span><span class="sxs-lookup"><span data-stu-id="591d4-158">Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly.</span></span> <span data-ttu-id="591d4-159">D. h. mit einen anonymen Typ haben Sie keine Namen an, verwenden Sie anstelle von `String` in `IEnumerable(Of String)`.</span><span class="sxs-lookup"><span data-stu-id="591d4-159">That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`.</span></span> <span data-ttu-id="591d4-160">Weitere Informationen finden Sie unter [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="591d4-160">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Abfragen](../../../../visual-basic/language-reference/queries/queries.md)
+```vb  
+' Method GetTable returns a table of Customer objects.  
+Dim customers = db.GetTable(Of Customer)()  
+Dim nameCityQuery = From cust In customers   
+                    Where cust.City = "London"   
+                    Select cust.Name, cust.City  
+  
+For Each custInfo In nameCityQuery  
+    Console.WriteLine(custInfo.Name)  
+Next  
+```  
+  
+ <span data-ttu-id="591d4-161">Obwohl es nicht möglich, Typen für alle Variablen im vorherigen Beispiel anzugeben, bleiben die Beziehungen gleich.</span><span class="sxs-lookup"><span data-stu-id="591d4-161">Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.</span></span>  
+  
+1.  <span data-ttu-id="591d4-162">Der Typ der Elemente in der Datenquelle ist erneut den Typ der Bereichsvariablen in der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="591d4-162">The type of the elements in the data source is again the type of the range variable in the query.</span></span> <span data-ttu-id="591d4-163">In diesem Beispiel `cust` ist eine Instanz der `Customer`.</span><span class="sxs-lookup"><span data-stu-id="591d4-163">In this example, `cust` is an instance of `Customer`.</span></span>  
+  
+2.  <span data-ttu-id="591d4-164">Da die `Select` Anweisung erzeugt einen anonymen Typ, der die Abfragevariable `nameCityQuery`, implizit als anonymer Typ typisiert sein.</span><span class="sxs-lookup"><span data-stu-id="591d4-164">Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type.</span></span> <span data-ttu-id="591d4-165">Ein anonymer Typ hat keinen verwendbaren Namen und kann daher nicht explizit angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="591d4-165">An anonymous type has no usable name, and therefore cannot be specified explicitly.</span></span>  
+  
+3.  <span data-ttu-id="591d4-166">Der Typ der Iterationsvariablen in der `For Each` Schleife ist der anonyme Typ, der in Schritt 2 erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="591d4-166">The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2.</span></span> <span data-ttu-id="591d4-167">Da der Typ keinen verwendbaren Namen aufweist, muss der Typ der Schleifenvariablen Iteration implizit bestimmt werden.</span><span class="sxs-lookup"><span data-stu-id="591d4-167">Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="591d4-168">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="591d4-168">See Also</span></span>  
+ [<span data-ttu-id="591d4-169">Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="591d4-169">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="591d4-170">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="591d4-170">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="591d4-171">Lokaler Typrückschluss</span><span class="sxs-lookup"><span data-stu-id="591d4-171">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="591d4-172">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="591d4-172">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="591d4-173">LINQ</span><span class="sxs-lookup"><span data-stu-id="591d4-173">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="591d4-174">Abfragen</span><span class="sxs-lookup"><span data-stu-id="591d4-174">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

@@ -1,70 +1,68 @@
 ---
-title: "Ausgabeoptionen f&#252;r die XslCompiledTransform-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Ausgabeoptionen für die XslCompiledTransform-Klasse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Ausgabeoptionen f&#252;r die XslCompiledTransform-Klasse
-In diesem Thema finden Sie Informationen zu den verfügbaren XSLT\-Ausgabeoptionen.  Sie können Ausgabeoptionen im Stylesheet oder in der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode angeben.  
+# <a name="output-options-on-the-xslcompiledtransform-class"></a><span data-ttu-id="e3a6a-102">Ausgabeoptionen für die XslCompiledTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="e3a6a-102">Output Options on the XslCompiledTransform Class</span></span>
+<span data-ttu-id="e3a6a-103">In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptionen.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-103">This topic discusses the available XSLT output options.</span></span> <span data-ttu-id="e3a6a-104">Sie können Ausgabeoptionen im Stylesheet oder in der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode angeben.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-104">You can specify output options in the style sheet, or on the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## xsl:output\-Element  
- Mit dem `xsl:output`\-Element werden die Ausgabeoptionen angegeben.  Mit dem von der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode angegebenen Ausgabetyp wird das Verhalten der `xsl:output`\-Optionen bestimmt.  
+## <a name="xsloutput-element"></a><span data-ttu-id="e3a6a-105">xsl:output-Element</span><span class="sxs-lookup"><span data-stu-id="e3a6a-105">xsl:output Element</span></span>  
+ <span data-ttu-id="e3a6a-106">Mit dem `xsl:output`-Element werden die Ausgabeoptionen angegeben.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-106">The `xsl:output` element specifies options for the output.</span></span> <span data-ttu-id="e3a6a-107">Mit dem von der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode angegebenen Ausgabetyp wird das Verhalten der `xsl:output`-Optionen bestimmt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-107">The output type specified by the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method determines the behavior of the `xsl:output` options.</span></span>  
   
- In der folgenden Tabelle wird das Verhalten der einzelnen im `xsl:output`\-Element verfügbaren Attribute beschrieben, wenn der Ausgabetyp ein Datenstream oder ein <xref:System.IO.TextWriter> ist.  
+ <span data-ttu-id="e3a6a-108">In der folgenden Tabelle wird das Verhalten der einzelnen im `xsl:output`-Element verfügbaren Attribute beschrieben, wenn der Ausgabetyp ein Datenstream oder ein <xref:System.IO.TextWriter> ist.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-108">The following table describes the behavior for each of the attributes available on the `xsl:output` element when the output type is a stream or a <xref:System.IO.TextWriter>.</span></span>  
   
-|Attributname|Verhalten|  
-|------------------|---------------|  
-|Methode|Unterstützt.|  
-|Version|Ignoriert.  Diese Version ist immer 1.0 für XML und 4.0 für HTML.|  
-|encoding|Wird bei Ausgabe in einen <xref:System.IO.TextWriter> ignoriert.  Stattdessen wird die <xref:System.IO.TextWriter.Encoding%2A?displayProperty=fullName>\-Eigenschaft verwendet.|  
-|omit\-xml\-declaration|Unterstützt.|  
-|Eigenständig|Unterstützt.|  
-|doctype\-public|Unterstützt.|  
-|doctype\-system|Unterstützt.|  
-|cdata\-section\-elements|Unterstützt.|  
-|indent|Unterstützt.|  
-|media\-type|Unterstützt.|  
+|<span data-ttu-id="e3a6a-109">Attributname</span><span class="sxs-lookup"><span data-stu-id="e3a6a-109">Attribute name</span></span>|<span data-ttu-id="e3a6a-110">Verhalten</span><span class="sxs-lookup"><span data-stu-id="e3a6a-110">Behavior</span></span>|  
+|--------------------|--------------|  
+|<span data-ttu-id="e3a6a-111">Methode</span><span class="sxs-lookup"><span data-stu-id="e3a6a-111">method</span></span>|<span data-ttu-id="e3a6a-112">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-112">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-113">Version</span><span class="sxs-lookup"><span data-stu-id="e3a6a-113">version</span></span>|<span data-ttu-id="e3a6a-114">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-114">Ignored.</span></span> <span data-ttu-id="e3a6a-115">Diese Version ist immer 1.0 für XML und 4.0 für HTML.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-115">The version is always 1.0 for XML and 4.0 for HTML.</span></span>|  
+|<span data-ttu-id="e3a6a-116">encoding</span><span class="sxs-lookup"><span data-stu-id="e3a6a-116">encoding</span></span>|<span data-ttu-id="e3a6a-117">Wird bei Ausgabe in einen <xref:System.IO.TextWriter> ignoriert.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-117">Ignored when outputting to a <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="e3a6a-118">Stattdessen wird die <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>-Eigenschaft verwendet.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-118">The <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> property is used instead.</span></span>|  
+|<span data-ttu-id="e3a6a-119">omit-xml-declaration</span><span class="sxs-lookup"><span data-stu-id="e3a6a-119">omit-xml-declaration</span></span>|<span data-ttu-id="e3a6a-120">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-120">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-121">Eigenständig</span><span class="sxs-lookup"><span data-stu-id="e3a6a-121">standalone</span></span>|<span data-ttu-id="e3a6a-122">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-122">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-123">doctype-public</span><span class="sxs-lookup"><span data-stu-id="e3a6a-123">doctype-public</span></span>|<span data-ttu-id="e3a6a-124">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-124">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-125">doctype-system</span><span class="sxs-lookup"><span data-stu-id="e3a6a-125">doctype-system</span></span>|<span data-ttu-id="e3a6a-126">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-126">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-127">cdata-section-elements</span><span class="sxs-lookup"><span data-stu-id="e3a6a-127">cdata-section-elements</span></span>|<span data-ttu-id="e3a6a-128">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-128">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-129">indent</span><span class="sxs-lookup"><span data-stu-id="e3a6a-129">indent</span></span>|<span data-ttu-id="e3a6a-130">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-130">Supported.</span></span>|  
+|<span data-ttu-id="e3a6a-131">media-type</span><span class="sxs-lookup"><span data-stu-id="e3a6a-131">media-type</span></span>|<span data-ttu-id="e3a6a-132">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-132">Supported.</span></span>|  
   
-#### Senden der Ausgabe an einen XmlWriter  
- Wenn das Stylesheet das `xsl:output`\-Element verwendet und der Ausgabetyp ein <xref:System.Xml.XmlWriter>\-Objekt ist, müssen Sie zum Erstellen des <xref:System.Xml.XmlWriter>\-Objekts die <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=fullName>\-Eigenschaft verwenden.  Die <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=fullName>\-Eigenschaft gibt ein <xref:System.Xml.XmlWriterSettings>\-Objekt mit Informationen zurück, die aus dem `xsl:output`\-Element eines kompilierten Stylesheets abgeleitet wurden.  Dieses <xref:System.Xml.XmlWriterSettings>\-Objekt kann an die <xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName>\-Methode übergeben werden, um ein <xref:System.Xml.XmlWriter>\-Objekt mit den ordnungsgemäßen Einstellungen zu erstellen.  
+#### <a name="sending-output-to-an-xmlwriter"></a><span data-ttu-id="e3a6a-133">Senden der Ausgabe an einen XmlWriter</span><span class="sxs-lookup"><span data-stu-id="e3a6a-133">Sending Output to an XmlWriter</span></span>  
+ <span data-ttu-id="e3a6a-134">Wenn das Stylesheet das `xsl:output`-Element verwendet und der Ausgabetyp ein <xref:System.Xml.XmlWriter>-Objekt ist, müssen Sie zum Erstellen des <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType>-Objekts die <xref:System.Xml.XmlWriter>-Eigenschaft verwenden.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-134">If your style sheet uses the `xsl:output` element and the output type is an <xref:System.Xml.XmlWriter> object, you should use the <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> property when you create the <xref:System.Xml.XmlWriter> object.</span></span> <span data-ttu-id="e3a6a-135">Die <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType>-Eigenschaft gibt ein <xref:System.Xml.XmlWriterSettings>-Objekt mit Informationen zurück, die aus dem `xsl:output`-Element eines kompilierten Stylesheets abgeleitet wurden.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-135">The <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> property returns an <xref:System.Xml.XmlWriterSettings> object that contains information derived from the `xsl:output` element of a compiled style sheet.</span></span> <span data-ttu-id="e3a6a-136">Dieses <xref:System.Xml.XmlWriterSettings>-Objekt kann an die <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>-Methode übergeben werden, um ein <xref:System.Xml.XmlWriter>-Objekt mit den ordnungsgemäßen Einstellungen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-136">This <xref:System.Xml.XmlWriterSettings> object can be passed to the <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> method to create an <xref:System.Xml.XmlWriter> object with the correct settings.</span></span>  
   
-## Ausgabetypen  
- In der folgenden Liste sind die über den <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Befehl verfügbaren Ausgabetypen beschrieben.  
+## <a name="output-types"></a><span data-ttu-id="e3a6a-137">Ausgabetypen</span><span class="sxs-lookup"><span data-stu-id="e3a6a-137">Output Types</span></span>  
+ <span data-ttu-id="e3a6a-138">In der folgenden Liste sind die über den <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Befehl verfügbaren Ausgabetypen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-138">The following list describes the output types available on the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> command.</span></span>  
   
-#### XmlWriter  
- Die <xref:System.Xml.XmlWriter>\-Klasse schreibt XML\-Datenströme oder XML\-Dateien aus.  Sie können die Funktionen angegeben, die vom <xref:System.Xml.XmlWriter>\-Objekt unterstützt werden sollen, einschließlich der Ausgabeoptionen, indem Sie die <xref:System.Xml.XmlWriterSettings>\-Klasse verwenden.  Die <xref:System.Xml.XmlWriter>\-Klasse ist ein integraler Bestandteil des <xref:System.Xml>\-Framework.  Verwenden Sie diesen Ausgabetyp, um Ausgabeergebnisse in einen anderen XML\-Prozess weiterzuleiten.  
+#### <a name="xmlwriter"></a><span data-ttu-id="e3a6a-139">XmlWriter</span><span class="sxs-lookup"><span data-stu-id="e3a6a-139">XmlWriter</span></span>  
+ <span data-ttu-id="e3a6a-140">Die <xref:System.Xml.XmlWriter>-Klasse schreibt XML-Datenströme oder XML-Dateien aus.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-140">The <xref:System.Xml.XmlWriter> class writes out XML streams or files.</span></span> <span data-ttu-id="e3a6a-141">Sie können die Funktionen angegeben, die vom <xref:System.Xml.XmlWriter>-Objekt unterstützt werden sollen, einschließlich der Ausgabeoptionen, indem Sie die <xref:System.Xml.XmlWriterSettings>-Klasse verwenden.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-141">You can specify the features to support on the <xref:System.Xml.XmlWriter> object, including output options, by using the <xref:System.Xml.XmlWriterSettings> class.</span></span> <span data-ttu-id="e3a6a-142">Die <xref:System.Xml.XmlWriter>-Klasse ist ein integraler Bestandteil des <xref:System.Xml>-Framework.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-142">The <xref:System.Xml.XmlWriter> class is an integral part of the <xref:System.Xml> framework.</span></span> <span data-ttu-id="e3a6a-143">Verwenden Sie diesen Ausgabetyp, um Ausgabeergebnisse in einen anderen XML-Prozess weiterzuleiten.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-143">Use this output type to pipeline the output results into another XML process.</span></span>  
   
-#### Zeichenfolge  
- Verwenden Sie diesen Ausgabetyp, um den URI der Ausgabedatei anzugeben.  
+#### <a name="string"></a><span data-ttu-id="e3a6a-144">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="e3a6a-144">String</span></span>  
+ <span data-ttu-id="e3a6a-145">Verwenden Sie diesen Ausgabetyp, um den URI der Ausgabedatei anzugeben.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-145">Use this output type to specify the URI of the output file.</span></span>  
   
-#### Stream  
- Ein Stream \(Datenstream\) ist eine Abstraktion einer Folge von Bytes, beispielsweise eine Datei, ein Eingabe\-\/Ausgabegerät, eine Pipe für die Kommunikation zwischen Prozessen oder ein TCP\/IP\-Socket.  Die <xref:System.IO.Stream>\-Klasse und die davon abgeleiteten Klassen stellen eine allgemeine Ansicht dieser unterschiedlichen Eingabe\- und Ausgabetypen bereit, sodass Programmierer sich nicht mit den Einzelheiten des Betriebssystems und der zugrunde liegenden Geräte befassen müssen.  
+#### <a name="stream"></a><span data-ttu-id="e3a6a-146">Stream</span><span class="sxs-lookup"><span data-stu-id="e3a6a-146">Stream</span></span>  
+ <span data-ttu-id="e3a6a-147">Ein Stream (Datenstream) ist eine Abstraktion einer Folge von Bytes, beispielsweise eine Datei, ein Eingabe-/Ausgabegerät, eine Pipe für die Kommunikation zwischen Prozessen oder ein TCP/IP-Socket.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-147">A stream is an abstraction of a sequence of bytes, such as a file, an input/output device, an inter-process communication pipe, or a TCP/IP socket.</span></span> <span data-ttu-id="e3a6a-148">Die <xref:System.IO.Stream>-Klasse und die davon abgeleiteten Klassen stellen eine allgemeine Ansicht dieser unterschiedlichen Eingabe- und Ausgabetypen bereit, sodass Programmierer sich nicht mit den Einzelheiten des Betriebssystems und der zugrunde liegenden Geräte befassen müssen.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-148">The <xref:System.IO.Stream> class and its derived classes provide a generic view of these different types of input and output, isolating the programmer from the specific details of the operating system and the underlying devices.</span></span>  
   
- Verwenden Sie diesen Ausgabetyp, um Daten an einen <xref:System.IO.FileStream>, einen <xref:System.IO.MemoryStream> oder einen Ausgabedatenstream \(`Response.OutputStream`\) zu senden.  
+ <span data-ttu-id="e3a6a-149">Verwenden Sie diesen Ausgabetyp, um Daten an einen <xref:System.IO.FileStream>, einen <xref:System.IO.MemoryStream> oder einen Ausgabedatenstream (`Response.OutputStream`) zu senden.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-149">Use this output type to send data to a <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, or an output stream (`Response.OutputStream`).</span></span>  
   
-#### TextWriter  
- Der <xref:System.IO.TextWriter> schreibt sequenzielle Zeichen.  Er ist in der <xref:System.IO.StringWriter>\-Klasse und der <xref:System.IO.StreamWriter>\-Klasse implementiert, die Zeichen in Zeichenfolgen bzw. in Datenströme schreiben.  Verwenden Sie diesen Ausgabetyp, wenn die Ausgabe in eine Zeichenfolge erfolgen soll.  
+#### <a name="textwriter"></a><span data-ttu-id="e3a6a-150">TextWriter</span><span class="sxs-lookup"><span data-stu-id="e3a6a-150">TextWriter</span></span>  
+ <span data-ttu-id="e3a6a-151">Der <xref:System.IO.TextWriter> schreibt sequenzielle Zeichen.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-151">The <xref:System.IO.TextWriter> writes sequential characters.</span></span> <span data-ttu-id="e3a6a-152">Er ist in der <xref:System.IO.StringWriter>-Klasse und der <xref:System.IO.StreamWriter>-Klasse implementiert, die Zeichen in Zeichenfolgen bzw. in Datenströme schreiben.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-152">It is implemented in the <xref:System.IO.StringWriter> and <xref:System.IO.StreamWriter> classes, which write characters to strings or streams, respectively.</span></span> <span data-ttu-id="e3a6a-153">Verwenden Sie diesen Ausgabetyp, wenn die Ausgabe in eine Zeichenfolge erfolgen soll.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-153">Use this output type when you want to output to a string.</span></span>  
   
-## Hinweise  
+## <a name="notes"></a><span data-ttu-id="e3a6a-154">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e3a6a-154">Notes</span></span>  
   
--   Beim Schreiben leerer Tags wird ein Leerzeichen zwischen das letzte Zeichen des Elementnamens und den umgekehrten Schrägstrich geschrieben, beispielsweise `<myElement />`.  Dadurch können die generierten HTML\-Seiten in älteren Webbrowsern ordnungsgemäß angezeigt werden.  
+-   <span data-ttu-id="e3a6a-155">Beim Schreiben leerer Tags wird ein Leerzeichen zwischen das letzte Zeichen des Elementnamens und den umgekehrten Schrägstrich geschrieben, beispielsweise `<myElement />`.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-155">When writing out empty tags, a space is written between the last character of the element name and the backslash, `<myElement />` for example.</span></span> <span data-ttu-id="e3a6a-156">Dadurch können die generierten HTML-Seiten in älteren Webbrowsern ordnungsgemäß angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e3a6a-156">This lets older browsers display the generated HTML pages correctly.</span></span>  
   
-## Siehe auch  
- [XSLT\-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="e3a6a-157">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3a6a-157">See Also</span></span>  
+ [<span data-ttu-id="e3a6a-158">XSLT Transformations (XSLT-Transformationen)</span><span class="sxs-lookup"><span data-stu-id="e3a6a-158">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)

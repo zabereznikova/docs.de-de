@@ -1,43 +1,38 @@
 ---
 title: Reine funktionale XML-Transformationen (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 32259e0b75d8c098663b589f33e2f36344fb15cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee60c400bb9bff719f818ab5a5a0a3c667a1b412
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="pure-functional-transformations-of-xml-c"></a>Reine funktionale XML-Transformationen (C#)
-Dieser Abschnitt enthält eine Einführung in die funktionale Transformation für XML. Sie finden hier Erläuterungen der wichtigsten Konzepte und Begriffe sowie die Sprachkonstrukte, die Sie für den Einsatz funktionaler Transformationen kennen müssen. Außerdem enthält der Abschnitt auch Beispiele für die Verwendung funktionaler Transformationen zur Manipulation eines XML-Dokuments. Die Codebeispiele in diesem Abschnitt beziehen sich zwar alle auf LINQ to XML, aber die zugrunde liegenden Konzepte lassen sich auch auf andere LINQ-Technologien übertragen.  
+# <a name="pure-functional-transformations-of-xml-c"></a><span data-ttu-id="51d19-102">Reine funktionale XML-Transformationen (C#)</span><span class="sxs-lookup"><span data-stu-id="51d19-102">Pure Functional Transformations of XML (C#)</span></span>
+<span data-ttu-id="51d19-103">Dieser Abschnitt enthält eine Einführung in die funktionale Transformation für XML.</span><span class="sxs-lookup"><span data-stu-id="51d19-103">This section provides a functional transformation tutorial for XML.</span></span> <span data-ttu-id="51d19-104">Sie finden hier Erläuterungen der wichtigsten Konzepte und Begriffe sowie die Sprachkonstrukte, die Sie für den Einsatz funktionaler Transformationen kennen müssen. Außerdem enthält der Abschnitt auch Beispiele für die Verwendung funktionaler Transformationen zur Manipulation eines XML-Dokuments.</span><span class="sxs-lookup"><span data-stu-id="51d19-104">This includes explanations of the main concepts and language constructs that you must understand to use functional transformations, and examples of using functional transformations to manipulate an XML document.</span></span> <span data-ttu-id="51d19-105">Die Codebeispiele in diesem Abschnitt beziehen sich zwar alle auf LINQ to XML, aber die zugrunde liegenden Konzepte lassen sich auch auf andere LINQ-Technologien übertragen.</span><span class="sxs-lookup"><span data-stu-id="51d19-105">Although this tutorial provides LINQ to XML code examples, all of the underlying concepts also apply to other LINQ technologies.</span></span>  
   
- Das [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) enthält eine Reihe von Beispielen, die jeweils auf dem vorherigen aufbauen. In diesen Beispielen wird die Manipulation von XML durch die reine funktionale Transformation veranschaulicht.  
+ <span data-ttu-id="51d19-106">Das [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) enthält eine Reihe von Beispielen, die jeweils auf dem vorherigen aufbauen.</span><span class="sxs-lookup"><span data-stu-id="51d19-106">The [Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial provides a series of examples, each building on the previous one.</span></span> <span data-ttu-id="51d19-107">In diesen Beispielen wird die Manipulation von XML durch die reine funktionale Transformation veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="51d19-107">These examples demonstrate the pure functional transformational approach to manipulating XML.</span></span>  
   
- Dieses Tutorial setzt grundlegende Kenntnisse von C# voraus. Sie finden hier keine ausführlichen semantischen Erläuterungen der Sprachkonstrukte. Wenn Sie diesbezüglich nähere Informationen benötigen, können Sie die an den entsprechenden Stellen angegebenen Links zur Sprachdokumentation verwenden.  
+ <span data-ttu-id="51d19-108">Dieses Tutorial setzt grundlegende Kenntnisse von C# voraus.</span><span class="sxs-lookup"><span data-stu-id="51d19-108">This tutorial assumes a working knowledge of C#.</span></span> <span data-ttu-id="51d19-109">Sie finden hier keine ausführlichen semantischen Erläuterungen der Sprachkonstrukte. Wenn Sie diesbezüglich nähere Informationen benötigen, können Sie die an den entsprechenden Stellen angegebenen Links zur Sprachdokumentation verwenden.</span><span class="sxs-lookup"><span data-stu-id="51d19-109">Detailed semantics of the language constructs are not provided in this tutorial, but links are provided to the language documentation as appropriate.</span></span>  
   
- Es wird weiterhin davon ausgegangen, dass der Leser über grundlegende Kenntnisse von Begriffen und Konzepten der Informatik und von XML, einschließlich der XML-Namespaces, verfügt.  
+ <span data-ttu-id="51d19-110">Es wird weiterhin davon ausgegangen, dass der Leser über grundlegende Kenntnisse von Begriffen und Konzepten der Informatik und von XML, einschließlich der XML-Namespaces, verfügt.</span><span class="sxs-lookup"><span data-stu-id="51d19-110">A working knowledge of basic computer science concepts and XML, including XML namespaces, is also assumed.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a><span data-ttu-id="51d19-111">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="51d19-111">In This Section</span></span>  
   
-|Thema|Beschreibung|  
+|<span data-ttu-id="51d19-112">Thema</span><span class="sxs-lookup"><span data-stu-id="51d19-112">Topic</span></span>|<span data-ttu-id="51d19-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="51d19-113">Description</span></span>|  
 |-----------|-----------------|  
-|[Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Beschreibt funktionale Transformationen und enthält entsprechende Terminologiedefinitionen.|  
-|[Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Enthält ausführliche Beschreibungen der verzögerten Auswertung ("Lazy Evaluation") und der verzögerten Ausführung.|  
-|[Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Veranschaulicht eine funktionale Transformation.|  
+|[<span data-ttu-id="51d19-114">Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))</span><span class="sxs-lookup"><span data-stu-id="51d19-114">Introduction to Pure Functional Transformations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|<span data-ttu-id="51d19-115">Beschreibt funktionale Transformationen und enthält entsprechende Terminologiedefinitionen.</span><span class="sxs-lookup"><span data-stu-id="51d19-115">Describes functional transformations and defines the relevant terminology.</span></span>|  
+|[<span data-ttu-id="51d19-116">Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))</span><span class="sxs-lookup"><span data-stu-id="51d19-116">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|<span data-ttu-id="51d19-117">Enthält ausführliche Beschreibungen der verzögerten Auswertung ("Lazy Evaluation") und der verzögerten Ausführung.</span><span class="sxs-lookup"><span data-stu-id="51d19-117">Describes lazy evaluation and deferred execution in detail.</span></span>|  
+|[<span data-ttu-id="51d19-118">Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))</span><span class="sxs-lookup"><span data-stu-id="51d19-118">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|<span data-ttu-id="51d19-119">Veranschaulicht eine funktionale Transformation.</span><span class="sxs-lookup"><span data-stu-id="51d19-119">A tutorial that demonstrates a functional transformation.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-
+## <a name="see-also"></a><span data-ttu-id="51d19-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51d19-120">See Also</span></span>  
+ [<span data-ttu-id="51d19-121">Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))</span><span class="sxs-lookup"><span data-stu-id="51d19-121">Querying XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

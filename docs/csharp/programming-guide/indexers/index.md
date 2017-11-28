@@ -1,95 +1,75 @@
 ---
 title: Indexer (C#-Programmierhandbuch)
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.indexers
-dev_langs:
-- CSharp
+f1_keywords: cs.indexers
 helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: db49a602b83940cab3f87dea17accb92a2be825d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 784308f3073114cd0c07cf15edae527a2654edec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="indexers-c-programming-guide"></a>Indexer (C#-Programmierhandbuch)
+# <a name="indexers-c-programming-guide"></a><span data-ttu-id="b7066-102">Indexer (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="b7066-102">Indexers (C# Programming Guide)</span></span>
 
-Indexer ermöglichen, dass Instanzen einer Klasse oder Struktur wie Arrays indiziert werden. Der indizierte Wert kann festgelegt oder ohne explizite Angabe eines Typs oder Instanzmembers abgerufen werden. Indexer ähneln [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md). Der Unterschied besteht jedoch darin, dass ihre Zugriffsmethoden Parameter verwenden.  
+<span data-ttu-id="b7066-103">Indexer ermöglichen, dass Instanzen einer Klasse oder Struktur wie Arrays indiziert werden.</span><span class="sxs-lookup"><span data-stu-id="b7066-103">Indexers allow instances of a class or struct to be indexed just like arrays.</span></span> <span data-ttu-id="b7066-104">Der indizierte Wert kann festgelegt oder ohne explizite Angabe eines Typs oder Instanzmembers abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="b7066-104">The indexed value can be set or retrieved without explicitly specifying a type or instance member.</span></span> <span data-ttu-id="b7066-105">Indexer ähneln [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md). Der Unterschied besteht jedoch darin, dass ihre Zugriffsmethoden Parameter verwenden.</span><span class="sxs-lookup"><span data-stu-id="b7066-105">Indexers resemble [properties](../../../csharp/programming-guide/classes-and-structs/properties.md) except that their accessors take parameters.</span></span>  
  
- Im folgenden Beispiel wird eine generische Klasse mit einfachen [get](../../../csharp/language-reference/keywords/get.md)- und [set](../../../csharp/language-reference/keywords/set.md)-Accessormethoden zum Zuweisen und Abrufen von Werten definiert. Die `Program`-Klasse erstellt eine Instanz dieser Klasse für das Speichern von Zeichenfolgen.  
+ <span data-ttu-id="b7066-106">Im folgenden Beispiel wird eine generische Klasse mit einfachen [get](../../../csharp/language-reference/keywords/get.md)- und [set](../../../csharp/language-reference/keywords/set.md)-Accessormethoden zum Zuweisen und Abrufen von Werten definiert.</span><span class="sxs-lookup"><span data-stu-id="b7066-106">The following example defines a generic class with simple [get](../../../csharp/language-reference/keywords/get.md) and [set](../../../csharp/language-reference/keywords/set.md) accessor methods to assign and retrieve values.</span></span> <span data-ttu-id="b7066-107">Die `Program`-Klasse erstellt eine Instanz dieser Klasse für das Speichern von Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="b7066-107">The `Program` class creates an instance of this class for storing strings.</span></span>  
   
- [!code-cs[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
+ [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  Weitere Beispiele finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
+>  <span data-ttu-id="b7066-108">Weitere Beispiele finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).</span><span class="sxs-lookup"><span data-stu-id="b7066-108">For more examples, see [Related Sections](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).</span></span>  
   
-## <a name="expression-body-definitions"></a>Ausdruckstextdefinitionen  
+## <a name="expression-body-definitions"></a><span data-ttu-id="b7066-109">Ausdruckstextdefinitionen</span><span class="sxs-lookup"><span data-stu-id="b7066-109">Expression Body Definitions</span></span>  
  
-Get- oder Set-Accessoren eines Indexers bestehen häufig aus einer einzelnen Anweisung, die einen Wert zurückgibt oder festlegt. Ausdruckskörpermember bieten eine vereinfachte Syntax zur Unterstützung dieses Szenarios. Ab C# 6 kann ein schreibgeschützter Indexer als Ausdruckskörpermember implementiert werden, wie im folgenden Beispiel gezeigt.
+<span data-ttu-id="b7066-110">Get- oder Set-Accessoren eines Indexers bestehen häufig aus einer einzelnen Anweisung, die einen Wert zurückgibt oder festlegt.</span><span class="sxs-lookup"><span data-stu-id="b7066-110">It is common for an indexer's get or set accessor to consist of a single statement that either returns or sets a value.</span></span> <span data-ttu-id="b7066-111">Ausdruckskörpermember bieten eine vereinfachte Syntax zur Unterstützung dieses Szenarios.</span><span class="sxs-lookup"><span data-stu-id="b7066-111">Expression-bodied members provide a simplified syntax to support this scenario.</span></span> <span data-ttu-id="b7066-112">Ab C# 6 kann ein schreibgeschützter Indexer als Ausdruckskörpermember implementiert werden, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="b7066-112">Starting with C# 6, a read-only indexer can be implemented as an expression-bodied member, as the following example shows.</span></span>
 
-[!code-cs[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
+[!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-Beachten Sie, dass `=>` den Ausdruckstext vorstellt und dass das `get`-Schlüsselwort nicht verwendet wird. 
+<span data-ttu-id="b7066-113">Beachten Sie, dass `=>` den Ausdruckstext vorstellt und dass das `get`-Schlüsselwort nicht verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b7066-113">Note that `=>` introduces the expression body, and that the `get` keyword is not used.</span></span> 
 
-Ab C# 7 können der Get- und der Set-Accessor als Ausdruckskörpermember implementiert werden. In diesem Fall müssen die Schlüsselwörter `get` und `set` verwendet werden. Zum Beispiel:
+<span data-ttu-id="b7066-114">Ab C# 7 können der Get- und der Set-Accessor als Ausdruckskörpermember implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="b7066-114">Starting with C# 7, both the get and set accessor can be an implemented as expression-bodied members.</span></span> <span data-ttu-id="b7066-115">In diesem Fall müssen die Schlüsselwörter `get` und `set` verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b7066-115">In this case, both `get` and `set` keywords must be used.</span></span> <span data-ttu-id="b7066-116">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="b7066-116">For example:</span></span>
 
-[!code-cs[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
+[!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
-## <a name="indexers-overview"></a>Übersicht über Indexer  
+## <a name="indexers-overview"></a><span data-ttu-id="b7066-117">Übersicht über Indexer</span><span class="sxs-lookup"><span data-stu-id="b7066-117">Indexers Overview</span></span>  
   
--   Indexer ermöglichen es Objekten, in ähnlicher Weise wie Arrays indiziert zu werden.  
+-   <span data-ttu-id="b7066-118">Indexer ermöglichen es Objekten, in ähnlicher Weise wie Arrays indiziert zu werden.</span><span class="sxs-lookup"><span data-stu-id="b7066-118">Indexers enable objects to be indexed in a similar manner to arrays.</span></span>  
   
--   Ein `get`-Accessor gibt einen Wert zurück. Ein `set`-Accessor weist einen Wert zu.  
+-   <span data-ttu-id="b7066-119">Ein `get`-Accessor gibt einen Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="b7066-119">A `get` accessor returns a value.</span></span> <span data-ttu-id="b7066-120">Ein `set`-Accessor weist einen Wert zu.</span><span class="sxs-lookup"><span data-stu-id="b7066-120">A `set` accessor assigns a value.</span></span>  
   
--   Das [this](../../../csharp/language-reference/keywords/this.md)-Schlüsselwort wird zum Definieren des Indexers verwendet.  
+-   <span data-ttu-id="b7066-121">Das [this](../../../csharp/language-reference/keywords/this.md)-Schlüsselwort wird zum Definieren des Indexers verwendet.</span><span class="sxs-lookup"><span data-stu-id="b7066-121">The [this](../../../csharp/language-reference/keywords/this.md) keyword is used to define the indexer.</span></span>  
   
--   Das [value](../../../csharp/language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Indexer zugewiesen wird.  
+-   <span data-ttu-id="b7066-122">Das [value](../../../csharp/language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Indexer zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="b7066-122">The [value](../../../csharp/language-reference/keywords/value.md) keyword is used to define the value being assigned by the `set` indexer.</span></span>  
   
--   Indexer müssen nicht durch einen Ganzzahlwert indiziert werden. Sie können entscheiden, wie Sie den spezifischen Suchmechanismus definieren möchten.  
+-   <span data-ttu-id="b7066-123">Indexer müssen nicht durch einen Ganzzahlwert indiziert werden. Sie können entscheiden, wie Sie den spezifischen Suchmechanismus definieren möchten.</span><span class="sxs-lookup"><span data-stu-id="b7066-123">Indexers do not have to be indexed by an integer value; it is up to you how to define the specific look-up mechanism.</span></span>  
   
--   Indexer können überladen werden.  
+-   <span data-ttu-id="b7066-124">Indexer können überladen werden.</span><span class="sxs-lookup"><span data-stu-id="b7066-124">Indexers can be overloaded.</span></span>  
   
--   Indexer können mehr als einen formalen Parameter aufweisen, beispielsweise beim Zugreifen auf ein 2D-Array.  
+-   <span data-ttu-id="b7066-125">Indexer können mehr als einen formalen Parameter aufweisen, beispielsweise beim Zugreifen auf ein 2D-Array.</span><span class="sxs-lookup"><span data-stu-id="b7066-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte  
+##  <span data-ttu-id="b7066-126"><a name="BKMK_RelatedSections"></a> Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b7066-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
   
--   [Verwenden von Indexern](../../../csharp/programming-guide/indexers/using-indexers.md)  
+-   [<span data-ttu-id="b7066-127">Verwenden von Indexern</span><span class="sxs-lookup"><span data-stu-id="b7066-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Indexer in Schnittstellen](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+-   [<span data-ttu-id="b7066-128">Indexer in Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="b7066-128">Indexers in Interfaces</span></span>](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Vergleich zwischen Eigenschaften und Indexern](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+-   [<span data-ttu-id="b7066-129">Vergleich zwischen Eigenschaften und Indexern</span><span class="sxs-lookup"><span data-stu-id="b7066-129">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Einschränken des Zugriffsmethodenzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+-   [<span data-ttu-id="b7066-130">Einschränken des Zugriffsmethodenzugriffs</span><span class="sxs-lookup"><span data-stu-id="b7066-130">Restricting Accessor Accessibility</span></span>](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="b7066-131">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="b7066-131">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
-
+## <a name="see-also"></a><span data-ttu-id="b7066-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b7066-132">See Also</span></span>  
+ [<span data-ttu-id="b7066-133">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="b7066-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b7066-134">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b7066-134">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)

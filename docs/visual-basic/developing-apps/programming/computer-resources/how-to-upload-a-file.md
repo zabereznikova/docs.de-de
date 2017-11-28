@@ -1,79 +1,60 @@
 ---
 title: 'Gewusst wie: Hochladen einer Datei in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - networks, uploading files
-- files, uploading
-- uploading files
-- UploadFile method
+- files [Visual Basic], uploading
+- uploading files [Visual Basic]
+- UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8a0fab9b812ddff1f56e9fa203bd297fd70bc47d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29baf1f420cece6e0b05f9638b30a326178a013d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Gewusst wie: Hochladen einer Datei in Visual Basic
-Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum Hochladen einer Datei und zum Speichern derselben an einem Remotespeicherort verwendet werden. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Hochladens anzeigt und Benutzern erlaubt, den Vorgang abzubrechen.  
+# <a name="how-to-upload-a-file-in-visual-basic"></a><span data-ttu-id="ca65c-102">Gewusst wie: Hochladen einer Datei in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ca65c-102">How to: Upload a File in Visual Basic</span></span>
+<span data-ttu-id="ca65c-103">Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum Hochladen einer Datei und zum Speichern derselben an einem Remotespeicherort verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ca65c-103">The <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> method can be used to upload a file and store it to a remote location.</span></span> <span data-ttu-id="ca65c-104">Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Hochladens anzeigt und Benutzern erlaubt, den Vorgang abzubrechen.</span><span class="sxs-lookup"><span data-stu-id="ca65c-104">If the `ShowUI` parameter is set to `True`, a dialog box is displayed that shows the progress of the upload and allows users to cancel the operation.</span></span>  
   
-### <a name="to-upload-a-file"></a>Hochladen einer Datei  
+### <a name="to-upload-a-file"></a><span data-ttu-id="ca65c-105">Hochladen einer Datei</span><span class="sxs-lookup"><span data-stu-id="ca65c-105">To upload a file</span></span>  
   
--   Verwenden Sie die `UploadFile`-Methode, um eine Datei hochzuladen, und geben Sie den Speicherort der Quelldatei und des Zielverzeichnisses als Zeichenfolge oder URI (Uniform Resource Identifier) an. In diesem Beispiel wird die Datei `Order.txt` in `http://www.cohowinery.com/uploads.aspx` hochgeladen.  
+-   <span data-ttu-id="ca65c-106">Verwenden Sie die `UploadFile`-Methode, um eine Datei hochzuladen, und geben Sie den Speicherort der Quelldatei und des Zielverzeichnisses als Zeichenfolge oder URI (Uniform Resource Identifier) an. In diesem Beispiel wird die Datei `Order.txt` in `http://www.cohowinery.com/uploads.aspx` hochgeladen.</span><span class="sxs-lookup"><span data-stu-id="ca65c-106">Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI (Uniform Resource Identifier).This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`.</span></span>  
   
      [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]  
   
-### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Hochladen einer Datei und Anzeigen des Fortschritts des Vorgangs  
+### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a><span data-ttu-id="ca65c-107">Hochladen einer Datei und Anzeigen des Fortschritts des Vorgangs</span><span class="sxs-lookup"><span data-stu-id="ca65c-107">To upload a file and show the progress of the operation</span></span>  
   
--   Verwenden Sie die `UploadFile`-Methode, um eine Datei hochzuladen, und geben Sie den Speicherort der Quelldatei und des Zielverzeichnisses als Zeichenfolge oder URI an. In diesem Beispiel wird `Order.txt` ohne Benutzername und Kennwort in `http://www.cohowinery.com/uploads.aspx` hochgeladen. Der Hochladeprozess wird gezeigt. Das Timeoutintervall beträgt 500 Millisekunden.  
+-   <span data-ttu-id="ca65c-108">Verwenden Sie die `UploadFile`-Methode, um eine Datei hochzuladen, und geben Sie den Speicherort der Quelldatei und des Zielverzeichnisses als Zeichenfolge oder URI an.</span><span class="sxs-lookup"><span data-stu-id="ca65c-108">Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI.</span></span> <span data-ttu-id="ca65c-109">In diesem Beispiel wird `Order.txt` ohne Benutzername und Kennwort in `http://www.cohowinery.com/uploads.aspx` hochgeladen. Der Hochladeprozess wird gezeigt. Das Timeoutintervall beträgt 500 Millisekunden.</span><span class="sxs-lookup"><span data-stu-id="ca65c-109">This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx` without supplying a user name or password, shows the progress of the upload, and has a time-out interval of 500 milliseconds.</span></span>  
   
      [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]  
   
-### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>So laden Sie eine Datei unter Angabe eines Benutzernamens und Kennworts hoch  
+### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a><span data-ttu-id="ca65c-110">So laden Sie eine Datei unter Angabe eines Benutzernamens und Kennworts hoch</span><span class="sxs-lookup"><span data-stu-id="ca65c-110">To upload a file, supplying a user name and password</span></span>  
   
--   Verwenden Sie die `UploadFile`-Methode zum Hochladen der Datei. Geben Sie dabei den Speicherort der Quelldatei und des Zielverzeichnisses als Zeichenfolge oder URI an, und geben Sie den Benutzernamen und das Kennwort an. In diesem Beispiel wird die Datei `Order.txt` in `http://www.cohowinery.com/uploads.aspx` hochgeladen. Der Benutzername `anonymous` und ein leeres Kennwort werden bereitgestellt.  
+-   <span data-ttu-id="ca65c-111">Verwenden Sie die `UploadFile`-Methode zum Hochladen der Datei. Geben Sie dabei den Speicherort der Quelldatei und des Zielverzeichnisses als Zeichenfolge oder URI an, und geben Sie den Benutzernamen und das Kennwort an.</span><span class="sxs-lookup"><span data-stu-id="ca65c-111">Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI, and specifying the user name and the password.</span></span> <span data-ttu-id="ca65c-112">In diesem Beispiel wird die Datei `Order.txt` in `http://www.cohowinery.com/uploads.aspx` hochgeladen. Der Benutzername `anonymous` und ein leeres Kennwort werden bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="ca65c-112">This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`, supplying the user name `anonymous` and a blank password.</span></span>  
   
      [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
+## <a name="robust-programming"></a><span data-ttu-id="ca65c-113">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="ca65c-113">Robust Programming</span></span>  
+ <span data-ttu-id="ca65c-114">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="ca65c-114">The following conditions may throw an exception:</span></span>  
   
--   Der Dateipfad ist ungültig (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="ca65c-115">Der Dateipfad ist ungültig (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="ca65c-115">The local file path is not valid (<xref:System.ArgumentException>).</span></span>  
   
--   Die Authentifizierung ist fehlgeschlagen (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="ca65c-116">Die Authentifizierung ist fehlgeschlagen (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="ca65c-116">Authentication failed (<xref:System.Security.SecurityException>).</span></span>  
   
--   Verbindungstimeout (<xref:System.TimeoutException>)  
+-   <span data-ttu-id="ca65c-117">Verbindungstimeout (<xref:System.TimeoutException>)</span><span class="sxs-lookup"><span data-stu-id="ca65c-117">The connection timed out (<xref:System.TimeoutException>).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>   
- [Vorgehensweise: Herunterladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)   
- [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-
+## <a name="see-also"></a><span data-ttu-id="ca65c-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ca65c-118">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
+ [<span data-ttu-id="ca65c-119">Gewusst wie: Herunterladen einer Datei</span><span class="sxs-lookup"><span data-stu-id="ca65c-119">How to: Download a File</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [<span data-ttu-id="ca65c-120">Gewusst wie: Analysieren von Dateipfaden</span><span class="sxs-lookup"><span data-stu-id="ca65c-120">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

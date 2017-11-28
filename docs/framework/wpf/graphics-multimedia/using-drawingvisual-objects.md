@@ -1,95 +1,86 @@
 ---
-title: "Verwenden von DrawingVisual-Objekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DrawingVisual-Objekte auf visueller Ebene"
-  - "Visuelle Ebene, DrawingVisual-Objekte"
+title: Verwenden von DrawingVisual-Objekten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- visual layer [WPF], DrawingVisual objects
+- DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee46c41d6f0f42bbb9f50bd5862f6eb076b34bb1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden von DrawingVisual-Objekten
-Dieses Thema bietet einen Überblick über die Verwendung von <xref:System.Windows.Media.DrawingVisual>\-Objekten in der visuellen Ebene von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
- Dieses Thema enthält folgende Abschnitte.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [DrawingVisual\-Objekt](#drawing_visual_object)  
-  
--   [DrawingVisual\-Hostcontainer](#drawingvisual_host_container)  
-  
--   [Erstellen von DrawingVisual\-Objekten](#creating_drawingvisual_objects)  
-  
--   [Erstellen von Überschreibungen für FrameworkElement\-Member](#creating_overrides)  
-  
--   [Bereitstellen von Unterstützung für Treffertests](#providing_hit_testing_support)  
-  
--   [Verwandte Themen](#seeAlsoToggle)  
+# <a name="using-drawingvisual-objects"></a><span data-ttu-id="5f9d9-102">Verwenden von DrawingVisual-Objekten</span><span class="sxs-lookup"><span data-stu-id="5f9d9-102">Using DrawingVisual Objects</span></span>
+<span data-ttu-id="5f9d9-103">Dieses Thema bietet einen Überblick zum Verwenden <xref:System.Windows.Media.DrawingVisual> Objekte in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visueller Ebene.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-103">This topic provides an overview of how to use <xref:System.Windows.Media.DrawingVisual> objects in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual layer.</span></span>  
   
 <a name="drawingvisual_object"></a>   
-## DrawingVisual\-Objekt  
- <xref:System.Windows.Media.DrawingVisual> ist eine einfache Zeichnungsklasse, die verwendet wird, um Formen, Bilder oder Text zu rendern.  Diese Klasse wird als einfach angesehen, weil sie weder Layout noch Ereignisbehandlung bereitstellt. Dadurch wird die Leistung gesteigert.  Aus diesem Grund sind Zeichnungen ideal für Hintergründe und ClipArt.  
+## <a name="drawingvisual-object"></a><span data-ttu-id="5f9d9-104">DrawingVisual-Objekt</span><span class="sxs-lookup"><span data-stu-id="5f9d9-104">DrawingVisual Object</span></span>  
+ <span data-ttu-id="5f9d9-105">Die <xref:System.Windows.Media.DrawingVisual> ist eine einfache zeichnen-Klasse, die zum Rendern von Formen, Bildern oder Text verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-105">The <xref:System.Windows.Media.DrawingVisual> is a lightweight drawing class that is used to render shapes, images, or text.</span></span> <span data-ttu-id="5f9d9-106">Diese Klasse wird als einfach angesehen, weil sie weder Layout noch Ereignisbehandlung bereitstellt. Dadurch wird die Leistung gesteigert.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-106">This class is considered lightweight because it does not provide layout or event handling, which improves its performance.</span></span> <span data-ttu-id="5f9d9-107">Aus diesem Grund eignen sich Zeichnungen für Hintergründe und ClipArt.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-107">For this reason, drawings are ideal for backgrounds and clip art.</span></span>  
   
 <a name="drawingvisual_host_container"></a>   
-## DrawingVisual\-Hostcontainer  
- Um <xref:System.Windows.Media.DrawingVisual>\-Objekte verwenden zu können, müssen Sie einen Hostcontainer für die Objekte erstellen.  Das Hostcontainerobjekt muss von der <xref:System.Windows.FrameworkElement>\-Klasse abgeleitet werden, die die in der <xref:System.Windows.Media.DrawingVisual>\-Klasse nicht verfügbare Layout\- und Ereignisbehandlungsunterstützung bereitstellt.  Das Hostcontainerobjekt zeigt keine sichtbaren Eigenschaften, da sein Hauptzweck im Aufnehmen untergeordneter Objekte besteht.  Die <xref:System.Windows.UIElement.Visibility%2A>\-Eigenschaft des Hostcontainers muss jedoch auf <xref:System.Windows.Visibility> festgelegt werden. Andernfalls würden die untergeordneten Objekte nicht angezeigt.  
+## <a name="drawingvisual-host-container"></a><span data-ttu-id="5f9d9-108">DrawingVisual-Hostcontainer</span><span class="sxs-lookup"><span data-stu-id="5f9d9-108">DrawingVisual Host Container</span></span>  
+ <span data-ttu-id="5f9d9-109">Um verwenden <xref:System.Windows.Media.DrawingVisual> -Objekte, müssen Sie einen Hostcontainer für die Objekte zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-109">In order to use <xref:System.Windows.Media.DrawingVisual> objects, you need to create a host container for the objects.</span></span> <span data-ttu-id="5f9d9-110">Leiten die Host-Container-Objekt aus der <xref:System.Windows.FrameworkElement> -Klasse, die das Layout und Ereignisbehandlung zu unterstützen, stellt die <xref:System.Windows.Media.DrawingVisual> Klasse besitzt.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-110">The host container object must derive from the <xref:System.Windows.FrameworkElement> class, which provides the layout and event handling support that the <xref:System.Windows.Media.DrawingVisual> class lacks.</span></span> <span data-ttu-id="5f9d9-111">Das Hostcontainerobjekt zeigt keine sichtbaren Eigenschaften, da seine Hauptfunktion die Aufnahme untergeordneter Objekte ist.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-111">The host container object does not display any visible properties, since its main purpose is to contain child objects.</span></span> <span data-ttu-id="5f9d9-112">Allerdings die <xref:System.Windows.UIElement.Visibility%2A> -Eigenschaft des Hostcontainers muss festgelegt werden, um <xref:System.Windows.Visibility.Visible>ist, andernfalls keines der untergeordneten Elemente werden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-112">However, the <xref:System.Windows.UIElement.Visibility%2A> property of the host container must be set to <xref:System.Windows.Visibility.Visible>; otherwise, none of its child elements will be visible.</span></span>  
   
- Wenn Sie ein Hostcontainerobjekt für visuelle Objekte erstellen, müssen Sie die Verweise für die visuellen Objekte in einer <xref:System.Windows.Media.VisualCollection> speichern.  Verwenden Sie die <xref:System.Windows.Media.VisualCollection.Add%2A>\-Methode, um dem Hostcontainer ein visuelles Objekt hinzuzufügen.  In dem folgenden Beispiel wird ein Hostcontainerobjekt erstellt, und es werden drei visuelle Objekte zu dessen <xref:System.Windows.Media.VisualCollection> hinzugefügt.  
+ <span data-ttu-id="5f9d9-113">Wenn Sie einen Host-Container-Objekt, für visuelle Objekte erstellen, müssen Sie zum Speichern der visuellen Objektverweisen in einem <xref:System.Windows.Media.VisualCollection>.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-113">When you create a host container object for visual objects, you need to store the visual object references in a <xref:System.Windows.Media.VisualCollection>.</span></span> <span data-ttu-id="5f9d9-114">Verwenden der <xref:System.Windows.Media.VisualCollection.Add%2A> Methode, um ein visuelles Objekt auf den Hostcontainer hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-114">Use the <xref:System.Windows.Media.VisualCollection.Add%2A> method to add a visual object to the host container.</span></span> <span data-ttu-id="5f9d9-115">Im folgenden Beispiel wird ein Hostobjekt für den Container erstellt und drei visuelle Objekte werden hinzugefügt, um seine <xref:System.Windows.Media.VisualCollection>.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-115">In the following example, a host container object is created, and three visual objects are added to its <xref:System.Windows.Media.VisualCollection>.</span></span>  
   
  [!code-csharp[DrawingVisualSample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#100)]
  [!code-vb[DrawingVisualSample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#100)]  
   
 > [!NOTE]
->  Das vollständige Codebeispiel, aus dem das vorangehende Codebeispiel extrahiert wurde, finden Sie unter [Beispiel für Treffertests mit "DrawingVisuals"](http://go.microsoft.com/fwlink/?LinkID=159994).  
+>  <span data-ttu-id="5f9d9-116">Informationen über das vollständige Codebeispiel, aus dem das vorherige Codebeispiel extrahiert wurde, finden Sie unter [Beispiel für Treffertests mit DrawingVisuals](http://go.microsoft.com/fwlink/?LinkID=159994).</span><span class="sxs-lookup"><span data-stu-id="5f9d9-116">For the complete code sample from which the preceding code example was extracted, see [Hit Test Using DrawingVisuals Sample](http://go.microsoft.com/fwlink/?LinkID=159994).</span></span>  
   
 <a name="creating_drawingvisual_objects"></a>   
-## Erstellen von DrawingVisual\-Objekten  
- Wenn Sie ein <xref:System.Windows.Media.DrawingVisual>\-Objekt erstellen, besitzt dieses keinen Zeichnungsinhalt.  Sie können Text\-, Grafik\- oder Bildinhalt hinzufügen, indem Sie den <xref:System.Windows.Media.DrawingContext> des Objekts und die Zeichnung abrufen.  Ein <xref:System.Windows.Media.DrawingContext> wird zurückgegeben, wenn Sie die <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A>\-Methode eines <xref:System.Windows.Media.DrawingVisual>\-Objekts aufrufen.  
+## <a name="creating-drawingvisual-objects"></a><span data-ttu-id="5f9d9-117">Erstellen von DrawingVisual-Objekten</span><span class="sxs-lookup"><span data-stu-id="5f9d9-117">Creating DrawingVisual Objects</span></span>  
+ <span data-ttu-id="5f9d9-118">Beim Erstellen einer <xref:System.Windows.Media.DrawingVisual> Objekt, er hat keine Zeichnungsinhalt.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-118">When you create a <xref:System.Windows.Media.DrawingVisual> object, it has no drawing content.</span></span> <span data-ttu-id="5f9d9-119">Sie können Text, Grafiken oder Bildinhalt hinzufügen, indem des Objekts abrufen <xref:System.Windows.Media.DrawingContext> und die Zeichnung.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-119">You can add text, graphics, or image content by retrieving the object's <xref:System.Windows.Media.DrawingContext> and drawing into it.</span></span> <span data-ttu-id="5f9d9-120">Ein <xref:System.Windows.Media.DrawingContext> wird zurückgegeben, indem die <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> Methode von einem <xref:System.Windows.Media.DrawingVisual> Objekt.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-120">A <xref:System.Windows.Media.DrawingContext> is returned by calling the <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> method of a <xref:System.Windows.Media.DrawingVisual> object.</span></span>  
   
- Um ein Rechteck in den <xref:System.Windows.Media.DrawingContext> zu zeichnen, verwenden Sie die <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A>\-Methode des <xref:System.Windows.Media.DrawingContext>\-Objekts.  Ähnliche Methoden sind auch zum Zeichnen anderer Inhaltstypen verfügbar.  Wenn Sie den Inhalt in den <xref:System.Windows.Media.DrawingContext> gezeichnet haben, rufen Sie die <xref:System.Windows.Media.DrawingContext.Close%2A>\-Methode auf, um den <xref:System.Windows.Media.DrawingContext> zu schließen und den Inhalt beizubehalten.  
+ <span data-ttu-id="5f9d9-121">Zeichnen Sie ein Rechteck in der <xref:System.Windows.Media.DrawingContext>, verwenden die <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> Methode der <xref:System.Windows.Media.DrawingContext> Objekt.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-121">To draw a rectangle into the <xref:System.Windows.Media.DrawingContext>, use the <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> method of the <xref:System.Windows.Media.DrawingContext> object.</span></span> <span data-ttu-id="5f9d9-122">Ähnliche Methoden sind für andere Arten von Inhalten verfügbar.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-122">Similar methods exist for drawing other types of content.</span></span> <span data-ttu-id="5f9d9-123">Sie danach Zeichnungsinhalt in der <xref:System.Windows.Media.DrawingContext>, rufen Sie die <xref:System.Windows.Media.DrawingContext.Close%2A> Methode zum Schließen der <xref:System.Windows.Media.DrawingContext> und den Inhalt beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-123">When you are finished drawing content into the <xref:System.Windows.Media.DrawingContext>, call the <xref:System.Windows.Media.DrawingContext.Close%2A> method to close the <xref:System.Windows.Media.DrawingContext> and persist the content.</span></span>  
   
- Im folgenden Beispiel wird ein <xref:System.Windows.Media.DrawingVisual>\-Objekt erstellt, und es wird ein Rechteck in seinen <xref:System.Windows.Media.DrawingContext> gezeichnet.  
+ <span data-ttu-id="5f9d9-124">Im folgenden Beispiel ein <xref:System.Windows.Media.DrawingVisual> Objekt wird erstellt, und ein Rechteck gezeichnet, in dessen <xref:System.Windows.Media.DrawingContext>.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-124">In the following example, a <xref:System.Windows.Media.DrawingVisual> object is created, and a rectangle is drawn into its <xref:System.Windows.Media.DrawingContext>.</span></span>  
   
  [!code-csharp[DrawingVisualSample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
  [!code-vb[DrawingVisualSample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 <a name="creating_overrides"></a>   
-## Erstellen von Überschreibungen für FrameworkElement\-Member  
- Das Hostcontainerobjekt verwaltet die zugehörige Auflistung visueller Objekte.  Hierzu muss der Hostcontainer Memberüberschreibungen für die abgeleitete <xref:System.Windows.FrameworkElement>\-Klasse implementieren.  
+## <a name="creating-overrides-for-frameworkelement-members"></a><span data-ttu-id="5f9d9-125">Erstellen von Überschreibungen für Elemente von FrameworkElement</span><span class="sxs-lookup"><span data-stu-id="5f9d9-125">Creating Overrides for FrameworkElement Members</span></span>  
+ <span data-ttu-id="5f9d9-126">Der Hostcontainerobjekt ist für die Verwaltung seiner Auflistung von visuellen Objekten zuständig.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-126">The host container object is responsible for managing its collection of visual objects.</span></span> <span data-ttu-id="5f9d9-127">Dies erfordert, dass der Hostcontainer Member Außerkraftsetzungen für die abgeleitete implementieren <xref:System.Windows.FrameworkElement> Klasse.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-127">This requires that the host container implement member overrides for the derived <xref:System.Windows.FrameworkElement> class.</span></span>  
   
- Die folgende Liste beschreibt die zwei Member, die Sie überschreiben müssen:  
+ <span data-ttu-id="5f9d9-128">Die folgende Liste beschreibt die zwei Elemente, die Sie überschreiben müssen:</span><span class="sxs-lookup"><span data-stu-id="5f9d9-128">The following list describes the two members you must override:</span></span>  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Gibt ein untergeordnetes Element am angegebenen Index aus der Auflistung der untergeordneten Elemente zurück.  
+-   <span data-ttu-id="5f9d9-129"><xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Gibt ein untergeordnetes Element am angegebenen Index aus der Auflistung von untergeordneten Elementen.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-129"><xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Returns a child at the specified index from the collection of child elements.</span></span>  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ruft die Anzahl visueller untergeordneter Elemente innerhalb dieses Elements ab.  
+-   <span data-ttu-id="5f9d9-130"><xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ruft die Anzahl der sichtbaren untergeordneten Elemente innerhalb dieses Elements ab.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-130"><xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Gets the number of visual child elements within this element.</span></span>  
   
- Im folgenden Beispiel werden Überschreibungen für die zwei <xref:System.Windows.FrameworkElement>\-Member implementiert.  
+ <span data-ttu-id="5f9d9-131">Im folgenden Beispiel überschreibt, für die beiden <xref:System.Windows.FrameworkElement> Member implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-131">In the following example, overrides for the two <xref:System.Windows.FrameworkElement> members are implemented.</span></span>  
   
  [!code-csharp[DrawingVisualSample#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#102)]
  [!code-vb[DrawingVisualSample#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#102)]  
   
 <a name="providing_hit_testing_support"></a>   
-## Bereitstellen von Unterstützung für Treffertests  
- Das Hostcontainerobjekt ermöglicht eine Ereignisbehandlung, auch wenn keine sichtbaren Eigenschaften angezeigt werden. Hierzu muss jedoch die <xref:System.Windows.UIElement.Visibility%2A>\-Eigenschaft auf <xref:System.Windows.Visibility> festgelegt sein.  Sie können so eine Ereignisbehandlungsroutine für den Hostcontainer erstellen, durch die Mausereignisse erfasst werden, z. B. das Loslassen der linken Maustaste.  Die Ereignisbehandlungsroutine kann dann Treffertests implementieren, indem sie die <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>\-Methode aufruft.  Der <xref:System.Windows.Media.HitTestResultCallback>\-Parameter der Methode bezieht sich auf eine benutzerdefinierte Prozedur, mit der Sie die resultierende Aktion für einen Treffertest bestimmen können.  
+## <a name="providing-hit-testing-support"></a><span data-ttu-id="5f9d9-132">Bereitstellen von Unterstützung für den Treffertest</span><span class="sxs-lookup"><span data-stu-id="5f9d9-132">Providing Hit Testing Support</span></span>  
+ <span data-ttu-id="5f9d9-133">Das Hostobjekt für den Container bieten Ereignisbehandlung, auch wenn keine angezeigten Eigenschaften anzuzeigen, jedoch seine <xref:System.Windows.UIElement.Visibility%2A> Eigenschaft muss festgelegt werden, um <xref:System.Windows.Visibility.Visible>.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-133">The host container object can provide event handling even if it does not display any visible properties—however, its <xref:System.Windows.UIElement.Visibility%2A> property must be set to <xref:System.Windows.Visibility.Visible>.</span></span> <span data-ttu-id="5f9d9-134">Dadurch können Sie eine Ereignisbehandlungsroutine für den Hostcontainer erstellen, die Mausereignisse, z.B. das Loslassen der linken Maustaste, auffangen kann.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-134">This allows you to create an event handling routine for the host container that can trap mouse events, such as the release of the left mouse button.</span></span> <span data-ttu-id="5f9d9-135">Die Routine für die Ereignisbehandlung kann dann implementieren Treffertests durch Aufrufen der <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-135">The event handling routine can then implement hit testing by invoking the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method.</span></span> <span data-ttu-id="5f9d9-136">Der Methode <xref:System.Windows.Media.HitTestResultCallback> Parameter verweist auf eine benutzerdefinierte Prozedur, die Sie verwenden können, um zu bestimmen, die sich ergebenden Aktion eines Treffertests.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-136">The method's <xref:System.Windows.Media.HitTestResultCallback> parameter refers to a user-defined procedure that you can use to determine the resulting action of a hit test.</span></span>  
   
- Im folgenden Beispiel wird die Unterstützung für Treffertests für das Hostcontainerobjekt und die untergeordneten Elemente implementiert.  
+ <span data-ttu-id="5f9d9-137">Im folgenden Beispiel wird die Unterstützung für Treffertests für das Hostcontainerobjekt und seine untergeordneten Elemente implementiert.</span><span class="sxs-lookup"><span data-stu-id="5f9d9-137">In the following example, hit testing support is implemented for the host container object and its children.</span></span>  
   
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## Siehe auch  
- <xref:System.Windows.Media.DrawingVisual>   
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>   
- [Übersicht über das WPF\-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)   
- [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a><span data-ttu-id="5f9d9-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f9d9-138">See Also</span></span>  
+ <xref:System.Windows.Media.DrawingVisual>  
+ <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
+ [<span data-ttu-id="5f9d9-139">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="5f9d9-139">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="5f9d9-140">Treffertests in der visuellen Ebene</span><span class="sxs-lookup"><span data-stu-id="5f9d9-140">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

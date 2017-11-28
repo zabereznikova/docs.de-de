@@ -9,77 +9,74 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="net-core-application-deployment"></a><span data-ttu-id="88791-104">.NET Core Anwendungsbereitstellung</span><span class="sxs-lookup"><span data-stu-id="88791-104">.NET Core application deployment</span></span>
 
-# <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
+<span data-ttu-id="88791-105">Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen:</span><span class="sxs-lookup"><span data-stu-id="88791-105">You can create two types of deployments for .NET Core applications:</span></span>
 
-Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen:
+- <span data-ttu-id="88791-106">Framework-abhängige Bereitstellung.</span><span class="sxs-lookup"><span data-stu-id="88791-106">Framework-dependent deployment.</span></span> <span data-ttu-id="88791-107">Wie der Name schon sagt, benötigt eine Framework-abhängige Bereitstellung (Framework-Dependent Deployment, FDD) eine gemeinsame systemweite Version von .NET Core auf dem Zielsystem.</span><span class="sxs-lookup"><span data-stu-id="88791-107">As the name implies, framework-dependent deployment (FDD) relies on the presence of a shared system-wide version of .NET Core on the target system.</span></span> <span data-ttu-id="88791-108">Da .NET Core bereits vorhanden ist, ist Ihre Anwendung auch zwischen .NET Core-Installationen übertragbar.</span><span class="sxs-lookup"><span data-stu-id="88791-108">Because .NET Core is already present, your app is also portable between installations of .NET Core.</span></span> <span data-ttu-id="88791-109">Ihre Anwendung enthält nur ihren eigenen Code und Drittanbieter-Abhängigkeiten, die außerhalb von .NET Core-Bibliotheken bestehen.</span><span class="sxs-lookup"><span data-stu-id="88791-109">Your app contains only its own code and any third-party dependencies that are outside of the .NET Core libraries.</span></span> <span data-ttu-id="88791-110">FDDs enthalten *DLL*-Dateien, die mithilfe des [dotnet-Hilfsprogramms](../tools/dotnet.md) über die Befehlszeile gestartet werden können.</span><span class="sxs-lookup"><span data-stu-id="88791-110">FDDs contain *.dll* files that can be launched by using the [dotnet utility](../tools/dotnet.md) from the command line.</span></span> <span data-ttu-id="88791-111">`dotnet app.dll` führt z.B. eine Anwendung namens `app` aus.</span><span class="sxs-lookup"><span data-stu-id="88791-111">For example, `dotnet app.dll` runs an application named `app`.</span></span>
 
-- Framework-abhängige Bereitstellung. Wie der Name schon sagt, benötigt eine Framework-abhängige Bereitstellung (Framework-Dependent Deployment, FDD) eine gemeinsame systemweite Version von .NET Core auf dem Zielsystem. Da .NET Core bereits vorhanden ist, ist Ihre Anwendung auch zwischen .NET Core-Installationen übertragbar. Ihre Anwendung enthält nur ihren eigenen Code und Drittanbieter-Abhängigkeiten, die außerhalb von .NET Core-Bibliotheken bestehen. FDDs enthalten *DLL*-Dateien, die mithilfe des [dotnet-Hilfsprogramms](../tools/dotnet.md) über die Befehlszeile gestartet werden können. `dotnet app.dll` führt z.B. eine Anwendung namens `app` aus.
+- <span data-ttu-id="88791-112">Eigenständige Bereitstellung.</span><span class="sxs-lookup"><span data-stu-id="88791-112">Self-contained deployment.</span></span> <span data-ttu-id="88791-113">Im Gegensatz zu FDD müssen bei einer eigenständigen Bereitstellung (Self-Contained Deployment, SCD) die freigegebenen Komponenten nicht auf dem Zielsystem vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="88791-113">Unlike FDD, a self-contained deployment (SCD) doesn't rely on the presence of shared components on the target system.</span></span> <span data-ttu-id="88791-114">Alle Komponenten, einschließlich .NET Core-Bibliotheken und .NET Core Runtime, sind in der Anwendung enthalten und von anderen .NET Core-Anwendungen isoliert.</span><span class="sxs-lookup"><span data-stu-id="88791-114">All components, including both the .NET Core libraries and the .NET Core runtime, are included with the application and are isolated from other .NET Core applications.</span></span> <span data-ttu-id="88791-115">SCDs enthalten eine ausführbare Datei (z.B. *app.exe* auf Windows-Plattformen für eine Anwendung namens `app`), die eine umbenannte Version des plattformspezifischen .NET Core-Hosts darstellt, und eine *DLL*-Datei (z.B. *app.dll*), bei der es sich um die eigentliche Anwendung handelt.</span><span class="sxs-lookup"><span data-stu-id="88791-115">SCDs include an executable (such as *app.exe* on Windows platforms for an application named `app`), which is  a renamed version of the platform-specific .NET Core host, and a *.dll* file (such as *app.dll*), which is the actual application.</span></span>
 
-- Eigenständige Bereitstellung. Im Gegensatz zu FDD müssen bei einer eigenständigen Bereitstellung (Self-Contained Deployment, SCD) die freigegebenen Komponenten nicht auf dem Zielsystem vorhanden sein. Alle Komponenten, einschließlich .NET Core-Bibliotheken und .NET Core Runtime, sind in der Anwendung enthalten und von anderen .NET Core-Anwendungen isoliert. SCDs enthalten eine ausführbare Datei (z.B. *app.exe* auf Windows-Plattformen für eine Anwendung namens `app`), die eine umbenannte Version des plattformspezifischen .NET Core-Hosts darstellt, und eine *DLL*-Datei (z.B. *app.dll*), bei der es sich um die eigentliche Anwendung handelt.
+## <a name="framework-dependent-deployments-fdd"></a><span data-ttu-id="88791-116">Framework-abhängige Bereitstellungen (FDD)</span><span class="sxs-lookup"><span data-stu-id="88791-116">Framework-dependent deployments (FDD)</span></span>
 
-## <a name="framework-dependent-deployments-fdd"></a>Framework-abhängige Bereitstellungen (FDD)
+<span data-ttu-id="88791-117">Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit.</span><span class="sxs-lookup"><span data-stu-id="88791-117">For an FDD, you deploy only your app and any third-party dependencies.</span></span> <span data-ttu-id="88791-118">Sie müssen .NET Core nicht bereitstellen, da Ihre Anwendung die .NET Core- Version verwendet, die auf dem Zielsystem vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="88791-118">You don't have to deploy .NET Core, since your app will use the version of .NET Core that's present on the target system.</span></span> <span data-ttu-id="88791-119">Dies ist das Standard-Bereitstellungsmodell für .NET Core-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="88791-119">This is the default deployment model for .NET Core apps.</span></span>
 
-Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit. Sie müssen .NET Core nicht bereitstellen, da Ihre Anwendung die .NET Core- Version verwendet, die auf dem Zielsystem vorhanden ist. Dies ist das Standard-Bereitstellungsmodell für .NET Core-Anwendungen.
+### <a name="why-create-a-framework-dependent-deployment"></a><span data-ttu-id="88791-120">Warum eine Framework-abhängige Bereitstellung erstellen?</span><span class="sxs-lookup"><span data-stu-id="88791-120">Why create a framework-dependent deployment?</span></span>
 
-### <a name="why-create-a-framework-dependent-deployment"></a>Warum eine Framework-abhängige Bereitstellung erstellen?
+<span data-ttu-id="88791-121">Die Bereitstellung einer FDD hat eine Reihe von Vorteilen:</span><span class="sxs-lookup"><span data-stu-id="88791-121">Deploying an FDD has a number of advantages:</span></span>
 
-Die Bereitstellung einer FDD hat eine Reihe von Vorteilen:
+- <span data-ttu-id="88791-122">Sie müssen die Zielbetriebssysteme, auf denen Ihre .NET Core-Anwendung ausgeführt wird, nicht im Voraus definieren.</span><span class="sxs-lookup"><span data-stu-id="88791-122">You don't have to define the target operating systems that your .NET Core app will run on in advance.</span></span> <span data-ttu-id="88791-123">Da .NET Core unabhängig vom Betriebssystem ein gemeinsames PE-Dateiformat für ausführbare Dateien verwendet, kann .NET Core Ihrer Anwendung unabhängig vom zugrunde liegenden Betriebssystem ausführen.</span><span class="sxs-lookup"><span data-stu-id="88791-123">Because .NET Core uses a common PE file format for executables and libraries regardless of operating system, .NET Core can execute your app regardless of the underlying operating system.</span></span> <span data-ttu-id="88791-124">Weitere Informationen zum PE-Dateiformat finden Sie unter [.NET Assembly-Dateiformat](../../standard/assembly-format.md).</span><span class="sxs-lookup"><span data-stu-id="88791-124">For more information on the PE file format, see [.NET Assembly File Format](../../standard/assembly-format.md).</span></span>
 
-- Sie müssen die Zielbetriebssysteme, auf denen Ihre .NET Core-Anwendung ausgeführt wird, nicht im Voraus definieren. Da .NET Core unabhängig vom Betriebssystem ein gemeinsames PE-Dateiformat für ausführbare Dateien verwendet, kann .NET Core Ihrer Anwendung unabhängig vom zugrunde liegenden Betriebssystem ausführen. Weitere Informationen zum PE-Dateiformat finden Sie unter [.NET Assembly-Dateiformat](../../standard/assembly-format.md).
+- <span data-ttu-id="88791-125">Ihr Bereitstellungspaket ist klein.</span><span class="sxs-lookup"><span data-stu-id="88791-125">The size of your deployment package is small.</span></span> <span data-ttu-id="88791-126">Sie müssen nur Ihre Anwendung und deren Abhängigkeiten bereitstellen, nicht .NET Core selbst.</span><span class="sxs-lookup"><span data-stu-id="88791-126">You only deploy your app and its dependencies, not .NET Core itself.</span></span>
 
-- Ihr Bereitstellungspaket ist klein. Sie müssen nur Ihre Anwendung und deren Abhängigkeiten bereitstellen, nicht .NET Core selbst.
+- <span data-ttu-id="88791-127">Mehrere Anwendungen verwenden die gleiche .NET Core-Installation, die Speicherplatz und Arbeitsspeicher auf dem Hostsystem verringert.</span><span class="sxs-lookup"><span data-stu-id="88791-127">Multiple apps use the same .NET Core installation, which reduces both disk space and memory usage on host systems.</span></span>
 
-- Mehrere Anwendungen verwenden die gleiche .NET Core-Installation, die Speicherplatz und Arbeitsspeicher auf dem Hostsystem verringert.
+<span data-ttu-id="88791-128">Es gibt auch einige Nachteile:</span><span class="sxs-lookup"><span data-stu-id="88791-128">There are also a few disadvantages:</span></span>
 
-Es gibt auch einige Nachteile:
+- <span data-ttu-id="88791-129">Ihre Anwendung kann nur ausgeführt werden, wenn die .NET Core-Version die Sie anvisieren oder eine höhere Version bereits auf dem Hostsystem installiert ist.</span><span class="sxs-lookup"><span data-stu-id="88791-129">Your app can run only if the version of .NET Core that you target, or a later version, is already installed on the host system.</span></span>
 
-- Ihre Anwendung kann nur ausgeführt werden, wenn die .NET Core-Version die Sie anvisieren oder eine höhere Version bereits auf dem Hostsystem installiert ist.
+- <span data-ttu-id="88791-130">Es ist möglich, dass die .NET Core Runtime und die Bibliotheken ohne Ihr Wissen in zukünftigen Versionen geändert werden.</span><span class="sxs-lookup"><span data-stu-id="88791-130">It's possible for the .NET Core runtime and libraries to change without your knowledge in future releases.</span></span> <span data-ttu-id="88791-131">In seltenen Fällen kann dies das Verhalten Ihrer Anwendung ändern.</span><span class="sxs-lookup"><span data-stu-id="88791-131">In rare cases, this may change the behavior of your app.</span></span>
 
-- Es ist möglich, dass die .NET Core Runtime und die Bibliotheken ohne Ihr Wissen in zukünftigen Versionen geändert werden. In seltenen Fällen kann dies das Verhalten Ihrer Anwendung ändern.
+## <a name="self-contained-deployments-scd"></a><span data-ttu-id="88791-132">Eigenständige Bereitstellungen (Self-contained deployments, SCD)</span><span class="sxs-lookup"><span data-stu-id="88791-132">Self-contained deployments (SCD)</span></span>
 
-## <a name="self-contained-deployments-scd"></a>Eigenständige Bereitstellungen (Self-contained deployments, SCD)
+<span data-ttu-id="88791-133">Bei einer eigenständigen Bereitstellung stellen Sie nicht nur Ihre Anwendung und alle erforderlichen Drittanbieterabhängigkeiten bereit, sondern auch die .NET Core-Version, mit der Sie Ihre Anwendung erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="88791-133">For a self-contained deployment, you deploy your app and any required third-party dependencies along with the version of .NET Core that you used to build the app.</span></span> <span data-ttu-id="88791-134">Eine eigenständige Bereitstellung schließt allerdings nicht die [nativen Abhängigkeiten von .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) auf verschiedenen Plattformen mit ein. Diese müssen daher vor dem Ausführen der Anwendung installiert werden.</span><span class="sxs-lookup"><span data-stu-id="88791-134">Creating an SCD doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) on various platforms, so these must be present before the app runs.</span></span>
 
-Bei einer eigenständigen Bereitstellung stellen Sie nicht nur Ihre Anwendung und alle erforderlichen Drittanbieterabhängigkeiten bereit, sondern auch die .NET Core-Version, mit der Sie Ihre Anwendung erstellt haben. Eine eigenständige Bereitstellung schließt allerdings nicht die [nativen Abhängigkeiten von .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) auf verschiedenen Plattformen mit ein. Diese müssen daher vor dem Ausführen der Anwendung installiert werden.
+<span data-ttu-id="88791-135">Framework-abhängige Bereitstellungen (FDD) und eigenständige Bereitstellungen (SCD) verwenden getrennte ausführbare Hostdateien, sodass Sie eine ausführbare Hostdatei für eine SCD mit Ihrer Herausgebersignatur signieren können.</span><span class="sxs-lookup"><span data-stu-id="88791-135">FDD and SCD deployments use separate host executables, so you can sign a host executable for an SCD with your publisher signature.</span></span>
 
-Framework-abhängige Bereitstellungen (FDD) und eigenständige Bereitstellungen (SCD) verwenden getrennte ausführbare Hostdateien, sodass Sie eine ausführbare Hostdatei für eine SCD mit Ihrer Herausgebersignatur signieren können.
+### <a name="why-deploy-a-self-contained-deployment"></a><span data-ttu-id="88791-136">Was spricht für eine eigenständige Bereitstellung?</span><span class="sxs-lookup"><span data-stu-id="88791-136">Why deploy a self-contained deployment?</span></span>
 
-### <a name="why-deploy-a-self-contained-deployment"></a>Was spricht für eine eigenständige Bereitstellung?
+<span data-ttu-id="88791-137">Das Bereitstellen einer eigenständigen Bereitstellung hat zwei wesentliche Vorteile:</span><span class="sxs-lookup"><span data-stu-id="88791-137">Deploying a Self-contained deployment has two major advantages:</span></span>
 
-Das Bereitstellen einer eigenständigen Bereitstellung hat zwei wesentliche Vorteile:
+- <span data-ttu-id="88791-138">Sie haben die alleinige Kontrolle über die .NET Core-Version, die mit Ihrer Anwendung bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="88791-138">You have sole control of the version of .NET Core that is deployed with your app.</span></span> <span data-ttu-id="88791-139">.NET Core kann nur von Ihnen bearbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="88791-139">.NET Core can be serviced only by you.</span></span>
 
-- Sie haben die alleinige Kontrolle über die .NET Core-Version, die mit Ihrer Anwendung bereitgestellt wird. .NET Core kann nur von Ihnen bearbeitet werden.
+- <span data-ttu-id="88791-140">Sie können sicher sein, dass das Zielsystem Ihre .NET Core-Anwendung ausführen kann, da Sie die .NET Core-Version bereitstellen, die darauf ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="88791-140">You can be assured that the target system can run your .NET Core app, since you're providing the version of .NET Core that it will run on.</span></span>
 
-- Sie können sicher sein, dass das Zielsystem Ihre .NET Core-Anwendung ausführen kann, da Sie die .NET Core-Version bereitstellen, die darauf ausgeführt werden soll.
+<span data-ttu-id="88791-141">Es hat auch einige Nachteile:</span><span class="sxs-lookup"><span data-stu-id="88791-141">It also has a number of disadvantages:</span></span>
 
-Es hat auch einige Nachteile:
+- <span data-ttu-id="88791-142">Da .NET Core in Ihrem Bereitstellungspaket enthalten ist, müssen Sie die Zielplattformen auswählen, für die Sie im Voraus Bereitstellungspaketen erstellen.</span><span class="sxs-lookup"><span data-stu-id="88791-142">Because .NET Core is included in your deployment package, you must select the target platforms for which you build deployment packages in advance.</span></span>
 
-- Da .NET Core in Ihrem Bereitstellungspaket enthalten ist, müssen Sie die Zielplattformen auswählen, für die Sie im Voraus Bereitstellungspaketen erstellen.
+- <span data-ttu-id="88791-143">Die Größe Ihres Bereitstellungspakets ist relativ groß, da es auch .NET Core, Ihre Anwendung und ihre Drittanbieter-Abhängigkeiten enthält.</span><span class="sxs-lookup"><span data-stu-id="88791-143">The size of your deployment package is relatively large, since you have to include .NET Core as well as your app and its third-party dependencies.</span></span>
 
-- Die Größe Ihres Bereitstellungspakets ist relativ groß, da es auch .NET Core, Ihre Anwendung und ihre Drittanbieter-Abhängigkeiten enthält.
+- <span data-ttu-id="88791-144">Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.</span><span class="sxs-lookup"><span data-stu-id="88791-144">Deploying numerous self-contained .NET Core apps to a system can consume significant amounts of disk space, since each app duplicates .NET Core files.</span></span>
 
-- Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.
+## <a name="step-by-step-examples"></a><span data-ttu-id="88791-145">Beispiele mit Schrittanleitungen</span><span class="sxs-lookup"><span data-stu-id="88791-145">Step-by-step examples</span></span>
 
-## <a name="step-by-step-examples"></a>Beispiele mit Schrittanleitungen
+<span data-ttu-id="88791-146">Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools).</span><span class="sxs-lookup"><span data-stu-id="88791-146">For step-by-step examples of deploying .NET Core apps with CLI tools, see [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md).</span></span> <span data-ttu-id="88791-147">Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio).</span><span class="sxs-lookup"><span data-stu-id="88791-147">For step-by-step examples of deploying .NET Core apps with Visual Studio, see [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md).</span></span> <span data-ttu-id="88791-148">Jedes Thema enthält Beispiele der folgenden Bereitstellungen:</span><span class="sxs-lookup"><span data-stu-id="88791-148">Each topic includes examples of the following deployments:</span></span>
 
-Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio). Jedes Thema enthält Beispiele der folgenden Bereitstellungen:
+- <span data-ttu-id="88791-149">Framework-abhängige Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="88791-149">Framework-dependent deployment</span></span>
+- <span data-ttu-id="88791-150">Framework-abhängige Bereitstellung mit Drittanbieterabhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="88791-150">Framework-dependent deployment with third-party dependencies</span></span>
+- <span data-ttu-id="88791-151">Eigenständige Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="88791-151">Self-contained deployment</span></span>
+- <span data-ttu-id="88791-152">Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="88791-152">Self-contained deployment with third-party dependencies</span></span>
 
-- Framework-abhängige Bereitstellung
-- Framework-abhängige Bereitstellung mit Drittanbieterabhängigkeiten
-- Eigenständige Bereitstellung
-- Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
+# <a name="see-also"></a><span data-ttu-id="88791-153">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="88791-153">See also</span></span>
 
-# <a name="see-also"></a>Siehe auch
-
-[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)  (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)  
-[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)  (Bereitstellen von .NET Core-Apps mit Visual Studio)  
-[Pakete, Metapakete und Frameworks](../packages.md)   
-[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
-
+<span data-ttu-id="88791-154">[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)  (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)</span><span class="sxs-lookup"><span data-stu-id="88791-154">[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) </span></span>  
+<span data-ttu-id="88791-155">[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)  (Bereitstellen von .NET Core-Apps mit Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="88791-155">[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) </span></span>  
+<span data-ttu-id="88791-156">[Pakete, Metapakete und Frameworks](../packages.md) </span><span class="sxs-lookup"><span data-stu-id="88791-156">[Packages, Metapackages and Frameworks](../packages.md) </span></span>  
+[<span data-ttu-id="88791-157">.NET Core Runtime-ID (RID)-Katalog</span><span class="sxs-lookup"><span data-stu-id="88791-157">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)

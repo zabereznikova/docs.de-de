@@ -1,38 +1,37 @@
 ---
-title: "&#220;bersicht &#252;ber das TreeView-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TreeView"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "TreeView-Steuerelement [Windows Forms], Informationen über das TreeView-Steuerelement"
+title: "Übersicht über das TreeView-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TreeView
+helpviewer_keywords: TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee285a7db058cd88843eb3addf207fb5c446dfa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das TreeView-Steuerelement (Windows&#160;Forms)
-Mit dem <xref:System.Windows.Forms.TreeView>\-Steuerelement in Windows Forms können Sie Benutzern eine Hierarchie von Knoten anzeigen, die mit der Anzeige der Dateien und Ordner im linken Bereich des Windows Explorer\-Features des Windows\-Betriebssystems vergleichbar ist.  Jeder Knoten in der Strukturansicht kann potenziell weitere Knoten enthalten, sogenannte *untergeordnete Knoten*.  Sie können übergeordnete Knoten oder Knoten, die untergeordnete Knoten enthalten, erweitert oder reduziert anzeigen.  Sie können auch eine Strukturansicht mit Kontrollkästchen neben den Knoten anzeigen, indem Sie die <xref:System.Windows.Forms.TreeView.CheckBoxes%2A>\-Eigenschaft der Strukturansicht auf `true` festlegen.  Anschließend können Sie Knoten programmgesteuert auswählen oder löschen, indem Sie die <xref:System.Windows.Forms.TreeNode.Checked%2A>\-Eigenschaft des Knotens auf `true` oder `false` festlegen.  
+# <a name="treeview-control-overview-windows-forms"></a><span data-ttu-id="c3795-102">Übersicht über das TreeView-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c3795-102">TreeView Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="c3795-103">Mit dem <xref:System.Windows.Forms.TreeView>-Steuerelement in Windows Forms können Sie Benutzern eine Hierarchie von Knoten anzeigen, die mit der Anzeige der Dateien und Ordner im linken Bereich des Windows Explorer-Features des Windows-Betriebssystems vergleichbar ist.</span><span class="sxs-lookup"><span data-stu-id="c3795-103">With the Windows Forms <xref:System.Windows.Forms.TreeView> control, you can display a hierarchy of nodes to users, like the way files and folders are displayed in the left pane of the Windows Explorer feature of the Windows operating system.</span></span> <span data-ttu-id="c3795-104">Jeder Knoten in der Strukturansicht kann andere Knoten, so genannte enthalten *Unterknoten*.</span><span class="sxs-lookup"><span data-stu-id="c3795-104">Each node in the tree view might contain other nodes, called *child nodes*.</span></span> <span data-ttu-id="c3795-105">Sie können übergeordnete Knoten oder Knoten, die untergeordnete Knoten enthalten, erweitert oder reduziert anzeigen.</span><span class="sxs-lookup"><span data-stu-id="c3795-105">You can display parent nodes, or nodes that contain child nodes, as expanded or collapsed.</span></span> <span data-ttu-id="c3795-106">Sie können auch eine Strukturansicht mit Kontrollkästchen neben den Knoten anzeigen, indem Sie die <xref:System.Windows.Forms.TreeView.CheckBoxes%2A>-Eigenschaft der Strukturansicht auf `true` festlegen.</span><span class="sxs-lookup"><span data-stu-id="c3795-106">You can also display a tree view with check boxes next to the nodes by setting the tree view's <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> property to `true`.</span></span> <span data-ttu-id="c3795-107">Anschließend können Sie Knoten programmgesteuert auswählen oder löschen, indem Sie die <xref:System.Windows.Forms.TreeNode.Checked%2A>-Eigenschaft des Knotens auf `true` oder `false` festlegen.</span><span class="sxs-lookup"><span data-stu-id="c3795-107">You can then programmatically select or clear nodes by setting the node's <xref:System.Windows.Forms.TreeNode.Checked%2A> property to `true` or `false`.</span></span>  
   
-## Wichtige Eigenschaften  
- Die wichtigsten Eigenschaften des <xref:System.Windows.Forms.TreeView>\-Steuerelements sind <xref:System.Windows.Forms.TreeView.Nodes%2A> und <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.  Die <xref:System.Windows.Forms.TreeView.Nodes%2A>\-Eigenschaft enthält die Liste der Knoten der obersten Ebene in der Strukturansicht.  Die <xref:System.Windows.Forms.TreeView.SelectedNode%2A>\-Eigenschaft legt den aktuell ausgewählten Knoten fest.  Sie können neben den Knoten Symbole anzeigen.  Das Steuerelement verwendet Bilder aus der <xref:System.Windows.Forms.ImageList>, die in der <xref:System.Windows.Forms.TreeView.ImageList%2A>\-Eigenschaft der Strukturansicht genannt ist.  Die <xref:System.Windows.Forms.TreeView.ImageIndex%2A>\-Eigenschaft legt das Standardbild für Knoten in der Strukturansicht fest.  Weitere Informationen zum Anzeigen von Bildern finden Sie unter [Gewusst wie: Festlegen von Symbolen für das TreeView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).  Bei Verwendung von [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] haben Sie Zugriff auf eine umfangreiche Bibliothek von Standardbildern, die Sie mit dem <xref:System.Windows.Forms.TreeView>\-Steuerelement verwenden können.  
+## <a name="key-properties"></a><span data-ttu-id="c3795-108">Wichtige Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="c3795-108">Key Properties</span></span>  
+ <span data-ttu-id="c3795-109">Die wichtigsten Eigenschaften des <xref:System.Windows.Forms.TreeView>-Steuerelements sind <xref:System.Windows.Forms.TreeView.Nodes%2A> und <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.</span><span class="sxs-lookup"><span data-stu-id="c3795-109">The key properties of the <xref:System.Windows.Forms.TreeView> control are <xref:System.Windows.Forms.TreeView.Nodes%2A> and <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.</span></span> <span data-ttu-id="c3795-110">Die <xref:System.Windows.Forms.TreeView.Nodes%2A>-Eigenschaft enthält die Liste der Knoten der obersten Ebene in der Strukturansicht.</span><span class="sxs-lookup"><span data-stu-id="c3795-110">The <xref:System.Windows.Forms.TreeView.Nodes%2A> property contains the list of top-level nodes in the tree view.</span></span> <span data-ttu-id="c3795-111">Die <xref:System.Windows.Forms.TreeView.SelectedNode%2A>-Eigenschaft legt den aktuell ausgewählten Knoten fest.</span><span class="sxs-lookup"><span data-stu-id="c3795-111">The <xref:System.Windows.Forms.TreeView.SelectedNode%2A> property sets the currently selected node.</span></span> <span data-ttu-id="c3795-112">Sie können neben den Knoten Symbole anzeigen.</span><span class="sxs-lookup"><span data-stu-id="c3795-112">You can display icons next to the nodes.</span></span> <span data-ttu-id="c3795-113">Das Steuerelement verwendet Bilder aus der <xref:System.Windows.Forms.ImageList>, die in der <xref:System.Windows.Forms.TreeView.ImageList%2A>-Eigenschaft der Strukturansicht genannt ist.</span><span class="sxs-lookup"><span data-stu-id="c3795-113">The control uses images from the <xref:System.Windows.Forms.ImageList> named in the tree view's <xref:System.Windows.Forms.TreeView.ImageList%2A> property.</span></span> <span data-ttu-id="c3795-114">Die <xref:System.Windows.Forms.TreeView.ImageIndex%2A>-Eigenschaft legt das Standardbild für Knoten in der Strukturansicht fest.</span><span class="sxs-lookup"><span data-stu-id="c3795-114">The <xref:System.Windows.Forms.TreeView.ImageIndex%2A> property sets the default image for nodes in the tree view.</span></span> <span data-ttu-id="c3795-115">Weitere Informationen zum Anzeigen von Bildern finden Sie unter [Vorgehensweise: Festlegen von Symbolen für das TreeView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).</span><span class="sxs-lookup"><span data-stu-id="c3795-115">For more information about displaying images, see [How to: Set Icons for the Windows Forms TreeView Control](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).</span></span> <span data-ttu-id="c3795-116">Bei Verwendung von [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] haben Sie Zugriff auf eine umfangreiche Bibliothek von Standardbildern, die Sie mit dem <xref:System.Windows.Forms.TreeView>-Steuerelement verwenden können.</span><span class="sxs-lookup"><span data-stu-id="c3795-116">If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use with the <xref:System.Windows.Forms.TreeView> control.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.TreeView>   
- [TreeView\-Steuerelement](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Gewusst wie: Festlegen von Symbolen für das TreeView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)   
- [Gewusst wie: Hinzufügen oder Entfernen von Knoten mit dem TreeView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)   
- [Gewusst wie: Durchlaufen aller Knoten eines TreeView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)   
- [Gewusst wie: Ermitteln des per Mausklick ausgewählten TreeView\-Knotens](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)   
- [Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView\- oder ListView\-Steuerelement \(Windows Forms\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+## <a name="see-also"></a><span data-ttu-id="c3795-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3795-117">See Also</span></span>  
+ <xref:System.Windows.Forms.TreeView>  
+ [<span data-ttu-id="c3795-118">TreeView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c3795-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="c3795-119">Gewusst wie: Festlegen von Symbolen für das TreeView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c3795-119">How to: Set Icons for the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="c3795-120">Gewusst wie: Hinzufügen oder Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c3795-120">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="c3795-121">Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c3795-121">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="c3795-122">Gewusst wie: Ermitteln des per Mausklick ausgewählten TreeView-Knotens</span><span class="sxs-lookup"><span data-stu-id="c3795-122">How to: Determine Which TreeView Node Was Clicked</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
+ [<span data-ttu-id="c3795-123">Gewusst wie: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c3795-123">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

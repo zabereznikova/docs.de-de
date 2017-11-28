@@ -1,187 +1,166 @@
 ---
-title: Generische Typen in Visual Basic (Visual Basic) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 2015-07-20
+title: Generische Typen in Visual Basic (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - generic interfaces
-- data type arguments, defining
+- data type arguments [Visual Basic], defining
 - generic delegates
 - arguments [Visual Basic], data types
-- Of keyword, using
+- Of keyword [Visual Basic], using
 - delegates, generic
 - constraints, Visual Basic generic types
 - generic parameters
 - data type parameters
-- procedures, generic
+- procedures [Visual Basic], generic
 - generic procedures
 - data types [Visual Basic], generic
 - data types [Visual Basic], as parameters
 - generics [Visual Basic], generic types
 - data types [Visual Basic], as arguments
-- generic classes, Visual Basic
-- parameters, type
+- generic classes [Visual Basic], Visual Basic
+- parameters [Visual Basic], type
 - type arguments
-- interfaces, generic
+- interfaces [Visual Basic], generic
 - generics [Visual Basic]
 - types [Visual Basic], generic
-- parameters, generic
-- generic structures
-- generic classes
+- parameters [Visual Basic], generic
+- generic structures [Visual Basic]
+- generic classes [Visual Basic]
 - type parameters
 - data type arguments
-- structures, generic
-- parameters, data type
+- structures [Visual Basic], generic
+- parameters [Visual Basic], data type
 - collections, generic
 - classes [Visual Basic], generic
-- data type parameters, defining
-- type arguments, defining
+- data type parameters [Visual Basic], defining
+- type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f6c48ff7f72eb86526ed4d71e6259b7886aab25
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 463391da61cbafe1f50a246307994cfa134dba38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="generic-types-in-visual-basic-visual-basic"></a>Generische Typen in Visual Basic (Visual Basic)
-Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt. Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.  
+# <a name="generic-types-in-visual-basic-visual-basic"></a><span data-ttu-id="3acb6-102">Generische Typen in Visual Basic (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3acb6-102">Generic Types in Visual Basic (Visual Basic)</span></span>
+<span data-ttu-id="3acb6-103">Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt.</span><span class="sxs-lookup"><span data-stu-id="3acb6-103">A *generic type* is a single programming element that adapts to perform the same functionality for a variety of data types.</span></span> <span data-ttu-id="3acb6-104">Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.</span><span class="sxs-lookup"><span data-stu-id="3acb6-104">When you define a generic class or procedure, you do not have to define a separate version for each data type for which you might want to perform that functionality.</span></span>  
   
- Eine Analogie hierzu ist ein Schraubendrehersatz mit auswechselbaren Spitzen. Sie sehen sich die Schraube an, die Sie drehen müssen, und wählen die geeignete Spitze für diese Schraube aus (geschlitzt, gekreuzt oder mit Stern). Sobald Sie die richtige Spitze in den Schraubendreher gesteckt haben, führen Sie mit dem Schraubendreher genau diese Funktion aus, d. h., Sie drehen die Schraube.  
+ <span data-ttu-id="3acb6-105">Eine Analogie hierzu ist ein Schraubendrehersatz mit auswechselbaren Spitzen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-105">An analogy is a screwdriver set with removable heads.</span></span> <span data-ttu-id="3acb6-106">Sie sehen sich die Schraube an, die Sie drehen müssen, und wählen die geeignete Spitze für diese Schraube aus (geschlitzt, gekreuzt oder mit Stern).</span><span class="sxs-lookup"><span data-stu-id="3acb6-106">You inspect the screw you need to turn and select the correct head for that screw (slotted, crossed, starred).</span></span> <span data-ttu-id="3acb6-107">Sobald Sie die richtige Spitze in den Schraubendreher gesteckt haben, führen Sie mit dem Schraubendreher genau diese Funktion aus, d. h., Sie drehen die Schraube.</span><span class="sxs-lookup"><span data-stu-id="3acb6-107">Once you insert the correct head in the screwdriver handle, you perform the exact same function with the screwdriver, namely turning the screw.</span></span>  
   
- ![Diagramm eines Schraubdrehersatzes als generischem Werkzeug](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
-Schraubendrehersatz als generisches Werkzeug  
+ <span data-ttu-id="3acb6-108">![Diagramm eines Schraubdrehersatzes als generischem Werkzeug](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")</span><span class="sxs-lookup"><span data-stu-id="3acb6-108">![Diagram of a screwdriver set as a generic tool](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")</span></span>  
+<span data-ttu-id="3acb6-109">Schraubendrehersatz als generisches Werkzeug</span><span class="sxs-lookup"><span data-stu-id="3acb6-109">Screwdriver set as a generic tool</span></span>  
   
- Wenn Sie einen generischen Typ definieren, parametrisieren Sie ihn mit mindestens einem Datentyp. Dies ermöglicht es, die Datentypen mithilfe von Code an die Anforderungen anzupassen. Im Code können Sie mehrere unterschiedliche Programmierelemente anhand des generischen Elements deklarieren, von denen jedes für eine andere Gruppe von Datentypen ausgeführt wird. Die deklarierten Elemente führen jedoch alle dieselbe Logik aus, unabhängig davon, welche Datentypen von ihnen verwendet werden.  
+ <span data-ttu-id="3acb6-110">Wenn Sie einen generischen Typ definieren, parametrisieren Sie ihn mit mindestens einem Datentyp.</span><span class="sxs-lookup"><span data-stu-id="3acb6-110">When you define a generic type, you parameterize it with one or more data types.</span></span> <span data-ttu-id="3acb6-111">Dies ermöglicht es, die Datentypen mithilfe von Code an die Anforderungen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-111">This allows the using code to tailor the data types to its requirements.</span></span> <span data-ttu-id="3acb6-112">Im Code können Sie mehrere unterschiedliche Programmierelemente anhand des generischen Elements deklarieren, von denen jedes für eine andere Gruppe von Datentypen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-112">Your code can declare several different programming elements from the generic element, each one acting on a different set of data types.</span></span> <span data-ttu-id="3acb6-113">Die deklarierten Elemente führen jedoch alle dieselbe Logik aus, unabhängig davon, welche Datentypen von ihnen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3acb6-113">But the declared elements all perform the identical logic, no matter what data types they are using.</span></span>  
   
- Nehmen Sie beispielsweise an, Sie möchten eine Warteschlangeklasse erstellen und verwenden, die für einen bestimmten Datentyp, z. B. `String`, ausgeführt wird. Sie können eine solche Klasse aus deklarieren <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>, wie im folgende Beispiel dargestellt.</xref:System.Collections.Generic.Queue%601?displayProperty=fullName>  
+ <span data-ttu-id="3acb6-114">Nehmen Sie beispielsweise an, Sie möchten eine Warteschlangeklasse erstellen und verwenden, die für einen bestimmten Datentyp, z. B. `String`, ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-114">For example, you might want to create and use a queue class that operates on a specific data type such as `String`.</span></span> <span data-ttu-id="3acb6-115">Sie können eine solche Klasse aus deklarieren <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, wie im folgende Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3acb6-115">You can declare such a class from <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, as the following example shows.</span></span>  
   
- [!code-vb[VbVbalrDataTypes&#1;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
- Nun können Sie `stringQ` verwenden, um ausschließlich mit `String` -Werten zu arbeiten. Da `stringQ` speziell für `String` -Werte und nicht allgemein für `Object` -Werte verwendet wird, gibt es weder späte Bindung noch Typkonvertierung. Dies erspart Ausführungszeit und verringert Laufzeitfehler.  
+ <span data-ttu-id="3acb6-116">Nun können Sie `stringQ` verwenden, um ausschließlich mit `String` -Werten zu arbeiten.</span><span class="sxs-lookup"><span data-stu-id="3acb6-116">You can now use `stringQ` to work exclusively with `String` values.</span></span> <span data-ttu-id="3acb6-117">Da `stringQ` speziell für `String` -Werte und nicht allgemein für `Object` -Werte verwendet wird, gibt es weder späte Bindung noch Typkonvertierung.</span><span class="sxs-lookup"><span data-stu-id="3acb6-117">Because `stringQ` is specific for `String` instead of being generalized for `Object` values, you do not have late binding or type conversion.</span></span> <span data-ttu-id="3acb6-118">Dies erspart Ausführungszeit und verringert Laufzeitfehler.</span><span class="sxs-lookup"><span data-stu-id="3acb6-118">This saves execution time and reduces run-time errors.</span></span>  
   
- Weitere Informationen zur Verwendung eines generischen Typs finden Sie unter [Gewusst wie: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ <span data-ttu-id="3acb6-119">Weitere Informationen zur Verwendung eines generischen Typs finden Sie unter [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).</span><span class="sxs-lookup"><span data-stu-id="3acb6-119">For more information on using a generic type, see [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).</span></span>  
   
-## <a name="example-of-a-generic-class"></a>Beispiel für eine generische Klasse  
- Im folgenden Beispiel wird eine Rumpfdefinition einer generischen Klasse veranschaulicht.  
+## <a name="example-of-a-generic-class"></a><span data-ttu-id="3acb6-120">Beispiel für eine generische Klasse</span><span class="sxs-lookup"><span data-stu-id="3acb6-120">Example of a Generic Class</span></span>  
+ <span data-ttu-id="3acb6-121">Im folgenden Beispiel wird eine Rumpfdefinition einer generischen Klasse veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="3acb6-121">The following example shows a skeleton definition of a generic class.</span></span>  
   
- [!code-vb[VbVbalrDataTypes&#2;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
   
- Im dieser Rumpfdefinition ist `t` ein *Typparameter*, d. h. ein Platzhalter für einen Datentyp, den Sie beim Deklarieren der Klasse angeben. An anderer Stelle im Code können Sie verschiedene Versionen von `classHolder` deklarieren, indem Sie für `t`verschiedene Datentypen angeben. Im folgenden Beispiel werden zwei solcher Deklarationen gezeigt.  
+ <span data-ttu-id="3acb6-122">Im dieser Rumpfdefinition ist `t` ein *Typparameter*, d. h. ein Platzhalter für einen Datentyp, den Sie beim Deklarieren der Klasse angeben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-122">In the preceding skeleton, `t` is a *type parameter*, that is, a placeholder for a data type that you supply when you declare the class.</span></span> <span data-ttu-id="3acb6-123">An anderer Stelle im Code können Sie verschiedene Versionen von `classHolder` deklarieren, indem Sie für `t`verschiedene Datentypen angeben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-123">Elsewhere in your code, you can declare various versions of `classHolder` by supplying various data types for `t`.</span></span> <span data-ttu-id="3acb6-124">Im folgenden Beispiel werden zwei solcher Deklarationen gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3acb6-124">The following example shows two such declarations.</span></span>  
   
- [!code-vb[VbVbalrDataTypes&3;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
   
- Die vorangehenden Anweisungen deklarieren *konstruierte Klassen*, in denen ein bestimmter Typ den Typparameter ersetzt. Diese Ersetzung wird im gesamten Code in der konstruierten Klasse weitergegeben. Im folgenden Beispiel wird gezeigt, wie die `processNewItem` -Prozedur in `integerClass`aussieht.  
+ <span data-ttu-id="3acb6-125">Die vorangehenden Anweisungen deklarieren *konstruierte Klassen*, in denen ein bestimmter Typ den Typparameter ersetzt.</span><span class="sxs-lookup"><span data-stu-id="3acb6-125">The preceding statements declare *constructed classes*, in which a specific type replaces the type parameter.</span></span> <span data-ttu-id="3acb6-126">Diese Ersetzung wird im gesamten Code in der konstruierten Klasse weitergegeben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-126">This replacement is propagated throughout the code within the constructed class.</span></span> <span data-ttu-id="3acb6-127">Im folgenden Beispiel wird gezeigt, wie die `processNewItem` -Prozedur in `integerClass`aussieht.</span><span class="sxs-lookup"><span data-stu-id="3acb6-127">The following example shows what the `processNewItem` procedure looks like in `integerClass`.</span></span>  
   
- [!code-vb[VbVbalrDataTypes&4;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Ein ausführlicheres Beispiel finden Sie unter [Gewusst wie: Definieren einer Klasse, dass können bieten identisch Funktionen auf unterschiedliche Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ <span data-ttu-id="3acb6-128">Ein vollständigeres Beispiel finden Sie unter [wie: Definieren einer Klasse, dass können bereitstellen identisch Funktionen auf unterschiedliche Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).</span><span class="sxs-lookup"><span data-stu-id="3acb6-128">For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).</span></span>  
   
-## <a name="eligible-programming-elements"></a>Geeignete Programmierelemente  
- Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden. Beachten Sie, dass die [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] definiert mehrere generische Klassen, Strukturen und Schnittstellen, die häufig verwendete generische Elemente darstellen. Der <xref:System.Collections.Generic?displayProperty=fullName>-Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit.</xref:System.Collections.Generic?displayProperty=fullName> Lesen Sie vor dem eigene generisches Element definieren, wenn es bereits in <xref:System.Collections.Generic?displayProperty=fullName>.</xref:System.Collections.Generic?displayProperty=fullName> verfügbar ist  
+## <a name="eligible-programming-elements"></a><span data-ttu-id="3acb6-129">Geeignete Programmierelemente</span><span class="sxs-lookup"><span data-stu-id="3acb6-129">Eligible Programming Elements</span></span>  
+ <span data-ttu-id="3acb6-130">Sie können generische Klassen, Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden.</span><span class="sxs-lookup"><span data-stu-id="3acb6-130">You can define and use generic classes, structures, interfaces, procedures, and delegates.</span></span> <span data-ttu-id="3acb6-131">Beachten Sie, dass [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] mehrere generische Klassen, Strukturen und Schnittstellen definiert, die häufig verwendete generische Elemente darstellen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-131">Note that the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] defines several generic classes, structures, and interfaces that represent commonly used generic elements.</span></span> <span data-ttu-id="3acb6-132">Die <xref:System.Collections.Generic?displayProperty=nameWithType> -Namespace stellt Wörterbücher, Listen, Warteschlangen und Stapel bereit.</span><span class="sxs-lookup"><span data-stu-id="3acb6-132">The <xref:System.Collections.Generic?displayProperty=nameWithType> namespace provides dictionaries, lists, queues, and stacks.</span></span> <span data-ttu-id="3acb6-133">Bevor Sie Ihr eigenes generisches Element definieren, zu prüfen, ob bereits verfügbar ist <xref:System.Collections.Generic?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3acb6-133">Before defining your own generic element, see if it is already available in <xref:System.Collections.Generic?displayProperty=nameWithType>.</span></span>  
   
- Prozeduren sind keine Typen, Sie können aber generische Prozeduren definieren und verwenden. Finden Sie unter [generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ <span data-ttu-id="3acb6-134">Prozeduren sind keine Typen, Sie können aber generische Prozeduren definieren und verwenden.</span><span class="sxs-lookup"><span data-stu-id="3acb6-134">Procedures are not types, but you can define and use generic procedures.</span></span> <span data-ttu-id="3acb6-135">Siehe [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="3acb6-135">See [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).</span></span>  
   
-## <a name="advantages-of-generic-types"></a>Vorteile von generischen Typen  
- Ein generischer Typ fungiert als Basis für das Deklarieren mehrerer unterschiedlicher Programmierelemente, von denen jedes für einen bestimmten Datentyp ausgeführt wird. Die Alternativen zu einem generischen Typ sind:  
+## <a name="advantages-of-generic-types"></a><span data-ttu-id="3acb6-136">Vorteile von generischen Typen</span><span class="sxs-lookup"><span data-stu-id="3acb6-136">Advantages of Generic Types</span></span>  
+ <span data-ttu-id="3acb6-137">Ein generischer Typ fungiert als Basis für das Deklarieren mehrerer unterschiedlicher Programmierelemente, von denen jedes für einen bestimmten Datentyp ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-137">A generic type serves as a basis for declaring several different programming elements, each of which operates on a specific data type.</span></span> <span data-ttu-id="3acb6-138">Die Alternativen zu einem generischen Typ sind:</span><span class="sxs-lookup"><span data-stu-id="3acb6-138">The alternatives to a generic type are:</span></span>  
   
-1.  Ein einzelner Typ, der auf den `Object` -Datentyp angewendet wird.  
+1.  <span data-ttu-id="3acb6-139">Ein einzelner Typ, der auf den `Object` -Datentyp angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-139">A single type operating on the `Object` data type.</span></span>  
   
-2.  Ein Satz von *typspezifischen* Versionen des Typs, wobei jede Version individuell codiert ist und auf einen speziellen Datentyp, z. B. `String`oder `Integer`, oder auf einen benutzerdefinierten Typ, etwa `customer`, angewendet wird.  
+2.  <span data-ttu-id="3acb6-140">Ein Satz von *typspezifischen* Versionen des Typs, wobei jede Version individuell codiert ist und auf einen speziellen Datentyp, z. B. `String`oder `Integer`, oder auf einen benutzerdefinierten Typ, etwa `customer`, angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-140">A set of *type-specific* versions of the type, each version individually coded and operating on one specific data type such as `String`, `Integer`, or a user-defined type such as `customer`.</span></span>  
   
- Ein generischer Typ bietet folgende Vorteile gegenüber diesen Alternativen:  
+ <span data-ttu-id="3acb6-141">Ein generischer Typ bietet folgende Vorteile gegenüber diesen Alternativen:</span><span class="sxs-lookup"><span data-stu-id="3acb6-141">A generic type has the following advantages over these alternatives:</span></span>  
   
--   **Typsicherheit.** . Generische Typen erzwingen die Typüberprüfung zur Kompilierzeit. Auf `Object` basierende Typen akzeptieren jeden Datentyp, und Sie müssen Code schreiben, der überprüft, ob ein Eingabedatentyp zulässig ist. Mit generischen Typen kann der Compiler Typenkonflikte vor der Laufzeit abfangen.  
+-   <span data-ttu-id="3acb6-142">**Typsicherheit**</span><span class="sxs-lookup"><span data-stu-id="3acb6-142">**Type Safety.**</span></span> <span data-ttu-id="3acb6-143">. Generische Typen erzwingen die Typüberprüfung zur Kompilierzeit.</span><span class="sxs-lookup"><span data-stu-id="3acb6-143">Generic types enforce compile-time type checking.</span></span> <span data-ttu-id="3acb6-144">Auf `Object` basierende Typen akzeptieren jeden Datentyp, und Sie müssen Code schreiben, der überprüft, ob ein Eingabedatentyp zulässig ist.</span><span class="sxs-lookup"><span data-stu-id="3acb6-144">Types based on `Object` accept any data type, and you must write code to check whether an input data type is acceptable.</span></span> <span data-ttu-id="3acb6-145">Mit generischen Typen kann der Compiler Typenkonflikte vor der Laufzeit abfangen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-145">With generic types, the compiler can catch type mismatches before run time.</span></span>  
   
--   **Die Leistung.** Generische Typen müssen kein *Boxing* und *unBoxing* für Daten ausführen, da jeder Typ speziell für einen Datentyp verwendet wird. Operationen, die auf `Object` basierend, müssen für Eingabedatentypen Boxing ausführen, um sie in `Object` zu konvertieren, und Unboxing für Daten ausführen, die für die Ausgabe vorgesehen sind. Durch Boxing und Unboxing wird die Leistung verringert.  
+-   <span data-ttu-id="3acb6-146">**Leistung:**</span><span class="sxs-lookup"><span data-stu-id="3acb6-146">**Performance.**</span></span> <span data-ttu-id="3acb6-147">Generische Typen müssen kein *Boxing* und *Unboxing* für Daten ausführen, da jeder Typ speziell für einen Datentyp verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-147">Generic types do not have to *box* and *unbox* data, because each one is specialized for one data type.</span></span> <span data-ttu-id="3acb6-148">Operationen, die auf `Object` basierend, müssen für Eingabedatentypen Boxing ausführen, um sie in `Object` zu konvertieren, und Unboxing für Daten ausführen, die für die Ausgabe vorgesehen sind.</span><span class="sxs-lookup"><span data-stu-id="3acb6-148">Operations based on `Object` must box input data types to convert them to `Object` and unbox data destined for output.</span></span> <span data-ttu-id="3acb6-149">Durch Boxing und Unboxing wird die Leistung verringert.</span><span class="sxs-lookup"><span data-stu-id="3acb6-149">Boxing and unboxing reduce performance.</span></span>  
   
-     Typen, die auf `Object` basieren, sind außerdem spät gebunden, d. h., dass der Zugriff auf ihre Member zusätzlichen Code zur Laufzeit erfordert. Hierdurch wird die Leistung ebenfalls verringert.  
+     <span data-ttu-id="3acb6-150">Typen, die auf `Object` basieren, sind außerdem spät gebunden, d. h., dass der Zugriff auf ihre Member zusätzlichen Code zur Laufzeit erfordert.</span><span class="sxs-lookup"><span data-stu-id="3acb6-150">Types based on `Object` are also late-bound, which means that accessing their members requires extra code at run time.</span></span> <span data-ttu-id="3acb6-151">Hierdurch wird die Leistung ebenfalls verringert.</span><span class="sxs-lookup"><span data-stu-id="3acb6-151">This also reduces performance.</span></span>  
   
--   **Konsolidierung von Code.** Der Code in einem generischen Typ muss nur einmal definiert werden. Ein Satz typspezifischer Versionen eines Typs muss in jeder Version denselben Code replizieren, wobei der einzige Unterschied im speziellen Datentyp für die jeweilige Version besteht. Bei generischen Typen werden alle typspezifischen Versionen aus dem ursprünglichen generischen Typ generiert.  
+-   <span data-ttu-id="3acb6-152">**Codekonsolidierung.**</span><span class="sxs-lookup"><span data-stu-id="3acb6-152">**Code Consolidation.**</span></span> <span data-ttu-id="3acb6-153">Der Code in einem generischen Typ muss nur einmal definiert werden.</span><span class="sxs-lookup"><span data-stu-id="3acb6-153">The code in a generic type has to be defined only once.</span></span> <span data-ttu-id="3acb6-154">Ein Satz typspezifischer Versionen eines Typs muss in jeder Version denselben Code replizieren, wobei der einzige Unterschied im speziellen Datentyp für die jeweilige Version besteht.</span><span class="sxs-lookup"><span data-stu-id="3acb6-154">A set of type-specific versions of a type must replicate the same code in each version, with the only difference being the specific data type for that version.</span></span> <span data-ttu-id="3acb6-155">Bei generischen Typen werden alle typspezifischen Versionen aus dem ursprünglichen generischen Typ generiert.</span><span class="sxs-lookup"><span data-stu-id="3acb6-155">With generic types, the type-specific versions are all generated from the original generic type.</span></span>  
   
--   **Wiederverwendung von Code.** . Code, der nicht von einem bestimmten Datentyp abhängt, kann für verschiedene Datentypen wiederverwendet werden, wenn er generisch ist. Sie können ihn häufig sogar für einen Datentypen wiederverwenden, den Sie ursprünglich nicht vorausbestimmt haben.  
+-   <span data-ttu-id="3acb6-156">**Wiederverwendung von Code**</span><span class="sxs-lookup"><span data-stu-id="3acb6-156">**Code Reuse.**</span></span> <span data-ttu-id="3acb6-157">. Code, der nicht von einem bestimmten Datentyp abhängt, kann für verschiedene Datentypen wiederverwendet werden, wenn er generisch ist.</span><span class="sxs-lookup"><span data-stu-id="3acb6-157">Code that does not depend on a particular data type can be reused with various data types if it is generic.</span></span> <span data-ttu-id="3acb6-158">Sie können ihn häufig sogar für einen Datentypen wiederverwenden, den Sie ursprünglich nicht vorausbestimmt haben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-158">You can often reuse it even with a data type that you did not originally predict.</span></span>  
   
--   **IDE-Unterstützung.** Wenn Sie einen konstruierten Typ verwenden, der aus einem generischen Typ deklariert wurde, können Sie durch die IDE (Integrated Development Environment, integrierte Entwicklungsumgebung) weitere Unterstützung beim Verfassen des Codes erhalten. Beispielsweise kann IntelliSense Ihnen die typspezifischen Optionen für ein Argument eines Konstruktors oder einer Methode anzeigen.  
+-   <span data-ttu-id="3acb6-159">**IDE-Unterstützung.**</span><span class="sxs-lookup"><span data-stu-id="3acb6-159">**IDE Support.**</span></span> <span data-ttu-id="3acb6-160">Wenn Sie einen konstruierten Typ verwenden, der aus einem generischen Typ deklariert wurde, können Sie durch die IDE (Integrated Development Environment, integrierte Entwicklungsumgebung) weitere Unterstützung beim Verfassen des Codes erhalten.</span><span class="sxs-lookup"><span data-stu-id="3acb6-160">When you use a constructed type declared from a generic type, the integrated development environment (IDE) can give you more support while you are developing your code.</span></span> <span data-ttu-id="3acb6-161">Beispielsweise kann IntelliSense Ihnen die typspezifischen Optionen für ein Argument eines Konstruktors oder einer Methode anzeigen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-161">For example, IntelliSense can show you the type-specific options for an argument to a constructor or method.</span></span>  
   
--   **Generische Algorithmen.** Abstrakte Algorithmen, die typunabhängig sind, sind gute Kandidaten für generische Typen. Zum Beispiel eine generische Prozedur, die Elemente mithilfe der <xref:System.IComparable>Schnittstelle kann verwendet werden, für jeden Datentyp, der implementiert <xref:System.IComparable>.</xref:System.IComparable> </xref:System.IComparable> sortiert  
+-   <span data-ttu-id="3acb6-162">**Generische Algorithmen.**</span><span class="sxs-lookup"><span data-stu-id="3acb6-162">**Generic Algorithms.**</span></span> <span data-ttu-id="3acb6-163">Abstrakte Algorithmen, die typunabhängig sind, sind gute Kandidaten für generische Typen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-163">Abstract algorithms that are type-independent are good candidates for generic types.</span></span> <span data-ttu-id="3acb6-164">Beispielsweise kann eine generische Prozedur, die Elemente mithilfe der <xref:System.IComparable> -Schnittstelle sortiert, für jeden Datentyp verwendet werden, der <xref:System.IComparable>implementiert.</span><span class="sxs-lookup"><span data-stu-id="3acb6-164">For example, a generic procedure that sorts items using the <xref:System.IComparable> interface can be used with any data type that implements <xref:System.IComparable>.</span></span>  
   
-## <a name="constraints"></a>Einschränkungen  
- Obwohl der Code in der Definition eines generischen Typs so typunabhängig wie möglich sein sollte, müssen Sie eventuell eine bestimmte Fähigkeit irgendeines Datentyps erfordern, der dem generischen Datentyp bereitgestellt wird. Wenn Sie zwei Elemente zu sortieren vergleichen möchten, deren Datentyp muss implementieren beispielsweise die <xref:System.IComparable>Schnittstelle.</xref:System.IComparable> Sie können diese Anforderung erzwingen, indem Sie dem Typparameter eine *Einschränkung* hinzufügen.  
+## <a name="constraints"></a><span data-ttu-id="3acb6-165">Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="3acb6-165">Constraints</span></span>  
+ <span data-ttu-id="3acb6-166">Obwohl der Code in der Definition eines generischen Typs so typunabhängig wie möglich sein sollte, müssen Sie eventuell eine bestimmte Fähigkeit irgendeines Datentyps erfordern, der dem generischen Datentyp bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="3acb6-166">Although the code in a generic type definition should be as type-independent as possible, you might need to require a certain capability of any data type supplied to your generic type.</span></span> <span data-ttu-id="3acb6-167">Wenn Sie z. B. zwei Elemente vergleichen möchten, um sie zu sortieren oder abzugleichen, muss ihr Datentyp die <xref:System.IComparable> -Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="3acb6-167">For example, if you want to compare two items for the purpose of sorting or collating, their data type must implement the <xref:System.IComparable> interface.</span></span> <span data-ttu-id="3acb6-168">Sie können diese Anforderung erzwingen, indem Sie dem Typparameter eine *Einschränkung* hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-168">You can enforce this requirement by adding a *constraint* to the type parameter.</span></span>  
   
-### <a name="example-of-a-constraint"></a>Beispiel für eine Einschränkung  
- Das folgende Beispiel zeigt eine Skelette Definition einer Klasse mit einer Einschränkung, die das Typargument implementieren <xref:System.IComparable>.</xref:System.IComparable> erfordert  
+### <a name="example-of-a-constraint"></a><span data-ttu-id="3acb6-169">Beispiel für eine Einschränkung</span><span class="sxs-lookup"><span data-stu-id="3acb6-169">Example of a Constraint</span></span>  
+ <span data-ttu-id="3acb6-170">Im folgenden Beispiel wird die Rumpfdefinition einer Klasse mit einer Einschränkung gezeigt, die für das Typargument erfordert, dass es <xref:System.IComparable>implementiert.</span><span class="sxs-lookup"><span data-stu-id="3acb6-170">The following example shows a skeleton definition of a class with a constraint that requires the type argument to implement <xref:System.IComparable>.</span></span>  
   
- [!code-vb[VbVbalrDataTypes&5;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
   
- Wenn nachfolgende Code versucht, eine Klasse von `itemManager` angeben eines Typs, die nicht implementiert <xref:System.IComparable>, signalisiert der Compiler einen Fehler.</xref:System.IComparable>  
+ <span data-ttu-id="3acb6-171">Wird in späterem Code versucht, eine Klasse aus `itemManager` zu erstellen, wozu ein Typ bereitgestellt wird, der <xref:System.IComparable>nicht implementiert, signalisiert der Compiler einen Fehler.</span><span class="sxs-lookup"><span data-stu-id="3acb6-171">If subsequent code attempts to construct a class from `itemManager` supplying a type that does not implement <xref:System.IComparable>, the compiler signals an error.</span></span>  
   
-### <a name="types-of-constraints"></a>Typen von Einschränkungen  
- In einer Einschränkung können die folgenden Anforderungen in beliebiger Kombination angegeben werden:  
+### <a name="types-of-constraints"></a><span data-ttu-id="3acb6-172">Typen von Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="3acb6-172">Types of Constraints</span></span>  
+ <span data-ttu-id="3acb6-173">In einer Einschränkung können die folgenden Anforderungen in beliebiger Kombination angegeben werden:</span><span class="sxs-lookup"><span data-stu-id="3acb6-173">Your constraint can specify the following requirements in any combination:</span></span>  
   
--   Das Typargument muss mindestens eine Schnittstelle implementieren.  
+-   <span data-ttu-id="3acb6-174">Das Typargument muss mindestens eine Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="3acb6-174">The type argument must implement one or more interfaces</span></span>  
   
--   Das Typargument darf nur den Typ einer einzigen Klasse haben oder von einer einzigen Klasse erben.  
+-   <span data-ttu-id="3acb6-175">Das Typargument darf nur den Typ einer einzigen Klasse haben oder von einer einzigen Klasse erben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-175">The type argument must be of the type of, or inherit from, at most one class</span></span>  
   
--   Das Typargument muss einen parameterlosen Konstruktor für den Code verfügbar machen, der Objekte aus dem Typargument erstellt.  
+-   <span data-ttu-id="3acb6-176">Das Typargument muss einen parameterlosen Konstruktor für den Code verfügbar machen, der Objekte aus dem Typargument erstellt.</span><span class="sxs-lookup"><span data-stu-id="3acb6-176">The type argument must expose a parameterless constructor accessible to the code that creates objects from it</span></span>  
   
--   Das Typargument muss ein *Verweistyp*oder *Werttyp*sein.  
+-   <span data-ttu-id="3acb6-177">Das Typargument muss ein *Verweistyp*oder *Werttyp*sein.</span><span class="sxs-lookup"><span data-stu-id="3acb6-177">The type argument must be a *reference type*, or it must be a *value type*</span></span>  
   
- Wenn Sie mehrere Einschränkungen erzwingen müssen, verwenden Sie eine durch Trennzeichen getrennte *Einschränkungsliste* in geschweiften Klammern (`{ }`). Um einen zugreifbaren Konstruktor erfordern, Sie enthalten die [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort in der Liste. Um festzulegen, dass ein Verweistyp erforderlich ist, fügen Sie das `Class` -Schlüsselwort ein. Um festzulegen, dass ein Werttyp erforderlich ist, fügen Sie das `Structure` -Schlüsselwort ein.  
+ <span data-ttu-id="3acb6-178">Wenn Sie mehrere Einschränkungen erzwingen müssen, verwenden Sie eine durch Trennzeichen getrennte *Einschränkungsliste* in geschweiften Klammern (`{ }`).</span><span class="sxs-lookup"><span data-stu-id="3acb6-178">If you need to impose more than one requirement, you use a comma-separated *constraint list* inside braces (`{ }`).</span></span> <span data-ttu-id="3acb6-179">Um ein zugänglicher Konstruktor erforderlich ist, schließen Sie die [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort in der Liste.</span><span class="sxs-lookup"><span data-stu-id="3acb6-179">To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list.</span></span> <span data-ttu-id="3acb6-180">Um festzulegen, dass ein Verweistyp erforderlich ist, fügen Sie das `Class` -Schlüsselwort ein. Um festzulegen, dass ein Werttyp erforderlich ist, fügen Sie das `Structure` -Schlüsselwort ein.</span><span class="sxs-lookup"><span data-stu-id="3acb6-180">To require a reference type, you include the `Class` keyword; to require a value type, you include the `Structure` keyword.</span></span>  
   
- Weitere Informationen zu Einschränkungen finden Sie unter [Liste](../../../../visual-basic/language-reference/statements/type-list.md).  
+ <span data-ttu-id="3acb6-181">Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../../visual-basic/language-reference/statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="3acb6-181">For more information on constraints, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
   
-### <a name="example-of-multiple-constraints"></a>Beispiel für mehrere Einschränkungen  
- Im folgenden Beispiel wird die Rumpfdefinition einer generischen Klasse mit einer Einschränkungsliste für den Typparameter veranschaulicht. In Code, der eine Instanz dieser Klasse erstellt, muss das Typargument implementieren sowohl die <xref:System.IComparable>und <xref:System.IDisposable>-Schnittstellen, ein Verweistyp sein und einen zugreifbaren parameterlosen Konstruktor verfügbar machen.</xref:System.IDisposable> </xref:System.IComparable>  
+### <a name="example-of-multiple-constraints"></a><span data-ttu-id="3acb6-182">Beispiel für mehrere Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="3acb6-182">Example of Multiple Constraints</span></span>  
+ <span data-ttu-id="3acb6-183">Im folgenden Beispiel wird die Rumpfdefinition einer generischen Klasse mit einer Einschränkungsliste für den Typparameter veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="3acb6-183">The following example shows a skeleton definition of a generic class with a constraint list on the type parameter.</span></span> <span data-ttu-id="3acb6-184">In dem Code, der eine Instanz dieser Klasse erstellt, muss das Typargument sowohl die <xref:System.IComparable> -Schnittstelle als auch die <xref:System.IDisposable> -Schnittstelle implementieren, ein Verweistyp sein und einen zugänglichen parameterlosen Konstruktor verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="3acb6-184">In the code that creates an instance of this class, the type argument must implement both the <xref:System.IComparable> and <xref:System.IDisposable> interfaces, be a reference type, and expose an accessible parameterless constructor.</span></span>  
   
- [!code-vb[VbVbalrDataTypes&6;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
   
-## <a name="important-terms"></a>Wichtige Begriffe  
- Für generische Typen werden die folgenden Begriffe verwendet:  
+## <a name="important-terms"></a><span data-ttu-id="3acb6-185">Wichtige Begriffe</span><span class="sxs-lookup"><span data-stu-id="3acb6-185">Important Terms</span></span>  
+ <span data-ttu-id="3acb6-186">Für generische Typen werden die folgenden Begriffe verwendet:</span><span class="sxs-lookup"><span data-stu-id="3acb6-186">Generic types introduce and use the following terms:</span></span>  
   
--   *Generischer Typ*. Eine Definition einer Klasse, einer Struktur, einer Schnittstelle, einer Prozedur oder eines Delegaten, für deren bzw. dessen Deklaration Sie mindestens einen Datentyp angeben.  
+-   <span data-ttu-id="3acb6-187">*Generischer Typ*.</span><span class="sxs-lookup"><span data-stu-id="3acb6-187">*Generic Type*.</span></span> <span data-ttu-id="3acb6-188">Eine Definition einer Klasse, einer Struktur, einer Schnittstelle, einer Prozedur oder eines Delegaten, für deren bzw. dessen Deklaration Sie mindestens einen Datentyp angeben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-188">A definition of a class, structure, interface, procedure, or delegate for which you supply at least one data type when you declare it.</span></span>  
   
--   *Typparameter*. In der Definition eines generischen Typs ein Platzhalter für einen Datentyp, den Sie beim Deklarieren des Typs angeben.  
+-   <span data-ttu-id="3acb6-189">*Typparameter*.</span><span class="sxs-lookup"><span data-stu-id="3acb6-189">*Type Parameter*.</span></span> <span data-ttu-id="3acb6-190">In der Definition eines generischen Typs ein Platzhalter für einen Datentyp, den Sie beim Deklarieren des Typs angeben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-190">In a generic type definition, a placeholder for a data type you supply when you declare the type.</span></span>  
   
--   *Typargument*. Ein spezieller Datentyp, der einen Typparameter ersetzt, wenn Sie einen konstruierten Typ aus einem generischen Typ deklarieren.  
+-   <span data-ttu-id="3acb6-191">*Typargument*.</span><span class="sxs-lookup"><span data-stu-id="3acb6-191">*Type Argument*.</span></span> <span data-ttu-id="3acb6-192">Ein spezieller Datentyp, der einen Typparameter ersetzt, wenn Sie einen konstruierten Typ aus einem generischen Typ deklarieren.</span><span class="sxs-lookup"><span data-stu-id="3acb6-192">A specific data type that replaces a type parameter when you declare a constructed type from a generic type.</span></span>  
   
--   *Einschränkung*. Eine Bedingung für einen Typparameter, die das Typargument einschränkt, das Sie für den Typparameter angeben können. Eine Einschränkung kann festlegen, dass das Typargument eine bestimmte Schnittstelle implementieren, eine bestimmte Klasse sein oder von einer bestimmten Klasse erben, einen zugänglichen parameterlosen Konstruktor haben oder ein Verweistyp oder ein Werttyp sein muss. Sie können diese Einschränkungen kombinieren, Sie können aber maximal eine Klasse angeben.  
+-   <span data-ttu-id="3acb6-193">*Einschränkung*.</span><span class="sxs-lookup"><span data-stu-id="3acb6-193">*Constraint*.</span></span> <span data-ttu-id="3acb6-194">Eine Bedingung für einen Typparameter, die das Typargument einschränkt, das Sie für den Typparameter angeben können.</span><span class="sxs-lookup"><span data-stu-id="3acb6-194">A condition on a type parameter that restricts the type argument you can supply for it.</span></span> <span data-ttu-id="3acb6-195">Eine Einschränkung kann festlegen, dass das Typargument eine bestimmte Schnittstelle implementieren, eine bestimmte Klasse sein oder von einer bestimmten Klasse erben, einen zugänglichen parameterlosen Konstruktor haben oder ein Verweistyp oder ein Werttyp sein muss.</span><span class="sxs-lookup"><span data-stu-id="3acb6-195">A constraint can require that the type argument must implement a particular interface, be or inherit from a particular class, have an accessible parameterless constructor, or be a reference type or a value type.</span></span> <span data-ttu-id="3acb6-196">Sie können diese Einschränkungen kombinieren, Sie können aber maximal eine Klasse angeben.</span><span class="sxs-lookup"><span data-stu-id="3acb6-196">You can combine these constraints, but you can specify at most one class.</span></span>  
   
--   *Konstruierter Typ.* Eine Klasse, eine Struktur, eine Schnittstelle, eine Prozedur oder ein Delegat, die bzw. der aus einem generischen Typ deklariert wird, indem Typargumente für dessen Typparameter angegeben werden.  
+-   <span data-ttu-id="3acb6-197">*Konstruierter Typ.*</span><span class="sxs-lookup"><span data-stu-id="3acb6-197">*Constructed Type*.</span></span> <span data-ttu-id="3acb6-198">Eine Klasse, eine Struktur, eine Schnittstelle, eine Prozedur oder ein Delegat, die bzw. der aus einem generischen Typ deklariert wird, indem Typargumente für dessen Typparameter angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="3acb6-198">A class, structure, interface, procedure, or delegate declared from a generic type by supplying type arguments for its type parameters.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Typumwandlungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)   
- [Als](../../../../visual-basic/language-reference/statements/as-clause.md)   
- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)   
- [Kovarianz und Kontravarianz](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
- [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a><span data-ttu-id="3acb6-199">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3acb6-199">See Also</span></span>  
+ [<span data-ttu-id="3acb6-200">Datentypen</span><span class="sxs-lookup"><span data-stu-id="3acb6-200">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="3acb6-201">Typzeichen</span><span class="sxs-lookup"><span data-stu-id="3acb6-201">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="3acb6-202">Werttypen und Verweistypen</span><span class="sxs-lookup"><span data-stu-id="3acb6-202">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="3acb6-203">Konvertierungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3acb6-203">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="3acb6-204">Problembehandlung bei Datentypen</span><span class="sxs-lookup"><span data-stu-id="3acb6-204">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="3acb6-205">Datentypen</span><span class="sxs-lookup"><span data-stu-id="3acb6-205">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="3acb6-206">Of</span><span class="sxs-lookup"><span data-stu-id="3acb6-206">Of</span></span>](../../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="3acb6-207">As</span><span class="sxs-lookup"><span data-stu-id="3acb6-207">As</span></span>](../../../../visual-basic/language-reference/statements/as-clause.md)  
+ [<span data-ttu-id="3acb6-208">Object-Datentyp</span><span class="sxs-lookup"><span data-stu-id="3acb6-208">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [<span data-ttu-id="3acb6-209">Kovarianz und Kontravarianz</span><span class="sxs-lookup"><span data-stu-id="3acb6-209">Covariance and Contravariance</span></span>](../../concepts/covariance-contravariance/index.md)  
+ [<span data-ttu-id="3acb6-210">Iteratoren</span><span class="sxs-lookup"><span data-stu-id="3acb6-210">Iterators</span></span>](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

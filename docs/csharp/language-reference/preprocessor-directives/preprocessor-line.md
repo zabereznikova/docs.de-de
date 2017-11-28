@@ -1,43 +1,23 @@
 ---
 title: '#<a name="line-c-reference"></a>line (C#-Referenz)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#line'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#line directive [C#]'
+f1_keywords: '#line'
+helpviewer_keywords: '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="line-c-reference"></a>#line (C#-Referenz)
-Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamenausgabe für Fehler und Warnungen bearbeiten. Dieses Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Zeilennummer 200 (obwohl der Standardwert #7 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet. Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
+# <a name="line-c-reference"></a><span data-ttu-id="0c1e6-102">#line (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="0c1e6-102">#line (C# Reference)</span></span>
+<span data-ttu-id="0c1e6-103">Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamenausgabe für Fehler und Warnungen bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="0c1e6-104">Dieses Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="0c1e6-105">Die `#line 200`-Anweisung erzwingt die Zeilennummer 200 (obwohl der Standardwert #7 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="0c1e6-106">Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  
   
 ```csharp
 class MainClass  
@@ -57,19 +37,19 @@ class MainClass
 }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die `#line`-Anweisung könnte in einem automatischen Zwischenschritt im Buildprozess verwendet werden. Wenn beispielsweise Zeilen aus der ursprünglichen Quellcodedatei entfernt würden, Sie jedoch trotzdem möchten, dass der Compiler eine Ausgabe basierend auf der ursprünglichen Zeilennummerierung in der Datei generiert, könnten Sie Zeilen entfernen und anschließend die ursprüngliche Zeilennummerierung mit `#line` simulieren.  
+## <a name="remarks"></a><span data-ttu-id="0c1e6-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0c1e6-107">Remarks</span></span>  
+ <span data-ttu-id="0c1e6-108">Die `#line`-Anweisung könnte in einem automatischen Zwischenschritt im Buildprozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-108">The `#line` directive might be used in an automated, intermediate step in the build process.</span></span> <span data-ttu-id="0c1e6-109">Wenn beispielsweise Zeilen aus der ursprünglichen Quellcodedatei entfernt würden, Sie jedoch trotzdem möchten, dass der Compiler eine Ausgabe basierend auf der ursprünglichen Zeilennummerierung in der Datei generiert, könnten Sie Zeilen entfernen und anschließend die ursprüngliche Zeilennummerierung mit `#line` simulieren.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-109">For example, if lines were removed from the original source code file, but you still wanted the compiler to generate output based on the original line numbering in the file, you could remove lines and then simulate the original line numbering with `#line`.</span></span>  
   
- Die `#line hidden`-Anweisung blendet die aufeinander folgenden Zeilen im Debugger aus, sodass alle Zeilen zwischen einer `#line hidden`-Anweisung und der nächsten `#line`-Anweisung (vorausgesetzt es handelt sich nicht um eine weitere `#line hidden`-Anweisung) übersprungen werden, wenn der Entwickler den Code durchläuft. Diese Option kann auch dazu verwendet werden, ASP.NET die Möglichkeit zu geben, zwischen benutzerdefiniertem und computergeneriertem Code zu unterscheiden. Obwohl ASP.NET der primäre Anwender dieser Funktion ist, ist es wahrscheinlich, dass mehr Quellgeneratoren sich diese zunutze machen werden.  
+ <span data-ttu-id="0c1e6-110">Die `#line hidden`-Anweisung blendet die aufeinander folgenden Zeilen im Debugger aus, sodass alle Zeilen zwischen einer `#line hidden`-Anweisung und der nächsten `#line`-Anweisung (vorausgesetzt es handelt sich nicht um eine weitere `#line hidden`-Anweisung) übersprungen werden, wenn der Entwickler den Code durchläuft.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-110">The `#line hidden` directive hides the successive lines from the debugger, such that when the developer steps through the code, any lines between a `#line hidden` and the next `#line` directive (assuming that it is not another `#line hidden` directive) will be stepped over.</span></span> <span data-ttu-id="0c1e6-111">Diese Option kann auch dazu verwendet werden, ASP.NET die Möglichkeit zu geben, zwischen benutzerdefiniertem und computergeneriertem Code zu unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-111">This option can also be used to allow ASP.NET to differentiate between user-defined and machine-generated code.</span></span> <span data-ttu-id="0c1e6-112">Obwohl ASP.NET der primäre Anwender dieser Funktion ist, ist es wahrscheinlich, dass mehr Quellgeneratoren sich diese zunutze machen werden.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-112">Although ASP.NET is the primary consumer of this feature, it is likely that more source generators will make use of it.</span></span>  
   
- Ein `#line hidden`-Anweisung hat keine Auswirkung auf Dateinamen oder Zeilennummern bei der Fehlerberichterstattung. Das bedeutet, wenn ein Fehler in einem ausgeblendeten Block gefunden wird, meldet der Compiler den aktuellen Dateinamen und die Zeilennummer des Fehlers.  
+ <span data-ttu-id="0c1e6-113">Ein `#line hidden`-Anweisung hat keine Auswirkung auf Dateinamen oder Zeilennummern bei der Fehlerberichterstattung.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-113">A `#line hidden` directive does not affect file names or line numbers in error reporting.</span></span> <span data-ttu-id="0c1e6-114">Das bedeutet, wenn ein Fehler in einem ausgeblendeten Block gefunden wird, meldet der Compiler den aktuellen Dateinamen und die Zeilennummer des Fehlers.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-114">That is, if an error is encountered in a hidden block, the compiler will report the current file name and line number of the error.</span></span>  
   
- Die `#line filename`-Anweisung gibt den Dateinamen an, von dem Sie möchten, dass er in der Compilerausgabe erscheint. Standardmäßig wird der tatsächliche Name der Quellcodedatei verwendet. Der Dateiname muss in doppelten Anführungszeichen ("") und hinter einer Zeilennummer stehen.  
+ <span data-ttu-id="0c1e6-115">Die `#line filename`-Anweisung gibt den Dateinamen an, von dem Sie möchten, dass er in der Compilerausgabe erscheint.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-115">The `#line filename` directive specifies the file name you want to appear in the compiler output.</span></span> <span data-ttu-id="0c1e6-116">Standardmäßig wird der tatsächliche Name der Quellcodedatei verwendet.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-116">By default, the actual name of the source code file is used.</span></span> <span data-ttu-id="0c1e6-117">Der Dateiname muss in doppelten Anführungszeichen ("") und hinter einer Zeilennummer stehen.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-117">The file name must be in double quotation marks ("") and must be preceded by a line number.</span></span>  
   
- Eine Quellcodedatei kann über eine beliebige Anzahl von `#line`-Anweisungen verfügen.  
+ <span data-ttu-id="0c1e6-118">Eine Quellcodedatei kann über eine beliebige Anzahl von `#line`-Anweisungen verfügen.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-118">A source code file can have any number of `#line` directives.</span></span>  
   
-## <a name="example-1"></a>Beispiel 1  
- Das folgende Beispiel zeigt, wie der Debugger die ausgeblendeten Zeilen im Code ignoriert. Wenn Sie das Beispiel ausführen, werden drei Textzeilen angezeigt. Wenn Sie jedoch wie im Beispiel gezeigt einen Haltepunkt setzen und F10 drücken, um den Code zu durchlaufen, werden Sie feststellen, dass der Debugger die ausgeblendete Zeile ignoriert. Beachten Sie zudem, dass die ausgeblendete Zeile selbst dann vom Debugger ignoriert wird, wenn Sie einen Haltepunkt an dieser Zeile setzen.  
+## <a name="example-1"></a><span data-ttu-id="0c1e6-119">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="0c1e6-119">Example 1</span></span>  
+ <span data-ttu-id="0c1e6-120">Das folgende Beispiel zeigt, wie der Debugger die ausgeblendeten Zeilen im Code ignoriert.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-120">The following example shows how the debugger ignores the hidden lines in the code.</span></span> <span data-ttu-id="0c1e6-121">Wenn Sie das Beispiel ausführen, werden drei Textzeilen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-121">When you run the example, it will display three lines of text.</span></span> <span data-ttu-id="0c1e6-122">Wenn Sie jedoch wie im Beispiel gezeigt einen Haltepunkt setzen und F10 drücken, um den Code zu durchlaufen, werden Sie feststellen, dass der Debugger die ausgeblendete Zeile ignoriert.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-122">However, when you set a break point, as shown in the example, and hit F10 to step through the code, you will notice that the debugger ignores the hidden line.</span></span> <span data-ttu-id="0c1e6-123">Beachten Sie zudem, dass die ausgeblendete Zeile selbst dann vom Debugger ignoriert wird, wenn Sie einen Haltepunkt an dieser Zeile setzen.</span><span class="sxs-lookup"><span data-stu-id="0c1e6-123">Notice also that even if you set a break point at the hidden line, the debugger will still ignore it.</span></span>  
   
 ```csharp
 // preprocessor_linehidden.cs  
@@ -87,8 +67,7 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="0c1e6-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c1e6-124">See Also</span></span>  
+ [<span data-ttu-id="0c1e6-125">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="0c1e6-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="0c1e6-126">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="0c1e6-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0c1e6-127">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="0c1e6-127">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

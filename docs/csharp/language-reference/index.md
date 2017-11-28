@@ -1,12 +1,9 @@
 ---
 title: C#-Referenz
-ms.date: 2017-02-14
+ms.date: 02/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - Visual C#, language reference
 - language reference [C#]
@@ -14,69 +11,46 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6f885dcf17bb1e6d6cf4ba628b586f2107675c4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="c-reference"></a>C#-Referenz
-Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, Sonderzeichen, Präprozessordirektiven, Compileroptionen sowie Compilerfehlern und -warnmeldungen von C#.  
+# <a name="c-reference"></a><span data-ttu-id="c7aab-102">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="c7aab-102">C# Reference</span></span>
+<span data-ttu-id="c7aab-103">Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, Sonderzeichen, Präprozessordirektiven, Compileroptionen sowie Compilerfehlern und -warnmeldungen von C#.</span><span class="sxs-lookup"><span data-stu-id="c7aab-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [C#-Schlüsselwörter](../../csharp/language-reference/keywords/index.md)  
- Enthält Links zu Informationen über C#-Schlüsselwörtern und zur Syntax.  
+## <a name="in-this-section"></a><span data-ttu-id="c7aab-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c7aab-104">In This Section</span></span>  
+ [<span data-ttu-id="c7aab-105">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="c7aab-105">C# Keywords</span></span>](../../csharp/language-reference/keywords/index.md)  
+ <span data-ttu-id="c7aab-106">Enthält Links zu Informationen über C#-Schlüsselwörtern und zur Syntax.</span><span class="sxs-lookup"><span data-stu-id="c7aab-106">Provides links to information about C# keywords and syntax.</span></span>  
   
- [C#-Operatoren](../../csharp/language-reference/operators/index.md)  
- Enthält Links zu Informationen über C#-Operatoren und zur Syntax.  
+ [<span data-ttu-id="c7aab-107">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="c7aab-107">C# Operators</span></span>](../../csharp/language-reference/operators/index.md)  
+ <span data-ttu-id="c7aab-108">Enthält Links zu Informationen über C#-Operatoren und zur Syntax.</span><span class="sxs-lookup"><span data-stu-id="c7aab-108">Provides links to information about C# operators and syntax.</span></span>  
 
- [C#-Sonderzeichen](../../csharp/language-reference/tokens/index.md)  
- Enthält Links zu Informationen über kontextbezogene Sonderzeichen in C# und deren Verwendung.  
+ [<span data-ttu-id="c7aab-109">C#-Sonderzeichen</span><span class="sxs-lookup"><span data-stu-id="c7aab-109">C# Special Characters</span></span>](../../csharp/language-reference/tokens/index.md)  
+ <span data-ttu-id="c7aab-110">Enthält Links zu Informationen über kontextbezogene Sonderzeichen in C# und deren Verwendung.</span><span class="sxs-lookup"><span data-stu-id="c7aab-110">Provides links to information about special contextual characters in C# and their usage.</span></span>  
 
- [C#-Präprozessoranweisungen](../../csharp/language-reference/preprocessor-directives/index.md)  
- Enthält Links zu Informationen über die Compilerbefehle zum Einbetten in C#-Quellcode.  
+ [<span data-ttu-id="c7aab-111">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="c7aab-111">C# Preprocessor Directives</span></span>](../../csharp/language-reference/preprocessor-directives/index.md)  
+ <span data-ttu-id="c7aab-112">Enthält Links zu Informationen über die Compilerbefehle zum Einbetten in C#-Quellcode.</span><span class="sxs-lookup"><span data-stu-id="c7aab-112">Provides links to information about compiler commands for embedding in C# source code.</span></span>  
   
- [C#-Compileroptionen](../../csharp/language-reference/compiler-options/index.md)  
- Enthält Informationen über Compileroptionen und ihre Verwendung.  
+ [<span data-ttu-id="c7aab-113">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="c7aab-113">C# Compiler Options</span></span>](../../csharp/language-reference/compiler-options/index.md)  
+ <span data-ttu-id="c7aab-114">Enthält Informationen über Compileroptionen und ihre Verwendung.</span><span class="sxs-lookup"><span data-stu-id="c7aab-114">Includes information about compiler options and how to use them.</span></span>  
   
- [C#-Compilerfehler](../../csharp/language-reference/compiler-messages/index.md)  
- Enthält Codeausschnitte, die die Ursache und Korrektur der C#-Compilerfehler und -warnungen veranschaulichen.  
+ [<span data-ttu-id="c7aab-115">C#-Compilerfehler</span><span class="sxs-lookup"><span data-stu-id="c7aab-115">C# Compiler Errors</span></span>](../../csharp/language-reference/compiler-messages/index.md)  
+ <span data-ttu-id="c7aab-116">Enthält Codeausschnitte, die die Ursache und Korrektur der C#-Compilerfehler und -warnungen veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="c7aab-116">Includes code snippets that demonstrate the cause and correction of C# compiler errors and warnings.</span></span>  
   
- [C#-Programmiersprachenspezifikation](../../csharp/language-reference/language-specification/index.md)  
- Enthält Zeiger auf die neueste Version der C#-Spezifikation im Microsoft Word-Format.  
+ [<span data-ttu-id="c7aab-117">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="c7aab-117">C# Language Specification</span></span>](../../csharp/language-reference/language-specification/index.md)  
+ <span data-ttu-id="c7aab-118">Enthält Zeiger auf die neueste Version der C#-Spezifikation im Microsoft Word-Format.</span><span class="sxs-lookup"><span data-stu-id="c7aab-118">Provides pointers to the latest version of the C# Language Specification in Microsoft Word format.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
-<!--
- [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
- Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
--->  
- [KB-Artikel zu C# in der Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=70368)  
- Öffnet eine Microsoft-Suchseite für Knowledge Base-Artikel, die auf MSDN verfügbar sind.  
-  
- [C#](../../csharp/index.md): Enthält ein Portal für die Visual C#-Dokumentation.  
-  
- [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Enthält Links zu konzeptionellen und aufgabenspezifischen Themen, in denen IDE und Editor beschrieben werden.  
-  
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
- Enthält Informationen zur Verwendung der C#-Programmiersprache.
+## <a name="related-sections"></a><span data-ttu-id="c7aab-119">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="c7aab-119">Related Sections</span></span>  
 
+ <span data-ttu-id="c7aab-120">[C#](../../csharp/index.md): Enthält ein Portal für die Visual C#-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="c7aab-120">[C#](../../csharp/index.md) Provides a portal to Visual C# documentation.</span></span>  
+  
+ [<span data-ttu-id="c7aab-121">Verwenden der Visual Studio-Entwicklungsumgebung für C#</span><span class="sxs-lookup"><span data-stu-id="c7aab-121">Using the Visual Studio Development Environment for C#</span></span>](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ <span data-ttu-id="c7aab-122">Enthält Links zu konzeptionellen und aufgabenspezifischen Themen, in denen IDE und Editor beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="c7aab-122">Provides links to conceptual and task topics that describe the IDE and Editor.</span></span>  
+  
+ [<span data-ttu-id="c7aab-123">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="c7aab-123">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
+ <span data-ttu-id="c7aab-124">Enthält Informationen zur Verwendung der C#-Programmiersprache.</span><span class="sxs-lookup"><span data-stu-id="c7aab-124">Includes information about how to use the C# programming language.</span></span>

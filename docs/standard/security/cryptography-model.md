@@ -1,45 +1,43 @@
 ---
-title: ".NET Framework Cryptography Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "cryptography [.NET Framework], model"
-  - "encryption [.NET Framework], model"
+title: "Das Kryptografiemodell in .NET Framework"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [.NET Framework], model
+- encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 9fb0a726a4bef5b6efa67d5f63c1899468f7e8ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework Cryptography Model
-.NET Framework stellt Implementierungen von vielen kryptografischen Standardalgorithmen bereit.  Diese Algorithmen sind einfach zu verwenden und die sichersten möglichen Standardeigenschaften.  Darüber hinaus ist das .NET Framework\-Kryptografiemodell mit Objektvererbung, Streamdesign und Konfiguration äußerst erweiterbar.  
+# <a name="net-framework-cryptography-model"></a><span data-ttu-id="8af25-102">Das Kryptografiemodell in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8af25-102">.NET Framework Cryptography Model</span></span>
+<span data-ttu-id="8af25-103">.NET Framework stellt Implementierungen von vielen kryptografischen Standardalgorithmen bereit.</span><span class="sxs-lookup"><span data-stu-id="8af25-103">The .NET Framework provides implementations of many standard cryptographic algorithms.</span></span> <span data-ttu-id="8af25-104">Diese Algorithmen sind einfach zu verwenden und die sichersten möglichen Standardeigenschaften.</span><span class="sxs-lookup"><span data-stu-id="8af25-104">These algorithms are easy to use and have the safest possible default properties.</span></span> <span data-ttu-id="8af25-105">Darüber hinaus ist das .NET Framework-Kryptografiemodell mit Objektvererbung, Streamdesign und Konfiguration äußerst erweiterbar.</span><span class="sxs-lookup"><span data-stu-id="8af25-105">In addition, the .NET Framework cryptography model of object inheritance, stream design, and configuration is extremely extensible.</span></span>  
   
-## Objektvererbung  
- Das Sicherheitssystem von .NET Framework implementiert ein erweiterbares Muster der abgeleiteten Klassenvererbung.  Die Hierarchie lautet wie folgt:  
+## <a name="object-inheritance"></a><span data-ttu-id="8af25-106">Objektvererbung</span><span class="sxs-lookup"><span data-stu-id="8af25-106">Object Inheritance</span></span>  
+ <span data-ttu-id="8af25-107">Das Sicherheitssystem von .NET Framework implementiert ein erweiterbares Muster der abgeleiteten Klassenvererbung.</span><span class="sxs-lookup"><span data-stu-id="8af25-107">The .NET Framework security system implements an extensible pattern of derived class inheritance.</span></span> <span data-ttu-id="8af25-108">Die Hierarchie lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="8af25-108">The hierarchy is as follows:</span></span>  
   
--   Algorithmustypklasse, etwa <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> oder <xref:System.Security.Cryptography.HashAlgorithm>.  Diese Ebene ist abstrakt.  
+-   <span data-ttu-id="8af25-109">Algorithmustypklasse, etwa <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> oder <xref:System.Security.Cryptography.HashAlgorithm>.</span><span class="sxs-lookup"><span data-stu-id="8af25-109">Algorithm type class, such as <xref:System.Security.Cryptography.SymmetricAlgorithm>,  <xref:System.Security.Cryptography.AsymmetricAlgorithm> or <xref:System.Security.Cryptography.HashAlgorithm>.</span></span> <span data-ttu-id="8af25-110">Diese Ebene ist abstrakt.</span><span class="sxs-lookup"><span data-stu-id="8af25-110">This level is abstract.</span></span>  
   
--   Algorithmusklasse, die von einer Algorithmustypklasse erbt; z. B. <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RC2> oder <xref:System.Security.Cryptography.ECDiffieHellman>.  Diese Ebene ist abstrakt.  
+-   <span data-ttu-id="8af25-111">Algorithmusklasse, die von einer Algorithmustypklasse erbt; z. B. <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RC2> oder <xref:System.Security.Cryptography.ECDiffieHellman>.</span><span class="sxs-lookup"><span data-stu-id="8af25-111">Algorithm class that inherits from an algorithm type class; for example, <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RC2>, or <xref:System.Security.Cryptography.ECDiffieHellman>.</span></span> <span data-ttu-id="8af25-112">Diese Ebene ist abstrakt.</span><span class="sxs-lookup"><span data-stu-id="8af25-112">This level is abstract.</span></span>  
   
--   Implementierung einer Algorithmusklasse, die von einer Algorithmusklasse erbt; z. B. <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider> oder <xref:System.Security.Cryptography.ECDiffieHellmanCng>.  Diese Ebene ist vollständig implementiert.  
+-   <span data-ttu-id="8af25-113">Implementierung einer Algorithmusklasse, die von einer Algorithmusklasse erbt; z. B. <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider> oder <xref:System.Security.Cryptography.ECDiffieHellmanCng>.</span><span class="sxs-lookup"><span data-stu-id="8af25-113">Implementation of an algorithm class that inherits from an algorithm class; for example, <xref:System.Security.Cryptography.AesManaged>, <xref:System.Security.Cryptography.RC2CryptoServiceProvider>, or <xref:System.Security.Cryptography.ECDiffieHellmanCng>.</span></span> <span data-ttu-id="8af25-114">Diese Ebene ist vollständig implementiert.</span><span class="sxs-lookup"><span data-stu-id="8af25-114">This level is fully implemented.</span></span>  
   
- Wird dieses Muster abgeleiteter Klassen verwendet, ist es einfach, einen neuen Algorithmus oder eine neue Implementierung eines vorhandenen Algorithmus hinzuzufügen.  Möchten Sie z. B. einen neuen Algorithmus für einen öffentlichem Schlüssel erstellen, würden Sie von der <xref:System.Security.Cryptography.AsymmetricAlgorithm>\-Klasse erben.  Um eine neue Implementierung eines bestimmten Algorithmus zu erstellen, würden Sie eine nicht abstrakte abgeleitete Klasse dieses Algorithmus erstellen.  
+ <span data-ttu-id="8af25-115">Wird dieses Muster abgeleiteter Klassen verwendet, ist es einfach, einen neuen Algorithmus oder eine neue Implementierung eines vorhandenen Algorithmus hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="8af25-115">Using this pattern of derived classes, it is easy to add a new algorithm or a new implementation of an existing algorithm.</span></span> <span data-ttu-id="8af25-116">Möchten Sie z. B. einen neuen Algorithmus für einen öffentlichem Schlüssel erstellen, würden Sie von der <xref:System.Security.Cryptography.AsymmetricAlgorithm>-Klasse erben.</span><span class="sxs-lookup"><span data-stu-id="8af25-116">For example, to create a new public-key algorithm, you would inherit from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class.</span></span> <span data-ttu-id="8af25-117">Um eine neue Implementierung eines bestimmten Algorithmus zu erstellen, würden Sie eine nicht abstrakte abgeleitete Klasse dieses Algorithmus erstellen.</span><span class="sxs-lookup"><span data-stu-id="8af25-117">To create a new implementation of a specific algorithm, you would create a non-abstract derived class of that algorithm.</span></span>  
   
-## So werden Algorithmen in .NET Framework implementiert  
- Als ein Beispiel für die verschiedenen Implementierungen eines Algorithmus können Sie sich symmetrische Algorithmen ansehen.  Die Basis für alle symmetrischen Algorithmen ist die <xref:System.Security.Cryptography.SymmetricAlgorithm>\-Klasse, die von den folgenden Algorithmen geerbt wird:  
+## <a name="how-algorithms-are-implemented-in-the-net-framework"></a><span data-ttu-id="8af25-118">So werden Algorithmen in .NET Framework implementiert</span><span class="sxs-lookup"><span data-stu-id="8af25-118">How Algorithms Are Implemented in the .NET Framework</span></span>  
+ <span data-ttu-id="8af25-119">Als ein Beispiel für die verschiedenen Implementierungen eines Algorithmus können Sie sich symmetrische Algorithmen ansehen.</span><span class="sxs-lookup"><span data-stu-id="8af25-119">As an example of the different implementations available for an algorithm, consider symmetric algorithms.</span></span> <span data-ttu-id="8af25-120">Die Basis für alle symmetrischen Algorithmen ist die <xref:System.Security.Cryptography.SymmetricAlgorithm>-Klasse, die von den folgenden Algorithmen geerbt wird:</span><span class="sxs-lookup"><span data-stu-id="8af25-120">The base for all symmetric algorithms is <xref:System.Security.Cryptography.SymmetricAlgorithm>, which is inherited by the following algorithms:</span></span>  
   
 1.  <xref:System.Security.Cryptography.Aes>  
   
@@ -51,51 +49,51 @@ caps.handback.revision: 17
   
 5.  <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes> wird von zwei Klassen geerbt: <xref:System.Security.Cryptography.AesCryptoServiceProvider> und <xref:System.Security.Cryptography.AesManaged>.  Die <xref:System.Security.Cryptography.AesCryptoServiceProvider>\-Klasse ist ein Wrapper um die Implementierung der Windows\-Kryptografie\-API \(CAPI\) von Aes, während die <xref:System.Security.Cryptography.AesManaged>\-Klasse vollständig in verwaltetem Code geschrieben ist.  Außerdem gibt es einen dritten Typ von Implementierung ,Cryptography Next Generation \(CNG\), zusätzlich zu den verwalteten und den CAPI\-Implementierungen.  Ein Beispiel für einen CNG\-Algorithmus ist <xref:System.Security.Cryptography.ECDiffieHellmanCng>.  CNG\-Algorithmen sind ab Windows Vista verfügbar.  
+ <span data-ttu-id="8af25-121"><xref:System.Security.Cryptography.Aes> wird von zwei Klassen geerbt: <xref:System.Security.Cryptography.AesCryptoServiceProvider> und <xref:System.Security.Cryptography.AesManaged>.</span><span class="sxs-lookup"><span data-stu-id="8af25-121"><xref:System.Security.Cryptography.Aes> is inherited by two classes: <xref:System.Security.Cryptography.AesCryptoServiceProvider> and <xref:System.Security.Cryptography.AesManaged>.</span></span> <span data-ttu-id="8af25-122">Die <xref:System.Security.Cryptography.AesCryptoServiceProvider>-Klasse ist ein Wrapper um die Implementierung der Windows-Kryptografie-API (CAPI) von Aes, während die <xref:System.Security.Cryptography.AesManaged>-Klasse vollständig in verwaltetem Code geschrieben ist.</span><span class="sxs-lookup"><span data-stu-id="8af25-122">The <xref:System.Security.Cryptography.AesCryptoServiceProvider> class is a wrapper around the Windows Cryptography API (CAPI) implementation of Aes, whereas the <xref:System.Security.Cryptography.AesManaged> class is written entirely in managed code.</span></span> <span data-ttu-id="8af25-123">Außerdem gibt es einen dritten Typ von Implementierung ,Cryptography Next Generation (CNG), zusätzlich zu den verwalteten und den CAPI-Implementierungen.</span><span class="sxs-lookup"><span data-stu-id="8af25-123">There is also a third type of implementation, Cryptography Next Generation (CNG), in addition to the managed and CAPI implementations.</span></span> <span data-ttu-id="8af25-124">Ein Beispiel für einen CNG-Algorithmus ist <xref:System.Security.Cryptography.ECDiffieHellmanCng>.</span><span class="sxs-lookup"><span data-stu-id="8af25-124">An example of a CNG algorithm is <xref:System.Security.Cryptography.ECDiffieHellmanCng>.</span></span> <span data-ttu-id="8af25-125">CNG-Algorithmen sind ab Windows Vista verfügbar.</span><span class="sxs-lookup"><span data-stu-id="8af25-125">CNG algorithms are available on Windows Vista and later.</span></span>  
   
- Sie haben die Wahl, welche Implementierung für Sie am besten geeignet ist.  Die verwalteten Implementierungen sind auf allen Plattformen verfügbar, die .NET Framework unterstützen.  Die CAPI\-Implementierungen sind unter älteren Betriebssystemen verfügbar und werden nicht mehr entwickelt.  CNG ist die neueste Implementierung, in der die neue Entwicklungen erfolgen.  Die verwalteten Implementierungen sind nicht durch die FIPS \(Federal Information Processing Standards\) zertifiziert und möglicherweise langsamer als die Wrapperklassen.  
+ <span data-ttu-id="8af25-126">Sie haben die Wahl, welche Implementierung für Sie am besten geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="8af25-126">You can choose which implementation is best for you.</span></span>  <span data-ttu-id="8af25-127">Die verwalteten Implementierungen sind auf allen Plattformen verfügbar, die .NET Framework unterstützen.</span><span class="sxs-lookup"><span data-stu-id="8af25-127">The managed implementations are available on all platforms that support the .NET Framework.</span></span>  <span data-ttu-id="8af25-128">Die CAPI-Implementierungen sind unter älteren Betriebssystemen verfügbar und werden nicht mehr entwickelt.</span><span class="sxs-lookup"><span data-stu-id="8af25-128">The CAPI implementations are available on older operating systems, and are no longer being developed.</span></span> <span data-ttu-id="8af25-129">CNG ist die neueste Implementierung, in der die neue Entwicklungen erfolgen.</span><span class="sxs-lookup"><span data-stu-id="8af25-129">CNG is the very latest implementation where new development will take place.</span></span> <span data-ttu-id="8af25-130">Die verwalteten Implementierungen sind nicht durch die FIPS (Federal Information Processing Standards) zertifiziert und möglicherweise langsamer als die Wrapperklassen.</span><span class="sxs-lookup"><span data-stu-id="8af25-130">However, the managed implementations are not certified by the Federal Information Processing Standards (FIPS), and may be slower than the wrapper classes.</span></span>  
   
-## Streamdesign \(Datenstromdesign\)  
- Die Common Language Runtime verwendet ein streamorientiertes Design für die Implementierung von symmetrischen Algorithmen und Hashalgorithmen.  Der Kern dieses Designs ist die <xref:System.Security.Cryptography.CryptoStream>\-Klasse, die aus der <xref:System.IO.Stream>\-Klasse abgeleitet ist.  Streambasierte kryptografische Objekte unterstützen eine einzelne Standardschnittstelle \(`CryptoStream`\) für die Verarbeitung des Datenübertragungsanteils des jeweiligen Objekts.  Da alle Objekte auf Basis einer Standardschnittstelle erstellt werden, können Sie mehrere Objekte verketten \(z. B. ein Hashobjekt, auf das ein Verschlüsselungsobjekt folgt\), und Sie können mehrere Vorgänge für die Daten ausführen, ohne eine temporäre Speicherung für die Daten zu benötigen.  Das Streamingmodell ermöglicht es Ihnen auch, Objekte aus kleineren Objekten zu erstellen.  Beispielsweise kann ein kombinierter Verschlüsselungs\- und Hashalgorithmus als einzelnes Streamobjekt \(Datenstromobjekt\) angezeigt werden, obwohl dieses Objekt möglicherweise aus einem Satz von Streamobjekten erstellt wurde.  
+## <a name="stream-design"></a><span data-ttu-id="8af25-131">Streamdesign (Datenstromdesign)</span><span class="sxs-lookup"><span data-stu-id="8af25-131">Stream Design</span></span>  
+ <span data-ttu-id="8af25-132">Die Common Language Runtime verwendet ein streamorientiertes Design für die Implementierung von symmetrischen Algorithmen und Hashalgorithmen.</span><span class="sxs-lookup"><span data-stu-id="8af25-132">The common language runtime uses a stream-oriented design for implementing symmetric algorithms and hash algorithms.</span></span> <span data-ttu-id="8af25-133">Der Kern dieses Designs ist die <xref:System.Security.Cryptography.CryptoStream>-Klasse, die aus der <xref:System.IO.Stream>-Klasse abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="8af25-133">The core of this design is the <xref:System.Security.Cryptography.CryptoStream> class, which derives from the <xref:System.IO.Stream> class.</span></span> <span data-ttu-id="8af25-134">Streambasierte kryptografische Objekte unterstützen eine einzelne Standardschnittstelle (`CryptoStream`) für die Verarbeitung des Datenübertragungsanteils des jeweiligen Objekts.</span><span class="sxs-lookup"><span data-stu-id="8af25-134">Stream-based cryptographic objects support a single standard interface (`CryptoStream`) for handling the data transfer portion of the object.</span></span> <span data-ttu-id="8af25-135">Da alle Objekte auf Basis einer Standardschnittstelle erstellt werden, können Sie mehrere Objekte verketten (z. B. ein Hashobjekt, auf das ein Verschlüsselungsobjekt folgt), und Sie können mehrere Vorgänge für die Daten ausführen, ohne eine temporäre Speicherung für die Daten zu benötigen.</span><span class="sxs-lookup"><span data-stu-id="8af25-135">Because all the objects are built on a standard interface, you can chain together multiple objects (such as a hash object followed by an encryption object), and you can perform multiple operations on the data without needing any intermediate storage for it.</span></span> <span data-ttu-id="8af25-136">Das Streamingmodell ermöglicht es Ihnen auch, Objekte aus kleineren Objekten zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="8af25-136">The streaming model also enables you to build objects from smaller objects.</span></span> <span data-ttu-id="8af25-137">Beispielsweise kann ein kombinierter Verschlüsselungs- und Hashalgorithmus als einzelnes Streamobjekt (Datenstromobjekt) angezeigt werden, obwohl dieses Objekt möglicherweise aus einem Satz von Streamobjekten erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="8af25-137">For example, a combined encryption and hash algorithm can be viewed as a single stream object, although this object might be built from a set of stream objects.</span></span>  
   
-## Kryptografische Konfiguration  
- Mit einer kryptografischen Konfiguration können Sie eine bestimmte Implementierung eines Algorithmus zu einem Algorithmusnamen auflösen, wodurch Erweiterbarkeit der Kryptografieklassen von .NET Framework ermöglicht wird.  Sie können Ihre eigene Hardware\- oder Softwareimplementierung eines Algorithmus hinzufügen und die Implementierung dem von Ihnen gewählten Algorithmusnamen zuordnen.  Ist in der Konfigurationsdatei kein Algorithmus angegeben, werden die Standardeinstellungen verwendet.  Weitere Informationen zu einer kryptografischen Konfiguration finden Sie unter [Konfigurieren kryptografischer Klassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md).  
+## <a name="cryptographic-configuration"></a><span data-ttu-id="8af25-138">Kryptografische Konfiguration</span><span class="sxs-lookup"><span data-stu-id="8af25-138">Cryptographic Configuration</span></span>  
+ <span data-ttu-id="8af25-139">Mit einer kryptografischen Konfiguration können Sie eine bestimmte Implementierung eines Algorithmus zu einem Algorithmusnamen auflösen, wodurch Erweiterbarkeit der Kryptografieklassen von .NET Framework ermöglicht wird.</span><span class="sxs-lookup"><span data-stu-id="8af25-139">Cryptographic configuration lets you resolve a specific implementation of an algorithm to an algorithm name, allowing extensibility of the .NET Framework cryptography classes.</span></span> <span data-ttu-id="8af25-140">Sie können Ihre eigene Hardware- oder Softwareimplementierung eines Algorithmus hinzufügen und die Implementierung dem von Ihnen gewählten Algorithmusnamen zuordnen.</span><span class="sxs-lookup"><span data-stu-id="8af25-140">You can add your own hardware or software implementation of an algorithm and map the implementation to the algorithm name of your choice.</span></span> <span data-ttu-id="8af25-141">Ist in der Konfigurationsdatei kein Algorithmus angegeben, werden die Standardeinstellungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="8af25-141">If an algorithm is not specified in the configuration file, the default settings are used.</span></span> <span data-ttu-id="8af25-142">Weitere Informationen zu einer kryptografischen Konfiguration finden Sie unter [konfigurieren kryptografischer Klassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md).</span><span class="sxs-lookup"><span data-stu-id="8af25-142">For more information about cryptographic configuration, see [Configuring Cryptography Classes](../../../docs/framework/configure-apps/configure-cryptography-classes.md).</span></span>  
   
-## Wählen eines Algorithmus  
- Sie können einen Algorithmus für unterschiedliche Zwecke wählen: z. B. für Datenintegrität, für Datenschutz oder zum Generieren eines Schlüssels.  Symmetrische und Hashalgorithmen sind dazu vorgesehen, Daten entweder aus Integritätsgründen \(Schutz vor Änderungen\) oder aus Datenschutzgründen \(Schutz vor Anzeigen\) zu schützen.  Hashalgorithmen werden hauptsächlich für die Datenintegrität verwendet.  
+## <a name="choosing-an-algorithm"></a><span data-ttu-id="8af25-143">Wählen eines Algorithmus</span><span class="sxs-lookup"><span data-stu-id="8af25-143">Choosing an Algorithm</span></span>  
+ <span data-ttu-id="8af25-144">Sie können einen Algorithmus für unterschiedliche Zwecke wählen: z. B. für Datenintegrität, für Datenschutz oder zum Generieren eines Schlüssels.</span><span class="sxs-lookup"><span data-stu-id="8af25-144">You can select an algorithm for different reasons: for example, for data integrity, for data privacy, or to generate a key.</span></span> <span data-ttu-id="8af25-145">Symmetrische und Hashalgorithmen sind dazu vorgesehen, Daten entweder aus Integritätsgründen (Schutz vor Änderungen) oder aus Datenschutzgründen (Schutz vor Anzeigen) zu schützen.</span><span class="sxs-lookup"><span data-stu-id="8af25-145">Symmetric and hash algorithms are intended for protecting data for either integrity reasons (protect from change) or privacy reasons (protect from viewing).</span></span> <span data-ttu-id="8af25-146">Hashalgorithmen werden hauptsächlich für die Datenintegrität verwendet.</span><span class="sxs-lookup"><span data-stu-id="8af25-146">Hash algorithms are used primarily for data integrity.</span></span>  
   
- Es folgt eine Liste empfohlener Algorithmen nach Anwendung:  
+ <span data-ttu-id="8af25-147">Es folgt eine Liste empfohlener Algorithmen nach Anwendung:</span><span class="sxs-lookup"><span data-stu-id="8af25-147">Here is a list of recommended algorithms by application:</span></span>  
   
--   Datenschutz:  
+-   <span data-ttu-id="8af25-148">Datenschutz:</span><span class="sxs-lookup"><span data-stu-id="8af25-148">Data privacy:</span></span>  
   
     -   <xref:System.Security.Cryptography.Aes>  
   
--   Datenintegrität:  
+-   <span data-ttu-id="8af25-149">Datenintegrität:</span><span class="sxs-lookup"><span data-stu-id="8af25-149">Data integrity:</span></span>  
   
     -   <xref:System.Security.Cryptography.HMACSHA256>  
   
     -   <xref:System.Security.Cryptography.HMACSHA512>  
   
--   Digitale Signatur:  
+-   <span data-ttu-id="8af25-150">Digitale Signatur:</span><span class="sxs-lookup"><span data-stu-id="8af25-150">Digital signature:</span></span>  
   
     -   <xref:System.Security.Cryptography.ECDsa>  
   
     -   <xref:System.Security.Cryptography.RSA>  
   
--   Schlüsselaustausch:  
+-   <span data-ttu-id="8af25-151">Schlüsselaustausch:</span><span class="sxs-lookup"><span data-stu-id="8af25-151">Key exchange:</span></span>  
   
     -   <xref:System.Security.Cryptography.ECDiffieHellman>  
   
     -   <xref:System.Security.Cryptography.RSA>  
   
--   Zufallszahlengenerierung:  
+-   <span data-ttu-id="8af25-152">Zufallszahlengenerierung:</span><span class="sxs-lookup"><span data-stu-id="8af25-152">Random number generation:</span></span>  
   
     -   <xref:System.Security.Cryptography.RNGCryptoServiceProvider>  
   
--   Generieren eines Schlüssels aus einem Kennwort:  
+-   <span data-ttu-id="8af25-153">Generieren eines Schlüssels aus einem Kennwort:</span><span class="sxs-lookup"><span data-stu-id="8af25-153">Generating a key from a password:</span></span>  
   
     -   <xref:System.Security.Cryptography.Rfc2898DeriveBytes>  
   
-## Siehe auch  
- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)   
- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="8af25-154">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8af25-154">See Also</span></span>  
+ [<span data-ttu-id="8af25-155">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="8af25-155">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)  
+ 

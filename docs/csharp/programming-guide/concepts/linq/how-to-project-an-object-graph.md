@@ -1,31 +1,27 @@
 ---
 title: 'Vorgehensweise: Projektieren eines Objektdiagramms (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 222fa65848d503a6fe5d1eb961b97c5760e5eb6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f09d1ab23d027829a8b3ea94fa62455ddb95499
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Vorgehensweise: Projektieren eines Objektdiagramms (C#)
-In diesem Thema wird gezeigt, wie Sie ein XML-Dokument für das Projizieren (oder Auffüllen) eines Objektdiagramms verwenden können.  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="00276-102">Vorgehensweise: Projektieren eines Objektdiagramms (C#)</span><span class="sxs-lookup"><span data-stu-id="00276-102">How to: Project an Object Graph (C#)</span></span>
+<span data-ttu-id="00276-103">In diesem Thema wird gezeigt, wie Sie ein XML-Dokument für das Projizieren (oder Auffüllen) eines Objektdiagramms verwenden können.</span><span class="sxs-lookup"><span data-stu-id="00276-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende Code füllt ein Objektdiagramm mit den Klassen `Address`, `PurchaseOrder` und `PurchaseOrderItem` aus dem XML-Dokument in [XML-Beispieldatei: Typische Bestellung (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+## <a name="example"></a><span data-ttu-id="00276-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="00276-104">Example</span></span>  
+ <span data-ttu-id="00276-105">Der folgende Code füllt ein Objektdiagramm mit den Klassen `Address`, `PurchaseOrder` und `PurchaseOrderItem` aus dem XML-Dokument in [XML-Beispieldatei: Typische Bestellung (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="00276-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -227,9 +223,9 @@ class Program {
 }  
 ```  
   
- In diesem Beispiel wird das Ergebnis der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage als eine <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem` zurückgegeben. Die Elemente in der `PurchaseOrder`-Klasse sind vom Typ <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem`. Der Code verwendet die <xref:System.Linq.Enumerable.ToList%2A>-Erweiterungsmethode, um aus den Ergebnissen der Abfrage eine <xref:System.Collections.Generic.List%601>-Auflistung zu erstellen.  
+ <span data-ttu-id="00276-106">In diesem Beispiel wird das Ergebnis der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage als eine <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem` zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="00276-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="00276-107">Die Elemente in der `PurchaseOrder`-Klasse sind vom Typ <xref:System.Collections.Generic.IEnumerable%601> von `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="00276-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="00276-108">Der Code verwendet die <xref:System.Linq.Enumerable.ToList%2A>-Erweiterungsmethode, um aus den Ergebnissen der Abfrage eine <xref:System.Collections.Generic.List%601>-Auflistung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="00276-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- Das Beispiel führt zur folgenden Ausgabe:  
+ <span data-ttu-id="00276-109">Das Beispiel führt zur folgenden Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="00276-109">The example produces the following output:</span></span>  
   
 ```  
 PurchaseOrderNumber: 99503  
@@ -268,8 +264,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.Select%2A>   
- <xref:System.Linq.Enumerable.ToList%2A>   
- [Projections and Transformations (LINQ to XML) (C#) (Projektionen und Transformationen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="00276-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="00276-110">See Also</span></span>  
+ <xref:System.Linq.Enumerable.Select%2A>  
+ <xref:System.Linq.Enumerable.ToList%2A>  
+ [<span data-ttu-id="00276-111">Projektionen und Transformationen (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="00276-111">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

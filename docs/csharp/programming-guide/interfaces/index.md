@@ -1,122 +1,103 @@
 ---
 title: Schnittstellen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0552cea71f66ba8c299b1706cab6778c9e3367c9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
-Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funktionalitäten, die von einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder einer [Struktur](../../../csharp/language-reference/keywords/struct.md) implementiert werden können.  
+# <a name="interfaces-c-programming-guide"></a><span data-ttu-id="2a9c2-102">Schnittstellen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="2a9c2-102">Interfaces (C# Programming Guide)</span></span>
+<span data-ttu-id="2a9c2-103">Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funktionalitäten, die von einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder einer [Struktur](../../../csharp/language-reference/keywords/struct.md) implementiert werden können.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-103">An interface contains definitions for a group of related functionalities that a [class](../../../csharp/language-reference/keywords/class.md) or a [struct](../../../csharp/language-reference/keywords/struct.md) can implement.</span></span>  
   
- Durch die Verwendung von Schnittstellen können Sie beispielsweise das Verhalten aus mehreren Quellen in einer Klasse einbeziehen. Diese Funktion ist wichtig in C#, da die Sprache die mehrfache Vererbung von Klassen nicht unterstützt. Zudem müssen Sie eine Schnittstelle verwenden, wenn Sie die Vererbung für Strukturen simulieren möchten, da sie tatsächlich nicht von einer anderen Struktur oder Klasse erben können.  
+ <span data-ttu-id="2a9c2-104">Durch die Verwendung von Schnittstellen können Sie beispielsweise das Verhalten aus mehreren Quellen in einer Klasse einbeziehen.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-104">By using interfaces, you can, for example, include behavior from multiple sources in a class.</span></span> <span data-ttu-id="2a9c2-105">Diese Funktion ist wichtig in C#, da die Sprache die mehrfache Vererbung von Klassen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-105">That capability is important in C# because the language doesn't support multiple inheritance of classes.</span></span> <span data-ttu-id="2a9c2-106">Zudem müssen Sie eine Schnittstelle verwenden, wenn Sie die Vererbung für Strukturen simulieren möchten, da sie tatsächlich nicht von einer anderen Struktur oder Klasse erben können.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-106">In addition, you must use an interface if you want to simulate inheritance for structs, because they can't actually inherit from another struct or class.</span></span>  
   
- Sie definieren eine Schnittstelle durch die Verwendung des Schlüsselworts [interface](../../../csharp/language-reference/keywords/interface.md), wie im folgenden Beispiel gezeigt.  
+ <span data-ttu-id="2a9c2-107">Sie definieren eine Schnittstelle durch die Verwendung des Schlüsselworts [interface](../../../csharp/language-reference/keywords/interface.md), wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-107">You define an interface by using the [interface](../../../csharp/language-reference/keywords/interface.md) keyword, as the following example shows.</span></span>  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
- Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
+ <span data-ttu-id="2a9c2-108">Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-108">Any class or struct that implements the <xref:System.IEquatable%601> interface must contain a definition for an <xref:System.IEquatable%601.Equals%2A> method that matches the signature that the interface specifies.</span></span> <span data-ttu-id="2a9c2-109">Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-109">As a result, you can count on a class that implements `IEquatable<T>` to contain an `Equals` method with which an instance of the class can determine whether it's equal to another instance of the same class.</span></span>  
   
- Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Die Schnittstelle definiert nur die Signatur. Auf diese Weise ähnelt eine Schnittstelle in C# einer abstrakten Klasse, in der alle Methoden abstrakt sind. Eine Klasse oder Struktur kann jedoch mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur eine einzelne Klasse, ein Abstrakt oder nichts erben. Daher können Sie durch die Verwendung von Schnittstellen das Verhalten von mehreren Quellen in einer Klasse einbeziehen.  
+ <span data-ttu-id="2a9c2-110">Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-110">The definition of `IEquatable<T>` doesn’t provide an implementation for `Equals`.</span></span> <span data-ttu-id="2a9c2-111">Die Schnittstelle definiert nur die Signatur.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-111">The interface defines only the signature.</span></span> <span data-ttu-id="2a9c2-112">Auf diese Weise ähnelt eine Schnittstelle in C# einer abstrakten Klasse, in der alle Methoden abstrakt sind.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-112">In that way, an interface in C# is similar to an abstract class in which all the methods are abstract.</span></span> <span data-ttu-id="2a9c2-113">Eine Klasse oder Struktur kann jedoch mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur eine einzelne Klasse, ein Abstrakt oder nichts erben.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-113">However, a class or struct can implement multiple interfaces, but a class can inherit only a single class, abstract or not.</span></span> <span data-ttu-id="2a9c2-114">Daher können Sie durch die Verwendung von Schnittstellen das Verhalten von mehreren Quellen in einer Klasse einbeziehen.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-114">Therefore, by using interfaces, you can include behavior from multiple sources in a class.</span></span>  
   
- Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ <span data-ttu-id="2a9c2-115">Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="2a9c2-115">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- Schnittstellen können Methoden, Eigenschaften, Ereignisse, Indexer oder eine beliebige Kombination aus diesen vier Membertypen enthalten. Links zu den Beispielen finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Eine Schnittstelle kann weder Konstanten, Felder, Operatoren, Instanzkonstruktoren, Finalizer noch Typen enthalten. Schnittstellenmember sind automatisch öffentlich, und sie können keine Zugriffsmodifizierer enthalten. Member können zudem nicht [statisch](../../../csharp/language-reference/keywords/static.md) sein.  
+ <span data-ttu-id="2a9c2-116">Schnittstellen können Methoden, Eigenschaften, Ereignisse, Indexer oder eine beliebige Kombination aus diesen vier Membertypen enthalten.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-116">Interfaces can contain methods, properties, events, indexers, or any combination of those four member types.</span></span> <span data-ttu-id="2a9c2-117">Links zu den Beispielen finden Sie unter [Verwandte Abschnitte](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections).</span><span class="sxs-lookup"><span data-stu-id="2a9c2-117">For links to examples, see [Related Sections](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections).</span></span> <span data-ttu-id="2a9c2-118">Eine Schnittstelle kann weder Konstanten, Felder, Operatoren, Instanzkonstruktoren, Finalizer noch Typen enthalten.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-118">An interface can't contain constants, fields, operators, instance constructors, finalizers, or types.</span></span> <span data-ttu-id="2a9c2-119">Schnittstellenmember sind automatisch öffentlich, und sie können keine Zugriffsmodifizierer enthalten.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-119">Interface members are automatically public, and they can't include any access modifiers.</span></span> <span data-ttu-id="2a9c2-120">Member können zudem nicht [statisch](../../../csharp/language-reference/keywords/static.md) sein.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-120">Members also can't be [static](../../../csharp/language-reference/keywords/static.md).</span></span>  
   
- Zum Implementieren eines Schnittstellenmembers muss das entsprechende Member der Implementierungsklasse öffentlich und nicht statisch sein und muss über denselben Namen und die Signatur wie das Schnittstellenmember verfügen.  
+ <span data-ttu-id="2a9c2-121">Zum Implementieren eines Schnittstellenmembers muss das entsprechende Member der Implementierungsklasse öffentlich und nicht statisch sein und muss über denselben Namen und die Signatur wie das Schnittstellenmember verfügen.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-121">To implement an interface member, the corresponding member of the implementing class must be public, non-static, and have the same name and signature as the interface member.</span></span>  
   
- Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss die Klasse oder Struktur eine Implementierung für alle Member bereitstellen, die durch die Schnittstelle definiert wird. Die Schnittstelle an sich stellt keine Funktionalität bereit, die eine Klasse oder Struktur dergestalt erben kann, sodass es die Funktionalität der Basisklasse erben kann Wenn eine Basisklasse jedoch eine Schnittstelle implementiert, erbt jede aus der Basisklasse abgeleitete Klasse diese Implementierung.  
+ <span data-ttu-id="2a9c2-122">Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss die Klasse oder Struktur eine Implementierung für alle Member bereitstellen, die durch die Schnittstelle definiert wird.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-122">When a class or struct implements an interface, the class or struct must provide an implementation for all of the members that the interface defines.</span></span> <span data-ttu-id="2a9c2-123">Die Schnittstelle an sich stellt keine Funktionalität bereit, die eine Klasse oder Struktur dergestalt erben kann, sodass es die Funktionalität der Basisklasse erben kann</span><span class="sxs-lookup"><span data-stu-id="2a9c2-123">The interface itself provides no functionality that a class or struct can inherit in the way that it can inherit base class functionality.</span></span> <span data-ttu-id="2a9c2-124">Wenn eine Basisklasse jedoch eine Schnittstelle implementiert, erbt jede aus der Basisklasse abgeleitete Klasse diese Implementierung.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-124">However, if a base class implements an interface, any class that's derived from the base class inherits that implementation.</span></span>  
   
- Das folgenden Beispiel zeigt eine Implementierung der IEquatable<T\>-Schnittstelle. Die Implementierungsklasse `Car` muss die Implementierung der <xref:System.IEquatable%601.Equals%2A>-Methode bereitstellen.  
+ <span data-ttu-id="2a9c2-125">Das folgenden Beispiel zeigt eine Implementierung der IEquatable<T\>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-125">The following example shows an implementation of the IEquatable<T\> interface.</span></span> <span data-ttu-id="2a9c2-126">Die Implementierungsklasse `Car` muss die Implementierung der <xref:System.IEquatable%601.Equals%2A>-Methode bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-126">The implementing class, `Car`, must provide an implementation of the <xref:System.IEquatable%601.Equals%2A> method.</span></span>  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
- Eigenschaften und Indexer einer Klasse können zusätzliche Accessors für eine Eigenschaft oder einen in einer Schnittstelle definierten Indexer definieren. Beispielsweise kann eine Schnittstelle eine Eigenschaft deklarieren, die einen [Get](../../../csharp/language-reference/keywords/get.md)-Accessor aufweist. Die Klasse zur Implementierung der Schnittstelle kann dieselbe Eigenschaft mit einem `get`- und einem [set](../../../csharp/language-reference/keywords/set.md)-Accessor deklarieren. Wenn die Eigenschaft oder der Indexer jedoch die explizite Implementierung verwendet, müssen die Accessors übereinstimmen. Weitere Informationen zur expliziten Implementierung finden Sie unter [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) und unter [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
+ <span data-ttu-id="2a9c2-127">Eigenschaften und Indexer einer Klasse können zusätzliche Accessors für eine Eigenschaft oder einen in einer Schnittstelle definierten Indexer definieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-127">Properties and indexers of a class can define extra accessors for a property or indexer that's defined in an interface.</span></span> <span data-ttu-id="2a9c2-128">Beispielsweise kann eine Schnittstelle eine Eigenschaft deklarieren, die einen [Get](../../../csharp/language-reference/keywords/get.md)-Accessor aufweist.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-128">For example, an interface might declare a property that has a [get](../../../csharp/language-reference/keywords/get.md) accessor.</span></span> <span data-ttu-id="2a9c2-129">Die Klasse zur Implementierung der Schnittstelle kann dieselbe Eigenschaft mit einem `get`- und einem [set](../../../csharp/language-reference/keywords/set.md)-Accessor deklarieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-129">The class that implements the interface can declare the same property with both a `get` and [set](../../../csharp/language-reference/keywords/set.md) accessor.</span></span> <span data-ttu-id="2a9c2-130">Wenn die Eigenschaft oder der Indexer jedoch die explizite Implementierung verwendet, müssen die Accessors übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-130">However, if the property or indexer uses explicit implementation, the accessors must match.</span></span> <span data-ttu-id="2a9c2-131">Weitere Informationen zur expliziten Implementierung finden Sie unter [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) und unter [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).</span><span class="sxs-lookup"><span data-stu-id="2a9c2-131">For more information about explicit implementation, see [Explicit Interface Implementation](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) and [Interface Properties](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).</span></span>  
   
- Schnittstellen können andere Schnittstellen implementieren. Eine Klasse kann eine Schnittstelle mehrfach über geerbte Basisklassen einbeziehen, die sie erbt, oder über Schnittstellen, die von anderen Schnittstellen implementiert werden. Die Klasse kann jedoch nur einmal eine Implementierung einer Schnittstelle bereitstellen und auch nur dann, wenn die Klasse die Schnittstelle als Bestandteil der Definition der Klasse (`class ClassName : InterfaceName`) deklariert. Wenn die Schnittstelle geerbt wurde, da Sie eine Basisklasse geerbt haben, die die Schnittstelle implementiert, bietet die Basisklasse die Implementierung der Member der Schnittstelle. Die abgeleitete Klasse kann jedoch anstelle der Verwendung der geerbten Implementierung die Schnittstellenmember erneut implementieren.  
+ <span data-ttu-id="2a9c2-132">Schnittstellen können andere Schnittstellen implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-132">Interfaces can implement other interfaces.</span></span> <span data-ttu-id="2a9c2-133">Eine Klasse kann eine Schnittstelle mehrfach über geerbte Basisklassen einbeziehen, die sie erbt, oder über Schnittstellen, die von anderen Schnittstellen implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-133">A class might include an interface multiple times through base classes that it inherits or through interfaces that other interfaces implement.</span></span> <span data-ttu-id="2a9c2-134">Die Klasse kann jedoch nur einmal eine Implementierung einer Schnittstelle bereitstellen und auch nur dann, wenn die Klasse die Schnittstelle als Bestandteil der Definition der Klasse (`class ClassName : InterfaceName`) deklariert.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-134">However, the class can provide an implementation of an interface only one time and only if the class declares the interface as part of the definition of the class (`class ClassName : InterfaceName`).</span></span> <span data-ttu-id="2a9c2-135">Wenn die Schnittstelle geerbt wurde, da Sie eine Basisklasse geerbt haben, die die Schnittstelle implementiert, bietet die Basisklasse die Implementierung der Member der Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-135">If the interface is inherited because you inherited a base class that implements the interface, the base class provides the implementation of the members of the interface.</span></span> <span data-ttu-id="2a9c2-136">Die abgeleitete Klasse kann jedoch anstelle der Verwendung der geerbten Implementierung die Schnittstellenmember erneut implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-136">However, the derived class can reimplement the interface members instead of using the inherited implementation.</span></span>  
   
- Eine Basisklasse kann zudem Schnittstellenmember mithilfe von virtuellen Membern implementieren. In diesem Fall kann eine abgeleitete Klasse das Schnittstellenverhalten durch das Überschreiben der virtuellen Member ändern. Weitere Informationen über virtuelle Member finden Sie unter [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ <span data-ttu-id="2a9c2-137">Eine Basisklasse kann zudem Schnittstellenmember mithilfe von virtuellen Membern implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-137">A base class can also implement interface members by using virtual members.</span></span> <span data-ttu-id="2a9c2-138">In diesem Fall kann eine abgeleitete Klasse das Schnittstellenverhalten durch das Überschreiben der virtuellen Member ändern.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-138">In that case, a derived class can change the interface behavior by overriding the virtual members.</span></span> <span data-ttu-id="2a9c2-139">Weitere Informationen über virtuelle Member finden Sie unter [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).</span><span class="sxs-lookup"><span data-stu-id="2a9c2-139">For more information about virtual members, see [Polymorphism](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).</span></span>  
   
-## <a name="interfaces-summary"></a>Zusammenfassung zu Schnittstellen  
- Eine Schnittstelle verfügt über die folgenden Eigenschaften:  
+## <a name="interfaces-summary"></a><span data-ttu-id="2a9c2-140">Zusammenfassung zu Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="2a9c2-140">Interfaces Summary</span></span>  
+ <span data-ttu-id="2a9c2-141">Eine Schnittstelle verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="2a9c2-141">An interface has the following properties:</span></span>  
   
--   Eine Schnittstelle ähnelt einer abstrakten Basisklasse. Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren.  
+-   <span data-ttu-id="2a9c2-142">Eine Schnittstelle ähnelt einer abstrakten Basisklasse.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-142">An interface is like an abstract base class.</span></span> <span data-ttu-id="2a9c2-143">Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-143">Any class or struct that implements the interface must implement all its members.</span></span>  
   
--   Eine Schnittstelle kann nicht direkt instanziiert werden. Die zugehörigen Member werden durch die die Schnittstelle implementierende Klasse oder Struktur implementiert.  
+-   <span data-ttu-id="2a9c2-144">Eine Schnittstelle kann nicht direkt instanziiert werden.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-144">An interface can't be instantiated directly.</span></span> <span data-ttu-id="2a9c2-145">Die zugehörigen Member werden durch die die Schnittstelle implementierende Klasse oder Struktur implementiert.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-145">Its members are implemented by any class or struct that implements the interface.</span></span>  
   
--   Schnittstellen können Ereignisse, Indexer, Methoden und Eigenschaften enthalten.  
+-   <span data-ttu-id="2a9c2-146">Schnittstellen können Ereignisse, Indexer, Methoden und Eigenschaften enthalten.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-146">Interfaces can contain events, indexers, methods, and properties.</span></span>  
   
--   Schnittstellen enthalten keine Implementierung von Methoden.  
+-   <span data-ttu-id="2a9c2-147">Schnittstellen enthalten keine Implementierung von Methoden.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-147">Interfaces contain no implementation of methods.</span></span>  
   
--   Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann keine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.  
+-   <span data-ttu-id="2a9c2-148">Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-148">A class or struct can implement multiple interfaces.</span></span> <span data-ttu-id="2a9c2-149">Eine Klasse kann keine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-149">A class can inherit a base class and also implement one or more interfaces.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
- Erläutert das Erstellen eines für eine Schnittstelle spezifischen Klassenmembers.  
+## <a name="in-this-section"></a><span data-ttu-id="2a9c2-150">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2a9c2-150">In This Section</span></span>  
+ [<span data-ttu-id="2a9c2-151">Explizite Schnittstellenimplementierung</span><span class="sxs-lookup"><span data-stu-id="2a9c2-151">Explicit Interface Implementation</span></span>](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+ <span data-ttu-id="2a9c2-152">Erläutert das Erstellen eines für eine Schnittstelle spezifischen Klassenmembers.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-152">Explains how to create a class member that’s specific to an interface.</span></span>  
   
- [Gewusst wie: Explizites Implementieren von Schnittstellenmembern](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
- Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern.  
+ [<span data-ttu-id="2a9c2-153">Gewusst wie: Explizites Implementieren von Schnittstellenmembern</span><span class="sxs-lookup"><span data-stu-id="2a9c2-153">How to: Explicitly Implement Interface Members</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
+ <span data-ttu-id="2a9c2-154">Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-154">Provides an example of how to explicitly implement members of interfaces.</span></span>  
   
- [Gewusst wie: Explizites Implementieren von Membern zweier Schnittstellen](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
- Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern mit Vererbung.  
+ [<span data-ttu-id="2a9c2-155">Gewusst wie: Explizites Implementieren von Membern zweier Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="2a9c2-155">How to: Explicitly Implement Members of Two Interfaces</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
+ <span data-ttu-id="2a9c2-156">Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern mit Vererbung.</span><span class="sxs-lookup"><span data-stu-id="2a9c2-156">Provides an example of how to explicitly implement members of interfaces with inheritance.</span></span>  
   
-##  <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte  
+##  <span data-ttu-id="2a9c2-157"><a name="BKMK_RelatedSections"></a> Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="2a9c2-157"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
   
--   [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+-   [<span data-ttu-id="2a9c2-158">Schnittstelleneigenschaften</span><span class="sxs-lookup"><span data-stu-id="2a9c2-158">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Indexer in Schnittstellen](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+-   [<span data-ttu-id="2a9c2-159">Indexer in Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="2a9c2-159">Indexers in Interfaces</span></span>](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Gewusst wie: Implementieren von Schnittstellenereignissen](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
+-   [<span data-ttu-id="2a9c2-160">Gewusst wie: Implementieren von Schnittstellenereignissen</span><span class="sxs-lookup"><span data-stu-id="2a9c2-160">How to:  Implement Interface Events</span></span>](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
   
--   [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+-   [<span data-ttu-id="2a9c2-161">Klassen und Strukturen</span><span class="sxs-lookup"><span data-stu-id="2a9c2-161">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
   
--   [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+-   [<span data-ttu-id="2a9c2-162">Vererbung</span><span class="sxs-lookup"><span data-stu-id="2a9c2-162">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
   
--   [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+-   [<span data-ttu-id="2a9c2-163">Methoden</span><span class="sxs-lookup"><span data-stu-id="2a9c2-163">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [Polymorphismus](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+-   [<span data-ttu-id="2a9c2-164">Polymorphismus</span><span class="sxs-lookup"><span data-stu-id="2a9c2-164">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
   
--   [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+-   [<span data-ttu-id="2a9c2-165">Abstrakte und versiegelte Klassen und Klassenmember</span><span class="sxs-lookup"><span data-stu-id="2a9c2-165">Abstract and Sealed Classes and Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
   
--   [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+-   [<span data-ttu-id="2a9c2-166">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="2a9c2-166">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+-   [<span data-ttu-id="2a9c2-167">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="2a9c2-167">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
   
--   [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+-   [<span data-ttu-id="2a9c2-168">Indexer</span><span class="sxs-lookup"><span data-stu-id="2a9c2-168">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
   
-## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
- [Interfaces (Schnittstellen)](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) in [Learning C# 3.0: Master the Fundamentals of C# 3.0 (C# 3.0 lernen: Die Grundlagen von C# 3.0 meistern)](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
+## <a name="featured-book-chapter"></a><span data-ttu-id="2a9c2-169">Enthaltenes Buchkapitel</span><span class="sxs-lookup"><span data-stu-id="2a9c2-169">Featured Book Chapter</span></span>  
+ <span data-ttu-id="2a9c2-170">[Interfaces (Schnittstellen)](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) in [Learning C# 3.0: Master the Fundamentals of C# 3.0 (C# 3.0 lernen: Die Grundlagen von C# 3.0 meistern)](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)</span><span class="sxs-lookup"><span data-stu-id="2a9c2-170">[Interfaces](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) in [Learning C# 3.0: Master the Fundamentals of C# 3.0](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-
+## <a name="see-also"></a><span data-ttu-id="2a9c2-171">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a9c2-171">See Also</span></span>  
+ [<span data-ttu-id="2a9c2-172">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2a9c2-172">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2a9c2-173">Vererbung</span><span class="sxs-lookup"><span data-stu-id="2a9c2-173">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

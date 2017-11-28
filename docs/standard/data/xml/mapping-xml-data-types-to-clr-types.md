@@ -1,35 +1,33 @@
 ---
-title: "Zuordnen von XML-Datentypen zu CLR-Typen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Zuordnen von XML-Datentypen zu CLR-Typen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3b6e67d27de33e61f5d5190249e90ac48e1aaaec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zuordnen von XML-Datentypen zu CLR-Typen
-In der folgenden Tabelle wird die Zuordnung zwischen XML\-Datentypen und CLR\-Typen \(Common Language Runtime\) beschrieben.  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="cd5cd-102">Zuordnen von XML-Datentypen zu CLR-Typen</span><span class="sxs-lookup"><span data-stu-id="cd5cd-102">Mapping XML Data Types to CLR Types</span></span>
+<span data-ttu-id="cd5cd-103">In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="cd5cd-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
   
-## In der folgenden Tabelle werden die Standardzuordnungen eines XML\-Datentyps zu einem CLR\-Typ beschrieben.  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="cd5cd-104">In der folgenden Tabelle werden die Standardzuordnungen eines XML-Datentyps zu einem CLR-Typ beschrieben.</span><span class="sxs-lookup"><span data-stu-id="cd5cd-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
   
 > [!NOTE]
->  Das `xs`\-Präfix und das `xdt`\-Präfix werden den Namespace\-URIs **http:\/\/www.w3.org\/2001\/XMLSchema** bzw. **http:\/\/www.w3.org\/2003\/05\/xpath\-datatypes** zugeordnet.  
+>  <span data-ttu-id="cd5cd-105">Das `xs`-Präfix und das `xdt`-Präfix werden den Namespace-URIs http://www.w3.org/2001/XMLSchema bzw. http://www.w3.org/2003/05/xpath-datatypes zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="cd5cd-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
   
-|XML\-Typ|CLR\-Typ|  
+|<span data-ttu-id="cd5cd-106">XML-Typ</span><span class="sxs-lookup"><span data-stu-id="cd5cd-106">XML Type</span></span>|<span data-ttu-id="cd5cd-107">CLR-Typ</span><span class="sxs-lookup"><span data-stu-id="cd5cd-107">CLR Type</span></span>|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -80,13 +78,13 @@ In der folgenden Tabelle wird die Zuordnung zwischen XML\-Datentypen und CLR\-Ty
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|Dokumentknoten|<xref:System.Xml.XPath.XPathNavigator>|  
-|Elementknoten|<xref:System.Xml.XPath.XPathNavigator>|  
-|Attributknoten|<xref:System.Xml.XPath.XPathNavigator>|  
-|Namespaceknoten|<xref:System.Xml.XPath.XPathNavigator>|  
-|Textknoten|<xref:System.Xml.XPath.XPathNavigator>|  
-|Kommentarknoten|<xref:System.Xml.XPath.XPathNavigator>|  
-|Verarbeitungsanweisungsknoten|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-108">Dokumentknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-109">Elementknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-110">Attributknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-111">Namespaceknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-112">Textknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-113">Kommentarknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="cd5cd-114">Verarbeitungsanweisungsknoten</span><span class="sxs-lookup"><span data-stu-id="cd5cd-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## Siehe auch  
- [Typenunterstützung in den System.Xml\-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a><span data-ttu-id="cd5cd-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cd5cd-115">See Also</span></span>  
+ [<span data-ttu-id="cd5cd-116">Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)</span><span class="sxs-lookup"><span data-stu-id="cd5cd-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

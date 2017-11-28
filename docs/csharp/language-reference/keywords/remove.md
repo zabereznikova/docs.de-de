@@ -1,51 +1,30 @@
 ---
 title: remove (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- remove_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- remove event accessor [C#]
+f1_keywords: remove_CSharpKeyword
+helpviewer_keywords: remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 66647dee0c4cc728ae5e19457a4a5ef0e7f72248
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b34d653a40e1309e281235416c0399abc6dd9a0d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="remove-c-reference"></a>remove (C#-Referenz)
-Das kontextabhängige Schlüsselwort `remove` definiert einen benutzerdefinierten Ereignisaccessor, der aufgerufen wird, wenn der Clientcode das Abonnement Ihres Ereignisses ([event](../../../csharp/language-reference/keywords/event.md)) aufhebt. Wenn Sie einen benutzerdefinierten `remove`-Accessor bereitstellen, müssen Sie auch einen [add](../../../csharp/language-reference/keywords/add.md)-Accessor angeben.  
+# <a name="remove-c-reference"></a><span data-ttu-id="cc593-102">remove (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="cc593-102">remove (C# Reference)</span></span>
+<span data-ttu-id="cc593-103">Das kontextabhängige Schlüsselwort `remove` definiert einen benutzerdefinierten Ereignisaccessor, der aufgerufen wird, wenn der Clientcode das Abonnement Ihres Ereignisses ([event](../../../csharp/language-reference/keywords/event.md)) aufhebt.</span><span class="sxs-lookup"><span data-stu-id="cc593-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="cc593-104">Wenn Sie einen benutzerdefinierten `remove`-Accessor bereitstellen, müssen Sie auch einen [add](../../../csharp/language-reference/keywords/add.md)-Accessor angeben.</span><span class="sxs-lookup"><span data-stu-id="cc593-104">If you supply a custom `remove` accessor, you must also supply an [add](../../../csharp/language-reference/keywords/add.md) accessor.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird ein Ereignis mit den benutzerdefinierten Accessoren [add](../../../csharp/language-reference/keywords/add.md) und `remove` gezeigt. Das vollständige Beispiel finden Sie unter [Vorgehensweise: Implementieren von Schnittstellenereignissen](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
+## <a name="example"></a><span data-ttu-id="cc593-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cc593-105">Example</span></span>  
+ <span data-ttu-id="cc593-106">Im folgende Beispiel wird ein Ereignis mit den benutzerdefinierten Accessoren [add](../../../csharp/language-reference/keywords/add.md) und `remove` gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cc593-106">The following example shows an event with custom [add](../../../csharp/language-reference/keywords/add.md) and `remove` accessors.</span></span> <span data-ttu-id="cc593-107">Das vollständige Beispiel finden Sie unter [Vorgehensweise: Implementieren von Schnittstellenereignissen](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="cc593-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
- [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
+ [!code-csharp[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
   
- Sie müssen normalerweise keine eigenen benutzerdefinierten Ereignisaccessoren bereitstellen. Die Accessoren, die automatisch vom Compiler generiert werden, wenn Sie ein Ereignis deklarieren, sind in den meisten Szenarios ausreichend.  
+ <span data-ttu-id="cc593-108">Sie müssen normalerweise keine eigenen benutzerdefinierten Ereignisaccessoren bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="cc593-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="cc593-109">Die Accessoren, die automatisch vom Compiler generiert werden, wenn Sie ein Ereignis deklarieren, sind in den meisten Szenarios ausreichend.</span><span class="sxs-lookup"><span data-stu-id="cc593-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Ereignisse](../../../csharp/programming-guide/events/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="cc593-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc593-110">See Also</span></span>  
+ [<span data-ttu-id="cc593-111">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="cc593-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)

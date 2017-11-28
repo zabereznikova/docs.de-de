@@ -1,60 +1,58 @@
 ---
-title: "Geschachtelte Typen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "geschachtelte Typen"
-  - "öffentliche geschachtelte Typen"
-  - "Geben Sie Richtlinien für den Entwurf, geschachtelte Typen"
-  - "geschachtelte Typen"
-  - "[Member [.NET Framework], Typ"
-  - "Klassenbibliothek-Entwurf Richtlinien [.NET Framework], geschachtelte Typen"
+title: Geschachtelte Typen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- types, nested
+- public nested types
+- type design guidelines, nested types
+- nested types
+- members [.NET Framework], type
+- class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Geschachtelte Typen
-Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeitsbereichs eines anderen Typs, die den einschließenden Typ aufgerufen wird, definiert. Ein geschachtelter Typ hat Zugriff auf alle Member des einschließenden Typs. Beispielsweise verfügt es über Zugriff auf private Felder definiert, in den einschließenden Typ und geschützte Felder, die in alle Vorgänger des einschließenden Typs definiert.  
+# <a name="nested-types"></a><span data-ttu-id="a1d2c-102">Geschachtelte Typen</span><span class="sxs-lookup"><span data-stu-id="a1d2c-102">Nested Types</span></span>
+<span data-ttu-id="a1d2c-103">Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeitsbereichs eines anderen Typs, der aufgerufen wird, den einschließenden Typ definiert.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-103">A nested type is a type defined within the scope of another type, which is called the enclosing type.</span></span> <span data-ttu-id="a1d2c-104">Ein geschachtelter Typ hat Zugriff auf alle Member des einschließenden Typs.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-104">A nested type has access to all members of its enclosing type.</span></span> <span data-ttu-id="a1d2c-105">Beispielsweise verfügt es über Zugriff auf private Felder, die in der einschließende Typ und zu schützende in alle vorausgehenden Elemente des einschließenden Typs definierten öffentlichen Felder definiert.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-105">For example, it has access to private fields defined in the enclosing type and to protected fields defined in all ascendants of the enclosing type.</span></span>  
   
- Im Allgemeinen sollte nur selten geschachtelte Typen verwendet werden. Hierfür gibt es mehrere Gründe: Einige Entwickler sind nicht vollständig mit dem Konzept vertraut. Diese Entwickler können z. B. Probleme mit der Syntax des Deklarieren von Variablen von geschachtelten Typen haben. Geschachtelte Typen sind ebenfalls sehr eng mit ihren einschließenden Typen verbunden und daher eignen sich nicht um allgemeine Typen sein.  
+ <span data-ttu-id="a1d2c-106">Im Allgemeinen sollte nur selten geschachtelte Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-106">In general, nested types should be used sparingly.</span></span> <span data-ttu-id="a1d2c-107">Hierfür gibt es mehrere Gründe:</span><span class="sxs-lookup"><span data-stu-id="a1d2c-107">There are several reasons for this.</span></span> <span data-ttu-id="a1d2c-108">Einige Entwickler sind nicht mit dem Konzept vollständig vertraut.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-108">Some developers are not fully familiar with the concept.</span></span> <span data-ttu-id="a1d2c-109">Diese Entwickler könnte z. B. Probleme mit der Syntax des Deklarieren von Variablen von geschachtelten Typen haben.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-109">These developers might, for example, have problems with the syntax of declaring variables of nested types.</span></span> <span data-ttu-id="a1d2c-110">Geschachtelte Typen sind ebenfalls sehr eng mit ihren einschließenden Typen verbunden und daher eignen sich nicht um die allgemeinen Typen sein.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-110">Nested types are also very tightly coupled with their enclosing types, and as such are not suited to be general-purpose types.</span></span>  
   
- Geschachtelte Typen eignen sich am besten für die Modellierung von Details zur Implementierung der einschließenden Typen. Der Benutzer sollte nur selten zum Deklarieren von Variablen für einen geschachtelten Typ und fast nie sollte explizit Instanziieren von geschachtelten Typen. Der Enumerator einer Auflistung kann z. B. einen geschachtelten Typ der Auflistung sein. Enumeratoren werden normalerweise von dem einschließenden Typ instanziiert, und da viele Sprachen zu die Foreach\-Anweisung unterstützen Enumerator Variablen selten vom Endbenutzer deklariert werden.  
+ <span data-ttu-id="a1d2c-111">Geschachtelte Typen eignen sich am besten für die Modellierung von Implementierungsdetails der einschließenden Typen.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-111">Nested types are best suited for modeling implementation details of their enclosing types.</span></span> <span data-ttu-id="a1d2c-112">Der Endbenutzer müssen nur selten in Variablen eines geschachtelten Typs deklarieren und fast nie müssen in der geschachtelte Typen explizit instanziieren.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-112">The end user should rarely have to declare variables of a nested type and almost never should have to explicitly instantiate nested types.</span></span> <span data-ttu-id="a1d2c-113">Der Enumerator eine Auflistung kann z. B. ein geschachtelter Typ dieser Sammlung sein.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-113">For example, the enumerator of a collection can be a nested type of that collection.</span></span> <span data-ttu-id="a1d2c-114">Enumeratoren werden normalerweise vom einschließenden Typ instanziiert, und da viele Sprachen zu die foreach-Anweisung unterstützen Enumerator Variablen selten vom Endbenutzer deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-114">Enumerators are usually instantiated by their enclosing type, and because many languages support the foreach statement, enumerator variables rarely have to be declared by the end user.</span></span>  
   
- **✓ führen** geschachtelte Typen verwenden, wenn die Beziehung zwischen den geschachtelten Typ und seinem äußeren Typ ist, sodass Memberzugriff Semantik wünschenswert sind.  
+ <span data-ttu-id="a1d2c-115">**Führen Sie ✓** geschachtelte Typen verwenden, wenn die Beziehung zwischen den geschachtelten Typ und der äußere Typ ist, sodass Memberzugriff Semantik wünschenswert ist.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-115">**✓ DO** use nested types when the relationship between the nested type and its outer type is such that member-accessibility semantics are desirable.</span></span>  
   
- **X nicht** öffentliche geschachtelte Typen als eine logische Gruppierung erstellen, verwenden Sie für diese Namespaces.  
+ <span data-ttu-id="a1d2c-116">**X nicht** verwenden öffentlichen geschachtelten Typen als eine logische Gruppierung zu erstellen; für diese Namespaces verwenden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-116">**X DO NOT** use public nested types as a logical grouping construct; use namespaces for this.</span></span>  
   
- **X vermeiden** öffentlich verfügbar gemacht werden geschachtelte Typen. Die einzige Ausnahme ist, wenn Variablen des geschachtelten Typs müssen nur in seltenen Szenarien wie z. B. Erstellen von Unterklassen oder anderen erweiterten Anpassungsszenarien deklariert werden.  
+ <span data-ttu-id="a1d2c-117">**X vermeiden** öffentlich verfügbar gemacht werden geschachtelte Typen.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-117">**X AVOID** publicly exposed nested types.</span></span> <span data-ttu-id="a1d2c-118">Die einzige Ausnahme hierbei ist, wenn Variablen des geschachtelten Typs müssen nur in seltenen Szenarien wie z. B. Erstellen von Unterklassen oder andere erweiterte Anpassungsszenarien deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-118">The only exception to this is if variables of the nested type need to be declared only in rare scenarios such as subclassing or other advanced customization scenarios.</span></span>  
   
- **X nicht** geschachtelte Typen verwenden, wenn der Typ außerhalb des enthaltenden Typs verwiesen werden kann.  
+ <span data-ttu-id="a1d2c-119">**X nicht** geschachtelte Typen verwenden, wenn der Typ wahrscheinlich außerhalb der enthaltende Typ verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-119">**X DO NOT** use nested types if the type is likely to be referenced outside of the containing type.</span></span>  
   
- Eine Enumeration, die an eine Methode für eine Klasse definierten übergeben sollten z. B. nicht als geschachtelter Typ in der Klasse definiert werden.  
+ <span data-ttu-id="a1d2c-120">Eine Enumeration, die an eine Methode, die für eine Klasse definierten übergeben darf beispielsweise nicht als ein geschachtelter Typ in der Klasse definiert werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-120">For example, an enum passed to a method defined on a class should not be defined as a nested type in the class.</span></span>  
   
- **X nicht** geschachtelte Typen verwenden, wenn sie von Clientcode instanziiert werden müssen.  Wenn ein Typ einen öffentlichen Konstruktor verfügt, sollte dieser nicht geschachtelt werden.  
+ <span data-ttu-id="a1d2c-121">**X nicht** geschachtelte Typen verwenden, wenn sie vom Clientcode instanziiert werden müssen.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-121">**X DO NOT** use nested types if they need to be instantiated by client code.</span></span>  <span data-ttu-id="a1d2c-122">Wenn ein Typ einen öffentlichen Konstruktor verfügt, sollte es wahrscheinlich nicht geschachtelt werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-122">If a type has a public constructor, it should probably not be nested.</span></span>  
   
- Wenn ein Typ instanziiert werden kann, ist das an, dass der Typ verfügt über einen Ort im Framework selbst erscheint \(Sie können erstellen, arbeiten und zerstören es, ohne jemals mithilfe des äußeren Typs\), und sollte daher nicht geschachtelt werden. Interne Typen sollten nicht häufig wiederverwendet werden außerhalb des äußeren Typs ohne Beziehung ist in den äußeren Typ.  
+ <span data-ttu-id="a1d2c-123">Wenn ein Typ nicht instanziiert werden kann, das erscheint, um anzugeben, der Typ ist für das Framework selbst geeignet (Sie können erstellen, arbeiten und ohne jemals mithilfe des äußeren Typs zu zerstören), und sollte daher nicht geschachtelt werden.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-123">If a type can be instantiated, that seems to indicate the type has a place in the framework on its own (you can create it, work with it, and destroy it without ever using the outer type), and thus should not be nested.</span></span> <span data-ttu-id="a1d2c-124">Interne Typen sollten nicht weit wiederverwendet werden außerhalb des äußeren Typs ohne eine Beziehung ist in der äußeren Typ.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-124">Inner types should not be widely reused outside of the outer type without any relationship whatsoever to the outer type.</span></span>  
   
- **X nicht** einen geschachtelten Typ als Member einer Schnittstelle definiert. Dieses Konstrukt wird von vielen Sprachen nicht unterstützt.  
+ <span data-ttu-id="a1d2c-125">**X nicht** einen geschachtelten Typ als Member einer Schnittstelle definieren.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-125">**X DO NOT** define a nested type as a member of an interface.</span></span> <span data-ttu-id="a1d2c-126">Dieses Konstrukt wird von zahlreichen Sprachen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a1d2c-126">Many languages do not support such a construct.</span></span>  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ <span data-ttu-id="a1d2c-127">*Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*</span><span class="sxs-lookup"><span data-stu-id="a1d2c-127">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ <span data-ttu-id="a1d2c-128">*Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*</span><span class="sxs-lookup"><span data-stu-id="a1d2c-128">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Siehe auch  
- [Typentwurfsrichtlinien](../../../docs/standard/design-guidelines/type.md)   
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="a1d2c-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a1d2c-129">See Also</span></span>  
+ [<span data-ttu-id="a1d2c-130">Typ-Entwurfsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="a1d2c-130">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="a1d2c-131">Frameworkentwurfsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="a1d2c-131">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

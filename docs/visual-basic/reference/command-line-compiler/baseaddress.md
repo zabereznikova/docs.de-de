@@ -1,75 +1,58 @@
 ---
-title: / BaseAddress | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: /baseaddress
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /baseaddress
 - baseaddress
-dev_langs:
-- VB
 helpviewer_keywords:
 - -baseaddress compiler option [Visual Basic]
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 527a7c348583498f46ee094ef9b9eec9abf1bcd0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8be88bf4834ca58b1fe708eb1ef7188c583fef0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="baseaddress"></a>/baseaddress
-Gibt eine Standard-Basisadresse an, beim Erstellen einer DLL.  
+# <a name="baseaddress"></a><span data-ttu-id="b4f12-102">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="b4f12-102">/baseaddress</span></span>
+<span data-ttu-id="b4f12-103">Gibt eine Standard-Basisadresse an, beim Erstellen einer DLL.</span><span class="sxs-lookup"><span data-stu-id="b4f12-103">Specifies a default base address when creating a DLL.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="b4f12-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b4f12-104">Syntax</span></span>  
   
 ```  
 /baseaddress:address  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="b4f12-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="b4f12-105">Arguments</span></span>  
   
-|Begriff|Definition|  
+|<span data-ttu-id="b4f12-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="b4f12-106">Term</span></span>|<span data-ttu-id="b4f12-107">Definition</span><span class="sxs-lookup"><span data-stu-id="b4f12-107">Definition</span></span>|  
 |---|---|  
-|`address`|Erforderlich. Die Basisadresse für die DLL. Diese Adresse muss als Hexadezimalwert angegeben werden.|  
+|`address`|<span data-ttu-id="b4f12-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b4f12-108">Required.</span></span> <span data-ttu-id="b4f12-109">Die Basisadresse für die DLL.</span><span class="sxs-lookup"><span data-stu-id="b4f12-109">The base address for the DLL.</span></span> <span data-ttu-id="b4f12-110">Diese Adresse muss als eine hexadezimale Zahl angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b4f12-110">This address must be specified as a hexadecimal number.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Die Standard-Basisadresse für eine DLL-Datei festgelegt ist, durch die [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+## <a name="remarks"></a><span data-ttu-id="b4f12-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b4f12-111">Remarks</span></span>  
+ <span data-ttu-id="b4f12-112">Die Standard-Basisadresse für eine DLL wird durch Festlegen der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b4f12-112">The default base address for a DLL is set by the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
- Denken Sie daran, dass das niederwertige Wort in dieser Adresse gerundet wird. Wenn Sie 0 x 11110001 angeben, wird sie z. B. auf 0 x 11110000 gerundet.  
+ <span data-ttu-id="b4f12-113">Denken Sie daran, dass das niederwertige Wort in dieser Adresse gerundet wird.</span><span class="sxs-lookup"><span data-stu-id="b4f12-113">Be aware that the lower-order word in this address is rounded.</span></span> <span data-ttu-id="b4f12-114">Wenn Sie 0 x 11110001 angeben, wird es beispielsweise auf 0 x 11110000 gerundet.</span><span class="sxs-lookup"><span data-stu-id="b4f12-114">For example, if you specify 0x11110001, it is rounded to 0x11110000.</span></span>  
   
- Um den Signaturprozess für eine DLL durchzuführen, verwenden die `–R` Möglichkeit, das Strong Name-Tool (Sn.exe).  
+ <span data-ttu-id="b4f12-115">Zum Ausführen des signierungsprozesses für eine DLL verwenden die `–R` Möglichkeit, das Strong Name-Tool (Sn.exe).</span><span class="sxs-lookup"><span data-stu-id="b4f12-115">To complete the signing process for a DLL, use the `–R` option of the Strong Naming tool (Sn.exe).</span></span>  
   
- Diese Option wird ignoriert, wenn das Ziel keine DLL ist.  
+ <span data-ttu-id="b4f12-116">Diese Option wird ignoriert, wenn das Ziel keine DLL ist.</span><span class="sxs-lookup"><span data-stu-id="b4f12-116">This option is ignored if the target is not a DLL.</span></span>  
   
-|/ Baseaddress in der Visual Studio-IDE festlegen|  
+|<span data-ttu-id="b4f12-117">/ Baseaddress in der Visual Studio-IDE festlegen</span><span class="sxs-lookup"><span data-stu-id="b4f12-117">To set /baseaddress in the Visual Studio IDE</span></span>|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Klicken Sie auf die **Kompilieren** Registerkarte.<br />3.  Klicken Sie auf **erweiterte**.<br />4.  Ändern Sie den Wert in der **DLL-Basisadresse:** Feld. **Hinweis:** der **DLL-Basisadresse:** Feld ist schreibgeschützt, wenn das Ziel eine DLL ist.|  
+|<span data-ttu-id="b4f12-118">1.  Ein Projekt auswählen in **Projektmappen-Explorer**.</span><span class="sxs-lookup"><span data-stu-id="b4f12-118">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="b4f12-119">Klicken Sie im Menü **Projekt** auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="b4f12-119">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="b4f12-120">Weitere Informationen finden Sie unter [Einführung in den Projekt-Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span><span class="sxs-lookup"><span data-stu-id="b4f12-120">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span><br /><span data-ttu-id="b4f12-121">2.  Klicken Sie auf die Registerkarte **Kompilieren**.</span><span class="sxs-lookup"><span data-stu-id="b4f12-121">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="b4f12-122">3.  Klicken Sie auf **erweiterte**.</span><span class="sxs-lookup"><span data-stu-id="b4f12-122">3.  Click **Advanced**.</span></span><br /><span data-ttu-id="b4f12-123">4.  Ändern Sie den Wert in der **Basisadresse der DLL:** Feld.</span><span class="sxs-lookup"><span data-stu-id="b4f12-123">4.  Modify the value in the **DLL base address:** box.</span></span> <span data-ttu-id="b4f12-124">**Hinweis:** der **Basisadresse der DLL:** Feld ist schreibgeschützt, es sei denn, das Ziel eine DLL ist.</span><span class="sxs-lookup"><span data-stu-id="b4f12-124">**Note:**      The **DLL base address:** box is read-only unless the target is a DLL.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23)
+## <a name="see-also"></a><span data-ttu-id="b4f12-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4f12-125">See Also</span></span>  
+ [<span data-ttu-id="b4f12-126">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="b4f12-126">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="b4f12-127">/ target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4f12-127">/target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [<span data-ttu-id="b4f12-128">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="b4f12-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="b4f12-129">Sn.exe (Strong Name-Tool)</span><span class="sxs-lookup"><span data-stu-id="b4f12-129">Sn.exe (Strong Name Tool)</span></span>](https://msdn.microsoft.com/library/k5b5tt23)

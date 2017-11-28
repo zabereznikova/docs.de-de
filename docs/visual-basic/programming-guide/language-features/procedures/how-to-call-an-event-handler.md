@@ -1,86 +1,69 @@
 ---
-title: 'Gewusst wie: Aufrufen von einem Ereignishandler in Visual Basic | Microsoft-Dokumentation'
+title: 'Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, procedures
-- event handlers, calling
+- event handlers [Visual Basic], calling
 - event handlers
-- procedures, event handlers
-- procedures, calling
+- procedures [Visual Basic], event handlers
+- procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5b300feca3415d1283d24179795a4ae92c61e52
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 52b4b6ca8b03d8301535d6aeedc3bd0190d8527f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-call-an-event-handler-in-visual-basic"></a>Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic
-Ein *Ereignis* ist eine Aktion oder ein vorkommen, z. B. ein Mausklick klicken oder ein Kreditlimit überschritten –, durch eine Anwendungskomponente, und für die Sie Code schreiben können, reagieren erkannt. Ein *-Ereignishandler* ist der Code, der auf ein Ereignis reagieren.  
+# <a name="how-to-call-an-event-handler-in-visual-basic"></a><span data-ttu-id="37812-102">Gewusst wie: Aufrufen eines Ereignishandlers in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37812-102">How to: Call an Event Handler in Visual Basic</span></span>
+<span data-ttu-id="37812-103">Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. eine Maus klicken oder ein Kreditlimit überschritten –, wird von einigen Programmkomponente, und für die Sie Code schreiben können reagieren erkannt.</span><span class="sxs-lookup"><span data-stu-id="37812-103">An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond.</span></span> <span data-ttu-id="37812-104">Ein *Ereignishandler* ist der Code, die Sie schreiben, um auf ein Ereignis zu reagieren.</span><span class="sxs-lookup"><span data-stu-id="37812-104">An *event handler* is the code you write to respond to an event.</span></span>  
   
- Ein Ereignishandler in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ist ein `Sub` Verfahren. Allerdings Sie normalerweise rufen ihn nicht die gleiche Weise wie andere `Sub` Verfahren. Stattdessen geben Sie die Prozedur als Handler für das Ereignis. Hierzu können Sie entweder mit einer [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) -Klausel und eine [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) Variable, oder mit einer [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Mithilfe einer `Handles` -Klausel ist die Standardmethode, deklarieren einen Ereignishandler in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Dies ist die Möglichkeit, die die Ereignishandler von Entwicklern geschrieben werden, wenn Sie in der integrierten Entwicklungsumgebung (IDE) programmieren. Die `AddHandler` -Anweisung eignet sich zum Auslösen von Ereignissen dynamisch zur Laufzeit.  
+ <span data-ttu-id="37812-105">Ein Ereignishandler in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ist eine `Sub` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="37812-105">An event handler in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] is a `Sub` procedure.</span></span> <span data-ttu-id="37812-106">Allerdings rufen Sie nicht normalerweise es die gleiche Weise wie andere `Sub` Prozeduren.</span><span class="sxs-lookup"><span data-stu-id="37812-106">However, you do not normally call it the same way as other `Sub` procedures.</span></span> <span data-ttu-id="37812-107">Stattdessen geben Sie die Prozedur als Handler für das Ereignis.</span><span class="sxs-lookup"><span data-stu-id="37812-107">Instead, you identify the procedure as a handler for the event.</span></span> <span data-ttu-id="37812-108">Hierzu können Sie entweder mit einer [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) Klausel und eine [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) Variablen, oder mit einer [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md).</span><span class="sxs-lookup"><span data-stu-id="37812-108">You can do this either with a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause and a [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) variable, or with an [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span> <span data-ttu-id="37812-109">Mit einem `Handles` -Klausel ist die Standardmethode zum Deklarieren eines ereignishandlers in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37812-109">Using a `Handles` clause is the default way to declare an event handler in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="37812-110">Dies ist die Möglichkeit, die der Ereignishandler wird, die geschrieben werden, wenn Sie in der integrierten Entwicklungsumgebung (IDE) programmieren.</span><span class="sxs-lookup"><span data-stu-id="37812-110">This is the way the event handlers are written by the designers when you program in the integrated development environment (IDE).</span></span> <span data-ttu-id="37812-111">Die `AddHandler` Anweisung eignet sich zum Auslösen von Ereignissen dynamisch zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="37812-111">The `AddHandler` statement is suitable for raising events dynamically at run time.</span></span>  
   
- Wenn das Ereignis eintritt, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ruft automatisch die Ereignis-Handler-Prozedur. Jeglicher Code, der Zugriff auf das Ereignis kann dazu führen, dass es durch die Ausführung einer [RaiseEvent-Anweisung](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
+ <span data-ttu-id="37812-112">Wenn das Ereignis auftritt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatisch die Ereignis-Handler-Prozedur aufruft.</span><span class="sxs-lookup"><span data-stu-id="37812-112">When the event occurs, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically calls the event handler procedure.</span></span> <span data-ttu-id="37812-113">Jeglicher Code, der Zugriff auf das Ereignis kann dazu führen, dass durch die Ausführung einer [RaiseEvent-Anweisung](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).</span><span class="sxs-lookup"><span data-stu-id="37812-113">Any code that has access to the event can cause it to occur by executing a [RaiseEvent Statement](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).</span></span>  
   
- Sie können das gleiche Ereignis mehrere Ereignishandler zuordnen. In einigen Fällen können Sie einen Ereignishandler aus einem Ereignis zu trennen. Weitere Informationen finden Sie unter [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+ <span data-ttu-id="37812-114">Sie können das gleiche Ereignis mehrere Ereignishandler zuordnen.</span><span class="sxs-lookup"><span data-stu-id="37812-114">You can associate more than one event handler with the same event.</span></span> <span data-ttu-id="37812-115">In einigen Fällen können Sie einen Ereignishandler von einem Ereignis trennen.</span><span class="sxs-lookup"><span data-stu-id="37812-115">In some cases you can dissociate a handler from an event.</span></span> <span data-ttu-id="37812-116">Weitere Informationen finden Sie unter [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="37812-116">For more information, see [Events](../../../../visual-basic/programming-guide/language-features/events/index.md).</span></span>  
   
-### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Mit Handles und WithEvents einen Ereignishandler aufrufen  
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a><span data-ttu-id="37812-117">Einen Ereignishandler mithilfe von Handles und WithEvents aufrufen</span><span class="sxs-lookup"><span data-stu-id="37812-117">To call an event handler using Handles and WithEvents</span></span>  
   
-1.  Stellen Sie sicher, dass das Ereignis mit deklariert eine [Event-Anweisung](../../../../visual-basic/language-reference/statements/event-statement.md).  
+1.  <span data-ttu-id="37812-118">Stellen Sie sicher, dass das Ereignis wird deklariert, wobei ein [Event-Anweisung](../../../../visual-basic/language-reference/statements/event-statement.md).</span><span class="sxs-lookup"><span data-stu-id="37812-118">Make sure the event is declared with an [Event Statement](../../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-2.  Deklarieren Sie eine Objektvariable auf Modul- oder Ebene, mit der [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) Schlüsselwort. Die `As` -Klausel für diese Variable muss die Klasse angeben, die das Ereignis auslöst.  
+2.  <span data-ttu-id="37812-119">Deklarieren eine Objektvariablen auf Modul- oder Ebene, mit der [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="37812-119">Declare an object variable at module or class level, using the [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) keyword.</span></span> <span data-ttu-id="37812-120">Die `As` -Klausel für diese Variable muss die Klasse angeben, die das Ereignis auslöst.</span><span class="sxs-lookup"><span data-stu-id="37812-120">The `As` clause for this variable must specify the class that raises the event.</span></span>  
   
-3.  In der Deklaration der Ereignisbehandlung `Sub` Verfahren Hinzufügen einer [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) -Klausel, in der `WithEvents` Variable und der Name des Ereignisses.  
+3.  <span data-ttu-id="37812-121">In der Deklaration eines der Ereignisbehandlung `Sub` Prozedur, hinzufügen eine [behandelt](../../../../visual-basic/language-reference/statements/handles-clause.md) -Klausel, der `WithEvents` Variable und den Namen des Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="37812-121">In the declaration of the event-handling `Sub` procedure, add a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause that specifies the `WithEvents` variable and the event name.</span></span>  
   
-4.  Wenn das Ereignis eintritt, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ruft automatisch die `Sub` Verfahren. Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.  
+4.  <span data-ttu-id="37812-122">Wenn das Ereignis auftritt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft automatisch den `Sub` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="37812-122">When the event occurs, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically calls the `Sub` procedure.</span></span> <span data-ttu-id="37812-123">Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.</span><span class="sxs-lookup"><span data-stu-id="37812-123">Your code can use a `RaiseEvent` statement to make the event occur.</span></span>  
   
-     Im folgende Beispiel wird ein Ereignis definiert und ein `WithEvents` Variable, die auf die Klasse verweist, die das Ereignis auslöst. Die Ereignisbehandlung `Sub` Prozedur verwendet einen `Handles` -Klausel zur Angabe der Klasse und das Ereignis behandelt.  
+     <span data-ttu-id="37812-124">Im folgende Beispiel wird ein Ereignis definiert und eine `WithEvents` Variable, die auf die Klasse verweist, die das Ereignis auslöst.</span><span class="sxs-lookup"><span data-stu-id="37812-124">The following example defines an event and a `WithEvents` variable that refers to the class that raises the event.</span></span> <span data-ttu-id="37812-125">Der Ereignisbehandlung `Sub` Beispielprozedur verwendet eine `Handles` -Klausel zur Angabe der Klasse und das Ereignis verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="37812-125">The event-handling `Sub` procedure uses a `Handles` clause to specify the class and event it handles.</span></span>  
   
-     [!code-vb[VbVbcnProcedures&4;](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
-### <a name="to-call-an-event-handler-using-addhandler"></a>Mit AddHandler einen Ereignishandler aufrufen  
+### <a name="to-call-an-event-handler-using-addhandler"></a><span data-ttu-id="37812-126">Einen Ereignishandler, die mit "AddHandler" aufrufen</span><span class="sxs-lookup"><span data-stu-id="37812-126">To call an event handler using AddHandler</span></span>  
   
-1.  Stellen Sie sicher, dass das Ereignis mit deklariert eine `Event` Anweisung.  
+1.  <span data-ttu-id="37812-127">Stellen Sie sicher, dass das Ereignis wird deklariert, wobei eine `Event` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="37812-127">Make sure the event is declared with an `Event` statement.</span></span>  
   
-2.  Führen Sie eine [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) dynamisch die Ereignisbehandlung zu verknüpfen `Sub` Prozedur mit dem Ereignis.  
+2.  <span data-ttu-id="37812-128">Führen Sie eine [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) die Ereignisbehandlung dynamisch Verbindung `Sub` Prozedur mit dem Ereignis.</span><span class="sxs-lookup"><span data-stu-id="37812-128">Execute an [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) to dynamically connect the event-handling `Sub` procedure with the event.</span></span>  
   
-3.  Wenn das Ereignis eintritt, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ruft automatisch die `Sub` Verfahren. Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.  
+3.  <span data-ttu-id="37812-129">Wenn das Ereignis auftritt, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ruft automatisch den `Sub` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="37812-129">When the event occurs, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically calls the `Sub` procedure.</span></span> <span data-ttu-id="37812-130">Code können Sie eine `RaiseEvent` Anweisung, damit das Ereignis auftreten.</span><span class="sxs-lookup"><span data-stu-id="37812-130">Your code can use a `RaiseEvent` statement to make the event occur.</span></span>  
   
-     Das folgende Beispiel definiert eine `Sub` Prozedur zum Behandeln der <xref:System.Windows.Forms.Form.Closing>-Ereignis eines Formulars.</xref:System.Windows.Forms.Form.Closing> Anschließend wird mithilfe der [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) Zuordnen der `catchClose` Prozedur als Ereignishandler für <xref:System.Windows.Forms.Form.Closing>.</xref:System.Windows.Forms.Form.Closing>  
+     <span data-ttu-id="37812-131">Das folgende Beispiel definiert eine `Sub` Prozedur zum Behandeln der <xref:System.Windows.Forms.Form.Closing> -Ereignis für ein Formular.</span><span class="sxs-lookup"><span data-stu-id="37812-131">The following example defines a `Sub` procedure to handle the <xref:System.Windows.Forms.Form.Closing> event of a form.</span></span> <span data-ttu-id="37812-132">Es verwendet dann die [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) zum Zuordnen der `catchClose` Prozedur als ein Ereignishandler für <xref:System.Windows.Forms.Form.Closing>.</span><span class="sxs-lookup"><span data-stu-id="37812-132">It then uses the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) to associate the `catchClose` procedure as an event handler for <xref:System.Windows.Forms.Form.Closing>.</span></span>  
   
-     [!code-vb[VbVbcnProcedures&5;](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
-     Sie können einen Ereignishandler aus einem Ereignis trennen, durch Ausführen der [RemoveHandler-Anweisung](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
+     <span data-ttu-id="37812-133">Sie können einen Ereignishandler von einem Ereignis trennen, durch das Ausführen der [RemoveHandler-Anweisung](../../../../visual-basic/language-reference/statements/removehandler-statement.md).</span><span class="sxs-lookup"><span data-stu-id="37812-133">You can dissociate an event handler from an event by executing the [RemoveHandler Statement](../../../../visual-basic/language-reference/statements/removehandler-statement.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)   
- [Sub-Prozeduren](./sub-procedures.md)   
- [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [AddressOf-Operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Gewusst wie: Erstellen einer Prozedur](./how-to-create-a-procedure.md)   
- [Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+## <a name="see-also"></a><span data-ttu-id="37812-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37812-134">See Also</span></span>  
+ [<span data-ttu-id="37812-135">Verfahren</span><span class="sxs-lookup"><span data-stu-id="37812-135">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="37812-136">Sub-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="37812-136">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="37812-137">Sub-Anweisung</span><span class="sxs-lookup"><span data-stu-id="37812-137">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="37812-138">AddressOf-Operator</span><span class="sxs-lookup"><span data-stu-id="37812-138">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="37812-139">Gewusst wie: Erstellen einer Prozedur</span><span class="sxs-lookup"><span data-stu-id="37812-139">How to: Create a Procedure</span></span>](./how-to-create-a-procedure.md)  
+ [<span data-ttu-id="37812-140">Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt</span><span class="sxs-lookup"><span data-stu-id="37812-140">How to: Call a Procedure that Does Not Return a Value</span></span>](./how-to-call-a-procedure-that-does-not-return-a-value.md)

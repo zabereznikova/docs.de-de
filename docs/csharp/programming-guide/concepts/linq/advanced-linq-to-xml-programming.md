@@ -1,45 +1,40 @@
 ---
 title: Erweiterte LINQ to XML-Programmierung (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0f451700dbd2bf9f924eacf6c3685b88ff2c8849
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4419d05874f8e4883711d0f4abb98bc4a416b7fd
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="advanced-linq-to-xml-programming-c"></a>Erweiterte LINQ to XML-Programmierung (C#)
-Dieser Abschnitt enthält Informationen, die nur für erfahrene Entwickler und in bestimmten [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Szenarios relevant sind.  
+# <a name="advanced-linq-to-xml-programming-c"></a><span data-ttu-id="aaea3-102">Erweiterte LINQ to XML-Programmierung (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-102">Advanced LINQ to XML Programming (C#)</span></span>
+<span data-ttu-id="aaea3-103">Dieser Abschnitt enthält Informationen, die nur für erfahrene Entwickler und in bestimmten [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Szenarios relevant sind.</span><span class="sxs-lookup"><span data-stu-id="aaea3-103">This section provides information that will only be applicable to advanced developers in certain [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a><span data-ttu-id="aaea3-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="aaea3-104">In This Section</span></span>  
   
-|Thema|Beschreibung|  
+|<span data-ttu-id="aaea3-105">Thema</span><span class="sxs-lookup"><span data-stu-id="aaea3-105">Topic</span></span>|<span data-ttu-id="aaea3-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aaea3-106">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML-Anmerkungen](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Beschreibt, wie Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Knoten und -Attributen Anmerkungen hinzufügen können.|  
-|[LINQ to XML-Ereignisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|Beschreibt, wie Sie Ereignishandler für Ereignisse schreiben können, die beim Ändern einer XML-Struktur eintreten.|  
-|[Programmieren mit Knoten (C#)](../../../../csharp/programming-guide/concepts/linq/programming-with-nodes.md)|Beschreibt, wie Sie durch das Abfragen und Bearbeiten von Knoten mit einer höheren Detailgenauigkeit (Granularität) als bei Elementen und Attributen arbeiten können.|  
-|[Fehler durch Vermischung von deklarativem und imperativem Code (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Beschreibt die Probleme, die auftreten, wenn Sie deklarativen Code (Abfragen) mit imperativem Code (Code, der die XML-Struktur ändert) mischen.|  
-|[Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Beschreibt, wie Sie XML-Fragmente aus einem <xref:System.Xml.XmlReader> streamen können. Mit dieser Technik können Sie die Speicherbeanspruchung durch Ihre Anwendung steuern.|  
-|[Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|Beschreibt, wie Sie XML aus einem <xref:System.Xml.XmlReader> streamen, das XML-Fragment transformieren und die Ausgabe mit <xref:System.Xml.Linq.XStreamingElement> streamen können.|  
-|[Vorgehensweise: Lesen und Schreiben eines verschlüsselten Dokuments (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Beschreibt, wie Sie XML-Dokumente lesen oder schreiben können, die codiert sind.|  
-|[Verwenden von XSLT zum Transformieren eines XML-Baums (C#)](../../../../csharp/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|Beschreibt, wie Sie eine XML-Struktur mit XSLT transformieren können.|  
-|[Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Beschreibt, wie Sie Anmerkungen verwenden können, um die Transformation einer XML-Struktur zu ermöglichen.|  
-|[Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Beschreibt, wie Sie Objektdiagramme serialisieren können, die <xref:System.Xml.Linq.XElement>-Objekte und <xref:System.Xml.Linq.XDocument>-Objekte enthalten.|  
-|[WPF-Datenbindung mit LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Beschreibt, wie Sie LINQ to XML als Datenquelle für die Datenbindung in WPF-Anwendungen (Windows Presentation Foundation) verwenden können.|  
+|[<span data-ttu-id="aaea3-107">LINQ to XML-Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="aaea3-107">LINQ to XML Annotations</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|<span data-ttu-id="aaea3-108">Beschreibt, wie Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Knoten und -Attributen Anmerkungen hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="aaea3-108">Describes how to add annotations to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nodes and attributes.</span></span>|  
+|[<span data-ttu-id="aaea3-109">LINQ to XML-Ereignisse (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-109">LINQ to XML Events (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|<span data-ttu-id="aaea3-110">Beschreibt, wie Sie Ereignishandler für Ereignisse schreiben können, die beim Ändern einer XML-Struktur eintreten.</span><span class="sxs-lookup"><span data-stu-id="aaea3-110">Describes how to write event handlers for events that occur when you alter an XML tree.</span></span>|  
+|[<span data-ttu-id="aaea3-111">Programmieren mit Knoten (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-111">Programming with Nodes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-with-nodes.md)|<span data-ttu-id="aaea3-112">Beschreibt, wie Sie durch das Abfragen und Bearbeiten von Knoten mit einer höheren Detailgenauigkeit (Granularität) als bei Elementen und Attributen arbeiten können.</span><span class="sxs-lookup"><span data-stu-id="aaea3-112">Describes how to query and manipulate nodes at a finer level of granularity than elements and attributes.</span></span>|  
+|[<span data-ttu-id="aaea3-113">Fehler durch Vermischung von deklarativem und imperativem Code (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-113">Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|<span data-ttu-id="aaea3-114">Beschreibt die Probleme, die auftreten, wenn Sie deklarativen Code (Abfragen) mit imperativem Code (Code, der die XML-Struktur ändert) mischen.</span><span class="sxs-lookup"><span data-stu-id="aaea3-114">Describes the problems that appear when you mix declarative code (queries) with imperative code (code that modifies the XML tree).</span></span>|  
+|[<span data-ttu-id="aaea3-115">Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-115">How to: Stream XML Fragments with Access to Header Information (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|<span data-ttu-id="aaea3-116">Beschreibt, wie Sie XML-Fragmente aus einem <xref:System.Xml.XmlReader> streamen können.</span><span class="sxs-lookup"><span data-stu-id="aaea3-116">Describes how to stream XML fragments from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="aaea3-117">Mit dieser Technik können Sie die Speicherbeanspruchung durch Ihre Anwendung steuern.</span><span class="sxs-lookup"><span data-stu-id="aaea3-117">You can use this technique to control the memory footprint of your application.</span></span>|  
+|[<span data-ttu-id="aaea3-118">Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-118">How to: Perform Streaming Transform of Large XML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|<span data-ttu-id="aaea3-119">Beschreibt, wie Sie XML aus einem <xref:System.Xml.XmlReader> streamen, das XML-Fragment transformieren und die Ausgabe mit <xref:System.Xml.Linq.XStreamingElement> streamen können.</span><span class="sxs-lookup"><span data-stu-id="aaea3-119">Describes how to stream XML from an <xref:System.Xml.XmlReader>, transform the XML fragment, and stream the output using <xref:System.Xml.Linq.XStreamingElement>.</span></span>|  
+|[<span data-ttu-id="aaea3-120">Vorgehensweise: Lesen und Schreiben eines verschlüsselten Dokuments (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-120">How to: Read and Write an Encoded Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|<span data-ttu-id="aaea3-121">Beschreibt, wie Sie XML-Dokumente lesen oder schreiben können, die codiert sind.</span><span class="sxs-lookup"><span data-stu-id="aaea3-121">Describes how to read and write XML documents that are encoded.</span></span>|  
+|[<span data-ttu-id="aaea3-122">Verwenden von XSLT zum Transformieren eines XML-Baums (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-122">Using XSLT to Transform an XML Tree (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|<span data-ttu-id="aaea3-123">Beschreibt, wie Sie eine XML-Struktur mit XSLT transformieren können.</span><span class="sxs-lookup"><span data-stu-id="aaea3-123">Describes how to transform an XML tree using XSLT.</span></span>|  
+|[<span data-ttu-id="aaea3-124">Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-124">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|<span data-ttu-id="aaea3-125">Beschreibt, wie Sie Anmerkungen verwenden können, um die Transformation einer XML-Struktur zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="aaea3-125">Describes how annotations can be used to facilitate transforms of an XML tree.</span></span>|  
+|[<span data-ttu-id="aaea3-126">Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten (C#)</span><span class="sxs-lookup"><span data-stu-id="aaea3-126">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|<span data-ttu-id="aaea3-127">Beschreibt, wie Sie Objektdiagramme serialisieren können, die <xref:System.Xml.Linq.XElement>-Objekte und <xref:System.Xml.Linq.XDocument>-Objekte enthalten.</span><span class="sxs-lookup"><span data-stu-id="aaea3-127">Describes how to serialize object graphs that contain <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> objects.</span></span>|  
+|[<span data-ttu-id="aaea3-128">WPF-Datenbindung mit LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="aaea3-128">WPF Data Binding with LINQ to XML</span></span>](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|<span data-ttu-id="aaea3-129">Beschreibt, wie Sie LINQ to XML als Datenquelle für die Datenbindung in WPF-Anwendungen (Windows Presentation Foundation) verwenden können.</span><span class="sxs-lookup"><span data-stu-id="aaea3-129">Describes how to use LINQ to XML as the data source for data binding in Windows Presentation Foundation applications.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="aaea3-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aaea3-130">See Also</span></span>  
+ [<span data-ttu-id="aaea3-131">Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))</span><span class="sxs-lookup"><span data-stu-id="aaea3-131">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -1,89 +1,83 @@
 ---
 title: Lokale Funktionen (C#-Programmierhandbuch)
-ms.date: 2017-06-14
+ms.date: 06/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- local functions [C#]
+helpviewer_keywords: local functions [C#]
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
-ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
+# <a name="local-functions-c-programming-guide"></a><span data-ttu-id="65233-102">Lokale Funktionen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="65233-102">Local functions (C# Programming Guide)</span></span>
 
-Ab C#-7 unterstützt C# *lokale Funktionen*. Lokale Funktionen sind private Methoden eines Typs, die in einem anderen Member geschachtelt sind. Sie können nur aus ihrem enthaltenden Member aufgerufen werden. Lokale Funktionen können deklariert und aufgerufen werden aus:
+<span data-ttu-id="65233-103">Ab C#-7 unterstützt C# *lokale Funktionen*.</span><span class="sxs-lookup"><span data-stu-id="65233-103">Starting with C# 7, C# supports *local functions*.</span></span> <span data-ttu-id="65233-104">Lokale Funktionen sind private Methoden eines Typs, die in einem anderen Member geschachtelt sind.</span><span class="sxs-lookup"><span data-stu-id="65233-104">Local functions are private methods of a type that are nested in another member.</span></span> <span data-ttu-id="65233-105">Sie können nur aus ihrem enthaltenden Member aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="65233-105">They can only be called from their containing member.</span></span> <span data-ttu-id="65233-106">Lokale Funktionen können deklariert und aufgerufen werden aus:</span><span class="sxs-lookup"><span data-stu-id="65233-106">Local functions can be declared in and called from:</span></span>
 
-- Methoden, insbesondere Iteratormethoden und Async-Methoden
-- Konstruktoren
-- Eigenschaftenaccessoren
-- Ereignisaccessoren
-- Anonymen Methoden
-- Lambdaausdrücke
-- Finalizer
-- Anderen lokalen Funktionen
+- <span data-ttu-id="65233-107">Methoden, insbesondere Iteratormethoden und Async-Methoden</span><span class="sxs-lookup"><span data-stu-id="65233-107">Methods, especially iterator methods and async methods</span></span>
+- <span data-ttu-id="65233-108">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="65233-108">Constructors</span></span>
+- <span data-ttu-id="65233-109">Eigenschaftenaccessoren</span><span class="sxs-lookup"><span data-stu-id="65233-109">Property accessors</span></span>
+- <span data-ttu-id="65233-110">Ereignisaccessoren</span><span class="sxs-lookup"><span data-stu-id="65233-110">Event accessors</span></span>
+- <span data-ttu-id="65233-111">Anonymen Methoden</span><span class="sxs-lookup"><span data-stu-id="65233-111">Anonymous methods</span></span>
+- <span data-ttu-id="65233-112">Lambdaausdrücke</span><span class="sxs-lookup"><span data-stu-id="65233-112">Lambda expressions</span></span>
+- <span data-ttu-id="65233-113">Finalizer</span><span class="sxs-lookup"><span data-stu-id="65233-113">Finalizers</span></span>
+- <span data-ttu-id="65233-114">Anderen lokalen Funktionen</span><span class="sxs-lookup"><span data-stu-id="65233-114">Other local functions</span></span>
 
-Lokale Funktionen können jedoch nicht in einem Ausdruckskörpermember deklariert werden.
+<span data-ttu-id="65233-115">Lokale Funktionen können jedoch nicht in einem Ausdruckskörpermember deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="65233-115">However, local functions can't be declared inside an expression-bodied member.</span></span>
 
 > [!NOTE]
-> In einigen Fällen können Sie einen Lambdaausdruck zum Implementieren von Funktionen verwenden, die auch von einer lokalen Funktion unterstützt werden. Einen Vergleich finden Sie unter [Lokale Funktionen im Vergleich zu Lambdaausdrücken](../../local-functions-vs-lambdas.md).
+> <span data-ttu-id="65233-116">In einigen Fällen können Sie einen Lambdaausdruck zum Implementieren von Funktionen verwenden, die auch von einer lokalen Funktion unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="65233-116">In some cases, you can use a lambda expression to implement functionality also supported by a local function.</span></span> <span data-ttu-id="65233-117">Einen Vergleich finden Sie unter [Lokale Funktionen im Vergleich zu Lambdaausdrücken](../../local-functions-vs-lambdas.md).</span><span class="sxs-lookup"><span data-stu-id="65233-117">For a comparison, see [Local functions compared to Lambda expressions](../../local-functions-vs-lambdas.md).</span></span>
 
-Lokale Funktionen machen den Zweck Ihres Codes deutlich. Beim Lesen des Codes wird deutlich, dass die Methode nur von der enthaltenden Methode aufgerufen werden kann. Bei Teamprojekten wird auch verhindert, dass ein anderer Entwickler die Methode versehentlich direkt an anderer Stelle in der Klasse aufruft.
+<span data-ttu-id="65233-118">Lokale Funktionen machen den Zweck Ihres Codes deutlich.</span><span class="sxs-lookup"><span data-stu-id="65233-118">Local functions make the intent of your code clear.</span></span> <span data-ttu-id="65233-119">Beim Lesen des Codes wird deutlich, dass die Methode nur von der enthaltenden Methode aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="65233-119">Anyone reading you code can see that the method is not callable except by the containing method.</span></span> <span data-ttu-id="65233-120">Bei Teamprojekten wird auch verhindert, dass ein anderer Entwickler die Methode versehentlich direkt an anderer Stelle in der Klasse aufruft.</span><span class="sxs-lookup"><span data-stu-id="65233-120">For team projects, they also make it impossible for another developer to mistakenly call the method directly from elsewhere in the class or stuct.</span></span>
  
-## <a name="local-function-syntax"></a>Syntax einer lokalen Funktion
+## <a name="local-function-syntax"></a><span data-ttu-id="65233-121">Syntax einer lokalen Funktion</span><span class="sxs-lookup"><span data-stu-id="65233-121">Local function syntax</span></span>
 
-Eine lokale Funktion wird definiert als eine geschachtelte Methode in einem enthaltenden Member. Ihre Definition besitzt die folgende Syntax:
+<span data-ttu-id="65233-122">Eine lokale Funktion wird definiert als eine geschachtelte Methode in einem enthaltenden Member.</span><span class="sxs-lookup"><span data-stu-id="65233-122">A local function is defined as a nested method inside a containing member.</span></span> <span data-ttu-id="65233-123">Ihre Definition besitzt die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="65233-123">Its definition has the following syntax:</span></span>
 
 ```txt
 <modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
 ```
 
-Lokale Funktionen können die Modifizierer [async](../../language-reference/keywords/async.md) und [unsafe](../../language-reference/keywords/unsafe.md) verwenden. 
+<span data-ttu-id="65233-124">Lokale Funktionen können die Modifizierer [async](../../language-reference/keywords/async.md) und [unsafe](../../language-reference/keywords/unsafe.md) verwenden.</span><span class="sxs-lookup"><span data-stu-id="65233-124">Local functions can use the [async](../../language-reference/keywords/async.md) and [unsafe](../../language-reference/keywords/unsafe.md) modifiers.</span></span> 
 
-Beachten Sie, dass alle im enthaltenden Member definierten lokalen Variablen, einschließlich der Methodenparameter, in der lokalen Funktion zugänglich sind. 
+<span data-ttu-id="65233-125">Beachten Sie, dass alle im enthaltenden Member definierten lokalen Variablen, einschließlich der Methodenparameter, in der lokalen Funktion zugänglich sind.</span><span class="sxs-lookup"><span data-stu-id="65233-125">Note that all local variables that are defined in the containing member, including its method parameters, are accessible in the local function.</span></span> 
 
-Im Gegensatz zu einer Methodendefinition kann die Definition einer lokalen Funktion keines der folgenden Elemente enthalten:
+<span data-ttu-id="65233-126">Im Gegensatz zu einer Methodendefinition kann die Definition einer lokalen Funktion keines der folgenden Elemente enthalten:</span><span class="sxs-lookup"><span data-stu-id="65233-126">Unlike a method definition, a local function definition cannot include the following elements:</span></span>
 
-- Den Zugriffsmodifizierer für Member. Da alle lokale Funktionen privat sind, generiert das Verwenden eines Zugriffsmodifizierers wie etwa das Schlüsselwort `private` den Compilerfehler CS0106 „Der Modifizierer ‚private‘ ist für dieses Element nicht gültig“.
+- <span data-ttu-id="65233-127">Den Zugriffsmodifizierer für Member.</span><span class="sxs-lookup"><span data-stu-id="65233-127">The member access modifier.</span></span> <span data-ttu-id="65233-128">Da alle lokale Funktionen privat sind, generiert das Verwenden eines Zugriffsmodifizierers wie etwa das Schlüsselwort `private` den Compilerfehler CS0106 „Der Modifizierer ‚private‘ ist für dieses Element nicht gültig“.</span><span class="sxs-lookup"><span data-stu-id="65233-128">Because all local functions are private, including an access modifier, such as the `private` keyword, generates compiler error CS0106, "The modifier 'private' is not valid for this item."</span></span>
  
-- Das Schlüsselwort [static](../../language-reference/keywords/static.md). Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 „Der Modifizierer ‚static‘ ist für dieses Element nicht gültig“.
+- <span data-ttu-id="65233-129">Das Schlüsselwort [static](../../language-reference/keywords/static.md).</span><span class="sxs-lookup"><span data-stu-id="65233-129">The [static](../../language-reference/keywords/static.md) keyword.</span></span> <span data-ttu-id="65233-130">Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 „Der Modifizierer ‚static‘ ist für dieses Element nicht gültig“.</span><span class="sxs-lookup"><span data-stu-id="65233-130">Including the `static` keyword generates compiler error CS0106, "The modifier 'static' is not valid for this item."</span></span>
 
-Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Parameter und Typparameter angewendet werden. 
+<span data-ttu-id="65233-131">Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Parameter und Typparameter angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="65233-131">In addition, attributes can't be applied to the local function or to its parameters and type parameters.</span></span> 
  
-Das folgende Beispiel definiert eine lokale Funktion mit dem Namen `AppendPathSeparator`, die für eine Methode mit dem Namen `GetText` privat ist:
+<span data-ttu-id="65233-132">Das folgende Beispiel definiert eine lokale Funktion mit dem Namen `AppendPathSeparator`, die für eine Methode mit dem Namen `GetText` privat ist:</span><span class="sxs-lookup"><span data-stu-id="65233-132">The following example defines a local function named `AppendPathSeparator` that is private to a method named `GetText`:</span></span>
    
-[!code-cs[LokaleFunktionBeispiel](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+[!code-csharp[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
    
-## <a name="local-functions-and-exceptions"></a>Lokale Funktionen und Ausnahmen
+## <a name="local-functions-and-exceptions"></a><span data-ttu-id="65233-133">Lokale Funktionen und Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="65233-133">Local functions and exceptions</span></span>
 
-Eine nützliche Funktion von lokalen Funktionen ist die Tatsache, dass sie Ausnahmen sofort verfügbar machen können. Bei Methodeniteratoren werden Ausnahmen erst eingeblendet, wenn die zurückgegebene Sequenz aufgelistet wird, und nicht, wenn der Iterator abgerufen wird. Bei async-Methoden werden Ausnahmen festgestellt, wenn die zurückgegebene Aufgabe erwartet wird. 
+<span data-ttu-id="65233-134">Eine nützliche Funktion von lokalen Funktionen ist die Tatsache, dass sie Ausnahmen sofort verfügbar machen können.</span><span class="sxs-lookup"><span data-stu-id="65233-134">One of the useful features of local functions is that they can allow exceptions to surface immediately.</span></span> <span data-ttu-id="65233-135">Bei Methodeniteratoren werden Ausnahmen erst eingeblendet, wenn die zurückgegebene Sequenz aufgelistet wird, und nicht, wenn der Iterator abgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="65233-135">For method iterators, exceptions are surfaced only when the returned sequence is enumerated, and not when the iterator is retrieved.</span></span> <span data-ttu-id="65233-136">Bei async-Methoden werden Ausnahmen festgestellt, wenn die zurückgegebene Aufgabe erwartet wird.</span><span class="sxs-lookup"><span data-stu-id="65233-136">For async methods, any exceptions thrown in an async method are observed when the returned task is awaited.</span></span> 
 
-Das folgende Beispiel definiert eine `OddSequence`-Methode, die ungerade Zahlen in einem angegebenen Bereich aufzählt. Da eine Zahl größer als 100 an die `OddSequence`-Enumeratormethode übergeben wird, wird <xref:System.ArgumentOutOfRangeException> ausgelöst. Die Ausgabe des Beispiels zeigt, dass die Ausnahme erst beim Durchlaufen der Zahlen und nicht beim Abrufen des Enumerators eingeblendet wird.
+<span data-ttu-id="65233-137">Das folgende Beispiel definiert eine `OddSequence`-Methode, die ungerade Zahlen in einem angegebenen Bereich aufzählt.</span><span class="sxs-lookup"><span data-stu-id="65233-137">The following example defines an `OddSequence` method that enumerates odd numbers between a specified range.</span></span> <span data-ttu-id="65233-138">Da eine Zahl größer als 100 an die `OddSequence`-Enumeratormethode übergeben wird, wird <xref:System.ArgumentOutOfRangeException> ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="65233-138">Because it passes a number greater than 100 to the `OddSequence` enumerator method, the method throws an <xref:System.ArgumentOutOfRangeException>.</span></span> <span data-ttu-id="65233-139">Die Ausgabe des Beispiels zeigt, dass die Ausnahme erst beim Durchlaufen der Zahlen und nicht beim Abrufen des Enumerators eingeblendet wird.</span><span class="sxs-lookup"><span data-stu-id="65233-139">As the output from the example shows, the exception surfaces only when you iterate the numbers, and not when you retrieve the enumerator.</span></span>
 
-[!code-cs[LokaleFunktionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
+[!code-csharp[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
 
-Stattdessen können Sie während der Validierung und vor Abrufen des Iterators wie im folgenden Beispiel dargestellt eine Ausnahme auslösen, indem der Iterator aus einer lokalen Funktion zurückgegeben wird.
+<span data-ttu-id="65233-140">Stattdessen können Sie während der Validierung und vor Abrufen des Iterators wie im folgenden Beispiel dargestellt eine Ausnahme auslösen, indem der Iterator aus einer lokalen Funktion zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="65233-140">Instead, you can throw an exception when performing validation and before retrieving the iterator by returning the iterator from a local function, as the following example shows.</span></span>
 
-[!code-cs[LokaleFunktionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+[!code-csharp[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
-Lokale Funktionen können auf ähnliche Weise verwendet werden, um Ausnahmen außerhalb des asynchronen Vorgangs zu behandeln. Normalerweise erfordern Ausnahmen in einer async-Methode die Überprüfung der inneren Ausnahmen von <xref:System.AggregateException>. Lokale Funktionen ermöglichen einen schnellen Abbruch Ihres Codes. Ihre Ausnahme kann sowohl synchron ausgelöst als auch beobachtet werden.
+<span data-ttu-id="65233-141">Lokale Funktionen können auf ähnliche Weise verwendet werden, um Ausnahmen außerhalb des asynchronen Vorgangs zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="65233-141">Local functions can be used in a similar way to handle exceptions outside of the asynchronous operation.</span></span> <span data-ttu-id="65233-142">Normalerweise erfordern Ausnahmen in einer async-Methode die Überprüfung der inneren Ausnahmen von <xref:System.AggregateException>.</span><span class="sxs-lookup"><span data-stu-id="65233-142">Ordinarily, exceptions thrown in async method require that you examine the inner exceptions of an <xref:System.AggregateException>.</span></span> <span data-ttu-id="65233-143">Lokale Funktionen ermöglichen einen schnellen Abbruch Ihres Codes. Ihre Ausnahme kann sowohl synchron ausgelöst als auch beobachtet werden.</span><span class="sxs-lookup"><span data-stu-id="65233-143">Local functions allow your code to fail fast and allow your exception to be both thrown and observed synchronously.</span></span>
 
-Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `GetMultipleAsync` verwendet, um für eine bestimmte Anzahl von Sekunden anzuhalten und ein zufälliges Vielfaches dieser Sekundenanzahl zurückzugeben. Die maximale Verzögerung beträgt 5 Sekunden. <xref:System.ArgumentOutOfRangeException> wird ausgegeben, wenn der Wert größer als 5 ist. Im folgenden Beispiel wird verdeutlicht, dass die Ausnahme, die bei der Übergabe eines Werts größer als 6 an die Methode `GetMultipleAsync` ausgelöst wird, von <xref:System.AggregateException> umschlossen wird, sobald die Methode `GetMultipleAsync` ausgeführt wird.
+<span data-ttu-id="65233-144">Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `GetMultipleAsync` verwendet, um für eine bestimmte Anzahl von Sekunden anzuhalten und ein zufälliges Vielfaches dieser Sekundenanzahl zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="65233-144">The following example uses an asynchronous method named `GetMultipleAsync` to pause for a specified number of seconds and return a value that is a random multiple of that number of seconds.</span></span> <span data-ttu-id="65233-145">Die maximale Verzögerung beträgt 5 Sekunden. <xref:System.ArgumentOutOfRangeException> wird ausgegeben, wenn der Wert größer als 5 ist.</span><span class="sxs-lookup"><span data-stu-id="65233-145">The maximum delay is 5 seconds; an <xref:System.ArgumentOutOfRangeException> results if the value is greater than 5.</span></span> <span data-ttu-id="65233-146">Im folgenden Beispiel wird verdeutlicht, dass die Ausnahme, die bei der Übergabe eines Werts größer als 6 an die Methode `GetMultipleAsync` ausgelöst wird, von <xref:System.AggregateException> umschlossen wird, sobald die Methode `GetMultipleAsync` ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="65233-146">As the following example shows, the exception that is thrown when a value of 6 is passed to the `GetMultipleAsync` method is wrapped in an <xref:System.AggregateException> after the `GetMultipleAsync` method begins execution.</span></span>
 
-[!code-cs[LokaleFunktionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
+[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
-Wie beim Methodeniterator kann der Code aus diesem Beispiel umgestaltet werden, um die Validierung vor Aufruf der asynchronen Methode durchzuführen. Die Ausgabe des folgenden Beispiels zeigt, dass <xref:System.ArgumentOutOfRangeException> nicht von einer <x:System.AggregateException> umschlossen wird.
+<span data-ttu-id="65233-147">Wie beim Methodeniterator kann der Code aus diesem Beispiel umgestaltet werden, um die Validierung vor Aufruf der asynchronen Methode durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="65233-147">As we did with the method iterator, we can refactor the code from this example to perform the validation before calling the asynchronous method.</span></span> <span data-ttu-id="65233-148">Die Ausgabe des folgenden Beispiels zeigt, dass <xref:System.ArgumentOutOfRangeException> nicht von einer <x:System.AggregateException> umschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="65233-148">As the output from the following example shows, the <xref:System.ArgumentOutOfRangeException> is not wrapped in a <x:System.AggregateException>.</span></span>
 
-[!code-cs[LokaleFunktionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
+[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
-## <a name="see-also"></a>Siehe auch
-[Methoden](methods.md)
-
+## <a name="see-also"></a><span data-ttu-id="65233-149">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="65233-149">See also</span></span>
+[<span data-ttu-id="65233-150">Methoden</span><span class="sxs-lookup"><span data-stu-id="65233-150">Methods</span></span>](methods.md)

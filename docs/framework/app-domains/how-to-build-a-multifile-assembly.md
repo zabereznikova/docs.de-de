@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -21,78 +24,88 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 68a2217ed05588b2ba6070850dfd0d61a7a0fde2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5dd9de26f083209a0e8da79562f914023e008251
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Gewusst wie: Erstellen einer Mehrfachdateiassembly
-In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.  
+# <a name="how-to-build-a-multifile-assembly"></a><span data-ttu-id="da0ae-102">Gewusst wie: Erstellen einer Mehrfachdateiassembly</span><span class="sxs-lookup"><span data-stu-id="da0ae-102">How to: Build a Multifile Assembly</span></span>
+<span data-ttu-id="da0ae-103">In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="da0ae-103">This article explains how to create a multifile assembly and provides code that illustrates each step in the procedure.</span></span>  
   
 > [!NOTE]
->  Die Visual Studio-IDE für C# und Visual Basic kann nur zum Erstellen von Einzeldateiassemblys verwendet werden. Wenn Sie Mehrfachdateiassemblys erstellen möchten, müssen Sie auf Befehlszeilencompiler oder auf Visual Studio mit Visual C++ zurückgreifen.  
+>  <span data-ttu-id="da0ae-104">Die Visual Studio-IDE für C# und Visual Basic kann nur zum Erstellen von Einzeldateiassemblys verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="da0ae-104">The Visual Studio IDE for C# and Visual Basic can only be used to create single-file assemblies.</span></span> <span data-ttu-id="da0ae-105">Wenn Sie Mehrfachdateiassemblys erstellen möchten, müssen Sie auf Befehlszeilencompiler oder auf Visual Studio mit Visual C++ zurückgreifen.</span><span class="sxs-lookup"><span data-stu-id="da0ae-105">If you want to create multifile assemblies, you must use the command-line compilers or Visual Studio with Visual C++.</span></span>  
   
-### <a name="to-create-a-multifile-assembly"></a>So erstellen Sie eine Mehrfachdateiassembly  
+### <a name="to-create-a-multifile-assembly"></a><span data-ttu-id="da0ae-106">So erstellen Sie eine Mehrfachdateiassembly</span><span class="sxs-lookup"><span data-stu-id="da0ae-106">To create a multifile assembly</span></span>  
   
-1.  Kompilieren Sie alle Dateien mit Namespaces, auf die andere Module der Assembly verweisen, in Codemodule. Die Standarderweiterung für Codemodule ist "netmodule".  
+1.  <span data-ttu-id="da0ae-107">Kompilieren Sie alle Dateien mit Namespaces, auf die andere Module der Assembly verweisen, in Codemodule.</span><span class="sxs-lookup"><span data-stu-id="da0ae-107">Compile all files that contain namespaces referenced by other modules in the assembly into code modules.</span></span> <span data-ttu-id="da0ae-108">Die Standarderweiterung für Codemodule ist "netmodule".</span><span class="sxs-lookup"><span data-stu-id="da0ae-108">The default extension for code modules is .netmodule.</span></span>  
   
-     Beispielsweise weist die Datei `Stringer` den Namespace `myStringer` auf, der die Klasse `Stringer` enthält. Die `Stringer`-Klasse enthält die `StringerMethod`-Methode, die eine einzelne Zeile auf der Konsole ausgibt.  
+     <span data-ttu-id="da0ae-109">Beispielsweise weist die Datei `Stringer` den Namespace `myStringer` auf, der die Klasse `Stringer` enthält.</span><span class="sxs-lookup"><span data-stu-id="da0ae-109">For example, let's say the `Stringer` file has a namespace called `myStringer`, which includes a class called `Stringer`.</span></span> <span data-ttu-id="da0ae-110">Die `Stringer`-Klasse enthält die `StringerMethod`-Methode, die eine einzelne Zeile auf der Konsole ausgibt.</span><span class="sxs-lookup"><span data-stu-id="da0ae-110">The `Stringer` class contains a method called `StringerMethod` that writes a single line to the console.</span></span>  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#1)] [!code-csharp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#1)] [!code-vb[Conceptual.Assembly.Multifile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#1)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#1)]
+     [!code-csharp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#1)]
+     [!code-vb[Conceptual.Assembly.Multifile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#1)]  
   
-     Verwenden Sie folgenden Befehl, um diesen Code zu kompilieren:  
+     <span data-ttu-id="da0ae-111">Verwenden Sie folgenden Befehl, um diesen Code zu kompilieren:</span><span class="sxs-lookup"><span data-stu-id="da0ae-111">Use the following command to compile this code:</span></span>  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#2)] [!code-csharp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#2)]  [!code-vb[Conceptual.Assembly.Multifile#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#2)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#2)]
+     [!code-csharp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#2)]
+     [!code-vb[Conceptual.Assembly.Multifile#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#2)]  
   
-     Durch die Compileroption **/t:** in Verbindung mit dem Parameter *module* wird die Datei als Modul kompiliert, nicht als Assembly. Der Compiler erzeugt ein Modul mit dem Namen `Stringer.netmodule`, das anschließend einer Assembly hinzugefügt werden kann.  
+     <span data-ttu-id="da0ae-112">Durch die Compileroption **/t:** in Verbindung mit dem Parameter *module* wird die Datei als Modul kompiliert, nicht als Assembly.</span><span class="sxs-lookup"><span data-stu-id="da0ae-112">Specifying the *module* parameter with the **/t:** compiler option indicates that the file should be compiled as a module rather than as an assembly.</span></span> <span data-ttu-id="da0ae-113">Der Compiler erzeugt ein Modul mit dem Namen `Stringer.netmodule`, das anschließend einer Assembly hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="da0ae-113">The compiler produces a module called `Stringer.netmodule`, which can be added to an assembly.</span></span>  
   
-2.  Kompilieren Sie alle weiteren Module unter Verwendung der erforderlichen Compileroptionen, um die anderen Module anzugeben, auf die im Code verwiesen wird. In diesem Schritt kommt die **/addmodule**-Compileroption zum Einsatz.  
+2.  <span data-ttu-id="da0ae-114">Kompilieren Sie alle weiteren Module unter Verwendung der erforderlichen Compileroptionen, um die anderen Module anzugeben, auf die im Code verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="da0ae-114">Compile all other modules, using the necessary compiler options to indicate the other modules that are referenced in the code.</span></span> <span data-ttu-id="da0ae-115">In diesem Schritt kommt die **/addmodule**-Compileroption zum Einsatz.</span><span class="sxs-lookup"><span data-stu-id="da0ae-115">This step uses the **/addmodule** compiler option.</span></span>  
   
-     Im folgenden Beispiel verfügt ein Codemodul mit dem Namen `Client` über die `Main`-Methode als Einstiegspunkt. Diese verweist wiederum auf eine Methode im `Stringer.dll`-Modul, das in Schritt 1 erstellt wurde.  
+     <span data-ttu-id="da0ae-116">Im folgenden Beispiel verfügt ein Codemodul mit dem Namen `Client` über die `Main`-Methode als Einstiegspunkt. Diese verweist wiederum auf eine Methode im `Stringer.dll`-Modul, das in Schritt 1 erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="da0ae-116">In the following example, a code module called `Client` has an entry point `Main` method that references a method in the `Stringer.dll` module created in step 1.</span></span>  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#3)] [!code-csharp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#3)] [!code-vb[Conceptual.Assembly.Multifile#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#3)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#3)]
+     [!code-csharp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#3)]
+     [!code-vb[Conceptual.Assembly.Multifile#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#3)]  
   
-     Verwenden Sie folgenden Befehl, um diesen Code zu kompilieren:  
+     <span data-ttu-id="da0ae-117">Verwenden Sie folgenden Befehl, um diesen Code zu kompilieren:</span><span class="sxs-lookup"><span data-stu-id="da0ae-117">Use the following command to compile this code:</span></span>  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#4)] [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]  [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#4)]
+     [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]
+     [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]  
   
-     Verwenden Sie die Option **/t:module**, da dieses Modul in einem späteren Schritt zu einer Assembly hinzugefügt wird. Legen Sie die **/addmodule**-Option fest, da der Code in `Client` auf einen Namespace verweist, der vom Code in `Stringer.netmodule` erzeugt wurde. Der Compiler erzeugt ein Modul mit dem Namen `Client.netmodule`, das einen Verweis auf ein anderes Modul, `Stringer.netmodule`, enthält.  
+     <span data-ttu-id="da0ae-118">Verwenden Sie die Option **/t:module**, da dieses Modul in einem späteren Schritt zu einer Assembly hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="da0ae-118">Specify the **/t:module** option because this module will be added to an assembly in a future step.</span></span> <span data-ttu-id="da0ae-119">Legen Sie die **/addmodule**-Option fest, da der Code in `Client` auf einen Namespace verweist, der vom Code in `Stringer.netmodule` erzeugt wurde.</span><span class="sxs-lookup"><span data-stu-id="da0ae-119">Specify the **/addmodule** option because the code in `Client` references a namespace created by the code in `Stringer.netmodule`.</span></span> <span data-ttu-id="da0ae-120">Der Compiler erzeugt ein Modul mit dem Namen `Client.netmodule`, das einen Verweis auf ein anderes Modul, `Stringer.netmodule`, enthält.</span><span class="sxs-lookup"><span data-stu-id="da0ae-120">The compiler produces a module called `Client.netmodule` that contains a reference to another module, `Stringer.netmodule`.</span></span>  
   
     > [!NOTE]
-    >  Die C#- und Visual Basic-Compiler unterstützen das direkte Erstellen von Mehrfachdateiassemblys unter Verwendung der beiden folgenden unterschiedlichen Syntaxformen.  
+    >  <span data-ttu-id="da0ae-121">Die C#- und Visual Basic-Compiler unterstützen das direkte Erstellen von Mehrfachdateiassemblys unter Verwendung der beiden folgenden unterschiedlichen Syntaxformen.</span><span class="sxs-lookup"><span data-stu-id="da0ae-121">The C# and Visual Basic compilers support directly creating multifile assemblies using the following two different syntaxes.</span></span>  
     >   
-    >  -   Zwei Kompilierungen erzeugen eine aus zwei Dateien bestehende Assembly:  
+    >  -   <span data-ttu-id="da0ae-122">Zwei Kompilierungen erzeugen eine aus zwei Dateien bestehende Assembly:</span><span class="sxs-lookup"><span data-stu-id="da0ae-122">Two compilations create a two-file assembly:</span></span>  
     >   
-    >      [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)] [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)] [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]  
-    > -   Eine Kompilierung erzeugt eine aus zwei Dateien bestehende Assembly:  
+    >      [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+      [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+      [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]  
+    > -   <span data-ttu-id="da0ae-123">Eine Kompilierung erzeugt eine aus zwei Dateien bestehende Assembly:</span><span class="sxs-lookup"><span data-stu-id="da0ae-123">One compilation creates a two-file assembly:</span></span>  
     >   
-    >      [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)] [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)] [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]  
+    >      [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+      [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+      [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]  
   
-3.  Erstellen Sie mit dem [Assembly Linker-Tool (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) eine Ausgabedatei, die das Assemblymanifest enthält. In dieser Datei sind Referenzinformationen zu allen zur Assembly gehörenden Modulen und Ressourcen enthalten.  
+3.  <span data-ttu-id="da0ae-124">Erstellen Sie mit dem [Assembly Linker-Tool (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) eine Ausgabedatei, die das Assemblymanifest enthält.</span><span class="sxs-lookup"><span data-stu-id="da0ae-124">Use the [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) to create the output file that contains the assembly manifest.</span></span> <span data-ttu-id="da0ae-125">In dieser Datei sind Referenzinformationen zu allen zur Assembly gehörenden Modulen und Ressourcen enthalten.</span><span class="sxs-lookup"><span data-stu-id="da0ae-125">This file contains reference information for all modules or resources that are part of the assembly.</span></span>  
   
-     Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
+     <span data-ttu-id="da0ae-126">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="da0ae-126">At the command prompt, type the following command:</span></span>  
   
-     **al** \<*modulname*> \<*modulname*> … **/main:**\<*Methodenname*> **/out:**\<*Dateiname*> **/target:**\<*Assemblydateityp*>  
+     <span data-ttu-id="da0ae-127">**al** \<*modulname*> \<*modulname*> …</span><span class="sxs-lookup"><span data-stu-id="da0ae-127">**al** \<*module name*> \<*module name*> …</span></span> <span data-ttu-id="da0ae-128">**/main:**\<*Methodenname*> **/out:**\<*Dateiname*> **/target:**\<*Assemblydateityp*></span><span class="sxs-lookup"><span data-stu-id="da0ae-128">**/main:**\<*method name*> **/out:**\<*file name*> **/target:**\<*assembly file type*></span></span>  
   
-     In diesem Befehl bezeichnen die *Modulname*-Argumente die Namen aller Module, die in der Assembly enthalten sein sollen. Die Option **/main:** gibt den Methodennamen an, der den Einstiegspunkt der Assembly darstellt. Die Option **/out:** gibt den Namen der Ausgabedatei an, die Assemblymetadaten enthält. Die Option **/target:** gibt an, dass die Assembly eine ausführbare Datei für eine Konsolenanwendung (.exe), eine ausführbare Windows-Datei (.win) oder eine Bibliothek ist (.lib).  
+     <span data-ttu-id="da0ae-129">In diesem Befehl bezeichnen die *Modulname*-Argumente die Namen aller Module, die in der Assembly enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="da0ae-129">In this command, the *module name* arguments specify the name of each module to include in the assembly.</span></span> <span data-ttu-id="da0ae-130">Die Option **/main:** gibt den Methodennamen an, der den Einstiegspunkt der Assembly darstellt.</span><span class="sxs-lookup"><span data-stu-id="da0ae-130">The **/main:** option specifies the method name that is the assembly's entry point.</span></span> <span data-ttu-id="da0ae-131">Die Option **/out:** gibt den Namen der Ausgabedatei an, die Assemblymetadaten enthält.</span><span class="sxs-lookup"><span data-stu-id="da0ae-131">The **/out:** option specifies the name of the output file, which contains assembly metadata.</span></span> <span data-ttu-id="da0ae-132">Die Option **/target:** gibt an, dass die Assembly eine ausführbare Datei für eine Konsolenanwendung (.exe), eine ausführbare Windows-Datei (.win) oder eine Bibliothek ist (.lib).</span><span class="sxs-lookup"><span data-stu-id="da0ae-132">The **/target:** option specifies that the assembly is a console application executable (.exe) file, a Windows executable (.win) file, or a library (.lib) file.</span></span>  
   
-     Im folgenden Beispiel erstellt Al.exe`myAssembly.exe` eine Assembly mit dem Namen , die eine ausführbare Datei für eine Konsolenanwendung ist. Die Anwendung besteht aus zwei Modulen, `Client.netmodule` und `Stringer.netmodule`, sowie der ausführbaren Datei `myAssembly.exe,`, die ausschließlich Assemblymetadaten enthält. Der Einstiegspunkt der Assembly ist die `Main`-Methode in der `MainClientApp`-Klasse, die sich in der Datei `Client.dll` befindet.  
+     <span data-ttu-id="da0ae-133">Im folgenden Beispiel erstellt Al.exe`myAssembly.exe` eine Assembly mit dem Namen , die eine ausführbare Datei für eine Konsolenanwendung ist.</span><span class="sxs-lookup"><span data-stu-id="da0ae-133">In the following example, Al.exe creates an assembly that is a console application executable called `myAssembly.exe`.</span></span> <span data-ttu-id="da0ae-134">Die Anwendung besteht aus zwei Modulen, `Client.netmodule` und `Stringer.netmodule`, sowie der ausführbaren Datei `myAssembly.exe,`, die ausschließlich Assemblymetadaten enthält.</span><span class="sxs-lookup"><span data-stu-id="da0ae-134">The application consists of two modules called `Client.netmodule` and `Stringer.netmodule`, and the executable file called `myAssembly.exe,` which contains only assembly metadata .</span></span> <span data-ttu-id="da0ae-135">Der Einstiegspunkt der Assembly ist die `Main`-Methode in der `MainClientApp`-Klasse, die sich in der Datei `Client.dll` befindet.</span><span class="sxs-lookup"><span data-stu-id="da0ae-135">The entry point of the assembly is the `Main` method in the class `MainClientApp`, which is located in `Client.dll`.</span></span>  
   
     ```  
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe   
     ```  
   
-     Sie können das [MSIL Disassembler-Tool (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um den Inhalt einer Assembly zu untersuchen oder um zu bestimmen, ob es sich bei einer Datei um eine Assembly oder ein Modul handelt.  
+     <span data-ttu-id="da0ae-136">Sie können das [MSIL Disassembler-Tool (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um den Inhalt einer Assembly zu untersuchen oder um zu bestimmen, ob es sich bei einer Datei um eine Assembly oder ein Modul handelt.</span><span class="sxs-lookup"><span data-stu-id="da0ae-136">You can use the [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to examine the contents of an assembly, or determine whether a file is an assembly or a module.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
- [Vorgehensweise: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)   
- [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="da0ae-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da0ae-137">See Also</span></span>  
+ [<span data-ttu-id="da0ae-138">Erstellen von Assemblys</span><span class="sxs-lookup"><span data-stu-id="da0ae-138">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ [<span data-ttu-id="da0ae-139">Gewusst wie: Anzeigen des Assemblyinhalts</span><span class="sxs-lookup"><span data-stu-id="da0ae-139">How to: View Assembly Contents</span></span>](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [<span data-ttu-id="da0ae-140">So sucht Common Language Runtime nach Assemblys</span><span class="sxs-lookup"><span data-stu-id="da0ae-140">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="da0ae-141">Mehrfachdateiassemblys</span><span class="sxs-lookup"><span data-stu-id="da0ae-141">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)

@@ -1,104 +1,85 @@
 ---
 title: "Einschränkungen für Typparameter (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
 ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e91ae026bd89a6dd30b4c9233da4dd897928291e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
-Wenn Sie eine generische Klasse definieren, können Sie Beschränkungen auf die Arten der Typen anwenden, die Clientcode für generische Typargumente verwenden kann, wenn er Ihre Klasse instanziiert. Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler. Diese Einschränkungen werden als Constraints bezeichnet. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sechs verschiedenen Contrainttypen aufgelistet:  
+# <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="177c2-102">Einschränkungen für Typparameter (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="177c2-102">Constraints on Type Parameters (C# Programming Guide)</span></span>
+<span data-ttu-id="177c2-103">Wenn Sie eine generische Klasse definieren, können Sie Beschränkungen auf die Arten der Typen anwenden, die Clientcode für generische Typargumente verwenden kann, wenn er Ihre Klasse instanziiert.</span><span class="sxs-lookup"><span data-stu-id="177c2-103">When you define a generic class, you can apply restrictions to the kinds of types that client code can use for type arguments when it instantiates your class.</span></span> <span data-ttu-id="177c2-104">Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler.</span><span class="sxs-lookup"><span data-stu-id="177c2-104">If client code tries to instantiate your class by using a type that is not allowed by a constraint, the result is a compile-time error.</span></span> <span data-ttu-id="177c2-105">Diese Einschränkungen werden als Constraints bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="177c2-105">These restrictions are called constraints.</span></span> <span data-ttu-id="177c2-106">Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben.</span><span class="sxs-lookup"><span data-stu-id="177c2-106">Constraints are specified by using the `where` contextual keyword.</span></span> <span data-ttu-id="177c2-107">In der folgenden Tabelle werden die sechs verschiedenen Contrainttypen aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="177c2-107">The following table lists the six types of constraints:</span></span>  
   
-|Constraint|Beschreibung|  
+|<span data-ttu-id="177c2-108">Constraint</span><span class="sxs-lookup"><span data-stu-id="177c2-108">Constraint</span></span>|<span data-ttu-id="177c2-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="177c2-109">Description</span></span>|  
 |----------------|-----------------|  
-|where T: struct|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden. Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
-|where T : class|Das Typargument muss ein Verweistyp sein. Dies gilt ebenfalls für Klassen-, Schnittstellen-, Delegat- oder Arraytypen.|  
-|where T : new()|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.|  
-|where T : \<basisklassenname>|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden.|  
-|where T : \<schnittstellenname>|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein.|  
-|where T : U|Das Typargument, das für T angegeben wurde, muss das für T angegebene Argument sein oder von diesem abgeleitet werden.|  
+|<span data-ttu-id="177c2-110">where T: struct</span><span class="sxs-lookup"><span data-stu-id="177c2-110">where T: struct</span></span>|<span data-ttu-id="177c2-111">Das Typargument muss ein Werttyp sein.</span><span class="sxs-lookup"><span data-stu-id="177c2-111">The type argument must be a value type.</span></span> <span data-ttu-id="177c2-112">Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-112">Any value type except <xref:System.Nullable> can be specified.</span></span> <span data-ttu-id="177c2-113">Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).</span><span class="sxs-lookup"><span data-stu-id="177c2-113">See [Using Nullable Types](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) for more information.</span></span>|  
+|<span data-ttu-id="177c2-114">where T : class</span><span class="sxs-lookup"><span data-stu-id="177c2-114">where T : class</span></span>|<span data-ttu-id="177c2-115">Das Typargument muss ein Verweistyp sein. Dies gilt ebenfalls für Klassen-, Schnittstellen-, Delegat- oder Arraytypen.</span><span class="sxs-lookup"><span data-stu-id="177c2-115">The type argument must be a reference type; this applies also to any class, interface, delegate, or array type.</span></span>|  
+|<span data-ttu-id="177c2-116">where T : new()</span><span class="sxs-lookup"><span data-stu-id="177c2-116">where T : new()</span></span>|<span data-ttu-id="177c2-117">Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen.</span><span class="sxs-lookup"><span data-stu-id="177c2-117">The type argument must have a public parameterless constructor.</span></span> <span data-ttu-id="177c2-118">Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-118">When used together with other constraints, the `new()` constraint must be specified last.</span></span>|  
+|<span data-ttu-id="177c2-119">where T : \<basisklassenname></span><span class="sxs-lookup"><span data-stu-id="177c2-119">where T : \<base class name></span></span>|<span data-ttu-id="177c2-120">Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-120">The type argument must be or derive from the specified base class.</span></span>|  
+|<span data-ttu-id="177c2-121">where T : \<schnittstellenname></span><span class="sxs-lookup"><span data-stu-id="177c2-121">where T : \<interface name></span></span>|<span data-ttu-id="177c2-122">Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren.</span><span class="sxs-lookup"><span data-stu-id="177c2-122">The type argument must be or implement the specified interface.</span></span> <span data-ttu-id="177c2-123">Es können mehrere Schnittstelleneinschränkungen angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-123">Multiple interface constraints can be specified.</span></span> <span data-ttu-id="177c2-124">Die einschränkende Schnittstelle kann auch generisch sein.</span><span class="sxs-lookup"><span data-stu-id="177c2-124">The constraining interface can also be generic.</span></span>|  
+|<span data-ttu-id="177c2-125">where T : U</span><span class="sxs-lookup"><span data-stu-id="177c2-125">where T : U</span></span>|<span data-ttu-id="177c2-126">Das Typargument, das für T angegeben wurde, muss das für T angegebene Argument sein oder von diesem abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-126">The type argument supplied for T must be or derive from the argument supplied for U.</span></span>|  
   
-## <a name="why-use-constraints"></a>Weshalb Constraints?  
- Wenn Sie untersuchen möchten, ob ein bestimmtes Argument in einer generischen Liste gültig ist oder es mit einem anderen Element vergleichen möchten, muss der Compiler eine Garantie haben, dass der Operator oder die Methode, die er aufgerufen hat, von jedem Typargument unterstützt wird, das von Clientcode angegeben werden kann. Diese Garantie wird gegeben, indem Sie einen oder mehrere Constraints auf Ihre generische Klassendefinition anwenden. Der Basisklassenconstraint sagt dem Compiler z.B., dass nur Objekte dieses Typs oder Objekte, die von diesem Typ abgeleitet werden, als Typargumente verwendet werden. Sobald der Compiler diese Garantie hat, kann er erlauben, dass Methoden dieses Typs in der generischen Klasse aufgerufen werden können. Constraints werden mit dem kontextuellen Schlüsselwort `where` angewendet. Im folgenden Codebeispiel wird die Funktionalität veranschaulicht, die der `GenericList<T>`-Klasse durch das Anwenden eines Basisklassenconstraints hinzugefügt werden kann (in [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)).  
+## <a name="why-use-constraints"></a><span data-ttu-id="177c2-127">Weshalb Constraints?</span><span class="sxs-lookup"><span data-stu-id="177c2-127">Why Use Constraints</span></span>  
+ <span data-ttu-id="177c2-128">Wenn Sie untersuchen möchten, ob ein bestimmtes Argument in einer generischen Liste gültig ist oder es mit einem anderen Element vergleichen möchten, muss der Compiler eine Garantie haben, dass der Operator oder die Methode, die er aufgerufen hat, von jedem Typargument unterstützt wird, das von Clientcode angegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="177c2-128">If you want to examine an item in a generic list to determine whether it is valid or to compare it to some other item, the compiler must have some guarantee that the operator or method it has to call will be supported by any type argument that might be specified by client code.</span></span> <span data-ttu-id="177c2-129">Diese Garantie wird gegeben, indem Sie einen oder mehrere Constraints auf Ihre generische Klassendefinition anwenden.</span><span class="sxs-lookup"><span data-stu-id="177c2-129">This guarantee is obtained by applying one or more constraints to your generic class definition.</span></span> <span data-ttu-id="177c2-130">Der Basisklassenconstraint sagt dem Compiler z.B., dass nur Objekte dieses Typs oder Objekte, die von diesem Typ abgeleitet werden, als Typargumente verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-130">For example, the base class constraint tells the compiler that only objects of this type or derived from this type will be used as type arguments.</span></span> <span data-ttu-id="177c2-131">Sobald der Compiler diese Garantie hat, kann er erlauben, dass Methoden dieses Typs in der generischen Klasse aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="177c2-131">Once the compiler has this guarantee, it can allow methods of that type to be called in the generic class.</span></span> <span data-ttu-id="177c2-132">Constraints werden mit dem kontextuellen Schlüsselwort `where` angewendet.</span><span class="sxs-lookup"><span data-stu-id="177c2-132">Constraints are applied by using the contextual keyword `where`.</span></span> <span data-ttu-id="177c2-133">Im folgenden Codebeispiel wird die Funktionalität veranschaulicht, die der `GenericList<T>`-Klasse durch das Anwenden eines Basisklassenconstraints hinzugefügt werden kann (in [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)).</span><span class="sxs-lookup"><span data-stu-id="177c2-133">The following code example demonstrates the functionality we can add to the `GenericList<T>` class (in [Introduction to Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)) by applying a base class constraint.</span></span>  
   
- [!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]  
   
- Mit dem Constraint kann die generische Klasse die `Employee.Name`-Eigenschaft verwenden, da alle Elemente des Typs T sicher ein `Employee`-Objekt oder ein Objekt, das von `Employee` erbt, sind.  
+ <span data-ttu-id="177c2-134">Mit dem Constraint kann die generische Klasse die `Employee.Name`-Eigenschaft verwenden, da alle Elemente des Typs T sicher ein `Employee`-Objekt oder ein Objekt, das von `Employee` erbt, sind.</span><span class="sxs-lookup"><span data-stu-id="177c2-134">The constraint enables the generic class to use the `Employee.Name` property because all items of type T are guaranteed to be either an `Employee` object or an object that inherits from `Employee`.</span></span>  
   
- Mehrere Constraints können wie folgt auf den gleichen Typenparameter angewendet werden, und die Contraints können selbst generische Typen sein:  
+ <span data-ttu-id="177c2-135">Mehrere Constraints können wie folgt auf den gleichen Typenparameter angewendet werden, und die Contraints können selbst generische Typen sein:</span><span class="sxs-lookup"><span data-stu-id="177c2-135">Multiple constraints can be applied to the same type parameter, and the constraints themselves can be generic types, as follows:</span></span>  
   
- [!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]  
   
- Indem Sie den Typparameter einschränken, erhöhen Sie die Zahl an zulässigen Vorgängen und Methodenaufrufen von denjenigen, die vom einschränkenden Typ und allen Typen in dessen Vererbungshierarchie unterstützt werden. Beim Entwerfen generischer Klassen und Methoden müssen Sie Constraints auf den Typparameter anwenden, wenn Sie Vorgänge mit den generischen Membern durchführen möchten, die über das einfache Zuweisen und Aufrufen von Methoden hinausgehen, die nicht von `System.Object` unterstützt werden.  
+ <span data-ttu-id="177c2-136">Indem Sie den Typparameter einschränken, erhöhen Sie die Zahl an zulässigen Vorgängen und Methodenaufrufen von denjenigen, die vom einschränkenden Typ und allen Typen in dessen Vererbungshierarchie unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-136">By constraining the type parameter, you increase the number of allowable operations and method calls to those supported by the constraining type and all types in its inheritance hierarchy.</span></span> <span data-ttu-id="177c2-137">Beim Entwerfen generischer Klassen und Methoden müssen Sie Constraints auf den Typparameter anwenden, wenn Sie Vorgänge mit den generischen Membern durchführen möchten, die über das einfache Zuweisen und Aufrufen von Methoden hinausgehen, die nicht von `System.Object` unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-137">Therefore, when you design generic classes or methods, if you will be performing any operation on the generic members beyond simple assignment or calling any methods not supported by `System.Object`, you will have to apply constraints to the type parameter.</span></span>  
   
- Wenn Sie den Constraint `where T : class` anwenden, vermeiden Sie das Verwenden der Operatoren `==` und `!=` mit dem Typparameter, da diese nur auf Verweisidentität und nicht auf Wertgleichheit prüfen. Dies ist auch der Fall, wenn diese Operatoren in einem Typ überladen werden, der als Argument verwendet wird. Der folgende Code veranschaulicht diesen Aspekt. Die Ausgabe ist FALSE, obwohl die <xref:System.String>-Klasse den `==`-Operator überlädt.  
+ <span data-ttu-id="177c2-138">Wenn Sie den Constraint `where T : class` anwenden, vermeiden Sie das Verwenden der Operatoren `==` und `!=` mit dem Typparameter, da diese nur auf Verweisidentität und nicht auf Wertgleichheit prüfen.</span><span class="sxs-lookup"><span data-stu-id="177c2-138">When applying the `where T : class` constraint, avoid the `==` and `!=` operators on the type parameter because these operators will test for reference identity only, not for value equality.</span></span> <span data-ttu-id="177c2-139">Dies ist auch der Fall, wenn diese Operatoren in einem Typ überladen werden, der als Argument verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="177c2-139">This is the case even if these operators are overloaded in a type that is used as an argument.</span></span> <span data-ttu-id="177c2-140">Der folgende Code veranschaulicht diesen Aspekt. Die Ausgabe ist FALSE, obwohl die <xref:System.String>-Klasse den `==`-Operator überlädt.</span><span class="sxs-lookup"><span data-stu-id="177c2-140">The following code illustrates this point; the output is false even though the <xref:System.String> class overloads the `==` operator.</span></span>  
   
- [!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]  
   
- Dieses Verhalten tritt auf, da der Compiler zur Kompilierzeit nur weiß, dass T ein Verweistyp ist, und deshalb die Standardoperatoren verwenden muss, die für alle Verweistypen zulässig sind. Wenn Sie auf Wertgleichheit prüfen müssen, wird empfohlen, dass Sie den `where T : IComparable<T>`-Constraint anwenden und die Schnittstelle in jeder Klasse implementieren, die verwendet wird, um die generische Klasse zu erstellen.  
+ <span data-ttu-id="177c2-141">Dieses Verhalten tritt auf, da der Compiler zur Kompilierzeit nur weiß, dass T ein Verweistyp ist, und deshalb die Standardoperatoren verwenden muss, die für alle Verweistypen zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="177c2-141">The reason for this behavior is that, at compile time, the compiler only knows that T is a reference type, and therefore must use the default operators that are valid for all reference types.</span></span> <span data-ttu-id="177c2-142">Wenn Sie auf Wertgleichheit prüfen müssen, wird empfohlen, dass Sie den `where T : IComparable<T>`-Constraint anwenden und die Schnittstelle in jeder Klasse implementieren, die verwendet wird, um die generische Klasse zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="177c2-142">If you must test for value equality, the recommended way is to also apply the `where T : IComparable<T>` constraint and implement that interface in any class that will be used to construct the generic class.</span></span>  
   
-## <a name="constraining-multiple-parameters"></a>Einschränken mehrerer Parameter  
- Sie können wie im folgenden Beispiel gezeigt Constraints auf mehrere Parameter und mehrere Constraints auf einen einzelnen Parameter anwenden:  
+## <a name="constraining-multiple-parameters"></a><span data-ttu-id="177c2-143">Einschränken mehrerer Parameter</span><span class="sxs-lookup"><span data-stu-id="177c2-143">Constraining Multiple Parameters</span></span>  
+ <span data-ttu-id="177c2-144">Sie können wie im folgenden Beispiel gezeigt Constraints auf mehrere Parameter und mehrere Constraints auf einen einzelnen Parameter anwenden:</span><span class="sxs-lookup"><span data-stu-id="177c2-144">You can apply constraints to multiple parameters, and multiple constraints to a single parameter, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]  
   
-## <a name="unbounded-type-parameters"></a>Ungebundene Typparameter  
- Typparameter, auf die keine Constraints angewendet wurden, wie z.B. T in der öffentlichen Klasse `SampleClass<T>{}`, werden als ungebundene Typparameter bezeichnet. Für ungebundene Typparameter gelten die folgenden Regeln:  
+## <a name="unbounded-type-parameters"></a><span data-ttu-id="177c2-145">Ungebundene Typparameter</span><span class="sxs-lookup"><span data-stu-id="177c2-145">Unbounded Type Parameters</span></span>  
+ <span data-ttu-id="177c2-146">Typparameter, auf die keine Constraints angewendet wurden, wie z.B. T in der öffentlichen Klasse `SampleClass<T>{}`, werden als ungebundene Typparameter bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="177c2-146">Type parameters that have no constraints, such as T in public class `SampleClass<T>{}`, are called unbounded type parameters.</span></span> <span data-ttu-id="177c2-147">Für ungebundene Typparameter gelten die folgenden Regeln:</span><span class="sxs-lookup"><span data-stu-id="177c2-147">Unbounded type parameters have the following rules:</span></span>  
   
--   Die Operatoren `!=` und `==` können nicht verwendet werden, weil es keine Garantie gibt, dass das jeweilige Typargument diese auch unterstützt.  
+-   <span data-ttu-id="177c2-148">Die Operatoren `!=` und `==` können nicht verwendet werden, weil es keine Garantie gibt, dass das jeweilige Typargument diese auch unterstützt.</span><span class="sxs-lookup"><span data-stu-id="177c2-148">The `!=` and `==` operators cannot be used because there is no guarantee that the concrete type argument will support these operators.</span></span>  
   
--   Sie können in und aus `System.Object` oder implizit in einen Schnittstellentyp konvertiert werden.  
+-   <span data-ttu-id="177c2-149">Sie können in und aus `System.Object` oder implizit in einen Schnittstellentyp konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-149">They can be converted to and from `System.Object` or explicitly converted to any interface type.</span></span>  
   
--   Sie können mit [NULL](../../../csharp/language-reference/keywords/null.md) vergleichen. Wenn ein ungebundener Parameter mit `null` verglichen wird, gibt der Vergleich immer FALSE zurück, wenn das Typargument ein Werttyp ist.  
+-   <span data-ttu-id="177c2-150">Sie können mit [NULL](../../../csharp/language-reference/keywords/null.md) vergleichen.</span><span class="sxs-lookup"><span data-stu-id="177c2-150">You can compare to [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="177c2-151">Wenn ein ungebundener Parameter mit `null` verglichen wird, gibt der Vergleich immer FALSE zurück, wenn das Typargument ein Werttyp ist.</span><span class="sxs-lookup"><span data-stu-id="177c2-151">If an unbounded parameter is compared to `null`, the comparison will always return false if the type argument is a value type.</span></span>  
   
-## <a name="type-parameters-as-constraints"></a>Typparameter als Constraints  
- Es ist nützlich, einen Typparameter wie in folgendem Beispiel gezeigt als Constraint zu verwenden, wenn eine Memberfunktion mit ihren eigenen Typparametern diesen Parameter auf den Typparameter des enthaltenden Typs einschränken muss:  
+## <a name="type-parameters-as-constraints"></a><span data-ttu-id="177c2-152">Typparameter als Constraints</span><span class="sxs-lookup"><span data-stu-id="177c2-152">Type Parameters as Constraints</span></span>  
+ <span data-ttu-id="177c2-153">Es ist nützlich, einen Typparameter wie in folgendem Beispiel gezeigt als Constraint zu verwenden, wenn eine Memberfunktion mit ihren eigenen Typparametern diesen Parameter auf den Typparameter des enthaltenden Typs einschränken muss:</span><span class="sxs-lookup"><span data-stu-id="177c2-153">The use of a generic type parameter as a constraint is useful when a member function with its own type parameter has to constrain that parameter to the type parameter of the containing type, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]  
   
- Im vorherigen Beispiel ist `T` ein Typconstraint im Kontext der `Add`-Methode und ein ungebundener Typparameter im Kontext der `List`-Klasse.  
+ <span data-ttu-id="177c2-154">Im vorherigen Beispiel ist `T` ein Typconstraint im Kontext der `Add`-Methode und ein ungebundener Typparameter im Kontext der `List`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="177c2-154">In the previous example, `T` is a type constraint in the context of the `Add` method, and an unbounded type parameter in the context of the `List` class.</span></span>  
   
- Typparameter können auch in generischen Klassendefinitionen als Constraints verwendet werden. Beachten Sie, dass Typparameter in spitzen Klammern zusammen mit allen anderen Typparametern deklariert werden müssen.  
+ <span data-ttu-id="177c2-155">Typparameter können auch in generischen Klassendefinitionen als Constraints verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="177c2-155">Type parameters can also be used as constraints in generic class definitions.</span></span> <span data-ttu-id="177c2-156">Beachten Sie, dass Typparameter in spitzen Klammern zusammen mit allen anderen Typparametern deklariert werden müssen.</span><span class="sxs-lookup"><span data-stu-id="177c2-156">Note that the type parameter must be declared within the angle brackets together with any other type parameters:</span></span>  
   
- [!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]  
   
- Das Verwenden von Typparametern als Constraints für generische Klassen ist nur bis zu einem gewissen Punkt nützlich, da der Compiler keine Informationen über den Typparameter annehmen kann, nur dass er von `System.Object` abgeleitet ist. Sie sollten Typparameter als Constraints dann verwenden, wenn Sie eine Vererbungsbeziehung zwischen zwei Typparametern erzwingen möchten.  
+ <span data-ttu-id="177c2-157">Das Verwenden von Typparametern als Constraints für generische Klassen ist nur bis zu einem gewissen Punkt nützlich, da der Compiler keine Informationen über den Typparameter annehmen kann, nur dass er von `System.Object` abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="177c2-157">The usefulness of type parameters as constraints with generic classes is very limited because the compiler can assume nothing about the type parameter except that it derives from `System.Object`.</span></span> <span data-ttu-id="177c2-158">Sie sollten Typparameter als Constraints dann verwenden, wenn Sie eine Vererbungsbeziehung zwischen zwei Typparametern erzwingen möchten.</span><span class="sxs-lookup"><span data-stu-id="177c2-158">Use type parameters as constraints on generic classes in scenarios in which you want to enforce an inheritance relationship between two type parameters.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)   
- [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)
-
+## <a name="see-also"></a><span data-ttu-id="177c2-159">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="177c2-159">See Also</span></span>  
+ <xref:System.Collections.Generic>  
+ [<span data-ttu-id="177c2-160">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="177c2-160">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="177c2-161">Einführung in Generika</span><span class="sxs-lookup"><span data-stu-id="177c2-161">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [<span data-ttu-id="177c2-162">Generische Klassen</span><span class="sxs-lookup"><span data-stu-id="177c2-162">Generic Classes</span></span>](../../../csharp/programming-guide/generics/generic-classes.md)  
+ [<span data-ttu-id="177c2-163">new-Einschränkung</span><span class="sxs-lookup"><span data-stu-id="177c2-163">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)

@@ -1,76 +1,59 @@
 ---
-title: Rekursive Prozeduren (Visual Basic) | Microsoft-Dokumentation
+title: Rekursive Prozeduren (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, procedures
-- procedures, that call themselves
-- procedures, recursive
-- procedures, calling
+- procedures [Visual Basic], that call themselves
+- procedures [Visual Basic], recursive
+- procedures [Visual Basic], calling
 - recursive procedures
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fc95cd5f7cfd5637f6282c6ef571eb81bac1816
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 444eeaf043cf3710c5154fd7e8577590e3ce7d1e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="recursive-procedures-visual-basic"></a>Rekursive Prozeduren (Visual Basic)
-Ein *rekursive* Prozedur ist eine, die sich selbst aufruft. Im Allgemeinen, dies ist nicht die effizienteste Methode zum Schreiben [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Code.  
+# <a name="recursive-procedures-visual-basic"></a><span data-ttu-id="28165-102">Rekursive Prozeduren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28165-102">Recursive Procedures (Visual Basic)</span></span>
+<span data-ttu-id="28165-103">Ein *rekursive* Prozedur ist eine, die sich selbst aufruft.</span><span class="sxs-lookup"><span data-stu-id="28165-103">A *recursive* procedure is one that calls itself.</span></span> <span data-ttu-id="28165-104">Im Allgemeinen, dies ist nicht die effizienteste Methode zum Schreiben [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Code.</span><span class="sxs-lookup"><span data-stu-id="28165-104">In general, this is not the most effective way to write [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] code.</span></span>  
   
- Die folgende Prozedur verwendet die Rekursion berechnet die Fakultät ihres ursprünglichen Arguments.  
+ <span data-ttu-id="28165-105">Im folgenden Verfahren wird die Rekursion berechnet die Fakultät des ursprünglichen Arguments.</span><span class="sxs-lookup"><span data-stu-id="28165-105">The following procedure uses recursion to calculate the factorial of its original argument.</span></span>  
   
- [!code-vb[VbVbcnProcedures&51;](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Zu rekursive Prozeduren  
- **Beschränkenden Bedingungen**. Sie müssen eine rekursive Prozedur für mindestens eine Bedingung zu testen, die die Rekursion beendet entwerfen, und Sie müssen auch den Fall, in dem keine solchen Bedingung, innerhalb einer angemessenen Anzahl von rekursiven Aufrufen erfüllt ist, behandeln. Ohne mindestens eine Bedingung, die fehlerfrei erfüllt werden kann, wird die Prozedur ein erhöhtes Risiko für die Ausführung in einer Endlosschleife ausgeführt.  
+## <a name="considerations-with-recursive-procedures"></a><span data-ttu-id="28165-106">Überlegungen zu mit rekursive Prozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-106">Considerations with Recursive Procedures</span></span>  
+ <span data-ttu-id="28165-107">**Beschränkenden Bedingungen**.</span><span class="sxs-lookup"><span data-stu-id="28165-107">**Limiting Conditions**.</span></span> <span data-ttu-id="28165-108">Sie müssen eine rekursive Prozedur für mindestens eine Bedingung zu testen, die die Rekursion beendet entwerfen, und müssen Sie auch die Groß-/Kleinschreibung, in denen keine solche Bedingung, in eine angemessene Anzahl von rekursiven Aufrufen erfüllt ist, behandeln.</span><span class="sxs-lookup"><span data-stu-id="28165-108">You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls.</span></span> <span data-ttu-id="28165-109">Ohne mindestens eine Bedingung, die ohne Fehler erfüllt werden kann, wird die Prozedur ein erhöhtes Risiko der Ausführung in einer Endlosschleife ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="28165-109">Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.</span></span>  
   
- **Speicherverwendung**. Ihre Anwendung hat eine begrenzte Menge an Speicherplatz für lokale Variablen. Jedes Mal eine Prozedur aufruft, wird weiterer Speicherplatz für zusätzliche Kopien ihrer lokalen Variablen. Wenn dieser Vorgang unendlich lange fortsetzt, wird letztendlich eine <xref:System.StackOverflowException>Fehler.</xref:System.StackOverflowException>  
+ <span data-ttu-id="28165-110">**Speichernutzung**.</span><span class="sxs-lookup"><span data-stu-id="28165-110">**Memory Usage**.</span></span> <span data-ttu-id="28165-111">Die Anwendung verfügt über eine begrenzte Menge an Speicherplatz für lokale Variablen.</span><span class="sxs-lookup"><span data-stu-id="28165-111">Your application has a limited amount of space for local variables.</span></span> <span data-ttu-id="28165-112">Jedes Mal eine Prozedur aufruft, verwendet es weiterer Speicherplatz für zusätzliche Kopien ihrer lokalen Variablen.</span><span class="sxs-lookup"><span data-stu-id="28165-112">Each time a procedure calls itself, it uses more of that space for additional copies of its local variables.</span></span> <span data-ttu-id="28165-113">Wenn dieser Prozess unbestimmte Zeit weiterhin besteht, wird letztendlich eine <xref:System.StackOverflowException> Fehler.</span><span class="sxs-lookup"><span data-stu-id="28165-113">If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.</span></span>  
   
- **Effizienz**. Sie können fast immer eine Schleife für die Rekursion ersetzen. Eine Schleife muss nicht den Aufwand für das Übergeben von Argumenten, Initialisieren von zusätzlichem Speicher und das Zurückgeben von Werten. Die Leistung kann ohne rekursive Aufrufe viel besser sein.  
+ <span data-ttu-id="28165-114">**Effizienz**.</span><span class="sxs-lookup"><span data-stu-id="28165-114">**Efficiency**.</span></span> <span data-ttu-id="28165-115">Sie können fast immer eine Schleife für die Rekursion ersetzen.</span><span class="sxs-lookup"><span data-stu-id="28165-115">You can almost always substitute a loop for recursion.</span></span> <span data-ttu-id="28165-116">Eine Schleife muss sich nicht auf den Aufwand für das Übergeben von Argumenten, Initialisieren von zusätzlichem Speicher und Zurückgeben von Werten aus.</span><span class="sxs-lookup"><span data-stu-id="28165-116">A loop does not have the overhead of passing arguments, initializing additional storage, and returning values.</span></span> <span data-ttu-id="28165-117">Die Leistung kann sich wesentlich besser ohne rekursive Aufrufe sein.</span><span class="sxs-lookup"><span data-stu-id="28165-117">Your performance can be much better without recursive calls.</span></span>  
   
- **Gegenseitige Rekursion**. Sie können eine sehr schlechte Leistung oder sogar eine Endlosschleife, beobachten, wenn zwei Prozeduren einander aufrufen. Ein solcher Entwurf stellt die gleichen Probleme wie eine einzelne rekursive Prozedur, aber möglicherweise schwerer zu erkennen und zu debuggen.  
+ <span data-ttu-id="28165-118">**Gegenseitige Rekursion**.</span><span class="sxs-lookup"><span data-stu-id="28165-118">**Mutual Recursion**.</span></span> <span data-ttu-id="28165-119">Sie können eine sehr schlechte Leistung oder sogar eine unendliche Schleife beobachten, ob zwei Prozeduren gegenseitig aufrufen.</span><span class="sxs-lookup"><span data-stu-id="28165-119">You might observe very poor performance, or even an infinite loop, if two procedures call each other.</span></span> <span data-ttu-id="28165-120">Ein solcher Entwurf bietet die gleichen Probleme als ein rekursives Prozedur, aber möglicherweise schwerer zu erkennen und zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="28165-120">Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.</span></span>  
   
- **Aufrufe mit Klammern**. Wenn ein `Function` Prozedur ruft sich selbst rekursiv, Sie müssen den Namen der Prozedur mit Klammern folgen, selbst wenn keine Argumentliste vorhanden ist. Andernfalls stammt der Funktionsname als Rückgabewert der Funktion.  
+ <span data-ttu-id="28165-121">**Aufrufen mit Klammern**.</span><span class="sxs-lookup"><span data-stu-id="28165-121">**Calling with Parentheses**.</span></span> <span data-ttu-id="28165-122">Wenn eine `Function` Prozedur ruft sich selbst rekursiv, Sie müssen den Prozedurnamen mit Klammern folgen, auch wenn es keine Argumentliste enthalten.</span><span class="sxs-lookup"><span data-stu-id="28165-122">When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list.</span></span> <span data-ttu-id="28165-123">Der Funktionsname stammt, andernfalls als, das den Rückgabewert der Funktion darstellt.</span><span class="sxs-lookup"><span data-stu-id="28165-123">Otherwise, the function name is taken as representing the return value of the function.</span></span>  
   
- **Testen von**. Wenn Sie eine rekursive Prozedur schreiben, sollten Sie es sehr sorgfältig testen, um sicherzustellen, dass es immer eine einschränkende Bedingung erfüllt. Sie sollten auch sicherstellen, dass nicht genügend Arbeitsspeicher nicht durch zu viele rekursive Aufrufe ausgeführt werden kann.  
+ <span data-ttu-id="28165-124">**Testen von**.</span><span class="sxs-lookup"><span data-stu-id="28165-124">**Testing**.</span></span> <span data-ttu-id="28165-125">Wenn Sie eine rekursive Prozedur schreiben, sollten Sie es sehr sorgfältig testen, um sicherzustellen, dass es immer eine einschränkende Bedingung erfüllt.</span><span class="sxs-lookup"><span data-stu-id="28165-125">If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition.</span></span> <span data-ttu-id="28165-126">Sie sollten auch sicherstellen, dass nicht genügend Arbeitsspeicher aufgrund von zu viele rekursive Aufrufe ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="28165-126">You should also ensure that you cannot run out of memory due to having too many recursive calls.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.StackOverflowException></xref:System.StackOverflowException>   
- [Verfahren](./index.md)   
- [Sub-Prozeduren](./sub-procedures.md)   
- [Function-Prozeduren](./function-procedures.md)   
- [Property-Prozeduren](./property-procedures.md)   
- [Operatorprozeduren](./operator-procedures.md)   
- [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
- [Prozedurüberladung](./procedure-overloading.md)   
- [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)   
- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Problembehandlung bei Ausnahmen: System.StackOverflowException](http://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a><span data-ttu-id="28165-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="28165-127">See Also</span></span>  
+ <xref:System.StackOverflowException>  
+ [<span data-ttu-id="28165-128">Verfahren</span><span class="sxs-lookup"><span data-stu-id="28165-128">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="28165-129">Sub-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-129">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="28165-130">Function-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-130">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="28165-131">Eigenschaftenprozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-131">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="28165-132">Operatorprozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-132">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="28165-133">Parameter und Argumente von Prozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-133">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="28165-134">Prozedurüberladung</span><span class="sxs-lookup"><span data-stu-id="28165-134">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="28165-135">Problembehandlung bei Prozeduren</span><span class="sxs-lookup"><span data-stu-id="28165-135">Troubleshooting Procedures</span></span>](./troubleshooting-procedures.md)  
+ [<span data-ttu-id="28165-136">Schleifenstruktur</span><span class="sxs-lookup"><span data-stu-id="28165-136">Loop Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="28165-137">Problembehandlung bei Ausnahmen: System.StackOverflowException</span><span class="sxs-lookup"><span data-stu-id="28165-137">Troubleshooting Exceptions: System.StackOverflowException</span></span>](http://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

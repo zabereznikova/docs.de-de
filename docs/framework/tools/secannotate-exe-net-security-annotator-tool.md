@@ -5,69 +5,61 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f7051e753c324933828e2447752f9c5ea13ed9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator-Tool)
-Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendung, die die `SecurityCritical`- und `SecuritySafeCritical`-Teile einer oder mehrerer Assemblys identifiziert.  
+# <a name="secannotateexe-net-security-annotator-tool"></a><span data-ttu-id="3c0e8-102">SecAnnotate.exe (.NET Security Annotator-Tool)</span><span class="sxs-lookup"><span data-stu-id="3c0e8-102">SecAnnotate.exe (.NET Security Annotator Tool)</span></span>
+<span data-ttu-id="3c0e8-103">Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendung, die die `SecurityCritical`- und `SecuritySafeCritical`-Teile einer oder mehrerer Assemblys identifiziert.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-103">The .NET Security Annotator tool (SecAnnotate.exe) is a command-line application that identifies the `SecurityCritical` and `SecuritySafeCritical` portions of one or more assemblies.</span></span>  
   
- [Security Annotator,](http://go.microsoft.com/fwlink/?LinkId=198007) eine Visual Studio-Erweiterung, stellt eine grafische Benutzeroberfläche für „secAnnotate.exe“ bereit und ermöglicht die Ausführung des Tools in Visual Studio.  
+ <span data-ttu-id="3c0e8-104">[Security Annotator,](http://go.microsoft.com/fwlink/?LinkId=198007) eine Visual Studio-Erweiterung, stellt eine grafische Benutzeroberfläche für „secAnnotate.exe“ bereit und ermöglicht die Ausführung des Tools in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-104">A Visual Studio extension, [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007), provides a graphical user interface to SecAnnotate.exe and enables you to run the tool from Visual Studio.</span></span>  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="3c0e8-105">Dieses Tool wird automatisch mit Visual Studio installiert.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-105">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="3c0e8-106">Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7).</span><span class="sxs-lookup"><span data-stu-id="3c0e8-106">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="3c0e8-107">Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="3c0e8-107">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Geben Sie an der Eingabeaufforderung Folgendes ein, wobei *Parameter* im folgenden Abschnitt beschrieben werden und *Assemblys* aus mindestens einem durch Leerzeichen getrennten Assemblynamen bestehen:  
+ <span data-ttu-id="3c0e8-108">Geben Sie an der Eingabeaufforderung Folgendes ein, wobei *Parameter* im folgenden Abschnitt beschrieben werden und *Assemblys* aus mindestens einem durch Leerzeichen getrennten Assemblynamen bestehen:</span><span class="sxs-lookup"><span data-stu-id="3c0e8-108">At the command prompt, type the following, where *parameters* are described in the following section, and *assemblies* consist of one or more assembly names separated by blanks:</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="3c0e8-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="3c0e8-109">Syntax</span></span>  
   
 ```  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="3c0e8-110">Parameter</span><span class="sxs-lookup"><span data-stu-id="3c0e8-110">Parameters</span></span>  
   
-|Option|Beschreibung|  
+|<span data-ttu-id="3c0e8-111">Option</span><span class="sxs-lookup"><span data-stu-id="3c0e8-111">Option</span></span>|<span data-ttu-id="3c0e8-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3c0e8-112">Description</span></span>|  
 |------------|-----------------|  
-|`/a`<br /><br /> oder<br /><br /> `/showstatistics`|Zeigt eine Statistik zur Verwendung der Transparenz in Assemblys an, die analysiert werden.|  
-|`/d:` *verzeichnis*<br /><br /> oder<br /><br /> `/referencedir:` *verzeichnis*|Gibt ein Verzeichnis an, das während der Anmerkung nach abhängigen Assemblys durchsucht werden soll.|  
-|`/i`<br /><br /> oder<br /><br /> `/includesignatures`|Schließt erweiterte Signaturinformationen in die Anmerkungsberichtsdatei ein.|  
-|`/n`<br /><br /> oder<br /><br /> `/nogac`|Unterdrückt die Suche nach Assemblys, auf die im globalen Assemblycache verwiesen wird.|  
-|`/o:` *output.xml*<br /><br /> oder<br /><br /> `/out:` *output.xml*|Gibt die Ausgabeanmerkungsdatei an.|  
-|`/p:` *maxpasses*<br /><br /> oder<br /><br /> `/maximumpasses:` *maxpasses*|Gibt die maximale Anzahl von Anmerkungsphasen für Assemblys an, bevor die Generierung von neuen Anmerkungen beendet wird.|  
-|`/q`<br /><br /> oder<br /><br /> `/quiet`|Gibt den stillen Modus an, in dem die Anmerkungsfunktion keine Statusmeldungen, sondern nur Fehlerinformationen ausgibt.|  
-|`/r:` *assembly*<br /><br /> oder<br /><br /> `/referenceassembly:` *assembly*|Schließt die angegebene Assembly beim Auflösen von abhängigen Assemblys während der Anmerkung ein. Verweisassemblys erhalten gegenüber Assemblys, die im Verweispfad gefunden werden, Priorität.|  
-|`/s:` *rulename*<br /><br /> oder<br /><br /> `/suppressrule:` *rulename*|Unterdrückt das Ausführen der angegebenen Transparenzregel für die Eingabeassemblys.|  
-|`/t`<br /><br /> oder<br /><br /> `/forcetransparent`|Zwingt das Annotator-Tool, alle Assemblys, die keine Transparenzanmerkungen aufweisen, so zu behandeln, als ob sie völlig transparent wären.|  
-|`/t`:*assembly*<br /><br /> oder<br /><br /> `/forcetransparent`:*assembly*|Zwingt die gegebene Assembly, transparent zu sein, unabhängig von ihren aktuellen Anmerkungen auf Assemblyebene.|  
+|`/a`<br /><br /> <span data-ttu-id="3c0e8-113">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-113">or</span></span><br /><br /> `/showstatistics`|<span data-ttu-id="3c0e8-114">Zeigt eine Statistik zur Verwendung der Transparenz in Assemblys an, die analysiert werden.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-114">Shows statistics about the use of transparency in assemblies that are being analyzed.</span></span>|  
+|<span data-ttu-id="3c0e8-115">`/d:` *verzeichnis*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-115">`/d:` *directory*</span></span><br /><br /> <span data-ttu-id="3c0e8-116">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-116">or</span></span><br /><br /> <span data-ttu-id="3c0e8-117">`/referencedir:` *verzeichnis*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-117">`/referencedir:` *directory*</span></span>|<span data-ttu-id="3c0e8-118">Gibt ein Verzeichnis an, das während der Anmerkung nach abhängigen Assemblys durchsucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-118">Specifies a directory to search for dependent assemblies during annotation.</span></span>|  
+|`/i`<br /><br /> <span data-ttu-id="3c0e8-119">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-119">or</span></span><br /><br /> `/includesignatures`|<span data-ttu-id="3c0e8-120">Schließt erweiterte Signaturinformationen in die Anmerkungsberichtsdatei ein.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-120">Includes extended signature information in the annotation report file.</span></span>|  
+|`/n`<br /><br /> <span data-ttu-id="3c0e8-121">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-121">or</span></span><br /><br /> `/nogac`|<span data-ttu-id="3c0e8-122">Unterdrückt die Suche nach Assemblys, auf die im globalen Assemblycache verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-122">Suppresses searching for referenced assemblies in the global assembly cache.</span></span>|  
+|<span data-ttu-id="3c0e8-123">`/o:` *output.xml*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-123">`/o:` *output.xml*</span></span><br /><br /> <span data-ttu-id="3c0e8-124">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-124">or</span></span><br /><br /> <span data-ttu-id="3c0e8-125">`/out:` *output.xml*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-125">`/out:` *output.xml*</span></span>|<span data-ttu-id="3c0e8-126">Gibt die Ausgabeanmerkungsdatei an.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-126">Specifies the output annotation file.</span></span>|  
+|<span data-ttu-id="3c0e8-127">`/p:` *maxpasses*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-127">`/p:` *maxpasses*</span></span><br /><br /> <span data-ttu-id="3c0e8-128">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-128">or</span></span><br /><br /> <span data-ttu-id="3c0e8-129">`/maximumpasses:` *maxpasses*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-129">`/maximumpasses:` *maxpasses*</span></span>|<span data-ttu-id="3c0e8-130">Gibt die maximale Anzahl von Anmerkungsphasen für Assemblys an, bevor die Generierung von neuen Anmerkungen beendet wird.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-130">Specifies the maximum number of annotation passes to make on assemblies before stopping the generation of new annotations.</span></span>|  
+|`/q`<br /><br /> <span data-ttu-id="3c0e8-131">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-131">or</span></span><br /><br /> `/quiet`|<span data-ttu-id="3c0e8-132">Gibt den stillen Modus an, in dem die Anmerkungsfunktion keine Statusmeldungen, sondern nur Fehlerinformationen ausgibt.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-132">Specifies quiet mode, in which the annotator does not output status messages; it outputs only error information.</span></span>|  
+|<span data-ttu-id="3c0e8-133">`/r:` *assembly*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-133">`/r:` *assembly*</span></span><br /><br /> <span data-ttu-id="3c0e8-134">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-134">or</span></span><br /><br /> <span data-ttu-id="3c0e8-135">`/referenceassembly:` *assembly*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-135">`/referenceassembly:` *assembly*</span></span>|<span data-ttu-id="3c0e8-136">Schließt die angegebene Assembly beim Auflösen von abhängigen Assemblys während der Anmerkung ein.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-136">Includes the specified assembly when resolving dependent assemblies during annotation.</span></span> <span data-ttu-id="3c0e8-137">Verweisassemblys erhalten gegenüber Assemblys, die im Verweispfad gefunden werden, Priorität.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-137">Reference assemblies are given priority over assemblies that are found in the reference path.</span></span>|  
+|<span data-ttu-id="3c0e8-138">`/s:` *rulename*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-138">`/s:` *rulename*</span></span><br /><br /> <span data-ttu-id="3c0e8-139">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-139">or</span></span><br /><br /> <span data-ttu-id="3c0e8-140">`/suppressrule:` *rulename*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-140">`/suppressrule:` *rulename*</span></span>|<span data-ttu-id="3c0e8-141">Unterdrückt das Ausführen der angegebenen Transparenzregel für die Eingabeassemblys.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-141">Suppresses running the specified transparency rule on the input assemblies.</span></span>|  
+|`/t`<br /><br /> <span data-ttu-id="3c0e8-142">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-142">or</span></span><br /><br /> `/forcetransparent`|<span data-ttu-id="3c0e8-143">Zwingt das Annotator-Tool, alle Assemblys, die keine Transparenzanmerkungen aufweisen, so zu behandeln, als ob sie völlig transparent wären.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-143">Forces the Annotator tool to treat all assemblies that do not have any transparency annotations as if they were entirely transparent.</span></span>|  
+|<span data-ttu-id="3c0e8-144">`/t`:*assembly*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-144">`/t`:*assembly*</span></span><br /><br /> <span data-ttu-id="3c0e8-145">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-145">or</span></span><br /><br /> <span data-ttu-id="3c0e8-146">`/forcetransparent`:*assembly*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-146">`/forcetransparent`:*assembly*</span></span>|<span data-ttu-id="3c0e8-147">Zwingt die gegebene Assembly, transparent zu sein, unabhängig von ihren aktuellen Anmerkungen auf Assemblyebene.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-147">Force the given assembly to be transparent, regardless of its current assembly-level annotations.</span></span>|  
 |||  
-|`/v`<br /><br /> oder<br /><br /> `/verify`|Überprüft nur, ob die Anmerkungen einer Assembly korrekt sind. Es wird nicht versucht, mehrere Durchläufe auszuführen, um alle erforderlichen Anmerkungen zu finden, wenn die Assembly nicht überprüft wird.|  
-|`/x`<br /><br /> oder<br /><br /> `/verbose`|Legt die ausführliche Ausgabe während des Kommentierens fest.|  
-|`/y:` *verzeichnis*<br /><br /> oder<br /><br /> `/symbolpath:` *verzeichnis*|Schließt das angegebene Verzeichnis beim Suchen nach Symboldateien während der Anmerkung ein.|  
+|`/v`<br /><br /> <span data-ttu-id="3c0e8-148">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-148">or</span></span><br /><br /> `/verify`|<span data-ttu-id="3c0e8-149">Überprüft nur, ob die Anmerkungen einer Assembly korrekt sind. Es wird nicht versucht, mehrere Durchläufe auszuführen, um alle erforderlichen Anmerkungen zu finden, wenn die Assembly nicht überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-149">Verifies only that an assembly's annotations are correct; does not attempt to make multiple passes to find all required annotations if the assembly does not verify.</span></span>|  
+|`/x`<br /><br /> <span data-ttu-id="3c0e8-150">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-150">or</span></span><br /><br /> `/verbose`|<span data-ttu-id="3c0e8-151">Legt die ausführliche Ausgabe während des Kommentierens fest.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-151">Specifies verbose output while annotating.</span></span>|  
+|<span data-ttu-id="3c0e8-152">`/y:` *verzeichnis*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-152">`/y:` *directory*</span></span><br /><br /> <span data-ttu-id="3c0e8-153">oder</span><span class="sxs-lookup"><span data-stu-id="3c0e8-153">or</span></span><br /><br /> <span data-ttu-id="3c0e8-154">`/symbolpath:` *verzeichnis*</span><span class="sxs-lookup"><span data-stu-id="3c0e8-154">`/symbolpath:` *directory*</span></span>|<span data-ttu-id="3c0e8-155">Schließt das angegebene Verzeichnis beim Suchen nach Symboldateien während der Anmerkung ein.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-155">Includes the specified directory when searching for symbol files during annotation.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Parameter und Assemblys werden möglicherweise auch in einer Antwortdatei bereitgestellt, die in der Befehlszeile angegeben und der ein @-Zeichen vorangestellt wird. Jede Zeile in der Antwortdatei sollte einen einzelnen Parameter- oder Assemblynamen enthalten.  
+## <a name="remarks"></a><span data-ttu-id="3c0e8-156">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3c0e8-156">Remarks</span></span>  
+ <span data-ttu-id="3c0e8-157">Parameter und Assemblys werden möglicherweise auch in einer Antwortdatei bereitgestellt, die in der Befehlszeile angegeben und der ein @-Zeichen vorangestellt wird.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-157">Parameters and assemblies may also be provided in a response file that is specified on the command line and prefixed with an at sign (@).</span></span> <span data-ttu-id="3c0e8-158">Jede Zeile in der Antwortdatei sollte einen einzelnen Parameter- oder Assemblynamen enthalten.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-158">Each line in the response file should contain a single parameter or assembly name.</span></span>  
   
- Weitere Informationen zu .NET Security Annotator finden Sie im Eintrag [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations (Analysieren Ihrer Assemblys auf Transparenzverstöße mit SecAnnotate)](http://go.microsoft.com/fwlink/?LinkId=187648) im .NET Security Blog.  
+ <span data-ttu-id="3c0e8-159">Weitere Informationen zu .NET Security Annotator finden Sie im Eintrag [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations (Analysieren Ihrer Assemblys auf Transparenzverstöße mit SecAnnotate)](http://go.microsoft.com/fwlink/?LinkId=187648) im .NET Security Blog.</span><span class="sxs-lookup"><span data-stu-id="3c0e8-159">For more information about the .NET Security Annotator, see the entry [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](http://go.microsoft.com/fwlink/?LinkId=187648) in the .NET Security blog.</span></span>  
   
-## <a name="examples"></a>Beispiele
-
+## <a name="examples"></a><span data-ttu-id="3c0e8-160">Beispiele</span><span class="sxs-lookup"><span data-stu-id="3c0e8-160">Examples</span></span>

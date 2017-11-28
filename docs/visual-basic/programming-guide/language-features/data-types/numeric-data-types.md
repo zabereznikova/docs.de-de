@@ -1,111 +1,94 @@
 ---
-title: Numerische Datentypen (Visual Basic) | Microsoft-Dokumentation
+title: Numerische Datentypen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- integral types, Visual Basic
-- Short data type, numeric data types
-- Double data type, numeric data types
-- Long data type, Visual Basic numeric data types
-- numbers, whole
+- integral types [Visual Basic], Visual Basic
+- Short data type [Visual Basic], numeric data types
+- Double data type [Visual Basic], numeric data types
+- Long data type [Visual Basic], Visual Basic numeric data types
+- numbers [Visual Basic], whole
 - fractions
 - numbers
 - whole numbers
 - integer numbers
-- numbers, integer
-- fractional data types
+- numbers [Visual Basic], integer
+- fractional data types [Visual Basic]
 - mantissas, of fractional numbers
 - mantissas
 - data types [Visual Basic], numeric
-- Integer data type, numeric data types
+- Integer data type [Visual Basic], numeric data types
 - exponent, of fractional numbers
-- integers
-- numeric data types, Visual Basic
-- Single data type, numeric types
-- Decimal data type, numeric data types
+- integers [Visual Basic]
+- numeric data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], numeric types
+- Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c3098370b8d9dcb6aafcb06dcfb8f4e144b899a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="numeric-data-types-visual-basic"></a>Numerische Datentypen (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]stellt mehrere *numerische Datentypen* für die Behandlung von Zahlen in unterschiedlichen Darstellungen. *Ganzzahlige* Typen darstellen, nur ganze Zahlen (positiv, negativ und&0; (null)), und *Nonintegral* Zahlen mit Nachkommastellen und ganze Zahl darstellen.  
+# <a name="numeric-data-types-visual-basic"></a><span data-ttu-id="c937d-102">Numerische Datentypen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c937d-102">Numeric Data Types (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="c937d-103">stellt mehrere *numerische Datentypen* für die Behandlung von Zahlen in verschiedenen Darstellungen bereit.</span><span class="sxs-lookup"><span data-stu-id="c937d-103"> supplies several *numeric data types* for handling numbers in various representations.</span></span> <span data-ttu-id="c937d-104">*Ganzzahlige* Typen darstellen, nur ganze Zahlen (Positive und negative und 0 (null)), und *Nonintegral* Typen darstellen von Zahlen mit Nachkommastellen und ganze Zahl.</span><span class="sxs-lookup"><span data-stu-id="c937d-104">*Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.</span></span>  
   
- Eine Tabelle mit einer Side-by-Side-Vergleich der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Datentypen finden Sie in [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ <span data-ttu-id="c937d-105">Für eine Tabelle mit einer Seite-an-Seite-Vergleich, der die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Datentypen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span><span class="sxs-lookup"><span data-stu-id="c937d-105">For a table showing a side-by-side comparison of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] data types, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
-## <a name="integral-numeric-types"></a>Ganzzahlige numerische Typen  
- *Ganzzahlige Datentypen* sind diejenigen, die nur Zahlen ohne Nachkommastellen darstellen.  
+## <a name="integral-numeric-types"></a><span data-ttu-id="c937d-106">Ganzzahlige numerische Typen</span><span class="sxs-lookup"><span data-stu-id="c937d-106">Integral Numeric Types</span></span>  
+ <span data-ttu-id="c937d-107">*Ganzzahlige Datentypen* sind solche, die nur Zahlen ohne Nachkommastellen darstellen.</span><span class="sxs-lookup"><span data-stu-id="c937d-107">*Integral data types* are those that represent only numbers without fractional parts.</span></span>  
   
- Die *signiert* ganzzahlige Datentypen sind [SByte-Datentyp](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-Bit), [Short-Datentyp](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-Bit), [Integer-Datentyp](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-Bit) und [vom Typ Long](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-Bit). Wenn eine Variable immer ganze Zahlen anstelle von Zahlen mit Nachkommastellen speichert, deklarieren Sie sie als einen dieser Typen.  
+ <span data-ttu-id="c937d-108">Die *signiert* ganzzahlige Datentypen sind [SByte-Datentyp](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-Bit), [Short-Datentyp](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-Bit), [Integer-Datentyp](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-Bit) und [ Long-Datentyp](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-Bit).</span><span class="sxs-lookup"><span data-stu-id="c937d-108">The *signed* integral data types are [SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit), [Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit), [Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit), and [Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit).</span></span> <span data-ttu-id="c937d-109">Wenn eine Variable Ganzzahlen anstelle von Brüchen speichert, deklarieren Sie sie als einen dieser Typen.</span><span class="sxs-lookup"><span data-stu-id="c937d-109">If a variable always stores integers rather than fractional numbers, declare it as one of these types.</span></span>  
   
- Die *ohne Vorzeichen* ganzzahligen Typen werden [Byte-Datentyp](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-Bit), [UShort-Datentyp](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-Bit), [UInteger-Datentyp](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-Bit) und [ULong-Datentyp](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-Bit). Wenn eine Variable binäre Daten oder Daten unbekannten Typs enthält, deklarieren Sie sie als einen dieser Typen.  
+ <span data-ttu-id="c937d-110">Die *ohne Vorzeichen* ganzzahlige Typen sind [Byte-Datentyp](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-Bit), [UShort-Datentyp](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-Bit), [UInteger-Datentyp](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-Bit) und [ ULong-Datentyp](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-Bit).</span><span class="sxs-lookup"><span data-stu-id="c937d-110">The *unsigned* integral types are [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit), and [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit).</span></span> <span data-ttu-id="c937d-111">Wenn eine Variable binäre Daten, oder unbekannten Typs enthält, deklarieren Sie sie als einen dieser Typen an.</span><span class="sxs-lookup"><span data-stu-id="c937d-111">If a variable contains binary data, or data of unknown nature, declare it as one of these types.</span></span>  
   
-### <a name="performance"></a>Leistung  
- Arithmetische Operationen sind schneller mit ganzzahligen Typen als mit anderen Datentypen. Am schnellsten mit werden die `Integer` und `UInteger` Typen in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+### <a name="performance"></a><span data-ttu-id="c937d-112">Leistung</span><span class="sxs-lookup"><span data-stu-id="c937d-112">Performance</span></span>  
+ <span data-ttu-id="c937d-113">Arithmetische Operationen sind mit Ganzzahltypen mit anderen Datentypen als schneller.</span><span class="sxs-lookup"><span data-stu-id="c937d-113">Arithmetic operations are faster with integral types than with other data types.</span></span> <span data-ttu-id="c937d-114">Am schnellsten mit werden die `Integer` und `UInteger` Typen im [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c937d-114">They are fastest with the `Integer` and `UInteger` types in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-### <a name="large-integers"></a>Große ganze Zahlen  
- Wenn Sie eine ganze Zahl größer als halten müssen die `Integer` Datentyp enthalten kann, können Sie die `Long` Daten geben Sie stattdessen. `Long`-Variablen können Zahlen von-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 enthalten. Vorgänge mit `Long` sind etwas langsamer als bei `Integer`.  
+### <a name="large-integers"></a><span data-ttu-id="c937d-115">Große ganze Zahlen</span><span class="sxs-lookup"><span data-stu-id="c937d-115">Large Integers</span></span>  
+ <span data-ttu-id="c937d-116">Wenn Sie eine ganze Zahl größer als halten müssen die `Integer` Datentyp aufnehmen kann, können Sie mithilfe der `Long` Datentyp stattdessen.</span><span class="sxs-lookup"><span data-stu-id="c937d-116">If you need to hold an integer larger than the `Integer` data type can hold, you can use the `Long` data type instead.</span></span> <span data-ttu-id="c937d-117">`Long`Variablen können Zahlen von-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 enthalten.</span><span class="sxs-lookup"><span data-stu-id="c937d-117">`Long` variables can hold numbers from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807.</span></span> <span data-ttu-id="c937d-118">Vorgänge mit `Long` sind etwas langsamer als bei `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c937d-118">Operations with `Long` are slightly slower than with `Integer`.</span></span>  
   
- Wenn Sie noch größere Werte benötigen, können Sie die [Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). Sie können Zahlen von-79.228.162.514.264.337.593.543.950.335 bis 79.228.162.514.264.337.593.543.950.335 in enthalten eine `Decimal` -Variablen verwenden, wenn Sie keine Dezimalstellen verwenden. Allerdings Vorgänge mit `Decimal` Zahlen sind beträchtlich langsamer als ein mit einem anderen numerischen Datentyp.  
+ <span data-ttu-id="c937d-119">Wenn Sie noch größere Werte benötigen, können Sie die [Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="c937d-119">If you need even larger values, you can use the [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md).</span></span> <span data-ttu-id="c937d-120">Sie können Zahlen von-79.228.162.514.264.337.593.543.950.335 bis Wert 79,228,162,514,264,337,593,543,950,335 in enthalten eine `Decimal` Variable, wenn Sie Dezimalstellen nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c937d-120">You can hold numbers from -79,228,162,514,264,337,593,543,950,335 through 79,228,162,514,264,337,593,543,950,335 in a `Decimal` variable if you do not use any decimal places.</span></span> <span data-ttu-id="c937d-121">Allerdings Vorgänge mit `Decimal` Zahlen sind erheblich langsamer als bei einem beliebigen anderen numerischen Datentyp.</span><span class="sxs-lookup"><span data-stu-id="c937d-121">However, operations with `Decimal` numbers are considerably slower than with any other numeric data type.</span></span>  
   
-### <a name="small-integers"></a>Kleine ganze Zahlen  
- Wenn Sie nicht den vollen Umfang der benötigen die `Integer` Datentyp aufweisen, können Sie die `Short` -Datentyp, der ganze Zahlen von-32.768 bis 32.767 enthalten kann. Für den kleinsten Integer-Bereich der `SByte` enthält Zahlen von-128 bis 127. Wenn Sie eine sehr große Anzahl von Variablen, die kleinen ganzen Zahlen verfügen, die common Language Runtime kann manchmal speichern, Ihre `Short` und `SByte` Variablen effizienter und Arbeitsspeicher belegt. Allerdings Vorgänge mit `Short` und `SByte` sind etwas langsamer als bei `Integer`.  
+### <a name="small-integers"></a><span data-ttu-id="c937d-122">Integer-Werten</span><span class="sxs-lookup"><span data-stu-id="c937d-122">Small Integers</span></span>  
+ <span data-ttu-id="c937d-123">Wenn Sie nicht das gesamte Spektrum der benötigen die `Integer` -Datentyp, können Sie die `Short` -Datentyp, der ganze Zahlen von-32.768 bis 32.767 enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="c937d-123">If you do not need the full range of the `Integer` data type, you can use the `Short` data type, which can hold integers from -32,768 through 32,767.</span></span> <span data-ttu-id="c937d-124">Für den kleinsten Integer-Bereich der `SByte` -Datentyp enthält ganze Zahlen von-128 bis 127.</span><span class="sxs-lookup"><span data-stu-id="c937d-124">For the smallest integer range, the `SByte` data type holds integers from -128 through 127.</span></span> <span data-ttu-id="c937d-125">Haben eine sehr große Anzahl von Variablen, die small Integers enthalten, kann in einigen Fällen die common Language Runtime speichern Ihre `Short` und `SByte` Variablen effizienter und Arbeitsspeicher belegt.</span><span class="sxs-lookup"><span data-stu-id="c937d-125">If you have a very large number of variables that hold small integers, the common language runtime can sometimes store your `Short` and `SByte` variables more efficiently and save memory consumption.</span></span> <span data-ttu-id="c937d-126">Allerdings Vorgänge mit `Short` und `SByte` sind etwas langsamer als bei `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c937d-126">However, operations with `Short` and `SByte` are somewhat slower than with `Integer`.</span></span>  
   
-### <a name="unsigned-integers"></a>Ganze Zahlen ohne Vorzeichen  
- Wenn Sie wissen, dass Ihre Variable nie eine negative Zahl enthalten muss, können Sie die *Typen ohne Vorzeichen*`Byte`, `UShort`, `UInteger`, und `ULong`. Jeder dieser Datentypen kann eine positive ganze Zahl doppelt so groß wie den entsprechenden Typ signed enthalten (`SByte`, `Short`, `Integer`, und `Long`). Hinsichtlich der Leistung ist jeder Datentyp ohne Vorzeichen genauso leistungsstark wie der entsprechende Datentyp mit Vorzeichen. Insbesondere `UInteger` teilt mit `Integer` die Unterscheidung der effizienteste aller elementaren numerischen Datentypen.  
+### <a name="unsigned-integers"></a><span data-ttu-id="c937d-127">Ganzzahlen ohne Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="c937d-127">Unsigned Integers</span></span>  
+ <span data-ttu-id="c937d-128">Wenn Sie wissen, dass die Variable muss nie eine negative Zahl aufnehmen, können Sie mithilfe der *Typen ohne Vorzeichen*`Byte`, `UShort`, `UInteger`, und `ULong`.</span><span class="sxs-lookup"><span data-stu-id="c937d-128">If you know that your variable never needs to hold a negative number, you can use the *unsigned types*`Byte`, `UShort`, `UInteger`, and `ULong`.</span></span> <span data-ttu-id="c937d-129">Jeder dieser Datentypen kann eine positive ganze Zahl zweimal so groß wie dem entsprechenden Typ einen signierten enthalten (`SByte`, `Short`, `Integer`, und `Long`).</span><span class="sxs-lookup"><span data-stu-id="c937d-129">Each of these data types can hold a positive integer twice as large as its corresponding signed type (`SByte`, `Short`, `Integer`, and `Long`).</span></span> <span data-ttu-id="c937d-130">Im Hinblick auf Leistung ist jeder Typ ohne Vorzeichen genau so effizient wie der entsprechende Datentyp mit Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="c937d-130">In terms of performance, each unsigned type is exactly as efficient as its corresponding signed type.</span></span> <span data-ttu-id="c937d-131">Insbesondere `UInteger` teilt mit `Integer` die Unterscheidung der effizienteste aller elementaren numerischen Datentypen.</span><span class="sxs-lookup"><span data-stu-id="c937d-131">In particular, `UInteger` shares with `Integer` the distinction of being the most efficient of all the elementary numeric data types.</span></span>  
   
-## <a name="nonintegral-numeric-types"></a>Nicht ganzzahlige numerische Typen  
- *Nicht ganzzahlige Datentypen* sind für die Darstellung von Zahlen mit Nachkommastellen und ganze Zahl.  
+## <a name="nonintegral-numeric-types"></a><span data-ttu-id="c937d-132">Nicht ganzzahlige numerische Typen</span><span class="sxs-lookup"><span data-stu-id="c937d-132">Nonintegral Numeric Types</span></span>  
+ <span data-ttu-id="c937d-133">*Nicht ganzzahlige Datentypen* sind diejenigen, die Zahlen mit Nachkommastellen und ganze Zahl darstellen.</span><span class="sxs-lookup"><span data-stu-id="c937d-133">*Nonintegral data types* are those that represent numbers with both integer and fractional parts.</span></span>  
   
- Die nicht ganzzahligen numerischen Datentypen sind `Decimal` (128-Bit-Festkomma) [Single-Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-Bit-Gleitkomma) und [Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-Bit-Gleitkomma). Sie sind alle signierten Typen. Wenn eine Variable einen Bruch enthalten kann, deklarieren Sie sie als einen dieser Typen.  
+ <span data-ttu-id="c937d-134">Die nicht integrale numerische Datentypen sind `Decimal` (128-Bit-Festkommazahl) [Single-Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-Bit-Gleitkommazahl), und [Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-Bit-Gleitkommazahl).</span><span class="sxs-lookup"><span data-stu-id="c937d-134">The nonintegral numeric data types are `Decimal` (128-bit fixed point), [Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit floating point), and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit floating point).</span></span> <span data-ttu-id="c937d-135">Sie sind alle signierten Typen.</span><span class="sxs-lookup"><span data-stu-id="c937d-135">They are all signed types.</span></span> <span data-ttu-id="c937d-136">Wenn eine Variable einen Bruch enthalten kann, deklarieren Sie sie als einen dieser Typen an.</span><span class="sxs-lookup"><span data-stu-id="c937d-136">If a variable can contain a fraction, declare it as one of these types.</span></span>  
   
- `Decimal`ist kein Gleitkommadatentyp. `Decimal`Zahlen haben einen binären Ganzzahlwert und einen Ganzzahlskalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimalbruch ist.  
+ <span data-ttu-id="c937d-137">`Decimal`ist kein Typ Gleitkommadaten.</span><span class="sxs-lookup"><span data-stu-id="c937d-137">`Decimal` is not a floating-point data type.</span></span> <span data-ttu-id="c937d-138">`Decimal`Zahlen haben einen binären ganzzahligen Wert und eine ganze Zahl Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimalbruch ist.</span><span class="sxs-lookup"><span data-stu-id="c937d-138">`Decimal` numbers have a binary integer value and an integer scaling factor that specifies what portion of the value is a decimal fraction.</span></span>  
   
- Sie können `Decimal` -Variablen für Währungswerte. Der Vorteil ist die Genauigkeit der Werte. Die `Double` -Datentyp ist schneller und weniger Speicher benötigt, aber Rundungsfehler unterliegt. Die `Decimal` Datentyp behält die vollständige Genauigkeit von bis zu 28 Dezimalstellen.  
+ <span data-ttu-id="c937d-139">Sie können `Decimal` Variablen für Währungswerte.</span><span class="sxs-lookup"><span data-stu-id="c937d-139">You can use `Decimal` variables for money values.</span></span> <span data-ttu-id="c937d-140">Der Vorteil ist die Genauigkeit der Werte.</span><span class="sxs-lookup"><span data-stu-id="c937d-140">The advantage is the precision of the values.</span></span> <span data-ttu-id="c937d-141">Die `Double` -Datentyp ist schneller und weniger Speicher benötigt, aber es Rundungsfehler unterliegt.</span><span class="sxs-lookup"><span data-stu-id="c937d-141">The `Double` data type is faster and requires less memory, but it is subject to rounding errors.</span></span> <span data-ttu-id="c937d-142">Die `Decimal` Datentyp behält vollständige Genauigkeit mit 28 Dezimalstellen an.</span><span class="sxs-lookup"><span data-stu-id="c937d-142">The `Decimal` data type retains complete accuracy to 28 decimal places.</span></span>  
   
- Gleitkomma (`Single` und `Double`) können größere Wertbereiche als `Decimal` Zahlen kann jedoch Rundungsfehler auftreten. Gleitkommatypen unterstützen weniger signifikante Stellen als `Decimal` können jedoch größere Werte darstellen.  
+ <span data-ttu-id="c937d-143">Gleitkomma (`Single` und `Double`) Zahlen haben größere Bereiche als `Decimal` Zahlen aber unterliegen Rundungsfehler werden können.</span><span class="sxs-lookup"><span data-stu-id="c937d-143">Floating-point (`Single` and `Double`) numbers have larger ranges than `Decimal` numbers but can be subject to rounding errors.</span></span> <span data-ttu-id="c937d-144">Gleitkommatypen unterstützen weniger signifikante Ziffern als `Decimal` aber größere Werte darstellen können.</span><span class="sxs-lookup"><span data-stu-id="c937d-144">Floating-point types support fewer significant digits than `Decimal` but can represent values of greater magnitude.</span></span>  
   
- Nicht ganzzahlige können ausgedrückt werden als MmmEeee mmm wird die *Mantisse* (die signifikante Stellen) und Eee ist die *Exponent* (eine Potenz von 10). Die höchsten positiven Werte der nicht ganzzahligen Datentypen sind 7.9228162514264337593543950335E + 28 für `Decimal`, 3,4028235E + 38 für `Single`, und 1, 79769313486231570E + 308 für `Double`.  
+ <span data-ttu-id="c937d-145">Nicht ganzzahlige in ausgedrückt werden können als MmmEeee mmm also die *Mantisse* (die signifikante Stellen) und Eee ist die *Exponenten* (eine Potenz von 10).</span><span class="sxs-lookup"><span data-stu-id="c937d-145">Nonintegral number values can be expressed as mmmEeee, in which mmm is the *mantissa* (the significant digits) and eee is the *exponent* (a power of 10).</span></span> <span data-ttu-id="c937d-146">Die höchste positive Werte die Ganzzahltypen sind 7.9228162514264337593543950335E + 28 für `Decimal`, 3,4028235E + 38 für `Single`, und 1.79769313486231570E + 308 für `Double`.</span><span class="sxs-lookup"><span data-stu-id="c937d-146">The highest positive values of the nonintegral types are 7.9228162514264337593543950335E+28 for `Decimal`, 3.4028235E+38 for `Single`, and 1.79769313486231570E+308 for `Double`.</span></span>  
   
-### <a name="performance"></a>Leistung  
- `Double`ist der effizienteste Datentyp mit Nachkommastellen, da die Prozessoren auf den aktuellen Plattformen Gleitkommaoperationen mit doppelter Genauigkeit ausführen. Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.  
+### <a name="performance"></a><span data-ttu-id="c937d-147">Leistung</span><span class="sxs-lookup"><span data-stu-id="c937d-147">Performance</span></span>  
+ <span data-ttu-id="c937d-148">`Double`ist der effizienteste die Datentypen mit Nachkommastellen, da die Prozessoren auf den aktuellen Plattformen Operationen mit Gleitkommazahlen mit doppelter Genauigkeit ausführen.</span><span class="sxs-lookup"><span data-stu-id="c937d-148">`Double` is the most efficient of the fractional data types, because the processors on current platforms perform floating-point operations in double precision.</span></span> <span data-ttu-id="c937d-149">Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c937d-149">However, operations with `Double` are not as fast as with the integral types such as `Integer`.</span></span>  
   
-### <a name="small-magnitudes"></a>Kleine Werte  
- Für Zahlen mit der kleinstmöglichen Größe (nahe 0) `Double` Variablen können Zahlen enthalten so klein wie - 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 für positive Werte.  
+### <a name="small-magnitudes"></a><span data-ttu-id="c937d-150">Kleine Magnituden</span><span class="sxs-lookup"><span data-stu-id="c937d-150">Small Magnitudes</span></span>  
+ <span data-ttu-id="c937d-151">Zahlen mit der kleinstmöglichen Größe (nahe 0) `Double` können Variablen Zahlen so klein wie - 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 für positive Werte zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="c937d-151">For numbers with the smallest possible magnitude (closest to 0), `Double` variables can hold numbers as small as -4.94065645841246544E-324 for negative values and 4.94065645841246544E-324 for positive values.</span></span>  
   
-### <a name="small-fractional-numbers"></a>Kleine Bruchzahlen  
- Wenn Sie nicht den vollen Umfang der benötigen die `Double` Datentyp aufweisen, können Sie die `Single` -Datentyp, der Gleitkommazahlen von - 3,4028235E + 38 bis 3,4028235E + 38 enthalten kann. Die kleinsten Werte für `Single` Variablen sind - 1.401298E-45 für negative Werte und 1.401298E-45 für positive Werte. Wenn Sie eine sehr große Anzahl von Variablen, die kleine Gleitkommazahlen enthalten verfügen, kann manchmal die common Language Runtime speichern Ihre `Single` Variablen effizienter und Arbeitsspeicher belegt.  
+### <a name="small-fractional-numbers"></a><span data-ttu-id="c937d-152">Kleine Bruchzahlen</span><span class="sxs-lookup"><span data-stu-id="c937d-152">Small Fractional Numbers</span></span>  
+ <span data-ttu-id="c937d-153">Wenn Sie nicht das gesamte Spektrum der benötigen die `Double` -Datentyp, können Sie die `Single` -Datentyp, der Gleitkommazahlen von - 3,4028235E + 38 bis 3,4028235E + 38 aufnehmen kann.</span><span class="sxs-lookup"><span data-stu-id="c937d-153">If you do not need the full range of the `Double` data type, you can use the `Single` data type, which can hold floating-point numbers from -3.4028235E+38 through 3.4028235E+38.</span></span> <span data-ttu-id="c937d-154">Die kleinsten Werte für `Single` Variablen sind - 1.401298E-45 für negative Werte und 1.401298E-45 für positive Werte zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="c937d-154">The smallest magnitudes for `Single` variables are -1.401298E-45 for negative values and 1.401298E-45 for positive values.</span></span> <span data-ttu-id="c937d-155">Haben eine sehr große Anzahl von Variablen, die kleine Gleitkommazahlen enthalten, kann in einigen Fällen die common Language Runtime speichern Ihre `Single` Variablen effizienter und Arbeitsspeicher belegt.</span><span class="sxs-lookup"><span data-stu-id="c937d-155">If you have a very large number of variables that hold small floating-point numbers, the common language runtime can sometimes store your `Single` variables more efficiently and save memory consumption.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Zeichendatentypen](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)   
- [Sonstige Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)   
- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a><span data-ttu-id="c937d-156">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c937d-156">See Also</span></span>  
+ [<span data-ttu-id="c937d-157">Elementare Datentypen</span><span class="sxs-lookup"><span data-stu-id="c937d-157">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="c937d-158">Zeichendatentypen</span><span class="sxs-lookup"><span data-stu-id="c937d-158">Character Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
+ [<span data-ttu-id="c937d-159">Sonstige Datentypen</span><span class="sxs-lookup"><span data-stu-id="c937d-159">Miscellaneous Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
+ [<span data-ttu-id="c937d-160">Problembehandlung bei Datentypen</span><span class="sxs-lookup"><span data-stu-id="c937d-160">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="c937d-161">Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert</span><span class="sxs-lookup"><span data-stu-id="c937d-161">How to: Call a Windows Function that Takes Unsigned Types</span></span>](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

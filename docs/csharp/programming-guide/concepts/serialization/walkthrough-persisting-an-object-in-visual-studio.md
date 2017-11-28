@@ -1,55 +1,46 @@
 ---
 title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)
-Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird. Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
+# <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a><span data-ttu-id="45981-102">Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="45981-102">Walkthrough: Persisting an Object in Visual Studio (C#)</span></span>
+<span data-ttu-id="45981-103">Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird.</span><span class="sxs-lookup"><span data-stu-id="45981-103">Although you can set an object's properties to default values at design time, any values entered at run time are lost when the object is destroyed.</span></span> <span data-ttu-id="45981-104">Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.</span><span class="sxs-lookup"><span data-stu-id="45981-104">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>  
   
- In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches `Loan`-Objekt und behalten dessen Daten in einer Datei bei. Anschließend rufen Sie die Daten aus der Datei ab, wenn Sie das Objekt neu erstellen.  
-  
-> [!IMPORTANT]
->  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, muss Sie über die `Create`-Berechtigung für den Ordner verfügen. Berechtigungen werden mithilfe von Zugriffssteuerungslisten festgelegt. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung `Write`, was einer geringeren Berechtigung entspricht. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte die `Read`-Berechtigung nur für eine einzelne Datei erteilt werden (anstatt „Create“-Berechtigungen für den gesamten Ordner zu gewähren). Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in Stammordner oder den Ordner „Programme“ zu schreiben.  
+ <span data-ttu-id="45981-105">In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches `Loan`-Objekt und behalten dessen Daten in einer Datei bei.</span><span class="sxs-lookup"><span data-stu-id="45981-105">In this walkthrough, you will create a simple `Loan` object and persist its data to a file.</span></span> <span data-ttu-id="45981-106">Anschließend rufen Sie die Daten aus der Datei ab, wenn Sie das Objekt neu erstellen.</span><span class="sxs-lookup"><span data-stu-id="45981-106">You will then retrieve the data from the file when you re-create the object.</span></span>  
   
 > [!IMPORTANT]
->  In diesem Beispiel werden Daten in einer Datei im Binärformat gespeichert. Diese Formate sollten nicht für sensible Daten wie Kennwörter oder Kreditkarteninformationen verwendet werden.  
+>  <span data-ttu-id="45981-107">Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="45981-107">This example creates a new file if the file does not already exist.</span></span> <span data-ttu-id="45981-108">Wenn eine Anwendung eine Datei erstellen muss, muss Sie über die `Create`-Berechtigung für den Ordner verfügen.</span><span class="sxs-lookup"><span data-stu-id="45981-108">If an application must create a file, that application must `Create` permission for the folder.</span></span> <span data-ttu-id="45981-109">Berechtigungen werden mithilfe von Zugriffssteuerungslisten festgelegt.</span><span class="sxs-lookup"><span data-stu-id="45981-109">Permissions are set by using access control lists.</span></span> <span data-ttu-id="45981-110">Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung `Write`, was einer geringeren Berechtigung entspricht.</span><span class="sxs-lookup"><span data-stu-id="45981-110">If the file already exists, the application needs only `Write` permission, a lesser permission.</span></span> <span data-ttu-id="45981-111">Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte die `Read`-Berechtigung nur für eine einzelne Datei erteilt werden (anstatt „Create“-Berechtigungen für den gesamten Ordner zu gewähren).</span><span class="sxs-lookup"><span data-stu-id="45981-111">Where possible, it is more secure to create the file during deployment, and only grant `Read` permissions to a single file (instead of Create permissions for a folder).</span></span> <span data-ttu-id="45981-112">Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in Stammordner oder den Ordner „Programme“ zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="45981-112">Also, it is more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="45981-113">In diesem Beispiel werden Daten in einer Datei im Binärformat gespeichert.</span><span class="sxs-lookup"><span data-stu-id="45981-113">This example stores data in a binary format file.</span></span> <span data-ttu-id="45981-114">Diese Formate sollten nicht für sensible Daten wie Kennwörter oder Kreditkarteninformationen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="45981-114">These formats should not be used for sensitive data, such as passwords or credit-card information.</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="45981-115">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="45981-115">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="45981-116">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="45981-116">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="45981-117">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="45981-117">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## <a name="creating-the-loan-object"></a>Erstellen des Loan-Objekts  
- Der erste Schritt ist das Erstellen einer `Loan`-Klasse und einer Testanwendung, die die Klasse verwendet.  
+## <a name="creating-the-loan-object"></a><span data-ttu-id="45981-118">Erstellen des Loan-Objekts</span><span class="sxs-lookup"><span data-stu-id="45981-118">Creating the Loan Object</span></span>  
+ <span data-ttu-id="45981-119">Der erste Schritt ist das Erstellen einer `Loan`-Klasse und einer Testanwendung, die die Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="45981-119">The first step is to create a `Loan` class and a test application that uses the class.</span></span>  
   
-### <a name="to-create-the-loan-class"></a>So erstellen Sie eine Loan-Klasse  
+### <a name="to-create-the-loan-class"></a><span data-ttu-id="45981-120">So erstellen Sie eine Loan-Klasse</span><span class="sxs-lookup"><span data-stu-id="45981-120">To create the Loan class</span></span>  
   
-1.  Erstellen Sie ein neues Klassenbibliotheksprojekt mit dem Namen „LoanClass“. Weitere Informationen finden Sie unter [Erstellen von Projekten und Projektmappen](/visualstudio/ide/creating-solutions-and-projects).  
+1.  <span data-ttu-id="45981-121">Erstellen Sie ein neues Klassenbibliotheksprojekt mit dem Namen „LoanClass“.</span><span class="sxs-lookup"><span data-stu-id="45981-121">Create a new Class Library project and name it "LoanClass".</span></span> <span data-ttu-id="45981-122">Weitere Informationen finden Sie unter [Erstellen von Projekten und Projektmappen](/visualstudio/ide/creating-solutions-and-projects).</span><span class="sxs-lookup"><span data-stu-id="45981-122">For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).</span></span>  
   
-2.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für die Datei „Class1“ und wählen Sie **Umbenennen** aus. Benennen Sie die Datei in `Loan` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `Loan` umbenannt.  
+2.  <span data-ttu-id="45981-123">Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für die Datei „Class1“ und wählen Sie **Umbenennen** aus.</span><span class="sxs-lookup"><span data-stu-id="45981-123">In **Solution Explorer**, open the shortcut menu for the Class1 file and choose **Rename**.</span></span> <span data-ttu-id="45981-124">Benennen Sie die Datei in `Loan` um, und drücken Sie die EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="45981-124">Rename the file to `Loan` and press ENTER.</span></span> <span data-ttu-id="45981-125">Durch Umbenennen der Datei wird die Klasse ebenfalls in `Loan` umbenannt.</span><span class="sxs-lookup"><span data-stu-id="45981-125">Renaming the file will also rename the class to `Loan`.</span></span>  
   
-3.  Fügen Sie der Klasse die folgenden öffentlichen Member hinzu:  
+3.  <span data-ttu-id="45981-126">Fügen Sie der Klasse die folgenden öffentlichen Member hinzu:</span><span class="sxs-lookup"><span data-stu-id="45981-126">Add the following public members to the class:</span></span>  
   
     ```csharp  
     public class Loan : System.ComponentModel.INotifyPropertyChanged  
@@ -85,27 +76,27 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     }  
     ```  
   
- Sie müssen ebenfalls eine einfache Anwendung erstellen, die die `Loan`-Klasse verwendet.  
+ <span data-ttu-id="45981-127">Sie müssen ebenfalls eine einfache Anwendung erstellen, die die `Loan`-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="45981-127">You will also have to create a simple application that uses the `Loan` class.</span></span>  
   
-### <a name="to-create-a-test-application"></a>So erstellen Sie eine Testanwendung  
+### <a name="to-create-a-test-application"></a><span data-ttu-id="45981-128">So erstellen Sie eine Testanwendung</span><span class="sxs-lookup"><span data-stu-id="45981-128">To create a test application</span></span>  
   
-1.  Wählen Sie im Menü **Datei** **Hinzufügen** und **Neues Projekt** aus, um ein Windows Forms-Anwendungsprojekt zu Ihrer Projektmappe hinzuzufügen.  
+1.  <span data-ttu-id="45981-129">Wählen Sie im Menü **Datei** **Hinzufügen** und **Neues Projekt** aus, um ein Windows Forms-Anwendungsprojekt zu Ihrer Projektmappe hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="45981-129">To add a Windows Forms Application project to your solution, on the **File** menu, choose **Add**, **New Project**.</span></span>  
   
-2.  Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** **Windows Forms-Anwendung** aus, und geben Sie als Namen für das Projekt `LoanApp` ein. Klicken Sie anschließend auf **OK**, um das Dialogfeld zu schließen.  
+2.  <span data-ttu-id="45981-130">Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** **Windows Forms-Anwendung** aus, und geben Sie als Namen für das Projekt `LoanApp` ein. Klicken Sie anschließend auf **OK**, um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="45981-130">In the **Add New Project** dialog box, choose **Windows Forms Application**, and enter `LoanApp` as the name of the project, and then click **OK** to close the dialog box.</span></span>  
   
-3.  Wählen Sie im **Projektmappen-Explorer** das LoanApp-Projekt aus.  
+3.  <span data-ttu-id="45981-131">Wählen Sie im **Projektmappen-Explorer** das LoanApp-Projekt aus.</span><span class="sxs-lookup"><span data-stu-id="45981-131">In **Solution Explorer**, choose the LoanApp project.</span></span>  
   
-4.  Klicken Sie im Menü **Projekt** auf **Als Startprojekt festlegen**.  
+4.  <span data-ttu-id="45981-132">Klicken Sie im Menü **Projekt** auf **Als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="45981-132">On the **Project** menu, choose **Set as StartUp Project**.</span></span>  
   
-5.  Wählen Sie im Menü **Projekt** den Eintrag **Verweis hinzufügen**aus.  
+5.  <span data-ttu-id="45981-133">Wählen Sie im Menü **Projekt** den Eintrag **Verweis hinzufügen**aus.</span><span class="sxs-lookup"><span data-stu-id="45981-133">On the **Project** menu, choose **Add Reference**.</span></span>  
   
-6.  Wählen Sie im Dialogfeld **Verweis hinzufügen** die Registerkarte **Projekte** und anschließend das LoanClass-Projekt aus.  
+6.  <span data-ttu-id="45981-134">Wählen Sie im Dialogfeld **Verweis hinzufügen** die Registerkarte **Projekte** und anschließend das LoanClass-Projekt aus.</span><span class="sxs-lookup"><span data-stu-id="45981-134">In the **Add Reference** dialog box, choose the **Projects** tab and then choose the LoanClass project.</span></span>  
   
-7.  Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+7.  <span data-ttu-id="45981-135">Klicken Sie auf **OK**, um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="45981-135">Click **OK** to close the dialog box.</span></span>  
   
-8.  Fügen Sie dem Formular im Designer vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.  
+8.  <span data-ttu-id="45981-136">Fügen Sie dem Formular im Designer vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="45981-136">In the designer, add four <xref:System.Windows.Forms.TextBox> controls to the form.</span></span>  
   
-9. Fügen Sie im Code-Editor folgenden Code hinzu:  
+9. <span data-ttu-id="45981-137">Fügen Sie im Code-Editor folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="45981-137">In the Code Editor, add the following code:</span></span>  
   
     ```csharp  
     private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
@@ -119,7 +110,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     }  
     ```  
   
-10. Fügen Sie dem Formular mithilfe des folgenden Codes einen Ereignishandler für das Ereignis `PropertyChanged` hinzu:  
+10. <span data-ttu-id="45981-138">Fügen Sie dem Formular mithilfe des folgenden Codes einen Ereignishandler für das Ereignis `PropertyChanged` hinzu:</span><span class="sxs-lookup"><span data-stu-id="45981-138">Add an event handler for the `PropertyChanged` event to the form by using the following code:</span></span>  
   
     ```csharp  
     private void CustomerPropertyChanged(object sender,   
@@ -129,16 +120,16 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     }  
     ```  
   
- Nun können Sie die Anwendung erstellen und ausführen. Beachten Sie, dass die Standardwerte aus der `Loan`-Klasse in den Textfeldern angezeigt werden. Versuchen Sie, den Wert „Zinssatz“ von 7,5 zu 7,1 zu ändern, schließen Sie die Anwendung, und führen Sie sie erneut aus – der Wert wird auf den Standardwert 7,5 zurückgesetzt.  
+ <span data-ttu-id="45981-139">Nun können Sie die Anwendung erstellen und ausführen.</span><span class="sxs-lookup"><span data-stu-id="45981-139">At this point, you can build and run the application.</span></span> <span data-ttu-id="45981-140">Beachten Sie, dass die Standardwerte aus der `Loan`-Klasse in den Textfeldern angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="45981-140">Note that the default values from the `Loan` class appear in the text boxes.</span></span> <span data-ttu-id="45981-141">Versuchen Sie, den Wert „Zinssatz“ von 7,5 zu 7,1 zu ändern, schließen Sie die Anwendung, und führen Sie sie erneut aus – der Wert wird auf den Standardwert 7,5 zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="45981-141">Try to change the interest-rate value from 7.5 to 7.1, and then close the application and run it again—the value reverts to the default of 7.5.</span></span>  
   
- In der Praxis ändern sich Zinssätze regelmäßig, aber nicht unbedingt jedes Mal wenn die Anwendung ausgeführt wird. Es ist besser, den aktuellsten Zinssatz zwischen zwei Instanzen der Anwendung beizubehalten, anstatt den Benutzer den Zinssatz bei jeder Ausführung der Anwendung aktualisieren zu lassen. Im nächsten Schritt werden Sie durch Hinzufügen von Serialisierung zur Loan-Klasse genau das tun.  
+ <span data-ttu-id="45981-142">In der Praxis ändern sich Zinssätze regelmäßig, aber nicht unbedingt jedes Mal wenn die Anwendung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="45981-142">In the real world, interest rates change periodically, but not necessarily every time that the application is run.</span></span> <span data-ttu-id="45981-143">Es ist besser, den aktuellsten Zinssatz zwischen zwei Instanzen der Anwendung beizubehalten, anstatt den Benutzer den Zinssatz bei jeder Ausführung der Anwendung aktualisieren zu lassen.</span><span class="sxs-lookup"><span data-stu-id="45981-143">Rather than making the user update the interest rate every time that the application runs, it is better to preserve the most recent interest rate between instances of the application.</span></span> <span data-ttu-id="45981-144">Im nächsten Schritt werden Sie durch Hinzufügen von Serialisierung zur Loan-Klasse genau das tun.</span><span class="sxs-lookup"><span data-stu-id="45981-144">In the next step, you will do just that by adding serialization to the Loan class.</span></span>  
   
-## <a name="using-serialization-to-persist-the-object"></a>Verwenden von Serialisierung zum Beibehalten des Objekts  
- Sie müssen die Klasse zuerst mit dem Attribut `Serializable` markieren, um die Werte für die Loan-Klasse beizubehalten.  
+## <a name="using-serialization-to-persist-the-object"></a><span data-ttu-id="45981-145">Verwenden von Serialisierung zum Beibehalten des Objekts</span><span class="sxs-lookup"><span data-stu-id="45981-145">Using Serialization to Persist the Object</span></span>  
+ <span data-ttu-id="45981-146">Sie müssen die Klasse zuerst mit dem Attribut `Serializable` markieren, um die Werte für die Loan-Klasse beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="45981-146">In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.</span></span>  
   
-### <a name="to-mark-a-class-as-serializable"></a>So markieren Sie eine Klasse als serialisierbar  
+### <a name="to-mark-a-class-as-serializable"></a><span data-ttu-id="45981-147">So markieren Sie eine Klasse als serialisierbar</span><span class="sxs-lookup"><span data-stu-id="45981-147">To mark a class as serializable</span></span>  
   
--   Ändern Sie die Klassendeklaration für die Loan-Klasse wie folgt:  
+-   <span data-ttu-id="45981-148">Ändern Sie die Klassendeklaration für die Loan-Klasse wie folgt:</span><span class="sxs-lookup"><span data-stu-id="45981-148">Change the class declaration for the Loan class as follows:</span></span>  
   
     ```csharp  
     [Serializable()]  
@@ -146,41 +137,41 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     {  
     ```  
   
- Der Compiler wird vom Attribut `Serializable` darüber informiert, dass der Inhalt der Klasse in einer Datei beibehalten werden kann. Da das Ereignis `PropertyChanged` von einem Windows Form-Objekt behandelt wird, kann es nicht serialisiert werden. Das Attribut `NonSerialized` kann dazu verwendet werden, Klassenmember zu markieren, die nicht beibehalten werden sollen.  
+ <span data-ttu-id="45981-149">Der Compiler wird vom Attribut `Serializable` darüber informiert, dass der Inhalt der Klasse in einer Datei beibehalten werden kann.</span><span class="sxs-lookup"><span data-stu-id="45981-149">The `Serializable` attribute tells the compiler that everything in the class can be persisted to a file.</span></span> <span data-ttu-id="45981-150">Da das Ereignis `PropertyChanged` von einem Windows Form-Objekt behandelt wird, kann es nicht serialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="45981-150">Because the `PropertyChanged` event is handled by a Windows Form object, it cannot be serialized.</span></span> <span data-ttu-id="45981-151">Das Attribut `NonSerialized` kann dazu verwendet werden, Klassenmember zu markieren, die nicht beibehalten werden sollen.</span><span class="sxs-lookup"><span data-stu-id="45981-151">The `NonSerialized` attribute can be used to mark class members that should not be persisted.</span></span>  
   
-### <a name="to-prevent-a-member-from-being-serialized"></a>So verhindern Sie, dass ein Member serialisiert wird  
+### <a name="to-prevent-a-member-from-being-serialized"></a><span data-ttu-id="45981-152">So verhindern Sie, dass ein Member serialisiert wird</span><span class="sxs-lookup"><span data-stu-id="45981-152">To prevent a member from being serialized</span></span>  
   
--   Ändern Sie die Deklaration für das Ereignis `PropertyChanged` wie folgt:  
+-   <span data-ttu-id="45981-153">Ändern Sie die Deklaration für das Ereignis `PropertyChanged` wie folgt:</span><span class="sxs-lookup"><span data-stu-id="45981-153">Change the declaration for the `PropertyChanged` event as follows:</span></span>  
   
     ```csharp  
     [field: NonSerialized()]  
     public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
     ```  
   
- Fügen Sie als nächstes den Serialisierungscode zur LoanApp-Anwendung hinzu. Um die Klasse zu serialisieren und in eine Datei zu schreiben, verwenden Sie die Namespaces <xref:System.IO> und <xref:System.Xml.Serialization>. Sie können Verweise zu den notwendigen Klassenbibliotheken hinzufügen, damit Sie die vollqualifizierten Namen nicht eingeben müssen.  
+ <span data-ttu-id="45981-154">Fügen Sie als nächstes den Serialisierungscode zur LoanApp-Anwendung hinzu.</span><span class="sxs-lookup"><span data-stu-id="45981-154">The next step is to add the serialization code to the LoanApp application.</span></span> <span data-ttu-id="45981-155">Um die Klasse zu serialisieren und in eine Datei zu schreiben, verwenden Sie die Namespaces <xref:System.IO> und <xref:System.Xml.Serialization>.</span><span class="sxs-lookup"><span data-stu-id="45981-155">In order to serialize the class and write it to a file, you will use the <xref:System.IO> and <xref:System.Xml.Serialization> namespaces.</span></span> <span data-ttu-id="45981-156">Sie können Verweise zu den notwendigen Klassenbibliotheken hinzufügen, damit Sie die vollqualifizierten Namen nicht eingeben müssen.</span><span class="sxs-lookup"><span data-stu-id="45981-156">To avoid typing the fully qualified names, you can add references to the necessary class libraries.</span></span>  
   
-### <a name="to-add-references-to-namespaces"></a>So fügen Sie Verweise zu Namespaces hinzu  
+### <a name="to-add-references-to-namespaces"></a><span data-ttu-id="45981-157">So fügen Sie Verweise zu Namespaces hinzu</span><span class="sxs-lookup"><span data-stu-id="45981-157">To add references to namespaces</span></span>  
   
--   Fügen Sie am Anfang der `Form1`-Klasse die folgenden Anweisungen ein:  
+-   <span data-ttu-id="45981-158">Fügen Sie am Anfang der `Form1`-Klasse die folgenden Anweisungen ein:</span><span class="sxs-lookup"><span data-stu-id="45981-158">Add the following statements to the top of the `Form1` class:</span></span>  
   
     ```csharp  
     using System.IO;  
     using System.Runtime.Serialization.Formatters.Binary;  
     ```  
   
-     In diesem Fall verwenden Sie ein binäres Formatierungsprogramm, um ein Objekt im Binärformat zu speichern.  
+     <span data-ttu-id="45981-159">In diesem Fall verwenden Sie ein binäres Formatierungsprogramm, um ein Objekt im Binärformat zu speichern.</span><span class="sxs-lookup"><span data-stu-id="45981-159">In this case, you are using a binary formatter to save the object in a binary format.</span></span>  
   
- Fügen Sie als nächstes Code hinzu, um das Objekt aus der Datei zu deserialisieren wenn das Objekt erstellt wird.  
+ <span data-ttu-id="45981-160">Fügen Sie als nächstes Code hinzu, um das Objekt aus der Datei zu deserialisieren wenn das Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="45981-160">The next step is to add code to deserialize the object from the file when the object is created.</span></span>  
   
-### <a name="to-deserialize-an-object"></a>So deserialisieren Sie ein Objekt  
+### <a name="to-deserialize-an-object"></a><span data-ttu-id="45981-161">So deserialisieren Sie ein Objekt</span><span class="sxs-lookup"><span data-stu-id="45981-161">To deserialize an object</span></span>  
   
-1.  Fügen Sie eine Konstante zur Klasse für den Dateinamen der serialisierten Daten hinzu.  
+1.  <span data-ttu-id="45981-162">Fügen Sie eine Konstante zur Klasse für den Dateinamen der serialisierten Daten hinzu.</span><span class="sxs-lookup"><span data-stu-id="45981-162">Add a constant to the class for the serialized data's file name.</span></span>  
   
     ```csharp  
     const string FileName = @"..\..\SavedLoan.bin";  
     ```  
   
-2.  Ändern Sie den Code der `Form1_Load`-Ereignisprozedur wie folgt:  
+2.  <span data-ttu-id="45981-163">Ändern Sie den Code der `Form1_Load`-Ereignisprozedur wie folgt:</span><span class="sxs-lookup"><span data-stu-id="45981-163">Modify the code in the `Form1_Load` event procedure as follows:</span></span>  
   
     ```csharp  
     private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
@@ -204,13 +195,13 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     }  
     ```  
   
-     Beachten Sie, dass Sie erst sicherstellen müssen, ob die Datei vorhanden ist. Wenn sie vorhanden ist, erstellen Sie eine <xref:System.IO.Stream>-Klasse zum Lesen der Binärdatei und eine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse zum Übersetzen der Datei. Sie müssen ebenfalls vom Streamtyp in den Loan-Objekttyp konvertieren.  
+     <span data-ttu-id="45981-164">Beachten Sie, dass Sie erst sicherstellen müssen, ob die Datei vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="45981-164">Note that you first must check that the file exists.</span></span> <span data-ttu-id="45981-165">Wenn sie vorhanden ist, erstellen Sie eine <xref:System.IO.Stream>-Klasse zum Lesen der Binärdatei und eine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse zum Übersetzen der Datei.</span><span class="sxs-lookup"><span data-stu-id="45981-165">If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file.</span></span> <span data-ttu-id="45981-166">Sie müssen ebenfalls vom Streamtyp in den Loan-Objekttyp konvertieren.</span><span class="sxs-lookup"><span data-stu-id="45981-166">You also need to convert from the stream type to the Loan object type.</span></span>  
   
- Als nächstes müssen Sie Code hinzufügen, um die in die Textfelder eingegebenen Daten in der `Loan`-Klasse zu speichern. Anschließend müssen Sie die Klasse in eine Datei serialisieren.  
+ <span data-ttu-id="45981-167">Als nächstes müssen Sie Code hinzufügen, um die in die Textfelder eingegebenen Daten in der `Loan`-Klasse zu speichern. Anschließend müssen Sie die Klasse in eine Datei serialisieren.</span><span class="sxs-lookup"><span data-stu-id="45981-167">Next you must add code to save the data entered in the text boxes to the `Loan` class, and then you must serialize the class to a file.</span></span>  
   
-### <a name="to-save-the-data-and-serialize-the-class"></a>So speichern Sie die Daten und serialisieren die Klasse  
+### <a name="to-save-the-data-and-serialize-the-class"></a><span data-ttu-id="45981-168">So speichern Sie die Daten und serialisieren die Klasse</span><span class="sxs-lookup"><span data-stu-id="45981-168">To save the data and serialize the class</span></span>  
   
--   Fügen Sie den folgenden Code zur `Form1_FormClosing`-Ereignisprozedur hinzu:  
+-   <span data-ttu-id="45981-169">Fügen Sie den folgenden Code zur `Form1_FormClosing`-Ereignisprozedur hinzu:</span><span class="sxs-lookup"><span data-stu-id="45981-169">Add the following code to the `Form1_FormClosing` event procedure:</span></span>  
   
     ```csharp  
     private void Form1_FormClosing(object sender, FormClosingEventArgs e)  
@@ -227,9 +218,8 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
     }  
     ```  
   
- Nun können Sie die Anwendung erneut erstellen und ausführen. Zuerst werden die Standardwerte in den Textfeldern angezeigt. Versuchen Sie, die Werte zu ändern, und geben Sie einen Namen in das vierte Textfeld ein. Schließen Sie die Anwendung, und führen Sie sie dann erneut aus. Beachten Sie, dass die neuen Werte jetzt in den Textfeldern erscheinen.  
+ <span data-ttu-id="45981-170">Nun können Sie die Anwendung erneut erstellen und ausführen.</span><span class="sxs-lookup"><span data-stu-id="45981-170">At this point, you can again build and run the application.</span></span> <span data-ttu-id="45981-171">Zuerst werden die Standardwerte in den Textfeldern angezeigt.</span><span class="sxs-lookup"><span data-stu-id="45981-171">Initially, the default values appear in the text boxes.</span></span> <span data-ttu-id="45981-172">Versuchen Sie, die Werte zu ändern, und geben Sie einen Namen in das vierte Textfeld ein.</span><span class="sxs-lookup"><span data-stu-id="45981-172">Try to change the values and enter a name in the fourth text box.</span></span> <span data-ttu-id="45981-173">Schließen Sie die Anwendung, und führen Sie sie dann erneut aus.</span><span class="sxs-lookup"><span data-stu-id="45981-173">Close the application and then run it again.</span></span> <span data-ttu-id="45981-174">Beachten Sie, dass die neuen Werte jetzt in den Textfeldern erscheinen.</span><span class="sxs-lookup"><span data-stu-id="45981-174">Note that the new values now appear in the text boxes.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Serialization (C# ) (Serialisierung (C#))](../../../../csharp/programming-guide/concepts/serialization/index.md)   
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="45981-175">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="45981-175">See Also</span></span>  
+ [<span data-ttu-id="45981-176">Serialisierung (C#)</span><span class="sxs-lookup"><span data-stu-id="45981-176">Serialization (C# )</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+ [<span data-ttu-id="45981-177">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="45981-177">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)

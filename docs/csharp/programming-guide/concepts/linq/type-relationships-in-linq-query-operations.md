@@ -1,15 +1,12 @@
 ---
 title: "Typbeziehungen in LINQ-Abfragevorgängen (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
 - data sources [LINQ in C#], type relationships
@@ -21,77 +18,60 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a088a7f673a9f6aea7a0f50e18746259171bb7e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e33936ce2398cea782ec1f4272f22d9c3fc049e8
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="type-relationships-in-linq-query-operations-c"></a>Typbeziehungen in LINQ-Abfragevorgängen (C#)
-Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, wie die Variablentypen in einer vollständigen Abfrageoperation miteinander zusammenhängen. Wenn Sie diese Beziehungen verstehen, können Sie die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Beispiele und die Codebeispiele in der Dokumentation besser nachvollziehen. Weiterhin können Sie dann besser verstehen, was im Hintergrund abläuft, wenn Variablen implizit mithilfe von `var` typisiert werden.  
+# <a name="type-relationships-in-linq-query-operations-c"></a><span data-ttu-id="b1942-102">Typbeziehungen in LINQ-Abfragevorgängen (C#)</span><span class="sxs-lookup"><span data-stu-id="b1942-102">Type Relationships in LINQ Query Operations (C#)</span></span>
+<span data-ttu-id="b1942-103">Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, wie die Variablentypen in einer vollständigen Abfrageoperation miteinander zusammenhängen.</span><span class="sxs-lookup"><span data-stu-id="b1942-103">To write queries effectively, you should understand how types of the variables in a complete query operation all relate to each other.</span></span> <span data-ttu-id="b1942-104">Wenn Sie diese Beziehungen verstehen, können Sie die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Beispiele und die Codebeispiele in der Dokumentation besser nachvollziehen.</span><span class="sxs-lookup"><span data-stu-id="b1942-104">If you understand these relationships you will more easily comprehend the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and code examples in the documentation.</span></span> <span data-ttu-id="b1942-105">Weiterhin können Sie dann besser verstehen, was im Hintergrund abläuft, wenn Variablen implizit mithilfe von `var` typisiert werden.</span><span class="sxs-lookup"><span data-stu-id="b1942-105">Furthermore, you will understand what occurs behind the scenes when variables are implicitly typed by using `var`.</span></span>  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperationen sind in der Datenquelle, in der Abfrage selbst und in der Abfrageausführung stark typisiert. Die Variablentypen in der Abfrage müssen mit den Elementtypen in der Datenquelle und mit dem Typ der Iterationsvariablen in der `foreach`-Anweisung kompatibel sein. Diese starke Typisierung stellt sicher, dass Typfehler zur Kompilierzeit abgefangen werden, sodass sie korrigiert werden können, bevor die Benutzer sie ausführen.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="b1942-106">-Abfrageoperationen sind in der Datenquelle, in der Abfrage selbst und in der Abfrageausführung stark typisiert.</span><span class="sxs-lookup"><span data-stu-id="b1942-106"> query operations are strongly typed in the data source, in the query itself, and in the query execution.</span></span> <span data-ttu-id="b1942-107">Die Variablentypen in der Abfrage müssen mit den Elementtypen in der Datenquelle und mit dem Typ der Iterationsvariablen in der `foreach`-Anweisung kompatibel sein.</span><span class="sxs-lookup"><span data-stu-id="b1942-107">The type of the variables in the query must be compatible with the type of the elements in the data source and with the type of the iteration variable in the `foreach` statement.</span></span> <span data-ttu-id="b1942-108">Diese starke Typisierung stellt sicher, dass Typfehler zur Kompilierzeit abgefangen werden, sodass sie korrigiert werden können, bevor die Benutzer sie ausführen.</span><span class="sxs-lookup"><span data-stu-id="b1942-108">This strong typing guarantees that type errors are caught at compile time when they can be corrected before users encounter them.</span></span>  
   
- Um diese Typbeziehungen zu veranschaulichen, wird in den meisten folgenden Beispielen explizite Typisierung für alle Variablen angewendet. Im letzten Beispiel wird gezeigt, wie diese Prinzipien auch dann gelten, wenn Sie die implizite Typisierung mithilfe von [var](../../../../csharp/language-reference/keywords/var.md) verwenden.  
+ <span data-ttu-id="b1942-109">Um diese Typbeziehungen zu veranschaulichen, wird in den meisten folgenden Beispielen explizite Typisierung für alle Variablen angewendet.</span><span class="sxs-lookup"><span data-stu-id="b1942-109">In order to demonstrate these type relationships, most of the examples that follow use explicit typing for all variables.</span></span> <span data-ttu-id="b1942-110">Im letzten Beispiel wird gezeigt, wie diese Prinzipien auch dann gelten, wenn Sie die implizite Typisierung mithilfe von [var](../../../../csharp/language-reference/keywords/var.md) verwenden.</span><span class="sxs-lookup"><span data-stu-id="b1942-110">The last example shows how the same principles apply even when you use implicit typing by using [var](../../../../csharp/language-reference/keywords/var.md).</span></span>  
   
-## <a name="queries-that-do-not-transform-the-source-data"></a>Abfragen, bei denen die Quelldaten nicht transformiert werden  
- Die folgende Abbildung zeigt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperation für Objekte, die keine Transformationen der Daten ausführt. Die Quelle enthält eine Sequenz von Zeichenfolgen, und die Abfrageausgabe ist ebenfalls eine Sequenz von Zeichenfolgen.  
+## <a name="queries-that-do-not-transform-the-source-data"></a><span data-ttu-id="b1942-111">Abfragen, bei denen die Quelldaten nicht transformiert werden</span><span class="sxs-lookup"><span data-stu-id="b1942-111">Queries that do not Transform the Source Data</span></span>  
+ <span data-ttu-id="b1942-112">Die folgende Abbildung zeigt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperation für Objekte, die keine Transformationen der Daten ausführt.</span><span class="sxs-lookup"><span data-stu-id="b1942-112">The following illustration shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects query operation that performs no transformations on the data.</span></span> <span data-ttu-id="b1942-113">Die Quelle enthält eine Sequenz von Zeichenfolgen, und die Abfrageausgabe ist ebenfalls eine Sequenz von Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="b1942-113">The source contains a sequence of strings and the query output is also a sequence of strings.</span></span>  
   
- ![Beziehung von Datentypen in einer LINQ-Abfrage](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ <span data-ttu-id="b1942-114">![Beziehung von Datentypen in einer LINQ-Abfrage](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")</span><span class="sxs-lookup"><span data-stu-id="b1942-114">![Relation of data types in a LINQ query](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")</span></span>  
   
-1.  Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
+1.  <span data-ttu-id="b1942-115">Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.</span><span class="sxs-lookup"><span data-stu-id="b1942-115">The type argument of the data source determines the type of the range variable.</span></span>  
   
-2.  Der Typ des Objekts, das ausgewählt ist, bestimmt den Typ der Abfragevariablen. In diesem Beispiel ist `name` eine Zeichenfolge. Daher ist die Abfragevariable eine `IEnumerable`\<Zeichenfolge>.  
+2.  <span data-ttu-id="b1942-116">Der Typ des Objekts, das ausgewählt ist, bestimmt den Typ der Abfragevariablen.</span><span class="sxs-lookup"><span data-stu-id="b1942-116">The type of the object that is selected determines the type of the query variable.</span></span> <span data-ttu-id="b1942-117">In diesem Beispiel ist `name` eine Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="b1942-117">Here `name` is a string.</span></span> <span data-ttu-id="b1942-118">Daher ist die Abfragevariable eine `IEnumerable`\<Zeichenfolge>.</span><span class="sxs-lookup"><span data-stu-id="b1942-118">Therefore, the query variable is an `IEnumerable`\<string>.</span></span>  
   
-3.  Die Abfragevariable durchläuft in der `foreach`-Anweisung verschiedene Iterationen. Da die Abfragevariable eine Sequenz von Zeichenfolgen ist, ist die Iterationsvariable ebenfalls eine Zeichenfolge.  
+3.  <span data-ttu-id="b1942-119">Die Abfragevariable durchläuft in der `foreach`-Anweisung verschiedene Iterationen.</span><span class="sxs-lookup"><span data-stu-id="b1942-119">The query variable is iterated over in the `foreach` statement.</span></span> <span data-ttu-id="b1942-120">Da die Abfragevariable eine Sequenz von Zeichenfolgen ist, ist die Iterationsvariable ebenfalls eine Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="b1942-120">Because the query variable is a sequence of strings, the iteration variable is also a string.</span></span>  
   
-## <a name="queries-that-transform-the-source-data"></a>Abfragen, bei denen die Quelldaten transformiert werden  
- Die folgende Abbildung zeigt eine [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Abfrageoperation, die eine einfache Datentransformation ausführt. Die Abfrage verwendet eine Sequenz von `Customer`-Objekten als Eingabe und wählt nur die `Name`-Eigenschaft im Ergebnis aus. Da `Name` eine Zeichenfolge ist, erzeugt die Abfrage eine Sequenz von Zeichenfolgen als Ausgabe.  
+## <a name="queries-that-transform-the-source-data"></a><span data-ttu-id="b1942-121">Abfragen, bei denen die Quelldaten transformiert werden</span><span class="sxs-lookup"><span data-stu-id="b1942-121">Queries that Transform the Source Data</span></span>  
+ <span data-ttu-id="b1942-122">Die folgende Abbildung zeigt eine [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Abfrageoperation, die eine einfache Datentransformation ausführt.</span><span class="sxs-lookup"><span data-stu-id="b1942-122">The following illustration shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that performs a simple transformation on the data.</span></span> <span data-ttu-id="b1942-123">Die Abfrage verwendet eine Sequenz von `Customer`-Objekten als Eingabe und wählt nur die `Name`-Eigenschaft im Ergebnis aus.</span><span class="sxs-lookup"><span data-stu-id="b1942-123">The query takes a sequence of `Customer` objects as input, and selects only the `Name` property in the result.</span></span> <span data-ttu-id="b1942-124">Da `Name` eine Zeichenfolge ist, erzeugt die Abfrage eine Sequenz von Zeichenfolgen als Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="b1942-124">Because `Name` is a string, the query produces a sequence of strings as output.</span></span>  
   
- ![Eine Abfrage, die den Datentyp transformiert](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ <span data-ttu-id="b1942-125">![Eine Abfrage, die den Datentyp transformiert](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")</span><span class="sxs-lookup"><span data-stu-id="b1942-125">![A query that transforms the data type](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")</span></span>  
   
-1.  Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
+1.  <span data-ttu-id="b1942-126">Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.</span><span class="sxs-lookup"><span data-stu-id="b1942-126">The type argument of the data source determines the type of the range variable.</span></span>  
   
-2.  Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `string`, sondern `Customer`.  
+2.  <span data-ttu-id="b1942-127">Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück.</span><span class="sxs-lookup"><span data-stu-id="b1942-127">The `select` statement returns the `Name` property instead of the complete `Customer` object.</span></span> <span data-ttu-id="b1942-128">Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `string`, sondern `Customer`.</span><span class="sxs-lookup"><span data-stu-id="b1942-128">Because `Name` is a string, the type argument of `custNameQuery` is `string`, not `Customer`.</span></span>  
   
-3.  Da `custNameQuery` eine Sequenz von Zeichenfolgen ist, muss die Iterationsvariable der `foreach`-Schleife auch ein `string` sein.  
+3.  <span data-ttu-id="b1942-129">Da `custNameQuery` eine Sequenz von Zeichenfolgen ist, muss die Iterationsvariable der `foreach`-Schleife auch ein `string` sein.</span><span class="sxs-lookup"><span data-stu-id="b1942-129">Because `custNameQuery` is a sequence of strings, the `foreach` loop's iteration variable must also be a `string`.</span></span>  
   
- Die folgende Abbildung zeigt eine etwas komplexere Transformation. Die `select`-Anweisung gibt einen anonymen Typ zurück, der nur zwei Member des ursprünglichen `Customer`-Objekts erfasst.  
+ <span data-ttu-id="b1942-130">Die folgende Abbildung zeigt eine etwas komplexere Transformation.</span><span class="sxs-lookup"><span data-stu-id="b1942-130">The following illustration shows a slightly more complex transformation.</span></span> <span data-ttu-id="b1942-131">Die `select`-Anweisung gibt einen anonymen Typ zurück, der nur zwei Member des ursprünglichen `Customer`-Objekts erfasst.</span><span class="sxs-lookup"><span data-stu-id="b1942-131">The `select` statement returns an anonymous type that captures just two members of the original `Customer` object.</span></span>  
   
- ![Eine Abfrage, die den Datentyp transformiert](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ <span data-ttu-id="b1942-132">![Eine Abfrage, die den Datentyp transformiert](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")</span><span class="sxs-lookup"><span data-stu-id="b1942-132">![A query that transforms the data type](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")</span></span>  
   
-1.  Das Typargument der Datenquelle ist immer der Typ der Bereichsvariablen in der Abfrage.  
+1.  <span data-ttu-id="b1942-133">Das Typargument der Datenquelle ist immer der Typ der Bereichsvariablen in der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="b1942-133">The type argument of the data source is always the type of the range variable in the query.</span></span>  
   
-2.  Da die `select`-Anweisung einen anonymen Typ erzeugt, muss die Abfragevariable mithilfe von `var` implizit typisiert werden.  
+2.  <span data-ttu-id="b1942-134">Da die `select`-Anweisung einen anonymen Typ erzeugt, muss die Abfragevariable mithilfe von `var` implizit typisiert werden.</span><span class="sxs-lookup"><span data-stu-id="b1942-134">Because the `select` statement produces an anonymous type, the query variable must be implicitly typed by using `var`.</span></span>  
   
-3.  Da der Typ der Abfragevariablen implizit ist, muss die Iterationsvariable in der `foreach`-Schleife auch implizit sein.  
+3.  <span data-ttu-id="b1942-135">Da der Typ der Abfragevariablen implizit ist, muss die Iterationsvariable in der `foreach`-Schleife auch implizit sein.</span><span class="sxs-lookup"><span data-stu-id="b1942-135">Because the type of the query variable is implicit, the iteration variable in the `foreach` loop must also be implicit.</span></span>  
   
-## <a name="letting-the-compiler-infer-type-information"></a>Ableiten von Typinformationen durch den Compiler  
- Auch wenn Sie die Typbeziehungen einer Abfrageoperation grundsätzlich verstehen sollten, haben Sie die Option, den Compiler alle Arbeitsschritte ausführen zu lassen. Das [var](../../../../csharp/language-reference/keywords/var.md)-Schlüsselwort kann in einer Abfrageoperation für jede lokale Variable verwendet werden. Die folgende Abbildung ähnelt Beispiel Nummer 2, das zuvor erläutert wurde. Allerdings stellt der Compiler den starken Typ für jede Variable in der Abfrageoperation bereit.  
+## <a name="letting-the-compiler-infer-type-information"></a><span data-ttu-id="b1942-136">Ableiten von Typinformationen durch den Compiler</span><span class="sxs-lookup"><span data-stu-id="b1942-136">Letting the compiler infer type information</span></span>  
+ <span data-ttu-id="b1942-137">Auch wenn Sie die Typbeziehungen einer Abfrageoperation grundsätzlich verstehen sollten, haben Sie die Option, den Compiler alle Arbeitsschritte ausführen zu lassen.</span><span class="sxs-lookup"><span data-stu-id="b1942-137">Although you should understand the type relationships in a query operation, you have the option to let the compiler do all the work for you.</span></span> <span data-ttu-id="b1942-138">Das [var](../../../../csharp/language-reference/keywords/var.md)-Schlüsselwort kann in einer Abfrageoperation für jede lokale Variable verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b1942-138">The keyword [var](../../../../csharp/language-reference/keywords/var.md) can be used for any local variable in a query operation.</span></span> <span data-ttu-id="b1942-139">Die folgende Abbildung ähnelt Beispiel Nummer 2, das zuvor erläutert wurde.</span><span class="sxs-lookup"><span data-stu-id="b1942-139">The following illustration is similar to example number 2 that was discussed earlier.</span></span> <span data-ttu-id="b1942-140">Allerdings stellt der Compiler den starken Typ für jede Variable in der Abfrageoperation bereit.</span><span class="sxs-lookup"><span data-stu-id="b1942-140">However, the compiler supplies the strong type for each variable in the query operation.</span></span>  
   
- ![Typfluss mit implizierter Typisierung](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ <span data-ttu-id="b1942-141">![Typfluss mit implizierter Typisierung](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")</span><span class="sxs-lookup"><span data-stu-id="b1942-141">![Type flow with implicit typing](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")</span></span>  
   
- Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ <span data-ttu-id="b1942-142">Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="b1942-142">For more information about `var`, see [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="b1942-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b1942-143">See Also</span></span>  
+ [<span data-ttu-id="b1942-144">Erste Schritte mit LINQ in C#</span><span class="sxs-lookup"><span data-stu-id="b1942-144">Getting Started with LINQ in C#</span></span>](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

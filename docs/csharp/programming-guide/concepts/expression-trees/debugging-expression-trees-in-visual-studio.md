@@ -1,127 +1,117 @@
 ---
 title: "Debuggen von Ausdrucksbäumen in Visual Studio (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d74df8ba339526e20850cd8b8f1a4b37c20e22ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="debugging-expression-trees-in-visual-studio-c"></a>Debuggen von Ausdrucksbäumen in Visual Studio (C#)
-Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um einen schnellen Überblick über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die nur im Debugmodus verfügbar ist. Weitere Informationen zum Debugging finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
+# <a name="debugging-expression-trees-in-visual-studio-c"></a><span data-ttu-id="2c9e8-102">Debuggen von Ausdrucksbäumen in Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="2c9e8-102">Debugging Expression Trees in Visual Studio (C#)</span></span>
+<span data-ttu-id="2c9e8-103">Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-103">You can analyze the structure and content of expression trees when you debug your applications.</span></span> <span data-ttu-id="2c9e8-104">Um einen schnellen Überblick über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die nur im Debugmodus verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-104">To get a quick overview of the expression tree structure, you can use the `DebugView` property, which is available only in debug mode.</span></span> <span data-ttu-id="2c9e8-105">Weitere Informationen zum Debugging finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="2c9e8-105">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>  
   
- Die `DebugView`-Eigenschaft stellt den Inhalt von Ausdrucksbaumstrukturen mithilfe von Visual Studio-Schnellansichten übersichtlicher dar. Weitere Informationen finden Sie unter [Create Custom Visualizers (Erstellen benutzerdefinierter Schnellansichten)](/visualstudio/debugger/create-custom-visualizers-of-data).  
+ <span data-ttu-id="2c9e8-106">Die `DebugView`-Eigenschaft stellt den Inhalt von Ausdrucksbaumstrukturen mithilfe von Visual Studio-Schnellansichten übersichtlicher dar.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-106">To better represent the content of expression trees, the `DebugView` property uses Visual Studio visualizers.</span></span> <span data-ttu-id="2c9e8-107">Weitere Informationen finden Sie unter [Create Custom Visualizers (Erstellen benutzerdefinierter Schnellansichten)](/visualstudio/debugger/create-custom-visualizers-of-data).</span><span class="sxs-lookup"><span data-stu-id="2c9e8-107">For more information, see [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data).</span></span>  
   
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>So öffnen Sie eine Schnellansicht für eine Ausdrucksbaumstruktur  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a><span data-ttu-id="2c9e8-108">So öffnen Sie eine Schnellansicht für eine Ausdrucksbaumstruktur</span><span class="sxs-lookup"><span data-stu-id="2c9e8-108">To open a visualizer for an expression tree</span></span>  
   
-1.  Klicken Sie auf das Lupensymbol, das in **DataTips** neben der `DebugView`-Eigenschaft einer Ausdrucksbaumstruktur, neben einem **Überwachungsfenster**, einem **Auto**- oder neben einem **Lokalfenster** angezeigt wird.  
+1.  <span data-ttu-id="2c9e8-109">Klicken Sie auf das Lupensymbol, das in **DataTips** neben der `DebugView`-Eigenschaft einer Ausdrucksbaumstruktur, neben einem **Überwachungsfenster**, einem **Auto**- oder neben einem **Lokalfenster** angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-109">Click the magnifying glass icon that appears next to the `DebugView` property of an expression tree in **DataTips**, a **Watch** window, the **Autos** window, or the **Locals** window.</span></span>  
   
-     Eine Liste von Schnellansichten wird angezeigt.  
+     <span data-ttu-id="2c9e8-110">Eine Liste von Schnellansichten wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-110">A list of visualizers is displayed.</span></span>  
   
-2.  Klicken Sie auf die gewünschte Schnellansicht.  
+2.  <span data-ttu-id="2c9e8-111">Klicken Sie auf die gewünschte Schnellansicht.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-111">Click the visualizer you want to use.</span></span>  
   
- Jeder Ausdruckstyp wird in der Schnellansicht angezeigt, wie in den folgenden Abschnitten beschrieben.  
+ <span data-ttu-id="2c9e8-112">Jeder Ausdruckstyp wird in der Schnellansicht angezeigt, wie in den folgenden Abschnitten beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-112">Each expression type is displayed in the visualizer as described in the following sections.</span></span>  
   
-## <a name="parameterexpressions"></a>ParameterExpressions  
- Namen von <xref:System.Linq.Expressions.ParameterExpression>-Variablen werden mit einem „$“-Symbol am Anfang angezeigt.  
+## <a name="parameterexpressions"></a><span data-ttu-id="2c9e8-113">ParameterExpressions</span><span class="sxs-lookup"><span data-stu-id="2c9e8-113">ParameterExpressions</span></span>  
+ <span data-ttu-id="2c9e8-114">Namen von <xref:System.Linq.Expressions.ParameterExpression>-Variablen werden mit einem „$“-Symbol am Anfang angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-114"><xref:System.Linq.Expressions.ParameterExpression> variable names are displayed with a "$" symbol at the beginning.</span></span>  
   
- Wenn ein Parameter nicht über einen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `$var1` oder `$var2`.  
+ <span data-ttu-id="2c9e8-115">Wenn ein Parameter nicht über einen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `$var1` oder `$var2`.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-115">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>  
   
-### <a name="examples"></a>Beispiele  
+### <a name="examples"></a><span data-ttu-id="2c9e8-116">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e8-116">Examples</span></span>  
   
-|Ausdruck|`DebugView`-Eigenschaft|  
+|<span data-ttu-id="2c9e8-117">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2c9e8-117">Expression</span></span>|<span data-ttu-id="2c9e8-118">`DebugView`-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2c9e8-118">`DebugView` property</span></span>|  
 |----------------|--------------------------|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");`|`$num`|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
   
-## <a name="constantexpressions"></a>ConstantExpressions  
- Für <xref:System.Linq.Expressions.ConstantExpression>-Objekte, die ganzzahlige Werte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante angezeigt.  
+## <a name="constantexpressions"></a><span data-ttu-id="2c9e8-119">ConstantExpressions</span><span class="sxs-lookup"><span data-stu-id="2c9e8-119">ConstantExpressions</span></span>  
+ <span data-ttu-id="2c9e8-120">Für <xref:System.Linq.Expressions.ConstantExpression>-Objekte, die ganzzahlige Werte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-120">For <xref:System.Linq.Expressions.ConstantExpression> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>  
   
- Für numerische Typen, die über Standardsuffixe als C#-Literale verfügen, wird das Suffix zum Wert hinzugefügt. Die folgende Tabelle zeigt die verschiedenen numerischen Typen und ihre zugeordneten Suffixe.  
+ <span data-ttu-id="2c9e8-121">Für numerische Typen, die über Standardsuffixe als C#-Literale verfügen, wird das Suffix zum Wert hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-121">For numeric types that have standard suffixes as C# literals, the suffix is added to the value.</span></span> <span data-ttu-id="2c9e8-122">Die folgende Tabelle zeigt die verschiedenen numerischen Typen und ihre zugeordneten Suffixe.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-122">The following table shows the suffixes associated with various numeric types.</span></span>  
   
-|Typ|Suffix|  
+|<span data-ttu-id="2c9e8-123">Typ</span><span class="sxs-lookup"><span data-stu-id="2c9e8-123">Type</span></span>|<span data-ttu-id="2c9e8-124">Suffix</span><span class="sxs-lookup"><span data-stu-id="2c9e8-124">Suffix</span></span>|  
 |----------|------------|  
-|<xref:System.UInt32>|U|  
-|<xref:System.Int64>|L|  
-|<xref:System.UInt64>|UL|  
-|<xref:System.Double>|D|  
-|<xref:System.Single>|F|  
-|<xref:System.Decimal>|M|  
+|<xref:System.UInt32>|<span data-ttu-id="2c9e8-125">U</span><span class="sxs-lookup"><span data-stu-id="2c9e8-125">U</span></span>|  
+|<xref:System.Int64>|<span data-ttu-id="2c9e8-126">L</span><span class="sxs-lookup"><span data-stu-id="2c9e8-126">L</span></span>|  
+|<xref:System.UInt64>|<span data-ttu-id="2c9e8-127">UL</span><span class="sxs-lookup"><span data-stu-id="2c9e8-127">UL</span></span>|  
+|<xref:System.Double>|<span data-ttu-id="2c9e8-128">D</span><span class="sxs-lookup"><span data-stu-id="2c9e8-128">D</span></span>|  
+|<xref:System.Single>|<span data-ttu-id="2c9e8-129">F</span><span class="sxs-lookup"><span data-stu-id="2c9e8-129">F</span></span>|  
+|<xref:System.Decimal>|<span data-ttu-id="2c9e8-130">M</span><span class="sxs-lookup"><span data-stu-id="2c9e8-130">M</span></span>|  
   
-### <a name="examples"></a>Beispiele  
+### <a name="examples"></a><span data-ttu-id="2c9e8-131">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e8-131">Examples</span></span>  
   
-|Ausdruck|`DebugView`-Eigenschaft|  
+|<span data-ttu-id="2c9e8-132">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2c9e8-132">Expression</span></span>|<span data-ttu-id="2c9e8-133">`DebugView`-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2c9e8-133">`DebugView` property</span></span>|  
 |----------------|--------------------------|  
-|`int num = 10; ConstantExpression expr = Expression.Constant(num);`|10|  
-|`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
+|`int num = 10; ConstantExpression expr = Expression.Constant(num);`|<span data-ttu-id="2c9e8-134">10</span><span class="sxs-lookup"><span data-stu-id="2c9e8-134">10</span></span>|  
+|`double num = 10; ConstantExpression expr = Expression.Constant(num);`|<span data-ttu-id="2c9e8-135">10D</span><span class="sxs-lookup"><span data-stu-id="2c9e8-135">10D</span></span>|  
   
-## <a name="blockexpression"></a>BlockExpression  
- Wenn sich der Typ eines <xref:System.Linq.Expressions.BlockExpression>-Objekts vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in der `DebugInfo`-Eigenschaft in spitzen Klammern (\< und >) angezeigt. Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.  
+## <a name="blockexpression"></a><span data-ttu-id="2c9e8-136">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="2c9e8-136">BlockExpression</span></span>  
+ <span data-ttu-id="2c9e8-137">Wenn sich der Typ eines <xref:System.Linq.Expressions.BlockExpression>-Objekts vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in der `DebugInfo`-Eigenschaft in spitzen Klammern (\< und >) angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-137">If the type of a <xref:System.Linq.Expressions.BlockExpression> object differs from the type of the last expression in the block, the type is displayed in the `DebugInfo` property in angle brackets (\< and >).</span></span> <span data-ttu-id="2c9e8-138">Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-138">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>  
   
-### <a name="examples"></a>Beispiele  
+### <a name="examples"></a><span data-ttu-id="2c9e8-139">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e8-139">Examples</span></span>  
   
-|Ausdruck|`DebugView`-Eigenschaft|  
+|<span data-ttu-id="2c9e8-140">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2c9e8-140">Expression</span></span>|<span data-ttu-id="2c9e8-141">`DebugView`-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2c9e8-141">`DebugView` property</span></span>|  
 |----------------|--------------------------|  
 |`BlockExpression block = Expression.Block(Expression.Constant("test"));`|`.Block() {`<br /><br /> `"test"`<br /><br /> `}`|  
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
-## <a name="lambdaexpression"></a>LambdaExpression.  
- <xref:System.Linq.Expressions.LambdaExpression>-Objekte werden zusammen mit ihren Delegattypen angezeigt.  
+## <a name="lambdaexpression"></a><span data-ttu-id="2c9e8-142">LambdaExpression.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-142">LambdaExpression</span></span>  
+ <span data-ttu-id="2c9e8-143"><xref:System.Linq.Expressions.LambdaExpression>-Objekte werden zusammen mit ihren Delegattypen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-143"><xref:System.Linq.Expressions.LambdaExpression> objects are displayed together with their delegate types.</span></span>  
   
- Wenn ein Lambda-Ausdruck über keinen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `#Lambda1` oder `#Lambda2`.  
+ <span data-ttu-id="2c9e8-144">Wenn ein Lambda-Ausdruck über keinen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `#Lambda1` oder `#Lambda2`.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-144">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>  
   
-### <a name="examples"></a>Beispiele  
+### <a name="examples"></a><span data-ttu-id="2c9e8-145">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e8-145">Examples</span></span>  
   
-|Ausdruck|`DebugView`-Eigenschaft|  
+|<span data-ttu-id="2c9e8-146">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2c9e8-146">Expression</span></span>|<span data-ttu-id="2c9e8-147">`DebugView`-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2c9e8-147">`DebugView` property</span></span>|  
 |----------------|--------------------------|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));`|`.Lambda #Lambda1<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
   
-## <a name="labelexpression"></a>LabelExpression  
- Wenn Sie einen Standardwert für das <xref:System.Linq.Expressions.LabelExpression>-Objekt angeben, wird dieser Wert vor dem <xref:System.Linq.Expressions.LabelTarget>-Objekt angezeigt.  
+## <a name="labelexpression"></a><span data-ttu-id="2c9e8-148">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="2c9e8-148">LabelExpression</span></span>  
+ <span data-ttu-id="2c9e8-149">Wenn Sie einen Standardwert für das <xref:System.Linq.Expressions.LabelExpression>-Objekt angeben, wird dieser Wert vor dem <xref:System.Linq.Expressions.LabelTarget>-Objekt angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-149">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget> object.</span></span>  
   
- Das `.Label`-Token gibt den Anfang der Bezeichnung an. Das `.LabelTarget`-Token gibt den Zielort an, zu dem gewechselt werden soll.  
+ <span data-ttu-id="2c9e8-150">Das `.Label`-Token gibt den Anfang der Bezeichnung an.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-150">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="2c9e8-151">Das `.LabelTarget`-Token gibt den Zielort an, zu dem gewechselt werden soll.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-151">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>  
   
- Wenn eine Bezeichnung nicht über einen Namen verfügt, wird ihr ein automatisch generierter Name zugewiesen (z.B. `#Label1` oder `#Label2`).  
+ <span data-ttu-id="2c9e8-152">Wenn eine Bezeichnung nicht über einen Namen verfügt, wird ihr ein automatisch generierter Name zugewiesen (z.B. `#Label1` oder `#Label2`).</span><span class="sxs-lookup"><span data-stu-id="2c9e8-152">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>  
   
-### <a name="examples"></a>Beispiele  
+### <a name="examples"></a><span data-ttu-id="2c9e8-153">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e8-153">Examples</span></span>  
   
-|Ausdruck|`DebugView`-Eigenschaft|  
+|<span data-ttu-id="2c9e8-154">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2c9e8-154">Expression</span></span>|<span data-ttu-id="2c9e8-155">`DebugView`-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2c9e8-155">`DebugView` property</span></span>|  
 |----------------|--------------------------|  
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
   
-## <a name="checked-operators"></a>Überprüfte Operatoren  
- Überprüften Operatoren wird in der Ansicht das Symbol "#" vorangestellt. Der überprüfte Additionsoperator wird z.B. als `#+` angezeigt.  
+## <a name="checked-operators"></a><span data-ttu-id="2c9e8-156">Überprüfte Operatoren</span><span class="sxs-lookup"><span data-stu-id="2c9e8-156">Checked Operators</span></span>  
+ <span data-ttu-id="2c9e8-157">Überprüften Operatoren wird in der Ansicht das Symbol "#" vorangestellt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-157">Checked operators are displayed with the "#" symbol in front of the operator.</span></span> <span data-ttu-id="2c9e8-158">Der überprüfte Additionsoperator wird z.B. als `#+` angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2c9e8-158">For example, the checked addition operator is displayed as `#+`.</span></span>  
   
-### <a name="examples"></a>Beispiele  
+### <a name="examples"></a><span data-ttu-id="2c9e8-159">Beispiele</span><span class="sxs-lookup"><span data-stu-id="2c9e8-159">Examples</span></span>  
   
-|Ausdruck|`DebugView`-Eigenschaft|  
+|<span data-ttu-id="2c9e8-160">Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2c9e8-160">Expression</span></span>|<span data-ttu-id="2c9e8-161">`DebugView`-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2c9e8-161">`DebugView` property</span></span>|  
 |----------------|--------------------------|  
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
- [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)
-
+## <a name="see-also"></a><span data-ttu-id="2c9e8-162">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2c9e8-162">See Also</span></span>  
+ [<span data-ttu-id="2c9e8-163">Ausdrucksbaumstrukturen (C#)</span><span class="sxs-lookup"><span data-stu-id="2c9e8-163">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+ [<span data-ttu-id="2c9e8-164">Debuggen in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2c9e8-164">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)  
+ [<span data-ttu-id="2c9e8-165">Erstellen benutzerdefinierter Schnellansichten</span><span class="sxs-lookup"><span data-stu-id="2c9e8-165">Create Custom Visualizers</span></span>](/visualstudio/debugger/create-custom-visualizers-of-data)

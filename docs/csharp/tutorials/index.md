@@ -10,28 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.translationtype: HT
-ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
 ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="c-tutorials"></a><span data-ttu-id="e2eac-104">C#-Tutorials</span><span class="sxs-lookup"><span data-stu-id="e2eac-104">C# Tutorials</span></span>
 
-# <a name="c-tutorials"></a>C#-Tutorials
+<span data-ttu-id="e2eac-105">Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:</span><span class="sxs-lookup"><span data-stu-id="e2eac-105">The following tutorials enable you to build C# programs using [.NET Core](../../core/index.md):</span></span>
 
-Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:
+* <span data-ttu-id="e2eac-106">[Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.</span><span class="sxs-lookup"><span data-stu-id="e2eac-106">[Console Application](console-teleprompter.md): demonstrates Console I/O, the structure of a Console application, and the basics of the Task based asynchronous programming model.</span></span>
+* <span data-ttu-id="e2eac-107">[REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.</span><span class="sxs-lookup"><span data-stu-id="e2eac-107">[REST Client](console-webapiclient.md): demonstrates web communications, JSON serialization, and Object Oriented features in the C# language.</span></span>
 
-* [Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.
-* [REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.
+* <span data-ttu-id="e2eac-108">[Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="e2eac-108">[Inheritance in C# and .NET](inheritance.md): demonstrates inheritance in C#, including the use of inheritance to define base classes, abstract base classes, and derived classes.</span></span>
 
-* [Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.
+* <span data-ttu-id="e2eac-109">[Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.</span><span class="sxs-lookup"><span data-stu-id="e2eac-109">[Working with LINQ](working-with-linq.md): demonstrates many of the features of LINQ and the language elements that support it.</span></span>
 
-* [Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.
+* <span data-ttu-id="e2eac-110">[In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.</span><span class="sxs-lookup"><span data-stu-id="e2eac-110">[Microservices hosted in Docker](microservices.md): demonstrates building an ASP.NET Core microservice and hosting it in Docker.</span></span>
 
-* [In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.
+* <span data-ttu-id="e2eac-111">[Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht zahlreiche Verwendungsmöglichkeiten für die `$`-Zeichenfolgeninterpolation in C#.</span><span class="sxs-lookup"><span data-stu-id="e2eac-111">[String Interpolation](string-interpolation.md): demonstrates many of the uses for the `$` string interpolation in C#.</span></span>
 
-* [Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht zahlreiche Verwendungsmöglichkeiten für die `$`-Zeichenfolgeninterpolation in C#.
-
-* [Verwenden von Attributen](attributes.md): Erstellen und Verwenden von Attributen in C#.
-
+* <span data-ttu-id="e2eac-112">[Verwenden von Attributen](attributes.md): Erstellen und Verwenden von Attributen in C#.</span><span class="sxs-lookup"><span data-stu-id="e2eac-112">[Using Attributes](attributes.md): how to create and use attributes in C#.</span></span>

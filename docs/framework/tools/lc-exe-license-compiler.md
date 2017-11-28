@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Lc.exe
 - .licx file
@@ -25,29 +19,28 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: e0175b14f556a68f9c289d84d79ce10a6982ffb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f65212d9f62d090cd0c16e15b6678e21b00f235
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
-Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
+# <a name="lcexe-license-compiler"></a><span data-ttu-id="fd0f7-102">Lc.exe (License Compiler-Tool)</span><span class="sxs-lookup"><span data-stu-id="fd0f7-102">Lc.exe (License Compiler)</span></span>
+<span data-ttu-id="fd0f7-103">Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-103">The License Compiler reads text files that contain licensing information and produces a binary file that can be embedded in a common language runtime executable as a resource.</span></span>  
   
- Eine LICX-Textdatei wird vom Windows Forms-Designer automatisch generiert oder aktualisiert, sobald dem Formular ein lizenziertes Steuerelement hinzugefügt wird. Bei der Kompilierung wandelt das Projektsystem die LICX-Textdatei in eine binäre LICENSES-Ressource um, die die Lizenzierung des .NET-Steuerelements unterstützt. Die binäre Ressource wird anschließend in die Projektausgabe eingebettet.  
+ <span data-ttu-id="fd0f7-104">Eine LICX-Textdatei wird vom Windows Forms-Designer automatisch generiert oder aktualisiert, sobald dem Formular ein lizenziertes Steuerelement hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-104">A .licx text file is automatically generated or updated by the Windows Forms Designer whenever a licensed control is added to the form.</span></span> <span data-ttu-id="fd0f7-105">Bei der Kompilierung wandelt das Projektsystem die LICX-Textdatei in eine binäre LICENSES-Ressource um, die die Lizenzierung des .NET-Steuerelements unterstützt.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-105">As part of compilation, the project system will transform the .licx text file into a .licenses binary resource that provides support for .NET control licensing.</span></span> <span data-ttu-id="fd0f7-106">Die binäre Ressource wird anschließend in die Projektausgabe eingebettet.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-106">The binary resource will then be embedded in the project output.</span></span>  
   
- Kreuzkompilierung zwischen 32-Bit und 64-Bit wird nicht unterstützt, wenn Sie beim Erstellen des Projekts den Lizenzcompiler verwenden. Das liegt daran, dass der Lizenzcompiler Assemblys laden muss und das Laden von 64-Bit-Assemblys aus einer 32-Bit-Anwendung und umgekehrt nicht erlaubt ist. Verwenden Sie in diesem Fall den Lizenzcompiler von der Befehlszeile aus, um die Lizenz manuell zu kompilieren, und geben Sie die entsprechende Architektur an.  
+ <span data-ttu-id="fd0f7-107">Kreuzkompilierung zwischen 32-Bit und 64-Bit wird nicht unterstützt, wenn Sie beim Erstellen des Projekts den Lizenzcompiler verwenden.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-107">Cross compilation between 32-bit and 64-bit is not supported when you use the License Compiler when building your project.</span></span> <span data-ttu-id="fd0f7-108">Das liegt daran, dass der Lizenzcompiler Assemblys laden muss und das Laden von 64-Bit-Assemblys aus einer 32-Bit-Anwendung und umgekehrt nicht erlaubt ist.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-108">This is because the License Compiler has to load assemblies, and loading 64-bit assemblies from a 32-bit application is not allowed, and vice versa.</span></span> <span data-ttu-id="fd0f7-109">Verwenden Sie in diesem Fall den Lizenzcompiler von der Befehlszeile aus, um die Lizenz manuell zu kompilieren, und geben Sie die entsprechende Architektur an.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-109">In this case, use the License Compiler from the command line to compile the license manually, and specify the corresponding architecture.</span></span>  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="fd0f7-110">Dieses Tool wird automatisch mit Visual Studio installiert.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-110">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="fd0f7-111">Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7).</span><span class="sxs-lookup"><span data-stu-id="fd0f7-111">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="fd0f7-112">Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="fd0f7-112">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Geben Sie an der Eingabeaufforderung Folgendes ein:  
+ <span data-ttu-id="fd0f7-113">Geben Sie an der Eingabeaufforderung Folgendes ein:</span><span class="sxs-lookup"><span data-stu-id="fd0f7-113">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="fd0f7-114">Syntax</span><span class="sxs-lookup"><span data-stu-id="fd0f7-114">Syntax</span></span>  
   
 ```  
       lc /target:  
@@ -55,46 +48,46 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
 /i:modules [/nologo] [/v]  
 ```  
   
-|Option|Beschreibung|  
+|<span data-ttu-id="fd0f7-115">Option</span><span class="sxs-lookup"><span data-stu-id="fd0f7-115">Option</span></span>|<span data-ttu-id="fd0f7-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fd0f7-116">Description</span></span>|  
 |------------|-----------------|  
-|**/complist:** *filename*|Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen. Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.<br /><br /> Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben. "Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.|  
-|**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/i:***module*|Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten. Verwenden Sie mehrere**/i**-Flags, um mehrere Module anzugeben.|  
-|**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
-|**/outdir:** *path*|Gibt das Verzeichnis an, in dem die LICENSES-Ausgabedatei gespeichert werden soll.|  
-|**/target:** *targetPE*|Gibt die ausführbare Datei an, für die die LICENSES-Datei generiert wird.|  
-|**/v**|Gibt den ausführlichen Modus an und zeigt Statusinformationen zur Kompilierung an.|  
-|**@** *file*|Gibt die Antwortdatei (.rsp) an.|  
-|**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
+|<span data-ttu-id="fd0f7-117">**/complist:** *filename*</span><span class="sxs-lookup"><span data-stu-id="fd0f7-117">**/complist:** *filename*</span></span>|<span data-ttu-id="fd0f7-118">Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-118">Specifies the name of a file that contains the list of licensed components to include in the .licenses file.</span></span> <span data-ttu-id="fd0f7-119">Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-119">Each component is referenced using its full name with only one component per line.</span></span><br /><br /> <span data-ttu-id="fd0f7-120">Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-120">Command-line users can specify a separate file for each form in the project.</span></span> <span data-ttu-id="fd0f7-121">"Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-121">Lc.exe accepts multiple input files and produces a single .licenses file.</span></span>|  
+|<span data-ttu-id="fd0f7-122">**-h**[**elp**]</span><span class="sxs-lookup"><span data-stu-id="fd0f7-122">**/h**[**elp**]</span></span>|<span data-ttu-id="fd0f7-123">Zeigt Befehlssyntax und Optionen für das Tool an.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-123">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="fd0f7-124">**/i:***module*</span><span class="sxs-lookup"><span data-stu-id="fd0f7-124">**/i:** *module*</span></span>|<span data-ttu-id="fd0f7-125">Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-125">Specifies the modules that contain the components listed in the **/complist** file.</span></span> <span data-ttu-id="fd0f7-126">Verwenden Sie mehrere**/i**-Flags, um mehrere Module anzugeben.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-126">To specify more than one module, use multiple **/i** flags.</span></span>|  
+|<span data-ttu-id="fd0f7-127">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="fd0f7-127">**/nologo**</span></span>|<span data-ttu-id="fd0f7-128">Unterdrückt die Anzeige des Startbanners von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-128">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="fd0f7-129">**/outdir:** *path*</span><span class="sxs-lookup"><span data-stu-id="fd0f7-129">**/outdir:** *path*</span></span>|<span data-ttu-id="fd0f7-130">Gibt das Verzeichnis an, in dem die LICENSES-Ausgabedatei gespeichert werden soll.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-130">Specifies the directory in which to place the output .licenses file.</span></span>|  
+|<span data-ttu-id="fd0f7-131">**/target:** *targetPE*</span><span class="sxs-lookup"><span data-stu-id="fd0f7-131">**/target:** *targetPE*</span></span>|<span data-ttu-id="fd0f7-132">Gibt die ausführbare Datei an, für die die LICENSES-Datei generiert wird.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-132">Specifies the executable for which the .licenses file is being generated.</span></span>|  
+|<span data-ttu-id="fd0f7-133">**/v**</span><span class="sxs-lookup"><span data-stu-id="fd0f7-133">**/v**</span></span>|<span data-ttu-id="fd0f7-134">Gibt den ausführlichen Modus an und zeigt Statusinformationen zur Kompilierung an.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-134">Specifies verbose mode; displays compilation progress information.</span></span>|  
+|<span data-ttu-id="fd0f7-135">**@** *file*</span><span class="sxs-lookup"><span data-stu-id="fd0f7-135">**@** *file*</span></span>|<span data-ttu-id="fd0f7-136">Gibt die Antwortdatei (.rsp) an.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-136">Specifies the response (.rsp) file.</span></span>|  
+|<span data-ttu-id="fd0f7-137">**/?**</span><span class="sxs-lookup"><span data-stu-id="fd0f7-137">**/?**</span></span>|<span data-ttu-id="fd0f7-138">Zeigt Befehlssyntax und Optionen für das Tool an.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-138">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="fd0f7-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fd0f7-139">Example</span></span>  
   
-1.  Wenn Sie das lizenzierte Steuerelement `MyCompany.Samples.LicControl1` verwenden, das in `Samples.DLL` in einer Anwendung namens `HostApp.exe`*,* enthalten ist, können Sie `HostAppLic.txt` mit folgendem Inhalt erstellen.  
+1.  <span data-ttu-id="fd0f7-140">Wenn Sie das lizenzierte Steuerelement `MyCompany.Samples.LicControl1` verwenden, das in `Samples.DLL` in einer Anwendung namens `HostApp.exe`*,* enthalten ist, können Sie `HostAppLic.txt` mit folgendem Inhalt erstellen.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-140">If you are using a licensed control `MyCompany.Samples.LicControl1` contained in `Samples.DLL` in an application called `HostApp.exe`*,* you can create `HostAppLic.txt` that contains the following.</span></span>  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Erstellen Sie die LICENSES-Datei `HostApp.exe.licenses` mit dem folgenden Befehl.  
+2.  <span data-ttu-id="fd0f7-141">Erstellen Sie die LICENSES-Datei `HostApp.exe.licenses` mit dem folgenden Befehl.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-141">Create the .licenses file called `HostApp.exe.licenses` using the following command.</span></span>  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Erstellen Sie `HostApp.exe` mit der LICENSES-Datei als Ressource. Wenn Sie eine C#-Anwendung erstellt haben, erstellen Sie die Anwendung mit dem folgenden Befehl.  
+3.  <span data-ttu-id="fd0f7-142">Erstellen Sie `HostApp.exe` mit der LICENSES-Datei als Ressource.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-142">Build `HostApp.exe` including the .licenses file as a resource.</span></span> <span data-ttu-id="fd0f7-143">Wenn Sie eine C#-Anwendung erstellt haben, erstellen Sie die Anwendung mit dem folgenden Befehl.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-143">If you were building a C# application you would use the following command to build your application.</span></span>  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
- Mit dem folgenden Befehl wird `myApp.licenses` aus den von `hostapplic.txt`, `hostapplic2.txt` und `hostapplic3.txt` angegebenen Listen lizenzierter Komponenten kompiliert. Das `modulesList`-Argument gibt die Module mit den lizenzierten Komponenten an.  
+ <span data-ttu-id="fd0f7-144">Mit dem folgenden Befehl wird `myApp.licenses` aus den von `hostapplic.txt`, `hostapplic2.txt` und `hostapplic3.txt` angegebenen Listen lizenzierter Komponenten kompiliert.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-144">The following command compiles `myApp.licenses` from the lists of licensed components specified by `hostapplic.txt`, `hostapplic2.txt` and `hostapplic3.txt`.</span></span> <span data-ttu-id="fd0f7-145">Das `modulesList`-Argument gibt die Module mit den lizenzierten Komponenten an.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-145">The `modulesList` argument specifies the modules that contain the licensed components.</span></span>  
   
 ```  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
-## <a name="response-file-example"></a>Beispiel für eine Antwortdatei  
- Die folgende Auflistung enthält ein Beispiel für eine Antwortdatei namens `response.rsp`. Weitere Informationen zu Antwortdateien finden Sie unter [Antwortdateien](/visualstudio/msbuild/msbuild-response-files).  
+## <a name="response-file-example"></a><span data-ttu-id="fd0f7-146">Beispiel für eine Antwortdatei</span><span class="sxs-lookup"><span data-stu-id="fd0f7-146">Response File Example</span></span>  
+ <span data-ttu-id="fd0f7-147">Die folgende Auflistung enthält ein Beispiel für eine Antwortdatei namens `response.rsp`.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-147">The following listing shows an example of a response file, `response.rsp`.</span></span> <span data-ttu-id="fd0f7-148">Weitere Informationen zu Antwortdateien finden Sie unter [Antwortdateien](/visualstudio/msbuild/msbuild-response-files).</span><span class="sxs-lookup"><span data-stu-id="fd0f7-148">For more information on response files, see [Response Files](/visualstudio/msbuild/msbuild-response-files).</span></span>  
   
 ```  
 /target:hostapp.exe  
@@ -103,14 +96,13 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 /outdir:"C:\My Folder"  
 ```  
   
- In der folgenden Befehlszeile wird die `response.rsp` Datei verwendet.  
+ <span data-ttu-id="fd0f7-149">In der folgenden Befehlszeile wird die `response.rsp` Datei verwendet.</span><span class="sxs-lookup"><span data-stu-id="fd0f7-149">The following command line uses the `response.rsp` file.</span></span>  
   
 ```  
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="fd0f7-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fd0f7-150">See Also</span></span>  
+ [<span data-ttu-id="fd0f7-151">Extras</span><span class="sxs-lookup"><span data-stu-id="fd0f7-151">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="fd0f7-152">Al.exe (Assembly Linker-Tool)</span><span class="sxs-lookup"><span data-stu-id="fd0f7-152">Al.exe (Assembly Linker)</span></span>](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [<span data-ttu-id="fd0f7-153">Eingabeaufforderungen</span><span class="sxs-lookup"><span data-stu-id="fd0f7-153">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

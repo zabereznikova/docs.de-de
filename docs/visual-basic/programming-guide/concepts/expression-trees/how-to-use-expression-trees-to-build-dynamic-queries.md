@@ -1,58 +1,123 @@
 ---
-title: 'Gewusst wie: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8d69be78a9f3568535dffe54e21af80c6eb12f70
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d09f89b0b49118d575690f577c77c5c3d2a76e92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Gewusst wie: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (Visual Basic)
-In LINQ sind Ausdrucksbaumstrukturen strukturierten Abfragen dieses Ziel Datenquellen dar, die implementieren <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> verwendet. Angenommen, der LINQ-Anbieter implementiert die <xref:System.Linq.IQueryable%601>-Schnittstelle für das Abfragen relationaler Datenspeicher.</xref:System.Linq.IQueryable%601> Visual Basic-Compiler kompiliert, Abfragen, die diese Datenquellen in Code zu verwenden, die zur Laufzeit eine Ausdrucksbaumstruktur erstellt wird. Der Abfrageanbieter kann die Datenstruktur des Ausdruck-Struktur durchlaufen und in eine Abfragesprache entsprechend für die Datenquelle zu übersetzen.  
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a><span data-ttu-id="0911f-102">Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0911f-102">How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)</span></span>
+<span data-ttu-id="0911f-103">Ausdrucksbaumstrukturen werden in LINQ dazu verwendet, strukturierte Abfragen für Datenquellen zu repräsentieren, die <xref:System.Linq.IQueryable%601> implementieren.</span><span class="sxs-lookup"><span data-stu-id="0911f-103">In LINQ, expression trees are used to represent structured queries that target sources of data that implement <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="0911f-104">Der LINQ-Anbieter implementiert z.B. die <xref:System.Linq.IQueryable%601>-Schnittstelle, um relationale Datenspeicher abzufragen.</span><span class="sxs-lookup"><span data-stu-id="0911f-104">For example, the LINQ provider implements the <xref:System.Linq.IQueryable%601> interface for querying relational data stores.</span></span> <span data-ttu-id="0911f-105">Visual Basic-Compiler kompiliert, Abfragen von solchen Datenquellen in Code, bei denen zur Laufzeit eine Ausdrucksbaumstruktur erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="0911f-105">The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime.</span></span> <span data-ttu-id="0911f-106">Anschließend kann der Abfrageanbieter die Datenstruktur der Ausdrucksbaumstruktur durchlaufen und in eine für die Datenquelle geeignete Abfragesprache übersetzen.</span><span class="sxs-lookup"><span data-stu-id="0911f-106">The query provider can then traverse the expression tree data structure and translate it into a query language appropriate for the data source.</span></span>  
   
- Ausdrucksbaumstrukturen werden auch in LINQ verwendet, Lambda-Ausdrücke dar, die Variablen des Typs <xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601> zugewiesen sind  
+ <span data-ttu-id="0911f-107">Ausdrucksbaumstrukturen werden in LINQ außerdem dazu verwendet, Lambdaausdrücke zu repräsentieren, die Variablen den Typs <xref:System.Linq.Expressions.Expression%601> zugewiesen sind.</span><span class="sxs-lookup"><span data-stu-id="0911f-107">Expression trees are also used in LINQ to represent lambda expressions that are assigned to variables of type <xref:System.Linq.Expressions.Expression%601>.</span></span>  
   
- Dieses Thema beschreibt, wie Sie Ausdrucksbaumstrukturen dynamische LINQ-Abfragen erstellen. Dynamische Abfragen sind nützlich, wenn die Einzelheiten einer Abfrage zur Kompilierzeit nicht bekannt sind. Beispielsweise kann eine Anwendung eine Benutzeroberfläche bereitstellen, mit der der Endbenutzer eines oder mehrere Prädikate zum Filtern der Daten festlegen können. LINQ für Abfragen verwenden möchten, muss dieser Anwendungstyp Ausdrucksbaumstrukturen verwenden, die LINQ-Abfrage zur Laufzeit erstellt.  
+ <span data-ttu-id="0911f-108">In diesem Thema wird erläutert, wie Sie Ausdrucksbaumstrukturen verwenden können, um dynamische LINQ-Abfragen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0911f-108">This topic describes how to use expression trees to create dynamic LINQ queries.</span></span> <span data-ttu-id="0911f-109">Dynamische Abfragen sind nützlich, wenn die Eigenschaften einer Abfrage zur Kompilierzeit nicht bekannt sind.</span><span class="sxs-lookup"><span data-stu-id="0911f-109">Dynamic queries are useful when the specifics of a query are not known at compile time.</span></span> <span data-ttu-id="0911f-110">Beispielsweise kann eine Anwendung über eine Benutzeroberfläche verfügen, in der der Endbenutzer ein oder mehrere Prädikate zum Filtern der Daten angeben kann.</span><span class="sxs-lookup"><span data-stu-id="0911f-110">For example, an application might provide a user interface that enables the end user to specify one or more predicates to filter the data.</span></span> <span data-ttu-id="0911f-111">Damit LINQ für Abfragen verwendet werden kann, muss solch eine Anwendung Ausdrucksbaumstrukturen benutzen, um die LINQ-Abfrage zur Laufzeit zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0911f-111">In order to use LINQ for querying, this kind of application must use expression trees to create the LINQ query at runtime.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Ausdrucksbaumstrukturen verwenden, erstellen Sie eine Abfrage für ein `IQueryable` Datenquelle und dann ausgeführt wird. Der Code erstellt eine Ausdrucksbaumstruktur, um die Darstellung der folgenden Abfrage:  
+## <a name="example"></a><span data-ttu-id="0911f-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0911f-112">Example</span></span>  
+ <span data-ttu-id="0911f-113">In folgendem Beispiel erfahren Sie, wie Sie Ausdrucksbaumstrukturen zur Konstruktion einer Abfrage anhand einer `IQueryable`-Datenquelle verwenden und diese anschließend ausführen können.</span><span class="sxs-lookup"><span data-stu-id="0911f-113">The following example shows you how to use expression trees to construct a query against an `IQueryable` data source and then execute it.</span></span> <span data-ttu-id="0911f-114">Im Code wird eine Ausdrucksbaumstruktur erstellt, welche die folgende Abfrage darstellt:</span><span class="sxs-lookup"><span data-stu-id="0911f-114">The code builds an expression tree to represent the following query:</span></span>  
   
  `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`  
   
- Die Methoden in der <xref:System.Linq.Expressions>Namespace werden zum Erstellen von Ausdrucksbaumstrukturen, die die Ausdrücke darstellen, aus denen die gesamte Abfrage zusammensetzt.</xref:System.Linq.Expressions> Die Ausdrücke, die Aufrufe an die Standardabfrageoperator-Methoden darstellen, finden Sie in der <xref:System.Linq.Queryable>Implementierungen dieser Methoden.</xref:System.Linq.Queryable> Die endgültige Ausdrucksbaumstruktur wird zum Übergeben der <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29>Implementierung des Anbieters von den `IQueryable` -Datenquelle, um eine ausführbare Abfrage vom Typ erstellen `IQueryable`.</xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> Die Ergebnisse werden abgerufen, indem diese Abfragevariable aufgelistet.  
+ <span data-ttu-id="0911f-115">Die Factorymethoden im <xref:System.Linq.Expressions>-Namespace werden zum Erstellen von Ausdrucksbaumstrukturen verwendet, die Ausdrücke repräsentieren, aus denen die Abfrage besteht.</span><span class="sxs-lookup"><span data-stu-id="0911f-115">The factory methods in the <xref:System.Linq.Expressions> namespace are used to create expression trees that represent the expressions that make up the overall query.</span></span> <span data-ttu-id="0911f-116">Die Ausdrücke, die Aufrufe an die Methoden des Standardabfrageoperators repräsentieren, verweisen auf die <xref:System.Linq.Queryable>-Implementierung dieser Methoden.</span><span class="sxs-lookup"><span data-stu-id="0911f-116">The expressions that represent calls to the standard query operator methods refer to the <xref:System.Linq.Queryable> implementations of these methods.</span></span> <span data-ttu-id="0911f-117">Die letzte Verzeichnisstruktur wird an die <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29>-Implementierung des Anbieters der `IQueryable`-Datenquelle übergeben, um eine ausführbare Abfrage des Typs `IQueryable` zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0911f-117">The final expression tree is passed to the <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementation of the provider of the `IQueryable` data source to create an executable query of type `IQueryable`.</span></span> <span data-ttu-id="0911f-118">Sie erhalten die Ergebnisse via Zugriff auf die Auflistung der Abfrageergebnisse.</span><span class="sxs-lookup"><span data-stu-id="0911f-118">The results are obtained by enumerating that query variable.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Dieser Code verwendet eine feste Anzahl von Ausdrücken in das Prädikat, das an die `Queryable.Where` Methode. Allerdings können Sie eine Anwendung schreiben, die eine Variable Anzahl von Prädikatausdrücken kombiniert, die von der Benutzereingabe abhängig ist. Sie können auch die Standardabfrageoperatoren variieren, die in der Abfrage abhängig von der Eingabe vom Benutzer aufgerufen werden.  
+```vb  
+' Add an Imports statement for System.Linq.Expressions.  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
+Dim companies =   
+    {"Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",   
+     "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",   
+     "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",   
+     "Blue Yonder Airlines", "Trey Research", "The Phone Company",   
+     "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee"}  
   
--   Erstellen Sie ein neues **Konsolenanwendung** Projekt.  
+' The IQueryable data to query.  
+Dim queryableData As IQueryable(Of String) = companies.AsQueryable()  
   
--   Fügen Sie einen Verweis auf System.Core.dll hinzu, wenn es nicht bereits verwiesen wird.  
+' Compose the expression tree that represents the parameter to the predicate.  
+Dim pe As ParameterExpression = Expression.Parameter(GetType(String), "company")  
   
--   Schließen Sie den System.Linq.Expressions-Namespace.  
+' ***** Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16) *****  
+' Create an expression tree that represents the expression: company.ToLower() = "coho winery".  
+Dim left As Expression = Expression.Call(pe, GetType(String).GetMethod("ToLower", System.Type.EmptyTypes))  
+Dim right As Expression = Expression.Constant("coho winery")  
+Dim e1 As Expression = Expression.Equal(left, right)  
   
--   Kopieren Sie den Code aus dem Beispiel, und fügen Sie ihn in die `Main` `Sub` Verfahren.  
+' Create an expression tree that represents the expression: company.Length > 16.  
+left = Expression.Property(pe, GetType(String).GetProperty("Length"))  
+right = Expression.Constant(16, GetType(Integer))  
+Dim e2 As Expression = Expression.GreaterThan(left, right)  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Gewusst wie: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+' Combine the expressions to create an expression tree that represents the  
+' expression: company.ToLower() = "coho winery" OrElse company.Length > 16).  
+Dim predicateBody As Expression = Expression.OrElse(e1, e2)  
+  
+' Create an expression tree that represents the expression:  
+' queryableData.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16)  
+Dim whereCallExpression As MethodCallExpression = Expression.Call(   
+        GetType(Queryable),   
+        "Where",   
+        New Type() {queryableData.ElementType},   
+        queryableData.Expression,   
+        Expression.Lambda(Of Func(Of String, Boolean))(predicateBody, New ParameterExpression() {pe}))  
+' ***** End Where *****  
+  
+' ***** OrderBy(Function(company) company) *****  
+' Create an expression tree that represents the expression:  
+' whereCallExpression.OrderBy(Function(company) company)  
+Dim orderByCallExpression As MethodCallExpression = Expression.Call(   
+        GetType(Queryable),   
+        "OrderBy",   
+        New Type() {queryableData.ElementType, queryableData.ElementType},   
+        whereCallExpression,   
+        Expression.Lambda(Of Func(Of String, String))(pe, New ParameterExpression() {pe}))  
+' ***** End OrderBy *****  
+  
+' Create an executable query from the expression tree.  
+Dim results As IQueryable(Of String) = queryableData.Provider.CreateQuery(Of String)(orderByCallExpression)  
+  
+' Enumerate the results.  
+For Each company As String In results  
+    Console.WriteLine(company)  
+Next  
+  
+' This code produces the following output:  
+'  
+' Blue Yonder Airlines  
+' City Power & Light  
+' Coho Winery  
+' Consolidated Messenger  
+' Graphic Design Institute  
+' Humongous Insurance  
+' Lucerne Publishing  
+' Northwind Traders  
+' The Phone Company  
+' Wide World Importers  
+```  
+  
+ <span data-ttu-id="0911f-119">In diesem Code wird in dem an die `Queryable.Where`-Methode übergebenen Prädikat eine feste Anzahl von Ausdrücken verwendet.</span><span class="sxs-lookup"><span data-stu-id="0911f-119">This code uses a fixed number of expressions in the predicate that is passed to the `Queryable.Where` method.</span></span> <span data-ttu-id="0911f-120">Sie können allerdings eine Anwendung schreiben, die eine variable Zahl von Prädikatausdrücken miteinander vereint; diese Zahl ist von der Benutzereingabe abhängig.</span><span class="sxs-lookup"><span data-stu-id="0911f-120">However, you can write an application that combines a variable number of predicate expressions that depends on the user input.</span></span> <span data-ttu-id="0911f-121">Sie können auch die Standardabfrageoperatoren variieren, die in der Abfrage aufgerufen werden; dies ist ebenfalls von der Benutzereingabe abhängig.</span><span class="sxs-lookup"><span data-stu-id="0911f-121">You can also vary the standard query operators that are called in the query, depending on the input from the user.</span></span>  
+  
+## <a name="compiling-the-code"></a><span data-ttu-id="0911f-122">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="0911f-122">Compiling the Code</span></span>  
+  
+-   <span data-ttu-id="0911f-123">Erstellen Sie ein neues **Konsolenanwendungsprojekt**.</span><span class="sxs-lookup"><span data-stu-id="0911f-123">Create a new **Console Application** project.</span></span>  
+  
+-   <span data-ttu-id="0911f-124">Fügen Sie einen Verweis auf „System.Core.dll“ hinzu, wenn nicht bereits darauf verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="0911f-124">Add a reference to System.Core.dll if it is not already referenced.</span></span>  
+  
+-   <span data-ttu-id="0911f-125">Binden Sie den System.Linq.Expressions-Namespace ein.</span><span class="sxs-lookup"><span data-stu-id="0911f-125">Include the System.Linq.Expressions namespace.</span></span>  
+  
+-   <span data-ttu-id="0911f-126">Kopieren Sie den Code aus dem Beispiel, und fügen Sie ihn in die `Main` `Sub` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="0911f-126">Copy the code from the example and paste it into the `Main` `Sub` procedure.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0911f-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0911f-127">See Also</span></span>  
+ [<span data-ttu-id="0911f-128">Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0911f-128">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [<span data-ttu-id="0911f-129">Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0911f-129">How to: Execute Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

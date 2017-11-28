@@ -10,120 +10,118 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="types-and-variables"></a><span data-ttu-id="a8678-104">Typen und Variablen</span><span class="sxs-lookup"><span data-stu-id="a8678-104">Types and variables</span></span>
 
-# <a name="types-and-variables"></a>Typen und Variablen
+<span data-ttu-id="a8678-105">Es gibt zwei Arten von Typen in C#: *Werttypen* und *Verweistypen*.</span><span class="sxs-lookup"><span data-stu-id="a8678-105">There are two kinds of types in C#: *value types* and *reference types*.</span></span> <span data-ttu-id="a8678-106">Variablen von Werttypen enthalten ihre Daten direkt, Variablen von Verweistypen speichern hingegen Verweise auf ihre Daten – letztere werden als Objekte bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="a8678-106">Variables of value types directly contain their data whereas variables of reference types store references to their data, the latter being known as objects.</span></span> <span data-ttu-id="a8678-107">Mit Verweistypen können zwei Variablen auf das gleiche Objekt verweisen, und so können an einer Variablen durchgeführte Vorgänge das Objekt beeinflussen, auf das die andere Variable verweist.</span><span class="sxs-lookup"><span data-stu-id="a8678-107">With reference types, it is possible for two variables to reference the same object and thus possible for operations on one variable to affect the object referenced by the other variable.</span></span> <span data-ttu-id="a8678-108">Bei Werttypen besitzt jede Variable eine eigene Kopie der Daten, und auf eine Variable angewendete Vorgänge können die andere Variable nicht beeinflussen (außer im Fall von `ref`- und `out`-Parametervariablen).</span><span class="sxs-lookup"><span data-stu-id="a8678-108">With value types, the variables each have their own copy of the data, and it is not possible for operations on one to affect the other (except in the case of `ref` and `out` parameter variables).</span></span>
 
-Es gibt zwei Arten von Typen in C#: *Werttypen* und *Verweistypen*. Variablen von Werttypen enthalten ihre Daten direkt, Variablen von Verweistypen speichern hingegen Verweise auf ihre Daten – letztere werden als Objekte bezeichnet. Mit Verweistypen können zwei Variablen auf das gleiche Objekt verweisen, und so können an einer Variablen durchgeführte Vorgänge das Objekt beeinflussen, auf das die andere Variable verweist. Bei Werttypen besitzt jede Variable eine eigene Kopie der Daten, und auf eine Variable angewendete Vorgänge können die andere Variable nicht beeinflussen (außer im Fall von `ref`- und `out`-Parametervariablen).
+<span data-ttu-id="a8678-109">C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *Strukturtypen* und *auf NULL festlegbare Werttypen*.</span><span class="sxs-lookup"><span data-stu-id="a8678-109">C#’s value types are further divided into *simple types*, *enum types*, *struct types*, and *nullable value types*.</span></span> <span data-ttu-id="a8678-110">C#-Verweistypen sind weiter unterteilt in *Klassentypen*, *Schnittstellentypen*, *Arraytypen* und *Delegattypen*.</span><span class="sxs-lookup"><span data-stu-id="a8678-110">C#’s reference types are further divided into *class types*, *interface types*, *array types*, and *delegate types*.</span></span>
 
-C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *Strukturtypen* und *auf NULL festlegbare Werttypen*. C#-Verweistypen sind weiter unterteilt in *Klassentypen*, *Schnittstellentypen*, *Arraytypen* und *Delegattypen*.
+<span data-ttu-id="a8678-111">Im Folgenden finden Sie eine Übersicht des C#-Typsystems.</span><span class="sxs-lookup"><span data-stu-id="a8678-111">The following provides an overview of C#’s type system.</span></span>
 
-Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
+* <span data-ttu-id="a8678-112">Werttypen</span><span class="sxs-lookup"><span data-stu-id="a8678-112">Value types</span></span>
+    - <span data-ttu-id="a8678-113">Einfache Typen</span><span class="sxs-lookup"><span data-stu-id="a8678-113">Simple Types</span></span>
+        * <span data-ttu-id="a8678-114">Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`</span><span class="sxs-lookup"><span data-stu-id="a8678-114">Signed integral: `sbyte`, `short`, `int`, `long`</span></span>
+        * <span data-ttu-id="a8678-115">Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`</span><span class="sxs-lookup"><span data-stu-id="a8678-115">Unsigned integral: `byte`, `ushort`, `uint`, `ulong`</span></span>
+        * <span data-ttu-id="a8678-116">Unicode-Zeichen: `char`</span><span class="sxs-lookup"><span data-stu-id="a8678-116">Unicode characters: `char`</span></span>
+        * <span data-ttu-id="a8678-117">IEEE-Gleitkomma: `float`, `double`</span><span class="sxs-lookup"><span data-stu-id="a8678-117">IEEE floating point: `float`, `double`</span></span>
+        * <span data-ttu-id="a8678-118">Dezimalwert mit hoher Genauigkeit: `decimal`</span><span class="sxs-lookup"><span data-stu-id="a8678-118">High-precision decimal: `decimal`</span></span>
+        * <span data-ttu-id="a8678-119">Boolesch: `bool`</span><span class="sxs-lookup"><span data-stu-id="a8678-119">Boolean: `bool`</span></span>
+    - <span data-ttu-id="a8678-120">Enumerationstypen</span><span class="sxs-lookup"><span data-stu-id="a8678-120">Enum types</span></span>
+        * <span data-ttu-id="a8678-121">Benutzerdefinierte Typen der Form `enum E {...}`</span><span class="sxs-lookup"><span data-stu-id="a8678-121">User-defined types of the form `enum E {...}`</span></span>
+    - <span data-ttu-id="a8678-122">Strukturtypen</span><span class="sxs-lookup"><span data-stu-id="a8678-122">Struct types</span></span>
+        * <span data-ttu-id="a8678-123">Benutzerdefinierte Typen der Form `struct S {...}`</span><span class="sxs-lookup"><span data-stu-id="a8678-123">User-defined types of the form `struct S {...}`</span></span>
+    - <span data-ttu-id="a8678-124">Auf NULL festlegbare Werttypen</span><span class="sxs-lookup"><span data-stu-id="a8678-124">Nullable value types</span></span>
+        * <span data-ttu-id="a8678-125">Erweiterungen aller anderen Werttypen mit einem `null`-Wert</span><span class="sxs-lookup"><span data-stu-id="a8678-125">Extensions of all other value types with a `null` value</span></span>
+* <span data-ttu-id="a8678-126">Verweistypen</span><span class="sxs-lookup"><span data-stu-id="a8678-126">Reference types</span></span>
+    - <span data-ttu-id="a8678-127">Klassentypen</span><span class="sxs-lookup"><span data-stu-id="a8678-127">Class types</span></span>
+        * <span data-ttu-id="a8678-128">Ultimative Basisklasse aller anderen Typen:`object`</span><span class="sxs-lookup"><span data-stu-id="a8678-128">Ultimate base class of all other types: `object`</span></span>
+        * <span data-ttu-id="a8678-129">Unicode-Zeichenfolgen: `string`</span><span class="sxs-lookup"><span data-stu-id="a8678-129">Unicode strings: `string`</span></span>
+        * <span data-ttu-id="a8678-130">Benutzerdefinierte Typen der Form `class C {...}`</span><span class="sxs-lookup"><span data-stu-id="a8678-130">User-defined types of the form `class C {...}`</span></span>
+    - <span data-ttu-id="a8678-131">Schnittstellentypen</span><span class="sxs-lookup"><span data-stu-id="a8678-131">Interface types</span></span>
+        * <span data-ttu-id="a8678-132">Benutzerdefinierte Typen der Form `interface I {...}`</span><span class="sxs-lookup"><span data-stu-id="a8678-132">User-defined types of the form `interface I {...}`</span></span>
+    - <span data-ttu-id="a8678-133">Arraytypen</span><span class="sxs-lookup"><span data-stu-id="a8678-133">Array types</span></span>
+        * <span data-ttu-id="a8678-134">Ein- und mehrdimensional, z.B. `int[]` und`int[,]`</span><span class="sxs-lookup"><span data-stu-id="a8678-134">Single- and multi-dimensional, for example, `int[]` and `int[,]`</span></span>
+    - <span data-ttu-id="a8678-135">Delegattypen</span><span class="sxs-lookup"><span data-stu-id="a8678-135">Delegate types</span></span>
+        * <span data-ttu-id="a8678-136">Benutzerdefinierte Typen der Form `delegate int D(...)`</span><span class="sxs-lookup"><span data-stu-id="a8678-136">User-defined types of the form `delegate int D(...)`</span></span>
 
-* Werttypen
-    - Einfache Typen
-        * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`
-        * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`
-        * Unicode-Zeichen: `char`
-        * IEEE-Gleitkomma: `float`, `double`
-        * Dezimalwert mit hoher Genauigkeit: `decimal`
-        * Boolesch: `bool`
-    - Enumerationstypen
-        * Benutzerdefinierte Typen der Form `enum E {...}`
-    - Strukturtypen
-        * Benutzerdefinierte Typen der Form `struct S {...}`
-    - Auf NULL festlegbare Werttypen
-        * Erweiterungen aller anderen Werttypen mit einem `null`-Wert
-* Verweistypen
-    - Klassentypen
-        * Ultimative Basisklasse aller anderen Typen:`object`
-        * Unicode-Zeichenfolgen: `string`
-        * Benutzerdefinierte Typen der Form `class C {...}`
-    - Schnittstellentypen
-        * Benutzerdefinierte Typen der Form `interface I {...}`
-    - Arraytypen
-        * Ein- und mehrdimensional, z.B. `int[]` und`int[,]`
-    - Delegattypen
-        * Benutzerdefinierte Typen der Form `delegate int D(...)`
+<span data-ttu-id="a8678-137">Die acht Ganzzahltypen unterstützen 8-Bit-, 16-Bit, 32-Bit- und 64-Bit-Werte mit oder ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="a8678-137">The eight integral types provide support for 8-bit, 16-bit, 32-bit, and 64-bit values in signed or unsigned form.</span></span>
 
-Die acht Ganzzahltypen unterstützen 8-Bit-, 16-Bit, 32-Bit- und 64-Bit-Werte mit oder ohne Vorzeichen.
+<span data-ttu-id="a8678-138">Die zwei Gleitkommatypen `float` und `double` werden jeweils im 32-Bit-IEC-60559-Format mit einfacher Genauigkeit und 64-Bit-IEC-60559-Format mit doppelter Genauigkeit dargestellt.</span><span class="sxs-lookup"><span data-stu-id="a8678-138">The two floating-point types, `float` and `double`, are represented using the 32-bit single-precision and 64-bit double-precision IEC-60559 formats, respectively.</span></span>
 
-Die zwei Gleitkommatypen `float` und `double` werden jeweils im 32-Bit-IEC-60559-Format mit einfacher Genauigkeit und 64-Bit-IEC-60559-Format mit doppelter Genauigkeit dargestellt.
+<span data-ttu-id="a8678-139">Der `decimal`-Typ ist ein für Finanz-und Währungsberechnungen geeigneter 128-Bit-Datentyp.</span><span class="sxs-lookup"><span data-stu-id="a8678-139">The `decimal` type is a 128-bit data type suitable for financial and monetary calculations.</span></span>
 
-Der `decimal`-Typ ist ein für Finanz-und Währungsberechnungen geeigneter 128-Bit-Datentyp.
+<span data-ttu-id="a8678-140">Der `bool`-Typ von C# dient zur Darstellung boolescher Werte – Werte, die entweder `true` oder `false` sind.</span><span class="sxs-lookup"><span data-stu-id="a8678-140">C#’s `bool` type is used to represent Boolean values—values that are either `true` or `false`.</span></span>
 
-Der `bool`-Typ von C# dient zur Darstellung boolescher Werte – Werte, die entweder `true` oder `false` sind.
+<span data-ttu-id="a8678-141">Zur Zeichen- und Zeichenfolgenverarbeitung in C# wird die Unicode-Codierung verwendet.</span><span class="sxs-lookup"><span data-stu-id="a8678-141">Character and string processing in C# uses Unicode encoding.</span></span> <span data-ttu-id="a8678-142">Der `char`-Typ stellt eine UTF-16-Codeeinheit dar und der `string`-Typ eine Folge von UTF-16-Codeeinheiten.</span><span class="sxs-lookup"><span data-stu-id="a8678-142">The `char` type represents a UTF-16 code unit, and the `string` type represents a sequence of UTF-16 code units.</span></span>
 
-Zur Zeichen- und Zeichenfolgenverarbeitung in C# wird die Unicode-Codierung verwendet. Der `char`-Typ stellt eine UTF-16-Codeeinheit dar und der `string`-Typ eine Folge von UTF-16-Codeeinheiten.
+<span data-ttu-id="a8678-143">Hier sind die numerischen Typen von C# zusammengefasst.</span><span class="sxs-lookup"><span data-stu-id="a8678-143">This summarizes C#’s numeric types.</span></span>
 
-Hier sind die numerischen Typen von C# zusammengefasst.
-
-* Ganzzahlig mit Vorzeichen
-    - `sbyte`: 8 Bit, Bereich von -128 - 127
-    - `short`: 16 Bit, Bereich von -32.768 - 32.767
-    - `int`: 32 Bit, Bereich von -2.147.483.648 - 2.147.483.647
-    - `long`: 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
-* Ganzzahlig ohne Vorzeichen
-    - `byte`: 8 Bit, Bereich von 0 - 255
-    - `ushort`: 16 Bit, Bereich von 0 - 65.535
-    - `uint`: 32 Bit, Bereich von 0 - 4.294.967.295
-    - `ulong`: 64 Bit, Bereich von -0 - 18.446.744.073.709.551.615
-* Gleitkomma
-    - `float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> - 3,4 × 10<sup>38</sup>, Genauigkeit von 7 Stellen
-    - `double`: 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> - 1,7 × 10<sup>308</sup>, Genauigkeit von 15 Stellen
-* Decimal
-    - `decimal`: 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> - 7,9 x 10<sup>28</sup> mit einer Genauigkeit von mindestens 28 Stellen
+* <span data-ttu-id="a8678-144">Ganzzahlig mit Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="a8678-144">Signed Integral</span></span>
+    - <span data-ttu-id="a8678-145">`sbyte`: 8 Bit, Bereich von -128 - 127</span><span class="sxs-lookup"><span data-stu-id="a8678-145">`sbyte`:  8 bits, range from -128 - 127</span></span>
+    - <span data-ttu-id="a8678-146">`short`: 16 Bit, Bereich von -32.768 - 32.767</span><span class="sxs-lookup"><span data-stu-id="a8678-146">`short`: 16 bits, range from -32,768 - 32,767</span></span>
+    - <span data-ttu-id="a8678-147">`int`: 32 Bit, Bereich von -2.147.483.648 - 2.147.483.647</span><span class="sxs-lookup"><span data-stu-id="a8678-147">`int`  : 32 bits, range from -2,147,483,648 - 2,147,483,647</span></span>
+    - <span data-ttu-id="a8678-148">`long`: 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807</span><span class="sxs-lookup"><span data-stu-id="a8678-148">`long` : 64 bits, range from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</span></span>
+* <span data-ttu-id="a8678-149">Ganzzahlig ohne Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="a8678-149">Unsigned integral</span></span>
+    - <span data-ttu-id="a8678-150">`byte`: 8 Bit, Bereich von 0 - 255</span><span class="sxs-lookup"><span data-stu-id="a8678-150">`byte`   :  8 bits, range from 0 - 255</span></span>
+    - <span data-ttu-id="a8678-151">`ushort`: 16 Bit, Bereich von 0 - 65.535</span><span class="sxs-lookup"><span data-stu-id="a8678-151">`ushort` : 16 bits, range from 0 - 65,535</span></span>
+    - <span data-ttu-id="a8678-152">`uint`: 32 Bit, Bereich von 0 - 4.294.967.295</span><span class="sxs-lookup"><span data-stu-id="a8678-152">`uint`   : 32 bits, range from 0 - 4,294,967,295</span></span>
+    - <span data-ttu-id="a8678-153">`ulong`: 64 Bit, Bereich von -0 - 18.446.744.073.709.551.615</span><span class="sxs-lookup"><span data-stu-id="a8678-153">`ulong`  : 64 bits, range from 0 - 18,446,744,073,709,551,615</span></span>
+* <span data-ttu-id="a8678-154">Gleitkomma</span><span class="sxs-lookup"><span data-stu-id="a8678-154">Floating point</span></span>
+    - <span data-ttu-id="a8678-155">`float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> - 3,4 × 10<sup>38</sup>, Genauigkeit von 7 Stellen</span><span class="sxs-lookup"><span data-stu-id="a8678-155">`float`  : 32 bits, range from 1.5 × 10<sup>−45</sup> - 3.4 × 10<sup>38</sup>,    7-digit precision</span></span>
+    - <span data-ttu-id="a8678-156">`double`: 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> - 1,7 × 10<sup>308</sup>, Genauigkeit von 15 Stellen</span><span class="sxs-lookup"><span data-stu-id="a8678-156">`double` : 64 bits, range from 5.0 × 10<sup>−324</sup> - 1.7 × 10<sup>308</sup>, 15-digit precision</span></span>
+* <span data-ttu-id="a8678-157">Decimal</span><span class="sxs-lookup"><span data-stu-id="a8678-157">Decimal</span></span>
+    - <span data-ttu-id="a8678-158">`decimal`: 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> - 7,9 x 10<sup>28</sup> mit einer Genauigkeit von mindestens 28 Stellen</span><span class="sxs-lookup"><span data-stu-id="a8678-158">`decimal` : 128 bits, range is at least –7.9 × 10<sup>−28</sup> -  7.9 × 10<sup>28</sup>, with at least 28-digit precision</span></span>
     
-C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.
+<span data-ttu-id="a8678-159">C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a8678-159">C# programs use *type declarations* to create new types.</span></span> <span data-ttu-id="a8678-160">Eine Typdeklaration gibt den Namen und die Member des neuen Typs an.</span><span class="sxs-lookup"><span data-stu-id="a8678-160">A type declaration specifies the name and the members of the new type.</span></span> <span data-ttu-id="a8678-161">Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.</span><span class="sxs-lookup"><span data-stu-id="a8678-161">Five of C#’s categories of types are user-definable: class types, struct types, interface types, enum types, and delegate types.</span></span>
 
-Ein `class`-Typ definiert eine Datenstruktur, die Datenmember (Felder) und Funktionsmember (Methoden, Eigenschaften usw.) enthält. Klassentypen unterstützen einzelne Vererbung und Polymorphie. Dies sind Mechanismen, durch die abgeleitete Klassen erweitert und Basisklassen spezialisiert werden können.
+<span data-ttu-id="a8678-162">Ein `class`-Typ definiert eine Datenstruktur, die Datenmember (Felder) und Funktionsmember (Methoden, Eigenschaften usw.) enthält.</span><span class="sxs-lookup"><span data-stu-id="a8678-162">A `class` type defines a data structure that contains data members (fields) and function members (methods, properties, and others).</span></span> <span data-ttu-id="a8678-163">Klassentypen unterstützen einzelne Vererbung und Polymorphie. Dies sind Mechanismen, durch die abgeleitete Klassen erweitert und Basisklassen spezialisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="a8678-163">Class types support single inheritance and polymorphism, mechanisms whereby derived classes can extend and specialize base classes.</span></span>
 
-Ein `struct`-Typ ähnelt einem Klassentyp, da er eine Struktur mit Datenmembern und Funktionsmembern darstellt. Allerdings sind Strukturen im Gegensatz zu Klassen Werttypen und erfordern in der Regel keine Heapzuordnung. Strukturtypen unterstützen keine benutzerdefinierte Vererbung, und alle Strukturtypen erben implizit vom Typ `object`.
+<span data-ttu-id="a8678-164">Ein `struct`-Typ ähnelt einem Klassentyp, da er eine Struktur mit Datenmembern und Funktionsmembern darstellt.</span><span class="sxs-lookup"><span data-stu-id="a8678-164">A `struct` type is similar to a class type in that it represents a structure with data members and function members.</span></span> <span data-ttu-id="a8678-165">Allerdings sind Strukturen im Gegensatz zu Klassen Werttypen und erfordern in der Regel keine Heapzuordnung.</span><span class="sxs-lookup"><span data-stu-id="a8678-165">However, unlike classes, structs are value types and do not typically require heap allocation.</span></span> <span data-ttu-id="a8678-166">Strukturtypen unterstützen keine benutzerdefinierte Vererbung, und alle Strukturtypen erben implizit vom Typ `object`.</span><span class="sxs-lookup"><span data-stu-id="a8678-166">Struct types do not support user-specified inheritance, and all struct types implicitly inherit from type `object`.</span></span>
 
-Ein `interface`-Typ definiert einen Vertrag als benannter Satz öffentlicher Funktionsmember. Eine `class` oder `struct`, die eine `interface` implementiert, muss Implementierungen der Funktionsmember der Schnittstelle bereitstellen. Eine `interface` kann von mehreren Basisschnittstellen erben, und eine `class` oder `struct` kann mehrere Schnittstellen implementieren.
+<span data-ttu-id="a8678-167">Ein `interface`-Typ definiert einen Vertrag als benannter Satz öffentlicher Funktionsmember.</span><span class="sxs-lookup"><span data-stu-id="a8678-167">An `interface` type defines a contract as a named set of public function members.</span></span> <span data-ttu-id="a8678-168">Eine `class` oder `struct`, die eine `interface` implementiert, muss Implementierungen der Funktionsmember der Schnittstelle bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="a8678-168">A `class` or `struct` that implements an `interface` must provide implementations of the interface’s function members.</span></span> <span data-ttu-id="a8678-169">Eine `interface` kann von mehreren Basisschnittstellen erben, und eine `class` oder `struct` kann mehrere Schnittstellen implementieren.</span><span class="sxs-lookup"><span data-stu-id="a8678-169">An `interface` may inherit from multiple base interfaces, and a `class` or `struct` may implement multiple interfaces.</span></span>
 
-Ein `delegate`-Typ stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate werden analog zu Funktionstypen von funktionalen Sprachen bereitgestellt. Sie ähneln auch dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
+<span data-ttu-id="a8678-170">Ein `delegate`-Typ stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar.</span><span class="sxs-lookup"><span data-stu-id="a8678-170">A `delegate` type represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="a8678-171">Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können.</span><span class="sxs-lookup"><span data-stu-id="a8678-171">Delegates make it possible to treat methods as entities that can be assigned to variables and passed as parameters.</span></span> <span data-ttu-id="a8678-172">Delegate werden analog zu Funktionstypen von funktionalen Sprachen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="a8678-172">Delegates are analogous to function types provided by functional languages.</span></span> <span data-ttu-id="a8678-173">Sie ähneln auch dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.</span><span class="sxs-lookup"><span data-stu-id="a8678-173">They are also similar to the concept of function pointers found in some other languages, but unlike function pointers, delegates are object-oriented and type-safe.</span></span>
 
-Die Typen, `class`, `struct`, `interface` und `delegate` unterstützen generische Typen, wobei sie mit anderen Typen parametrisiert werden können.
+<span data-ttu-id="a8678-174">Die Typen, `class`, `struct`, `interface` und `delegate` unterstützen generische Typen, wobei sie mit anderen Typen parametrisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="a8678-174">The `class`, `struct`, `interface` and `delegate` types all support generics, whereby they can be parameterized with other types.</span></span>
 
-Ein `enum`-Typ ist ein eigenständiger Typ mit einer benannten Konstante. Jeder `enum`-Typ verfügt über einen zugrunde liegenden Typ, der einer der acht ganzzahligen Typen sein muss. Der Satz von Werten eines `enum`-Typs ist mit dem Satz von Werten des zugrunde liegenden Typs identisch.
+<span data-ttu-id="a8678-175">Ein `enum`-Typ ist ein eigenständiger Typ mit einer benannten Konstante.</span><span class="sxs-lookup"><span data-stu-id="a8678-175">An `enum` type is a distinct type with named constants.</span></span> <span data-ttu-id="a8678-176">Jeder `enum`-Typ verfügt über einen zugrunde liegenden Typ, der einer der acht ganzzahligen Typen sein muss.</span><span class="sxs-lookup"><span data-stu-id="a8678-176">Every `enum` type has an underlying type, which must be one of the eight integral types.</span></span> <span data-ttu-id="a8678-177">Der Satz von Werten eines `enum`-Typs ist mit dem Satz von Werten des zugrunde liegenden Typs identisch.</span><span class="sxs-lookup"><span data-stu-id="a8678-177">The set of values of an `enum` type is the same as the set of values of the underlying type.</span></span>
 
-C# unterstützt ein- und mehrdimensionale Arrays beliebigen Typs. Im Gegensatz zu den oben aufgeführten Typen müssen Arraytypen nicht deklariert werden, bevor sie verwendet werden können. Stattdessen werden Arraytypen erstellt, indem hinter einen Typnamen eckige Klammern gesetzt werden. Beispielsweise ist `int[]` ein eindimensionales Array von `int`, `int[,]` ein zweidimensionales Array von `int` und `int[][]` ein eindimensionales Array des eindimensionalen Arrays von `int`.
+<span data-ttu-id="a8678-178">C# unterstützt ein- und mehrdimensionale Arrays beliebigen Typs.</span><span class="sxs-lookup"><span data-stu-id="a8678-178">C# supports single- and multi-dimensional arrays of any type.</span></span> <span data-ttu-id="a8678-179">Im Gegensatz zu den oben aufgeführten Typen müssen Arraytypen nicht deklariert werden, bevor sie verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="a8678-179">Unlike the types listed above, array types do not have to be declared before they can be used.</span></span> <span data-ttu-id="a8678-180">Stattdessen werden Arraytypen erstellt, indem hinter einen Typnamen eckige Klammern gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="a8678-180">Instead, array types are constructed by following a type name with square brackets.</span></span> <span data-ttu-id="a8678-181">Beispielsweise ist `int[]` ein eindimensionales Array von `int`, `int[,]` ein zweidimensionales Array von `int` und `int[][]` ein eindimensionales Array des eindimensionalen Arrays von `int`.</span><span class="sxs-lookup"><span data-stu-id="a8678-181">For example, `int[]` is a single-dimensional array of `int`, `int[,]` is a two-dimensional array of `int`, and `int[][]` is a single-dimensional array of single-dimensional array of `int`.</span></span>
 
-Auf NULL festlegbare Werttypen müssen auch nicht deklariert werden, bevor sie verwendet werden können. Für jeden nicht auf NULL festlegbaren Werttypen `T` gibt es einen entsprechenden auf NULL festlegbaren Werttypen `T?`, der einen zusätzlichen Wert enthalten kann, `null`. Beispielsweise ist `int?` ein Typ, der jeden 32-Bit-Ganzzahlwert oder den Wert `null` enthalten kann.
+<span data-ttu-id="a8678-182">Auf NULL festlegbare Werttypen müssen auch nicht deklariert werden, bevor sie verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="a8678-182">Nullable value types also do not have to be declared before they can be used.</span></span> <span data-ttu-id="a8678-183">Für jeden nicht auf NULL festlegbaren Werttypen `T` gibt es einen entsprechenden auf NULL festlegbaren Werttypen `T?`, der einen zusätzlichen Wert enthalten kann, `null`.</span><span class="sxs-lookup"><span data-stu-id="a8678-183">For each non-nullable value type `T` there is a corresponding nullable value type `T?`, which can hold an additional value, `null`.</span></span> <span data-ttu-id="a8678-184">Beispielsweise ist `int?` ein Typ, der jeden 32-Bit-Ganzzahlwert oder den Wert `null` enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="a8678-184">For instance, `int?` is a type that can hold any 32-bit integer or the value `null`.</span></span>
 
-Das C#-Typsystem ist dahingehend vereinheitlicht, dass ein Wert eines beliebigen Typs als `object` behandelt werden kann. Jeder Typ in C# ist direkt oder indirekt vom `object`-Klassentyp abgeleitet, und `object` ist die ultimative Basisklasse aller Typen. Werte von Verweistypen werden als Objekte behandelt, indem die Werte einfach als Typ `object` angezeigt werden. Werte von Werttypen werden durch Ausführen von *Boxing*- und *Unboxingvorgängen* als Objekte behandelt. Im folgenden Beispiel wird ein `int`-Wert in ein `object` und wieder in einen `int`-Wert konvertiert.
+<span data-ttu-id="a8678-185">Das C#-Typsystem ist dahingehend vereinheitlicht, dass ein Wert eines beliebigen Typs als `object` behandelt werden kann.</span><span class="sxs-lookup"><span data-stu-id="a8678-185">C#’s type system is unified such that a value of any type can be treated as an `object`.</span></span> <span data-ttu-id="a8678-186">Jeder Typ in C# ist direkt oder indirekt vom `object`-Klassentyp abgeleitet, und `object` ist die ultimative Basisklasse aller Typen.</span><span class="sxs-lookup"><span data-stu-id="a8678-186">Every type in C# directly or indirectly derives from the `object` class type, and `object` is the ultimate base class of all types.</span></span> <span data-ttu-id="a8678-187">Werte von Verweistypen werden als Objekte behandelt, indem die Werte einfach als Typ `object` angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="a8678-187">Values of reference types are treated as objects simply by viewing the values as type `object`.</span></span> <span data-ttu-id="a8678-188">Werte von Werttypen werden durch Ausführen von *Boxing*- und *Unboxingvorgängen* als Objekte behandelt.</span><span class="sxs-lookup"><span data-stu-id="a8678-188">Values of value types are treated as objects by performing *boxing* and *unboxing operations*.</span></span> <span data-ttu-id="a8678-189">Im folgenden Beispiel wird ein `int`-Wert in ein `object` und wieder in einen `int`-Wert konvertiert.</span><span class="sxs-lookup"><span data-stu-id="a8678-189">In the following example, an `int` value is converted to `object` and back again to `int`.</span></span>
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-Wenn ein Wert eines Werttyps in den Typ `object` konvertiert wird, wird eine auch „Box“ genannte `object`-Instanz zum Speichern des Werts zugeordnet, und der Wert wird in diese Box kopiert. Wenn umgekehrt ein `object`-Verweis in einen Werttyp umgewandelt wird, wird überprüft, ob das `object`, auf das verwiesen wird, eine Box des korrekten Datentyps ist, und bei erfolgreicher Überprüfung wird der Wert in der Box kopiert.
+<span data-ttu-id="a8678-190">Wenn ein Wert eines Werttyps in den Typ `object` konvertiert wird, wird eine auch „Box“ genannte `object`-Instanz zum Speichern des Werts zugeordnet, und der Wert wird in diese Box kopiert.</span><span class="sxs-lookup"><span data-stu-id="a8678-190">When a value of a value type is converted to type `object`, an `object` instance, also called a "box", is allocated to hold the value, and the value is copied into that box.</span></span> <span data-ttu-id="a8678-191">Wenn umgekehrt ein `object`-Verweis in einen Werttyp umgewandelt wird, wird überprüft, ob das `object`, auf das verwiesen wird, eine Box des korrekten Datentyps ist, und bei erfolgreicher Überprüfung wird der Wert in der Box kopiert.</span><span class="sxs-lookup"><span data-stu-id="a8678-191">Conversely, when an `object` reference is cast to a value type, a check is made that the referenced `object` is a box of the correct value type, and, if the check succeeds, the value in the box is copied out.</span></span>
 
-Aus dem einheitlichen C#-Typensystem resultiert, dass Werttypen „bei Nachfrage“ Objekte werden können. Aufgrund der Vereinheitlichung können Bibliotheken für allgemeine Zwecke, die den Typ `object` verwenden, sowohl mit Verweis- als auch Werttypen verwendet werden.
+<span data-ttu-id="a8678-192">Aus dem einheitlichen C#-Typensystem resultiert, dass Werttypen „bei Nachfrage“ Objekte werden können.</span><span class="sxs-lookup"><span data-stu-id="a8678-192">C#’s unified type system effectively means that value types can become objects "on demand."</span></span> <span data-ttu-id="a8678-193">Aufgrund der Vereinheitlichung können Bibliotheken für allgemeine Zwecke, die den Typ `object` verwenden, sowohl mit Verweis- als auch Werttypen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a8678-193">Because of the unification, general-purpose libraries that use type `object` can be used with both reference types and value types.</span></span>
 
-Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayelementen, lokalen Variablen und Parametern. Variablen stellen Speicherorte dar, und jede Variable hat einen Typ, der bestimmt, welche Werte in der Variablen gespeichert werden können, wie unten gezeigt.
+<span data-ttu-id="a8678-194">Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayelementen, lokalen Variablen und Parametern.</span><span class="sxs-lookup"><span data-stu-id="a8678-194">There are several kinds of *variables* in C#, including fields, array elements, local variables, and parameters.</span></span> <span data-ttu-id="a8678-195">Variablen stellen Speicherorte dar, und jede Variable hat einen Typ, der bestimmt, welche Werte in der Variablen gespeichert werden können, wie unten gezeigt.</span><span class="sxs-lookup"><span data-stu-id="a8678-195">Variables represent storage locations, and every variable has a type that determines what values can be stored in the variable, as shown below.</span></span>
 
-* Nicht auf NULL festlegbarer Werttyp
-    - Ein Wert genau dieses Typs
-* Auf NULL festlegbarer Werttyp
-    - Ein `null`-Wert oder ein Wert genau dieses Typs
-* object
-    - Ein `null`-Verweis, ein Verweis auf ein Objekt eines beliebigen Verweistyps oder ein Verweis auf einen geschachtelten Wert eines beliebigen Werttyps
-* Klassentyp
-    - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Klassentyps oder ein Verweis auf eine Instanz einer Klasse, die von diesem Klassentyp abgeleitet ist
-* Schnittstellentyp
-    - Ein `null`-Verweis, ein Verweis auf eine Instanz eines Klassentyps, der diesen Schnittstellentyp implementiert, oder ein Verweis auf einen geschachtelten Wert eines Werttyps, der diesen Schnittstellentyp implementiert
-* Arraytyp
-    - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Arraytyps oder ein Verweis auf eine Instanz eines kompatiblen Arraytyps
-* Delegattyp
-    - Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp
+* <span data-ttu-id="a8678-196">Nicht auf NULL festlegbarer Werttyp</span><span class="sxs-lookup"><span data-stu-id="a8678-196">Non-nullable value type</span></span>
+    - <span data-ttu-id="a8678-197">Ein Wert genau dieses Typs</span><span class="sxs-lookup"><span data-stu-id="a8678-197">A value of that exact type</span></span>
+* <span data-ttu-id="a8678-198">Auf NULL festlegbarer Werttyp</span><span class="sxs-lookup"><span data-stu-id="a8678-198">Nullable value type</span></span>
+    - <span data-ttu-id="a8678-199">Ein `null`-Wert oder ein Wert genau dieses Typs</span><span class="sxs-lookup"><span data-stu-id="a8678-199">A `null` value or a value of that exact type</span></span>
+* <span data-ttu-id="a8678-200">object</span><span class="sxs-lookup"><span data-stu-id="a8678-200">object</span></span>
+    - <span data-ttu-id="a8678-201">Ein `null`-Verweis, ein Verweis auf ein Objekt eines beliebigen Verweistyps oder ein Verweis auf einen geschachtelten Wert eines beliebigen Werttyps</span><span class="sxs-lookup"><span data-stu-id="a8678-201">A `null` reference, a reference to an object of any reference type, or a reference to a boxed value of any value type</span></span>
+* <span data-ttu-id="a8678-202">Klassentyp</span><span class="sxs-lookup"><span data-stu-id="a8678-202">Class type</span></span>
+    - <span data-ttu-id="a8678-203">Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Klassentyps oder ein Verweis auf eine Instanz einer Klasse, die von diesem Klassentyp abgeleitet ist</span><span class="sxs-lookup"><span data-stu-id="a8678-203">A `null` reference, a reference to an instance of that class type, or a reference to an instance of a class derived from that class type</span></span>
+* <span data-ttu-id="a8678-204">Schnittstellentyp</span><span class="sxs-lookup"><span data-stu-id="a8678-204">Interface type</span></span>
+    - <span data-ttu-id="a8678-205">Ein `null`-Verweis, ein Verweis auf eine Instanz eines Klassentyps, der diesen Schnittstellentyp implementiert, oder ein Verweis auf einen geschachtelten Wert eines Werttyps, der diesen Schnittstellentyp implementiert</span><span class="sxs-lookup"><span data-stu-id="a8678-205">A `null` reference, a reference to an instance of a class type that implements that interface type, or a reference to a boxed value of a value type that implements that interface type</span></span>
+* <span data-ttu-id="a8678-206">Arraytyp</span><span class="sxs-lookup"><span data-stu-id="a8678-206">Array type</span></span>
+    - <span data-ttu-id="a8678-207">Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Arraytyps oder ein Verweis auf eine Instanz eines kompatiblen Arraytyps</span><span class="sxs-lookup"><span data-stu-id="a8678-207">A `null` reference, a reference to an instance of that array type, or a reference to an instance of a compatible array type</span></span>
+* <span data-ttu-id="a8678-208">Delegattyp</span><span class="sxs-lookup"><span data-stu-id="a8678-208">Delegate type</span></span>
+    - <span data-ttu-id="a8678-209">Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp</span><span class="sxs-lookup"><span data-stu-id="a8678-209">A `null` reference or a reference to an instance of a compatible delegate type</span></span>
 
 >[!div class="step-by-step"]
-[Zurück](program-structure.md)
-[Weiter](expressions.md)
-
+<span data-ttu-id="a8678-210">[Zurück](program-structure.md)
+[Weiter](expressions.md)</span><span class="sxs-lookup"><span data-stu-id="a8678-210">[Previous](program-structure.md)
+[Next](expressions.md)</span></span>

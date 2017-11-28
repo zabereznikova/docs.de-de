@@ -1,107 +1,113 @@
 ---
-title: "Gewusst wie: Extrahieren des Wochentags aus einem bestimmten Datum | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Formatieren [.NET Framework], Datumsangaben"
-  - "DateTime.DayOfWeek-Eigenschaft"
-  - "DateTime.ToString-Methode"
-  - "Datumsangaben [.NET Framework], Abrufen von Wocheninformationen"
-  - "DateTimeOffset.DayOfWeek-Eigenschaft"
-  - "Datumsangaben [.NET Framework], Wochentag"
-  - "Weekday-Funktion"
-  - "Wochentag [.NET Framework]"
-  - "Extrahieren des Wochentags"
-  - "Wochentagbezeichnungen"
-  - "WeekdayName-Funktion"
-  - "Zahlen [.NET Framework], Wochentag"
-  - "Formatieren [.NET Framework], Zeit"
-  - "DateTimeOffset.ToString-Methode"
-  - "Vollständige Wochentagbezeichnungen"
+title: 'Gewusst wie: Extrahieren des Wochentags aus einem bestimmten Datum'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- formatting [.NET Framework], dates
+- DateTime.DayOfWeek property
+- DateTime.ToString method
+- dates [.NET Framework], retrieving week information
+- DateTimeOffset.DayOfWeek property
+- dates [.NET Framework], day of week
+- Weekday function
+- day of week [.NET Framework]
+- extracting day of week
+- weekday names
+- WeekdayName function
+- numbers [.NET Framework], day of week
+- formatting [.NET Framework], time
+- DateTimeOffset.ToString method
+- full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3accb01eb8c5edb8b3e245020b43c5a94a8bb4cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Extrahieren des Wochentags aus einem bestimmten Datum
-Mit .NET Framework ist es einfach, den Wochentag für ein bestimmtes Datum festzulegen und den lokalisierten Namen eines Wochentags für ein bestimmtes Datum anzuzeigen. Ein Aufzählungswert, der den einem bestimmten Datum entsprechenden Wochentag anzeigt, ist über die <xref:System.DateTime.DayOfWeek%2A>\- oder die <xref:System.DateTimeOffset.DayOfWeek%2A>\-Eigenschaft verfügbar. Dagegen ist das Abrufen des Namens eines Wochentags ein Formatierungsvorgang, der durch das Aufrufen einer Formatierungsmethode ausgeführt werden kann, wie z. B. der `ToString`\-Methode eines Datums\- oder Zeitwertes oder der <xref:System.String.Format%2A?displayProperty=fullName>\-Methode. In diesem Thema wird gezeigt, wie diese Formatierungsvorgänge ausgeführt werden.  
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a><span data-ttu-id="68cf8-102">Gewusst wie: Extrahieren des Wochentags aus einem bestimmten Datum</span><span class="sxs-lookup"><span data-stu-id="68cf8-102">How to: Extract the Day of the Week from a Specific Date</span></span>
+<span data-ttu-id="68cf8-103">Mit .NET Framework ist es einfach, den Wochentag für ein bestimmtes Datum festzulegen und den lokalisierten Namen eines Wochentags für ein bestimmtes Datum anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="68cf8-103">The .NET Framework makes it easy to determine the ordinal day of the week for a particular date, and to display the localized weekday name for a particular date.</span></span> <span data-ttu-id="68cf8-104">Ein Aufzählungswert, der den einem bestimmten Datum entsprechenden Wochentag anzeigt, ist über die <xref:System.DateTime.DayOfWeek%2A>- oder die <xref:System.DateTimeOffset.DayOfWeek%2A>-Eigenschaft verfügbar.</span><span class="sxs-lookup"><span data-stu-id="68cf8-104">An enumerated value that indicates the day of the week corresponding to a particular date is available from the <xref:System.DateTime.DayOfWeek%2A> or <xref:System.DateTimeOffset.DayOfWeek%2A> property.</span></span> <span data-ttu-id="68cf8-105">Dagegen ist das Abrufen des Namens eines Wochentags ein Formatierungsvorgang, der durch das Aufrufen einer Formatierungsmethode ausgeführt werden kann, wie z. B. der `ToString`-Methode eines Datums- oder Zeitwertes oder der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode.</span><span class="sxs-lookup"><span data-stu-id="68cf8-105">In contrast, retrieving the weekday name is a formatting operation that can be performed by calling a formatting method, such as a date and time value's `ToString` method or the <xref:System.String.Format%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="68cf8-106">In diesem Thema wird gezeigt, wie diese Formatierungsvorgänge ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="68cf8-106">This topic shows how to perform these formatting operations.</span></span>  
   
-### Extrahieren einer Zahl, die den Wochentag anzeigt, aus einem bestimmten Datum  
+### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a><span data-ttu-id="68cf8-107">Extrahieren einer Zahl, die den Wochentag anzeigt, aus einem bestimmten Datum</span><span class="sxs-lookup"><span data-stu-id="68cf8-107">To extract a number indicating the day of the week from a specific date</span></span>  
   
-1.  Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>\-Methode oder <xref:System.DateTimeOffset>\-Methode in einen <xref:System.DateTime.Parse%2A?displayProperty=fullName>\-Wert oder einen <xref:System.DateTimeOffset.Parse%2A?displayProperty=fullName>\-Wert.  
+1.  <span data-ttu-id="68cf8-108">Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>-Methode oder <xref:System.DateTimeOffset>-Methode in einen <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>-Wert oder einen <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>-Wert.</span><span class="sxs-lookup"><span data-stu-id="68cf8-108">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  Verwenden Sie die <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName>\- oder die <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=fullName>\-Eigenschaft, um einen <xref:System.DayOfWeek>\-Wert abzurufen, der den Wochentag anzeigt.  
+2.  <span data-ttu-id="68cf8-109">Verwenden Sie die <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType>- oder die <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType>-Eigenschaft, um einen <xref:System.DayOfWeek>-Wert abzurufen, der den Wochentag anzeigt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-109">Use the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> property to retrieve a <xref:System.DayOfWeek> value that indicates the day of the week.</span></span>  
   
-3.  Falls nötig, wandeln Sie den <xref:System.DayOfWeek>\-Wert in eine Ganzzahl um \(in C\#\) oder konvertieren Sie ihn \(in Visual Basic\).  
+3.  <span data-ttu-id="68cf8-110">Falls nötig, wandeln Sie den <xref:System.DayOfWeek>-Wert in eine Ganzzahl um (in C#) oder konvertieren Sie ihn (in Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="68cf8-110">If necessary, cast (in C#) or convert (in Visual Basic) the <xref:System.DayOfWeek> value to an integer.</span></span>  
   
- Das folgende Beispiel zeigt eine Ganzzahl, die den Wochentag eines bestimmten Datums anzeigt.  
+ <span data-ttu-id="68cf8-111">Das folgende Beispiel zeigt eine Ganzzahl, die den Wochentag eines bestimmten Datums anzeigt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-111">The following example displays an integer that represents the day of the week of a specific date.</span></span>  
   
  [!code-csharp[Formatting.Howto.WeekdayName#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/weekdaynumber7.cs#7)]
  [!code-vb[Formatting.Howto.WeekdayName#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/weekdaynumber7.vb#7)]  
   
-### Extrahieren des abgekürzten Wochentagsnamens aus einem bestimmten Datum  
+### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a><span data-ttu-id="68cf8-112">Extrahieren des abgekürzten Wochentagsnamens aus einem bestimmten Datum</span><span class="sxs-lookup"><span data-stu-id="68cf8-112">To extract the abbreviated weekday name from a specific date</span></span>  
   
-1.  Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>\-Methode oder <xref:System.DateTimeOffset>\-Methode in einen <xref:System.DateTime.Parse%2A?displayProperty=fullName>\-Wert oder einen <xref:System.DateTimeOffset.Parse%2A?displayProperty=fullName>\-Wert.  
+1.  <span data-ttu-id="68cf8-113">Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>-Methode oder <xref:System.DateTimeOffset>-Methode in einen <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>-Wert oder einen <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>-Wert.</span><span class="sxs-lookup"><span data-stu-id="68cf8-113">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  Sie können den abgekürzten Wochentagsnamen der aktuellen Kultur oder einer bestimmten Kultur extrahieren:  
+2.  <span data-ttu-id="68cf8-114">Sie können den abgekürzten Wochentagsnamen der aktuellen Kultur oder einer bestimmten Kultur extrahieren:</span><span class="sxs-lookup"><span data-stu-id="68cf8-114">You can extract the abbreviated weekday name of the current culture or of a specific culture:</span></span>  
   
-    1.  Um den abgekürzten Wochentagsnamen der aktuellen Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName>\- oder <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=fullName>\-Instanzmethode des Datums\- oder Zeitwerts auf und übergeben Sie die Zeichenfolge "ddd" als `format`\-Parameter. Im folgenden Beispiel wird das Aufrufen der <xref:System.DateTime.ToString%28System.String%29>\-Methode veranschaulicht.  
+    1.  <span data-ttu-id="68cf8-115">Um den abgekürzten Wochentagsnamen der aktuellen Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>- oder <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>-Instanzmethode des Datums- oder Zeitwerts auf und übergeben Sie die Zeichenfolge "ddd" als `format`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="68cf8-115">To extract the abbreviated weekday name for the current culture, call the date and time value's <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> instance method, and pass the string "ddd" as the `format` parameter.</span></span> <span data-ttu-id="68cf8-116">Im folgenden Beispiel wird das Aufrufen der <xref:System.DateTime.ToString%28System.String%29>-Methode veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="68cf8-116">The following example illustrates the call to the <xref:System.DateTime.ToString%28System.String%29> method.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  Um den abgekürzten Wochentagsnamen einer bestimmten Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName>\- oder <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName>\-Instanzmethode des Datums\- oder Zeitwerts auf. Übergeben Sie die Zeichenfolge "ddd" als `format`\-Parameter. Übergeben Sie entweder ein <xref:System.Globalization.CultureInfo>\- oder ein <xref:System.Globalization.DateTimeFormatInfo>\-Objekt, das die Kultur darstellt, deren Wochentagsnamen Sie abrufen wollen, als `provider`\-Parameter. Der folgende Code veranschaulicht einen Aufruf der <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29>\-Methode mit einem <xref:System.Globalization.CultureInfo>\-Objekt, das die fr\-FR\-Kultur darstellt.  
+    2.  <span data-ttu-id="68cf8-117">Um den abgekürzten Wochentagsnamen einer bestimmten Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>- oder <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>-Instanzmethode des Datums- oder Zeitwerts auf.</span><span class="sxs-lookup"><span data-stu-id="68cf8-117">To extract the abbreviated weekday name for a specific culture, call the date and time value’s <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> instance method.</span></span> <span data-ttu-id="68cf8-118">Übergeben Sie die Zeichenfolge "ddd" als `format`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="68cf8-118">Pass the string "ddd" as the `format` parameter.</span></span> <span data-ttu-id="68cf8-119">Übergeben Sie entweder ein <xref:System.Globalization.CultureInfo>- oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, das die Kultur darstellt, deren Wochentagsnamen Sie abrufen wollen, als `provider`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="68cf8-119">Pass either a <xref:System.Globalization.CultureInfo> or a <xref:System.Globalization.DateTimeFormatInfo> object that represents the culture whose weekday name you want to retrieve as the `provider` parameter.</span></span> <span data-ttu-id="68cf8-120">Der folgende Code veranschaulicht einen Aufruf der <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode mit einem <xref:System.Globalization.CultureInfo>-Objekt, das die fr-FR-Kultur darstellt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-120">The following code illustrates a call to the <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> method using a <xref:System.Globalization.CultureInfo> object that represents the fr-FR culture.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
   
-### Extrahieren des vollen Wochentagsnamens aus einem bestimmten Datum  
+### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a><span data-ttu-id="68cf8-121">Extrahieren des vollen Wochentagsnamens aus einem bestimmten Datum</span><span class="sxs-lookup"><span data-stu-id="68cf8-121">To extract the full weekday name from a specific date</span></span>  
   
-1.  Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>\-Methode oder <xref:System.DateTimeOffset>\-Methode in einen <xref:System.DateTime.Parse%2A?displayProperty=fullName>\-Wert oder einen <xref:System.DateTimeOffset.Parse%2A?displayProperty=fullName>\-Wert.  
+1.  <span data-ttu-id="68cf8-122">Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>-Methode oder <xref:System.DateTimeOffset>-Methode in einen <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>-Wert oder einen <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>-Wert.</span><span class="sxs-lookup"><span data-stu-id="68cf8-122">If you are working with the string representation of a date, convert it to a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value by using the static <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  Sie können den vollen Wochentagsnamen der aktuellen Kultur oder einer bestimmten Kultur extrahieren:  
+2.  <span data-ttu-id="68cf8-123">Sie können den vollen Wochentagsnamen der aktuellen Kultur oder einer bestimmten Kultur extrahieren:</span><span class="sxs-lookup"><span data-stu-id="68cf8-123">You can extract the full weekday name of the current culture or of a specific culture:</span></span>  
   
-    1.  Um den Wochentagsnamen der aktuellen Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName>\- oder <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=fullName>\-Instanzmethode des Datums\- oder Zeitwerts auf und übergeben Sie die Zeichenfolge "dddd" als `format`\-Parameter. Im folgenden Beispiel wird das Aufrufen der <xref:System.DateTime.ToString%28System.String%29>\-Methode veranschaulicht.  
+    1.  <span data-ttu-id="68cf8-124">Um den Wochentagsnamen der aktuellen Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>- oder <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>-Instanzmethode des Datums- oder Zeitwerts auf und übergeben Sie die Zeichenfolge "dddd" als `format`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="68cf8-124">To extract the weekday name for the current culture, call the date and time value’s <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> instance method, and pass the string "dddd" as the `format` parameter.</span></span> <span data-ttu-id="68cf8-125">Im folgenden Beispiel wird das Aufrufen der <xref:System.DateTime.ToString%28System.String%29>-Methode veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="68cf8-125">The following example illustrates the call to the <xref:System.DateTime.ToString%28System.String%29> method.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  Um den Wochentagsnamen einer bestimmten Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName>\- oder <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=fullName>\-Instanzmethode des Datums\- oder Zeitwerts auf. Übergeben Sie die Zeichenfolge "dddd" als `format`\-Parameter. Übergeben Sie entweder ein <xref:System.Globalization.CultureInfo>\- oder ein <xref:System.Globalization.DateTimeFormatInfo>\-Objekt, das die Kultur darstellt, deren Wochentagsnamen Sie abrufen wollen, als `provider`\-Parameter. Der folgende Code veranschaulicht einen Aufruf der <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29>\-Methode mit einem <xref:System.Globalization.CultureInfo>\-Objekt, das die es\-ES\-Kultur darstellt.  
+    2.  <span data-ttu-id="68cf8-126">Um den Wochentagsnamen einer bestimmten Kultur zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>- oder <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>-Instanzmethode des Datums- oder Zeitwerts auf.</span><span class="sxs-lookup"><span data-stu-id="68cf8-126">To extract the weekday name for a specific culture, call the date and time value’s <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> instance method.</span></span> <span data-ttu-id="68cf8-127">Übergeben Sie die Zeichenfolge "dddd" als `format`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="68cf8-127">Pass the string "dddd" as the `format` parameter.</span></span> <span data-ttu-id="68cf8-128">Übergeben Sie entweder ein <xref:System.Globalization.CultureInfo>- oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, das die Kultur darstellt, deren Wochentagsnamen Sie abrufen wollen, als `provider`-Parameter.</span><span class="sxs-lookup"><span data-stu-id="68cf8-128">Pass either a <xref:System.Globalization.CultureInfo> or a <xref:System.Globalization.DateTimeFormatInfo> object that represents the culture whose weekday name you want to retrieve as the `provider` parameter.</span></span> <span data-ttu-id="68cf8-129">Der folgende Code veranschaulicht einen Aufruf der <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode mit einem <xref:System.Globalization.CultureInfo>-Objekt, das die es-ES-Kultur darstellt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-129">The following code illustrates a call to the <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> method using a <xref:System.Globalization.CultureInfo> object that represents the es-ES culture.</span></span>  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
   
-## Beispiel  
- Das Beispiel veranschaulicht Aufrufe der <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName>\- und <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=fullName>\-Eigenschaften sowie der <xref:System.DateTime.ToString%2A?displayProperty=fullName>\- und der <xref:System.DateTimeOffset.ToString%2A?displayProperty=fullName>\-Methode zum Abrufen der Nummer, die den Wochentag, den abgekürzten Wochentagsnamen und den vollen Wochentagsnamen für ein bestimmtes Datum darstellt.  
+## <a name="example"></a><span data-ttu-id="68cf8-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="68cf8-130">Example</span></span>  
+ <span data-ttu-id="68cf8-131">Das Beispiel veranschaulicht Aufrufe der <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType>- und <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType>-Eigenschaften sowie der <xref:System.DateTime.ToString%2A?displayProperty=nameWithType>- und der <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType>-Methode zum Abrufen der Nummer, die den Wochentag, den abgekürzten Wochentagsnamen und den vollen Wochentagsnamen für ein bestimmtes Datum darstellt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-131">The example illustrates calls to the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> and <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> properties and the <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> and <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> methods to retrieve the number that represents the day of the week, the abbreviated weekday name, and the full weekday name for a particular date.</span></span>  
   
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- Einzelne Sprachen verfügen gegebenenfalls über Funktionen, die die von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verfügung gestellte Funktion duplizieren oder ergänzen. Visual Basic verfügt beispielsweise über zwei solcher Funktionen:  
+ <span data-ttu-id="68cf8-132">Einzelne Sprachen verfügen gegebenenfalls über Funktionen, die die von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verfügung gestellte Funktion duplizieren oder ergänzen.</span><span class="sxs-lookup"><span data-stu-id="68cf8-132">Individual languages may provide functionality that duplicates or supplements the functionality provided by the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="68cf8-133">Visual Basic verfügt beispielsweise über zwei solcher Funktionen:</span><span class="sxs-lookup"><span data-stu-id="68cf8-133">For example, Visual Basic includes two such functions:</span></span>  
   
--   `Weekday`, die eine Zahl zurückgibt, die den Wochentag eines bestimmten Datums anzeigt. Sie betrachtet den Ordinalwert des ersten Wochentags als eins, während die <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName>\-Eigenschaft ihn als null betrachtet.  
+-   <span data-ttu-id="68cf8-134">`Weekday`, die eine Zahl zurückgibt, die den Wochentag eines bestimmten Datums anzeigt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-134">`Weekday`, which returns a number that indicates the day of the week of a particular date.</span></span> <span data-ttu-id="68cf8-135">Sie betrachtet den Ordinalwert des ersten Wochentags als eins, während die <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType>-Eigenschaft ihn als null betrachtet.</span><span class="sxs-lookup"><span data-stu-id="68cf8-135">It considers the ordinal value of the first day of the week to be one, whereas the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> property considers it to be zero.</span></span>  
   
--   `WeekdayName`, die den Namen des Wochentags in der aktuellen Kultur zurückgibt, der der Nummer eines bestimmten Wochentags entspricht.  
+-   <span data-ttu-id="68cf8-136">`WeekdayName`, die den Namen des Wochentags in der aktuellen Kultur zurückgibt, der der Nummer eines bestimmten Wochentags entspricht.</span><span class="sxs-lookup"><span data-stu-id="68cf8-136">`WeekdayName`, which returns the name of the week in the current culture that corresponds to a particular weekday number.</span></span>  
   
- Das folgende Beispiel veranschaulicht die Verwendung der `Weekday`\- und `WeekdayName`\-Funktionen in Visual Basic.  
+ <span data-ttu-id="68cf8-137">Das folgende Beispiel veranschaulicht die Verwendung der `Weekday`- und `WeekdayName`-Funktionen in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="68cf8-137">The following example illustrates the use of the Visual Basic `Weekday` and `WeekdayName` functions.</span></span>  
   
  [!code-vb[Formatting.HowTo.WeekdayName#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example9.vb#9)]  
   
- Sie können auch den von der <xref:System.DateTime.DayOfWeek%2A?displayProperty=fullName>\-Eigenschaft zurückgegebenen Wert verwenden, um den Wochentagsnamen eines bestimmten Datums abzurufen. Dies erfordert lediglich einen Aufruf der <xref:System.Enum.ToString%2A>\-Methode auf dem von der Eigenschaft zurückgegebenen <xref:System.DayOfWeek>\-Wert. Diese Vorgehensweise erzeugt jedoch nicht den lokalisierten Wochentagsnamen für die aktuelle Kultur, wie das folgende Beispiel zeigt.  
+ <span data-ttu-id="68cf8-138">Sie können auch den von der <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebenen Wert verwenden, um den Wochentagsnamen eines bestimmten Datums abzurufen.</span><span class="sxs-lookup"><span data-stu-id="68cf8-138">You can also use the value returned by the <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> property to retrieve the weekday name of a particular date.</span></span> <span data-ttu-id="68cf8-139">Dies erfordert lediglich einen Aufruf der <xref:System.Enum.ToString%2A>-Methode auf dem von der Eigenschaft zurückgegebenen <xref:System.DayOfWeek>-Wert.</span><span class="sxs-lookup"><span data-stu-id="68cf8-139">This requires only a call to the <xref:System.Enum.ToString%2A> method on the <xref:System.DayOfWeek> value returned by the property.</span></span> <span data-ttu-id="68cf8-140">Diese Vorgehensweise erzeugt jedoch nicht den lokalisierten Wochentagsnamen für die aktuelle Kultur, wie das folgende Beispiel zeigt.</span><span class="sxs-lookup"><span data-stu-id="68cf8-140">However, this technique does not produce a localized weekday name for the current culture, as the following example illustrates.</span></span>  
   
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]  
   
-## Siehe auch  
- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [Standard\-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)   
- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a><span data-ttu-id="68cf8-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="68cf8-141">See Also</span></span>  
+ [<span data-ttu-id="68cf8-142">Durchführen von Formatierungsvorgängen</span><span class="sxs-lookup"><span data-stu-id="68cf8-142">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [<span data-ttu-id="68cf8-143">Standard Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="68cf8-143">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [<span data-ttu-id="68cf8-144">Custom Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="68cf8-144">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

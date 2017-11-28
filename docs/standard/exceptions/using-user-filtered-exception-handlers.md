@@ -1,30 +1,33 @@
 ---
-title: "Verwenden benutzergefilterter Ausnahmehandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ausnahmen, Benutzergefiltert"
-  - "Benutzergefilterte Ausnahmen"
+title: Verwenden benutzergefilterter Ausnahmehandler
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-filtered exceptions
+- exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a71a722063448fb0d568f4bfb4f71d4e01c57454
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verwenden benutzergefilterter Ausnahmehandler
-Visual Basic unterstützt benutzergefilterte Ausnahmen.  Benutzergefilterte Handler fangen und behandeln Ausnahmen gemäß benutzerdefinierten Ausnahmebedingungen.  Diese Handler verwenden die **Catch**\-Anweisung mit dem Schlüsselwort **When**.  
+# <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="35d0a-102">Verwenden benutzergefilterter Ausnahmehandler</span><span class="sxs-lookup"><span data-stu-id="35d0a-102">Using User-Filtered Exception Handlers</span></span>
+<span data-ttu-id="35d0a-103">Visual Basic unterstützt benutzergefilterte Ausnahmen.</span><span class="sxs-lookup"><span data-stu-id="35d0a-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="35d0a-104">Benutzergefilterte Handler fangen und behandeln Ausnahmen gemäß benutzerdefinierten Ausnahmeanforderungen.</span><span class="sxs-lookup"><span data-stu-id="35d0a-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="35d0a-105">In diesen Handlern wird die **Catch**-Anweisung mit dem Schlüsselwort **When** verwendet.</span><span class="sxs-lookup"><span data-stu-id="35d0a-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  
   
- Dieses Verfahren ist nützlich, wenn ein bestimmtes einzelnes Ausnahmeobjekt mehreren Fehlern entspricht.  In diesem Fall verfügt das Objekt in der Regel über eine Eigenschaft, die den spezifischen, mit dem Fehler verknüpften Fehlercode enthält.  Die den Fehlercode enthaltende Eigenschaft kann im Ausdruck dazu verwendet werden, nur einen ganz bestimmten Fehler auszuwählen, der in der **Catch**\-Klausel behandelt werden soll.  
+ <span data-ttu-id="35d0a-106">Dieses Verfahren ist nützlich, wenn ein bestimmtes Ausnahmeobjekt mehreren Fehlern entspricht.</span><span class="sxs-lookup"><span data-stu-id="35d0a-106">This technique is useful when a particular exception object corresponds to multiple errors.</span></span> <span data-ttu-id="35d0a-107">In diesem Fall hat das Objekt in der Regel eine Eigenschaft, die den speziellen Fehlercode enthält, der mit dem Fehler verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="35d0a-107">In this case, the object typically has a property that contains the specific error code associated with the error.</span></span> <span data-ttu-id="35d0a-108">Sie können die Eigenschaft, die den Fehlercode enthält, im Ausdruck dazu verwenden, nur den bestimmten Fehler auszuwählen, den Sie in dieser **Catch**-Klausel behandeln möchten.</span><span class="sxs-lookup"><span data-stu-id="35d0a-108">You can use the error code property in the expression to select only the particular error you want to handle in that **Catch** clause.</span></span>  
   
- Das folgende Beispiel in Visual Basic veranschaulicht die **Catch\/When**\-Anweisung.  
+ <span data-ttu-id="35d0a-109">Im folgenden Visual Basic-Beispiel wird die **Catch/When**-Anweisung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="35d0a-109">The following Visual Basic example illustrates the **Catch/When** statement.</span></span>  
   
 ```  
 Try  
@@ -34,12 +37,12 @@ Try
 End Try  
 ```  
   
- Der Ausdruck mit der benutzergefilterten Klausel enthält keinerlei Einschränkungen.  Wenn während der Ausführung des benutzergefilterten Ausdrucks eine Ausnahme auftritt, wird diese Ausnahme verworfen, und der Filterausdruck wird als false betrachtet.  In diesem Fall setzt die Common Language Runtime die Suche nach einem Handler für die aktuelle Ausnahme fort.  
+ <span data-ttu-id="35d0a-110">Der Ausdruck der benutzergefilterten Klausel ist in keiner Weise eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="35d0a-110">The expression of the user-filtered clause is not restricted in any way.</span></span> <span data-ttu-id="35d0a-111">Tritt während der Ausführung des benutzergefilterten Ausdrucks eine Ausnahme auf, wird diese Ausnahme verworfen, und der Filterausdruck wird so bewertet, als habe er das Ergebnis „false“ gehabt.</span><span class="sxs-lookup"><span data-stu-id="35d0a-111">If an exception occurs during execution of the user-filtered expression, that exception is discarded and the filter expression is considered to have evaluated to false.</span></span> <span data-ttu-id="35d0a-112">In diesem Fall setzt die Common Language Runtime die Suche nach einem Handler für die aktuelle Ausnahme fort.</span><span class="sxs-lookup"><span data-stu-id="35d0a-112">In this case, the common language runtime continues the search for a handler for the current exception.</span></span>  
   
-## Kombinieren von Klauseln mit spezifischen Ausnahmen und Benutzerfiltern  
- Eine **catch**\-Anweisung kann sowohl Klauseln mit einer spezifischen Ausnahme als auch mit einem Benutzerfilter enthalten.  Die CLR prüft zuerst die spezifische Ausnahme.  Ist die spezifische Ausnahme erfolgreich, führt die CLR den Benutzerfilter aus.  Der allgemeine Filter kann einen Verweis auf eine im Klassenfilter deklarierte Variable enthalten.  Beachten Sie, dass die Reihenfolge von zwei Filterklauseln nicht umkehrbar ist.  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a><span data-ttu-id="35d0a-113">Kombinieren der speziellen Ausnahme und der benutzergefilterten Klauseln</span><span class="sxs-lookup"><span data-stu-id="35d0a-113">Combining the Specific Exception and the User-Filtered Clauses</span></span>  
+ <span data-ttu-id="35d0a-114">Eine Catch-Anweisung kann sowohl die spezielle Ausnahme als auch die benutzergefilterten Klauseln enthalten.</span><span class="sxs-lookup"><span data-stu-id="35d0a-114">A catch statement can contain both the specific exception and the user-filtered clauses.</span></span> <span data-ttu-id="35d0a-115">Die Runtime prüft zuerst die spezielle Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="35d0a-115">The runtime tests the specific exception first.</span></span> <span data-ttu-id="35d0a-116">Wird die spezielle Ausnahme erfolgreich abgefangen, führt die Runtime den Benutzerfilter aus.</span><span class="sxs-lookup"><span data-stu-id="35d0a-116">If the specific exception succeeds, the runtime executes the user filter.</span></span> <span data-ttu-id="35d0a-117">Der allgemeine Filter kann einen Verweis auf die Variable enthalten, die im Klassenfilter deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="35d0a-117">The generic filter can contain a reference to the variable declared in the class filter.</span></span> <span data-ttu-id="35d0a-118">Die Reihenfolge der beiden Filterklauseln nicht umgekehrt werden.</span><span class="sxs-lookup"><span data-stu-id="35d0a-118">Note that the order of the two filter clauses cannot be reversed.</span></span>  
   
- Das folgende Beispiel in Visual Basic zeigt die spezifische Ausnahme `ClassLoadException` in der **Catch**\-Anweisung sowie die benutzergefilterte Klausel mit dem Schlüsselwort **When**.  
+ <span data-ttu-id="35d0a-119">Im folgenden Visual Basic-Beispiel werden die spezielle Ausnahme `ClassLoadException` in der **Catch**-Anweisung sowie die benutzergefilterte Klausel mit dem Schlüsselwort **When** veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="35d0a-119">The following Visual Basic example shows the specific exception `ClassLoadException` in the **Catch** statement as well as the user-filtered clause using the **When** keyword.</span></span>  
   
 ```  
 Try  
@@ -48,9 +51,6 @@ Try
       'Catch statements.  
 End Try  
 ```  
-  
-## Siehe auch  
- [Gewusst wie: Verwenden des Try\-Catch\-Blocks zum Abfangen von Ausnahmen](../../../docs/standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md)   
- [Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch\-Block](../../../docs/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)   
- [Best Practices für Ausnahmen](../../../docs/standard/exceptions/best-practices-for-exceptions.md)   
- [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+
+## <a name="see-also"></a><span data-ttu-id="35d0a-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="35d0a-120">See Also</span></span>
+[<span data-ttu-id="35d0a-121">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="35d0a-121">Exceptions</span></span>](index.md)

@@ -9,50 +9,47 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="porting-to-net-core-from-net-framework"></a><span data-ttu-id="0371c-104">Portieren von .NET Framework auf .NET Core</span><span class="sxs-lookup"><span data-stu-id="0371c-104">Porting to .NET Core from .NET Framework</span></span>
 
-# <a name="porting-to-net-core-from-net-framework"></a>Portieren von .NET Framework auf .NET Core
+<span data-ttu-id="0371c-105">Wenn Code auf .NET Framework ausgeführt wird, sind Sie vielleicht interessiert daran, Ihren Code auf .NET Core 1.0 auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0371c-105">If you've got code running on the .NET Framework, you may be interested in running your code on .NET Core 1.0.</span></span>  <span data-ttu-id="0371c-106">Dieser Artikel enthält eine Übersicht über den Portiervorgang und eine Liste der Tools, die während des Portierens auf .NET Core hilfreich sein können.</span><span class="sxs-lookup"><span data-stu-id="0371c-106">This article covers an overview of the porting process and a list of the tools you may find helpful when porting to .NET Core.</span></span>
 
-Wenn Code auf .NET Framework ausgeführt wird, sind Sie vielleicht interessiert daran, Ihren Code auf .NET Core 1.0 auszuführen.  Dieser Artikel enthält eine Übersicht über den Portiervorgang und eine Liste der Tools, die während des Portierens auf .NET Core hilfreich sein können.
+## <a name="overview-of-the-porting-process"></a><span data-ttu-id="0371c-107">Übersicht über den Portiervorgang</span><span class="sxs-lookup"><span data-stu-id="0371c-107">Overview of the Porting Process</span></span>
 
-## <a name="overview-of-the-porting-process"></a>Übersicht über den Portiervorgang
+<span data-ttu-id="0371c-108">Die empfohlene Vorgehensweise für das Portieren ist in den folgenden Schritten dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0371c-108">The recommended process for porting follows the following series of steps.</span></span>  <span data-ttu-id="0371c-109">Jeder Teil dieses Vorgangs wird in weiteren Artikeln genauer erläutert.</span><span class="sxs-lookup"><span data-stu-id="0371c-109">Each of these parts of the process are covered in more detail in further articles.</span></span>
 
-Die empfohlene Vorgehensweise für das Portieren ist in den folgenden Schritten dargestellt.  Jeder Teil dieses Vorgangs wird in weiteren Artikeln genauer erläutert.
+1. <span data-ttu-id="0371c-110">Identifizieren Sie sich und weisen Sie sich für Ihre Drittanbieter-Abhängigkeiten aus.</span><span class="sxs-lookup"><span data-stu-id="0371c-110">Identify and account for your third-party dependencies.</span></span>
 
-1. Identifizieren Sie sich und weisen Sie sich für Ihre Drittanbieter-Abhängigkeiten aus.
-
-   Sie müssen verstehen, was Ihre Drittanbieter-Abhängigkeiten sind, wie Sie von diesen abhängig sind, wie Sie überprüfen können, ob sie ebenso auf .NET Core ausgeführt werden, und welche Schritte Sie durchführen können, falls sie es nicht tun.
+   <span data-ttu-id="0371c-111">Sie müssen verstehen, was Ihre Drittanbieter-Abhängigkeiten sind, wie Sie von diesen abhängig sind, wie Sie überprüfen können, ob sie ebenso auf .NET Core ausgeführt werden, und welche Schritte Sie durchführen können, falls sie es nicht tun.</span><span class="sxs-lookup"><span data-stu-id="0371c-111">This will involve understanding what your third-party dependencies are, how you depend on them, how to see if they also run on .NET Core, and steps you can take if they don't.</span></span>
    
-2. Legen Sie .NET Framework 4.6.2 als neues Ziel für alle Projekte fest, die Sie portieren möchten.
+2. <span data-ttu-id="0371c-112">Legen Sie .NET Framework 4.6.2 als neues Ziel für alle Projekte fest, die Sie portieren möchten.</span><span class="sxs-lookup"><span data-stu-id="0371c-112">Retarget all projects you wish to port to target .NET Framework 4.6.2.</span></span>
 
-   Dadurch wird sichergestellt, dass Sie API-Alternativen für bestimmte .NET Framework-Ziele in Fällen verwenden können, in denen .NET Core eine bestimmte API nicht unterstützen kann.
+   <span data-ttu-id="0371c-113">Dadurch wird sichergestellt, dass Sie API-Alternativen für bestimmte .NET Framework-Ziele in Fällen verwenden können, in denen .NET Core eine bestimmte API nicht unterstützen kann.</span><span class="sxs-lookup"><span data-stu-id="0371c-113">This ensures that you can use API alternatives for .NET Framework-specific targets in the cases where .NET Core can't support a particular API.</span></span>
    
-3. Verwenden Sie das [Tool zum Analysieren der API-Portabilität](https://github.com/Microsoft/dotnet-apiport/), um Ihre Assemblys zu analysieren, und um einen Plan zum Portieren auf Grundlage der Ergebnisse zu entwickeln.
+3. <span data-ttu-id="0371c-114">Verwenden Sie das [Tool zum Analysieren der API-Portabilität](https://github.com/Microsoft/dotnet-apiport/), um Ihre Assemblys zu analysieren, und um einen Plan zum Portieren auf Grundlage der Ergebnisse zu entwickeln.</span><span class="sxs-lookup"><span data-stu-id="0371c-114">Use the [API Portability Analyzer tool](https://github.com/Microsoft/dotnet-apiport/) to analyze your assemblies and develop a plan to port based on its results.</span></span>
 
-   Das Tool zum Analysieren der API-Portabilität analysiert Ihre kompilierten Assemblys und generiert einen Bericht, der eine allgemeine Zusammenfassung über die Portabilität sowie einen Strukturplan jeder API anzeigt, die Sie verwenden, und die nicht auf .NET Core verfügbar ist.  Sie können diesen Bericht zusammen mit einer Analyse Ihrer Codebase verwenden, um einen Plan zum Portieren Ihres Codes zu entwickeln.
+   <span data-ttu-id="0371c-115">Das Tool zum Analysieren der API-Portabilität analysiert Ihre kompilierten Assemblys und generiert einen Bericht, der eine allgemeine Zusammenfassung über die Portabilität sowie einen Strukturplan jeder API anzeigt, die Sie verwenden, und die nicht auf .NET Core verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="0371c-115">The API Portability Analyzer tool will analyze your compiled assemblies and generate a report which shows a high-level portability summary and a breakdown of each API you're using that isn't available on .NET Core.</span></span>  <span data-ttu-id="0371c-116">Sie können diesen Bericht zusammen mit einer Analyse Ihrer Codebase verwenden, um einen Plan zum Portieren Ihres Codes zu entwickeln.</span><span class="sxs-lookup"><span data-stu-id="0371c-116">You can use this report alongside an analysis of your codebase to develop a plan for how you'll port your code over.</span></span>
    
-4. Portieren Sie Ihre Testcodes.
+4. <span data-ttu-id="0371c-117">Portieren Sie Ihre Testcodes.</span><span class="sxs-lookup"><span data-stu-id="0371c-117">Port your tests code.</span></span>
 
-   Da das Portieren auf .NET Core solch eine große Änderung für Ihre Codebase darstellt, wird empfohlen, Ihre Tests zu portieren, damit Sie Tests ausführen können, wenn Sie Code portieren.  MSTest, xUnit und NUnit unterstützen derzeit alle .NET Core 1.0.
+   <span data-ttu-id="0371c-118">Da das Portieren auf .NET Core solch eine große Änderung für Ihre Codebase darstellt, wird empfohlen, Ihre Tests zu portieren, damit Sie Tests ausführen können, wenn Sie Code portieren.</span><span class="sxs-lookup"><span data-stu-id="0371c-118">Because porting to .NET Core is such a big change to your codebase, it's highly recommended to get your tests ported so that you can run tests as you port code over.</span></span>  <span data-ttu-id="0371c-119">MSTest, xUnit und NUnit unterstützen derzeit alle .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="0371c-119">MSTest, xUnit, and NUnit all support .NET Core 1.0 today.</span></span>
    
-6. Führen Sie Ihren Plan zum Portieren aus!
+6. <span data-ttu-id="0371c-120">Führen Sie Ihren Plan zum Portieren aus!</span><span class="sxs-lookup"><span data-stu-id="0371c-120">Execute your plan for porting!</span></span>
 
-## <a name="tools-to-help"></a>Hilfetools
+## <a name="tools-to-help"></a><span data-ttu-id="0371c-121">Hilfetools</span><span class="sxs-lookup"><span data-stu-id="0371c-121">Tools to help</span></span>
 
-Nachstehend finden Sie eine Liste der Tools, die hilfreich sein können:
+<span data-ttu-id="0371c-122">Nachstehend finden Sie eine Liste der Tools, die hilfreich sein können:</span><span class="sxs-lookup"><span data-stu-id="0371c-122">Here's a short list of the tools you'll find helpful:</span></span>
 
-* NuGet – [Nuget Client](https://dist.nuget.org/index.html) oder [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) sind die Paket-Manager von Microsoft für .NET-Implementierungen.
-* API Portability Analyzer – [Befehlszeilentool ](https://github.com/Microsoft/dotnet-apiport/releases) oder [Visual Studio-Erweiterung](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b); eine Toolkette, die einen Bericht generieren kann, der aussagt, wie portierbar Ihr Code zwischen .NET Framework und .NET Core ist, mithilfe einem Assembly-zu-Assymbly-Strukturplan der Fehler.  Weitere Informationen finden Sie unter [Tooling to help you on the process (Tools für den Vorgang)](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
-* Reverse Package Search – ein [nützlicher Webdienst](https://packagesearch.azurewebsites.net), mit dem Sie einen Typ suchen können und Pakete finden können, die diesen Typ enthalten.
+* <span data-ttu-id="0371c-123">NuGet – [Nuget Client](https://dist.nuget.org/index.html) oder [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) sind die Paket-Manager von Microsoft für .NET-Implementierungen.</span><span class="sxs-lookup"><span data-stu-id="0371c-123">NuGet - [Nuget Client](https://dist.nuget.org/index.html) or [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), Microsoft's package manager for .NET implementations.</span></span>
+* <span data-ttu-id="0371c-124">API Portability Analyzer – [Befehlszeilentool ](https://github.com/Microsoft/dotnet-apiport/releases) oder [Visual Studio-Erweiterung](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b); eine Toolkette, die einen Bericht generieren kann, der aussagt, wie portierbar Ihr Code zwischen .NET Framework und .NET Core ist, mithilfe einem Assembly-zu-Assymbly-Strukturplan der Fehler.</span><span class="sxs-lookup"><span data-stu-id="0371c-124">Api Portability Analyzer - [command line tool](https://github.com/Microsoft/dotnet-apiport/releases) or [Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), a toolchain that can generate a report of how portable your code is between .NET Framework and .NET Core, with an assembly-by-assembly breakdown of issues.</span></span>  <span data-ttu-id="0371c-125">Weitere Informationen finden Sie unter [Tooling to help you on the process (Tools für den Vorgang)](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).</span><span class="sxs-lookup"><span data-stu-id="0371c-125">See [Tooling to help you on the process](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) for more information.</span></span>
+* <span data-ttu-id="0371c-126">Reverse Package Search – ein [nützlicher Webdienst](https://packagesearch.azurewebsites.net), mit dem Sie einen Typ suchen können und Pakete finden können, die diesen Typ enthalten.</span><span class="sxs-lookup"><span data-stu-id="0371c-126">Reverse Package Search - A [useful web service](https://packagesearch.azurewebsites.net) that allows you to search for a type and find packages containing that type.</span></span>
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a><span data-ttu-id="0371c-127">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="0371c-127">Next steps</span></span>
 
-[Porting to .NET Core - Analyzing your Third-Party Dependencies (Portieren auf.NET Core – Analysieren Ihrer Drittanbieter-Abhängigkeiten)](third-party-deps.md)
+[<span data-ttu-id="0371c-128">Porting to .NET Core - Analyzing your Third-Party Dependencies (Portieren auf.NET Core – Analysieren Ihrer Drittanbieter-Abhängigkeiten)</span><span class="sxs-lookup"><span data-stu-id="0371c-128">Analyzing your third-party dependencies.</span></span>](third-party-deps.md)
    
-

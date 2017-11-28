@@ -1,52 +1,32 @@
 ---
 title: 'Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert (C#-Programmierhandbuch)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- strings [C#], converting to DateTIme
+helpviewer_keywords: strings [C#], converting to DateTIme
 ms.assetid: 88abef11-3a06-4b49-8dd2-61ed0e876fc3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b459f245f0090fff16918bceb12a0082f6944331
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert (C#-Programmierhandbuch)
-Es ist in Programmen üblich, Benutzern die Eingabe von Datumsangaben als Zeichenfolgenwerte zu ermöglichen. Um ein zeichenfolgenbasiertes Datum in ein <xref:System.DateTime?displayProperty=fullName> -Objekt zu konvertieren, können Sie die <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> -Methode oder die statische <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> -Methode verwenden, wie im folgenden Beispiel dargestellt.  
+# <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a><span data-ttu-id="d9c1c-102">Gewusst wie: Konvertieren einer Zeichenfolge in einen DateTime-Wert (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="d9c1c-102">How to: Convert a String to a DateTime (C# Programming Guide)</span></span>
+<span data-ttu-id="d9c1c-103">Es ist in Programmen üblich, Benutzern die Eingabe von Datumsangaben als Zeichenfolgenwerte zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-103">It is common for programs to enable users to enter dates as string values.</span></span> <span data-ttu-id="d9c1c-104">Um ein zeichenfolgenbasiertes Datum in ein <xref:System.DateTime?displayProperty=nameWithType> -Objekt zu konvertieren, können Sie die <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType> -Methode oder die statische <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> -Methode verwenden, wie im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-104">To convert a string-based date to a <xref:System.DateTime?displayProperty=nameWithType> object, you can use the <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType> method or the <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> static method, as shown in the following example.</span></span>  
   
- **Kultur**.  Datumsangaben werden weltweit je nach Kultur unterschiedlich geschrieben.  In den USA entspricht 01/20/2008 z. B. dem 20. Januar 2008.  In Frankreich wird dadurch eine InvalidFormatException ausgelöst. Dies liegt daran, dass Datumsangaben in Frankreich als Tag/Monat/Jahr und in den USA als Monat/Tag/Jahr gelesen werden.  
+ <span data-ttu-id="d9c1c-105">**Kultur**.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-105">**Culture**.</span></span>  <span data-ttu-id="d9c1c-106">Datumsangaben werden weltweit je nach Kultur unterschiedlich geschrieben.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-106">Different cultures in the world write date strings in different ways.</span></span>  <span data-ttu-id="d9c1c-107">In den USA entspricht 01/20/2008 z. B. dem 20. Januar 2008.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-107">For example, in the US 01/20/2008 is January 20th, 2008.</span></span>  <span data-ttu-id="d9c1c-108">In Frankreich wird dadurch eine InvalidFormatException ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-108">In France this will throw an InvalidFormatException.</span></span> <span data-ttu-id="d9c1c-109">Dies liegt daran, dass Datumsangaben in Frankreich als Tag/Monat/Jahr und in den USA als Monat/Tag/Jahr gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-109">This is because France reads date-times as Day/Month/Year, and in the US it is Month/Day/Year.</span></span>  
   
- Daher wird eine Zeichenfolge wie 20/01/2008 in Frankreich als 20. Januar 2008 interpretiert, während sie in den USA eine InvalidFormatException auslöst.  
+ <span data-ttu-id="d9c1c-110">Daher wird eine Zeichenfolge wie 20/01/2008 in Frankreich als 20. Januar 2008 interpretiert, während sie in den USA eine InvalidFormatException auslöst.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-110">Consequently, a string like 20/01/2008 will parse to January 20th, 2008 in France, and then throw an InvalidFormatException in the US.</span></span>  
   
- Zum Ermitteln der aktuellen Kultureinstellungen können Sie System.Globalization.CultureInfo.CurrentCulture verwenden.  
+ <span data-ttu-id="d9c1c-111">Zum Ermitteln der aktuellen Kultureinstellungen können Sie System.Globalization.CultureInfo.CurrentCulture verwenden.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-111">To determine your current culture settings, you can use System.Globalization.CultureInfo.CurrentCulture.</span></span>  
   
- Im Folgenden finden Sie ein einfaches Beispiel für das Konvertieren einer Zeichenfolge in dateTime.  
+ <span data-ttu-id="d9c1c-112">Im Folgenden finden Sie ein einfaches Beispiel für das Konvertieren einer Zeichenfolge in dateTime.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-112">See the example below for a simple example of converting a string to dateTime.</span></span>  
   
- Weitere Beispiele für Datumszeichenfolgen finden Sie unter <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
+ <span data-ttu-id="d9c1c-113">Weitere Beispiele für Datumszeichenfolgen finden Sie unter <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d9c1c-113">For more examples of date strings, see <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType>.</span></span>  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -69,9 +49,8 @@ Press any key to continue . . .
  */  
 ```  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
+## <a name="example"></a><span data-ttu-id="d9c1c-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d9c1c-114">Example</span></span>  
+ [!code-csharp[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d9c1c-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9c1c-115">See Also</span></span>  
+ [<span data-ttu-id="d9c1c-116">Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="d9c1c-116">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)

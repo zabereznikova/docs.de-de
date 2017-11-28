@@ -5,59 +5,56 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f86ddcb86f3361665498ca0e34bf9147338551
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Minderung: Deserialisierung von Objekten über App-Domänen
-In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.  
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a><span data-ttu-id="da520-102">Minderung: Deserialisierung von Objekten über App-Domänen</span><span class="sxs-lookup"><span data-stu-id="da520-102">Mitigation: Deserialization of Objects Across App Domains</span></span>
+<span data-ttu-id="da520-103">In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.</span><span class="sxs-lookup"><span data-stu-id="da520-103">In some cases, when an app uses two or more app domains with different application bases, the attempt to deserialize objects in the logical call context across app domains throws an exception.</span></span>  
   
-## <a name="diagnosing-the-issue"></a>Diagnose des Problems  
- Das Problem tritt bei der folgenden Abfolge von Bedingungen auf:  
+## <a name="diagnosing-the-issue"></a><span data-ttu-id="da520-104">Diagnose des Problems</span><span class="sxs-lookup"><span data-stu-id="da520-104">Diagnosing the issue</span></span>  
+ <span data-ttu-id="da520-105">Das Problem tritt bei der folgenden Abfolge von Bedingungen auf:</span><span class="sxs-lookup"><span data-stu-id="da520-105">The issue arises under the following sequence of conditions:</span></span>  
   
-1.  Eine Anwendung verwendet zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen.  
+1.  <span data-ttu-id="da520-106">Eine Anwendung verwendet zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen.</span><span class="sxs-lookup"><span data-stu-id="da520-106">An app uses two or more app domains with different application bases.</span></span>  
   
-2.  Einige Typen werden explizit zu <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> hinzugefügt, indem eine Methode wie <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> oder <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName> aufgerufen wird. Diese Typen werden nicht als serialisierbar markiert und werden nicht im globalen Assemblycache gespeichert.  
+2.  <span data-ttu-id="da520-107">Einige Typen werden explizit zu <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> hinzugefügt, indem eine Methode wie <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> oder <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType> aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="da520-107">Some types are explicitly added to the <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> by calling a method such as <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> or <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="da520-108">Diese Typen werden nicht als serialisierbar markiert und werden nicht im globalen Assemblycache gespeichert.</span><span class="sxs-lookup"><span data-stu-id="da520-108">These types are not marked as serializable and are not stored in the global assembly cache.</span></span>  
   
-3.  Später versucht Code, der in der nicht standardmäßigen App-Domäne ausgeführt wird, einen Wert aus einer Konfigurationsdatei zu lesen oder XML für die Deserialisierung eines Objekts zu verwenden.  
+3.  <span data-ttu-id="da520-109">Später versucht Code, der in der nicht standardmäßigen App-Domäne ausgeführt wird, einen Wert aus einer Konfigurationsdatei zu lesen oder XML für die Deserialisierung eines Objekts zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="da520-109">Later, code running in the non-default app domain tries to read a value from a configuration file or use XML to deserialize an object.</span></span>  
   
-4.  Um aus einer Konfigurationsdatei zu lesen oder das Objekt zu deserialisieren, versucht ein <xref:System.Xml.XmlReader>-Objekt auf das Konfigurationssystem zuzugreifen.  
+4.  <span data-ttu-id="da520-110">Um aus einer Konfigurationsdatei zu lesen oder das Objekt zu deserialisieren, versucht ein <xref:System.Xml.XmlReader>-Objekt auf das Konfigurationssystem zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="da520-110">In order to read from a configuration file or deserialize the object, an <xref:System.Xml.XmlReader> object tries to access the configuration system.</span></span>  
   
-5.  Wenn das Konfigurationssystem noch nicht initialisiert wurde, muss es seine Initialisierung abschließen. Dies bedeutet unter anderem, dass die Laufzeit wie folgt einen stabilen Pfad für ein Konfigurationssystem erstellen muss:  
+5.  <span data-ttu-id="da520-111">Wenn das Konfigurationssystem noch nicht initialisiert wurde, muss es seine Initialisierung abschließen.</span><span class="sxs-lookup"><span data-stu-id="da520-111">If the configuration system has not already been initialized, it must complete its initialization.</span></span> <span data-ttu-id="da520-112">Dies bedeutet unter anderem, dass die Laufzeit wie folgt einen stabilen Pfad für ein Konfigurationssystem erstellen muss:</span><span class="sxs-lookup"><span data-stu-id="da520-112">This means, among other things, that the runtime has to create a stable path for a configuration system, which it does as follows:</span></span>  
   
-    1.  Sie sucht nach einem Beweis für die nicht standardmäßige App-Domäne.  
+    1.  <span data-ttu-id="da520-113">Sie sucht nach einem Beweis für die nicht standardmäßige App-Domäne.</span><span class="sxs-lookup"><span data-stu-id="da520-113">It looks for evidence for the non-default app domain.</span></span>  
   
-    2.  Sie versucht, den Beweis für die nicht standardmäßige App-Domäne auf Grundlage der Standard-App-Domäne zu berechnen.  
+    2.  <span data-ttu-id="da520-114">Sie versucht, den Beweis für die nicht standardmäßige App-Domäne auf Grundlage der Standard-App-Domäne zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="da520-114">It tries to calculate the evidence for the non-default app domain based on the default app domain.</span></span>  
   
-    3.  Der Aufruf, um einen Beweis für die Standard-App-Domäne zu erhalten, löst einen Aufruf über die App-Domänen hinweg auf, der von der nicht standardmäßigen App-Domäne zur Standard-App-Domäne verläuft.  
+    3.  <span data-ttu-id="da520-115">Der Aufruf, um einen Beweis für die Standard-App-Domäne zu erhalten, löst einen Aufruf über die App-Domänen hinweg auf, der von der nicht standardmäßigen App-Domäne zur Standard-App-Domäne verläuft.</span><span class="sxs-lookup"><span data-stu-id="da520-115">The call to get evidence for the default app domain triggers a cross-app domain call from the non-default app domain to the default app domain.</span></span>  
   
-    4.  Im Rahmen des über die App-Domänengrenzen hinweg geltenden Vertrags in .NET Framework muss der Inhalt des logischen Aufrufkontexts auch über App-Domänengrenzen hinweg gemarshallt werden.  
+    4.  <span data-ttu-id="da520-116">Im Rahmen des über die App-Domänengrenzen hinweg geltenden Vertrags in .NET Framework muss der Inhalt des logischen Aufrufkontexts auch über App-Domänengrenzen hinweg gemarshallt werden.</span><span class="sxs-lookup"><span data-stu-id="da520-116">As part of the cross-app domain contract in the .NET Framework, the contents of the logical call context also have to be marshaled across app domain boundaries.</span></span>  
   
-6.  Da die Typen im logischen Aufrufkontext nicht in der Standard-App-Domäne aufgelöst werden können, wird eine Ausnahme ausgelöst.  
+6.  <span data-ttu-id="da520-117">Da die Typen im logischen Aufrufkontext nicht in der Standard-App-Domäne aufgelöst werden können, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="da520-117">Because the types that are in the logical call context cannot be resolved in the default app domain, an exception is thrown.</span></span>  
   
-## <a name="mitigation"></a>Problemumgehung  
- Gehen Sie wie folgt vor, um dieses Problem zu umgehen:  
+## <a name="mitigation"></a><span data-ttu-id="da520-118">Problemumgehung</span><span class="sxs-lookup"><span data-stu-id="da520-118">Mitigation</span></span>  
+ <span data-ttu-id="da520-119">Gehen Sie wie folgt vor, um dieses Problem zu umgehen:</span><span class="sxs-lookup"><span data-stu-id="da520-119">To work around this issue, do the following</span></span>  
   
-1.  Suchen Sie bei Auftreten der Ausnahme nach dem Aufruf von `get_Evidence` in der Aufrufliste. Bei der Ausnahme kann es sich um verschiedene Ausnahmen handeln, einschließlich <xref:System.IO.FileNotFoundException> und <xref:System.Runtime.Serialization.SerializationException>.  
+1.  <span data-ttu-id="da520-120">Suchen Sie bei Auftreten der Ausnahme nach dem Aufruf von `get_Evidence` in der Aufrufliste.</span><span class="sxs-lookup"><span data-stu-id="da520-120">Look for the call to `get_Evidence` in the call stack when the exception is thrown.</span></span> <span data-ttu-id="da520-121">Bei der Ausnahme kann es sich um verschiedene Ausnahmen handeln, einschließlich <xref:System.IO.FileNotFoundException> und <xref:System.Runtime.Serialization.SerializationException>.</span><span class="sxs-lookup"><span data-stu-id="da520-121">The exception can be any of a large subset of exceptions, including <xref:System.IO.FileNotFoundException> and <xref:System.Runtime.Serialization.SerializationException>.</span></span>  
   
-2.  Identifizieren Sie die Position in der App, an der keine Objekte zum logischen Aufrufkontext hinzugefügt werden, und fügen Sie folgenden Code hinzu:  
+2.  <span data-ttu-id="da520-122">Identifizieren Sie die Position in der App, an der keine Objekte zum logischen Aufrufkontext hinzugefügt werden, und fügen Sie folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="da520-122">Identify the place in the app where no objects are added to the logical call context and add the following code:</span></span>  
   
     ```  
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
-
+## <a name="see-also"></a><span data-ttu-id="da520-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da520-123">See Also</span></span>  
+ [<span data-ttu-id="da520-124">Änderungen zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="da520-124">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

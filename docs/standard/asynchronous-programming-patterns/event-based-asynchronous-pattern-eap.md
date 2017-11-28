@@ -1,72 +1,75 @@
 ---
-title: "Event-based Asynchronous Pattern (EAP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asynchronous calls"
-  - "asynchronous programming, design patterns"
-  - "asynchronous programming"
+title: Ereignisbasiertes asynchrones Muster (EAP)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- asynchronous calls
+- asynchronous programming, design patterns
+- asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0b5f242b9586c4ea3b045daf8f10b84127b81085
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Event-based Asynchronous Pattern (EAP)
-Es gibt verschiedene Möglichkeiten, asynchrone Features für Clientcode verfügbar zu machen.  Das ereignisbasierte asynchrone Muster gibt Klassen ein Verfahren zum Präsentieren von asynchronem Verhalten vor.  
+# <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="3c9ef-102">Ereignisbasiertes asynchrones Muster (EAP)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-102">Event-based Asynchronous Pattern (EAP)</span></span>
+<span data-ttu-id="3c9ef-103">Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="3c9ef-104">Das ereignisbasierte asynchrone Muster gibt Klassen ein Verfahren zum Präsentieren von asynchronem Verhalten vor.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  
   
 > [!NOTE]
->  Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellt die Task Parallel Library ein neues Modell für die asynchrone und parallele Programmierung bereit.  Weitere Informationen finden Sie unter [Parallel Programming](../../../docs/standard/parallel-programming/index.md).  
+>  <span data-ttu-id="3c9ef-105">Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellt die Task Parallel Library ein neues Modell für die asynchrone und parallele Programmierung bereit.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-105">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the Task Parallel Library provides a new model for asynchronous and parallel programming.</span></span> <span data-ttu-id="3c9ef-106">Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../docs/standard/parallel-programming/index.md).</span><span class="sxs-lookup"><span data-stu-id="3c9ef-106">For more information, see [Parallel Programming](../../../docs/standard/parallel-programming/index.md).</span></span>  
   
-## In diesem Abschnitt  
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- Beschreibt, wie das ereignisbasierte asynchrone Muster die Vorteile von Multithreadanwendungen bietet und gleichzeitig viele komplexe Aspekte des Multithreaddesigns verbirgt.  
+## <a name="in-this-section"></a><span data-ttu-id="3c9ef-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3c9ef-107">In This Section</span></span>  
+ [<span data-ttu-id="3c9ef-108">Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-108">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ <span data-ttu-id="3c9ef-109">Beschreibt, wie das ereignisbasierte asynchrone Muster die Vorteile von Multithreadanwendungen bietet und gleichzeitig viele komplexe Aspekte des Multithreaddesigns verbirgt.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-109">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
   
- [Implementing the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
- Beschreibt das standardisierte Verfahren zum Verpacken einer Klasse, die über asynchrone Features verfügt.  
+ [<span data-ttu-id="3c9ef-110">Implementieren des ereignisbasierten asynchronen Entwurfsmusters</span><span class="sxs-lookup"><span data-stu-id="3c9ef-110">Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="3c9ef-111">Beschreibt das standardisierte Verfahren zum Verpacken einer Klasse, die über asynchrone Funktionen verfügt.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-111">Describes the standardized way to package a class that has asynchronous features.</span></span>  
   
- [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
- Beschreibt die Anforderungen, die zum Verfügbarmachen asynchroner Features nach dem ereignisbasierten asynchronen Muster erfüllt sein müssen.  
+ [<span data-ttu-id="3c9ef-112">Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters</span><span class="sxs-lookup"><span data-stu-id="3c9ef-112">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="3c9ef-113">Beschreibt die Anforderungen, die zum Verfügbarmachen asynchroner Funktionen nach dem ereignisbasierten asynchronen Muster erfüllt sein müssen.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-113">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
   
- [Deciding When to Implement the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- Beschreibt, wie Sie ermitteln, ob Sie das ereignisbasierte asynchrone Muster anstelle des <xref:System.IAsyncResult>\-Musters implementieren sollen.  
+ [<span data-ttu-id="3c9ef-114">Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-114">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="3c9ef-115">Beschreibt, wie Sie ermitteln, ob Sie das ereignisbasierte asynchrone Muster anstelle des <xref:System.IAsyncResult>-Musters implementieren sollen.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-115">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern.</span></span>  
   
- [Walkthrough: Implementing a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- Veranschaulicht das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert.  Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=fullName>\-Namespace implementiert, was eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet.  
+ [<span data-ttu-id="3c9ef-116">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern (Exemplarische Vorgehensweise: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-116">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="3c9ef-117">Veranschaulicht das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-117">Illustrates how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="3c9ef-118">Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=nameWithType>-Namespace implementiert, was eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-118">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
   
- [How to: Use Components That Support the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- Beschreibt die Verwendung einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt.  
+ [<span data-ttu-id="3c9ef-119">How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-119">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="3c9ef-120">Beschreibt die Verwendung einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-120">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="3c9ef-121">Verweis</span><span class="sxs-lookup"><span data-stu-id="3c9ef-121">Reference</span></span>  
  <xref:System.ComponentModel.AsyncOperation>  
- Beschreibt die <xref:System.ComponentModel.AsyncOperation>\-Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="3c9ef-122">Beschreibt die <xref:System.ComponentModel.AsyncOperation>-Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-122">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.AsyncOperationManager>  
- Beschreibt die <xref:System.ComponentModel.AsyncOperationManager>\-Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="3c9ef-123">Beschreibt die <xref:System.ComponentModel.AsyncOperationManager>-Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-123">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- Beschreibt die <xref:System.ComponentModel.BackgroundWorker>\-Komponente und enthält Links zu allen Membern.  
+ <span data-ttu-id="3c9ef-124">Beschreibt die <xref:System.ComponentModel.BackgroundWorker>-Komponente und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-124">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
   
-## Verwandte Abschnitte  
- [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- Beschreibt ein Programmiermodell für asynchrone und parallele Vorgänge.  
+## <a name="related-sections"></a><span data-ttu-id="3c9ef-125">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3c9ef-125">Related Sections</span></span>  
+ [<span data-ttu-id="3c9ef-126">Task Parallel Library (TPL)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-126">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ <span data-ttu-id="3c9ef-127">Beschreibt ein Programmiermodell für asynchrone und parallele Vorgänge.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-127">Describes a programming model for asynchronous and parallel operations.</span></span>  
   
- [Threading](../../../docs/standard/threading/index.md)  
- Beschreibt Multithreadingfeatures in .NET Framework.  
+ [<span data-ttu-id="3c9ef-128">Threading</span><span class="sxs-lookup"><span data-stu-id="3c9ef-128">Threading</span></span>](../../../docs/standard/threading/index.md)  
+ <span data-ttu-id="3c9ef-129">Beschreibt Multithreadingfunktionen in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-129">Describes multithreading features in the .NET Framework.</span></span>  
   
- [Threading](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)  
- Beschreibt Multithreading\-Funktionen in den Programmiersprachen C\# und Visual Basic.  
+ [<span data-ttu-id="3c9ef-130">Threading</span><span class="sxs-lookup"><span data-stu-id="3c9ef-130">Threading</span></span>](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
+ <span data-ttu-id="3c9ef-131">Beschreibt Multithreading-Funktionen in den Programmiersprachen C# und Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3c9ef-131">Describes multithreading features in the C# and Visual Basic languages.</span></span>  
   
-## Siehe auch  
- [Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)   
- [Ereignisse](../../../docs/standard/events/index.md)   
- [Multithreading in Components](../Topic/Multithreading%20in%20Components.md)   
- [Asynchronous Programming Design Patterns](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+## <a name="see-also"></a><span data-ttu-id="3c9ef-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3c9ef-132">See Also</span></span>  
+ [<span data-ttu-id="3c9ef-133">Empfohlene Vorgehensweise für das verwaltete Threading</span><span class="sxs-lookup"><span data-stu-id="3c9ef-133">Managed Threading Best Practices</span></span>](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [<span data-ttu-id="3c9ef-134">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="3c9ef-134">Events</span></span>](../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="3c9ef-135">Multithreading in Komponenten</span><span class="sxs-lookup"><span data-stu-id="3c9ef-135">Multithreading in Components</span></span>](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [<span data-ttu-id="3c9ef-136">Asynchronous Programming Design Patterns (Entwurfsmuster für die asynchrone Programmierung)</span><span class="sxs-lookup"><span data-stu-id="3c9ef-136">Asynchronous Programming Design Patterns</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

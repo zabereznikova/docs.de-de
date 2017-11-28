@@ -1,51 +1,34 @@
 ---
-title: 'Gewusst wie: Aufrufen einer Delegatenmethode (Visual Basic) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Aufrufen einer Delegatenmethode (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29b20eb6089886c8111711388472004bbacea312
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ea94d4bb26e168667fd75c6928e52261f230c85e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Gewusst wie: Aufrufen einer Delegatenmethode (Visual Basic)
-Dieses Beispiel zeigt, wie Sie eine Methode mit einem Delegaten zuweisen und dann diese Methode über den Delegaten aufrufen.  
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="8668c-102">Gewusst wie: Aufrufen einer Delegatenmethode (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8668c-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
+<span data-ttu-id="8668c-103">Dieses Beispiel zeigt, wie eine Methode mit einem Delegaten zuordnen und anschließend diese Methode über den Delegaten aufrufen.</span><span class="sxs-lookup"><span data-stu-id="8668c-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Erstellen des Delegaten und entsprechender Prozeduren  
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="8668c-104">Erstellen des Delegaten und dem entsprechenden Verfahren</span><span class="sxs-lookup"><span data-stu-id="8668c-104">Create the delegate and matching procedures</span></span>  
   
-1.  Erstellen Sie einen Delegaten mit dem Namen `MySubDelegate`.  
+1.  <span data-ttu-id="8668c-105">Erstellen Sie einen Delegaten mit dem Namen `MySubDelegate`.</span><span class="sxs-lookup"><span data-stu-id="8668c-105">Create a delegate named `MySubDelegate`.</span></span>  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Deklarieren Sie eine Klasse, die eine Methode mit der gleichen Signatur wie der Delegat enthält.  
+2.  <span data-ttu-id="8668c-106">Deklarieren Sie eine Klasse, die eine Methode mit der gleichen Signatur wie der Delegat enthält.</span><span class="sxs-lookup"><span data-stu-id="8668c-106">Declare a class that contains a method with the same signature as the delegate.</span></span>  
   
     ```  
     Class class1  
@@ -55,7 +38,7 @@ Dieses Beispiel zeigt, wie Sie eine Methode mit einem Delegaten zuweisen und dan
     End Class  
     ```  
   
-3.  Definieren Sie eine Methode, die eine Instanz des Delegaten erstellt und ruft die Methode, die dem Delegaten zugeordnet sind, durch Aufrufen der integriertes `Invoke` Methode.  
+3.  <span data-ttu-id="8668c-107">Definieren Sie eine Methode, erstellt eine Instanz des Delegaten und ruft die Methode, die der Delegat durch Aufrufen der integriertes zugeordneten `Invoke` Methode.</span><span class="sxs-lookup"><span data-stu-id="8668c-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>  
   
     ```  
     Protected Sub DelegateTest()  
@@ -67,8 +50,8 @@ Dieses Beispiel zeigt, wie Sie eine Methode mit einem Delegaten zuweisen und dan
     End Sub  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Delegate-Anweisung](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Delegaten](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)   
- [Multithreadanwendungen](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+## <a name="see-also"></a><span data-ttu-id="8668c-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8668c-108">See Also</span></span>  
+ [<span data-ttu-id="8668c-109">Delegate-Anweisung</span><span class="sxs-lookup"><span data-stu-id="8668c-109">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="8668c-110">Delegaten</span><span class="sxs-lookup"><span data-stu-id="8668c-110">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="8668c-111">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="8668c-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="8668c-112">Multithreadanwendungen</span><span class="sxs-lookup"><span data-stu-id="8668c-112">Multithreaded Applications</span></span>](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

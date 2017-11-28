@@ -1,62 +1,41 @@
 ---
 title: '#<a name="pragma-warning-c-reference"></a>pragma-Warnung (C#-Referenz)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#pragma warning'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#pragma warning [C#]'
+f1_keywords: '#pragma warning'
+helpviewer_keywords: '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5330b448dc2b328992b2d29699557d20df56dee4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c11acfd096d36c96ceb9e9c5c0d16e47e58fa1
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma warning (C#-Referenz)
-`#pragma warning` kann bestimmte Warnungen aktivieren oder deaktivieren.  
+# <a name="pragma-warning-c-reference"></a><span data-ttu-id="ed032-102">#pragma warning (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ed032-102">#pragma warning (C# Reference)</span></span>
+<span data-ttu-id="ed032-103">`#pragma warning` kann bestimmte Warnungen aktivieren oder deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ed032-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="ed032-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ed032-104">Syntax</span></span>  
   
 ```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="ed032-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ed032-105">Parameters</span></span>  
  `warning-list`  
- Eine durch Trennzeichen getrennte Liste mit Warnzahlen. Das Präfix „CS“ ist optional.  
+ <span data-ttu-id="ed032-106">Eine durch Trennzeichen getrennte Liste mit Warnzahlen.</span><span class="sxs-lookup"><span data-stu-id="ed032-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="ed032-107">Das Präfix „CS“ ist optional.</span><span class="sxs-lookup"><span data-stu-id="ed032-107">The "CS" prefix is optional.</span></span>  
   
- Wenn keine Warnzahlen angegeben werden, deaktiviert `disable` alle Warnungen und `restore` aktiviert sie.  
+ <span data-ttu-id="ed032-108">Wenn keine Warnzahlen angegeben werden, deaktiviert `disable` alle Warnungen und `restore` aktiviert sie.</span><span class="sxs-lookup"><span data-stu-id="ed032-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
   
 > [!NOTE]
->  Um Warnzahlen in Visual Studio zu suchen, erstellen Sie Ihr Projekt und suchen Sie nach den Warnzahlen im Fenster **Ausgabe**.  
+>  <span data-ttu-id="ed032-109">Um Warnzahlen in Visual Studio zu suchen, erstellen Sie Ihr Projekt und suchen Sie nach den Warnzahlen im Fenster **Ausgabe**.</span><span class="sxs-lookup"><span data-stu-id="ed032-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="ed032-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ed032-110">Example</span></span>  
   
 ```csharp
 // pragma_warning.cs  
@@ -82,9 +61,8 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [C#-Compilerfehler](../../../csharp/language-reference/compiler-messages/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="ed032-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ed032-111">See Also</span></span>  
+ [<span data-ttu-id="ed032-112">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ed032-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="ed032-113">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ed032-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="ed032-114">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="ed032-114">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)  
+ [<span data-ttu-id="ed032-115">C#-Compilerfehler</span><span class="sxs-lookup"><span data-stu-id="ed032-115">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)

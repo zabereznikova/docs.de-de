@@ -10,28 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 8088ce0c138cdb05a6e4a4fb6467e43efd252ba7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="expression-trees-summary"></a><span data-ttu-id="d51f4-104">Zusammenfassung der Ausdrucksbaumstrukturen</span><span class="sxs-lookup"><span data-stu-id="d51f4-104">Expression Trees Summary</span></span>
 
-# <a name="expression-trees-summary"></a>Zusammenfassung der Ausdrucksbaumstrukturen
+[<span data-ttu-id="d51f4-105">Vorheriges – Übersetzen von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="d51f4-105">Previous -- Translating Expressions</span></span>](expression-trees-translating.md)
 
-[Vorheriges – Übersetzen von Ausdrücken](expression-trees-translating.md)
+<span data-ttu-id="d51f4-106">In dieser Serie haben Sie erfahren, wie Sie *Ausdrucksbaumstrukturen* verwenden können, um dynamische Programme zu erstellen, die Code wie Daten interpretieren, und um neue Funktionen basierend auf diesem Code zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d51f4-106">In this series, you've seen how you can use *expression trees* to create dynamic programs that interpret code as data and build new functionality based on that code.</span></span>
 
-In dieser Serie haben Sie erfahren, wie Sie *Ausdrucksbaumstrukturen* verwenden können, um dynamische Programme zu erstellen, die Code wie Daten interpretieren, und um neue Funktionen basierend auf diesem Code zu erstellen.
+<span data-ttu-id="d51f4-107">Sie können Ausdrucksbaumstrukturen untersuchen, um die Absicht eines Algorithmus zu verstehen.</span><span class="sxs-lookup"><span data-stu-id="d51f4-107">You can examine expression trees to understand the intent of an algorithm.</span></span> <span data-ttu-id="d51f4-108">Sie können nicht nur diesen Code überprüfen.</span><span class="sxs-lookup"><span data-stu-id="d51f4-108">You can not only examine that code.</span></span> <span data-ttu-id="d51f4-109">Sie können neue Ausdrucksbaumstrukturen erstellen, die geänderte Versionen des ursprünglichen Codes darstellen.</span><span class="sxs-lookup"><span data-stu-id="d51f4-109">You can build new expression trees that represent modified versions of the original code.</span></span>
 
-Sie können Ausdrucksbaumstrukturen untersuchen, um die Absicht eines Algorithmus zu verstehen. Sie können nicht nur diesen Code überprüfen. Sie können neue Ausdrucksbaumstrukturen erstellen, die geänderte Versionen des ursprünglichen Codes darstellen.
+<span data-ttu-id="d51f4-110">Sie können auch mithilfe von Ausdrucksbaumstrukturen einen Algorithmus betrachten und den Algorithmus in eine andere Sprache oder Umgebung übersetzen.</span><span class="sxs-lookup"><span data-stu-id="d51f4-110">You can also use expression trees to look at an algorithm, and translate that algorithm into another language or environment.</span></span> 
 
-Sie können auch mithilfe von Ausdrucksbaumstrukturen einen Algorithmus betrachten und den Algorithmus in eine andere Sprache oder Umgebung übersetzen. 
+## <a name="limitations"></a><span data-ttu-id="d51f4-111">Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="d51f4-111">Limitations</span></span>
 
-## <a name="limitations"></a>Einschränkungen
+<span data-ttu-id="d51f4-112">Es gibt einige neuere C#-Sprachelemente, die nicht gut in Ausdrucksbaumstrukturen übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="d51f4-112">There are some newer C# language elements that don't translate well into expression trees.</span></span> <span data-ttu-id="d51f4-113">Ausdrucksbaumstrukturen können keine `await`-Ausdrücke oder `async`-Lambdaausdrücke enthalten.</span><span class="sxs-lookup"><span data-stu-id="d51f4-113">Expression trees cannot contain `await` expressions, or `async` lambda expressions.</span></span> <span data-ttu-id="d51f4-114">Viele der in der C# 6-Version hinzugefügten Funktionen werden nicht genau wie in den Ausdrucksbaumstrukturen geschrieben angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d51f4-114">Many of the features added in the C# 6 release don't appear exactly as written in expression trees.</span></span> <span data-ttu-id="d51f4-115">Stattdessen werden neuere Funktionen in Ausdrucksbaumstrukturen in der entsprechenden früheren Syntax verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="d51f4-115">Instead, newer features will be exposed in expressions trees in the equivalent, earlier syntax.</span></span> <span data-ttu-id="d51f4-116">Diese sind möglicherweise nicht so sehr von einer Einschränkung betroffen, wie Sie vielleicht denken.</span><span class="sxs-lookup"><span data-stu-id="d51f4-116">This may not be as much of a limitation as you might think.</span></span> <span data-ttu-id="d51f4-117">In der Tat bedeutet dies, dass Ihr Code, der Ausdrucksbaumstrukturen interpretiert, wahrscheinlich immer noch genauso funktioniert, wenn neue Sprachfunktionen eingeführt werden.</span><span class="sxs-lookup"><span data-stu-id="d51f4-117">In fact, it means that your code that interprets expression trees will likely still work the same when new language features are introduced.</span></span>
 
-Es gibt einige neuere C#-Sprachelemente, die nicht gut in Ausdrucksbaumstrukturen übersetzt werden. Ausdrucksbaumstrukturen können keine `await`-Ausdrücke oder `async`-Lambdaausdrücke enthalten. Viele der in der C# 6-Version hinzugefügten Funktionen werden nicht genau wie in den Ausdrucksbaumstrukturen geschrieben angezeigt. Stattdessen werden neuere Funktionen in Ausdrucksbaumstrukturen in der entsprechenden früheren Syntax verfügbar gemacht. Diese sind möglicherweise nicht so sehr von einer Einschränkung betroffen, wie Sie vielleicht denken. In der Tat bedeutet dies, dass Ihr Code, der Ausdrucksbaumstrukturen interpretiert, wahrscheinlich immer noch genauso funktioniert, wenn neue Sprachfunktionen eingeführt werden.
-
-Trotz dieser Einschränkungen können Ausdrucksbaumstrukturen es Ihnen ermöglichen, dynamische Algorithmen zu erstellen, die sich auf das Interpretieren und Bearbeiten von Code verlassen, der als Datenstruktur dargestellt wird. Es ist ein leistungsfähiges Tool und eine der Funktionen des .NET-Ökosystems, die es umfangreichen Bibliotheken wie Entity Framework ermöglichen, zu erreichen, was sie tun.
-
+<span data-ttu-id="d51f4-118">Trotz dieser Einschränkungen können Ausdrucksbaumstrukturen es Ihnen ermöglichen, dynamische Algorithmen zu erstellen, die sich auf das Interpretieren und Bearbeiten von Code verlassen, der als Datenstruktur dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="d51f4-118">Even with these limitations, expression trees do enable you to create dynamic algorithms that rely on interpreting and modifying code that is represetned as a data structure.</span></span> <span data-ttu-id="d51f4-119">Es ist ein leistungsfähiges Tool und eine der Funktionen des .NET-Ökosystems, die es umfangreichen Bibliotheken wie Entity Framework ermöglichen, zu erreichen, was sie tun.</span><span class="sxs-lookup"><span data-stu-id="d51f4-119">It's a powerful tool, and it's one of the features of the .NET ecosystem that enables rich libraries such as Entity Framework to accomplish what they do.</span></span>
 

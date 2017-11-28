@@ -1,72 +1,53 @@
 ---
 title: Verwenden von Ausnahmen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 55c2cc0c6a1f852bd286b98927cc69f81119aeee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96fc082d135d38f521429de7b4e9a668773982ea
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-exceptions-c-programming-guide"></a>Verwenden von Ausnahmen (C#-Programmierhandbuch)
-In C# werden Fehler im Programm zur Laufzeit mithilfe von sogenannten Ausnahmen durch das Programm weitergegeben. Ausnahmen werden von Code ausgelöst, der auf einen Fehler stößt. Sie werden von Code abgefangen, der den Fehler beheben kann. Ausnahmen können durch die Common Language Runtime (CLR) von .NET Framework oder durch Code in einem Programm ausgelöst werden. Sobald eine Ausnahme ausgelöst wird, wird sie in der Aufrufliste nach oben weitergegeben, bis eine `catch`-Anweisung für die Ausnahme gefunden wird. Nicht abgefangene Ausnahmen werden von einem generischen Ausnahmehandler behandelt, der vom System bereitgestellt wird, das ein Dialogfeld anzeigt.  
+# <a name="using-exceptions-c-programming-guide"></a><span data-ttu-id="6d0c1-102">Verwenden von Ausnahmen (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="6d0c1-102">Using Exceptions (C# Programming Guide)</span></span>
+<span data-ttu-id="6d0c1-103">In C# werden Fehler im Programm zur Laufzeit mithilfe von sogenannten Ausnahmen durch das Programm weitergegeben.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-103">In C#, errors in the program at run time are propagated through the program by using a mechanism called exceptions.</span></span> <span data-ttu-id="6d0c1-104">Ausnahmen werden von Code ausgelöst, der auf einen Fehler stößt. Sie werden von Code abgefangen, der den Fehler beheben kann.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-104">Exceptions are thrown by code that encounters an error and caught by code that can correct the error.</span></span> <span data-ttu-id="6d0c1-105">Ausnahmen können durch die Common Language Runtime (CLR) von .NET Framework oder durch Code in einem Programm ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-105">Exceptions can be thrown by the .NET Framework common language runtime (CLR) or by code in a program.</span></span> <span data-ttu-id="6d0c1-106">Sobald eine Ausnahme ausgelöst wird, wird sie in der Aufrufliste nach oben weitergegeben, bis eine `catch`-Anweisung für die Ausnahme gefunden wird.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-106">Once an exception is thrown, it propagates up the call stack until a `catch` statement for the exception is found.</span></span> <span data-ttu-id="6d0c1-107">Nicht abgefangene Ausnahmen werden von einem generischen Ausnahmehandler behandelt, der vom System bereitgestellt wird, das ein Dialogfeld anzeigt.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-107">Uncaught exceptions are handled by a generic exception handler provided by the system that displays a dialog box.</span></span>  
   
- Ausnahmen werden von Klassen dargestellt, die von <xref:System.Exception> abgeleitet sind. Diese Klasse bestimmt den Typ der Ausnahme und enthält Eigenschaften, die über Details zur Ausnahme verfügen. Das Auslösen einer Ausnahme umfasst das Erstellen einer Instanz einer von einer Ausnahme abgeleiteten Klasse, das optionale Konfigurieren von Eigenschaften der Ausnahme und das Auslösen des Objekts mithilfe des Schlüsselworts `throw`. Beispiel:  
+ <span data-ttu-id="6d0c1-108">Ausnahmen werden von Klassen dargestellt, die von <xref:System.Exception> abgeleitet sind.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-108">Exceptions are represented by classes derived from <xref:System.Exception>.</span></span> <span data-ttu-id="6d0c1-109">Diese Klasse bestimmt den Typ der Ausnahme und enthält Eigenschaften, die über Details zur Ausnahme verfügen.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-109">This class identifies the type of exception and contains properties that have details about the exception.</span></span> <span data-ttu-id="6d0c1-110">Das Auslösen einer Ausnahme umfasst das Erstellen einer Instanz einer von einer Ausnahme abgeleiteten Klasse, das optionale Konfigurieren von Eigenschaften der Ausnahme und das Auslösen des Objekts mithilfe des Schlüsselworts `throw`.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-110">Throwing an exception involves creating an instance of an exception-derived class, optionally configuring properties of the exception, and then throwing the object by using the `throw` keyword.</span></span> <span data-ttu-id="6d0c1-111">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="6d0c1-111">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- Nachdem eine Ausnahme ausgelöst wird, überprüft die Runtime die aktuelle Anweisung, um festzustellen, ob sie sich in einem `try`-Block befindet. Falls dies der Fall ist, werden alle mit dem `try`-Block verknüpften `catch`-Blöcke überprüft, um festzustellen, ob sie die Ausnahme abfangen können. `Catch`-Blöcke geben normalerweise Ausnahmetypen an; wenn der Typ des `catch`-Blocks der gleiche Typ ist wie die Ausnahme oder die Basisklasse der Ausnahme, kann der `catch`-Block die Methode behandeln. Zum Beispiel:  
+ <span data-ttu-id="6d0c1-112">Nachdem eine Ausnahme ausgelöst wird, überprüft die Runtime die aktuelle Anweisung, um festzustellen, ob sie sich in einem `try`-Block befindet.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-112">After an exception is thrown, the runtime checks the current statement to see whether it is within a `try` block.</span></span> <span data-ttu-id="6d0c1-113">Falls dies der Fall ist, werden alle mit dem `try`-Block verknüpften `catch`-Blöcke überprüft, um festzustellen, ob sie die Ausnahme abfangen können.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-113">If it is, any `catch` blocks associated with the `try` block are checked to see whether they can catch the exception.</span></span> <span data-ttu-id="6d0c1-114">`Catch`-Blöcke geben normalerweise Ausnahmetypen an; wenn der Typ des `catch`-Blocks der gleiche Typ ist wie die Ausnahme oder die Basisklasse der Ausnahme, kann der `catch`-Block die Methode behandeln.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-114">`Catch` blocks typically specify exception types; if the type of the `catch` block is the same type as the exception, or a base class of the exception, the `catch` block can handle the method.</span></span> <span data-ttu-id="6d0c1-115">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="6d0c1-115">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
- Wenn sich die Anweisung, die eine Ausnahme auslöst, nicht innerhalb eines `try`-Blocks befindet, oder der `try`-Block, der sie umfasst, über keinen übereinstimmenden `catch`-Block verfügt, überprüft die Runtime die aufrufende Methode auf eine `try`-Anweisung und `catch`-Blöcke. Die Runtime geht die Aufrufliste weiter nach oben durch und sucht nach einem kompatiblen `catch`-Block. Nachdem der `catch`-Block gefunden und ausgeführt wurde, wird die Steuerung an die nächste Anweisung nach diesem `catch`-Block weitergegeben.  
+ <span data-ttu-id="6d0c1-116">Wenn sich die Anweisung, die eine Ausnahme auslöst, nicht innerhalb eines `try`-Blocks befindet, oder der `try`-Block, der sie umfasst, über keinen übereinstimmenden `catch`-Block verfügt, überprüft die Runtime die aufrufende Methode auf eine `try`-Anweisung und `catch`-Blöcke.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-116">If the statement that throws an exception is not within a `try` block or if the `try` block that encloses it has no matching `catch` block, the runtime checks the calling method for a `try` statement and `catch` blocks.</span></span> <span data-ttu-id="6d0c1-117">Die Runtime geht die Aufrufliste weiter nach oben durch und sucht nach einem kompatiblen `catch`-Block.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-117">The runtime continues up the calling stack, searching for a compatible `catch` block.</span></span> <span data-ttu-id="6d0c1-118">Nachdem der `catch`-Block gefunden und ausgeführt wurde, wird die Steuerung an die nächste Anweisung nach diesem `catch`-Block weitergegeben.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-118">After the `catch` block is found and executed, control is passed to the next statement after that `catch` block.</span></span>  
   
- Eine `try`-Anweisung kann mehr als einen `catch`-Block enthalten. Die erste `catch`-Anweisung, die die Ausnahme behandelt, wird ausgeführt; alle folgenden `catch`-Anweisungen werden ignoriert, selbst wenn sie kompatibel sind. Daher sollten catch-Blöcke immer vom spezifischsten Element (oder am meisten abgeleiteten) zum am wenigsten spezifischen sortiert werden. Zum Beispiel:  
+ <span data-ttu-id="6d0c1-119">Eine `try`-Anweisung kann mehr als einen `catch`-Block enthalten.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-119">A `try` statement can contain more than one `catch` block.</span></span> <span data-ttu-id="6d0c1-120">Die erste `catch`-Anweisung, die die Ausnahme behandelt, wird ausgeführt; alle folgenden `catch`-Anweisungen werden ignoriert, selbst wenn sie kompatibel sind.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-120">The first `catch` statement that can handle the exception is executed; any following `catch` statements, even if they are compatible, are ignored.</span></span> <span data-ttu-id="6d0c1-121">Daher sollten catch-Blöcke immer vom spezifischsten Element (oder am meisten abgeleiteten) zum am wenigsten spezifischen sortiert werden.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-121">Therefore, catch blocks should always be ordered from most specific (or most-derived) to least specific.</span></span> <span data-ttu-id="6d0c1-122">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="6d0c1-122">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Bevor der `catch`-Block ausgeführt wird prüft die Runtime auf `finally`-Blöcke. `Finally`-Blöcke ermöglichen dem Programmierer, mehrdeutige Zustände zu bereinigen, die möglicherweise von einem abgebrochenen `try`-Block übrig sind, oder externe Ressourcen freizugeben (z.B. Grafikhandles, Datenbankverbindungen oder Dateistreams), ohne auf Garbage Collector in der Runtime zum Finalisieren der Objekte zu warten. Zum Beispiel:  
+ <span data-ttu-id="6d0c1-123">Bevor der `catch`-Block ausgeführt wird prüft die Runtime auf `finally`-Blöcke.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-123">Before the `catch` block is executed, the runtime checks for `finally` blocks.</span></span> <span data-ttu-id="6d0c1-124">`Finally`-Blöcke ermöglichen dem Programmierer, mehrdeutige Zustände zu bereinigen, die möglicherweise von einem abgebrochenen `try`-Block übrig sind, oder externe Ressourcen freizugeben (z.B. Grafikhandles, Datenbankverbindungen oder Dateistreams), ohne auf Garbage Collector in der Runtime zum Finalisieren der Objekte zu warten.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-124">`Finally` blocks enable the programmer to clean up any ambiguous state that could be left over from an aborted `try` block, or to release any external resources (such as graphics handles, database connections or file streams) without waiting for the garbage collector in the runtime to finalize the objects.</span></span> <span data-ttu-id="6d0c1-125">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="6d0c1-125">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
- Wenn `WriteByte()` eine Ausnahme auslöst, schlägt der Code im zweiten `try`-Block fehl, der versucht, die Datei erneut zu öffnen, wenn `file.Close()` nicht aufgerufen wird. Die Datei bleibt gesperrt. Da `finally`-Blocke ausgeführt werden, selbst wenn eine Ausnahme ausgelöst wird, ermöglicht es der `finally`-Block im vorherigen Beispiel, dass die Datei korrekt geschlossen wird und trägt so zur Fehlervermeidung bei.  
+ <span data-ttu-id="6d0c1-126">Wenn `WriteByte()` eine Ausnahme auslöst, schlägt der Code im zweiten `try`-Block fehl, der versucht, die Datei erneut zu öffnen, wenn `file.Close()` nicht aufgerufen wird. Die Datei bleibt gesperrt.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-126">If `WriteByte()` threw an exception, the code in the second `try` block that tries to reopen the file would fail if `file.Close()` is not called, and the file would remain locked.</span></span> <span data-ttu-id="6d0c1-127">Da `finally`-Blocke ausgeführt werden, selbst wenn eine Ausnahme ausgelöst wird, ermöglicht es der `finally`-Block im vorherigen Beispiel, dass die Datei korrekt geschlossen wird und trägt so zur Fehlervermeidung bei.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-127">Because `finally` blocks are executed even if an exception is thrown, the `finally` block in the previous example allows for the file to be closed correctly and helps avoid an error.</span></span>  
   
- Wenn in der Aufrufliste kein kompatibler `catch`-Block gefunden wird, nachdem eine Ausnahme ausgelöst wird, tritt eine der folgenden Situationen auf:  
+ <span data-ttu-id="6d0c1-128">Wenn in der Aufrufliste kein kompatibler `catch`-Block gefunden wird, nachdem eine Ausnahme ausgelöst wird, tritt eine der folgenden Situationen auf:</span><span class="sxs-lookup"><span data-stu-id="6d0c1-128">If no compatible `catch` block is found on the call stack after an exception is thrown, one of three things occurs:</span></span>  
   
--   Wenn die Ausnahme sich in einem Finalizer befindet, wird der Finalizer abgebrochen und der Basisfinalizer (sofern vorhanden) aufgerufen.  
+-   <span data-ttu-id="6d0c1-129">Wenn die Ausnahme sich in einem Finalizer befindet, wird der Finalizer abgebrochen und der Basisfinalizer (sofern vorhanden) aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-129">If the exception is within a finalizer, the finalizer is aborted and the base finalizer, if any, is called.</span></span>  
   
--   Wenn die Aufrufliste einen statischen Konstruktor oder einen statischen Feldinitialisierer enthält, wird <xref:System.TypeInitializationException> ausgelöst und die ursprüngliche Ausnahme der <xref:System.Exception.InnerException%2A>-Eigenschaft der neuen Ausnahme zugewiesen.  
+-   <span data-ttu-id="6d0c1-130">Wenn die Aufrufliste einen statischen Konstruktor oder einen statischen Feldinitialisierer enthält, wird <xref:System.TypeInitializationException> ausgelöst und die ursprüngliche Ausnahme der <xref:System.Exception.InnerException%2A>-Eigenschaft der neuen Ausnahme zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-130">If the call stack contains a static constructor, or a static field initializer, a <xref:System.TypeInitializationException> is thrown, with the original exception assigned to the <xref:System.Exception.InnerException%2A> property of the new exception.</span></span>  
   
--   Wenn der Anfang des Threads erreicht wird, wird der Thread beendet.  
+-   <span data-ttu-id="6d0c1-131">Wenn der Anfang des Threads erreicht wird, wird der Thread beendet.</span><span class="sxs-lookup"><span data-stu-id="6d0c1-131">If the start of the thread is reached, the thread is terminated.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="6d0c1-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6d0c1-132">See Also</span></span>  
+ [<span data-ttu-id="6d0c1-133">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="6d0c1-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="6d0c1-134">Ausnahmen und Ausnahmebehandlung</span><span class="sxs-lookup"><span data-stu-id="6d0c1-134">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)

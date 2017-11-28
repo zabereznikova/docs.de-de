@@ -1,36 +1,28 @@
 ---
-title: "Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic) | Microsoft-Dokumentation"
+title: "Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5d8adde531d31aa6bf353f53bd4cfecc084f515
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)
-Bereitstellung und Rückgabe von Werten in einer Multithreadanwendung ist kompliziert, da der Konstruktor für die Thread-Klasse einen Verweis auf eine Prozedur übergeben werden muss, die keine Argumente akzeptiert und keinen Wert zurückgibt. Die folgenden Abschnitte zeigen sich auf einfache Weise Parameter bereitgestellt und Werte aus Prozeduren in separaten Threads zurück.  
+# <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a><span data-ttu-id="976bb-102">Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="976bb-102">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>
+<span data-ttu-id="976bb-103">Das Bereitstellen und Zurückgeben von Rückgabewerten in einer Multithreadanwendung ist kompliziert, weil der Konstruktor für die Threadklasse einen Verweis an eine Prozedur übergeben muss, die weder Argumente akzeptiert noch Werte zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="976bb-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="976bb-104">Im folgenden Abschnitt werden ein paar einfache Methoden gezeigt, um Parameter und Rückgabewerte von Prozeduren in separaten Threads bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="976bb-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  
   
-## <a name="supplying-parameters-for-multithreaded-procedures"></a>Bereitstellen von Parametern für Multithreadprozeduren  
- Die beste Möglichkeit, Parameter für ein Multithread-Methodenaufruf ist die Zielmethode in eine Klasse einschließen, und definieren Sie Felder für diese Klasse, die als Parameter für den neuen Thread verwendet werden. Der Vorteil dieses Ansatzes ist jedes Mal, wenn Sie einen neuen Thread starten möchten, können Sie eine neue Instanz der Klasse mit eigenen Parametern erstellen. Nehmen wir beispielsweise an, dass Sie eine Funktion haben, die berechnet die Fläche eines Dreiecks, wie im folgenden Code:  
+## <a name="supplying-parameters-for-multithreaded-procedures"></a><span data-ttu-id="976bb-105">Bereitstellen von Parametern für Multithreadprozeduren</span><span class="sxs-lookup"><span data-stu-id="976bb-105">Supplying Parameters for Multithreaded Procedures</span></span>  
+ <span data-ttu-id="976bb-106">Die beste Möglichkeit, um Parameter für ein Multithread-Methodenaufruf bereitzustellen ist, die Zielmethode in eine Klasse zu umschließen und Felder für diese Klasse zu definieren, die als Parameter für den neuen Thread dienen.</span><span class="sxs-lookup"><span data-stu-id="976bb-106">The best way to supply parameters for a multithreaded method call is to wrap the target method in a class and define fields for that class that will serve as parameters for the new thread.</span></span> <span data-ttu-id="976bb-107">Der Vorteil dieses Ansatzes ist, dass Sie jedes Mal, wenn Sie einen neuen Thread starten möchten, eine neue Instanz der Klasse mit eigenen Parametern erstellen können.</span><span class="sxs-lookup"><span data-stu-id="976bb-107">The advantage of this approach is that you can create a new instance of the class, with its own parameters, every time you want to start a new thread.</span></span> <span data-ttu-id="976bb-108">Nehmen wir z.B. an, dass Sie eine Funktion haben, die den Bereich eines Dreiecks wie im folgenden Code berechnet:</span><span class="sxs-lookup"><span data-stu-id="976bb-108">For example, suppose you have a function that calculates the area of a triangle, as in the following code:</span></span>  
   
 ```vb  
 Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double  
@@ -38,7 +30,7 @@ Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double
 End Function  
 ```  
   
- Sie können eine Klasse, umschließt Schreiben der `CalcArea` -Funktion und Felder zum Speichern von Eingabeparametern wie folgt erstellt:  
+ <span data-ttu-id="976bb-109">Sie können eine Klasse schreiben, die die `CalcArea`-Funktion umschließt und Felder erstellt, um Eingabeparameter wie folgt zu speichern:</span><span class="sxs-lookup"><span data-stu-id="976bb-109">You can write a class that wraps the `CalcArea` function and creates fields to store input parameters, as follows:</span></span>  
   
 ```vb  
 Class AreaClass  
@@ -52,7 +44,7 @@ Class AreaClass
 End Class  
 ```  
   
- Verwenden der `AreaClass`, können Sie erstellen ein `AreaClass` Objekt, und legen die `Base` und `Height` Eigenschaften, wie im folgenden Code gezeigt:  
+ <span data-ttu-id="976bb-110">Sie können zum Verwenden von `AreaClass` ein `AreaClass`-Objekt erstellen und die Eigenschaften `Base` und `Height` so festlegen, wie es im folgenden Code gezeigt wird:</span><span class="sxs-lookup"><span data-stu-id="976bb-110">To use the `AreaClass`, you can create an `AreaClass` object, and set the `Base` and `Height` properties as shown in the following code:</span></span>  
   
 ```vb  
 Protected Sub TestArea()  
@@ -65,12 +57,12 @@ Protected Sub TestArea()
 End Sub  
 ```  
   
- Beachten Sie, dass die `TestArea` Prozedur überprüft nicht den Wert des der `Area` Feld nach dem Aufruf der `CalcArea` Methode. Da `CalcArea` auf einem separaten Thread ausgeführt wird die `Area` Feld wird nicht unbedingt festgelegt werden, wenn Sie es sofort nach dem Aufruf von Einchecken `Thread.Start`. Im nächsten Abschnitt wird eine bessere Möglichkeit zum Zurückgeben von Werten aus Multithreadprozeduren beschrieben.  
+ <span data-ttu-id="976bb-111">Beachten Sie, dass die `TestArea`-Prozedur nicht den Wert des `Area`-Felds überprüft, nachdem sie die `CalcArea`-Methode aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="976bb-111">Notice that the `TestArea` procedure does not check the value of the `Area` field after calling the `CalcArea` method.</span></span> <span data-ttu-id="976bb-112">Da `CalcArea` in einem separaten Thread ausgeführt wird, besteht keine Garantie, dass das `Area`-Feld festgelegt wird, wenn Sie es sofort nach dem Aufruf von `Thread.Start` überprüfen.</span><span class="sxs-lookup"><span data-stu-id="976bb-112">Because `CalcArea` runs on a separate thread, the `Area` field is not guaranteed to be set if you check it immediately after calling `Thread.Start`.</span></span> <span data-ttu-id="976bb-113">Im nächsten Abschnitt wird eine bessere Möglichkeit zum Zurückgeben von Werten aus Multithreadprozeduren beschrieben.</span><span class="sxs-lookup"><span data-stu-id="976bb-113">The next section discusses a better way to return values from multithreaded procedures.</span></span>  
   
-## <a name="returning-values-from-multithreaded-procedures"></a>Rückgabe von Werten aus Multithreadprozeduren  
- Rückgabe von Werten aus Prozeduren, die in separaten Threads ausgeführt wird durch die Tatsache, dass die Prozeduren können keine Funktionen sein und können keine verkompliziert `ByRef` Argumente. Die einfachste Möglichkeit zum Zurückgeben von Werten ist die Verwendung der <xref:System.ComponentModel.BackgroundWorker>Komponente verwaltet die Threads nach Abschluss der Aufgabe ein Ereignis auszulösen, und die Ergebnisse mit einem Ereignishandler zu verarbeiten.</xref:System.ComponentModel.BackgroundWorker>  
+## <a name="returning-values-from-multithreaded-procedures"></a><span data-ttu-id="976bb-114">Rückgabe von Werten aus Multithreadprozeduren</span><span class="sxs-lookup"><span data-stu-id="976bb-114">Returning Values from Multithreaded Procedures</span></span>  
+ <span data-ttu-id="976bb-115">Die Rückgabe von Werten aus Prozeduren, die in separaten Threads ausgeführt werden, wird dadurch erschwert, dass die Prozeduren weder Funktionen sein noch `ByRef`-Argumente verwenden können.</span><span class="sxs-lookup"><span data-stu-id="976bb-115">Returning values from procedures that run on separate threads is complicated by the fact that the procedures cannot be functions and cannot use `ByRef` arguments.</span></span> <span data-ttu-id="976bb-116">Die einfachste Möglichkeit zum Zurückgeben von Werten ist, indem Sie die <xref:System.ComponentModel.BackgroundWorker>-Komponente zum Verwalten Ihrer Threads verwenden und ein Ereignis auslösen, wenn die Aufgabe erledigt ist, und das Ergebnis mit einem Ereignishandler verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="976bb-116">The easiest way to return values is to use the <xref:System.ComponentModel.BackgroundWorker> component to manage your threads and raise an event when the task is done, and process the results with an event handler.</span></span>  
   
- Das folgende Beispiel gibt einen Wert zurück, durch das Auslösen eines Ereignisses aus einer Prozedur, die auf einem separaten Thread ausgeführt wird:  
+ <span data-ttu-id="976bb-117">Im folgenden Beispiel wird ein Wert durch das Auslösen eines Ereignisses von einer Prozedur zurückgegeben, die in einem separaten Thread ausgeführt wird:</span><span class="sxs-lookup"><span data-stu-id="976bb-117">The following example returns a value by raising an event from a procedure running on a separate thread:</span></span>  
   
 ```vb  
 Private Class AreaClass2  
@@ -116,13 +108,13 @@ Private Sub BackgroundWorker1_RunWorkerCompleted(
 End Sub  
 ```  
   
- Angabe von Parametern und Rückgabewerte für Threadpool-Threads mithilfe des optionalen `ByVal` Zustandsobjekt Variable, der die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>Methode.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Threadzeitgeber-Threads unterstützen auch ein Zustandsobjekt für diesen Zweck. Informationen über Threadpooling und Threadzeitgeber finden Sie unter [Threadpooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[Threadpooling](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) und [Threadzeitgeber (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).  
+ <span data-ttu-id="976bb-118">Sie können Parameter und Rückgabewerte bereitstellen, indem Sie die optionale Zustandsobjektvariable `ByVal` der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="976bb-118">You can provide parameters and return values to thread-pool threads by using the optional `ByVal` state-object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="976bb-119">Threads des Threadzeitgebers unterstützen für diesen Zweck auch ein Zustandsobjekt.</span><span class="sxs-lookup"><span data-stu-id="976bb-119">Thread-timer threads also support a state object for this purpose.</span></span> <span data-ttu-id="976bb-120">Informationen über Threadpooling und Threadzeitgeber finden Sie unter [Threadpooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[Threadpooling](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) und [Threadzeitgeber (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).</span><span class="sxs-lookup"><span data-stu-id="976bb-120">For information on thread pooling and thread timers, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[Thread Pooling](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) and [Thread Timers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
- [Threadpooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [Threadsynchronisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)   
- [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)   
- [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Delegaten](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Multithreading in Komponenten](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+## <a name="see-also"></a><span data-ttu-id="976bb-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="976bb-121">See Also</span></span>  
+ [<span data-ttu-id="976bb-122">Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="976bb-122">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
+ [<span data-ttu-id="976bb-123">Threadpooling (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="976bb-123">Thread Pooling (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [<span data-ttu-id="976bb-124">Threadsynchronisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="976bb-124">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
+ [<span data-ttu-id="976bb-125">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="976bb-125">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="976bb-126">Multithreadanwendungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="976bb-126">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [<span data-ttu-id="976bb-127">Delegaten</span><span class="sxs-lookup"><span data-stu-id="976bb-127">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="976bb-128">Multithreading in Komponenten</span><span class="sxs-lookup"><span data-stu-id="976bb-128">Multithreading in Components</span></span>](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)

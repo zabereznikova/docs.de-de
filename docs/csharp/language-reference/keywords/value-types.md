@@ -1,132 +1,112 @@
 ---
 title: Werttypen (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
-Die Werttypen sind in zwei Hauptkategorien unterteilt:  
+# <a name="value-types-c-reference"></a><span data-ttu-id="54d4a-102">Werttypen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="54d4a-102">Value Types (C# Reference)</span></span>
+<span data-ttu-id="54d4a-103">Die Werttypen sind in zwei Hauptkategorien unterteilt:</span><span class="sxs-lookup"><span data-stu-id="54d4a-103">The value types consist of two main categories:</span></span>  
   
--   [Strukturen](../../../csharp/language-reference/keywords/struct.md)  
+-   [<span data-ttu-id="54d4a-104">Strukturen</span><span class="sxs-lookup"><span data-stu-id="54d4a-104">Structs</span></span>](../../../csharp/language-reference/keywords/struct.md)  
   
--   [Enumerationen](../../../csharp/language-reference/keywords/enum.md)  
+-   [<span data-ttu-id="54d4a-105">Enumerationen</span><span class="sxs-lookup"><span data-stu-id="54d4a-105">Enumerations</span></span>](../../../csharp/language-reference/keywords/enum.md)  
   
- Strukturen werden in diese Kategorien eingeteilt:  
+ <span data-ttu-id="54d4a-106">Strukturen werden in diese Kategorien eingeteilt:</span><span class="sxs-lookup"><span data-stu-id="54d4a-106">Structs fall into these categories:</span></span>  
   
--   Numerische Typen  
+-   <span data-ttu-id="54d4a-107">Numerische Typen</span><span class="sxs-lookup"><span data-stu-id="54d4a-107">Numeric types</span></span>  
   
-    -   [Integrale Typen](../../../csharp/language-reference/keywords/integral-types-table.md)  
+    -   [<span data-ttu-id="54d4a-108">Integrale Typen</span><span class="sxs-lookup"><span data-stu-id="54d4a-108">Integral types</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
   
-    -   [Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+    -   [<span data-ttu-id="54d4a-109">Gleitkommatypen</span><span class="sxs-lookup"><span data-stu-id="54d4a-109">Floating-point types</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
   
-    -   [decimal](../../../csharp/language-reference/keywords/decimal.md)  
+    -   [<span data-ttu-id="54d4a-110">decimal</span><span class="sxs-lookup"><span data-stu-id="54d4a-110">decimal</span></span>](../../../csharp/language-reference/keywords/decimal.md)  
   
--   [bool](../../../csharp/language-reference/keywords/bool.md)  
+-   [<span data-ttu-id="54d4a-111">bool</span><span class="sxs-lookup"><span data-stu-id="54d4a-111">bool</span></span>](../../../csharp/language-reference/keywords/bool.md)  
   
--   Benutzerdefinierte Strukturen  
+-   <span data-ttu-id="54d4a-112">Benutzerdefinierte Strukturen</span><span class="sxs-lookup"><span data-stu-id="54d4a-112">User defined structs.</span></span>  
   
-## <a name="main-features-of-value-types"></a>Hauptfunktionen von Werttypen  
- Variablen, die auf Werttypen basieren, enthalten Werte direkt. Durch das Zuweisen einer Werttypvariablen zu einer anderen wird der enthaltene Wert kopiert. Dies unterscheidet sich von der Zuweisung von Verweistypvariablen. Dabei wird ein Verweis auf das Objekt, aber nicht das Objekt selbst kopiert.  
+## <a name="main-features-of-value-types"></a><span data-ttu-id="54d4a-113">Hauptfunktionen von Werttypen</span><span class="sxs-lookup"><span data-stu-id="54d4a-113">Main Features of Value Types</span></span>  
+ <span data-ttu-id="54d4a-114">Variablen, die auf Werttypen basieren, enthalten Werte direkt.</span><span class="sxs-lookup"><span data-stu-id="54d4a-114">Variables that are based on value types directly contain values.</span></span> <span data-ttu-id="54d4a-115">Durch das Zuweisen einer Werttypvariablen zu einer anderen wird der enthaltene Wert kopiert.</span><span class="sxs-lookup"><span data-stu-id="54d4a-115">Assigning one value type variable to another copies the contained value.</span></span> <span data-ttu-id="54d4a-116">Dies unterscheidet sich von der Zuweisung von Verweistypvariablen. Dabei wird ein Verweis auf das Objekt, aber nicht das Objekt selbst kopiert.</span><span class="sxs-lookup"><span data-stu-id="54d4a-116">This differs from the assignment of reference type variables, which copies a reference to the object but not the object itself.</span></span>  
   
- Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=fullName> abgeleitet.  
+ <span data-ttu-id="54d4a-117">Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="54d4a-117">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
- Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten. Strukturen können aber wie Verweistypen Schnittstellen implementieren.  
+ <span data-ttu-id="54d4a-118">Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten.</span><span class="sxs-lookup"><span data-stu-id="54d4a-118">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="54d4a-119">Strukturen können aber wie Verweistypen Schnittstellen implementieren.</span><span class="sxs-lookup"><span data-stu-id="54d4a-119">However, like reference types, structs can implement interfaces.</span></span>  
   
- Im Gegensatz zu Verweistypen können Werttypen nicht den Wert `null` enthalten. Allerdings ermöglicht es die Funktion [Nullable-Typ](../../../csharp/programming-guide/nullable-types/index.md), dass Werttypen `null` zugewiesen werden können.  
+ <span data-ttu-id="54d4a-120">Im Gegensatz zu Verweistypen können Werttypen nicht den Wert `null` enthalten.</span><span class="sxs-lookup"><span data-stu-id="54d4a-120">Unlike reference types, a value type cannot contain the `null` value.</span></span> <span data-ttu-id="54d4a-121">Allerdings ermöglicht es die Funktion [Nullable-Typ](../../../csharp/programming-guide/nullable-types/index.md), dass Werttypen `null` zugewiesen werden können.</span><span class="sxs-lookup"><span data-stu-id="54d4a-121">However, the [nullable types](../../../csharp/programming-guide/nullable-types/index.md) feature does allow for value types to be assigned to `null`.</span></span>  
   
- Jeder Werttyp hat einen impliziten Standardkonstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
+ <span data-ttu-id="54d4a-122">Jeder Werttyp hat einen impliziten Standardkonstruktor, der den Standardwert dieses Typs initialisiert.</span><span class="sxs-lookup"><span data-stu-id="54d4a-122">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="54d4a-123">Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="54d4a-123">For information about default values of value types, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
   
-## <a name="main-features-of-simple-types"></a>Hauptfunktionen von einfachen Typen  
- Alle einfachen Typen, die für C# wesentlichen Typen, sind Aliasse der Systemtypen aus dem .NET Framework. [int](../../../csharp/language-reference/keywords/int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=fullName>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md).  
+## <a name="main-features-of-simple-types"></a><span data-ttu-id="54d4a-124">Hauptfunktionen von einfachen Typen</span><span class="sxs-lookup"><span data-stu-id="54d4a-124">Main Features of Simple Types</span></span>  
+ <span data-ttu-id="54d4a-125">Alle einfachen Typen, die für C# wesentlichen Typen, sind Aliasse der Systemtypen aus dem .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="54d4a-125">All of the simple types -- those integral to the C# language -- are aliases of the .NET Framework System types.</span></span> <span data-ttu-id="54d4a-126">[int](../../../csharp/language-reference/keywords/int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="54d4a-126">For example, [int](../../../csharp/language-reference/keywords/int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="54d4a-127">Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="54d4a-127">For a complete list of aliases, see [Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md).</span></span>  
   
- Konstante Ausdrücke, deren Operanden alle einfache Typkonstanten sind, werden zur Kompilierzeit ausgewertet.  
+ <span data-ttu-id="54d4a-128">Konstante Ausdrücke, deren Operanden alle einfache Typkonstanten sind, werden zur Kompilierzeit ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="54d4a-128">Constant expressions, whose operands are all simple type constants, are evaluated at compilation time.</span></span>  
   
- Einfache Typen können mithilfe von Literalen initialisiert werden. „A“ ist beispielsweise ein Literal vom Typ `char`, und 2001 ist ein Literal vom Typ `int`.  
+ <span data-ttu-id="54d4a-129">Einfache Typen können mithilfe von Literalen initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="54d4a-129">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="54d4a-130">„A“ ist beispielsweise ein Literal vom Typ `char`, und 2001 ist ein Literal vom Typ `int`.</span><span class="sxs-lookup"><span data-stu-id="54d4a-130">For example, 'A' is a literal of the type `char` and 2001 is a literal of the type `int`.</span></span>  
   
-## <a name="initializing-value-types"></a>Initialisieren von Werttypen  
- Lokale Variablen in C# müssen vor ihrer Verwendung initialisiert werden. Sie könnten eine lokale Variable beispielsweise ohne Initialisierung wie im folgenden Beispiel deklarieren:  
+## <a name="initializing-value-types"></a><span data-ttu-id="54d4a-131">Initialisieren von Werttypen</span><span class="sxs-lookup"><span data-stu-id="54d4a-131">Initializing Value Types</span></span>  
+ <span data-ttu-id="54d4a-132">Lokale Variablen in C# müssen vor ihrer Verwendung initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="54d4a-132">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="54d4a-133">Sie könnten eine lokale Variable beispielsweise ohne Initialisierung wie im folgenden Beispiel deklarieren:</span><span class="sxs-lookup"><span data-stu-id="54d4a-133">For example, you might declare a local variable without initialization as in the following example:</span></span>  
   
 ```  
 int myInt;  
 ```  
   
- Sie können sie nicht verwenden, bis Sie sie initialisiert haben. Sie können sie mit der folgenden Anweisung initialisieren:  
+ <span data-ttu-id="54d4a-134">Sie können sie nicht verwenden, bis Sie sie initialisiert haben.</span><span class="sxs-lookup"><span data-stu-id="54d4a-134">You cannot use it before you initialize it.</span></span> <span data-ttu-id="54d4a-135">Sie können sie mit der folgenden Anweisung initialisieren:</span><span class="sxs-lookup"><span data-stu-id="54d4a-135">You can initialize it using the following statement:</span></span>  
   
 ```  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
- Diese Anweisung entspricht der folgenden Anweisung:  
+ <span data-ttu-id="54d4a-136">Diese Anweisung entspricht der folgenden Anweisung:</span><span class="sxs-lookup"><span data-stu-id="54d4a-136">This statement is equivalent to the following statement:</span></span>  
   
 ```  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
- Natürlich können Sie sich die Deklaration und die Initialisierung in derselben Anweisung befinden, wie in den folgenden Beispielen dargestellt:  
+ <span data-ttu-id="54d4a-137">Natürlich können Sie sich die Deklaration und die Initialisierung in derselben Anweisung befinden, wie in den folgenden Beispielen dargestellt:</span><span class="sxs-lookup"><span data-stu-id="54d4a-137">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>  
   
 ```  
 int myInt = new int();  
 ```  
   
- – oder –  
+ <span data-ttu-id="54d4a-138">– oder –</span><span class="sxs-lookup"><span data-stu-id="54d4a-138">–or–</span></span>  
   
 ```  
 int myInt = 0;  
 ```  
   
- Durch die Verwendung des Operators [new](../../../csharp/language-reference/keywords/new.md) wird der Standardkonstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der Standardkonstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
+ <span data-ttu-id="54d4a-139">Durch die Verwendung des Operators [new](../../../csharp/language-reference/keywords/new.md) wird der Standardkonstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="54d4a-139">Using the [new](../../../csharp/language-reference/keywords/new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="54d4a-140">Im vorherigen Beispiel hat der Standardkonstruktor `myInt` den Wert `0` zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="54d4a-140">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="54d4a-141">Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="54d4a-141">For more information about values assigned by calling default constructors, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
   
- Verwenden Sie bei benutzerdefinierten Typen [new](../../../csharp/language-reference/keywords/new.md) zum Aufrufen des Standardkonstruktors. Die folgende Anweisung ruft z.B. den Standardkonstruktor der `Point`-Struktur auf:  
+ <span data-ttu-id="54d4a-142">Verwenden Sie bei benutzerdefinierten Typen [new](../../../csharp/language-reference/keywords/new.md) zum Aufrufen des Standardkonstruktors.</span><span class="sxs-lookup"><span data-stu-id="54d4a-142">With user-defined types, use [new](../../../csharp/language-reference/keywords/new.md) to invoke the default constructor.</span></span> <span data-ttu-id="54d4a-143">Die folgende Anweisung ruft z.B. den Standardkonstruktor der `Point`-Struktur auf:</span><span class="sxs-lookup"><span data-stu-id="54d4a-143">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>  
   
 ```  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   
- Nach diesem Aufruf gilt die Struktur als definitiv zugewiesen. Das bedeutet, dass alle ihre Member mit ihren Standardwerten initialisiert werden.  
+ <span data-ttu-id="54d4a-144">Nach diesem Aufruf gilt die Struktur als definitiv zugewiesen. Das bedeutet, dass alle ihre Member mit ihren Standardwerten initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="54d4a-144">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>  
   
- Weitere Informationen zum Operator „new“ finden Sie unter [new](../../../csharp/language-reference/keywords/new.md).  
+ <span data-ttu-id="54d4a-145">Weitere Informationen zum Operator „new“ finden Sie unter [new](../../../csharp/language-reference/keywords/new.md).</span><span class="sxs-lookup"><span data-stu-id="54d4a-145">For more information about the new operator, see [new](../../../csharp/language-reference/keywords/new.md).</span></span>  
   
- Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ <span data-ttu-id="54d4a-146">Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="54d4a-146">For information about formatting the output of numeric types, see [Formatting Numeric Results Table](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Typen](../../../csharp/language-reference/keywords/types.md)   
- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
-
+## <a name="see-also"></a><span data-ttu-id="54d4a-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="54d4a-147">See Also</span></span>  
+ [<span data-ttu-id="54d4a-148">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="54d4a-148">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="54d4a-149">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="54d4a-149">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="54d4a-150">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="54d4a-150">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="54d4a-151">Typen</span><span class="sxs-lookup"><span data-stu-id="54d4a-151">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
+ [<span data-ttu-id="54d4a-152">Referenztabellen für Typen</span><span class="sxs-lookup"><span data-stu-id="54d4a-152">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+ [<span data-ttu-id="54d4a-153">Verweistypen</span><span class="sxs-lookup"><span data-stu-id="54d4a-153">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)

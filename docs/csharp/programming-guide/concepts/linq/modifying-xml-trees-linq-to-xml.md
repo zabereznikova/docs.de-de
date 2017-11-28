@@ -1,44 +1,39 @@
 ---
 title: "Ändern von XML-Strukturen (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 8cf3ffabeb7c3caa5f0e3e38fb6f69551ce791b3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cb4ff851dbea97f254d5290ce021d560849e3d9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="modifying-xml-trees-linq-to-xml-c"></a>Ändern von XML-Strukturen (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist ein Speicher im Arbeitsspeicher, der XML-Strukturen speichert. Nachdem Sie eine XML-Struktur aus einer Quelle geladen oder analysiert haben, können Sie diese Struktur in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ändern, sie anschließend serialisieren und möglicherweise in einer Datei speichern oder an einen Remoteserver senden.  
+# <a name="modifying-xml-trees-linq-to-xml-c"></a><span data-ttu-id="abca5-102">Ändern von XML-Strukturen (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="abca5-102">Modifying XML Trees (LINQ to XML) (C#)</span></span>
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="abca5-103"> ist ein Speicher im Arbeitsspeicher, der XML-Strukturen speichert.</span><span class="sxs-lookup"><span data-stu-id="abca5-103"> is an in-memory store for an XML tree.</span></span> <span data-ttu-id="abca5-104">Nachdem Sie eine XML-Struktur aus einer Quelle geladen oder analysiert haben, können Sie diese Struktur in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ändern, sie anschließend serialisieren und möglicherweise in einer Datei speichern oder an einen Remoteserver senden.</span><span class="sxs-lookup"><span data-stu-id="abca5-104">After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.</span></span>  
   
- Für das Ändern einer vorhandenen Struktur verwenden Sie bestimmte Methoden, wie <xref:System.Xml.Linq.XContainer.Add%2A>.  
+ <span data-ttu-id="abca5-105">Für das Ändern einer vorhandenen Struktur verwenden Sie bestimmte Methoden, wie <xref:System.Xml.Linq.XContainer.Add%2A>.</span><span class="sxs-lookup"><span data-stu-id="abca5-105">When you modify a tree in place, you use certain methods, such as <xref:System.Xml.Linq.XContainer.Add%2A>.</span></span>  
   
- Es gibt aber auch einen anderen Ansatz, nämlich die Verwendung der funktionalen Konstruktion, um eine neue Struktur mit einer anderen Form zu erzeugen. Je nach Art der Änderungen, die Sie an Ihrer XML-Struktur vornehmen müssen, und je nach Größe der Struktur kann sich dieser Ansatz als robuster und einfacher in der Handhabung erweisen. Das erste Thema in diesem Abschnitt enthält eine Gegenüberstellung dieser beiden Ansätze.  
+ <span data-ttu-id="abca5-106">Es gibt aber auch einen anderen Ansatz, nämlich die Verwendung der funktionalen Konstruktion, um eine neue Struktur mit einer anderen Form zu erzeugen.</span><span class="sxs-lookup"><span data-stu-id="abca5-106">However, there is another approach, which is to use functional construction to generate a new tree with a different shape.</span></span> <span data-ttu-id="abca5-107">Je nach Art der Änderungen, die Sie an Ihrer XML-Struktur vornehmen müssen, und je nach Größe der Struktur kann sich dieser Ansatz als robuster und einfacher in der Handhabung erweisen.</span><span class="sxs-lookup"><span data-stu-id="abca5-107">Depending on the types of changes that you need to make to your XML tree, and depending on the size of the tree, this approach can be more robust and easier to develop.</span></span> <span data-ttu-id="abca5-108">Das erste Thema in diesem Abschnitt enthält eine Gegenüberstellung dieser beiden Ansätze.</span><span class="sxs-lookup"><span data-stu-id="abca5-108">The first topic in this section compares these two approaches.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a><span data-ttu-id="abca5-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="abca5-109">In This Section</span></span>  
   
-|Thema|Beschreibung|  
+|<span data-ttu-id="abca5-110">Thema</span><span class="sxs-lookup"><span data-stu-id="abca5-110">Topic</span></span>|<span data-ttu-id="abca5-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="abca5-111">Description</span></span>|  
 |-----------|-----------------|  
-|[Änderung des XML-Baums im Arbeitsspeicher und Funktionale Konstruktion (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)|Stellt das Ändern einer XML-Struktur im Arbeitsspeicher dem Ändern durch funktionale Konstruktion gegenüber.|  
-|[Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (C#)](../../../../csharp/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|Enthält Informationen zum Hinzufügen von Elementen, Attributen oder Knoten zu einer XML-Struktur.|  
-|[Ändern von Elementen, Attributen und Knoten in einem XML-Baum](../../../../csharp/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|Enthält Informationen zum Ändern vorhandener Elemente, Attribute oder Knoten.|  
-|[Entfernen von Elementen, Attributen und Knoten aus einer XML-Struktur (C#)](../../../../csharp/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|Enthält Informationen zum Entfernen von Elementen, Attributen oder Knoten aus einer XML-Struktur.|  
-|[Warten von Name-Wert-Paaren (C#)](../../../../csharp/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|Beschreibt das Verwalten von Anwendungsinformationen, die am besten als Name/Wert-Paare aufbewahrt werden, wie Konfigurationsinformationen oder globale Einstellungen.|  
-|[Vorgehensweise: Ändern des Namespace für eine gesamte XML-Struktur (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Zeigt, wie eine XML-Struktur aus einem Namespace in einen anderen Namespace verschoben werden kann.|  
+|[<span data-ttu-id="abca5-112">Änderung des XML-Baums im Arbeitsspeicher und Funktionale Konstruktion (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="abca5-112">In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)|<span data-ttu-id="abca5-113">Stellt das Ändern einer XML-Struktur im Arbeitsspeicher dem Ändern durch funktionale Konstruktion gegenüber.</span><span class="sxs-lookup"><span data-stu-id="abca5-113">Compares modifying an XML tree in memory to functional construction.</span></span>|  
+|[<span data-ttu-id="abca5-114">Hinzufügen von Elementen, Attributen und Knoten zu einer XML-Struktur (C#)</span><span class="sxs-lookup"><span data-stu-id="abca5-114">Adding Elements, Attributes, and Nodes to an XML Tree (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|<span data-ttu-id="abca5-115">Enthält Informationen zum Hinzufügen von Elementen, Attributen oder Knoten zu einer XML-Struktur.</span><span class="sxs-lookup"><span data-stu-id="abca5-115">Provides information about adding elements, attributes, or nodes to an XML tree.</span></span>|  
+|[<span data-ttu-id="abca5-116">Ändern von Elementen, Attributen und Knoten in einem XML-Baum</span><span class="sxs-lookup"><span data-stu-id="abca5-116">Modifying Elements, Attributes, and Nodes in an XML Tree</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|<span data-ttu-id="abca5-117">Enthält Informationen zum Ändern vorhandener Elemente, Attribute oder Knoten.</span><span class="sxs-lookup"><span data-stu-id="abca5-117">Provides information about modifying existing elements, attributes, or nodes.</span></span>|  
+|[<span data-ttu-id="abca5-118">Entfernen von Elementen, Attributen und Knoten aus einer XML-Struktur (C#)</span><span class="sxs-lookup"><span data-stu-id="abca5-118">Removing Elements, Attributes, and Nodes from an XML Tree (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|<span data-ttu-id="abca5-119">Enthält Informationen zum Entfernen von Elementen, Attributen oder Knoten aus einer XML-Struktur.</span><span class="sxs-lookup"><span data-stu-id="abca5-119">Provides information about removing elements, attributes, or nodes from the XML tree.</span></span>|  
+|[<span data-ttu-id="abca5-120">Warten von Name-Wert-Paaren (C#)</span><span class="sxs-lookup"><span data-stu-id="abca5-120">Maintaining Name/Value Pairs (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|<span data-ttu-id="abca5-121">Beschreibt das Verwalten von Anwendungsinformationen, die am besten als Name/Wert-Paare aufbewahrt werden, wie Konfigurationsinformationen oder globale Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="abca5-121">Describes how to maintain application information that is best kept as name/value pairs, such as configuration information or global settings.</span></span>|  
+|[<span data-ttu-id="abca5-122">Vorgehensweise: Ändern des Namespace für eine gesamte XML-Struktur (C#)</span><span class="sxs-lookup"><span data-stu-id="abca5-122">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|<span data-ttu-id="abca5-123">Zeigt, wie eine XML-Struktur aus einem Namespace in einen anderen Namespace verschoben werden kann.</span><span class="sxs-lookup"><span data-stu-id="abca5-123">Shows how to move an XML tree from one namespace into another.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="abca5-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="abca5-124">See Also</span></span>  
+ [<span data-ttu-id="abca5-125">Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))</span><span class="sxs-lookup"><span data-stu-id="abca5-125">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

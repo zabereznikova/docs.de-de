@@ -1,67 +1,66 @@
 ---
-title: "How to: Initialize an Array Variable in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], initializing"
-  - "arrays [Visual Basic], variables"
-  - "arrays [Visual Basic], initializing"
-  - "arrays [Visual Basic], declaring"
+title: 'Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], initializing
+- arrays [Visual Basic], variables
+- arrays [Visual Basic], initializing
+- arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-caps.latest.revision: 42
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3ccdbed601d3fa87acb0833bc153c199b17a4eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Initialize an Array Variable in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New`\-Klausel einfügen und die Anfangswerte des Arrays angeben.  Sie können den Typ angeben oder ihn von den Werten im Arrayliteral ableiten lassen.  Weitere Informationen zum Ableiten des Typs finden Sie unter "Auffüllen eines Arrays mit Anfangswerten" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a><span data-ttu-id="7350a-102">Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7350a-102">How to: Initialize an Array Variable in Visual Basic</span></span>
+<span data-ttu-id="7350a-103">Sie initialisieren eine Arrayvariable, in dem Sie ein Arrayliteral in einer `New`-Klausel einfügen und die Anfangswerte des Arrays angeben.</span><span class="sxs-lookup"><span data-stu-id="7350a-103">You initialize an array variable by including an array literal in a `New` clause and specifying the initial values of the array.</span></span> <span data-ttu-id="7350a-104">Sie können den Typ angeben oder ihn von den Werten im Arrayliteral ableiten lassen.</span><span class="sxs-lookup"><span data-stu-id="7350a-104">You can either specify the type or allow it to be inferred from the values in the array literal.</span></span> <span data-ttu-id="7350a-105">Weitere Informationen dazu, wie der Typ nicht abgeleitet ist, finden Sie unter "Auffüllen eines Arrays mit Anfangswerten" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="7350a-105">For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-### So initialisieren Sie eine Arrayvariable mit einem Arrayliteral  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a><span data-ttu-id="7350a-106">So initialisieren Sie eine Arrayvariable mit einem Arrayliteral</span><span class="sxs-lookup"><span data-stu-id="7350a-106">To initialize an array variable by using an array literal</span></span>  
   
--   Geben Sie die Elementwerte in der `New`\-Klausel oder beim Zuweisen des Arraywerts in geschweiften Klammern \(`{}`\) an.  Im folgenden Beispiel werden mehrere Möglichkeiten veranschaulicht, wie Variablen so deklariert, erstellt und initialisiert werden können, dass sie ein Array mit Elementen vom Typ `Char` enthalten.  
+-   <span data-ttu-id="7350a-107">Geben Sie die Elementwerte in der `New`-Klausel oder beim Zuweisen des Arraywerts in geschweiften Klammern (`{}`) an.</span><span class="sxs-lookup"><span data-stu-id="7350a-107">Either in the `New` clause, or when you assign the array value, supply the element values inside braces (`{}`).</span></span> <span data-ttu-id="7350a-108">Im folgenden Beispiel werden mehrere Möglichkeiten veranschaulicht, wie Variablen so deklariert, erstellt und initialisiert werden können, dass sie ein Array mit Elementen vom Typ `Char` enthalten.</span><span class="sxs-lookup"><span data-stu-id="7350a-108">The following example shows several ways to declare, create, and initialize a variable to contain an array that has elements of type `Char`.</span></span>  
   
      [!code-vb[VbVbalrArrays#16](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_1.vb)]  
   
-     Nach der Ausführung jeder Anweisung hat das erstellte Array die Länge 3, wobei die Elemente von Index 0 bis Index 2 die Anfangswerte enthalten.  Wenn Sie sowohl die Obergrenze als auch die Werte angeben, müssen Sie für jedes Element von Index 0 bis zur Obergrenze einen Wert einfügen.  
+     <span data-ttu-id="7350a-109">Nach der Ausführung jeder Anweisung hat das erstellte Array die Länge 3, wobei die Elemente von Index 0 bis Index 2 die Anfangswerte enthalten.</span><span class="sxs-lookup"><span data-stu-id="7350a-109">After each statement executes, the array that's created has a length of 3, with elements at index 0 through index 2 containing the initial values.</span></span> <span data-ttu-id="7350a-110">Wenn Sie sowohl die Obergrenze als auch die Werte angeben, müssen Sie für jedes Element von Index 0 bis zur Obergrenze einen Wert einfügen.</span><span class="sxs-lookup"><span data-stu-id="7350a-110">If you supply both the upper bound and the values, you must include a value for every element from index 0 through the upper bound.</span></span>  
   
-     Beachten Sie, dass Sie keine Indexobergrenze angeben müssen, wenn Elementwerte in einem Arrayliteral bereitgestellt werden.  Wenn keine Obergrenze angegeben wird, wird die Größe des Arrays anhand der Anzahl der Werte im Arrayliteral abgeleitet.  
+     <span data-ttu-id="7350a-111">Beachten Sie, dass Sie keine Indexobergrenze angeben müssen, wenn Elementwerte in einem Arrayliteral bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="7350a-111">Notice that you do not have to specify the index upper bound if you supply element values in an array literal.</span></span> <span data-ttu-id="7350a-112">Wenn keine Obergrenze angegeben wird, wird die Größe des Arrays anhand der Anzahl der Werte im Arrayliteral abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="7350a-112">If no upper bound is specified, the size of the array is inferred based on the number of values in the array literal.</span></span>  
   
-### So initialisieren Sie eine mehrdimensionale Arrayvariable mit Arrayliteralen  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a><span data-ttu-id="7350a-113">So initialisieren Sie eine mehrdimensionale Arrayvariable mit Arrayliteralen</span><span class="sxs-lookup"><span data-stu-id="7350a-113">To initialize a multidimensional array variable by using array literals</span></span>  
   
--   Schachteln Sie Werte in geschweiften Klammern \(`{}`\) in geschweiften Klammern.  Stellen Sie sicher, dass alle geschachtelten Arrayliterale als Arrays des gleichen Typs und mit derselben Länge abgeleitet werden.  Im folgenden Codebeispiel werden mehrere Beispiele für die Initialisierung mehrdimensionaler Arrays veranschaulicht.  
+-   <span data-ttu-id="7350a-114">Schachteln Sie Werte in geschweiften Klammern (`{}`) in geschweiften Klammern.</span><span class="sxs-lookup"><span data-stu-id="7350a-114">Nest values inside braces (`{}`) within braces.</span></span> <span data-ttu-id="7350a-115">Stellen Sie sicher, dass alle geschachtelten Arrayliterale als Arrays des gleichen Typs und mit derselben Länge abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="7350a-115">Ensure that the nested array literals all infer as arrays of the same type and length.</span></span> <span data-ttu-id="7350a-116">Im folgenden Codebeispiel werden mehrere Beispiele für die Initialisierung mehrdimensionaler Arrays veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="7350a-116">The following code example shows several examples of multidimensional array initialization.</span></span>  
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   Sie können die Arraygrenzen explizit angeben oder diese Angabe auslassen, sodass der Compiler die Arraygrenzen von den Werten im Arrayliteral ableitet.  Wenn Sie sowohl die Obergrenzen als auch die Werte vorgeben, müssen Sie in jeder Dimension für jedes Element von Index 0 bis zur Obergrenze einen Wert angeben.  Im folgenden Beispiel werden mehrere Möglichkeiten veranschaulicht, wie Variablen so deklariert, erstellt und initialisiert werden können, dass sie ein zweidimensionales Array mit Elementen vom Typ `Short` enthalten.  
+-   <span data-ttu-id="7350a-117">Sie können die Arraygrenzen explizit angeben oder diese Angabe auslassen, sodass der Compiler die Arraygrenzen von den Werten im Arrayliteral ableitet.</span><span class="sxs-lookup"><span data-stu-id="7350a-117">You can explicitly specify the array bounds, or leave them out and have the compiler infer the array bounds based on the values in the array literal.</span></span> <span data-ttu-id="7350a-118">Wenn Sie sowohl die Obergrenzen als auch die Werte vorgeben, müssen Sie in jeder Dimension für jedes Element von Index 0 bis zur Obergrenze einen Wert angeben.</span><span class="sxs-lookup"><span data-stu-id="7350a-118">If you supply both the upper bounds and the values, you must include a value for every element from index 0 through the upper bound in every dimension.</span></span> <span data-ttu-id="7350a-119">Im folgenden Beispiel werden mehrere Möglichkeiten veranschaulicht, wie Variablen so deklariert, erstellt und initialisiert werden können, dass sie ein zweidimensionales Array mit Elementen vom Typ `Short` enthalten.</span><span class="sxs-lookup"><span data-stu-id="7350a-119">The following example shows several ways to declare, create, and initialize a variable to contain a two-dimensional array that has elements of type `Short`</span></span>  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   
-     Nach der Ausführung jeder Anweisung enthält das erstellte Array sechs initialisierte Elemente mit den Indizes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)` und `(1,2)`.  Jede Arrayposition enthält den Wert `10`.  
+     <span data-ttu-id="7350a-120">Nach der Ausführung jeder Anweisung enthält das erstellte Array sechs initialisierte Elemente mit den Indizes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)` und `(1,2)`.</span><span class="sxs-lookup"><span data-stu-id="7350a-120">After each statement executes, the created array contains six initialized elements that have indexes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, and `(1,2)`.</span></span> <span data-ttu-id="7350a-121">Jede Arrayposition enthält den Wert `10`.</span><span class="sxs-lookup"><span data-stu-id="7350a-121">Each array location contains the value `10`.</span></span>  
   
--   Im folgenden Beispiel wird ein mehrdimensionales Array durchlaufen.  Fügen Sie den Code in einer Windows\-Konsolenanwendung, die in Visual Basic geschrieben wurde, in die `Sub Main()`\-Methode ein.  Die letzten Kommentare zeigen die Ausgabe an.  
+-   <span data-ttu-id="7350a-122">Im folgenden Beispiel wird ein mehrdimensionales Array durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="7350a-122">The following example iterates through a multidimensional array.</span></span> <span data-ttu-id="7350a-123">Fügen Sie den Code in einer Windows-Konsolenanwendung, die in Visual Basic geschrieben wurde, in die `Sub Main()`-Methode ein.</span><span class="sxs-lookup"><span data-stu-id="7350a-123">In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.</span></span> <span data-ttu-id="7350a-124">Die letzten Kommentare zeigen die Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="7350a-124">The last comments show the output.</span></span>  
   
      [!code-vb[VbVbalrArrays#31](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_4.vb)]  
   
-### So initialisieren Sie eine verzweigte Arrayvariable mit Arrayliteralen  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a><span data-ttu-id="7350a-125">So initialisieren Sie eine verzweigte Arrayvariable mit Arrayliteralen</span><span class="sxs-lookup"><span data-stu-id="7350a-125">To initialize a jagged array variable by using array literals</span></span>  
   
--   Schachteln Sie Objektwerte in geschweiften Klammern \(`{}`\).  Sie können zwar auch Arrayliterale schachteln, die Arrays von verschiedener Länge angeben, stellen Sie jedoch bei einem verzweigten Array sicher, dass die geschachtelten Arrayliterale in runden Klammern \(`()`\) eingeschlossen sind.  Durch die Klammern wird die Auswertung der geschachtelten Arrayliterale erzwungen, und die erhaltenen Arrays werden als Anfangswerte des verzweigten Arrays verwendet.  Im folgenden Codebeispiel werden zwei Beispiele für die Initialisierung verzweigter Arrays veranschaulicht.  
+-   <span data-ttu-id="7350a-126">Schachteln Sie Objektwerte in geschweiften Klammern (`{}`).</span><span class="sxs-lookup"><span data-stu-id="7350a-126">Nest object values inside braces (`{}`).</span></span> <span data-ttu-id="7350a-127">Sie können zwar auch Arrayliterale schachteln, die Arrays von verschiedener Länge angeben, stellen Sie jedoch bei einem verzweigten Array sicher, dass die geschachtelten Arrayliterale in runden Klammern (`()`) eingeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="7350a-127">Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that that the nested array literals are enclosed in parentheses (`()`).</span></span> <span data-ttu-id="7350a-128">Durch die Klammern wird die Auswertung der geschachtelten Arrayliterale erzwungen, und die erhaltenen Arrays werden als Anfangswerte des verzweigten Arrays verwendet.</span><span class="sxs-lookup"><span data-stu-id="7350a-128">The parentheses force the evaluation of the nested array literals, and the resulting arrays are used as the initial values of the jagged array.</span></span> <span data-ttu-id="7350a-129">Im folgenden Codebeispiel werden zwei Beispiele für die Initialisierung verzweigter Arrays veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="7350a-129">The following code example shows two examples of jagged array initialization.</span></span>  
   
      [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_5.vb)]  
   
--   Im folgenden Beispiel wird ein verzweigtes Array durchlaufen.  Fügen Sie den Code in einer Windows\-Konsolenanwendung, die in Visual Basic geschrieben wurde, in die `Sub Main()`\-Methode ein.  Die letzten Kommentare im Code zeigen die Ausgabe an.  
+-   <span data-ttu-id="7350a-130">Im folgenden Beispiel wird ein verzweigtes Array durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="7350a-130">The following example iterates through a jagged array.</span></span> <span data-ttu-id="7350a-131">Fügen Sie den Code in einer Windows-Konsolenanwendung, die in Visual Basic geschrieben wurde, in die `Sub Main()`-Methode ein.</span><span class="sxs-lookup"><span data-stu-id="7350a-131">In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.</span></span>  <span data-ttu-id="7350a-132">Die letzten Kommentare im Code zeigen die Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="7350a-132">The last comments in the code show the output.</span></span>  
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
-## Siehe auch  
- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Troubleshooting Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a><span data-ttu-id="7350a-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7350a-133">See Also</span></span>  
+ [<span data-ttu-id="7350a-134">Arrays</span><span class="sxs-lookup"><span data-stu-id="7350a-134">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="7350a-135">Problembehandlung bei Arrays</span><span class="sxs-lookup"><span data-stu-id="7350a-135">Troubleshooting Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
