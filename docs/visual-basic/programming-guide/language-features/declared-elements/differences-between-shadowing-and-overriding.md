@@ -1,70 +1,69 @@
 ---
-title: "Differences Between Shadowing and Overriding (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "shadowing, vs. overriding"
-  - "overriding, vs. shadowing"
+title: "Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- shadowing, vs. overriding
+- overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Shadowing and Overriding (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Wenn Sie eine Klasse definieren, die von einer Basisklasse erbt, möchten Sie u. U. eines oder mehrere der Basisklassenelemente in der abgeleiteten Klasse neu definieren.  Zu diesem Zweck sind die Techniken Shadowing und Überschreiben verfügbar.  
+# <a name="differences-between-shadowing-and-overriding-visual-basic"></a><span data-ttu-id="b522a-102">Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b522a-102">Differences Between Shadowing and Overriding (Visual Basic)</span></span>
+<span data-ttu-id="b522a-103">Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten manchmal eine oder mehrere der in der abgeleiteten Klasse die Basisklasse-Elemente neu definieren.</span><span class="sxs-lookup"><span data-stu-id="b522a-103">When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class.</span></span> <span data-ttu-id="b522a-104">Shadowing und überschreiben sind verfügbar für diesen Zweck.</span><span class="sxs-lookup"><span data-stu-id="b522a-104">Shadowing and overriding are both available for this purpose.</span></span>  
   
-## Vergleich  
- Shadowing und Überschreiben werden verwendet, wenn eine abgeleitete Klasse von einer Basisklasse erbt und beide ein deklariertes Element durch ein anderes neu definieren.  Es gibt jedoch klare Unterschiede zwischen den beiden Verfahren.  
+## <a name="comparison"></a><span data-ttu-id="b522a-105">Vergleich</span><span class="sxs-lookup"><span data-stu-id="b522a-105">Comparison</span></span>  
+ <span data-ttu-id="b522a-106">Shadowing und überschreiben werden verwendet, wenn eine abgeleitete Klasse, die von einer Basisklasse erbt, und beide ein deklariertes Element mit einem anderen neu definieren.</span><span class="sxs-lookup"><span data-stu-id="b522a-106">Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another.</span></span> <span data-ttu-id="b522a-107">Es gibt jedoch bedeutende Unterschiede zwischen den beiden.</span><span class="sxs-lookup"><span data-stu-id="b522a-107">But there are significant differences between the two.</span></span>  
   
- In der folgenden Tabelle werden das Shadowing und das Überschreiben miteinander verglichen.  
+ <span data-ttu-id="b522a-108">Die folgende Tabelle vergleicht shadowing und überschreiben.</span><span class="sxs-lookup"><span data-stu-id="b522a-108">The following table compares shadowing with overriding.</span></span>  
   
 ||||  
-|-|-|-|  
-|Vergleichsaspekte|Shadowing|Überschreiben|  
-|Zweck|Schützt vor späteren Änderungen der Basisklasse, durch die ein Member eingeführt wird, der bereits in der abgeleiteten Klasse definiert wurde|Gewährleistet Polymorphismus durch die Definition einer anderen Implementierung einer Prozedur oder Eigenschaft mit derselben Aufrufabfolge<sup>1</sup>|  
-|Neu definiertes Element|Jeder deklarierte Elementtyp|Nur Prozeduren \(`Function`, `Sub` oder `Operator`\) oder Eigenschaften|  
-|Neu definierendes Element|Jeder deklarierte Elementtyp|Nur Prozeduren oder Eigenschaften mit einer identischen Aufrufabfolge<sup>1</sup>|  
-|Zugriffsebene für die Neudefinition von Elementen|Beliebige Zugriffsebene|Kann die Zugriffsebene von überschriebenen Elementen nicht ändern|  
-|Lese\- und Schreibzugriff des neu definierenden Elements|Beliebige Kombination|Kann die Lesbarkeit oder Schreibbarkeit der überschriebenen Eigenschaft nicht ändern|  
-|Kontrolle über die Neudefinition|Basisklassenelement kann das Shadowing nicht durchsetzen oder verbieten|Basisklassenelement kann `MustOverride`, `NotOverridable` oder `Overridable` angeben|  
-|Verwendung von Schlüsselwörtern|Die Verwendung von `Shadows` wird in der abgeleiteten Klasse empfohlen. Wenn weder `Shadows` noch `Overrides` angegeben wurde, wird `Shadows` angenommen<sup>2</sup>.|`Overridable` oder `MustOverride` ist in der Basisklasse erforderlich; `Overrides` ist in der abgeleiteten Klasse erforderlich.|  
-|Vererbung des neu definierenden Elements durch Klassen, die von der abgeleiteten Klasse abgeleitet werden|Das Element, welches das Shadowing durchführt, wird von nachfolgenden abgeleiteten Klassen geerbt; das Element, für welches das Shadowing durchgeführt wurde, bleibt verdeckt<sup>3</sup>.|Das überschreibende Element wird von weiter abgeleiteten Klassen geerbt; das überschriebene Element bleibt überschrieben|  
+|---|---|---|  
+|<span data-ttu-id="b522a-109">Vergleichspunkt</span><span class="sxs-lookup"><span data-stu-id="b522a-109">Point of comparison</span></span>|<span data-ttu-id="b522a-110">Shadowing</span><span class="sxs-lookup"><span data-stu-id="b522a-110">Shadowing</span></span>|<span data-ttu-id="b522a-111">Überschreiben</span><span class="sxs-lookup"><span data-stu-id="b522a-111">Overriding</span></span>|  
+|<span data-ttu-id="b522a-112">Zweck</span><span class="sxs-lookup"><span data-stu-id="b522a-112">Purpose</span></span>|<span data-ttu-id="b522a-113">Schutz gegen eine spätere Änderung Basisklasse, die ein Element eingeführt werden, die Sie in der abgeleiteten Klasse bereits definiert haben</span><span class="sxs-lookup"><span data-stu-id="b522a-113">Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class</span></span>|<span data-ttu-id="b522a-114">Polymorphie erreicht, durch die Definition einer anderen Implementierung einer Prozedur oder Eigenschaft mit dem gleichen Aufrufsequenz<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="b522a-114">Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="b522a-115">Neu definierten element</span><span class="sxs-lookup"><span data-stu-id="b522a-115">Redefined element</span></span>|<span data-ttu-id="b522a-116">Jeder deklarierte Elementtyp.</span><span class="sxs-lookup"><span data-stu-id="b522a-116">Any declared element type</span></span>|<span data-ttu-id="b522a-117">Nur eine Prozedur (`Function`, `Sub`, oder `Operator`) oder eine Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="b522a-117">Only a procedure (`Function`, `Sub`, or `Operator`) or property</span></span>|  
+|<span data-ttu-id="b522a-118">Redefine-element</span><span class="sxs-lookup"><span data-stu-id="b522a-118">Redefining element</span></span>|<span data-ttu-id="b522a-119">Jeder deklarierte Elementtyp.</span><span class="sxs-lookup"><span data-stu-id="b522a-119">Any declared element type</span></span>|<span data-ttu-id="b522a-120">Nur eine Prozedur oder Eigenschaft mit einer identischen Aufrufabfolge<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="b522a-120">Only a procedure or property with the identical calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="b522a-121">Zugriffsebene des neu definierenden Elements</span><span class="sxs-lookup"><span data-stu-id="b522a-121">Access level of redefining element</span></span>|<span data-ttu-id="b522a-122">Eine andere Zugriffsebene</span><span class="sxs-lookup"><span data-stu-id="b522a-122">Any access level</span></span>|<span data-ttu-id="b522a-123">Zugriffsebene außer Kraft gesetztes Element kann nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="b522a-123">Cannot change access level of overridden element</span></span>|  
+|<span data-ttu-id="b522a-124">Lese- und Schreibberechtigung für Neudefinieren-element</span><span class="sxs-lookup"><span data-stu-id="b522a-124">Readability and writability of redefining element</span></span>|<span data-ttu-id="b522a-125">Eine beliebige Kombination</span><span class="sxs-lookup"><span data-stu-id="b522a-125">Any combination</span></span>|<span data-ttu-id="b522a-126">Lesbarkeit oder Schreibberechtigung für die überschriebenen Eigenschaft kann nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="b522a-126">Cannot change readability or writability of overridden property</span></span>|  
+|<span data-ttu-id="b522a-127">Kontrolle über die Neudefinition</span><span class="sxs-lookup"><span data-stu-id="b522a-127">Control over redefining</span></span>|<span data-ttu-id="b522a-128">Basisklasse-Element kann nicht zu erzwingen und verbieten shadowing</span><span class="sxs-lookup"><span data-stu-id="b522a-128">Base class element cannot enforce or prohibit shadowing</span></span>|<span data-ttu-id="b522a-129">Basisklassenelement festlegbaren `MustOverride`, `NotOverridable`, oder`Overridable`</span><span class="sxs-lookup"><span data-stu-id="b522a-129">Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`</span></span>|  
+|<span data-ttu-id="b522a-130">Verwendung von Schlüsselwörtern</span><span class="sxs-lookup"><span data-stu-id="b522a-130">Keyword usage</span></span>|<span data-ttu-id="b522a-131">`Shadows`in der abgeleiteten Klasse empfohlen; `Shadows` davon ausgegangen, dass weder `Shadows` noch `Overrides` angegebenen<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="b522a-131">`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup></span></span>|<span data-ttu-id="b522a-132">`Overridable`oder `MustOverride` erforderlich, in der Basisklasse; `Overrides` in einer abgeleiteten Klasse erforderlich</span><span class="sxs-lookup"><span data-stu-id="b522a-132">`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class</span></span>|  
+|<span data-ttu-id="b522a-133">Vererbung des neu definierenden Elements von von der abgeleiteten Klasse abgeleitete Klassen</span><span class="sxs-lookup"><span data-stu-id="b522a-133">Inheritance of redefining element by classes deriving from your derived class</span></span>|<span data-ttu-id="b522a-134">Shadowing-Element von geerbt weiter abgeleiteten Klassen; schattiertes Element weiterhin ausgeblendet<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="b522a-134">Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup></span></span>|<span data-ttu-id="b522a-135">Element Überschreiben von geerbten weiter abgeleiteten Klassen; außer Kraft gesetztes Element noch überschreiben.</span><span class="sxs-lookup"><span data-stu-id="b522a-135">Overriding element inherited by further derived classes; overridden element still overridden</span></span>|  
   
- <sup>1</sup> Die *Aufrufabfolge* besteht aus dem Elementtyp \(`Function`, `Sub`, `Operator` oder `Property`\), dem Namen, der Argumentliste und dem Rückgabetyp.  Es ist nicht möglich, eine Prozedur mit einer Eigenschaft zu überschreiben oder umgekehrt.  Sie können keinerlei Prozedur \(`Function`, `Sub` oder `Operator`\) mit einer anderen Art von Prozedur überschreiben.  
+ <span data-ttu-id="b522a-136"><sup>1</sup> der *Aufrufsequenz* besteht aus den Elementtyp (`Function`, `Sub`, `Operator`, oder `Property`), benennen Sie die Parameterliste, und dem Rückgabetyp.</span><span class="sxs-lookup"><span data-stu-id="b522a-136"><sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type.</span></span> <span data-ttu-id="b522a-137">Sie können eine Prozedur mit einer Eigenschaft oder den umgekehrten nicht überschreiben.</span><span class="sxs-lookup"><span data-stu-id="b522a-137">You cannot override a procedure with a property, or the other way around.</span></span> <span data-ttu-id="b522a-138">Eine Art von Prozedur kann nicht überschrieben werden (`Function`, `Sub`, oder `Operator`) mit einer anderen Art.</span><span class="sxs-lookup"><span data-stu-id="b522a-138">You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.</span></span>  
   
- <sup>2</sup> Wenn Sie weder `Shadows` noch `Overrides` angeben, gibt der Compiler eine Warnung aus, damit Sie nochmals überprüfen und bestätigen können, welche Art von Neudefinition verwendet werden soll.  Wenn Sie die Warnung ignorieren, wird der Shadowing\-Mechanismus verwendet.  
+ <span data-ttu-id="b522a-139"><sup>2</sup> , wenn Sie nicht entweder angeben `Shadows` oder `Overrides`, der Compiler gibt eine Warnmeldung können Sie sicher sein, welche Art von Neudefinition, die Sie verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="b522a-139"><sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use.</span></span> <span data-ttu-id="b522a-140">Wenn Sie die Warnung ignorieren, wird das Shadowing verwendet.</span><span class="sxs-lookup"><span data-stu-id="b522a-140">If you ignore the warning, the shadowing mechanism is used.</span></span>  
   
- <sup>3</sup> Wenn in einer nachfolgend abgeleiteten Klasse nicht auf das Element, welches das Shadowing durchführt, zugegriffen werden kann, wird der Shadowing\-Effekt nicht vererbt.  Wenn Sie beispielsweise das Element, welches das Shadowing durchführt, als `Private` deklarieren, erbt eine von der abgeleiteten Klasse abgeleitete Klasse das Originalelement anstelle des Elements, welches das Shadowing durchführt.  
+ <span data-ttu-id="b522a-141"><sup>3</sup> ist das shadowing-Element kann nicht zugegriffen werden, in einer weiteren abgeleiteten Klasse shadowing nicht geerbt.</span><span class="sxs-lookup"><span data-stu-id="b522a-141"><sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited.</span></span> <span data-ttu-id="b522a-142">Wenn Sie das shadowing-Element als deklarieren z. B. `Private`, eine von der abgeleiteten Klasse abgeleitete Klasse erbt das ursprüngliche Element, anstatt das shadowing-Element.</span><span class="sxs-lookup"><span data-stu-id="b522a-142">For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.</span></span>  
   
-## Richtlinien  
- Das Überschreiben wird normalerweise in den folgenden Fällen angewendet:  
+## <a name="guidelines"></a><span data-ttu-id="b522a-143">Richtlinien</span><span class="sxs-lookup"><span data-stu-id="b522a-143">Guidelines</span></span>  
+ <span data-ttu-id="b522a-144">Normalerweise verwenden Sie in den folgenden Fällen überschreiben:</span><span class="sxs-lookup"><span data-stu-id="b522a-144">You normally use overriding in the following cases:</span></span>  
   
--   Sie definieren polymorphe abgeleitete Klassen.  
+-   <span data-ttu-id="b522a-145">Sie definieren polymorphe abgeleitete Klassen.</span><span class="sxs-lookup"><span data-stu-id="b522a-145">You are defining polymorphic derived classes.</span></span>  
   
--   Sie möchten sicherstellen, dass der Compiler den gleichen Elementtyp und die gleiche Aufrufabfolge erzwingt.  
+-   <span data-ttu-id="b522a-146">Die Sicherheit der, dass der Compiler den gleichen Elementtyp und Aufrufsequenz erzwungen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b522a-146">You want the safety of having the compiler enforce the identical element type and calling sequence.</span></span>  
   
- Sie führen ein Shadowing normalerweise in den folgenden Fällen durch:  
+ <span data-ttu-id="b522a-147">Normalerweise verwenden Sie shadowing in den folgenden Fällen:</span><span class="sxs-lookup"><span data-stu-id="b522a-147">You normally use shadowing in the following cases:</span></span>  
   
--   Sie erwarten, dass Ihre Basisklasse modifiziert wird, und definieren ein Element mit dem Namen eines Basisklassenelements.  
+-   <span data-ttu-id="b522a-148">Sie erwarten, dass Ihre Basisklasse möglicherweise geändert werden, und definieren ein Element mit dem gleichen Namen wie der Ihres.</span><span class="sxs-lookup"><span data-stu-id="b522a-148">You anticipate that your base class might be modified and define an element using the same name as yours.</span></span>  
   
--   Sie möchten in der Lage sein, den Elementtyp oder die Aufruffolge zu ändern.  
+-   <span data-ttu-id="b522a-149">Die Freiheit gibt den Elementtyp ändern oder die Aufrufsequenz angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="b522a-149">You want the freedom of changing the element type or calling sequence.</span></span>  
   
-## Siehe auch  
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+## <a name="see-also"></a><span data-ttu-id="b522a-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b522a-150">See Also</span></span>  
+ [<span data-ttu-id="b522a-151">Verweise auf deklarierte Elemente</span><span class="sxs-lookup"><span data-stu-id="b522a-151">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="b522a-152">Shadowing in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b522a-152">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="b522a-153">Gewusst wie: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable</span><span class="sxs-lookup"><span data-stu-id="b522a-153">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="b522a-154">Gewusst wie: Ausblenden einer geerbten Variablen</span><span class="sxs-lookup"><span data-stu-id="b522a-154">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="b522a-155">Gewusst wie: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird</span><span class="sxs-lookup"><span data-stu-id="b522a-155">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="b522a-156">Shadows</span><span class="sxs-lookup"><span data-stu-id="b522a-156">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="b522a-157">Overrides</span><span class="sxs-lookup"><span data-stu-id="b522a-157">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)

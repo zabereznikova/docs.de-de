@@ -1,36 +1,34 @@
 ---
-title: "Bad DLL calling convention | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID49"
-dev_langs: 
-  - "VB"
+title: Fehlerhafte DLL-Aufrufkonvention
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: daa84e82d2fbe1041af56fdd5cc3855efd814ddf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bad DLL calling convention
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Argumente, die an eine Dynamic Link Library \(DLL\) übergeben werden, müssen mit den Argumenten genau übereinstimmen, die von der Routine erwartet werden.  Aufrufkonventionen enthalten die Nummer, den Typ und die Reihenfolge der Argumente.  Möglicherweise ruft das Programm eine Routine in einer DLL auf, der der falsche Typ oder die falsche Anzahl von Argumenten übergeben wird.  
+# <a name="bad-dll-calling-convention"></a><span data-ttu-id="d735a-102">Fehlerhafte DLL-Aufrufkonvention</span><span class="sxs-lookup"><span data-stu-id="d735a-102">Bad DLL calling convention</span></span>
+<span data-ttu-id="d735a-103">Weitergegebenen Argumenten um eine Dynamic Link Library (DLL) müssen genau mit denen von der Routine erwartet entsprechen.</span><span class="sxs-lookup"><span data-stu-id="d735a-103">Arguments passed to a dynamic-link library (DLL) must exactly match those expected by the routine.</span></span> <span data-ttu-id="d735a-104">Aufrufkonventionen befassen sich mit Anzahl, Typ und die Reihenfolge der Argumente.</span><span class="sxs-lookup"><span data-stu-id="d735a-104">Calling conventions deal with number, type, and order of arguments.</span></span> <span data-ttu-id="d735a-105">Das Programm möglicherweise eine Routine in einer DLL aufrufen, der den falschen Typ oder die Anzahl von Argumenten übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="d735a-105">Your program may be calling a routine in a DLL that is being passed the wrong type or number of arguments.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d735a-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="d735a-106">To correct this error</span></span>  
   
-1.  Vergewissern Sie sich, dass alle Argumenttypen mit denen, die in der Deklaration der aufgerufenen Routine angegeben sind, übereinstimmen.  
+1.  <span data-ttu-id="d735a-107">Stellen Sie sicher, dass alle Argumenttypen stimmen mit denen angegeben wird, in der Deklaration der Routine, die Sie aufrufen.</span><span class="sxs-lookup"><span data-stu-id="d735a-107">Make sure all argument types agree with those specified in the declaration of the routine that you are calling.</span></span>  
   
-2.  Vergewissern Sie sich, dass dieselbe Anzahl an Argumenten übergeben wird, die in der Deklaration der aufgerufenen Routine angegeben sind.  
+2.  <span data-ttu-id="d735a-108">Stellen Sie sicher, dass Sie die gleiche Anzahl von Argumenten angegeben werden, in der Deklaration der Routine, die Sie aufrufen übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="d735a-108">Make sure you are passing the same number of arguments indicated in the declaration of the routine that you are calling.</span></span>  
   
-3.  Wenn die DLL\-Routine Argumente nach Wert erwartet, vergewissern Sie sich, dass für diese Argumente `ByVal` in der Deklaration für die Routine angegeben ist.  
+3.  <span data-ttu-id="d735a-109">Wenn die DLL-Routine Argumente nach Wert erwartet wird, stellen Sie sicher `ByVal` für diese Argumente in der Deklaration für die Routine angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="d735a-109">If the DLL routine expects arguments by value, make sure `ByVal` is specified for those arguments in the declaration for the routine.</span></span>  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)   
- [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md)   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d735a-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d735a-110">See Also</span></span>  
+ [<span data-ttu-id="d735a-111">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="d735a-111">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ [<span data-ttu-id="d735a-112">Call-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d735a-112">Call Statement</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [<span data-ttu-id="d735a-113">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d735a-113">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)

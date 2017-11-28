@@ -1,48 +1,51 @@
 ---
-title: "&#220;bersicht &#252;ber GridView-Spaltenheaderstile und -Spaltenheadervorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Spaltenheader, Anpassen"
-  - "Steuerelemente, ListView"
-  - "GridView-Ansichtsmodus, Anpassen von Spaltenheadern"
-  - "Kopfzeilen, Anpassen"
-  - "ListView-Steuerelemente [WPF], GridView-Spaltenheaderstile"
+title: "Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- column headers [WPF], customizing
+- ListView controls [WPF], GridView column header styles
+- controls [WPF], ListView
+- headers [WPF], customizing
+- GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber GridView-Spaltenheaderstile und -Spaltenheadervorlagen
-In dieser Übersicht wird die Rangfolge für Eigenschaften erläutert, mit denen Sie einen Spaltenheader im <xref:System.Windows.Controls.GridView>\-Ansichtsmodus eines <xref:System.Windows.Controls.ListView>\-Steuerelements anpassen.  
+# <a name="gridview-column-header-styles-and-templates-overview"></a><span data-ttu-id="994b6-102">Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen</span><span class="sxs-lookup"><span data-stu-id="994b6-102">GridView Column Header Styles and Templates Overview</span></span>
+<span data-ttu-id="994b6-103">In dieser Übersicht wird erläutert, die Reihenfolge der Rangfolge für Eigenschaften, mit denen Sie eine Spaltenüberschrift im Anpassen der <xref:System.Windows.Controls.GridView> Ansichtsmodus des ein <xref:System.Windows.Controls.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="994b6-103">This overview discusses the order of precedence for properties that you use to customize a column header in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## Anpassen eines Spaltenheaders in einem GridView  
- Die Eigenschaften, die den Inhalt, das Layout und den Stil eines Spaltenheaders in einem <xref:System.Windows.Controls.GridView> definieren, befinden sich in vielen verwandten Klassen.  Einige dieser Eigenschaften haben eine ähnliche oder sogar identische Funktion.  
+## <a name="customizing-a-column-header-in-a-gridview"></a><span data-ttu-id="994b6-104">Anpassen einer Spaltenüberschrift in einer GridView</span><span class="sxs-lookup"><span data-stu-id="994b6-104">Customizing a Column Header in a GridView</span></span>  
+ <span data-ttu-id="994b6-105">Die Eigenschaften, die Inhalte, Layout und Stil Rand eines Spaltenheaders im definieren, einer <xref:System.Windows.Controls.GridView> auf vielen verwandten Klassen gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="994b6-105">The properties that define the content, layout, and style of a column header in a <xref:System.Windows.Controls.GridView> are found on many related classes.</span></span> <span data-ttu-id="994b6-106">Einige dieser Eigenschaften aufweisen, die Ähnlichkeit oder identische Funktionen.</span><span class="sxs-lookup"><span data-stu-id="994b6-106">Some of these properties have functionality that is similar or the same.</span></span>  
   
- In der folgenden Tabelle sind Gruppen von Eigenschaften, die dieselbe Funktion erfüllen, aufgeführt.  Mithilfe dieser Eigenschaften können Sie die Spaltenheader in einem <xref:System.Windows.Controls.GridView> anpassen.  Die Rangfolge bei verwandten Eigenschaften verläuft von rechts nach links, wobei die Eigenschaft in der Spalte ganz rechts die höchste Priorität besitzt.  Wenn <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> beispielsweise über das <xref:System.Windows.Controls.GridViewColumnHeader>\-Objekt und <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> über das zugehörige <xref:System.Windows.Controls.GridViewColumn>\-Objekt festgelegt werden, hat <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> Vorrang.  In diesem Szenario hat <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> keine Auswirkungen.  
+ <span data-ttu-id="994b6-107">Die Zeilen in der folgenden Tabelle angezeigt werden Gruppen von Eigenschaften, die die gleiche Funktion ausführen.</span><span class="sxs-lookup"><span data-stu-id="994b6-107">The rows in the following table show groups of properties that perform the same function.</span></span> <span data-ttu-id="994b6-108">Können diese Eigenschaften anpassen, die Spaltenüberschriften in einer <xref:System.Windows.Controls.GridView>.</span><span class="sxs-lookup"><span data-stu-id="994b6-108">You can use these properties to customize the column headers in a <xref:System.Windows.Controls.GridView>.</span></span> <span data-ttu-id="994b6-109">Rangfolge bei verwandten Eigenschaften ist, in dem die höchste Priorität hat der Eigenschaft in der äußersten rechten Spalte von rechts nach links.</span><span class="sxs-lookup"><span data-stu-id="994b6-109">The order of precedence for related properties is from right to left where the property in the farthest right column has the highest precedence.</span></span> <span data-ttu-id="994b6-110">Z. B. wenn ein <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> festgelegt ist, auf die <xref:System.Windows.Controls.GridViewColumnHeader> Objekt und die <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> ist auf dem zugeordneten <xref:System.Windows.Controls.GridViewColumn>, die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> hat Vorrang vor.</span><span class="sxs-lookup"><span data-stu-id="994b6-110">For example, if a <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> is set on the <xref:System.Windows.Controls.GridViewColumnHeader> object and the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> is set on the associated <xref:System.Windows.Controls.GridViewColumn>, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> takes precedence.</span></span> <span data-ttu-id="994b6-111">In diesem Szenario die <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> hat keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="994b6-111">In this scenario, the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> has no effect.</span></span>  
   
- **Verwandte Eigenschaften für Spaltenheader in einem GridView**  
+ <span data-ttu-id="994b6-112">**Verwandte Eigenschaften für die Spaltenüberschriften in einer GridView**</span><span class="sxs-lookup"><span data-stu-id="994b6-112">**Related properties for column headers in a GridView**</span></span>  
   
 |||||  
 |-|-|-|-|  
-|**Klassen**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
-|**Kontextmenüeigenschaften**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|Nicht zutreffend|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**ToolTip**<br /><br /> **Eigenschaften**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|Nicht zutreffend|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
-|**Headervorlage**<br /><br /> **Eigenschaften**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
-|**Formateigenschaften**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
+|<span data-ttu-id="994b6-113">**Klassen**</span><span class="sxs-lookup"><span data-stu-id="994b6-113">**Classes**</span></span>|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
+|<span data-ttu-id="994b6-114">**Menü-Kontexteigenschaften**</span><span class="sxs-lookup"><span data-stu-id="994b6-114">**Context Menu Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|<span data-ttu-id="994b6-115">Nicht zutreffend</span><span class="sxs-lookup"><span data-stu-id="994b6-115">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
+|<span data-ttu-id="994b6-116">**QuickInfo**</span><span class="sxs-lookup"><span data-stu-id="994b6-116">**ToolTip**</span></span><br /><br /> <span data-ttu-id="994b6-117">**Eigenschaften**</span><span class="sxs-lookup"><span data-stu-id="994b6-117">**Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|<span data-ttu-id="994b6-118">Nicht zutreffend</span><span class="sxs-lookup"><span data-stu-id="994b6-118">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|<span data-ttu-id="994b6-119">**Header-Vorlage**</span><span class="sxs-lookup"><span data-stu-id="994b6-119">**Header Template**</span></span><br /><br /> <span data-ttu-id="994b6-120">**Eigenschaften**</span><span class="sxs-lookup"><span data-stu-id="994b6-120">**Properties**</span></span>|<span data-ttu-id="994b6-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="994b6-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<span data-ttu-id="994b6-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="994b6-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<span data-ttu-id="994b6-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="994b6-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
+|<span data-ttu-id="994b6-124">**Style-Eigenschaften**</span><span class="sxs-lookup"><span data-stu-id="994b6-124">**Style Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup>Wenn Sie bei **Headervorlageneigenschaften** sowohl die Vorlagen\- als auch die Vorlagenauswahleigenschaft festlegen, hat die Vorlageneigenschaft Vorrang.  Wenn Sie zum Beispiel sowohl die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>\-Eigenschaft als auch die <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>\-Eigenschaft festlegen, hat die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>\-Eigenschaft Vorrang.  
+ <span data-ttu-id="994b6-125"><sup>1</sup>für **Vorlage Headereigenschaften**, wenn Sie, die Vorlage und den Selektor Vorlageneigenschaften, die Vorlage Eigenschaft hat Vorrang festlegen.</span><span class="sxs-lookup"><span data-stu-id="994b6-125"><sup>1</sup>For **Header Template Properties**, if you set both the template and template selector properties, the template property takes precedence.</span></span> <span data-ttu-id="994b6-126">Angenommen, wenn Sie beide Optionen festlegen der <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> und <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> Eigenschaften, die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> -Eigenschaft Vorrang.</span><span class="sxs-lookup"><span data-stu-id="994b6-126">For example, if you set both the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> and <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> properties, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> property takes precedence.</span></span>  
   
-## Siehe auch  
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="994b6-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="994b6-127">See Also</span></span>  
+ [<span data-ttu-id="994b6-128">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="994b6-128">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="994b6-129">Übersicht über ListView</span><span class="sxs-lookup"><span data-stu-id="994b6-129">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="994b6-130">Übersicht über GridView</span><span class="sxs-lookup"><span data-stu-id="994b6-130">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)

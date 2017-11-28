@@ -1,54 +1,60 @@
 ---
-title: "Vorgehensweise: Pr&#252;fen des Sicherheitskontexts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Claimset-Klasse"
-  - "ServiceSecurityContext-Klasse"
-  - "WCF, Sicherheit"
+title: "Vorgehensweise: Prüfen des Sicherheitskontexts"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ServiceSecurityContext class
+- WCF, security
+- Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 72bc3dfcc91cb0fe5b393c9735c83b6331d5e0dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Pr&#252;fen des Sicherheitskontexts
-Beim Programmieren von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Diensten können Sie mit dem Dienstsicherheitskontext genaue Informationen über die Clientanmeldeinformationen und Ansprüche bestimmen, die für die Authentifizierung des Diensts benötigt werden.Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>\-Klasse.  
+# <a name="how-to-examine-the-security-context"></a><span data-ttu-id="fa898-102">Vorgehensweise: Prüfen des Sicherheitskontexts</span><span class="sxs-lookup"><span data-stu-id="fa898-102">How to: Examine the Security Context</span></span>
+<span data-ttu-id="fa898-103">Beim Programmieren von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Diensten können Sie mit dem Dienstsicherheitskontext genaue Informationen über die Clientanmeldeinformationen und Ansprüche bestimmen, die für die Authentifizierung des Diensts benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="fa898-103">When programming [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services, the service security context enables you to determine details about the client credentials and claims used to authenticate with the service.</span></span> <span data-ttu-id="fa898-104">Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="fa898-104">This is done by using the properties of the <xref:System.ServiceModel.ServiceSecurityContext> class.</span></span>  
   
- So können Sie z. B. die Identität des aktuellen Clients mit der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>\-Eigenschaft oder der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>\-Eigenschaft abrufen.Mit der <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>\-Eigenschaft können Sie ermitteln, ob der Client anonym ist.  
+ <span data-ttu-id="fa898-105">So können Sie z.&#160;B. die Identität des aktuellen Clients mit der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>-Eigenschaft oder der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft abrufen.</span><span class="sxs-lookup"><span data-stu-id="fa898-105">For example, you can retrieve the identity of the current client by using the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> or the <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> property.</span></span> <span data-ttu-id="fa898-106">Mit der <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>-Eigenschaft können Sie ermitteln, ob der Client anonym ist.</span><span class="sxs-lookup"><span data-stu-id="fa898-106">To determine whether the client is anonymous, use the <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> property.</span></span>  
   
- Sie können auch bestimmen, welche Ansprüche im Namen des Clients gestellt werden, indem Sie die Auflistung der Ansprüche der <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>\-Eigenschaft durchlaufen.  
+ <span data-ttu-id="fa898-107">Sie können auch bestimmen, welche Ansprüche im Namen des Clients gestellt werden, indem Sie die Auflistung der Ansprüche der <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>-Eigenschaft durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="fa898-107">You can also determine what claims are being made on behalf of the client by iterating through the collection of claims in the <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> property.</span></span>  
   
-### So rufen Sie den aktuellen Sicherheitskontext ab  
+### <a name="to-get-the-current-security-context"></a><span data-ttu-id="fa898-108">So rufen Sie den aktuellen Sicherheitskontext ab</span><span class="sxs-lookup"><span data-stu-id="fa898-108">To get the current security context</span></span>  
   
--   Greifen Sie auf die statische <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>\- Eigenschaft zu, um den aktuellen Sicherheitskontext abzurufen.Überprüfen Sie eine beliebige der Eigenschaften des aktuellen Kontexts für den Verweis.  
+-   <span data-ttu-id="fa898-109">Greifen Sie auf die statische <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>- Eigenschaft zu, um den aktuellen Sicherheitskontext abzurufen.</span><span class="sxs-lookup"><span data-stu-id="fa898-109">Access the static property <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> to get the current security context.</span></span> <span data-ttu-id="fa898-110">Überprüfen Sie eine beliebige der Eigenschaften des aktuellen Kontexts für den Verweis.</span><span class="sxs-lookup"><span data-stu-id="fa898-110">Examine any of the properties of the current context from the reference.</span></span>  
   
-### So ermitteln Sie die Identität des Aufrufers  
+### <a name="to-determine-the-identity-of-the-caller"></a><span data-ttu-id="fa898-111">So ermitteln Sie die Identität des Aufrufers</span><span class="sxs-lookup"><span data-stu-id="fa898-111">To determine the identity of the caller</span></span>  
   
-1.  Drucken Sie den Wert der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>\-Eigenschaft und der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>\-Eigenschaft.  
+1.  <span data-ttu-id="fa898-112">Drucken Sie den Wert der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>-Eigenschaft und der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="fa898-112">Print the value of the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> and <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> properties.</span></span>  
   
-### So analysieren Sie die Ansprüche eines Aufrufers  
+### <a name="to-parse-the-claims-of-a-caller"></a><span data-ttu-id="fa898-113">So analysieren Sie die Ansprüche eines Aufrufers</span><span class="sxs-lookup"><span data-stu-id="fa898-113">To parse the claims of a caller</span></span>  
   
-1.  Geben Sie die aktuelle <xref:System.IdentityModel.Policy.AuthorizationContext>\-Klasse zurück.Verwenden Sie die <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>\-Eigenschaft, um den aktuellen Dienstsicherheitskontext zurückzugeben, geben Sie dann den `AuthorizationContext` mit der <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>\-Eigenschaft zurück.  
+1.  <span data-ttu-id="fa898-114">Geben Sie die aktuelle <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse zurück.</span><span class="sxs-lookup"><span data-stu-id="fa898-114">Return the current <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span> <span data-ttu-id="fa898-115">Verwenden Sie die <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>-Eigenschaft, um den aktuellen Dienstsicherheitskontext zurückzugeben, geben Sie dann den `AuthorizationContext` mit der <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>-Eigenschaft zurück.</span><span class="sxs-lookup"><span data-stu-id="fa898-115">Use the <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> property to return the current service security context, then return the `AuthorizationContext` using the <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> property.</span></span>  
   
-2.  Analysieren Sie die Auflistung der <xref:System.IdentityModel.Claims.ClaimSet>\-Objekte, die von der <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>\-Eigenschaft der <xref:System.IdentityModel.Policy.AuthorizationContext>\-Klasse zurückgegeben werden.  
+2.  <span data-ttu-id="fa898-116">Analysieren Sie die Auflistung der <xref:System.IdentityModel.Claims.ClaimSet>-Objekte, die von der <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>-Eigenschaft der <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="fa898-116">Parse the collection of <xref:System.IdentityModel.Claims.ClaimSet> objects returned by the <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> property of the <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel werden die Werte der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>\-Eigenschaft und der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>\-Eigenschaft des aktuellen Sicherheitskontexts und der <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>\-Eigenschaft gedruckt sowie der Ressourcenwert des Anspruchs und die <xref:System.IdentityModel.Claims.Claim.Right%2A>\-Eigenschaft jedes Anspruchs im aktuellen Sicherheitskontext.  
+## <a name="example"></a><span data-ttu-id="fa898-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fa898-117">Example</span></span>  
+ <span data-ttu-id="fa898-118">Im folgenden Beispiel werden die Werte der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft und der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>-Eigenschaft des aktuellen Sicherheitskontexts und der <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>-Eigenschaft gedruckt sowie der Ressourcenwert des Anspruchs und die <xref:System.IdentityModel.Claims.Claim.Right%2A>-Eigenschaft jedes Anspruchs im aktuellen Sicherheitskontext.</span><span class="sxs-lookup"><span data-stu-id="fa898-118">The following example prints the values of the <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> and <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> properties of the current security context and the <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> property, the resource value of the claim, and the <xref:System.IdentityModel.Claims.Claim.Right%2A> property of every claim in the current security context.</span></span>  
   
  [!code-csharp[c_PrincipalPermissionAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#4)]
  [!code-vb[c_PrincipalPermissionAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#4)]  
   
-## Kompilieren des Codes  
- Der Code verwendet die folgenden Namespaces:  
+## <a name="compiling-the-code"></a><span data-ttu-id="fa898-119">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="fa898-119">Compiling the Code</span></span>  
+ <span data-ttu-id="fa898-120">Der Code verwendet die folgenden Namespaces:</span><span class="sxs-lookup"><span data-stu-id="fa898-120">The code uses the following namespaces:</span></span>  
   
 -   <xref:System>  
   
@@ -58,6 +64,6 @@ Beim Programmieren von [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Die
   
 -   <xref:System.IdentityModel.Claims>  
   
-## Siehe auch  
- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)   
- [Dienstidentität und Authentifizierung](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="fa898-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa898-121">See Also</span></span>  
+ [<span data-ttu-id="fa898-122">Sichern von Diensten</span><span class="sxs-lookup"><span data-stu-id="fa898-122">Securing Services</span></span>](../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="fa898-123">Dienstidentität und Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="fa898-123">Service Identity and Authentication</span></span>](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

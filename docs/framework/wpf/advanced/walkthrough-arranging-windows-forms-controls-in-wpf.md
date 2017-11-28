@@ -1,295 +1,301 @@
 ---
-title: "Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anordnen von Steuerelementen"
-  - "Hybridanwendungen [WPF-Interoperabilität]"
+title: 'Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f78da83657c4c1bd913f67c9e612264cc5dbdf99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layoutfeatures verwendet werden, um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente in einer Hybridanwendung anzuordnen.  
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a><span data-ttu-id="9b97a-102">Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF</span><span class="sxs-lookup"><span data-stu-id="9b97a-102">Walkthrough: Arranging Windows Forms Controls in WPF</span></span>
+<span data-ttu-id="9b97a-103">In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutfunktionen anordnen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente in einer hybridanwendung.</span><span class="sxs-lookup"><span data-stu-id="9b97a-103">This walkthrough shows you how to use [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout features to arrange [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls in a hybrid application.</span></span>  
   
- In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
+ <span data-ttu-id="9b97a-104">In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="9b97a-104">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Erstellen des Projekts.  
+-   <span data-ttu-id="9b97a-105">Erstellen des Projekts.</span><span class="sxs-lookup"><span data-stu-id="9b97a-105">Creating the project.</span></span>  
   
--   Verwenden der Standardlayouteinstellungen  
+-   <span data-ttu-id="9b97a-106">Verwenden der Standardlayouteinstellungen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-106">Using default layout settings.</span></span>  
   
--   Größenanpassung an den Inhalt  
+-   <span data-ttu-id="9b97a-107">Anpassen der Größe an Inhalt.</span><span class="sxs-lookup"><span data-stu-id="9b97a-107">Sizing to content.</span></span>  
   
--   Verwenden der absoluten Positionierung  
+-   <span data-ttu-id="9b97a-108">Verwenden der absoluten Positionierung.</span><span class="sxs-lookup"><span data-stu-id="9b97a-108">Using absolute positioning.</span></span>  
   
--   Explizites Angeben der Größe  
+-   <span data-ttu-id="9b97a-109">Explizites Angeben der Größe.</span><span class="sxs-lookup"><span data-stu-id="9b97a-109">Specifying size explicitly.</span></span>  
   
--   Festlegen von Layouteigenschaften  
+-   <span data-ttu-id="9b97a-110">Festlegen der Layouteigenschaften.</span><span class="sxs-lookup"><span data-stu-id="9b97a-110">Setting layout properties.</span></span>  
   
--   Grundlagen der Z\-Reihenfolge\-Einschränkungen  
+-   <span data-ttu-id="9b97a-111">Grundlegendes zu Einschränkungen der Z-Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="9b97a-111">Understanding z-order limitations.</span></span>  
   
--   Andocken  
+-   <span data-ttu-id="9b97a-112">Andocken.</span><span class="sxs-lookup"><span data-stu-id="9b97a-112">Docking.</span></span>  
   
--   Einstellen der Sichtbarkeit  
+-   <span data-ttu-id="9b97a-113">Einstellen der Sichtbarkeit.</span><span class="sxs-lookup"><span data-stu-id="9b97a-113">Setting visibility.</span></span>  
   
--   Hosten eines Steuerelements, das nicht gestreckt wird  
+-   <span data-ttu-id="9b97a-114">Hosten eines Steuerelements, das nicht gestreckt wird.</span><span class="sxs-lookup"><span data-stu-id="9b97a-114">Hosting a control that does not stretch.</span></span>  
   
--   Skalieren  
+-   <span data-ttu-id="9b97a-115">Skalieren.</span><span class="sxs-lookup"><span data-stu-id="9b97a-115">Scaling.</span></span>  
   
--   Drehen  
+-   <span data-ttu-id="9b97a-116">Drehen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-116">Rotating.</span></span>  
   
--   Einstellen von Textabständen und Rändern  
+-   <span data-ttu-id="9b97a-117">Einstellen von Abständen und Rändern.</span><span class="sxs-lookup"><span data-stu-id="9b97a-117">Setting padding and margins.</span></span>  
   
--   Verwenden von dynamischen Layoutcontainern  
+-   <span data-ttu-id="9b97a-118">Verwenden von dynamischen Layoutcontainern.</span><span class="sxs-lookup"><span data-stu-id="9b97a-118">Using dynamic layout containers.</span></span>  
   
- Eine vollständige Codeauflistung der Aufgaben, die in dieser exemplarischen Vorgehensweise veranschaulicht wurden, finden Sie unter [Beispiel für das Anordnen von Windows Forms\-Steuerelementen in WPF](http://go.microsoft.com/fwlink/?LinkID=159971).  
+ <span data-ttu-id="9b97a-119">Vollständige Codeliste der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Anordnen von Windows Forms-Steuerelementen im WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159971).</span><span class="sxs-lookup"><span data-stu-id="9b97a-119">For a complete code listing of the tasks illustrated in this walkthrough, see [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971).</span></span>  
   
- Anschließend werden Sie die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Layoutfeatures in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-basierten Anwendungen verstehen.  
+ <span data-ttu-id="9b97a-120">Wenn Sie fertig sind, müssen Sie einen Überblick über [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Layout-Funktionen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierten Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-120">When you are finished, you will have an understanding of [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] layout features in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based applications.</span></span>  
   
-## Vorbereitungsmaßnahmen  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
+## <a name="prerequisites"></a><span data-ttu-id="9b97a-121">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="9b97a-121">Prerequisites</span></span>  
+ <span data-ttu-id="9b97a-122">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="9b97a-122">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="9b97a-123">.</span><span class="sxs-lookup"><span data-stu-id="9b97a-123">.</span></span>  
   
-## Erstellen des Projekts  
+## <a name="creating-the-project"></a><span data-ttu-id="9b97a-124">Erstellen des Projekts</span><span class="sxs-lookup"><span data-stu-id="9b97a-124">Creating the Project</span></span>  
   
-#### So erstellen Sie das Projekt und richten es ein  
+#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="9b97a-125">So erstellen und richten Sie das Projekt ein</span><span class="sxs-lookup"><span data-stu-id="9b97a-125">To create and set up the project</span></span>  
   
-1.  Erstellen Sie ein WPF\-Anwendungsprojekt mit dem Namen `WpfLayoutHostingWf`.  
+1.  <span data-ttu-id="9b97a-126">Erstellen Sie ein WPF-Anwendungsprojekt mit dem Namen `WpfLayoutHostingWf`.</span><span class="sxs-lookup"><span data-stu-id="9b97a-126">Create a WPF Application project named `WpfLayoutHostingWf`.</span></span>  
   
-2.  Fügen Sie im Projektmappen\-Explorer Verweise auf die folgenden Assemblys hinzu.  
+2.  <span data-ttu-id="9b97a-127">Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.</span><span class="sxs-lookup"><span data-stu-id="9b97a-127">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="9b97a-128">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="9b97a-128">WindowsFormsIntegration</span></span>  
   
-    -   System.Windows.Forms  
+    -   <span data-ttu-id="9b97a-129">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="9b97a-129">System.Windows.Forms</span></span>  
   
-    -   System.Drawing  
+    -   <span data-ttu-id="9b97a-130">System.Drawing</span><span class="sxs-lookup"><span data-stu-id="9b97a-130">System.Drawing</span></span>  
   
-3.  Doppelklicken Sie auf "MainWindow.xaml", um die Datei in der XAML\-Ansicht zu öffnen.  
+3.  <span data-ttu-id="9b97a-131">Doppelklicken Sie auf „MainWindow.xaml“, um die Datei in der XAML-Ansicht zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-131">Double-click MainWindow.xaml to open it in XAML view.</span></span>  
   
-4.  Fügen Sie im <xref:System.Windows.Window>\-Element die folgende [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Namespacezuordnung hinzu.  
+4.  <span data-ttu-id="9b97a-132">In der <xref:System.Windows.Window> Element, fügen Sie die folgenden [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Namespacezuordnung.</span><span class="sxs-lookup"><span data-stu-id="9b97a-132">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespace mapping.</span></span>  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Legen Sie im <xref:System.Windows.Controls.Grid>\-Element die <xref:System.Windows.Controls.Grid.ShowGridLines%2A>\-Eigenschaft auf `true` fest, und definieren Sie fünf Zeilen und drei Spalten.  
+5.  <span data-ttu-id="9b97a-133">In der <xref:System.Windows.Controls.Grid> Elementsatz die <xref:System.Windows.Controls.Grid.ShowGridLines%2A> Eigenschaft `true` fünf Zeilen und drei Spalten definieren.</span><span class="sxs-lookup"><span data-stu-id="9b97a-133">In the <xref:System.Windows.Controls.Grid> element set the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property to `true` and define five rows and three columns.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
-## Verwenden der Standardlayouteinstellungen  
- Standardmäßig behandelt das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element das Layout für das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement.  
+## <a name="using-default-layout-settings"></a><span data-ttu-id="9b97a-134">Verwenden der Standardlayouteinstellungen</span><span class="sxs-lookup"><span data-stu-id="9b97a-134">Using Default Layout Settings</span></span>  
+ <span data-ttu-id="9b97a-135">Wird standardmäßig die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element behandelt das Layout für das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="9b97a-135">By default, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element handles the layout for the hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
-#### So verwenden Sie Standardlayouteinstellungen  
+#### <a name="to-use-default-layout-settings"></a><span data-ttu-id="9b97a-136">Verwenden der Standardlayouteinstellungen</span><span class="sxs-lookup"><span data-stu-id="9b97a-136">To use default layout settings</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-137">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-137">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-<xref:System.Windows.Forms.Button?displayProperty=fullName>\-Steuerelement wird im <xref:System.Windows.Controls.Canvas> angezeigt.  Die Größe des gehosteten Steuerelements basiert auf dessen Inhalt, und die Größe des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements wird an das gehostete Steuerelement angepasst.  
+2.  <span data-ttu-id="9b97a-138">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-138">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-139">Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Steuerelement wird in der <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="9b97a-139">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> control appears in the <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="9b97a-140">Das gehostete Steuerelement wird basierend auf seinen Inhalt angepasst und der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird angepasst, um das gehostete Steuerelement aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-140">The hosted control is sized based on its content, and the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is sized to accommodate the hosted control.</span></span>  
   
-## Größenanpassung an den Inhalt  
- Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element stellt sicher, dass die Größe des gehosteten Steuerelements so angepasst wird, dass sein Inhalt ordnungsgemäß angezeigt wird.  
+## <a name="sizing-to-content"></a><span data-ttu-id="9b97a-141">Anpassen der Größe an Inhalt</span><span class="sxs-lookup"><span data-stu-id="9b97a-141">Sizing to Content</span></span>  
+ <span data-ttu-id="9b97a-142">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Elements sicher, dass das gehostete Steuerelement festgelegt wird, um seinen Inhalt ordnungsgemäß angezeigt.</span><span class="sxs-lookup"><span data-stu-id="9b97a-142">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element ensures that the hosted control is sized to display its content properly.</span></span>  
   
-#### So passen Sie die Größe an den Inhalt an  
+#### <a name="to-size-to-content"></a><span data-ttu-id="9b97a-143">Anpassen der Größe an Inhalt</span><span class="sxs-lookup"><span data-stu-id="9b97a-143">To size to content</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-144">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-144">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Die Größe der zwei neuen Schaltflächen wird so angepasst, dass die längere Textzeichenfolge und der größere Schriftgrad ordnungsgemäß angezeigt werden, und die Größe der <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elemente wird an die gehosteten Steuerelemente angepasst.  
+2.  <span data-ttu-id="9b97a-145">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-145">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-146">Die zwei neue Schaltflächen-Steuerelemente sind Größe angepasst, um die Textzeichenfolge länger und größere Schriftgröße ordnungsgemäß angezeigt werden und die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente werden geändert, um die gehosteten Steuerelemente angepasst.</span><span class="sxs-lookup"><span data-stu-id="9b97a-146">The two new button controls are sized to display the longer text string and larger font size properly, and the <xref:System.Windows.Forms.Integration.WindowsFormsHost> elements are resized to accommodate the hosted controls.</span></span>  
   
-## Verwenden der absoluten Positionierung  
- Mit der absoluten Positionierung können Sie das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element beliebig in der Benutzeroberfläche einfügen.  
+## <a name="using-absolute-positioning"></a><span data-ttu-id="9b97a-147">Verwenden der absoluten Positionierung</span><span class="sxs-lookup"><span data-stu-id="9b97a-147">Using Absolute Positioning</span></span>  
+ <span data-ttu-id="9b97a-148">Sie können absolute Positionierung Platzieren der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element an einer beliebigen Stelle in der Benutzeroberfläche (UI).</span><span class="sxs-lookup"><span data-stu-id="9b97a-148">You can use absolute positioning to place the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element anywhere in the user interface (UI).</span></span>  
   
-#### So verwenden Sie die absolute Positionierung  
+#### <a name="to-use-absolute-positioning"></a><span data-ttu-id="9b97a-149">Verwenden der absoluten Positionierung</span><span class="sxs-lookup"><span data-stu-id="9b97a-149">To use absolute positioning</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-150">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-150">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird 20 Pixel vom oberen Rand der Rasterzelle und 20 Pixel vom linken Rand platziert.  
+2.  <span data-ttu-id="9b97a-151">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-151">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-152">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> 20 Pixel vom oberen Rand der Rasterzelle und 20 Pixel vom linken Element befindet.</span><span class="sxs-lookup"><span data-stu-id="9b97a-152">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is placed 20 pixels from the top side of the grid cell and 20 pixels from the left.</span></span>  
   
-## Explizites Angeben der Größe  
- Sie können die Größe des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements mit der <xref:System.Windows.FrameworkElement.Width%2A>\-Eigenschaft und der <xref:System.Windows.FrameworkElement.Height%2A>\-Eigenschaft angeben.  
+## <a name="specifying-size-explicitly"></a><span data-ttu-id="9b97a-153">Explizites Angeben der Größe</span><span class="sxs-lookup"><span data-stu-id="9b97a-153">Specifying Size Explicitly</span></span>  
+ <span data-ttu-id="9b97a-154">Sie können die Größe der angeben der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element mit der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="9b97a-154">You can specify the size of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element using the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties.</span></span>  
   
-#### So geben Sie die Größe explizit an  
+#### <a name="to-specify-size-explicitly"></a><span data-ttu-id="9b97a-155">Explizites Angeben der Größe</span><span class="sxs-lookup"><span data-stu-id="9b97a-155">To specify size explicitly</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-156">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-156">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird auf eine Größe von 50 x 70 Pixel \(Breite x Höhe\) festgelegt und liegt damit unter den Standardlayouteinstellungen.  Der Inhalt des [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelements wird entsprechend neu angeordnet.  
+2.  <span data-ttu-id="9b97a-157">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-157">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-158">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element festgelegt, wird er auf eine Größe von 50 Pixel breit und 70 Pixel hoch, die kleiner als die Standardeinstellungen für das Layout.</span><span class="sxs-lookup"><span data-stu-id="9b97a-158">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is set to a size of 50 pixels wide by 70 pixels high, which is smaller than the default layout settings.</span></span> <span data-ttu-id="9b97a-159">Der Inhalt der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement wird entsprechend neu angeordnet.</span><span class="sxs-lookup"><span data-stu-id="9b97a-159">The content of the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is rearranged accordingly.</span></span>  
   
-## Festlegen von Layouteigenschaften  
- Legen Sie layoutbezogene Eigenschaften immer für das gehostete Steuerelement fest, und verwenden Sie dabei die Eigenschaften des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements.  Das Festlegen der Layouteigenschaften direkt für das gehostete Steuerelement führt zu unbeabsichtigten Ergebnissen.  
+## <a name="setting-layout-properties"></a><span data-ttu-id="9b97a-160">Festlegen der Layouteigenschaften</span><span class="sxs-lookup"><span data-stu-id="9b97a-160">Setting Layout Properties</span></span>  
+ <span data-ttu-id="9b97a-161">Layout-bezogene Eigenschaften immer im gehosteten Steuerelement festgelegt, wird mit den Eigenschaften des der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-161">Always set layout-related properties on the hosted control by using the properties of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span> <span data-ttu-id="9b97a-162">Das Festlegen der Layouteigenschaften direkt für das gehostete Steuerelement führt zu unbeabsichtigten Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-162">Setting layout properties directly on the hosted control will yield unintended results.</span></span>  
   
- Das Festlegen der layoutbezogenen Eigenschaften für das gehostete Steuerelement in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hat keine Auswirkungen.  
+ <span data-ttu-id="9b97a-163">Festlegen von layoutbezogenen Eigenschaften für das gehostete Steuerelement im [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hat keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-163">Setting layout-related properties on the hosted control in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] has no effect.</span></span>  
   
-#### So zeigen Sie die Auswirkungen des Festlegens der Eigenschaften für das gehostete Steuerelement an  
+#### <a name="to-see-the-effects-of-setting-properties-on-the-hosted-control"></a><span data-ttu-id="9b97a-164">Anzeigen der Auswirkungen des Festlegens der Eigenschaften für das gehostete Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9b97a-164">To see the effects of setting properties on the hosted control</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-165">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-165">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
-2.  Doppelklicken Sie im Projektmappen\-Explorer auf "MainWindow.xaml.  vb" oder "MainWindow.xaml.cs", um die Datei im Code\-Editor zu öffnen.  
+2.  <span data-ttu-id="9b97a-166">Doppelklicken Sie in Projektmappen-Explorer „MainWindow.xaml.</span><span class="sxs-lookup"><span data-stu-id="9b97a-166">In Solution Explorer, double-click MainWindow.xaml.</span></span> <span data-ttu-id="9b97a-167">vb“ oder „MainWindow.Xaml.cs“, um die Datei im Code-Editor zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-167">vb or MainWindow.xaml.cs to open it in the Code Editor.</span></span>  
   
-3.  Kopieren Sie den folgenden Code in die `MainWindow`\-Klassendefinition.  
+3.  <span data-ttu-id="9b97a-168">Kopieren Sie den folgenden Code in die `MainWindow` Klassendefinition.</span><span class="sxs-lookup"><span data-stu-id="9b97a-168">Copy the following code into the `MainWindow` class definition.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]  
   
-4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+4.  <span data-ttu-id="9b97a-169">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-169">Press F5 to build and run the application.</span></span>  
   
-5.  Klicken Sie auf die Schaltfläche **Hier klicken**.  Der `button1_Click`\-Ereignishandler legt die <xref:System.Windows.Forms.Control.Top%2A>\-Eigenschaft und die <xref:System.Windows.Forms.Control.Left%2A>\-Eigenschaft für das gehostete Steuerelement fest.  Dadurch wird das gehostete Steuerelement innerhalb des <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elements neu angeordnet.  Der Host behält den gleichen Bildschirmbereich bei, das gehostete Steuerelement wird jedoch abgeschnitten.  Das gehostete Steuerelement sollte jedoch immer das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element ausfüllen.  
+5.  <span data-ttu-id="9b97a-170">Klicken Sie auf die **Click me** Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="9b97a-170">Click the **Click me** button.</span></span> <span data-ttu-id="9b97a-171">Die `button1_Click` Ereignishandler legt die <xref:System.Windows.Forms.Control.Top%2A> und <xref:System.Windows.Forms.Control.Left%2A> Eigenschaften im gehosteten Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="9b97a-171">The `button1_Click` event handler sets the <xref:System.Windows.Forms.Control.Top%2A> and <xref:System.Windows.Forms.Control.Left%2A> properties on the hosted control.</span></span> <span data-ttu-id="9b97a-172">Dies bewirkt, dass das gehostete Steuerelement innerhalb neu angeordnet werden die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-172">This causes the hosted control to be repositioned within the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span> <span data-ttu-id="9b97a-173">Der Host behält den gleichen Bildschirmbereich bei, jedoch wird das gehostete Steuerelement abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="9b97a-173">The host maintains the same screen area, but the hosted control is clipped.</span></span> <span data-ttu-id="9b97a-174">Das gehostete Steuerelement sollte jedoch immer ausfüllen der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-174">Instead, the hosted control should always fill the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span>  
   
-## Grundlagen der Z\-Reihenfolge\-Einschränkungen  
- Standardmäßig werden sichtbare <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Elemente immer an der obersten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elemente gezeichnet, und sie sind mit Z\-Reihenfolge nicht beeinflusst.  Um Z Reihenfolge zu aktivieren, legen Sie die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A>\-Eigenschaft fest <xref:System.Windows.Forms.Integration.WindowsFormsHost> und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A>\-Eigenschaft auf <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>auszurichten.  
+## <a name="understanding-z-order-limitations"></a><span data-ttu-id="9b97a-175">Grundlegendes zu Einschränkungen der Z-Reihenfolge</span><span class="sxs-lookup"><span data-stu-id="9b97a-175">Understanding Z-Order Limitations</span></span>  
+ <span data-ttu-id="9b97a-176">Standardmäßig sichtbar <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente werden immer gezeichnet, zusätzlich zu anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente, und Z-Reihenfolge nicht betroffen sind.</span><span class="sxs-lookup"><span data-stu-id="9b97a-176">By default, visible <xref:System.Windows.Forms.Integration.WindowsFormsHost> elements are always drawn on top of other [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements, and they are unaffected by z-order.</span></span> <span data-ttu-id="9b97a-177">Legen Sie zum Aktivieren der Z-Reihenfolge der <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> Eigenschaft von der <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf "true" und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> Eigenschaft <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span><span class="sxs-lookup"><span data-stu-id="9b97a-177">To enable z-ordering, set the <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> property of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> to true and the <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> property to <xref:System.Windows.Interop.CompositionMode.Full> or <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span></span>  
   
-#### Um das standardmäßige finden z\-Reihenfolgen\-Verhalten  
+#### <a name="to-see-the-default-z-order-behavior"></a><span data-ttu-id="9b97a-178">Anzeigen des Standardverhaltens für die Z-Reihenfolge</span><span class="sxs-lookup"><span data-stu-id="9b97a-178">To see the default z-order behavior</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-179">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-179">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird über das Bezeichnungselement gezeichnet.  
+2.  <span data-ttu-id="9b97a-180">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-180">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-181">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element über das Label-Element gezeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="9b97a-181">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is painted over the label element.</span></span>  
   
-#### Um das z\-Reihenfolgen\-Verhalten finden, wenn IsRedirected auf true festgelegt ist  
+#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a><span data-ttu-id="9b97a-182">Anzeigen des Verhaltens der Z-Reihenfolge, wenn IsRedirected auf true festgelegt ist</span><span class="sxs-lookup"><span data-stu-id="9b97a-182">To see the z-order behavior when IsRedirected is true</span></span>  
   
-1.  Ersetzen Sie das vorherige z\-Reihenfolgen\-Beispiel durch den folgenden XAML\-Code.  
+1.  <span data-ttu-id="9b97a-183">Ersetzen Sie im vorherigen Beispiel der Z-Reihenfolge durch Folgendes XAML.</span><span class="sxs-lookup"><span data-stu-id="9b97a-183">Replace the previous z-order example with the following XAML.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
   
-     Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Die Bezeichnung wird über dem Element <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element gezeichnet.  
+     <span data-ttu-id="9b97a-184">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-184">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-185">Das Label-Element gezeichnet wird, über die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-185">The label element is painted over the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span>  
   
-## Andocken  
- Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element unterstützt das Andocken von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Legen Sie die angefügte <xref:System.Windows.Controls.DockPanel.Dock%2A>\-Eigenschaft so fest, dass das gehostete Steuerelement in einem <xref:System.Windows.Controls.DockPanel>\-Element angedockt wird.  
+## <a name="docking"></a><span data-ttu-id="9b97a-186">Andocken</span><span class="sxs-lookup"><span data-stu-id="9b97a-186">Docking</span></span>  
+ <span data-ttu-id="9b97a-187"><xref:System.Windows.Forms.Integration.WindowsFormsHost>Element unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] andocken.</span><span class="sxs-lookup"><span data-stu-id="9b97a-187"><xref:System.Windows.Forms.Integration.WindowsFormsHost> element supports [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] docking.</span></span> <span data-ttu-id="9b97a-188">Legen Sie die <xref:System.Windows.Controls.DockPanel.Dock%2A> angefügte Eigenschaft, um das gehostete Steuerelement im Andocken ein <xref:System.Windows.Controls.DockPanel> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-188">Set the <xref:System.Windows.Controls.DockPanel.Dock%2A> attached property to dock the hosted control in a <xref:System.Windows.Controls.DockPanel> element.</span></span>  
   
-#### So docken Sie ein gehostetes Steuerelement an  
+#### <a name="to-dock-a-hosted-control"></a><span data-ttu-id="9b97a-189">Andocke eines gehosteten Steuerelements</span><span class="sxs-lookup"><span data-stu-id="9b97a-189">To dock a hosted control</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-190">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-190">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird an der rechten Seite des <xref:System.Windows.Controls.DockPanel>\-Elements angedockt.  
+2.  <span data-ttu-id="9b97a-191">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-191">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-192">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element auf der rechten Seite des angedockt ist die <xref:System.Windows.Controls.DockPanel> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-192">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is docked to the right side of the <xref:System.Windows.Controls.DockPanel> element.</span></span>  
   
-## Einstellen der Sichtbarkeit  
- Sie können das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement ausblenden oder reduzieren, indem Sie die <xref:System.Windows.UIElement.Visibility%2A>\-Eigenschaft für das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element festlegen.  Wenn ein Steuerelement nicht sichtbar ist, wird es nicht angezeigt, aber es belegt Platz im Layoutbereich.  Wenn ein Steuerelement reduziert ist, wird es nicht angezeigt und belegt auch keinen Platz im Layoutbereich.  
+## <a name="setting-visibility"></a><span data-ttu-id="9b97a-193">Einstellen der Sichtbarkeit</span><span class="sxs-lookup"><span data-stu-id="9b97a-193">Setting Visibility</span></span>  
+ <span data-ttu-id="9b97a-194">Sie vornehmen können Ihre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] unsichtbar zu steuern oder zu reduzieren, indem Sie festlegen der <xref:System.Windows.UIElement.Visibility%2A> Eigenschaft auf die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-194">You can make your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control invisible or collapse it by setting the <xref:System.Windows.UIElement.Visibility%2A> property on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span> <span data-ttu-id="9b97a-195">Wenn ein Steuerelement unsichtbar ist, wird es nicht angezeigt, es belegt jedoch Platz im Layoutbereich.</span><span class="sxs-lookup"><span data-stu-id="9b97a-195">When a control is invisible, it is not displayed, but it occupies layout space.</span></span> <span data-ttu-id="9b97a-196">Wenn ein Steuerelement reduziert ist, wird es nicht angezeigt, und es belegt auch keinen Platz im Layoutbereich.</span><span class="sxs-lookup"><span data-stu-id="9b97a-196">When a control is collapsed, it is not displayed, nor does it occupy layout space.</span></span>  
   
-#### So legen Sie die Sichtbarkeit eines gehosteten Steuerelements fest  
+#### <a name="to-set-the-visibility-of-a-hosted-control"></a><span data-ttu-id="9b97a-197">Festlegen der Sichtbarkeit eines gehosteten Steuerelements</span><span class="sxs-lookup"><span data-stu-id="9b97a-197">To set the visibility of a hosted control</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-198">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-198">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
   
-2.  Kopieren Sie in "MainWindow.xaml.vb" oder "MainWindow.xaml.cs" den folgenden Code in die Klassendefinition.  
+2.  <span data-ttu-id="9b97a-199">Kopieren Sie in „MainWindow.xaml.vb“ oder „MainWindow.xaml.cs“ den folgenden Code in die Klassendefinition.</span><span class="sxs-lookup"><span data-stu-id="9b97a-199">In MainWindow.xaml.vb or MainWindow.xaml.cs, copy the following code into the class definition.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
      [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]  
   
-3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
+3.  <span data-ttu-id="9b97a-200">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-200">Press F5 to build and run the application.</span></span>  
   
-4.  Klicken Sie auf die Schaltfläche **Zum Ausblenden klicken**, um das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element auszublenden.  
+4.  <span data-ttu-id="9b97a-201">Klicken Sie auf die **klicken Sie hier, um unsichtbar zu machen** Schaltfläche stellen die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element nicht sichtbar.</span><span class="sxs-lookup"><span data-stu-id="9b97a-201">Click the **Click to make invisible** button to make the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element invisible.</span></span>  
   
-5.  Klicken Sie auf die Schaltfläche **Zum Reduzieren klicken**, um das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element vollständig im Layout auszublenden.  Wenn das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelement reduziert ist, werden die umgebenden Elemente neu angeordnet, um dessen Bereich einzunehmen.  
+5.  <span data-ttu-id="9b97a-202">Klicken Sie auf die **zum Reduzieren** Schaltfläche Ausblenden der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element aus dem Layout vollständig.</span><span class="sxs-lookup"><span data-stu-id="9b97a-202">Click the **Click to collapse** button to hide the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element from the layout entirely.</span></span> <span data-ttu-id="9b97a-203">Wenn die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement reduziert ist, werden die umgebenden Elemente neu angeordnet, um seine Platz einnehmen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-203">When the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is collapsed, the surrounding elements are rearranged to occupy its space.</span></span>  
   
-## Hosten eines Steuerelements, das nicht gestreckt wird  
- Einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente haben eine feste Größe und können nicht gestreckt werden, um den verfügbaren Bereich im Layout auszufüllen.  Das <xref:System.Windows.Forms.MonthCalendar>\-Steuerelement zeigt beispielsweise einen Monat in einem festen Bereich an.  
+## <a name="hosting-a-control-that-does-not-stretch"></a><span data-ttu-id="9b97a-204">Hosten eines Steuerelements, das nicht gestreckt wird</span><span class="sxs-lookup"><span data-stu-id="9b97a-204">Hosting a Control That Does Not Stretch</span></span>  
+ <span data-ttu-id="9b97a-205">Einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente verfügen über eine feste Größe und können nicht gestreckt werden, um das Layout verfügbaren Platz auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-205">Some [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls have a fixed size and do not stretch to fill available space in the layout.</span></span> <span data-ttu-id="9b97a-206">Z. B. die <xref:System.Windows.Forms.MonthCalendar> Steuerelement ein Monats in einem festen Bereich angezeigt.</span><span class="sxs-lookup"><span data-stu-id="9b97a-206">For example, the <xref:System.Windows.Forms.MonthCalendar> control displays a month in a fixed space.</span></span>  
   
-#### So hosten Sie ein Steuerelement, das nicht gestreckt wird  
+#### <a name="to-host-a-control-that-does-not-stretch"></a><span data-ttu-id="9b97a-207">Hosten eines Steuerelements, das nicht gestreckt wird</span><span class="sxs-lookup"><span data-stu-id="9b97a-207">To host a control that does not stretch</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-208">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-208">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element wird in der Rasterzeile zentriert. Es wird jedoch nicht gestreckt, um den verfügbaren Bereich auszufüllen.  Wenn das Fenster groß genug ist, werden möglicherweise zwei oder mehr Monate vom gehosteten <xref:System.Windows.Forms.MonthCalendar>\-Steuerelement angezeigt, die jedoch in der Zeile zentriert sind.  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layoutmodul zentriert Elemente, deren Größe nicht angepasst werden kann, um den verfügbaren Bereich auszufüllen.  
+2.  <span data-ttu-id="9b97a-209">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-209">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-210">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird in der Rasterzeile zentriert, aber es ist nicht gestreckt, um den verfügbaren Platz auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-210">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is centered in the grid row, but it is not stretched to fill the available space.</span></span> <span data-ttu-id="9b97a-211">Wenn das Fenster groß genug ist, werden möglicherweise zwei oder mehr Monate angezeigt, die von der gehosteten <xref:System.Windows.Forms.MonthCalendar> -Steuerelement, doch diese sind in der Zeile zentriert.</span><span class="sxs-lookup"><span data-stu-id="9b97a-211">If the window is large enough, you may see two or more months displayed by the hosted <xref:System.Windows.Forms.MonthCalendar> control, but these are centered in the row.</span></span> <span data-ttu-id="9b97a-212">Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutmodul zentriert Elemente, deren Größe geändert werden können nicht um den verfügbaren Platz auszufüllen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-212">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout engine centers elements that cannot be sized to fill the available space.</span></span>  
   
-## Skalieren  
- Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elementen sind die meisten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente nicht kontinuierlich skalierbar.  Standardmäßig skaliert das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element sein gehostetes Steuerelement, sofern dies möglich ist.  Um klar entwickelte Skalierung zu aktivieren, legen Sie die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A>\-Eigenschaft fest <xref:System.Windows.Forms.Integration.WindowsFormsHost> und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A>\-Eigenschaft auf <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>auszurichten.  
+## <a name="scaling"></a><span data-ttu-id="9b97a-213">Skalieren</span><span class="sxs-lookup"><span data-stu-id="9b97a-213">Scaling</span></span>  
+ <span data-ttu-id="9b97a-214">Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente, die meisten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente können nicht fortlaufend.</span><span class="sxs-lookup"><span data-stu-id="9b97a-214">Unlike [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements, most [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls are not continuously scalable.</span></span> <span data-ttu-id="9b97a-215">Wird standardmäßig die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element skaliert sein gehostetes Steuerelement, wenn möglich.</span><span class="sxs-lookup"><span data-stu-id="9b97a-215">By default, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element scales its hosted control when possible.</span></span>  <span data-ttu-id="9b97a-216">Um vollwertige Skalierung zu aktivieren, legen die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> Eigenschaft von der <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf "true" und der <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> Eigenschaft <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span><span class="sxs-lookup"><span data-stu-id="9b97a-216">To enable full-fledged scaling, set the <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> property of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> to true and the <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> property to <xref:System.Windows.Interop.CompositionMode.Full> or <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span></span>  
   
-#### So fügen Sie ein gehostetes Steuerelement mithilfe des Standardverhaltens skalieren  
+#### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a><span data-ttu-id="9b97a-217">Skalieren eines gehosteten Steuerelements mithilfe des Standardverhaltens</span><span class="sxs-lookup"><span data-stu-id="9b97a-217">To scale a hosted control by using the default behavior</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-218">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-218">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement und die umgebenden Elemente werden um den Faktor 0,5 skaliert.  Die Schriftart des gehosteten Steuerelements wird jedoch nicht skaliert.  
+2.  <span data-ttu-id="9b97a-219">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-219">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-220">Das gehostete Steuerelement und die umgebenden Elemente werden um den Faktor 0,5 skaliert.</span><span class="sxs-lookup"><span data-stu-id="9b97a-220">The hosted control and its surrounding elements are scaled by a factor of 0.5.</span></span> <span data-ttu-id="9b97a-221">Allerdings wird die Schriftart des gehosteten Steuerelements nicht skaliert.</span><span class="sxs-lookup"><span data-stu-id="9b97a-221">However, the hosted control's font is not scaled.</span></span>  
   
-#### So fügen Sie ein gehostetes Steuerelement durch Festlegen von IsRedirected skalieren True  
+#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a><span data-ttu-id="9b97a-222">Skalieren eines gehosteten Steuerelements durch Festlegen von IsRedirected auf True</span><span class="sxs-lookup"><span data-stu-id="9b97a-222">To scale a hosted control by setting IsRedirected to true</span></span>  
   
-1.  Ersetzen Sie das vorherige Beispiel mit Skalierungs durch den folgenden XAML\-Code.  
+1.  <span data-ttu-id="9b97a-223">Ersetzen Sie das vorherige Beispiel für die Skalierung durch das folgende XAML.</span><span class="sxs-lookup"><span data-stu-id="9b97a-223">Replace the previous scaling example with the following XAML.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement, dessen umgebenden Elemente und die Schriftart des gehosteten Steuerelements wird durch den Faktor 0.5 skaliert.  
+2.  <span data-ttu-id="9b97a-224">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-224">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-225">Das gehostete Steuerelement, die umgebenden Elemente und die Schriftart des gehosteten Steuerelements werden durch den Faktor 0,5 skaliert.</span><span class="sxs-lookup"><span data-stu-id="9b97a-225">The hosted control, its surrounding elements, and the hosted control's font are scaled by a factor of 0.5.</span></span>  
   
-## Drehen  
- Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elementen unterstützen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente keine Drehung.  Standardmäßig dreht sich das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element nicht mit anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Elementen, wenn eine Drehungstransformation angewendet wird.  Jeder andere Drehungswert als 180 Grad löst das <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>\-Ereignis aus.  Um das Drehen zu jedem Winkel zu aktivieren, legen Sie die <xref:System.Windows.Interop.HwndHost.IsRedirected%2A>\-Eigenschaft fest <xref:System.Windows.Forms.Integration.WindowsFormsHost> und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A>\-Eigenschaft auf <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>auszurichten.  
+## <a name="rotating"></a><span data-ttu-id="9b97a-226">Drehen</span><span class="sxs-lookup"><span data-stu-id="9b97a-226">Rotating</span></span>  
+ <span data-ttu-id="9b97a-227">Im Gegensatz zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente unterstützen nicht die Drehung.</span><span class="sxs-lookup"><span data-stu-id="9b97a-227">Unlike [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls do not support rotation.</span></span> <span data-ttu-id="9b97a-228">Wird standardmäßig die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element dreht sich nicht mit anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente angezeigt, wenn eine Drehtransformation angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="9b97a-228">By default, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element does not rotate with other [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements when a rotation transformation is applied.</span></span> <span data-ttu-id="9b97a-229">Jeder andere Drehungswert als 180 Grad löst die <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="9b97a-229">Any rotation value other than 180 degrees raises the <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> event.</span></span>  <span data-ttu-id="9b97a-230">Legen Sie zum Aktivieren, um einen beliebigen Winkel drehen der <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> Eigenschaft von der <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf "true" und die <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> Eigenschaft <xref:System.Windows.Interop.CompositionMode.Full> oder <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span><span class="sxs-lookup"><span data-stu-id="9b97a-230">To enable rotating to any angle, set the <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> property of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> to true and the <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> property to <xref:System.Windows.Interop.CompositionMode.Full> or <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span></span>  
   
-#### So zeigen Sie die Auswirkung der Drehung in einer Hybridanwendung an  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a><span data-ttu-id="9b97a-231">Anzeigen der Auswirkung der Drehung in einer Hybridanwendung</span><span class="sxs-lookup"><span data-stu-id="9b97a-231">To see the effect of rotation in a hybrid application</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-232">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-232">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement wird nicht gedreht. Die umgebenden Elemente werden jedoch um 180 Grad gedreht.  Die Größe des Fensters muss möglicherweise geändert werden, damit die Elemente sichtbar sind.  
+2.  <span data-ttu-id="9b97a-233">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-233">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-234">Das gehostete Steuerelement wird nicht gedreht, die umgebenden Elemente werden jedoch um einen Winkel von 180 Grad gedreht.</span><span class="sxs-lookup"><span data-stu-id="9b97a-234">The hosted control is not rotated, but its surrounding elements are rotated by an angle of 180 degrees.</span></span> <span data-ttu-id="9b97a-235">Sie müssen möglicherweise die Fenstergröße anpassen, um die Elemente zu sehen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-235">You may have to resize the window to see the elements.</span></span>  
   
-#### So zeigen Sie die Auswirkung der Drehung in einer Hybridanwendung ermitteln, ob IsRedirected auf true festgelegt ist  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a><span data-ttu-id="9b97a-236">Anzeigen der Auswirkung der Drehung in einer Hybridanwendung, wenn IsRedirected auf true festgelegt ist</span><span class="sxs-lookup"><span data-stu-id="9b97a-236">To see the effect of rotation in a hybrid application when IsRedirected is true</span></span>  
   
-1.  Ersetzen Sie das vorherige Beispiel mit Drehungs durch den folgenden XAML\-Code.  
+1.  <span data-ttu-id="9b97a-237">Ersetzen das vorherige Beispiel für die Drehung durch das folgende XAML.</span><span class="sxs-lookup"><span data-stu-id="9b97a-237">Replace the previous rotation example with the following XAML.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das gehostete Steuerelement wird deaktiviert.  Beachten Sie, dass die <xref:System.Windows.Media.RotateTransform.Angle%2A>\-Eigenschaft auf einen beliebigen Wert festgelegt werden kann.  Die Größe des Fensters muss möglicherweise geändert werden, damit die Elemente sichtbar sind.  
+2.  <span data-ttu-id="9b97a-238">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-238">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-239">Das gehostete Steuerelement wird gedreht.</span><span class="sxs-lookup"><span data-stu-id="9b97a-239">The hosted control is rotated.</span></span>  <span data-ttu-id="9b97a-240">Beachten Sie, dass die <xref:System.Windows.Media.RotateTransform.Angle%2A> Eigenschaft kann auf einen beliebigen Wert festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="9b97a-240">Note that the <xref:System.Windows.Media.RotateTransform.Angle%2A> property can be set to any value.</span></span> <span data-ttu-id="9b97a-241">Sie müssen möglicherweise die Fenstergröße anpassen, um die Elemente zu sehen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-241">You may have to resize the window to see the elements.</span></span>  
   
-## Einstellen von Textabständen und Rändern  
- Textabstände und Ränder im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layout sind mit den Textabständen und Rändern in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] vergleichbar.  Legen Sie einfach die <xref:System.Windows.Controls.Control.Padding%2A>\-Eigenschaft und die <xref:System.Windows.FrameworkElement.Margin%2A>\-Eigenschaft für das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element fest.  
+## <a name="setting-padding-and-margins"></a><span data-ttu-id="9b97a-242">Einstellen von Abständen und Rändern</span><span class="sxs-lookup"><span data-stu-id="9b97a-242">Setting Padding and Margins</span></span>  
+ <span data-ttu-id="9b97a-243">Auffüllung und Rändern in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout ähneln Auffüllung und Rändern in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9b97a-243">Padding and margins in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout are similar to padding and margins in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span> <span data-ttu-id="9b97a-244">Legen Sie einfach die <xref:System.Windows.Controls.Control.Padding%2A> und <xref:System.Windows.FrameworkElement.Margin%2A> Eigenschaften auf der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-244">Simply set the <xref:System.Windows.Controls.Control.Padding%2A> and <xref:System.Windows.FrameworkElement.Margin%2A> properties on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span>  
   
-#### So legen Sie Textabstände und Ränder für ein gehostetes Steuerelement fest  
+#### <a name="to-set-padding-and-margins-for-a-hosted-control"></a><span data-ttu-id="9b97a-245">Festlegen von Abstand und Rändern für ein gehostetes Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9b97a-245">To set padding and margins for a hosted control</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-246">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-246">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
-    [!code-xml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
   
-2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Die Einstellungen für Textabstände und Ränder werden wie in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] auf die gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente angewendet.  
+2.  <span data-ttu-id="9b97a-247">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-247">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-248">Die Ränder und Abstände Einstellungen angewendet, das vom gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente auf die gleiche Weise, die sie werden, in angewendet würden [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9b97a-248">The padding and margin settings are applied to the hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls in the same way they would be applied in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
-## Verwenden von dynamischen Layoutcontainern  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] stellt zwei dynamische Layoutcontainer, <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>, zur Verfügung.  Sie können diese Container auch in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Layouts verwenden.  
+## <a name="using-dynamic-layout-containers"></a><span data-ttu-id="9b97a-249">Verwenden von dynamischen Layoutcontainern</span><span class="sxs-lookup"><span data-stu-id="9b97a-249">Using Dynamic Layout Containers</span></span>  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<span data-ttu-id="9b97a-250">stellt zwei dynamische Layoutcontainer <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="9b97a-250"> provides two dynamic layout containers, <xref:System.Windows.Forms.FlowLayoutPanel> and <xref:System.Windows.Forms.TableLayoutPanel>.</span></span> <span data-ttu-id="9b97a-251">Sie können auch diese Container in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layouts.</span><span class="sxs-lookup"><span data-stu-id="9b97a-251">You can also use these containers in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layouts.</span></span>  
   
-#### So verwenden Sie einen dynamischen Layoutcontainer  
+#### <a name="to-use-a-dynamic-layout-container"></a><span data-ttu-id="9b97a-252">Verwenden von dynamischen Layoutcontainern</span><span class="sxs-lookup"><span data-stu-id="9b97a-252">To use a dynamic layout container</span></span>  
   
-1.  Kopieren Sie den folgenden XAML\-Code in das <xref:System.Windows.Controls.Grid>\-Element.  
+1.  <span data-ttu-id="9b97a-253">Kopieren Sie den folgenden XAML-Code in die <xref:System.Windows.Controls.Grid> Element.</span><span class="sxs-lookup"><span data-stu-id="9b97a-253">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
   
-2.  Kopieren Sie in "MainWindow.xaml.vb" oder "MainWindow.xaml.cs" den folgenden Code in die Klassendefinition.  
+2.  <span data-ttu-id="9b97a-254">Kopieren Sie in „MainWindow.xaml.vb“ oder „MainWindow.xaml.cs“ den folgenden Code in die Klassedefinition.</span><span class="sxs-lookup"><span data-stu-id="9b97a-254">In MainWindow.xaml.vb or MainWindow.xaml.cs copy the following code into the class definition.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]  
   
-3.  Fügen Sie dem Konstruktor einen Aufruf der `InitializeFlowLayoutPanel`\-Methode hinzu.  
+3.  <span data-ttu-id="9b97a-255">Fügen Sie einen Aufruf an die `InitializeFlowLayoutPanel` -Methode im Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="9b97a-255">Add a call to the `InitializeFlowLayoutPanel` method in the constructor.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
-4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>\-Element füllt <xref:System.Windows.Controls.DockPanel> aus, und <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seine untergeordneten Steuerelemente in der Standard\-<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> an.  
+4.  <span data-ttu-id="9b97a-256">Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9b97a-256">Press F5 to build and run the application.</span></span> <span data-ttu-id="9b97a-257">Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element füllt die <xref:System.Windows.Controls.DockPanel>, und <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seine untergeordneten Steuerelemente in der standardmäßigen <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.</span><span class="sxs-lookup"><span data-stu-id="9b97a-257">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element fills the <xref:System.Windows.Controls.DockPanel>, and <xref:System.Windows.Forms.FlowLayoutPanel> arranges its child controls in the default <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [WPF\-Designer](http://msdn.microsoft.com/de-de/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Überlegungen zum Layout für das WindowsFormsHost\-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)   
- [Beispiel für das Anordnen von Windows Forms\-Steuerelementen in WPF](http://go.microsoft.com/fwlink/?LinkID=159971)   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms\-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF\-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9b97a-258">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9b97a-258">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="9b97a-259">WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="9b97a-259">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="9b97a-260">Überlegungen zum Layout für das WindowsFormsHost-Element</span><span class="sxs-lookup"><span data-stu-id="9b97a-260">Layout Considerations for the WindowsFormsHost Element</span></span>](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [<span data-ttu-id="9b97a-261">Anordnen von Windows Forms-Steuerelementen in WPF-Beispiel</span><span class="sxs-lookup"><span data-stu-id="9b97a-261">Arranging Windows Forms Controls in WPF Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [<span data-ttu-id="9b97a-262">Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF</span><span class="sxs-lookup"><span data-stu-id="9b97a-262">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="9b97a-263">Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b97a-263">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

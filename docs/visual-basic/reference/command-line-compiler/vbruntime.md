@@ -1,125 +1,108 @@
 ---
-title: / vbruntime | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: /vbruntime
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbruntime
 - /vbruntime
-dev_langs:
-- VB
 helpviewer_keywords:
 - vbruntime compiler option [Visual Basic]
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 455f950988b540b74874ce38882c59059f77ea8f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: dda8ea7285a748bac53e30af8bd7a60099fe7411
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="vbruntime"></a>/vbruntime
-Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Library oder mit einem Verweis auf eine bestimmte Laufzeitbibliothek kompilieren soll.  
+# <a name="vbruntime"></a><span data-ttu-id="93ae7-102">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="93ae7-102">/vbruntime</span></span>
+<span data-ttu-id="93ae7-103">Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Library oder mit einem Verweis auf eine bestimmte Laufzeitbibliothek kompilieren soll.</span><span class="sxs-lookup"><span data-stu-id="93ae7-103">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="93ae7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="93ae7-104">Syntax</span></span>  
   
 ```  
 /vbruntime:{ - | + | * | path }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="93ae7-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="93ae7-105">Arguments</span></span>  
  \-  
- Kompilieren Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek.  
+ <span data-ttu-id="93ae7-106">Kompilieren Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek.</span><span class="sxs-lookup"><span data-stu-id="93ae7-106">Compile without a reference to the Visual Basic Runtime Library.</span></span>  
   
  \+  
- Kompilieren Sie mit einem Verweis auf die Visual Basic-Laufzeitbibliothek.  
+ <span data-ttu-id="93ae7-107">Kompilieren Sie mit einem Verweis auf die Visual Basic-Laufzeitbibliothek.</span><span class="sxs-lookup"><span data-stu-id="93ae7-107">Compile with a reference to the default Visual Basic Runtime Library.</span></span>  
   
  \*  
- Kompilieren Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek und betten Sie Kernfunktionalität aus der Visual Basic-Laufzeitbibliothek in die Assembly ein.  
+ <span data-ttu-id="93ae7-108">Kompilieren Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek und betten Sie Kernfunktionalität aus der Visual Basic-Laufzeitbibliothek in die Assembly ein.</span><span class="sxs-lookup"><span data-stu-id="93ae7-108">Compile without a reference to the Visual Basic Runtime Library, and embed core functionality from the Visual Basic Runtime Library into the assembly.</span></span>  
   
  `path`  
- Kompilieren Sie mit einem Verweis auf die angegebene Bibliothek (DLL).  
+ <span data-ttu-id="93ae7-109">Kompilieren Sie mit einem Verweis auf die angegebene Bibliothek (DLL).</span><span class="sxs-lookup"><span data-stu-id="93ae7-109">Compile with a reference to the specified library (DLL).</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Die `/vbruntime` -Compileroption können Sie angeben, dass der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren soll. Wenn Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren, werden Fehler oder Warnungen auf Code oder Sprache Konstrukten protokolliert, die einen Aufruf einer Visual Basic-Laufzeithilfsfunktion zu generieren. (Ein *Visual Basic-Laufzeithilfsfunktion* ist eine Funktion definiert, die in Microsoft.VisualBasic.dll, die zur Laufzeit, um eine bestimmte Sprachsemantik auszuführen aufgerufen wird.)  
+## <a name="remarks"></a><span data-ttu-id="93ae7-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="93ae7-110">Remarks</span></span>  
+ <span data-ttu-id="93ae7-111">Die `/vbruntime` (Compileroption) können Sie angeben, dass der Compiler ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren soll.</span><span class="sxs-lookup"><span data-stu-id="93ae7-111">The `/vbruntime` compiler option enables you to specify that the compiler should compile without a reference to the Visual Basic Runtime Library.</span></span> <span data-ttu-id="93ae7-112">Wenn Sie ohne einen Verweis auf die Visual Basic-Laufzeitbibliothek kompilieren, werden Fehler oder Warnungen auf Code oder Sprache Konstrukten protokolliert, die einen Aufruf an eine Visual Basic-Laufzeit-Hilfsprogramm zu generieren.</span><span class="sxs-lookup"><span data-stu-id="93ae7-112">If you compile without a reference to the Visual Basic Runtime Library, errors or warnings are logged on code or language constructs that generate a call to a Visual Basic runtime helper.</span></span> <span data-ttu-id="93ae7-113">(Ein *Visual Basic-Laufzeit-Hilfsprogramm* ist eine Funktion, die in "Microsoft.VisualBasic.dll", die zur Laufzeit zum Ausführen einer bestimmten Sprache semantische aufgerufen wird.)</span><span class="sxs-lookup"><span data-stu-id="93ae7-113">(A *Visual Basic runtime helper* is a function defined in Microsoft.VisualBasic.dll that is called at runtime to execute a specific language semantic.)</span></span>  
   
- Die `/vbruntime+` Option führt zum selben Verhalten, das auftritt, wenn kein `/vbruntime` -Schalter angegeben ist. Können Sie die `/vbruntime+` Option zum Überschreiben von vorherigen `/vbruntime` Switches.  
+ <span data-ttu-id="93ae7-114">Die `/vbruntime+` Option führt zum gleichen Verhalten, das auftritt, wenn kein `/vbruntime` -Schalter angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="93ae7-114">The `/vbruntime+` option produces the same behavior that occurs if no `/vbruntime` switch is specified.</span></span> <span data-ttu-id="93ae7-115">Können Sie die `/vbruntime+` Option aus, um die vorherigen überschreiben `/vbruntime` Switches.</span><span class="sxs-lookup"><span data-stu-id="93ae7-115">You can use the `/vbruntime+` option to override previous `/vbruntime` switches.</span></span>  
   
- Die meisten Objekte von der `My` Typ sind nicht verfügbar, wenn Sie verwenden die `/vbruntime-` oder `vbruntime:``path` Optionen.  
+ <span data-ttu-id="93ae7-116">Die meisten Objekte von der `My` Typ sind nicht verfügbar, wenn Sie verwenden die `/vbruntime-` oder `vbruntime:``path` Optionen.</span><span class="sxs-lookup"><span data-stu-id="93ae7-116">Most objects of the `My` type are unavailable when you use the `/vbruntime-` or `vbruntime:``path` options.</span></span>  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>Einbetten von Visual Basic-Laufzeit-Kernfunktionalität  
- Die `/vbruntime*` Option können Sie ohne einen Verweis auf eine Laufzeitbibliothek kompilieren. Stattdessen ist Kernfunktionalität aus der Visual Basic-Laufzeitbibliothek in der Benutzerassembly eingebettet. Sie können diese Option verwenden, wenn Ihre Anwendung auf Plattformen ausgeführt wird, die die Visual Basic-Laufzeit nicht enthalten.  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a><span data-ttu-id="93ae7-117">Einbetten von Visual Basic-Laufzeit-Kernfunktionalität</span><span class="sxs-lookup"><span data-stu-id="93ae7-117">Embedding Visual Basic Runtime core functionality</span></span>  
+ <span data-ttu-id="93ae7-118">Die `/vbruntime*` Option ermöglicht es Ihnen, ohne einen Verweis auf eine Laufzeitbibliothek kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="93ae7-118">The `/vbruntime*` option enables you to compile without a reference to a runtime library.</span></span> <span data-ttu-id="93ae7-119">Stattdessen ist Kernfunktionalität aus der Visual Basic-Laufzeitbibliothek in der Benutzerassembly eingebettet.</span><span class="sxs-lookup"><span data-stu-id="93ae7-119">Instead, core functionality from the Visual Basic Runtime Library is embedded in the user assembly.</span></span> <span data-ttu-id="93ae7-120">Sie können diese Option verwenden, wenn Ihre Anwendung auf Plattformen ausgeführt wird, die der Visual Basic-Laufzeit nicht enthalten.</span><span class="sxs-lookup"><span data-stu-id="93ae7-120">You can use this option if your application runs on platforms that do not contain the Visual Basic runtime.</span></span>  
   
- Die folgenden Elemente für die Common Language Runtime eingebettet werden:  
+ <span data-ttu-id="93ae7-121">Die folgenden Elemente für die Common Language Runtime eingebettet werden:</span><span class="sxs-lookup"><span data-stu-id="93ae7-121">The following runtime members are embedded:</span></span>  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions>Klasse</xref:Microsoft.VisualBasic.CompilerServices.Conversions>  
+-   <span data-ttu-id="93ae7-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions>-Klasse</span><span class="sxs-lookup"><span data-stu-id="93ae7-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions> class</span></span>  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>Methode</xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>  
+-   <span data-ttu-id="93ae7-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>-Methode</span><span class="sxs-lookup"><span data-stu-id="93ae7-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> method</span></span>  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>Methode</xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>  
+-   <span data-ttu-id="93ae7-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>-Methode</span><span class="sxs-lookup"><span data-stu-id="93ae7-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> method</span></span>  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>Methode</xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>  
+-   <span data-ttu-id="93ae7-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>-Methode</span><span class="sxs-lookup"><span data-stu-id="93ae7-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> method</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack>Konstante</xref:Microsoft.VisualBasic.Constants.vbBack>  
+-   <span data-ttu-id="93ae7-126"><xref:Microsoft.VisualBasic.Constants.vbBack>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-126"><xref:Microsoft.VisualBasic.Constants.vbBack> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr>Konstante</xref:Microsoft.VisualBasic.Constants.vbCr>  
+-   <span data-ttu-id="93ae7-127"><xref:Microsoft.VisualBasic.Constants.vbCr>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-127"><xref:Microsoft.VisualBasic.Constants.vbCr> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf>Konstante</xref:Microsoft.VisualBasic.Constants.vbCrLf>  
+-   <span data-ttu-id="93ae7-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed>Konstante</xref:Microsoft.VisualBasic.Constants.vbFormFeed>  
+-   <span data-ttu-id="93ae7-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf>Konstante</xref:Microsoft.VisualBasic.Constants.vbLf>  
+-   <span data-ttu-id="93ae7-130"><xref:Microsoft.VisualBasic.Constants.vbLf>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-130"><xref:Microsoft.VisualBasic.Constants.vbLf> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine>Konstante</xref:Microsoft.VisualBasic.Constants.vbNewLine>  
+-   <span data-ttu-id="93ae7-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar>Konstante</xref:Microsoft.VisualBasic.Constants.vbNullChar>  
+-   <span data-ttu-id="93ae7-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString>Konstante</xref:Microsoft.VisualBasic.Constants.vbNullString>  
+-   <span data-ttu-id="93ae7-133"><xref:Microsoft.VisualBasic.Constants.vbNullString>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-133"><xref:Microsoft.VisualBasic.Constants.vbNullString> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab>Konstante</xref:Microsoft.VisualBasic.Constants.vbTab>  
+-   <span data-ttu-id="93ae7-134"><xref:Microsoft.VisualBasic.Constants.vbTab>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-134"><xref:Microsoft.VisualBasic.Constants.vbTab> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>Konstante</xref:Microsoft.VisualBasic.Constants.vbVerticalTab>  
+-   <span data-ttu-id="93ae7-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab>Konstante</span><span class="sxs-lookup"><span data-stu-id="93ae7-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab> constant</span></span>  
   
--   Einige Objekte von der `My` Typ  
+-   <span data-ttu-id="93ae7-136">Einige Objekte von der `My` Typ</span><span class="sxs-lookup"><span data-stu-id="93ae7-136">Some objects of the `My` type</span></span>  
   
- Bei der Kompilierung mit der `/vbruntime*` -Option, und der Code verweist auf ein Element aus der Visual Basic-Laufzeitbibliothek, die nicht mit den Kernfunktionen eingebettet ist, gibt der Compiler einen Fehler, der angibt, dass der Member nicht verfügbar ist.  
+ <span data-ttu-id="93ae7-137">Wenn Sie mit: Kompilieren Sie die `/vbruntime*` Option und dem Code verweist auf ein Element aus der Visual Basic-Laufzeitbibliothek, die nicht mit der Kernfunktionalität eingebettet ist, gibt der Compiler einen Fehler, der angibt, dass der Member nicht verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="93ae7-137">If you compile using the `/vbruntime*` option and your code references a member from the Visual Basic Runtime Library that is not embedded with the core functionality, the compiler returns an error that indicates that the member is not available.</span></span>  
   
-## <a name="referencing-a-specified-library"></a>Verweisen auf eine angegebene Bibliothek  
- Sie können die `path` Argument mit einem Verweis auf eine benutzerdefinierte Laufzeitbibliothek anstelle der standardmäßigen Visual Basic-Laufzeitbibliothek kompilieren.  
+## <a name="referencing-a-specified-library"></a><span data-ttu-id="93ae7-138">Verweis auf eine angegebene Bibliothek</span><span class="sxs-lookup"><span data-stu-id="93ae7-138">Referencing a specified library</span></span>  
+ <span data-ttu-id="93ae7-139">Sie können die `path` Argument mit einem Verweis auf eine benutzerdefinierte Laufzeitbibliothek anstelle des standardmäßigen Visual Basic-Laufzeitbibliothek kompiliert.</span><span class="sxs-lookup"><span data-stu-id="93ae7-139">You can use the `path` argument to compile with a reference to a custom runtime library instead of the default Visual Basic Runtime Library.</span></span>  
   
- Wenn der Wert für das `path` -Argument einen vollqualifizierten Pfad zu einer DLL ist, verwendet der Compiler diese Datei als Laufzeitbibliothek. Wenn der Wert für das `path` -Argument keinen vollqualifizierten Pfad zu einer DLL, die Visual Basic-Compiler wird zuerst nach der angegebenen DLL im aktuellen Ordner suchen. Danach sucht in den Pfad, die Sie angegeben haben die [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) (Compileroption). Wenn die `/sdkpath` -Compileroption nicht verwendet wird, sucht der Compiler nach der angegebenen DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ <span data-ttu-id="93ae7-140">Wenn der Wert für die `path` -Argument einen vollqualifizierten Pfad zu einer DLL ist, verwendet der Compiler diese Datei als der Common Language Runtime-Bibliothek.</span><span class="sxs-lookup"><span data-stu-id="93ae7-140">If the value for the `path` argument is a fully qualified path to a DLL, the compiler will use that file as the runtime library.</span></span> <span data-ttu-id="93ae7-141">Wenn der Wert für die `path` -Argument keinen vollqualifizierten Pfad zu einer DLL, Visual Basic-Compiler sucht zuerst nach der angegebenen DLL im aktuellen Ordner.</span><span class="sxs-lookup"><span data-stu-id="93ae7-141">If the value for the `path` argument is not a fully qualified path to a DLL, the Visual Basic compiler will search for the identified DLL in the current folder first.</span></span> <span data-ttu-id="93ae7-142">Sucht dann in den Pfad, die Sie angegeben haben die [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) -Compileroption.</span><span class="sxs-lookup"><span data-stu-id="93ae7-142">It will then search in the path that you have specified by using the [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) compiler option.</span></span> <span data-ttu-id="93ae7-143">Wenn die `/sdkpath` -Compileroption nicht verwendet wird, sucht des Compilers nach der angegebenen DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).</span><span class="sxs-lookup"><span data-stu-id="93ae7-143">If the `/sdkpath` compiler option is not used, the compiler will search for the identified DLL in the .NET Framework folder (`%systemroot%\Microsoft.NET\Framework\versionNumber`).</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `/vbruntime` Option einen Verweis auf eine benutzerdefinierte Bibliothek zu kompilieren.  
+## <a name="example"></a><span data-ttu-id="93ae7-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="93ae7-144">Example</span></span>  
+ <span data-ttu-id="93ae7-145">Das folgende Beispiel zeigt, wie Sie die `/vbruntime` Option aus, um mit einem Verweis auf eine benutzerdefinierte Bibliothek zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="93ae7-145">The following example shows how to use the `/vbruntime` option to compile with a reference to a custom library.</span></span>  
   
 ```  
 vbc /vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Core – neue Kompilierungsmodus in Visual Studio 2010 SP1](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)   
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Beispiel für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a><span data-ttu-id="93ae7-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93ae7-146">See Also</span></span>  
+ [<span data-ttu-id="93ae7-147">Visual Basic Core – neue Kompilierungsmodus in Visual Studio 2010 SP1</span><span class="sxs-lookup"><span data-stu-id="93ae7-147">Visual Basic Core – New compilation mode in Visual Studio 2010 SP1</span></span>](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
+ [<span data-ttu-id="93ae7-148">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="93ae7-148">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="93ae7-149">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="93ae7-149">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="93ae7-150">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="93ae7-150">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

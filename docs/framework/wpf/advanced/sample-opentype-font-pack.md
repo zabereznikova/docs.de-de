@@ -1,67 +1,69 @@
 ---
-title: "OpenType-Beispielschriftartenpaket | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Schriftarten, OpenType-Schriftartenpaket"
-  - "OpenType-Schriftartenpaket"
-  - "Typografie, OpenType-Schriftartenpaket"
+title: OpenType-Beispielschriftartenpaket
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OpenType font pack [WPF]
+- fonts [WPF], OpenType font pack
+- typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbc5caeab5a77518e160bacb9722e50ff7abbfb4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# OpenType-Beispielschriftartenpaket
-Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Beispielschriftarten, die mit dem [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] verteilt werden.  Die Beispielschriftarten unterstützen erweiterte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Funktionen, die in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungen verwendet werden können.  
+# <a name="sample-opentype-font-pack"></a><span data-ttu-id="3ee5a-102">OpenType-Beispielschriftartenpaket</span><span class="sxs-lookup"><span data-stu-id="3ee5a-102">Sample OpenType Font Pack</span></span>
+<span data-ttu-id="3ee5a-103">Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten, die mit [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] verteilt sind.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-103">This topic provides an overview of the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that are distributed with the [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].</span></span> <span data-ttu-id="3ee5a-104">Die Beispielschriftarten unterstützen erweiterte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Features, die von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwendet werden können .</span><span class="sxs-lookup"><span data-stu-id="3ee5a-104">The sample fonts support extended [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features that can be used by [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 <a name="overview"></a>   
-## Schriftarten im OpenType\-Schriftartenpaket  
- Das [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] stellt einen Satz von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Beispielschriftarten bereit, die Sie bei der Erstellung von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendungen verwenden können.  Die Beispielschriftarten werden gemäß der Lizenz der Ascender Corporation bereitgestellt.  Diese Schriftarten implementieren nur einen Teil der mit dem [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Format definierten Features.  In der folgenden Tabelle sind die Namen der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Beispielschriftarten aufgeführt.  
+## <a name="fonts-in-the-opentype-font-pack"></a><span data-ttu-id="3ee5a-105">Schriftarten im OpenType-Schriftartenpaket</span><span class="sxs-lookup"><span data-stu-id="3ee5a-105">Fonts in the OpenType Font Pack</span></span>  
+ <span data-ttu-id="3ee5a-106">Das [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] bietet eine Reihe von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten, mit denen Sie beim Erstellen von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwenden können.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-106">The [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] provides a set of sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that you can use in creating [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="3ee5a-107">Die Beispielschriftarten werden unter der Lizenz von Ascender Corporation bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-107">The sample fonts are supplied under license from Ascender Corporation.</span></span> <span data-ttu-id="3ee5a-108">Diese Schriftarten implementieren nur einen Teil der Features, die vom [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Format festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-108">These fonts implement only a subset of the total features defined by the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] format.</span></span> <span data-ttu-id="3ee5a-109">Die folgende Tabelle enthält die Namen der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-109">The following table lists the names of the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span>  
   
-|**Name**|**Datei**|  
-|--------------|---------------|  
-|Kootenay|Kooten.ttf|  
-|Lindsey|Linds.ttf|  
-|Miramonte|Miramo.ttf|  
-|Miramonte Bold|Miramob.ttf|  
-|Pericles|Peric.ttf|  
-|Pericles Light|Pericl.ttf|  
-|Pescadero|Pesca.ttf|  
-|Pescadero Bold|Pescab.ttf|  
+|<span data-ttu-id="3ee5a-110">**Name**</span><span class="sxs-lookup"><span data-stu-id="3ee5a-110">**Name**</span></span>|<span data-ttu-id="3ee5a-111">**Datei**</span><span class="sxs-lookup"><span data-stu-id="3ee5a-111">**File**</span></span>|  
+|--------------|--------------|  
+|<span data-ttu-id="3ee5a-112">Kootenay</span><span class="sxs-lookup"><span data-stu-id="3ee5a-112">Kootenay</span></span>|<span data-ttu-id="3ee5a-113">Kooten.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-113">Kooten.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-114">Lindsey</span><span class="sxs-lookup"><span data-stu-id="3ee5a-114">Lindsey</span></span>|<span data-ttu-id="3ee5a-115">Linds.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-115">Linds.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-116">Miramonte</span><span class="sxs-lookup"><span data-stu-id="3ee5a-116">Miramonte</span></span>|<span data-ttu-id="3ee5a-117">Miramo.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-117">Miramo.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-118">Miramonte Fett</span><span class="sxs-lookup"><span data-stu-id="3ee5a-118">Miramonte Bold</span></span>|<span data-ttu-id="3ee5a-119">Miramob.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-119">Miramob.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-120">Pericles</span><span class="sxs-lookup"><span data-stu-id="3ee5a-120">Pericles</span></span>|<span data-ttu-id="3ee5a-121">Peric.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-121">Peric.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-122">Pericles Light</span><span class="sxs-lookup"><span data-stu-id="3ee5a-122">Pericles Light</span></span>|<span data-ttu-id="3ee5a-123">Pericl.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-123">Pericl.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-124">Pescadero</span><span class="sxs-lookup"><span data-stu-id="3ee5a-124">Pescadero</span></span>|<span data-ttu-id="3ee5a-125">Pesca.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-125">Pesca.ttf</span></span>|  
+|<span data-ttu-id="3ee5a-126">Pescadero fett</span><span class="sxs-lookup"><span data-stu-id="3ee5a-126">Pescadero Bold</span></span>|<span data-ttu-id="3ee5a-127">Pescab.ttf</span><span class="sxs-lookup"><span data-stu-id="3ee5a-127">Pescab.ttf</span></span>|  
   
- Die folgende Abbildung zeigt, wie die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Beispielschriftarten aussehen.  
+ <span data-ttu-id="3ee5a-128">Die folgende Abbildung zeigt, wie die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten aussehen.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-128">The following illustration shows what the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts look like.</span></span>  
   
- ![Liste der Schriftartennamen im Beispiel&#45;Schriftartpaket](../../../../docs/framework/wpf/advanced/media/samplefontpack01.png "samplefontpack01")  
-Schriftarten im OpenType\-Schriftartenpaket  
+ <span data-ttu-id="3ee5a-129">![Liste der Schriftartennamen im Beispiel-Schriftartpaket](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")</span><span class="sxs-lookup"><span data-stu-id="3ee5a-129">![List of font names in sample font pack](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")</span></span>  
+<span data-ttu-id="3ee5a-130">Schriftarten im OpenType-Schriftartenpaket</span><span class="sxs-lookup"><span data-stu-id="3ee5a-130">Fonts in the OpenType Font Pack</span></span>  
   
- Die Beispielschriftarten werden gemäß der Lizenz der Ascender Corporation bereitgestellt.  Ascender ist ein Anbieter erweiterter Schriftprodukte.  Informationen zur Lizenzierung von erweiterten oder benutzerdefinierten Versionen der Beispielschriftarten finden Sie auf der [Ascender Corporation\-Website](http://go.microsoft.com/fwlink/?LinkId=182627).  
+ <span data-ttu-id="3ee5a-131">Die Beispielschriftarten werden unter der Lizenz von Ascender Corporation bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-131">The sample fonts are supplied under license from Ascender Corporation.</span></span> <span data-ttu-id="3ee5a-132">Ascender ist ein Anbieter von erweiterten Schriftartprodukten.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-132">Ascender is a provider of advanced font products.</span></span> <span data-ttu-id="3ee5a-133">Auf der [Ascender Corporation Website](http://go.microsoft.com/fwlink/?LinkId=182627) finden Sie erweiterte oder benutzerdefinierte Versionen, um die Beispielschriftarten zu lizenzieren.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-133">To license extended or custom versions of the sample fonts, see [Ascender Corporation's Web site](http://go.microsoft.com/fwlink/?LinkId=182627).</span></span>  
   
 > [!NOTE]
->  Es liegt in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anders verteilen.  
+>  <span data-ttu-id="3ee5a-134">Aus diesem Grund liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anders verteilen.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-134">As a developer it is your responsibility to ensure that you have the required license rights for any font you embed within an application or otherwise redistribute.</span></span>  
   
 <a name="installing_the_fonts"></a>   
-## Installieren der Schriftarten  
- Sie können die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Beispielschriftarten im [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]\-Standardschriftartenverzeichnis **\\WINDOWS\\Fonts** installieren.  Installieren Sie die Schriftarten mithilfe von Schriftarten in der Schriftartensystemsteuerung.  Nachdem Sie die Schriftarten installiert haben, können alle Anwendungen darauf zugreifen, die auf [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]\-Standardschriftarten verweisen. Sie können einen repräsentativen Satz von Zeichen in mehreren Schriftgraden anzeigen, indem Sie auf die Schriftdatei doppelklicken.  Die folgende Bildschirmabbildung zeigt die Lindsey\-Schriftartendatei Linds.ttf.  
+## <a name="installing-the-fonts"></a><span data-ttu-id="3ee5a-135">Installieren der Schriftarten</span><span class="sxs-lookup"><span data-stu-id="3ee5a-135">Installing the Fonts</span></span>  
+ <span data-ttu-id="3ee5a-136">Sie haben die Möglichkeit zum Installieren der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten auf das [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Standardschriftartenverzeichnis **\WINDOWS\Fonts**.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-136">You have the option of installing the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts to the default [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Fonts directory, **\WINDOWS\Fonts**.</span></span> <span data-ttu-id="3ee5a-137">Verwenden Sie die Systemsteuerung „Schriftarten“, um die Schriftarten zu installieren.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-137">Use the Fonts control panel to install the fonts.</span></span> <span data-ttu-id="3ee5a-138">Sobald sich diese Schriftarten auf Ihrem Computer befinden, können alle Anwendungen darauf zugreifen, die auf die [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Standardschriftarten verweisen.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-138">Once these fonts are on your computer, they are accessible to all applications that reference default [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] fonts.</span></span> <span data-ttu-id="3ee5a-139">Sie können eine repräsentative Anzahl an Zeichen in mehreren Schriftgraden anzeigen, indem Sie doppelt auf die Schriftartendatei klicken.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-139">You can display a representative set of characters in several font sizes by doubling-clicking the font file.</span></span> <span data-ttu-id="3ee5a-140">Der folgende Screenshot zeigt die Schriftartendatei Lindsey, Linds.ttf.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-140">The following screenshot shows the Lindsey font file, Linds.ttf.</span></span>  
   
- ![Lindsey&#45;Schriftart &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF\_04")  
-Anzeigen der Lindsey\-Schriftart  
+ <span data-ttu-id="3ee5a-141">![Lindsey-Schriftart &#40; OpenType &#41; ] (../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")</span><span class="sxs-lookup"><span data-stu-id="3ee5a-141">![Lindsey font &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")</span></span>  
+<span data-ttu-id="3ee5a-142">Anzeigen der Schriftart Lindsey</span><span class="sxs-lookup"><span data-stu-id="3ee5a-142">Displaying the Lindsey font</span></span>  
   
 <a name="using_the_fonts"></a>   
-## Verwenden der Schriftarten  
- Es gibt zwei Methoden, um Schriftarten in der Anwendung verwenden zu können.  Sie können Ihrer Anwendung Schriftarten als Projektinhaltselemente hinzufügen, die nicht als Ressourcen innerhalb einer Assembly eingebettet sind.  Sie können Ihrer Anwendung Schriftarten auch als Projektressourcenelemente hinzufügen, die in die Assemblydateien der Anwendung eingebettet sind.  Weitere Informationen finden Sie unter [Verpacken von Schriftarten mit Anwendungen](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+## <a name="using-the-fonts"></a><span data-ttu-id="3ee5a-143">Verwenden der Schriftarten</span><span class="sxs-lookup"><span data-stu-id="3ee5a-143">Using the Fonts</span></span>  
+ <span data-ttu-id="3ee5a-144">Es gibt zwei Methoden, um die Schriftarten in Ihrer Anwendung verwenden zu können.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-144">There are two ways that you can use fonts in your application.</span></span> <span data-ttu-id="3ee5a-145">Sie können Schriftarten als Projektinhaltselemente zu Ihrer Anwendung hinzufügen, die nicht als Ressourcen in eine Assembly eingebettet werden.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-145">You can add fonts to your application as project content items that are not embedded as resources within an assembly.</span></span> <span data-ttu-id="3ee5a-146">Alternativ können Sie Schriftarten als Projektresourcenelemente zu Ihrer Anwendung hinzufügen, die in die Assemblydateien der Anwendung eingebettet sind.</span><span class="sxs-lookup"><span data-stu-id="3ee5a-146">Alternatively, you can add fonts to your application as project resource items that are embedded within the application's assembly files.</span></span> <span data-ttu-id="3ee5a-147">Weitere Informationen finden Sie unter [Schriftarten mit Anwendungen verpacken](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).</span><span class="sxs-lookup"><span data-stu-id="3ee5a-147">For more information, see [Packaging Fonts with Applications](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Documents.Typography>   
- [Features für OpenType\-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)   
- [Verpacken von Schriftarten mit Anwendungen](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a><span data-ttu-id="3ee5a-148">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ee5a-148">See Also</span></span>  
+ <xref:System.Windows.Documents.Typography>  
+ [<span data-ttu-id="3ee5a-149">Features für OpenType-Schriftarten</span><span class="sxs-lookup"><span data-stu-id="3ee5a-149">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="3ee5a-150">Verpacken von Schriftarten mit Anwendungen</span><span class="sxs-lookup"><span data-stu-id="3ee5a-150">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

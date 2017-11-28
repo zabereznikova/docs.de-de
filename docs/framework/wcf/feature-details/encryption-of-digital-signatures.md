@@ -1,44 +1,47 @@
 ---
-title: "Verschl&#252;sselung von digitalen Signaturen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Digitale Signaturen [WCF]"
-  - "Digitale Signaturen [WCF], Verschlüsselung"
-  - "Verschlüsselung von digitalen Signaturen [WCF]"
+title: "Verschlüsselung von digitalen Signaturen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption of digital signatures [WCF]
+- digital signatures [WCF], encryption
+- digital signatures [WCF]
 ms.assetid: 0868866d-40b4-4341-8e42-eee3b7f15b69
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 147f62a895983557267d0a18fdd1ea261ae6c855
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verschl&#252;sselung von digitalen Signaturen
-Standardmäßig wird eine Nachricht signiert und verschlüsselt, und die Signatur wird digital verschlüsselt.Dies können Sie steuern, indem Sie eine benutzerdefinierte Bindung mit einer Instanz von <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> erstellen und dann die `MessageProtectionOrder`\-Eigenschaft der Klasse auf einen <xref:System.ServiceModel.Security.MessageProtectionOrder>\-Enumerationswert festlegen.Die Standardeinstellung ist <xref:System.ServiceModel.Security.MessageProtectionOrder>.Im Vergleich zum einfachen Signieren und Verschlüsseln dauert dieser Prozess 10 bis 40 Prozent länger.Wenn Sie die Verschlüsselung der Signatur jedoch deaktivieren, kann ein Angreifer eventuell den Inhalt der Nachricht erraten.Dies ist möglich, da das Signaturelement den Hashcode des reinen Texts des signierten Teils der Nachricht enthält.Obwohl der Nachrichtentext zwar standardmäßig verschlüsselt ist, enthält die unverschlüsselte Signatur z. B. den Hashcode des Nachrichtentexts.Wenn die Nachricht klein ist, könnte ein Angreifer den Inhalt herleiten.Diese Möglichkeit wird durch das Verschlüsseln der Signatur reduziert oder ausgeschlossen.  
+# <a name="encryption-of-digital-signatures"></a><span data-ttu-id="c8f25-102">Verschlüsselung von digitalen Signaturen</span><span class="sxs-lookup"><span data-stu-id="c8f25-102">Encryption of Digital Signatures</span></span>
+<span data-ttu-id="c8f25-103">Standardmäßig wird eine Nachricht signiert und verschlüsselt, und die Signatur wird digital verschlüsselt.</span><span class="sxs-lookup"><span data-stu-id="c8f25-103">By default, a message is signed and encrypted, and the signature is digitally encrypted.</span></span> <span data-ttu-id="c8f25-104">Dies können Sie steuern, indem Sie eine benutzerdefinierte Bindung mit einer Instanz von <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> erstellen und dann die `MessageProtectionOrder`-Eigenschaft der Klasse auf einen <xref:System.ServiceModel.Security.MessageProtectionOrder>-Enumerationswert festlegen.</span><span class="sxs-lookup"><span data-stu-id="c8f25-104">You can control this by creating a custom binding with an instance of the <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> or the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> and then setting the `MessageProtectionOrder` property of either class to a <xref:System.ServiceModel.Security.MessageProtectionOrder> enumeration value.</span></span> <span data-ttu-id="c8f25-105">Die Standardeinstellung ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>.</span><span class="sxs-lookup"><span data-stu-id="c8f25-105">The default is <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>.</span></span> <span data-ttu-id="c8f25-106">Im Vergleich zum einfachen Signieren und Verschlüsseln dauert dieser Prozess 10 bis 40&#160;Prozent länger.</span><span class="sxs-lookup"><span data-stu-id="c8f25-106">This process takes 10 to 40 percent longer than simply signing and encrypting.</span></span> <span data-ttu-id="c8f25-107">Wenn Sie die Verschlüsselung der Signatur jedoch deaktivieren, kann ein Angreifer eventuell den Inhalt der Nachricht erraten.</span><span class="sxs-lookup"><span data-stu-id="c8f25-107">Disabling encryption of the signature, however, might allow an attacker to guess the contents of the message.</span></span> <span data-ttu-id="c8f25-108">Dies ist möglich, da das Signaturelement den Hashcode des reinen Texts des signierten Teils der Nachricht enthält.</span><span class="sxs-lookup"><span data-stu-id="c8f25-108">This is possible because the signature element contains the hash code of the plain text of every signed part in the message.</span></span> <span data-ttu-id="c8f25-109">Obwohl der Nachrichtentext zwar standardmäßig verschlüsselt ist, enthält die unverschlüsselte Signatur z.&#160;B. den Hashcode des Nachrichtentexts.</span><span class="sxs-lookup"><span data-stu-id="c8f25-109">For example, although the message body is encrypted by default, the unencrypted signature contains the hash code of the message body.</span></span> <span data-ttu-id="c8f25-110">Wenn die Nachricht klein ist, könnte ein Angreifer den Inhalt herleiten.</span><span class="sxs-lookup"><span data-stu-id="c8f25-110">If the message is small, an attacker might be able to deduce the contents.</span></span> <span data-ttu-id="c8f25-111">Diese Möglichkeit wird durch das Verschlüsseln der Signatur reduziert oder ausgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="c8f25-111">Encrypting the signature reduces or eliminates this possibility.</span></span>  
   
- Deshalb sollten Sie die Verschlüsselung der Signatur nur deaktivieren, wenn der Inhalt für Sie von niedrigem Wert und die Leistungssteigerung erheblich ist, z. B. wenn große Binärdateien gesendet werden, die keinerlei Sicherheitsauswirkungen haben.  
+ <span data-ttu-id="c8f25-112">Deshalb sollten Sie die Verschlüsselung der Signatur nur deaktivieren, wenn der Inhalt für Sie von niedrigem Wert und die Leistungssteigerung erheblich ist, z.&#160;B. wenn große Binärdateien gesendet werden, die keinerlei Sicherheitsauswirkungen haben.</span><span class="sxs-lookup"><span data-stu-id="c8f25-112">Therefore, disable encryption of the signature only when the value of the content is low, and the performance gain will be significant, for example, when sending large binary files that have no security implications.</span></span>  
   
-### So deaktivieren Sie das digitale Signieren  
+### <a name="to-disable-digital-signing"></a><span data-ttu-id="c8f25-113">So deaktivieren Sie das digitale Signieren</span><span class="sxs-lookup"><span data-stu-id="c8f25-113">To disable digital signing</span></span>  
   
-1.  Erstellen Sie eine <xref:System.ServiceModel.Channels.CustomBinding>.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+1.  <span data-ttu-id="c8f25-114">Erstellen Sie eine <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="c8f25-114">Create a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c8f25-115">[Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).</span><span class="sxs-lookup"><span data-stu-id="c8f25-115"> [How to: Create a Custom Binding Using the SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).</span></span>  
   
-2.  Fügen Sie der Bindungsauflistung entweder ein <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> oder ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> hinzu.  
+2.  <span data-ttu-id="c8f25-116">Fügen Sie der Bindungsauflistung entweder ein <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> oder ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> hinzu.</span><span class="sxs-lookup"><span data-stu-id="c8f25-116">Add either an <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> or a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> to the binding collection.</span></span>  
   
-3.  Legen Sie die <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.ServiceModel.Security.MessageProtectionOrder> oder die <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.ServiceModel.Security.MessageProtectionOrder> fest.  
+3.  <span data-ttu-id="c8f25-117">Legen Sie die <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> oder die <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> fest.</span><span class="sxs-lookup"><span data-stu-id="c8f25-117">Set the <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> property to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, or set the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> property to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Erstellung benutzerdefinierten Bindungen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Erstellen einer benutzerdefinierten Bindung für einen bestimmten Authentifizierungsmodus finden Sie unter [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c8f25-118">Erstellung benutzerdefinierter Bindungen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="c8f25-118"> creating custom bindings, see [Creating User-Defined Bindings](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c8f25-119">Erstellen einer benutzerdefinierten Bindung für einen bestimmten Authentifizierungsmodus finden Sie unter [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).</span><span class="sxs-lookup"><span data-stu-id="c8f25-119"> creating a custom binding for a specific authentication mode, see [How to: Create a SecurityBindingElement for a Specified Authentication Mode](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.Security.MessageProtectionOrder>   
- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)   
- [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a><span data-ttu-id="c8f25-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c8f25-120">See Also</span></span>  
+ <xref:System.ServiceModel.Security.MessageProtectionOrder>  
+ <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ [<span data-ttu-id="c8f25-121">Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="c8f25-121">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="c8f25-122">Erstellen von benutzerdefinierten Bindungen</span><span class="sxs-lookup"><span data-stu-id="c8f25-122">Creating User-Defined Bindings</span></span>](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
+ [<span data-ttu-id="c8f25-123">Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus</span><span class="sxs-lookup"><span data-stu-id="c8f25-123">How to: Create a SecurityBindingElement for a Specified Authentication Mode</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

@@ -1,47 +1,46 @@
 ---
-title: "Return Values for the CStr Function (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "times, CStr Function return values"
-  - "type conversion"
-  - "dates [Visual Basic], CStr Function return values"
-  - "CStr function"
-  - "strings [Visual Basic], return value"
-  - "Date data type, converting"
-  - "dates [Visual Basic]"
-  - "String data type, converting"
+title: "Rückgabewerte für die CStr-Funktion (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- times [Visual Basic], CStr Function return values
+- type conversion [Visual Basic]
+- dates [Visual Basic], CStr Function return values
+- CStr function
+- strings [Visual Basic], return value
+- Date data type [Visual Basic], converting
+- dates [Visual Basic]
+- String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b498c9b1b7916467c96ed2c645c7131192a5e8b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Return Values for the CStr Function (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-In der folgenden Tabelle werden die Rückgabewerte für `CStr` bei unterschiedlichen `expression`\-Datenypen beschrieben.  
+# <a name="return-values-for-the-cstr-function-visual-basic"></a><span data-ttu-id="67e46-102">Rückgabewerte für die CStr-Funktion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67e46-102">Return Values for the CStr Function (Visual Basic)</span></span>
+<span data-ttu-id="67e46-103">Die folgende Tabelle beschreibt die Rückgabewerte für `CStr` für verschiedene Datentypen der `expression`.</span><span class="sxs-lookup"><span data-stu-id="67e46-103">The following table describes the return values for `CStr` for different data types of `expression`.</span></span>  
   
-|Wenn `expression` den folgenden Datentyp hat:|ist der Rückgabewert von `CStr`|  
-|---------------------------------------------------|-------------------------------------|  
-|[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Eine Zeichenfolge, die den Wert **True** oder **False** enthält.|  
-|[Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md)|Eine Zeichenfolge, die einen `Date`\-Wert \(Datum und Uhrzeit\) im kurzen Datumsformat des Systems enthält.|  
-|[Numeric Data Types](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Eine Zeichenfolge, die die Zahl enthält.|  
+|<span data-ttu-id="67e46-104">Wenn `expression` Typ ist</span><span class="sxs-lookup"><span data-stu-id="67e46-104">If `expression` type is</span></span>|<span data-ttu-id="67e46-105">`CStr`Gibt zurück</span><span class="sxs-lookup"><span data-stu-id="67e46-105">`CStr` returns</span></span>|  
+|-----------------------------|--------------------|  
+|[<span data-ttu-id="67e46-106">Boolean-Datentyp</span><span class="sxs-lookup"><span data-stu-id="67e46-106">Boolean Data Type</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<span data-ttu-id="67e46-107">Eine Zeichenfolge mit "True" oder "False".</span><span class="sxs-lookup"><span data-stu-id="67e46-107">A string containing "True" or "False".</span></span>|  
+|[<span data-ttu-id="67e46-108">Date-Datentyp</span><span class="sxs-lookup"><span data-stu-id="67e46-108">Date Data Type</span></span>](../../../visual-basic/language-reference/data-types/date-data-type.md)|<span data-ttu-id="67e46-109">Eine Zeichenfolge mit einem `Date` Wert (Datum und Uhrzeit) im kurzen Datumsformat Ihres Systems.</span><span class="sxs-lookup"><span data-stu-id="67e46-109">A string containing a `Date` value (date and time) in the short date format of your system.</span></span>|  
+|[<span data-ttu-id="67e46-110">Numerische Datentypen</span><span class="sxs-lookup"><span data-stu-id="67e46-110">Numeric Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|<span data-ttu-id="67e46-111">Eine Zeichenfolge, die die Anzahl darstellt.</span><span class="sxs-lookup"><span data-stu-id="67e46-111">A string representing the number.</span></span>|  
   
-## CStr und Datum  
- Der `Date`\-Datentyp enthält immer sowohl Datums\- als auch Uhrzeitinformationen.  Für die Typkonvertierung verwendet Visual Basic 1\/1\/0001 \(1. Januar des Jahres 1\) als *neutralen Wert* für das Datum und 00:00:00 \(Mitternacht\) als neutralen Wert für die Uhrzeit.  `CStr` schließt keine neutralen Werte in die Ergebniszeichenfolge ein.  Wenn beispielsweise `#January 1, 0001 9:30:00#` in eine Zeichenfolge umgewandelt wird, lautet das Ergebnis "9:30:00 AM"; die Datumsinformationen werden unterdrückt.  Die Datumsinformationen sind dabei im ursprünglichen `Date`\-Wert noch enthalten und können mit Funktionen wie <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> wiederhergestellt werden.  
+## <a name="cstr-and-date"></a><span data-ttu-id="67e46-112">CStr und Datum</span><span class="sxs-lookup"><span data-stu-id="67e46-112">CStr and Date</span></span>  
+ <span data-ttu-id="67e46-113">Die `Date` Typ enthält immer die Datums-und Uhrzeitinformationen.</span><span class="sxs-lookup"><span data-stu-id="67e46-113">The `Date` type always contains both date and time information.</span></span> <span data-ttu-id="67e46-114">Zwecken Typumwandlung berücksichtigt Visual Basic 1/1/0001 (1. Januar des Jahres 1), werden eine *neutrale Wert* für das Datum und 00:00:00 (Mitternacht) für die Zeit ein neutrale Wert sein.</span><span class="sxs-lookup"><span data-stu-id="67e46-114">For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time.</span></span> <span data-ttu-id="67e46-115">`CStr`umfasst nicht neutral Werte in die resultierende Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="67e46-115">`CStr` does not include neutral values in the resulting string.</span></span> <span data-ttu-id="67e46-116">Angenommen, Sie konvertieren `#January 1, 0001 9:30:00#` in eine Zeichenfolge das Ergebnis "9:30:00 AM"; die Datumsinformationen unterdrückt wird.</span><span class="sxs-lookup"><span data-stu-id="67e46-116">For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed.</span></span> <span data-ttu-id="67e46-117">Die Datumsinformationen ist jedoch weiterhin vorhanden, in der ursprünglichen `Date` Wert und können mit Funktionen wie z. B. wiederhergestellt werden <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.</span><span class="sxs-lookup"><span data-stu-id="67e46-117">However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.</span></span>  
   
 > [!NOTE]
->  Die `CStr`\-Funktion führt die Konvertierung auf der Grundlage der aktuellen Kultureinstellungen für die Anwendung aus.  Um die Zeichenfolgenentsprechung einer Zahl in einer bestimmten Kultur abzurufen, verwenden Sie `ToString(IFormatProvider)`\-Methode der Zahl.  Verwenden Sie beispielsweise <xref:System.Double.ToString%2A?displayProperty=fullName>, wenn Sie einen Wert des Typs `Double` in einen `String`\-Wert konvertieren.  
+>  <span data-ttu-id="67e46-118">Die `CStr` -Funktion führt die Konvertierung auf Grundlage der aktuellen kultureinstellungen für die Anwendung.</span><span class="sxs-lookup"><span data-stu-id="67e46-118">The `CStr` function performs its conversion based on the current culture settings for the application.</span></span> <span data-ttu-id="67e46-119">Um die Zeichenfolgendarstellung einer Zahl in einer bestimmten Kultur abzurufen, verwenden Sie der Anzahl `ToString(IFormatProvider)` Methode.</span><span class="sxs-lookup"><span data-stu-id="67e46-119">To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method.</span></span> <span data-ttu-id="67e46-120">Verwenden Sie z. B. <xref:System.Double.ToString%2A?displayProperty=nameWithType> beim Konvertieren eines Werts vom Typ `Double` zu einem `String`.</span><span class="sxs-lookup"><span data-stu-id="67e46-120">For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.</span></span>  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)   
- [Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="67e46-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67e46-121">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>  
+ [<span data-ttu-id="67e46-122">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="67e46-122">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="67e46-123">Boolean-Datentyp</span><span class="sxs-lookup"><span data-stu-id="67e46-123">Boolean Data Type</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [<span data-ttu-id="67e46-124">Date-Datentyp</span><span class="sxs-lookup"><span data-stu-id="67e46-124">Date Data Type</span></span>](../../../visual-basic/language-reference/data-types/date-data-type.md)

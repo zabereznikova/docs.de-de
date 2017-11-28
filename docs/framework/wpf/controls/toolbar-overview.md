@@ -1,56 +1,58 @@
 ---
-title: "&#220;bersicht &#252;berToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelemente, ToolBar"
-  - "ToolBar-Steuerelement"
+title: "Übersicht überToolBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], ToolBar
+- ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dddf6940e180b3d997357390ead38f99f52994ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;berToolBar
-<xref:System.Windows.Controls.ToolBar>\-Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel verwandte Funktionen aufweisen.  Eine <xref:System.Windows.Controls.ToolBar> enthält normalerweise Schaltflächen, die Befehle aufrufen.  
+# <a name="toolbar-overview"></a><span data-ttu-id="c1e32-102">Übersicht überToolBar</span><span class="sxs-lookup"><span data-stu-id="c1e32-102">ToolBar Overview</span></span>
+<span data-ttu-id="c1e32-103"><xref:System.Windows.Controls.ToolBar>-Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelemente, die in der Regel in ihrer Funktion miteinander verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="c1e32-103"><xref:System.Windows.Controls.ToolBar> controls are containers for a group of commands or controls which are typically related in their function.</span></span> <span data-ttu-id="c1e32-104">Ein <xref:System.Windows.Controls.ToolBar> enthält in der Regel Schaltflächen, die Befehle aufrufen.</span><span class="sxs-lookup"><span data-stu-id="c1e32-104">A <xref:System.Windows.Controls.ToolBar> usually contains buttons which invoke commands.</span></span>  
   
-   
   
 <a name="ToolBarControl"></a>   
-## ToolBar\-Steuerelement  
- Das <xref:System.Windows.Controls.ToolBar>\-Steuerelement bezieht seinen Namen von der symbolleistenähnlichen Anordnung von Schaltflächen oder anderen Steuerelementen in einer einzelnen Zeile oder Spalte.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar>\-Steuerelemente bieten einen Überlaufmechanismus, der alle Elemente, die nicht auf natürliche Weise in ein größenbeschränktes <xref:System.Windows.Controls.ToolBar>\-Objekt passen, in einem speziellen Überlaufbereich platziert.  Des Weiteren werden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar>\-Steuerelemente in der Regel mit dem verwandten <xref:System.Windows.Controls.ToolBarTray>\-Steuerelement verwendet, das ein spezielles Layoutverhalten aufweist und Unterstützung für vom Benutzer initiierte Größenänderungen und Anordnungen von Symbolleisten bietet.  
+## <a name="toolbar-control"></a><span data-ttu-id="c1e32-105">ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c1e32-105">ToolBar Control</span></span>  
+ <span data-ttu-id="c1e32-106">Die <xref:System.Windows.Controls.ToolBar> Steuerelement akzeptiert den Namen der Leiste-ähnliche Anordnung von Schaltflächen oder anderen Steuerelementen in einer einzelnen Zeile oder Spalte.</span><span class="sxs-lookup"><span data-stu-id="c1e32-106">The <xref:System.Windows.Controls.ToolBar> control takes its name from the bar-like arrangement of buttons or other controls into a single row or column.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="c1e32-107"><xref:System.Windows.Controls.ToolBar> -Steuerelemente bieten einen Überlaufmechanismus der alle Elemente platziert, die nicht natürlich in einer größenbeschränkten passen <xref:System.Windows.Controls.ToolBar> in einem speziellen Überlaufbereich.</span><span class="sxs-lookup"><span data-stu-id="c1e32-107"> <xref:System.Windows.Controls.ToolBar> controls provide an overflow mechanism which places any items that do not fit naturally within a size-constrained <xref:System.Windows.Controls.ToolBar> into a special overflow area.</span></span> <span data-ttu-id="c1e32-108">Darüber hinaus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> -Steuerelementen wird in der Regel mit den zugehörigen <xref:System.Windows.Controls.ToolBarTray> Steuerelement, das spezielle Layoutverhalten sowie Unterstützung für das Ändern der Größe und Symbolleisten anordnen von Benutzern initiierte bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="c1e32-108">Also, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> controls are usually used with the related <xref:System.Windows.Controls.ToolBarTray> control, which provides special layout behavior as well as support for user-initiated sizing and arranging of toolbars.</span></span>  
   
 <a name="Creating_ToolBars"></a>   
-## Angeben der Position von ToolBar\-Elementen in einem ToolBarTray  
- Mit den Eigenschaften <xref:System.Windows.Controls.ToolBar.Band%2A> und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> positionieren Sie das <xref:System.Windows.Controls.ToolBar>\-Element im <xref:System.Windows.Controls.ToolBarTray>\-Element.  <xref:System.Windows.Controls.ToolBar.Band%2A> gibt die Position an, an der das <xref:System.Windows.Controls.ToolBar>\-Element im übergeordneten <xref:System.Windows.Controls.ToolBarTray>\-Element positioniert wird.  <xref:System.Windows.Controls.ToolBar.BandIndex%2A> gibt die Reihenfolge an, in der das <xref:System.Windows.Controls.ToolBar>\-Element innerhalb des zugehörigen Bands platziert wird.  Im folgenden Beispiel wird veranschaulicht, wie diese Eigenschaft zum Platzieren von <xref:System.Windows.Controls.ToolBar>\-Steuerelementen in einem <xref:System.Windows.Controls.ToolBarTray> verwendet wird.  
+## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a><span data-ttu-id="c1e32-109">Festlegen der Position von ToolBars in einem ToolBarTray</span><span class="sxs-lookup"><span data-stu-id="c1e32-109">Specifying the Position of ToolBars in a ToolBarTray</span></span>  
+ <span data-ttu-id="c1e32-110">Verwenden der <xref:System.Windows.Controls.ToolBar.Band%2A> und <xref:System.Windows.Controls.ToolBar.BandIndex%2A> Eigenschaften zum Positionieren der <xref:System.Windows.Controls.ToolBar> in der <xref:System.Windows.Controls.ToolBarTray>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-110">Use the <xref:System.Windows.Controls.ToolBar.Band%2A> and <xref:System.Windows.Controls.ToolBar.BandIndex%2A> properties to position the <xref:System.Windows.Controls.ToolBar> in the <xref:System.Windows.Controls.ToolBarTray>.</span></span> <span data-ttu-id="c1e32-111"><xref:System.Windows.Controls.ToolBar.Band%2A>Gibt die Position in dem die <xref:System.Windows.Controls.ToolBar> befindet sich in seinem übergeordneten Element <xref:System.Windows.Controls.ToolBarTray>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-111"><xref:System.Windows.Controls.ToolBar.Band%2A> indicates the position in which the <xref:System.Windows.Controls.ToolBar> is placed within its parent <xref:System.Windows.Controls.ToolBarTray>.</span></span> <span data-ttu-id="c1e32-112"><xref:System.Windows.Controls.ToolBar.BandIndex%2A>Gibt an, in welcher Reihenfolge die <xref:System.Windows.Controls.ToolBar> innerhalb des zugehörigen Bands platziert wird.</span><span class="sxs-lookup"><span data-stu-id="c1e32-112"><xref:System.Windows.Controls.ToolBar.BandIndex%2A> indicates the order in which the <xref:System.Windows.Controls.ToolBar> is placed within its band.</span></span> <span data-ttu-id="c1e32-113">Das folgende Beispiel zeigt wie diese Eigenschaft verwenden, platzieren <xref:System.Windows.Controls.ToolBar> Steuerelemente innerhalb einer <xref:System.Windows.Controls.ToolBarTray>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-113">The following example shows how use this property to place <xref:System.Windows.Controls.ToolBar> controls inside a <xref:System.Windows.Controls.ToolBarTray>.</span></span>  
   
- [!code-xml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+ [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
 <a name="ToolBars_with_Overflow_Items"></a>   
-## ToolBar\-Elemente mit Überlaufelementen  
- Oft enthalten <xref:System.Windows.Controls.ToolBar>\-Steuerelemente mehr Elemente als in die Größe der Symbolleiste passen.  In diesem Fall wird in der <xref:System.Windows.Controls.ToolBar> eine Überlaufschaltfläche angezeigt.  Um die Überlaufelemente anzuzeigen, klickt ein Benutzer auf die Überlaufschaltfläche. Die Elemente werden dann in einem Popupfenster unter der <xref:System.Windows.Controls.ToolBar> angezeigt.  Die folgende Grafik zeigt eine <xref:System.Windows.Controls.ToolBar> mit Überlaufelementen.  
+## <a name="toolbars-with-overflow-items"></a><span data-ttu-id="c1e32-114">ToolBars mit Überlaufelementen</span><span class="sxs-lookup"><span data-stu-id="c1e32-114">ToolBars with Overflow Items</span></span>  
+ <span data-ttu-id="c1e32-115">Häufig <xref:System.Windows.Controls.ToolBar> Steuerelemente enthalten mehr Elemente als in der Symbolleiste Größe eingepasst werden kann.</span><span class="sxs-lookup"><span data-stu-id="c1e32-115">Often <xref:System.Windows.Controls.ToolBar> controls contain more items than can fit into the toolbar's size.</span></span> <span data-ttu-id="c1e32-116">In diesem Fall die <xref:System.Windows.Controls.ToolBar> zeigt eine Schaltfläche "Überlauf".</span><span class="sxs-lookup"><span data-stu-id="c1e32-116">When this happens, the <xref:System.Windows.Controls.ToolBar> displays an overflow button.</span></span> <span data-ttu-id="c1e32-117">Um die Overflow-Elemente anzuzeigen, klickt ein Benutzer die dokumentüberlauf-Schaltfläche und die Elemente werden in einem Popupfenster unten dargestellt den <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-117">To see the overflow items, a user clicks the overflow button and the items are shown in a pop-up window below the <xref:System.Windows.Controls.ToolBar>.</span></span> <span data-ttu-id="c1e32-118">Die folgende Grafik zeigt eine <xref:System.Windows.Controls.ToolBar> mit Überlaufelementen.</span><span class="sxs-lookup"><span data-stu-id="c1e32-118">The following graphic shows a <xref:System.Windows.Controls.ToolBar> with overflow items.</span></span>  
   
- ![ToolBar mit Überlauf](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Symbolleiste mit Überlaufelementen  
+ <span data-ttu-id="c1e32-119">![ToolBar mit Überlauf](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")</span><span class="sxs-lookup"><span data-stu-id="c1e32-119">![ToolBar with overflow](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")</span></span>  
+<span data-ttu-id="c1e32-120">ToolBar mit Überlaufelementen</span><span class="sxs-lookup"><span data-stu-id="c1e32-120">Toolbar with Overflow Items</span></span>  
   
- Sie können angeben, wann ein Element einer Symbolleiste im Überlaufbereich platziert wird, indem Sie die angehängte <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.Windows.Controls.OverflowMode?displayProperty=fullName>, <xref:System.Windows.Controls.OverflowMode?displayProperty=fullName> oder <xref:System.Windows.Controls.OverflowMode?displayProperty=fullName> festlegen.  Im folgenden Beispiel wird angegeben, dass die letzten vier Schaltflächen der Symbolleiste immer im Überlaufbereich platziert werden.  
+ <span data-ttu-id="c1e32-121">Sie können angeben, wann ein Element auf einer Symbolleiste Überlaufbereich durch Festlegen von platziert wird die <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> angefügten Eigenschaft, um <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, oder <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-121">You can specify when an item on a toolbar is placed on the overflow panel by setting the <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> attached property to <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, or <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c1e32-122">Das folgende Beispiel gibt an, dass die letzten vier Schaltflächen auf der Symbolleiste sich immer im Überlaufpanel befinden soll.</span><span class="sxs-lookup"><span data-stu-id="c1e32-122">The following example specifies that the last four buttons on the toolbar should always be on the overflow panel.</span></span>  
   
- [!code-xml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
+ [!code-xaml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
- Die <xref:System.Windows.Controls.ToolBar> verwendet in ihrer <xref:System.Windows.Controls.ControlTemplate> einen <xref:System.Windows.Controls.Primitives.ToolBarPanel> und einen <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>.  Der <xref:System.Windows.Controls.Primitives.ToolBarPanel> ist für das Layout der Elemente auf der Symbolleiste verantwortlich.  Der <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> ist für das Layout der Elemente verantwortlich, die nicht auf die <xref:System.Windows.Controls.ToolBar> passen.  Ein <xref:System.Windows.Controls.ControlTemplate>\-Beispiel für eine <xref:System.Windows.Controls.ToolBar> finden Sie unter  
+ <span data-ttu-id="c1e32-123">Die <xref:System.Windows.Controls.ToolBar> verwendet eine <xref:System.Windows.Controls.Primitives.ToolBarPanel> und ein <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> in seiner <xref:System.Windows.Controls.ControlTemplate>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-123">The <xref:System.Windows.Controls.ToolBar> uses a <xref:System.Windows.Controls.Primitives.ToolBarPanel> and a <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> in its <xref:System.Windows.Controls.ControlTemplate>.</span></span>  <span data-ttu-id="c1e32-124">Die <xref:System.Windows.Controls.Primitives.ToolBarPanel> ist verantwortlich für das Layout der Elemente auf der Symbolleiste.</span><span class="sxs-lookup"><span data-stu-id="c1e32-124">The <xref:System.Windows.Controls.Primitives.ToolBarPanel> is responsible for the layout of the items on the toolbar.</span></span>  <span data-ttu-id="c1e32-125">Die <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> ist verantwortlich für das Layout der Elemente, die nicht auf passen die <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="c1e32-125">The <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> is responsible for the layout of the items that do not fit on the <xref:System.Windows.Controls.ToolBar>.</span></span> <span data-ttu-id="c1e32-126">Ein Beispiel für eine <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ToolBar>, finden Sie unter</span><span class="sxs-lookup"><span data-stu-id="c1e32-126">For an example of a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ToolBar>, see</span></span>  
   
- [ToolBar\-Stile und \-Vorlagen](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md).  
+ <span data-ttu-id="c1e32-127">[ToolBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)</span><span class="sxs-lookup"><span data-stu-id="c1e32-127">[ToolBar Styles and Templates](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Controls.Primitives.ToolBarPanel>   
- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>   
- [Formatieren von Steuerelementen in einer Symbolleiste](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)   
- [Beispiel für WPF\-Steuerelementsammlungen](http://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a><span data-ttu-id="c1e32-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c1e32-128">See Also</span></span>  
+ <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
+ <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
+ [<span data-ttu-id="c1e32-129">Formatieren von Steuerelementen in einer Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="c1e32-129">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [<span data-ttu-id="c1e32-130">Beispiel für WPF-Steuerelementsammlungen</span><span class="sxs-lookup"><span data-stu-id="c1e32-130">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)

@@ -1,27 +1,31 @@
 ---
-title: "DynamicActivity-Erstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DynamicActivity-Erstellung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4a579606bd3ee9d3f11669d59c6e7c9767b6eaf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# DynamicActivity-Erstellung
-In diesem Beispiel werden zwei unterschiedliche Möglichkeiten zum Erstellen einer Aktivität mithilfe der <xref:System.Activities.DynamicActivity>\-Aktivität zur Laufzeit veranschaulicht.  
+# <a name="dynamicactivity-creation"></a><span data-ttu-id="391a7-102">DynamicActivity-Erstellung</span><span class="sxs-lookup"><span data-stu-id="391a7-102">DynamicActivity Creation</span></span>
+<span data-ttu-id="391a7-103">In diesem Beispiel werden zwei unterschiedliche Möglichkeiten zum Erstellen einer Aktivität mithilfe der <xref:System.Activities.DynamicActivity>-Aktivität zur Laufzeit veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="391a7-103">This sample demonstrates two different ways to create an activity at runtime using the <xref:System.Activities.DynamicActivity> activity.</span></span>  
   
- In diesem Beispiel wird zur Laufzeit eine Aktivität mit Text erstellt, der eine <xref:System.Activities.Statements.Sequence>\-Aktivität enthält, die die <xref:System.Activities.Statements.ForEach%601>\-Aktivität und die <xref:System.Activities.Statements.Assign%601>\-Aktivität enthält.Eine Eingabeliste von Ganzzahlen wird an die Aktivität übergeben und als Eigenschaft festgelegt.Die <xref:System.Activities.Statements.ForEach%601>\-Aktivität durchläuft dann die Liste der Werte und akkumuliert diese.In der <xref:System.Activities.Statements.Assign%601>\-Aktivität wird der Durchschnittswert durch Teilen des Akkumulators durch die Anzahl von Elementen in der Liste und Zuweisen zum Durchschnitt berechnet.  
+ <span data-ttu-id="391a7-104">In diesem Beispiel wird zur Laufzeit eine Aktivität mit Text erstellt, der eine <xref:System.Activities.Statements.Sequence>-Aktivität enthält, die die <xref:System.Activities.Statements.ForEach%601>-Aktivität und die <xref:System.Activities.Statements.Assign%601>-Aktivität enthält.</span><span class="sxs-lookup"><span data-stu-id="391a7-104">In this sample, an activity is created at runtime with a body that contains a <xref:System.Activities.Statements.Sequence> activity that contains <xref:System.Activities.Statements.ForEach%601> and <xref:System.Activities.Statements.Assign%601> activities.</span></span> <span data-ttu-id="391a7-105">Eine Eingabeliste von Ganzzahlen wird an die Aktivität übergeben und als Eigenschaft festgelegt.</span><span class="sxs-lookup"><span data-stu-id="391a7-105">An input list of integers is passed into the activity and set as a property.</span></span> <span data-ttu-id="391a7-106">Die <xref:System.Activities.Statements.ForEach%601>-Aktivität durchläuft dann die Liste der Werte und akkumuliert diese.</span><span class="sxs-lookup"><span data-stu-id="391a7-106">The <xref:System.Activities.Statements.ForEach%601> activity then iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="391a7-107">In der <xref:System.Activities.Statements.Assign%601>-Aktivität wird der Durchschnittswert durch Teilen des Akkumulators durch die Anzahl von Elementen in der Liste und Zuweisen zum Durchschnitt berechnet.</span><span class="sxs-lookup"><span data-stu-id="391a7-107">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assign it to the average.</span></span>  
   
- In dem Beispiel wird die Verwendung einer <xref:System.Activities.DynamicActivity>\-Aktivität veranschaulicht, die als Eingabeargumente in Variablen fließt und Werte als Ausgabeargumente zurückgibt.Die Aktivität verfügt über ein Eingabeargument mit dem Namen `Numbers`, das eine Liste Ganzzahlen darstellt.Die <xref:System.Activities.Statements.ForEach%601>\-Aktivität durchläuft die Liste der Werte und akkumuliert diese.In der <xref:System.Activities.Statements.Assign%601>\-Aktivität wird der Durchschnittswert durch Teilen des Akkumulators durch die Anzahl von Elementen in der Liste und Zuweisen zum Durchschnitt berechnet.Der Durchschnitt wird als Ausgabeargument mit dem Namen `Average` zurückgegeben.  
+ <span data-ttu-id="391a7-108">In dem Beispiel wird die Verwendung einer <xref:System.Activities.DynamicActivity>-Aktivität veranschaulicht, die als Eingabeargumente in Variablen fließt und Werte als Ausgabeargumente zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="391a7-108">The sample demonstrates the usage of a <xref:System.Activities.DynamicActivity> activity that flows in variables as input arguments and returning values as output arguments.</span></span> <span data-ttu-id="391a7-109">Die Aktivität verfügt über ein Eingabeargument mit dem Namen `Numbers`, das eine Liste Ganzzahlen darstellt.</span><span class="sxs-lookup"><span data-stu-id="391a7-109">The activity has one input argument named `Numbers` that is a list of integers.</span></span> <span data-ttu-id="391a7-110">Die <xref:System.Activities.Statements.ForEach%601>-Aktivität durchläuft die Liste der Werte und akkumuliert diese.</span><span class="sxs-lookup"><span data-stu-id="391a7-110">The <xref:System.Activities.Statements.ForEach%601> activity iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="391a7-111">In der <xref:System.Activities.Statements.Assign%601>-Aktivität wird der Durchschnittswert durch Teilen des Akkumulators durch die Anzahl von Elementen in der Liste und Zuweisen zum Durchschnitt berechnet.</span><span class="sxs-lookup"><span data-stu-id="391a7-111">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assigning it to the average.</span></span> <span data-ttu-id="391a7-112">Der Durchschnitt wird als Ausgabeargument mit dem Namen `Average` zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="391a7-112">The average is returned as an output argument named `Average`.</span></span>  
   
- Wenn die dynamische Aktivität programmgesteuert erstellt wird, werden die Eingabe und die Ausgabe deklariert, wie im folgenden Codebeispiel dargestellt.  
+ <span data-ttu-id="391a7-113">Wenn die dynamische Aktivität programmgesteuert erstellt wird, werden die Eingabe und die Ausgabe deklariert, wie im folgenden Codebeispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="391a7-113">When the dynamic activity is created programmatically, the input and output are declared as shown in the following code example.</span></span>  
   
 ```csharp  
 DynamicActivity act = new DynamicActivity()  
@@ -45,10 +49,9 @@ DynamicActivity act = new DynamicActivity()
         }  
     },  
 };  
-  
 ```  
   
- Im folgenden Codebeispiel wird die vollständige Definition der `DynamicActivity` veranschaulicht, die den Durchschnitt der Werte in einer Liste berechnet.  
+ <span data-ttu-id="391a7-114">Im folgenden Codebeispiel wird die vollständige Definition der `DynamicActivity` veranschaulicht, die den Durchschnitt der Werte in einer Liste berechnet.</span><span class="sxs-lookup"><span data-stu-id="391a7-114">The following code example shows the complete definition of the `DynamicActivity` that computes the average of the values in a list.</span></span>  
   
 ```  
 DynamicActivity act = new DynamicActivity()  
@@ -102,9 +105,9 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- Die Eingabe und Ausgabe wird \(wenn in XAML erstellt\) deklariert, wie im folgenden Beispiel dargestellt.  
+ <span data-ttu-id="391a7-115">Die Eingabe und Ausgabe wird (wenn in XAML erstellt) deklariert, wie im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="391a7-115">When created in XAML, the input and output are declared as shown in the following example.</span></span>  
   
-```  
+```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
           xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
           xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -118,41 +121,39 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- Der XAML\-Code kann mithilfe von [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] visuell erstellt werden.Wenn er in einem Visual Studio\-Projekt enthalten ist, legen Sie die den Buildvorgang auf "None" fest, um zu verhindern, dass der Code kompiliert wird.Der XAML\-Code kann dann mithilfe des folgenden Aufrufs dynamisch geladen werden.  
+ <span data-ttu-id="391a7-116">Der XAML-Code kann mithilfe von [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] visuell erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="391a7-116">The XAML can be created visually using the [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="391a7-117">Wenn es in einem Visual Studio-Projekt enthalten ist, achten Sie darauf, dass "Buildvorgang" auf "None" zu verhindern, dass es zu kompilierende festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="391a7-117">If it is included in a Visual Studio project, be sure to set its "Build Action" to "None" to prevent it from being compiled.</span></span> <span data-ttu-id="391a7-118">Der XAML-Code kann dann mithilfe des folgenden Aufrufs dynamisch geladen werden.</span><span class="sxs-lookup"><span data-stu-id="391a7-118">The XAML can then be loaded dynamically using the following call.</span></span>  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
-  
 ```  
   
- Die <xref:System.Activities.DynamicActivity>\-Instanz, die programmgesteuert oder durch Laden eines XAML\-Workflows erstellt wurde, kann wie im folgenden Codebeispiel dargestellt verwendet werden.Beachten Sie, dass die an den `WorkflowInvoker.Invoke` übergebene "Act" die im ersten Codebeispiel definierte "Act" <xref:System.Activities.Activity> ist.  
+ <span data-ttu-id="391a7-119">Die <xref:System.Activities.DynamicActivity>-Instanz, die programmgesteuert oder durch Laden eines XAML-Workflows erstellt wurde, kann wie im folgenden Codebeispiel dargestellt verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="391a7-119">The <xref:System.Activities.DynamicActivity> instance created programmatically or through loading a XAML workflow can be used as shown in the following code example.</span></span> <span data-ttu-id="391a7-120">Bitte beachten Sie, dass "act" zum Übergeben der `WorkflowInvoker.Invoke` ist "Act" <xref:System.Activities.Activity> im ersten Codebeispiel definiert.</span><span class="sxs-lookup"><span data-stu-id="391a7-120">Please note that "act" passed to the `WorkflowInvoker.Invoke` is the "act" <xref:System.Activities.Activity> defined in the first code example.</span></span>  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
   
 Console.WriteLine("The average calculated using the code activity is = " + results["Average"]);  
-  
 ```  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="391a7-121">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="391a7-121">To use this sample</span></span>  
   
-1.  Öffnen Sie die Projektmappendatei "DynamicActivityCreation.sln" in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="391a7-122">Öffnen Sie die Projektmappendatei "DynamicActivityCreation.sln" in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="391a7-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DynamicActivityCreation.sln solution file.</span></span>  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  <span data-ttu-id="391a7-123">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="391a7-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+3.  <span data-ttu-id="391a7-124">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="391a7-124">To run the solution, press CTRL+F5.</span></span>  
   
-## Befehlszeilenargumente  
- In diesem Beispiel werden Befehlszeilenargumente akzeptiert.Benutzer können eine Liste von Zahlen bereitstellen, damit die Aktivität ihren Durchschnitt berechnet.Die Liste der zu verwendenden Zahlen wird als eine Liste von Zahlen übergeben, die durch ein Leerzeichen getrennt sind.Um beispielsweise den Durchschnitt von 5, 10 und 32 zu berechnen, rufen Sie das Beispiel mithilfe der folgenden Befehlszeile auf.  
+## <a name="command-line-arguments"></a><span data-ttu-id="391a7-125">Befehlszeilenargumente</span><span class="sxs-lookup"><span data-stu-id="391a7-125">Command line arguments</span></span>  
+ <span data-ttu-id="391a7-126">In diesem Beispiel werden Befehlszeilenargumente akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="391a7-126">This sample accepts command line arguments.</span></span> <span data-ttu-id="391a7-127">Benutzer können eine Liste von Zahlen bereitstellen, damit die Aktivität ihren Durchschnitt berechnet.</span><span class="sxs-lookup"><span data-stu-id="391a7-127">Users can provide a list of numbers for the activity to calculate their average.</span></span> <span data-ttu-id="391a7-128">Die Liste der zu verwendenden Zahlen wird als eine Liste von Zahlen übergeben, die durch ein Leerzeichen getrennt sind.</span><span class="sxs-lookup"><span data-stu-id="391a7-128">The list of numbers to be used is passed as a list of numbers separated by a space.</span></span> <span data-ttu-id="391a7-129">Um beispielsweise den Durchschnitt von 5, 10 und 32 zu berechnen, rufen Sie das Beispiel mithilfe der folgenden Befehlszeile auf.</span><span class="sxs-lookup"><span data-stu-id="391a7-129">For example, to calculate the average of 5, 10, and 32 invoke the sample using the following command line.</span></span>  
   
- **DynamicActivityCreation 5 10 32**   
+ <span data-ttu-id="391a7-130">**DynamicActivityCreation 5 10 32**</span><span class="sxs-lookup"><span data-stu-id="391a7-130">**DynamicActivityCreation 5 10 32**</span></span>  
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="391a7-131">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="391a7-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="391a7-132">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="391a7-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="391a7-133">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="391a7-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="391a7-134">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="391a7-134">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="391a7-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="391a7-135">See Also</span></span>

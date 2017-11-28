@@ -1,14 +1,11 @@
 ---
-title: / help, -? (Visual Basic) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: / help? (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /? compiler option [Visual Basic]
 - -help compiler option [Visual Basic]
@@ -17,33 +14,19 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c74d37af74a3a463d856f1c0a019bb4ecd04ee6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f8d0c17f26b4c1f1e8b6a20f70b0f3be4539aad1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="help--visual-basic"></a>/help, /? (Visual Basic)
-Zeigt die Compileroptionen an.  
+# <a name="help--visual-basic"></a><span data-ttu-id="d1a2d-103">/help, /?</span><span class="sxs-lookup"><span data-stu-id="d1a2d-103">/help, /?</span></span> <span data-ttu-id="d1a2d-104">(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1a2d-104">(Visual Basic)</span></span>
+<span data-ttu-id="d1a2d-105">Zeigt die Compileroptionen an.</span><span class="sxs-lookup"><span data-stu-id="d1a2d-105">Displays the compiler options.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="d1a2d-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="d1a2d-106">Syntax</span></span>  
   
 ```  
 /help  
@@ -51,19 +34,19 @@ Zeigt die Compileroptionen an.
 /?  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie diese Option bei einer Kompilierung verwenden, wird keine Ausgabedatei erstellt, und erfolgt keine Kompilierung.  
+## <a name="remarks"></a><span data-ttu-id="d1a2d-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d1a2d-107">Remarks</span></span>  
+ <span data-ttu-id="d1a2d-108">Wenn Sie diese Option in einer Kompilierung einbeziehen, wird keine Ausgabedatei wird erstellt, und keine Kompilierung findet.</span><span class="sxs-lookup"><span data-stu-id="d1a2d-108">If you include this option in a compilation, no output file is created and no compilation takes place.</span></span>  
   
 > [!NOTE]
->  Die `/help` Option ist nicht verfügbar der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] Entwicklungsumgebung; es ist nur beim Kompilieren von der Befehlszeile aus.  
+>  <span data-ttu-id="d1a2d-109">Die `/help` Option ist nicht verfügbar in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwicklungsumgebung; ist verfügbar, nur, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="d1a2d-109">The `/help` option is not available from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Der folgende Code zeigt die Hilfe über die Befehlszeile.  
+## <a name="example"></a><span data-ttu-id="d1a2d-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d1a2d-110">Example</span></span>  
+ <span data-ttu-id="d1a2d-111">Der folgende Code zeigt die Hilfe über die Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="d1a2d-111">The following code displays help from the command line.</span></span>  
   
 ```  
 vbc /help  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="d1a2d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1a2d-112">See Also</span></span>  
+ [<span data-ttu-id="d1a2d-113">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="d1a2d-113">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="d1a2d-114">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="d1a2d-114">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

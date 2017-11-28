@@ -1,40 +1,45 @@
 ---
-title: "Gewusst wie: Abrufen und Festlegen von Canvas-Positionierungseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Canvas-Steuerelement, Festlegen von Positionierungseigenschaften"
+title: 'Gewusst wie: Abrufen und Festlegen von Canvas-Positionierungseigenschaften'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen und Festlegen von Canvas-Positionierungseigenschaften
-Dieses Beispiel veranschaulicht, wie die Positionierungsmethoden des <xref:System.Windows.Controls.Canvas>\-Elements zum Positionieren untergeordneter Inhalte verwendet werden.  In diesem Beispiel dient der Inhalt eines <xref:System.Windows.Controls.ListBoxItem> zur Darstellung von Positionierungswerten. Anschließend werden die Werte in Instanzen von <xref:System.Double> konvertiert, bei dem es sich um ein für die Positionierung erforderliches Argument handelt.  Die Werte werden anschließend erneut in Zeichenfolgen konvertiert und dann als Text in einem <xref:System.Windows.Controls.TextBlock>\-Element unter Verwendung der <xref:System.Windows.Controls.Canvas.GetLeft%2A>\-Methode angezeigt.  
+# <a name="how-to-get-or-set-canvas-positioning-properties"></a><span data-ttu-id="04fe0-102">Gewusst wie: Abrufen und Festlegen von Canvas-Positionierungseigenschaften</span><span class="sxs-lookup"><span data-stu-id="04fe0-102">How to: Get or Set Canvas Positioning Properties</span></span>
+<span data-ttu-id="04fe0-103">Dieses Beispiel zeigt, wie die Positionierung Methoden die <xref:System.Windows.Controls.Canvas> Element des untergeordneten Inhalts zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="04fe0-103">This example shows how to use the positioning methods of the <xref:System.Windows.Controls.Canvas> element to position child content.</span></span> <span data-ttu-id="04fe0-104">In diesem Beispiel verwendet den Inhalt in einen <xref:System.Windows.Controls.ListBoxItem> zur Darstellung Werte positionieren und konvertiert die Werte in Instanzen von <xref:System.Double>, dies ist ein erforderliches Argument für die Positionierung.</span><span class="sxs-lookup"><span data-stu-id="04fe0-104">This example uses content in a <xref:System.Windows.Controls.ListBoxItem> to represent positioning values and converts the values into instances of <xref:System.Double>, which is a required argument for positioning.</span></span> <span data-ttu-id="04fe0-105">Die Werte sind dann wieder in Zeichenfolgen konvertiert und als Text im angezeigt ein <xref:System.Windows.Controls.TextBlock> -Element mithilfe der <xref:System.Windows.Controls.Canvas.GetLeft%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="04fe0-105">The values are then converted back into strings and displayed as text in a <xref:System.Windows.Controls.TextBlock> element by using the <xref:System.Windows.Controls.Canvas.GetLeft%2A> method.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird ein <xref:System.Windows.Controls.ListBox>\-Element erstellt, das über elf auswählbare <xref:System.Windows.Controls.ListBoxItem>\-Elemente verfügt.  Das <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>\-Ereignis löst die benutzerdefinierte `ChangeLeft`\-Methode aus, die im nachfolgenden Codeblock definiert wird.  
+## <a name="example"></a><span data-ttu-id="04fe0-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="04fe0-106">Example</span></span>  
+ <span data-ttu-id="04fe0-107">Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ListBox> Element, das elf auswählbare hat <xref:System.Windows.Controls.ListBoxItem> Elemente.</span><span class="sxs-lookup"><span data-stu-id="04fe0-107">The following example creates a <xref:System.Windows.Controls.ListBox> element that has eleven selectable <xref:System.Windows.Controls.ListBoxItem> elements.</span></span> <span data-ttu-id="04fe0-108">Die <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> Ereignistriggern der `ChangeLeft` benutzerdefinierte Methode, die im nachfolgenden Codeblock definiert.</span><span class="sxs-lookup"><span data-stu-id="04fe0-108">The <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event triggers the `ChangeLeft` custom method, which the subsequent code block defines.</span></span>  
   
- Jedes <xref:System.Windows.Controls.ListBoxItem> stellt einen <xref:System.Double>\-Wert dar. Hierbei handelt es sich um eins der Argumente, das von der <xref:System.Windows.Controls.Canvas.SetLeft%2A>\-Methode von <xref:System.Windows.Controls.Canvas> akzeptiert wird.  Um ein <xref:System.Windows.Controls.ListBoxItem> zur Darstellung einer Instanz von <xref:System.Double> zu verwenden, müssen Sie das <xref:System.Windows.Controls.ListBoxItem> zuerst in den richtigen Datentyp konvertieren.  
+ <span data-ttu-id="04fe0-109">Jedes <xref:System.Windows.Controls.ListBoxItem> stellt eine <xref:System.Double> Wert, der eines der Argumente ist, der <xref:System.Windows.Controls.Canvas.SetLeft%2A> Methode <xref:System.Windows.Controls.Canvas> akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="04fe0-109">Each <xref:System.Windows.Controls.ListBoxItem> represents a <xref:System.Double> value, which is one of the arguments that the <xref:System.Windows.Controls.Canvas.SetLeft%2A> method of <xref:System.Windows.Controls.Canvas> accepts.</span></span> <span data-ttu-id="04fe0-110">Zum Verwenden einer <xref:System.Windows.Controls.ListBoxItem> zur Darstellung einer Instanz von <xref:System.Double>, müssen Sie zuerst Konvertieren der <xref:System.Windows.Controls.ListBoxItem> in den richtigen Datentyp.</span><span class="sxs-lookup"><span data-stu-id="04fe0-110">In order to use a <xref:System.Windows.Controls.ListBoxItem> to represent an instance of <xref:System.Double>, you must first convert the <xref:System.Windows.Controls.ListBoxItem> to the correct data type.</span></span>  
   
- [!code-xml[CanvasPositioningProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml#1)]  
+ [!code-xaml[CanvasPositioningProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml#1)]  
   
- Wenn ein Benutzer die <xref:System.Windows.Controls.ListBox>\-Auswahl ändert, wird die benutzerdefinierte `ChangeLeft`\-Methode aufgerufen.  Diese Methode übergibt das <xref:System.Windows.Controls.ListBoxItem> an ein <xref:System.Windows.LengthConverter>\-Objekt, das den <xref:System.Windows.Controls.ContentControl.Content%2A> eines <xref:System.Windows.Controls.ListBoxItem> in eine Instanz von <xref:System.Double> konvertiert \(dieser Wert wurde bereits in den Typ <xref:System.String> unter Verwendung der <xref:System.Windows.Controls.Control.ToString%2A>\-Methode konvertiert\).  Dieser Wert wird anschließend wieder an die <xref:System.Windows.Controls.Canvas.SetLeft%2A>\-Methode und die <xref:System.Windows.Controls.Canvas.GetLeft%2A>\-Methode von <xref:System.Windows.Controls.Canvas> übergeben, um die Position des `text1`\-Objekts zu ändern.  
+ <span data-ttu-id="04fe0-111">Wenn ein Benutzer ändert die <xref:System.Windows.Controls.ListBox> Auswahl, ruft der `ChangeLeft` benutzerdefinierte Methode.</span><span class="sxs-lookup"><span data-stu-id="04fe0-111">When a user changes the <xref:System.Windows.Controls.ListBox> selection, it invokes the `ChangeLeft` custom method.</span></span> <span data-ttu-id="04fe0-112">Diese Methode übergibt der <xref:System.Windows.Controls.ListBoxItem> auf eine <xref:System.Windows.LengthConverter> -Objekt, das konvertiert die <xref:System.Windows.Controls.ContentControl.Content%2A> des eine <xref:System.Windows.Controls.ListBoxItem> mit einer Instanz von <xref:System.Double> (Beachten Sie, das diesen Wert auf bereits konvertiert wurde eine <xref:System.String> mithilfe der <xref:System.Windows.Controls.Control.ToString%2A> die Methode).</span><span class="sxs-lookup"><span data-stu-id="04fe0-112">This method passes the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.Windows.LengthConverter> object, which converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of a <xref:System.Windows.Controls.ListBoxItem> to an instance of <xref:System.Double> (notice that this value has already been converted to a <xref:System.String> by using the <xref:System.Windows.Controls.Control.ToString%2A> method).</span></span> <span data-ttu-id="04fe0-113">Dieser Wert wird dann zurück zum Übergeben der <xref:System.Windows.Controls.Canvas.SetLeft%2A> und <xref:System.Windows.Controls.Canvas.GetLeft%2A> Methoden der <xref:System.Windows.Controls.Canvas> damit ändern Sie die Position von der `text1` Objekt.</span><span class="sxs-lookup"><span data-stu-id="04fe0-113">This value is then passed back to the <xref:System.Windows.Controls.Canvas.SetLeft%2A> and <xref:System.Windows.Controls.Canvas.GetLeft%2A> methods of <xref:System.Windows.Controls.Canvas> in order to change the position of the `text1` object.</span></span>  
   
  [!code-csharp[CanvasPositioningProperties#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml.cs#2)]
  [!code-vb[CanvasPositioningProperties#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.Canvas>   
- <xref:System.Windows.Controls.ListBoxItem>   
- <xref:System.Windows.LengthConverter>   
- [Übersicht über Panel\-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a><span data-ttu-id="04fe0-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="04fe0-114">See Also</span></span>  
+ <xref:System.Windows.Controls.Canvas>  
+ <xref:System.Windows.Controls.ListBoxItem>  
+ <xref:System.Windows.LengthConverter>  
+ [<span data-ttu-id="04fe0-115">Übersicht über Panel-Elemente</span><span class="sxs-lookup"><span data-stu-id="04fe0-115">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)

@@ -1,44 +1,44 @@
 ---
-title: "&#220;bersicht &#252;ber das RadioButton-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RadioButton"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Optionsfelder, Informationen über Optionsfelder"
-  - "Optionsfelder, Feststellen des Zustands"
-  - "RadioButton-Steuerelement [Windows Forms], Informationen über das RadioButton-Steuerelement"
-  - "RadioButton-Steuerelement [Windows Forms], Feststellen des Zustands"
+title: "Übersicht über das RadioButton-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RadioButton
+helpviewer_keywords:
+- RadioButton control [Windows Forms], about RadioButton control
+- RadioButton control [Windows Forms], determining state
+- radio buttons [Windows Forms], determining state
+- radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das RadioButton-Steuerelement (Windows&#160;Forms)
-<xref:System.Windows.Forms.RadioButton>\-Steuerelemente in Windows Forms bieten dem Benutzer zwei oder mehr Optionen, die sich gegenseitig ausschließen.  Obwohl Optionsfelder und Kontrollkästchen eine relativ ähnliche Funktionsweise besitzen, weisen Sie doch einen wichtigen Unterschied auf: Sobald der Benutzer ein Optionsfeld aktiviert, können in derselben Gruppe keine zusätzlichen Optionsfelder aktiviert werden.  Bei Kontrollkästchen können im Gegensatz dazu beliebig viele aktiviert werden.  Eine Optionsfeldgruppe stellt dem Benutzer eine Reihe von Optionen zur Verfügung, von denen jeweils nur eine aktiviert werden kann.  
+# <a name="radiobutton-control-overview-windows-forms"></a><span data-ttu-id="f266d-102">Übersicht über das RadioButton-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f266d-102">RadioButton Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="f266d-103">Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente enthalten eine Reihe von mindestens zwei sich gegenseitig ausschließende Optionen für dem Benutzer.</span><span class="sxs-lookup"><span data-stu-id="f266d-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="f266d-104">Während Optionsfelder und Kontrollkästchen scheinbar ordnungsgemäß funktionieren auf ähnliche Weise, gibt es einen wichtigen Unterschied: Wenn ein Benutzer ein Optionsfeld auswählt, die anderen Optionsfelder in der gleichen Gruppe kann nicht ausgewählt werden ebenfalls.</span><span class="sxs-lookup"><span data-stu-id="f266d-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span> <span data-ttu-id="f266d-105">Im Gegensatz dazu kann eine beliebige Anzahl von Kontrollkästchen ausgewählt werden.</span><span class="sxs-lookup"><span data-stu-id="f266d-105">In contrast, any number of check boxes can be selected.</span></span> <span data-ttu-id="f266d-106">Definieren eine Gruppe von Optionsfeldern wird dem Benutzer mitgeteilt, "Dies ist eine Gruppe von Auswahlmöglichkeiten, die in denen Sie nur einen auswählen können."</span><span class="sxs-lookup"><span data-stu-id="f266d-106">Defining a radio button group tells the user, "Here is a set of choices from which you can choose one and only one."</span></span>  
   
-## Verwenden des Steuerelements  
- Beim Klicken auf ein <xref:System.Windows.Forms.RadioButton>\-Steuerelement wird dessen <xref:System.Windows.Forms.RadioButton.Checked%2A>\-Eigenschaft auf `true` festgelegt, und der <xref:System.Windows.Forms.Control.Click>\-Ereignishandler wird aufgerufen.  Sobald sich der Wert der <xref:System.Windows.Forms.RadioButton.Checked%2A>\-Eigenschaft ändert, wird das <xref:System.Windows.Forms.RadioButton.CheckedChanged>\-Ereignis ausgelöst.  Wenn für die <xref:System.Windows.Forms.RadioButton.AutoCheck%2A>\-Eigenschaft `true` festgelegt ist \(der Standardwert\) und das Optionsfeld aktiviert wird, werden alle übrigen Optionsfelder in der Gruppe automatisch deaktiviert.  Für diese Eigenschaft wird in der Regel nur `false` festgelegt, wenn eine Validierung mittels Code durchgeführt wird, um sicherzustellen, dass das aktivierte Optionsfeld eine zulässige Option darstellt.  Der Text innerhalb des Steuerelements wird mithilfe der <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft festgelegt, die zusätzlich Tastenkombinationen für Zugriffstasten enthalten kann.  Über eine Zugriffstaste kann der Benutzer auf das Steuerelement "klicken", indem er die ALT\-TASTE zusammen mit der Tastenkombination drückt.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) und [Gewusst wie: Festlegen des durch ein Windows Forms\-Steuerelement angezeigten Textes](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+## <a name="using-the-control"></a><span data-ttu-id="f266d-107">Verwenden des Steuerelements</span><span class="sxs-lookup"><span data-stu-id="f266d-107">Using the Control</span></span>  
+ <span data-ttu-id="f266d-108">Wenn eine <xref:System.Windows.Forms.RadioButton> Steuerelement geklickt wird, dessen <xref:System.Windows.Forms.RadioButton.Checked%2A> -Eigenschaftensatz auf `true` und die <xref:System.Windows.Forms.Control.Click> Ereignishandler wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="f266d-108">When a <xref:System.Windows.Forms.RadioButton> control is clicked, its <xref:System.Windows.Forms.RadioButton.Checked%2A> property is set to `true` and the <xref:System.Windows.Forms.Control.Click> event handler is called.</span></span> <span data-ttu-id="f266d-109">Der <xref:System.Windows.Forms.RadioButton.CheckedChanged> Ereignis wird ausgelöst, wenn der Wert des der <xref:System.Windows.Forms.RadioButton.Checked%2A> -Eigenschaft ändert.</span><span class="sxs-lookup"><span data-stu-id="f266d-109">The <xref:System.Windows.Forms.RadioButton.CheckedChanged> event is raised when the value of the <xref:System.Windows.Forms.RadioButton.Checked%2A> property changes.</span></span> <span data-ttu-id="f266d-110">Wenn die <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> -Eigenschaftensatz auf `true` (Standard), das Optionsfeld ausgewählt ist, werden alle anderen in der Gruppe automatisch gelöscht.</span><span class="sxs-lookup"><span data-stu-id="f266d-110">If the <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> property is set to `true` (the default), when the radio button is selected all others in the group are automatically cleared.</span></span> <span data-ttu-id="f266d-111">Diese Eigenschaft ist in der Regel legen Sie nur auf `false` eine zulässige Option wenn Validierungscode verwendet wird, um sicherzustellen, dass das Optionsfeld ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="f266d-111">This property is usually only set to `false` when validation code is used to make sure the radio button selected is an allowable option.</span></span> <span data-ttu-id="f266d-112">Der im Steuerelement angezeigte Text wird festgelegt, mit der <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft, die Tastenkombinationen für Zugriffstasten enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="f266d-112">The text displayed within the control is set with the <xref:System.Windows.Forms.Control.Text%2A> property, which can contain access key shortcuts.</span></span> <span data-ttu-id="f266d-113">Eine Zugriffstaste ermöglicht einem Benutzer das Steuerelement "auf", durch Drücken der ALT-Taste und der Zugriffstaste.</span><span class="sxs-lookup"><span data-stu-id="f266d-113">An access key enables a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="f266d-114">Weitere Informationen finden Sie unter [wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) und [Vorgehensweise: Festlegen der Text, die durch ein Windows Forms-Steuerelement angezeigt](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="f266d-114">For more information, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
- Wenn die <xref:System.Windows.Forms.RadioButton.Appearance%2A>\-Eigenschaft auf <xref:System.Windows.Forms.Appearance> festgelegt ist, kann das <xref:System.Windows.Forms.RadioButton>\-Steuerelement wie eine Befehlsschaltfläche angezeigt werden, die, wenn sie ausgewählt wird, gedrückt aussieht.  Optionsfelder können mithilfe der <xref:System.Windows.Forms.ButtonBase.Image%2A>\-Eigenschaft und <xref:System.Windows.Forms.ButtonBase.ImageList%2A>\-Eigenschaft auch Bilder anzeigen.  Weitere Informationen finden Sie unter [Gewusst wie: Festlegen des durch ein Windows Forms\-Steuerelement angezeigten Bildes](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="f266d-115">Die <xref:System.Windows.Forms.RadioButton> Steuerelement kann angezeigt werden, wie eine Befehlsschaltfläche, die angezeigt wird, falls es ausgewählt, wenn wurden die <xref:System.Windows.Forms.RadioButton.Appearance%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.Appearance.Button>.</span><span class="sxs-lookup"><span data-stu-id="f266d-115">The <xref:System.Windows.Forms.RadioButton> control can appear like a command button, which appears to have been depressed if selected, if the <xref:System.Windows.Forms.RadioButton.Appearance%2A> property is set to <xref:System.Windows.Forms.Appearance.Button>.</span></span> <span data-ttu-id="f266d-116">Optionsfelder können auch anzeigen, Bilder, die mithilfe der <xref:System.Windows.Forms.ButtonBase.Image%2A> und <xref:System.Windows.Forms.ButtonBase.ImageList%2A> Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="f266d-116">Radio buttons can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="f266d-117">Weitere Informationen finden Sie unter [Vorgehensweise: Legen Sie das Bild nicht angezeigt durch ein Windows Forms-Steuerelement](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="f266d-117">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.RadioButton>   
- [Übersicht über das Panel\-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [Übersicht über das GroupBox\-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)   
- [Übersicht über das CheckBox\-Steuerelement](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)   
- [Gewusst wie: Festlegen des durch ein Windows Forms\-Steuerelement angezeigten Textes](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [Gewusst wie: Gruppieren von RadioButton\-Steuerelementen in Windows Forms für die Verwendung als Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)   
- [RadioButton\-Steuerelement](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f266d-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f266d-118">See Also</span></span>  
+ <xref:System.Windows.Forms.RadioButton>  
+ [<span data-ttu-id="f266d-119">Übersicht über das Panel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f266d-119">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f266d-120">Übersicht über das GroupBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f266d-120">GroupBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f266d-121">Übersicht über das CheckBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f266d-121">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f266d-122">Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="f266d-122">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [<span data-ttu-id="f266d-123">Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Texts</span><span class="sxs-lookup"><span data-stu-id="f266d-123">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="f266d-124">Gewusst wie: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set</span><span class="sxs-lookup"><span data-stu-id="f266d-124">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [<span data-ttu-id="f266d-125">RadioButton-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f266d-125">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

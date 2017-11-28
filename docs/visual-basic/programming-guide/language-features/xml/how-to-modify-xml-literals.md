@@ -1,56 +1,39 @@
 ---
-title: "Gewusst wie: Ändern von XML-Literalen (Visual Basic) | Microsoft-Dokumentation"
+title: "Gewusst wie: Ändern von XML-Literalen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0ff2eba693862154d9c402748fb6797d10c4a1f8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bdc60542477d15f4fe9dd85dae4c9a918e695740
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-xml-literals-visual-basic"></a>Gewusst wie: Ändern von XML-Literalen (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]stellt einfache Methoden zum Ändern von XML-Literalen. Sie können das Hinzufügen oder Löschen von Elementen und Attributen, und Sie können auch ein vorhandenes Element durch ein neues XML-Element ersetzen. Dieses Thema enthält mehrere Beispiele für das Ändern eines vorhandenen XML-Literals.  
+# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="31c43-102">Gewusst wie: Ändern von XML-Literalen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31c43-102">How to: Modify XML Literals (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="31c43-103">bietet bequeme Möglichkeiten zum Ändern von XML-Literale.</span><span class="sxs-lookup"><span data-stu-id="31c43-103"> provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="31c43-104">Sie können das Hinzufügen oder Löschen von Elementen und Attributen, und Sie können auch ein vorhandenes Element durch ein neues XML-Element ersetzen.</span><span class="sxs-lookup"><span data-stu-id="31c43-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="31c43-105">Dieses Thema enthält mehrere Beispiele für die Vorgehensweise beim Ändern einer vorhandenen XML-literal.</span><span class="sxs-lookup"><span data-stu-id="31c43-105">This topic provides several examples of how to modify an existing XML literal.</span></span>  
   
-### <a name="to-modify-the-value-of-an-xml-literal"></a>So ändern Sie den Wert des XML-literal  
+### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="31c43-106">Zum Ändern des Werts eines XML-Literals</span><span class="sxs-lookup"><span data-stu-id="31c43-106">To modify the value of an XML literal</span></span>  
   
-1.  Ändern Sie den Wert eines XML-Literals, erhalten Sie einen Verweis auf das XML-literal aufrufen und die `Value` Eigenschaft auf den gewünschten Wert.  
+1.  <span data-ttu-id="31c43-107">Um den Wert eines XML-Literals zu ändern, erhalten Sie einen Verweis auf die XML-Literale und legen die `Value` Eigenschaft auf den gewünschten Wert.</span><span class="sxs-lookup"><span data-stu-id="31c43-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>  
   
-     Im folgenden Codebeispiel wird den Wert aller updates den \<Preis > Elemente in einem XML-Dokument.  
+     <span data-ttu-id="31c43-108">Im folgenden Codebeispiel wird der Wert aller aktualisiert die \<Price >-Elemente in einem XML-Dokument.</span><span class="sxs-lookup"><span data-stu-id="31c43-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>  
   
-     [!code-vb[VbXmlSamples2&4;](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
   
-     Im folgenden werden Beispiele für ursprünglichen und geänderten XML-Code aus diesem Codebeispiel.  
+     <span data-ttu-id="31c43-109">Der folgende Code zeigt XML-Beispielquelle und geänderten XML-Code aus diesem Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="31c43-109">The following shows sample source XML and modified XML from this code example.</span></span>  
   
     ```  
     Source XML:  
@@ -85,15 +68,15 @@ ms.lasthandoff: 03/13/2017
     ```  
   
     > [!NOTE]
-    >  Die `Value` Eigenschaft bezieht sich auf das erste XML-Element in einer Auflistung. Wenn mehr als ein Element mit dem gleichen Namen in einer Auflistung vorhanden ist, wird durch Festlegen der `Value` Eigenschaft wirkt sich nur auf das erste Element in der Auflistung.  
+    >  <span data-ttu-id="31c43-110">Die `Value` Eigenschaft bezieht sich auf das erste XML-Element in einer Auflistung.</span><span class="sxs-lookup"><span data-stu-id="31c43-110">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="31c43-111">Wenn mehr als ein Element mit dem gleichen Namen in einer Auflistung vorhanden ist, wird durch Festlegen der `Value` Eigenschaft wirkt sich nur das erste Element in der Auflistung.</span><span class="sxs-lookup"><span data-stu-id="31c43-111">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>  
   
-### <a name="to-add-an-attribute-to-an-xml-literal"></a>Ein XML-Literal ein Attribut hinzufügen  
+### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="31c43-112">Ein XML-Literal ein Attribut hinzufügen</span><span class="sxs-lookup"><span data-stu-id="31c43-112">To add an attribute to an XML literal</span></span>  
   
-1.  Um ein XML-literal ein Attribut hinzuzufügen, erhalten Sie zunächst einen Verweis auf das XML-literal. Sie können ein Attribut dann durch Hinzufügen einer neuen XML-Attributachseneigenschaft hinzufügen. Sie können auch einen neuen hinzufügen <xref:System.Xml.Linq.XAttribute>-Objekt, das XML-literal mithilfe der <xref:System.Xml.Linq.XContainer.Add%2A>-Methode.</xref:System.Xml.Linq.XContainer.Add%2A> </xref:System.Xml.Linq.XAttribute> Im folgende Beispiel werden beide Optionen veranschaulicht.  
+1.  <span data-ttu-id="31c43-113">Um ein XML-literal ein Attribut hinzuzufügen, rufen Sie zunächst einen Verweis auf das XML-literal.</span><span class="sxs-lookup"><span data-stu-id="31c43-113">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="31c43-114">Sie können ein Attribut klicken Sie dann durch Hinzufügen einer neuen XML-Attributachseneigenschaft hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="31c43-114">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="31c43-115">Sie können auch einen neuen hinzufügen <xref:System.Xml.Linq.XAttribute> -Objekt, das XML-literal mit dem <xref:System.Xml.Linq.XContainer.Add%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31c43-115">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="31c43-116">Im folgende Beispiel werden beide Optionen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="31c43-116">The following example shows both options.</span></span>  
   
-     [!code-vb[VbXmlSamples2&5;](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
   
-     Im folgenden werden Beispiele für ursprünglichen und geänderten XML-Code aus diesem Codebeispiel.  
+     <span data-ttu-id="31c43-117">Der folgende Code zeigt XML-Beispielquelle und geänderten XML-Code aus diesem Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="31c43-117">The following shows sample source XML and modified XML from this code example.</span></span>  
   
     ```  
     Source XML:  
@@ -127,19 +110,19 @@ ms.lasthandoff: 03/13/2017
     </Catalog>  
     ```  
   
-     Weitere Informationen zu XML-Attribut Achseneigenschaft, finden Sie unter [XML-Attributachseneigenschaft](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).  
+     <span data-ttu-id="31c43-118">Weitere Informationen zu XML-Achse Attributeigenschaften finden Sie unter [XML-Attributachseneigenschaft](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span><span class="sxs-lookup"><span data-stu-id="31c43-118">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>  
   
-### <a name="to-add-an-element-to-an-xml-literal"></a>Hinzufügen eines Elements zu einem XML-literal  
+### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="31c43-119">Hinzufügen eines Elements zu einem XML-literal</span><span class="sxs-lookup"><span data-stu-id="31c43-119">To add an element to an XML literal</span></span>  
   
-1.  Um ein XML-literal ein Element hinzuzufügen, rufen Sie zuerst einen Verweis auf das XML-literal. Anschließend können Sie einen neuen hinzufügen <xref:System.Xml.Linq.XElement>Objekt als das letzte untergeordnete Element des Elements mithilfe der <xref:System.Xml.Linq.XContainer.Add%2A>-Methode.</xref:System.Xml.Linq.XContainer.Add%2A> </xref:System.Xml.Linq.XElement> Sie können einen neuen hinzufügen <xref:System.Xml.Linq.XElement>Objekt als das erste untergeordnete Element mit der <xref:System.Xml.Linq.XContainer.AddFirst%2A>-Methode.</xref:System.Xml.Linq.XContainer.AddFirst%2A> </xref:System.Xml.Linq.XElement>  
+1.  <span data-ttu-id="31c43-120">Um ein XML-literal ein Element hinzuzufügen, rufen Sie zunächst einen Verweis auf das XML-literal.</span><span class="sxs-lookup"><span data-stu-id="31c43-120">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="31c43-121">Anschließend können Sie ein neues hinzufügen <xref:System.Xml.Linq.XElement> Objekt als das letzte untergeordnete Element des Elements mithilfe der <xref:System.Xml.Linq.XContainer.Add%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31c43-121">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="31c43-122">Sie können ein neues hinzufügen <xref:System.Xml.Linq.XElement> Objekt als das erste untergeordnete Element mithilfe der <xref:System.Xml.Linq.XContainer.AddFirst%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31c43-122">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>  
   
-     Um ein neues Element in einem bestimmten Speicherort relativ zu anderen untergeordneten Elementen hinzuzufügen, müssen Sie zunächst erwerben Sie einen Verweis auf einen benachbarten Unterelement. Sie können dann die neue hinzufügen <xref:System.Xml.Linq.XElement>Objekt vor dem benachbarten Unterelement mithilfe der <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>-Methode.</xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> </xref:System.Xml.Linq.XElement> Sie können auch das neue hinzufügen <xref:System.Xml.Linq.XElement>Objekts nach dem benachbarten Unterelement mithilfe der <xref:System.Xml.Linq.XNode.AddAfterSelf%2A>-Methode.</xref:System.Xml.Linq.XNode.AddAfterSelf%2A> </xref:System.Xml.Linq.XElement>  
+     <span data-ttu-id="31c43-123">Um ein neues Element in einem bestimmten Speicherort relativ zu anderen untergeordneten Elementen hinzuzufügen, rufen Sie zunächst einen Verweis auf ein benachbarte untergeordnete Element.</span><span class="sxs-lookup"><span data-stu-id="31c43-123">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="31c43-124">Sie können dann die neue hinzufügen <xref:System.Xml.Linq.XElement> Objekt vor dem benachbarten untergeordneten Element mithilfe der <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31c43-124">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="31c43-125">Sie können auch das neue hinzufügen <xref:System.Xml.Linq.XElement> Objekt nach dem benachbarten untergeordneten Element mithilfe der <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31c43-125">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>  
   
-     Das folgende Beispiel zeigt Beispiele für jede dieser Techniken.  
+     <span data-ttu-id="31c43-126">Das folgende Beispiel zeigt Beispiele für jeden dieser Techniken.</span><span class="sxs-lookup"><span data-stu-id="31c43-126">The following example shows examples of each of these techniques.</span></span>  
   
-     [!code-vb[VbXmlSamples2&6;](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
   
-     Im folgenden werden Beispiele für ursprünglichen und geänderten XML-Code aus diesem Codebeispiel.  
+     <span data-ttu-id="31c43-127">Der folgende Code zeigt XML-Beispielquelle und geänderten XML-Code aus diesem Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="31c43-127">The following shows sample source XML and modified XML from this code example.</span></span>  
   
     ```  
     Source XML:  
@@ -177,13 +160,13 @@ ms.lasthandoff: 03/13/2017
     </Catalog>  
     ```  
   
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>So entfernen Sie ein Element oder Attribut aus einem XML-literal  
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="31c43-128">So entfernen Sie ein Element oder Attribut aus einem XML-literal</span><span class="sxs-lookup"><span data-stu-id="31c43-128">To remove an element or attribute from an XML literal</span></span>  
   
-1.  Um ein Element oder Attribut aus einem XML-Literal zu entfernen, rufen Sie einen Verweis auf das Element oder Attribut, und rufen die `Remove` Methode, wie im folgenden Beispiel gezeigt.  
+1.  <span data-ttu-id="31c43-129">Um ein Element oder Attribut aus einem XML-Literal zu entfernen, rufen Sie einen Verweis auf das Element oder Attribut, und rufen die `Remove` Methode, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="31c43-129">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>  
   
-     [!code-vb[VbXmlSamples&#2;7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
   
-     Im folgenden werden Beispiele für ursprünglichen und geänderten XML-Code aus diesem Codebeispiel.  
+     <span data-ttu-id="31c43-130">Der folgende Code zeigt XML-Beispielquelle und geänderten XML-Code aus diesem Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="31c43-130">The following shows sample source XML and modified XML from this code example.</span></span>  
   
     ```  
     Source XML:  
@@ -219,19 +202,19 @@ ms.lasthandoff: 03/13/2017
       </Book></Catalog>  
     ```  
   
-     Um alle Elemente oder Attribute aus einem XML-Literal zu entfernen, rufen Sie einen Verweis auf das XML-literal und der <xref:System.Xml.Linq.XElement.RemoveAll%2A>-Methode.</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+     <span data-ttu-id="31c43-131">Um alle Elemente oder Attribute aus einem XML-Literal zu entfernen, rufen Sie einen Verweis auf das XML-literal und die <xref:System.Xml.Linq.XElement.RemoveAll%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="31c43-131">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>  
   
-### <a name="to-modify-an-xml-literal"></a>So ändern Sie ein XML-literal  
+### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="31c43-132">So ändern Sie ein XML-literal</span><span class="sxs-lookup"><span data-stu-id="31c43-132">To modify an XML literal</span></span>  
   
-1.  Um den Namen eines XML-Elements zu ändern, rufen Sie zuerst einen Verweis auf das Element. Anschließend können Sie eine neue erstellen <xref:System.Xml.Linq.XElement>-Objekt, das einem neuen Namen, und übergeben Sie das neue <xref:System.Xml.Linq.XElement>-Objekt an die <xref:System.Xml.Linq.XNode.ReplaceWith%2A>Methode des vorhandenen <xref:System.Xml.Linq.XElement>Objekt.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode.ReplaceWith%2A> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement>  
+1.  <span data-ttu-id="31c43-133">Um den Namen eines XML-Elements zu ändern, rufen Sie zunächst einen Verweis auf das Element.</span><span class="sxs-lookup"><span data-stu-id="31c43-133">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="31c43-134">Sie können dann ein neues erstellen <xref:System.Xml.Linq.XElement> -Objekt, das hat den neuen Namen ein, und übergeben Sie das neue <xref:System.Xml.Linq.XElement> -Objekt an die <xref:System.Xml.Linq.XNode.ReplaceWith%2A> Methode des vorhandenen <xref:System.Xml.Linq.XElement> Objekt.</span><span class="sxs-lookup"><span data-stu-id="31c43-134">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>  
   
-     Wenn das Element, das Sie ersetzen untergeordnete Elemente, die beibehalten werden müssen verfügt, legen Sie den Wert der neuen <xref:System.Xml.Linq.XElement>-Objekt an die <xref:System.Xml.Linq.XContainer.Nodes%2A>-Eigenschaft des vorhandenen Elements.</xref:System.Xml.Linq.XContainer.Nodes%2A> </xref:System.Xml.Linq.XElement> Dadurch wird den Wert des neuen Elements auf den inneren XML-Codes des vorhandenen Elements festgelegt. Andernfalls können Sie den Wert des neuen Elements, das Festlegen der `Value` -Eigenschaft des vorhandenen Elements.  
+     <span data-ttu-id="31c43-135">Wenn das Element, das Sie ersetzen untergeordnete Elemente, die beibehalten werden sollen verfügt, legen Sie den Wert der neuen <xref:System.Xml.Linq.XElement> -Objekt an die <xref:System.Xml.Linq.XContainer.Nodes%2A> Eigenschaft des vorhandenen Elements.</span><span class="sxs-lookup"><span data-stu-id="31c43-135">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="31c43-136">Dies legt den Wert des neuen Elements in der inneren XML des vorhandenen Elements fest.</span><span class="sxs-lookup"><span data-stu-id="31c43-136">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="31c43-137">Andernfalls können Sie legen Sie den Wert des neuen Elements, das die `Value` Eigenschaft des vorhandenen Elements.</span><span class="sxs-lookup"><span data-stu-id="31c43-137">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>  
   
-     Im folgenden Codebeispiel werden alle ersetzt \<Beschreibung > Elemente mit einer \<abstrakte > Element. Der Inhalt des der \<Beschreibung > Element wird in der neuen beibehalten \<abstrakte > Element mithilfe der <xref:System.Xml.Linq.XContainer.Nodes%2A>Eigenschaft der \<Beschreibung > <xref:System.Xml.Linq.XElement>Objekt.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XContainer.Nodes%2A>  
+     <span data-ttu-id="31c43-138">Im folgenden Codebeispiel wird ersetzt alle \<Beschreibung >-Elemente mit einer \<abstrakte > Element.</span><span class="sxs-lookup"><span data-stu-id="31c43-138">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="31c43-139">Den Inhalt der \<Beschreibung > Element wird in der neuen beibehalten \<abstrakte >-Element mithilfe der <xref:System.Xml.Linq.XContainer.Nodes%2A> Eigenschaft der \<Beschreibung > <xref:System.Xml.Linq.XElement> Objekt.</span><span class="sxs-lookup"><span data-stu-id="31c43-139">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>  
   
-     [!code-vb[VbXmlSamples&#2;8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
   
-     Im folgenden werden Beispiele für ursprünglichen und geänderten XML-Code aus diesem Codebeispiel.  
+     <span data-ttu-id="31c43-140">Der folgende Code zeigt XML-Beispielquelle und geänderten XML-Code aus diesem Codebeispiel wird.</span><span class="sxs-lookup"><span data-stu-id="31c43-140">The following shows sample source XML and modified XML from this code example.</span></span>  
   
     ```  
     Source XML:  
@@ -291,9 +274,9 @@ ms.lasthandoff: 03/13/2017
     </Catalog>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)   
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [Gewusst wie: Laden von XML aus einer Datei, die Zeichenfolge oder den Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a><span data-ttu-id="31c43-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="31c43-141">See Also</span></span>  
+ [<span data-ttu-id="31c43-142">Bearbeiten von XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="31c43-142">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
+ [<span data-ttu-id="31c43-143">XML</span><span class="sxs-lookup"><span data-stu-id="31c43-143">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [<span data-ttu-id="31c43-144">Gewusst wie: Laden von XML aus einer Datei, einer Zeichenfolge oder einem Stream</span><span class="sxs-lookup"><span data-stu-id="31c43-144">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ [<span data-ttu-id="31c43-145">LINQ</span><span class="sxs-lookup"><span data-stu-id="31c43-145">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="31c43-146">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="31c43-146">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

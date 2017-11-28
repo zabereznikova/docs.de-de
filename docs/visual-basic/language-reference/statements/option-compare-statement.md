@@ -1,127 +1,109 @@
 ---
-title: Option Compare-Anweisung | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Option Compare-Anweisung
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Compare
 - vb.OptionCompare
-dev_langs:
-- VB
 helpviewer_keywords:
 - case sensitivity, Option Compare statement
-- Compare keyword
-- binary comparison
+- Compare keyword [Visual Basic]
+- binary comparison [Visual Basic]
 - strings [Visual Basic], returning from functions
-- binary comparison, Option Compare statement
+- binary comparison [Visual Basic], Option Compare statement
 - strings [Visual Basic], comparing
 - string comparison [Visual Basic], Option Compare statement
-- Text keyword, Option Compare statement
-- Binary keyword, Option Compare statement
+- Text keyword [Visual Basic], Option Compare statement
+- Binary keyword [Visual Basic], Option Compare statement
 - string comparison [Visual Basic], sorting data
-- Option Compare statement
+- Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b1b077a8818315e52ada6b08ff1e1ced9bbd17c
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 281b18322f5be4e7dadcb9533680b25016a44c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="option-compare-statement"></a>Option Compare-Anweisung
-Deklariert die Standardvergleichsmethode, die beim Vergleichen von Zeichenfolgendaten verwendet wird.  
+# <a name="option-compare-statement"></a><span data-ttu-id="688e1-102">Option Compare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="688e1-102">Option Compare Statement</span></span>
+<span data-ttu-id="688e1-103">Deklariert die Standardvergleichsmethode, die beim Vergleichen von Zeichenfolgendaten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="688e1-103">Declares the default comparison method to use when comparing string data.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="688e1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="688e1-104">Syntax</span></span>  
   
 ```  
 Option Compare { Binary | Text }  
 ```  
   
-## <a name="parts"></a>Teile  
+## <a name="parts"></a><span data-ttu-id="688e1-105">Teile</span><span class="sxs-lookup"><span data-stu-id="688e1-105">Parts</span></span>  
   
-|Begriff|Definition|  
+|<span data-ttu-id="688e1-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="688e1-106">Term</span></span>|<span data-ttu-id="688e1-107">Definition</span><span class="sxs-lookup"><span data-stu-id="688e1-107">Definition</span></span>|  
 |---|---|  
-|`Binary`|Dies ist optional. Resultiert in Zeichenfolgenvergleichen basierend auf einer Sortierreihenfolge, die sich von den internen binären Darstellungen der Zeichen ableitet.<br /><br /> Diese Art von Vergleich ist besonders hilfreich, da die Zeichenfolgen Zeichen enthalten können, die nicht als Text interpretiert werden. In diesem Fall sollten Sie Vergleiche nicht alphabetischen Äquivalenzen, z. B. Groß-/Kleinschreibung vorziehen.|  
-|`Text`|Dies ist optional. Führt zu einem Zeichenfolgenvergleich basierend auf einer schreibungsunabhängigen Textsortierreihenfolge, die durch das Gebietsschema des Systems bestimmt wird.<br /><br /> Diese Art von Vergleich ist nützlich, wenn die Zeichenfolgen nur Textzeichen enthalten und Sie nur anhand alphabetischer Äquivalenzen z. B. Groß-/Kleinschreibung oder eng verwandter Buchstaben vergleichen möchten. Sie könnten zum Beispiel `A` und `a` als gleich ansehen und `Ä` und `ä`, die vor `B` und `b` kommen.|  
+|`Binary`|<span data-ttu-id="688e1-108">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="688e1-108">Optional.</span></span> <span data-ttu-id="688e1-109">Resultiert in Zeichenfolgenvergleichen basierend auf einer Sortierreihenfolge, die sich von den internen binären Darstellungen der Zeichen ableitet.</span><span class="sxs-lookup"><span data-stu-id="688e1-109">Results in string comparisons based on a sort order derived from the internal binary representations of the characters.</span></span><br /><br /> <span data-ttu-id="688e1-110">Diese Art von Vergleich ist besonders hilfreich, da die Zeichenfolgen Zeichen enthalten können, die nicht als Text interpretiert werden.</span><span class="sxs-lookup"><span data-stu-id="688e1-110">This type of comparison is useful especially if the strings can contain characters that are not to be interpreted as text.</span></span> <span data-ttu-id="688e1-111">In diesem Fall sollten Sie Vergleiche nicht alphabetischen Äquivalenzen, z. B. Groß-/Kleinschreibung vorziehen.</span><span class="sxs-lookup"><span data-stu-id="688e1-111">In this case, you do not want to bias comparisons with alphabetical equivalences, such as case insensitivity.</span></span>|  
+|`Text`|<span data-ttu-id="688e1-112">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="688e1-112">Optional.</span></span> <span data-ttu-id="688e1-113">Führt zu einem Zeichenfolgenvergleich basierend auf einer schreibungsunabhängigen Textsortierreihenfolge, die durch das Gebietsschema des Systems bestimmt wird.</span><span class="sxs-lookup"><span data-stu-id="688e1-113">Results in string comparisons based on a case-insensitive text sort order determined by your system's locale.</span></span><br /><br /> <span data-ttu-id="688e1-114">Diese Art von Vergleich ist nützlich, wenn die Zeichenfolgen nur Textzeichen enthalten und Sie nur anhand alphabetischer Äquivalenzen z. B. Groß-/Kleinschreibung oder eng verwandter Buchstaben vergleichen möchten.</span><span class="sxs-lookup"><span data-stu-id="688e1-114">This type of comparison is useful if your strings contain all text characters, and you want to compare them taking into account alphabetic equivalences such as case insensitivity and closely related letters.</span></span> <span data-ttu-id="688e1-115">Sie könnten zum Beispiel `A` und `a` als gleich ansehen und `Ä` und `ä`, die vor `B` und `b` kommen.</span><span class="sxs-lookup"><span data-stu-id="688e1-115">For example, you might want to consider `A` and `a` to be equal, and `Ä` and `ä` to come before `B` and `b`.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn sie verwendet wird, muss die `Option Compare`-Anweisung in einer Datei vor allen anderen Quellcodeanweisungen angeordnet sein.  
+## <a name="remarks"></a><span data-ttu-id="688e1-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="688e1-116">Remarks</span></span>  
+ <span data-ttu-id="688e1-117">Wenn sie verwendet wird, muss die `Option Compare`-Anweisung in einer Datei vor allen anderen Quellcodeanweisungen angeordnet sein.</span><span class="sxs-lookup"><span data-stu-id="688e1-117">If used, the `Option Compare` statement must appear in a file before any other source code statements.</span></span>  
   
- Die `Option Compare`-Anweisung gibt die Zeichenfolgenvergleichsmethode vor (`Binary` oder `Text`).  Die Standardmethode zum Textvergleich ist `Binary`.  
+ <span data-ttu-id="688e1-118">Die `Option Compare`-Anweisung gibt die Zeichenfolgenvergleichsmethode vor (`Binary` oder `Text`).</span><span class="sxs-lookup"><span data-stu-id="688e1-118">The `Option Compare` statement specifies the string comparison method (`Binary` or `Text`).</span></span>  <span data-ttu-id="688e1-119">Die Standardmethode zum Textvergleich ist `Binary`.</span><span class="sxs-lookup"><span data-stu-id="688e1-119">The default text comparison method is `Binary`.</span></span>  
   
- Ein `Binary`-Vergleich vergleicht den numerischen Unicode-Wert jedes Zeichens in jeder Zeichenfolge. Ein `Text`-Vergleich vergleicht alle Unicode-Zeichen anhand der lexikalische Bedeutung in der aktuellen Kultur.  
+ <span data-ttu-id="688e1-120">Ein `Binary`-Vergleich vergleicht den numerischen Unicode-Wert jedes Zeichens in jeder Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="688e1-120">A `Binary` comparison compares the numeric Unicode value of each character in each string.</span></span> <span data-ttu-id="688e1-121">Ein `Text`-Vergleich vergleicht alle Unicode-Zeichen anhand der lexikalische Bedeutung in der aktuellen Kultur.</span><span class="sxs-lookup"><span data-stu-id="688e1-121">A `Text` comparison compares each Unicode character based on its lexical meaning in the current culture.</span></span>  
   
- In Microsoft Windows wird die Sortierreihenfolge durch die Codepage festgelegt. Weitere Informationen finden Sie unter [Codepages](https://docs.microsoft.com/cpp/c-runtime-library/code-pages).  
+ <span data-ttu-id="688e1-122">In Microsoft Windows wird die Sortierreihenfolge durch die Codepage festgelegt.</span><span class="sxs-lookup"><span data-stu-id="688e1-122">In Microsoft Windows, sort order is determined by the code page.</span></span> <span data-ttu-id="688e1-123">Weitere Informationen finden Sie unter [Codepages](/cpp/c-runtime-library/code-pages).</span><span class="sxs-lookup"><span data-stu-id="688e1-123">For more information, see [Code Pages](/cpp/c-runtime-library/code-pages).</span></span>  
   
- Im folgenden Beispiel werden Zeichen der Codepage für Westeuropäisch (ANSI 1252) mit `Option Compare Binary` sortiert, wodurch eine typische binäre Sortierreihenfolge erzeugt wird.  
+ <span data-ttu-id="688e1-124">Im folgenden Beispiel werden Zeichen der Codepage für Westeuropäisch (ANSI 1252) mit `Option Compare Binary` sortiert, wodurch eine typische binäre Sortierreihenfolge erzeugt wird.</span><span class="sxs-lookup"><span data-stu-id="688e1-124">In the following example, characters in the English/European code page (ANSI 1252) are sorted by using `Option Compare Binary`, which produces a typical binary sort order.</span></span>  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Wenn dieselben Zeichen in derselben Codepage `Option Compare Text` mit sortiert werden, wird die folgende Sortierreihenfolge erzeugt.  
+ <span data-ttu-id="688e1-125">Wenn dieselben Zeichen in derselben Codepage `Option Compare Text` mit sortiert werden, wird die folgende Sortierreihenfolge erzeugt.</span><span class="sxs-lookup"><span data-stu-id="688e1-125">When the same characters in the same code page are sorted by using `Option Compare Text`, the following text sort order is produced.</span></span>  
   
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-## <a name="when-an-option-compare-statement-is-not-present"></a>Wenn eine Option Compare-Anweisung nicht vorhanden ist  
- Enthält der Quellcode kein `Option Compare` -Anweisung, die **Option Compare** auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet wird. Wenn Sie den Befehlszeilencompiler verwenden, wird die Einstellung angegeben, durch die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption verwendet wird.  
+## <a name="when-an-option-compare-statement-is-not-present"></a><span data-ttu-id="688e1-126">Wenn eine Option Compare-Anweisung nicht vorhanden ist</span><span class="sxs-lookup"><span data-stu-id="688e1-126">When an Option Compare Statement Is Not Present</span></span>  
+ <span data-ttu-id="688e1-127">Wenn der Quellcode nicht enthält ein `Option Compare` -Anweisung, die **Option Compare** festlegen für die [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="688e1-127">If the source code does not contain an `Option Compare` statement, the **Option Compare** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used.</span></span> <span data-ttu-id="688e1-128">Wenn Sie den Befehlszeilencompiler verwenden, die Einstellung gemäß der [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="688e1-128">If you use the command-line compiler, the setting specified by the [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option is used.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-#### <a name="to-set-option-compare-in-the-ide"></a>Festelegen der Option Compare in der IDE  
+#### <a name="to-set-option-compare-in-the-ide"></a><span data-ttu-id="688e1-129">Festelegen der Option Compare in der IDE</span><span class="sxs-lookup"><span data-stu-id="688e1-129">To set Option Compare in the IDE</span></span>  
   
-1.  In **Projektmappen-Explorer**, wählen Sie ein Projekt. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [NIB: Verwalten von Projekteigenschaften mit dem Projekt-Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  <span data-ttu-id="688e1-130">Wählen Sie im **Projektmappen-Explorer** ein Projekt aus.</span><span class="sxs-lookup"><span data-stu-id="688e1-130">In **Solution Explorer**, select a project.</span></span> <span data-ttu-id="688e1-131">Klicken Sie im Menü **Projekt** auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="688e1-131">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="688e1-132">Weitere Informationen finden Sie unter [NIB: Verwalten von Projekteigenschaften mit dem Projekt-Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).</span><span class="sxs-lookup"><span data-stu-id="688e1-132">For more information, see [NIB: Managing Project Properties with the Project Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).</span></span>  
   
-2.  Klicken Sie auf die **Kompilieren** Registerkarte.  
+2.  <span data-ttu-id="688e1-133">Klicken Sie auf die Registerkarte **Kompilieren**.</span><span class="sxs-lookup"><span data-stu-id="688e1-133">Click the **Compile** tab.</span></span>  
   
-3.  Legen Sie den Wert der **Option Compare** Feld.  
+3.  <span data-ttu-id="688e1-134">Legen Sie den Wert der **Option Compare** Feld.</span><span class="sxs-lookup"><span data-stu-id="688e1-134">Set the value in the **Option Compare** box.</span></span>  
   
- Wenn Sie ein Projekt erstellen die **Option Compare** auf der **Kompilieren** Registerkarte auf festgelegt ist die **Option Compare** festlegen in der **Optionen** im Dialogfeld. So ändern Sie diese Einstellung, auf die **Tools** Menü klicken Sie auf **Optionen**. In der **Optionen** Dialogfeld erweitern Sie **Projekte und Projektmappen**, und klicken Sie dann auf **VB-Standard**. Die ursprüngliche Standardeinstellung in **VB-Standard** ist **binäre**.  
+ <span data-ttu-id="688e1-135">Bei der Erstellung eines Projekts die **Option Compare** festlegen, auf die **Kompilieren** auf die Registerkarte "festgelegt ist die **Option Compare** festlegen in der **Optionen** Das Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="688e1-135">When you create a project, the **Option Compare** setting on the **Compile** tab is set to the **Option Compare** setting in the **Options** dialog box.</span></span> <span data-ttu-id="688e1-136">So ändern Sie diese Einstellung, auf die **Tools** Menü klicken Sie auf **Optionen**.</span><span class="sxs-lookup"><span data-stu-id="688e1-136">To change this setting, on the **Tools** menu, click **Options**.</span></span> <span data-ttu-id="688e1-137">Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**.</span><span class="sxs-lookup"><span data-stu-id="688e1-137">In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**.</span></span> <span data-ttu-id="688e1-138">Die ursprüngliche Standardeinstellung in **VB-Standard** ist **binäre**.</span><span class="sxs-lookup"><span data-stu-id="688e1-138">The initial default setting in **VB Defaults** is **Binary**.</span></span>  
   
-#### <a name="to-set-option-compare-on-the-command-line"></a>Festlegen der Option Compare in der Befehlszeile  
+#### <a name="to-set-option-compare-on-the-command-line"></a><span data-ttu-id="688e1-139">Festlegen der Option Compare in der Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="688e1-139">To set Option Compare on the command line</span></span>  
   
--   Enthalten die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption in der **Vbc** Befehl.  
+-   <span data-ttu-id="688e1-140">Enthalten die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption in der **Vbc** Befehl.</span><span class="sxs-lookup"><span data-stu-id="688e1-140">Include the [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option in the **vbc** command.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgenden Beispiel verwendet die `Option Compare`-Anweisung, um den binären Vergleich als die Standardzeichenfolgenvergleichsmethode festzulegen. Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Binary`-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.  
+## <a name="example"></a><span data-ttu-id="688e1-141">Beispiel</span><span class="sxs-lookup"><span data-stu-id="688e1-141">Example</span></span>  
+ <span data-ttu-id="688e1-142">Das folgenden Beispiel verwendet die `Option Compare`-Anweisung, um den binären Vergleich als die Standardzeichenfolgenvergleichsmethode festzulegen.</span><span class="sxs-lookup"><span data-stu-id="688e1-142">The following example uses the `Option Compare` statement to set the binary comparison as the default string comparison method.</span></span> <span data-ttu-id="688e1-143">Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Binary`-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.</span><span class="sxs-lookup"><span data-stu-id="688e1-143">To use this code, uncomment the `Option Compare Binary` statement, and put it at the top of the source file.</span></span>  
   
- [!code-vb[VbVbalrStatements&#45;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Option Compare`-Anweisung verwendet, um die Textsortierreihenfolge als die Standardzeichenfolgenvergleichsmethode festzulegen. Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Text`-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.  
+## <a name="example"></a><span data-ttu-id="688e1-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="688e1-144">Example</span></span>  
+ <span data-ttu-id="688e1-145">Im folgenden Beispiel wird die `Option Compare`-Anweisung verwendet, um die Textsortierreihenfolge als die Standardzeichenfolgenvergleichsmethode festzulegen.</span><span class="sxs-lookup"><span data-stu-id="688e1-145">The following example uses the `Option Compare` statement to set the case-insensitive text sort order as the default string comparison method.</span></span> <span data-ttu-id="688e1-146">Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Text`-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.</span><span class="sxs-lookup"><span data-stu-id="688e1-146">To use this code, uncomment the `Option Compare Text` statement, and put it at the top of the source file.</span></span>  
   
- [!code-vb[VbVbalrStatements&#46;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A></xref:Microsoft.VisualBasic.Strings.InStr%2A>   
- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A></xref:Microsoft.VisualBasic.Strings.InStrRev%2A>   
- <xref:Microsoft.VisualBasic.Strings.Replace%2A></xref:Microsoft.VisualBasic.Strings.Replace%2A>   
- <xref:Microsoft.VisualBasic.Strings.Split%2A></xref:Microsoft.VisualBasic.Strings.Split%2A>   
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A></xref:Microsoft.VisualBasic.Strings.StrComp%2A>   
- [/ optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)   
- [Vergleichsoperatoren](../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Vergleichsoperatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [LIKE-Operator](../../../visual-basic/language-reference/operators/like-operator.md)   
- [String-Funktionen](../../../visual-basic/language-reference/functions/string-functions.md)   
- [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="688e1-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="688e1-147">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Replace%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Split%2A>  
+ <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
+ [<span data-ttu-id="688e1-148">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="688e1-148">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [<span data-ttu-id="688e1-149">Vergleichsoperatoren</span><span class="sxs-lookup"><span data-stu-id="688e1-149">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [<span data-ttu-id="688e1-150">Vergleichsoperatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="688e1-150">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [<span data-ttu-id="688e1-151">Like-Operator</span><span class="sxs-lookup"><span data-stu-id="688e1-151">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [<span data-ttu-id="688e1-152">String-Funktionen</span><span class="sxs-lookup"><span data-stu-id="688e1-152">String Functions</span></span>](../../../visual-basic/language-reference/functions/string-functions.md)  
+ [<span data-ttu-id="688e1-153">Option Explicit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="688e1-153">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="688e1-154">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="688e1-154">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)

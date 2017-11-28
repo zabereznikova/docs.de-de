@@ -1,88 +1,87 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual&#160;C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [C#]"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Erstellen"
-  - "Benutzersteuerelemente [C#]"
-  - "Benutzersteuerelemente [Windows Forms], Erstellen mit Visual C#"
-  - "UserControl-Klasse, Exemplarische Vorgehensweisen"
+title: "Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [C#]
+- user controls [Windows Forms], creating with Visual C#
+- UserControl class [Windows Forms], walkthroughs
+- user controls [C#]
+- custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d96705ed3f18c76a64c344ddec7a1cd4315e2e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual&#160;C# #
-Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benutzeroberflächen erstellt und wiederverwendet werden.  Es handelt sich hier im Wesentlichen um Komponenten mit visueller Darstellung.  Als solche können sie sich beispielsweise aus einem oder mehreren Steuerelementen, Komponenten oder Codeblöcken aus Windows Forms zusammensetzen, die die Funktionalität erweitern können, indem sie Benutzereingaben validieren, Anzeigeeigenschaften ändern und andere vom Autor angeforderte Aufgaben ausführen.  Zusammengesetzte Steuerelemente können auf die gleiche Weise in Windows Forms platziert werden wie andere Steuerelemente.  Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement mit der Bezeichnung `ctlClock`.  Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.  
+# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a><span data-ttu-id="4e5cc-102">Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#</span><span class="sxs-lookup"><span data-stu-id="4e5cc-102">Walkthrough: Authoring a Composite Control with Visual C#</span></span> #
+<span data-ttu-id="4e5cc-103">Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefinierte grafische Schnittstellen erstellt und wiederverwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-103">Composite controls provide a means by which custom graphical interfaces can be created and reused.</span></span> <span data-ttu-id="4e5cc-104">Ein zusammengesetztes Steuerelement ist im wesentlichen eine Komponente mit visueller Darstellung.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-104">A composite control is essentially a component with a visual representation.</span></span> <span data-ttu-id="4e5cc-105">Daher können zusammengesetzte Steuerelemente aus einem oder mehr Windows Forms-Steuerelementen, Komponenten oder Codeblöcken bestehen. Diese erweitern die Funktionalität durch Validieren von Benutzereingaben, verändern Anzeigeeigenschaften oder führen andere vom Autor gewünschte Aufgaben aus.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-105">As such, it might consist of one or more Windows Forms controls, components, or blocks of code that can extend functionality by validating user input, modifying display properties, or performing other tasks required by the author.</span></span> <span data-ttu-id="4e5cc-106">Zusammengesetzte Steuerelemente können genau wie andere Steuerelemente in Windows Forms platziert werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-106">Composite controls can be placed on Windows Forms in the same manner as other controls.</span></span> <span data-ttu-id="4e5cc-107">Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement namens `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-107">In the first part of this walkthrough, you create a simple composite control called `ctlClock`.</span></span> <span data-ttu-id="4e5cc-108">Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-108">In the second part of the walkthrough, you extend the functionality of `ctlClock` through inheritance.</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="4e5cc-109">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="4e5cc-110">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="4e5cc-111">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="4e5cc-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Erstellen des Projekts  
- Wenn Sie ein neues Projekt erstellen, geben Sie dessen Namen an, um Stammnamespace, Assemblyname und Projektname einzurichten und sicherzustellen, dass die Standardkomponente sich im richtigen Namespace befindet.  
+## <a name="creating-the-project"></a><span data-ttu-id="4e5cc-112">Erstellen des Projekts</span><span class="sxs-lookup"><span data-stu-id="4e5cc-112">Creating the Project</span></span>  
+ <span data-ttu-id="4e5cc-113">Geben Sie beim Erstellen des Projekts den Namen an, um den Stammnamespace, Assemblynamen und Projektnamen festzulegen und sicherzustellen, dass sich die Standardkomponente im richtigen Namespace befindet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-113">When you create a new project, you specify its name to set the root namespace, assembly name, and project name, and ensure that the default component will be in the correct namespace.</span></span>  
   
-#### So erstellen Sie die ctlClockLib\-Steuerelementbibliothek und das ctlClock\-Steuerelement  
+#### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a><span data-ttu-id="4e5cc-114">So erstellen Sie die ctlClockLib-Steuerelementbibliothek und das ctlClock-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-114">To create the ctlClockLib control library and the ctlClock control</span></span>  
   
-1.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.  
+1.  <span data-ttu-id="4e5cc-115">Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-115">On the **File** menu, point to **New**, and then click **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  Wählen Sie aus der Liste der [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\-Projekte die Projektvorlage **Windows Forms\-Steuerelementbibliothek**, geben Sie `ctlClockLib` in das Feld **Name** ein, und klicken Sie dann auf **OK**.  
+2.  <span data-ttu-id="4e5cc-116">Wählen Sie aus der Liste der [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]-Projekte die Projektvorlage **Windows Forms-Steuerelementbibliothek** aus, geben Sie im Feld **Name** `ctlClockLib` ein, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-116">From the list of [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] projects, select the **Windows Forms Control Library** project template, type `ctlClockLib` in the **Name** box, and then click **OK**.</span></span>  
   
-     Der Projektname `ctlClockLib` wird standardmäßig auch dem Stammnamespace zugewiesen.  Der Stammnamespace wird dazu verwendet, die Namen der Komponenten in der Assembly zu qualifizieren.  Wenn beispielsweise zwei Assemblys Komponenten mit der Bezeichnung `ctlClock` bereitstellen, können Sie die zu verwendende `ctlClock`\-Komponente mit `ctlClockLib.ctlClock.`  angeben.  
+     <span data-ttu-id="4e5cc-117">Der Projektname `ctlClockLib` wird standardmäßig auch dem Stammnamespace zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-117">The project name, `ctlClockLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="4e5cc-118">Der Stammnamespace wird verwendet, um die Namen der Komponenten in der Assembly zu qualifizieren.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-118">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="4e5cc-119">Wenn z.B. zwei Assemblys Komponenten mit dem Namen `ctlClock` bereitstellen, können Sie Ihre `ctlClock`-Komponente mithilfe von `ctlClockLib.ctlClock.` überprüfen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-119">For example, if two assemblies provide components named `ctlClock`, you can specify your `ctlClock` component using `ctlClockLib.ctlClock.`</span></span>  
   
-3.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **UserControl1.cs**, und klicken Sie dann auf **Umbenennen**.  Ändern Sie den Dateinamen in `ctlClock.cs`.  Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob Sie alle Verweise auf das Codeelement "UserControl1" umbenennen möchten.  
+3.  <span data-ttu-id="4e5cc-120">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **UserControl1.cs**, und klicken Sie dann auf **Umbenennen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-120">In Solution Explorer, right-click **UserControl1.cs**, and then click **Rename**.</span></span> <span data-ttu-id="4e5cc-121">Ändern Sie den Dateinamen in `ctlClock.cs`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-121">Change the file name to `ctlClock.cs`.</span></span> <span data-ttu-id="4e5cc-122">Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob alle Verweise auf das Codeelement „UserControl1“ umbenannt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-122">Click the **Yes** button when you are asked if you want to rename all references to the code element "UserControl1".</span></span>  
   
     > [!NOTE]
-    >  Standardmäßig erben zusammengesetzte Steuerelemente von der vom System bereitgestellten <xref:System.Windows.Forms.UserControl>\-Klasse.  Die <xref:System.Windows.Forms.UserControl>\-Klasse stellt Funktionalität bereit, die von allen zusammengesetzten Steuerelementen benötigt wird, und implementiert Standardmethoden und \-eigenschaften.  
+    >  <span data-ttu-id="4e5cc-123">Standardmäßig erbt ein zusammengesetztes Steuerelement von der <xref:System.Windows.Forms.UserControl> Klasse, die vom System bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-123">By default, a composite control inherits from the <xref:System.Windows.Forms.UserControl> class provided by the system.</span></span> <span data-ttu-id="4e5cc-124">Die <xref:System.Windows.Forms.UserControl> Klasse stellt alle zusammengesetzte Steuerelemente erforderliche Funktionalität bereit, und standard-Methoden und Eigenschaften implementiert.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-124">The <xref:System.Windows.Forms.UserControl> class provides functionality required by all composite controls, and implements standard methods and properties.</span></span>  
   
-4.  Klicken Sie im Menü **Datei** auf **Alle speichern**, um das Projekt zu speichern.  
+4.  <span data-ttu-id="4e5cc-125">Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-125">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Hinzufügen von Windows\-Steuerelementen und \-Komponenten zu zusammengesetzten Steuerelementen  
- Visuelle Oberflächen sind ein wesentlicher Bestandteil von zusammengesetzten Steuerelementen.  Sie werden implementiert, indem der Designeroberfläche eines oder mehrere Windows\-Steuerelemente hinzugefügt werden.  Im folgenden Beispiel werden Windows\-Steuerelemente in das zusammengesetzte Steuerelement integriert. Anschließend schreiben Sie Code, um Funktionen zu implementieren.  
+## <a name="adding-windows-controls-and-components-to-the-composite-control"></a><span data-ttu-id="4e5cc-126">Hinzufügen von Windows-Steuerelementen und -Komponenten zum zusammengesetzten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-126">Adding Windows Controls and Components to the Composite Control</span></span>  
+ <span data-ttu-id="4e5cc-127">Eine visuelle Schnittstelle ist ein wesentlicher Bestandteil von zusammengesetzten Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-127">A visual interface is an essential part of your composite control.</span></span> <span data-ttu-id="4e5cc-128">Diese visuelle Schnittstelle wird durch das Hinzufügen eines oder mehrerer Windows-Steuerelemente zur Designeroberfläche implementiert.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-128">This visual interface is implemented by the addition of one or more Windows controls to the designer surface.</span></span> <span data-ttu-id="4e5cc-129">Im folgenden Beispiel integrieren Sie Windows-Steuerelemente in das zusammengesetzte Steuerelement und schreiben Code, um Funktionalität zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-129">In the following demonstration, you will incorporate Windows controls into your composite control and write code to implement functionality.</span></span>  
   
-#### So fügen Sie dem zusammengesetzten Steuerelement eine Beschriftung und einen Zeitgeber hinzu  
+#### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a><span data-ttu-id="4e5cc-130">So fügen Sie eine Bezeichnung und einen Timer zum zusammengesetzten Steuerelement hinzu</span><span class="sxs-lookup"><span data-stu-id="4e5cc-130">To add a Label and a Timer to your composite control</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlClock.cs**, und wählen Sie **Designer anzeigen** aus.  
+1.  <span data-ttu-id="4e5cc-131">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlClock.cs**, und wählen Sie **Designer anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-131">In Solution Explorer, right-click **ctlClock.cs**, and then click **View Designer**.</span></span>  
   
-2.  Erweitern Sie in der **Toolbox** den Knoten **Allgemeine Steuerelemente**, und doppelklicken Sie dann auf **Label**.  
+2.  <span data-ttu-id="4e5cc-132">Erweitern Sie in der **Toolbox** den Knoten **Allgemeine Steuerelemente**, und doppelklicken Sie dann auf **Bezeichnung**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-132">In the **Toolbox**, expand the **Common Controls** node, and then double-click **Label**.</span></span>  
   
-     Ein <xref:System.Windows.Forms.Label>\-Steuerelement mit dem Namen `label1` wird dem Steuerelement auf der Designeroberfläche hinzugefügt.  
+     <span data-ttu-id="4e5cc-133">Ein <xref:System.Windows.Forms.Label> Steuerelement namens `label1` Ihr Steuerelement auf der Designeroberfläche hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-133">A <xref:System.Windows.Forms.Label> control named `label1` is added to your control on the designer surface.</span></span>  
   
-3.  Klicken Sie im Designer auf **Label1**.  Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.  
+3.  <span data-ttu-id="4e5cc-134">Klicken Sie im Designer auf **label1**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-134">In the designer, click **label1**.</span></span> <span data-ttu-id="4e5cc-135">Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-135">In the Properties window, set the following properties.</span></span>  
   
-    |Property|Ändern in|  
+    |<span data-ttu-id="4e5cc-136">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="4e5cc-136">Property</span></span>|<span data-ttu-id="4e5cc-137">Ändern in</span><span class="sxs-lookup"><span data-stu-id="4e5cc-137">Change to</span></span>|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
-    |**Text**|`(leer)`|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Font.Size**|`14`|  
+    |<span data-ttu-id="4e5cc-138">**Name**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-138">**Name**</span></span>|`lblDisplay`|  
+    |<span data-ttu-id="4e5cc-139">**Text**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-139">**Text**</span></span>|`(blank space)`|  
+    |<span data-ttu-id="4e5cc-140">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-140">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="4e5cc-141">**Font.Size**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-141">**Font.Size**</span></span>|`14`|  
   
-4.  Erweitern Sie in der **Toolbox** den Knoten **Komponenten**, und doppelklicken Sie dann auf **Timer**.  
+4.  <span data-ttu-id="4e5cc-142">Erweitern Sie in der **Toolbox** den Knoten **Komponenten**, und doppelklicken Sie dann auf **Timer**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-142">In the **Toolbox**, expand the **Components** node, and then double-click **Timer**.</span></span>  
   
-     Da es sich beim <xref:System.Windows.Forms.Timer> um eine Komponente handelt, verfügt er zur Laufzeit über keine visuelle Darstellung.  Daher wird er nicht zusammen mit den Steuerelementen auf der Designeroberfläche angezeigt, sondern im **Komponenten\-Designer** \(eine Leiste am unteren Rand der Designeroberfläche\).  
+     <span data-ttu-id="4e5cc-143">Da eine <xref:System.Windows.Forms.Timer> ist eine Komponente sie zur Laufzeit keine visuelle Darstellung hat.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-143">Because a <xref:System.Windows.Forms.Timer> is a component, it has no visual representation at run time.</span></span> <span data-ttu-id="4e5cc-144">Er wird daher nicht bei den Steuerelementen auf der Designeroberfläche angezeigt, sondern im **Komponenten-Designer** (eine Taskleiste am unteren Ende der Designeroberfläche).</span><span class="sxs-lookup"><span data-stu-id="4e5cc-144">Therefore, it does not appear with the controls on the designer surface, but rather in the **Component Designer** (a tray at the bottom of the designer surface).</span></span>  
   
-5.  Klicken Sie im **Komponenten\-Designer** auf **timer1**, und legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A>\-Eigenschaft auf `1000` und die <xref:System.Windows.Forms.Timer.Enabled%2A>\-Eigenschaft auf `true` fest.  
+5.  <span data-ttu-id="4e5cc-145">In der **Komponenten-Designer**, klicken Sie auf **timer1**, und legen Sie dann die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft `1000` und die <xref:System.Windows.Forms.Timer.Enabled%2A> Eigenschaft `true`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-145">In the **Component Designer**, click **timer1**, and then set the <xref:System.Windows.Forms.Timer.Interval%2A> property to `1000` and the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `true`.</span></span>  
   
-     Die <xref:System.Windows.Forms.Timer.Interval%2A>\-Eigenschaft steuert die Zählfrequenz der <xref:System.Windows.Forms.Timer>\-Komponente.  Für jeden Teilstrich von `timer1` wird der Code im `timer1_Tick`\-Ereignis ausgeführt.  Mit der `Interval`\-Eigenschaft legen Sie die Anzahl der Millisekunden zwischen den einzelnen Zählungen fest.  
+     <span data-ttu-id="4e5cc-146">Die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft steuert die Häufigkeit, mit denen die <xref:System.Windows.Forms.Timer> Komponente Ticks.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-146">The <xref:System.Windows.Forms.Timer.Interval%2A> property controls the frequency with which the <xref:System.Windows.Forms.Timer> component ticks.</span></span> <span data-ttu-id="4e5cc-147">Bei jedem Tick von `timer1` führt sie den Code im Ereignis `timer1_Tick` aus.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-147">Each time `timer1` ticks, it runs the code in the `timer1_Tick` event.</span></span> <span data-ttu-id="4e5cc-148">Das Intervall stellt die Anzahl von Millisekunden zwischen Ticks dar.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-148">The interval represents the number of milliseconds between ticks.</span></span>  
   
-6.  Doppelklicken Sie im **Komponenten\-Designer** auf **timer1**, um zum `timer1_Tick`\-Ereignis für `ctlClock` zu wechseln.  
+6.  <span data-ttu-id="4e5cc-149">Doppelklicken Sie im **Komponenten-Designer** auf **timer1**, um zum `timer1_Tick`-Ereignis für `ctlClock` zu gelangen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-149">In the **Component Designer**, double-click **timer1** to go to the `timer1_Tick` event for `ctlClock`.</span></span>  
   
-7.  Ändern Sie den Code, sodass er dem folgendem Beispielcode gleicht.  Hierbei müssen Sie den Zugriffsmodifizierer von `private` in `protected` ändern.  
+7.  <span data-ttu-id="4e5cc-150">Ändern Sie den Code so, dass er folgendem Codebeispiel ähnelt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-150">Modify the code so that it resembles the following code sample.</span></span> <span data-ttu-id="4e5cc-151">Achten Sie darauf, den Zugriffsmodifizierer von `private` in `protected` zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-151">Be sure to change the access modifier from `private` to `protected`.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     protected void timer1_Tick(object sender, System.EventArgs e)  
     {  
         // Causes the label to display the current time.  
@@ -90,41 +89,37 @@ Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benut
     }  
     ```  
   
-     Dieser Code zeigt die aktuelle Uhrzeit in `lblDisplay` an.  Da das Intervall von `timer1` auf `1000` festgelegt wurde, wird das Ereignis alle tausend Millisekunden ausgelöst, d. h. die Anzeige der aktuellen Uhrzeit wird einmal pro Sekunde aktualisiert.  
+     <span data-ttu-id="4e5cc-152">Durch diesen Code wird die aktuelle Zeit in `lblDisplay` angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-152">This code will cause the current time to be shown in `lblDisplay`.</span></span> <span data-ttu-id="4e5cc-153">Da das Intervall von `timer1` auf `1000` festgelegt wurde, wird dieses Ereignis alle tausend Millisekunden ausgelöst. Dadurch wird die aktuelle Zeit jede Sekunde aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-153">Because the interval of `timer1` was set to `1000`, this event will occur every thousand milliseconds, thus updating the current time every second.</span></span>  
   
-8.  Ändern Sie die Methode so, dass sie mit dem `virtual`\-Schlüsselwort überschrieben werden kann.  Weitere Informationen finden Sie im Abschnitt "Erben von einem zusammengesetzten Steuerelement" weiter unten.  
+8.  <span data-ttu-id="4e5cc-154">Ändern Sie die Methode so, dass sie mit dem Schlüsselwort `virtual` überschreibbar ist.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-154">Modify the method to be overridable with the `virtual` keyword.</span></span> <span data-ttu-id="4e5cc-155">Weitere Informationen finden Sie im Abschnitt „Erben von Benutzersteuerelementen“.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-155">For more information, see the  "Inheriting from a User Control" section below.</span></span>  
   
-    ```  
+    ```csharp  
     protected virtual void timer1_Tick(object sender, System.EventArgs e)  
     ```  
   
-9. Klicken Sie im Menü **Datei** auf **Alle speichern**, um das Projekt zu speichern.  
+9. <span data-ttu-id="4e5cc-156">Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-156">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Hinzufügen von Eigenschaften zum zusammengesetzten Steuerelement  
- Das Clock\-Steuerelement kapselt nun ein <xref:System.Windows.Forms.Label>\-Steuerelement und eine <xref:System.Windows.Forms.Timer>\-Komponente, beide mit einem eigenen Satz von inhärenten Eigenschaften.  Während nachfolgende Benutzer des Steuerelements nicht auf die einzelnen Eigenschaften dieser Steuerelemente zugreifen können, sind Sie in der Lage, benutzerdefinierte Eigenschaften zu erstellen und verfügbar zu machen, indem Sie die entsprechenden Codeblöcke schreiben.  In der folgenden Prozedur fügen Sie dem Steuerelement Eigenschaften hinzu, die dem Benutzer ermöglichen, Hintergrund\- und Textfarbe zu ändern.  
+## <a name="adding-properties-to-the-composite-control"></a><span data-ttu-id="4e5cc-157">Hinzufügen von Eigenschaften zum zusammengesetzten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-157">Adding Properties to the Composite Control</span></span>  
+ <span data-ttu-id="4e5cc-158">Kapselt die Uhren-Steuerelement nun eine <xref:System.Windows.Forms.Label> Steuerelement und ein <xref:System.Windows.Forms.Timer> Komponente, jeweils über einen eigenen Satz von inhärenten Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-158">Your clock control now encapsulates a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.Timer> component, each with its own set of inherent properties.</span></span> <span data-ttu-id="4e5cc-159">Während nachfolgende Benutzer des Steuerelements nicht auf die einzelnen Eigenschaften dieser Steuerelemente zugreifen können, können Sie benutzerdefinierte Eigenschaften durch Schreiben der geeigneten Codeblöcke erstellen und verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-159">While the individual properties of these controls will not be accessible to subsequent users of your control, you can create and expose custom properties by writing the appropriate blocks of code.</span></span> <span data-ttu-id="4e5cc-160">Im folgenden Vorgang fügen Sie Eigenschaften zum Steuerelement hinzu, die dem Benutzer ermöglichen, die Farbe des Hintergrunds und des Texts zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-160">In the following procedure, you will add properties to your control that enable the user to change the color of the background and text.</span></span>  
   
-#### So fügen Sie dem zusammengesetzten Steuerelement eine Eigenschaft hinzu  
+#### <a name="to-add-a-property-to-your-composite-control"></a><span data-ttu-id="4e5cc-161">So fügen Sie eine Eigenschaft zum zusammengesetzten Steuerelement hinzu</span><span class="sxs-lookup"><span data-stu-id="4e5cc-161">To add a property to your composite control</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlClock.cs**, und wählen Sie **Code anzeigen** aus.  
+1.  <span data-ttu-id="4e5cc-162">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlClock.cs**, und klicken Sie auf **Code anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-162">In Solution Explorer, right-click **ctlClock.cs**, and then click **View Code**.</span></span>  
   
-     Der **Code\-Editor** für das Steuerelement wird geöffnet.  
+     <span data-ttu-id="4e5cc-163">Der **Code-Editor** für das Steuerelement wird geöffnet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-163">The **Code Editor** for your control opens.</span></span>  
   
-2.  Suchen Sie die `public partial class ctlClock`\-Anweisung.  Geben Sie unter der öffnenden Klammer \(`{)`\) den folgenden Code ein.  
+2.  <span data-ttu-id="4e5cc-164">Suchen Sie die `public partial class ctlClock`-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-164">Locate the `public partial class ctlClock` statement.</span></span> <span data-ttu-id="4e5cc-165">Geben Sie unter der öffnenden Klammer (`{)` den folgenden Code ein.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-165">Beneath the opening brace (`{)`, type the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private Color colFColor;  
     private Color colBColor;  
     ```  
   
-     Durch diese Anweisungen werden die **Private**\-Variablen erstellt, die Sie zum Speichern der Werte für die zu erstellenden Eigenschaften verwenden.  
+     <span data-ttu-id="4e5cc-166">Diese Anweisungen erstellen die privaten Variablen, die Sie verwenden, um die Werte für die Eigenschaften zu speichern, die Sie gleich erstellen werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-166">These statements create the private variables that you will use to store the values for the properties you are about to create.</span></span>  
   
-3.  Geben Sie unter den Variablendeklarationen aus Schritt 2 den folgenden Code ein.  
+3.  <span data-ttu-id="4e5cc-167">Geben Sie den folgenden Code unter den variablen Deklarationen aus Schritt 2 ein.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-167">Type the following code beneath the variable declarations from step 2.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // Declares the name and type of the property.  
     public Color ClockBackColor  
     {  
@@ -156,63 +151,61 @@ Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benut
     }  
     ```  
   
-     Dieser Code macht zwei benutzerdefinierte Eigenschaften \(`ClockForeColor` und `ClockBackColor`\) für nachfolgende Benutzer des Steuerelements verfügbar.  Die `get`\-Anweisung und die `set`\-Anweisung stellen Speicher zur Verfügung und ermöglichen das Abrufen des Eigenschaftswerts. Darüber hinaus enthalten sie Code, um eine der Eigenschaft angemessene Funktionalität zu implementieren.  
+     <span data-ttu-id="4e5cc-168">Dieser Code stellt nachfolgenden Benutzern dieses Steuerelements zwei benutzerdefinierte Eigenschaften zur Verfügung, `ClockForeColor` und `ClockBackColor`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-168">The preceding code makes two custom properties, `ClockForeColor` and `ClockBackColor`, available to subsequent users of this control.</span></span> <span data-ttu-id="4e5cc-169">Die Anweisungen `get` und `set` ermöglichen das Speichern und Abrufen des Eigenschaftswerts sowie des Codes zum Implementieren der geeigneten Funktionalität der Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-169">The `get` and `set` statements provide for storage and retrieval of the property value, as well as code to implement functionality appropriate to the property.</span></span>  
   
-4.  Klicken Sie im Menü **Datei** auf **Alle speichern**, um das Projekt zu speichern.  
+4.  <span data-ttu-id="4e5cc-170">Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-170">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Testen des Steuerelements  
- Steuerelemente sind keine eigenständigen Anwendungen und müssen daher in einem Container untergebracht werden.  Testen Sie das Laufzeitverhalten des Steuerelements, und probieren Sie seine Eigenschaften mit dem **UserControl\-Testcontainer** aus.  Weitere Informationen finden Sie unter [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="testing-the-control"></a><span data-ttu-id="4e5cc-171">Testen des Steuerelements</span><span class="sxs-lookup"><span data-stu-id="4e5cc-171">Testing the Control</span></span>  
+ <span data-ttu-id="4e5cc-172">Steuerelemente sind keine eigenständigen Anwendungen. Sie müssen in einem Container gehostet werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-172">Controls are not stand-alone applications; they must be hosted in a container.</span></span> <span data-ttu-id="4e5cc-173">Testen Sie das Laufzeitverhalten Ihres Steuerelements, und überprüfen Sie die Eigenschaften im **UserControl-Testcontainer**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-173">Test your control's run-time behavior and exercise its properties with the **UserControl Test Container**.</span></span> <span data-ttu-id="4e5cc-174">Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="4e5cc-174">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-#### So testen Sie das Steuerelement  
+#### <a name="to-test-your-control"></a><span data-ttu-id="4e5cc-175">So testen Sie das Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-175">To test your control</span></span>  
   
-1.  Drücken Sie F5, um das Projekt zu erstellen und das Steuerelement im **UserControl\-Testcontainer** auszuführen.  
+1.  <span data-ttu-id="4e5cc-176">Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl-Testcontainer** aus.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-176">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
   
-2.  Suchen Sie im Eigenschaftenraster des Testcontainers die `ClockBackColor`\-Eigenschaft, und wählen Sie sie anschließend aus, um die Farbpalette anzuzeigen.  
+2.  <span data-ttu-id="4e5cc-177">Suchen Sie im Eigenschaftenraster des Testcontainers die Eigenschaft `ClockBackColor`, und wählen Sie anschließend die Eigenschaft aus, um die Farbpalette anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-177">In the test container's property grid, locate the `ClockBackColor` property, and then select the property to display the color palette.</span></span>  
   
-3.  Klicken Sie auf eine Farbe.  
+3.  <span data-ttu-id="4e5cc-178">Wählen Sie eine Farbe aus, indem sie darauf klicken.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-178">Choose a color by clicking it.</span></span>  
   
-     Die Hintergrundfarbe des Steuerelements ändert sich entsprechend.  
+     <span data-ttu-id="4e5cc-179">Die Hintergrundfarbe des Steuerelements ändert sich in die ausgewählte Farbe.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-179">The background color of your control changes to the color you selected.</span></span>  
   
-4.  Mit dem gleichen Verfahren können Sie prüfen, ob die `ClockForeColor`\-Eigenschaft wie erwartet funktioniert.  
+4.  <span data-ttu-id="4e5cc-180">Verwenden Sie eine ähnliche Abfolge von Ereignissen, um zu überprüfen, ob die Eigenschaft `ClockForeColor` funktioniert wie erwartet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-180">Use a similar sequence of events to verify that the `ClockForeColor` property is functioning as expected.</span></span>  
   
-     In diesem Abschnitt und in den vorherigen Abschnitten wurde veranschaulicht, wie Komponenten und Windows\-Steuerelemente mit Code und Paketen kombiniert werden können, um in Form eines zusammengesetzten Steuerelements benutzerdefinierte Funktionalität zur Verfügung zu stellen.  Es wurde außerdem gezeigt, wie Eigenschaften in einem zusammengesetzten Steuerelement verfügbar gemacht werden und wie ein Steuerelement nach seiner Fertigstellung getestet wird.  Im folgenden Abschnitt erfahren Sie, wie geerbte zusammengesetzte Steuerelemente mithilfe von `ctlClock` als Basis entworfen werden.  
+     <span data-ttu-id="4e5cc-181">In diesem Abschnitt und in den vorherigen Abschnitten haben Sie gesehen, wie Komponenten und Windows-Steuerelemente mit Code und Paketen kombiniert werden können, um benutzerdefinierte Funktionalität in Form eines zusammengesetzten Steuerelements zu bieten.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-181">In this section and the preceding sections, you have seen how components and Windows controls can be combined with code and packaging to provide custom functionality in the form of a composite control.</span></span> <span data-ttu-id="4e5cc-182">Sie haben gelernt, Eigenschaften in Ihrem zusammengesetzten Steuerelement verfügbar zu machen, und das Steuerelement nach Abschluss zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-182">You have learned to expose properties in your composite control, and how to test your control after it is complete.</span></span> <span data-ttu-id="4e5cc-183">Im nächsten Abschnitt erfahren Sie, wie man ein vererbtes zusammengesetztes Steuerelement mithilfe von `ctlClock` als Basis verwendet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-183">In the next section you will learn how to construct an inherited composite control using `ctlClock` as a base.</span></span>  
   
-## Erben von einem zusammengesetzten Steuerelement  
- In den vorherigen Abschnitten haben Sie erfahren, wie Windows\-Steuerelemente, Komponenten und Code zu wiederverwendbaren zusammengesetzten Steuerelementen kombiniert werden.  Das zusammengesetzte Steuerelement kann nun bei der Erstellung weiterer Steuerelemente als Basis dienen.  Der Vorgang der Ableitung einer Klasse aus einer Basisklasse wird als *Vererbung* bezeichnet.  In diesem Abschnitt erstellen Sie ein zusammengesetztes Steuerelement mit der Bezeichnung `ctlAlarmClock`.  Dieses Steuerelement wird von `ctlClock`, seinem übergeordneten Steuerelement, abgeleitet.  Sie erfahren, wie die Funktionalität von `ctlClock` durch Überschreiben der übergeordneten Methoden und Hinzufügen neuer Methoden und Eigenschaften erweitert werden kann.  
+## <a name="inheriting-from-a-composite-control"></a><span data-ttu-id="4e5cc-184">Erben von einem zusammengesetzten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-184">Inheriting from a Composite Control</span></span>  
+ <span data-ttu-id="4e5cc-185">In den vorherigen Abschnitten haben Sie gelernt, wie man Windows-Steuerelemente, Komponenten und Code in wiederverwendbare zusammengesetzte Steuerelemente kombiniert.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-185">In the previous sections, you learned how to combine Windows controls, components, and code into reusable composite controls.</span></span> <span data-ttu-id="4e5cc-186">Das zusammengesetzte Steuerelement kann jetzt als Basis für die Erstellung anderer Steuerelemente verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-186">Your composite control can now be used as a base upon which other controls can be built.</span></span> <span data-ttu-id="4e5cc-187">Der Vorgang, bei dem eine Klasse von einer Basisklasse abgeleitet wird, nennt man *Vererbung*.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-187">The process of deriving a class from a base class is called *inheritance*.</span></span> <span data-ttu-id="4e5cc-188">In diesem Abschnitt erstellen Sie ein zusammengesetztes Steuerelement namens `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-188">In this section, you will create a composite control called `ctlAlarmClock`.</span></span> <span data-ttu-id="4e5cc-189">Dieses Steuerelement wird von seinem übergeordneten Steuerelement, `ctlClock`, abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-189">This control will be derived from its parent control, `ctlClock`.</span></span> <span data-ttu-id="4e5cc-190">Sie erfahren, wie Sie die Funktionalität von `ctlClock` durch Überschreiben der übergeordneten Methoden und Hinzufügen neuer Methoden und Eigenschaften erweitern können.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-190">You will learn to extend the functionality of `ctlClock` by overriding parent methods and adding new methods and properties.</span></span>  
   
- Der erste Schritt bei der Erstellung eines geerbten Steuerelements besteht in dessen Ableitung vom übergeordneten Element.  Bei diesem Vorgang wird ein neues Steuerelement erstellt, das über alle Eigenschaften, Methoden und grafischen Merkmale des übergeordneten Steuerelements verfügt, jedoch selbst auch als Basis für das Hinzufügen neuer oder geänderter Funktionalität dienen kann.  
+ <span data-ttu-id="4e5cc-191">Der erste Schritt beim Erstellen eines geerbten Steuerelements ist das Ableiten vom übergeordneten Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-191">The first step in creating an inherited control is to derive it from its parent.</span></span> <span data-ttu-id="4e5cc-192">Diese Aktion erstellt ein neues Steuerelement, das über alle Eigenschaften, Methoden und grafischen Merkmale des übergeordneten Steuerelements verfügt, aber auch als Basis für das Hinzufügen neuer oder veränderter Funktionalität dienen kann.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-192">This action creates a new control that has all of the properties, methods, and graphical characteristics of the parent control, but can also act as a base for the addition of new or modified functionality.</span></span>  
   
-#### So erstellen Sie das geerbte Steuerelement  
+#### <a name="to-create-the-inherited-control"></a><span data-ttu-id="4e5cc-193">So erstellen Sie das geerbte Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-193">To create the inherited control</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlClockLib**, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Benutzersteuerelement**.  
+1.  <span data-ttu-id="4e5cc-194">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlClockLib**, zeigen Sie auf **Hinzufügen**, und klicken Sie anschließend auf **Benutzersteuerelement**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-194">In Solution Explorer, right-click **ctlClockLib**, point to **Add**, and then click **User Control**.</span></span>  
   
-     Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
+     <span data-ttu-id="4e5cc-195">Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-195">The **Add New Item** dialog box opens.</span></span>  
   
-2.  Wählen Sie die Vorlage **Geerbtes Benutzersteuerelement** aus.  
+2.  <span data-ttu-id="4e5cc-196">Wählen Sie die Vorlage **Geerbtes Benutzersteuerelement**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-196">Select the **Inherited User Control** template.</span></span>  
   
-3.  Geben Sie im Feld **Name** die Bezeichnung `ctlAlarmClock.cs` ein, und klicken Sie auf **Hinzufügen**.  
+3.  <span data-ttu-id="4e5cc-197">Geben Sie im Feld **Name** die Bezeichnung `ctlAlarmClock.cs` ein, und klicken Sie dann auf **Hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-197">In the **Name** box, type `ctlAlarmClock.cs`, and then click **Add**.</span></span>  
   
-     Das Dialogfeld **Vererbungsauswahl** wird angezeigt.  
+     <span data-ttu-id="4e5cc-198">Das Dialogfeld **Vererbungsauswahl** wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-198">The **Inheritance Picker** dialog box appears.</span></span>  
   
-4.  Doppelklicken Sie unter **Komponentenname** auf **ctlClock**.  
+4.  <span data-ttu-id="4e5cc-199">Doppelklicken Sie unter **Komponentenname** auf **ctlClock**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-199">Under **Component Name**, double-click **ctlClock**.</span></span>  
   
-5.  Durchsuchen Sie im Projektmappen\-Explorer die aktuellen Projekte.  
+5.  <span data-ttu-id="4e5cc-200">Durchsuchen Sie die aktuellen Projekte im Projektmappen-Explorer.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-200">In Solution Explorer, browse through the current projects.</span></span>  
   
     > [!NOTE]
-    >  Dem aktuellen Projekt wurde eine Datei mit dem Namen **ctlAlarmClock.cs** hinzugefügt.  
+    >  <span data-ttu-id="4e5cc-201">Eine Datei namens **ctlAlarmClock.cs** wurde zum aktuellen Projekt hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-201">A file called **ctlAlarmClock.cs** has been added to the current project.</span></span>  
   
-### Hinzufügen von Alarm\-Eigenschaften  
- Einem geerbten Steuerelement werden Eigenschaften auf die gleiche Weise hinzugefügt wie einem zusammengesetzten Steuerelement.  Nun fügen Sie mithilfe der Eigenschaftendeklarations\-Syntax dem Steuerelement zwei Eigenschaften hinzu: `AlarmTime` und `AlarmSet`. Die erste speichert den Wert, der Datum und Uhrzeit für das Auslösen des Alarms angibt; die zweite gibt an, ob der Alarm festgelegt wurde.  
+### <a name="adding-the-alarm-properties"></a><span data-ttu-id="4e5cc-202">Hinzufügen von Wecker-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4e5cc-202">Adding the Alarm Properties</span></span>  
+ <span data-ttu-id="4e5cc-203">Eigenschaften werden auf die gleiche Weise zu einem geerbten Steuerelement hinzugefügt wie zu einem zusammengesetzten Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-203">Properties are added to an inherited control in the same way they are added to a composite control.</span></span> <span data-ttu-id="4e5cc-204">Sie verwenden jetzt die Syntax zum Deklarieren von Eigenschaften, um zwei Eigenschaften zu Ihrem Steuerelement hinzuzufügen: `AlarmTime`, wodurch der Wert des Datums und der Uhrzeit gespeichert wird, zu der der Wecker klingelt, und `AlarmSet`, die anzeigt, ob der Wecker eingestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-204">You will now use the property declaration syntax to add two properties to your control: `AlarmTime`, which will store the value of the date and time the alarm is to go off, and `AlarmSet`, which will indicate whether the alarm is set.</span></span>  
   
-##### So fügen Sie dem zusammengesetzten Steuerelement Eigenschaften hinzu  
+##### <a name="to-add-properties-to-your-composite-control"></a><span data-ttu-id="4e5cc-205">So fügen Sie Eigenschaften zum zusammengesetzten Steuerelement hinzu</span><span class="sxs-lookup"><span data-stu-id="4e5cc-205">To add properties to your composite control</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlAlarmClock**, und wählen Sie **Code anzeigen** aus.  
+1.  <span data-ttu-id="4e5cc-206">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlAlarmClock**, und klicken Sie dann auf **Code anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-206">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Code**.</span></span>  
   
-2.  Suchen Sie die `public class`\-Anweisung.  Beachten Sie, dass das Steuerelement von `ctlClockLib.ctlClock` erbt.  Geben Sie unter der öffnenden Klammer \(`{)`\) den folgenden Code ein.  
+2.  <span data-ttu-id="4e5cc-207">Suchen Sie die `public class`-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-207">Locate the `public class` statement.</span></span> <span data-ttu-id="4e5cc-208">Beachten Sie, dass das Steuerelement von `ctlClockLib.ctlClock` erbt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-208">Note that your control inherits from `ctlClockLib.ctlClock`.</span></span> <span data-ttu-id="4e5cc-209">Geben Sie unter der öffnenden Klammer (`{)`-Anweisung den folgenden Code ein.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-209">Beneath the opening brace (`{)` statement, type the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private DateTime dteAlarmTime;  
     private bool blnAlarmSet;  
     // These properties will be declared as public to allow future   
@@ -241,52 +234,48 @@ Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benut
     }  
     ```  
   
-### Erweitern der grafischen Oberfläche des Steuerelements  
- Die visuelle Oberfläche des geerbten Steuerelements stimmt mit der des Steuerelements, von dem es erbt, überein.  Es besteht aus denselben konstituierenden Steuerelementen wie das übergeordnete Steuerelement, aber die Eigenschaften der konstituierenden Steuerelemente sind nur dann verfügbar, wenn sie speziell verfügbar gemacht wurden.  Die grafische Benutzeroberfläche eines geerbten zusammengesetzten Steuerelements kann auf dieselbe Weise ergänzt werden wie die eines anderen zusammengesetzten Steuerelements.  Der nächste Schritt beim Erweitern der grafischen Oberfläche ist das Hinzufügen eines **Label**\-Steuerelements, das beim Erreichen des Alarmzeitpunkts blinkt.  
+### <a name="adding-to-the-graphical-interface-of-the-control"></a><span data-ttu-id="4e5cc-210">Hinzufügen zur grafischen Oberfläche des Steuerelements</span><span class="sxs-lookup"><span data-stu-id="4e5cc-210">Adding to the Graphical Interface of the Control</span></span>  
+ <span data-ttu-id="4e5cc-211">Das geerbte Steuerelement verfügt über eine visuelle Schnittstelle, die mit dem Steuerelement identisch ist, von dem es erbt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-211">Your inherited control has a visual interface that is identical to the control it inherits from.</span></span> <span data-ttu-id="4e5cc-212">Es verfügt über die gleichen konstituierenden Steuerelemente wie das übergeordnete Steuerelement. Allerdings sind die Eigenschaften der konstituierenden Steuerelemente nicht verfügbar, solange sie nicht explizit verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-212">It possesses the same constituent controls as its parent control, but the properties of the constituent controls will not be available unless they were specifically exposed.</span></span> <span data-ttu-id="4e5cc-213">Sie können zur grafischen Schnittstelle des geerbten zusammengesetzten Steuerelements auf die gleiche Weise hinzufügen, wie Sie zu jedem anderen zusammengesetzten Steuerelement hinzufügen würden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-213">You may add to the graphical interface of an inherited composite control in the same manner as you would add to any composite control.</span></span> <span data-ttu-id="4e5cc-214">Um den Vorgang fortzusetzen, zur visuellen Schnittstelle Ihres Weckers hinzuzufügen, fügen Sie ein Label-Steuerelement hinzu, das leuchtet, wenn der Wecker klingelt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-214">To continue adding to your alarm clock's visual interface, you will add a label control that will flash when the alarm is sounding.</span></span>  
   
-##### So fügen Sie das Label\-Steuerelement hinzu  
+##### <a name="to-add-the-label-control"></a><span data-ttu-id="4e5cc-215">So fügen Sie das Label-Steuerelement hinzu</span><span class="sxs-lookup"><span data-stu-id="4e5cc-215">To add the label control</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlAlarmClock**, und wählen Sie **Designer anzeigen** aus.  
+1.  <span data-ttu-id="4e5cc-216">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlAlarmClock**, und klicken Sie dann auf **Designer anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-216">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Designer**.</span></span>  
   
-     Im Hauptfenster wird der Designer für `ctlAlarmClock` geöffnet.  
+     <span data-ttu-id="4e5cc-217">Der Designer für `ctlAlarmClock` wird im Hauptfenster geöffnet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-217">The designer for `ctlAlarmClock` opens in the main window.</span></span>  
   
-2.  Klicken Sie auf den Anzeigebereich des Steuerelements, und zeigen Sie das Eigenschaftenfenster an.  
-  
-    > [!NOTE]
-    >  Zwar werden alle Eigenschaften angezeigt, diese sind jedoch abgeblendet.  Dies weist darauf hin, dass diese Eigenschaften `lblDisplay` angehören und im Eigenschaftenfenster weder geändert werden können noch zugänglich sind.  Standardmäßig sind Steuerelemente in einem zusammengesetzten Steuerelement `private`. Es gibt keine Möglichkeit, auf ihre Eigenschaften zuzugreifen.  
+2.  <span data-ttu-id="4e5cc-218">Klicken Sie auf den Anzeigebereich des Steuerelements, und zeigen Sie das Eigenschaftenfenster an.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-218">Click the display portion of the control, and view the Properties window.</span></span>  
   
     > [!NOTE]
-    >  Wenn nachfolgende Benutzer des zusammengesetzten Steuerelements Zugriff auf die internen Steuerelemente des Benutzersteuerelements haben sollen, müssen sie als `public` oder `protected` deklariert werden.  Mit dem passenden Code können Sie dann die Eigenschaften der im zusammengesetzten Steuerelement enthaltenen Steuerelemente festlegen und ändern.  
+    >  <span data-ttu-id="4e5cc-219">Alle Eigenschaften werden angezeigt, sind aber abgeblendet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-219">While all the properties are displayed, they are dimmed.</span></span> <span data-ttu-id="4e5cc-220">Das bedeutet, dass die Eigenschaften nativ zu `lblDisplay` sind, und dass sie nicht im Eigenschaftenfenster geändert oder auf sie zugegriffen werden können.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-220">This indicates that these properties are native to `lblDisplay` and cannot be modified or accessed in the Properties window.</span></span> <span data-ttu-id="4e5cc-221">Standardmäßig sind in einem zusammengesetzten Steuerelement enthaltene Steuerelemente `private`, und es ist nicht möglich, auf ihre Eigenschaften zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-221">By default, controls contained in a composite control are `private`, and their properties are not accessible by any means.</span></span>  
   
-3.  Fügen Sie dem zusammengesetzten Steuerelement ein <xref:System.Windows.Forms.Label>\-Steuerelement hinzu.  
+    > [!NOTE]
+    >  <span data-ttu-id="4e5cc-222">Wenn Sie möchten, dass nachfolgende Benutzer des zusammengesetzten Steuerelements Zugriff auf interne Steuerelemente haben, deklarieren Sie sie als `public` oder `protected`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-222">If you want subsequent users of your composite control to have access to its internal controls, declare them as `public` or `protected`.</span></span> <span data-ttu-id="4e5cc-223">Dadurch können Sie Eigenschaften von Steuerelementen, die in Ihrem zusammengesetzten Steuerelement enthalten sind, festlegen und ändern, indem Sie den entsprechenden Code verwenden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-223">This will allow you to set and modify properties of controls contained within your composite control by using the appropriate code.</span></span>  
   
-4.  Ziehen Sie das <xref:System.Windows.Forms.Label>\-Steuerelement mit der Maus direkt unter das Anzeigefeld.  Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.  
+3.  <span data-ttu-id="4e5cc-224">Hinzufügen einer <xref:System.Windows.Forms.Label> Steuerelement Ihrer zusammengesetzten Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-224">Add a <xref:System.Windows.Forms.Label> control to your composite control.</span></span>  
   
-    |Property|Einstellung|  
-    |--------------|-----------------|  
-    |**Name**|`lblAlarm`|  
-    |**Text**|Alarm\!|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`false`|  
+4.  <span data-ttu-id="4e5cc-225">Mithilfe der Maus ziehen, um die <xref:System.Windows.Forms.Label> Steuerelement sofort unter Anzeigefelds.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-225">Using the mouse, drag the <xref:System.Windows.Forms.Label> control immediately beneath the display box.</span></span> <span data-ttu-id="4e5cc-226">Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-226">In the Properties window, set the following properties.</span></span>  
   
-### Hinzufügen der Alarmfunktionalität  
- In den vorherigen Prozeduren haben Sie Eigenschaften und ein Steuerelement hinzugefügt, durch die die Alarmfunktionalität im zusammengesetzten Steuerelement aktiviert wird.  In dieser Prozedur wird Code hinzugefügt, um die aktuelle Uhrzeit mit der Alarmzeit zu vergleichen und einen Blinkalarm auszugeben, wenn beide Zeiten gleich sind.  Indem Sie die `timer1_Tick`\-Methode von `ctlClock` überschreiben und ihr zusätzlichen Code hinzufügen, erweitern Sie die Funktionalität von `ctlAlarmClock`, während die gesamte inhärente Funktionalität von `ctlClock` beibehalten bleibt.  
+    |<span data-ttu-id="4e5cc-227">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="4e5cc-227">Property</span></span>|<span data-ttu-id="4e5cc-228">Einstellung</span><span class="sxs-lookup"><span data-stu-id="4e5cc-228">Setting</span></span>|  
+    |--------------|-------------|  
+    |<span data-ttu-id="4e5cc-229">**Name**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-229">**Name**</span></span>|`lblAlarm`|  
+    |<span data-ttu-id="4e5cc-230">**Text**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-230">**Text**</span></span>|<span data-ttu-id="4e5cc-231">**Alarm!**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-231">**Alarm!**</span></span>|  
+    |<span data-ttu-id="4e5cc-232">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-232">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="4e5cc-233">**Visible**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-233">**Visible**</span></span>|`false`|  
   
-##### So überschreiben Sie die Timer1\_Tick\-Methode von "ctlClock"  
+### <a name="adding-the-alarm-functionality"></a><span data-ttu-id="4e5cc-234">Hinzufügen der Wecker-Funktionalität</span><span class="sxs-lookup"><span data-stu-id="4e5cc-234">Adding the Alarm Functionality</span></span>  
+ <span data-ttu-id="4e5cc-235">In den vorherigen Schritten haben Sie Eigenschaften und ein Steuerelement hinzugefügt, dass die Wecker-Funktionalität in Ihrem zusammengesetzten Steuerelement aktiviert.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-235">In the previous procedures, you added properties and a control that will enable alarm functionality in your composite control.</span></span> <span data-ttu-id="4e5cc-236">In diesem Verfahren fügen Sie Code hinzu, um die aktuelle Zeit mit der Weckzeit zu vergleichen, und bei Gleichheit einen Wecker auszulösen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-236">In this procedure, you will add code to compare the current time to the alarm time and, if they are the same, to flash an alarm.</span></span> <span data-ttu-id="4e5cc-237">Durch Überschreiben der Methode `timer1_Tick` von `ctlClock` und Hinzufügen von zusätzlichem Code erweitern Sie die Funktion von `ctlAlarmClock`, während alle geerbten Funktionen von `ctlClock` erhalten bleiben.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-237">By overriding the `timer1_Tick` method of `ctlClock` and adding additional code to it, you will extend the capability of `ctlAlarmClock` while retaining all of the inherent functionality of `ctlClock`.</span></span>  
   
-1.  Suchen Sie im **Code\-Editor** die `private bool blnAlarmSet;`\-Anweisung.  Fügen Sie direkt darunter die folgende Anweisung ein.  
+##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a><span data-ttu-id="4e5cc-238">So überschreiben Sie die Methode „Timer1_Tick“ von „ctlClock“</span><span class="sxs-lookup"><span data-stu-id="4e5cc-238">To override the timer1_Tick method of ctlClock</span></span>  
   
-     \[C\#\]  
+1.  <span data-ttu-id="4e5cc-239">Suchen Sie im **Code-Editor** eine `private bool blnAlarmSet;`-Anweisung hinzu.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-239">In the **Code Editor**, locate the `private bool blnAlarmSet;` statement.</span></span> <span data-ttu-id="4e5cc-240">Fügen Sie direkt darunter die folgende Anweisung hinzu.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-240">Immediately beneath it, add the following statement.</span></span>  
   
-    ```  
+    ```csharp  
     private bool blnColorTicker;  
     ```  
   
-2.  Suchen Sie im **Code\-Editor** am Ende der Klasse die schließende Klammer \(`})`\).  Fügen Sie direkt vor der Klammer den folgenden Code ein.  
+2.  <span data-ttu-id="4e5cc-241">Suchen Sie im **Code-Editor** die schließende Klammer (`})` am Ende der Klasse.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-241">In the **Code Editor**, locate the closing brace (`})` at the end of the class.</span></span> <span data-ttu-id="4e5cc-242">Fügen Sie direkt vor der Klammer den folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-242">Just before the brace, add the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     protected override void timer1_Tick(object sender, System.EventArgs e)  
     {  
         // Calls the Timer1_Tick method of ctlClock.  
@@ -326,32 +315,30 @@ Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benut
     }  
     ```  
   
-     Durch das Hinzufügen dieses Codes werden verschiedene Aufgaben ausgeführt.  Durch die `override`\-Anweisung wird das Steuerelement veranlasst, diese Methode anstelle der vom Basissteuerelement geerbten Methode zu verwenden.  Beim Aufrufen der Methode wird die überschriebene Methode aufgerufen, indem die `base.timer1_Tick`\-Anweisung aufgerufen wird. Dabei wird sichergestellt, dass alle Funktionen des ursprünglichen Steuerelements in diesem Steuerelement reproduziert werden.  Anschließend wird zusätzlicher Code ausgeführt, um die Alarmfunktionalität zu integrieren.  Sobald der Alarm ausgelöst wird, wird ein blinkendes Label\-Steuerelement angezeigt.  
+     <span data-ttu-id="4e5cc-243">Das Hinzufügen dieses Codes dient mehreren Zwecken.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-243">The addition of this code accomplishes several tasks.</span></span> <span data-ttu-id="4e5cc-244">Die Anweisung `override` weist das Steuerelement an, diese Methode statt der Methode zu verwenden, die vom Basissteuerelement geerbt wurde.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-244">The `override` statement directs the control to use this method in place of the method that was inherited from the base control.</span></span> <span data-ttu-id="4e5cc-245">Wenn diese Methode aufgerufen wird, ruft sie durch Aufruf der `base.timer1_Tick`-Anweisung die überschriebene Methode auf. Damit wird sichergestellt, dass die gesamte Funktionalität, die im ursprünglichen Steuerelement enthalten ist, in diesem Steuerelement reproduziert wird.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-245">When this method is called, it calls the method it overrides by invoking the `base.timer1_Tick` statement, ensuring that all of the functionality incorporated in the original control is reproduced in this control.</span></span> <span data-ttu-id="4e5cc-246">Anschließend ruft sie zusätzlichen Code auf, um die Wecker-Funktionalität zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-246">It then runs additional code to incorporate the alarm functionality.</span></span> <span data-ttu-id="4e5cc-247">Ein blinkendes Label-Steuerelement erscheint, wenn der Wecker ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-247">A flashing label control will appear when the alarm occurs.</span></span>  
   
-     Das Alarmsteuerelement ist nun fast fertig.  Es muss nur noch eine Möglichkeit zum Deaktivieren des Alarms implementiert werden.  Hierzu fügen Sie der `lblAlarm_Click`\-Methode Code hinzu.  
+     <span data-ttu-id="4e5cc-248">Das Wecker-Steuerelement ist fast abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-248">Your alarm clock control is almost complete.</span></span> <span data-ttu-id="4e5cc-249">Sie müssen nur noch eine Möglichkeit zum Deaktivieren implementieren.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-249">The only thing that remains is to implement a way to turn it off.</span></span> <span data-ttu-id="4e5cc-250">Zu diesem Zweck fügen Sie Code zur Methode `lblAlarm_Click` hinzu.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-250">To do this, you will add code to the `lblAlarm_Click` method.</span></span>  
   
-##### So implementieren Sie die Methode zum Deaktivieren des Alarms  
+##### <a name="to-implement-the-shutoff-method"></a><span data-ttu-id="4e5cc-251">So implementieren Sie die Methode zum Deaktivieren</span><span class="sxs-lookup"><span data-stu-id="4e5cc-251">To implement the shutoff method</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlAlarmClock.cs**, und wählen Sie **Designer anzeigen** aus.  
+1.  <span data-ttu-id="4e5cc-252">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlAlarmClock.cs**, und klicken Sie dann auf **Designer anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-252">In Solution Explorer, right-click **ctlAlarmClock.cs**, and then click **View Designer**.</span></span>  
   
-     Der Designer wird geöffnet.  
+     <span data-ttu-id="4e5cc-253">Der Designer wird geöffnet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-253">The designer opens.</span></span>  
   
-2.  Fügen Sie dem Steuerelement eine Schaltfläche hinzu.  Legen Sie die Eigenschaften der Schaltfläche wie folgt fest.  
+2.  <span data-ttu-id="4e5cc-254">Fügen Sie eine Schaltfläche zum Steuerelement hinzu.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-254">Add a button to the control.</span></span> <span data-ttu-id="4e5cc-255">Legen Sie die Eigenschaften der Schaltfläche wie folgt fest.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-255">Set the properties of the button as follows.</span></span>  
   
-    |Property|Wert|  
-    |--------------|----------|  
-    |**Name**|`btnAlarmOff`|  
-    |**Text**|Alarm deaktivieren|  
+    |<span data-ttu-id="4e5cc-256">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="4e5cc-256">Property</span></span>|<span data-ttu-id="4e5cc-257">Wert</span><span class="sxs-lookup"><span data-stu-id="4e5cc-257">Value</span></span>|  
+    |--------------|-----------|  
+    |<span data-ttu-id="4e5cc-258">**Name**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-258">**Name**</span></span>|`btnAlarmOff`|  
+    |<span data-ttu-id="4e5cc-259">**Text**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-259">**Text**</span></span>|<span data-ttu-id="4e5cc-260">**Wecker deaktivieren**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-260">**Disable Alarm**</span></span>|  
   
-3.  Doppelklicken Sie im Designer auf **btnAlarmOff**.  
+3.  <span data-ttu-id="4e5cc-261">Doppelklicken Sie im Designer auf **btnAlarmOff**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-261">In the designer, double-click **btnAlarmOff**.</span></span>  
   
-     Der **Code\-Editor** wird geöffnet und springt zur Zeile `private void btnAlarmOff_Click`.  
+     <span data-ttu-id="4e5cc-262">Der **Code-Editor** wird in der Zeile `private void btnAlarmOff_Click` geöffnet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-262">The **Code Editor** opens to the `private void btnAlarmOff_Click` line.</span></span>  
   
-4.  Ändern Sie diese Methode, sodass sie etwa folgendermaßen lautet.  
+4.  <span data-ttu-id="4e5cc-263">Ändern Sie die Methode so, dass sie folgendem Code ähnelt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-263">Modify this method so that it resembles the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void btnAlarmOff_Click(object sender, System.EventArgs e)  
     {  
         // Turns off the alarm.  
@@ -361,49 +348,47 @@ Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benut
     }  
     ```  
   
-5.  Klicken Sie im Menü **Datei** auf **Alle speichern**, um das Projekt zu speichern.  
+5.  <span data-ttu-id="4e5cc-264">Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-264">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-### Verwenden des geerbten Steuerelements in einem Formular  
- Sie können das geerbte Steuerelement auf dieselbe Weise testen wie das Basisklassensteuerelement `ctlClock`: Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl\-Testcontainer** aus.  Weitere Informationen finden Sie unter [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+### <a name="using-the-inherited-control-on-a-form"></a><span data-ttu-id="4e5cc-265">Verwenden des geerbten Steuerelements in einem Formular</span><span class="sxs-lookup"><span data-stu-id="4e5cc-265">Using the Inherited Control on a Form</span></span>  
+ <span data-ttu-id="4e5cc-266">Sie können Ihr geerbtes Steuerelement so testen, wie Sie das `ctlClock`-Steuerelement der Basisklasse getestet haben: Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl Testcontainer** aus.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-266">You can test your inherited control the same way you tested the base class control, `ctlClock`: Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span> <span data-ttu-id="4e5cc-267">Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="4e5cc-267">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- Um das Steuerelement verwenden zu können, müssen Sie es auf einem Formular hosten.  Wie normale zusammengesetzte Steuerelemente auch kann ein geerbtes zusammengesetztes Steuerelement nicht eigenständig ausgeführt werden, sondern muss in einem Formular oder einem anderen Container gehostet werden.  Da `ctlAlarmClock` über eine tiefer gehende Funktionalität verfügt, ist beim Test zusätzlicher Code erforderlich.  In dieser Prozedur wird ein einfaches Programm zum Testen der Funktionalität von `ctlAlarmClock` erstellt.  Sie werden Code zum Festlegen und Anzeigen der `AlarmTime`\-Eigenschaft von `ctlAlarmClock` schreiben und die enthaltenen Funktionen testen.  
+ <span data-ttu-id="4e5cc-268">Sie müssen das Steuerelement auf einem Formular hosten, um es verwenden zu können.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-268">To put your control to use, you will need to host it on a form.</span></span> <span data-ttu-id="4e5cc-269">Wie standardmäßige zusammengesetzten Steuerelemente kann ein geerbtes zusammengesetztes Steuerelement nicht alleine stehen und muss in einem Formular oder einem anderen Container gehostet werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-269">As with a standard composite control, an inherited composite control cannot stand alone and must be hosted in a form or other container.</span></span> <span data-ttu-id="4e5cc-270">Da `ctlAlarmClock` über eine tiefer gehende Funktionalität verfügt, wird zusätzlicher Code für das Testen benötigt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-270">Since `ctlAlarmClock` has a greater depth of functionality, additional code is required to test it.</span></span> <span data-ttu-id="4e5cc-271">In dieser Vorgehensweise schreiben Sie ein einfaches Programm, um die Funktionalität von `ctlAlarmClock` zu testen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-271">In this procedure, you will write a simple program to test the functionality of `ctlAlarmClock`.</span></span> <span data-ttu-id="4e5cc-272">Sie schreiben Code zum Einstellen und Anzeigen der Eigenschaft `AlarmTime` von `ctlAlarmClock` und testen die geerbten Funktionen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-272">You will write code to set and display the `AlarmTime` property of `ctlAlarmClock`, and will test its inherent functions.</span></span>  
   
-##### So erstellen Sie das Steuerelement und fügen es einem Testformular hinzu  
+##### <a name="to-build-and-add-your-control-to-a-test-form"></a><span data-ttu-id="4e5cc-273">So erstellen Sie ein Steuerelement und fügen es zu einem Testformular hinzu</span><span class="sxs-lookup"><span data-stu-id="4e5cc-273">To build and add your control to a test form</span></span>  
   
-1.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **ctlClockLib**, und wählen Sie **Erstellen** aus.  
+1.  <span data-ttu-id="4e5cc-274">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **ctlClockLib**, und klicken Sie auf **Erstellen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-274">In Solution Explorer, right-click **ctlClockLib**, and then click **Build**.</span></span>  
   
-2.  Fügen Sie der Projektmappe ein neues Projekt vom Typ **Windows\-Anwendung** hinzu, und nennen Sie es `Test`.  
+2.  <span data-ttu-id="4e5cc-275">Fügen Sie der Projektmappe ein neues **Windows-Anwendungsprojekt** mit dem Namen `Test` hinzu.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-275">Add a new **Windows Application** project to the solution, and name it `Test`.</span></span>  
   
-3.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf den Knoten **Verweise** des Testprojekts.  Klicken Sie auf **Verweis hinzufügen**, um das Dialogfeld **Verweis hinzufügen** anzuzeigen.  Klicken Sie auf die Registerkarte **Projekte**.  Das `ctlClockLib`\-Projekt wird unter **Projektname** aufgeführt.  Doppelklicken Sie auf das Projekt, um dem Testprojekt den Verweis hinzuzufügen.  
+3.  <span data-ttu-id="4e5cc-276">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Verweise** für das neue Testprojekt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-276">In Solution Explorer, right-click the **References** node for your test project.</span></span> <span data-ttu-id="4e5cc-277">Klicken Sie auf **Verweis hinzufügen**, um das Dialogfeld **Verweis hinzufügen** anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-277">Click **Add Reference** to display the **Add Reference** dialog box.</span></span> <span data-ttu-id="4e5cc-278">Klicken Sie auf die Registerkarte mit der Bezeichnung **Projekte**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-278">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="4e5cc-279">Ihr `ctlClockLib`-Projekt wird unter **Projektname** aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-279">Your `ctlClockLib` project will be listed under **Project Name**.</span></span> <span data-ttu-id="4e5cc-280">Doppelklicken Sie auf das Projekt, um den Verweis auf das Testprojekt hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-280">Double-click the project to add the reference to the test project.</span></span>  
   
-4.  Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **Test**, und wählen Sie **Erstellen** aus.  
+4.  <span data-ttu-id="4e5cc-281">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Test**, und klicken Sie dann auf **Erstellen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-281">In Solution Explorer, right-click **Test**, and then click **Build**.</span></span>  
   
-5.  Erweitern Sie in der **Toolbox** den Knoten **ctlClockLib Components**.  
+5.  <span data-ttu-id="4e5cc-282">Erweitern Sie in der **Toolbox** den Knoten **ctlClockLib Components**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-282">In the **Toolbox**, expand the **ctlClockLib Components** node.</span></span>  
   
-6.  Doppelklicken Sie auf **ctlAlarmClock**, um dem Formular eine Kopie von `ctlAlarmClock` hinzuzufügen.  
+6.  <span data-ttu-id="4e5cc-283">Doppelklicken Sie auf **ctlAlarmClock**, um eine Kopie von `ctlAlarmClock` zu Ihrem Formular hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-283">Double-click **ctlAlarmClock** to add a copy of `ctlAlarmClock` to your form.</span></span>  
   
-7.  Suchen Sie in der **Toolbox** die Bezeichnung **DateTimePicker**, und doppelklicken Sie darauf, um dem Formular ein <xref:System.Windows.Forms.DateTimePicker>\-Steuerelement hinzuzufügen. Fügen Sie anschließend ein <xref:System.Windows.Forms.Label>\-Steuerelement hinzu, indem Sie auf **Label** doppelklicken.  
+7.  <span data-ttu-id="4e5cc-284">In der **Toolbox**, suchen, und doppelklicken Sie auf **DateTimePicker** Hinzufügen einer <xref:System.Windows.Forms.DateTimePicker> -Steuerelement auf das Formular, und fügen Sie dann eine <xref:System.Windows.Forms.Label> Steuerelement durch Doppelklicken auf **Bezeichnung**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-284">In the **Toolbox**, locate and double-click **DateTimePicker** to add a <xref:System.Windows.Forms.DateTimePicker> control to your form, and then add a <xref:System.Windows.Forms.Label> control by double-clicking **Label**.</span></span>  
   
-8.  Platzieren Sie die Steuerelemente mithilfe der Maus gut erreichbar auf dem Formular.  
+8.  <span data-ttu-id="4e5cc-285">Verwenden Sie die Maus, um das Steuerelement an einem geeigneten Ort auf dem Formular zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-285">Use the mouse to position the controls in a convenient place on the form.</span></span>  
   
-9. Legen Sie die Eigenschaften dieser Steuerelemente wie folgt fest.  
+9. <span data-ttu-id="4e5cc-286">Legen Sie die Eigenschaften dieser Steuerelemente wie folgt fest.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-286">Set the properties of these controls in the following manner.</span></span>  
   
-    |Steuerelement|Property|Wert|  
-    |-------------------|--------------|----------|  
-    |`label1`|**Text**|`(leer)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat>|  
+    |<span data-ttu-id="4e5cc-287">Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4e5cc-287">Control</span></span>|<span data-ttu-id="4e5cc-288">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="4e5cc-288">Property</span></span>|<span data-ttu-id="4e5cc-289">Wert</span><span class="sxs-lookup"><span data-stu-id="4e5cc-289">Value</span></span>|  
+    |-------------|--------------|-----------|  
+    |`label1`|<span data-ttu-id="4e5cc-290">**Text**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-290">**Text**</span></span>|`(blank space)`|  
+    ||<span data-ttu-id="4e5cc-291">**Name**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-291">**Name**</span></span>|`lblTest`|  
+    |`dateTimePicker1`|<span data-ttu-id="4e5cc-292">**Name**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-292">**Name**</span></span>|`dtpTest`|  
+    ||<span data-ttu-id="4e5cc-293">**Format**</span><span class="sxs-lookup"><span data-stu-id="4e5cc-293">**Format**</span></span>|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
-10. Doppelklicken Sie im Designer auf **dtpTest**.  
+10. <span data-ttu-id="4e5cc-294">Doppelklicken Sie im Designer auf **dtpTest**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-294">In the designer, double-click **dtpTest**.</span></span>  
   
-     Der **Code\-Editor** wird bei `private void dtpTest_ValueChanged` geöffnet.  
+     <span data-ttu-id="4e5cc-295">Der **Code-Editor** für `private void dtpTest_ValueChanged` wird geöffnet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-295">The **Code Editor** opens to `private void dtpTest_ValueChanged`.</span></span>  
   
-11. Ändern Sie den Code, sodass er etwa folgendermaßen lautet.  
+11. <span data-ttu-id="4e5cc-296">Ändern Sie den Code so, dass er folgendem Beispiel ähnelt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-296">Modify the code so that it resembles the following.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void dtpTest_ValueChanged(object sender, System.EventArgs e)  
     {  
         ctlAlarmClock1.AlarmTime = dtpTest.Value;  
@@ -413,25 +398,25 @@ Mit zusammengesetzten Steuerelementen können benutzerdefinierte grafische Benut
     }  
     ```  
   
-12. Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **Test**, und wählen Sie **Als Startprojekt festlegen**.  
+12. <span data-ttu-id="4e5cc-297">Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Test**, und klicken Sie anschließend auf **Als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-297">In Solution Explorer, right-click **Test**, and then click **Set as StartUp Project**.</span></span>  
   
-13. Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
+13. <span data-ttu-id="4e5cc-298">Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-298">On the **Debug** menu, click **Start Debugging**.</span></span>  
   
-     Das Testprogramm wird gestartet.  Beachten Sie, dass die Uhrzeit im `ctlAlarmClock`\-Steuerelement aktualisiert und die Startzeit im <xref:System.Windows.Forms.DateTimePicker>\-Steuerelement angezeigt wird.  
+     <span data-ttu-id="4e5cc-299">Das Testprogramm wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-299">The test program starts.</span></span> <span data-ttu-id="4e5cc-300">Beachten Sie, dass die aktuelle Uhrzeit, in aktualisiert wird der `ctlAlarmClock` -Steuerelement, und die Startzeit in angezeigt wird der <xref:System.Windows.Forms.DateTimePicker> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-300">Note that the current time is updated in the `ctlAlarmClock` control, and that the starting time is shown in the <xref:System.Windows.Forms.DateTimePicker> control.</span></span>  
   
-14. Klicken Sie in <xref:System.Windows.Forms.DateTimePicker> auf die Stelle, an der die Minuten angezeigt werden.  
+14. <span data-ttu-id="4e5cc-301">Klicken Sie auf die <xref:System.Windows.Forms.DateTimePicker> , in dem die Minuten der Stunde angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-301">Click the <xref:System.Windows.Forms.DateTimePicker> where the minutes of the hour are displayed.</span></span>  
   
-15. Geben Sie über die Tastatur einen Wert für die Minuten ein, der um eine Minute größer als die von `ctlAlarmClock` angezeigte aktuelle Zeitangabe ist.  
+15. <span data-ttu-id="4e5cc-302">Legen Sie mithilfe der Tastatur einen Wert für die Minuten fest, der eine Minute höher ist als die aktuell von `ctlAlarmClock` angezeigte Zeit.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-302">Using the keyboard, set a value for minutes that is one minute greater than the current time shown by `ctlAlarmClock`.</span></span>  
   
-     Die Alarmzeit wird in `lblTest` angezeigt.  Warten Sie, bis die angezeigte Zeitangabe die Zeit der Alarmeinstellung erreicht hat.  Sobald die Zeiten identisch sind, beginnt `lblAlarm` zu blinken.  
+     <span data-ttu-id="4e5cc-303">Die Zeit für die Einstellung des Weckers wird in `lblTest` angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-303">The time for the alarm setting is shown in `lblTest`.</span></span> <span data-ttu-id="4e5cc-304">Warten Sie, bis die angezeigte Zeit die für den Wecker eingestellte Zeit erreicht hat.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-304">Wait for the displayed time to reach the alarm setting time.</span></span> <span data-ttu-id="4e5cc-305">Wenn die angezeigte Zeit die Zeit erreicht, auf die der Wecker eingestellt ist, leuchtet `lblAlarm`.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-305">When the displayed time reaches the time to which the alarm is set, the `lblAlarm` will flash.</span></span>  
   
-16. Deaktivieren Sie die Alarmfunktion, indem Sie auf `btnAlarmOff` klicken.  Jetzt können Sie die Alarmeinstellung erneut vornehmen.  
+16. <span data-ttu-id="4e5cc-306">Deaktivieren Sie den Wecker, indem Sie auf `btnAlarmOff` klicken.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-306">Turn off the alarm by clicking `btnAlarmOff`.</span></span> <span data-ttu-id="4e5cc-307">Sie können den Wecker nun zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-307">You may now reset the alarm.</span></span>  
   
-     In dieser exemplarischen Vorgehensweise wurden einige wichtige Konzepte behandelt.  Sie wissen nun, wie durch Kombination von Steuerelementen und Komponenten in einem Container für zusammengesetzte Steuerelemente ein zusammengesetztes Steuerelement erstellt wird.  Sie haben gelernt, wie dem Steuerelement Eigenschaften hinzugefügt werden und wie Code zur Implementierung benutzerdefinierter Funktionalität geschrieben wird.  Im letzten Abschnitt haben Sie erfahren, wie die Funktionen eines beliebigen zusammengesetzten Steuerelements durch Vererbung erweitert werden und wie die Funktionalität von Hostmethoden durch Überschreiben geändert wird.  
+     <span data-ttu-id="4e5cc-308">In dieser exemplarischen Vorgehensweise wurden zahlreiche wichtige Konzepte behandelt.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-308">This walkthrough has covered a number of key concepts.</span></span> <span data-ttu-id="4e5cc-309">Sie haben gelernt, ein zusammengesetztes Steuerelement zu erstellen, indem Sie Steuerelemente und Komponenten in einem Container für zusammengesetzte Steuerelemente kombiniert haben.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-309">You have learned to create a composite control by combining controls and components into a composite control container.</span></span> <span data-ttu-id="4e5cc-310">Sie haben gelernt, Eigenschaften zu Ihrem Steuerelement hinzuzufügen und Code für das Implementieren benutzerdefinierter Funktionalität zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-310">You have learned to add properties to your control, and to write code to implement custom functionality.</span></span> <span data-ttu-id="4e5cc-311">Im letzten Abschnitt haben Sie gelernt, die Funktionalität eines bestimmten zusammengesetzten Steuerelements durch Vererbung zu erweitern und die Funktionalität von Host-Methoden durch außer Kraft setzen dieser Methoden zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4e5cc-311">In the last section, you learned to extend the functionality of a given composite control through inheritance, and to alter the functionality of host methods by overriding those methods.</span></span>  
   
-## Siehe auch  
- [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [Programming with Components](../Topic/Programming%20with%20Components.md)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)   
- [Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld "Toolboxelemente auswählen"](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms\-Steuerelement mit Visual C\#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a><span data-ttu-id="4e5cc-312">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4e5cc-312">See Also</span></span>  
+ [<span data-ttu-id="4e5cc-313">Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)</span><span class="sxs-lookup"><span data-stu-id="4e5cc-313">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="4e5cc-314">Programmieren mit Komponenten</span><span class="sxs-lookup"><span data-stu-id="4e5cc-314">Programming with Components</span></span>](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [<span data-ttu-id="4e5cc-315">Exemplarische Vorgehensweise: Erstellen von Komponenten</span><span class="sxs-lookup"><span data-stu-id="4e5cc-315">Component Authoring Walkthroughs</span></span>](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [<span data-ttu-id="4e5cc-316">Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“</span><span class="sxs-lookup"><span data-stu-id="4e5cc-316">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [<span data-ttu-id="4e5cc-317">Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#</span><span class="sxs-lookup"><span data-stu-id="4e5cc-317">Walkthrough: Inheriting from a Windows Forms Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

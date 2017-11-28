@@ -1,32 +1,35 @@
 ---
-title: "mc:Ignorable-Attribut | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MC-XML-Namespacepräfix"
-  - "mc:Ignorable-Attribut"
-  - "mc:ProcessContent-Attribut"
-  - "XAML, mc:Ignorable-Attribut"
-  - "XAML, mc:ProcessContent-Attribut"
-  - "XML, MC-Namespacepräfix"
+title: mc:Ignorable-Attribut
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mc XML namespace prefix [WPF]
+- mc:Ignorable attribute
+- XML [WPF], mc namespace prefix
+- XAML [WPF], mc:Ignorable attribute
+- mc:ProcessContent attribute
+- XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3be5949ee26fbb21d913a7aefe2664202c5bef38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# mc:Ignorable-Attribut
-Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]\-Namespacepräfixe, die in einer Markupdatei gefunden wurden, möglicherweise von einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor ignoriert werden.  Das `mc:Ignorable`\-Attribut unterstützt Markupkompatibilität sowohl für benutzerdefinierte Namespace\-Zuordnungen als auch für die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Versionsverwaltung.  
+# <a name="mcignorable-attribute"></a><span data-ttu-id="fa5a4-102">mc:Ignorable-Attribut</span><span class="sxs-lookup"><span data-stu-id="fa5a4-102">mc:Ignorable Attribute</span></span>
+<span data-ttu-id="fa5a4-103">Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacepräfixe, die in einer Markupdatei gefunden können ignoriert werden, indem eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-103">Specifies which [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace prefixes encountered in a markup file may be ignored by a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor.</span></span> <span data-ttu-id="fa5a4-104">Die `mc:Ignorable` Attribut unterstützt Markupkompatibilität für benutzerdefinierte Namespacezuordnung und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versionsverwaltung.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-104">The `mc:Ignorable` attribute supports markup compatibility both for custom namespace mapping and for [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versioning.</span></span>  
   
-## Verwendung von XAML\-Attributen \(Einzelnes Präfix\)  
+## <a name="xaml-attribute-usage-single-prefix"></a><span data-ttu-id="fa5a4-105">Verwendung von XAML-Attributen (Präfix)</span><span class="sxs-lookup"><span data-stu-id="fa5a4-105">XAML Attribute Usage (Single Prefix)</span></span>  
   
 ```  
 <object  
@@ -37,43 +40,43 @@ Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
 </object>  
 ```  
   
-## Verwendung von XAML\-Attributen \(Zwei Präfixe\)  
+## <a name="xaml-attribute-usage-two-prefixes"></a><span data-ttu-id="fa5a4-106">Verwendung von XAML-Attributen (zwei Präfixe)</span><span class="sxs-lookup"><span data-stu-id="fa5a4-106">XAML Attribute Usage (Two Prefixes)</span></span>  
   
 ```  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-  mc:Ignorable="ignorablePrefix1 ignorablePrefix2"...>  
+  mc:Ignorable="ignorablePrefix1 ignorablePrefix2"...>  
     <ignorablePrefix1:ThisElementCanBeIgnored/>  
 </object>  
 ```  
   
-## XAML\-Werte  
+## <a name="xaml-values"></a><span data-ttu-id="fa5a4-107">XAML-Werte</span><span class="sxs-lookup"><span data-stu-id="fa5a4-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|*ignorablePrefix, ignorablePrefix1 usw.*|Eine beliebige gültige Präfixzeichenfolge, gemäß XML 1.0\-Spezifikation.|  
-|*ignorableUri*|Ein beliebiger gültiger URI zum Angeben eines Namespaces, gemäß XML 1.0\-Spezifikation.|  
-|*ThisElementCanBeIgnored*|Ein Element, das von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Prozessorimplementierungen ignoriert werden kann, wenn der zugrunde liegende Typ nicht aufgelöst werden kann.|  
+|<span data-ttu-id="fa5a4-108">*IgnorablePrefix, ignorablePrefix1 usw..*</span><span class="sxs-lookup"><span data-stu-id="fa5a4-108">*ignorablePrefix, ignorablePrefix1, etc.*</span></span>|<span data-ttu-id="fa5a4-109">Jede gültige Präfixzeichenfolge gemäß der XML 1.0-Spezifikation.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-109">Any valid prefix string, per the XML 1.0 specification.</span></span>|  
+|<span data-ttu-id="fa5a4-110">*ignorableUri*</span><span class="sxs-lookup"><span data-stu-id="fa5a4-110">*ignorableUri*</span></span>|<span data-ttu-id="fa5a4-111">Ein beliebiger gültiger URI zum Angeben eines Namespaces, gemäß der XML 1.0-Spezifikation.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-111">Any valid URI for designating a namespace, per the XML 1.0 specification.</span></span>|  
+|<span data-ttu-id="fa5a4-112">*ThisElementCanBeIgnored*</span><span class="sxs-lookup"><span data-stu-id="fa5a4-112">*ThisElementCanBeIgnored*</span></span>|<span data-ttu-id="fa5a4-113">Ein Element, das vom ignoriert werden sollen, kann [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Implementierungen von ereignissprozessoren, wenn der zugrunde liegende Typ aufgelöst werden kann.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-113">An element that can be ignored by [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] processor implementations, if the underlying type cannot be resolved.</span></span>|  
   
-## Hinweise  
- Das `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]\-Namespacepräfix ist die empfohlene Präfixkonvention für die Zuordnung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Compatibility\-Namespaces [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].  
+## <a name="remarks"></a><span data-ttu-id="fa5a4-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fa5a4-114">Remarks</span></span>  
+ <span data-ttu-id="fa5a4-115">Die `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacepräfix ist die empfohlene Präfix Konvention, die zu verwendende Zuordnung der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Kompatibilität Namespace [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fa5a4-115">The `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace prefix is the recommended prefix convention to use when mapping the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compatibility namespace [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].</span></span>  
   
- Elemente oder Attribute, bei denen der Präfixabschnitt des Elementnamens als `mc:Ignorable` identifiziert wird, lösen keine Fehler aus, wenn sie von einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor verarbeitet werden.  Wenn dieses Attribut nicht zu einem zugrunde liegenden Typ oder Programmierkonstrukt aufgelöst werden konnte, wird dieses Element ignoriert.  Beachten Sie jedoch, dass ignorierte Elemente noch immer zusätzliche Analysefehler für weitere Elementanforderungen auslösen können, die Nebeneffekte des nicht verarbeiteten Elements sind.  So erfordert beispielsweise ein bestimmtes Elementinhaltsmodell möglicherweise genau ein untergeordnetes Element. Wenn jedoch das angegebene untergeordnete Element in einem `mc:Ignorable`\-Präfix enthalten war und nicht zu einem Typ aufgelöst werden konnte, löst der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor möglicherweise einen Fehler aus.  
+ <span data-ttu-id="fa5a4-116">Elemente oder Attribute, in denen die Präfixteil des Elementnamens als prognostiziert `mc:Ignorable` löst keine Fehler bei der Verarbeitung einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-116">Elements or attributes where the prefix portion of the element name are identified as `mc:Ignorable` will not raise errors when processed by a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor.</span></span> <span data-ttu-id="fa5a4-117">Wenn dieses Attribut nicht in einen zugrunde liegenden Typ oder einen Programmiermodell aufgelöst werden konnte, wird dieses Element ignoriert.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-117">If that attribute could not be resolved to an underlying type or programming construct, then that element is ignored.</span></span> <span data-ttu-id="fa5a4-118">Beachten Sie jedoch, dass ignorierter Elemente möglicherweise noch weitere Analysefehler für zusätzliche Element Anforderungen generiert, die Nebeneffekte des jeweiligen Elements, das nicht verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-118">Note however that ignored elements might still generate additional parsing errors for additional element requirements that are side effects of that element not being processed.</span></span> <span data-ttu-id="fa5a4-119">Beispielsweise kann ein bestimmtes Elementinhaltsmodell erfordern genau ein untergeordnetes Element, wenn das angegebene untergeordnete Element in wurde einer `mc:Ignorable` Präfix und das angegebene untergeordnete Element konnte nicht in einen Typ aufgelöst werden und dann die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor möglicherweise ein Fehler ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-119">For instance, a particular element content model might require exactly one child element, but if the specified child element was in an `mc:Ignorable` prefix, and the specified child element could not be resolved to a type, then the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor might raise an error.</span></span>  
   
- `mc:Ignorable` gilt nur für Namespacezuordnungen für Bezeichnerzeichenfolgen.  `mc:Ignorable` gilt nicht für Namespacezuordnungen zu Assemblys, die einen [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]\-Namespace und eine Assembly angeben \(oder standardmäßig die ausführbare Datei als Assembly haben\).  
+ <span data-ttu-id="fa5a4-120">`mc:Ignorable`gilt nur für Namespacezuordnungen in Bezeichnerzeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-120">`mc:Ignorable` only applies to namespace mappings to identifier strings.</span></span> <span data-ttu-id="fa5a4-121">`mc:Ignorable`gilt nicht für Namespacezuordnungen, die in Assemblys, die angeben einer [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespace und eine Assembly (oder standardmäßig auf die aktuelle ausführbare Datei, wie die Assembly befinden).</span><span class="sxs-lookup"><span data-stu-id="fa5a4-121">`mc:Ignorable` does not apply to namespace mappings into assemblies, which specify a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] namespace and an assembly (or default to the current executable as the assembly).</span></span>  
   
- Wenn Sie einen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor implementieren, darf Ihre Prozessorimplementierung keine Analyse\- oder Verarbeitungsfehler bei der Typauflösung für ein beliebiges Element oder ein Attribut auslösen, das durch ein Präfix als `mc:Ignorable` identifiziert wurde.  Ihre Prozessorimplementierung kann dennoch Ausnahmen auslösen, die Nebeneffekte davon sind, dass ein Element nicht geladen oder verarbeitet werden kann, wie das zuvor genannte untergeordnete Element.  
+ <span data-ttu-id="fa5a4-122">Wenn Sie implementieren eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor, wird Ihre-prozessorimplementierung muss nicht ausgelöst, analysieren oder Verarbeitungsfehlern auf typauflösung für ein Element oder Attribut, das durch ein Präfix gekennzeichnet werden, die als identifiziert wird `mc:Ignorable`.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-122">If you are implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor, your processor implementation must not raise parsing or processing errors on type resolution for any element or attribute that is qualified by a prefix that is identified as `mc:Ignorable`.</span></span> <span data-ttu-id="fa5a4-123">Aber Ihre-prozessorimplementierung kann weiterhin, die ein sekundäres Ergebnis eines Elements, das wegen eines Fehlers beim Laden oder verarbeitet werden, z. B. das ein untergeordnetes Element Beispiel weiter oben genannten Ausnahmen auslösen.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-123">But your processor implementation can still raise exceptions that are a secondary result of an element failing to load or be processed, such as the one-child element example given earlier.</span></span>  
   
- Standardmäßig ignoriert ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor Inhalte innerhalb eines ignorierten Elements.  Sie können jedoch ein zusätzliches Attribut angeben, [mc:ProcessContent\-Attribut](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), um festzulegen, dass innerhalb eines ignorierten Elements vom nächsten verfügbaren übergeordneten Element eine kontinuierliche Verarbeitung des Inhalts ausgeführt werden muss.  
+ <span data-ttu-id="fa5a4-124">Wird standardmäßig ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor ignoriert Inhalte innerhalb eines Elements wird ignoriert.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-124">By default, a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor will ignore content within an ignored element.</span></span> <span data-ttu-id="fa5a4-125">Sie können jedoch ein zusätzliches Attribut angeben [MC: ProcessContent Attribut](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), kontinuierliche Verarbeitung von Inhalten innerhalb eines ignorierten Elements vom nächsten verfügbaren übergeordneten Element erforderlich.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-125">However, you can specify an additional attribute, [mc:ProcessContent Attribute](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), to require continued processing of content within an ignored element by the next available parent element.</span></span>  
   
- Mehrere Präfixe können im Attribut angegeben werden, indem mindestens ein Leerzeichen als Trennzeichen verwendet wird, z. B.: `mc:Ignorable="ignore1 ignore2"`.  
+ <span data-ttu-id="fa5a4-126">Mehrere Präfixe können im Attribut, z. B. über eine oder mehrere Leerzeichen als Trennzeichen, angegeben werden: `mc:Ignorable="ignore1 ignore2"`.</span><span class="sxs-lookup"><span data-stu-id="fa5a4-126">Multiple prefixes can be specified in the attribute, using one or more whitespace characters as the separator, for example: `mc:Ignorable="ignore1 ignore2"`.</span></span>  
   
- Der [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]\-Namespace definiert andere Elemente und Attribute, die nicht innerhalb dieses [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]\-Bereichs dokumentiert sind.  Weitere Informationen finden Sie unter [Spezifikation für die XML\-Markupkompatibilität](http://go.microsoft.com/fwlink/?LinkId=73824).  
+ <span data-ttu-id="fa5a4-127">Die [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] -Namespace definiert, andere Elemente und Attribute, die innerhalb dieses Bereichs, der nicht dokumentiert sind die [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fa5a4-127">The [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] namespace defines other elements and attributes that are not documented within this area of the [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)].</span></span> <span data-ttu-id="fa5a4-128">Weitere Informationen finden Sie unter [Kompatibilität-Spezifikation für XML-Markup](http://go.microsoft.com/fwlink/?LinkId=73824).</span><span class="sxs-lookup"><span data-stu-id="fa5a4-128">For more information, see [XML Markup Compatibility Specification](http://go.microsoft.com/fwlink/?LinkId=73824).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Markup.XamlReader>   
- [PresentationOptions:Freeze\-Attribut](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)   
- [Übersicht über XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="fa5a4-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa5a4-129">See Also</span></span>  
+ <xref:System.Windows.Markup.XamlReader>  
+ [<span data-ttu-id="fa5a4-130">PresentationOptions:Freeze-Attribut</span><span class="sxs-lookup"><span data-stu-id="fa5a4-130">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)  
+ [<span data-ttu-id="fa5a4-131">Übersicht über XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="fa5a4-131">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="fa5a4-132">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="fa5a4-132">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

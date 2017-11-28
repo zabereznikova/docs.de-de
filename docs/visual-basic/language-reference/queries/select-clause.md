@@ -1,68 +1,66 @@
 ---
-title: "Select Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySelect"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Select statement"
-  - "Select clause"
-  - "queries [Visual Basic], Select"
+title: Select-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySelect
+helpviewer_keywords:
+- Select statement [Visual Basic]
+- Select clause [Visual Basic]
+- queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Select Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Definiert das Ergebnis einer Abfrage.  
+# <a name="select-clause-visual-basic"></a><span data-ttu-id="55a1b-102">Select-Klausel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55a1b-102">Select Clause (Visual Basic)</span></span>
+<span data-ttu-id="55a1b-103">Definiert das Ergebnis einer Abfrage an.</span><span class="sxs-lookup"><span data-stu-id="55a1b-103">Defines the result of a query.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="55a1b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="55a1b-104">Syntax</span></span>  
   
 ```  
 Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="55a1b-105">Teile</span><span class="sxs-lookup"><span data-stu-id="55a1b-105">Parts</span></span>  
  `var1`  
- Optional.  Ein Alias, der verwendet werden kann, um auf die Ergebnisse des Spaltenausdrucks zu verweisen.  
+ <span data-ttu-id="55a1b-106">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="55a1b-106">Optional.</span></span> <span data-ttu-id="55a1b-107">Ein Alias, der verwendet werden kann, um die Ergebnisse des Spaltenausdrucks verweisen.</span><span class="sxs-lookup"><span data-stu-id="55a1b-107">An alias that can be used to reference the results of the column expression.</span></span>  
   
  `fieldName1`  
- Erforderlich.  Der Name des Felds, das im Abfrageergebnis zurückgegeben werden soll.  
+ <span data-ttu-id="55a1b-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="55a1b-108">Required.</span></span> <span data-ttu-id="55a1b-109">Der Name des Felds in den Abfrageergebnissen zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="55a1b-109">The name of the field to return in the query result.</span></span>  
   
-## Hinweise  
- Mit der `Select`\-Klausel können Sie die Ergebnisse definieren, die in einer Abfrage zurückgegeben werden sollen.  Dadurch können Sie die Member eines neuen anonymen Typs definieren, der von einer Abfrage erstellt wird, oder auf die Member eines benannten Typs zugreifen, der von einer Abfrage zurückgegeben wird.  Eine Abfrage muss keine `Select`\-Klausel enthalten.  Wenn Sie keine `Select`\-Klausel angeben, wird von der Abfrage ein Typ auf Grundlage aller Member der Bereichsvariablen zurückgegeben, die für den aktuellen Bereich angegeben wurden.  Weitere Informationen finden Sie unter [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  Wenn eine Abfrage einen benannten Typ erstellt, wird ein Ergebnis des Typs <xref:System.Collections.Generic.IEnumerable%601> zurückgegeben. Dabei ist `T` der erstellte Typ.  
+## <a name="remarks"></a><span data-ttu-id="55a1b-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="55a1b-110">Remarks</span></span>  
+ <span data-ttu-id="55a1b-111">Sie können die `Select` -Klausel, um die Ergebnisse von einer Abfrage zurückzugebenden definieren.</span><span class="sxs-lookup"><span data-stu-id="55a1b-111">You can use the `Select` clause to define the results to return from a query.</span></span> <span data-ttu-id="55a1b-112">So können Sie entweder die Member des ein neuer anonymer Typ definieren, die von einer Abfrage erstellt wird, oder für die Member eines benannten Typs gelten, die von einer Abfrage zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="55a1b-112">This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query.</span></span> <span data-ttu-id="55a1b-113">Die `Select` -Klausel ist nicht für eine Abfrage erforderlich.</span><span class="sxs-lookup"><span data-stu-id="55a1b-113">The `Select` clause is not required for a query.</span></span> <span data-ttu-id="55a1b-114">Wenn kein `Select` -Klausel angegeben ist, die Abfrage gibt einen Typ basierend auf alle Mitglieder der Bereichsvariablen für den aktuellen Bereich zurück.</span><span class="sxs-lookup"><span data-stu-id="55a1b-114">If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope.</span></span> <span data-ttu-id="55a1b-115">Weitere Informationen finden Sie unter [Anonyme Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="55a1b-115">For more information, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span> <span data-ttu-id="55a1b-116">Wenn eine Abfrage einen benannten Typ erstellt, wird ein Ergebnis vom Typ zurückgegeben <xref:System.Collections.Generic.IEnumerable%601> , in dem `T` der erstellte Typ ist.</span><span class="sxs-lookup"><span data-stu-id="55a1b-116">When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.</span></span>  
   
- Die `Select`\-Klausel kann auf alle Variablen des aktuellen Bereichs verweisen.  Hierzu gehören die in der `From`\-Klausel \(oder den `From`\-Klauseln\) angegebenen Bereichsvariablen.  Weiterhin gehören hierzu alle neuen, in der `Aggregate`\-Klausel, der `Let`\-Klausel, der `Group By`\-Klausel oder der `Group Join`\-Klausel mit einem Alias erstellten Variablen, sowie die Variablen einer im Abfrageausdruck vorangestellten `Select`\-Klausel.  Die `Select`\-Klausel kann auch statische Werte enthalten.  Beispielsweise enthält das folgende Codebeispiel einen Abfrageausdruck, in dem die `Select`\-Klausel das Abfrageergebnis als einen neuen anonymen Typ mit den vier Membern `ProductName`, `Price`, `Discount` und `DiscountedPrice` definiert.  Die Werte für den `ProductName`\-Member und den `Price`\-Member werden aus der Bereichsvariablen product übernommen, die in der `From`\-Klausel definiert wird.  Der Wert für den `DiscountedPrice`\-Member wird in der `Let`\-Klausel berechnet.  Der `Discount`\-Member ist ein statischer Wert.  
+ <span data-ttu-id="55a1b-117">Die `Select` -Klausel kann alle Variablen im aktuellen Bereich verweisen.</span><span class="sxs-lookup"><span data-stu-id="55a1b-117">The `Select` clause can reference any variables in the current scope.</span></span> <span data-ttu-id="55a1b-118">Dies schließt Bereichsvariablen der `From` -Klausel (oder `From` Klauseln).</span><span class="sxs-lookup"><span data-stu-id="55a1b-118">This includes range variables identified in the `From` clause (or `From` clauses).</span></span> <span data-ttu-id="55a1b-119">Es enthält auch neue Variablen mit einem Alias erstellt die `Aggregate`, `Let`, `Group By`, oder `Group Join` Klauseln oder Variablen von einer früheren `Select` -Klausel in der Abfrageausdruck.</span><span class="sxs-lookup"><span data-stu-id="55a1b-119">It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression.</span></span> <span data-ttu-id="55a1b-120">Die `Select` -Klausel kann auch statische Werte enthalten.</span><span class="sxs-lookup"><span data-stu-id="55a1b-120">The `Select` clause can also include static values.</span></span> <span data-ttu-id="55a1b-121">Z. B. das folgende Codebeispiel enthält einen Abfrageausdruck, in dem die `Select` -Klausel definiert das Abfrageergebnis als ein neuer anonymer Typ mit vier Mitglieder: `ProductName`, `Price`, `Discount`, und `DiscountedPrice`.</span><span class="sxs-lookup"><span data-stu-id="55a1b-121">For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`.</span></span> <span data-ttu-id="55a1b-122">Die `ProductName` und `Price` Elementwerten stammen aus der Produkt-Bereichsvariablen, die in definiert ist die `From` Klausel.</span><span class="sxs-lookup"><span data-stu-id="55a1b-122">The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause.</span></span> <span data-ttu-id="55a1b-123">Die `DiscountedPrice` Elementwert wird berechnet, der `Let` Klausel.</span><span class="sxs-lookup"><span data-stu-id="55a1b-123">The `DiscountedPrice` member value is calculated in the `Let` clause.</span></span> <span data-ttu-id="55a1b-124">Die `Discount` angehört, einen statischen Wert.</span><span class="sxs-lookup"><span data-stu-id="55a1b-124">The `Discount` member is a static value.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
   
- Die `Select`\-Klausel führt einen neuen Satz von Bereichsvariablen für nachfolgende Abfrageklauseln ein. Die vorherigen Bereichsvariablen befinden sich nicht mehr im Gültigkeitsbereich.  Die letzte `Select`\-Klausel in einem Abfrageausdruck legt den Rückgabewert der Abfrage fest.  Beispielsweise werden in der folgenden Abfrage für jede Kundenbestellung, deren Gesamtsumme größer als 500 ist, der Firmenname und die Auftrags\-ID zurückgegeben.  Die erste `Select`\-Klausel gibt die Bereichsvariablen für die `Where`\-Klausel und die zweite `Select`\-Klausel an.  Die zweite `Select`\-Klausel gibt die von der Abfrage zurückgegebenen Werte als neuen anonymen Typ an.  
+ <span data-ttu-id="55a1b-125">Die `Select` -Klausel führt einen neuen Satz von Bereichsvariablen für nachfolgende Abfrageklauseln und vorherigen Bereichsvariablen sind nicht mehr im Gültigkeitsbereich.</span><span class="sxs-lookup"><span data-stu-id="55a1b-125">The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope.</span></span> <span data-ttu-id="55a1b-126">Der letzte `Select` -Klausel in einem Abfrageausdruck bestimmt den Rückgabewert der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="55a1b-126">The last `Select` clause in a query expression determines the return value of the query.</span></span> <span data-ttu-id="55a1b-127">Die folgende Abfrage gibt z. B. das Unternehmen Name "und" Order ID für jede kundenbestellung für die die Summe 500 übersteigt.</span><span class="sxs-lookup"><span data-stu-id="55a1b-127">For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500.</span></span> <span data-ttu-id="55a1b-128">Die erste `Select` -Klausel kennzeichnet die Bereichsvariablen für die `Where` -Klausel und das zweite `Select` Klausel.</span><span class="sxs-lookup"><span data-stu-id="55a1b-128">The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause.</span></span> <span data-ttu-id="55a1b-129">Die zweite `Select` -Klausel kennzeichnet die Werte, die von der Abfrage als ein neuer anonymer Typ zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="55a1b-129">The second `Select` clause identifies the values returned by the query as a new anonymous type.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
   
- Wenn die `Select`\-Klausel ein einzelnes zurückzugebendes Element angibt, wird vom Abfrageausdruck eine Auflistung des Typs dieses einzelnen Elements zurückgegeben.  Wenn die `Select`\-Klausel mehrere zurückzugebende Elemente angibt, wird vom Abfrageausdruck eine Auflistung eines neuen anonymen Typs zurückgegeben, der auf den ausgewählten Elementen basiert.  Beispielsweise geben die beiden folgenden Abfragen auf Grundlage der `Select`\-Klausel Auflistungen von zwei verschiedenen Typen zurück.  Die erste Abfrage gibt eine Auflistung von Firmennamen als Zeichenfolgen zurück.  Die zweite Abfrage gibt eine Auflistung von `Customer`\-Objekten mit den entsprechenden Firmennamen und Adressinformationen zurück.  
+ <span data-ttu-id="55a1b-130">Wenn die `Select` -Klausel kennzeichnet ein einzelnes Element zurückgeben, der Abfrageausdruck gibt eine Auflistung des Typs dieses einzelnen Elements zurück.</span><span class="sxs-lookup"><span data-stu-id="55a1b-130">If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item.</span></span> <span data-ttu-id="55a1b-131">Wenn die `Select` -Klausel kennzeichnet mehrere Elemente zurückgegeben, der Abfrageausdruck gibt eine Auflistung ein neuer anonymer Typ, der auf Basis der ausgewählten Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="55a1b-131">If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items.</span></span> <span data-ttu-id="55a1b-132">Beispielsweise die folgenden beiden Abfragen zurückgeben Auflistungen von zwei verschiedenen Typen auf Grundlage der `Select` Klausel.</span><span class="sxs-lookup"><span data-stu-id="55a1b-132">For example, the following two queries return collections of two different types based on the `Select` clause.</span></span> <span data-ttu-id="55a1b-133">Die erste Abfrage gibt eine Auflistung von Firmennamen als Zeichenfolgen zurück.</span><span class="sxs-lookup"><span data-stu-id="55a1b-133">The first query returns a collection of company names as strings.</span></span> <span data-ttu-id="55a1b-134">Die zweite Abfrage gibt eine Auflistung von `Customer` Objekte, die mit den Firmennamen und Adressinformationen aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="55a1b-134">The second query returns a collection of `Customer` objects populated with the company names and address information.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
   
-## Beispiel  
- Der folgende Abfrageausdruck verwendet eine `From`\-Klausel zum Deklarieren einer Bereichsvariablen `cust` für die `customers`\-Auflistung.  Mit der `Select`\-Klausel werden der Kundenname und die ID ausgewählt und die `CompanyName`\-Spalte sowie die `CustomerID`\-Spalte der neuen Bereichsvariablen gefüllt.  Die `For Each`\-Anweisung durchläuft alle zurückgegebenen Objekte und zeigt für jeden Datensatz die `CompanyName`\-Spalte und die `CustomerID`\-Spalte an.  
+## <a name="example"></a><span data-ttu-id="55a1b-135">Beispiel</span><span class="sxs-lookup"><span data-stu-id="55a1b-135">Example</span></span>  
+ <span data-ttu-id="55a1b-136">Die folgende Abfrage Ausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für die `customers` Auflistung.</span><span class="sxs-lookup"><span data-stu-id="55a1b-136">The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection.</span></span> <span data-ttu-id="55a1b-137">Die `Select` -Klausel wählt die Kundennamen- und ID-Wert, und füllt die `CompanyName` und `CustomerID` Spalten der neuen Bereichsvariablen.</span><span class="sxs-lookup"><span data-stu-id="55a1b-137">The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable.</span></span> <span data-ttu-id="55a1b-138">Die `For Each` -Anweisung durchläuft alle zurückgegebenen Objekte und zeigt die `CompanyName` und `CustomerID` Spalten für jeden Datensatz.</span><span class="sxs-lookup"><span data-stu-id="55a1b-138">The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## Siehe auch  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a><span data-ttu-id="55a1b-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="55a1b-139">See Also</span></span>  
+ [<span data-ttu-id="55a1b-140">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="55a1b-140">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="55a1b-141">Abfragen</span><span class="sxs-lookup"><span data-stu-id="55a1b-141">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="55a1b-142">From-Klausel</span><span class="sxs-lookup"><span data-stu-id="55a1b-142">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="55a1b-143">Where-Klausel</span><span class="sxs-lookup"><span data-stu-id="55a1b-143">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="55a1b-144">Order By-Klausel</span><span class="sxs-lookup"><span data-stu-id="55a1b-144">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="55a1b-145">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="55a1b-145">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

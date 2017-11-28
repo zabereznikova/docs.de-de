@@ -1,76 +1,74 @@
 ---
-title: "Impersonating and Reverting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WindowsIdentity objects, impersonating"
-  - "security [.NET Framework], impersonating Windows accounts"
-  - "impersonating Windows accounts"
+title: "Wechseln und Zurücksetzen der Identität"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WindowsIdentity objects, impersonating
+- security [.NET Framework], impersonating Windows accounts
+- impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 4d1bd053cacc677ca66fc2e2a9e14620e1d3a8b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Impersonating and Reverting
-Es kann vorkommen, dass Sie das Token eines Windows NT\-Kontos abrufen müssen, um die Identität eines Windows\-Kontos zu wechseln. Beispielsweise könnte es sein, dass Ihre ASP.NET\-basierte Anwendung im Namen unterschiedlicher Benutzer zu unterschiedlichen Zeiten Aktionen ausführen muss. Ihre Anwendung kann hierzu von Internetinformationsdienste \(IIS\) ein Token akzeptieren, das einem Administrator entspricht, die Identität dieses Benutzers annehmen, einen Vorgang ausführen und zur vorherigen Identität zurückkehren. Anschließend kann die Anwendung ein Token von IIS akzeptieren, das einem Benutzer mit weniger Rechten entspricht, einige Vorgänge ausführen und die Identität erneut zurücksetzen.  
+# <a name="impersonating-and-reverting"></a><span data-ttu-id="6fc13-102">Wechseln und Zurücksetzen der Identität</span><span class="sxs-lookup"><span data-stu-id="6fc13-102">Impersonating and Reverting</span></span>
+<span data-ttu-id="6fc13-103">Es kann vorkommen, dass Sie das Token eines Windows-Kontos abrufen müssen, um die Identität eines Windows-Kontos zu wechseln.</span><span class="sxs-lookup"><span data-stu-id="6fc13-103">Sometimes you might need to obtain a Windows account token to impersonate a Windows account.</span></span> <span data-ttu-id="6fc13-104">Beispielsweise könnte es sein, dass Ihre ASP.NET-basierte Anwendung im Namen unterschiedlicher Benutzer zu unterschiedlichen Zeiten Aktionen ausführen muss.</span><span class="sxs-lookup"><span data-stu-id="6fc13-104">For example, your ASP.NET-based application might have to act on behalf of several users at different times.</span></span> <span data-ttu-id="6fc13-105">Ihre Anwendung kann hierzu von Internetinformationsdienste (IIS) ein Token akzeptieren, das einem Administrator entspricht, die Identität dieses Benutzers annehmen, einen Vorgang ausführen und zur vorherigen Identität zurückkehren.</span><span class="sxs-lookup"><span data-stu-id="6fc13-105">Your application might accept a token that represents an administrator from Internet Information Services (IIS), impersonate that user, perform an operation, and revert to the previous identity.</span></span> <span data-ttu-id="6fc13-106">Anschließend kann die Anwendung ein Token von IIS akzeptieren, das einem Benutzer mit weniger Rechten entspricht, einige Vorgänge ausführen und die Identität erneut zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="6fc13-106">Next, it might accept a token from IIS that represents a user with fewer rights, perform some operation, and revert again.</span></span>  
   
- In Fällen, in denen Ihre Anwendung die Identität eines Windows\-Kontos annehmen muss, das von IIS nicht an den aktuellen Thread angefügt wurde, müssen Sie das Token dieses Kontos abrufen und mit ihm das Konto aktivieren. Führen Sie dazu die folgenden Schritte aus:  
+ <span data-ttu-id="6fc13-107">In Fällen, in denen Ihre Anwendung die Identität eines Windows-Kontos annehmen muss, das von IIS nicht an den aktuellen Thread angefügt wurde, müssen Sie das Token dieses Kontos abrufen und mit ihm das Konto aktivieren.</span><span class="sxs-lookup"><span data-stu-id="6fc13-107">In situations where your application must impersonate a Windows account that has not been attached to the current thread by IIS, you must retrieve that account's token and use it to activate the account.</span></span> <span data-ttu-id="6fc13-108">Führen Sie dazu die folgenden Aufgaben aus:</span><span class="sxs-lookup"><span data-stu-id="6fc13-108">You can do this by performing the following tasks:</span></span>  
   
-1.  Rufen Sie ein Kontotoken für einen bestimmten Benutzer ab, indem Sie die nicht verwaltete **LogonUser**\-Methode aufrufen. Diese Methode befindet sich nicht in der .NET Framework\-Basisklassenbibliothek, sondern in der nicht verwalteten **advapi32.dll**. Der Zugriff auf Methoden in nicht verwaltetem Code ist ein weitergehender Vorgang und liegt außerhalb des Rahmens dieser Erörterung. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../docs/framework/interop/index.md). Weitere Informationen zur **LogonUser**\-Methode und zu **advapi32.dll** finden Sie in der Platform SDK\-Dokumentation.  
+1.  <span data-ttu-id="6fc13-109">Rufen Sie ein Kontotoken für einen bestimmten Benutzer ab, indem Sie die nicht verwaltete **LogonUser**-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="6fc13-109">Retrieve an account token for a particular user by making a call to the unmanaged **LogonUser** method.</span></span> <span data-ttu-id="6fc13-110">Diese Methode befindet sich nicht in der .NET Framework-Basisklassenbibliothek, sondern in der nicht verwalteten **advapi32.dll**.</span><span class="sxs-lookup"><span data-stu-id="6fc13-110">This method is not in the .NET Framework base class library, but is located in the unmanaged **advapi32.dll**.</span></span> <span data-ttu-id="6fc13-111">Der Zugriff auf Methoden in nicht verwaltetem Code ist ein weitergehender Vorgang und liegt außerhalb des Rahmens dieser Erörterung.</span><span class="sxs-lookup"><span data-stu-id="6fc13-111">Accessing methods in unmanaged code is an advanced operation and is beyond the scope of this discussion.</span></span> <span data-ttu-id="6fc13-112">Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="6fc13-112">For more information, see [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="6fc13-113">Weitere Informationen zur **LogonUser**-Methode und zu **advapi32.dll** finden Sie in der Platform SDK-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="6fc13-113">For more information about the **LogonUser** method and **advapi32.dll**, see the Platform SDK documentation.</span></span>  
   
-2.  Erstellen Sie eine neue Instanz der **WindowsIdentity**\-Klasse, und übergeben Sie dabei das Token. Der folgende Code veranschaulicht diesen Aufruf, wobei `hToken` einem Windows\-Token entspricht.  
+2.  <span data-ttu-id="6fc13-114">Erstellen Sie eine neue Instanz der **WindowsIdentity**-Klasse, und übergeben Sie dabei das Token.</span><span class="sxs-lookup"><span data-stu-id="6fc13-114">Create a new instance of the **WindowsIdentity** class, passing the token.</span></span> <span data-ttu-id="6fc13-115">Der folgende Code veranschaulicht diesen Aufruf, wobei `hToken` einem Windows-Token entspricht.</span><span class="sxs-lookup"><span data-stu-id="6fc13-115">The following code demonstrates this call, where `hToken` represents a Windows token.</span></span>  
   
     ```csharp  
     WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
-  
     ```  
   
     ```vb  
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Beginnen Sie mit dem Identitätswechsel, indem Sie eine neue Instanz der <xref:System.Security.Principal.WindowsImpersonationContext>\-Klasse erzeugen und diese, wie im folgenden Code dargestellt, mit der <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=fullName>\-Methode der initialisierten Klasse initialisieren.  
+3.  <span data-ttu-id="6fc13-116">Beginnen mit dem Identitätswechsel durch Erstellen einer neuen Instanz von der <xref:System.Security.Principal.WindowsImpersonationContext> Klasse und initialisieren es mit der <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> -Methode der initialisierten Klasse, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="6fc13-116">Begin impersonation by creating a new instance of the <xref:System.Security.Principal.WindowsImpersonationContext> class and initializing it with the <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> method of the initialized class, as shown in the following code.</span></span>  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
-  
     ```  
   
     ```vb  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
     ```  
   
-4.  Wenn Sie die neue Identität nicht mehr benötigen, rufen Sie die <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=fullName>\-Methode auf, um den Identitätswechsel zurückzunehmen, wie im folgenden Code gezeigt.  
+4.  <span data-ttu-id="6fc13-117">Wenn Sie die Identität nicht mehr benötigen, rufen Sie die <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> Methode, um den Identitätswechsel zurückzunehmen, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="6fc13-117">When you no longer need to impersonate, call the <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> method to revert the impersonation, as shown in the following code.</span></span>  
   
     ```csharp  
     MyImpersonation.Undo();  
-  
     ```  
   
     ```vb  
     MyImpersonation.Undo()  
     ```  
   
- Wenn vertrauenswürdiger Code bereits ein <xref:System.Security.Principal.WindowsPrincipal>\-Objekt an den Thread angefügt hat, können Sie die Instanzmethode **Impersonate** aufrufen, die kein Kontotoken übernimmt. Dies ist aber nur sinnvoll, wenn das **WindowsPrincipal**\-Objekt im Thread einem Benutzer entspricht, der nicht der Benutzer ist, für den der Prozess derzeit ausgeführt wird. Diese Situation kann z. B. gegeben sein, wenn Sie ASP.NET mit aktivierter Windows\-Authentifizierung und deaktiviertem Identitätswechsel verwenden. In diesem Fall wird der Prozess unter einem in Internetinformationsdienste \(IIS\) konfigurierten Konto ausgeführt, während der aktuelle Prinzipal dem Windows\-Benutzer entspricht, der auf die Seite zugreift.  
+ <span data-ttu-id="6fc13-118">Wenn vertrauenswürdiger Code bereits angefügt wurde eine <xref:System.Security.Principal.WindowsPrincipal> -Objekt an den Thread, können Sie die Instanzmethode aufrufen **Impersonate**, die keinen Kontotoken.</span><span class="sxs-lookup"><span data-stu-id="6fc13-118">If trusted code has already attached a <xref:System.Security.Principal.WindowsPrincipal> object to the thread, you can call the instance method **Impersonate**, which does not take an account token.</span></span> <span data-ttu-id="6fc13-119">Dies ist aber nur sinnvoll, wenn das **WindowsPrincipal**-Objekt im Thread einem Benutzer entspricht, der nicht der Benutzer ist, für den der Prozess derzeit ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="6fc13-119">Note that this is only useful when the **WindowsPrincipal** object on the thread represents a user other than the one under which the process is currently executing.</span></span> <span data-ttu-id="6fc13-120">Diese Situation kann z. B. gegeben sein, wenn Sie ASP.NET mit aktivierter Windows-Authentifizierung und deaktiviertem Identitätswechsel verwenden.</span><span class="sxs-lookup"><span data-stu-id="6fc13-120">For example, you might encounter this situation using ASP.NET with Windows authentication turned on and impersonation turned off.</span></span> <span data-ttu-id="6fc13-121">In diesem Fall wird der Prozess unter einem in Internetinformationsdienste (IIS) konfigurierten Konto ausgeführt, während der aktuelle Prinzipal dem Windows-Benutzer entspricht, der auf die Seite zugreift.</span><span class="sxs-lookup"><span data-stu-id="6fc13-121">In this case, the process is running under an account configured in Internet Information Services (IIS) while the current principal represents the Windows user that is accessing the page.</span></span>  
   
- Beachten Sie, dass weder **Impersonate** noch **Undo** das **Principal**\-Objekt \(<xref:System.Security.Principal.IPrincipal>\) ändert, das dem aktuellen Aufrufkontext zugeordnet ist. Stattdessen wird sowohl beim Annehmen einer Identität als auch beim Zurücksetzen das Token geändert, das dem aktuellen Betriebssystemprozess zugeordnet ist.  
+ <span data-ttu-id="6fc13-122">Beachten Sie, dass weder **Impersonate** noch **Rückgängig** Änderungen der **Principal** Objekt (<xref:System.Security.Principal.IPrincipal>) dem aktuellen Aufrufkontext zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="6fc13-122">Note that neither **Impersonate** nor **Undo** changes the **Principal** object (<xref:System.Security.Principal.IPrincipal>)  associated with the current call context.</span></span> <span data-ttu-id="6fc13-123">Stattdessen wird sowohl beim Annehmen einer Identität als auch beim Zurücksetzen das Token geändert, das dem aktuellen Betriebssystemprozess zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="6fc13-123">Rather, impersonation and reverting change the token associated with the current operating system process..</span></span>  
   
-## Siehe auch  
- <xref:System.Security.Principal.WindowsIdentity>   
- <xref:System.Security.Principal.WindowsImpersonationContext>   
- [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md)   
- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md)
+## <a name="see-also"></a><span data-ttu-id="6fc13-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6fc13-124">See Also</span></span>  
+ <xref:System.Security.Principal.WindowsIdentity>  
+ <xref:System.Security.Principal.WindowsImpersonationContext>  
+ [<span data-ttu-id="6fc13-125">Principal- und Identitätsobjekte</span><span class="sxs-lookup"><span data-stu-id="6fc13-125">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)  
+ [<span data-ttu-id="6fc13-126">Interoperabilität mit nicht verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="6fc13-126">Interoperating with Unmanaged Code</span></span>](../../../docs/framework/interop/index.md)

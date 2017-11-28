@@ -1,63 +1,64 @@
 ---
-title: "Gewusst wie: Sperren von Steuerelementen f&#252;r Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Sperren"
-  - "Windows Forms-Steuerelemente, Sperren"
+title: "Gewusst wie: Sperren von Steuerelementen für Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, locking
+- controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 30808d2102a1be41381f0e07c9f0f37bfb4a5a56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Sperren von Steuerelementen f&#252;r Windows&#160;Forms
-Während Sie die Benutzeroberfläche der Windows\-Anwendung entwerfen, können Sie die Steuerelemente sperren, sobald sie über die richtige Position verfügen. Auf diese Weise wird verhindert, dass die Elemente versehentlich verschoben, vergrößert oder verkleinert werden, wenn Sie andere Eigenschaften festlegen.  
+# <a name="how-to-lock-controls-to-windows-forms"></a><span data-ttu-id="ae633-102">Gewusst wie: Sperren von Steuerelementen für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae633-102">How to: Lock Controls to Windows Forms</span></span>
+<span data-ttu-id="ae633-103">Wenn Sie die Benutzeroberfläche (UI) von der Windows-Anwendung entwerfen, können Sie die Steuerelemente sperren, sobald sie ordnungsgemäß positioniert sind, sodass Sie nicht versehentlich verschieben oder deren Größe ändern, wenn Sie andere Eigenschaften festlegen.</span><span class="sxs-lookup"><span data-stu-id="ae633-103">When you design the user interface (UI) of your Windows application, you can lock the controls once they are positioned correctly, so that you do not inadvertently move or resize them when setting other properties.</span></span>  
   
- Außerdem können Sie alle Steuerelemente im Formular gleichzeitig sperren und entsperren – dies ist besonders bei Formularen mit zahlreichen Steuerelementen von Vorteil – oder einzelne Steuerelemente entsperren.  Nachdem Sie alle Steuerelemente an der gewünschten Stelle im Formular positioniert haben, sperren Sie diese, um zu vermeiden, dass sie versehentlich verschoben werden.  
+ <span data-ttu-id="ae633-104">Darüber hinaus können Sie sperren und entsperren Sie alle Steuerelemente im Formular gleichzeitig, was für Formulare mit vielen Steuerelementen hilfreich ist, oder Sie einzelne Steuerelemente entsperren.</span><span class="sxs-lookup"><span data-stu-id="ae633-104">Additionally, you can lock and unlock all the controls on the form at once, which is helpful for forms with many controls, or you can unlock individual controls.</span></span> <span data-ttu-id="ae633-105">Nachdem Sie alle Steuerelemente platziert haben, möchten Sie sie auf dem Formular, Sperren Sie diese um fehlerhafte Bewegung zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="ae633-105">Once you have placed all the controls where you want them on the form, lock them all in place to prevent erroneous movement.</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="ae633-106">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="ae633-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="ae633-107">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="ae633-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="ae633-108">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="ae633-108">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So sperren Sie ein Steuerelement  
+### <a name="to-lock-a-control"></a><span data-ttu-id="ae633-109">So sperren Sie ein Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ae633-109">To lock a control</span></span>  
   
-1.  Klicken Sie im **Eigenschaftenfenster** auf die **Locked**\-Eigenschaft, und wählen Sie `true` aus.  \(Durch Doppelklicken auf den Eigenschaftennamen wird zwischen **true** und **false** gewechselt.\)  
+1.  <span data-ttu-id="ae633-110">In der **Eigenschaften** Fenster, klicken Sie auf die **gesperrt** Eigenschaft, und wählen `true`.</span><span class="sxs-lookup"><span data-stu-id="ae633-110">In the **Properties** window, click the **Locked** property and select `true`.</span></span> <span data-ttu-id="ae633-111">(Doppelklicken auf den Namen wird die Einstellung der Eigenschaft.)</span><span class="sxs-lookup"><span data-stu-id="ae633-111">(Double-clicking the name toggles the property setting.)</span></span>  
   
-     Alternativ klicken Sie mit der rechten Maustaste auf das Steuerelement und wählen **Steuerelemente sperren**.  
-  
-    > [!NOTE]
-    >  Durch das Sperren wird verhindert, dass Steuerelemente auf eine neue Größe oder Position auf der Entwurfsoberfläche gezogen werden.  Die Größe oder Position der Steuerelemente kann jedoch weiterhin im **Eigenschaftenfenster** bzw. im Code geändert werden.  
-  
-### So sperren Sie alle Steuerelemente in einem Formular  
-  
-1.  Wählen Sie im Menü **Format** die Option **Steuerelemente sperren**.  
+     <span data-ttu-id="ae633-112">Alternativ können Sie mit der rechten Maustaste in des Steuerelements, und wählen Sie **Steuerelemente sperren**.</span><span class="sxs-lookup"><span data-stu-id="ae633-112">Alternatively, right-click the control and choose **Lock Controls**.</span></span>  
   
     > [!NOTE]
-    >  Durch diesen Befehl wird zusätzlich die Größe des Formulars gesperrt, da es sich bei einem Formular auch um ein Steuerelement handelt.  
+    >  <span data-ttu-id="ae633-113">Sperren von Steuerelementen, die sie zu einer neuen Größe oder Position auf der Entwurfsoberfläche gezogenen verhindert.</span><span class="sxs-lookup"><span data-stu-id="ae633-113">Locking controls prevents them from being dragged to a new size or location on the design surface.</span></span> <span data-ttu-id="ae633-114">Sie können jedoch immer noch ändern die Größe oder Position von Steuerelementen mithilfe von der **Eigenschaften** Fenster oder im Code.</span><span class="sxs-lookup"><span data-stu-id="ae633-114">However, you can still change the size or location of controls by means of the **Properties** window or in code.</span></span>  
   
-### So heben Sie die Sperrung aller gesperrten Steuerelemente in einem Formular auf  
+### <a name="to-lock-all-the-controls-on-a-form"></a><span data-ttu-id="ae633-115">So sperren Sie alle Steuerelemente in einem Formular</span><span class="sxs-lookup"><span data-stu-id="ae633-115">To lock all the controls on a form</span></span>  
   
-1.  Wählen Sie im Menü **Format** die Option **Steuerelemente sperren**.  
+1.  <span data-ttu-id="ae633-116">Aus der **Format** Menü wählen **Steuerelemente sperren**.</span><span class="sxs-lookup"><span data-stu-id="ae633-116">From the **Format** menu, choose **Lock Controls**.</span></span>  
   
-     Die Sperrung aller zuvor im Formular gesperrten Steuerelemente wird aufgehoben.  
+    > [!NOTE]
+    >  <span data-ttu-id="ae633-117">Mit diesem Befehl wird auch die Größe des Formulars gesperrt, da ein Formular ein Steuerelement handelt.</span><span class="sxs-lookup"><span data-stu-id="ae633-117">This command locks the form's size as well, because a form is a control.</span></span>  
   
-### So heben Sie die Sperrung einzelner gesperrter Steuerelemente auf  
+### <a name="to-unlock-all-locked-controls-on-a-form"></a><span data-ttu-id="ae633-118">Gesperrt, um alle Steuerelemente in einem Formular</span><span class="sxs-lookup"><span data-stu-id="ae633-118">To unlock all locked controls on a form</span></span>  
   
-1.  Klicken Sie im **Eigenschaftenfenster** auf die **Locked**\-Eigenschaft, und wählen Sie `false` aus.  \(Durch Doppelklicken auf den Eigenschaftennamen wird zwischen **true** und **false** gewechselt.\)  
+1.  <span data-ttu-id="ae633-119">Aus der **Format** Menü wählen **Steuerelemente sperren**.</span><span class="sxs-lookup"><span data-stu-id="ae633-119">From the **Format** menu, choose **Lock Controls**.</span></span>  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+     <span data-ttu-id="ae633-120">Alle zuvor gesperrten Steuerelemente im Formular sind jetzt entsperrt.</span><span class="sxs-lookup"><span data-stu-id="ae633-120">All previously locked controls on the form are now unlocked.</span></span>  
+  
+### <a name="to-unlock-locked-controls-individually"></a><span data-ttu-id="ae633-121">Zum Entsperren Steuerelemente einzeln gesperrt werden</span><span class="sxs-lookup"><span data-stu-id="ae633-121">To unlock locked controls individually</span></span>  
+  
+1.  <span data-ttu-id="ae633-122">In der **Eigenschaften** Fenster, klicken Sie auf die **gesperrt** Eigenschaft, und wählen `false`.</span><span class="sxs-lookup"><span data-stu-id="ae633-122">In the **Properties** window, click the **Locked** property and select `false`.</span></span> <span data-ttu-id="ae633-123">(Doppelklicken auf den Namen wird die Einstellung der Eigenschaft.)</span><span class="sxs-lookup"><span data-stu-id="ae633-123">(Double-clicking the name toggles the property setting.)</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ae633-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ae633-124">See Also</span></span>  
+ [<span data-ttu-id="ae633-125">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="ae633-125">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="ae633-126">Anordnen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae633-126">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="ae633-127">Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente</span><span class="sxs-lookup"><span data-stu-id="ae633-127">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="ae633-128">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="ae633-128">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="ae633-129">Windows Forms-Steuerelemente nach Funktion</span><span class="sxs-lookup"><span data-stu-id="ae633-129">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

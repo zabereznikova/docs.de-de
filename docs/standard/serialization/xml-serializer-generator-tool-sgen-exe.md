@@ -8,65 +8,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 8655523db0e90ab3d8c4d4055f876ba3f71d4a8d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 73669fcfd74f9c4948c8ec976ff3271c72f1033a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
-Der XML Serializer Generator erstellt eine XML-Serialisierungsassembly für die Typen in einer bestimmten Assembly, um die Startleistung von <xref:System.Xml.Serialization.XmlSerializer> beim Serialisieren oder Deserialisieren von Objekten der angegebenen Typen zu erhöhen.  
+# <a name="xml-serializer-generator-tool-sgenexe"></a><span data-ttu-id="c0ba9-102">XML Serializer Generator-Tool (Sgen.exe)</span><span class="sxs-lookup"><span data-stu-id="c0ba9-102">XML Serializer Generator Tool (Sgen.exe)</span></span>
+<span data-ttu-id="c0ba9-103">Der XML Serializer Generator erstellt eine XML-Serialisierungsassembly für die Typen in einer bestimmten Assembly, um die Startleistung von <xref:System.Xml.Serialization.XmlSerializer> beim Serialisieren oder Deserialisieren von Objekten der angegebenen Typen zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-103">The XML Serializer Generator creates an XML serialization assembly for types in a specified assembly in order to improve the startup performance of a <xref:System.Xml.Serialization.XmlSerializer> when it serializes or deserializes objects of the specified types.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="c0ba9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c0ba9-104">Syntax</span></span>  
   
 ```  
 sgen [options]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a><span data-ttu-id="c0ba9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c0ba9-105">Parameters</span></span>  
   
-|Option|Beschreibung|  
+|<span data-ttu-id="c0ba9-106">Option</span><span class="sxs-lookup"><span data-stu-id="c0ba9-106">Option</span></span>|<span data-ttu-id="c0ba9-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c0ba9-107">Description</span></span>|  
 |------------|-----------------|  
-|**/a**[**ssembly**]**:***Dateiname*|Generiert den Serialisierungscode für alle Typen, die in der durch *filename* angegebenen Assembly oder ausführbaren Datei enthalten sind. Nur ein Dateiname kann bereitgestellt werden. Bei Wiederholung dieses Arguments wird der letzte Dateiname verwendet.|  
-|**/c[ompiler]:** *Optionen*|Gibt die Optionen für die Übergabe an den C#-Compiler an. Bei Übergabe an den Compiler werden alle csc.exe-Optionen unterstützt. Damit kann angegeben werden, dass die Assembly signiert werden soll. Außerdem kann die Schlüsseldatei angegeben werden.|  
-|**/d**[**ebug**]|Generiert ein Image, das mit einem Debugger verwendet werden kann.|  
-|**/f[orce]**|Erzwingt das Überschreiben einer vorhandenen, gleichnamigen Assembly. Der Standardwert ist **FALSE**.|  
-|**/help oder /?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/k**[**eep**]|Unterdrückt das Löschen der generierten Quelldateien und anderer temporärer Dateien, nachdem sie in die Serialisierungsassembly kompiliert wurden. Damit kann ermittelt werden, ob das Tool für einen bestimmten Typ Serialisierungscode generiert.|  
-|**/n**[**ologo**]|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
-|**/o**[**ut**]**:***Pfad*|Gibt das Verzeichnis an, in das die generierte Assembly gespeichert werden soll. **Hinweis:**Der Name der generierten Assembly besteht aus dem Namen der Eingabeassembly plus „xmlSerializers.dll“.|  
-|**/p**[**roxytypes**]|Generiert Serialisierungscode nur für die Proxytypen des XML-Webdiensts.|  
-|**/r**[**eference**]**:***assemblyfiles*|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
-|**/s**[**ilent**]|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
-|**/t**[**ype**]**:***Typ*|Generiert Serialisierungscode nur für den angegebenen Typ.|  
-|**/v**[**erbose**]|Zeigt eine ausführliche Ausgabe für das Debuggen an. Listet Typen aus der Zielassembly auf, die nicht mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können.|  
-|**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
+|<span data-ttu-id="c0ba9-108">**/a**[**ssembly**]**:***Dateiname*</span><span class="sxs-lookup"><span data-stu-id="c0ba9-108">**/a**[**ssembly**]**:***filename*</span></span>|<span data-ttu-id="c0ba9-109">Generiert den Serialisierungscode für alle Typen, die in der durch *filename* angegebenen Assembly oder ausführbaren Datei enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-109">Generates serialization code for all the types contained in the assembly or executable specified by *filename*.</span></span> <span data-ttu-id="c0ba9-110">Nur ein Dateiname kann bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-110">Only one file name can be provided.</span></span> <span data-ttu-id="c0ba9-111">Bei Wiederholung dieses Arguments wird der letzte Dateiname verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-111">If this argument is repeated, the last file name is used.</span></span>|  
+|<span data-ttu-id="c0ba9-112">**/c[ompiler]:** *Optionen*</span><span class="sxs-lookup"><span data-stu-id="c0ba9-112">**/c[ompiler]:** *options*</span></span>|<span data-ttu-id="c0ba9-113">Gibt die Optionen für die Übergabe an den C#-Compiler an.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-113">Specifies the options to pass to the C# compiler.</span></span> <span data-ttu-id="c0ba9-114">Bei Übergabe an den Compiler werden alle csc.exe-Optionen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-114">All csc.exe options are supported as they are passed to the compiler.</span></span> <span data-ttu-id="c0ba9-115">Damit kann angegeben werden, dass die Assembly signiert werden soll. Außerdem kann die Schlüsseldatei angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-115">This can be used to specify that the assembly should be signed and to specify the key file.</span></span>|  
+|<span data-ttu-id="c0ba9-116">**/d**[**ebug**]</span><span class="sxs-lookup"><span data-stu-id="c0ba9-116">**/d**[**ebug**]</span></span>|<span data-ttu-id="c0ba9-117">Generiert ein Image, das mit einem Debugger verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-117">Generates an image that can be used with a debugger.</span></span>|  
+|<span data-ttu-id="c0ba9-118">**/f[orce]**</span><span class="sxs-lookup"><span data-stu-id="c0ba9-118">**/f[orce]**</span></span>|<span data-ttu-id="c0ba9-119">Erzwingt das Überschreiben einer vorhandenen, gleichnamigen Assembly.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-119">Forces the overwriting of an existing assembly of the same name.</span></span> <span data-ttu-id="c0ba9-120">Der Standardwert ist **FALSE**.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-120">The default is **false**.</span></span>|  
+|<span data-ttu-id="c0ba9-121">**/help oder /?**</span><span class="sxs-lookup"><span data-stu-id="c0ba9-121">**/help or /?**</span></span>|<span data-ttu-id="c0ba9-122">Zeigt Befehlssyntax und Optionen für das Tool an.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-122">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="c0ba9-123">**/k**[**eep**]</span><span class="sxs-lookup"><span data-stu-id="c0ba9-123">**/k**[**eep**]</span></span>|<span data-ttu-id="c0ba9-124">Unterdrückt das Löschen der generierten Quelldateien und anderer temporärer Dateien, nachdem sie in die Serialisierungsassembly kompiliert wurden.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-124">Suppresses the deletion of the generated source files and other temporary files after they have been compiled into the serialization assembly.</span></span> <span data-ttu-id="c0ba9-125">Damit kann ermittelt werden, ob das Tool für einen bestimmten Typ Serialisierungscode generiert.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-125">This can be used to determine whether the tool is generating serialization code for a particular type.</span></span>|  
+|<span data-ttu-id="c0ba9-126">**/n**[**ologo**]</span><span class="sxs-lookup"><span data-stu-id="c0ba9-126">**/n**[**ologo**]</span></span>|<span data-ttu-id="c0ba9-127">Unterdrückt die Anzeige des Startbanners von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-127">Suppresses the display of the Microsoft startup banner.</span></span>|  
+|<span data-ttu-id="c0ba9-128">**/o**[**ut**]**:***Pfad*</span><span class="sxs-lookup"><span data-stu-id="c0ba9-128">**/o**[**ut**]**:***path*</span></span>|<span data-ttu-id="c0ba9-129">Gibt das Verzeichnis an, in das die generierte Assembly gespeichert werden soll.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-129">Specifies the directory in which to save the generated assembly.</span></span> <span data-ttu-id="c0ba9-130">**Hinweis:**Der Name der generierten Assembly besteht aus dem Namen der Eingabeassembly plus „xmlSerializers.dll“.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-130">**Note:**  The name of the generated assembly is composed of the name of the input assembly plus "xmlSerializers.dll".</span></span>|  
+|<span data-ttu-id="c0ba9-131">**/p**[**roxytypes**]</span><span class="sxs-lookup"><span data-stu-id="c0ba9-131">**/p**[**roxytypes**]</span></span>|<span data-ttu-id="c0ba9-132">Generiert Serialisierungscode nur für die Proxytypen des XML-Webdiensts.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-132">Generates serialization code only for the XML Web service proxy types.</span></span>|  
+|<span data-ttu-id="c0ba9-133">**/r**[**eference**]**:***assemblyfiles*</span><span class="sxs-lookup"><span data-stu-id="c0ba9-133">**/r**[**eference**]**:***assemblyfiles*</span></span>|<span data-ttu-id="c0ba9-134">Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-134">Specifies the assemblies that are referenced by the types requiring XML serialization.</span></span> <span data-ttu-id="c0ba9-135">Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-135">Accepts multiple assembly files separated by commas.</span></span>|  
+|<span data-ttu-id="c0ba9-136">**/s**[**ilent**]</span><span class="sxs-lookup"><span data-stu-id="c0ba9-136">**/s**[**ilent**]</span></span>|<span data-ttu-id="c0ba9-137">Unterdrückt die Anzeige von Erfolgsmeldungen.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-137">Suppresses the display of success messages.</span></span>|  
+|<span data-ttu-id="c0ba9-138">**/t**[**ype**]**:***Typ*</span><span class="sxs-lookup"><span data-stu-id="c0ba9-138">**/t**[**ype**]**:***type*</span></span>|<span data-ttu-id="c0ba9-139">Generiert Serialisierungscode nur für den angegebenen Typ.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-139">Generates serialization code only for the specified type.</span></span>|  
+|<span data-ttu-id="c0ba9-140">**/v**[**erbose**]</span><span class="sxs-lookup"><span data-stu-id="c0ba9-140">**/v**[**erbose**]</span></span>|<span data-ttu-id="c0ba9-141">Zeigt eine ausführliche Ausgabe für das Debuggen an.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-141">Displays verbose output for debugging.</span></span> <span data-ttu-id="c0ba9-142">Listet Typen aus der Zielassembly auf, die nicht mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-142">Lists types from the target assembly that cannot be serialized with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>|  
+|<span data-ttu-id="c0ba9-143">**/?**</span><span class="sxs-lookup"><span data-stu-id="c0ba9-143">**/?**</span></span>|<span data-ttu-id="c0ba9-144">Zeigt Befehlssyntax und Optionen für das Tool an.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-144">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der XML Serializer Generator nicht verwendet wird, generiert <xref:System.Xml.Serialization.XmlSerializer> bei jeder Ausführung einer Anwendung für jeden Typ Serialisierungscode und eine Serialisierungsassembly. Zur Verbesserung der Leistung beim Starten der XML-Serialisierung verwenden Sie das Tool Sgen.exe, um die Assemblys im Voraus zu generieren. Diese Assemblys können dann zusammen mit der Anwendung bereitgestellt werden.  
+## <a name="remarks"></a><span data-ttu-id="c0ba9-145">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c0ba9-145">Remarks</span></span>  
+ <span data-ttu-id="c0ba9-146">Wenn der XML Serializer Generator nicht verwendet wird, generiert <xref:System.Xml.Serialization.XmlSerializer> bei jeder Ausführung einer Anwendung für jeden Typ Serialisierungscode und eine Serialisierungsassembly.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-146">When the XML Serializer Generator is not used, a <xref:System.Xml.Serialization.XmlSerializer> generates serialization code and a serialization assembly for each type every time an application is run.</span></span> <span data-ttu-id="c0ba9-147">Zur Verbesserung der Leistung beim Starten der XML-Serialisierung verwenden Sie das Tool Sgen.exe, um die Assemblys im Voraus zu generieren.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-147">To improve the performance of XML serialization startup, use the Sgen.exe tool to generate those assemblies the assemblies in advance.</span></span> <span data-ttu-id="c0ba9-148">Diese Assemblys können dann zusammen mit der Anwendung bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-148">These assemblies can then be deployed with the application.</span></span>  
   
- Mit dem XML Serializer Generator kann auch die Leistung von Clients, die zur Kommunikation mit Servern XML-Webdienstproxys verwenden, verbessert werden, da die Leistung durch den Serialisierungsprozess beim erstmaligen Laden des Typs nicht beeinträchtigt wird.  
+ <span data-ttu-id="c0ba9-149">Mit dem XML Serializer Generator kann auch die Leistung von Clients, die zur Kommunikation mit Servern XML-Webdienstproxys verwenden, verbessert werden, da die Leistung durch den Serialisierungsprozess beim erstmaligen Laden des Typs nicht beeinträchtigt wird.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-149">The XML Serializer Generator can also improve the performance of clients that use XML Web service proxies to communicate with servers because the serialization process will not incur a performance hit when the type is loaded the first time.</span></span>  
   
- Die generierten Assemblys können nicht auf der Serverseite eines Webdiensts verwendet werden. Dieses Tool wird nur für Webdienstclients und manuelle Serialisierungsszenarien verwendet.  
+ <span data-ttu-id="c0ba9-150">Die generierten Assemblys können nicht auf der Serverseite eines Webdiensts verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-150">These generated assemblies cannot be used on the server side of a Web service.</span></span> <span data-ttu-id="c0ba9-151">Dieses Tool wird nur für Webdienstclients und manuelle Serialisierungsszenarien verwendet.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-151">This tool is only for Web service clients and manual serialization scenarios.</span></span>  
   
- Wenn der Name der Assembly, die den zu serialisierenden Typen enthält, MyType.dll ist, erhält die zugehörige Serialisierungsassembly den Namen MyType.XmlSerializers.dll.  
+ <span data-ttu-id="c0ba9-152">Wenn der Name der Assembly, die den zu serialisierenden Typen enthält, MyType.dll ist, erhält die zugehörige Serialisierungsassembly den Namen MyType.XmlSerializers.dll.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-152">If the assembly containing the type to serialize is named MyType.dll, then the associated serialization assembly will be named MyType.XmlSerializers.dll.</span></span>  
   
-## <a name="examples"></a>Beispiele  
- Mit dem folgenden Befehl wird eine Assembly mit dem Namen Data.XmlSerializers.dll erstellt, um alle in der Assembly Data.dll enthaltenen Typen zu serialisieren.  
+## <a name="examples"></a><span data-ttu-id="c0ba9-153">Beispiele</span><span class="sxs-lookup"><span data-stu-id="c0ba9-153">Examples</span></span>  
+ <span data-ttu-id="c0ba9-154">Mit dem folgenden Befehl wird eine Assembly mit dem Namen Data.XmlSerializers.dll erstellt, um alle in der Assembly Data.dll enthaltenen Typen zu serialisieren.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-154">The following command creates an assembly named Data.XmlSerializers.dll for serializing all the types contained in the assembly named Data.dll.</span></span>  
   
 ```  
 sgen Data.dll   
 ```  
   
- Auf die Assembly Data.XmlSerializers.dll kann vom Code verwiesen werden, der die Typen in Data.dll serialisiert und deserialisiert.  
+ <span data-ttu-id="c0ba9-155">Auf die Assembly Data.XmlSerializers.dll kann vom Code verwiesen werden, der die Typen in Data.dll serialisiert und deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="c0ba9-155">The Data.XmlSerializers.dll assembly can be referenced from code that needs to serialize and deserialize the types in Data.dll.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
- [Übersicht über XML-Webdienste](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)   
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="c0ba9-156">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0ba9-156">See Also</span></span>  
+ [<span data-ttu-id="c0ba9-157">Extras</span><span class="sxs-lookup"><span data-stu-id="c0ba9-157">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="c0ba9-158">Übersicht über XML-Webdienste</span><span class="sxs-lookup"><span data-stu-id="c0ba9-158">XML Web Services Overview</span></span>](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [<span data-ttu-id="c0ba9-159">Eingabeaufforderungen</span><span class="sxs-lookup"><span data-stu-id="c0ba9-159">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

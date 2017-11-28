@@ -1,148 +1,146 @@
 ---
-title: "Calendar-Stile und -Vorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Kalender [WPF], Stile und Vorlagen"
-  - "ControlTemplate [WPF], Kalender"
-  - "Bestandteile [WPF], Kalender"
-  - "Zustände [WPF], Kalender"
-  - "Formate [WPF], Kalender"
-  - "Vorlagen [WPF], Kalender"
+title: Calendar-Stile und -Vorlagen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], Calendar
+- templates [WPF], Calendar
+- states [WPF], Calendar
+- parts [WPF], Calendar
+- Calendar [WPF], styles and templates
+- ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b27049c63faa9bf84dc5febd210a29a530f175a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Calendar-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Calendar>\-Steuerelement beschrieben.  Sie können die standardmäßige <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement ein individuelles Aussehen zu verleihen.  Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="calendar-styles-and-templates"></a><span data-ttu-id="923f8-102">Calendar-Stile und -Vorlagen</span><span class="sxs-lookup"><span data-stu-id="923f8-102">Calendar Styles and Templates</span></span>
+<span data-ttu-id="923f8-103">In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.Calendar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Calendar> control.</span></span> <span data-ttu-id="923f8-104">Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen.</span><span class="sxs-lookup"><span data-stu-id="923f8-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="923f8-105">Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="923f8-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Calendar\-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Calendar>\-Steuerelement aufgelistet.  
+## <a name="calendar-parts"></a><span data-ttu-id="923f8-106">Calendar-Teile</span><span class="sxs-lookup"><span data-stu-id="923f8-106">Calendar Parts</span></span>  
+ <span data-ttu-id="923f8-107">Die folgende Tabelle enthält die benannten Teile für die <xref:System.Windows.Controls.Calendar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-107">The following table lists the named parts for the <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="923f8-108">Segment</span><span class="sxs-lookup"><span data-stu-id="923f8-108">Part</span></span>|<span data-ttu-id="923f8-109">Typ</span><span class="sxs-lookup"><span data-stu-id="923f8-109">Type</span></span>|<span data-ttu-id="923f8-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="923f8-110">Description</span></span>|  
 |-|-|-|  
-|Bestandteil|Typ|Beschreibung|  
-|PART\_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Der aktuell angezeigte Monat oder das aktuell angezeigte Jahr im <xref:System.Windows.Controls.Calendar>.|  
-|PART\_Root|<xref:System.Windows.Controls.Panel>|Der Bereich, der das <xref:System.Windows.Controls.Primitives.CalendarItem> enthält.|  
+|<span data-ttu-id="923f8-111">PART_CalendarItem</span><span class="sxs-lookup"><span data-stu-id="923f8-111">PART_CalendarItem</span></span>|<xref:System.Windows.Controls.Primitives.CalendarItem>|<span data-ttu-id="923f8-112">Die aktuell angezeigte Monat oder Jahr auf die <xref:System.Windows.Controls.Calendar>.</span><span class="sxs-lookup"><span data-stu-id="923f8-112">The currently displayed month or year on the <xref:System.Windows.Controls.Calendar>.</span></span>|  
+|<span data-ttu-id="923f8-113">PART_Root</span><span class="sxs-lookup"><span data-stu-id="923f8-113">PART_Root</span></span>|<xref:System.Windows.Controls.Panel>|<span data-ttu-id="923f8-114">Der Bereich, enthält die <xref:System.Windows.Controls.Primitives.CalendarItem>.</span><span class="sxs-lookup"><span data-stu-id="923f8-114">The panel that contains the <xref:System.Windows.Controls.Primitives.CalendarItem>.</span></span>|  
   
-## Calendar\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.Calendar>\-Steuerelement aufgelistet.  
+## <a name="calendar-states"></a><span data-ttu-id="923f8-115">Calendar-Zustände</span><span class="sxs-lookup"><span data-stu-id="923f8-115">Calendar States</span></span>  
+ <span data-ttu-id="923f8-116">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.Calendar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-116">The following table lists the visual states for the <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|-----------------------|----------------------------|------------------|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="923f8-117">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-117">VisualState Name</span></span>|<span data-ttu-id="923f8-118">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-118">VisualStateGroup Name</span></span>|<span data-ttu-id="923f8-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="923f8-119">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="923f8-120">Gültig</span><span class="sxs-lookup"><span data-stu-id="923f8-120">Valid</span></span>|<span data-ttu-id="923f8-121">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-121">ValidationStates</span></span>|<span data-ttu-id="923f8-122">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="923f8-122">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="923f8-123">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-123">InvalidFocused</span></span>|<span data-ttu-id="923f8-124">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-124">ValidationStates</span></span>|<span data-ttu-id="923f8-125">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="923f8-125">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="923f8-126">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-126">InvalidUnfocused</span></span>|<span data-ttu-id="923f8-127">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-127">ValidationStates</span></span>|<span data-ttu-id="923f8-128">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-128">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarItem\-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Primitives.CalendarItem>\-Steuerelement aufgelistet.  
+## <a name="calendaritem-parts"></a><span data-ttu-id="923f8-129">CalendarItem-Teile</span><span class="sxs-lookup"><span data-stu-id="923f8-129">CalendarItem Parts</span></span>  
+ <span data-ttu-id="923f8-130">Die folgende Tabelle enthält die benannten Teile für die <xref:System.Windows.Controls.Primitives.CalendarItem> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-130">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.CalendarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="923f8-131">Segment</span><span class="sxs-lookup"><span data-stu-id="923f8-131">Part</span></span>|<span data-ttu-id="923f8-132">Typ</span><span class="sxs-lookup"><span data-stu-id="923f8-132">Type</span></span>|<span data-ttu-id="923f8-133">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="923f8-133">Description</span></span>|  
 |-|-|-|  
-|Bestandteil|Typ|Beschreibung|  
-|PART\_Root|<xref:System.Windows.FrameworkElement>|Der Stamm des Steuerelements.|  
-|PART\_PreviousButton|<xref:System.Windows.Controls.Button>|Die Schaltfläche, die die vorherige Seite des Kalenders anzeigt, wenn darauf geklickt wird.|  
-|PART\_NextButton|<xref:System.Windows.Controls.Button>|Die Schaltfläche, die die nächste Seite des Kalenders anzeigt, wenn darauf geklickt wird.|  
-|PART\_HeaderButton|<xref:System.Windows.Controls.Button>|Die Schaltfläche, die die Umschaltung zwischen Monatsmodus, Jahresmodus und Jahrzehntmodus ermöglicht.|  
-|PART\_MonthView|<xref:System.Windows.Controls.Grid>|Hostet den Inhalt im Monatsmodus.|  
-|PART\_YearView|<xref:System.Windows.Controls.Grid>|Hostet den Inhalt im Jahres\- oder Jahrzehntmodus.|  
-|PART\_DisabledVisual|<xref:System.Windows.FrameworkElement>|Das Overlay für den deaktivierten Zustand.|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|Die <xref:System.Windows.DataTemplate>, die die visuelle Struktur beschreibt.|  
+|<span data-ttu-id="923f8-134">PART_Root</span><span class="sxs-lookup"><span data-stu-id="923f8-134">PART_Root</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="923f8-135">Der Stamm des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="923f8-135">The root of the control.</span></span>|  
+|<span data-ttu-id="923f8-136">PART_PreviousButton</span><span class="sxs-lookup"><span data-stu-id="923f8-136">PART_PreviousButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="923f8-137">Die Schaltfläche ", in dem die vorherige Seite des Kalenders angezeigt, wenn darauf geklickt wird.</span><span class="sxs-lookup"><span data-stu-id="923f8-137">The button that displays the previous page of the calendar when it is clicked.</span></span>|  
+|<span data-ttu-id="923f8-138">PART_NextButton</span><span class="sxs-lookup"><span data-stu-id="923f8-138">PART_NextButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="923f8-139">Die Schaltfläche ", in dem die nächste Seite des Kalenders angezeigt, wenn darauf geklickt wird.</span><span class="sxs-lookup"><span data-stu-id="923f8-139">The button that displays the next page of the calendar when it is clicked.</span></span>|  
+|<span data-ttu-id="923f8-140">PART_HeaderButton</span><span class="sxs-lookup"><span data-stu-id="923f8-140">PART_HeaderButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="923f8-141">Die Schaltfläche, die das Wechseln zwischen dem Monat, Jahresmodus und Jahrzehntmodus.</span><span class="sxs-lookup"><span data-stu-id="923f8-141">The button that allows switching between month mode, year mode, and decade mode.</span></span>|  
+|<span data-ttu-id="923f8-142">PART_MonthView</span><span class="sxs-lookup"><span data-stu-id="923f8-142">PART_MonthView</span></span>|<xref:System.Windows.Controls.Grid>|<span data-ttu-id="923f8-143">Hostet den Inhalt im Monatsmodus.</span><span class="sxs-lookup"><span data-stu-id="923f8-143">Hosts the content when in month mode.</span></span>|  
+|<span data-ttu-id="923f8-144">PART_YearView</span><span class="sxs-lookup"><span data-stu-id="923f8-144">PART_YearView</span></span>|<xref:System.Windows.Controls.Grid>|<span data-ttu-id="923f8-145">Hostet den Inhalt im Jahr oder Jahrzehnt-Modus.</span><span class="sxs-lookup"><span data-stu-id="923f8-145">Hosts the content when in year or decade mode.</span></span>|  
+|<span data-ttu-id="923f8-146">PART_DisabledVisual</span><span class="sxs-lookup"><span data-stu-id="923f8-146">PART_DisabledVisual</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="923f8-147">Das Overlay für den deaktivierten Zustand.</span><span class="sxs-lookup"><span data-stu-id="923f8-147">The overlay for the disabled state.</span></span>|  
+|<span data-ttu-id="923f8-148">DayTitleTemplate</span><span class="sxs-lookup"><span data-stu-id="923f8-148">DayTitleTemplate</span></span>|<xref:System.Windows.DataTemplate>|<span data-ttu-id="923f8-149">Die <xref:System.Windows.DataTemplate> , die die visuelle Struktur beschreibt.</span><span class="sxs-lookup"><span data-stu-id="923f8-149">The <xref:System.Windows.DataTemplate> that describes the visual structure.</span></span>|  
   
-## CalendarItem\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.CalendarItem>\-Steuerelement aufgelistet.  
+## <a name="calendaritem-states"></a><span data-ttu-id="923f8-150">CalendarItem-Zustände</span><span class="sxs-lookup"><span data-stu-id="923f8-150">CalendarItem States</span></span>  
+ <span data-ttu-id="923f8-151">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.Primitives.CalendarItem> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-151">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="923f8-152">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-152">VisualState Name</span></span>|<span data-ttu-id="923f8-153">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-153">VisualStateGroup Name</span></span>|<span data-ttu-id="923f8-154">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="923f8-154">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Normal|CommonStates|Der Standardzustand.|  
-|Disabled|CommonStates|Der Zustand des Kalenders, wenn die <xref:System.Windows.UIElement.IsEnabled%2A>\-Eigenschaft auf `false` festgelegt ist.|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="923f8-155">Normal-Status</span><span class="sxs-lookup"><span data-stu-id="923f8-155">Normal State</span></span>|<span data-ttu-id="923f8-156">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-156">CommonStates</span></span>|<span data-ttu-id="923f8-157">Der Standardzustand</span><span class="sxs-lookup"><span data-stu-id="923f8-157">The default state.</span></span>|  
+|<span data-ttu-id="923f8-158">Zustand "deaktiviert"</span><span class="sxs-lookup"><span data-stu-id="923f8-158">Disabled State</span></span>|<span data-ttu-id="923f8-159">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-159">CommonStates</span></span>|<span data-ttu-id="923f8-160">Der Status des Kalenders bei der <xref:System.Windows.UIElement.IsEnabled%2A> Eigenschaft ist `false`.</span><span class="sxs-lookup"><span data-stu-id="923f8-160">The state of the calendar when the <xref:System.Windows.UIElement.IsEnabled%2A> property is `false`.</span></span>|  
+|<span data-ttu-id="923f8-161">Gültig</span><span class="sxs-lookup"><span data-stu-id="923f8-161">Valid</span></span>|<span data-ttu-id="923f8-162">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-162">ValidationStates</span></span>|<span data-ttu-id="923f8-163">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="923f8-163">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="923f8-164">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-164">InvalidFocused</span></span>|<span data-ttu-id="923f8-165">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-165">ValidationStates</span></span>|<span data-ttu-id="923f8-166">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="923f8-166">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="923f8-167">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-167">InvalidUnfocused</span></span>|<span data-ttu-id="923f8-168">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-168">ValidationStates</span></span>|<span data-ttu-id="923f8-169">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-169">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
+|<span data-ttu-id="923f8-170">Gültig</span><span class="sxs-lookup"><span data-stu-id="923f8-170">Valid</span></span>|<span data-ttu-id="923f8-171">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-171">ValidationStates</span></span>|<span data-ttu-id="923f8-172">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="923f8-172">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="923f8-173">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-173">InvalidFocused</span></span>|<span data-ttu-id="923f8-174">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-174">ValidationStates</span></span>|<span data-ttu-id="923f8-175">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="923f8-175">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="923f8-176">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-176">InvalidUnfocused</span></span>|<span data-ttu-id="923f8-177">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-177">ValidationStates</span></span>|<span data-ttu-id="923f8-178">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-178">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarDayButton\-Teile  
- Das <xref:System.Windows.Controls.Primitives.CalendarDayButton>\-Steuerelement verfügt nicht über benannte Teile.  
+## <a name="calendardaybutton-parts"></a><span data-ttu-id="923f8-179">CalendarDayButton-Teile</span><span class="sxs-lookup"><span data-stu-id="923f8-179">CalendarDayButton Parts</span></span>  
+ <span data-ttu-id="923f8-180">Die <xref:System.Windows.Controls.Primitives.CalendarDayButton> Steuerelement enthält keine benannten Teile.</span><span class="sxs-lookup"><span data-stu-id="923f8-180">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> control does not have any named parts.</span></span>  
   
-## CalendarDayButton\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.CalendarDayButton>\-Steuerelement aufgelistet.  
+## <a name="calendardaybutton-states"></a><span data-ttu-id="923f8-181">CalendarDayButton-Zustände</span><span class="sxs-lookup"><span data-stu-id="923f8-181">CalendarDayButton States</span></span>  
+ <span data-ttu-id="923f8-182">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.Primitives.CalendarDayButton> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-182">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarDayButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="923f8-183">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-183">VisualState Name</span></span>|<span data-ttu-id="923f8-184">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-184">VisualStateGroup Name</span></span>|<span data-ttu-id="923f8-185">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="923f8-185">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Normal|CommonStates|Der Standardzustand.|  
-|Disabled|CommonStates|Die <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich über der <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Pressed|CommonStates|Die <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist aktiviert.|  
-|Ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
-|Nicht ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Die Schaltfläche besitzt den Fokus.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Die Schaltfläche besitzt den Fokus nicht.|  
-|Focused|FocusStates|Die Schaltfläche besitzt den Fokus.|  
-|Unfocused|FocusStates|Die Schaltfläche besitzt den Fokus nicht.|  
-|Aktiv|ActiveStates|Die Schaltfläche ist aktiv.|  
-|Inaktiv|ActiveStates|Die Schaltfläche ist inaktiv.|  
-|RegularDay|DayStates|Die Schaltfläche stellt nicht <xref:System.DateTime.Today%2A?displayProperty=fullName> dar.|  
-|Today|DayStates|Die Schaltfläche stellt <xref:System.DateTime.Today%2A?displayProperty=fullName> dar.|  
-|NormalDay|BlackoutDayStates|Die Schaltfläche stellt einen Tag dar, der ausgewählt werden kann.|  
-|BlackoutDay|BlackoutDayStates|Die Schaltfläche stellt einen Tag dar, der nicht ausgewählt werden kann.|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="923f8-186">Normal</span><span class="sxs-lookup"><span data-stu-id="923f8-186">Normal</span></span>|<span data-ttu-id="923f8-187">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-187">CommonStates</span></span>|<span data-ttu-id="923f8-188">Der Standardzustand</span><span class="sxs-lookup"><span data-stu-id="923f8-188">The default state.</span></span>|  
+|<span data-ttu-id="923f8-189">Deaktiviert</span><span class="sxs-lookup"><span data-stu-id="923f8-189">Disabled</span></span>|<span data-ttu-id="923f8-190">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-190">CommonStates</span></span>|<span data-ttu-id="923f8-191">Die <xref:System.Windows.Controls.Primitives.CalendarDayButton> ist deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="923f8-191">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> is disabled.</span></span>|  
+|<span data-ttu-id="923f8-192">MouseOver</span><span class="sxs-lookup"><span data-stu-id="923f8-192">MouseOver</span></span>|<span data-ttu-id="923f8-193">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-193">CommonStates</span></span>|<span data-ttu-id="923f8-194">Befindet sich der Mauszeiger über dem <xref:System.Windows.Controls.Primitives.CalendarDayButton>.</span><span class="sxs-lookup"><span data-stu-id="923f8-194">The mouse pointer is positioned over the <xref:System.Windows.Controls.Primitives.CalendarDayButton>.</span></span>|  
+|<span data-ttu-id="923f8-195">Gedrückt</span><span class="sxs-lookup"><span data-stu-id="923f8-195">Pressed</span></span>|<span data-ttu-id="923f8-196">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-196">CommonStates</span></span>|<span data-ttu-id="923f8-197">Die <xref:System.Windows.Controls.Primitives.CalendarDayButton> gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="923f8-197">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> is pressed.</span></span>|  
+|<span data-ttu-id="923f8-198">Ausgewählt</span><span class="sxs-lookup"><span data-stu-id="923f8-198">Selected</span></span>|<span data-ttu-id="923f8-199">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="923f8-199">SelectionStates</span></span>|<span data-ttu-id="923f8-200">Die Schaltfläche "" ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="923f8-200">The button is selected.</span></span>|  
+|<span data-ttu-id="923f8-201">Nicht markiert</span><span class="sxs-lookup"><span data-stu-id="923f8-201">Unselected</span></span>|<span data-ttu-id="923f8-202">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="923f8-202">SelectionStates</span></span>|<span data-ttu-id="923f8-203">Die Schaltfläche ist nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="923f8-203">The button is not selected.</span></span>|  
+|<span data-ttu-id="923f8-204">CalendarButtonFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-204">CalendarButtonFocused</span></span>|<span data-ttu-id="923f8-205">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-205">CalendarButtonFocusStates</span></span>|<span data-ttu-id="923f8-206">Die Schaltfläche mit der besitzt Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-206">The button has focus.</span></span>|  
+|<span data-ttu-id="923f8-207">CalendarButtonUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-207">CalendarButtonUnfocused</span></span>|<span data-ttu-id="923f8-208">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-208">CalendarButtonFocusStates</span></span>|<span data-ttu-id="923f8-209">Die Schaltfläche muss nicht den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-209">The button does not have focus.</span></span>|  
+|<span data-ttu-id="923f8-210">Mit Fokus</span><span class="sxs-lookup"><span data-stu-id="923f8-210">Focused</span></span>|<span data-ttu-id="923f8-211">FocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-211">FocusStates</span></span>|<span data-ttu-id="923f8-212">Die Schaltfläche mit der besitzt Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-212">The button has focus.</span></span>|  
+|<span data-ttu-id="923f8-213">Ohne Fokus</span><span class="sxs-lookup"><span data-stu-id="923f8-213">Unfocused</span></span>|<span data-ttu-id="923f8-214">FocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-214">FocusStates</span></span>|<span data-ttu-id="923f8-215">Die Schaltfläche muss nicht den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-215">The button does not have focus.</span></span>|  
+|<span data-ttu-id="923f8-216">Aktiv</span><span class="sxs-lookup"><span data-stu-id="923f8-216">Active</span></span>|<span data-ttu-id="923f8-217">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="923f8-217">ActiveStates</span></span>|<span data-ttu-id="923f8-218">Die Schaltfläche ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="923f8-218">The button is active.</span></span>|  
+|<span data-ttu-id="923f8-219">Inaktive</span><span class="sxs-lookup"><span data-stu-id="923f8-219">Inactive</span></span>|<span data-ttu-id="923f8-220">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="923f8-220">ActiveStates</span></span>|<span data-ttu-id="923f8-221">Die Schaltfläche ist inaktiv.</span><span class="sxs-lookup"><span data-stu-id="923f8-221">The button is inactive.</span></span>|  
+|<span data-ttu-id="923f8-222">RegularDay</span><span class="sxs-lookup"><span data-stu-id="923f8-222">RegularDay</span></span>|<span data-ttu-id="923f8-223">DayStates</span><span class="sxs-lookup"><span data-stu-id="923f8-223">DayStates</span></span>|<span data-ttu-id="923f8-224">Die Schaltfläche "" stellt keine dar <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="923f8-224">The button does not represent <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="923f8-225">Heute</span><span class="sxs-lookup"><span data-stu-id="923f8-225">Today</span></span>|<span data-ttu-id="923f8-226">DayStates</span><span class="sxs-lookup"><span data-stu-id="923f8-226">DayStates</span></span>|<span data-ttu-id="923f8-227">Stellt die Schaltfläche <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="923f8-227">The button represents <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="923f8-228">NormalDay</span><span class="sxs-lookup"><span data-stu-id="923f8-228">NormalDay</span></span>|<span data-ttu-id="923f8-229">BlackoutDayStates</span><span class="sxs-lookup"><span data-stu-id="923f8-229">BlackoutDayStates</span></span>|<span data-ttu-id="923f8-230">Die Schaltfläche "" stellt einen Tag, der ausgewählt werden kann.</span><span class="sxs-lookup"><span data-stu-id="923f8-230">The button represents a day that can be selected.</span></span>|  
+|<span data-ttu-id="923f8-231">BlackoutDay</span><span class="sxs-lookup"><span data-stu-id="923f8-231">BlackoutDay</span></span>|<span data-ttu-id="923f8-232">BlackoutDayStates</span><span class="sxs-lookup"><span data-stu-id="923f8-232">BlackoutDayStates</span></span>|<span data-ttu-id="923f8-233">Die Schaltfläche "" stellt einen Tag, der nicht ausgewählt werden kann.</span><span class="sxs-lookup"><span data-stu-id="923f8-233">The button represents a day that cannot be selected.</span></span>|  
+|<span data-ttu-id="923f8-234">Gültig</span><span class="sxs-lookup"><span data-stu-id="923f8-234">Valid</span></span>|<span data-ttu-id="923f8-235">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-235">ValidationStates</span></span>|<span data-ttu-id="923f8-236">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="923f8-236">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="923f8-237">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-237">InvalidFocused</span></span>|<span data-ttu-id="923f8-238">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-238">ValidationStates</span></span>|<span data-ttu-id="923f8-239">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="923f8-239">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="923f8-240">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-240">InvalidUnfocused</span></span>|<span data-ttu-id="923f8-241">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-241">ValidationStates</span></span>|<span data-ttu-id="923f8-242">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-242">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarButton\-Teile  
- Das <xref:System.Windows.Controls.Primitives.CalendarButton>\-Steuerelement verfügt nicht über benannte Teile.  
+## <a name="calendarbutton-parts"></a><span data-ttu-id="923f8-243">CalendarButton-Teile</span><span class="sxs-lookup"><span data-stu-id="923f8-243">CalendarButton Parts</span></span>  
+ <span data-ttu-id="923f8-244">Die <xref:System.Windows.Controls.Primitives.CalendarButton> Steuerelement enthält keine benannten Teile.</span><span class="sxs-lookup"><span data-stu-id="923f8-244">The <xref:System.Windows.Controls.Primitives.CalendarButton> control does not have any named parts.</span></span>  
   
-## CalendarButton\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.CalendarButton>\-Steuerelement aufgelistet.  
+## <a name="calendarbutton-states"></a><span data-ttu-id="923f8-245">CalendarButton-Zustände</span><span class="sxs-lookup"><span data-stu-id="923f8-245">CalendarButton States</span></span>  
+ <span data-ttu-id="923f8-246">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.Primitives.CalendarButton> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="923f8-246">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="923f8-247">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-247">VisualState Name</span></span>|<span data-ttu-id="923f8-248">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="923f8-248">VisualStateGroup Name</span></span>|<span data-ttu-id="923f8-249">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="923f8-249">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Normal|CommonStates|Der Standardzustand.|  
-|Disabled|CommonStates|Die <xref:System.Windows.Controls.Primitives.CalendarButton> ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich über der <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Pressed|CommonStates|Die <xref:System.Windows.Controls.Primitives.CalendarButton> ist aktiviert.|  
-|Ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
-|Nicht ausgewählt|SelectionStates|Die Schaltfläche ist ausgewählt.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Die Schaltfläche besitzt den Fokus.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Die Schaltfläche besitzt den Fokus nicht.|  
-|Focused|FocusStates|Die Schaltfläche besitzt den Fokus.|  
-|Unfocused|FocusStates|Die Schaltfläche besitzt den Fokus nicht.|  
-|Aktiv|ActiveStates|Die Schaltfläche ist aktiv.|  
-|Inaktiv|ActiveStates|Die Schaltfläche ist inaktiv.|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="923f8-250">Normal</span><span class="sxs-lookup"><span data-stu-id="923f8-250">Normal</span></span>|<span data-ttu-id="923f8-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-251">CommonStates</span></span>|<span data-ttu-id="923f8-252">Der Standardzustand</span><span class="sxs-lookup"><span data-stu-id="923f8-252">The default state.</span></span>|  
+|<span data-ttu-id="923f8-253">Deaktiviert</span><span class="sxs-lookup"><span data-stu-id="923f8-253">Disabled</span></span>|<span data-ttu-id="923f8-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-254">CommonStates</span></span>|<span data-ttu-id="923f8-255">Die <xref:System.Windows.Controls.Primitives.CalendarButton> ist deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="923f8-255">The <xref:System.Windows.Controls.Primitives.CalendarButton> is disabled.</span></span>|  
+|<span data-ttu-id="923f8-256">MouseOver</span><span class="sxs-lookup"><span data-stu-id="923f8-256">MouseOver</span></span>|<span data-ttu-id="923f8-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-257">CommonStates</span></span>|<span data-ttu-id="923f8-258">Befindet sich der Mauszeiger über dem <xref:System.Windows.Controls.Primitives.CalendarButton>.</span><span class="sxs-lookup"><span data-stu-id="923f8-258">The mouse pointer is positioned over the <xref:System.Windows.Controls.Primitives.CalendarButton>.</span></span>|  
+|<span data-ttu-id="923f8-259">Gedrückt</span><span class="sxs-lookup"><span data-stu-id="923f8-259">Pressed</span></span>|<span data-ttu-id="923f8-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="923f8-260">CommonStates</span></span>|<span data-ttu-id="923f8-261">Die <xref:System.Windows.Controls.Primitives.CalendarButton> gedrückt wird.</span><span class="sxs-lookup"><span data-stu-id="923f8-261">The <xref:System.Windows.Controls.Primitives.CalendarButton> is pressed.</span></span>|  
+|<span data-ttu-id="923f8-262">Ausgewählt</span><span class="sxs-lookup"><span data-stu-id="923f8-262">Selected</span></span>|<span data-ttu-id="923f8-263">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="923f8-263">SelectionStates</span></span>|<span data-ttu-id="923f8-264">Die Schaltfläche "" ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="923f8-264">The button is selected.</span></span>|  
+|<span data-ttu-id="923f8-265">Nicht markiert</span><span class="sxs-lookup"><span data-stu-id="923f8-265">Unselected</span></span>|<span data-ttu-id="923f8-266">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="923f8-266">SelectionStates</span></span>|<span data-ttu-id="923f8-267">Die Schaltfläche ist nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="923f8-267">The button is not selected.</span></span>|  
+|<span data-ttu-id="923f8-268">CalendarButtonFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-268">CalendarButtonFocused</span></span>|<span data-ttu-id="923f8-269">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-269">CalendarButtonFocusStates</span></span>|<span data-ttu-id="923f8-270">Die Schaltfläche mit der besitzt Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-270">The button has focus.</span></span>|  
+|<span data-ttu-id="923f8-271">CalendarButtonUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-271">CalendarButtonUnfocused</span></span>|<span data-ttu-id="923f8-272">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-272">CalendarButtonFocusStates</span></span>|<span data-ttu-id="923f8-273">Die Schaltfläche muss nicht den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-273">The button does not have focus.</span></span>|  
+|<span data-ttu-id="923f8-274">Mit Fokus</span><span class="sxs-lookup"><span data-stu-id="923f8-274">Focused</span></span>|<span data-ttu-id="923f8-275">FocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-275">FocusStates</span></span>|<span data-ttu-id="923f8-276">Die Schaltfläche mit der besitzt Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-276">The button has focus.</span></span>|  
+|<span data-ttu-id="923f8-277">Ohne Fokus</span><span class="sxs-lookup"><span data-stu-id="923f8-277">Unfocused</span></span>|<span data-ttu-id="923f8-278">FocusStates</span><span class="sxs-lookup"><span data-stu-id="923f8-278">FocusStates</span></span>|<span data-ttu-id="923f8-279">Die Schaltfläche muss nicht den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-279">The button does not have focus.</span></span>|  
+|<span data-ttu-id="923f8-280">Aktiv</span><span class="sxs-lookup"><span data-stu-id="923f8-280">Active</span></span>|<span data-ttu-id="923f8-281">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="923f8-281">ActiveStates</span></span>|<span data-ttu-id="923f8-282">Die Schaltfläche ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="923f8-282">The button is active.</span></span>|  
+|<span data-ttu-id="923f8-283">Inaktive</span><span class="sxs-lookup"><span data-stu-id="923f8-283">Inactive</span></span>|<span data-ttu-id="923f8-284">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="923f8-284">ActiveStates</span></span>|<span data-ttu-id="923f8-285">Die Schaltfläche ist inaktiv.</span><span class="sxs-lookup"><span data-stu-id="923f8-285">The button is inactive.</span></span>|  
+|<span data-ttu-id="923f8-286">Gültig</span><span class="sxs-lookup"><span data-stu-id="923f8-286">Valid</span></span>|<span data-ttu-id="923f8-287">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-287">ValidationStates</span></span>|<span data-ttu-id="923f8-288">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="923f8-288">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="923f8-289">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="923f8-289">InvalidFocused</span></span>|<span data-ttu-id="923f8-290">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-290">ValidationStates</span></span>|<span data-ttu-id="923f8-291">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="923f8-291">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="923f8-292">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="923f8-292">InvalidUnfocused</span></span>|<span data-ttu-id="923f8-293">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="923f8-293">ValidationStates</span></span>|<span data-ttu-id="923f8-294">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="923f8-294">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Beispiel für eine Calendar\-ControlTemplate  
- Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.Calendar>\-Steuerelement und zugehörige Typen definiert wird.  
+## <a name="calendar-controltemplate-example"></a><span data-ttu-id="923f8-295">Beispiel für ControlTemplate "Kalender"</span><span class="sxs-lookup"><span data-stu-id="923f8-295">Calendar ControlTemplate Example</span></span>  
+ <span data-ttu-id="923f8-296">Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.Calendar> Steuerelement und zugeordnete Typen.</span><span class="sxs-lookup"><span data-stu-id="923f8-296">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Calendar> control and associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
+ [!code-xaml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
- Im vorherigen Beispiel werden eine oder mehrere der folgenden Ressourcen verwendet.  
+ <span data-ttu-id="923f8-297">Im vorhergehenden Beispiel wird mindestens eine der folgenden Ressourcen verwendet.</span><span class="sxs-lookup"><span data-stu-id="923f8-297">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Das vollständige Beispiel finden Sie unter          [Beispiel zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="923f8-298">Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="923f8-298">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Steuerelementformate und \-vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Anpassung von Steuerelementen](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="923f8-299">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="923f8-299">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="923f8-300">Steuerelementformate und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="923f8-300">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="923f8-301">Anpassung von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="923f8-301">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="923f8-302">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="923f8-302">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="923f8-303">Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="923f8-303">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

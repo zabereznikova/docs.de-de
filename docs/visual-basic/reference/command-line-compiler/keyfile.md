@@ -1,82 +1,65 @@
 ---
-title: / keyfile | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: /keyfile
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /keyfile compiler option [Visual Basic]
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c36eac96ac6302db0b567e8249af726c807c2c6c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 33c9bdf3cf055ea005542f8b2471963b16c16122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="keyfile"></a>/keyfile
-Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
+# <a name="keyfile"></a><span data-ttu-id="9409c-102">/keyfile</span><span class="sxs-lookup"><span data-stu-id="9409c-102">/keyfile</span></span>
+<span data-ttu-id="9409c-103">Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="9409c-103">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="9409c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9409c-104">Syntax</span></span>  
   
 ```  
 /keyfile:file  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a><span data-ttu-id="9409c-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="9409c-105">Arguments</span></span>  
  `file`  
- Erforderlich. Datei, die den Schlüssel enthält. Wenn der Dateiname ein Leerzeichen enthält, schließen Sie den Namen in Anführungszeichen ("").  
+ <span data-ttu-id="9409c-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="9409c-106">Required.</span></span> <span data-ttu-id="9409c-107">Datei, die den Schlüssel enthält.</span><span class="sxs-lookup"><span data-stu-id="9409c-107">File that contains the key.</span></span> <span data-ttu-id="9409c-108">Wenn der Dateiname ein Leerzeichen enthält, setzen Sie den Namen in Anführungszeichen ("").</span><span class="sxs-lookup"><span data-stu-id="9409c-108">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und signiert anschließend die endgültige Assembly mit dem privaten Schlüssel. Um eine Schlüsseldatei zu generieren, geben Sie `sn -k file` in der Befehlszeile. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+## <a name="remarks"></a><span data-ttu-id="9409c-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9409c-109">Remarks</span></span>  
+ <span data-ttu-id="9409c-110">Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und signiert anschließend die endgültige Assembly mit dem privaten Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="9409c-110">The compiler inserts the public key into the assembly manifest and then signs the final assembly with the private key.</span></span> <span data-ttu-id="9409c-111">Um eine Schlüsseldatei zu generieren, geben Sie `sn -k file` in der Befehlszeile.</span><span class="sxs-lookup"><span data-stu-id="9409c-111">To generate a key file, type `sn -k file` at the command line.</span></span> <span data-ttu-id="9409c-112">Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span><span class="sxs-lookup"><span data-stu-id="9409c-112">For more information, see [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
- Bei der Kompilierung mit `/target:module`, der Name der Schlüsseldatei im Modul gespeichert und in die Assembly, die erstellt wird, wenn eine Assembly mit aufgenommen [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ <span data-ttu-id="9409c-113">Beim Kompilieren mit `/target:module`, der Namen der Datei mit dem Schlüssel ist im Modul gespeichert und in die Assembly, die erstellt wird, wenn Sie eine Assembly mit Kompilieren integriert [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span><span class="sxs-lookup"><span data-stu-id="9409c-113">If you compile with `/target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span></span>  
   
- Sie können auch die Verschlüsselungsinformationen mit an den Compiler übergeben [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Verwendung [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) , wenn Sie eine Assembly teilweise signiert werden soll.  
+ <span data-ttu-id="9409c-114">Außerdem können Sie Ihre Verschlüsselungsinformationen mit [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) an den Compiler übergeben.</span><span class="sxs-lookup"><span data-stu-id="9409c-114">You can also pass your encryption information to the compiler with [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).</span></span> <span data-ttu-id="9409c-115">Verwenden Sie [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md), wenn die Assembly teilweise signiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="9409c-115">Use [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) if you want a partially signed assembly.</span></span>  
   
- Sie können diese Option auch als benutzerdefiniertes Attribut angeben (<xref:System.Reflection.AssemblyKeyFileAttribute>) im Quellcode für ein beliebiges Microsoft intermediate Language-Modul.</xref:System.Reflection.AssemblyKeyFileAttribute>  
+ <span data-ttu-id="9409c-116">Sie können diese Option auch als benutzerdefiniertes Attribut angeben (<xref:System.Reflection.AssemblyKeyFileAttribute>) im Quellcode für ein beliebiges Modul von Microsoft intermediate Language.</span><span class="sxs-lookup"><span data-stu-id="9409c-116">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyFileAttribute>) in the source code for any Microsoft intermediate language module.</span></span>  
   
- Sowohl `/keyfile` und [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) sind (entweder durch eine Befehlszeilenoption oder durch ein benutzerdefiniertes Attribut) in der gleichen Kompilierung angegeben, versucht der Compiler zuerst den Schlüsselcontainer. Wenn dies erfolgreich ist, wird die Assembly mit den Informationen im Schlüsselcontainer signiert. Wenn der Compiler den Schlüsselcontainer nicht finden kann, versucht er mit angegebene Datei `/keyfile`. Wenn dies erfolgreich ist, die Assembly mit den Informationen in der Schlüsseldatei signiert wird und die Informationen im Schlüsselcontainer installiert ist (ähnlich wie `sn -i`), damit bei der nächsten Kompilierung die Schlüsselcontainer gültig sein soll.  
+ <span data-ttu-id="9409c-117">Sowohl `/keyfile` und [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) sind angegeben (entweder durch eine Befehlszeilenoption oder durch ein benutzerdefiniertes Attribut) in der gleichen Kompilierung, versucht der Compiler zunächst den Schlüsselcontainer.</span><span class="sxs-lookup"><span data-stu-id="9409c-117">In case both `/keyfile` and [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) are specified (either by command-line option or by custom attribute) in the same compilation, the compiler first tries the key container.</span></span> <span data-ttu-id="9409c-118">Wenn dies erfolgreich ist, wird die Assembly mit den Informationen im Schlüsselcontainer signiert.</span><span class="sxs-lookup"><span data-stu-id="9409c-118">If that succeeds, then the assembly is signed with the information in the key container.</span></span> <span data-ttu-id="9409c-119">Wenn der Compiler den Schlüsselcontainer nicht finden kann, versucht es mit angegebene Datei `/keyfile`.</span><span class="sxs-lookup"><span data-stu-id="9409c-119">If the compiler does not find the key container, it tries the file specified with `/keyfile`.</span></span> <span data-ttu-id="9409c-120">Wenn dies erfolgreich ist, die Assembly mit den Informationen in der Schlüsseldatei signiert wird und die Schlüsselinformationen im Schlüsselcontainer installiert wird (ähnlich wie `sn -i`), damit bei der nächsten Kompilierung die Schlüsselcontainer gültig sein soll.</span><span class="sxs-lookup"><span data-stu-id="9409c-120">If this succeeds, the assembly is signed with the information in the key file, and the key information is installed in the key container (similar to `sn -i`) so that on the next compilation, the key container will be valid.</span></span>  
   
- Beachten Sie, dass eine Schlüsseldatei möglicherweise nur den öffentlichen Schlüssel enthält.  
+ <span data-ttu-id="9409c-121">Beachten Sie, dass die Schlüsseldatei möglicherweise nur den öffentlichen Schlüssel enthält.</span><span class="sxs-lookup"><span data-stu-id="9409c-121">Note that a key file might contain only the public key.</span></span>  
   
- Finden Sie unter [erstellen und Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617) für Weitere Informationen zum Signieren einer Assemblys.  
+ <span data-ttu-id="9409c-122">Finden Sie unter [erstellen und Verwenden von Assemblys](https://msdn.microsoft.com/library/xwb8f617) für Weitere Informationen zum Signieren einer Assemblys.</span><span class="sxs-lookup"><span data-stu-id="9409c-122">See [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) for more information on signing an assembly.</span></span>  
   
 > [!NOTE]
->  Die `/keyfile` Option ist nicht verfügbar der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] Entwicklungsumgebung; es ist nur beim Kompilieren von der Befehlszeile aus.  
+>  <span data-ttu-id="9409c-123">Die `/keyfile` Option ist nicht verfügbar in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwicklungsumgebung; ist verfügbar, nur, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="9409c-123">The `/keyfile` option is not available from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Code wird die Quelldatei `Input.vb` und gibt eine Schlüsseldatei an.  
+## <a name="example"></a><span data-ttu-id="9409c-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9409c-124">Example</span></span>  
+ <span data-ttu-id="9409c-125">Der folgende Code kompiliert die Quelldatei `Input.vb` und gibt eine Schlüsseldatei an.</span><span class="sxs-lookup"><span data-stu-id="9409c-125">The following code compiles source file `Input.vb` and specifies a key file.</span></span>  
   
 ```  
 vbc /keyfile:myfile.sn input.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="9409c-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9409c-126">See Also</span></span>  
+ [<span data-ttu-id="9409c-127">Assemblys und der globale Assemblycache</span><span class="sxs-lookup"><span data-stu-id="9409c-127">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="9409c-128">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="9409c-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="9409c-129">/ Reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9409c-129">/reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [<span data-ttu-id="9409c-130">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="9409c-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

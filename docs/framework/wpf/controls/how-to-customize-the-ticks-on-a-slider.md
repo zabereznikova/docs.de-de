@@ -1,38 +1,41 @@
 ---
-title: "Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TickBar"
-  - "Schieberegler-Steuerelement erstellen mit TickBar"
+title: 'Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TickBar [WPF]
+- Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d266d85e10ca8e77cd32338096cf3a3b761c188
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler
-In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Slider> Steuerelement, das Teilstriche angezeigt werden.  
+# <a name="how-to-customize-the-ticks-on-a-slider"></a><span data-ttu-id="efb2e-102">Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler</span><span class="sxs-lookup"><span data-stu-id="efb2e-102">How to: Customize the Ticks on a Slider</span></span>
+<span data-ttu-id="efb2e-103">In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Slider> -Steuerelement mit Teilstrichen.</span><span class="sxs-lookup"><span data-stu-id="efb2e-103">This example shows how to create a <xref:System.Windows.Controls.Slider> control that has tick marks.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Die <xref:System.Windows.Controls.Primitives.TickBar> zeigt beim Festlegen der <xref:System.Windows.Controls.Slider.TickPlacement%2A> -Eigenschaft auf einen anderen Wert als <xref:System.Windows.Controls.Primitives.TickPlacement>, dies ist der Standardwert.  
+## <a name="example"></a><span data-ttu-id="efb2e-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="efb2e-104">Example</span></span>  
+ <span data-ttu-id="efb2e-105">Die <xref:System.Windows.Controls.Primitives.TickBar> wird angezeigt, wenn Sie festlegen, die <xref:System.Windows.Controls.Slider.TickPlacement%2A> -Eigenschaft auf einen anderen Wert als <xref:System.Windows.Controls.Primitives.TickPlacement.None>, dies ist der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="efb2e-105">The <xref:System.Windows.Controls.Primitives.TickBar> displays when you set the <xref:System.Windows.Controls.Slider.TickPlacement%2A> property to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None>, which is the default value.</span></span>  
   
- Das folgende Beispiel zeigt, wie Sie erstellen ein <xref:System.Windows.Controls.Slider> mit einer <xref:System.Windows.Controls.Primitives.TickBar> , zeigt ein aktivieren. Die <xref:System.Windows.Controls.Slider.TickPlacement%2A> und <xref:System.Windows.Controls.Slider.TickFrequency%2A> Eigenschaften definieren die Position der Teilstriche und das Intervall zwischen ihnen. Beim Verschieben der <xref:System.Windows.Controls.Primitives.Thumb>, QuickInfo zeigt den Wert für die <xref:System.Windows.Controls.Slider>. Die <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> -Eigenschaft definiert, wo die QuickInfos angezeigt. Die <xref:System.Windows.Controls.Primitives.Thumb> Bewegung an die Position der Teilstriche entsprechen, da <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> Wert `true`.  
+ <span data-ttu-id="efb2e-106">Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.Slider> mit einem <xref:System.Windows.Controls.Primitives.TickBar> , zeigt Markierungen Teilstrichen.</span><span class="sxs-lookup"><span data-stu-id="efb2e-106">The following example shows how to create a <xref:System.Windows.Controls.Slider> with a <xref:System.Windows.Controls.Primitives.TickBar> that displays tick marks.</span></span> <span data-ttu-id="efb2e-107">Die <xref:System.Windows.Controls.Slider.TickPlacement%2A> und <xref:System.Windows.Controls.Slider.TickFrequency%2A> Eigenschaften definieren die Position der Teilstriche und das Intervall zwischen ihnen.</span><span class="sxs-lookup"><span data-stu-id="efb2e-107">The <xref:System.Windows.Controls.Slider.TickPlacement%2A> and <xref:System.Windows.Controls.Slider.TickFrequency%2A> properties define the location of the tick marks and the interval between them.</span></span> <span data-ttu-id="efb2e-108">Beim Verschieben der <xref:System.Windows.Controls.Primitives.Thumb>, den Wert der in QuickInfos der <xref:System.Windows.Controls.Slider>.</span><span class="sxs-lookup"><span data-stu-id="efb2e-108">When you move the <xref:System.Windows.Controls.Primitives.Thumb>, tooltips display the value of the <xref:System.Windows.Controls.Slider>.</span></span> <span data-ttu-id="efb2e-109">Die <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> Eigenschaft definiert, wo die QuickInfos angezeigt.</span><span class="sxs-lookup"><span data-stu-id="efb2e-109">The <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> property defines where the tooltips occur.</span></span> <span data-ttu-id="efb2e-110">Die <xref:System.Windows.Controls.Primitives.Thumb> -Bewegungen, die an die Position der Teilstriche entsprechen, da <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> festgelegt ist, um `true`.</span><span class="sxs-lookup"><span data-stu-id="efb2e-110">The <xref:System.Windows.Controls.Primitives.Thumb> movements correspond to the location of the tick marks because <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> is set to `true`.</span></span>  
   
- Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Slider.Ticks%2A> -Eigenschaft Tick entlang der <xref:System.Windows.Controls.Slider> in unregelmäßigen Intervallen.  
+ <span data-ttu-id="efb2e-111">Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Slider.Ticks%2A> Eigenschaft zum Erstellen von Teilstrichen entlang der <xref:System.Windows.Controls.Slider> in unregelmäßigen Intervallen.</span><span class="sxs-lookup"><span data-stu-id="efb2e-111">The following example shows how to use the <xref:System.Windows.Controls.Slider.Ticks%2A> property to create tick marks along the <xref:System.Windows.Controls.Slider> at irregular intervals.</span></span>  
   
- [!code-xml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+ [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.Slider>   
- <xref:System.Windows.Controls.Primitives.TickBar>   
- <xref:System.Windows.Controls.Slider.TickPlacement%2A>   
- [Schieberegler Gewusst-wie-Themen](http://msdn.microsoft.com/de-de/534be86c-afb2-425d-8186-631278a9925e)
+## <a name="see-also"></a><span data-ttu-id="efb2e-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="efb2e-112">See Also</span></span>  
+ <xref:System.Windows.Controls.Slider>  
+ <xref:System.Windows.Controls.Primitives.TickBar>  
+ <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
+ [<span data-ttu-id="efb2e-113">Slider How-to Topics (Vorgehensweisen für Schieberegler)</span><span class="sxs-lookup"><span data-stu-id="efb2e-113">Slider How-to Topics</span></span>](http://msdn.microsoft.com/en-us/534be86c-afb2-425d-8186-631278a9925e)

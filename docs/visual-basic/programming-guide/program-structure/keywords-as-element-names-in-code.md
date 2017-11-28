@@ -1,45 +1,44 @@
 ---
-title: "Keywords as Element Names in Code (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, naming conventions"
-  - "keywords [Visual Basic], in code"
-  - "name conflicts"
-  - "element names, in code"
+title: "Schlüsselwörter als Elementnamen in Code (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Visual Basic code, naming conventions
+- keywords [Visual Basic], in code
+- name conflicts [Visual Basic]
+- element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f410a0eaac0dcc034d406a89ed1d01a8f228a583
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Keywords as Element Names in Code (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Jedes Programmelement \(z. B. Variablen, Klassen oder Member\) kann denselben Namen wie ein eingeschränktes Schlüsselwort haben.  Beispielsweise können Sie eine Variable mit dem Namen `Loop` erstellen.  Um jedoch auf diese Version der Variablen verweisen zu können, die denselben Namen wie das geschützte `Loop`\-Schlüsselwort aufweist, müssen Sie dem Namen entweder die vollständige qualifizierende Zeichenfolge voranstellen, oder ihn wie im folgenden Beispiel in eckige Klammern \(`[ ]`\) einschließen:  
+# <a name="keywords-as-element-names-in-code-visual-basic"></a><span data-ttu-id="1425e-102">Schlüsselwörter als Elementnamen in Code (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1425e-102">Keywords as Element Names in Code (Visual Basic)</span></span>
+<span data-ttu-id="1425e-103">Jedem Programmelement, z. B. eine Variable, eine Klasse oder ein Member – kann den gleichen Namen wie ein eingeschränktes Schlüsselwort haben.</span><span class="sxs-lookup"><span data-stu-id="1425e-103">Any program element — such as a variable, class, or member — can have the same name as a restricted keyword.</span></span> <span data-ttu-id="1425e-104">Sie können z. B. erstellen eine Variablen namens `Loop`.</span><span class="sxs-lookup"><span data-stu-id="1425e-104">For example, you can create a variable named `Loop`.</span></span> <span data-ttu-id="1425e-105">Allerdings zum Verweisen auf die Version zu – die hat des gleichen Namens wie die eingeschränkte `Loop` Schlüsselwort – müssen Sie ein vollständiger Qualifizierungspfad voran oder schließen Sie ihn in eckige Klammern (`[ ]`), wie das folgende Beispiel zeigt.</span><span class="sxs-lookup"><span data-stu-id="1425e-105">However, to refer to your version of it — which has the same name as the restricted `Loop` keyword — you must either precede it with a full qualification string or enclose it in square brackets (`[ ]`), as the following example shows.</span></span>  
   
  [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
- Wenn Sie keinen der beiden Schritte ausführen, geht Visual Basic davon aus, dass das systeminterne `Loop`\-Schlüsselwort verwendet wurde, und erzeugt einen Fehler, wie im folgenden Beispiel gezeigt:  
+ <span data-ttu-id="1425e-106">Wenn Sie nicht eine dieser Optionen, und klicken Sie dann Visual Basic davon aus, die systeminterne Funktion dass `Loop` Schlüsselwort und erzeugt einen Fehler, wie im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="1425e-106">If you do not do either of these, then Visual Basic assumes use of the intrinsic `Loop` keyword and produces an error, as in the following example:</span></span>  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- Die eckigen Klammern können beim Verweisen auf Formulare und Steuerelemente sowie bei der Deklaration einer Variablen oder der Definition einer Prozedur mit demselben Namen wie ein eingeschränktes Schlüsselwort verwendet werden.  Vollständige Namen oder eckige Klammern werden schnell einmal vergessen, und so kann es leicht passieren, dass sich Codefehler einschleichen und die Lesbarkeit leidet.  Deshalb wird davon abgeraten, eingeschränkte Schlüsselwörter als Namen von Programmelementen zu verwenden.  Falls jedoch in einer zukünftigen Version von Visual Basic ein neues Schlüsselwort definiert wird, das einen Konflikt mit dem Namen eines vorhandenen Formulars oder Steuerelements verursacht, können Sie mit diesem Verfahren Code so aktualisieren, dass er in der neuen Version fehlerfrei ausgeführt wird.  
+ <span data-ttu-id="1425e-107">Eckige Klammern können beim Verweisen auf Formularen und Steuerelementen und beim Deklarieren einer Variablen oder eine Prozedur mit dem gleichen Namen wie ein eingeschränktes Schlüsselwort definieren.</span><span class="sxs-lookup"><span data-stu-id="1425e-107">You can use square brackets when referring to forms and controls, and when declaring a variable or defining a procedure with the same name as a restricted keyword.</span></span> <span data-ttu-id="1425e-108">Es kann leicht vergessen, qualifizieren Namen oder eckige Klammern einschließen und somit einführen von Fehlern in Ihren Code und schwieriger zu lesen sein.</span><span class="sxs-lookup"><span data-stu-id="1425e-108">It can be easy to forget to qualify names or include square brackets, and thus introduce errors into your code and make it harder to read.</span></span> <span data-ttu-id="1425e-109">Aus diesem Grund wird empfohlen, dass Sie eingeschränkte Schlüsselwörter nicht als den Namen der Anwendung Elemente verwenden.</span><span class="sxs-lookup"><span data-stu-id="1425e-109">For this reason, we recommend that you not use restricted keywords as the names of program elements.</span></span> <span data-ttu-id="1425e-110">Jedoch wenn eine zukünftige Version von Visual Basic einem neuen Schlüsselwort, steht in Konflikt mit vorhandenen Steuerelementnamen eines Formulars oder definiert, können klicken Sie dann diese Technik Sie beim Aktualisieren von Code mit der neuen Version funktioniert.</span><span class="sxs-lookup"><span data-stu-id="1425e-110">However, if a future version of Visual Basic defines a new keyword that conflicts with an existing form or control name, then you can use this technique when updating your code to work with the new version.</span></span>  
   
 > [!NOTE]
->  Ein Programm kann auch Elementnamen enthalten, die aus anderen Assemblys stammen, auf die verwiesen wird.  Wenn diese Namen einen Konflikt mit eingeschränkten Schlüsselwörtern verursachen, führt das Einschließen der Namen in eckige Klammern dazu, dass sie von Visual Basic als die von Ihnen definierten Elemente interpretiert werden.  
+>  <span data-ttu-id="1425e-111">Das Programm kann auch Elementnamen, die von anderen Assemblys verwiesen wird bereitgestellt enthalten.</span><span class="sxs-lookup"><span data-stu-id="1425e-111">Your program also might include element names provided by other referenced assemblies.</span></span> <span data-ttu-id="1425e-112">Wenn diese Namen mit eingeschränkte Schlüsselwörter in Konflikt stehen, führt dazu, dass Platzieren von eckigen Klammern darum Visual Basic, um sie als Ihre definierten Elemente interpretiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="1425e-112">If these names conflict with restricted keywords, then placing square brackets around them causes Visual Basic to interpret them as your defined elements.</span></span>  
   
-## Siehe auch  
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="1425e-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1425e-113">See Also</span></span>  
+ [<span data-ttu-id="1425e-114">Visual Basic-Benennungskonventionen</span><span class="sxs-lookup"><span data-stu-id="1425e-114">Visual Basic Naming Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [<span data-ttu-id="1425e-115">Programmstruktur und Codekonventionen</span><span class="sxs-lookup"><span data-stu-id="1425e-115">Program Structure and Code Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [<span data-ttu-id="1425e-116">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="1425e-116">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

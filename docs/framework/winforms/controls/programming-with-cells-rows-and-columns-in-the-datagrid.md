@@ -1,68 +1,69 @@
 ---
-title: "Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zellen, Datenblätter"
-  - "Spalten [Windows Forms], Datenblätter"
-  - "Datenblätter, Elemente"
-  - "DataGridView-Steuerelement [Windows Forms], Programmieren mit Datenblattelementen"
-  - "Zeilen [Windows Forms], Datenblätter"
+title: Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], elements
+- columns [Windows Forms], data grids
+- cells [Windows Forms], data grids
+- DataGridView control [Windows Forms], programming with grid elements
+- rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms
-Dieser Abschnitt enthält Themen, die verschiedene Programmieraufgaben in Bezug auf Zellen\-, Zeilen\- und Spaltenobjekte veranschaulichen.  
+# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="9d091-102">Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-102">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="9d091-103">Dieser Abschnitt enthält Themen, in denen verschiedene Programmieraufgaben, die im Zusammenhang mit Zellen-, Zeilen- und Spaltenobjekten veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="9d091-103">This section provides topics that demonstrate various programming tasks involving cell, row, and column objects.</span></span>  
   
-## In diesem Abschnitt  
- [Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
- Beschreibt, wie das <xref:System.Windows.Forms.DataGridView.CellFormatting>\-Ereignis behandelt wird, um unterschiedliche QuickInfos für einzelne Zellen bereitzustellen.  
+## <a name="in-this-section"></a><span data-ttu-id="9d091-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9d091-104">In This Section</span></span>  
+ [<span data-ttu-id="9d091-105">Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-105">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ <span data-ttu-id="9d091-106">Beschreibt das Behandeln der <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis, um unterschiedliche QuickInfos für einzelne Zellen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="9d091-106">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting> event to provide different ToolTips for individual cells.</span></span>  
   
- [Gewusst wie: Ausführen einer benutzerdefinierten Aktion aufgrund von Änderungen in einer Zelle des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
- Beschreibt, wie das <xref:System.Windows.Forms.DataGridView.CellValueChanged>\-Ereignis und das <xref:System.Windows.Forms.DataGridView.CellStateChanged>\-Ereignis behandelt werden.  
+ [<span data-ttu-id="9d091-107">Gewusst wie: Ausführen einer benutzerdefinierten Aktion aufgrund von Änderungen in einer Zelle des DataGridView-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-107">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ <span data-ttu-id="9d091-108">Beschreibt das Behandeln der <xref:System.Windows.Forms.DataGridView.CellValueChanged> und <xref:System.Windows.Forms.DataGridView.CellStateChanged> Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="9d091-108">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
- [Gewusst wie: Bearbeiten von Bändern im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Programmierung mit Objekten vom Typ <xref:System.Windows.Forms.DataGridViewBand>, der den Basistyp für Zeilen und Spalten darstellt.  
+ [<span data-ttu-id="9d091-109">Gewusst wie: Bearbeiten von Bändern im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-109">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="9d091-110">Beschreibt, wie eine Programmierung mit Objekten des Typs <xref:System.Windows.Forms.DataGridViewBand>, dies ist der Basistyp für Zeilen und Spalten.</span><span class="sxs-lookup"><span data-stu-id="9d091-110">Describes how to program with objects of type <xref:System.Windows.Forms.DataGridViewBand>, which is the base type for rows and columns.</span></span>  
   
- [Gewusst wie: Bearbeiten von Zeilen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Programmierung mit Objekten vom Typ `DataGridViewRow`.  
+ [<span data-ttu-id="9d091-111">Gewusst wie: Bearbeiten von Zeilen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-111">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="9d091-112">Beschreibt, wie eine Programmierung mit Objekten des Typs `DataGridViewRow`.</span><span class="sxs-lookup"><span data-stu-id="9d091-112">Describes how to program with objects of type `DataGridViewRow`.</span></span>  
   
- [Gewusst wie: Bearbeiten von Spalten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Programmierung mit Objekten vom Typ `DataGridViewColumn`.  
+ [<span data-ttu-id="9d091-113">Gewusst wie: Bearbeiten von Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-113">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="9d091-114">Beschreibt, wie eine Programmierung mit Objekten des Typs `DataGridViewColumn`.</span><span class="sxs-lookup"><span data-stu-id="9d091-114">Describes how to program with objects of type `DataGridViewColumn`.</span></span>  
   
- [Gewusst wie: Arbeiten mit Bildspalten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt das Programmieren mit der `DataGridViewImageColumn`\-Klasse.  
+ [<span data-ttu-id="9d091-115">Gewusst wie: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-115">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="9d091-116">Beschreibt, wie mit der `DataGridViewImageColumn` Klasse.</span><span class="sxs-lookup"><span data-stu-id="9d091-116">Describes how to program with the `DataGridViewImageColumn` class.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="9d091-117">Verweis</span><span class="sxs-lookup"><span data-stu-id="9d091-117">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- Enthält die Referenzdokumentation zum <xref:System.Windows.Forms.DataGridView>\-Steuerelement.  
+ <span data-ttu-id="9d091-118">Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="9d091-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewCell>  
- Enthält die Referenzdokumentation zur <xref:System.Windows.Forms.DataGridViewCell>\-Klasse.  
+ <span data-ttu-id="9d091-119">Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewCell> Klasse.</span><span class="sxs-lookup"><span data-stu-id="9d091-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewCell> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewRow>  
- Enthält die Referenzdokumentation zur <xref:System.Windows.Forms.DataGridViewRow>\-Klasse.  
+ <span data-ttu-id="9d091-120">Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewRow> Klasse.</span><span class="sxs-lookup"><span data-stu-id="9d091-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewColumn>  
- Enthält die Referenzdokumentation zur <xref:System.Windows.Forms.DataGridViewColumn>\-Klasse.  
+ <span data-ttu-id="9d091-121">Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.</span><span class="sxs-lookup"><span data-stu-id="9d091-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
   
-## Verwandte Abschnitte  
- [Grundlegende Spalten\-, Zeilen\- und Zellfeatures im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Enthält Themen, in denen häufig verwendete Zellen\-, Zeilen\- und Spalteneigenschaften beschrieben werden.  
+## <a name="related-sections"></a><span data-ttu-id="9d091-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9d091-122">Related Sections</span></span>  
+ [<span data-ttu-id="9d091-123">Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-123">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ <span data-ttu-id="9d091-124">Enthält Themen, in denen häufig Zellen-, Zeilen- und Spalte Eigenschaften verwendet.</span><span class="sxs-lookup"><span data-stu-id="9d091-124">Provides topics that describe commonly used cell, row, and column properties.</span></span>  
   
-## Siehe auch  
- [DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Spaltentypen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="9d091-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9d091-125">See Also</span></span>  
+ [<span data-ttu-id="9d091-126">DataGridView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9d091-126">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="9d091-127">Spaltentypen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9d091-127">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
