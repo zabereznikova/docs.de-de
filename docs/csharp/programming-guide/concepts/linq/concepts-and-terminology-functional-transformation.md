@@ -1,25 +1,21 @@
 ---
 title: Konzepte und Terminologie (funktionale Transformation) (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c62aadc84f9c62429ffe59b78de386aac0f5cf63
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ba05385b4cf686ac7bf8a203140338d31da80680
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Konzepte und Terminologie (funktionale Transformation) (C#)
 Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mit reinen funktionalen Transformationen verwendet werden. Bei Verwendung der funktionalen Transformation zum Transformieren von Daten erhalten Sie Code, der häufig schneller programmiert werden kann, ausdrucksstärker ist und einfacher von Fehlern bereinigt und verwaltet werden kann als Code, der auf die herkömmliche imperative Methode zurückzuführen ist.  
@@ -84,6 +80,5 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Diese Sprachfunktionen werden in Codebeispielen im gesamten Abschnitt verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (c#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
+ [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [Funktionale Programmierung und Imperative Programmierung (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
-

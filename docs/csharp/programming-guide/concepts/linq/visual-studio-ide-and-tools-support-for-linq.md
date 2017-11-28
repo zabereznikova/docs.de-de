@@ -1,30 +1,21 @@
 ---
 title: "Visual Studio-IDE und Toolunterstützung für LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 42d38e34c1b6474a3892fd091c9f344234f7ca68
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 028f501b455da2a930d3e39ba25da38ef9fdfd8d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Visual Studio-IDE und Toolunterstützung für LINQ (C#)
 Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bietet die folgenden Features, die die LINQ-Anwendungsentwicklung unterstützen:  
@@ -43,4 +34,3 @@ Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) v
   
 ## <a name="see-also"></a>Siehe auch  
  [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)
-

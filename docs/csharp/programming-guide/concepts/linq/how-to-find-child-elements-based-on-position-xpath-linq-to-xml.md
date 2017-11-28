@@ -1,25 +1,21 @@
 ---
 title: 'Vorgehensweise: Ermitteln untergeordneter Elemente anhand der Position (XPath-LINQ to XML) (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: df586c74d46513122029b3f5fdb5bec4f7b6003b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 247cb8f2be3a005413045198443b132b25241775
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Vorgehensweise: Ermitteln untergeordneter Elemente anhand der Position (XPath-LINQ to XML) (C#)
 Es kann passieren, dass Sie Elemente anhand ihrer Position ermitteln, also z. B. das zweite oder das dritte bis fünfte Element finden möchten.  
@@ -92,4 +88,3 @@ Results are identical
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to XML für XPath-Benutzer (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

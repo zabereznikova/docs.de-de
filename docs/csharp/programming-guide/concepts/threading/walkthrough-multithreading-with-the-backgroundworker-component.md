@@ -1,30 +1,21 @@
 ---
 title: 'Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Exemplarische Vorgehensweise: Multithreading mit der BackgroundWorker-Komponente (C#)
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windows Forms-Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht. Folgendes wird veranschaulicht:  
@@ -292,6 +283,5 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie man eine Windo
  Diese Anwendung enthält eine grundlegende Fehlerbehandlung. Sie erkennt leere Suchbegriffe. Sie können dieses Programm stabiler machen, indem Sie andere Fehler behandeln, z.B. das Überschreiten der maximalen Anzahl von Wörtern oder Linien, die gezählt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
+ [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [Gewusst wie: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
-

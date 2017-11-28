@@ -12,16 +12,15 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6e6f23c413bbefe6a29746e2f6a1887a23dd3bfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465939bca9e0300300efef9842f312800817a5cc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="when-to-use-generic-collections"></a>Verwenden von generischen Auflistungen
 Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei generischen Typen keine Notwendigkeit zum Einschließen der Elemente besteht.  
@@ -54,7 +53,7 @@ Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den u
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> ermöglicht das schnelle Einfügen und Entfernen unsortierter Elemente.  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, solange der Objekttyp die <xref:System.Collections.IEnumerable?displayProperty=fullName> - oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> -Schnittstelle implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach` -Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) und [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Mit der LINQ to Objects-Funktion können Sie LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, solange der Objekttyp die <xref:System.Collections.IEnumerable?displayProperty=nameWithType> - oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> -Schnittstelle implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach` -Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) und [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="additional-functionality"></a>Zusätzliche Funktionen  
  Einige der generischen Typen besitzen Funktionen, die es in den nicht generischen Auflistungstypen nicht gibt. Die <xref:System.Collections.Generic.List%601> -Klasse, die der nicht generischen <xref:System.Collections.ArrayList> -Klasse entspricht, hat z. B. eine Reihe von Methoden, die generische Delegaten akzeptieren, z. B. den <xref:System.Predicate%601> -Delegaten, mit dem Sie Methoden zum Durchsuchen der Liste angeben können, den <xref:System.Action%601> -Delegaten, der Methoden für die einzelnen Listenelemente darstellt, und den <xref:System.Converter%602> -Delegaten, mit dem Sie Konvertierungen zwischen Typen definieren können.  
@@ -62,7 +61,6 @@ Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den u
  Mit der <xref:System.Collections.Generic.List%601> -Klasse können Sie Ihre eigenen generischen <xref:System.Collections.Generic.IComparer%601> -Schnittstellenimplementierungen zum Sortieren und Durchsuchen der Liste angeben. Die Klassen <xref:System.Collections.Generic.SortedDictionary%602> und <xref:System.Collections.Generic.SortedList%602> verfügen ebenfalls über diese Funktion. Darüber hinaus ermöglichen Ihnen diese Klassen das Angeben von Vergleichen beim Erstellen der Auflistung. In ähnlicher Weise können Sie mit den Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.ObjectModel.KeyedCollection%602> eigene Gleichheitsvergleiche angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Auflistungen und Datenstrukturen](../../../docs/standard/collections/index.md)   
- [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)   
+ [Sammlungen und Datenstrukturen](../../../docs/standard/collections/index.md)  
+ [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)  
  [Generika](../../../docs/standard/generics/index.md)
-

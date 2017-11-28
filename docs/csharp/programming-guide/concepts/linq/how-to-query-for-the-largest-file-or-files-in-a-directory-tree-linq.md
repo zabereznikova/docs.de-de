@@ -1,30 +1,21 @@
 ---
 title: "How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (C#))"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4ab52cc46a7d735ebe60f1d3822d5ae39c2a1234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22bb97865e13722f35aa716ca2bd829989330ab6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (C#))
 Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:  
@@ -163,6 +154,5 @@ class QueryBySize
  Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-

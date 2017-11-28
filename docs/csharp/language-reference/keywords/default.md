@@ -1,43 +1,23 @@
 ---
 title: default (C#-Referenz)
-ms.date: 2017-08-04
+ms.date: 08/04/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - default
 - default_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- default keyword [C#]
+helpviewer_keywords: default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1078dd21101a41969754de1afc8919f8ac0bda8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
-ms.openlocfilehash: 60607855e4a947af694c8ad8a9a3f0515ebb1700
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="default-c-reference"></a>default (C#-Referenz)
 
 Das `default`-Schlüsselwort.
@@ -50,7 +30,6 @@ Das `default`-Schlüsselwort kann in der `switch`-Anweisung oder in einem Standa
 
 ## <a name="see-also"></a>Siehe auch
 
- [C#-Referenz](../index.md)   
- [C#-Programmierhandbuch](../../programming-guide/index.md)   
- [C#-Schlüsselwörter](index.md)   
-
+ [C#-Referenz](../index.md)  
+ [C#-Programmierhandbuch](../../programming-guide/index.md)  
+ [C#-Schlüsselwörter](index.md)  

@@ -1,42 +1,23 @@
 ---
 title: -warnaserror (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /warnaserror
-dev_langs:
-- CSharp
+f1_keywords: /warnaserror
 helpviewer_keywords:
 - /warnaserror compiler option [C#]
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 28c2cdc26d32d98e617a0c4b8cd282d2fbc87f4d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df29fd760e0e4a002f1b5078d85370a74f322e23
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="warnaserror-c-compiler-options"></a>/warnaserror (C#-Compileroptionen)
 Die Option **/warnaserror+** behandelt alle Warnungen als Fehler.  
@@ -64,7 +45,7 @@ Die Option **/warnaserror+** behandelt alle Warnungen als Fehler.
   
 3.  Ändern Sie die Eigenschaft **Warnungen als Fehler behandeln**.  
   
-     Um diese Compileroption programmgesteuert festzulegen, sehen Sie sich <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A> an.  
+     Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>.  
   
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass keine Warnungen angezeigt werden:  
@@ -75,6 +56,5 @@ csc /warnaserror:642,649,652 in.cs
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-

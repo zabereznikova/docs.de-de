@@ -1,40 +1,36 @@
 ---
-title: Umgestalten mit einer Erweiterungsmethode (Visual Basic) | Microsoft-Dokumentation
+title: Umgestalten mit einer Erweiterungsmethode (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 83934292a57b5830cc6a3b002b61c6ad657d4eb7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Umgestalten mit einer Erweiterungsmethode (Visual Basic)
-Dieses Beispiel baut auf dem vorherigen Beispiel, [Abrufen des Texts der Absätze (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion, die implementiert wird, als eine Erweiterungsmethode.  
+Dieses Beispiel baut auf dem vorhergehenden Beispiel [Abrufen des Textes aus den Absätzen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion um, die implementiert wird, als eine Erweiterungsmethode.  
   
- Im vorherigen Beispiel verwendet die <xref:System.Linq.Enumerable.Aggregate%2A>Standardabfrageoperator zum Verketten mehrerer Zeichenfolgen zu einer einzigen Zeichenfolge.</xref:System.Linq.Enumerable.Aggregate%2A> Bequemer ist es aber, dafür eine Erweiterungsmethode zu schreiben, weil die Abfrage dadurch kleiner und einfacher wird.  
+ Im vorherigen Beispiel wurde zum Verketten mehrerer Zeichenfolgen zu einer Zeichenfolge der <xref:System.Linq.Enumerable.Aggregate%2A>-Standardabfrageoperator verwendet. Bequemer ist es aber, dafür eine Erweiterungsmethode zu schreiben, weil die Abfrage dadurch kleiner und einfacher wird.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es die Absätze, die Formatvorlagen der Absätze und den Text der einzelnen Absätze abruft. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf.  
   
  Das Beispiel enthält mehrere Überladungen der `StringConcatenate`-Methode.  
   
- Sie finden die Anleitung zum Erstellen des Quelldokuments für dieses Beispiel in [Erstellen von Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Sie erhalten Anweisungen zum Erstellen des Quelldokument für dieses Beispiel in [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Er verwendet die Typen in der <xref:System.IO.Packaging?displayProperty=fullName>Namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -229,7 +225,7 @@ Module Module1
 End Module  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe, wenn für das Dokument, das in beschriebene [Erstellen von Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Dieses Beispiel erzeugt die folgende Ausgabe bei Anwendung auf das Dokument, die in beschriebenen [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -254,8 +250,8 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel wird gezeigt, wie dieser Code durch Verwendung von reinen Funktionen umgestaltet werden kann:  
   
--   [Umgestalten mit einer reinen Funktion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [Refactoring mit reiner Funktion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Lernprogramm: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Umgestalten in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

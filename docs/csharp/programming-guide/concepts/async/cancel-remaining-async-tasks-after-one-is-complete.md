@@ -1,33 +1,24 @@
 ---
 title: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fe65f81af28509c577e014353c43b72d34375459
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23e68327cfc52845b203acdf5f69253de746d566
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
-Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>-Methode zusammen mit einem <xref:System.Threading.CancellationToken> können Sie alle verbleibenden Aufgaben abbrechen, wenn eine Aufgabe abgeschlossen wurde. Die `WhenAny`-Methode akzeptiert ein Argument, das eine Auflistung von Aufgaben ist. Die Methode startet alle Aufgaben und gibt eine einzelne Aufgabe zurück. Die einzelne Aufgabe ist abgeschlossen, wenn eine beliebige Aufgabe in der Auflistung abgeschlossen ist.  
+Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>-Methode zusammen mit einem <xref:System.Threading.CancellationToken> können Sie alle verbleibenden Aufgaben abbrechen, wenn eine Aufgabe abgeschlossen wurde. Die `WhenAny`-Methode akzeptiert ein Argument, das eine Auflistung von Aufgaben ist. Die Methode startet alle Aufgaben und gibt eine einzelne Aufgabe zurück. Die einzelne Aufgabe ist abgeschlossen, wenn eine beliebige Aufgabe in der Auflistung abgeschlossen ist.  
   
  In diesem Beispiel wird veranschaulicht, wie ein Abbruchtoken in Verbindung mit `WhenAny` verwendet wird, um an der ersten Aufgabe festzuhalten, die in der Auflistung von Aufgaben beendet wird, und die übrigen Aufgaben abzubrechen. Jede Aufgabe lädt den Inhalt einer Website herunter. Im Beispiel wird die Länge des Inhalts des ersten abgeschlossenen Downloads angezeigt und die anderen Downloads abgebrochen.  
   
@@ -103,7 +94,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
     ```  
   
-5.  In diesem Beispiel sind Sie nur an der Aufgabe interessiert, die zuerst beendet wird. Verwenden Sie daher <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>, um die verbleibenden Aufgaben abzubrechen.  
+5.  In diesem Beispiel sind Sie nur an der Aufgabe interessiert, die zuerst beendet wird. Verwenden Sie daher <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, um die verbleibenden Aufgaben abzubrechen.  
   
     ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
@@ -275,8 +266,7 @@ namespace CancelAfterOneTask
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)   
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046)
-

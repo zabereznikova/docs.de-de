@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>Unterscheidung zwischen Delegaten und Ereignissen
 
 [Zurück](modern-events.md)
@@ -55,4 +53,3 @@ Vergleichen Sie das mit vielen delegatbasierten Entwürfen, bei denen ein Delega
 ## <a name="evaluate-carefully"></a>Sorgfältig bewerten
 
 Die oben genannten Aspekte sind keine verbindlichen Regeln. Stattdessen stellen sie Leitfäden dar, mit denen Sie entscheiden können, welche Auswahl für Ihre spezielle Verwendung am besten geeignet ist. Da sie sich ähneln, können Sie sogar beide als Prototyp nutzen, und überlegen, welche beim Arbeiten natürlicher wäre. Beide behandeln Szenarios mit später Bindung gut. Verwenden Sie die, die Ihren Entwurf am besten kommuniziert.
-

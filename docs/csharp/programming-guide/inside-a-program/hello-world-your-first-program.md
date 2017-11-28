@@ -1,42 +1,24 @@
 ---
 title: "Hello World – Ihr erstes Programm (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
-ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Ihr erstes Programm (C#-Programmierhandbuch)
 Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!“ -Programms. Das Programm zeigt die Zeichenfolge `Hello World!` an.  
@@ -63,7 +45,7 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
   
 6.  Ersetzen Sie den Inhalt von Program.cs durch den folgenden Code.  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  Drücken Sie die Taste F5, um das Projekt auszuführen. Ein Eingabeaufforderungsfenster wird angezeigt, das die Zeile `Hello World!` enthält  
   
@@ -72,11 +54,11 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
 ## <a name="comments"></a>Kommentare  
  Die erste Zeile enthält einen Kommentar. Durch die Zeichen `//` wird die restliche Zeile in einen Kommentar konvertiert.  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
+ [!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  Sie können auch einen Kommentar aus einem Textblock einfügen, indem Sie ihn zwischen den Zeichen `/*` und `*/` einschließen. Dies wird im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
+ [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Die 'Main'-Methode  
  Eine C#-Konsolenanwendung muss eine `Main`-Methode enthalten, in der die Steuerung beginnt und endet. Innerhalb der `Main`-Methode erstellen Sie Objekte und führen andere Methoden aus.  
@@ -85,19 +67,19 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
   
 -   Es kann `void` zurückgegeben werden.  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   Zudem kann eine ganze Zahl zurückgegeben werden.  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   Bei beiden Rückgabetypen können Argumente verwendet werden.  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      - oder -   
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  Der Parameter der `Main`-Methode, `args`, ist ein `string`-Array, das die Befehlszeilenargumente enthält, die zum Aufrufen des Programms verwendet werden. Im Gegensatz zu C++ enthält dieses Array nicht den Namen der ausführbaren Datei (EXE).  
   
@@ -108,9 +90,9 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
 ## <a name="input-and-output"></a>Eingabe und Ausgabe  
  C#-Programme verwenden im Allgemeinen die Eingabe-/Ausgabedienste der Laufzeitbibliothek von .NET Framework. Die Anweisung `System.Console.WriteLine("Hello World!");` verwendet die <xref:System.Console.WriteLine%2A>-Methode. Dies ist eine der Ausgabemethoden der <xref:System.Console>-Klasse in der Laufzeit-Bibliothek. Bei dieser Methode wird der Zeichenfolgenparameter für den Standardausgabestream gefolgt von einer neuen Zeile angezeigt. Für andere Eingabe-/Ausgabevorgänge sind andere <xref:System.Console>-Methoden verfügbar. Wenn Sie die `using System;`-Direktive am Anfang des Programms einfügen, können Sie die <xref:System>-Klassen und -Methoden direkt verwenden, ohne sie voll zu qualifizieren. Zum Beispiel können Sie `Console.WriteLine` statt `System.Console.WriteLine` aufrufen:  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
+ [!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  Weitere Informationen zu Eingabe-/Ausgabemethoden finden Sie unter <xref:System.IO>.  
   
@@ -150,11 +132,10 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
  Weitere Informationen über den C#-Compiler und seine Optionen finden Sie unter [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md).
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)   
- [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)  
+ [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

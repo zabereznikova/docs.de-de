@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen Sie mit dem Verfahren vertraut sein, mit dem die Common Language Runtime die Assemblys sucht und bindet, aus denen Ihre Anwendung zusammengesetzt ist. Standardmäßig versucht die Common Language Runtime, die genaue Version einer Assembly einzubinden, mit der die Anwendung erstellt wurde. Dieses Standardverhalten kann durch Einstellungen in der Konfigurationsdatei überschrieben werden.  
@@ -263,6 +256,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Wenn beispielsweise "Assembly1" auf "Assembly2" verweist und "Assembly1" von "http://www.code.microsoft.com/utils" heruntergeladen wurde, wird dieser Speicherort als Hinweis auf den Speicherort von "Assembly2.dll" angesehen. Die Common Language Runtime überprüft dann "http://www.code.microsoft.com/utils/Assembly2.dll" und "http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll", um die Assembly zu finden. Wenn "Assembly2" in keinem der beiden Speicherorte vorhanden ist, wird eine Anfrage an Windows Installer gestellt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+ [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [Bereitstellung](../../../docs/framework/deployment/index.md)
-

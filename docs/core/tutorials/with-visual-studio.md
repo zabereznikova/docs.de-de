@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
+ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017
 
 Dieses Thema ist eine grundlegende Einführung in das Erstellen, Debuggen und Veröffentlichen einer einfachen .NET Core-Konsolenanwendung in C# mithilfe von Visual Studio 2017. Visual Studio 2017 bietet eine Entwicklungsumgebung mit vollem Funktionsumfang für die Erstellung von .NET Core-Anwendungen. Sofern die Anwendung keine plattformspezifischen Abhängigkeiten aufweist, kann sie auf jeder von .NET Core unterstützten Plattform und in jedem System mit installiertem .NET Core ausgeführt werden.
@@ -40,9 +38,9 @@ Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstel
 
    ![Visual Studio und das neue HelloWorld-Projekt](./media/with-visual-studio/devenv.png)
 
-   Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=fullName>-Methode auf, um die literale Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen. Indem Sie auf der Symbolleiste die **HelloWorld**-Schaltfläche mit dem grünen Pfeil auswählen, können Sie das Programm im Debugmodus ausführen. In diesem Fall ist das Konsolenfenster nur sehr kurz zu sehen und wird wieder geschlossen. Dies liegt daran, dass die Methode `Main` beendet wird und die Anwendung endet, sobald die einzige Anweisung in der `Main`-Methode ausgeführt wurde.
+   Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode auf, um die literale Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen. Indem Sie auf der Symbolleiste die **HelloWorld**-Schaltfläche mit dem grünen Pfeil auswählen, können Sie das Programm im Debugmodus ausführen. In diesem Fall ist das Konsolenfenster nur sehr kurz zu sehen und wird wieder geschlossen. Dies liegt daran, dass die Methode `Main` beendet wird und die Anwendung endet, sobald die einzige Anweisung in der `Main`-Methode ausgeführt wurde.
 
-1. Damit die Anwendung anhält, bevor sie das Konsolenfenster schließt, fügen Sie den folgenden Code sofort nach dem Aufruf der <xref:System.Console.WriteLine(System.String)?displayProperty=fullName>-Methode hinzu:
+1. Damit die Anwendung anhält, bevor sie das Konsolenfenster schließt, fügen Sie den folgenden Code sofort nach dem Aufruf der <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode hinzu:
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -66,11 +64,11 @@ Erweitern Sie ihre Anwendung, um die Benutzer aufzufordern, Ihren Namen einzugeb
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Dieser Code ersetzt die bestehenden Anweisungen <xref:System.Console.WriteLine%2A?displayProperty=fullName>, <xref:System.Console.Write%2A?displayProperty=fullName> und <xref:System.Console.ReadKey%2A?displayProperty=fullName>.
+   Dieser Code ersetzt die bestehenden Anweisungen <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> und <xref:System.Console.ReadKey%2A?displayProperty=nameWithType>.
 
    ![C#-Programmdatei von Visual Studio mit aktualisierter Main-Methode](./media/with-visual-studio/codewindow.png)
 
-   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=fullName> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../csharp/language-reference/keywords/interpolated-strings.md), um diese Werte im Konsolenfenster anzuzeigen.
+   Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `date` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../csharp/language-reference/keywords/interpolated-strings.md), um diese Werte im Konsolenfenster anzuzeigen.
 
 1. Kompilieren Sie das Programm durch Auswählen von **Erstellen** > **Projektmappe erstellen**.
 
@@ -91,4 +89,3 @@ Sie haben Ihre Anwendung erstellt und ausgeführt. Wenn Sie professionelle Anwen
 Anstatt eine Konsolenanwendung zu verwenden, können Sie auch mit .NET Core und Visual Studio 2017 eine Klassenbibliothek erstellen. Eine Schrittanleitung dazu finden Sie im Thema [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](library-with-visual-studio.md).
 
 Sie können auch mit [Visual Studio Code](https://code.visualstudio.com/), einem kostenlosen, herunterladbaren Code-Editor, eine .NET Core-Konsolen-App unter Mac, Linux oder Windows entwickeln. Ein Tutorial mit Schrittanleitungen finden Sie unter [Erste Schritte mit Visual Studio Code](with-visual-studio-code.md).
-

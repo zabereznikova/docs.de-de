@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
 .NET Core wurde mit Prüfbarkeit als Hintergedanke entwickelt, sodass das Erstellen von Unittests für Ihre Anwendung einfacher als je zuvor ist. Dieser Artikel gibt eine kurze Einführung zu Unittests (und wie sich diese von anderen Arten von Tests unterscheiden). Verknüpfte Ressourcen zeigen, wie ein Testprojekt einer Lösung zugeordnet wird und anschließend Komponententests mithilfe der Befehlszeile oder Visual Studio ausgeführt werden.
@@ -52,4 +50,3 @@ Sie können verschiedene Sprachen für Ihre Klassenbibliotheken und Komponentent
 * Wenn Sie Visual Studio verwenden, lesen Sie [Live Unit Testing in .NET Core](/visualstudio/test/live-unit-testing) (Live-Komponententests in .NET Core).
 * Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](selective-unit-tests.md) oder [Including and excluding test projects and test methods](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods) (Einbeziehen und Ausschließen von Testprojekten und Testmethoden).
 * Das XUnit-Team hat ein Tutorial geschrieben, das zeigt, [how to use xUnit with .NET Core and Visual Studio (wie xUnit mit .NET Core und Visual Studio verwendet wird)](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-

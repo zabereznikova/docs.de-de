@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
 - deploying applications [.NET Framework]
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: eee16adfaa38b9a616f47d8489d99d0d9714cbaa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit Ihrer Anwendung zu beginnen. Die meisten der Informationen sind für Entwickler, OEM- und Organisationsadministratoren vorgesehen. Benutzer, die .NET Framework auf ihren Computern installieren möchten, sollten die Informationen unter [Installieren von .NET Framework](~/docs/framework/install/index.md) lesen.  
@@ -183,4 +176,3 @@ Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit 
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
-

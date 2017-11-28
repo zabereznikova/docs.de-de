@@ -16,16 +16,15 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. In .NET Framework enthalten die [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142)-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenstreams und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -33,7 +32,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
  Eine Datei ist eine geordnete, mit einem Namen versehene Auflistung von dauerhaft gespeicherten Bytes. Beim Umgang mit Dateien arbeiten Sie mit Verzeichnispfaden, Datenträgern sowie mit Datei- und Verzeichnisnamen. Im Unterschied dazu, handelt es sich bei einem Stream um eine Sequenz von Bytes, die zum Lesen von und zum Schreiben in einen Sicherungsspeicher verwendet wird, für den unterschiedliche Speichermedien (z. B. Festplatten oder Arbeitsspeicher) verwendet werden können. Ebenso wie es neben Festplatten mehrere andere Sicherungsspeicher gibt, gibt es neben Dateistreams zusätzlich Netzwerk-, Speicher- und Pipestreams.  
   
 ## <a name="files-and-directories"></a>Dateien und Verzeichnisse  
- Sie können die Typen im <xref:System.IO?displayProperty=fullName>-Namespace verwenden, um mit Dateien und Verzeichnissen zu interagieren. Beispielsweise können Sie Eigenschaften für Dateien und Verzeichnisse abrufen und festlegen oder Auflistungen von Dateien und Verzeichnissen anhand von Suchkriterien abrufen.  
+ Sie können die Typen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, um mit Dateien und Verzeichnissen zu interagieren. Beispielsweise können Sie Eigenschaften für Dateien und Verzeichnisse abrufen und festlegen oder Auflistungen von Dateien und Verzeichnissen anhand von Suchkriterien abrufen.  
   
  Im Folgenden sind einige häufig verwendete Datei- und Verzeichnisklassen aufgeführt:  
   
@@ -47,7 +46,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
   
 -   <xref:System.IO.Path> – stellt Methoden und Eigenschaften für die plattformübergreifende Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.  
   
- Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName>-Klasse für Datei-E/A-Vorgänge bereitgestellten Methoden und Eigenschaften verwenden.  
+ Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType>-Klasse für Datei-E/A-Vorgänge bereitgestellten Methoden und Eigenschaften verwenden.  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md), [Gewusst wie: Erstellen einer Verzeichnisauflistung](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) und [Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
@@ -83,7 +82,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
  Ein Beispiel für asynchrones Arbeiten mit Streams finden Sie unter [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="readers-and-writers"></a>Reader und Writer  
- Der <xref:System.IO?displayProperty=fullName>-Namespace stellt zudem Typen zum Lesen und Schreiben von codierten Zeichen in Streams bereit. Normalerweise werden Streams für die Eingabe und Ausgabe von Bytes verwendet. Die Reader- und Writer-Typen übernehmen die Konvertierung der codierten Zeichen in Bytes und umgekehrt, sodass der Vorgang im Stream abgeschlossen werden kann. Jede Reader- und Writer-Klasse ist einem Stream zugeordnet, der durch die `BaseStream`-Eigenschaft der Klasse abgerufen werden kann.  
+ Der <xref:System.IO?displayProperty=nameWithType>-Namespace stellt zudem Typen zum Lesen und Schreiben von codierten Zeichen in Streams bereit. Normalerweise werden Streams für die Eingabe und Ausgabe von Bytes verwendet. Die Reader- und Writer-Typen übernehmen die Konvertierung der codierten Zeichen in Bytes und umgekehrt, sodass der Vorgang im Stream abgeschlossen werden kann. Jede Reader- und Writer-Klasse ist einem Stream zugeordnet, der durch die `BaseStream`-Eigenschaft der Klasse abgerufen werden kann.  
   
  Im Folgenden werden einige häufig verwendete Reader- und Writer-Klassen aufgeführt:  
   
@@ -105,7 +104,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
  Weitere Informationen finden Sie unter [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="compression"></a>Komprimierung  
- Komprimierung bezieht sich auf das Verkleinern einer Datei zum Zweck der Speicherung. Bei einer Dekomprimierung wird der Inhalt einer komprimierten Datei extrahiert und in ein verwendbares Format gebracht. Der <xref:System.IO.Compression?displayProperty=fullName>-Namespace enthält Typen zum Komprimieren und Dekomprimieren von Dateien und Streams.  
+ Komprimierung bezieht sich auf das Verkleinern einer Datei zum Zweck der Speicherung. Bei einer Dekomprimierung wird der Inhalt einer komprimierten Datei extrahiert und in ein verwendbares Format gebracht. Der <xref:System.IO.Compression?displayProperty=nameWithType>-Namespace enthält Typen zum Komprimieren und Dekomprimieren von Dateien und Streams.  
   
  Die folgenden Klassen werden häufig zum Komprimieren und Dekomprimieren von Dateien und Streams verwendet:  
   
@@ -156,7 +155,7 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
  Weitere Informationen zu E/A-Vorgängen in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App finden Sie im Windows Developer Center unter [Schnellstart: Lesen und Schreiben einer Datei](http://go.microsoft.com/fwlink/p/?LinkId=243072).  
   
 ## <a name="io-and-security"></a>E/A und Sicherheit  
- Wenn Sie die Klassen im <xref:System.IO?displayProperty=fullName>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+ Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
  Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](../../../docs/standard/io/isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](http://go.microsoft.com/fwlink/?LinkId=229175) für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps.  
   
@@ -183,4 +182,3 @@ Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Da
 -   [Speicherabbilddateien](../../../docs/standard/io/memory-mapped-files.md)  
   
  Beschreibt Speicherabbilddateien, die den Inhalt von Dateien auf dem Datenträger im virtuellen Arbeitsspeicher enthalten. Sie können Speicherabbilddateien verwenden, um sehr große Dateien zu bearbeiten und gemeinsam genutzten Speicherbereich für die prozessübergreifende Kommunikation zu erstellen.
-

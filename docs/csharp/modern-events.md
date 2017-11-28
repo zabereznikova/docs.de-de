@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-updated-net-core-event-pattern"></a>Das aktualisierte .NET Core-Ereignismuster
 
 [Vorherige](event-pattern.md)
@@ -89,4 +87,3 @@ Dies sind die wichtigsten Updates für das .NET-Ereignismuster. In den Bibliothe
 Der nächste Artikel dieser Reihe hilft Ihnen dabei, zwischen der Verwendung von `delegates` und `events` in ihren Entwürfen zu unterscheiden. Da sich beide Konzepte ähneln, wird Ihnen dieser Artikel helfen, die beste Entscheidung für Ihre Programme zu treffen.
 
 [Nächste](distinguish-delegates-events.md)
-

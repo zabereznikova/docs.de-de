@@ -1,40 +1,19 @@
 ---
 title: Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.assetid: 5cc578fe-d9e5-4015-937d-b34b83207072
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
-ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-guide"></a>Leitfaden für Visual Basic
 
@@ -42,10 +21,10 @@ Visual Basic wurde entwickelt, damit Sie typsichere und objektorientierte Anwend
   
  Auch diese Visual Basic-Generation bietet Ihnen schnelle und einfache Möglichkeiten zur Erstellung von Anwendungen auf der Basis von .NET Framework.  
   
- Wenn Sie noch nicht über Visual Basic verfügen, können Sie eine kostenlose Visual Studio-Version mit Visual Basic auf der [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs) -Website beziehen.  
+ Wenn Sie noch nicht über Visual Basic verfügen, können Sie eine kostenlose Visual Studio-Version mit Visual Basic auf der [Visual Studio](https://www.visualstudio.com/products/downloads) -Website beziehen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Getting Started (Erste Schritte)](../visual-basic/getting-started/index.md)   
+ [Erste Schritte](../visual-basic/getting-started/index.md)  
  Unterstützt Sie beim Einstieg durch die Auflistung der neuen Funktionen und gibt an, welche Features in den verschiedenen Produktversionen verfügbar sind.  
    
  [Programmierkonzepte](../visual-basic/programming-guide/concepts/index.md) Stellt die nützlichsten Sprachkonzepte für Visual Basic-Programmierer vor.
@@ -77,4 +56,3 @@ Visual Basic wurde entwickelt, damit Sie typsichere und objektorientierte Anwend
   
  [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Bietet Zugang zu der Bibliothek der Klassen, Schnittstellen und Werttypen, die in der Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK enthalten sind.
-

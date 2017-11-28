@@ -10,21 +10,19 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 8d8f443f8458cd392c75e9787e612ca1cc3518c7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="program-structure"></a>Programmstruktur
 
 Die organisatorischen Schlüsselkonzepte in C# sind: ***Programme***, ***Namespaces***, ***Typen***, ***Member*** und ***Assemblys***. C#-Programme bestehen aus mindestens einer Quelldatei. Programme deklarieren Typen, die Member enthalten, und können in Namespaces organisiert werden. Klassen und Schnittstellen sind Beispiele für Typen. Felder, Methoden, Eigenschaften und Ereignisse sind Beispiele für Member. Wenn C#-Programme kompiliert werden, werden sie physisch in Assemblys verpackt. Assemblys haben in der Regel die Erweiterung `.exe` oder `.dll`, je nachdem, ob sie ***Anwendungen*** oder ***Bibliotheken*** implementieren.
 
 Das Beispiel deklariert eine Klasse namens `Stack` in einem Namespace namens `Acme.Collections`:
 
-[!code-csharp[Stapel](../../../samples/snippets/csharp/tour/program-structure/program.cs#L1-L34)]
+[!code-csharp[Stack](../../../samples/snippets/csharp/tour/program-structure/program.cs#L1-L34)]
 
 Der vollqualifizierte Name dieser Klasse ist `Acme.Collections.Stack`. Die Klasse enthält mehrere Member: ein Feld mit dem Namen `top`, zwei Methoden mit dem Namen `Push` und `Pop` sowie eine geschachtelte Klasse mit dem Namen `Entry`. Die `Entry`-Klasse enthält weitere drei Member: ein Feld mit dem Namen `next`, ein Feld mit dem Namen `data` und einen Konstruktor. Vorausgesetzt, dass der Quellcode des Beispiels in der Datei `acme.cs` gespeichert wird, kompiliert die Befehlszeile
 
@@ -62,4 +60,3 @@ In C# kann der Quelltext eines Programms in verschiedenen Quelldateien gespeiche
 >[!div class="step-by-step"]
 [Zurück](index.md)
 [Weiter](types-and-variables.md)
-

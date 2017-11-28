@@ -1,27 +1,18 @@
 ---
 title: Reflektion (C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f567eb47d93fcd95e5895b4b44e1c89fb0b901b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa0aee4a0580ea28e3f0c70528dabaaf6f635f71
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-c"></a>Reflektion (C#)
 Reflektion bietet Objekte (vom Typ <xref:System.Type>), die Assemblys, Module und Typen beschreiben. Mithilfe von Reflektion können Sie dynamisch eine Instanz eines Typs erzeugen, den Typ an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann. Wenn Sie Attribute in Ihrem Code verwenden, können Sie mit Reflektion auf diese zugreifen. Weitere Informationen finden Sie unter [Attribute](https://msdn.microsoft.com/library/5x6cd29c).  
@@ -79,6 +70,5 @@ System.Console.WriteLine(info);
 -   [Abrufen von Informationen aus Attributen](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Assemblys in der Common Language Runtime (CLR)](https://msdn.microsoft.com/library/k3677y81)
-

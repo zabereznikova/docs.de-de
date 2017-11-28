@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd06e38413d7a7fc666743938d0f03067717b6f2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
 In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für Entwickler bereitgestellt, die .NET Framework mit ihren Anwendungen installieren, und Administratoren, die .NET Framework in einem Netzwerk bereitstellen möchten. Außerdem werden Probleme bei der Aktivierung und dem Neustart im Zusammenhang mit der Bereitstellung besprochen sowie erläutert, wie der Status der .NET Framework-Installation überwacht wird.  
@@ -53,4 +46,3 @@ In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für E
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
-

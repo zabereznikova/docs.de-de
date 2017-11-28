@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>Versionierung in C# #
 
 In diesem Tutorial erfahren Sie, welche Rolle die Versionierung in .NET spielt. Außerdem erfahren Sie, welche Faktoren Sie berücksichtigen müssen, wenn Sie die Versionen Ihrer Bibliothek verwalten oder ein Upgrade auf eine neue Version der Bibliothek durchführen.
@@ -89,7 +87,7 @@ Sie können den `new`-Modifizierer verwenden, um geerbte Member einer Basisklass
 
 Betrachten Sie das folgende Beispiel:
 
-[!code-csharp[Beispiel für die Verwendung des 'new'-Modifizierers](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
 **Ausgabe**
 
@@ -107,7 +105,7 @@ Wenn kein `new`-Modifizierer angegeben ist, blendet eine abgeleitete Klasse stan
 
 Der `override`-Modifizierer bedeutet, dass eine abgeleitete Implementierung die Implementierung eines Basisklassenmembers erweitert, anstatt sie auszublenden. Der `virtual`-Modifizierer muss auf den Basisklassenmember angewendet sein.
 
-[!code-csharp[Beispiel für die Verwendung des 'override'-Modifizierers](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **Ausgabe**
 
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 Der `override`-Modifizierer wird beim Kompilieren ausgewertet, und der Compiler löst einen Fehler aus, wenn kein virtueller Member gefunden wird, der außer Kraft gesetzt werden kann.
 
 Ihre Kenntnis der besprochenen Techniken und Ihr Wissen, in welchen Situationen diese angewendet werden, kann einen großen Unterschied beim reibungslosen Übergang zwischen den Versionen einer Bibliothek ausmachen.
-

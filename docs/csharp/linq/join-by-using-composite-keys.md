@@ -10,12 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
+ms.openlocfilehash: c285e768d64d1da7e428e29fc67838e87575500c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e3e860729ca9267d29ba105ac03ebe22a70b1762
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-by-using-composite-keys"></a>Verknüpfen mithilfe eines zusammengesetzten Schlüssels
 
@@ -43,7 +42,6 @@ join...on new {Name = o.CustomerName, ID = o.CustID} equals
  Zusammengesetzte Schlüssel können auch in einer `group`-Klausel verwendet werden.  
 
 ## <a name="see-also"></a>Siehe auch  
- [LINQ-Abfrageausdrücke](index.md)   
- [Join-Klausel](../language-reference/keywords/join-clause.md)   
+ [LINQ-Abfrageausdrücke](index.md)  
+ [join-Klausel](../language-reference/keywords/join-clause.md)  
  [group-Klausel](../language-reference/keywords/group-clause.md)
-

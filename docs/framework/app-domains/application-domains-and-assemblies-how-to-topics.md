@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 396c3ac263f20608d69949c7ad5d9d5b1dffb555
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
 Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  
@@ -65,4 +63,3 @@ Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in d
   
 ## <a name="see-also"></a>Siehe auch  
  [Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/index.md)
-

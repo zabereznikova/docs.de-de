@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f5aa4b8fa5422ae126a6027c5fe3358925873782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-assemblies"></a>Erstellen von Assemblys
 Sie können Einfach- oder Mehrfachdateiassemblys mit einer IDE entwickeln, wie z.B. [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], oder mit den von [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bereitgestellten Compilern und Tools. Die einfachste Assembly ist eine einzelne Datei mit einem einfachen Namen. Diese wird in eine einzige Anwendungsdomäne geladen. Auf diese Assembly kann nicht von anderen Assemblys außerhalb des Anwendungsverzeichnisses verwiesen werden. Außerdem wird sie keiner Versionsüberprüfung unterzogen. Um die Anwendung, die aus der Assembly besteht, zu deinstallieren, müssen Sie nur das Verzeichnis löschen, in dem sie sich befindet. Viele Entwickler benötigen nur eine Assembly mit diesen Funktionen, um eine Anwendung bereitzustellen.  
@@ -56,10 +54,9 @@ Sie können Einfach- oder Mehrfachdateiassemblys mit einer IDE entwickeln, wie z
  Wenn Sie Assemblys der Common Language Runtime für nicht verwaltete COM-Anwendungen verfügbar machen, müssen Sie auf Besonderheiten achten. Weitere Informationen zum Arbeiten mit nicht verwaltetem Code finden Sie unter [Exposing .NET Framework Components to COM (Verfügbarmachen von .NET Framework-Komponenten in COM)](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Assembly Versioning (Assemblyversionskontrolle)](../../../docs/framework/app-domains/assembly-versioning.md)   
- [How to: Build a Single-File Assembly (Vorgehensweise: Erstellen einer Einzeldateiassembly)](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
- [How to: Build a Multifile Assembly (Vorgehensweise: Erstellen einer Mehrfachdateiassembly)](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
- [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [Gewusst wie: Erstellen einer Einzeldateiassembly](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+ [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)
-

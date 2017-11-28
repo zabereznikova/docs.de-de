@@ -1,40 +1,22 @@
 ---
 title: "Gewusst wie: Erstellen eines Schlüssels in der Registrierung (Visual C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Gewusst wie: Erstellen eines Schlüssels in der Registrierung (Visual C#)
 Dieses Beispiel fügt der Registrierung des aktuellen Benutzers unter dem Schlüssel "Names" das Wertepaar "Name" und "Isabella" hinzu.  
@@ -79,8 +61,7 @@ key.Close();
  Es ist nicht sicher, geheime Daten wie Kennwörter in der Registrierung als Klartext zu speichern. Dies gilt auch, wenn der Registrierungsschlüssel durch Zugriffssteuerungslisten (ACLs) geschützt ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.IO?displayProperty=fullName>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)   
+ <xref:System.IO?displayProperty=nameWithType>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)  
  [Read, write and delete from the registry with C# (Ausführen von Aktionen in der Registrierung mit C#: Lesen, Schreiben und Löschen)](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
-

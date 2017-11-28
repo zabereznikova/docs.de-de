@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-    
 # <a name="enums"></a>Enumerationen
 
 Ein ***Enumerationstyp*** ist ein eindeutiger Werttyp mit einem Satz benannter Konstanten. Sie definieren die Enumerationen, wenn Sie einen Typ definieren müssen, der einen Satz von diskreten Werten haben kann. Die Enumerationen verwenden einen der ganzzahligen Werttypen als ihren zugrunde liegenden Speicher. Sie liefern die Bedeutung der diskreten Werte.
@@ -45,4 +43,3 @@ Der Standardwert eines beliebigen `enum`-Typs ist der ganzzahlige Wert 0 (null) 
 >[!div class="step-by-step"]
 [Zurück](interfaces.md)
 [Weiter](delegates.md)
-

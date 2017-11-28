@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ca3e9dbe5578623ccc67898c6f08213c31ad8e23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80fb48fc86d3010020a0a8a79bb2b4b7a6275368
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Konvertierungstool CorFlags)
 Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags-Abschnitts eines Headers eines portierbaren ausführbaren Images.  
@@ -68,7 +61,6 @@ CorFlags.exe assembly [options]
  Wenn keine Optionen angegeben sind, zeigt das Konvertierungstool CorFlags die Flags für die angegebene Assembly an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
- [64-Bit-Anwendungen](../../../docs/framework/64-bit-apps.md)   
+ [Extras](../../../docs/framework/tools/index.md)  
+ [64-Bit-Anwendungen](../../../docs/framework/64-bit-apps.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: bb852719e3312b78b86621e3cb69fa8bf7267856
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Entschärfung: WCF-Dienste und Zertifikatauthentifizierung
 .NET Framework 4.6 fügt der Standardliste des WCF-SSL-Protokolls TLS 1.1 und TLS 1.2 hinzu. Wenn sowohl auf dem Client- als auch auf dem Servercomputer .NET Framework 4.6 oder höher installiert ist, wird TLS 1.2 für die Aushandlung verwendet.  
@@ -59,11 +58,10 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
--   Wenn die Bindung im Quellcode dynamisch konfiguriert ist, aktualisieren Sie die <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName>-Eigenschaft für die Verwendung von TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) oder einer früheren Version des Protokolls im Quellcode.  
+-   Wenn die Bindung im Quellcode dynamisch konfiguriert ist, aktualisieren Sie die <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType>-Eigenschaft für die Verwendung von TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) oder einer früheren Version des Protokolls im Quellcode.  
   
     > [!CAUTION]
     >  Diese Problemumgehung wird nicht empfohlen, da ein Zertifikat mit MD5-Hashalgorithmus als unsicher angesehen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-

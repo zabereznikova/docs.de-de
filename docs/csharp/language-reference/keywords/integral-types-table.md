@@ -1,41 +1,23 @@
 ---
 title: Tabelle ganzzahliger Typen (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 663ea9a64284c25999564eca9ea5ccec861e9662
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2932d0b7c8e1b01a4965b29d90bdd5711ddb5dc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="integral-types-table-c-reference"></a>Tabelle ganzzahliger Typen (C#-Referenz)
 Die folgende Tabelle enthält Größe und Bereich der integralen Typen, die eine Teilmenge der einfachen Typen bilden.  
@@ -55,12 +37,11 @@ Die folgende Tabelle enthält Größe und Bereich der integralen Typen, die eine
  Überschreitet der durch ein Ganzzahlliteral dargestellte Wert den Bereich `ulong`, tritt ein Kompilierungsfehler auf.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabelle für Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabelle für Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

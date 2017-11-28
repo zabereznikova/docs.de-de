@@ -9,7 +9,7 @@
 ## [Kryptografiemodell](cryptography-model.md)
 ### [Kryptografische Dienste](cryptographic-services.md)
 ### [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](generating-keys-for-encryption-and-decryption.md)
-### [Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer](how-to-store-asymmetric-keys-in-a-key-container.md)
+### [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md) (Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer)
 ### [Verschlüsseln von Daten](encrypting-data.md)
 ### [Entschlüsseln von Daten](decrypting-data.md)
 ### [Kryptografische Signaturen](cryptographic-signatures.md)

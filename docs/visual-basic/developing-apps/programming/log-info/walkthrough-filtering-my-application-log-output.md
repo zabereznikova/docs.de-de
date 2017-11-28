@@ -1,44 +1,25 @@
 ---
 title: "Filterung der Ausgaben von „My.Application.Log“ (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von "My.Application.Log" (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßige Filtern von Protokollen für das `My.Application.Log`-Objekt ändern, um zu steuern, welche Informationen vom `Log`-Objekt an die Listener übergeben werden und welche Informationen von den Listenern geschrieben werden. Sie können das Protokollierungsverhalten auch nach dem Erstellen der Anwendung ändern, da die Konfigurationsinformationen in der Konfigurationsdatei der Anwendung gespeichert sind.  
@@ -162,7 +143,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
 9. Ändern Sie den Wert des `value`-Attributs zurück zu „Information“.  
   
     > [!NOTE]
-    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der Klassen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], <xref:System.Diagnostics.Trace?displayProperty=fullName> und <xref:System.Diagnostics.Debug?displayProperty=fullName> wird dadurch nicht verändert.  
+    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der Klassen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], <xref:System.Diagnostics.Trace?displayProperty=nameWithType> und <xref:System.Diagnostics.Debug?displayProperty=nameWithType> wird dadurch nicht verändert.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Einzelne Filterung für alle „My.Application.Log“-Listener  
  Im vorherige Beispiel wurde gezeigt, wie Sie die Filterung für alle `My.Application.Log`-Ausgaben ändern können. In diesem Beispiel wird veranschaulicht, wie Sie einen einzelnen Protokolllistener filtern. Standardmäßig verwendet eine Anwendung zwei Listener, die in die Debugausgabe und die Protokolldatei der Anwendung schreiben.  
@@ -275,10 +256,9 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
  Weitere Informationen zum Ändern der Protokolleinstellungen nach der Bereitstellung finden Sie unter [Working with Application Logs (Arbeiten mit Anwendungsprotokollen)](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Walkthrough: Determining Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [Walkthrough: Changing Where My.Application.Log Writes Information (Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [Walkthrough: Creating Custom Log Listeners (Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [How to: Write Log Messages (Vorgehensweise: Schreiben von Protokollmeldungen)](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Trace Switches (Ablaufverfolgungsschalter)](../../../../framework/debug-trace-profile/trace-switches.md)   
+ [Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Ablaufverfolgungsschalter](../../../../framework/debug-trace-profile/trace-switches.md)  
  [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

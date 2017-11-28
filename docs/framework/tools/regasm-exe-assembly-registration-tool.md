@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 553b7725d2e0fe8fc197805d8e4b444567c33040
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
 Die Metadaten in einer Assembly werden vom Assembly Registration-Tool gelesen, und die erforderlichen Einträge werden der Registrierung hinzugefügt. COM-Clients sind so in der Lage, .NET Framework-Klassen transparent zu erstellen. Sobald eine Klasse registriert ist, kann diese von jedem COM-Client wie eine COM-Klasse verwendet werden. Die Klasse wird beim Installieren der Assembly nur einmal registriert. COM kann keine Instanzen von Klassen in der Assembly erstellen, bevor diese nicht registriert wurden.  
@@ -97,9 +90,8 @@ regasm myTest.dll /tlb:myTest.tlb
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
- [Tlbexp.exe (Type Library Exporter-Tool)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
- [Tlbimp.exe (Type Library Importer)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md)   
+ [Extras](../../../docs/framework/tools/index.md)  
+ [Tlbexp.exe (Type Library Exporter-Tool)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

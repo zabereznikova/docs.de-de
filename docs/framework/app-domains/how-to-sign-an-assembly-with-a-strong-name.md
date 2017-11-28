@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Gewusst wie: Signieren einer Assembly mit einem starken Namen
 Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signieren:  
@@ -76,16 +78,18 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>So signieren Sie eine Assembly mit einem starken Namen unter Verwendung von Attributen  
   
-1.  Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
+1.  Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
   
 2.  Kompilieren Sie die Quellcodedatei normal.  
   
 > [!NOTE]
 >  Die C#- und Visual Basic-Compiler geben Compilerwarnungen aus (CS1699 bzw. BC41008), wenn das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut im Quellcode auftreten. Sie können die Warnungen ignorieren.  
   
- Im folgenden Beispiel wird das <xref:System.Reflection.AssemblyKeyFileAttribute>-Attribut mit der Schlüsseldatei `keyfile.snk` verwendet, die sich in dem Verzeichnis befindet, in dem die Assembly kompiliert wird.  
+ Im folgenden Beispiel wird das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut mit der Schlüsseldatei `keyfile.snk`verwendet, die sich in dem Verzeichnis befindet, in dem die Assembly kompiliert wird.  
   
- [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)] [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)] [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
+ [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
+ [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
+ [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
  Sie können auch während des Kompiliervorgangs der Quelldatei eine Assembly verzögert signieren. Weitere Informationen finden Sie unter [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   
@@ -102,10 +106,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)   
- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [Verwalten der Signierung von Assemblys und Manifesten](/visualstudio/ide/managing-assembly-and-manifest-signing)   
+ [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+ [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [Verwalten der Signierung von Assemblys und Manifesten](/visualstudio/ide/managing-assembly-and-manifest-signing)  
  [Seite „Signierung“, Projekt-Designer](https://msdn.microsoft.com/library/0k50fs3b)
-

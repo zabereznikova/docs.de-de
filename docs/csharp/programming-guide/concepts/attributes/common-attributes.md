@@ -1,30 +1,21 @@
 ---
 title: Allgemeine Attribute (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
 Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwendet werden.  
@@ -67,7 +58,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Gibt an, ob eine Assembly die parallele Ausführung auf demselben Computer, im selben Prozess oder in derselben Anwendungsdomäne unterstützt|  
   
 ### <a name="informational-attributes"></a>Informationsattribute  
- Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle zeigt die Informationsattribute, die im Namespace <xref:System.Reflection?displayProperty=fullName> definiert werden.  
+ Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle zeigt die Informationsattribute, die im Namespace <xref:System.Reflection?displayProperty=nameWithType> definiert werden.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
@@ -80,7 +71,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
 |<xref:System.CLSCompliantAttribute>|Gibt an, ob die Assembly mit der Common Language Specification (CLS) kompatibel ist|  
   
 ### <a name="assembly-manifest-attributes"></a>Attribute für Assemblymanifeste  
- Sie können Attribute für Assemblymanifeste verwenden, um Informationen im Assemblymanifest bereitzustellen. Dies schließt Titel, Beschreibung, Standardalias und Konfiguration ein. Die folgende Tabelle zeigt die Attribute für Assemblymanifeste, die im Namespace <xref:System.Reflection?displayProperty=fullName> definiert werden.  
+ Sie können Attribute für Assemblymanifeste verwenden, um Informationen im Assemblymanifest bereitzustellen. Dies schließt Titel, Beschreibung, Standardalias und Konfiguration ein. Die folgende Tabelle zeigt die Attribute für Assemblymanifeste, die im Namespace <xref:System.Reflection?displayProperty=nameWithType> definiert werden.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> Aufufrerinfoattribute  
  Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen.  
   
- Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=fullName>-Namespace definiert sind:  
+ Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
 |Attribut|Beschreibung|Typ|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  Weitere Informationen zu den Aufruferinformationsattributen finden Sie unter [Caller Information (C#) (Aufruferinformationen (C#))](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Attribute](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+ [Attribute](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

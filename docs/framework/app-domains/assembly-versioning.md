@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-versioning"></a>Assemblyversionen
 Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
@@ -78,11 +76,10 @@ Auflösen einer Assemblybindungsanforderung
 > [!NOTE]
 >  Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält. Sie können diese Warnung ignorieren.  
   
- Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)   
- [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md)   
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)  
+ [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md)  
  [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "Gültiger Inhalt von XElement- und XDocument-Objekten"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 113a187c9a852420ffcef3893a415a24bae2c655
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2552c233961c13816fd91c79c5e6b589674985f6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
 In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.  
@@ -107,4 +98,3 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
 ## <a name="see-also"></a>Siehe auch  
  [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-

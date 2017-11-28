@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
+ms.openlocfilehash: fef146c92a5cbbf21f8f1688f221c2bd45c99de7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 51bdae75346022a7564fdb50e582c143e7762a1f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-custom-join-operations"></a>Ausführen von benutzerdefinierten Verknüpfungsoperationen
 
@@ -40,15 +38,14 @@ In diesem Beispiel wird gezeigt, wie Verknüpfungsoperationen ausgeführt werden
   
  Die zweite Methode erzeugt eine Sequenz aller Produkte, deren Kategorie-ID in der Kategorieliste auf der linken Seite aufgeführt ist. Beachten Sie, dass Sie mit der Verwendung der `let`-Klausel und der `Contains`-Methode ein temporäres Array erstellen. Es ist auch möglich, das Array vor der Abfrage zu erstellen und die erste `from`-Klausel zu löschen.  
   
- [!code-cs[csProgGuideLINQ#64](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#64](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel muss die Abfrage zwei Sequenzen anhand übereinstimmender Schlüssel verknüpfen, die bei der inneren (rechten) Sequenz nicht vor der eigentlichen Join-Klausel abgerufen werden können. Wenn diese Verknüpfung mit einer `join`-Klausel ausgeführt werden würde, müsste anschließend die `Split`-Methode für jedes Element aufgerufen werden. Mit der Verwendung von mehreren `from`-Klauseln kann die Abfrage den Mehraufwand des wiederholten Methodenaufrufs vermeiden. Da `join` jedoch optimiert ist, könnte es in diesem Sonderfall trotzdem schneller sein als mehrere `from`-Klauseln zu verwenden. Die Ergebnisse variieren hauptsächlich nach Aufwand des Methodenaufrufs.  
   
- [!code-cs[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [LINQ-Abfrageausdrücke](index.md)   
- [Join-Klausel](../language-reference/keywords/join-clause.md)   
+ [LINQ-Abfrageausdrücke](index.md)  
+ [join-Klausel](../language-reference/keywords/join-clause.md)  
  [Sortieren der Ergebnisse einer Join-Klausel](order-the-results-of-a-join-clause.md)
-

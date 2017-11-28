@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="statements"></a>Anweisungen
 
 Die Aktionen eines Programms werden mit *Anweisungen* ausgedrückt. C# unterstützt verschiedene Arten von Anweisungen, von denen ein Teil als eingebettete Anweisungen definiert ist.
@@ -46,7 +44,7 @@ Im Folgenden werden die Arten von Anweisungen aufgelistet, die verwendet werden 
 
 * Deklaration lokaler Variablen:
 
- [!code-csharp[Deklarationen](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
+ [!code-csharp[Declarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
 
 * Deklaration lokaler Konstanten:
 
@@ -54,7 +52,7 @@ Im Folgenden werden die Arten von Anweisungen aufgelistet, die verwendet werden 
 
 * Ausdrucksanweisung:
 
- [!code-csharp[Ausdrücke](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
+ [!code-csharp[Expressions](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
 
 * `if`-Anweisung:
 
@@ -119,4 +117,3 @@ Im Folgenden werden die Arten von Anweisungen aufgelistet, die verwendet werden 
 >[!div class="step-by-step"]
 [Zurück](expressions.md)
 [Weiter](classes-and-objects.md)
-

@@ -1,41 +1,22 @@
 ---
 title: const (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - const_CSharpKeyword
 - const
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- const keyword [C#]
+helpviewer_keywords: const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7f54b686b170622ca1ead736a9f614c9bbef52dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b8f6d567deed513ff5693fe39bd21c8607677402
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="const-c-reference"></a>const (C#-Referenz)
 Sie verwenden das `const`-Schlüsselwort, um ein konstantes Feld oder eine konstante lokale Variable zu deklarieren. Konstante Felder und lokale Felder sind keine Variablen und können daher nicht geändert werden. Konstanten können Nummern, boolesche Werte, Zeichenfolgen oder ein NULL-Verweis sein. Erstellen Sie keine Konstante, um Informationen darzustellen, von denen Sie ausgehen, dass sie sich einmal ändern. Verwenden Sie beispielsweise kein konstantes Feld, um den Preis einer Dienstleistung, einer Produktversionsnummer oder den Markennamen eines Unternehmens zu speichern. Diese Werte können sich im Laufe der Zeit ändern, und da Compiler Konstanten weitergeben, muss anderer Code, der mit Ihren Bibliotheken kompiliert wird, neu kompiliert werden, damit die Änderungen sichtbar werden. Weitere Informationen finden Sie auch unter dem [readonly](../../../csharp/language-reference/keywords/readonly.md)-Schlüsselwort. Beispiel:  
@@ -70,20 +51,19 @@ public const int c2 = c1 + 100;
 >  Das [readonly](../../../csharp/language-reference/keywords/readonly.md)-Schlüsselwort unterscheidet sich vom `const`-Schlüsselwort. Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld für Laufzeitkonstanten verwendet werden kann, wie in der folgenden Codezeile: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`.  
   
 ## <a name="example"></a>Beispiel  
- [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demonstriert.  
   
- [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
  [readonly](../../../csharp/language-reference/keywords/readonly.md)
-

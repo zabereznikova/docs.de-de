@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 "MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit "MageUI.exe" erstellt werden, wird als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von "MageUI.exe" nicht aktualisiert, um als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -207,7 +200,6 @@ ms.lasthandoff: 09/25/2017
 |**Manifest auswählen**|Ermöglicht Ihnen die Auswahl des Anwendungsmanifests. Alle anderen Felder auf dieser Seite werden aufgefüllt, wenn Sie ein Anwendungsmanifest auswählen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)   
- [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-

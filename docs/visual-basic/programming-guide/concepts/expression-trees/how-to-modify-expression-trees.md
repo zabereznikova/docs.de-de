@@ -1,41 +1,33 @@
 ---
-title: "Gewusst wie: Ändern von Ausdrucksbaumstrukturen (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb4e818eed7d6547e091c914d40b3ce87af59512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 28a79a2dc8817a3fc6c7f3e2e01c1270d2981334
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Gewusst wie: Ändern von Ausdrucksbaumstrukturen (Visual Basic)
-In diesem Thema wird gezeigt, wie eine Ausdrucksbaumstruktur ändern. Ausdrucksbaumstrukturen sind unveränderlich, was bedeutet, dass sie nicht direkt geändert werden können. Um eine Ausdrucksbaumstruktur ändern möchten, müssen Sie eine Kopie einer vorhandenen Ausdrucksbaumstruktur zu erstellen und die erforderlichen Änderungen vorzunehmen, wenn Sie die Kopie erstellen. Sie können die <xref:System.Linq.Expressions.ExpressionVisitor>Klasse, um eine vorhandene Ausdrucksbaumstruktur zu durchlaufen und jeden Knoten zu kopieren.</xref:System.Linq.Expressions.ExpressionVisitor>  
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)
+In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können. Ausdrucksbaumstrukturen sind unveränderlich, d.h. sie können nicht direkt modifiziert werden. Um eine Ausdrucksbaumstruktur zu verändern, müssen Sie eine Kopie eines vorhandenen Ausdrucksbaumstruktur erstellen und währenddessen die erforderlichen Änderungen vornehmen. Sie können die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse verwenden, um einen vorhandenen Ausdrucksbaum zu durchlaufen und jeden Knoten zu kopieren, der durchlaufen wird.  
   
-### <a name="to-modify-an-expression-tree"></a>So ändern Sie eine Ausdrucksbaumstruktur  
+### <a name="to-modify-an-expression-tree"></a>So ändern Sie Ausdrucksbaumstrukturen  
   
-1.  Erstellen Sie ein neues **Konsolenanwendung** Projekt.  
+1.  Erstellen Sie ein neues **Konsolenanwendungsprojekt**.  
   
 2.  Hinzufügen einer `Imports` Anweisung, um die Datei für die `System.Linq.Expressions` Namespace.  
   
-3.  Hinzufügen der `AndAlsoModifier` Klasse zu Ihrem Projekt.  
+3.  Fügen Sie die `AndAlsoModifier`-Klasse in Ihr Projekt ein.  
   
     ```vb  
     Public Class AndAlsoModifier  
@@ -61,11 +53,11 @@ In diesem Thema wird gezeigt, wie eine Ausdrucksbaumstruktur ändern. Ausdrucksb
     End Class  
     ```  
   
-     Diese Klasse erbt die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse und wird spezialisiert, um Ausdrücke zu ändern, die bedingte darstellen `AND` Operations.</xref:System.Linq.Expressions.ExpressionVisitor> Es ändert diese Operationen von einem bedingten `AND` , eine bedingte `OR`. Die Klasse überschreibt Sie dazu die <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>Methode des Basistyps, da bedingte `AND` -Ausdrücke als binäre Ausdrücke dargestellt werden.</xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> In der `VisitBinary` -Methode, wenn der Ausdruck, der an sie übergeben wird, eine bedingte darstellt `AND` Vorgang, der Code erstellt einen neuen Ausdruck, der die bedingte enthält `OR` anstelle des bedingten Operators `AND` Operator. Wenn der Ausdruck, der an `VisitBinary` keine bedingte darstellt `AND` Vorgang, der-Methode verzögert Implementierung der Basisklasse. Die Methoden der Basisklasse erstellt Knoten, die auch die Ausdrucksbaumstrukturen, die übergeben werden, aber die Knoten haben ihre Sub-Strukturen, die mit der Ausdrucksbaumstrukturen, die ersetzt erzeugt rekursiv vom Besucher.  
+     Diese Klasse erbt die <xref:System.Linq.Expressions.ExpressionVisitor>-Klasse und ist darauf spezialisiert, Ausdrücke zu verändern, die bedingte `AND`-Vorgänge darstellen. Es ändert diese Vorgänge von einem bedingten `AND` in ein bedingtes `OR`. Zu diesem Zweck setzt die Klasse die <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A>-Methode der Basisklasse außer Kraft, weil bedingte `AND`-Ausdrücke als binäre Ausdrücke dargestellt werden. Für die `VisitBinary`-Methode gilt Folgendes: Wenn der an die Methode übergebene Ausdruck eine bedingte `AND`-Operation darstellt, erstellt der Code einen neuen Ausdruck, der den bedingten Operator `OR` anstelle des bedingten Operators `AND` enthält. Wenn der an `VisitBinary` übergebene Ausdruck keinen bedingten `AND`-Vorgang darstellt, verzögert die Methode die Implementierung der Basisklasse. Die Basisklassenmethode erstellt Knoten, die den übergebenen Ausdrucksbaumstrukturen gleichen. In diesem Fall sind die Teilstrukturen der Knoten jedoch durch die Ausdrucksbaumstrukturen ersetzt, die vom Besucher rekursiv erstellt werden.  
   
 4.  Hinzufügen einer `Imports` Anweisung, um die Datei für die `System.Linq.Expressions` Namespace.  
   
-5.  Fügen Sie Code in der `Main` -Methode in der Datei "Module1.vb", um eine Ausdrucksbaumstruktur zu erstellen und es an die Methode übergeben, die sie ändern.  
+5.  Hinzufügen von Code für die `Main` Methode in der Datei "Module1.vb", um eine Ausdrucksbaumstruktur zu erstellen sowie deren Übergabe an die Methode, die sie ändern.  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -83,10 +75,10 @@ In diesem Thema wird gezeigt, wie eine Ausdrucksbaumstruktur ändern. Ausdrucksb
     ' name => ((name.Length > 10) || name.StartsWith("G"))  
     ```  
   
-     Der Code erstellt einen Ausdruck, der eine bedingte enthält `AND` Vorgang. Er erstellt dann eine Instanz der `AndAlsoModifier` -Klasse und den Ausdruck, der `Modify` Methode dieser Klasse. Sowohl das Original als auch die geänderte Ausdrucksbaumstruktur werden ausgegeben, um die Änderung anzuzeigen.  
+     Der Code erstellt einen Ausdruck, der einen bedingten `AND`-Vorgang enthält. Er erstellt anschließend eine Instanz der `AndAlsoModifier`-Klasse und übergibt den Ausdruck an die `Modify`-Methode dieser Klasse. Sowohl der ursprüngliche als auch der geänderte Ausdrucksbaum werden ausgegeben, um die Änderungen zu zeigen.  
   
 6.  Kompilieren Sie die Anwendung, und führen Sie sie aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
+ [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
  [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

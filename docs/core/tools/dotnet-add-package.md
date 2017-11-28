@@ -7,12 +7,11 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -29,6 +28,8 @@ ms.lasthandoff: 08/14/2017
 ## <a name="description"></a>Beschreibung
 
 Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen von Paketverweisen zu einer Projektdatei. Nach dem Ausführen des Befehls wird die Kompatibilität überprüft, um sicherzustellen, dass das Paket mit den Frameworks im Projekt kompatibel ist. Wenn die Überprüfung erfolgreich ist, wird ein `<PackageReference>`-Element zur Projektdatei hinzugefügt, und [dotnet restore](dotnet-restore.md) wird ausgeführt.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Beispielsweise wird durch Hinzufügen von `Newtonsoft.Json` zu *ToDo.csproj* eine Ausgabe ähnlich der folgenden erzeugt:
 
@@ -97,4 +98,3 @@ Fügen Sie eine bestimmte Version eines Pakets zu einem Projekt hinzu:
 Fügen Sie ein Paket mit einer bestimmten NuGet-Quelle hinzu:
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
-

@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.topic: article
+dev_langs: vb
 ms.prod: .net-core
+ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 1f642678f15e05d24ee770adc1291b26eed6367c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und MSTest
 
@@ -146,4 +146,3 @@ if candidate < 2
 Wiederholen Sie den Vorgang, indem Sie weitere Tests, Theorien und Code in der Hauptbibliothek hinzufügen. Sie verfügen über die [endgültige Version der Tests](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) und die [vollständige Implementierung der Bibliothek](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).
 
 Sie haben eine kleine Bibliothek und eine Reihe von Unittests für diese Bibliothek erstellt. Sie haben die Projektmappe so strukturiert, dass das Hinzufügen neuer Pakete und Tests Teil des normalen Workflows ist. Sie haben den Großteil Ihrer Zeit und Ihres Aufwands mit der Erreichung der Anwendungsziele verbracht.
-

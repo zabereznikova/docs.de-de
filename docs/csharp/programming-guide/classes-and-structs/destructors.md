@@ -1,40 +1,22 @@
 ---
 title: Finalizer (C#-Programmierhandbuch)
-ms.date: 2017-05-10
+ms.date: 05/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43bb7e6488da5eda863e7ad70b25c9bf55bebb52
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
 Finalizer werden zur Zerstörung von Klasseninstanzen verwendet.  
@@ -53,11 +35,11 @@ Finalizer werden zur Zerstörung von Klasseninstanzen verwendet.
   
  Folgendes ist z.B. eine Deklaration eines Finalizers für die Klasse `Car`:
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
 
 Ein Finalizer kann auch als Ausdruckstextdefinition implementiert werden, wie im folgenden Beispiel gezeigt.
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+[!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
  Der Finalizer ruft <xref:System.Object.Finalize%2A> implizit auf der Basisklasse des Objekts auf. Daher wird der Aufruf eines Finalizers implizit in den folgenden Code übersetzt:  
   
@@ -101,14 +83,13 @@ protected override void Finalize()
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt drei Klassen, die eine Vererbungskette bilden. Die Klasse `First` ist die Basisklasse, `Second` wird von `First` abgeleitet, und `Third` wird von `Second` abgeleitet. Alle drei verfügen über Finalizer. In `Main` wird eine Instanz der am meisten abgeleiteten Klasse erstellt. Wenn das Programm ausgeführt wird, beachten Sie, dass die Finalizer der drei Klassen automatisch und in Reihenfolge von der am meisten bis zu der am wenigsten abgeleiteten aufgerufen werden.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.IDisposable>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
+ <xref:System.IDisposable>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [Garbage Collection](../../../standard/garbage-collection/index.md)
-

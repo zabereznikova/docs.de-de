@@ -1,40 +1,22 @@
 ---
 title: Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - boxing [C#], nullable types
 - unboxing [C#], nullable types
 - nullable types [C#], boxing and unboxing
 ms.assetid: bdb5b626-abc0-405d-8f64-0f0a0bf883a4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 29fccba56f6758fdfd407fa1879baa9260b69187
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Boxing von Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)
 Objekte, die auf Typen basieren, die NULL-Werte zulassen, werden nur dann umschlossen, wenn das Objekt ungleich NULL ist. Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, wird der Objektverweis `null` zugewiesen, anstatt dass er geboxt wird. Zum Beispiel:  
@@ -45,7 +27,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- Wenn das Objekt ungleich NULL und <xref:System.Nullable%601.HasValue%2A> `true` ist, kommt es zum Boxing. Allerdings wird nur der zugrunde liegende Typ, auf dem das auf NULL festlegbare Objekt basiert, geboxt. Das Boxing eines nicht auf NULL festlegbaren Werttyps umschließt den Werttyp selbst und nicht das <xref:System.Nullable%601?displayProperty=fullName>-Objekt, das den Werttyp umschließt. Zum Beispiel:  
+ Wenn das Objekt ungleich NULL und <xref:System.Nullable%601.HasValue%2A> `true` ist, kommt es zum Boxing. Allerdings wird nur der zugrunde liegende Typ, auf dem das auf NULL festlegbare Objekt basiert, geboxt. Das Boxing eines nicht auf NULL festlegbaren Werttyps umschließt den Werttyp selbst und nicht das <xref:System.Nullable%601?displayProperty=nameWithType>-Objekt, das den Werttyp umschließt. Zum Beispiel:  
   
 ```csharp  
 bool? b = false;  
@@ -91,7 +73,6 @@ int? i2 = (int?)iBoxed;
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Typen, die NULL-Werte zulassen](../../../csharp/programming-guide/nullable-types/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/index.md)  
  [Gewusst wie: Identifizieren eines Typs mit Nullwerten](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
-

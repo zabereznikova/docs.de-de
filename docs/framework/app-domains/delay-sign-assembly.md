@@ -2,9 +2,12 @@
 title: "Verzögertes Signieren einer Assembly"
 ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - deferring assembly signing
 - signing assemblies
@@ -12,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 08f0f48a71415878cd24640272a41de4c0a5ade6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
-ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delay-signing-an-assembly"></a>Verzögertes Signieren einer Assembly
 Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, auf das Entwickler nicht täglich zugreifen können. Der öffentliche Schlüssel stünde zur Verfügung, während der Zugriff auf den privaten Schlüssel nur einigen Wenigen erlaubt wäre. Beim Entwickeln von Assemblys mit starken Namen enthält jede Assembly, die auf die Zielassembly mit dem starken Namen verweist, das Token des öffentlichen Schlüssels, mit dem der starke Name der Zielassembly erzeugt wird. Aus diesem Grund muss der öffentliche Schlüssel während des Entwicklungsprozesses verfügbar sein.  
@@ -38,7 +40,9 @@ Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, au
   
     -   <xref:System.Reflection.AssemblyDelaySignAttribute>, das angibt, dass beim verzögerten Signieren **TRUE** als Parameter an den Konstruktor übergeben wird Zum Beispiel:  
   
-         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+         [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+         [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 3.  Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und reserviert in der PE-Datei Speicherplatz für die vollständige Signatur mit starkem Namen. Der echte öffentliche Schlüssel muss während der Erstellung der Assembly gespeichert werden, damit andere Assemblys, die auf diese Assembly verweisen, den Schlüssel abrufen und in ihrem eigenen Assemblyverweis speichern können.  
   
@@ -73,8 +77,7 @@ Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, au
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

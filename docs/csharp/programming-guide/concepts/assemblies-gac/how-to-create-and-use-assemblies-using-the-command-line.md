@@ -1,30 +1,21 @@
 ---
 title: "Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d59988ec4899b4115d8d0fd7172e0c8ff8802378
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 630a799331e03860fbee34eab6bea3bb594ef0f0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)
 Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:  
@@ -140,7 +131,6 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
  Weitere Informationen zum Erstellen über die Befehlszeile finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+ [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
-

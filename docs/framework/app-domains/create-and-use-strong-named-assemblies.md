@@ -2,8 +2,7 @@
 title: Erstellen und Verwenden von Assemblys mit starkem Namen
 ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
 ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 <a name="top"></a> Ein starker Name setzt sich aus der Identität der Assembly – dem einfachen Textnamen, der Versionsnummer und Kulturinformationen (falls vorhanden) – sowie einem öffentlichen Schlüssel und einer digitalen Signatur zusammen. Er wird mithilfe des entsprechenden privaten Schlüssels aus einer Assemblydatei generiert. (Die Assemblydatei enthält das Assemblymanifest, das wiederum die Namen und Hashes aller Dateien enthält, die die Assembly bilden.)  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/02/2017
 |[So erstellen Sie eine Assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Erläutert das Signieren einer Assembly mit einem starken Namen nach dem Erstellen der Assembly.|  
 |[Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem Assemblys mit starken Namen erstellt werden können. Dieses Tool stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.|  
 |[Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem eine Datei generiert wird, die ein Assemblymanifest von Modulen oder Ressourcendateien besitzt.|
-

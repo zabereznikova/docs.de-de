@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -86,15 +85,14 @@ Wenn `p` nicht mithilfe des `ref`-Schlüsselworts als eine lokale ref-Variable d
 
 Das folgende Beispiel definiert eine `NumberStore`-Klasse, die ein Array von Integer-Werten speichert. Die `FindNumber`-Methode gibt die erste Anzahl, die größer als oder gleich der Anzahl ist, die als Argument übergeben wurde, als Verweis zurück. Wenn keine Anzahl größer als oder gleich dem Argument ist, gibt die Methode die Anzahl im Index 0 zurück. 
 
-[!CODE-cs[ref-Rückgaben](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 Im folgenden Beispiel wird die `NumberStore.FindNumber`-Methode aufgerufen, um den ersten Wert abzurufen, der größer als oder gleich 16 ist. Die aufrufende Funktion verdoppelt dann den von der Methode zurückgegebenen Wert. Wie die Ausgabe aus dem Beispiel zeigt, wird diese Änderung im Wert der Arrayelemente der `NumberStore`-Instanz wiedergegeben.
 
-[!CODE-cs[ref-Rückgaben](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 Ohne Unterstützung für Verweisrückgabewerte wird ein solcher Vorgang in der Regel durchgeführt, indem der Index des Arrayelements zusammen mit seinem Wert zurückgegeben wird. Die aufrufende Funktion kann diesen Index dann dazu verwenden, den Wert in einem separaten Methodenaufruf zu ändern. Die aufrufende Funktion kann den Index jedoch auch ändern, um auf andere Arraywerte zuzugreifen und diese zu bearbeiten.  
  
 ## <a name="see-also"></a>Siehe auch
 
 [ref (C#-Referenz)](../../language-reference/keywords/ref.md)
-

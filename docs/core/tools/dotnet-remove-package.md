@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 4167f5465571259975572669e27f20c586b910da
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
@@ -51,4 +50,3 @@ Druckt eine kurze Hilfe für den Befehl.
 Entfernt `Newtonsoft.Json`-NuGet-Paket aus einem Projekt im aktuellen Verzeichnis:
 
 `dotnet remove package Newtonsoft.Json`
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multifile-assemblies"></a>Mehrfachdateiassemblys
 Sie können Mehrfachdateiassemblys mit dem Befehlszeilencompiler oder mit [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] in Visual C++ erstellen. Eine Datei in der Assembly muss das Assemblymanifest enthalten. Eine Assembly, die eine Anwendung startet, muss außerdem einen Einstiegspunkt enthalten, wie z.B. die Methoden „Main“ oder „WinMain“.  
@@ -51,6 +49,5 @@ Sie können Mehrfachdateiassemblys mit dem Befehlszeilencompiler oder mit [!INCL
  Sobald Sie die Assembly erstellt haben, können Sie die Datei signieren, die das Assemblymanifest enthält (und somit auch die Assembly). Alternativ können Sie der Datei auch einen starken Namen geben und sie in den globalen Assemblycache einfügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

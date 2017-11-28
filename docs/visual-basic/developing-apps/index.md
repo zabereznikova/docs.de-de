@@ -1,40 +1,21 @@
 ---
 title: Entwickeln von Anwendungen mit Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3752d99e3e9860d5cac2996bb412fdb6c30b5af1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0dee8a19d22eb9b483a2d17fad43830971a8ab0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-applications-with-visual-basic"></a>Entwickeln von Anwendungen mit Visual Basic
 Dieser Abschnitt enthält die Dokumentation für die Visual Basic-Sprache.  
@@ -47,7 +28,7 @@ Dieser Abschnitt enthält die Dokumentation für die Visual Basic-Sprache.
  Hier wird ein neues Feature namens `My` vorgestellt, das den Zugriff auf Informationen und Standardobjektinstanzen bereitstellt, die mit einer Anwendung und ihrer Laufzeitumgebung in Zusammenhang stehen.  
   
  [Zugreifen auf Daten in Visual Basic-Anwendungen](../../visual-basic/developing-apps/accessing-data.md)  
- Enthält die Hilfe für den Zugriff auf Daten in Visual Basic   
+ Enthält die Hilfe für den Zugriff auf Daten in Visual Basic  
   
  [Erstellen und Verwenden von Komponenten in Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Definiert den Begriff *Komponente* und erläutert, wie und wann Komponenten erstellt werden müssen.  
@@ -67,4 +48,3 @@ Dieser Abschnitt enthält die Dokumentation für die Visual Basic-Sprache.
   
  [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
  Enthält die Referenzdokumentation für die Visual Basic-Sprache
-

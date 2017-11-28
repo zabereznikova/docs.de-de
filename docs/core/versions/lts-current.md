@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-support"></a>.NET Core-Unterstützung
 
 Dies ist eine allgemeine Beschreibung der .NET Core-Unterstützung.
@@ -43,4 +41,3 @@ Um zu verstehen, welche speziellen Änderungen, etwa Fehlerbehebungen oder das H
 ### <a name="further-reading"></a>Weiterführende Themen
 * [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)
 * [Derzeit unterstützte Betriebssysteme und Versionen](https://github.com/dotnet/core/blob/master/roadmap.md)
-

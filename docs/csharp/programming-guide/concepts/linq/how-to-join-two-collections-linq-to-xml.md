@@ -1,25 +1,21 @@
 ---
 title: "Vorgehensweise: Verknüpfen von zwei Auflistungen (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 9fdbd442e0974dfcf5183a237eecd94c4c925ee4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ca088637629453b9d9f801b576ff195844c0bd1
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Vorgehensweise: Verknüpfen von zwei Auflistungen (LINQ to XML) (C#)
 Ein Element oder Attribut in einem XML-Dokument kann mitunter auf ein anderes Element oder Attribut verweisen. So enthält das XML-Dokument in [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) z.B. eine Liste von Kunden und eine Liste von Aufträgen. Jedes `Customer`-Element enthält ein `CustomerID`-Attribut. Jedes `Order`-Element enthält ein `CustomerID`-Element. Das `CustomerID`-Element eines Auftrags verweist auf das `CustomerID`-Attribut eines Kunden.  
@@ -138,4 +134,3 @@ Attempting to validate, custOrdDoc validated
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Abfragetechniken (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

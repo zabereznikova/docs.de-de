@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>Ausdrucksbaumstrukturen mit Erläuterung
 
 [Vorheriges – 2 Übersicht](expression-trees.md)
@@ -50,7 +48,7 @@ Visuell ist die gesamte Anweisung eine Struktur: Sie können beim Stammknoten be
 
 Dies mag kompliziert aussehen, aber es ist sehr leistungsfähig. Mit den gleichen Verfahren können Sie wesentlich kompliziertere Ausdrücke zerlegen. Betrachten Sie diesen Ausdruck:
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ Mit den APIs für Ausdrucksbaumstrukturen können Sie Strukturen erstellen, die 
 Eine Sache, die für Sie nicht möglich ist, ist die Änderung einer Ausdrucksbaumstruktur.  Ausdrucksbaumstrukturen sind unveränderliche Datenstrukturen. Wenn Sie eine Ausdrucksbaumstruktur ändern möchten, müssen Sie eine neue Struktur erstellen, die eine Kopie des Originals ist, aber mit den gewünschten Änderungen. 
 
 [Weiter – Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
-

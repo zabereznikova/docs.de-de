@@ -1,42 +1,24 @@
 ---
 title: join-Klausel (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-clause-c-reference"></a>join-Klausel (C#-Referenz)
 Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus unterschiedlichen Quellsequenzen, die keine direkte Beziehung im Objektmodell haben. Die Elemente müssen lediglich in jeder Quelle einige Werte freigeben, die auf Gleichheit verglichen werden können. Ein Lebensmittelgroßhändler hat z.B. eine Liste seiner Lieferanten und seiner Käufer für ein bestimmtes Produkt. Eine `join`-Klausel kann beispielsweise verwendet werden, um eine Liste von Lieferanten und Käufern dieses Produkts zu erstellen, die sich alle in einer angegebenen Region befinden.  
@@ -52,14 +34,14 @@ Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus untersc
 ## <a name="inner-join"></a>Innerer Join  
  Im folgenden Beispiel wird eine einfache Gleichheitsverknüpfung dargestellt. Diese Abfrage produziert eine flache Sequenz aus Paaren der Form „Produktname/Kategorie“. Die gleiche Kategoriezeichenfolge taucht in mehreren Elementen auf. Wenn ein Element aus `categories` keine entsprechenden `products` hat, wird diese Kategorie nicht in den Ergebnissen angezeigt.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
 ## <a name="group-join"></a>Group Join  
  Eine `join`-Klausel mit einem `into`-Ausdruck wird Gruppenverknüpfung genannt.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  Eine Gruppenverknüpfung erstellt eine hierarchische Ergebnissequenz, die Elemente in der linken Quellsequenz mit mindestens einem entsprechenden Element der rechten Quellsequenz verknüpft. Eine Gruppenverknüpfung hat keine entsprechenden Beziehungsbedingungen; eigentlich ist sie eine Sequenz von Objektarrays.  
   
@@ -69,14 +51,14 @@ Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus untersc
   
  Selbstverständlich können Sie auch das Ergebnis einer Gruppenverknüpfung als Generator einer anderen Unterabfrage verwenden:  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## <a name="left-outer-join"></a>Linker äußerer Join  
  In einem Left Outer Join werden alle Elemente der linken Quellsequenz zurückgegeben, auch wenn sich keine entsprechenden Elemente in der rechten Sequenz befinden. Um einen Left Outer Join in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] durchzuführen, verwenden Sie die Methode `DefaultIfEmpty` zusammen mit einer Gruppenverknüpfung, um ein Standardelement für den rechten Bereich festzulegen, das erstellt wird, wenn es kein entsprechendes Element im linken Bereich gibt. Sie können `null` als Standardwert für jeden beliebigen Verweistyp verwenden, oder Sie können einen benutzerdefinierten Standardtyp festlegen. Im folgendem Beispiel wird ein benutzerdefinierter Standardtyp dargestellt:  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
@@ -97,20 +79,19 @@ Die `join`-Klausel ist sehr nützlich beim verknüpfen von Elementen aus untersc
 ## <a name="example"></a>Beispiel  
  In folgendem Beispiel werden die Ergebnisse einer inneren Verknüpfung, einer Gruppenverknüpfung und einer linken äußeren Verknüpfung in der gleichen Datenquelle anhand derselben übereinstimmenden Schlüssel miteinander verglichen. Diesen Beispielen wurde zusätzlicher Code hinzugefügt, um die Ergebnisse in der Konsolenanzeige zu verdeutlichen.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>Hinweise  
  Eine `join`-Klausel, auf die kein `into` folgt, wird in einen <xref:System.Linq.Enumerable.Join%2A>-Methodenaufruf übersetzt. Eine `join`-Klausel, auf die `into` folgt, wird in einen <xref:System.Linq.Enumerable.GroupJoin%2A>-Methodenaufruf übersetzt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Verknüpfungsvorgänge](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   
- [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md)   
- [Vorgehensweise: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [Vorgehensweise: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Vorgehensweise: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Vorgehensweise: Sortieren der Ergebnisse einer Join-Klausel](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Vorgehensweise: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Gewusst wie: Installieren von Beispieldatenbanken](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
-
+ [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [Verknüpfungsvorgänge](../../programming-guide/concepts/linq/join-operations.md)  
+ [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md)  
+ [Gewusst wie: Ausführen linker äußerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [Gewusst wie: Ausführen innerer Verknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [Gewusst wie: Ausführen von Gruppenverknüpfungen](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [Gewusst wie: Sortieren der Ergebnisse einer Join-Klausel](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [Gewusst wie: Verknüpfen mithilfe eines zusammengesetzten Schlüssels](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [Gewusst wie: Installieren von Beispieldatenbanken](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

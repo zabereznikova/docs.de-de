@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
+ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 47e895274f6d400639878e0bd5c700e04b554ce5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-assembly-file-format"></a>.NET-Assemblydateiformat
 
 .NET definiert das Binärdateiformat „Assembly“, das .NET-Programme vollständig beschreiben und enthalten kann. Assemblys werden sowohl für die Programme selbst als auch alle abhängigen Bibliotheken verwendet. Ein .NET-Programm kann in Form einer oder mehrerer Assemblys, ohne sonstige erforderliche Artefakte, außerhalb der entsprechenden .NET-Implementierung ausgeführt werden. Native Abhängigkeiten, einschließlich Betriebssystem-APIs, werden separat berücksichtigt und sind nicht im .NET-Assemblyformat enthalten, obwohl sie manchmal in diesem Format (z.B. WinRT) beschrieben werden.
@@ -40,5 +38,4 @@ Assemblyheader aus ECMA 335 II.25.1, „Structure of the runtime file format“ 
 
 ## <a name="processing-the-assemblies"></a>Verarbeiten der Assemblys
 
-Es ist möglich, Tools oder APIs zum Verarbeiten von Assemblys zu schreiben. Assemblyinformationen ermöglichen programmatische Entscheidungen zur Laufzeit, das Umschreiben von Assemblys, Bereitstellen von API-IntelliSense in einem Editor und Generieren von Dokumentation. <xref:System.Reflection?displayProperty=fullName> und [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sind gute Beispiele für Tools, die häufig für diesen Zweck verwendet werden.
-
+Es ist möglich, Tools oder APIs zum Verarbeiten von Assemblys zu schreiben. Assemblyinformationen ermöglichen programmatische Entscheidungen zur Laufzeit, das Umschreiben von Assemblys, Bereitstellen von API-IntelliSense in einem Editor und Generieren von Dokumentation. <xref:System.Reflection?displayProperty=nameWithType> und [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sind gute Beispiele für Tools, die häufig für diesen Zweck verwendet werden.

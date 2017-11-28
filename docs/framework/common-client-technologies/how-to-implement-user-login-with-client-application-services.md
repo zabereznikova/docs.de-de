@@ -5,64 +5,68 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - validating users [client application services]
 - validation [.NET Framework], client application services
 - client application services, authenticate users
 ms.assetid: 5431a671-eb02-4e18-a651-24764fccec9a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9acd7e677b981c68b4aad7d10b41d7cef2e2eb06
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten
 Sie können Clientanwendungsdienste verwenden, um Benutzer durch einen vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildienst zu überprüfen. Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildiensts finden Sie unter [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
  Die folgenden Verfahren beschreiben, wie Benutzer über den Authentifizierungsdienst überprüft werden können, wenn Ihre Anwendung entsprechend auf die Anwendung eines der Client-Authentifizierungs-Dienstanbieter konfiguriert ist. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
- Normalerweise nehmen Sie die gesamte Validierung per `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName>-Methode vor. Bei dieser Methode wird die Interaktion mit dem Authentifizierungsdienst über den konfigurierten Authentifizierungsanbieter verwaltet. Weitere Informationen finden Sie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md).  
+ Normalerweise nehmen Sie die gesamte Validierung per `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>-Methode vor. Bei dieser Methode wird die Interaktion mit dem Authentifizierungsdienst über den konfigurierten Authentifizierungsanbieter verwaltet. Weitere Informationen finden Sie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md).  
   
  Für die Schritte zur Formularauthentifizierung ist der Zugriff auf einen laufenden [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Authentifizierungsdienst erforderlich. Einen Leitfaden zu den End-to-End-Testverfahren der Clientanwendungsdienst-Funktionen finden Sie unter [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).  
   
 ### <a name="to-authenticate-a-user-with-forms-authentication-using-a-membership-credentials-provider"></a>So authentifizieren Sie einen Benutzer mit der Formularauthentifizierung unter Verwendung eines Mitgliedschaftsdaten-Anbieters:  
   
-1.  Implementieren Sie die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>-Schnittstelle. Im folgenden Codebeispiel wird eine <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=fullName> -Implementierung für eine Anmeldungs-Dialogfeldklasse, die von <xref:System.Windows.Forms.Form?displayProperty=fullName> stammt, angezeigt. Dieses Dialogfeld enthält Textfelder für den Benutzernamen und das Kennwort sowie ein Kontrollkästchen „Merken“. Wenn der Client-Authentifizierungsanbieter die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>-Methode aufruft, wird das Formular angezeigt. Wenn der Benutzer die Informationen in das Anmeldedialogfeld eingibt, und auf OK klickt, werden die angegebenen Werte in ein neues <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>-Objekt ausgegeben.  
+1.  Implementieren Sie die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>-Schnittstelle. Im folgenden Codebeispiel wird eine <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> -Implementierung für eine Anmeldungs-Dialogfeldklasse, die von <xref:System.Windows.Forms.Form?displayProperty=nameWithType> stammt, angezeigt. Dieses Dialogfeld enthält Textfelder für den Benutzernamen und das Kennwort sowie ein Kontrollkästchen „Merken“. Wenn der Client-Authentifizierungsanbieter die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>-Methode aufruft, wird das Formular angezeigt. Wenn der Benutzer die Informationen in das Anmeldedialogfeld eingibt, und auf OK klickt, werden die angegebenen Werte in ein neues <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>-Objekt ausgegeben.  
   
-     [!code-csharp[ClientApplicationServices#210](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Login.cs#210)] [!code-vb[ClientApplicationServices#210](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Login.vb#210)]  
+     [!code-csharp[ClientApplicationServices#210](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Login.cs#210)]
+     [!code-vb[ClientApplicationServices#210](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Login.vb#210)]  
   
-2.  Rufen Sie die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> -Methode auf, und fügen Sie leere Zeichenfolgen als Parameterwerte ein. Wenn Sie leere Zeichenfolgen angeben, ruft diese Methode intern die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>-Methode für die für Ihre Anwendung konfigurierten Anbieter von Anmeldeinformationen für die Anwendung auf. Im folgenden Codebeispiel wird diese Methode verwendet, um den Zugriff auf eine Windows Forms-Vollanwendung einzuschränken. Sie können diesen Code zum Hinzufügen eines <xref:System.Windows.Forms.Form.Load?displayProperty=fullName>-Handlers hinzufügen.  
+2.  Rufen Sie die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> -Methode auf, und fügen Sie leere Zeichenfolgen als Parameterwerte ein. Wenn Sie leere Zeichenfolgen angeben, ruft diese Methode intern die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>-Methode für die für Ihre Anwendung konfigurierten Anbieter von Anmeldeinformationen für die Anwendung auf. Im folgenden Codebeispiel wird diese Methode verwendet, um den Zugriff auf eine Windows Forms-Vollanwendung einzuschränken. Sie können diesen Code zum Hinzufügen eines <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>-Handlers hinzufügen.  
   
-     [!code-csharp[ClientApplicationServices#317](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#317)] [!code-vb[ClientApplicationServices#317](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#317)]  
+     [!code-csharp[ClientApplicationServices#317](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#317)]
+     [!code-vb[ClientApplicationServices#317](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#317)]  
   
 ### <a name="to-authenticate-a-user-with-forms-authentication-without-using-a-membership-credentials-provider"></a>So authentifizieren Sie einen Benutzer mit der Formularauthentifizierung ohne Verwendung eines Mitgliedschaftsdaten-Anbieters:  
   
--   Rufen Sie die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName>-Methode auf, und fügen Sie die Benutzernamens- und die Kennwortwerte ein, die Sie vom Benutzer erhalten haben.  
+-   Rufen Sie die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>-Methode auf, und fügen Sie die Benutzernamens- und die Kennwortwerte ein, die Sie vom Benutzer erhalten haben.  
   
-     [!code-csharp[ClientApplicationServices#318](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#318)] [!code-vb[ClientApplicationServices#318](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#318)]  
+     [!code-csharp[ClientApplicationServices#318](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#318)]
+     [!code-vb[ClientApplicationServices#318](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#318)]  
   
 ### <a name="to-authenticate-a-user-with-windows-authentication"></a>So authentifizieren Sie einen Benutzer mithilfe der Windows-Authentifizierung:  
   
--   Rufen Sie die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName>-Methode auf, und fügen Sie leere Zeichenfolgen als Parameter ein. Bei diesem Methodenaufruf werden immer `true` ausgegeben, und bei dem Aufruf wird im Cookie-Cache des Benutzers ein Cookie hinzugefügt, welcher die Windows-Identität enthält.  
+-   Rufen Sie die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>-Methode auf, und fügen Sie leere Zeichenfolgen als Parameter ein. Bei diesem Methodenaufruf werden immer `true` ausgegeben, und bei dem Aufruf wird im Cookie-Cache des Benutzers ein Cookie hinzugefügt, welcher die Windows-Identität enthält.  
   
-     [!code-csharp[ClientApplicationServices#319](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#319)] [!code-vb[ClientApplicationServices#319](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#319)]  
+     [!code-csharp[ClientApplicationServices#319](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#319)]
+     [!code-vb[ClientApplicationServices#319](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#319)]  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Der Beispielcode in diesem Thema veranschaulicht die einfachsten Verwendungsmöglichkeiten der Authentifizierung in einer Windows-Clientanwendung. Beim Aufrufen der `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName>-Methode mit den Clientanwendungsdiensten und der Formularauthentifizierung kann Ihr Code jedoch Folgendes auslösen: <xref:System.Net.WebException>. Dies gibt an, dass der Authentifizierungsdienst nicht verfügbar ist. Ein Beispiel für den Umgang mit dieser Ausnahme finden Sie unter [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).  
+ Der Beispielcode in diesem Thema veranschaulicht die einfachsten Verwendungsmöglichkeiten der Authentifizierung in einer Windows-Clientanwendung. Beim Aufrufen der `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>-Methode mit den Clientanwendungsdiensten und der Formularauthentifizierung kann Ihr Code jedoch Folgendes auslösen: <xref:System.Net.WebException>. Dies gibt an, dass der Authentifizierungsdienst nicht verfügbar ist. Ein Beispiel für den Umgang mit dieser Ausnahme finden Sie unter [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
- [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
+ [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)
-

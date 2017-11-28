@@ -7,12 +7,11 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
 ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/23/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -94,5 +93,4 @@ Es stehen verschiedene Tools und Infrastrukturkomponenten zur Verfügung, die in
 [Leitfaden für C#](../csharp/index.md)  
 [Leitfaden für F#](../fsharp/index.md)  
 [Leitfaden für VB.NET](../visual-basic/index.md)  
-
 

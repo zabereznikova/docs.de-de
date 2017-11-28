@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
+ms.openlocfilehash: a8f70505d1bb043ab21f87edbb5aa2d9f18a7071
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
-ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
 Dieses Dokument behandelt die unterschiedlichen Möglichkeiten, wie Sie die .NET Core-CLI-Tools erweitern und die Szenarios erklären können, die jedes steuert.
@@ -49,6 +47,8 @@ Schließlich bietet dieses Erweiterbarkeitsmodell Unterstützung für die Erstel
 
 ### <a name="consuming-per-project-tools"></a>Tools pro Projekt verwenden
 Zum Nutzen dieser Tools müssen Sie das Element `<DotNetCliToolReference>` für jedes Tool hinzufügen, das Sie der Projektdatei verwenden möchten. Im Element `<DotNetCliToolReference>` verweisen Sie auf das Paket, in dem sich das Tool befindet, und geben die Version an, die Sie benötigen. Nach der Ausführung von [`dotnet restore`](dotnet-restore.md) werden das Tool und die zugehörigen Abhängigkeiten wiederhergestellt.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Für Tools, die die Buildausgabe des Projekts zur Ausführung laden müssen, gibt es normalerweise eine andere Abhängigkeit, die unter den regulären Abhängigkeiten in der Projektdatei angezeigt wird. Da die CLI als Buildmodul MSBuild verwendet, wird empfohlen, diese Teile des Tools als benutzerdefinierte MSBuild-[Ziele](/visualstudio/msbuild/msbuild-targets) und -[Aufgaben](/visualstudio/msbuild/msbuild-tasks) zu schreiben, da sie auf diese Weise am gesamten Buildprozess teilnehmen können. Außerdem können sie mühelos sämtliche Daten abrufen, die über den Build erstellt werden, z.B. den Speicherort der Ausgabedateien, die aktuell erstellte Konfiguration usw. Alle diese Informationen bilden eine Gruppe von MSBuild-Eigenschaften, die von jedem beliebigen Ziel gelesen werden können. Weiter unten in diesem Dokument erfahren Sie, wie über NuGet ein benutzerdefiniertes Ziel hinzugefügt wird.
 
@@ -165,4 +165,3 @@ echo "Hello World"
 Auf Mac OS können wir dieses Skript als `dotnet-hello` speichern und sein ausführbares Bit mit `chmod +x dotnet-hello` festlegen. Wir erstellen dann eine symbolische Verknüpfung in `/usr/local/bin` mit dem Befehl `ln -s <full_path>/dotnet-hello /usr/local/bin/`. So kann der Befehl mit der `dotnet hello`-Syntax aufgerufen werden.
 
 Wir können unter Windows das Skript als `dotnet-hello.cmd` speichern und es an einem Speicherort speichern, der sich in einem Systempfad befindet (oder Sie können es einem Ordner hinzufügen, der sich bereits im Pfad befindet). Verwenden Sie danach einfach `dotnet hello`, um dieses Beispiel auszuführen.
-

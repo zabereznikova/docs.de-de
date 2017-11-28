@@ -1,47 +1,28 @@
 ---
 title: 'Gewusst wie: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - event logs, shutdown
 - My.Application.Log object, logging
-- Startup event
+- Startup event [Visual Basic]
 - event logs, startup
-- Shutdown event
+- Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 16235e245fd71f16edb67003cf237bcee3a6855e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa5bf57ac5245e9363089b85607b7e6d1a00ba14
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Gewusst wie: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung (Visual Basic)
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry` -Methode mit den Ereignissen `Startup` und `Shutdown` zum Erfassen von Ablaufverfolgungsinformationen.  
@@ -86,9 +67,8 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
  [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
+ [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
  [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-

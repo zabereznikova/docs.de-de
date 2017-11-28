@@ -1,39 +1,21 @@
 ---
 title: Member (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="members-c-programming-guide"></a>Member (C#-Programmierhandbuch)
 Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten darstellen. Die Member einer Klasse umfassen alle Member, die in dieser Klasse deklariert sind, sowie alle Member (mit Ausnahme von Konstruktoren und Finalizer), die in den Klassen der Vererbungshierarchie deklariert sind. Private Member in Basisklassen werden geerbt. Aus abgeleiteten Klassen kann jedoch nicht darauf zugegriffen werden.  
@@ -54,16 +36,15 @@ Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten 
 |[Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Geschachtelte Typen sind Typen, die in einem anderen Typ deklariert sind. Geschachtelte Typen werden häufig verwendet, um Objekte zu beschreiben, die nur von den Typen verwendet werden, in denen sie enthalten sind.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Indexer](../../../csharp/programming-guide/indexers/index.md)   
- [Ereignisse](../../../csharp/programming-guide/events/index.md)   
- [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+ [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+ [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
  [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-

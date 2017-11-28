@@ -1,45 +1,26 @@
 ---
 title: try-catch (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - try
 - try_CSharpKeyword
 - catch
 - catch_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 753beb554796ad0aa2c5e15c715240453de9a3e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 Die try-catch-Anweisung besteht aus einem `try`-Block gefolgt von einer oder mehreren `catch`-Klauseln, die Handler für verschiedene Ausnahmen angeben.  
@@ -146,7 +127,7 @@ static void Main()
   
  Wenn ein `await`-Ausdruck in der asynchchronen Methode erreicht wird, wird die Ausführung der Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md) und [Ablaufsteuerung in asynchronen Programmen](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
- Die abgeschlossene Aufgabe, auf die `await` angewendet wird, kann sich aufgrund einer unbehandelten Ausnahme in der Methode, die die Aufgabe zurückgibt, in einem fehlerhaften Zustand befinden. Das Warten auf die Aufgabe löst eine Ausnahme aus. Eine Aufgabe kann auch in einem abgebrochenen Zustand enden, wenn der asynchrone Prozess, der sie zurückgibt, abgebrochen wird. Das Warten auf eine abgebrochene Aufgabe löst eine `OperationCanceledException` aus. Weitere Informationen zum Abbrechen eines asynchronen Prozesses finden Sie unter [Feinabstimmung der Async-Anwendung](http://msdn.microsoft.com/library/daaa32ea-c84c-4761-8230-c8292ffebd74).  
+ Die abgeschlossene Aufgabe, auf die `await` angewendet wird, kann sich aufgrund einer unbehandelten Ausnahme in der Methode, die die Aufgabe zurückgibt, in einem fehlerhaften Zustand befinden. Das Warten auf die Aufgabe löst eine Ausnahme aus. Eine Aufgabe kann auch in einem abgebrochenen Zustand enden, wenn der asynchrone Prozess, der sie zurückgibt, abgebrochen wird. Das Warten auf eine abgebrochene Aufgabe löst eine `OperationCanceledException` aus. Weitere Informationen zum Abbrechen eines asynchronen Prozesses finden Sie unter [Feinabstimmung der Async-Anwendung](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
  Um die Ausnahme abzufangen, warten Sie in einem `try`-Block auf die Aufgabe, und fangen Sie die Ausnahme im zugehörigen `catch`-Block ab. Ein Beispiel hierfür finden Sie im Abschnitt „Beispiel“.  
   
@@ -155,7 +136,7 @@ static void Main()
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel enthält der `try`-Block einen Aufruf der `ProcessString`-Methode, die eine Ausnahme verursachen kann. Die `catch`-Klausel enthält den Ausnahmehandler, der lediglich eine Meldung auf dem Bildschirm anzeigt. Wenn die `throw`-Anweisung aus `MyMethod` heraus aufgerufen wird, sucht das System nach der `catch`-Anweisung und zeigt die Meldung `Exception caught` an.  
   
- [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden zwei catch-Blöcke verwendet, und die spezifischste Ausnahme, die an erster Stelle steht, wird abgefangen.  
@@ -164,7 +145,7 @@ static void Main()
   
  Wenn Sie den allgemeinsten catch-Block im Beispiel an erster Stelle platzieren, wird die folgende Fehlermeldung angezeigt: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
   
- [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Ausnahmebehandlung für asynchrone Methoden veranschaulicht. Um eine von einer asynchronen Aufgabe ausgelöste Ausnahme abzufangen, platzieren Sie den `await`-Ausdruck in einem `try`-Block, und fangen Sie die Ausnahme in einem `catch`-Block ab.  
@@ -173,25 +154,24 @@ static void Main()
   
  Heben Sie die Auskommentierung der Zeile `throw new OperationCancelledException` auf, um zu veranschaulichen, was beim Abbrechen eines asynchronen Prozesses passiert. Die `IsCanceled`-Eigenschaft der Aufgabe wird auf `true` festgelegt, und die Ausnahme wird im `catch`-Block abgefangen. Unter bestimmten Bedingungen, die für dieses Beispiel nicht gelten, wird die `IsFaulted`-Eigenschaft der Aufgabe auf `true` und `IsCanceled` auf `false` festgelegt.  
   
- [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
+ [!code-csharp[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Behandlung von Ausnahmen in Fällen, in denen mehrere Aufgaben zu mehreren Ausnahmen führen können. Der `try`-Block wartet auf die Aufgabe, die von einem Aufruf von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> zurückgegeben wird. Die Aufgabe ist abgeschlossen, wenn die drei Aufgaben abgeschlossen sind, auf die WhenAll angewendet wird.  
   
  Jede der drei Aufgaben löst eine Ausnahme aus. Der `catch`-Block iteriert durch die Ausnahmen, die in der `Exception.InnerExceptions`-Eigenschaft der Aufgabe stehen, die von <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> zurückgegeben wurde.  
   
- [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
+ [!code-csharp[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
- [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [Vorgehensweise: Explizites Auslösen von Ausnahmen](https://msdn.microsoft.com/library/xhcbs8fz)
-
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+ [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

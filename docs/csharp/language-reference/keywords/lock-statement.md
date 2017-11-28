@@ -1,41 +1,22 @@
 ---
 title: lock-Anweisung (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - lock_CSharpKeyword
 - lock
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- lock keyword [C#]
+helpviewer_keywords: lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb48c2b1554ad2817406eaef42b4cb336ea46862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00dcbb9feec11587265bf61667d91c2c1598065b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
 Das Schlüsselwort `lock` kennzeichnet einen Anweisungsblock als kritischen Abschnitt, indem es die sich gegenseitig ausschließende Sperre für ein gegebenes Objekt abruft, eine Anweisung ausführt und anschließend die Sperre aufhebt. Das folgende Beispiel enthält eine `lock`-Anweisung.  
@@ -60,12 +41,12 @@ class Account
 }  
 ```  
   
- Weitere Informationen finden Sie unter [Threadsynchronisierung](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4).  
+ Weitere Informationen finden Sie unter [Threadsynchronisierung](../../programming-guide/concepts/threading/thread-synchronization.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Das Schlüsselwort `lock` stellt sicher, dass ein Thread keinen kritischen Abschnitt eines Codes betritt, während ein anderer Thread in diesem Abschnitt ist. Wenn ein anderer Thread versucht, auf einen gesperrten Code zuzugreifen, wartet er, sperrt, bis das Objekt freigegeben wird.  
   
- Der Abschnitt [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c) wird das Threading behandeln.  
+ Der Abschnitt [Threading](../../programming-guide/concepts/threading/index.md) wird das Threading behandeln.  
   
  Das `lock`-Schlüsselwort ruft am Anfang des Blocks <xref:System.Threading.Monitor.Enter%2A> und am Ende des Blocks <xref:System.Threading.Monitor.Exit%2A> auf. Ein <xref:System.Threading.ThreadInterruptedException> wird ausgelöst, wenn <xref:System.Threading.Thread.Interrupt%2A> einen Thread unterbricht, der darauf wartet eine `lock`-Anweisung einzugeben.  
   
@@ -84,26 +65,25 @@ class Account
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine einfache Verwendung von Threads ohne das Sperren in C# gezeigt.  
   
- [!code-cs[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
+ [!code-csharp[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden Threads und `lock` verwendet. Solange die `lock`-Anweisung vorhanden ist, ist der Anweisungsblock ein kritischer Abschnitt, und `balance` wird nie eine negative Zahl werden.  
   
- [!code-cs[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
+ [!code-csharp[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection.MethodImplAttributes>   
- <xref:System.Threading.Mutex>   
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)   
- @System.Threading.Monitor   
- [Interlocked-Vorgänge](../../../standard/threading/interlocked-operations.md)   
- [AutoResetEvent](../../../standard/threading/autoresetevent.md)   
- [Threadsynchronisierung](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)
-
+ <xref:System.Reflection.MethodImplAttributes>  
+ <xref:System.Threading.Mutex>  
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Threading](../../programming-guide/concepts/threading/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)  
+ <xref:System.Threading.Monitor>  
+ [Interlocked-Vorgänge](../../../standard/threading/interlocked-operations.md)  
+ [AutoResetEvent](../../../standard/threading/autoresetevent.md)  
+ [Threadsynchronisierung](../../programming-guide/concepts/threading/thread-synchronization.md)

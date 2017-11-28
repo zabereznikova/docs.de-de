@@ -1,22 +1,18 @@
 ---
 title: Entfernen von Elementen, Attributen und Knoten aus einem XML-Baum (C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Entfernen von Elementen, Attributen und Knoten aus einem XML-Baum (C#)
 Sie können eine XML-Struktur ändern, indem Sie Elemente, Attribute und andere Knotentypen entfernen.  
@@ -29,19 +25,19 @@ Sie können eine XML-Struktur ändern, indem Sie Elemente, Attribute und andere 
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|Entfernt einen <xref:System.Xml.Linq.XAttribute> aus seinem übergeordneten Knoten.|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|Entfernt die untergeordneten Knoten aus einem <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|Entfernt Inhalt und Attribute aus einem <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|Entfernt die Attribute eines <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|Entfernt das Attribut, wenn Sie als Wert `null` übergeben.|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName>|Entfernt das untergeordnete Element, wenn Sie als Wert `null` übergeben.|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|Entfernt einen <xref:System.Xml.Linq.XNode> aus seinem übergeordneten Knoten.|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName>|Entfernt jedes Attribut oder Element in der Quellauflistung aus seinem übergeordneten Element.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Entfernt einen <xref:System.Xml.Linq.XAttribute> aus seinem übergeordneten Knoten.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Entfernt die untergeordneten Knoten aus einem <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|Entfernt Inhalt und Attribute aus einem <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|Entfernt die Attribute eines <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|Entfernt das Attribut, wenn Sie als Wert `null` übergeben.|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|Entfernt das untergeordnete Element, wenn Sie als Wert `null` übergeben.|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Entfernt einen <xref:System.Xml.Linq.XNode> aus seinem übergeordneten Knoten.|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Entfernt jedes Attribut oder Element in der Quellauflistung aus seinem übergeordneten Element.|  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- In diesem Beispiel werden drei Ansätze zum Entfernen von Elementen gezeigt. Zuerst entfernt das Beispiel ein einzelnes Element. Als Zweites ruft das Beispiel eine Auflistung von Elementen ab, materialisiert sie mit dem <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>-Operator und entfernt die Auflistung. Zum Schluss ruft das Beispiel eine Auflistung von Elementen ab und entfernt diese mit der <xref:System.Xml.Linq.Extensions.Remove%2A>-Erweiterungsmethode.  
+ In diesem Beispiel werden drei Ansätze zum Entfernen von Elementen gezeigt. Zuerst entfernt das Beispiel ein einzelnes Element. Als Zweites ruft das Beispiel eine Auflistung von Elementen ab, materialisiert sie mit dem <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>-Operator und entfernt die Auflistung. Zum Schluss ruft das Beispiel eine Auflistung von Elementen ab und entfernt diese mit der <xref:System.Xml.Linq.Extensions.Remove%2A>-Erweiterungsmethode.  
   
  Weitere Informationen zum <xref:System.Linq.Enumerable.ToList%2A>-Operator finden Sie unter [Konvertieren von Datentypen (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).  
   
@@ -89,4 +85,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Siehe auch  
  [Modifying XML Trees (LINQ to XML) (C#) (Ändern von XML-Strukturen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

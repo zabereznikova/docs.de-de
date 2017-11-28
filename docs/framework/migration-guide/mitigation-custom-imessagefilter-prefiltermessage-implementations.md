@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 13b8fffdbab44d3bbbce8f1ed9ce0250dd892f7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: fe7290f3a887f2c4d52e52a6aff708e0e9fe415f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Entschärfung: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen
-In Windows Forms-Apps für Versionen des .NET Frameworks ab [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] kann eine benutzerdefinierte <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=fullName>-Implementierung Meldungen beim Aufruf der <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=fullName>-Methode sicher filtern, wenn die <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=fullName>-Implementierung:  
+In Windows Forms-Apps für Versionen des .NET Frameworks ab [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] kann eine benutzerdefinierte <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>-Implementierung Meldungen beim Aufruf der <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>-Methode sicher filtern, wenn die <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>-Implementierung:  
   
 -   Mindestens eine der folgenden Aktionen ausführt:  
   
@@ -30,12 +28,12 @@ In Windows Forms-Apps für Versionen des .NET Frameworks ab [!INCLUDE[net_v461](
   
     -   Entfernen eines Meldungsfilters durch Aufrufen der <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A>-Methode. -Methode.  
   
--   **Und** Nachrichten durch Aufrufen der <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=fullName>-Methode abruft.  
+-   **Und** Nachrichten durch Aufrufen der <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType>-Methode abruft.  
   
 ## <a name="impact"></a>Auswirkungen  
  Diese Änderung betrifft nur Windows Forms-Apps, die auf Versionen von .NET Framework ausgerichtet sind, die mit [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] beginnen.  
   
- Für Windows Forms-Apps, die auf vorherige Versionen von .NET Framework ausgerichtet sind, lösen solche Implementierungen in einigen Fällen beim Aufrufen der <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=fullName>-Methode eine <xref:System.IndexOutOfRangeException>-Ausnahme aus.  
+ Für Windows Forms-Apps, die auf vorherige Versionen von .NET Framework ausgerichtet sind, lösen solche Implementierungen in einigen Fällen beim Aufrufen der <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>-Methode eine <xref:System.IndexOutOfRangeException>-Ausnahme aus.  
   
 ## <a name="mitigation"></a>Problemumgehung  
  Ist diese Änderung nicht erwünscht, kann sie für Apps, die für [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] oder höhere Versionen vorgesehen sind, abgelehnt werden. Dazu muss dem [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)-Abschnitt der Konfigurationsdatei der App die folgende Konfigurationseinstellung hinzugefügt werden:  
@@ -56,4 +54,3 @@ In Windows Forms-Apps für Versionen des .NET Frameworks ab [!INCLUDE[net_v461](
   
 ## <a name="see-also"></a>Siehe auch  
  [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
-

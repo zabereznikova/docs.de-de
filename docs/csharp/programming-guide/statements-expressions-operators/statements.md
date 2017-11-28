@@ -1,54 +1,36 @@
 ---
 title: Anweisungen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 166130ca7a63127d0bd1df8328dc08b4a8cd7845
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4df592821f9bebb318138cffac9045fdbec1e759
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
 Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. Häufig verwendete Aktionen umfassen das Deklarieren von Variablen, Zuweisen von Werten, Aufrufen von Methoden, Durchlaufen von Auflistungen und das Verzweigen auf einen oder einen anderen Codeblock, je nach gegebener Bedingung. Die Reihenfolge, in der Anweisungen in einem Programm ausgeführt werden, wird „Ablaufsteuerung“ oder „Ausführungsablauf“ genannt. Die Ablaufsteuerung kann jedes Mal, wenn ein Programm ausgeführt wird, variieren, je nachdem, wie die Anwendung auf eine Eingabe reagiert, die sie während der Laufzeit empfängt.  
   
  Eine Anweisung kann aus einer einzelnen Codezeile, die mit einem Semikolon endet, oder aus einer Reihe von einzeiligen Anweisungen in einem Block bestehen. Ein Anweisungsblock ist in geschweiften Klammern eingeschlossen und kann geschachtelte Blöcke enthalten. Der folgende Code zeigt zwei Beispiele für einzeilige Anweisungen und einen mehrzeiligen Anweisungsblock:  
   
- [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
 ## <a name="types-of-statements"></a>Typen von Anweisungen  
  Die folgende Tabelle enthält die verschiedenen Typen von Anweisungen in C# und die zugehörigen Schlüsselwörter, mit Links zu Themen, die weitere Informationen enthalten:  
   
 |Kategorie|C#-Schlüsselwörter / Hinweise|  
 |--------------|---------------------------|  
-|Deklarationsanweisungen|Eine Deklarationsanweisung führt eine neue Variable oder Konstante ein. Eine Deklaration einer Variable kann der Variable optional einen Wert zuweisen. Bei einer Deklaration einer Konstante ist die Zuweisung erforderlich.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
-|Ausdrucksanweisungen|Ausdrucksanweisungen, die einen Wert berechnen, müssen den Wert in einer Variablen speichern.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
+|Deklarationsanweisungen|Eine Deklarationsanweisung führt eine neue Variable oder Konstante ein. Eine Deklaration einer Variable kann der Variable optional einen Wert zuweisen. Bei einer Deklaration einer Konstante ist die Zuweisung erforderlich.<br /><br /> [!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
+|Ausdrucksanweisungen|Ausdrucksanweisungen, die einen Wert berechnen, müssen den Wert in einer Variablen speichern.<br /><br /> [!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
 |[Auswahlanweisungen](../../../csharp/language-reference/keywords/selection-statements.md)|Auswahlanweisungen helfen Ihnen in unterschiedliche Codeabschnitte zu verzweigen, abhängig von einer oder mehreren angegebenen Bedingungen. Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
 |[Iterationsanweisungen](../../../csharp/language-reference/keywords/iteration-statements.md)|Iterationsanweisungen helfen Ihnen, Auflistungen, wie z.B. Arrays, zu durchlaufen oder den selben Satz von Anweisungen solange zu wiederholen, bis eine angegebene Bedingung erfüllt ist. Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
 |[Sprunganweisungen](../../../csharp/language-reference/keywords/jump-statements.md)|Sprunganweisungen übertragen Steuerelemente zu einem anderen Codeabschnitt. Weitere Informationen finden Sie unter den folgenden Themen:<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
@@ -59,30 +41,30 @@ Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. H�
 |Die Anweisung `fixed`|Die fixed-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Weitere Informationen finden Sie unter [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Die Anweisung `lock`|Die lock-Anweisung hilft Ihnen, den Zugriff auf Codeblöcke auf jeweils einen Thread zu beschränken. Weitere Informationen finden Sie unter [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Anweisungen mit Bezeichnung|Sie können einer Anweisung eine Bezeichnung geben, und anschließend mit dem Schlüsselwort [goto](../../../csharp/language-reference/keywords/goto.md) zu der Anweisung mit Bezeichnung springen. (Ein Beispiel finden Sie in der folgenden Zeile.)|  
-|Die leere Anweisung|Die leere Anweisung besteht aus einem einzelnen Semikolon. Sie führt keine Aktion aus und kann an Orten verwendet werden, an denen eine Anweisung erforderlich ist, aber keine Aktion ausgeführt werden muss. Die folgenden Beispiele zeigen zwei Verwendungen für eine leere Anweisung:<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
+|Die leere Anweisung|Die leere Anweisung besteht aus einem einzelnen Semikolon. Sie führt keine Aktion aus und kann an Orten verwendet werden, an denen eine Anweisung erforderlich ist, aber keine Aktion ausgeführt werden muss. Die folgenden Beispiele zeigen zwei Verwendungen für eine leere Anweisung:<br /><br /> [!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## <a name="embedded-statements"></a>Eingebettete Anweisungen  
  Einige Anweisungen, z.B. [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) und [foreach](../../../csharp/language-reference/keywords/foreach-in.md), haben immer eine eingebettete Anweisung, die diesen folgt. Diese eingebettete Anweisung kann entweder eine einzelne Anweisung oder mehrerer Anweisungen durch geschweifte Klammern in einem Anweisungsblock sein. In geschweiften Klammern können sogar einzeilige eingebettete Anweisungen eingeschlossen werden, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
  Eine eingebettete Anweisung, die nicht in geschweifte Klammern eingeschlossen ist, darf keine Deklarationsanweisung oder eine Anweisung mit Bezeichnung sein. Dies wird im folgenden Beispiel gezeigt:  
   
- [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   
  Fügen Sie die eingebettete Anweisung in einen Block ein, um den Fehler zu beheben:  
   
- [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
   
 ## <a name="nested-statement-blocks"></a>Geschachtelte Anweisungsblöcke  
  Anweisungsblöcke können geschachtelt werden, wie im folgenden Code gezeigt wird:  
   
- [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
   
 ## <a name="unreachable-statements"></a>Nicht erreichbare Anweisungen  
  Wenn der Compiler festlegt, dass der Steuerungsablauf nie auf eine bestimmte Anweisung unter jeglichen Umständen zugreifen kann, wird die Warnung CS0162 erzeugt, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
@@ -97,4 +79,3 @@ Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. H�
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-

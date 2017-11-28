@@ -1,15 +1,12 @@
 ---
 title: "Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
 - file attributes, determining
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
@@ -126,8 +107,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
  Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer, auf dem Sie über Netzwerkzugriff verfügen, überwachen. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, werden ein Ereignis oder mehrere Ereignisse ausgelöst, in einem Puffer gespeichert und an die <xref:System.IO.FileSystemWatcher>-Komponente für die Verarbeitung übermittelt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Datenströmen](https://msdn.microsoft.com/library/e4y2dch9)   
- [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)   
- [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys)   
+ [Erstellen von Streams](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)  
+ [Asynchrone Datei-E/A](https://msdn.microsoft.com/library/kztecsys)  
  [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
-

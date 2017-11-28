@@ -1,25 +1,28 @@
 ---
-title: "Vorgehensweise: Erstellen eines WCF-Diensts, der &#252;ber WebSockets kommuniziert | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines WCF-Diensts, der &#252;ber WebSockets kommuniziert
-WCF\-Dienste und \-Clients können die <xref:System.ServiceModel.NetHttpBinding>\-Bindung verwenden, um über WebSockets zu kommunizieren.  WebSockets werden verwendet, wenn die <xref:System.ServiceModel.NetHttpBinding> bestimmt, dass der Dienstvertrag einen Rückrufvertrag definiert.  In diesem Thema wird das Implementieren eines WCF\-Diensts und \-Clients beschrieben, die mithilfe der <xref:System.ServiceModel.NetHttpBinding> über WebSockets kommunizieren.  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert
+WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-Bindung verwenden, um über WebSockets zu kommunizieren.  WebSockets werden verwendet, wenn die <xref:System.ServiceModel.NetHttpBinding> bestimmt, dass der Dienstvertrag einen Rückrufvertrag definiert. In diesem Thema wird das Implementieren eines WCF-Diensts und -Clients beschrieben, die mithilfe der <xref:System.ServiceModel.NetHttpBinding> über WebSockets kommunizieren.  
   
-### Definieren des Diensts  
+### <a name="define-the-service"></a>Definieren des Diensts  
   
 1.  Definieren Sie einen Rückrufvertrag.  
   
@@ -34,7 +37,7 @@ WCF\-Dienste und \-Clients können die <xref:System.ServiceModel.NetHttpBinding>
   
      Dieser Vertrag wird von der Clientanwendung implementiert, damit der Dienst Nachrichten zurück an den Client senden kann.  
   
-2.  Definieren Sie den Dienstvertrag, und geben Sie die `IStockQuoteCallback`\-Schnittstelle als Rückrufvertrag an.  
+2.  Definieren Sie den Dienstvertrag, und geben Sie die `IStockQuoteCallback`-Schnittstelle als Rückrufvertrag an.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -66,7 +69,7 @@ WCF\-Dienste und \-Clients können die <xref:System.ServiceModel.NetHttpBinding>
         }  
     ```  
   
-     Der Dienstvorgang `StartSendingQuotes` wird als asynchroner Aufruf implementiert.  Der Rückrufkanal wird mithilfe des `OperationContext` abgerufen, und wenn der Kanal geöffnet ist, wird ein asynchroner Aufruf des Rückrufkanals ausgeführt.  
+     Der Dienstvorgang `StartSendingQuotes` wird als asynchroner Aufruf implementiert. Der Rückrufkanal wird mithilfe des `OperationContext` abgerufen, und wenn der Kanal geöffnet ist, wird ein asynchroner Aufruf des Rückrufkanals ausgeführt.  
   
 4.  Konfigurieren Sie den Dienst.  
   
@@ -97,9 +100,9 @@ WCF\-Dienste und \-Clients können die <xref:System.ServiceModel.NetHttpBinding>
     </configuration>  
     ```  
   
-     Die Konfigurationsdatei des Diensts basiert auf WCF\-Standardendpunkten.  Mit dem `<protocolMapping>`\-Abschnitt wird angegeben, dass für die erstellten Standardendpunkte die `NetHttpBinding` verwendet werden soll.  
+     Die Konfigurationsdatei des Diensts basiert auf WCF-Standardendpunkten. Mit dem `<protocolMapping>`-Abschnitt wird angegeben, dass für die erstellten Standardendpunkte die `NetHttpBinding` verwendet werden soll.  
   
-### Definieren des Clients  
+### <a name="define-the-client"></a>Definieren des Clients  
   
 1.  Implementieren Sie den Rückrufvertrag.  
   
@@ -138,7 +141,7 @@ WCF\-Dienste und \-Clients können die <xref:System.ServiceModel.NetHttpBinding>
         }  
         ```  
   
-         Der **CallbackHandler** wird hier aus Gründen der Übersichtlichkeit wiederholt.  Die Clientanwendung erstellt einen neuen **InstanceContext** und gibt die Implementierung der Rückrufschnittstelle an.  Danach erstellt sie eine Instanz der Proxyklasse, die einen Verweis an den neu erstellten **InstanceContext** sendet.  Wenn der Client den Dienst aufruft, ruft der Dienst den Client mithilfe des angegebenen Rückrufvertrags auf.  
+         Der CallbackHandler wird hier aus Gründen der Übersichtlichkeit wiederholt. Die Clientanwendung erstellt einen neuen InstanceContext und gibt die Implementierung der Rückrufschnittstelle an. Danach erstellt sie eine Instanz der Proxyklasse, die einen Verweis an den neu erstellten InstanceContext sendet. Wenn der Client den Dienst aufruft, ruft der Dienst den Client mithilfe des angegebenen Rückrufvertrags auf.  
   
     2.  Konfigurieren Sie den Client.  
   
@@ -167,7 +170,7 @@ WCF\-Dienste und \-Clients können die <xref:System.ServiceModel.NetHttpBinding>
   
          In der Clientkonfiguration sind keine besonderen Schritte erforderlich. Sie geben einfach den clientseitigen Endpunkt mithilfe der `NetHttpBinding` an.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  In Folgenden finden Sie den vollständigen Code, der in diesem Thema verwendet wird.  
   
 ```csharp  
@@ -196,7 +199,6 @@ namespace Server
         Task SendQuote(string code, double value);  
     }  
 }  
-  
 ```  
   
 ```  
@@ -326,6 +328,6 @@ namespace Client
 </configuration>  
 ```  
   
-## Siehe auch  
- [Synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [Verwenden der NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

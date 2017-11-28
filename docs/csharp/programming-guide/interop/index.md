@@ -1,41 +1,23 @@
 ---
 title: "Interoperabilität (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - COM interop
 - interoperability
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 910b0e0675fe416fae71a6e46c4a6cf2293327e6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilität (C#-Programmierhandbuch)
 Interoperabilität ermöglicht es Ihnen, vorhandene Investitionen in nicht verwalteten Code zu schützen und weiter zu nutzen. Code, der unter der Steuerung der Common Language Runtime (CLR) ausgeführt wird, wird als *verwalteter Code* bezeichnet. Code, der außerhalb der CLR ausgeführt wird, wird als *nicht verwalteter Code* bezeichnet. COM, COM+, C++-Komponenten, ActiveX-Komponenten und die Microsoft Win32-API sind Beispiele für nicht verwalteten Code.  
@@ -65,8 +47,7 @@ Interoperabilität ermöglicht es Ihnen, vorhandene Investitionen in nicht verwa
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)   
+ <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Interoperabilität mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)  
  [Exemplarische Vorgehensweise: Office-Programmierung](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
-

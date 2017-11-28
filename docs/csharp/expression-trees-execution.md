@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="executing-expression-trees"></a>Ausführen von Ausdrucksbaumstrukturen
 
 [Vorheriges – Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
@@ -130,4 +128,3 @@ Ausdrucksbaumstrukturen, die Lambdaausdrücke darstellen, können kompiliert wer
 Die Ausdrucksbaumstruktur stellt den Code dar, der für jedes angegebene Konstrukt ausgeführt werden würde, das Sie erstellen. Solange die Umgebung, in der Sie den Code kompilieren und ausführen, der Umgebung entspricht, in der Sie den Ausdruck erstellen, funktioniert alles wie erwartet. Wenn dies nicht der Fall ist, sind die Fehler sehr berechenbar, und sie werden in den ersten Tests von Code mithilfe der Ausdrucksbaumstrukturen abgefangen werden.
 
 [Weiter – Interpretieren von Ausdrücken](expression-trees-interpreting.md)
-

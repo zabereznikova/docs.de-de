@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/13/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="hosting-net-core"></a>Hosten von .NET Core
 
 Wie alle verwalteten Codes werden .NET Core-Anwendungen von einem Host ausgeführt. Der Host ist verantwortlich für das Starten der Laufzeit (einschließlich Komponenten wie die JIT und Garbage Collector), das Erstellen der AppDomains und das Aufrufen von verwalteten Einstiegspunkten.
@@ -147,4 +145,3 @@ Nachdem Ihr Host erstellt wurde, kann er getestet werden, indem er von der Befeh
 Wenn anfangs Funktionsstörungen auftreten, überprüfen Sie, dass *coreclr.dll* in dem Speicherort zur Verfügung steht, den der Host erwartet, dass sich alle erforderlichen Framework-Bibliotheken in der TPA-Liste befinden, und dass die CoreCLR-Bitanzahl (32 oder 64 Bit) der Erstellungsart des Host entspricht.
 
 Das Hosten der Laufzeit von .NET Core ist ein erweitertes Szenario, das für viele Entwickler nicht erforderlich ist, aber für diejenigen, die verwalteten Code von einem nativen Prozess starten müssen, oder die mehr Kontrolle über das Verhalten der .NET Core-Laufzeit benötigen, kann es sehr nützlich sein. Da .NET Core Seite-an-Seite mit sich selbst ausgeführt werden kann, ist es sogar möglich, Hosts zu erstellen, die mehrere Versionen der Laufzeit von .NET Core initialisieren und starten und im selben Prozess Anwendungen auf allen ausführen. 
-

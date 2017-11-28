@@ -1,46 +1,28 @@
 ---
 title: Delegaten (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4a6649537238af38e073eeb8747487822d058b7f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1d3dc2252b086f9df9e64a059a53ec8792e11b45
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Wenn Sie einen Delegaten instanziieren, können Sie jeder Methode seine Instanz mit einer kompatiblen Signatur und dem Rückgabetyp zuordnen. Sie können die Methode über die Delegatinstanz aufrufen.  
   
  Delegaten werden verwendet, um Methoden als Argumente an anderen Methoden zu übergeben. Ereignishandler sind nichts weiter als Methoden, die durch Delegaten aufgerufen werden. Wenn Sie eine benutzerdefinierte Methode erstellen, kann eine Klasse wie das Windows-Steuerelement diese Methode aufrufen, sobald ein bestimmtes Ereignis eintritt. Das folgende Beispiel veranschaulicht die Deklaration eines Delegaten:  
   
- [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
  Jede Methode einer beliebigen verfügbaren Klasse oder Struktur, die mit dem Delegattyp übereinstimmt, kann dem Delegaten zugewiesen werden. Bei der Methode kann es sich um eine statische Methode oder um eine Instanzenmethode handeln. Dies ermöglicht das programmgesteuerte Ändern von Methodenaufrufen sowie die Integration von neuem Code in bereits vorhandene Klassen.  
   
@@ -89,7 +71,6 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
  [Delegaten und Ereignisse](http://go.microsoft.com/fwlink/?LinkId=195418) in [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Delegate>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ <xref:System.Delegate>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Ereignisse](../../../csharp/programming-guide/events/index.md)
-

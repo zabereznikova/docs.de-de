@@ -1,39 +1,21 @@
 ---
 title: Zeigertypen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4ebc69762f18dc630100b544c18df0f43734ac
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 In einem unsicheren Kontext kann ein Typ sowohl ein Zeigertyp als auch ein Werttyp oder Verweistyp sein. Eine Zeigertypdeklaration erfolgt in einer der folgenden Formen:  
@@ -151,13 +133,12 @@ Console.ReadLine();
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Zeigerkonvertierungen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [Typen](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Zeigerkonvertierungen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
+ [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [Typen](../../../csharp/language-reference/keywords/types.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)  
  [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
-

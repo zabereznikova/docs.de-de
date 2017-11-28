@@ -5,29 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 404a092c6c05bcef568b234c9abeaf7969703cce
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine verteilbare Laufzeit. Wenn Sie Apps für diese Version von .NET Framework entwickeln, können Sie das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup als Teil einer erforderlichen Komponente in das Setup Ihrer App einschließen (mit dem Setup verketten). Für ein angepasstes oder einheitliches Setup können Sie festlegen, dass das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup automatisch gestartet und sein Status nachverfolgt wird, während der Setupstatus Ihrer App angezeigt wird. Das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup (das beobachtet werden kann) definiert mithilfe eines MMIO (Memory-Mapped IO)-Segments ein Protokoll für die Kommunikation mit Ihrem Setup (dem Monitor oder Chainer), um die automatische Nachverfolgung zu aktivieren. Dieses Protokoll definiert ein Verfahren für einen Chainer zum Abrufen von Statusinformationen und ausführlichen Ergebnissen, zum Antworten auf Meldungen sowie zum Abrechen des [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setups.  
@@ -323,6 +317,5 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
  Ein typischer Server erstellt einen zufälligen MMIO-Dateinamen, erstellt die Datei (wie im vorherigen Codebeispiel in `Server::CreateSection` gezeigt) und startet das verteilbare Programm mit der `CreateProcess`-Methode. Dabei wird der Pipename mit der Option `-pipe someFileSectionName` übergeben. Der Server sollte Methoden für `OnProgress`, `Send` und `Finished` mit spezifischem Code für die Benutzeroberfläche der Anwendung implementieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Bereitstellung](../../../docs/framework/deployment/index.md)
-

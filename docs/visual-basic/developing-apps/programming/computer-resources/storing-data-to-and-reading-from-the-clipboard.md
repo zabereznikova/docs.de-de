@@ -1,15 +1,12 @@
 ---
 title: Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
 - Clipboard, reading from (My.Computer.Clipboard)
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7bb4ad56f0a039aa7b23d7f0612aaab9366cb9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3b60942cf3e3a7f588a7838bcae0cb7b6fae2278
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage (Visual Basic)
 Die Zwischenablage kann zum Speichern von Daten, z.B. Texten und Bildern, verwendet werden. Da die Zwischenablage von allen aktiven Prozessen genutzt wird, kann sie zur Übertragung von Daten zwischen den Prozessen verwendet werden. Mit dem Objekt `My.Computer.Clipboard` können Sie einfach auf die Zwischenablage zugreifen, aus ihr lesen sowie in sie schreiben.  
@@ -95,9 +77,8 @@ Die Zwischenablage kann zum Speichern von Daten, z.B. Texten und Bildern, verwen
 >  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
- [Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
+ [Gewusst wie: Lesen von Objektdaten aus einer XML-Datei](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-

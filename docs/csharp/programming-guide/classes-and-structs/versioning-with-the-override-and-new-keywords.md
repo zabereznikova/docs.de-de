@@ -1,39 +1,21 @@
 ---
 title: "Versionsverwaltung mit den Schlüsselwörtern \"override\" und \"new\" (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: be51a5b3d3eecc58d43dcbbcb0802cce7fd16c45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csharp/language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../../csharp/language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
@@ -56,15 +38,15 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
   
  Nehmen wir zur Veranschaulichung dieser Vorgehensweise für einen Moment an, dass die Firma A eine Klasse mit dem Namen `GraphicsClass` erstellt, die Ihr Programm benutzt. Die folgende Datei ist `GraphicsClass`:  
   
- [!code-cs[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
   
  Ihr Unternehmen verwendet diese Klasse, und Sie verwenden sie zum Ableiten einer Klasse oder zum Hinzufügen einer neuen Methode:  
   
- [!code-cs[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
   
  Ihre Anwendung wird ohne Probleme verwendet, bis Firma A eine neue Version von `GraphicsClass` herausgibt, die dem folgenden Code ähnelt:  
   
- [!code-cs[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
   
  Die neue Version von `GraphicsClass` enthält jetzt eine Methode namens `DrawRectangle`. Anfänglich geschieht nichts. Die neue Version ist immer noch binärkompatibel mit der alten Version. Jede Software, die Sie entwickelt haben, funktioniert weiterhin, sogar wenn die neue Klasse auf diesen Computersystemen installiert ist. Aufgrund vorhandener Aufrufe der Methode verweist `DrawRectangle` weiterhin auf Ihre Version in Ihrer abgeleiteten Klasse.  
   
@@ -72,38 +54,37 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
   
  Wenn Sie möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, verwenden Sie das Schlüsselwort `override`:  
   
- [!code-cs[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
   
  Das Schlüsselwort `override` stellt sicher, dass alle Objekte, die von `YourDerivedGraphicsClass` abgeleitet sind, die Version von `DrawRectangle` der abgeleiteten Klasse verwenden. Objekte, die von `YourDerivedGraphicsClass` abgeleitet sind, können auf die Basisklassenversion von `DrawRectangle` mithilfe des base-Schlüsselworts zugreifen:  
   
- [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
  Wenn Sie nicht möchten, dass Ihre Methode die neue Basisklassenmethode außer Kraft setzt, gelten die folgenden Überlegungen. Sie können Ihre Methode umbenennen, um Verwechslungen zwischen den beiden Methoden zu vermeiden. Dies kann zeitaufwändig und fehleranfällig sein und ist in einigen Fällen einfach nicht praktikabel. Wenn das Projekt aber relativ klein ist, können Sie die Refactoring-Optionen von Visual Studio verwenden, um die Methode umzubenennen. Weitere Informationen finden Sie unter [Refactoring von Klassen und Typen (Klassen-Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
   
  Alternativ können Sie die Warnung vermeiden, indem Sie in der Definition Ihrer abgeleiteten Klasse das Schlüsselwort `new` verwenden:  
   
- [!code-cs[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
   
  Mit dem Schlüsselwort `new` teilt der Compiler mit, dass Ihre Definition die Definition ausblendet, die in der Basisklasse enthalten ist. Dies ist das Standardverhalten.  
   
 ## <a name="override-and-method-selection"></a>Überschreiben und Methodenauswahl  
  Wenn eine Methode in einer Klasse benannt wird, wählt der C#-Compiler die beste Methode zum Aufrufen aus, wenn mehr als eine Methode mit dem Aufruf kompatibel ist, z.B. wenn es zwei Methoden mit dem gleichen Namen und Parameter gibt, die mit dem übergebenen Parameter kompatibel sind. Die folgenden Methoden wären kompatibel:  
   
- [!code-cs[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
- Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Beispiel:  
+ Wenn `DoWork` für eine Instanz von `Derived` aufgerufen wird, versucht der C#-Compiler zuerst, den Aufruf mit den Versionen von `DoWork` kompatibel zu machen, die ursprünglich für `Derived` deklariert wurden. Override-Methoden werden nicht als Methoden angesehen, die für eine Klasse deklariert sind. Stattdessen sind sie neue Implementierungen einer Methode, die für eine Basisklasse deklariert wurde. Nur wenn der C#-Compiler keine Übereinstimmung des Methodenaufrufs mit dem Aufruf einer ursprünglichen Methode in `Derived` feststellen kann, versucht er, den Aufruf mit einer überschriebenen Methode mit dem gleichen Namen und kompatiblen Parametern übereinzustimmen. Zum Beispiel:  
   
- [!code-cs[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
- Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Beispiel:  
+ Da die Variable `val` implizit in einen Double-Wert konvertiert werden kann, ruft der C#-Compiler `DoWork(double)` anstelle von `DoWork(int)` auf. Es gibt zwei Möglichkeiten, das zu vermeiden. Vermeiden Sie zuerst das Deklarieren neuer Methoden mit dem gleichen Namen wie virtuelle Methoden. Zweitens können Sie den C#-Compiler anweisen, die virtuelle Methode aufzurufen, indem Sie eine Suche nach der Liste der Basisklassenmethode durchführen lassen. Dies geschieht durch umwandeln der Instanz von `Derived` in `Base`. Da es sich um eine virtuelle Methode handelt, wird die Implementierung von `DoWork(int)` auf `Derived` aufgerufen. Zum Beispiel:  
   
- [!code-cs[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   
  Weitere Beispiele für `new` und `override` finden Sie unter [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
  [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-

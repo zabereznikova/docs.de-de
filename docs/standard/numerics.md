@@ -17,16 +17,15 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 087c1cc56abf2a00544e22023ce72fae670df369
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>Numerische Ausdrücke in .NET Framework
 .NET Framework unterstützt die standardmäßigen numerischen Ganzzahlen und Gleitkomma-Primitive sowie <xref:System.Numerics.BigInteger>, ein ganzzahliger Typ ohne theoretische obere oder untere Grenze, <xref:System.Numerics.Complex>, einen komplexe Zahlen darstellenden Typ, und eine Reihe von SIMD-fähigen Vektortypen im <xref:System.Numerics>-Namespace.  
@@ -38,14 +37,14 @@ ms.lasthandoff: 08/21/2017
   
 |Typ|Mit/ohne Vorzeichen|Größe (Byte)|Minimalwert|Maximalwert|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
-|<xref:System.Byte?displayProperty=fullName>|Ohne Vorzeichen|1|0|255|  
-|<xref:System.Int16?displayProperty=fullName>|Signiert|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=fullName>|Signiert|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=fullName>|Signiert|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
-|<xref:System.SByte?displayProperty=fullName>|Signiert|1|-128|127|  
-|<xref:System.UInt16?displayProperty=fullName>|Ohne Vorzeichen|2|0|65,535|  
-|<xref:System.UInt32?displayProperty=fullName>|Ohne Vorzeichen|4|0|4,294,967,295|  
-|<xref:System.UInt64?displayProperty=fullName>|Ohne Vorzeichen|8|0|18,446,744,073,709,551,615|  
+|<xref:System.Byte?displayProperty=nameWithType>|Ohne Vorzeichen|1|0|255|  
+|<xref:System.Int16?displayProperty=nameWithType>|Signiert|2|-32,768|32,767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Signiert|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Signiert|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|Signiert|1|-128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Ohne Vorzeichen|2|0|65,535|  
+|<xref:System.UInt32?displayProperty=nameWithType>|Ohne Vorzeichen|4|0|4,294,967,295|  
+|<xref:System.UInt64?displayProperty=nameWithType>|Ohne Vorzeichen|8|0|18,446,744,073,709,551,615|  
   
  Jeder ganzzahlige Typ unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung). Jede Ganzzahl weist darüber hinaus auch Methoden für die Durchführung von Gleichheitsvergleichen und relativen Vergleichen auf, um die Zeichenfolgendarstellung einer Zahl in diese Ganzzahl und eine Ganzzahl in die entsprechende Zeichenfolgendarstellung konvertieren zu können. Einige zusätzliche mathematische Operationen über diejenigen hinaus, die von den Standardoperatoren verarbeitet werden, wie Runden oder Erkennen des kleineren oder größeren Werts zweier Ganzzahlen stehen über die <xref:System.Math>-Klasse bereit. Sie können auch mit den einzelnen Bit in einem ganzzahligen Wert arbeiten, indem Sie die <xref:System.BitConverter>-Klasse verwenden.  
   
@@ -56,16 +55,16 @@ ms.lasthandoff: 08/21/2017
   
 |Typ|Größe (in Bytes)|Minimum|Maximum|  
 |----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=fullName>|8|-1.79769313486232e308|1.79769313486232e308|  
-|<xref:System.Single?displayProperty=fullName>|4|-3.402823e38|3.402823e38|  
-|<xref:System.Decimal?displayProperty=fullName>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
+|<xref:System.Double?displayProperty=nameWithType>|8|-1.79769313486232e308|1.79769313486232e308|  
+|<xref:System.Single?displayProperty=nameWithType>|4|-3.402823e38|3.402823e38|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
   
- Jeder Gleitkommatyp unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung). Jeder Typ weist darüber hinaus auch Methoden für die Durchführung von Gleichheitsvergleichen und relativen Vergleichen auf, um die Zeichenfolgendarstellung einer Zahl in eine Gleitkommazahl und eine Gleitkommazahl in die entsprechende Zeichenfolgendarstellung konvertieren zu können. Einige weitere mathematische, algebraische und trigonometrische Operationen werden von der <xref:System.Math>-Klasse bereitgestellt. Sie können auch mit den einzelnen Bit in <xref:System.Double>- und <xref:System.Single>-Werten arbeiten, indem Sie die <xref:System.BitConverter>-Klasse verwenden. Die <xref:System.Decimal?displayProperty=fullName>-Struktur verfügt über eigene Methoden, <xref:System.Decimal.GetBits%2A?displayProperty=fullName> und <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=fullName>, um mit den einzelnen Bit eines Dezimalwerts zu arbeiten, und sie verfügt über einen eigenen Satz an Methoden für die Durchführung einiger zusätzlicher mathematischer Operationen.  
+ Jeder Gleitkommatyp unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung). Jeder Typ weist darüber hinaus auch Methoden für die Durchführung von Gleichheitsvergleichen und relativen Vergleichen auf, um die Zeichenfolgendarstellung einer Zahl in eine Gleitkommazahl und eine Gleitkommazahl in die entsprechende Zeichenfolgendarstellung konvertieren zu können. Einige weitere mathematische, algebraische und trigonometrische Operationen werden von der <xref:System.Math>-Klasse bereitgestellt. Sie können auch mit den einzelnen Bit in <xref:System.Double>- und <xref:System.Single>-Werten arbeiten, indem Sie die <xref:System.BitConverter>-Klasse verwenden. Die <xref:System.Decimal?displayProperty=nameWithType>-Struktur verfügt über eigene Methoden, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> und <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, um mit den einzelnen Bit eines Dezimalwerts zu arbeiten, und sie verfügt über einen eigenen Satz an Methoden für die Durchführung einiger zusätzlicher mathematischer Operationen.  
   
- Die Typen <xref:System.Double> und <xref:System.Single> sind dazu gedacht, für Werte verwendet zu werden, die von Natur aus unpräzise sind (wie der Abstand zwischen zwei Sternen im Sonnensystem), und für Anwendungen, in denen kein hoher Genauigkeitsgrad mit geringen Rundungsfehlern nicht erforderlich ist. Sie sollten den <xref:System.Decimal?displayProperty=fullName>-Typ in Fällen verwenden, in denen eine höhere Genauigkeit erforderlich ist und Rundungsfehler unerwünscht sind.  
+ Die Typen <xref:System.Double> und <xref:System.Single> sind dazu gedacht, für Werte verwendet zu werden, die von Natur aus unpräzise sind (wie der Abstand zwischen zwei Sternen im Sonnensystem), und für Anwendungen, in denen kein hoher Genauigkeitsgrad mit geringen Rundungsfehlern nicht erforderlich ist. Sie sollten den <xref:System.Decimal?displayProperty=nameWithType>-Typ in Fällen verwenden, in denen eine höhere Genauigkeit erforderlich ist und Rundungsfehler unerwünscht sind.  
   
 ## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=fullName> ist ein unveränderlicher Typ, der eine beliebig große ganze Zahl darstellt, dessen Wert theoretisch keine oberen und unteren Grenzen hat. Die Methoden des <xref:System.Numerics.BigInteger>-Typs ähneln im Wesentlichen denen der anderen ganzzahligen Typen.  
+ <xref:System.Numerics.BigInteger?displayProperty=nameWithType> ist ein unveränderlicher Typ, der eine beliebig große ganze Zahl darstellt, dessen Wert theoretisch keine oberen und unteren Grenzen hat. Die Methoden des <xref:System.Numerics.BigInteger>-Typs ähneln im Wesentlichen denen der anderen ganzzahligen Typen.  
   
 ## <a name="complex"></a>Komplex  
  Der Typ <xref:System.Numerics.Complex> steht für eine komplexe Zahl, d. h., für eine Zahl mit einem reellen und einem imaginären Teil. Er unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung) sowie mathematische, algebraische und trigonometrische Methoden.  
@@ -87,4 +86,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlagen der Anwendung](../../docs/standard/application-essentials.md)
-

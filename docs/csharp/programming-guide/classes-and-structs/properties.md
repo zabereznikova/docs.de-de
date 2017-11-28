@@ -1,41 +1,22 @@
 ---
 title: Eigenschaften (C#-Programmierhandbuch)
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="properties-c-programming-guide"></a>Eigenschaften (C#-Programmierhandbuch)
 
@@ -56,9 +37,9 @@ Eine Eigenschaft ist ein Member, das einen flexiblen Mechanismus zum Lesen, Schr
 
 Ein grundlegendes Muster zum Implementieren einer Eigenschaft umfasst ein privates Unterstützungsfeld zum Festlegen und Abrufen des Eigenschaftswerts. Der `get`-Accessor gibt den Wert des privaten Felds zurück, und der `set`-Accessor kann die Validierung einiger Daten ausführen, bevor er dem privaten Feld einen Wert zuweist. Beide Accessoren führen möglicherweise eine Konvertierung oder eine Berechnung der Daten aus, bevor sie gespeichert oder zurückgegeben werden.
 
-Dieses Muster wird anhand des folgenden Beispiels veranschaulicht. In diesem Beispiel stellt die `TimePeriod`-Klasse ein Zeitintervall dar. Intern speichert die Klasse das Zeitintervall in Sekunden in einem privaten Feld mit dem Namen `seconds`. Eine Schreib-Lese-Eigenschaft mit dem Namen `Hours` ermöglicht dem Kunden, das Zeitintervall in Stunden anzugeben. Die `get`- und `set`-Accessoren führen jeweils die notwendige Konvertierung zwischen Stunden und Sekunden durch. Darüber hinaus prüft der `set`-Accessor die Daten, und löst eine @System.ArgumentOutOfRangeException aus, wenn die Anzahl von Stunden ungültig ist. 
+Dieses Muster wird anhand des folgenden Beispiels veranschaulicht. In diesem Beispiel stellt die `TimePeriod`-Klasse ein Zeitintervall dar. Intern speichert die Klasse das Zeitintervall in Sekunden in einem privaten Feld mit dem Namen `seconds`. Eine Schreib-Lese-Eigenschaft mit dem Namen `Hours` ermöglicht dem Kunden, das Zeitintervall in Stunden anzugeben. Die `get`- und `set`-Accessoren führen jeweils die notwendige Konvertierung zwischen Stunden und Sekunden durch. Darüber hinaus prüft der `set`-Accessor die Daten, und löst eine <xref:System.ArgumentOutOfRangeException> aus, wenn die Anzahl von Stunden ungültig ist. 
    
- [!code-cs[Eigenschaften#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>Ausdruckstextdefinitionen  
 
@@ -66,11 +47,11 @@ Dieses Muster wird anhand des folgenden Beispiels veranschaulicht. In diesem Bei
 
  Beginnend mit dem C# 6, können schreibgeschützte Eigenschaften den `get`-Accessor als Ausdruckskörpermember implementieren. In diesem Fall werden weder das `get`-Accessorschlüsselwort noch das `return`-Schlüsselwort verwendet. Das folgende Beispiel implementiert die schreibgeschützte `Name`-Eigenschaft als ein Ausdruckskörpermember.
 
- [!code-cs[Eigenschaften#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  Beginnen mit C# 7, könne jeweils der `get`- und `set`-Accessor als Ausdruckskörpermember implementiert werden. In diesem Fall müsse die `get`- und `set`-Schlüsselwörter vorhanden sein. Das folgende Beispiel veranschaulicht die Verwendung von Ausdruckstextdefinitionen für beide Accessoren. Beachten Sie, dass das `return`-Schlüsselwort nicht mit dem `get`-Accessor verwendet wird.
  
-  [!code-cs[Eigenschaften#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>Automatisch implementierte Eigenschaften
 
@@ -78,7 +59,7 @@ In einigen Fällen weisen die Eigenschaft `get`- und `set`-Accessoren nur einen 
 
 Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, müssen beide automatisch implementiert werden. Definieren Sie eine automatisch implementierte Eigenschaft mithilfe der `get`- und `set`-Schlüsselwörter ohne jede Implementierung. Im folgenden Beispiel wird das vorherige Beispiel wiederholt, außer das `Name` und `Price` automatisch implementierte Eigenschaften sind. Beachten Sie, dass das Beispiel auch den parametrisierten Konstruktor entfernt, damit `SaleItem`-Objekte jetzt mit einem Aufruf vom Standardkonstruktor und vom [Objektinitialisierer](object-and-collection-initializers.md) initialisiert werden.
 
-  [!code-cs[Eigenschaften#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
@@ -96,9 +77,8 @@ Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, m�
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [Indexer](../../../csharp/programming-guide/indexers/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [Indexer](../../../csharp/programming-guide/indexers/index.md)  
  [get-Schlüsselwort](../../../csharp/language-reference/keywords/get.md)    
  [set-Schlüsselwort](../../../csharp/language-reference/keywords/set.md)    
-

@@ -1,43 +1,24 @@
 ---
 title: Abfragesyntax und Methodensyntax in LINQ (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 35ad7e9b086f36ca92974fdea197da4c513c8a51
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Abfragesyntax und Methodensyntax in LINQ (C#)
 Die meisten Abfragen in der einführenden Dokumentation der Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) wurden mithilfe der deklarierten Abfragesyntax von LINQ geschrieben. Die Abfragesyntax muss jedoch in Methodenaufrufe für die .NET Common Language Runtime (CLR) übersetzt werden, wenn der Code kompiliert wird. Diese Methodenaufrufe rufen die Standardabfrageoperatoren auf, die z.B. folgende Namen haben: `Where`, `Select`, `GroupBy`, `Join`, `Max` und `Average`. Sie können sie direkt mithilfe der Methodensyntax anstatt der Abfragesyntax aufrufen.  
@@ -47,7 +28,7 @@ Die meisten Abfragen in der einführenden Dokumentation der Language Integrated 
 ## <a name="standard-query-operator-extension-methods"></a>Erweiterungsmethoden von Standardabfrageoperatoren  
  Im folgenden Beispiel wird ein einfacher *Abfrageausdruck* und die semantisch äquivalente Abfrage gezeigt, die als *methodenbasierte Abfrage* geschrieben ist.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  Die Ausgabe der beiden Beispiele ist identisch. Sie sehen, dass der Typ der Abfragevariable in beiden Formen der gleiche ist: <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -71,4 +52,3 @@ Die meisten Abfragen in der einführenden Dokumentation der Language Integrated 
   
 ## <a name="see-also"></a>Siehe auch  
  [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

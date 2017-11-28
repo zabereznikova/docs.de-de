@@ -1,42 +1,24 @@
 ---
-title: "Visual Basic-Compileroptionen alphabetisch aufgeführt. | Microsoft-Dokumentation"
-ms.date: 2015-07-20
+title: Visual Basic Compiler Options Listed Alphabetically
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93246b3a38002955234a7a93529d05b71ab4e580
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
-Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] integrierten Entwicklungsumgebung (IDE). Es folgt eine Liste der [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Befehlszeilen-Compileroptionen (alphabetisch sortiert).  
+Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Es folgt eine Liste der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Befehlszeilen-Compileroptionen (alphabetisch sortiert).  
   
 |Option|Zweck|  
 |------------|-------------|  
@@ -53,20 +35,20 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
 |[/define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiert Symbole für bedingte Kompilierung.|  
 |[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Gibt an, ob die Assembly vollständig oder teilweise signiert wird.|  
 |[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]-Compiler gemeldet werden sollen.|  
+|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler vom [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Compiler gemeldet werden sollen.|  
 |[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.|  
-|[/ Help](../../../visual-basic/reference/command-line-compiler/help.md)|Zeigt Compileroptionen an Dieser Befehl entspricht der Angabe der `/?`-Option. Es findet keine Kompilierung statt.|  
+|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|Zeigt Compileroptionen an Dieser Befehl entspricht der Angabe der `/?`-Option. Es findet keine Kompilierung statt.|  
 |[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Gibt an, ob eine bestimmte ausführbare Datei ASLR mit hoher Entropie (Address Space Layout Randomization, Zufällige Anordnung des Layouts des Adressraums) unterstützt.|  
 |[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importiert einen Namespace aus einer angegebenen Assembly.|  
 |[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.|  
 |[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Geben Sie Sprachversion: 9 | 9.0 | 10 | 10.0 | 11 | 11.0.|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Gibt den Speicherort der Assemblys, auf die verwiesen wird die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) Option.|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Sprachversion angeben: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0.|  
+|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Gibt den Speicherort der Assemblys, auf die verwiesen wird durch die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) Option.|  
 |[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Erstellt einen Link zu einer verwalteten Ressource.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse enthält die `Sub``Main` Prozedur beim Start verwendet.|  
+|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse enthält die `Sub Main` Prozedur beim Start verwendet.|  
 |[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Gibt den Namen der Assembly an, zu der dieses Modul gehört.|  
 |`/modulename:<string>`|Geben Sie den Namen des Quellmoduls an|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] als Ziel fest.|  
+|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fest.|  
 |[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Führen Sie die Kompilierung nicht mit Vbc.rsp durch.|  
 |[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Unterdrückt Compilerbannerinformationen.|  
 |[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Bewirkt, dass der Compiler nicht auf die Standardbibliotheken verweist.|  
@@ -100,7 +82,7 @@ Die [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/v
 |[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Fügt eine Win32-Ressource in die Ausgabedatei ein.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Compileroptionen nach Kategorien sortiert](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)   
- [Introduction to the Project Designer (Einführung in den Projekt-Designer)](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [Visual Basic-Compileroptionen nach Kategorien sortiert](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+ [Introduction to the Project Designer (Einführung in den Projekt-Designer)](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -1,87 +1,93 @@
 ---
-title: "Lernprogramm: Hosten von visuellen Objekten in einer Win32-Anwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hosting, Visuelle Objekte in Win32-Code"
-  - "Visuelle Objekte in Win32-Code"
-  - "Win32-Code, Visuelle Objekte in"
+title: 'Lernprogramm: Hosten von visuellen Objekten in einer Win32-Anwendung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- visual objects in Win32 code [WPF]
+- Win32 code [WPF], visual objects in
+- hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47402194e3588699625249848c96d58b37059138
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Lernprogramm: Hosten von visuellen Objekten in einer Win32-Anwendung
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit.  Wenn Sie allerdings bereits erhebliche Arbeit in das Schreiben von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]\-Code investiert haben, kann es effektiver sein, eine vorhandene Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu erweitern, anstatt sie neu zu schreiben.  Zur Unterstützung von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]\- und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Grafiksubsystemen, die gleichzeitig in einer Anwendung verwendet werden, stellt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] einen Mechanismus zum Hosten von Objekten in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster bereit.  
+# <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Lernprogramm: Hosten von visuellen Objekten in einer Win32-Anwendung
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Code, ist es möglicherweise effektiver hinzufügen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Funktionalität der Anwendung statt den Code umschreiben. Zur Unterstützung von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Graphics-Subsysteme, die gleichzeitig in einer Anwendung verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet einen Mechanismus zum Hosten von Objekten in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
   
- In diesem Lernprogramm wird beschrieben, wie eine Beispielanwendung geschrieben wird \([Beispiel für Treffertests mit Win32\-Interoperabilität](http://go.microsoft.com/fwlink/?LinkID=159995)\), die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Objekte in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster hostet.  
+ In diesem Lernprogramm wird beschrieben, wie eine beispielanwendung schreiben [Treffertests mit Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995), die Hosts [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visuelle Objekte einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
   
-   
+
   
 <a name="requirements"></a>   
-## Anforderungen  
- In diesem Lernprogramm wird davon ausgegangen, dass Sie mit den Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Programmierung und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Programmierung vertraut sind.  Eine Einführung in die Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Programmierung finden Sie unter [Exemplarische Vorgehensweise: Erste Schritte mit WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  Eine Einführung in die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Programmierung finden Sie in zahlreichen Büchern zu diesem Thema, insbesondere in *Windows\-Programmierung* von Charles Petzold.  
+## <a name="requirements"></a>Anforderungen  
+ In diesem Lernprogramm wird vorausgesetzt, dass Sie mit den Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Programmierung und der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Programmierung vertraut sind. Eine grundlegende Einführung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programmierung, finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). Eine Einführung in die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programmierung, finden Sie in der zahlreiche Bücher zu diesem Thema, insbesondere *Windows-Programmierung* von Charles Petzold.  
   
 > [!NOTE]
->  Dieses Lernprogramm schließt eine Reihe von Codebeispielen aus dem genannten Beispiel ein.  Aus Gründen der besseren Lesbarkeit wird jedoch nicht der gesamte Beispielcode aufgeführt.  Den vollständige Beispielcode finden Sie unter [Beispiel für Treffertests mit Win32\-Interoperabilität](http://go.microsoft.com/fwlink/?LinkID=159995).  
+>  Dieses Lernprogramm enthält eine Reihe von Codebeispielen aus dem genannten Beispiel. Aus Gründen der besseren Lesbarkeit wird jedoch nicht der gesamte Beispielcode aufgeführt. Den vollständigen Beispielcode finden Sie unter [Treffertests mit Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995).  
   
 <a name="creating_the_host_win32_window"></a>   
-## Erstellen des Host\-Win32\-Fensters  
- Der Schlüssel zum Hosten von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Objekten in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster ist die <xref:System.Windows.Interop.HwndSource>\-Klasse.  Diese Klasse umschließt die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Objekte mit einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster, sodass sie als untergeordnetes Fenster in Ihre [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] eingebunden werden können.  
+## <a name="creating-the-host-win32-window"></a>Erstellen des Host-Win32-Fensters  
+ Der Schlüssel zum Hosten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekte in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster ist die <xref:System.Windows.Interop.HwndSource> Klasse. Diese Klasse dient als Wrapper für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekte in einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster, sodass sie integriert werden soll Ihre [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] als untergeordnetes Fenster.  
   
- Das folgende Beispiel zeigt den Code zum Erstellen des <xref:System.Windows.Interop.HwndSource>\-Objekts als [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Containerfenster für die visuellen Objekte.  Verwenden Sie zum Festlegen des Fensterstils, der Position und anderer Parameter für das [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster das <xref:System.Windows.Interop.HwndSourceParameters>\-Objekt.  
+ Das folgende Beispiel zeigt den Code zum Erstellen der <xref:System.Windows.Interop.HwndSource> -Objekts entsprechend der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Containerfenster für visuelle Objekte. Der Fensterstil, Position und andere Parameter für die festzulegende der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster verwenden die <xref:System.Windows.Interop.HwndSourceParameters> Objekt.  
   
  [!code-csharp[VisualsHitTesting#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#101)]
  [!code-vb[VisualsHitTesting#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#101)]  
   
 > [!NOTE]
->  Der Wert der <xref:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle%2A>\-Eigenschaft kann nicht auf WS\_EX\_TRANSPARENT festgelegt werden.  Dies bedeutet, dass das Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster nicht transparent sein kann.  Aus diesem Grund wird als Hintergrundfarbe für das Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster die gleiche Hintergrundfarbe wie für das übergeordnete Fenster festgelegt.  
+>  Der Wert, der die <xref:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle%2A> Eigenschaft kann nicht auf WS_EX_TRANSPARENT festgelegt werden. Dies bedeutet, dass den Host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster nicht transparent sein. Aus diesem Grund die Farbe des Hintergrunds des Hosts [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster auf die gleiche Hintergrundfarbe wie das übergeordnete Fenster festgelegt ist.  
   
 <a name="adding_visual_objects_to_the_host_win32_window"></a>   
-## Hinzufügen von visuellen Objekten zum Host\-Win32\-Fenster  
- Nachdem Sie ein Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Containerfenster für die visuellen Objekte erstellt haben, können Sie ihm visuelle Objekte hinzufügen.  Sie müssen sicherstellen, dass Transformationen der visuellen Objekte, wie zum Beispiel Animationen, nicht über das Begrenzungsrechteck des Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fensters hinausgehen.  
+## <a name="adding-visual-objects-to-the-host-win32-window"></a>Hinzufügen von visuellen Objekten zum Host-Win32-Fenster  
+ Nach der Erstellung eines Hosts [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Containerfenster für die visuellen Objekte können Sie visuelle Objekte darauf hinzufügen. Stellen Sie sicher, dass Transformationen der visuellen Objekte, z. B. Animationen, nicht außerhalb des zulässigen Bereichs des Hosts erweitern sollen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster des umschließenden Rechtecks.  
   
- Das folgende Beispiel zeigt den Code zum Erstellen des <xref:System.Windows.Interop.HwndSource>\-Objekts und zum Hinzufügen von visuellen Objekten.  
+ Das folgende Beispiel zeigt den Code zum Erstellen der <xref:System.Windows.Interop.HwndSource> -Objekt und visuelle Objekte hinzugefügt.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Interop.HwndSource.RootVisual%2A>\-Eigenschaft des <xref:System.Windows.Interop.HwndSource>\-Objekts wird auf das erste visuelle Objekt festgelegt, das zum Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster hinzugefügt wird.  Das visuelle Stammobjekt definiert den obersten Knoten der visuellen Objektstruktur.  Alle weiteren visuellen Objekte, die dem Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster hinzugefügt werden, werden als untergeordnete Objekte hinzugefügt.  
+>  Die <xref:System.Windows.Interop.HwndSource.RootVisual%2A> Eigenschaft von der <xref:System.Windows.Interop.HwndSource> Objektsatz zum ersten visual-Objekt an den Host hinzugefügt [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster. Das visuelle Stammobjekt definiert den obersten Knoten der Struktur des visuellen Objekts. Alle weiteren visuellen Objekte, die an den Host hinzugefügt [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster werden als untergeordnete Objekte hinzugefügt.  
   
  [!code-csharp[VisualsHitTesting#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#100)]
  [!code-vb[VisualsHitTesting#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#100)]  
   
 <a name="implementing_the_win32_message_filter"></a>   
-## Implementieren des Win32\-Nachrichtenfilters  
- Das Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster für visuelle Objekte erfordert eine Fenster\-Nachrichtenfilterprozedur, um Nachrichten behandeln zu können, die von einer Anwendungswarteschlange an das Fenster gesendet werden.  Die Fensterprozedur empfängt Nachrichten vom [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-System.  Hierbei kann es sich um Eingabenachrichten oder Nachrichten zur Fensterverwaltung handeln.  Sie können optional eine Nachricht in der Fensterprozedur behandeln oder die Nachricht zur Standardverarbeitung an das System übergeben.  
+## <a name="implementing-the-win32-message-filter"></a>Implementieren des Win32-Nachrichtenfilters  
+ Der Host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster für die visuellen Objekte erfordert eine Fensterprozedur für die Filter von Nachrichten zum Verarbeiten von Nachrichten, die aus der Anwendungswarteschlange an das Fenster gesendet werden. Die Fensterprozedur empfängt Nachrichten aus der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] System. Dabei kann es sich um Eingabe- oder Fensterverwaltungsmeldungen handeln. Sie können wahlweise eine Meldung in der Fensterprozedur verarbeiten oder die Meldung zwecks Standardverarbeitung an das System übergeben.  
   
- Das für visuelle Objekte als übergeordnetes Objekt definierte <xref:System.Windows.Interop.HwndSource>\-Objekt muss auf die Fenster\-Nachrichtenfilterprozedur, die Sie bereitstellen, verweisen.  Legen Sie beim Erstellen des <xref:System.Windows.Interop.HwndSource>\-Objekts die <xref:System.Windows.Interop.HwndSourceParameters.HwndSourceHook%2A>\-Eigenschaft so fest, dass sie auf die Fensterprozedur verweist.  
+ Die <xref:System.Windows.Interop.HwndSource> -Objekt, das Sie definiert, wie das übergeordnete Element für die visuellen Objekte Fenster Nachrichtenfilterprozedur verweisen müssen Sie angeben. Beim Erstellen der <xref:System.Windows.Interop.HwndSource> Objekt, das Festlegen der <xref:System.Windows.Interop.HwndSourceParameters.HwndSourceHook%2A> Eigenschaft, um die Fensterprozedur verweisen.  
   
  [!code-csharp[VisualsHitTesting#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#102)]
  [!code-vb[VisualsHitTesting#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#102)]  
   
- Im folgenden Beispiel wird der Code zum Behandeln der Nachrichten für die linke und rechte Maustaste veranschaulicht.  Der Koordinatenwert der Maustrefferposition ist im Wert des `lParam`\-Parameters enthalten.  
+ Das folgende Beispiel zeigt den Code für die Verarbeitung der Meldungen der linken und rechten Maustaste. Der Koordinatenwert der Maus erreicht Position ist der Wert der Bestandteil der `lParam` Parameter.  
   
  [!code-csharp[VisualsHitTesting#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
  [!code-vb[VisualsHitTesting#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
 <a name="processing_the_win32_messages"></a>   
-## Verarbeiten der Win32\-Nachrichten  
- Der Code im folgenden Beispiel veranschaulicht, wie ein Treffertest für die Hierarchie der visuellen Objekte, die im Host\-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster enthalten sind, durchgeführt wird.  Sie können ermitteln, ob sich ein Punkt in der Geometrie eines visuellen Objekts befindet, indem Sie die <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>\-Methode verwenden, um das visuelle Stammobjekt und den Koordinatenwert für den Treffertest anzugeben.  In diesem Fall ist das visuelle Stammobjekt der Wert der <xref:System.Windows.Interop.HwndSource.RootVisual%2A>\-Eigenschaft des <xref:System.Windows.Interop.HwndSource>\-Objekts.  
+## <a name="processing-the-win32-messages"></a>Verarbeiten der Win32-Meldungen  
+ Der Code im folgenden Beispiel wird gezeigt, wie ein Treffertest ausgeführt wird, für die Hierarchie der visuellen Objekte enthalten sind, auf dem Host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster. Sie können ermitteln, ob sich ein Punkt innerhalb der Geometrie des visuellen Objekts, mit der <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode, um das visuelle Stammobjekt und der Koordinatenwert Treffertest für anzugeben. In diesem Fall wird das Stamm-visual-Objekt den Wert des der <xref:System.Windows.Interop.HwndSource.RootVisual%2A> Eigenschaft von der <xref:System.Windows.Interop.HwndSource> Objekt.  
   
  [!code-csharp[VisualsHitTesting#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- Weitere Informationen über Treffertests für visuelle Objekte finden Sie unter [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).  
+ Weitere Informationen über Treffertests für visuelle Objekte finden Sie unter [erreicht Testen in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).  
   
-## Siehe auch  
- <xref:System.Windows.Interop.HwndSource>   
- [Beispiel für Treffertests mit Win32\-Interoperabilität](http://go.microsoft.com/fwlink/?LinkID=159995)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Interop.HwndSource>  
+ [Treffertests mit Interoperation Win32-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159995)  
  [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

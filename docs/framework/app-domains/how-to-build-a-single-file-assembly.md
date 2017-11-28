@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
 - library assemblies
@@ -18,16 +20,15 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Gewusst wie: Erstellen einer Einzeldateiassembly
 Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md). Sie können Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] verwenden, um eine Einzeldateiassembly zu erstellen. Standardmäßig erstellt der Compiler eine Assemblydatei mit einer „.exe“-Erweiterung.  
@@ -95,8 +96,7 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
- [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)   
- [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

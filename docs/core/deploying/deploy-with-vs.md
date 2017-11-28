@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
 Sie können eine .NET Core-Anwendung entweder als *Framework-abhängige Bereitstellung* bereitstellen, was die Binärdateien Ihrer Anwendung einschließt, jedoch von Präsenz von .NET Core auf dem Zielsystem abhängt, oder als *eigenständige Bereitstellung*,die jeweils Ihre Anwendung sowie .NET Core-Binärdateien einschließt. Einen Überblick über die Bereitstellung von .NET Core-Anwendungen finden Sie unter [.NET Core Anwendungsbereitstellung](index.md).
@@ -42,7 +40,7 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
    Öffnen Sie die *Program.cs*-Datei im Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
 
@@ -92,7 +90,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Öffnen Sie die *Program.cs*-Datei in einem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Definieren Sie die Zielplattformen für Ihre App.
 
@@ -189,4 +187,3 @@ Beachten Sie, dass Sie eine eigenständige Bereitstellung mit einer Drittanbiete
 # <a name="see-also"></a>Siehe auch
 [.NET Core Anwendungsbereitstellung](index.md)   
 [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)   
-

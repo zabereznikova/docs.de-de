@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0287c3f250a57f7a685191702be3ad5cc28fbec6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Developer-Eingabeaufforderung für Visual Studio.
 Die Developer-Eingabeaufforderung für Visual Studio legt die Umgebungsvariablen, die Ihnen die einfache Nutzung von .NET Framework-Tools ermöglichen, automatisch fest. Die Developer-Eingabeaufforderung wird mit vollständigen oder Community-Editionen von Visual Studio installiert. Sie wird nicht mit den Express-Versionen von Visual Studio installiert.  
@@ -102,6 +95,5 @@ Die Developer-Eingabeaufforderung für Visual Studio legt die Umgebungsvariablen
  Anschließend wird das neue Menüelement hinzugefügt, und Sie können über das Menü **Extras** auf die Eingabeaufforderung zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
+ [Extras](../../../docs/framework/tools/index.md)  
  [Verwalten von externen Tools](/visualstudio/ide/managing-external-tools)
-

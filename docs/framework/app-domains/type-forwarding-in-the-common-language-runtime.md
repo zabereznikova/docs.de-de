@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], type forwarding
 - type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 18e580a67d5a983d61ab3c0b71cfc7d294468010
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 113ff6decccc190c6638fa04745af425c55c6c0b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Typweiterleitung in der Common Language Runtime
 Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.  
@@ -54,7 +55,6 @@ Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben
 4.  Führen Sie für die Assembly, in der sich der Typ befand, eine Neukompilierung mit einem Verweis auf die Assembly durch, die jetzt den Typ enthält. Wenn Sie z. B. eine C#-Datei über die Befehlszeile kompilieren, geben Sie mit der [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md)-Option die Assembly an, die den Typ enthält. In C++ verwenden Sie die [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)-Direktive in der Quelldatei, um die Assembly anzugeben, die den Typ enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
- [Typweiterleitung (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)   
+ <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+ [Typweiterleitung (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
  [#using-Direktive](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
-

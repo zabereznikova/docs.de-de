@@ -10,12 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
 ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -328,4 +327,3 @@ Liste Sie alle für MVC verfügbaren Vorlagen auf:
 [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](~/docs/core/tutorials/create-custom-template.md)  
 [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)  
 [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
-

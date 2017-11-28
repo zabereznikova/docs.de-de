@@ -1,30 +1,21 @@
 ---
 title: "Übersicht über die LINQ to XML-Programmierung (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4306be3540577bf921eff71dbd9dd822707b33dd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc22991f53920b045280d3e74b9b8dd73e63c944
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>Übersicht über die LINQ to XML-Programmierung (C#)
 Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen.  
@@ -42,4 +33,3 @@ Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/
   
 ## <a name="see-also"></a>Siehe auch  
  [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

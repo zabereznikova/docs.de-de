@@ -1,30 +1,21 @@
 ---
 title: Parsen von XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3d262fd2177ac77ab5109362f94cc51d03c9563c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 13807e57b3616d51bd88b37d0acc703a18445a02
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="parsing-xml-c"></a>Parsen von XML (C#)
 In den Themen in diesem Abschnitt wird das Analysieren von XML-Dokumenten beschrieben.  
@@ -42,4 +33,3 @@ In den Themen in diesem Abschnitt wird das Analysieren von XML-Dokumenten beschr
   
 ## <a name="see-also"></a>Siehe auch  
  [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-

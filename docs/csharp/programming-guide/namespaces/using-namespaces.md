@@ -1,41 +1,22 @@
 ---
 title: Verwenden von Namespaces (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.names
-dev_langs:
-- CSharp
+f1_keywords: cs.names
 helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f485992f5d4b7bc16aaefeec8c7c76ce39f48ef0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 61b5d78f1c4924e3858c14876d36e52d4ee46ceb
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Verwenden von Namespaces (C#-Programmierhandbuch)
 Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwendet. Erstens: Die .NET Framework-Klassen verwenden Namespaces, um ihre zahlreichen Klassen zu organisieren. Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.  
@@ -45,32 +26,32 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
   
  Z.B. durch das Einfügen der Zeile  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
   
  Bei Programmstart kann der Programmierer folgenden Code verwenden:  
   
- [!code-cs[CsProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
+ [!code-csharp[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
   
  anstelle von:  
   
- [!code-cs[CsProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
+ [!code-csharp[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
   
 ## <a name="namespace-aliases"></a>Namespacealiase  
  Die [using-Anweisungen](../../../csharp/language-reference/keywords/using-directive.md) kann auch zum Erstellen eines Alias für einen [Namespace](../../../csharp/language-reference/keywords/namespace.md) verwendet werden. Wenn Sie einen bereits vorhandenen Namespace verwenden, der geschachtelte Namespaces enthält, können Sie einen Alias deklarieren, als schnelle Möglichkeit um auf einen bestimmten geschachtelten Namespace zu verweisen, wie im folgenden Beispiel gezeigt:  
   
- [!code-cs[CsProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
+ [!code-csharp[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Verwenden von Namespaces zur Steuerung des Gültigkeitsbereichs  
  Mit dem Schlüsselwort `namespace` wird ein Bereich deklariert. Die Möglichkeit zum Erstellen von Bereichen innerhalb des Projekts, hilft Ihnen den Code zu organisieren und ermöglicht Ihnen die Erstellung von global eindeutigen Typen. Im folgenden Beispiel, wird eine Klasse mit dem Titel `SampleClass` in zwei ineinander geschachtelten Namespaces definiert. Die [. Operator](../../../csharp/language-reference/operators/member-access-operator.md) wird verwendet, um zu unterscheiden, welche Methode aufgerufen wird.  
   
- [!code-cs[CsProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
+ [!code-csharp[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
   
 ## <a name="fully-qualified-names"></a>Vollqualifizierte Namen  
  Namespaces und Typen verfügen über eindeutige durch den vollqualifizierten Namen, die eine logische Hierarchie an. Beispielsweise impliziert die Anweisung `A.B`, dass `A` der Name des Namespaces oder des Typs ist und, dass `B` darin geschachtelt ist.  
   
  Im folgenden Beispiel gibt es geschachtelte Klassen und Namespaces. Der vollqualifizierte Name ist als Kommentar angegeben, der auf jede Entität folgt.  
   
- [!code-cs[CsProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
+ [!code-csharp[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
   
  Das vorherige Codesegment weist Folgendes auf:  
   
@@ -84,37 +65,36 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
   
  Mithilfe des vorhergehenden Codesegments können Sie dem Namespace `N1.N2` ein neues Klassenmitglied `C3` wie folgt hinzufügen:  
   
- [!code-cs[CsProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
+ [!code-csharp[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
   
  Im Allgemeinen verwenden Sie `::`, um auf einen Namespacealias, oder `global::`, um auf den globalen Namespace zu verweisen, und `.`, um Typen oder Mitglieder zu qualifizieren.  
   
  Die Verwendung von `::` mit einem Alias, der auf einen Typ statt auf einen Namespace verweist ist ein Fehler. Zum Beispiel:  
   
- [!code-cs[CsProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
+ [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
- [!code-cs[CsProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
+ [!code-csharp[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
   
  Beachten Sie, dass das Wort `global` kein vorderfinierter Alias ist; deshalb hat `global.X` keine spezielle Bedeutung. Er erhält erst dann eine besondere Bedeutung, wenn er mit `::` verwendet wird.  
   
  Compilerwarnung CS0440 wird generiert, wenn Sie einen Alias mit dem Namen global definieren, da `global::` immer ein Verweis auf den globalen Namespace und nicht auf einen Alias ist. Beispielsweise generiert die folgende Zeile die folgende Warnung:  
   
- [!code-cs[CsProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
+ [!code-csharp[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
   
  Die Verwendung von `::` mit Aliasen ist ratsam, und verhindert die unbeabsichtigte Einführung von zusätzlichen Typen. Betrachten Sie beispielsweise das folgende Beispiel:  
   
- [!code-cs[CsProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
+ [!code-csharp[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
   
- [!code-cs[CsProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
+ [!code-csharp[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
   
  Dies funktioniert, aber wenn anschließend ein Typ mit dem Namen `Alias` eingeführt werden würde, würde `Alias.` an diesen Typ gebunden. Mit `Alias::Exception` wird sichergestellt, dass `Alias` als ein Namespacealias behandelt und nicht für einen Typ gehalten wird.  
   
  Finden Sie im Thema [Vorgehensweise: Verwenden des globalen Namespacealias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) Informationen zum `global` Alias.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)   
- [Namespace Keywords (Schlüsselwörter des Namespace)](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)   
- [Operator ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
+ [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)  
+ [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
  [extern](../../../csharp/language-reference/keywords/extern.md)
-

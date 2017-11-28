@@ -1,39 +1,21 @@
 ---
 title: Schnittstellen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0552cea71f66ba8c299b1706cab6778c9e3367c9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funktionalitäten, die von einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder einer [Struktur](../../../csharp/language-reference/keywords/struct.md) implementiert werden können.  
@@ -42,7 +24,7 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
   
  Sie definieren eine Schnittstelle durch die Verwendung des Schlüsselworts [interface](../../../csharp/language-reference/keywords/interface.md), wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
  Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
   
@@ -58,7 +40,7 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
   
  Das folgenden Beispiel zeigt eine Implementierung der IEquatable<T\>-Schnittstelle. Die Implementierungsklasse `Car` muss die Implementierung der <xref:System.IEquatable%601.Equals%2A>-Methode bereitstellen.  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
  Eigenschaften und Indexer einer Klasse können zusätzliche Accessors für eine Eigenschaft oder einen in einer Schnittstelle definierten Indexer definieren. Beispielsweise kann eine Schnittstelle eine Eigenschaft deklarieren, die einen [Get](../../../csharp/language-reference/keywords/get.md)-Accessor aufweist. Die Klasse zur Implementierung der Schnittstelle kann dieselbe Eigenschaft mit einem `get`- und einem [set](../../../csharp/language-reference/keywords/set.md)-Accessor deklarieren. Wenn die Eigenschaft oder der Indexer jedoch die explizite Implementierung verwendet, müssen die Accessors übereinstimmen. Weitere Informationen zur expliziten Implementierung finden Sie unter [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) und unter [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
   
@@ -117,6 +99,5 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
  [Interfaces (Schnittstellen)](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) in [Learning C# 3.0: Master the Fundamentals of C# 3.0 (C# 3.0 lernen: Die Grundlagen von C# 3.0 meistern)](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-

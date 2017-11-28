@@ -8,27 +8,25 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, overview
+helpviewer_keywords: thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b5394cd2e9c9fa2b0cacb93ddf2cf05b33fabc71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 19ecc67b38e2eab52994fb278211c6d9ff67ae7e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-safe-collections"></a>Threadsichere Auflistungen
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt den <xref:System.Collections.Concurrent?displayProperty=fullName>-Namespace ein, der mehrere Auflistungsklassen einschließt, die sowohl threadsicher als auch skalierbar sind. Mehrere Threads können diesen Auflistungen sicher und effizient Elemente hinzufügen bzw. daraus entfernen, ohne dass zusätzliche Synchronisierung in Benutzercode erforderlich ist. Wenn Sie neuen Code schreiben, verwenden Sie die gleichzeitigen Auflistungsklassen, wenn von der Auflistung gleichzeitig Elemente in mehrere Threads geschrieben werden. Wenn Sie nur von einer freigegebenen Auflistung lesen, können Sie die Klassen im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace verwenden. Es wird empfohlen, keine 1.0-Auflistungsklassen zu verwenden, sofern als Zielversion nicht .NET Framework 1.1 oder eine frühere Laufzeit festgelegt wird.  
+[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt den <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace ein, der mehrere Auflistungsklassen einschließt, die sowohl threadsicher als auch skalierbar sind. Mehrere Threads können diesen Auflistungen sicher und effizient Elemente hinzufügen bzw. daraus entfernen, ohne dass zusätzliche Synchronisierung in Benutzercode erforderlich ist. Wenn Sie neuen Code schreiben, verwenden Sie die gleichzeitigen Auflistungsklassen, wenn von der Auflistung gleichzeitig Elemente in mehrere Threads geschrieben werden. Wenn Sie nur von einer freigegebenen Auflistung lesen, können Sie die Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Es wird empfohlen, keine 1.0-Auflistungsklassen zu verwenden, sofern als Zielversion nicht .NET Framework 1.1 oder eine frühere Laufzeit festgelegt wird.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Threadsynchronisierung in den Auflistungen von .NET Framework 1.0 und 2.0  
- Die in .NET Framework 1.0 eingeführten Auflistungen befinden sich im <xref:System.Collections?displayProperty=fullName>-Namespace. Diese Auflistungen, die das häufig verwendete <xref:System.Collections.ArrayList>-Objekt und das <xref:System.Collections.Hashtable>-Objekt einschließen, bieten eine gewisse Threadsicherheit durch die `Synchronized`-Eigenschaft, von der ein threadsicherer Wrapper um die Auflistung zurückgegeben wird. Der Wrapper funktioniert folgendermaßen: Die gesamte Auflistung wird bei jedem Hinzufüge- oder Entfernungsvorgang gesperrt. Daher muss jeder Thread, der versucht, auf die Auflistung zuzugreifen, warten, bis er die jeweilige Sperre übernehmen kann. Dies ist nicht skalierbar und kann beträchtliche Leistungseinbußen für große Auflistungen verursachen. Außerdem wird der Entwurf nicht völlig vor Racebedingungen geschützt. Weitere Informationen finden Sie unter [Synchronisierung in generischen Auflistungen](http://go.microsoft.com/fwlink/?LinkID=161130) auf der MSDN-Website.  
+ Die in .NET Framework 1.0 eingeführten Auflistungen befinden sich im <xref:System.Collections?displayProperty=nameWithType>-Namespace. Diese Auflistungen, die das häufig verwendete <xref:System.Collections.ArrayList>-Objekt und das <xref:System.Collections.Hashtable>-Objekt einschließen, bieten eine gewisse Threadsicherheit durch die `Synchronized`-Eigenschaft, von der ein threadsicherer Wrapper um die Auflistung zurückgegeben wird. Der Wrapper funktioniert folgendermaßen: Die gesamte Auflistung wird bei jedem Hinzufüge- oder Entfernungsvorgang gesperrt. Daher muss jeder Thread, der versucht, auf die Auflistung zuzugreifen, warten, bis er die jeweilige Sperre übernehmen kann. Dies ist nicht skalierbar und kann beträchtliche Leistungseinbußen für große Auflistungen verursachen. Außerdem wird der Entwurf nicht völlig vor Racebedingungen geschützt. Weitere Informationen finden Sie unter [Synchronisierung in generischen Auflistungen](http://go.microsoft.com/fwlink/?LinkID=161130) auf der MSDN-Website.  
   
- Die in .NET Framework 2.0 eingeführten Auflistungsklassen befinden sich im <xref:System.Collections.Generic?displayProperty=fullName>-Namespace. Dazu gehören <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> usw. Diese Klassen bieten verbesserte Typsicherheit und Leistung im Vergleich zu den .NET Framework 1.0-Klassen. Die .NET Framework 2.0-Auflistungsklassen stellen jedoch keine Threadsynchronisierung bereit; Benutzercode muss die gesamte Synchronisierung bereitstellen, wenn Elemente gleichzeitig in mehreren Threads hinzugefügt oder entfernt werden.  
+ Die in .NET Framework 2.0 eingeführten Auflistungsklassen befinden sich im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace. Dazu gehören <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> usw. Diese Klassen bieten verbesserte Typsicherheit und Leistung im Vergleich zu den .NET Framework 1.0-Klassen. Die .NET Framework 2.0-Auflistungsklassen stellen jedoch keine Threadsynchronisierung bereit; Benutzercode muss die gesamte Synchronisierung bereitstellen, wenn Elemente gleichzeitig in mehreren Threads hinzugefügt oder entfernt werden.  
   
  Es wird empfohlen, die gleichzeitigen Auflistungsklassen in [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] zu verwenden, da sie nicht nur die Typsicherheit der .NET Framework 2.0-Auflistungsklassen, sondern auch effizientere und vollständigere Threadsicherheit als die [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)]-Auflistungen bieten.  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/06/2017
 > [!NOTE]
 >  Da die gleichzeitigen Auflistungsklassen <xref:System.Collections.ICollection> unterstützen, stellen sie Implementierungen für die <xref:System.Collections.ICollection.IsSynchronized%2A>-Eigenschaft und die <xref:System.Collections.ICollection.SyncRoot%2A>-Eigenschaft bereit, auch wenn diese Eigenschaften nicht relevant sind. `IsSynchronized` gibt immer `false` zurück, und `SyncRoot` ist immer `null` (`Nothing` in Visual Basic).  
   
- In der folgenden Tabelle sind die Auflistungstypen im <xref:System.Collections.Concurrent?displayProperty=fullName>-Namespace aufgeführt.  
+ In der folgenden Tabelle sind die Auflistungstypen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace aufgeführt.  
   
 |Typ|Beschreibung|  
 |----------|-----------------|  
@@ -64,5 +62,4 @@ ms.lasthandoff: 09/06/2017
 |[Vorgehensweise: Erstellen eines Objektpools mittels ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Zeigt die Verwendung einer parallelen Sammlung zur Verbesserung der Leistung in Szenarien, in denen Sie Objekte nicht fortlaufend neu erstellen müssen, sondern diese wiederverwenden können.|  
   
 ## <a name="reference"></a>Verweis  
- <xref:System.Collections.Concurrent?displayProperty=fullName>
-
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>

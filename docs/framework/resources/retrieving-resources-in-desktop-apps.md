@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -23,23 +25,22 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4c1b751fc5fb5717ad4bf030777359bef2e69545
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f4c2527b7ef1e673d578f8c1e9a30fdacdea4046
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Abrufen von Ressourcen aus Assemblys  
- Die <xref:System.Resources.ResourceManager> Klasse ermöglicht den Zugriff auf Ressourcen zur Laufzeit. Verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName> -Methode, um Zeichenfolgenressourcen abzurufen und die <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName> - oder <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=fullName> - Methode, um Nicht-Zeichenfolgenressourcen abzurufen. Jede Methode enthält zwei Überladungen:  
+ Die <xref:System.Resources.ResourceManager> Klasse ermöglicht den Zugriff auf Ressourcen zur Laufzeit. Verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> -Methode, um Zeichenfolgenressourcen abzurufen und die <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> - oder <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> - Methode, um Nicht-Zeichenfolgenressourcen abzurufen. Jede Methode enthält zwei Überladungen:  
   
 -   Eine Überladung, deren einzelner Parameter eine Zeichenfolge ist, der den Namen der Ressource enthält. Die Methode versucht, die Ressource für die aktuelle Threadkultur abzurufen. Weitere Informationen finden Sie in den Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
   
@@ -66,9 +67,10 @@ TimeHeader=L'heure actuelle est
 TimeHeader=Текущее время —  
 ```  
   
- Der Quellcode für dieses Beispiel (in einer Datei namens GetString.cs für die C#-Version des Codes und GetString.vb für die Visual Basic-Version) definiert ein Zeichenfolgenarray, das die Namen von vier Kulturen enthält: die drei Kulturen, für die Ressourcen verfügbar sind und die Kultur Spanisch (Spanien). Eine Schleife, die nach dem Zufallsprinzip fünf Mal ausgeführt wird, wählt eine dieser Kulturen und weist sie den <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> - und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> -Eigenschaften. Sie ruft dann die <xref:System.Resources.ResourceManager.GetString%28System.String%29>-Methode auf, um die lokalisierte Zeichenfolge abzurufen, die zusammen mit der Uhrzeit angezeigt wird.  
+ Der Quellcode für dieses Beispiel (in einer Datei namens GetString.cs für die C#-Version des Codes und GetString.vb für die Visual Basic-Version) definiert ein Zeichenfolgenarray, das die Namen von vier Kulturen enthält: die drei Kulturen, für die Ressourcen verfügbar sind und die Kultur Spanisch (Spanien). Eine Schleife, die nach dem Zufallsprinzip fünf Mal ausgeführt wird, wählt eine dieser Kulturen und weist sie den <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> - und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> -Eigenschaften. Sie ruft dann die <xref:System.Resources.ResourceManager.GetString%28System.String%29> -Methode auf, um die lokalisierte Zeichenfolge abzurufen, die zusammen mit der Uhrzeit angezeigt wird.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstring.cs#3)] [!code-vb[Conceptual.Resources.Retrieving#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstring.vb#3)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstring.cs#3)]
+ [!code-vb[Conceptual.Resources.Retrieving#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstring.vb#3)]  
   
  Die folgende Batchdatei (.bat) kompiliert das Beispiel und generiert Satellitenassemblys in die entsprechenden Verzeichnisse. Die Befehle werden für die C#-Sprache und Compiler bereitgestellt. Ändern Sie in Visual Basic `csc` in `vbc`und ändern Sie `GetString.cs` in `GetString.vb`.  
   
@@ -92,11 +94,13 @@ al /embed:strings.ru-RU.resources /culture:ru-RU /out:ru-RU\GetString.resources.
   
  Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetStream%28System.String%29> -Methode verwendet, um eine Bitmap abzurufen, die im Begrüßungsbildschirm-Fenster einer App erscheint. Der folgende Quellcode in einer Datei mit dem Namen CreateResources.cs (für C#) oder CreateResources.vb (für Visual Basic) generiert eine .resx-Datei, die das serialisierte Bild enthält. In diesem Fall wird das Bild aus einer Datei namens SplashScreen.jpg geladen. Sie können den Dateinamen ändern und damit Ihr eigenes Bild laden.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)] [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
+ [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
- Der folgende Code ruft die Ressource ab und zeigt das Bild in einem <xref:System.Windows.Forms.PictureBox>-Steuerelement.  
+ Der folgende Code ruft die Ressource ab und zeigt das Bild in einem <xref:System.Windows.Forms.PictureBox> -Steuerelement.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)] [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
+ [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
   
  Sie können die folgende Batchdatei verwenden, um das C#-Beispiel zu erstellen. Ändern Sie in Visual Basic `csc` in `vbc`und ändern Sie die Erweiterung des Quellcodes von `.cs` in `.vb`.  
   
@@ -109,17 +113,20 @@ resgen AppResources.resx
 csc GetStream.cs /resource:AppResources.resources  
 ```  
   
- Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=fullName> -Methode verwendet, um ein benutzerdefiniertes Objekt zu deserialisieren. Das Beispiel enthält eine Quellcodedatei mit dem Namen UIElements.cs (UIElements.vb für Visual Basic), die die folgende Struktur mit dem Namen `PersonTable`definiert. Diese Struktur soll von einer allgemeinen Tabellen-Anzeigeroutine verwendet werden, die den lokalisierten Namen der Tabellenspalten anzeigt. Beachten Sie, dass die `PersonTable`-Struktur ist mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet ist.  
+ Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> -Methode verwendet, um ein benutzerdefiniertes Objekt zu deserialisieren. Das Beispiel enthält eine Quellcodedatei mit dem Namen UIElements.cs (UIElements.vb für Visual Basic), die die folgende Struktur mit dem Namen `PersonTable`definiert. Diese Struktur soll von einer allgemeinen Tabellen-Anzeigeroutine verwendet werden, die den lokalisierten Namen der Tabellenspalten anzeigt. Beachten Sie, dass die `PersonTable` -Struktur ist mit dem <xref:System.SerializableAttribute> -Attribut gekennzeichnet ist.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)] [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
+ [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
   
  Der folgende Code aus einer Datei mit dem Namen CreateResources.cs (CreateResources.vb für Visual Basic) erstellt eine XML-Ressourcendatei mit dem Namen UIResources.resx, die einen Tabellentitel und ein `PersonTable` -Objekt speichert, das Informationen für eine App enthält, die für die englische Sprache lokalisiert ist.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example1.cs#7)] [!code-vb[Conceptual.Resources.Retrieving#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#7)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example1.cs#7)]
+ [!code-vb[Conceptual.Resources.Retrieving#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#7)]  
   
  Der folgende Code in eine Quellcodedatei mit dem Namen GetObject.cs (GetObject.vb) ruft dann die Ressourcen ab und zeigt sie auf der Konsole an.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example2.cs#8)] [!code-vb[Conceptual.Resources.Retrieving#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example2.vb#8)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example2.cs#8)]
+ [!code-vb[Conceptual.Resources.Retrieving#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example2.vb#8)]  
   
  Mit der folgenden Batchdatei können Sie die erforderliche Ressourcendatei und Assemblys erstellen und die App ausführen. Verwenden Sie die Option `/r` , um Resgen.exe einen Verweis auf UIElements.dll bereitzustellen, damit die Anwendung Zugriff auf Informationen über die `PersonTable` -Struktur erhält. Wenn Sie C# verwenden, ersetzen Sie den `vbc` -Compilernamen mit `csc`und ersetzen Sie die `.vb` -Erweiterung mit `.cs`.  
   
@@ -147,7 +154,7 @@ GetObject.exe
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Abrufen von Ressourcen aus Ressourcendateien  
- Wenn Sie keine Ressourcen in Satellitenassemblys bereitstellen wollen, können Sie weiterhin ein <xref:System.Resources.ResourceManager> -Objekt für den direkten Zugriff auf Ressourcen in Ressourcendateien verwenden. Zu diesem Zweck müssen Sie die Ressourcendateien korrekt bereitstellen. Verwenden Sie dann die <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=fullName> -Methode zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts und geben Sie das Verzeichnis an, das die eigenständigen Ressourcendateien enthält.  
+ Wenn Sie keine Ressourcen in Satellitenassemblys bereitstellen wollen, können Sie weiterhin ein <xref:System.Resources.ResourceManager> -Objekt für den direkten Zugriff auf Ressourcen in Ressourcendateien verwenden. Zu diesem Zweck müssen Sie die Ressourcendateien korrekt bereitstellen. Verwenden Sie dann die <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> -Methode zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts und geben Sie das Verzeichnis an, das die eigenständigen Ressourcendateien enthält.  
   
 ### <a name="deploying-resources-files"></a>Bereitstellen von Ressourcendateien  
  Beim Einbetten von Ressourcendateien in eine Anwendungsassembly und Satellitenassemblys hat jede Satellitenassembly den gleichen Dateinamen, befindet sich jedoch in einem Unterverzeichnis, das die Kultur der Satellitenassembly wiedergibt. Wenn Sie direkt aus Ressourcendateien auf Ressourcen zugreifen, können Sie hingegen alle Ressourcendateien in einem Verzeichnis platzieren, in der Regel in einem Unterverzeichnis des Anwendungsverzeichnisses. Der Name des Standard-Ressourcendateien der App besteht nur aus einem Stammnamen ohne Angabe seiner Kultur (z.B. strings.resources). Die Ressourcen für jede lokalisierte Kultur werden in einer Datei gespeichert, deren Name aus dem Stammnamen gefolgt von der Kultur besteht (z.B. strings.ja.resources oder strings.de-DE.resources). Die folgende Abbildung zeigt, wo Ressourcendateien in der Verzeichnisstruktur platziert werden sollen.  
@@ -161,7 +168,7 @@ Verzeichnisstruktur und Namenskonventionen für Ressourcendateien
 > [!NOTE]
 >  Stellen Sie keine ASP.NET-Apps mit eigenständigen Ressourcendateien bereit. Dies kann zu Sperrproblemen führen und unterbricht die XCOPY-Bereitstellung. Es wird empfohlen, dass Sie ASP.NET-Ressourcen in Satellitenassemblys bereitstellen. Weitere Informationen finden Sie unter [ASP.NET Web Page Resources Overview](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
   
- Nach dem Instanziieren des <xref:System.Resources.ResourceManager> -Objekts verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>und <xref:System.Resources.ResourceManager.GetStream%2A> -Methoden wie bereits erwähnt, um die Ressourcen abzurufen. Das direkte Abrufen von Ressourcen aus Ressourcendateien unterscheidet sich jedoch von dem Abruf von eingebetteten Ressourcen aus Assemblys. Beim Abrufen von Ressourcen aus Ressourcendateien rufen die Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> immer die Standardkultur-Ressourcen ab, unabhängig von der aktuellen Kultur. Um die Ressourcen entweder der aktuellen Kultur der Anwendung oder einer bestimmten Kultur abrufen zu können, müssen Sie, die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>oder <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> -Methode aufrufen und die Kultur angeben, deren Ressourcen abgerufen werden sollen. Um die Ressourcen der aktuellen Kultur abzurufen, geben Sie den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> -Eigenschaft als `culture` Argument an. Wenn der Ressourcen-Manager die Ressourcen von `culture`nicht abrufen kann, verwendet er die Standard-Ressourcen-Fallback-Regeln, um die entsprechenden Ressourcen abzurufen.  
+ Nach dem Instanziieren des <xref:System.Resources.ResourceManager> -Objekts verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>und <xref:System.Resources.ResourceManager.GetStream%2A> -Methoden wie bereits erwähnt, um die Ressourcen abzurufen. Das direkte Abrufen von Ressourcen aus Ressourcendateien unterscheidet sich jedoch von dem Abruf von eingebetteten Ressourcen aus Assemblys. Beim Abrufen von Ressourcen aus Ressourcendateien rufen die Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> immer die Standardkultur-Ressourcen ab, unabhängig von der aktuellen Kultur. Um die Ressourcen entweder der aktuellen Kultur der Anwendung oder einer bestimmten Kultur abrufen zu können, müssen Sie, die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>oder <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> -Methode aufrufen und die Kultur angeben, deren Ressourcen abgerufen werden sollen. Um die Ressourcen der aktuellen Kultur abzurufen, geben Sie den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft als `culture` Argument an. Wenn der Ressourcen-Manager die Ressourcen von `culture`nicht abrufen kann, verwendet er die Standard-Ressourcen-Fallback-Regeln, um die entsprechenden Ressourcen abzurufen.  
   
 ### <a name="an-example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie der Ressourcen-Manager Ressourcen direkt aus einer Ressourcendatei abruft. Das Beispiel besteht aus drei textbasierten Ressourcendateien für die Kulturen Englisch (USA), Französisch (Frankreich) und Russisch (Russische Föderation). Englisch (USA) ist die Standardkultur in dem Beispiel. Die Ressourcen werden in der folgenden Datei mit dem Namen Strings.txt gespeichert:  
@@ -185,9 +192,10 @@ Greeting=Здравствуйте
 Prompt=Как вас зовут?  
 ```  
   
- Der Quellcode für das Beispiel lautet wie folgt. Das Beispiel instanziiert <xref:System.Globalization.CultureInfo> -Objekte für die Kulturen Englisch (USA), Englisch (Kanada), Französisch (Frankreich) und Russisch (Russische Föderation) und macht diese jeweils zur aktuellen Kultur. Die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=fullName>-Methode stellt dann den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>-Eigenschaft als `culture` Argument bereit, um die entsprechenden kulturspezifischen Ressourcen abzurufen.  
+ Der Quellcode für das Beispiel lautet wie folgt. Das Beispiel instanziiert <xref:System.Globalization.CultureInfo> -Objekte für die Kulturen Englisch (USA), Englisch (Kanada), Französisch (Frankreich) und Russisch (Russische Föderation) und macht diese jeweils zur aktuellen Kultur. Die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode stellt dann den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft als `culture` Argument bereit, um die entsprechenden kulturspezifischen Ressourcen abzurufen.  
   
- [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)] [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
+ [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
  Sie können die C#-Version des Beispiels kompilieren, indem Sie die folgende Batchdatei ausführen. Wenn Sie Visual Basic verwenden, ersetzen Sie `csc` mit `vbc` und ersetzen Sie die Erweiterung `.cs` mit `.vb`.  
   
@@ -201,9 +209,8 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Resources.ResourceManager>   
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)   
- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.Resources.ResourceManager>  
+ [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
+ [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=241674)
-

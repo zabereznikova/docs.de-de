@@ -1,52 +1,33 @@
 ---
 title: Befehlszeilenargumente (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- command-line arguments [C#]
+helpviewer_keywords: command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Befehlszeilenargumente (C#-Programmierhandbuch)
 Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Um in der `Main`-Methode in einer Windows Forms-Anwendung Befehlszeilenargumente zu aktivieren, müssen Sie die Signatur von `Main` in „program.cs“ manuell ändern. Im vom Windows Forms-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt. Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=fullName> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> verwenden, um von einem beliebigen Punkt in einer Konsolen- oder Windows-Anwendung auf die Befehlszeilenargumente zuzugreifen.  
+>  Um in der `Main`-Methode in einer Windows Forms-Anwendung Befehlszeilenargumente zu aktivieren, müssen Sie die Signatur von `Main` in „program.cs“ manuell ändern. Im vom Windows Forms-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt. Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> verwenden, um von einem beliebigen Punkt in einer Konsolen- oder Windows-Anwendung auf die Befehlszeilenargumente zuzugreifen.  
   
  Der Parameter der `Main`-Methode ist ein <xref:System.String>-Array, das die Befehlszeilenargumente darstellt. Normalerweise bestimmen Sie, ob Argumente vorhanden sind, indem Sie z. B. die `Length`-Eigenschaft testen:  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  Sie können die Zeichenfolgenargumente auch mit der <xref:System.Convert>-Klasse oder der `Parse`-Methode in numerische Typen konvertieren. Die folgende Anweisung konvertiert z. B. `string` mithilfe der `long`-Methode in eine <xref:System.Int64.Parse%2A>-Zahl:  
   
@@ -75,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  Fügen Sie den folgenden Code in einem beliebigen Text-Editor ein, und speichern Sie die Datei als Textdatei mit dem Namen `Factorial.cs`.  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  Öffnen Sie über den Bildschirm **Starten** oder das Menü **Starten** eine Visual Studio **Developer-Eingabeaufforderung**, und navigieren Sie dann zu dem Ordner, der die Datei enthält, die Sie gerade erstellt haben.  
   
@@ -97,11 +78,10 @@ long num = Convert.ToInt64(s);
  Weitere Beispiele zur Verwendung von Befehlszeilenargumenten finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Environment?displayProperty=fullName>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
- [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
+ <xref:System.Environment?displayProperty=nameWithType>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [Gewusst wie: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
  [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
-

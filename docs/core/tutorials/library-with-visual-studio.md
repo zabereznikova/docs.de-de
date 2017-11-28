@@ -10,12 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
+ms.openlocfilehash: 5806e3e71eabbc1d65ecffed72108ba548b57806
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 8b86f8f9cd02484cb91af3206606aced8fed1ecd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017
 
@@ -56,9 +55,9 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
 1. Ersetzen Sie den Code im Codefenster durch den folgenden Code, und speichern Sie die Datei:
 
-   [!CODE-csharp[ClassLib #1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
+   [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
-   Die Klassenbibliothek, `UtilityLibraries.StringLibrary`, enthält eine Methode namens `StartsWithUpper`, welche einen <xref:System.Boolean> Wert zurückgibt, der angibt, ob die aktuelle Zeichenfolgeninstanz mit einem Großbuchstaben beginnt. Der Unicode-Standard unterscheidet Groß- und Kleinschreibung. Die Methode <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> gibt `true` zurück, wenn ein Zeichen ein Großbuchstabe ist.
+   Die Klassenbibliothek, `UtilityLibraries.StringLibrary`, enthält eine Methode namens `StartsWithUpper`, welche einen <xref:System.Boolean> Wert zurückgibt, der angibt, ob die aktuelle Zeichenfolgeninstanz mit einem Großbuchstaben beginnt. Der Unicode-Standard unterscheidet Groß- und Kleinschreibung. Die Methode <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> gibt `true` zurück, wenn ein Zeichen ein Großbuchstabe ist.
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus. Das Projekt sollte fehlerfrei kompiliert werden.
 

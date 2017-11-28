@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f81c2d9fc2ec69c295485fe06029b5de65335db0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="introduction-to-events"></a>Einführung in Ereignisse
 
 [Vorheriges](delegates-patterns.md)
@@ -90,4 +88,3 @@ Wenn Sie stattdessen den Text des Lambdaausdrucks verwendet haben, versuchen Sie
 Im nächsten Artikel erfahren Sie mehr über das typische Ereignismuster und verschiedene Varianten dieses Beispiels.
 
 [Weiter](event-pattern.md)
-

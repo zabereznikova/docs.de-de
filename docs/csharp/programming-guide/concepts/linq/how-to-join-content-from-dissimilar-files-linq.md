@@ -1,30 +1,21 @@
 ---
 title: "Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ac5c9f2037e3254c6262efe00fcbff31664dcd70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95b2ff43ff5f14e2e3be40bee5463ed648c4c940
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ)
 In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden. Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten. Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.  
@@ -140,6 +131,5 @@ Zabokritski, 96, 85, 91, 60
  Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch  
- [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-

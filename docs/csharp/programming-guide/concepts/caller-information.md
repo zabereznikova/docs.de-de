@@ -1,32 +1,23 @@
 ---
 title: Aufruferinformationen (C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caller-information-c"></a>Aufruferinformationen (C#)
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen. Diese Informationen sind zum Verfolgen, Debuggen und Erstellen von Diagnosetools sehr nützlich.  
   
- Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=fullName>-Namespace definiert sind:  
+ Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
 |Attribut|Beschreibung|Typ|  
 |---|---|---|  
@@ -90,8 +81,7 @@ public void TraceMessage(string message,
 |Kein enthaltender Member (z. B. auf Assemblyebene oder Attribute, die auf Typen angewendet werden)|Der Standardwert des optionalen Parameters.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Allgemeine Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
+ [Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Allgemeine Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
-

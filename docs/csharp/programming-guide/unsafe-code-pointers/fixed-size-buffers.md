@@ -1,40 +1,22 @@
 ---
 title: "Puffer fester Größe (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
 ms.assetid: 6220d454-947c-4977-ac9d-9308c6ed5051
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3f99c2c6d477fca988fcca77de5ca5c2f8addd4d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 In C# können Sie die [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)-Anweisung verwenden, um einen Puffer mit einem Array fester Größe in einer Datenstruktur zu erstellen. Dies ist hilfreich, wenn Sie mit vorhandenem Code, z.B. Code in anderen Sprachen, bereits vorhandenen DLLs oder COM-Projekten arbeiten. Das Array fester Größe kann sämtliche Attribute und Modifizierer, die für reguläre Strukturmember zulässig sind, in Anspruch nehmen. Die einzige Einschränkung besteht darin, dass der Arraytyp `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float` oder `double` sein muss.  
@@ -50,11 +32,11 @@ private fixed char name[30];
   
  Vor C# 2.0 wäre das folgende `struct` z.B. 8 Bytes groß. Das `pathName`-Array ist ein Verweis auf das Heap zugeordnete Array:  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
+ [!code-csharp[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  Beginnend mit C# 2.0 kann ein `struct` ein eingebettetes Array enthalten. Im folgenden Beispiel verfügt das `fixedBuffer`-Array über eine feste Größe. Um auf die Elemente des Arrays zuzugreifen, verwenden Sie eine `fixed`-Anweisung, um einen Zeiger auf das erste Element festzulegen. Die `fixed`-Anweisung fixiert eine Instanz von `fixedBuffer` an einem bestimmten Speicherort im Arbeitsspeicher.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
+ [!code-csharp[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  Die Größe des 128-Element-`char`-Arrays beträgt 256 Bytes. [Char](../../../csharp/language-reference/keywords/char.md)-Puffer mit fester Größe verwenden immer zwei Bytes pro Zeichen, unabhängig von der Codierung. Dies gilt auch, wenn Char-Puffer zu API-Methoden oder Strukturen mit `CharSet = CharSet.Auto` oder `CharSet = CharSet.Ansi` gemarshallt werden. Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.CharSet>.  
   
@@ -74,8 +56,7 @@ private fixed char name[30];
 -   Unsichere Puffer können nur Instanzfelder von Strukturen in einem unsicheren Kontext sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [Interoperabilität](../../../csharp/programming-guide/interop/index.md)
-

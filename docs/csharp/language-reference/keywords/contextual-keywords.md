@@ -1,38 +1,19 @@
 ---
 title: "Kontextabhängige Schlüsselwörter (C#-Referenz)"
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- contextual keywords [C#]
+helpviewer_keywords: contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a6268e09b8063f95aa11fc1563f0b5b5d5d96a08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 57209c7554e7fb53ef946ad9a78a088a3dd49453
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontextabhängige Schlüsselwörter (C#-Referenz)
 Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code bereitzustellen, es ist jedoch kein reserviertes Wort in C#. In diesem Abschnitt werden die folgenden Kontextschlüsselwörter eingeführt:  
@@ -57,7 +38,6 @@ Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code 
  Alle in C# 3.0 eingeführten Abfrageschlüsselwörter sind auch kontextabhängig. Weitere Informationen finden Sie unter [Abfrageschlüsselwörter (C#-Referenz)](../../../csharp/language-reference/keywords/query-keywords.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-

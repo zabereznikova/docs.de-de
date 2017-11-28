@@ -1,25 +1,21 @@
 ---
 title: "Verzögerte Ausführung und Auswertung in LINQ to XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 847d8f830c26f54521664accc4bf569f822f255a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10ecebc2563df5a12b71a743727b1be21b19b671
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
 Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzögerte Ausführung (Deferred Execution) verwenden. In diesem Thema werden die Voraussetzungen und die Vorteile der verzögerten Ausführung erläutert und einige Überlegungen zur Implementierung angestellt.  
@@ -27,7 +23,7 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
 ## <a name="deferred-execution"></a>Verzögerte Ausführung  
  Verzögerte Ausführung bedeutet, dass die Auswertung eines Ausdrucks so lange hinausgezögert wird, bis dessen *realisierter* Wert tatsächlich benötigt wird. Dort, wo große Datensammlungen bearbeitet werden müssen, vor allem in Programmen, die eine Reihe von verketteten Abfragen oder Manipulationen enthalten, kann die verzögerte Ausführung die Arbeitsgeschwindigkeit der Anwendung signifikant erhöhen. Im besten Fall muss bei der verzögerten Ausführung lediglich ein Durchlauf durch die Quellauflistung erfolgen.  
   
- Die LINQ-Technologien machen von der verzögerten Ausführung umfangreichen Gebrauch, und dies sowohl bei den Membern der <xref:System.Linq?displayProperty=fullName>-Kernklassen als auch bei den Erweiterungsmethoden in den verschiedenen LINQ-Namespaces, z. B. <xref:System.Xml.Linq.Extensions?displayProperty=fullName>.  
+ Die LINQ-Technologien machen von der verzögerten Ausführung umfangreichen Gebrauch, und dies sowohl bei den Membern der <xref:System.Linq?displayProperty=nameWithType>-Kernklassen als auch bei den Erweiterungsmethoden in den verschiedenen LINQ-Namespaces, z. B. <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
   
  Die verzögerte Auswertung wird in der C#-Sprache direkt durch das [yield](../../../../csharp/language-reference/keywords/yield.md)-Schlüsselwort (in Form der `yield-return`-Anweisung) im Iteratorblock unterstützt. So ein Iterator muss eine Auflistung des Typs <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> (oder eines abgeleiteten Typs) zurückgeben.  
   
@@ -46,8 +42,7 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
 -   [Beispiel für eine verzögerte Ausführung (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)   
- [Konzepte und Terminologie (funktionale Transformation) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)   
- [Aggregationsvorgänge (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)   
+ [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+ [Konzepte und Terminologie (funktionale Transformation) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
+ [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
  [yield](../../../../csharp/language-reference/keywords/yield.md)
-

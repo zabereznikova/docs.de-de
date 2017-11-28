@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
 ## <a name="introduction"></a>Einführung
@@ -334,4 +332,3 @@ Kompilieren Sie den Code, und führen Sie ihn erneut aus. Die Ausgabe ist etwas 
 Dieses Beispiel sollte einige der in LINQ verwendeten Methoden veranschaulichen und Ihnen zeigen, wie Sie eigene Methoden erstellen, die sich mit LINQ-aktiviertem Code ganz einfach einsetzen lassen. Das Beispiel hat auch die Unterschiede zwischen verzögerter und strikter Auswertung aufgezeigt und erläutert, wie sich die Entscheidung für die eine oder andere Variante auf die Leistung auswirken kann.
 
 Sie haben etwas über die Techniken von Zauberkünstlern erfahren. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet. Bei manchen Tricks bittet der Zauberer einen Zuschauer, eine Karte ganz nach oben auf den Stapel zu legen. Dann mischt der Zauberer die Karten einige Male und weiß genau, wo die Karte ist. Für andere Tricks muss der Kartenstapel auf eine ganz bestimmte Art sortiert sein. Der Zauberer bereitet den Stapel vor dem Trick vor. Dann mischt er den Stapel 5-mal nach innen. Auf der Bühne zeigt er den Zuschauern dann einen Kartenstapel, der zufällig gemischt aussieht, mischt ihn noch 3-mal und erzielt so genau die gewünschte Kartenreihenfolge.
-

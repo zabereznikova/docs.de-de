@@ -8,19 +8,17 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework development
+helpviewer_keywords: .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
 ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-application-essentials"></a>Grundlagen der .NET Framework-Anwendung
 Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über grundlegende Anwendungsentwicklungsaufgaben in .NET Framework.  
@@ -77,4 +75,3 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
   
  [Sicherheit](../../docs/standard/security/index.md)  
  Enthält Informationen über die Klassen und Dienste für sichere Anwendungsentwicklung in der Common Language Runtime und in .NET Framework.
-

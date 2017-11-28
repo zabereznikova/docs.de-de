@@ -1,49 +1,54 @@
 ---
-title: "Gewusst wie: Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PrintSystemObject, Abrufen von Eigenschaften"
+title: 'Gewusst wie: Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2f6015d25ee8868fe9b4c6dcf3bf145d413521e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion
-Die Aufgliederung der Eigenschaften \(und Typen dieser Eigenschaften\) eines Objekts mithilfe von Reflektion kann die Anwendungsleistung beeinträchtigen.  Der <xref:System.Printing.IndexedProperties>\-Namespace bietet eine Möglichkeit, diese Informationen mithilfe der Reflektion abzurufen.  
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Gewusst wie: Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion
+Mithilfe der Reflektion auf die Eigenschaften (und die Typen der Eigenschaften) für ein Objekt aufschlüsseln kann die Leistung der Anwendung beeinträchtigen. Die <xref:System.Printing.IndexedProperties> Namespace bietet eine Möglichkeit zum Abrufen dieser Informationen mit über Reflektion ermöglicht.  
   
-## Beispiel  
- Dazu müssen die folgenden Schritte ausgeführt werden.  
+## <a name="example"></a>Beispiel  
+ Die Schritte hierzu sind wie folgt aus.  
   
-1.  Erstellen Sie eine Instanz des Typs.  Im folgenden Beispiel wird der <xref:System.Printing.PrintQueue>\-Typ aus [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] verwendet. Für Typen, die Sie von <xref:System.Printing.PrintSystemObject> ableiten, können Sie den Code leicht anpassen.  
+1.  Erstellen Sie eine Instanz des Typs. Im folgenden Beispiel wird der Typ der <xref:System.Printing.PrintQueue> Typ, der im Lieferumfang [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], aber nahezu identischer Code sollte für Typen, die Sie ableiten funktionieren <xref:System.Printing.PrintSystemObject>.  
   
-2.  Erstellen Sie ein <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> aus der <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> für diesen Typ.  Die <xref:System.Collections.DictionaryEntry.Value%2A>\-Eigenschaft für jeden Eintrag in diesem Wörterbuch ist ein Objekt, das zu einem der von <xref:System.Printing.IndexedProperties.PrintProperty> abgeleiteten Typen gehört.  
+2.  Erstellen einer <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> aus des Typs <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. Die <xref:System.Collections.DictionaryEntry.Value%2A> für jeden Eintrag in dieses Wörterbuch aufweist und ein Objekt ist eines von abgeleiteten Typen <xref:System.Printing.IndexedProperties.PrintProperty>.  
   
-3.  Listen Sie die Member des Wörterbuchs auf.  Gehen Sie für jeden Member wie folgt vor.  
+3.  Zählt die Elemente des Wörterbuchs. Für jede von ihnen die folgenden Schritte aus.  
   
-4.  Wandeln Sie den Wert jedes Eintrags in <xref:System.Printing.IndexedProperties.PrintProperty> um, und erstellen Sie damit ein <xref:System.Printing.IndexedProperties.PrintProperty>\-Objekt.  
+4.  Nach-oben-wandeln Sie den Wert jedes Eintrags in <xref:System.Printing.IndexedProperties.PrintProperty> und verwenden sie zum Erstellen einer <xref:System.Printing.IndexedProperties.PrintProperty> Objekt.  
   
-5.  Rufen Sie den <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A>\-Typ für jedes <xref:System.Printing.IndexedProperties.PrintProperty>\-Objekt ab.  
+5.  Ruft den Typ der der <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> aller der <xref:System.Printing.IndexedProperties.PrintProperty> Objekt.  
   
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
-## Siehe auch  
- <xref:System.Printing.IndexedProperties.PrintProperty>   
- <xref:System.Printing.PrintSystemObject>   
- <xref:System.Printing.IndexedProperties>   
- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>   
- <xref:System.Printing.LocalPrintServer>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Collections.DictionaryEntry>   
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Printing.IndexedProperties.PrintProperty>  
+ <xref:System.Printing.PrintSystemObject>  
+ <xref:System.Printing.IndexedProperties>  
+ <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
+ <xref:System.Printing.LocalPrintServer>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Collections.DictionaryEntry>  
+ [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)

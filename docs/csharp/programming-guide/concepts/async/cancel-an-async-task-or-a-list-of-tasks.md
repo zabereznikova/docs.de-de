@@ -1,30 +1,21 @@
 ---
 title: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 78becece40b4b527869c593f8a1fe1eeba1f1f51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)
 Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendung abbrechen können, wenn Sie nicht darauf warten möchten, bis diese beendet wird. Anhand der Beispiele in diesem Thema können Sie einer Anwendung, über die der Inhalt einer Website oder einer Liste von Websites heruntergeladen wird, eine Schaltfläche zum Abbrechen hinzufügen.  
@@ -70,7 +61,7 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
         CancellationTokenSource cts;  
     ```  
   
-2.  Fügen Sie den folgenden Ereignishandler für die Schaltfläche **Abbrechen** hinzu. Der Ereignishandler verwendet die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>-Methode, um `cts` bei Abbruchanforderungen durch den Benutzer zu benachrichtigen.  
+2.  Fügen Sie den folgenden Ereignishandler für die Schaltfläche **Abbrechen** hinzu. Der Ereignishandler verwendet die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>-Methode, um `cts` bei Abbruchanforderungen durch den Benutzer zu benachrichtigen.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -92,7 +83,7 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
         cts = new CancellationTokenSource();  
         ```  
   
-    -   Senden Sie im Aufruf von `AccessTheWebAsync`, wodurch der Inhalt einer bestimmten Website heruntergeladen wird, die <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName>-Eigenschaft von `cts` als Argument. Die `Token`-Eigenschaft gibt die Meldung weiter, wenn ein Abbruch angefordert wird. Fügen Sie einen catch-Block hinzu, der eine Meldung angezeigt, wenn der Benutzer den Downloadvorgang abbrechen möchte. Im folgende Code sind alle Änderungen dargestellt.  
+    -   Senden Sie im Aufruf von `AccessTheWebAsync`, wodurch der Inhalt einer bestimmten Website heruntergeladen wird, die <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType>-Eigenschaft von `cts` als Argument. Die `Token`-Eigenschaft gibt die Meldung weiter, wenn ein Abbruch angefordert wird. Fügen Sie einen catch-Block hinzu, der eine Meldung angezeigt, wenn der Benutzer den Downloadvorgang abbrechen möchte. Im folgende Code sind alle Änderungen dargestellt.  
   
         ```csharp  
         try  
@@ -113,7 +104,7 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
         }  
         ```  
   
-4.  Verwenden Sie in `AccessTheWebAsync` die <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> - Überladung der `GetAsync`-Methode im <xref:System.Net.Http.HttpClient>-Typ, um den Inhalt einer Website herunterzuladen. Übergeben Sie `ct`, der <xref:System.Threading.CancellationToken>-Parameter von `AccessTheWebAsync`, als zweites Argument. Das Token enthält die Meldung, wenn der Benutzer die Schaltfläche **Abbrechen** auswählt.  
+4.  Verwenden Sie in `AccessTheWebAsync` die <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> - Überladung der `GetAsync`-Methode im <xref:System.Net.Http.HttpClient>-Typ, um den Inhalt einer Website herunterzuladen. Übergeben Sie `ct`, der <xref:System.Threading.CancellationToken>-Parameter von `AccessTheWebAsync`, als zweites Argument. Das Token enthält die Meldung, wenn der Benutzer die Schaltfläche **Abbrechen** auswählt.  
   
      Im folgende Code sind die Änderungen in `AccessTheWebAsync` dargestellt.  
   
@@ -530,9 +521,8 @@ namespace CancelAListOfTasks
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken>   
- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](http://go.microsoft.com/fwlink/?LinkId=255046)
-

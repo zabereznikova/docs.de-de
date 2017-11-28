@@ -1,43 +1,24 @@
 ---
 title: "Ändern des Orts, in den „My.Application.Log“ Informationen schreibt (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Ändern des Orts, in den "My.Application.Log" Informationen schreibt (Visual Basic)
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Standardeinstellungen außer Kraft setzen und das `Log` -Objekt dazu bringen können, in andere Protokolllistener zu schreiben.  
@@ -180,13 +161,13 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
      Dies sind einige der Typen, die Sie verwenden können:  
   
-    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> -Listener, der in eine Protokolldatei schreibt.  
+    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>-Listener, der in ein Dateiprotokoll schreibt.  
   
-    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> -Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData` -Parameter angegeben ist.  
+    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>-Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData`-Parameter angegeben ist.  
   
-    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> - und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> -Listener, die in die Datei schreiben, die im `initializeData` -Parameter angegeben ist.  
+    -   Die Listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, die in die Datei schreiben, die im `initializeData`-Parameter angegeben ist.  
   
-    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> -Listener, der in die Befehlszeilenkonsole schreibt.  
+    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>-Listener, der in die Befehlszeilenkonsole schreibt.  
   
      Informationen dazu, wohin andere Typen von Protokolllistenern Informationen schreiben, finden Sie in der Dokumentation zum entsprechenden Typ.  
   
@@ -209,10 +190,9 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
+ [Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
  [Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
-

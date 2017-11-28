@@ -1,30 +1,21 @@
 ---
 title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)
 Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung lose koppeln, um versionsunabhängig zu werden. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek geschrieben werden; eine erneute Kompilierung für jede Version ist nicht erforderlich.  
@@ -49,7 +40,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 -   Konstanten werden nicht eingebettet.  
   
--   Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>-Klasse unterstützt keinen eingebetteten Typ als Schlüssel. Sie können Ihren eigenen Wörterbuchtyp implementieren, um einen eingebetteten Typ als Schlüssel zu unterstützen.  
+-   Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>-Klasse unterstützt keinen eingebetteten Typ als Schlüssel. Sie können Ihren eigenen Wörterbuchtyp implementieren, um einen eingebetteten Typ als Schlüssel zu unterstützen.  
   
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
   
@@ -250,8 +241,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
 6.  Öffnen Sie im Datei-Explorer den Ordner mit dem Ausgabepfad (z.B. C:\TypeEquivalenceSample). Doppelklicken Sie auf die Datei „TypeEquivalenceClient.exe“, um das Programm auszuführen. Das Programm reflektiert die neue Version der TypeEquivalenceRuntime-Assembly, ohne dass sie erneut kompiliert werden muss.  
   
 ## <a name="see-also"></a>Siehe auch  
- [/link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)   
- [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-
+ [-link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+ [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

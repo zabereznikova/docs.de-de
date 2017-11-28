@@ -1,42 +1,23 @@
 ---
 title: Neues in Visual Basic
-ms.date: 2017-04-27
+ms.date: 04/27/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- VB.StartPage.WhatsNew
-dev_langs:
-- VB
+f1_keywords: VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 145
+caps.latest.revision: "145"
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -95,7 +76,7 @@ Anschließend können Sie die Methode aufrufen und das zurückgegebene Tupel mit
 
 Sie können ein binäres Literal definieren, indem Sie die Präfixe `&B` oder `&b` verwenden. Zusätzlich können Sie einen Unterstrich (`_`) als Zahlentrennzeichen verwenden, um die Lesbarkeit zu verbessern. In folgendem Beispiel werden Funktionen sowohl verwendet, um einen `Byte`-Wert zuzuweisen, als auch um ihn als Dezimal-, Hexadezimal- und binäre Zahl anzuzeigen.
 
-[!code-vb[Binär](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
+[!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
 Weitere Informationen finden Sie im Abschnitt „Zuweisung von Literalen“ der Datentypen [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) und [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
@@ -192,4 +173,3 @@ End Interface
   
 ## <a name="see-also"></a>Siehe auch  
  [Neues in Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
-

@@ -1,22 +1,17 @@
 ---
 title: Lokale Funktionen (C#-Programmierhandbuch)
-ms.date: 2017-06-14
+ms.date: 06/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- local functions [C#]
+helpviewer_keywords: local functions [C#]
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
-ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 
@@ -60,7 +55,7 @@ Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Paramete
  
 Das folgende Beispiel definiert eine lokale Funktion mit dem Namen `AppendPathSeparator`, die für eine Methode mit dem Namen `GetText` privat ist:
    
-[!code-cs[LokaleFunktionBeispiel](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+[!code-csharp[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
    
 ## <a name="local-functions-and-exceptions"></a>Lokale Funktionen und Ausnahmen
 
@@ -68,22 +63,21 @@ Eine nützliche Funktion von lokalen Funktionen ist die Tatsache, dass sie Ausna
 
 Das folgende Beispiel definiert eine `OddSequence`-Methode, die ungerade Zahlen in einem angegebenen Bereich aufzählt. Da eine Zahl größer als 100 an die `OddSequence`-Enumeratormethode übergeben wird, wird <xref:System.ArgumentOutOfRangeException> ausgelöst. Die Ausgabe des Beispiels zeigt, dass die Ausnahme erst beim Durchlaufen der Zahlen und nicht beim Abrufen des Enumerators eingeblendet wird.
 
-[!code-cs[LokaleFunktionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
+[!code-csharp[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
 
 Stattdessen können Sie während der Validierung und vor Abrufen des Iterators wie im folgenden Beispiel dargestellt eine Ausnahme auslösen, indem der Iterator aus einer lokalen Funktion zurückgegeben wird.
 
-[!code-cs[LokaleFunktionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+[!code-csharp[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
 Lokale Funktionen können auf ähnliche Weise verwendet werden, um Ausnahmen außerhalb des asynchronen Vorgangs zu behandeln. Normalerweise erfordern Ausnahmen in einer async-Methode die Überprüfung der inneren Ausnahmen von <xref:System.AggregateException>. Lokale Funktionen ermöglichen einen schnellen Abbruch Ihres Codes. Ihre Ausnahme kann sowohl synchron ausgelöst als auch beobachtet werden.
 
 Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `GetMultipleAsync` verwendet, um für eine bestimmte Anzahl von Sekunden anzuhalten und ein zufälliges Vielfaches dieser Sekundenanzahl zurückzugeben. Die maximale Verzögerung beträgt 5 Sekunden. <xref:System.ArgumentOutOfRangeException> wird ausgegeben, wenn der Wert größer als 5 ist. Im folgenden Beispiel wird verdeutlicht, dass die Ausnahme, die bei der Übergabe eines Werts größer als 6 an die Methode `GetMultipleAsync` ausgelöst wird, von <xref:System.AggregateException> umschlossen wird, sobald die Methode `GetMultipleAsync` ausgeführt wird.
 
-[!code-cs[LokaleFunktionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
+[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
 Wie beim Methodeniterator kann der Code aus diesem Beispiel umgestaltet werden, um die Validierung vor Aufruf der asynchronen Methode durchzuführen. Die Ausgabe des folgenden Beispiels zeigt, dass <xref:System.ArgumentOutOfRangeException> nicht von einer <x:System.AggregateException> umschlossen wird.
 
-[!code-cs[LokaleFunktionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
+[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
 ## <a name="see-also"></a>Siehe auch
 [Methoden](methods.md)
-

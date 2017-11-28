@@ -1,30 +1,21 @@
 ---
 title: "Projektionsvorgänge (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a05a4f228e64405ba24d967193d9e7a487ae473
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b95072bf6e53ef090a7a7b398fa873bb0bf5b46
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="projection-operations-c"></a>Projektionsvorgänge (C#)
 Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.  
@@ -177,9 +168,8 @@ static void SelectVsSelectMany()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>   
- [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)   
- [How to: Populate Object Collections from Multiple Sources (LINQ) (C#) (Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
- [How to: Split a File Into Many Files by Using Groups (LINQ) (C#) (Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
-
+ <xref:System.Linq>  
+ [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)  
+ [Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

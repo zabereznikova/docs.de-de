@@ -8,12 +8,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 7cb84c2dc7fc4d16b00bd6459132390ab80131f3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
@@ -64,4 +63,3 @@ Entfernen Sie mehrere Projektverweise aus dem Projekt im aktuellen Verzeichnis:
 Entfernen Sie mehrere Projektverweise mithilfe eines Globmusters auf Unix/Linux:
 
 `dotnet remove app/app.csproj reference **/*.csproj`
-

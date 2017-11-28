@@ -1,33 +1,24 @@
 ---
 title: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a83ceb8a58104cc7a4c177ce6c7df9aded8af7e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 132332f4fd274126bb8bc270cd762e1bdc97106f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)
-Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) verbessern, indem Sie die <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>-Methode verwenden. Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.  
+Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) verbessern, indem Sie die <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>-Methode verwenden. Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.  
   
  Sie haben möglicherweise in der exemplarischen Vorgehensweise bemerkt, dass die Websites Downloads in verschiedenen Geschwindigkeiten anbieten. Manchmal ist eine Website sehr langsam und verzögert alle verbleibenden Downloads. Wenn Sie die asynchronen Projektmappen ausführen, die Sie in der exemplarischen Vorgehensweise erstellt haben, können Sie das Programm einfach beenden, wenn Sie nicht warten möchten. Eine bessere Option wäre jedoch, alle Downloads gleichzeitig zu starten und schnellere Downloads einfach fortfahren, ohne auf langsamere zu warten.  
   
@@ -453,6 +444,5 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
  [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-

@@ -1,30 +1,21 @@
 ---
 title: LINQ to XML-Achsen (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 212754ca8bafb8c8e2d0dbe076b88d3818e39a68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 65d64b6082942d702444305d7dfed4d05444b59e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML-Achsen (C#)
 Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktur geladen haben, können Sie durch Abfragen der XML-Struktur nach Elementen und Attributen suchen und deren Werte abrufen.  
@@ -47,6 +38,5 @@ Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktu
 |[How to: Retrieve the Shallow Value of an Element (C#) (Vorgehensweise: Abrufen des Shallow-Werts eines Elements (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Erläutert, wie der flache Wert eines Elements abgerufen wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
+ [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
  [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

@@ -1,42 +1,23 @@
 ---
 title: -errorreport (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (C#-Compileroptionen)
 Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler an Microsoft zu melden.  
@@ -62,9 +43,7 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
   
  **Senden**  
  Sendet Berichte über interne Compilerfehler automatisch an Microsoft. Wenn Sie diese Option aktivieren, müssen Sie zuerst der Richtlinie zur Datensammlung von Microsoft zustimmen. Beim ersten Mal, wenn Sie **/errorreport:send** auf einem Computer angeben, wird eine Compilermeldung Sie auf eine Website verweisen, die die Microsoft-Richtlinie zur Datensammlung enthält.  
-  
- Diese Option hängt von Registrierungseinstellungen ab. Informationen dazu, wie Sie die entsprechenden Werte in der Registrierung festlegen, finden Sie unter [How to Turn on Automatic Error Reporting in Visual Studio 2008 Command-line Tools (Aktivieren der automatischen Fehlerberichterstattung in Visual Studio 2008-Befehlszeilentools)](http://go.microsoft.com/fwlink/?LinkID=184695) auf der MSDN-Website.  
-  
+    
 ## <a name="remarks"></a>Hinweise  
  Ein interner Compilerfehler (ICE) entsteht, wenn der Compiler eine Quellcodedatei nicht verarbeiten kann. Tritt ein ICE auf, erzeugt der Compiler keine Ausgabedatei oder eine hilfreiche Diagnose, die Sie verwenden können, um Ihren Code zu beheben.  
   
@@ -88,4 +67,3 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
-

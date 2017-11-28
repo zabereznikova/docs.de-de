@@ -1,49 +1,47 @@
 ---
-title: "ReadOnly (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ReadOnly"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ReadOnly keyword"
-  - "variables [Visual Basic], read-only"
-  - "ReadOnly property"
-  - "properties [Visual Basic], read-only"
-  - "read-only variables"
+title: ReadOnly (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ReadOnly
+helpviewer_keywords:
+- ReadOnly keyword [Visual Basic]
+- variables [Visual Basic], read-only
+- ReadOnly property
+- properties [Visual Basic], read-only
+- read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9ca1d2e4eddb3b88073d6fcd46b0de5c627ba809
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# ReadOnly (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Legt fest, dass eine Variable oder Eigenschaft schreibgeschützt ist, also nur gelesen, aber nicht geschrieben werden kann.  
+# <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
+Gibt an, dass eine Variable oder die Eigenschaft lesen aber nicht geschrieben werden kann.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
-## Regeln  
+## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** `ReadOnly` kann nur auf Modulebene verwendet werden.  Dies bedeutet, dass der Deklarationskontext für ein `ReadOnly`\-Element eine Klasse, eine Struktur oder ein Modul sein muss und keine Quelldatei, kein Namespace und keine Prozedur sein kann.  
+-   **Deklarationskontext.** Sie können `ReadOnly` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `ReadOnly` Element muss eine Klasse, Struktur oder Modul, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
   
--   **Kombinierte Modifizierer.** Sie können `ReadOnly` nicht zusammen mit `Static` in derselben Deklaration angeben.  
+-   **Kombinierte Modifizierer.** Sie können keine angeben `ReadOnly` zusammen mit `Static` in der gleichen Deklaration.  
   
--   **Zuweisen von Werten.** Code, in dem eine `ReadOnly`\-Eigenschaft verwendet wird, kann deren Wert nicht festlegen.  Jedoch kann Code, der Zugriff auf den zugrunde liegenden Speicher hat, den Wert jederzeit zuweisen oder ändern.  
+-   **Zuweisen eines Werts an.** Code, in dem eine `ReadOnly` Eigenschaft der Wert kann nicht festgelegt werden. Code, der auf den zugrunde liegenden Speicher zugreifen kann jedoch zuweisen oder ändern Sie den Wert zu einem beliebigen Zeitpunkt.  
   
-     Sie können einer `ReadOnly`\-Variablen nur in ihrer Deklaration oder im Konstruktor der Klasse oder Struktur, in der sie definiert ist, einen Wert zuweisen.  
+     Sie können einen Wert zuweisen einer `ReadOnly` Variable nur in der Deklaration oder im Konstruktor einer Klasse oder Struktur, die in der sie definiert ist.  
   
-## Verwenden einer ReadOnly\-Variablen  
- Es gibt Situationen, in denen Sie keine [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) verwenden können, um einen konstanten Wert zu deklarieren und zuzuweisen.  Beispielsweise ist es möglich, dass die `Const`\-Anweisung den Datentyp, den Sie zuweisen möchten, nicht akzeptiert, oder dass der Wert während des Kompilierens nicht mit einem konstanten Ausdruck berechnet werden kann.  Möglicherweise ist der Wert zur Kompilierungszeit nicht einmal bekannt.  In diesen Fällen können Sie eine `ReadOnly`\-Variable zum Speichern eines konstanten Werts verwenden.  
+## <a name="when-to-use-a-readonly-variable"></a>Eine schreibgeschützte Variable zu verwenden  
+ Es gibt Situationen, in dem Sie können nicht mit, einem [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md) zu deklarieren und Zuweisen eines konstanten Werts. Z. B. die `Const` Anweisung möglicherweise nicht übernehmen den Datentyp, die Sie zuweisen möchten, oder Sie können möglicherweise nicht den Wert zum Zeitpunkt der Kompilierung mit einem konstanten Ausdruck zu berechnen. Sie bemerken möglicherweise nicht auch den Wert zum Zeitpunkt der Kompilierung. In diesen Fällen können Sie eine `ReadOnly` Variable verweist, einen konstanten Wert enthält.  
   
 > [!IMPORTANT]
->  Falls es sich beim Datentyp der Variablen um einen Verweistyp handelt, etwa ein Array oder eine Klasseninstanz, dann können dessen bzw. deren Member auch dann geändert werden, wenn die Variable selbst als `ReadOnly` deklariert wurde.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+>  Der Datentyp der Variablen ein Verweistyp, wie z. B. ein Array oder eine Klasseninstanz ist ihre Member können geändert werden, auch wenn die Variable selbst ist `ReadOnly`. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -53,21 +51,21 @@ Legt fest, dass eine Variable oder Eigenschaft schreibgeschützt ist, also nur g
   
  `End Sub`  
   
- Nach seiner Initialisierung enthält das Array, auf das `characterArray()` zeigt, die Werte "x", "y" und "z".  Weil die `characterArray`\-Variable als `ReadOnly` deklariert wurde, können Sie ihren Wert nach ihrer Initialisierung nicht ändern; d. h. Sie können ihr kein anderes Array zuweisen.  Sie können jedoch die Werte von einem oder mehreren Arraymember\(n\) ändern.  Nach einem Aufruf der Prozedur `changeArrayElement` enthält das Array, auf das `characterArray()` zeigt, die Werte "x", "M" und "z".  
+ Bei der Initialisierung, das Array verweist `characterArray()` enthält "X", "y" und "Z". Da die Variable `characterArray` ist `ReadOnly`, dessen Wert kann nicht geändert werden, sobald er initialisiert wurde, die; nicht möglich, weisen Sie ein neues Array zu. Allerdings können Sie die Werte von mindestens einer der Array-Elemente ändern. Nach einem Aufruf an die Prozedur `changeArrayElement`, das Array verweist `characterArray()` enthält "X", "M" und "Z".  
   
- Beachten Sie, dass dies der Deklaration eines Prozedurparameters als [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ähnlich ist. Diese Deklaration bewirkt, dass die Prozedur zwar nicht das Aufrufargument, aber dessen Member verändern kann.  
+ Beachten Sie, dass dies deklarieren einen Prozedurparameter werden ähnelt [ByVal](../../../visual-basic/language-reference/modifiers/byval.md), die verhindert, dass der Prozedur das aufrufende Argument selbst zu ändern, jedoch kann er seine Mitglieder ändern.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine `ReadOnly`\-Eigenschaft für das Einstellungsdatum eines Mitarbeiters definiert.  In der Klasse wird der Eigenschaftswert intern als `Private`\-Variable gespeichert, und nur Code innerhalb der Klasse kann diesen Wert ändern.  Die Eigenschaft ist jedoch als `Public` deklariert, und jeder Code, der auf die Klasse zugreifen kann, kann die Eigenschaft lesen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel definiert eine `ReadOnly` -Eigenschaft für das Datum, an dem ein Mitarbeiter eingestellt wurde. Die Klasse speichert den Eigenschaftswert intern als eine `Private` Variable, und nur Code innerhalb der Klasse kann diesen Wert ändern. Die Eigenschaft ist jedoch `Public`, und jeglicher Code, der die Klasse zugreifen kann, kann die Eigenschaft lesen.  
   
  [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
   
- Der `ReadOnly`\-Modifizierer kann in folgenden Kontexten verwendet werden:  
+ Der `ReadOnly`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
- [Dim\-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Property\-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## Siehe auch  
- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

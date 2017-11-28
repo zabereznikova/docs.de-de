@@ -1,30 +1,21 @@
 ---
 title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#)
 Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird. Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
@@ -230,6 +221,5 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
  Nun können Sie die Anwendung erneut erstellen und ausführen. Zuerst werden die Standardwerte in den Textfeldern angezeigt. Versuchen Sie, die Werte zu ändern, und geben Sie einen Namen in das vierte Textfeld ein. Schließen Sie die Anwendung, und führen Sie sie dann erneut aus. Beachten Sie, dass die neuen Werte jetzt in den Textfeldern erscheinen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Serialization (C# ) (Serialisierung (C#))](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ [Serialisierung (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
-

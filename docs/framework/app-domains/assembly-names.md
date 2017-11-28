@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 624cc6ad264f32b9a43917d9bae751f57b4421a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7029fb2b436c9ba49f2dfd3da07c5147222fbeaf
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-names"></a>Assemblynamen
 Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel und die Versionsnummer der Assembly enthält. Dies wird häufig als Anzeigename bezeichnet. Für geladenen Assemblys kann er mit der <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft abgerufen werden.  
@@ -34,7 +32,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  In .NET Framework Version 2.0 wird Prozessorarchitektur zur Assemblyidentität hinzugefügt. Dies macht prozessorspezifische Assemblyversionen möglich. Sie können Versionen einer Assembly erstellen, deren Identität sich nur in der Prozessorarchitektur unterschiedet, z.B. prozessorspezifische 32-Bit- und 64-Bit-Versionen. Die Prozessorarchitektur ist für starke Namen nicht unbedingt erforderlich. Weitere Informationen finden Sie unter <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>.  
+>  In .NET Framework Version 2.0 wird Prozessorarchitektur zur Assemblyidentität hinzugefügt. Dies macht prozessorspezifische Assemblyversionen möglich. Sie können Versionen einer Assembly erstellen, deren Identität sich nur in der Prozessorarchitektur unterschiedet, z.B. prozessorspezifische 32-Bit- und 64-Bit-Versionen. Die Prozessorarchitektur ist für starke Namen nicht unbedingt erforderlich. Weitere Informationen finden Sie unter <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  In diesem Beispiel gibt der vollqualifizierte Name an, dass die Assembly `myTypes` einen starken Namen mit einem öffentlichen Schlüsseltoken hat, den Kulturwert für Englisch (USA) und die Versionsnummer 1.0.1234.0. Seine Prozessorarchitektur ist „msil“. Das heißt, dass er in 32-Bit- oder 64-Bit-Code JIT-kompiliert (Just-In-Time) wird, je nach Betriebssystem und Prozessor.  
   
@@ -60,7 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="naming-application-components"></a>Namensanwendungskomponenten  
  Die Runtime achtet nicht auf den Dateinamen, wenn sie die Identität einer Assembly bestimmt. Die Assemblyidentität, die aus dem Assemblynamen, deren Version, Kultur und starkem Namen besteht, muss für die Runtime eindeutig sein.  
   
- Wenn Sie z.B. eine Assembly mit dem Namen „meineAssembly.exe“ haben, die auf eine Assembly mit dem Namen „meineAssembly.dll“ verweist, können Sie die Bindung ordnungsgemäß durchführen, indem Sie „meineAssembly.exe“ ausführen. Wenn allerdings eine andere Anwendung „meineAssembly.exe“ mit der <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>-Methode ausführt, gibt die Runtime an, dass „meineAssembly“ bereits geladen wurde, wenn „meineAssembly.exe“ die Bindung an „meineAssembly“ anfordert. In diesem Fall wird „meineAssembly.dll“ nicht geladen. Da „meineAssembly.exe“ nicht den angeforderten Typ enthält, wird eine <xref:System.TypeLoadException> ausgelöst.  
+ Wenn Sie z.B. eine Assembly mit dem Namen „meineAssembly.exe“ haben, die auf eine Assembly mit dem Namen „meineAssembly.dll“ verweist, können Sie die Bindung ordnungsgemäß durchführen, indem Sie „meineAssembly.exe“ ausführen. Wenn allerdings eine andere Anwendung „meineAssembly.exe“ mit der <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>-Methode ausführt, gibt die Runtime an, dass „meineAssembly“ bereits geladen wurde, wenn „meineAssembly.exe“ die Bindung an „meineAssembly“ anfordert. In diesem Fall wird „meineAssembly.dll“ nicht geladen. Da „meineAssembly.exe“ nicht den angeforderten Typ enthält, wird eine <xref:System.TypeLoadException> ausgelöst.  
   
  Um dieses Problem zu vermeiden, achten Sie darauf, dass die Assemblys, aus denen Ihre Anwendung besteht, nicht denselben Assemblynamen haben. Alternativ können Sie Assemblys mit dem gleichen Namen auch in unterschiedliche Verzeichnisse platzieren.  
   
@@ -68,10 +66,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Wenn Sie eine Assembly mit starkem Namen in den globalen Assemblycache einfügen, muss der Dateiname der Assembly mit dem Assemblynamen übereinstimmen (davon ausgenommen sind Erweiterungen des Dateinamen wie „.exe“ oder „.dll“). Wenn der Dateiname einer Assembly z.B. „meineAssembly.dll“ ist, muss der Assemblyname „meineAssembly“ sein. Private Assemblys, die nur im Stammanwendungsverzeichnis bereitgestellt wurden, können einen Assemblynamen haben, der sich vom Dateinamen unterscheidet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [How to: Determine an Assembly's Fully Qualified Name (Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly)](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
- [Creating Assemblies (Erstellen von Assemblys)](../../../docs/framework/app-domains/create-assemblies.md)   
- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)   
- [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Gewusst wie: Bestimmen des vollqualifizierten Namens einer Assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

@@ -7,12 +7,11 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: b2b625729b5db22bc7b69194f20963857004e3e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 9a5495220a95d0e2b0018f08617bbb41485fe96f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -43,6 +42,8 @@ Der `dotnet build`-Befehl erstellt das Projekt und die zugehörigen Abhängigkei
 Verfügt das Projekt über Abhängigkeiten von Drittanbietern, z.B. Bibliotheken von NuGet, werden diese aus dem NuGet-Cache aufgelöst und sind nicht mit der Buildausgabe des Projekts verfügbar. Bedenken Sie, dass das Produkt von `dotnet build` nicht auf einen anderen Computer zur Ausführung übertragen werden kann. Dies unterscheidet sich zum Verhalten des .NET Framework, bei dem die Erstellung eines ausführbaren Projekts (eine Anwendung) eine Ausgabe erzeugt, die auf jedem Computer ausgeführt werden kann, auf dem .NET Framework installiert ist. Um ein ähnliches Verhalten mit .NET Core zu erhalten, müssen Sie den Befehl [dotnet publish](dotnet-publish.md) verwenden. Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md).
 
 Das Erstellen erfordert die *project.assets.json*-Datei, die die Abhängigkeiten Ihrer Anwendung aufführt. Die Datei wird erstellt, wenn [`dotnet restore`](dotnet-restore.md) ausgeführt wird. Ohne die vorhandenen Ressourcendateien kann das Tool die Verweisassemblys nicht auflösen, was zu Fehlern führt. Mit dem .NET Core 1.x SDK müssen Sie `dotnet restore` explizit ausführen, bevor Sie `dotnet build` ausführen. Ab dem .NET Core 2.0 SDK wird `dotnet restore` implizit ausgeführt, wenn Sie `dotnet build` ausführen. Wenn Sie das implizite Wiederherstellen deaktivieren möchten, wenn Sie den Buildbefehl ausführen, können Sie die `--no-restore`-Option übergeben.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 `dotnet build` verwendet MSBuild, um das Projekt zu erstellen und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Inkrementelle Builds](/visualstudio/msbuild/incremental-builds).
 

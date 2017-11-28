@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-sdk-overview"></a>.NET Core SDK – Übersicht 
 
 ## <a name="introduction"></a>Einführung
@@ -38,4 +36,3 @@ Der native Installer ist in erster Linie für Entwicklercomputer vorgesehen. Das
 Installationsskripts hingegen erfordern keine Administratorrechte. Allerdings installieren diese auch keine erforderlichen Komponenten auf dem Computer, sodass Sie alle erforderlichen Komponenten manuell installieren müssen. Die Skripts werden hauptsächlich für das Einrichten von Buildservern verwendet oder in dem Fall, dass Sie die Tools ohne Administratorrechte installieren möchten (beachten Sie hierzu die oben genannten Einschränkungen hinsichtlich der erforderlichen Komponenten). Weitere Informationen finden Sie unter [dotnet-install scripts reference (Referenz zu dotnet-Installationsskripts)](tools/dotnet-install-script.md). Informationen dazu, wie Sie ein SDK auf Ihrem CI-Buildserver einrichten können, finden Sie in dem Dokument [Using .NET Core SDK and tools in Continuous Integration (CI) (Verwendung von .NET Core-SDK und Tools in der Fortlaufenden Integration (CI))](tools/using-ci-with-cli.md). 
 
 Das SDK wird standardmäßig parallel installiert (SxS). Das bedeutet, dass auf einem Computer jederzeit mehrere Versionen der CLI-Tools nebeneinander verwendet werden können. Ausführlichere Erklärungen dazu, wie die korrekte Version verwendet wird, finden Sie auf der Seite „.NET Core Command-Line Interface Tools“ (Tools für die .NET Core-Befehlszeilenschnittstelle) im Abschnitt [Driver (Treiber)](tools/index.md#driver).
-

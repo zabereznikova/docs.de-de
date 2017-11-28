@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
+ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core-CLI-Tools-Telemetrie
 
 Das [.NET Core-SDK](index.md) beinhaltet eine [Telemetriefunktion](https://github.com/dotnet/cli/pull/2145), die Benutzerinformationen sammelt. Es ist wichtig, dass das .NET-Team versteht, wie die Tools verwendet werden, damit sie verbessert werden können. Weitere Informationen finden Sie unter [What we've learned from .NET Core SDK Telemetry (Was wir von der .NET Core SDK Telemetrie gelernt haben)](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
@@ -39,6 +37,7 @@ Die Telemetrie wird *aktiviert*, wenn Sie die [.NET Core-CLI-Befehle](index.md) 
 - `dotnet pack`
 - `dotnet restore`
 - `dotnet run`
+
 
 ## <a name="behavior"></a>Verhalten
 
@@ -135,4 +134,3 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 [What we've learned from .NET Core SDK Telemetry (Was wir von der .NET Core-SDK-Telemetrie gelernt haben)](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
 [Telemetry reference source (dotnet/cli repo; release/2.0.0 branch) (Verweisquelle der Telemetrie (dotnet-/CLI-Repository, Version 2.0.0 Branch)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
 [.NET Core SDK Usage Data (.NET Core SDK-Nutzungsdaten)](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
-

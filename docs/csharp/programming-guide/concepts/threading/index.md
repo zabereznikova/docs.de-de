@@ -1,30 +1,21 @@
 ---
 title: Threading (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 633fe784b98bf67086581b82fb4b00cff28d5f5a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 45ffa38254717c9aee29c3922bf801f6a90c716e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="threading-c"></a>Threading (C#)
 Mit Threading kann Ihr C#-Programm parallele Verarbeitungsaufgaben durchführen, damit Sie mehr als einen Vorgang gleichzeitig durchführen können. Sie können z.B. Threading verwenden, um Benutzereingaben zu überwachen, Aufgaben im Hintergrund auszuführen und parallele Eingabestreams zu behandeln.  
@@ -48,7 +39,7 @@ Mit Threading kann Ihr C#-Programm parallele Verarbeitungsaufgaben durchführen,
  Sie können einige oder alle diese Klassen zum Synchronisieren der Aktivitäten mehrerer Threads verwenden. Allerdings wird der Support für das Threading teilweise von C# unterstützt. Die [Lock-Anweisung](../../../../csharp/language-reference/keywords/lock-statement.md) stellt z.B. Synchronisierungsfunktionen durch das implizit Verwenden von <xref:System.Threading.Monitor> bereit.  
   
 > [!NOTE]
->  Ab [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] wurde die Multithreadprogrammierung erheblich vereinfacht, und zwar durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> und <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=fullName>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Aufgaben anstatt von Threads basiert. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](https://msdn.microsoft.com/library/dd460693).  
+>  Ab [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] wurde die Multithreadprogrammierung erheblich vereinfacht, und zwar durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), neue parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Aufgaben anstatt von Threads basiert. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](https://msdn.microsoft.com/library/dd460693).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
@@ -62,4 +53,3 @@ Mit Threading kann Ihr C#-Programm parallele Verarbeitungsaufgaben durchführen,
 |[Thread Pooling (C#) (Pooling von Threads (C#))](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Beschreibt, wie Sie einen Pool von Arbeitsthreads verwenden können, die vom System verwaltet werden|  
 |[Vorgehensweise: Verwenden eines Threadpools (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Veranschaulicht das synchronisierte Verwenden von mehreren Threads im Threadpool|  
 |[Threading](https://msdn.microsoft.com/library/3e8s7xdd)|Beschreibt, wie Sie Threading in .NET Framework implementieren|
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-overview"></a>Async (Übersicht)
 
 Es ist noch nicht lange her, da wurden Apps einfach durch die Ausführung auf einem aktuelleren PC oder Server schneller, und dann endete dieser Trend. In der Tat hat er sich umgekehrt. Mobiltelefone mit 1-GHz-Single Core-ARM-Chips erschienen auf dem Markt, und Serverarbeitsauslastungen wurden VMs übertragen. Benutzer wünschen immer noch reaktionsfähige Benutzeroberflächen, und Geschäftsinhaber wünschen sich Server, die sich ihren Unternehmen anpassen können. Aus dem Übergang zu Mobilgeräten und zur Cloud und mehr als 3 Mrd. Internetbenutzern resultiert eine neue Gruppe von Softwaremustern. 
@@ -41,4 +39,3 @@ Asynchroner Code weist folgende Merkmale auf:
 ## <a name="whats-next"></a>Ausblick
 
 Tiefe Einblicke in asynchrone Konzepte und Programmierung finden Sie unter [Async ausführlich](async-in-depth.md) und [Task-based asynchronous programming (Taskbasiertes, asynchrones Programmieren)](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md).
-

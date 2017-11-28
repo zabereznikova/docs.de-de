@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
 Delegaten definieren einen Typ, der eine bestimmte Methodensignatur angibt. Eine Methode (statische Methode oder Instanzmethode), die dieser Signatur entspricht, kann einer Variablen dieses Typs zugewiesen werden. Anschließend kann sie (mit den entsprechenden Argumenten) direkt aufgerufen oder selbst als Argument an eine andere Methode übergeben und dann aufgerufen werden. Das folgende Beispiel veranschaulicht die Verwendung von Delegaten.
@@ -157,4 +155,3 @@ public MainWindow()
 *   [Delegaten](https://msdn.microsoft.com/library/ms173171.aspx)
 *   [Anonyme Funktionen](https://msdn.microsoft.com/library/bb882516.aspx)
 *   [Lambda-Ausdrücke](https://msdn.microsoft.com/library/bb397687.aspx)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
+ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="expressions"></a>Ausdrücke
 
 *Ausdrücke* bestehen aus *Operanden* und *Operatoren*. Die Operatoren eines Ausdrucks geben an, welche Operationen auf die Operanden angewendet werden. Beispiele für Operatoren sind `+`, `-`, `*`, `/` und `new`. Beispiele für Operanden sind Literale, Felder, lokale Variablen und Ausdrücke.
@@ -45,7 +43,7 @@ In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gem�
     - `new T(...){...}`: Objekterstellung mit Initialisierer
     - `new {...}`: Anonymer Objektinitialisierer
     - `new T[...]`: Arrayerstellung
-    - `typeof(T)`: Abrufen von @System.Type Objekt für `T`
+    - `typeof(T)`: Abrufen von <xref:System.Type> Objekt für `T`
     - `checked(x)`: Auswerten von Ausdrücken in geprüftem Kontext
     - `unchecked(x)`: Auswerten von Ausdrücken in nicht geprüftem Kontext
     - `default(T)`: Abrufen des Standardwerts von Typ `T`
@@ -102,4 +100,3 @@ In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gem�
 >[!div class="step-by-step"]
 [Zurück](types-and-variables.md)
 [Weiter](statements.md)
-

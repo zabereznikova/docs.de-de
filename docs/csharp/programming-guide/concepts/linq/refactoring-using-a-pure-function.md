@@ -1,25 +1,21 @@
 ---
 title: Refactoring mithilfe einer reinen Funktion (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3aba03afe75f0ef30a709d6a65ee03d56c13c820
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d918c5f37f92f5da7ca535b05b8ff3a97dc851bf
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
 Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Extension Method (Refactoring mit einer Erweiterungsmethode (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) so um, dass es eine reine Funktion verwendet. In diesem Beispiel wird der Code, der den Text eines Absatzes ermitteln soll, in die reine statische Methode `ParagraphText` verschoben.  
@@ -29,7 +25,7 @@ Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Ex
   
  Eine Anleitung zum Erstellen des Quelldokuments für dieses Beispiel finden Sie unter [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -192,7 +188,6 @@ StyleName:Code >Hello World<
 -   [Projecting XML in a Different Shape (C#) (Projektieren von XML in eine andere Form (C#))](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [Refactoring Using an Extension Method (C#) (Refactoring mit einer Erweiterungsmethode (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
- [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
-
+ [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [Refactoring mit einer Erweiterungsmethode (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+ [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

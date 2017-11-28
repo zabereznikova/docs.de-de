@@ -14,30 +14,27 @@ helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/25/2017
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
 ## <a name="introduction"></a>Einführung
-
 Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch Kompatibilität wird sichergestellt, dass jede Version additiv ist; frühere Versionen funktionieren also weiterhin. Auf der anderen Seite können Änderungen an früheren Versionen (zur Leistungssteigerung, Beheben von Sicherheitsproblemen oder Fehlerbehebungen) zu Kompatibilitätsproblemen im vorhandenen Code oder Anwendungen führen, die unter einer späteren Version ausgeführt werden. .NET Framework erkennt Änderungen der Neuzuweisung und Laufzeitänderungen. Die Neuzuweisung von Änderungen beeinflussen Anwendungen, die auf eine bestimmte .NET Framework-Version abzielen, aber auf einer höheren Version ausgeführt werden. Laufzeitänderungen betreffen alle Anwendungen, die auf einer bestimmten Version ausgeführt werden.
 
 Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folgendes angegeben werden kann:
 
-- Definieren eines Zielframeworks in Visual Studio
-- Angeben des Zielframeworks in einer Projektdatei
-- Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
+* Definieren eines Zielframeworks in Visual Studio
+* Angeben des Zielframeworks in einer Projektdatei
+* Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
 
 Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert.
 
@@ -82,16 +79,14 @@ Jedes Problem umfasst die folgenden Informationen:
 -   Die IDs der verfügbaren Diagnosen.
 
 ## <a name="usage"></a>Verwendung
-
 Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
 
-- [Neuausrichtungsänderungen](./retargeting/index.md)
-- [Änderungen zur Laufzeit](./runtime/index.md)
+* [Neuausrichtungsänderungen](./retargeting/index.md)
+* [Änderungen zur Laufzeit](./runtime/index.md)
 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[Neuigkeiten](../../../docs/framework/whats-new/index.md)   
-[Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
-
+* [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [Neuigkeiten](../../../docs/framework/whats-new/index.md)
+* [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)

@@ -1,42 +1,23 @@
 ---
 title: -out (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /out
-dev_langs:
-- CSharp
+f1_keywords: /out
 helpviewer_keywords:
 - /out compiler option [C#]
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6db728bc98f5223fc35268a1cce41021ff530cc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="out-c-compiler-options"></a>/out (C#-Compileroptionen)
 Die Option **/out** gibt den Namen der Ausgabedatei an.  
@@ -66,9 +47,9 @@ Die Option **/out** gibt den Namen der Ausgabedatei an.
   
  Wenn bei einer Befehlszeilenkompilierung mehrere Ausgabedateien erstellt werden, sollten Sie bedenken, dass nur eine der Ausgabedateien eine Assembly sein kann und dass nur die erste angegebene Ausgabedatei (implizit oder explizit mit **/out**) die Assembly sein kann.  
   
- Alle Module, die als Teil einer Kompilierung erstellt werden, werden Dateien, die jeder Assembly zugeordnet sind, die auch bei der Kompilierung erstellt werden. Verwenden Sie [ildasm.exe](https://msdn.microsoft.com/library/f7dy01k1), um das Assemblymanifest mit den zugehörigen Dateien anzuzeigen.  
+ Alle Module, die als Teil einer Kompilierung erstellt werden, werden Dateien, die jeder Assembly zugeordnet sind, die auch bei der Kompilierung erstellt werden. Verwenden Sie [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md), um das Assemblymanifest mit den zugehörigen Dateien anzuzeigen.  
   
- Die Compileroption „/out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Die Compileroption „/out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -88,7 +69,6 @@ csc t.cs /out:mymodule.netmodule /target:module t2.cs
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [Friend-Assemblys](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+ [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-

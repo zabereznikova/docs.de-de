@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
+ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e724428bce09e2b2fa20b9391ad131424e16413
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Dynamisches Festlegen von Prädikatfiltern zur Laufzeit
 
@@ -32,7 +30,7 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie f
   
 4.  Ersetzen Sie die `Program`-Klasse durch den folgenden Code.  
   
-     [!code-cs[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
+     [!code-csharp[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  Fügen Sie die folgende Zeile in die `Main`-Methode in Klasse `DynamicPredicates` unter der Deklaration von `ids` ein.  
   
@@ -70,7 +68,7 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie f
   
 2.  Kopieren Sie die folgende Methode, und fügen Sie sie in die Klasse `DynamicPredicates` ein.  
   
-     [!code-cs[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
+     [!code-csharp[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  Ersetzen Sie in der `Main`-Methode den Aufruf von `QueryByID` mit dem folgenden Aufruf, der das erste Element aus dem `args`-Array als sein Argument sendet: `QueryByYear(args[0])`.  
   
@@ -78,6 +76,5 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie f
   
  
 ## <a name="see-also"></a>Siehe auch  
- [LINQ-Abfrageausdrücke](index.md)   
+ [LINQ-Abfrageausdrücke](index.md)  
  [where-Klausel](../language-reference/keywords/where-clause.md)
-

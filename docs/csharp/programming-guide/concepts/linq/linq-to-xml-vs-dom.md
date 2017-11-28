@@ -1,30 +1,21 @@
 ---
 title: LINQ to XML im Vergleich zu DOM (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 049b60477c7c6de2254dfc355a741a4beb1a725f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e27bf46390bca80ca573ab557953f70f591c9ae2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML im Vergleich zu DOM (C#)
 In diesem Abschnitt werden einige der wichtigsten Unterschiede zwischen [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] und der derzeit verbreitetsten XML-Programmier-API, dem W3C-Dokumentobjektmodell (DOM), beschrieben.  
@@ -131,7 +122,7 @@ doc.AppendChild(name);
  In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gibt es keine Entsprechung für die Klasse `XmlDocumentFragment`. In vielen Fällen lassen sich aber mit dem Ergebnis einer Abfrage, die als `XmlDocumentFragment`-Schnittstelle von <xref:System.Collections.Generic.IEnumerable%601> oder als <xref:System.Xml.Linq.XNode>-Schnittstelle von <xref:System.Collections.Generic.IEnumerable%601> typisiert ist, die gleichen Ergebnisse wie mit der <xref:System.Xml.Linq.XElement>-Klasse erzielen.  
   
 ## <a name="support-for-xpathnavigator"></a>Unterstützung für XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet über die Erweiterungsmethoden im <xref:System.Xml.XPath?displayProperty=fullName>-Namespace Unterstützung für <xref:System.Xml.XPath.XPathNavigator>. Weitere Informationen finden Sie unter <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet über die Erweiterungsmethoden im <xref:System.Xml.XPath?displayProperty=nameWithType>-Namespace Unterstützung für <xref:System.Xml.XPath.XPathNavigator>. Weitere Informationen finden Sie unter <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Unterstützung für Leerraum und Einzüge  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] handhabt Leerzeichen einfacher als das DOM.  
@@ -146,8 +137,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Elemente unterstützen einen erweiterbaren Satz von Anmerkungen. Dies ist hilfreich, wenn verschiedene Informationen zu einem Element nachverfolgt werden sollen, z.B. Schemainformationen, die Information, ob das Element an eine Benutzeroberfläche gebunden ist, oder andere anwendungsspezifische Informationen. Weitere Informationen finden Sie unter [Anmerkungen zu LINQ to XML](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5).  
   
 ## <a name="support-for-schema-information"></a>Unterstützung für Schemainformationen  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet über die Erweiterungsmethoden im <xref:System.Xml.Schema?displayProperty=fullName>-Namespace Unterstützung für die XSD-Validierung. Sie können prüfen, ob sich eine XML-Struktur nach einer XSD richtet. Sie können die XML-Struktur mit dem Post-Schema-Validierungs-Infoset (PSVI) auffüllen. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen mithilfe von XSD](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) und <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bietet über die Erweiterungsmethoden im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace Unterstützung für die XSD-Validierung. Sie können prüfen, ob sich eine XML-Struktur nach einer XSD richtet. Sie können die XML-Struktur mit dem Post-Schema-Validierungs-Infoset (PSVI) auffüllen. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen mithilfe von XSD](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) und <xref:System.Xml.Schema.Extensions>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erste Schritte (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
-

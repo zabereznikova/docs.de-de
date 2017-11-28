@@ -1,30 +1,21 @@
 ---
 title: Pooling von Threads (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>Pooling von Threads (C#)
 Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um verschiedene Aufgaben im Hintergrund auszuführen. (Weitere Hintergrundinformationen finden Sie unter [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md).) Dies lässt den primären Thread frei, um andere Aufgaben asynchron auszuführen.  
@@ -37,7 +28,7 @@ Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um 
   
  Sie können einen eigenen Threadpool implementieren. Es ist allerdings einfacher, den Threadpool zu verwenden, der von .NET Framework durch die <xref:System.Threading.ThreadPool>-Klasse bereitgestellt wird.  
   
- Beim Pooling von Threads rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>-Methode mit einem Delegat für die Prozedur auf, die Sie ausführen wollen. C# erstellt dann den Thread und führt Ihre Prozedur aus.  
+ Beim Pooling von Threads rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>-Methode mit einem Delegat für die Prozedur auf, die Sie ausführen wollen. C# erstellt dann den Thread und führt Ihre Prozedur aus.  
   
 ## <a name="thread-pooling-example"></a>Beispiele zum Pooling von Threads  
  Das folgende Beispiel zeigt, wie Sie das Pooling von Threads zum Starten von mehreren Aufgaben verwenden können.  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  Strukturen können nicht zum Zurückgeben von Werten in Zustandsobjekten verwendet werden. Da Strukturen Werttypen sind, haben Änderungen, die der asynchrone Prozess vornimmt, keine Auswirkungen auf die Elemente der ursprünglichen Struktur. Verwenden Sie Strukturen, um Parameter bereitzustellen, wenn keine Rückgabewerte erforderlich sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [Vorgehensweise: Verwenden von Threadpools (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [Multithreaded Applications (C#) (Multithreadanwendungen (C#))](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Vorgehensweise: Verwenden eines Threadpools (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [Multithreaded Applications (C#) (Multithreadanwendungen (C#))](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Threadsynchronisierung (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

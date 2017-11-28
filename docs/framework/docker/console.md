@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
 
 Konsolenanwendungen werden für verschiedene Zwecke verwendet – vom einfachen Abfragen eines Status bis hin zu Aufgaben zur Verarbeitung von Dokumentbildern mit langer Laufzeit. In allen Fällen wird die Möglichkeit, diese Anwendungen zu starten und zu skalieren, durch Hardwarekäufe, Startzeiten oder die Ausführung mehrerer Instanzen eingeschränkt.
@@ -145,4 +143,3 @@ Um die Datei auszuführen, öffnen Sie PowerShell, und verwenden Sie folgenden B
 
 ## <a name="summary"></a>Zusammenfassung
 Sie können Ihre .NET Framework-Konsolenanwendungen in Containern ausführen, indem Sie einfach eine Dockerfile-Datei hinzufügen und die Anwendung veröffentlichen. So können Sie mehrere Instanzen ausführen, sauber starten und beenden und von mehr Windows Server 2016-Funktionen profitieren, ohne den Anwendungscode selbst in irgendeiner Weise zu ändern.
-

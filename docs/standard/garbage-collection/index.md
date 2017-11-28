@@ -24,16 +24,15 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1636bf1cf047e7505be7567f5b5061df25d899c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be94a3e0dee4cb27aee4d5c98ebc1d6ef0704ac9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 Der Garbage Collector von .NET verwaltet die Belegung und Freigabe von Arbeitsspeicher für die Anwendung. Bei jedem Erstellen eines neuen Objekts belegt die Common Language Runtime (CLR) Speicher für das Objekt aus dem verwalteten Heap. Solange ein Adressbereich im verwalteten Heap verfügbar ist, reserviert die Laufzeit Arbeitsspeicher für neue Objekte. Arbeitsspeicher ist jedoch nicht unendlich verfügbar. Möglicherweise muss mithilfe der Garbage Collection Arbeitsspeicher freigegeben werden. Das Optimierungsmodul der Garbage Collection bestimmt den besten Zeitpunkt für das Einsammeln anhand der erfolgten Speicherbelegungen. Beim Einsammeln durch die Garbage Collection wird nach Objekten im verwalteten Heap gesucht, die nicht mehr von der Anwendung verwendet werden. Anschließend werden die für das Freigeben des Arbeitsspeichers erforderlichen Operationen ausgeführt.  
@@ -71,4 +70,3 @@ Der Garbage Collector von .NET verwaltet die Belegung und Freigabe von Arbeitssp
   
 ## <a name="see-also"></a>Siehe auch  
  [Bereinigen von nicht verwalteten Ressourcen](../../../docs/standard/garbage-collection/unmanaged.md)
-

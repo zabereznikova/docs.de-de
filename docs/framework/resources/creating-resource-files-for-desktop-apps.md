@@ -5,26 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - resource files, .resources files
 - .resources files
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Erstellen von Ressourcendateien für Desktop-Apps
 Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressourcendateien einschließen, um sie für die Anwendung leicht verfügbar zu machen. .NET Framework bietet fünf Möglichkeiten, Ressourcendateien zu erstellen:  
@@ -65,7 +66,7 @@ name2=value2
   
  Das Ressourcendateiformat von .txt und von .restext-Dateien ist identisch. Die .restext-Dateierweiterung dient lediglich dazu, Textdateien direkt als textbasierte Ressourcendateien identifizierbar zu machen.  
   
- Zeichenfolgenressourcen werden als Name/Wert-Paare (*name/value* pairs) angezeigt, wobei *name* eine Zeichenfolge ist, die die Ressource identifiziert, und *value* die Ressourcenzeichenfolge, die zurückgegeben wird, wenn Sie *name* an eine Ressourcenabrufmethode wie <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName> übergeben. *name* und *value* müssen durch ein Gleichheitszeichen (=) getrennt werden. Zum Beispiel:  
+ Zeichenfolgenressourcen werden als Name/Wert-Paare (*name/value* pairs) angezeigt, wobei *name* eine Zeichenfolge ist, die die Ressource identifiziert, und *value* die Ressourcenzeichenfolge, die zurückgegeben wird, wenn Sie *name* an eine Ressourcenabrufmethode wie <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> übergeben. *name* und *value* müssen durch ein Gleichheitszeichen (=) getrennt werden. Zum Beispiel:  
   
 ```  
 FileMenuName=File  
@@ -77,7 +78,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  Verwenden Sie Ressourcendateien nicht, um Kennwörter, sicherheitsrelevante Informationen oder private Daten zu speichern.  
   
- Leere Zeichenfolgen (eine Ressource, deren Wert <xref:System.String.Empty?displayProperty=fullName> ist) sind in Textdateien zulässig. Zum Beispiel:  
+ Leere Zeichenfolgen (eine Ressource, deren Wert <xref:System.String.Empty?displayProperty=nameWithType> ist) sind in Textdateien zulässig. Zum Beispiel:  
   
 ```  
 EmptyString=  
@@ -123,7 +124,8 @@ greeting=Hello, {0}!
   
  Im folgenden Beispiel wird der Quellcode für eine Konsolenanwendung veranschaulicht, die dem Benutzer mithilfe der RESOURCES-Datei Nachrichten anzeigt.  
   
- [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)] [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
+ [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)]
+ [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
   
  Wenn Sie Visual Basic verwenden und die Quellcodedatei "Greeting.vb" genannt wird, erstellt der folgende Befehl eine ausführbare Datei, die die eingebettete RESOURCES-Datei einschließt:  
   
@@ -174,20 +176,21 @@ greeting=Hello, {0}!
   
 <a name="ResourcesFiles"></a>   
 ## <a name="resources-in-resources-files"></a>Ressourcen in RESOURCES-Dateien  
- Mit der <xref:System.Resources.ResourceWriter?displayProperty=fullName>-Klasse können Sie eine binäre Ressourcendatei (.resources) direkt aus Code programmgesteuert erstellen. Sie können auch mithilfe des [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) eine RESOURCES-Datei aus einer Textdatei oder einer RESX-Datei erstellen. Die RESOURCES-Datei kann neben Zeichenfolgendaten Binärdaten (Bytearrays) und Objektdaten enthalten. Das programmgesteuerte Erstellen einer RESOURCES-Datei erfordert die folgenden Schritte:  
+ Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klasse können Sie eine binäre Ressourcendatei (.resources) direkt aus Code programmgesteuert erstellen. Sie können auch mithilfe des [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) eine RESOURCES-Datei aus einer Textdatei oder einer RESX-Datei erstellen. Die RESOURCES-Datei kann neben Zeichenfolgendaten Binärdaten (Bytearrays) und Objektdaten enthalten. Das programmgesteuerte Erstellen einer RESOURCES-Datei erfordert die folgenden Schritte:  
   
 1.  Erstellen Sie ein <xref:System.Resources.ResourceWriter>-Objekt mit einem eindeutigen Dateinamen. Geben Sie dazu entweder einen Dateinamen oder einen Dateistream zu einem <xref:System.Resources.ResourceWriter>-Klassenkonstruktor an.  
   
-2.  Rufen Sie eine der Überladungen der <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=fullName>-Methode für jede benannte Ressource an, die der Datei hinzugefügt werden soll. Die Ressource kann eine Zeichenfolge, ein Objekt oder eine Auflistung der Binärdaten (ein Bytearray) sein.  
+2.  Rufen Sie eine der Überladungen der <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType>-Methode für jede benannte Ressource an, die der Datei hinzugefügt werden soll. Die Ressource kann eine Zeichenfolge, ein Objekt oder eine Auflistung der Binärdaten (ein Bytearray) sein.  
   
-3.  Rufen Sie die <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=fullName>-Methode auf, um die Ressourcen in die Datei zu schreiben und das <xref:System.Resources.ResourceWriter>-Objekt zu schließen.  
+3.  Rufen Sie die <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=nameWithType>-Methode auf, um die Ressourcen in die Datei zu schreiben und das <xref:System.Resources.ResourceWriter>-Objekt zu schließen.  
   
 > [!NOTE]
 >  Verwenden Sie Ressourcendateien nicht, um Kennwörter, sicherheitsrelevante Informationen oder private Daten zu speichern.  
   
  Im folgenden Beispiel wird programmgesteuert eine RESOURCES-Datei mit dem Namen "CarResources.resources" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile`-Objekte) gespeichert werden. Beachten Sie, dass die im Beispiel definierte und instanziierte `Automobile`-Klasse mit dem <xref:System.SerializableAttribute>-Attribut markiert wird, wodurch die Klasse von der binären Serialisierungsformatierung beibehalten werden kann.  
   
- [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)] [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
+ [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
   
  Nachdem Sie die RESOURCES-Datei erstellt haben, können Sie die RESOURCES-Datei in eine ausführbare Datei oder Runtimebibliothek einbetten, indem Sie den `/resource`-Schalter des Sprachcompilers einschließen, oder Sie betten sie mit dem [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly ein.  
   
@@ -200,7 +203,6 @@ greeting=Hello, {0}!
  Zur Kompilierzeit werden von Visual Studio zuerst die RESX-Dateien in einem Projekt in binäre Ressourcendateien (.resources) konvertiert und im Verzeichnis "obj" des Projekts in einem Unterverzeichnis gespeichert. Visual Studio bettet alle Ressourcendateien ein, die keine lokalisierten Ressourcen in der vom Projekt generierten Hauptassembly enthalten. Wenn Ressourcendateien lokalisierte Ressourcen enthalten, werden diese von Visual Studio für jede lokalisierte Kultur in separate Satellitenassemblys eingebettet. Anschließend wird jede Satellitenassembly in einem Verzeichnis gespeichert, dessen Name der lokalisierten Kultur entspricht. Lokalisierte englische Ressourcen (USA) werden z. B. in einer Satellitenassembly im Unterverzeichnis "en-US" gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Resources>   
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)   
- [Packen und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-
+ <xref:System.Resources>  
+ [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
+ [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

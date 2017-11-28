@@ -1,30 +1,21 @@
 ---
 title: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 450fb922079ca6737b8db7754f25435b9c3b884b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4532829080d994cf4cec92d64a12e3bf1890dc6a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)
 Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher angeordnet werden. Sie können z.B. das erstellen, was als eine Union in C/C++ bekannt ist, indem Sie die mit `StructLayout(LayoutKind.Explicit)`- und `FieldOffset`-Attribute verwenden.  
@@ -84,12 +75,11 @@ Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher 
  Die zwei Ganzzahlfelder `i1` und `i2` teilen die gleichen Speicheradressen wie `lg`. Diese Art der Kontrolle über das Strukturlayout ist nützlich, wenn Sie Plattformaufrufe nutzen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Attribute](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Zugriff auf Attribute mit Reflektion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+ [Attribute](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
+ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 16c99ec5d1c120f1ab079940459cdb7716471353
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte  
 C# ist eine stark typisierte Sprache. Jede Variable und jede Konstante verfügt über einen Typ, genau wie jeder Ausdruck, der zu einem Wert ausgewertet wird. Jede Methodensignatur gibt für jeden Eingabeparameter und den Rückgabewert einen Typ an. In der .NET Framework-Klassenbibliothek sind integrierte numerische Typen sowie komplexere Typen definiert, die eine große Anzahl logischer Konstrukte darstellen, z. B. das Dateisystem, Netzwerkverbindungen, Auflistungen und Arrays von Objekten sowie Datumsangaben. In einem typischen C#-Programm werden Typen aus der Klassenbibliothek sowie benutzerdefinierte Typen verwendet, die die Konzepte für das Problemfeld des Programms modellieren.  
   
@@ -64,7 +62,7 @@ C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung
 Sie können die Konstrukte [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) und [enum](language-reference/keywords/enum.md) verwenden, um eigene benutzerdefinierte Typen zu erstellen. Die .NET Framework-Klassenbibliothek ist eine Auflistung benutzerdefinierter, von Microsoft bereitgestellter Typen, die Sie in Ihren eigenen Anwendungen verwenden können. Standardmäßig sind die am häufigsten verwendeten Typen in der Klassenbibliothek in jedem C#-Programm verfügbar. Andere stehen nur zur Verfügung, wenn Sie ausdrücklich einen Projektverweis auf die Assembly hinzufügen, in der diese definiert sind. Wenn der Compiler über einen Verweis auf die Assembly verfügt, können Sie Variablen (und Konstanten) des in dieser Assembly deklarierten Typs im Quellcode deklarieren. 
   
 ## <a name="generic-types"></a>Generische Typen  
-Ein Typ kann mit einem oder mehreren *Typparametern* deklariert werden, die als Platzhalter für den eigentlichen Typ verwendet werden (den *konkreten Typ*), der vom Clientcode beim Erstellen einer Instanz des Typs bereitgestellt wird. Solche Typen werden als *generische Typen* bezeichnet. Beispielsweise besitzt der .NET Framework-Typ @System.Collections.Generic.List%601 einen Typparameter, dem üblicherweise der Name *T* gegeben wird. Beim Erstellen einer Instanz des Typs geben Sie die Objekte an, die die Liste enthalten soll, z. B. string:  
+Ein Typ kann mit einem oder mehreren *Typparametern* deklariert werden, die als Platzhalter für den eigentlichen Typ verwendet werden (den *konkreten Typ*), der vom Clientcode beim Erstellen einer Instanz des Typs bereitgestellt wird. Solche Typen werden als *generische Typen* bezeichnet. Beispielsweise besitzt der .NET Framework-Typ <xref:System.Collections.Generic.List%601> einen Typparameter, dem üblicherweise der Name *T* gegeben wird. Beim Erstellen einer Instanz des Typs geben Sie die Objekte an, die die Liste enthalten soll, z. B. string:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)] 
   
@@ -80,7 +78,7 @@ Es ist üblich, mehr als einen Wert aus einer Methode zurückgeben zu wollen. Si
 ## <a name="the-common-type-system"></a>Das allgemeine Typsystem  
 Sie sollten mit zwei grundlegenden Punkten des Typsystems in .NET Framework vertraut sein:  
   
--   Es unterstützt das Prinzip der Vererbung. Typen können von anderen Typen abgeleitet werden, die als *Basistypen* bezeichnet werden. Der abgeleitete Typ erbt (mit einigen Beschränkungen) die Methoden, Eigenschaften und anderen Member des Basistyps. Der Basistyp kann wiederum von einem anderen Typ abgeleitet sein. In diesem Fall erbt der abgeleitete Typ die Member beider Basistypen in der Vererbungshierarchie. Alle Typen, einschließlich integrierter numerischer Typen, z.B. @System.Int32 (C#-Schlüsselwort: `int`), werden letztendlich von einem einzelnen Basistyp abgeleitet, nämlich @System.Object (C#-Schlüsselwort: `object`). Diese einheitliche Typhierarchie wird als [Allgemeines Typsystem](../standard/common-type-system.md) (Common Type System – CTS) bezeichnet. Weitere Informationen zur Vererbung in C# finden Sie unter [Vererbung](programming-guide/classes-and-structs/inheritance.md).  
+-   Es unterstützt das Prinzip der Vererbung. Typen können von anderen Typen abgeleitet werden, die als *Basistypen* bezeichnet werden. Der abgeleitete Typ erbt (mit einigen Beschränkungen) die Methoden, Eigenschaften und anderen Member des Basistyps. Der Basistyp kann wiederum von einem anderen Typ abgeleitet sein. In diesem Fall erbt der abgeleitete Typ die Member beider Basistypen in der Vererbungshierarchie. Alle Typen, einschließlich integrierter numerischer Typen, z.B. <xref:System.Int32> (C#-Schlüsselwort: `int`), werden letztendlich von einem einzelnen Basistyp abgeleitet, nämlich <xref:System.Object> (C#-Schlüsselwort: `object`). Diese einheitliche Typhierarchie wird als [Allgemeines Typsystem](../standard/common-type-system.md) (Common Type System – CTS) bezeichnet. Weitere Informationen zur Vererbung in C# finden Sie unter [Vererbung](programming-guide/classes-and-structs/inheritance.md).  
   
 -   Jeder Typ im CTS ist als *Werttyp* oder *Referenztyp* definiert. Dies betrifft auch alle benutzerdefinierten Typen in der .NET Framework-Klassenbibliothek und Ihre eigenen benutzerdefinierten Typen. Typen, die Sie mithilfe des [struct](language-reference/keywords/struct.md)-Schlüsselworts definieren, sind Werttypen. Alle integrierten numerischen Typen sind **structs**. Weitere Informationen über Werttypen finden Sie unter [Structs](structs.md). Typen, die Sie mithilfe des [class](language-reference/keywords/class.md)-Schlüsselworts definieren, sind Referenztypen. Weitere Informationen über Referenztypen finden Sie unter [Classes](classes.md). Für Referenztypen und Werttypen gelten unterschiedliche Kompilierzeitregeln und ein anderes Laufzeitverhalten.
  
@@ -88,4 +86,3 @@ Sie sollten mit zwei grundlegenden Punkten des Typsystems in .NET Framework vert
 ## <a name="see-also"></a>Siehe auch
 [Strukturen](structs.md)
 [Klassen](classes.md)
-

@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -21,16 +24,15 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 68a2217ed05588b2ba6070850dfd0d61a7a0fde2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5dd9de26f083209a0e8da79562f914023e008251
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Gewusst wie: Erstellen einer Mehrfachdateiassembly
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.  
@@ -44,11 +46,15 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
   
      Beispielsweise weist die Datei `Stringer` den Namespace `myStringer` auf, der die Klasse `Stringer` enthält. Die `Stringer`-Klasse enthält die `StringerMethod`-Methode, die eine einzelne Zeile auf der Konsole ausgibt.  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#1)] [!code-csharp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#1)] [!code-vb[Conceptual.Assembly.Multifile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#1)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#1)]
+     [!code-csharp[Conceptual.Assembly.Multifile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#1)]
+     [!code-vb[Conceptual.Assembly.Multifile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#1)]  
   
      Verwenden Sie folgenden Befehl, um diesen Code zu kompilieren:  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#2)] [!code-csharp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#2)]  [!code-vb[Conceptual.Assembly.Multifile#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#2)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/stringer.cpp#2)]
+     [!code-csharp[Conceptual.Assembly.Multifile#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/stringer.cs#2)]
+     [!code-vb[Conceptual.Assembly.Multifile#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/stringer.vb#2)]  
   
      Durch die Compileroption **/t:** in Verbindung mit dem Parameter *module* wird die Datei als Modul kompiliert, nicht als Assembly. Der Compiler erzeugt ein Modul mit dem Namen `Stringer.netmodule`, das anschließend einer Assembly hinzugefügt werden kann.  
   
@@ -56,11 +62,15 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
   
      Im folgenden Beispiel verfügt ein Codemodul mit dem Namen `Client` über die `Main`-Methode als Einstiegspunkt. Diese verweist wiederum auf eine Methode im `Stringer.dll`-Modul, das in Schritt 1 erstellt wurde.  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#3)] [!code-csharp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#3)] [!code-vb[Conceptual.Assembly.Multifile#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#3)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#3)]
+     [!code-csharp[Conceptual.Assembly.Multifile#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#3)]
+     [!code-vb[Conceptual.Assembly.Multifile#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#3)]  
   
      Verwenden Sie folgenden Befehl, um diesen Code zu kompilieren:  
   
-     [!code-cpp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#4)] [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]  [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]  
+     [!code-cpp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#4)]
+     [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]
+     [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]  
   
      Verwenden Sie die Option **/t:module**, da dieses Modul in einem späteren Schritt zu einer Assembly hinzugefügt wird. Legen Sie die **/addmodule**-Option fest, da der Code in `Client` auf einen Namespace verweist, der vom Code in `Stringer.netmodule` erzeugt wurde. Der Compiler erzeugt ein Modul mit dem Namen `Client.netmodule`, das einen Verweis auf ein anderes Modul, `Stringer.netmodule`, enthält.  
   
@@ -69,10 +79,14 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
     >   
     >  -   Zwei Kompilierungen erzeugen eine aus zwei Dateien bestehende Assembly:  
     >   
-    >      [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)] [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)] [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]  
+    >      [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+      [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+      [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]  
     > -   Eine Kompilierung erzeugt eine aus zwei Dateien bestehende Assembly:  
     >   
-    >      [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)] [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)] [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]  
+    >      [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+      [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+      [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]  
   
 3.  Erstellen Sie mit dem [Assembly Linker-Tool (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) eine Ausgabedatei, die das Assemblymanifest enthält. In dieser Datei sind Referenzinformationen zu allen zur Assembly gehörenden Modulen und Ressourcen enthalten.  
   
@@ -91,8 +105,7 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
      Sie können das [MSIL Disassembler-Tool (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um den Inhalt einer Assembly zu untersuchen oder um zu bestimmen, ob es sich bei einer Datei um eine Assembly oder ein Modul handelt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
- [Vorgehensweise: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)   
- [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Gewusst wie: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)
-

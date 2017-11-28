@@ -1,45 +1,27 @@
 ---
 title: Nullable-Typen (C#-Programmierhandbuch)
-ms.date: 2017-05-15
+ms.date: 05/15/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 6d99bffc74cbcce04d725b8f225a4a4b175973be
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nullable-types-c-programming-guide"></a>Nullable-Typen (C#-Programmierhandbuch)
 Auf NULL festlegbare Typen sind Instanzen der <xref:System.Nullable%601?displayProperty=nameWithType>-Struktur. Ein Nullable-Typ kann den richtigen Bereich an Werten für den zugrunde liegenden Werttyp plus einen zusätzlichen `null`-Wert darstellen. Einem `Nullable<Int32>` (ausgesprochen „Nullable von Int32“) kann jeder Wert im Bereich von -2147483648 bis 2147483647 oder ein `null`-Wert zugewiesen werden. Einem `Nullable<bool>` können die Werte [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) oder [null](../../../csharp/language-reference/keywords/null.md) zugewiesen werden. Die Möglichkeit, `null` zu numerischen und booleschen Typen zuzuweisen, ist besonders nützlich, wenn Sie mit Datenbanken und anderen Datentypen mit Elementen arbeiten, denen möglicherweise kein Wert zugewiesen wurde. Ein boolesches Feld in einer Datenbank kann beispielsweise die Werte `true` oder `false` speichern oder nicht definiert sein. 
   
-[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
   
@@ -81,9 +63,8 @@ Weitere Beispiele finden Sie unter [Verwenden von Nullable-Typen](../../../cshar
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Nullable>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md)   
- [C#-Referenz](../../../csharp/language-reference/index.md)   
+ <xref:System.Nullable>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#](../../../csharp/index.md)  
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
  [What exactly does 'lifted' mean?](http://go.microsoft.com/fwlink/?LinkId=112382) (Was bedeutet „Lifted“ genau?)
-

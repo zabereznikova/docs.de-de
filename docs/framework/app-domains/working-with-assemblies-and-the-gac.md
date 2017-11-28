@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Arbeiten mit Assemblys und dem globalen Assemblychache
 Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen möchten, können Sie die Assembly im globalen Assemblycache installieren. Jeder Computer, auf dem die Common Language Runtime installiert ist, verfügt über diesen computerweiten Codecache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind. Eine Assembly muss einen starken Namen haben, um im globalen Assemblycache installiert werden zu können.  
@@ -83,4 +81,3 @@ Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen m
   
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Beschreibt Assemblys, die die Bausteine verwalteter Anwendungen bilden.
-

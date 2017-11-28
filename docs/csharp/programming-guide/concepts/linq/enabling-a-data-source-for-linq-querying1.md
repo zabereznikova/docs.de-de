@@ -1,30 +1,21 @@
 ---
 title: "Aktivieren einer Datenquelle für LINQ-Abfragen1"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 86818768e01574bc9a3aebcd09b8e282c92ec18d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zu erweitern, um die Abfrage einer beliebigen Datenquelle im [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster zu ermöglichen. Bei der Datenquelle kann es sich u. a. um eine Datenstruktur, einen Webdienst, ein Dateisystem oder eine Datenbank handeln. Das [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster erleichtert Clients das Ausführen von Abfragen für eine Datenquelle mit aktivierter [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage, da die Syntax und das Muster der Abfrage unverändert bleiben. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kann u.a. auf folgende Weisen für die Verwendung dieser Datenquellen erweitert werden:  
@@ -57,9 +48,8 @@ Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-m
  Ein komplexer `IQueryable`-Anbieter, wie z. B. der [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Anbieter, kann möglicherweise vollständige [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen in eine ausdrucksbasierte Abfragesprache wie SQL übersetzen. Ein komplexer Anbieter arbeitet universeller als ein weniger komplexer Anbieter, da er eine größere Bandbreite von Fragen in der Abfrage verarbeiten kann. Außerdem verfügt er über ein offenes Typsystem und benötigt daher eine umfassende Infrastruktur für die Zuordnung benutzerdefinierter Typen. Die Entwicklung eines komplexen Anbieters ist ziemlich arbeitsaufwändig.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.IQueryable%601>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- <xref:System.Linq.Enumerable>   
- [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.IQueryable%601>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ <xref:System.Linq.Enumerable>  
+ [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

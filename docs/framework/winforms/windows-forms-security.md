@@ -1,70 +1,71 @@
 ---
-title: "Sicherheit in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zugriffssteuerung, Windows Forms"
-  - "Zugriffssicherheit für Designer"
-  - "Berechtigungen, Windows Forms"
-  - "Sicherheit [Windows Forms]"
-  - "Sicherheitsrichtlinie, Windows Forms"
-  - "Windows Forms, Sicherheit"
+title: "Sicherheit in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designer access security [Windows Forms]
+- permissions [Windows Forms], Windows Forms
+- Windows Forms, security
+- security [Windows Forms]
+- access control [Windows Forms], Windows Forms
+- security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Sicherheit in Windows&#160;Forms
-Windows Forms bieten ein codebasiertes Sicherheitsmodell \(es werden Sicherheitsebenen für den Code festgelegt, unabhängig vom Benutzer, der den Code ausführt\).  Dies ergänzt die Sicherheitsschemas, die bereits im Computersystem wirksam sind.  Dazu können die Sicherheitsschemas des Browsers \(z. B. die auf Zonen beruhende Sicherheit in Internet Explorer\) oder diejenigen des Betriebssystems \(z. B. die auf Anmeldeinformationen beruhende Sicherheit unter Windows NT\) gehören.  
+# <a name="windows-forms-security"></a>Sicherheit in Windows Forms
+Windows Forms bietet ein Sicherheitsmodell, das Code-basierte (Sicherheit) festgelegte Ebenen für Code kann unabhängig von der Benutzer, den Code ausführt, ist. Dies erfolgt zusätzlich zu Sicherheit Schemas, die bereits auf Ihrem Computer vorhanden sein können. Diese können in den Browser (z. B. die Zone-basierte Sicherheit in Internet Explorer verfügbar) oder des Betriebssystems (z. B. die Anmeldeinformationen-basierte Sicherheit von Windows NT) umfassen.  
   
-## In diesem Abschnitt  
- [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- Erläutert kurz das .NET Framework\-Sicherheitsmodell sowie die grundlegenden Schritte, die für die Sicherheit der Windows Forms in der Anwendung erforderlich sind.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ Eine kurze Erläuterung, dass das .NET Framework-Sicherheitsmodell und die grundlegenden Schritte erforderlich, um sicherzustellen, dass die Windows Forms in Ihrer Anwendung gesichert werden.  
   
- [Mehr Sicherheit beim Datei\- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- Beschreibt, wie in einer halb vertrauenswürdigen Umgebung auf Dateien und Daten zugegriffen wird.  
+ [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ Beschreibt, wie Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung zugreifen.  
   
- [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- Beschreibt, wie in einer halb vertrauenswürdigen Umgebung auf Druckfunktionen zugegriffen wird.  
+ [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung Druckfeatures zugegriffen.  
   
- [Weitere Überlegungen zur Sicherheit in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- Beschreibt das Bearbeiten von Fenstern mit der Zwischenablage und das Aufrufen von nicht verwaltetem Code in einer halb vertrauenswürdigen Umgebung.  
+ [Weitere Überlegungen zur Sicherheit in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ Beschreibt Fenstern, verwenden der Zwischenablage und das Aufrufen von nicht verwaltetem Code in einer teilweise vertrauenswürdigen Umgebung.  
   
-## Verwandte Abschnitte  
- [NIB: Default Security Policy](http://msdn.microsoft.com/de-de/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
- Listet die Standardberechtigungen auf, die in den Berechtigungssätzen Voll vertrauenswürdig, Lokales Intranet und Internet gewährt werden.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [NIB: Standardsicherheitsrichtlinie](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ Listet die Standardberechtigungen, die in die volle Vertrauenswürdigkeit, Lokales Intranet und Internet Berechtigungssätze gewährt.  
   
- [NIB: General Security Policy Administration](http://msdn.microsoft.com/de-de/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
- Enthält Informationen über die Verwaltung der .NET Framework\-Sicherheitsrichtlinie und das Erhöhen von Berechtigungen.  
+ [NIB: Allgemein Security Policy-Verwaltung](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ Bietet Informationen zum Verwalten von der .NET Framework-Sicherheitsrichtlinie und erhöhen von Berechtigungen.  
   
- [Dangerous Permissions and Policy Administration](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
- Erläutert einige .NET Framework\-Berechtigungen, die eine Umgehung des Sicherheitssystems zulassen.  
+ [Problematische Berechtigungen und richtlinienverwaltung](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
+ Erläutert einige der.NET Framework-Berechtigungen, die potenziell das Sicherheitssystem umgangen werden, ermöglichen können.  
   
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)  
- Stellt Links zu Themen bereit, die optimale Vorgehensweisen zum sicheren Schreiben von Code für NET. Framework erläutern.  
+ [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)  
+ Enthält Links zu Themen, in denen die bewährten Methoden zum Schreiben von sicheren Code für .NET Framework.  
   
- [NIB: Requesting Permissions](http://msdn.microsoft.com/de-de/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
- Erläutert die Verwendung von Attributen, um der Laufzeit zu übermitteln, welche Berechtigungen für das Ausführen des Codes erforderlich sind.  
+ [NIB: Anfordern von Berechtigungen](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ Erläutert die Verwendung von Attributen, die der Laufzeit wissen, welche Berechtigungen Code ausgeführt werden muss.  
   
- [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)  
- Stellt Links zu Themen bereit, die grundlegende Aspekte der Codesicherheit behandeln.  
+ [Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md)  
+ Links zu Themen, die die grundlegenden Aspekte der codesicherheit abdecken.  
   
- [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md)  
- Erläutert die Grundlagen für das Arbeiten mit der .NET Framework\-Laufzeitsicherheitsrichtlinie.  
+ [Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md)  
+ Erläutert die Grundlagen der Arbeit mit .NET Framework Sicherheitsrichtlinie von Zeit ausführen.  
   
- [NIB: Determining When to Modify Security Policy](http://msdn.microsoft.com/de-de/af749b17-e461-409d-84b9-a3d44789db16)  
- Beschreibt die Vorgehensweise, um zu bestimmen, wann die Anwendungen von den standardmäßig vorgegebenen Sicherheitsrichtlinien abweichen müssen.  
+ [NIB: Bestimmen des Zeitpunkts für die Sicherheitsrichtlinien ändern](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ Erläutert, wie Sie feststellen, wann Ihre Anwendungen von der Standardsicherheitsrichtlinie voneinander abweichen müssen.  
   
- [NIB: Deploying Security Policy](http://msdn.microsoft.com/de-de/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
- Erläutert die beste Methode für die Bereitstellung von Änderungen in den Sicherheitsrichtlinien.
+ [NIB: Bereitstellen von Sicherheitsrichtlinien](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ Erläutert die beste Art und Weise zum Bereitstellen von Änderungen von Sicherheitsrichtlinien an.

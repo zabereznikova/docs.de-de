@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - code compilers
 - CodeDOM, generating source code
@@ -30,16 +33,15 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b01517d7d8c12d9a0191293fb52f429bb83bf40
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
 Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generieren von Sourcecode aus CodeDOM-Objektdiagrammen und zum Verwalten der Kompilierung mit unterstützten Compilern bereit. Ein Codeanbieter kann Quellcode in einer bestimmten Programmiersprache anhand eines CodeDOM-Diagramms erstellen. Eine Klasse, die von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet wurde, kann in der Regel Methoden zum Generieren und Kompilieren von Code für die Sprache bereitstellen, die der Anbieter unterstützt.  
@@ -49,11 +51,15 @@ Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generiere
   
  Im folgenden Beispiel wird veranschaulicht, wie eine Instanz einer <xref:Microsoft.CSharp.CSharpCodeProvider> erstellt wird:  
   
- [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)] [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)] [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
+ [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)]
+ [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
+ [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
  Das Diagramm für die Generierung von Code ist in der Regel Bestandteil einer <xref:System.CodeDom.CodeCompileUnit>. Zum Generieren von Code für eine **CodeCompileUnit**, die ein CodeDOM-Diagramm enthält, rufen Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode des Codeanbieters auf. Diese Methode verfügt einen Parameter für eine <xref:System.IO.TextWriter>, die zum Generieren des Quellcodes verwendet wird. Deshalb ist es manchmal erforderlich, zuerst eine **TextWriter**-Klasse zu erstellen, in die geschrieben werden kann. Das folgende Beispiel veranschaulicht die Erstellung von Code aus einer **CodeCompileUnit** und das Schreiben des generierten Quellcodes in eine Datei mit der Bezeichnung „HelloWorld.cs“.  
   
- [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)] [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)] [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
+ [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
+ [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
+ [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
 ## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>Verwenden eines CodeDOM-Codeanbieters zum Kompilieren von Assemblys  
  **Aufrufen der Kompilierung**  
@@ -88,14 +94,15 @@ Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generiere
   
  Das folgende Codebeispiel stellt die Kompilierung einer Quelldatei mithilfe des CodeDom-Anbieters dar, der aus der <xref:System.CodeDom.Compiler.CodeDomProvider>-Klasse abgeleitet wurde.  
   
- [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)] [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)] [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
+ [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)]
+ [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)]
+ [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Sprachen mit erweiterter Unterstützung  
  .NET Framework bietet Codecompiler für Codegeneratoren für die folgenden Sprachen: C#, Visual Basic, C++ und JScript. Die CodeDOM-Unterstützung kann auf andere Sprachen durch Implementierung sprachspezifischer Codegeneratoren und Codecompiler erweitert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.CodeDom>   
- <xref:System.CodeDom.Compiler>   
- [Generieren und Kompilieren von dynamischem Quellcode](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   
+ <xref:System.CodeDom>  
+ <xref:System.CodeDom.Compiler>  
+ [Generieren und Kompilieren von dynamischem Quellcode](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
  [Kurzreferenz zum CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
-

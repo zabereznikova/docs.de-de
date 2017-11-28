@@ -1,44 +1,36 @@
 ---
-title: 'Gewusst wie: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce4f89c88fd856d3471e4f32c4f69d15e8ccb4c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a65b5f74e872cb4d2e459bc7ff866ca332706ef9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Gewusst wie: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
   
--   Abfragen für ein boolescher Wert, der angibt, ob die zwei Dateilisten sind identisch.  
+-   Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
   
--   Durch Abfragen der Schnittmenge, die die Dateien abzurufen, die in beiden Ordnern befinden.  
+-   Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
   
--   Durch Abfragen der festgelegten Differenz, die Dateien abzurufen, die in einem Ordner, aber nicht den anderen sind.  
+-   Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
   
     > [!NOTE]
     >  Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  
   
- Die `FileComparer` hier dargestellte Klasse veranschaulicht, wie eine benutzerdefinierte Comparer-Klasse zusammen mit den Standardabfrageoperatoren. Die Klasse ist nicht für die Verwendung in realen Szenarien vorgesehen. Wird nur der Name und die Länge jeder Datei in Bytes um zu bestimmen, ob der Inhalt der einzelnen Ordner identisch sind. In einem realen Szenario sollten Sie diesen Vergleich aus, um eine gründlichere Überprüfung auf Gleichheit durchzuführen ändern.  
+ Die hier gezeigte `FileComparer`-Klasse veranschaulicht, wie eine benutzerdefinierte Vergleichsklasse zusammen mit den Standardabfrageoperatoren verwendet wird. Die Klasse ist nicht für die Verwendung in realen Szenarios vorgesehen. Sie verwendet nur den Namen und die Länge jeder Datei in Bytes, um zu bestimmen, ob die Inhalte der einzelnen Ordner identisch sind. In einem realen Szenario sollten Sie diese Vergleichsklasse ändern, um eine gründlichere Überprüfung auf Gleichheit durchzuführen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -131,8 +123,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+ Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
   
 ## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

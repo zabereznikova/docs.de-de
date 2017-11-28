@@ -1,30 +1,21 @@
 ---
 title: LINQ to XML-Sicherheit (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 281f979d0c7df2538f664199e4444db5166ba55e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b55a9b70ad4291bc74b629e289bdc168a30702ca
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML-Sicherheit (C#)
 In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörtert. Darüber hinaus finden Sie hier einige Empfehlungen zur Minderung der Sicherheitsrisiken.  
@@ -39,9 +30,9 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
  XML an sich ist anfällig für DoS-Angriffe, da Dokumente in Größe, Tiefe, Elementnamengröße usw. unbegrenzt sind. Egal, welche Komponenten Sie zum Verarbeiten von XML verwenden, sollten Sie immer darauf vorbereitet sein, die Anwendungsdomäne wiederherzustellen, falls übermäßig viele Ressourcen verwendet werden.  
   
 ## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Abwehr von XML-, XSD-, XPath- und XSLT-Angriffen  
- LINQ to XML basiert auf <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter>. LINQ to XML unterstützt durch Erweiterungsmethoden in den Namespaces <xref:System.Xml.Schema?displayProperty=fullName> und <xref:System.Xml.XPath?displayProperty=fullName> XSD und XPath. Mit den Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> und <xref:System.Xml.XmlWriter> können Sie in Verbindung mit LINQ to XML XSLT zum Transformieren von XML-Strukturen aufrufen.  
+ LINQ to XML basiert auf <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter>. LINQ to XML unterstützt durch Erweiterungsmethoden in den Namespaces <xref:System.Xml.Schema?displayProperty=nameWithType> und <xref:System.Xml.XPath?displayProperty=nameWithType> XSD und XPath. Mit den Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> und <xref:System.Xml.XmlWriter> können Sie in Verbindung mit LINQ to XML XSLT zum Transformieren von XML-Strukturen aufrufen.  
   
- In einer weniger sicheren Umgebung gibt es eine Reihe von Sicherheitsproblemen im Zusammenhang mit XML und der Verwendung der Klassen in <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.Schema?displayProperty=fullName>, <xref:System.Xml.XPath?displayProperty=fullName> und <xref:System.Xml.Xsl?displayProperty=fullName>. Dazu gehören u. a. folgende Probleme:  
+ In einer weniger sicheren Umgebung gibt es eine Reihe von Sicherheitsproblemen im Zusammenhang mit XML und der Verwendung der Klassen in <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> und <xref:System.Xml.Xsl?displayProperty=nameWithType>. Dazu gehören u. a. folgende Probleme:  
   
 -   XSD, XPath und XSLT sind zeichenfolgenbasierte Sprachen, in denen Sie Vorgänge angeben können, die zeit- oder speicherintensiv sind. Es liegt in der Verantwortung des Anwendungsprogrammierers, der XSD-, XPath- oder XSLT-Zeichenfolgen aus nicht vertrauenswürdigen Quellen verwendet, zu validieren, dass die Zeichenfolgen nicht bösartig sind, oder zu überwachen und die Wahrscheinlichkeit zu verringern, dass die Auswertung dieser Zeichenfolgen zu einem übermäßig hohen Verbrauch der Systemressourcen führt.  
   
@@ -78,9 +69,9 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
 ### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>Rufen Sie in einem Ereignishandler nicht "CodeAccessPermissions.Assert" auf  
  Eine Assembly kann mehr oder weniger Berechtigungen besitzen. Je mehr Berechtigungen eine Assembly besitzt, desto größer ist ihre Kontrolle über den Computer und dessen Umgebungen.  
   
- Wenn Code in einer Assembly mit mehr Berechtigungen <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> in einem Ereignishandler aufruft und die XML-Struktur dann an eine bösartige Assembly übergeben wird, die nur eingeschränkte Berechtigungen besitzt, kann die bösartige Assembly zur Auslösung eines Ereignisses führen. Da das Ereignis den Code ausführt, der sich in der Assembly mit den umfangreicheren Berechtigungen befindet, würde die bösartige Assembly dann mit erweiterten Rechten operieren.  
+ Wenn Code in einer Assembly mit mehr Berechtigungen <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> in einem Ereignishandler aufruft und die XML-Struktur dann an eine bösartige Assembly übergeben wird, die nur eingeschränkte Berechtigungen besitzt, kann die bösartige Assembly zur Auslösung eines Ereignisses führen. Da das Ereignis den Code ausführt, der sich in der Assembly mit den umfangreicheren Berechtigungen befindet, würde die bösartige Assembly dann mit erweiterten Rechten operieren.  
   
- Microsoft empfiehlt, <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> nie in einem Ereignishandler aufzurufen.  
+ Microsoft empfiehlt, <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> nie in einem Ereignishandler aufzurufen.  
   
 ### <a name="dtds-are-not-secure"></a>DTDs sind nicht sicher  
  Entitäten in DTDs sind von Natur aus nicht sicher. Ein bösartiges XML-Dokument, das eine DTD enthält, kann Ursache dafür sein, dass der Parser den gesamten Arbeitsspeicher und die gesamte CPU-Zeit nutzt, sodass es zu einem DoS-Angriff kommt. In LINQ to XML ist die DTD-Verarbeitung aus diesem Grund standardmäßig deaktiviert. Sie sollten keine DTDs von nicht vertrauenswürdigen Quellen akzeptieren.  
@@ -90,12 +81,12 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
 ### <a name="avoid-excessive-buffer-allocation"></a>Vermeiden Sie übermäßige Pufferzuordnung  
  Anwendungsentwickler müssen sich bewusst sein, dass extrem große Datenquellen eine Ressourcenüberlastung und DoS-Angriffe zur Folge haben können.  
   
- Wenn ein böswilliger Benutzer ein sehr großes XML-Dokument sendet oder hochlädt, kann das dazu führen, dass LINQ to XML übermäßig viele Systemressourcen verbraucht. Dies kann die Grundlage für einen DoS-Angriff sein. Wenn Sie dies vermeiden möchten, können Sie die <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName>-Eigenschaft festlegen und einen Reader erstellen, der die Größe der ladbaren Dokumente beschränkt. Anschließend erstellen Sie mit dem Reader die XML-Struktur.  
+ Wenn ein böswilliger Benutzer ein sehr großes XML-Dokument sendet oder hochlädt, kann das dazu führen, dass LINQ to XML übermäßig viele Systemressourcen verbraucht. Dies kann die Grundlage für einen DoS-Angriff sein. Wenn Sie dies vermeiden möchten, können Sie die <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType>-Eigenschaft festlegen und einen Reader erstellen, der die Größe der ladbaren Dokumente beschränkt. Anschließend erstellen Sie mit dem Reader die XML-Struktur.  
   
- Wenn Sie z. B. wissen, dass sich die maximale erwartete Größe Ihrer von einer nicht vertrauenswürdigen Quelle stammenden XML-Dokumente auf unter 50 KBytes beläuft, legen Sie für <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> den Wert "100.000" fest. Die Verarbeitung der XML-Dokumente wird davon nicht negativ beeinflusst, und gleichzeitig verringert sich das Risiko von DoS-Angriffen, bei denen Dokumente hochgeladen werden, die große Mengen des Speichers in Anspruch nehmen.  
+ Wenn Sie z. B. wissen, dass sich die maximale erwartete Größe Ihrer von einer nicht vertrauenswürdigen Quelle stammenden XML-Dokumente auf unter 50 KBytes beläuft, legen Sie für <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> den Wert "100.000" fest. Die Verarbeitung der XML-Dokumente wird davon nicht negativ beeinflusst, und gleichzeitig verringert sich das Risiko von DoS-Angriffen, bei denen Dokumente hochgeladen werden, die große Mengen des Speichers in Anspruch nehmen.  
   
 ### <a name="avoid-excess-entity-expansion"></a>Vermeiden Sie eine exzessive Entitätserweiterung  
- Ein bekannter DoS-Angriff mit einer DTD besteht in der Verwendung eines Dokuments, das eine exzessive Entitätserweiterung zur Folge hat. Wenn Sie solche Angriffe vermeiden möchten, können Sie die <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=fullName>-Eigenschaft festlegen und einen Reader erstellen, der die Anzahl der Zeichen beschränkt, die aus einer Entitätserweiterung resultieren. Anschließend erstellen Sie mit dem Reader die XML-Struktur.  
+ Ein bekannter DoS-Angriff mit einer DTD besteht in der Verwendung eines Dokuments, das eine exzessive Entitätserweiterung zur Folge hat. Wenn Sie solche Angriffe vermeiden möchten, können Sie die <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType>-Eigenschaft festlegen und einen Reader erstellen, der die Anzahl der Zeichen beschränkt, die aus einer Entitätserweiterung resultieren. Anschließend erstellen Sie mit dem Reader die XML-Struktur.  
   
 ### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Schränken Sie die Tiefe der XML-Hierarchie ein  
  Ein möglicher DoS-Angriff besteht darin, ein Dokument zu senden, dass eine außerordentlich große Hierarchietiefe besitzt. Wenn Sie solche Angriffe verhindern möchten, können Sie in Ihrer eigenen Klasse einen <xref:System.Xml.XmlReader> umschließen, der die Tiefe der Elemente zählt. Wenn die Tiefe ein vorher festgelegtes vernünftiges Maß übersteigt, können Sie die Verarbeitung des bösartigen Dokuments beenden.  
@@ -118,4 +109,3 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
   
 ## <a name="see-also"></a>Siehe auch  
  [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

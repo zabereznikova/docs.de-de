@@ -8,6 +8,10 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - generic methods, type inference
 - generics [.NET Framework], collections
@@ -28,16 +32,15 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef0b251add573c7aaed75b866523b5fdcd3d8e5a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="generics-in-the-net-framework"></a>Generika in .NET Framework
 <a name="top"></a> Mit Generika können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau an den Datentyp anpassen, der von ihnen verarbeitet wird. Anstatt beispielsweise die <xref:System.Collections.Hashtable> -Klasse zu verwenden, bei der Schlüssel und Werte einen beliebigen Typ haben dürfen, können Sie die generische Klasse <xref:System.Collections.Generic.Dictionary%602> verwenden und den für den Schlüssel und Wert zulässigen Typ angeben. Zu den Vorteilen von Generika zählen bessere Wiederverwendbarkeit des Codes und Typsicherheit.  
@@ -60,19 +63,23 @@ ms.lasthandoff: 09/05/2017
 ## <a name="defining-and-using-generics"></a>Definieren und Verwenden von Generika  
  Generika sind Klassen, Strukturen, Schnittstellen und Methoden, die über Platzhalter (Typparameter) für einen oder mehrere der Typen verfügen, die sie speichern oder verwenden. Eine generische Auflistungsklasse kann beispielsweise einen Typparameter als Platzhalter für den Typ von Objekten verwenden, die in ihr gespeichert werden; die Typparameter werden als die Typen ihrer Felder und die Parametertypen ihrer Methoden angezeigt. Eine generische Methode kann ihren Typparameter als den Typen ihres Rückgabewerts oder als den Typen einer ihrer formalen Parameter verwenden. Der folgende Code zeigt eine einfache generische Klassendefinition.  
   
- [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)] [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)] [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
+ [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
+ [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
+ [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
  Beim Erstellen einer Instanz einer generischen Klasse geben Sie die tatsächlich zu ersetzenden Typen für die Typparameter an. Dadurch wird eine neue generische Klasse eingerichtet, die als konstruierte generische Klasse bezeichnet wird, wobei die ausgewählten Typen überall dort, wo die Typparameter angezeigt werden, ersetzt werden. Das Ergebnis ist eine typsichere Klasse, die auf die ausgewählten Typen zugeschnitten ist, wie im folgenden Code veranschaulicht wird.  
   
- [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)] [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)] [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
+ [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
+ [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
+ [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Generika-Terminologie  
  Die folgenden Begriffe werden bei der Erörterung von Generika in .NET Framework verwendet:  
   
--   Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> -Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
+-   Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>-Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
   
--   *Generische Typparameter*, oder *Typparameter*, sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
+-   *Generische Typparameter*, oder *Typparameter*, sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
   
 -   Ein *konstruierter generischer Typ*, oder *konstruierter Typ*, ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
   
@@ -82,15 +89,19 @@ ms.lasthandoff: 09/05/2017
   
 -   *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen Standardkonstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
+-   *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen Standardkonstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
   
 -   Eine *generische Methodendefinition* ist eine Methode mit zwei Parameterlisten: eine Liste der generischen Typparameter und eine Liste der formalen Parameter. Typparameter können als Rückgabetyp oder als Typen der formalen Parameter auftreten, wie im folgenden Code dargestellt.  
   
- [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)] [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)] [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
+ [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
+ [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
+ [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
  Generische Methoden können in generischen oder nicht generischen Typen stehen. Beachten Sie unbedingt, dass eine Methode nicht nur deshalb generisch ist, weil sie zu einem generischen Typ gehört oder weil sie formale Parameter besitzt, deren Typen die generischen Parameter des einschließenden Typs sind. Eine Methode ist nur generisch, wenn sie über eine eigene Liste an Typparametern verfügt. Im folgenden Code ist nur die Methode `G` generisch.  
   
- [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)] [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)] [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
+ [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
+ [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
+ [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
  [Zurück nach oben](#top)  
   
@@ -102,7 +113,9 @@ ms.lasthandoff: 09/05/2017
   
 -   Es ist weniger Code erforderlich, und Code kann leichter wiederverwendet werden. Die Vererbung von einem Basistyp oder das Überschreiben von Membern ist nicht erforderlich. <xref:System.Collections.Generic.LinkedList%601> ist beispielsweise sofort einsatzbereit. So können Sie mit der folgenden Variablendeklaration eine verknüpfte Liste von Zeichenfolgen erstellen:  
   
-     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]  [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]  [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
+     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
+     [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
+     [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
 -   Bessere Leistung. Generische Auflistungstypen bieten im Allgemeinen eine bessere Leistung zum Speichern und Bearbeiten von Werttypen, da das Boxing von Werttypen nicht erforderlich ist.  
   
@@ -173,7 +186,6 @@ ms.lasthandoff: 09/05/2017
   
  <xref:System.Collections.ObjectModel>  
   
- <xref:System.Reflection.Emit.OpCodes?displayProperty=fullName>  
+ <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
   
  [Zurück nach oben](#top)
-

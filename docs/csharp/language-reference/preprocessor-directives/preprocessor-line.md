@@ -1,40 +1,20 @@
 ---
 title: '#<a name="line-c-reference"></a>line (C#-Referenz)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#line'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#line directive [C#]'
+f1_keywords: '#line'
+helpviewer_keywords: '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="line-c-reference"></a>#line (C#-Referenz)
 Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamenausgabe für Fehler und Warnungen bearbeiten. Dieses Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Zeilennummer 200 (obwohl der Standardwert #7 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet. Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
@@ -88,7 +68,6 @@ class MainClass
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
-

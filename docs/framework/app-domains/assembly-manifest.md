@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
 Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine EXE- oder DLL-Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
@@ -65,8 +63,7 @@ Typen von Assemblys
  Im Assemblymanifest können Sie Informationen hinzufügen oder ändern. Dazu müssen Sie Assemblyattribute im Code verwenden. Sie können Versionsinformationen und Informationsattribute ändern, einschließlich Marke, Urheberrecht, Produkt, Firma und Informationsversion. Eine vollständige Liste von Assemblyattributen finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblyinhalte](../../../docs/framework/app-domains/assembly-contents.md)   
- [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ [Assemblyinhalte](../../../docs/framework/app-domains/assembly-contents.md)  
+ [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

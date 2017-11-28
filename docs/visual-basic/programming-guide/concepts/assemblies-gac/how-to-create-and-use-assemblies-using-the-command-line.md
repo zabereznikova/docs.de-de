@@ -1,41 +1,33 @@
 ---
-title: "Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 363bca806736e5540165ea96e9b4fe60d0968098
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)
-Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL), wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario zur Demonstration erstellen und Verwenden einer DLL:  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)
+Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:  
   
--   `MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden. In diesem Beispiel enthält die DLL zwei Methoden `Add` und `Multiply`.  
+-   `MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden sollen. In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.  
   
--   `Add`: Die Quelldatei mit der Methode `Add`. Es gibt die Summe ihrer Parameter zurück. Die Klasse `AddClass` , enthält die Methode `Add` ist ein Mitglied der Namespace `UtilityMethods`.  
+-   `Add`: Die Quelldatei, die die Methode `Add` enthält. Sie gibt die Summe ihrer Parameter zurück. Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.  
   
--   `Mult`: Der Quellcode, der die Methode enthält `Multiply`. Es gibt das Produkt seiner Parameter zurück. Die Klasse `MultiplyClass` , enthält die Methode `Multiply` ist auch ein Mitglied der Namespace `UtilityMethods`.  
+-   `Mult`: Der Quellcode, der die Methode `Multiply` enthält. Er gibt die Summe seiner Parameter zurück. Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.  
   
--   `TestCode`: Die Datei enthält die `Main` Methode. Die Methoden verwendet zum Berechnen der Summe und das Produkt der Laufzeitargumente in die DLL-Datei.  
+-   `TestCode`: Die Datei, die die Methode `Main` enthält. Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -96,45 +88,45 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- Diese Datei enthält den Algorithmus, der die DLL-Methoden verwendet `Add` und `Multiply`. Er beginnt mit der Analyse der Argumente über die Befehlszeile `num1` und `num2`. Dann er die Summe berechnet, indem der `Add` Methode für die `AddClass` -Klasse und das Produkt mit der `Multiply` Methode für die `MultiplyClass` Klasse.  
+ Diese Datei enthält den Algorithmus, der die DLL-Methoden `Add` und `Multiply` verwendet. Zuerst werden die über die Befehlszeile eingegebenen Argumente `num1` und `num2` analysiert. Anschließend wird die Summe mithilfe der Methode `Add` für die `AddClass`-Klasse und das Produkt mit der Methode `Multiply` für die `MultiplyClass`-Klasse berechnet.  
   
- Beachten Sie, dass die `Imports` -Anweisung am Anfang der Datei können Sie die nicht qualifizierten Klassennamen verwenden, um die DLL-Methoden wie folgt zum Zeitpunkt der Kompilierung zu verweisen:  
+ Beachten Sie, dass die `Imports` Anweisung am Anfang der Datei ermöglicht es Ihnen, die nicht qualifizierten Klassennamen verwenden, um die DLL-Methoden wie folgt zum Zeitpunkt der Kompilierung zu verweisen:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
 ```  
   
- Andernfalls müssen Sie den vollqualifizierten Namen wie folgt verwenden:  
+ Andernfalls müssen Sie die vollqualifizierten Namen wie folgt verwenden:  
   
 ```vb  
 UtilityMethods.MultiplyClass.Multiply(num1, num2)  
 ```  
   
 ## <a name="execution"></a>Ausführung  
- Um das Programm auszuführen, geben Sie den Namen der EXE-Datei, gefolgt von zwei Zahlen, wie folgt aus:  
+ Um das Programm auszuführen, geben Sie so den Namen der EXE-Datei gefolgt von zwei Zahlen ein:  
   
  `TestCode 1234 5678`  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Zum Erstellen der Datei `MathLibrary.DLL`, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile aus.  
+ Um die Datei `MathLibrary.DLL` zu erstellen, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile.  
   
 ```vb  
 vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- Die [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) (Compileroption) teilt dem Compiler mit eine DLL anstelle einer EXE-Datei ausgegeben. Die [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) Compileroption, gefolgt von einem Dateinamen wird verwendet, um den Namen der DLL-Datei angeben. Andernfalls verwendet der Compiler die erste Datei (`Add.vb`) als Name der DLL.  
+ Die [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) Compileroption teilt dem Compiler mit einer DLL-Datei anstelle einer EXE-Datei auszugeben. Die [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) gefolgt von einem Dateinamen (Compileroption) wird verwendet, um den DLL-Dateinamen angeben. Andernfalls verwendet der Compiler die erste Datei (`Add.vb`) als Name der DLL.  
   
- Zum Erstellen der ausführbaren Datei `TestCode.exe`, verwenden Sie die folgende Befehlszeile:  
+ Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:  
   
 ```vb  
 vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- Die **/out** -Compileroption weist den Compiler an, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`). Diese Compileroption ist optional. Die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) -Compileroption werden die DLL-Dateien, die von der Anwendung verwendet.  
+ Die Compileroption **/out** weist den Compiler an, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`) an. Diese Compileroption ist optional. Die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) (Compileroption) gibt an, die DLL-Dateien, die dieses Programm verwendet.  
   
- Weitere Informationen zum Erstellen von der Befehlszeile aus finden Sie unter und [Erstellen von der Befehlszeile aus](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Weitere Informationen zum Erstellen von der Befehlszeile finden Sie unter und [erstellen über die Befehlszeile](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)   
- [Assemblys und dem globalen Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Erstellen einer Klasse zum Halten von DLL-Funktionen](http://msdn.microsoft.com/library/e08e4c34-0223-45f7-aa55-a3d8dd979b0f)
+ [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [Assemblys und der globale Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

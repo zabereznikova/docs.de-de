@@ -13,16 +13,15 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6da580d208736a64e2094f701fb4c1241a488322
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Entschärfung: Serialisierung von Steuerzeichen mit dem DataContractJsonSerializer
 
@@ -52,4 +51,3 @@ Wenn dieses Verhalten unerwünscht ist, können Sie sich gegen diese Funktion en
  
 ## <a name="see-also"></a>Siehe auch
 [Änderungen der Neuzuweisungen in .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
-

@@ -1,41 +1,22 @@
 ---
 title: by (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - by
 - by_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- by keyword [C#]
+helpviewer_keywords: by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bbbf64eb86c3cca5de659bffce7c5c0639461f85
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ada3524412a46766288c62b92f144dd954baa83
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="by-c-reference"></a>by (C#-Referenz)
 Das Kontextschlüsselwort `by` wird in der `group`-Klausel in einem Abfrageausdruck verwendet, um anzugeben, wie die zurückgegebenen Elemente gruppiert werden sollen. Weitere Informationen finden Sie unter [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md).  
@@ -43,8 +24,7 @@ Das Kontextschlüsselwort `by` wird in der `group`-Klausel in einem Abfrageausdr
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie das Kontextschlüsselwort `by` in einer `group`-Klausel verwendet wird, um anzugeben, dass die Kursteilnehmer anhand des ersten Buchstaben des Nachnamens gruppiert werden sollen.  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
+ [!code-csharp[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

@@ -17,6 +17,3 @@
 ### [Gewusst wie: Zugreifen auf untergeordnete XML-Elemente](how-to-access-xml-child-elements.md)
 ### [Gewusst wie: Zugreifen auf XML-Attribute](how-to-access-xml-attributes.md)
 ### [Gewusst wie: Deklarieren und Verwenden von XML-Namespacepräfixen](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [XML IntelliSense](xml-intellisense.md)
-### [Gewusst wie: Aktivieren von XML IntelliSense](how-to-enable-xml-intellisense.md)
-### [Assistent "XML zu Schema"](xml-to-schema-wizard.md)

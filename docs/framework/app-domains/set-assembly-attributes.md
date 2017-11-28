@@ -5,25 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0683ee1e79d9e5fd9bef7af3b6b85dd5a58c3845
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="setting-assembly-attributes"></a>Festlegen von Assemblyattributen
 Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Die Attribute sind in die folgenden Gruppen von Informationen unterteilt:  
@@ -45,11 +47,13 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|Ein aufgelistetes Feld, das die von der Assembly unterstützte Kultur angibt. Eine Assembly kann auch eine Kulturunabhängigkeit angeben. In diesem Fall enthält sie die Ressourcen für die Standardkultur. **Hinweis**: Die Runtime behandelt jede Assembly, für die das culture-Attribut nicht auf NULL festgelegt ist, als Satellitenassembly. Solche Assemblys unterliegen den Bindungsregeln für Satellitenassemblys. Weitere Informationen finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)(Seite möglicherweise auf Englisch).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Ein Wert, der Assemblyattribute festlegt, etwa ob die Assembly parallel ausgeführt werden kann.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Ein numerischer Wert mit dem Format *Haupt*.*Neben*.*Build*.*Revision* (z. B. 2.4.0.0). Common Language Runtime verwendet diesen Wert zum Durchführen von Bindungsvorgängen in Assemblys mit der Eigenschaft "Starker Name". **Hinweis**: Wenn das <xref:System.Reflection.AssemblyInformationalVersionAttribute>-Attribut nicht auf eine Assembly angewendet wird, wird die Versionsnummer, die vom <xref:System.Reflection.AssemblyVersionAttribute>-Attribut angegeben wird, von den Eigenschaften <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName> verwendet.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Ein numerischer Wert mit dem Format *Haupt*.*Neben*.*Build*.*Revision* (z. B. 2.4.0.0). Common Language Runtime verwendet diesen Wert zum Durchführen von Bindungsvorgängen in Assemblys mit der Eigenschaft "Starker Name". **Hinweis**: Wenn das <xref:System.Reflection.AssemblyInformationalVersionAttribute>-Attribut nicht auf eine Assembly angewendet wird, wird die Versionsnummer, die vom <xref:System.Reflection.AssemblyVersionAttribute>-Attribut angegeben wird, von den Eigenschaften <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> verwendet.|  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie das version- und das culture-Attribut auf eine Assembly angewendet werden.  
   
- [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)] [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)] [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
+ [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)]
+ [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)]
+ [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
   
 ## <a name="informational-attributes"></a>Informationsattribute  
  Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle beschreibt die verschiedenen Informationsattribute, die auf eine Assembly angewendet werden können.  
@@ -59,7 +63,7 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Ein Zeichenfolgenwert, der einen Firmennamen angibt.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Ein Zeichenfolgenwert, der Copyright-Informationen angibt.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Ein Zeichenfolgenwert, der die Win32-Dateiversionsnummer angibt. Dies ist normalerweise standardmäßig die Assemblyversion.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Ein Zeichenfolgenwert, der Versionsinformationen angibt, die zur Laufzeit nicht verwendet werden (zum Beispiel die vollständige Produktversionsnummer). **Hinweis**: Wenn dieses Attribut auf eine Assembly angewendet wird, kann die davon angegebene Zeichenfolge zur Runtime mithilfe der <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>-Eigenschaft abgerufen werden. Diese Zeichenfolge wird auch im von den Eigenschaften <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName> bereitgestellten Pfad und Registrierungsschlüssel verwendet.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Ein Zeichenfolgenwert, der Versionsinformationen angibt, die zur Laufzeit nicht verwendet werden (zum Beispiel die vollständige Produktversionsnummer). **Hinweis**: Wenn dieses Attribut auf eine Assembly angewendet wird, kann die davon angegebene Zeichenfolge zur Runtime mithilfe der <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>-Eigenschaft abgerufen werden. Diese Zeichenfolge wird auch im von den Eigenschaften <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> bereitgestellten Pfad und Registrierungsschlüssel verwendet.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Ein Zeichenfolgenwert, der Produktinformationen angibt.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Ein Zeichenfolgenwert, der Markeninformationen angibt.|  
   
@@ -86,9 +90,10 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
   
  Das folgende Codebeispiel zeigt die Attribute, die angewendet werden, wenn mithilfe der verzögerten Signierung eine Assembly mit starkem Namen mit einer Datei des öffentlichen Schlüssels `myKey.snk`erstellt wird.  
   
- [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)] [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)] [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+ [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+ [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+ [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)   
+ [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
  [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

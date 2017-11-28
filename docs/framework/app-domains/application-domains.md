@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isolierung der Anwendungen voneinander. Windows verwendet beispielsweise Prozesse, um Anwendungen zu isolieren. Diese Isolierung ist erforderlich, um sicherzustellen, dass der in einer Anwendung ausgeführte Code andere, unabhängig davon ausgeführte Anwendungen nicht beeinträchtigt.  
@@ -65,7 +63,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
     > [!NOTE]
     >  Einzelne Assemblys oder Typen können nicht entladen werden. Es können nur vollständige Domänen entladen werden.  
   
--   Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ **System.IO.FileNotFound** fehlschlagen. Ausführliche Informationen finden Sie unter [Remoteobjekte](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=fullName>.  
+-   Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ **System.IO.FileNotFound** fehlschlagen. Ausführliche Informationen finden Sie unter [Remoteobjekte](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   Das Verhalten von Code wird durch die Anwendung beschränkt, in der er ausgeführt wird. Die Anwendungsdomäne stellt Konfigurationseinstellungen bereit, z. B. Richtlinien der Anwendungsversion, den Speicherort von Remoteassemblys, auf die zugegriffen wird, sowie Informationen zum Suchen von Assemblys, die in die Domäne geladen werden.  
   
@@ -110,12 +108,12 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Es gibt keine eindeutige Korrelation zwischen Anwendungsdomänen und Threads. Es können jederzeit mehrere Threads in einer Anwendungsdomäne ausgeführt werden, wobei ein bestimmter Thread nicht auf eine einzelne Anwendungsdomäne beschränkt ist. Das heißt, dass Threads über die Grenzen von Anwendungsdomänen hinweg verwendet werden können. Es wird nicht für jede Anwendungsdomäne ein neuer Thread erstellt.  
   
- Zu jedem Zeitpunkt werden alle Threads in einer Anwendungsdomäne ausgeführt. In jeder angegebenen Anwendungsdomäne können 0 (null), ein oder mehrere Threads ausgeführt werden. Die Laufzeit verfolgt, welche Threads in welchen Anwendungsdomänen ausgeführt werden. Sie können jederzeit bestimmen, in welcher Domäne ein Thread ausgeführt wird, indem Sie die <xref:System.Threading.Thread.GetDomain%2A?displayProperty=fullName>-Methode aufrufen.  
+ Zu jedem Zeitpunkt werden alle Threads in einer Anwendungsdomäne ausgeführt. In jeder angegebenen Anwendungsdomäne können 0 (null), ein oder mehrere Threads ausgeführt werden. Die Laufzeit verfolgt, welche Threads in welchen Anwendungsdomänen ausgeführt werden. Sie können jederzeit bestimmen, in welcher Domäne ein Thread ausgeführt wird, indem Sie die <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>-Methode aufrufen.  
   
 ### <a name="application-domains-and-cultures"></a>Anwendungsdomänen und Kulturen  
- Die Kultur, die durch ein <xref:System.Globalization.CultureInfo>-Objekt dargestellt wird, ist Threads zugeordnet. Sie können die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen, indem Sie die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>-Eigenschaft verwenden. Mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>-Eigenschaft können Sie die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen oder festlegen. Wenn die einem Thread zugeordnete Kultur durch Verwendung der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>-Eigenschaft explizit festgelegt wurde, bleibt sie diesem Thread zugeordnet, wenn der Thread Anwendungsdomänengrenzen überschreitet. Andernfalls wird die Kultur, die dem Thread jeweils zugeordnet ist, durch den Wert der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=fullName>-Eigenschaft in der Anwendungsdomäne bestimmt, in der der Thread ausgeführt wird:  
+ Die Kultur, die durch ein <xref:System.Globalization.CultureInfo>-Objekt dargestellt wird, ist Threads zugeordnet. Sie können die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen, indem Sie die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft verwenden. Mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft können Sie die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen oder festlegen. Wenn die einem Thread zugeordnete Kultur durch Verwendung der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft explizit festgelegt wurde, bleibt sie diesem Thread zugeordnet, wenn der Thread Anwendungsdomänengrenzen überschreitet. Andernfalls wird die Kultur, die dem Thread jeweils zugeordnet ist, durch den Wert der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft in der Anwendungsdomäne bestimmt, in der der Thread ausgeführt wird:  
   
--   Wenn der Wert der Eigenschaft nicht `null` ist, wird die Kultur, die von der Eigenschaft zurückgegeben wird, dem Thread zugeordnet (und daher durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>-Eigenschaft und die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>-Eigenschaft zurückgegeben).  
+-   Wenn der Wert der Eigenschaft nicht `null` ist, wird die Kultur, die von der Eigenschaft zurückgegeben wird, dem Thread zugeordnet (und daher durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben).  
   
 -   Wenn der Wert der Eigenschaft `null` ist, wird die aktuelle Systemkultur dem Thread zugeordnet.  
   
@@ -171,5 +169,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Verweis  
- <xref:System.MarshalByRefObject?displayProperty=fullName>
-
+ <xref:System.MarshalByRefObject?displayProperty=nameWithType>

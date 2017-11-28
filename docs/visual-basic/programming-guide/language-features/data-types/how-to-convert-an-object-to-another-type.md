@@ -1,30 +1,28 @@
 ---
-title: "How to: Convert an Object to Another Type in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "objects [Visual Basic], converting"
+title: 'Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 053c93e7cf842138f5b9299cd2fcfa56342dd40b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Convert an Object to Another Type in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Eine `Object`\-Variable kann mithilfe eines Konvertierungsschlüsselworts wie [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) in einen anderen Datentyp umgewandelt werden.  
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic
+Konvertieren Sie eine `Object` Variable in einen anderen Datentyp mithilfe einer wie [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird eine `Object`\-Variable in eine `Integer`\-Variable und eine `String`\-Variable konvertiert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird ein `Object` -Variable auf einen `Integer` und ein `String`.  
   
 ```  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -35,20 +33,20 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Wenn Sie wissen, dass der Inhalt einer `Object`\-Variablen einen bestimmten Datentyp hat, sollten Sie die Variable in den betreffenden Datentyp umwandeln.  Wird stattdessen die `Object`\-Variable weiter verwendet, müssen entweder *Boxing*\- und *Unboxing*\-Operationen \(bei Werttypen\) oder eine *späte Bindung* \(bei Verweistypen\) ausgeführt werden.  Diese Operationen stellen einen zusätzlichen Arbeitsaufwand dar und führen damit zu Leistungseinbußen.  
+ Wenn Sie wissen, dass der Inhalt des ein `Object` -Variablen eines bestimmten Datentyps, es ist besser, die Variable in diesen Datentyp zu konvertieren. Wenn Sie weiterhin verwenden die `Object` Variable anfallen entweder *Boxing* und *unboxing* (für einen Werttyp) oder *späte Bindung* (für einen Referenztyp darstellt). Diese Vorgänge alle zusätzlichen Ausführung Zeit in Anspruch nehmen, und stellen die Leistung langsamer.  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweis auf den <xref:System?displayProperty=fullName>\-Namespace.  
+-   Einen Verweis auf den <xref:System?displayProperty=nameWithType>-Namespace  
   
-## Siehe auch  
- <xref:System.Object>   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Conversions Between Strings and Other Types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Object>  
+ [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

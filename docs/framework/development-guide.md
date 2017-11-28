@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework, development guide
+helpviewer_keywords: .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und Bereitstellen von .NET Framework-Apps beschrieben. Der Abschnitt enthält auch Informationen über Technologiebereiche, wie dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
@@ -43,7 +40,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  Erläutert die Verwendung von Windows Communication Foundation (WCF) zum Erstellen dienstorientierter Apps, die sicher und zuverlässig sind.  
   
  [Erstellen von Workflows mit Windows Workflow Foundation](windows-workflow-foundation/index.md)     
- Enthält Informationen zum Programmiermodell, zu Beispielen und Tools für die Verwendung von Windows Workflow Foundation (WF).   
+ Enthält Informationen zum Programmiermodell, zu Beispielen und Tools für die Verwendung von Windows Workflow Foundation (WF).  
 
  [Windows-Dienstanwendungen](../../docs/framework/windows-services/index.md)  
  Erläutert die Verwendung von Visual Studio und .NET Framework zum Erstellen einer App, die als Dienst installiert wird, und zum Starten, Beenden und Steuern ihres Verhaltens.  
@@ -94,4 +91,3 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
   
  [.NET Framework-Beispiele](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Enthält Links zur MSDN Code Samples Gallery für Beispielapps zur Veranschaulichung von .NET Framework-Technologien.
-

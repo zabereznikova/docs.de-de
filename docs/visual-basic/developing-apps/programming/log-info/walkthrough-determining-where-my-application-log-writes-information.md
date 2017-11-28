@@ -1,15 +1,12 @@
 ---
 title: "Bestimmen, wohin „My.Application.Log“ Informationen schreibt (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, output location
 - output, application log location
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4df7a80907b29a5eea79992f46c46603cbe2cc81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Bestimmen, wohin "My.Application.Log" Informationen schreibt (Visual Basic)
 Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener schreiben. Die Protokolllistener werden durch die Konfigurationsdatei des Computers konfiguriert und können durch die Konfigurationsdatei einer Anwendung außer Kraft gesetzt werden. Dieses Thema beschreibt die Standardeinstellungen und erläutert, wie Sie die Einstellungen für Ihre Anwendung ermitteln.  
@@ -79,28 +60,27 @@ Das `My.Application.Log` -Objekt kann Informationen in mehrere Protokolllistener
   
 5.  Bei vielen freigegebenen Listenern enthalten die Initialisierungdaten des Listeners eine Beschreibung, wohin der Listener die Daten leitet:  
   
-    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> -Listener schreibt in ein Dateiprotokoll, wie in der Einführung beschrieben.  
+    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>-Listener schreibt in ein Dateiprotokoll, wie in der Einführung beschrieben.  
   
-    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> -Listener schreibt Informationen in das Ereignisprotokoll des Computers, das im `initializeData` -Parameter angegeben ist. Zum Anzeigen von Ereignisprotokollen können Sie den **Server-Explorer** oder die **Windows-Ereignisanzeige**verwenden. Weitere Informationen finden Sie unter [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>-Listener schreibt Informationen in das Ereignisprotokoll des Computers, das im `initializeData`-Parameter angegeben ist. Zum Anzeigen von Ereignisprotokollen können Sie den **Server-Explorer** oder die **Windows-Ereignisanzeige**verwenden. Weitere Informationen finden Sie unter [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
-    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> - und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> -Listener schreiben in die Datei, die im `initializeData` -Parameter angegeben ist.  
+    -   Die <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>- und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>-Listener schreiben in die Datei, die im `initializeData`-Parameter angegeben ist.  
   
-    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> -Listener schreibt in die Befehlszeilenkonsole.  
+    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>-Listener schreibt in die Befehlszeilenkonsole.  
   
     -   Informationen dazu, wohin andere Typen von Protokolllistenern Informationen schreiben, finden Sie in der Dokumentation zum entsprechenden Typ.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DelimitedListTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics>   
- [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
- [Vorgehensweise: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [ETW-Ereignisse in .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.DelimitedListTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics>  
+ [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [Gewusst wie: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [ETW Events in the .NET Framework (ETW-Ereignisse in .NET Framework)](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  
  [Problembehandlung: Protokolllistener](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
-

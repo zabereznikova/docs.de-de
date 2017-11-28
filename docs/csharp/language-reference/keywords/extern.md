@@ -1,42 +1,24 @@
 ---
 title: extern (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - extern_CSharpKeyword
 - extern
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 106ceb6a4acf57daa01919acb38e4245655fca2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 796a904ec40dd8cdf59f093a4b89d7a2e1f99005
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extern-c-reference"></a>extern (C#-Referenz)
 Der `extern`-Modifizierer wird verwendet, um eine extern implementierte Methode zu deklarieren. Der `extern`-Modifizierer wird häufig mit dem `DllImport`-Attribut verwendet, wenn Sie nicht verwalteten Code mit Interop-Diensten aufrufen. In diesem Fall muss die Methode auch als `static` deklariert werden, wie im folgenden Beispiel gezeigt:  
@@ -55,7 +37,7 @@ private static extern void AVIFileInit();
 ## <a name="example"></a>Beispiel  
  **Beispiel 1.** In diesem Beispiel empfängt das Programm eine Zeichenfolge vom Benutzer und zeigt sie in einem Meldungsfeld an. Das Programm verwendet die `MessageBox`-Methode, die von der User32.dll-Bibliothek importiert wurde.  
   
- [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  **Beispiel 2.** Dieses Beispiel veranschaulicht ein C#-Programm, das eine C-Bibliothek aufruft (eine native DLL).  
@@ -111,9 +93,8 @@ SampleMethod() returns 50.
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>   
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
-

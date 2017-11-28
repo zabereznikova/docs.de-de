@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
+ms.openlocfilehash: 893999f9abcc299da4fb0923fe47c371079f695c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e11515031716a66ead866e52504137cb4e1df137
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac
 
 Visual Studio für Mac bietet eine umfassende integrierte Entwicklungsumgebung (IDE) für die Entwicklung von .NET Core-Anwendungen. Dieses Thema führt Sie durch die Erstellung einer einfachen Konsolenanwendung mit Visual Studio für Mac und .NET Core.
@@ -63,4 +61,3 @@ Führen Sie diese Anwendung durch Drücken von <kbd>F5</kbd> im Debugmodus oder 
 ## <a name="next-step"></a>Nächster Schritt
 
 Das Thema [Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](using-on-mac-vs-full-solution.md) veranschaulicht Ihnen, wie Sie eine vollständige .NET Core-Projektmappe erstellen, die eine wiederverwendbare Bibliothek und Komponententests enthält.
-

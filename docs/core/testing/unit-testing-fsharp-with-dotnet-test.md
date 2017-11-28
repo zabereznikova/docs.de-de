@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.topic: article
+dev_langs: fsharp
 ms.prod: .net-core
+ms.openlocfilehash: b4612b2b1a218f2bd126240db564258e07ba5231
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 1c0be8818f045a33cc0ee48e335cc05bf37ace92
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und xUnit
 
@@ -165,4 +165,3 @@ let sumOfSquares xs =
 ```
 
 Sie haben eine kleine Bibliothek und eine Reihe von Unittests für diese Bibliothek erstellt. Sie haben die Projektmappe so strukturiert, dass das Hinzufügen neuer Pakete und Tests Teil des normalen Workflows ist. Sie haben den Großteil Ihrer Zeit und Ihres Aufwands mit der Erreichung der Anwendungsziele verbracht.
-

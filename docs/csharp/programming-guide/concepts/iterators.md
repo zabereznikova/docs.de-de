@@ -1,27 +1,18 @@
 ---
 title: Iteratoren (C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iterators-c"></a>Iteratoren (C#)
 Ein *Iterator* kann verwendet werden, um Auflistungen wie Listen und Arrays schrittweise durchzugehen.  
@@ -366,7 +357,7 @@ public class Stack<T> : IEnumerable<T>
   
  In jeder aufeinanderfolgenden Iteration der `foreach`-Schleife (oder im direkten Aufruf von `IEnumerator.MoveNext`) setzt der nächste Iteratorcodetext den Prozess nach der letzten `yield return`-Anweisung fort. Er springt dann zur nächsten `yield return`-Anweisung weiter, bis das Ende des Iteratortexts erreicht ist, oder bis er auf eine `yield break`-Anweisung trifft.  
   
- Iteratoren unterstützen die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>-Methode nicht. Um den Prozess erneut von Anfang an zu durchlaufen, müssen Sie einen neuen Iterator erstellen.  
+ Iteratoren unterstützen die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>-Methode nicht. Um den Prozess erneut von Anfang an zu durchlaufen, müssen Sie einen neuen Iterator erstellen.  
   
  Weitere Informationen finden Sie unter [C#-Programmiersprachenspezifikation](../../../csharp/language-reference/language-specification/index.md).  
   
@@ -380,10 +371,9 @@ public class Stack<T> : IEnumerable<T>
 -   Das Einschließen des Erstellens der Liste im Iterator. In der Iteratormethode können Sie die Liste erstellen und anschließend jedes Ergebnis in eine Schleife liefern.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [Verwenden von foreach mit Arrays](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
+ [Verwenden von foreach mit Arrays](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [Generika](../../../csharp/programming-guide/generics/index.md)
-

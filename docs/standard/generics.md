@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>Generische Typen (Generika) – Übersicht
 
 Generika werden andauernd in C# verwendet, entweder implizit oder explizit. Wenn Sie LINQ in C# verwenden, haben Sie schon einmal bemerkt, dass Sie mit IEnumerable<T> arbeiten? Oder haben Sie in einem Onlinebeispiel eines „generischen Repositorys“ zur Kommunikation mit Datenbanken über Entity Framework festgestellt, dass die meisten Methoden IQueryable<T> zurückgeben? Haben Sie sich gefragt, wofür das **T** in diesen Beispielen steht und warum es dort ist?
@@ -75,4 +73,3 @@ Ein weiterer nützlicher Vorteil: Wenn die Runtime den Typ der Generika kennt, w
 
 *   [Einführung in Generika in C#](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [C#-Programmierhandbuch – Generika](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

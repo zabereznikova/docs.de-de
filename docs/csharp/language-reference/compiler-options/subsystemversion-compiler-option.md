@@ -1,36 +1,18 @@
 ---
 title: -subsystemversion (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bfb398c960d3aa1aa8c9c6638e1bd8fe5dba4a98
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c7992086eb33577d795496025820ed8f7bb51c24
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (C#-Compileroptionen)
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.  
@@ -83,4 +65,3 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
   
 ## <a name="see-also"></a>Siehe auch  
  [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
-

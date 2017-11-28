@@ -1,52 +1,33 @@
 ---
 title: Operatoren (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operators-c-programming-guide"></a>Operatoren (C#-Programmierhandbuch)
 In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operanden* in einem Ausdruck oder einer Anweisung angewendet wird. Operatoren mit einem Operanden, z. B. der Inkrementoperator (`++`) oder `new`, werden als *unäre* Operatoren bezeichnet. Operatoren mit zwei Operanden, z. B. arithmetische Operatoren (`+`,`-`,`*`,`/`), werden als *binäre* Operatoren bezeichnet. Der bedingte Operator (`?:`) verfügt über drei Operanden. Er ist der einzige ternäre Operator in C#.  
   
  Die folgende C#-Anweisung enthält einen einzelnen unären Operator und einen einzigen Operanden. Der Inkrementoperator `++`ändert den Wert des Operanden `y`.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  Die folgende C#-Anweisung enthält zwei binäre Operatoren mit jeweils zwei Operanden. Die Operanden des Zuweisungsoperators `=`sind die ganzzahlige Variable `y` und der Ausdruck `2 + 3` . Der Ausdruck `2 + 3` selbst besteht aus dem Additionsoperator und zwei Operanden: `2` und `3`.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>Operatoren, Evaluierung und Operatorrangfolge  
  Ein Operand kann ein gültiger Ausdruck sein, der aus beliebig langem Code zusammengesetzt ist, und kann eine beliebige Anzahl von Unterausdrücken enthalten. In einem Ausdruck mit mehreren Operatoren wird die Reihenfolge, in der die Operatoren angewendet werden, von der *Operatorrangfolge*, der *Assoziativität*und von Klammern bestimmt.  
@@ -193,6 +174,5 @@ a = (b = c);
  Weitere Informationen finden Sie unter [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md) und [C#-Operatoren](../../../csharp/language-reference/operators/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Anweisungen, Ausdrücke und Operatoren](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-

@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - runtime, metadata
 - languages, interoperability
@@ -18,16 +21,15 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5469f649d594553e1567d6d611cfafcd28e2c5b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
 Früher konnte eine in einer bestimmten Sprache geschriebene Softwarekomponente (.exe oder .dll) nicht einfach eine andere Softwarekomponente verwenden, die in einer anderen Sprache geschrieben war. COM ist die Lösung dieses Problems angegangen. Mit .NET Framework wird die Interoperation von Komponenten erleichtert, indem zusätzliche deklarative Informationen von Compilern an alle Module und Assemblys weitergegeben werden. Diese Informationen, so genannte Metadaten, ermöglichen eine nahtlose Interaktion der Komponenten.  
@@ -176,4 +178,3 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 |Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Attribute](../../docs/standard/attributes/index.md)|Beschreibt, wie Attribute angewendet, benutzerdefinierte Attribute geschrieben und in Attributen gespeicherte Informationen abgerufen werden.|
-

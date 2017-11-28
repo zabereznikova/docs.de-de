@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection, reflection-only loader context
 - assemblies [.NET Framework], loading for reflection
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext
 Mit dem ReflectionOnly-Load-Kontext können Sie Assemblys untersuchen, die für andere Plattformen oder andere Versionen von .NET Framework kompiliert wurden. In diesen Kontext geladener Code kann nur untersucht werden. Er kann nicht ausgeführt werden. Dies bedeutet, dass keine Objekte erstellt werden können, weil Konstruktoren nicht ausgeführt werden können. Da der Code nicht ausgeführt werden kann, werden Abhängigkeiten nicht automatische geladen. Wenn Sie diese untersuchen möchten, müssen Sie sie selbst laden.  
@@ -41,7 +43,7 @@ Mit dem ReflectionOnly-Load-Kontext können Sie Assemblys untersuchen, die für 
   
 3.  Sie können mit der <xref:System.Reflection.Assembly.ReflectionOnly%2A>-Eigenschaft einer Assembly feststellen, ob die Assembly in einen ReflectionOnly-Kontext geladen wurde.  
   
-4.  Wenn Attribute auf die Assembly oder auf Typen in der Assembly angewendet wurden, können Sie sich diese Attribute mit der <xref:System.Reflection.CustomAttributeData>-Klasse anschauen, um sicherzustellen, dass der Code nicht im ReflectionOnly-Kontext ausgeführt wird. Verwenden Sie die entsprechende Überladung der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName>-Methode, um <xref:System.Reflection.CustomAttributeData>-Objekte zu erhalten, die die auf eine Assembly, einen Member, ein Modul oder einen Parameter angewendeten Attribute darstellen.  
+4.  Wenn Attribute auf die Assembly oder auf Typen in der Assembly angewendet wurden, können Sie sich diese Attribute mit der <xref:System.Reflection.CustomAttributeData>-Klasse anschauen, um sicherzustellen, dass der Code nicht im ReflectionOnly-Kontext ausgeführt wird. Verwenden Sie die entsprechende Überladung der <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType>-Methode, um <xref:System.Reflection.CustomAttributeData>-Objekte zu erhalten, die die auf eine Assembly, einen Member, ein Modul oder einen Parameter angewendeten Attribute darstellen.  
   
     > [!NOTE]
     >  Auf die Assembly oder auf deren Inhalte angewendete Attribute sind möglicherweise in der Assembly oder in einer anderen in den ReflectionOnly-Kontext geladenen Assembly definiert. Es ist nicht möglich, im Voraus zu bestimmen, wo die Attribute definiert sind.  
@@ -54,10 +56,11 @@ Mit dem ReflectionOnly-Load-Kontext können Sie Assemblys untersuchen, die für 
 > [!NOTE]
 >  Um das Codebeispiel einfacher zu halten, lädt und untersucht die Assembly sich selbst. Für gewöhnlich ist nicht zu erwarten, dass die gleiche Assembly sowohl in den Ausführungskontext und den ReflectionOnly-Kontext geladen wird.  
   
- [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)] [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)] [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+ [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
+ <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+ <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
  <xref:System.Reflection.CustomAttributeData>
-

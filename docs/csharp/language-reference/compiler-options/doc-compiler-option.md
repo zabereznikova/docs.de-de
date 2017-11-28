@@ -1,15 +1,12 @@
 ---
 title: -doc (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - FileProperties.BuildAction
 - /doc
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - comments, C# code
 - XML documentation [C#], comments in source files
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ae3d6e1ffdaaa3245a51005070b16041c16dadae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 58608c1301b2df3286c1f8a1de189f6256b19052
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="doc-c-compiler-options"></a>/doc (C#-Compileroptionen)
 Mit der Option **/doc** können Sie Dokumentationskommentare in eine XML-Datei einfügen.  
@@ -84,6 +66,5 @@ Mit der Option **/doc** können Sie Dokumentationskommentare in eine XML-Datei e
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-

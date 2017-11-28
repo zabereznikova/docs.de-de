@@ -1,39 +1,21 @@
 ---
 title: "Operatorschlüsselwörter (C#-Referenz)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f1109fb343ebed3dc66e14664ed5ba470750f59
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-keywords-c-reference"></a>Operatorschlüsselwörter (C#-Referenz)
 Werden verwendet, um verschiedene Aktionen auszuführen wie das Erstellen von Objekten, das Überprüfen des Laufzeittyps eines Objekts, das Abrufen der Größe eines Typs usw. In diesem Abschnitt werden die folgenden Schlüsselwörter beschrieben:  
@@ -79,8 +61,7 @@ Werden verwendet, um verschiedene Aktionen auszuführen wie das Erstellen von Ob
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) Gibt einen ungeprüften Kontext an  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
  [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
-

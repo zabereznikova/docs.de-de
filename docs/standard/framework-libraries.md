@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
+ms.openlocfilehash: 6851e7059ca60430e761cebed4fd5040a6a3ee08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="framework-libraries"></a>Frameworkbibliotheken
 
 .NET verfügt über einen umfangreichen Standardsatz an Klassenbibliotheken, die entweder als Basisklassenbibliotheken (Kernsatz) oder Frameworkklassenbibliotheken (vollständiger Satz) bezeichnet werden. Diese Bibliotheken bieten Implementierungen für viele allgemeine und App-spezifische Typen, Algorithmen und Hilfsprogrammfunktionen. Sowohl kommerzielle als auch communitybasierte Bibliotheken bauen auf den Frameworkklassenbibliotheken auf und bieten einfache, sofort einsatzbereite Bibliotheken für eine Vielzahl von Computingaufgaben.
@@ -32,15 +30,15 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 
 .NET umfasst eine Reihe primitiver Typen, die (in unterschiedlichem Maß) in allen Programmen verwendet werden. Diese Typen enthalten Daten, beispielsweise Zahlen, Zeichenfolgen, Bytes und beliebige Objekte. Die Sprache C# enthält Schlüsselwörter für diese Typen. Unten finden Sie einen Beispielsatz dieser Typen, zusammen mit den entsprechenden C#-Schlüsselwörtern.
 
-* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
-* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen <xref:System.UInt16>-Typ ohne Vorzeichen.
-* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)): Ein 32-Bit-Ganzzahltyp mit Vorzeichen Es gibt auch einen [UInt32](../csharp/language-reference/keywords/uint.md)-Typ ohne Vorzeichen.
-* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)): Ein 32-Bit-Gleitkommatyp
-* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)): Ein 128-Bit-Dezimaltyp
-* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte des Arbeitsspeichers darstellt
-* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)): Ein boolescher Typ, der `true` oder `false` darstellt
-* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)): Ein numerischer 16-Bit-Typ, der ein Unicodezeichen darstellt
-* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen <xref:System.UInt16>-Typ ohne Vorzeichen.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): Ein 32-Bit-Ganzzahltyp mit Vorzeichen Es gibt auch einen [UInt32](../csharp/language-reference/keywords/uint.md)-Typ ohne Vorzeichen.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): Ein 32-Bit-Gleitkommatyp
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): Ein 128-Bit-Dezimaltyp
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte des Arbeitsspeichers darstellt
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): Ein boolescher Typ, der `true` oder `false` darstellt
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): Ein numerischer 16-Bit-Typ, der ein Unicodezeichen darstellt
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.
 
 ## <a name="data-structures"></a>Datenstrukturen
 
@@ -65,4 +63,3 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 Es gibt viele App-Modelle von unterschiedlichen Herstellern, die mit .NET verwendet werden können.
 
 *   [ASP.NET](http://asp.net): Stellt ein Webframework zum Erstellen von Websites und -diensten bereit. Unterstützt unter Windows, Linux und macOS (je nach ASP.NET-Version).
-

@@ -1,38 +1,19 @@
 ---
 title: cref-Attribut (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- cref [C#]
+helpviewer_keywords: cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0cffba9083b22813be3dd0379b244f4d078f8549
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref-Attribut (C#-Programmierhandbuch)
 Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft. Dokumentationstools wie [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die Attribute `cref` zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.  
@@ -40,7 +21,7 @@ Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. E
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](../../../csharp/programming-guide/xmldoc/see.md)-Tags verwendet werden.  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
  Beim Kompilieren erzeugt das Programm die folgende XML-Datei. Beachten Sie, dass z.B. das Attribut `cref` für die `GetZero`-Methode vom Compiler in `"M:TestNamespace.TestClass.GetZero"` umgewandelt wurde. Das Präfix „M:“ steht für „Methode“ und ist eine Konvention, die von Dokumentationstools wie Sandcastle erkannt wird. Eine vollständige Liste der Präfixe finden Sie unter [Verarbeiten der XML-Datei](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   
@@ -142,6 +123,5 @@ Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. E
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
+ [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
  [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

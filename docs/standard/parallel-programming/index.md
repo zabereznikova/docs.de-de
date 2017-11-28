@@ -1,5 +1,5 @@
 ---
-title: Parallele Programmierung in .NET Framework
+title: Parallele Programmierung in .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -8,21 +8,19 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parallel programming
+helpviewer_keywords: parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e061508b6b74e81b79ab7d53b0277afd38072635
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a3509229efc57b1f6b1244671df65b2f21964e65
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="parallel-programming-in-the-net-framework"></a>Parallele Programmierung in .NET Framework
+# <a name="parallel-programming-in-net"></a>Parallele Programmierung in .NET
 Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne (d. h. CPUs), die die gleichzeitige Ausführung mehrerer Threads ermöglichen. Schon in naher Zukunft werden Computer vermutlich über deutlich mehr Kerne verfügen. Um sowohl aktuelle als auch künftige Hardware nutzen zu können, kann der Code parallelisiert werden, um die Arbeit über mehrere Prozessoren zu verteilen. Früher erforderte die Parallelisierung Änderungen von Threads und Sperren auf niedriger Ebene. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] verbessern die Unterstützung für parallele Programmierung, indem sie eine neue Laufzeit, neue Klassenbibliothekstypen und neue Diagnosetools bereitstellen. Durch diese Funktionen wird die parallele Entwicklung vereinfacht, sodass sie effizienten, differenzierten und skalierbaren parallelen Code in einer natürlichen Sprache schreiben können, ohne direkt mit Threads oder dem Threadpool arbeiten zu müssen. Die folgende Abbildung stellt in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] eine allgemeine Übersicht der parallelen Programmierarchitektur bereit.  
   
  ![.NET-Architektur für die parallele Programmierung](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
@@ -31,7 +29,7 @@ Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne
   
 |Technologie|Beschreibung|  
 |----------------|-----------------|  
-|[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Stellt eine Dokumentation für die <xref:System.Threading.Tasks.Parallel?displayProperty=fullName>-Klasse, die parallele Versionen einer `For`-Schleife und einer `ForEach`-Schleife einschließt, sowie für die <xref:System.Threading.Tasks.Task?displayProperty=fullName>-Klasse bereit. Dies ist die bevorzugte Methode, um asynchrone Vorgänge auszudrücken.|  
+|[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Stellt eine Dokumentation für die <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>-Klasse, die parallele Versionen einer `For`-Schleife und einer `ForEach`-Schleife einschließt, sowie für die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Klasse bereit. Dies ist die bevorzugte Methode, um asynchrone Vorgänge auszudrücken.|  
 |[Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Eine parallele Implementierung von LINQ to Objects, die die Leistung in vielen Szenarien deutlich verbessert.|  
 |[Datenstrukturen für die parallele Programmierung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|Stellt Links zu Dokumentationen über threadsichere Auflistungsklassen, einfache Synchronisierungstypen und Typen für verzögerte Initialisierung bereit.|  
 |[Diagnosetools für die parallele Ausführung](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Stellt Links zu Dokumentationen über Visual Studio-Debuggerfenster für Aufgaben und parallele Stapel und die [Nebenläufigkeitsschnellansicht](/visualstudio/profiling/concurrency-visualizer) bereit, die aus einer Gruppe von Ansichten im [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)]-Profiler besteht, mit dem paralleler Code debuggt und dessen Leistung optimiert werden kann.|  
@@ -41,6 +39,5 @@ Viele Personalcomputer und Arbeitsstationen verfügen über zwei oder vier Kerne
 |[Weitere Informationen](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Stellt Links zu zusätzlichen Dokumentationen und Beispielressourcen für parallele Programmierung in .NET Framework bereit.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)   
+ [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](http://go.microsoft.com/fwlink/?LinkID=185142)  
  [Beispiele für die parallele Programmierung mit .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
-

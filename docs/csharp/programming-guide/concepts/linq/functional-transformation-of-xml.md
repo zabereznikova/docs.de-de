@@ -1,25 +1,21 @@
 ---
 title: Funktionale Transformation von XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: bd63407901ed32f982a30aa7610590c853f15cf6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 57b4d25b7c2257c16401339f590b3487fba7d12a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="functional-transformation-of-xml-c"></a>Funktionale Transformation von XML (C#)
 In diesem Thema wird der Ansatz der reinen funktionalen Transformation zum Ändern von XML-Dokumenten erläutert und dem prozeduralen Ansatz gegenübergestellt.  
@@ -45,7 +41,6 @@ In diesem Thema wird der Ansatz der reinen funktionalen Transformation zum Ände
  XSLT ist das empfohlene Tool für dokumentorientierte Transformationen, wenn das Quelldokument eine unregelmäßige Struktur besitzt. Dokumentorientierte Transformationen können aber auch von LINQ to XML ausgeführt werden. Weitere Informationen finden Sie unter [How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#) (Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (c#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [LINQ to XML im Vergleich zu anderen XML-Technologien](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
-

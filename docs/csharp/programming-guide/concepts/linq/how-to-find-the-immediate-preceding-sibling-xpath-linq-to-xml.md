@@ -1,25 +1,21 @@
 ---
 title: 'Vorgehensweise: Ermitteln des unmittelbar vorhergehenden nebengeordneten Knotens (XPath-LINQ to XML) (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 88a27b15fb46651d5a4c3a8e2ac8a357b600dec2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 033cadcf8d2e87301c8eef9c77b6fcf691c4e040
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Vorgehensweise: Ermitteln des unmittelbar vorhergehenden nebengeordneten Knotens (XPath-LINQ to XML) (C#)
 Es kann passieren, dass Sie den unmittelbar vorhergehenden nebengeordneten Knoten eines Knotens ermitteln möchten. Aufgrund des semantischen Unterschieds bei Positionsprädikaten für die Achsen vorhergehender nebengeordneter Knoten in XPath im Vergleich zu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist dies einer der interessanteren Vergleiche.  
@@ -66,4 +62,3 @@ Results are identical
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to XML für XPath-Benutzer (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

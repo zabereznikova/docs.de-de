@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-selective-unit-tests"></a>Ausführen von selektiven Komponententests
 
 Die folgenden Beispiele verwenden `dotnet test`. Wenn Sie `vstest.console.exe` verwenden, ersetzen Sie `--filter ` mit `--testcasefilter:`.
@@ -108,4 +106,3 @@ Im Codebeispiel können die definierten Merkmale mit den Schlüsseln `Category` 
 | <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | Führt Tests aus, die `TestClass1` in `FullyQualifiedName` besitzen, **oder** `Category` ist `Nightly`. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | Führt Tests aus, die `TestClass1` in `FullyQualifiedName` besitzen, **und** `Category` ist `Nightly`. |
 | <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | Führt Tests aus, in denen `FullyQualifiedName` entweder `TestClass1` enthalten ist, **und** `Category` ist `CategoryA`, **oder** `Priority` ist 1. |
-

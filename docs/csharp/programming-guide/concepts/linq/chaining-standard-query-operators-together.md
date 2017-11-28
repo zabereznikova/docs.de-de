@@ -1,30 +1,26 @@
 ---
 title: Verketten von Standardabfrageoperatoren (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 47e936bffd79784b0ee6850bfc29d1d1f5b3224d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Verketten von Standardabfrageoperatoren (C#)
 Dies ist das letzte Thema von [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
- Die Standardabfrageoperatoren können ebenfalls verkettet werden. So können Sie z. B. den <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>-Operator verwenden; dieser funktioniert ebenfalls verzögert. Er materialisiert keinerlei Zwischenergebnisse.  
+ Die Standardabfrageoperatoren können ebenfalls verkettet werden. So können Sie z. B. den <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>-Operator verwenden; dieser funktioniert ebenfalls verzögert. Er materialisiert keinerlei Zwischenergebnisse.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die <xref:System.Linq.Enumerable.Where%2A>-Methode aufgerufen, bevor `ConvertCollectionToUpperCase` aufgerufen wird. Die <xref:System.Linq.Enumerable.Where%2A>-Methode funktioniert fast genauso wie die in den vorherigen Beispielen dieses Lernprogramms verwendeten verzögerten Methoden `ConvertCollectionToUpperCase` und `AppendString`.  
@@ -100,4 +96,3 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>Siehe auch  
  [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-

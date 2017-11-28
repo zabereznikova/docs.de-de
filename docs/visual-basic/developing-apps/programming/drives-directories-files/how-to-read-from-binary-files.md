@@ -1,44 +1,26 @@
 ---
 title: "Gewusst wie: Lesen von Binärdateien in Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- binary files, reading from
+- binary files [Visual Basic], reading from
 - I/O [Visual Basic], reading from binary files
-- ReadAllBytes method, reading from binary files
+- ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea6056f7d33b1137abb19b24246ce6874ff4d008
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5c0a093073b9a064629ae13a52a2295ad184b81
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Gewusst wie: Lesen von Binärdateien in Visual Basic
 Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen von Binärdateien.  
@@ -77,9 +59,8 @@ Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen 
  Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden. Die Datei kann andere Inhalte als erwartet enthalten. Die Methoden zum Lesen aus der Datei können fehlschlagen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>   
- [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
+ [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
  [Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)
-

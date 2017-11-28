@@ -1,38 +1,19 @@
 ---
 title: Vom Compiler generierte Ausnahmen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], compiler-generated
+helpviewer_keywords: exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d1417e42f588978d5fc1beca4ad55463502ee219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Vom Compiler generierte Ausnahmen (C#-Programmierhandbuch)
 Einige Ausnahmen werden automatisch von der Common Language Runtime (CLR) von .NET Framework ausgelöst, wenn grundlegende Operationen fehlschlagen. Diese Ausnahmen und die entsprechenden Fehlerbedingungen sind in der folgenden Tabellen aufgelistet.  
@@ -51,10 +32,9 @@ Einige Ausnahmen werden automatisch von der Common Language Runtime (CLR) von .N
 |<xref:System.TypeInitializationException>|Wird ausgelöst, wenn ein statischer Konstruktor eine Ausnahme auslöst, und keine kompatiblen `catch`-Klausel vorhanden ist, die sie abfangen könnte.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)   
- [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)  
+ [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
-

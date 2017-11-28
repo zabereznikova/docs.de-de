@@ -1,30 +1,21 @@
 ---
 title: "Using Async for File Access (C#) (Verwenden von Async für Dateizugriff (C#))"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7d6272baa9beae405148185abfebde84ca0cb7d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b2994b77150f0566f250d20f2ac121c44a365bc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-async-for-file-access-c"></a>Using Async for File Access (C#) (Verwenden von Async für Dateizugriff (C#))
 Sie können die Async-Funktion verwenden, um auf Dateien zuzugreifen. Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne Rückrufe zu verwenden oder den Code über mehrere Methoden oder Lambdaausdrücke teilen zu müssen. Um synchronen Code asynchron auszuführen, rufen Sie einfach eine asynchrone Methode anstelle einer synchronen Methode auf und fügen Sie dem Code einige Schlüsselwörter hinzu.  
@@ -192,7 +183,6 @@ public async void ProcessWriteMult()
  Bei Verwendung der Methoden <xref:System.IO.Stream.WriteAsync%2A> und <xref:System.IO.Stream.ReadAsync%2A> können Sie einen <xref:System.Threading.CancellationToken> angeben, mit dem Sie den Vorgang in der Mitte des Streams beenden können. Weitere Informationen finden Sie unter [Fine-Tuning Your Async Application (C#) (Abstimmen der asynchronen Anwendung (C#))](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) und [Abbruch in verwalteten Threads](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Async Return Types (C#) (Asynchrone Rückgabetypen (C#))](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
+ [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Asynchrone Rückgabetypen (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
  [Ablaufsteuerung in asynchronen Programmen](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
-

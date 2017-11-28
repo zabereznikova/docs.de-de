@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 4165d968ff347dd9af3bff755be22484debc23c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02a79ff2d198149b51edb3765805f2614adb2483
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="strong-named-assemblies"></a>Assemblys mit starkem Namen
 Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identität. Außerdem werden Assemblykonflikte verhindert.  
@@ -53,8 +51,7 @@ Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identi
  Wenn Sie Open Source-Entwickler sind und die Vorzüge von Assemblys mit starkem Namen kennen lernen möchten, können Sie unter Umständen den privaten Schlüssel einer Assembly zusammen in Ihr Quellcodeverwaltungssystem einchecken.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)   
- [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
+ [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

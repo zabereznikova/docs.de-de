@@ -1,39 +1,21 @@
 ---
 title: 'Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch)
 In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse gezeigt, die nur zum Kapseln einer Reihe von automatisch implementierten Eigenschaften dient. Verwenden Sie diese Konstruktart anstelle einer Struktur, wenn Sie eine Verweistypsemantik verwenden müssen.  
@@ -137,7 +119,6 @@ In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse g
  Der Compiler erstellt Unterstützungsfelder für jede automatisch implementierte Eigenschaft. Es ist nicht möglich, über den Quellcode direkt auf die Felder zuzugreifen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
+ [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
  [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-

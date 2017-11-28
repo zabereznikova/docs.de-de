@@ -1,25 +1,21 @@
 ---
 title: "Suchen der standardmäßigen Absatzformatvorlage (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: e2664620127e6e3ed9f723a7c23012905be3781b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 834654837b5c7fc747b0df1ee9dc645664a77351
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Suchen der standardmäßigen Absatzformatvorlage (C#)
 Die erste Aufgabe im Tutorial „Bearbeiten des Inhalts eines WordprocessingML-Dokuments“ besteht darin, die Standardabsatzformatvorlage im Dokument zu ermitteln.  
@@ -29,9 +25,9 @@ Die erste Aufgabe im Tutorial „Bearbeiten des Inhalts eines WordprocessingML-D
 ### <a name="description"></a>Beschreibung  
  Das folgende Beispiel öffnet ein Office Open XML-WordprocessingML-Dokument, bestimmt den Dokument- und den Formatvorlagenteil des Pakets und führt dann eine Abfrage aus, um den Namen der Standardformatvorlage zu ermitteln. Informationen zu Office Open-XML-Dokumentpaketen und deren Bestandteilen finden Sie unter [Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open-XML-WordprocessingML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
- Die Abfrage sucht nach einem Knoten mit dem Namen `w:style`, der ein `w:type`-Attribut mit dem Wert "paragraph" und ein `w:default`-Attribut mit dem Wert "1" besitzt. Da es nur einen XML-Knoten mit diesen Attributen gibt, verwendet die Abfrage den <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName>-Operator, um eine Auflistung in ein Singleton umzuwandeln. Dann ruft die Abfrage den Wert des Attributs mit dem Namen `w:styleId` ab.  
+ Die Abfrage sucht nach einem Knoten mit dem Namen `w:style`, der ein `w:type`-Attribut mit dem Wert "paragraph" und ein `w:default`-Attribut mit dem Wert "1" besitzt. Da es nur einen XML-Knoten mit diesen Attributen gibt, verwendet die Abfrage den <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType>-Operator, um eine Auflistung in ein Singleton umzuwandeln. Dann ruft die Abfrage den Wert des Attributs mit dem Namen `w:styleId` ab.  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
 ### <a name="code"></a>Code  
   
@@ -102,4 +98,3 @@ The default style is: Normal
   
 ## <a name="see-also"></a>Siehe auch  
  [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
-

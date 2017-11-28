@@ -1,38 +1,19 @@
 ---
 title: new-Operator (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- new operator keyword [C#]
+helpviewer_keywords: new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 59e1cc2006548df9a7a10283a34044040e5c2fef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="new-operator-c-reference"></a>new-Operator (C#-Referenz)
 Wird zum Erstellen von Objekten und zum Aufrufen von Konstruktoren verwendet. Zum Beispiel:  
@@ -73,7 +54,7 @@ int i = 0;
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden ein `struct`-Objekt und ein Klassenobjekt mithilfe des `new`-Operators erstellt und initialisiert. Anschließend werden ihnen Werte zugewiesen. Die Standardwerte und die zugewiesenen Werte werden angezeigt.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  Beachten Sie im Beispiel, dass der Standardwert einer Zeichenfolge `null` ist. Daher wird er nicht angezeigt.  
   
@@ -81,10 +62,9 @@ int i = 0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-

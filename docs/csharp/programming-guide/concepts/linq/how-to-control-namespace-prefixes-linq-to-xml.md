@@ -1,30 +1,21 @@
 ---
 title: "Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fc8d652c54be62fdf38e0aa05fcf6a81af3f719b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Gewusst wie: Steuern von Namespacepräfixen (C#) (LINQ to XML)
 In diesem Thema wird beschrieben, wie Sie beim Serialisieren einer XML-Struktur Namespacepräfixe steuern können.  
@@ -73,4 +64,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Siehe auch  
  [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-expression-trees"></a>Erstellen von Ausdrucksbaumstrukturen
 
 [Vorheriges - Interpretieren von Ausdrücken](expression-trees-interpreting.md)
@@ -180,4 +178,3 @@ Die Ausdrucksbaumstruktur-APIs sind einige der Schwierigeren zum Navigieren in .
 Außerdem sind zu diesem Zeitpunkt C#-Ausdrücke vorhanden, die nicht direkt mit `Expression`-Klassenmethoden erstellt werden können. Im Allgemeinen werden dies die neuesten Operatoren und Ausdrücke sein, die in C# 5 und C# 6 hinzugefügt werden. (Z.B. `async`-Ausdrücke können nicht erstellt werden, und der neue `?.`-Operator kann nicht direkt erstellt werden.)
 
 [Weiter– Übersetzen von Ausdrücken](expression-trees-translating.md)
-

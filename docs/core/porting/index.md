@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core-from-net-framework"></a>Portieren von .NET Framework auf .NET Core
 
 Wenn Code auf .NET Framework ausgeführt wird, sind Sie vielleicht interessiert daran, Ihren Code auf .NET Core 1.0 auszuführen.  Dieser Artikel enthält eine Übersicht über den Portiervorgang und eine Liste der Tools, die während des Portierens auf .NET Core hilfreich sein können.
@@ -55,4 +53,3 @@ Nachstehend finden Sie eine Liste der Tools, die hilfreich sein können:
 
 [Porting to .NET Core - Analyzing your Third-Party Dependencies (Portieren auf.NET Core – Analysieren Ihrer Drittanbieter-Abhängigkeiten)](third-party-deps.md)
    
-

@@ -1,49 +1,29 @@
 ---
 title: "Main()-Rückgabewerte (C#-Programmierhandbuch)"
-ms.date: 2017-08-02
+ms.date: 08/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- Main method [C#], return values
+helpviewer_keywords: Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f317879a4941adfd3d125c7697226f8a510254c
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: d019d1c5757a961c03439d756e808ae13fd8a67b
-ms.openlocfilehash: 50943bdd0b7726145797faf82719537a388dad89
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
 
 Die Methode `Main` kann `void` zurückgeben:
 
-[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+[!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
 
 Zudem kann `int` zurückgegeben werden:
 
-[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+[!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
 
 Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgabe von `void` einen etwas einfacheren Code. Die Rückgabe einer Ganzzahl ermöglicht es dem Programm jedoch, Statusinformationen an andere Programme oder Skripts zu übermitteln, die die ausführbare Datei aufrufen. Der Rückgabewert von `Main` wird als Exitcode für den Prozess behandelt. Im folgenden Beispiel wird gezeigt, wie auf den Rückgabewert von `Main` zugegriffen werden kann.
 
@@ -53,7 +33,7 @@ Dieses Beispiel verwendet [.NET Core](../../../core/index.md) -Befehlszeilentool
 
 Ändern Sie die Methode `Main` in *program.cs* folgendermaßen:
 
-[!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+[!code-csharp[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
 
 Wenn ein Programm in Windows ausgeführt wird, wird jeder Wert, der von der Funktion `Main` zurückgegeben wurde, in einer Umgebungsvariable gespeichert. Diese Umgebungsvariable kann abgerufen werden, indem `ERRORLEVEL` aus einer Batchdatei oder `$LastExitCode` aus PowerShell verwendet wird.
 
@@ -100,7 +80,7 @@ private static async Task<int> AsyncConsoleWork()
 
 Dies kann nun durch Folgendes ersetzt werden:
 
-[!code-csharp[AsyncMain (Asynchrone Hauptelemente)](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
+[!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
 
 Der Vorteil der neuen Syntax ist, dass der Compiler immer den richtigen Code generiert.
 
@@ -122,4 +102,3 @@ Wenn der Einstiegspunkt der Anwendung `Task` oder `Task<int>` zurückgibt, gener
 [Main() and Command-Line Arguments (Main() und Befehlszeilenargumente)](index.md)
 [How to: Display Command Line Arguments (Vorgehensweise: Anzeigen von Befehlszeilenargumenten)](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 [How to: Access Command-Line Arguments Using foreach (Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach)](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
-

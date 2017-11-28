@@ -1,30 +1,21 @@
 ---
 title: Erstellen benutzerdefinierter Attribute (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 38bdedb352cc79f7a4cc3d08eb6138e7d994514b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ae5084501a2dd60ae23c93bbdb52dcd44f3f3f7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-custom-attributes-c"></a>Erstellen benutzerdefinierter Attribute (C#)
 Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:  
@@ -84,11 +75,10 @@ class SampleClass
 >  Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>   
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)   
- [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)   
- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
+ <xref:System.Reflection>  
+ [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+ [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)  
+ [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
  [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
-

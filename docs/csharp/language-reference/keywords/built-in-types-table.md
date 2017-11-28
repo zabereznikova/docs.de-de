@@ -1,39 +1,21 @@
 ---
 title: Tabelle integrierter Typen (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d9d1e4945526a862074e73e608185696328946be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df13a45544491dee9e592a4ab0b90b5235f12abc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabelle integrierter Typen (C#-Referenz)
 Die folgende Tabelle zeigt die Schlüsselwörter für integrierte C#-Typen, bei denen es sich um Aliase der vordefinierten Typen im <xref:System>-Namespace handelt.  
@@ -75,12 +57,11 @@ Console.WriteLine(myVariable.GetType());
  Sie können auch den Operator [typeof](../../../csharp/language-reference/keywords/typeof.md) verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Werttypen](../../../csharp/language-reference/keywords/value-types.md)   
- [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
+ [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

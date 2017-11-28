@@ -1,39 +1,31 @@
 ---
-title: 'Gewusst wie: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Neuordnen der Felder einer durch Trennzeichen getrennten Datei (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9abb0510ed3944cd80d6658238ef79d64dc0ca27
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f308495a21b671edf03fbd791ef77d668d55388d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Gewusst wie: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (Visual Basic)
-Eine Datei mit kommagetrennten Werten (CSV) ist eine Textdatei, die häufig verwendet wird, zum Speichern von Tabellendaten oder andere Tabellendaten, die durch die Zeilen und Spalten dargestellt werden. Mithilfe der <xref:System.String.Split%2A>Methode zum Trennen der Felder ist es sehr einfach, Abfragen und Bearbeiten von CSV-Dateien mithilfe von LINQ.</xref:System.String.Split%2A> Tatsächlich kann das gleiche Verfahren verwendet werden, um die Teile von beliebigen strukturierten Textzeile neu anzuordnen. Es ist nicht auf CSV-Dateien beschränkt.  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Vorgehensweise: Neuordnen der Felder einer durch Trennzeichen getrennten Datei (LINQ) (Visual Basic)
+Eine Datei mit kommagetrennten Werten (CSV) ist eine Textdatei, die häufig verwendet wird, um Tabellenkalkulationsdaten oder andere Tabellendaten zu speichern, die durch Zeilen und Spalten dargestellt werden. Mithilfe der Methode <xref:System.String.Split%2A> zum Trennen von Feldern ist es sehr einfach, CSV-Dateien mithilfe von LINQ abzufragen und zu bearbeiten. Tatsächlich kann das gleiche Verfahren verwendet werden, um die Teile von beliebigen strukturierten Textzeilen neu anzuordnen. Es ist nicht auf CSV-Dateien beschränkt.  
   
- Im folgenden Beispiel wird davon ausgegangen, dass die drei Spalten Schülern "last Name" darstellen "First Name" und "ID" Die Felder sind in alphabetischer Reihenfolge nach Nachnamen der Studenten. Die Abfrage erzeugt eine neue Sequenz, in der die ID-Spalte zuerst wird gefolgt von einer zweiten Spalte, die Vornamen und Nachnamen des Studenten kombiniert. Die Zeilen werden gemäß dem ID-Feld neu angeordnet. Die Ergebnisse werden in einer neuen Datei gespeichert, und die ursprünglichen Daten nicht geändert.  
+ Im folgenden Beispiel wird davon ausgegangen, dass die drei Spalten den „Nachnamen“, „Vornamen“ und die „ID“ von Schülern darstellen. Die Felder sind in alphabetischer Reihenfolge nach Nachnamen der Schüler angeordnet. Die Abfrage erzeugt eine neue Sequenz, in der die ID-Spalte zuerst angezeigt wird, gefolgt von einer zweiten Spalte, die Vornamen und Nachnamen des Schülers kombiniert. Die Zeilen werden gemäß dem ID-Feld neu angeordnet. Die Ergebnisse werden in einer neuen Datei gespeichert, und die ursprünglichen Daten werden nicht geändert.  
   
 ### <a name="to-create-the-data-file"></a>So erstellen Sie die Datendatei  
   
-1.  Kopieren Sie die folgenden Zeilen in eine nur-Text-Datei mit dem Namen spreadsheet1.csv. Speichern Sie die Datei im Projektordner.  
+1.  Kopieren Sie die folgenden Zeilen in eine Nur-Text-Datei mit dem Namen „spreadsheet1.csv“. Speichern Sie die Datei im Projektordner.  
   
     ```  
     Adams,Terry,120  
@@ -94,6 +86,6 @@ End Class
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
 ## <a name="see-also"></a>Siehe auch  
- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)   
+ [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Gewusst wie: Generieren von XML aus CSV-Dateien](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

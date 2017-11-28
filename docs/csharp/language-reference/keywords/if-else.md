@@ -1,50 +1,31 @@
 ---
 title: if-else (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - if_CSharpKeyword
 - else
 - else_CSharpKeyword
 - if
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a0ecc915af00caffeba92a8308a60bc24198d477
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 694761a9b03fadf2dff97e61e37c0af52658f9e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="if-else-c-reference"></a>if-else (C#-Referenz)
 Eine `if` -Anweisung ermittelt, welche Anweisung basierend auf dem Wert eines `Boolean` Ausdrucks auszuführen ist. Im folgenden Beispiel wird die `Boolean` Variable `result` auf `true` festgelegt und dann in der `if` Anweisung überprüft. Die Ausgabe lautet `The condition is true`.  
   
- [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
+ [!code-csharp[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
   
  Die können die Beispiele in diesem Thema ausführen, indem Sie sie in die `Main` -Methode einer Konsolenanwendung platzieren.  
   
@@ -78,28 +59,28 @@ if (condition)
   
  Die Anweisung bzw. die Anweisungen in `then-statement` und `else-statement` können von einer beliebigen Art sein und eine weitere `if` Anweisung enthalten, die in der ursprünglichen `if` -Anweisung geschachtelt ist. In geschachtelten `if` Anweisungen gehört jede `else` -Klausel zur letzten `if` -Anweisung, die nicht über eine zugehörige `else`-Anweisung verfügt. Im folgenden Beispiel wird `Result1` angezeigt, wenn `m > 10` und `n > 20` zu true ausgewertet werden. Wenn `m > 10` true ist, `n > 20` hingegen false, wird `Result2` angezeigt.  
   
- [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
+ [!code-csharp[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
   
  Wenn stattdessen `Result2` angezeigt werden soll, wenn `(m > 10)` false ist, können Sie diese Zuordnung mithilfe von Klammern festlegen, um den Beginn und das Ende der geschachtelten `if` Anweisung anzugeben, wie im folgenden Beispiel gezeigt.  
   
- [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
+ [!code-csharp[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
  `Result2` wird angezeigt, wenn die Bedingung `(m > 10)` als FALSE ausgewertet wird.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel geben Sie ein Zeichen über die Tastatur ein. Das Programm verwendet eine geschachtelte `if` -Anweisung, um zu bestimmen, ob das eingegebene Zeichen ein alphabetisches Zeichen ist. Wenn das eingegebene Zeichen ein alphabetisches Zeichen ist, überprüft das Programm, ob das eingegebene Zeichen in Groß- oder in Kleinschreibung ist. In beiden Fällen wird eine Meldung angezeigt.  
   
- [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
+ [!code-csharp[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Sie können eine `if` Anweisung auch in einem else-Block schachteln, wie der folgende Codeausschnitt zeigt. Im Beispiel werden `if` Anweisungen in zwei else-Blocks und einem then-Block geschachtelt. In den Kommentaren ist angegeben, welche Bedingungen in jedem Block true oder false sind.  
   
- [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
+ [!code-csharp[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird bestimmt, ob ein eingegebenes Zeichen ein Kleinbuchstabe, ein Großbuchstabe oder eine Zahl ist. Wenn alle drei Bedingungen false sind, ist das Zeichen kein alphanumerisches Zeichen. Das Beispiel zeigt für jeden Fall eine Meldung an.  
   
- [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
+ [!code-csharp[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
  So, wie eine Anweisung im else-Block oder then-Block jede beliebige Anweisung sein kann, können Sie für die Bedingungen einen beliebigen gültigen booleschen Ausdruck verwenden. Sie können logische Operatoren wie z.B [&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) und [!](../../../csharp/language-reference/operators/logical-negation-operator.md) verwenden verwenden, um Verbundbedingungen zu erstellen. Der folgende Code enthält Beispiele.  
   
@@ -154,10 +135,9 @@ if (!(m >= n || m >= p))
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [?:-Operator](../../../csharp/language-reference/operators/conditional-operator.md)   
- [if-else-Anweisung (C++)](/cpp/cpp/if-else-statement-cpp)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [?:-Operator](../../../csharp/language-reference/operators/conditional-operator.md)  
+ [if-else-Anweisung (C++)](/cpp/cpp/if-else-statement-cpp)  
  [switch](../../../csharp/language-reference/keywords/switch.md)
-

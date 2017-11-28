@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - failed assembly binds
 - Fuslogvw.exe
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ad02ade9c9e60e53fa8fb91d9a38d6ec12bc2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Assembly Binding Log Viewer-Tool)
 In der Assemblybindungs-Protokollanzeige werden Details zu Assemblybindungen angezeigt. Mit diesen Informationen lässt sich leichter diagnostizieren, weshalb zur Laufzeit in .NET Framework keine Assembly gefunden werden kann. Diese Fehler resultieren normalerweise aus einer Assembly, die am falschen Ort bereitgestellt wird, einem systemeigenen Abbild, das nicht mehr gültig ist, oder aus Abweichungen bei Versionsnummern oder Kulturen. Wenn die Common Language Runtime eine Assembly nicht finden kann, wird dies in der Anwendung als <xref:System.TypeLoadException> angezeigt.  
@@ -221,7 +214,7 @@ Discarding native image.
      Im wichtigen Hinweis finden Sie Informationen über Assemblys, die als domänenneutrale Assemblys geladen werden.  
   
 > [!IMPORTANT]
->  Wenn eine Assembly als domänenneutrale Assembly geladen wird, z. B. durch Festlegen der <xref:System.AppDomainSetup.LoaderOptimization%2A>-Eigenschaft auf <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> oder <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, kann das Aktivieren der Protokollierung in einigen Fällen zu Speicherverlust führen. Dies kann der Fall sein, wenn beim Laden eines domänenneutralen Moduls in eine Anwendungsdomäne ein Protokolleintrag erfolgt und später die Anwendungsdomäne entladen wird. Der Protokolleintrag wird möglicherweise erst freigegeben, wenn der Prozess beendet wird. Einige Debugger aktivieren die Protokollierung automatisch.  
+>  Wenn eine Assembly als domänenneutrale Assembly geladen wird, z. B. durch Festlegen der <xref:System.AppDomainSetup.LoaderOptimization%2A>-Eigenschaft auf <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> oder <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, kann das Aktivieren der Protokollierung in einigen Fällen zu Speicherverlust führen. Dies kann der Fall sein, wenn beim Laden eines domänenneutralen Moduls in eine Anwendungsdomäne ein Protokolleintrag erfolgt und später die Anwendungsdomäne entladen wird. Der Protokolleintrag wird möglicherweise erst freigegeben, wenn der Prozess beendet wird. Einige Debugger aktivieren die Protokollierung automatisch.  
   
 #### <a name="to-enable-a-custom-log-path"></a>So aktivieren Sie einen benutzerdefinierten Protokollpfad  
   
@@ -244,9 +237,8 @@ Discarding native image.
     >  Dieses Kontrollkästchen ist nur unter Windows 8 oder höher aktiviert.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.TypeLoadException>   
- [Tools](../../../docs/framework/tools/index.md)   
- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)   
- [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.TypeLoadException>  
+ [Extras](../../../docs/framework/tools/index.md)  
+ [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

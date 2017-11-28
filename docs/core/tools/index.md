@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
 
@@ -122,6 +121,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+
 ---
 
 ### <a name="driver"></a>Treiber
@@ -150,5 +150,5 @@ Wenn Sie Preview 2-Tools verwendet haben, um *project.json*-basierte Projekte zu
 
 ## <a name="see-also"></a>Siehe auch
 
- [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)   
- [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)   
+ [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)  
+ [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)  

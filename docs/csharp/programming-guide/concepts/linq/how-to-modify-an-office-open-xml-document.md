@@ -1,25 +1,21 @@
 ---
 title: "Vorgehensweise: Ändern eines Office Open-XML-Dokuments (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Vorgehensweise: Ändern eines Office Open-XML-Dokuments (C#)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ändert und speichert.  
@@ -29,7 +25,7 @@ Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ä
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht nach dem ersten Absatzelement im Dokument, ruft den Text aus dem Absatz ab und löscht dann alle Textruns im Absatz. Daraufhin wird ein neuer Textrun erstellt, der aus dem Text des ersten Absatzes, umgewandelt in Großbuchstaben, besteht. Anschließend wird das geänderte XML in ein Open XML-Paket serialisiert und das Paket wird geschlossen.  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -161,4 +157,3 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Abfragetechniken (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

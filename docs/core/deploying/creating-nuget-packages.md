@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
+ms.openlocfilehash: a5738a4f3755a959660db4be683677673af61ef9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>So erstellen Sie ein NuGet-Paket mit plattformübergreifenden Tools
 
 > [!NOTE]
@@ -28,6 +26,9 @@ Bibliotheken sollten für .NET Core 1.0 als NuGet-Pakete verteilt werden.  So we
 Stellen Sie sich vor, dass Sie eine fantastische neue Bibliothek geschrieben haben, die Sie über NuGet verteilen möchten.  Sie können hierfür ein NuGet-Paket mit plattformübergreifenden Tools erstellen.  Als Beispiel dient eine Bibliothek namens **SuperAwesomeLibrary** für `netstandard1.0`.
 
 Wenn Sie transitive Abhängigkeiten haben, das heißt ein Projekt, das von einem anderen Projekt abhängig ist, müssen Sie sicherstellen, dass Pakete für die gesamte Projektmappe mit dem Befehl `dotnet restore` wiederhergestellt werden, bevor das NuGet-Paket erstellt wird.  Andernfalls wird der Befehl `dotnet pack` nicht ordnungsgemäß funktionieren.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 
 Nachdem Sie sichergestellt haben, dass Pakete wiederhergestellt wurden, können Sie zu dem Verzeichnis navigieren, in dem sich eine Bibliothek befindet:
 
@@ -66,4 +67,3 @@ Jetzt haben Sie die erforderlichen Dateien zum Veröffentlichen eines NuGet-Pake
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Verwechseln Sie nicht `dotnet pack` mit `dotnet publish`
 
 Es ist wichtig zu beachten, dass zu keinem Zeitpunkt der Befehl `dotnet publish` beteiligt ist.  Der Befehl `dotnet publish` dient der Bereitstellung von Clientanwendungen mit allen Abhängigkeiten im gleichen Paket – nicht für das Generieren eines NuGet-Pakets, das über NuGet verteilt und genutzt wird.
-

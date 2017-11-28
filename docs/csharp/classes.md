@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 13cbd3a5b53ea9b0f1acb22684b6a28639d00751
-ms.contentlocale: de-de
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="classes"></a>Klassen
 Eine *Klasse* ist ein Konstrukt, das Ihnen ermöglicht, Ihre eigenen benutzerdefinierten Typen zu erstellen, indem Variablen anderer Typen, Methoden und Ereignisse zusammengefasst werden. Eine Klasse ist mit einem Entwurf vergleichbar. Sie definiert die Daten und das Verhalten eines Typs. Wenn die Klasse nicht als statisch deklariert ist, kann der Clientcode diese durch Erstellen von *Objekten* oder *Instanzen* verwenden, die einer Variable zugeordnet sind. Die Variable verbleibt im Arbeitsspeicher, bis alle Verweise darauf außerhalb des gültigen Bereichs angezeigt werden. Zu diesem Zeitpunkt markiert die CLR sie als geeignet für die Garbage Collection. Wenn die Klasse als [statisch](language-reference/keywords/static.md) deklariert wird, existiert nur eine Kopie im Arbeitsspeicher, und der Clientcode kann darauf nur über die Klasse selbst zugreifen und nicht über eine *Instanzvariable*. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
@@ -84,5 +82,4 @@ Weitere Informationen finden Sie unter [C#-Sprachspezifikation](language-referen
 [Konstruktoren](programming-guide/classes-and-structs/constructors.md)   
 [Finalizer](programming-guide/classes-and-structs/destructors.md)   
 [Objekte](programming-guide/classes-and-structs/objects.md)
-
 

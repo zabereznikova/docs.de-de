@@ -1,35 +1,33 @@
 ---
-title: "Zuordnen von XML-Datentypen zu CLR-Typen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Zuordnen von XML-Datentypen zu CLR-Typen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3b6e67d27de33e61f5d5190249e90ac48e1aaaec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zuordnen von XML-Datentypen zu CLR-Typen
-In der folgenden Tabelle wird die Zuordnung zwischen XML\-Datentypen und CLR\-Typen \(Common Language Runtime\) beschrieben.  
+# <a name="mapping-xml-data-types-to-clr-types"></a>Zuordnen von XML-Datentypen zu CLR-Typen
+In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.  
   
-## In der folgenden Tabelle werden die Standardzuordnungen eines XML\-Datentyps zu einem CLR\-Typ beschrieben.  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>In der folgenden Tabelle werden die Standardzuordnungen eines XML-Datentyps zu einem CLR-Typ beschrieben.  
   
 > [!NOTE]
->  Das `xs`\-Präfix und das `xdt`\-Präfix werden den Namespace\-URIs **http:\/\/www.w3.org\/2001\/XMLSchema** bzw. **http:\/\/www.w3.org\/2003\/05\/xpath\-datatypes** zugeordnet.  
+>  Das `xs`-Präfix und das `xdt`-Präfix werden den Namespace-URIs http://www.w3.org/2001/XMLSchema bzw. http://www.w3.org/2003/05/xpath-datatypes zugeordnet.  
   
-|XML\-Typ|CLR\-Typ|  
+|XML-Typ|CLR-Typ|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -88,5 +86,5 @@ In der folgenden Tabelle wird die Zuordnung zwischen XML\-Datentypen und CLR\-Ty
 |Kommentarknoten|<xref:System.Xml.XPath.XPathNavigator>|  
 |Verarbeitungsanweisungsknoten|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## Siehe auch  
- [Typenunterstützung in den System.Xml\-Klassen](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Siehe auch  
+ [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

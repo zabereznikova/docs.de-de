@@ -1,40 +1,32 @@
 ---
-title: "Gewusst wie: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 166eb731d41e009c374ba55f929eed302793ecd0
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c94973bf9eae0feb2f7690dcc10e839b6b7c060c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Gewusst wie: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (Visual Basic)
-Sie können den Satz von Methoden, mit denen Sie für die LINQ-Abfragen durch Hinzufügen von Erweiterungsmethoden zum Erweitern der <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle.</xref:System.Collections.Generic.IEnumerable%601> Zusätzlich zu den standardmäßigen Mittel- oder Höchstwerte, können Sie z. B. eine benutzerdefinierte aggregate-Methode, um einen einzelnen Wert aus einer Sequenz von Werten berechnen erstellen. Sie können auch eine Methode erstellen, die als benutzerdefinierter Filter oder spezifische Datentransformation für eine Sequenz von Werten und eine neue Sequenz zurückgibt. Beispiele für solche Methoden sind <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, und <xref:System.Linq.Enumerable.Reverse%2A>.</xref:System.Linq.Enumerable.Reverse%2A> </xref:System.Linq.Enumerable.Skip%2A> </xref:System.Linq.Enumerable.Distinct%2A>  
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (Visual Basic)
+Sie können die Methoden erweitern, die Sie für LINQ-Abfragen durch Hinzufügen von Erweiterungsmethoden zur <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle verwenden können. Zusätzlich zu den durchschnittlichen oder maximalen Standardvorgängen, können Sie eine benutzerdefinierte Aggregatmethode erstellen, um einen einzelnen Wert aus einer Sequenz von Werten zu berechnen. Sie können auch eine Methode erstellen, die als benutzerdefinierter Filter oder spezifische Datentransformation für eine Sequenz von Werten agiert und eine neue Sequenz zurückgibt. Beispiele für solche Methoden sind <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Reverse%2A>.  
   
- Beim Erweitern der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle können Sie die benutzerdefinierten Methoden auf jede aufzählbare Auflistung anwenden.</xref:System.Collections.Generic.IEnumerable%601> Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Beim Erweitern der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle können Sie die benutzerdefinierten Methoden auf jede aufzählbare Auflistung anwenden. Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
-## <a name="adding-an-aggregate-method"></a>Hinzufügen einer Aggregate-Methode  
- Eine aggregierte Methode berechnet einen einzelnen Wert aus einer Gruppe von Werten. LINQ stellt mehrere Aggregatmethoden, einschließlich <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>, und <xref:System.Linq.Enumerable.Max%2A>.</xref:System.Linq.Enumerable.Max%2A> </xref:System.Linq.Enumerable.Min%2A> </xref:System.Linq.Enumerable.Average%2A> Sie können eigene aggregate-Methode erstellen, indem Sie eine Erweiterungsmethode zum Hinzufügen der <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle.</xref:System.Collections.Generic.IEnumerable%601>  
+## <a name="adding-an-aggregate-method"></a>Hinzufügen einer Aggregatmethode  
+ Eine aggregierte Methode berechnet einen einzelnen Wert aus einer Gruppe von Werten. LINQ stellt mehrere Aggregatmethoden bereit, einschließlich <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> und <xref:System.Linq.Enumerable.Max%2A>. Sie können Ihre eigene Aggregatmethode erstellen, indem Sie der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle eine Erweiterungsmethode hinzufügen.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie eine Erweiterungsmethode namens erstellen `Median` berechnet ein Wendepunkt für eine Sequenz von Zahlen vom Typ `double`.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Erweiterungsmethode namens `Median` erstellt wird, um einen Median für eine Zahlensequenz des Typs `double` zu berechnen.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -65,31 +57,72 @@ Module LINQExtension
 End Module  
 ```  
   
- Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung aufrufen, auf die gleiche Weise, die Sie andere aggregate Methoden aus Aufrufen der <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle.</xref:System.Collections.Generic.IEnumerable%601>  
+ Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Aggregatmethoden aus der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle aufrufen.  
   
 > [!NOTE]
->  In Visual Basic können Sie entweder einen Methodenaufruf oder die Standardabfragesyntax für verwenden die `Aggregate` oder `Group By` Klausel. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+>  In Visual Basic können Sie entweder ein Methodenaufruf oder standard-Abfragesyntax zum Verwenden der `Aggregate` oder `Group By` Klausel. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie Sie die `Median` Methode für ein Array vom Typ `double`.  
+ Im folgenden Codebeispiel wird die Verwendung der `Median`-Methode für ein Array des Typs `double` veranschaulicht.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+```vb  
+Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}  
+  
+Dim query1 = Aggregate num In numbers1 Into Median()  
+  
+Console.WriteLine("Double: Median = " & query1)  
+```  
+  
+```vb  
+' This code produces the following output:  
+'  
+' Double: Median = 4.85  
+```  
+  
+
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Überladen einer Aggregatmethode zum Akzeptieren verschiedener Typen  
- Aggregate-Methode können überladen werden, sodass diese Sequenzen verschiedener Typen akzeptiert. Die Standardmethode ist eine Überladung für jeden Typ erstellen. Ein anderer Ansatz ist das Erstellen eine Überladung, die einen generischen Typ annimmt und mit einem Delegaten in einen bestimmten Typ zu konvertieren. Sie können auch beide Methoden kombinieren.  
+ Sie können die Aggregatmethode überladen, sodass diese Sequenzen verschiedener Typen akzeptiert. Die Standardmethode ist die Erstellung einer Überladung für jeden Typ. Ein anderer Ansatz ist das Erstellen einer Überladung, die einen generischen Typ annimmt und diesen mit einem Delegaten in einen bestimmten Typ konvertiert. Sie können auch beide Methoden kombinieren.  
   
 #### <a name="to-create-an-overload-for-each-type"></a>So erstellen Sie eine Überladung für jeden Typ  
- Sie können eine bestimmte Überladung für jeden Typ erstellen, die Sie unterstützen möchten. Das folgende Codebeispiel zeigt eine Überladung von der `Median` Methode für die `integer` Typ.  
+ Sie können eine bestimmte Überladung für jeden Typ erstellen, den Sie unterstützen möchten. Im folgenden Codebeispiel wird eine Überladung der `Median`-Methode für den `integer`-Typ veranschaulicht.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
- Sie können nun Aufrufe der `Median` Überladungen für beide `integer` und `double` Typen, wie im folgenden Code gezeigt:  
+```vb  
+' Integer overload  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+<Extension()>   
+Function Median(ByVal source As IEnumerable(Of Integer)) As Double  
+    Return Aggregate num In source Select CDbl(num) Into med = Median()  
+End Function  
+```  
+ Sie können nun die `Median`-Überladungen für die `integer`- und `double`-Typen aufrufen, so wie im folgenden Code gezeigt:  
+  
+```vb  
+Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}  
+  
+Dim query1 = Aggregate num In numbers1 Into Median()  
+  
+Console.WriteLine("Double: Median = " & query1)  
+```  
+  
+```vb  
+Dim numbers2() As Integer = {1, 2, 3, 4, 5}  
+  
+Dim query2 = Aggregate num In numbers2 Into Median()  
+  
+Console.WriteLine("Integer: Median = " & query2)  
+```  
+  
+```vb  
+' This code produces the following output:  
+'  
+' Double: Median = 4.85  
+' Integer: Median = 3  
+```  
+  
+ 
 #### <a name="to-create-a-generic-overload"></a>So erstellen Sie eine generische Überladung  
- Sie können auch eine Überladung erstellen, die eine Sequenz generischer Objekte akzeptiert. Diese Überladung nimmt einen Delegaten als Parameter und verwendet, um eine Sequenz von Objekten eines generischen Typs in einen bestimmten Typ zu konvertieren.  
+ Sie können auch eine Überladung erstellen, die eine Sequenz generischer Objekte akzeptiert. Diese Überladung nimmt einen Delegaten als Parameter und verwendet ihn, um eine Sequenz von Objekten eines generischen Typs in einen bestimmten Typ zu konvertieren.  
   
- Der folgende Code zeigt eine Überladung von der `Median` Methode, die die <xref:System.Func%602>-Delegaten als Parameter.</xref:System.Func%602> Dieser Delegat nimmt ein Objekt des generischen Typs T und gibt ein Objekt vom Typ `double`.  
+ Der folgende Code zeigt eine Überladung der `Median`-Methode, die den <xref:System.Func%602>-Delegaten als Parameter akzeptiert. Dieser Delegat übernimmt ein Objekt des generischen Typs „T“ und gibt ein Objekt vom Typ `double` zurück.  
   
 ```vb  
 ' Generic overload.  
@@ -101,18 +134,61 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- Sie können jetzt Aufrufen der `Median` -Methode für eine Sequenz von Objekten eines beliebigen Typs. Wenn der Typ keinen eigenen Überladung, müssen Sie einen Delegatparameter übergeben. In Visual Basic können Sie zu diesem Zweck einen Lambda-Ausdruck. Auch bei Verwendung der `Aggregate` oder `Group By` -Klausel anstelle der Methodenaufruf, können Sie jeder Wert oder Ausdruck, der im Gültigkeitsbereich dieser Klausel übergeben.  
+ Sie können nun die `Median`-Methode für eine Sequenz von Objekten beliebigen Typs aufrufen. Wenn der Typ nicht über eine eigene Methodenüberladung verfügt, müssen sie einen Delegatenparameter übergeben. In Visual Basic können Sie zu diesem Zweck einen Lambda-Ausdruck. Auch bei Verwendung der `Aggregate` oder `Group By` -Klausel anstelle von dem Aufruf der Methode, können Sie übergeben ein beliebiger Wert oder Ausdruck, der innerhalb des Bereichs dieser Klausel ist.  
   
- Im folgenden Beispielcode veranschaulicht das Aufrufen der `Median` -Methode für ein Array von ganzen Zahlen und ein Array von Zeichenfolgen. Für Zeichenfolgen wird der Median für die Längen der Zeichenfolgen im Array berechnet. Das Beispiel zeigt, wie übergeben der <xref:System.Func%602>Delegieren Parameter, um die `Median` Methode für jeden Fall.</xref:System.Func%602>  
+ Der folgende Beispielcode veranschaulicht, wie eine `Median`-Methode für ein Array aus ganzen Zahlen und ein Array aus Zeichenfolgen aufgerufen wird. Für Zeichenfolgen wird der Median für die Längen der Zeichenfolgen im Array berechnet. Das Beispiel zeigt, wie der Delegatparameter `Median` an die <xref:System.Func%602>-Methode für jeden Fall übergeben wird.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
-## <a name="adding-a-method-that-returns-a-collection"></a>Hinzufügen einer Methode, die eine Auflistung zurückgibt.  
- Sie können erweitern die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle mit einer benutzerdefinierten Abfrage-Methode, die eine Sequenz von Werten zurückgibt.</xref:System.Collections.Generic.IEnumerable%601> In diesem Fall muss die Methode eine Auflistung des Typs <xref:System.Collections.Generic.IEnumerable%601>.</xref:System.Collections.Generic.IEnumerable%601> zurückgeben Solche Methoden können verwendet werden, um Filter oder Datentransformationen auf eine Sequenz von Werten anzuwenden.  
+```vb  
+Dim numbers3() As Integer = {1, 2, 3, 4, 5}  
   
- Das folgende Beispiel zeigt, wie eine Erweiterungsmethode mit dem Namen erstellt `AlternateElements` jedes andere Element in einer Auflistung, beginnend mit dem ersten Element zurückgibt.  
+' You can use num as a parameter for the Median method   
+' so that the compiler will implicitly convert its value to double.  
+' If there is no implicit conversion, the compiler will  
+' display an error message.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
- Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung aufrufen, wie Sie auch andere Methoden Aufrufen der <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle, wie im folgenden Code gezeigt:</xref:System.Collections.Generic.IEnumerable%601>  
+Dim query3 = Aggregate num In numbers3 Into Median(num)  
+  
+Console.WriteLine("Integer: Median = " & query3)  
+  
+Dim numbers4() As String = {"one", "two", "three", "four", "five"}  
+  
+' With the generic overload, you can also use numeric properties of objects.  
+  
+Dim query4 = Aggregate str In numbers4 Into Median(str.Length)  
+  
+Console.WriteLine("String: Median = " & query4)  
+  
+' This code produces the following output:  
+'  
+' Integer: Median = 3  
+' String: Median = 4  
+```  
+## <a name="adding-a-method-that-returns-a-collection"></a>Hinzufügen einer Methode, die eine Auflistung zurückgibt  
+ Sie können die Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> mit einer benutzerdefinierten Abfragemethode erweitern, die eine Sequenz von Werten zurückgibt. In diesem Fall muss die Methode eine Auflistung des Typs <xref:System.Collections.Generic.IEnumerable%601> zurückgeben. Solche Methoden können verwendet werden, um Filter oder Datentransformationen auf eine Sequenz von Werten anzuwenden.  
+  
+ Das folgende Beispiel zeigt, wie eine Erweiterungsmethode mit dem Namen `AlternateElements` erstellt wird, die jedes andere Element in einer Auflistung zurückgibt, beginnend mit dem ersten Element.  
+  
+```vb  
+' Extension method for the IEnumerable(of T) interface.   
+' The method returns every other element of a sequence.  
+  
+<Extension()>   
+Function AlternateElements(Of T)(  
+    ByVal source As IEnumerable(Of T)  
+    ) As IEnumerable(Of T)  
+  
+    Dim list As New List(Of T)  
+    Dim i = 0  
+    For Each element In source  
+        If (i Mod 2 = 0) Then  
+            list.Add(element)  
+        End If  
+        i = i + 1  
+    Next  
+    Return list  
+End Function  
+```  
+ Sie können diese Erweiterungsmethode für jede aufzählbare Auflistung genau so aufrufen, wie Sie andere Methoden aus der Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> aufrufen, so wie im folgenden Code dargestellt:  
   
 ```vb  
 Dim strings() As String = {"a", "b", "c", "d", "e"}  
@@ -131,5 +207,5 @@ Next
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>   
+ <xref:System.Collections.Generic.IEnumerable%601>  
  [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

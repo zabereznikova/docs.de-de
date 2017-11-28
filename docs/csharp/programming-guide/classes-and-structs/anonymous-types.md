@@ -1,39 +1,21 @@
 ---
 title: Anonyme Typen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 24ebf1c98e14eaf74572a6143ea6865d89735a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonyme Typen (C#-Programmierhandbuch)
 Anonyme Typen stellen eine praktische Möglichkeit dar, einen Satz schreibgeschützter Eigenschaften in einem Objekt zu kapseln, ohne zuerst explizit einen Typ definieren zu müssen. Der Typname wird vom Compiler generiert und ist auf Quellcodeebene nicht verfügbar. Der Typ der einzelnen Eigenschaften wird vom Compiler abgeleitet.  
@@ -58,7 +40,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Wenn Sie im anonymen Typ keine Membernamen angeben, gibt der Compiler den Membern des anonymen Typs den Namen der Eigenschaft, mit der sie initialisiert werden. Sie müssen einen Namen für eine Eigenschaft angeben, die mit einem Ausdruck initialisiert wird, wie im vorherigen Beispiel dargestellt. Im folgenden Beispiel lauten die Namen der Eigenschaften des anonymen Typs `Color` und `Price`.  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  Wenn Sie einen anonymen Typ zum Initialisieren einer Variablen verwenden, deklarieren Sie die Variable normalerweise mithilfe von [var](../../../csharp/language-reference/keywords/var.md) als implizit typisierte lokale Variable. Der Typname kann in der Variablendeklaration nicht angegeben werden, da nur der Compiler über Zugriff auf den zugrunde liegenden Namen des anonymen Typs verfügt. Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -78,8 +60,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
  Da die Methoden <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A> von anonymen Typen anhand der Methoden `Equals` und `GetHashCode` der Eigenschaften definiert werden, sind zwei Instanzen eines anonymen Typs nur gleich, wenn alle Eigenschaften gleich sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

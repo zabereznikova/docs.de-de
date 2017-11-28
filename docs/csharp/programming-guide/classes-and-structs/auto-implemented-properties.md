@@ -1,39 +1,21 @@
 ---
 title: Automatisch implementierte Eigenschaften (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1aa923c6d8208c2d5451957c4112493d0acd561d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 92e0037b73f1054673ea8060b71af5bd4db13ca3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Automatisch implementierte Eigenschaften (C#-Programmierhandbuch)
 In C# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch implementierte Eigenschaften präziser, wenn in den Eigenschaftenzugriffsmethoden keine zusätzliche Logik erforderlich ist. Sie können damit auch Clientcode aktivieren, um Objekte zu erstellen. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, erstellt der Compiler ein privates, anonymes, dahinter liegendes Feld, auf das nur über `get` und `set`-Accessoren zugegriffen werden kann.  
@@ -41,7 +23,7 @@ In C# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch implemen
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine einfache Klasse, die über einige automatisch implementierte Eigenschaften verfügt:  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  In C#-6 und höher können Sie automatisch implementierte Eigenschaften entsprechend auf Felder initialisieren:  
   
@@ -54,6 +36,5 @@ public string FirstName { get; set; } = "Jane";
  Attribute sind für automatisch implementierte Eigenschaften, jedoch offensichtlich nicht für die dahinter liegenden Felder zulässig, da diese nicht aus dem Quellcode zugänglich sind. Wenn Sie ein Attribut auf das dahinter liegende Feld einer Eigenschaft verwenden müssen, erstellen Sie einfach eine reguläre Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
+ [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
-

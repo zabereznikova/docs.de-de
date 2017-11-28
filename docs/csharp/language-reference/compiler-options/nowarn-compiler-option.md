@@ -1,42 +1,23 @@
 ---
 title: -nowarn (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /nowarn
-dev_langs:
-- CSharp
+f1_keywords: /nowarn
 helpviewer_keywords:
 - nowarn compiler option [C#]
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bae7e6d16c044b8f1aeba26de434cdf17479e82
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nowarn-c-compiler-options"></a>/nowarn (C#-Compileroptionen)
 Mit der Option **/nowarn** können Sie unterdrücken, dass der Compiler eine oder mehrere Warnungen anzeigt. Trennen Sie mehrere Warnnummern durch ein Komma.  
@@ -75,7 +56,6 @@ Mit der Option **/nowarn** können Sie unterdrücken, dass der Compiler eine ode
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)  
  [C#-Compilerfehler](../../../csharp/language-reference/compiler-messages/index.md)
-

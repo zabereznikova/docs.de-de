@@ -1,40 +1,21 @@
 ---
 title: 'Gewusst wie: Konvertieren eines Bytearrays in einen ganzzahligen Typ (C#-Programmierhandbuch)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ee51cd94e961c7274286c812cb6900d26c6ce033
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 86ecfe95ab6fb5ce60e7568050cdf974d0dc3d88
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Gewusst wie: Konvertieren eines Bytearrays in einen ganzzahligen Typ (C#-Programmierhandbuch)
 In diesem Beispiel wird veranschaulicht, wie Sie die <xref:System.BitConverter>-Klasse dazu verwenden, einen Bytearray in einen [int](../../../csharp/language-reference/keywords/int.md)-Typ und wieder zurück in ein Bytearray zu konvertieren. Sie müssen möglicherweise Bytes in einen integrierten Datentyp konvertieren, wenn Sie z.B. Bytes aus dem Netzwerk gelesen haben. Die folgende Tabelle enthält zusätzlich zu der Methode [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) aus dem Beispiel auch die Methoden in der <xref:System.BitConverter>-Klasse, die Bytes (aus einem Bytearray) in andere integrierte Typen konvertiert.  
@@ -58,7 +39,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie die <xref:System.BitConverter>-
 > [!NOTE]
 >  Die Ausgabe kann sich je nach der Bytereihenfolge der Architektur Ihres Computers unterscheiden.  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
+ [!code-csharp[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die Methode <xref:System.BitConverter.GetBytes%28System.Int32%29> der Klasse <xref:System.BitConverter> aufgerufen, um `int` in ein Bytearray zu konvertieren.  
@@ -66,10 +47,9 @@ In diesem Beispiel wird veranschaulicht, wie Sie die <xref:System.BitConverter>-
 > [!NOTE]
 >  Die Ausgabe kann sich je nach der Bytereihenfolge der Architektur Ihres Computers unterscheiden.  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
+ [!code-csharp[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.BitConverter>   
- <xref:System.BitConverter.IsLittleEndian>   
+ <xref:System.BitConverter>  
+ <xref:System.BitConverter.IsLittleEndian>  
  [Typen](../../../csharp/programming-guide/types/index.md)
-

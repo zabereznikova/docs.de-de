@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- BlockingCollection, overview
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6dc6729bf4627164fbcde5980d4fcccd41b67645
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="blockingcollection-overview"></a>Übersicht über BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> ist eine threadsichere Auflistungsklasse, die die folgenden Features bietet:  
@@ -86,7 +87,6 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Für Szenarien, in denen ein Consumer Elemente aus mehreren Auflistungen gleichzeitig nehmen muss, können Sie Arrays von <xref:System.Collections.Concurrent.BlockingCollection%601> erstellen und statische Methoden wie <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> und <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> verwenden, die Elemente beliebigen Auflistungen im Array hinzufügen bzw. daraus entnehmen. Wenn eine Auflistung blockiert wird, versucht die Methode sofort, eine andere zu verwenden, bis sie eine findet, die den Vorgang ausführen kann. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von Arrays mit blockierenden Auflistungen in einer Pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [Auflistungen und Datenstrukturen](../../../../docs/standard/collections/index.md)   
- [threadsichere Auflistungen](../../../../docs/standard/collections/thread-safe/index.md)
-
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [Auflistungen und Datenstrukturen](../../../../docs/standard/collections/index.md)  
+ [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)

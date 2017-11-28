@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 653b91f899da5962132577fba0df6ecfcdfde4ae
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen und auf Member zuzugreifen (d. h. Aufrufen von Methoden und Konstruktoren, Abrufen und Festlegen von Eigenschaftswerten, Hinzufügen und Entfernen von Ereignishandlern usw.). Die Verwendung von Reflektion, um Typ- und Memberinformationen abzurufen, ist nicht eingeschränkt. Jeglicher Code kann Reflektion verwenden, um die folgenden Aufgaben auszuführen:  
@@ -52,9 +50,9 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
  Zum Beispiel ist Code, der in einer Sandkastenanwendungsdomäne ausgeführt wird, auf den in dieser Liste beschriebenen Zugriff beschränkt, es sei denn, die Anwendungsdomäne gewährt zusätzliche Berechtigungen.  
   
- Ab [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] wird bei einem Versuch, auf Member zuzugreifen, auf die normalerweise nicht zugegriffen werden kann, eine Forderung nach dem Berechtigungssatz des Zielobjekts plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>-Flag erstellt. Code, der mit voller Vertrauenswürdigkeit ausgeführt wird (z.B. Code in einer Anwendung, die über die Befehlszeile gestartet wird), kann diese Berechtigungen immer erfüllen. (Dies unterliegt Einschränkungen beim Zugriff auf sicherheitskritische Member, wie dies in diesem Artikel weiter unten beschrieben ist.)  
+ Ab [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] wird bei einem Versuch, auf Member zuzugreifen, auf die normalerweise nicht zugegriffen werden kann, eine Forderung nach dem Berechtigungssatz des Zielobjekts plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag erstellt. Code, der mit voller Vertrauenswürdigkeit ausgeführt wird (z.B. Code in einer Anwendung, die über die Befehlszeile gestartet wird), kann diese Berechtigungen immer erfüllen. (Dies unterliegt Einschränkungen beim Zugriff auf sicherheitskritische Member, wie dies in diesem Artikel weiter unten beschrieben ist.)  
   
- Optional kann eine Sandkastenanwendungsdomäne <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>-Flag gewähren, wie dies weiter unten in diesem Artikel im Abschnitt [Zugreifen auf Member, auf die normalerweise nicht zugegriffen werden kann](#accessingNormallyInaccessible) beschrieben ist.  
+ Optional kann eine Sandkastenanwendungsdomäne <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag gewähren, wie dies weiter unten in diesem Artikel im Abschnitt [Zugreifen auf Member, auf die normalerweise nicht zugegriffen werden kann](#accessingNormallyInaccessible) beschrieben ist.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Zugreifen auf sicherheitskritische Member  
@@ -87,21 +85,21 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>Zugreifen auf Member, auf die normalerweise nicht zugegriffen werden kann  
  Um über Reflektion Methoden aufzurufen, auf die nach den Zugriffsregeln der Common Language Runtime nicht zugegriffen kann, muss Ihrem Code eine von zwei Berechtigungen gewährt werden:  
   
--   Damit Code einen beliebigen nicht öffentlichen Member aufrufen kann, muss dem Code <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>-Flag gewährt werden.  
+-   Damit Code einen beliebigen nicht öffentlichen Member aufrufen kann, muss dem Code <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag gewährt werden.  
   
     > [!NOTE]
     >  Standardmäßig verweigert die Sicherheitsrichtlinie diese Berechtigung für Code, der aus dem Internet stammt. Diese Berechtigung sollte niemals für Code gewährt werden, der aus dem Internet stammt.  
   
--   Damit Code einen beliebigen nicht öffentlichen Member aufrufen kann, sofern der Berechtigungssatz der Assembly, die den aufgerufenen Member enthält, mit dem Berechtigungssatz des aufrufenden Codes identisch oder eine Untermenge dieses Berechtigungssatzes ist: Dem Code muss <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>-Flag gewährt werden.  
+-   Damit Code einen beliebigen nicht öffentlichen Member aufrufen kann, sofern der Berechtigungssatz der Assembly, die den aufgerufenen Member enthält, mit dem Berechtigungssatz des aufrufenden Codes identisch oder eine Untermenge dieses Berechtigungssatzes ist: Dem Code muss <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag gewährt werden.  
   
- Beispiel: Angenommen, Sie gewähren einer Anwendungsdomäne Internetberechtigungen plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>-Flag und führen anschließend eine Internetanwendung mit den beiden Assemblys A und B aus.  
+ Beispiel: Angenommen, Sie gewähren einer Anwendungsdomäne Internetberechtigungen plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag und führen anschließend eine Internetanwendung mit den beiden Assemblys A und B aus.  
   
 -   Assembly A kann Reflektion verwenden, um auf private Member von Assembly B zuzugreifen, da der Berechtigungssatz der Assembly B keine Berechtigungen enthält, die A nicht gewährt wurden.  
   
 -   Assembly A kann Reflektion nicht verwenden, um auf private Member von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys wie „mscorlib.dll“ zuzugreifen, denn „mscorlib.dll“ ist voll vertrauenswürdig und hat daher Berechtigungen, die Assembly A nicht gewährt wurden. Eine <xref:System.MemberAccessException> wird ausgelöst, wenn die Codezugriffssicherheit die Stapel zur Runtime durchläuft.  
   
 ## <a name="serialization"></a>Serialisierung  
- Für Serialisierung bietet <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=fullName>-Flag die Möglichkeit, Member von serialisierbaren Typen unabhängig davon, ob grundsätzlich auf sie zugegriffen werden kann, abzurufen und festzulegen. Mit dieser Berechtigung kann Code den privaten Status einer Instanz erkennen und ändern. (Zusätzlich dazu, dass dem Typ die entsprechenden Berechtigungen gewährt werden, muss er in den Metadaten als serialisierbar [markiert](../../../docs/standard/attributes/applying-attributes.md) sein.)  
+ Für Serialisierung bietet <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType>-Flag die Möglichkeit, Member von serialisierbaren Typen unabhängig davon, ob grundsätzlich auf sie zugegriffen werden kann, abzurufen und festzulegen. Mit dieser Berechtigung kann Code den privaten Status einer Instanz erkennen und ändern. (Zusätzlich dazu, dass dem Typ die entsprechenden Berechtigungen gewährt werden, muss er in den Metadaten als serialisierbar [markiert](../../../docs/standard/attributes/applying-attributes.md) sein.)  
   
 ## <a name="parameters-of-type-methodinfo"></a>Parameter des MethodInfo-Typs  
  Sie sollten keine öffentlichen Member schreiben, an die <xref:System.Reflection.MethodInfo>-Parameter übergeben werden. Dies gilt insbesondere für vertrauenswürdigen Code. Solche Member sind möglicherweise anfälliger für Schadsoftware. Nehmen Sie z. B. an, es gibt einen öffentlichen Member in hoch vertrauenswürdigem Code, und diesem Member wird ein <xref:System.Reflection.MethodInfo>-Parameter übergeben. Nehmen Sie weiter an, der öffentliche Member ruft indirekt die <xref:System.Reflection.MethodBase.Invoke%2A>-Methode für den bereitgestellten Parameter auf. Wenn der öffentliche Member nicht die erforderlichen Berechtigungsprüfungen ausführt, ist ein Aufruf <xref:System.Reflection.MethodBase.Invoke%2A>-Methode in jedem erfolgreich, weil das Sicherheitssystem feststellt, dass der Aufrufer hoch vertrauenswürdig ist. Selbst wenn Schadsoftware nicht die Berechtigung hat, die Methode direkt aufzurufen, kann sie dies weiterhin indirekt durch Aufrufen des öffentlichen Members tun.  
@@ -110,18 +108,17 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
 -   Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] kann transparenter Code Reflektion nicht dazu verwenden, auf sicherheitskritische Member zuzugreifen.  
   
--   Das <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>-Flag wurde in [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] eingeführt. Frühere Versionen von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>-Flag für Code, der Reflektion verwendet, um auf nicht öffentliche Member zuzugreifen. Diese Berechtigung sollte in keinem Fall teilweise vertrauenswürdigem Code erteilt werden.  
+-   Das <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag wurde in [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] eingeführt. Frühere Versionen von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag für Code, der Reflektion verwendet, um auf nicht öffentliche Member zuzugreifen. Diese Berechtigung sollte in keinem Fall teilweise vertrauenswürdigem Code erteilt werden.  
   
--   Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um über Reflektion Informationen über nicht öffentliche Typen und Member abzurufen. In früheren Versionen ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName>-Flag erforderlich.  
+-   Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um über Reflektion Informationen über nicht öffentliche Typen und Member abzurufen. In früheren Versionen ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag erforderlich.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>   
- <xref:System.Security.Permissions.ReflectionPermission>   
- <xref:System.Security.Permissions.SecurityPermission>   
- [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)   
- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)   
- [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [Anwenden von Attributen](../../../docs/standard/attributes/applying-attributes.md)   
+ <xref:System.Security.Permissions.ReflectionPermissionFlag>  
+ <xref:System.Security.Permissions.ReflectionPermission>  
+ <xref:System.Security.Permissions.SecurityPermission>  
+ [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)  
+ [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)  
+ [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Anwenden von Attributen](../../../docs/standard/attributes/applying-attributes.md)  
  [Zugreifen auf benutzerdefinierte Attribute](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
-

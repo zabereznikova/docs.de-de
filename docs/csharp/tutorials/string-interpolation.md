@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C# #
 
 Die Zeichenfolgeninterpolation ermöglicht, dass Platzhalter in einer Zeichenfolge durch den Wert einer Zeichenfolgenvariablen ersetzt werden. Vor C# 6 wurde dies mit `System.String.Format` realisiert. Dies funktioniert gut, aber da dabei nummerierte Platzhalter verwendet werden, kann es schwieriger zu lesen und detaillierter sein.
@@ -46,23 +44,27 @@ dotnet new console
 
 Dieser Befehl erstellt ein neues .NET Core-Projekt mit einer Projektdatei, *interpolated.csproj*, und einer Quellcodedatei, *Program.cs*. Sie müssen `dotnet restore` ausführen, um die Abhängigkeiten wiederherzustellen, die zum Kompilieren dieses Projekts erforderlich sind.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Verwenden Sie zum Ausführen des Programms `dotnet run`. Es sollte „Hello, World“ auf der Konsole ausgegeben werden.
+
+
 
 ## <a name="intro-to-string-interpolation"></a>Einführung zur Zeichenfolgeninterpolation
 
 Mit `System.String.Format` geben Sie „Platzhalter“ in einer Zeichenfolge an, die von den Parametern ersetzt werden, die auf die Zeichenfolge folgen. Zum Beispiel:
 
-[!code-csharp[String.Format-Beispiel](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 Damit wird „My name is Matt Groves“ ausgegeben.
 
 In C# 6 definieren Sie eine interpolierte Zeichenfolge, indem Sie ihr das `$`-Symbol voranstellen und dann die Variablen direkt in der Zeichenfolge verwenden, anstatt `String.Format` zu verwenden. Zum Beispiel:
 
-[!code-csharp[Interpolationsbeispiel](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 Sie müssen nicht einfach Variablen verwenden. Sie können jeden Ausdruck innerhalb der Klammern verwenden. Zum Beispiel:
 
-[!code-csharp[Beispiel eines Interpolationsausdrucks](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 Die Ausgabe wäre:
 
@@ -80,7 +82,7 @@ Hinter den Kulissen wird diese Zeichenfolgeninterpolations-Syntax vom Compiler i
 
 Sie können z.B. auffüllen und numerisch formatieren:
 
-[!code-csharp[Beispiel der Formatierung per Interpolation](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 Der obige Code würde folgende Ausgabe ergeben:
 
@@ -118,9 +120,8 @@ Standardmäßig verwendet eine interpolierte Zeichenfolge die aktuelle Kultur. U
 
 Zum Beispiel:
 
-[!code-csharp[Beispiel für Internationalisierung mit Interpolation](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Schlussfolgerung 
 
 In diesem Tutorial haben Sie gelernt, wie Sie Zeichenfolgeninterpolations-Funktionen von C# 6 verwenden. Es ist im Grunde eine präzisere Methode, einfache `String.Format`-Anweisungen zu schreiben, mit einigen Einschränkungen für fortgeschrittenere Verwendungen.
-

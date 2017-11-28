@@ -1,12 +1,9 @@
 ---
 title: "Einschränken des Zugriffsmethodenzugriffs (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -15,34 +12,19 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 347fffa4f612c5cb674a6529e46c0b1785670c95
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Einschränken des Zugriffsmethodenzugriffs (C#-Programmierhandbuch)
 Die [Get](../../../csharp/language-reference/keywords/get.md)- und [Set](../../../csharp/language-reference/keywords/set.md)-Teile einer Eigenschaft oder eines Indexers werden *Zugriffsmethoden* oder Accessoren genannt. Standardmäßig weisen diese Zugriffsmethoden dieselbe Sichtbarkeit oder Zugriffsebene auf: nämlich die der Eigenschaft oder des Indexers, zu dem sie gehören. Weitere Informationen finden Sie unter [Zugriffsebenen](../../../csharp/language-reference/keywords/accessibility-levels.md). Allerdings ist es manchmal sinnvoll, den Zugriff auf eine der beiden Zugriffsmethoden einzuschränken. Dies bedeutet in der Regel, dass der Zugriff auf den `set`-Accessor eingeschränkt wird, während der `get`-Accessor öffentlich zugänglich bleibt. Zum Beispiel:  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  In diesem Beispiel definiert die Eigenschaft `Name` einen `get`- und einen `set`-Accessor. Der `get`-Accessor erhält die Zugriffsebene der Eigenschaft selbst, in diesem Fall `public`. Der `set`-Accessor wird jedoch explizit durch Anwenden des [Protected](../../../csharp/language-reference/keywords/protected.md)-Zugriffsmodifizierers auf den Accessor selbst eingeschränkt.  
   
@@ -60,12 +42,12 @@ Die [Get](../../../csharp/language-reference/keywords/get.md)- und [Set](../../.
 ## <a name="access-modifiers-on-overriding-accessors"></a>Zugriffsmodifizierer für Override-Accessoren  
  Beim Überschreiben einer Eigenschaft oder eines Indexers müssen die überschriebenen Accessoren für den überschreibenden Code zugänglich sein. Außerdem müssen die Zugriffsebenen der Eigenschaft/des Indexers als auch der Accessoren mit der entsprechenden überschriebenen Eigenschaft/dem Indexer und den Accessoren übereinstimmen. Zum Beispiel:  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
  Bei der Verwendung eines Accessors zur Implementierung einer Schnittstelle darf der Accessor keinen Zugriffsmodifizierer besitzen. Wird jedoch zur Implementierung der Schnittstelle nur ein Accessor verwendet, z.B. `get`, kann der andere Accessor einen Zugriffsmodifizierer besitzen. Hier ein Beispiel:  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## <a name="accessor-accessibility-domain"></a>Zugriffsdomäne des Accessors  
  Bei Verwendung eines Zugriffsmodifizierers für den Accessor wird die [Zugriffsdomäne](../../../csharp/language-reference/keywords/accessibility-domain.md) des Accessors durch diesen Modifizierer bestimmt.  
@@ -77,7 +59,7 @@ Die [Get](../../../csharp/language-reference/keywords/get.md)- und [Set](../../.
   
  Das Beispiel zeigt auch, dass die Verwendung eines restriktiven Zugriffsmodifizierers, wie z.B. `private` oder `protected`, auf den `set`-Accessor der Eigenschaft `Name` in `DerivedClass` den Zugriff auf den Accessor verhindert. Mit dem Zuweisen zu dem Accessor wird ein Fehler generiert.  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## <a name="comments"></a>Kommentare  
  Beachten Sie, dass beim Ersetzen der Deklaration `new private string Id` durch `new public string Id` Folgendes ausgegeben wird:  
@@ -87,8 +69,7 @@ Die [Get](../../../csharp/language-reference/keywords/get.md)- und [Set](../../.
  `Name and ID in the derived class: John, John123`  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Indexer](../../../csharp/programming-guide/indexers/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Indexer](../../../csharp/programming-guide/indexers/index.md)  
  [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-

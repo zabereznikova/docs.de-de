@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Assemblys in der Common Language Runtime (CLR)
 Assemblys sind die Bausteine von .NET Framework-Anwendungen; sie bilden das Fundament für Bereitstellung, Versionskontrolle, Wiederverwendung, Gültigkeitsbereiche für die Aktivierung und Sicherheitsberechtigungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Eine Assembly stellt der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden.  
@@ -52,7 +50,7 @@ Assemblys sind die Bausteine von .NET Framework-Anwendungen; sie bilden das Fun
   
  Assemblys können statisch oder dynamisch sein. Statische Assemblys können .NET Framework-Typen (Schnittstellen und Klassen) sowie Ressourcen für die Assembly (Bitmaps, JPEG-Dateien, Ressourcendateien usw.) enthalten. Statische Assemblys werden auf dem Datenträger in PE-Dateien (Portable Executable, übertragbare ausführbare Datei) gespeichert. Mit .NET Framework können Sie außerdem dynamische Assemblys erstellen, die direkt vom Arbeitsspeicher aus ausgeführt und vor der Ausführung nicht auf dem Datenträger gespeichert werden. Dynamische Assemblys können nach ihrer Ausführung auf dem Datenträger gespeichert werden.  
   
- Beim Erstellen von Assemblys stehen Ihnen verschiedene Möglichkeiten zur Verfügung: Um DLL-Dateien oder EXE-Dateien zu erstellen, verwenden Sie wie gewohnt Entwicklungstools wie z. B. Visual Studio. Mit den Tools von [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] können Sie Assemblys mit Modulen erstellen, die in anderen Entwicklungsumgebungen erzeugt wurden. Außerdem können Sie dynamische Assemblys auch mit Common Language Runtime-APIs wie <xref:System.Reflection.Emit?displayProperty=fullName> erstellen.  
+ Beim Erstellen von Assemblys stehen Ihnen verschiedene Möglichkeiten zur Verfügung: Um DLL-Dateien oder EXE-Dateien zu erstellen, verwenden Sie wie gewohnt Entwicklungstools wie z. B. Visual Studio. Mit den Tools von [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] können Sie Assemblys mit Modulen erstellen, die in anderen Entwicklungsumgebungen erzeugt wurden. Außerdem können Sie dynamische Assemblys auch mit Common Language Runtime-APIs wie <xref:System.Reflection.Emit?displayProperty=nameWithType> erstellen.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
@@ -71,5 +69,4 @@ Assemblys sind die Bausteine von .NET Framework-Anwendungen; sie bilden das Fun
 |[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Beschreibt, wie .NET Framework zur Laufzeit Assemblyverweise auflöst.|  
   
 ## <a name="reference"></a>Verweis  
- <xref:System.Reflection.Assembly?displayProperty=fullName>
-
+ <xref:System.Reflection.Assembly?displayProperty=nameWithType>

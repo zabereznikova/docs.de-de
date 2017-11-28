@@ -10,14 +10,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
 ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8
 
 Möglicherweise wird .NET Framework 3.5 zum Ausführen einer App auf Windows 10, Windows 8.1 und Windows 8 benötigt. Sie können diese Schritte auch für frühere Versionen von Windows verwenden.
@@ -39,4 +37,3 @@ Sie können .NET Framework 3.5 auch über die Systemsteuerung aktivieren. Für d
    ![Installieren von .NET über die Systemsteuerung](./media/dotnet-control-panel.png)
 
    Sie müssen die untergeordneten Elemente für die **HTTP-Aktivierung von Windows Communication Foundation (WCF)** und die **Nicht-HTTP-Aktivierung von Windows Communication Foundation (WCF)** nicht auswählen, es sei denn, Sie sind ein Entwickler oder Serveradministrator und benötigen diese Funktionen.
-

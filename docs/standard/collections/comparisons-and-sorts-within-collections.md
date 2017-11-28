@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - sorting data, collections
 - IComparable.CompareTo method
@@ -15,16 +18,15 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: bb7092a2eae8d950f3709ea4fde63f6c7d5b32b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1033d7ec64641dd5904372bc05bd2076efe60d39
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Sammlungen
 Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Verwaltung von Auflistungen Vergleiche durch, sei es bei der Suche nach zu entfernenden Elementen oder bei der Rückgabe eines Schlüssel-Wert-Paars.  
@@ -37,9 +39,9 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
   
 -   Wenn Typ T die generische Schnittstelle <xref:System.IEquatable%601> implementiert, dann ist der Gleichheitsvergleich die <xref:System.IEquatable%601.Equals%2A> -Methode dieser Schnittstelle.  
   
--   Wenn der Typ T <xref:System.IEquatable%601>nicht implementiert, wird <xref:System.Object.Equals%2A?displayProperty=fullName> verwendet.  
+-   Wenn der Typ T <xref:System.IEquatable%601>nicht implementiert, wird <xref:System.Object.Equals%2A?displayProperty=nameWithType> verwendet.  
   
- Darüber hinaus akzeptieren einige Konstruktorüberladungen für Wörterbuchauflistungen eine <xref:System.Collections.Generic.IEqualityComparer%601> -Implementierung, die zum Vergleichen von Schlüsseln auf Gleichheit hin verwendet wird. Ein Beispiel dafür finden Sie unter <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=fullName> -Konstruktor.  
+ Darüber hinaus akzeptieren einige Konstruktorüberladungen für Wörterbuchauflistungen eine <xref:System.Collections.Generic.IEqualityComparer%601> -Implementierung, die zum Vergleichen von Schlüsseln auf Gleichheit hin verwendet wird. Ein Beispiel dafür finden Sie unter <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> -Konstruktor.  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>Festlegen der Sortierreihenfolge  
@@ -47,13 +49,13 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
   
  Der Standardvergleich beruht auf dem Vergleich von mindestens einem Objekt, um die **IComparable** -Schnittstelle zu implementieren. Es ist empfehlenswert, **IComparable** in allen Klassen zu implementieren, die als Werte in einer Listenauflistung oder als Schlüssel in einer Wörterbuchauflistung verwendet werden. Bei einer generischen Auflistung wird der Gleichheitsvergleich gemäß dem Folgenden bestimmt:  
   
--   Wenn Typ T die generische Schnittstelle <xref:System.IComparable%601?displayProperty=fullName> implementiert, dann ist der Standardvergleich die <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=fullName> -Methode dieser Schnittstelle.  
+-   Wenn Typ T die generische Schnittstelle <xref:System.IComparable%601?displayProperty=nameWithType> implementiert, dann ist der Standardvergleich die <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> -Methode dieser Schnittstelle.  
   
--   Wenn Typ T die nicht generische Schnittstelle <xref:System.IComparable?displayProperty=fullName> implementiert, dann ist der Standardvergleich die <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=fullName> -Methode dieser Schnittstelle.  
+-   Wenn Typ T die nicht generische Schnittstelle <xref:System.IComparable?displayProperty=nameWithType> implementiert, dann ist der Standardvergleich die <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> -Methode dieser Schnittstelle.  
   
 -   Wenn Typ T keine der Schnittstellen implementiert, gibt es keinen Standardvergleich, und ein Vergleich oder ein Vergleichsdelegat muss explizit angegeben werden.  
   
- Um explizite Vergleiche zu ermöglichen, akzeptieren einige Methoden eine **IComparer** -Implementierung als Parameter. Beispiel: Die <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> -Methode akzeptiert eine <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> -Implementierung.  
+ Um explizite Vergleiche zu ermöglichen, akzeptieren einige Methoden eine **IComparer** -Implementierung als Parameter. Beispiel: Die <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> -Methode akzeptiert eine <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> -Implementierung.  
   
  Die aktuelle Kultureinstellung des Systems kann sich auf die Vergleichs- und Sortiervorgänge innerhalb einer Auflistung auswirken. Standardmäßig sind die Vergleichs- und Sortiervorgänge in den **Auflistungen** -Klassen kulturabhängig. Um die Kultureinstellung zu ignorieren und daher konsistente Vergleichs- und Sortierergebnisse zu erhalten, verwenden Sie <xref:System.Globalization.CultureInfo.InvariantCulture%2A> mit Memberüberladungen, die <xref:System.Globalization.CultureInfo>akzeptieren. Weitere Informationen finden Sie unter [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) und [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).  
   
@@ -65,9 +67,8 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.IComparer>   
- <xref:System.IEquatable%601>   
- <xref:System.Collections.Generic.IComparer%601>   
- <xref:System.IComparable>   
+ <xref:System.Collections.IComparer>  
+ <xref:System.IEquatable%601>  
+ <xref:System.Collections.Generic.IComparer%601>  
+ <xref:System.IComparable>  
  <xref:System.IComparable%601>
-

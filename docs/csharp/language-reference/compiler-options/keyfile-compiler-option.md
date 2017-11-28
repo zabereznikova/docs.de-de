@@ -1,42 +1,23 @@
 ---
 title: -keyfile (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /keyfile
-dev_langs:
-- CSharp
+f1_keywords: /keyfile
 helpviewer_keywords:
 - /keyfile compiler option [C#]
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5098067f640c13429c3e2524df0d87364980bb1c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="keyfile-c-compiler-options"></a>/keyfile (C#-Compileroptionen)
 Gibt den Dateinamen mit dem kryptografischen Schlüssel an.  
@@ -64,7 +45,7 @@ Gibt den Dateinamen mit dem kryptografischen Schlüssel an.
   
  Beachten Sie, dass die Schlüsseldatei möglicherweise nur den öffentlichen Schlüssel enthält.  
   
- Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](https://msdn.microsoft.com/library/xwb8f617) und [Verzögertes Signieren einer Assembly](../../../framework/app-domains/delay-sign-assembly.md).  
+ Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) und [Verzögertes Signieren einer Assembly](../../../framework/app-domains/delay-sign-assembly.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -77,6 +58,5 @@ Gibt den Dateinamen mit dem kryptografischen Schlüssel an.
  Sie können mit <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A> programmgesteuert auf diese Compileroption zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-

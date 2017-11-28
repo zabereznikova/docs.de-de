@@ -1,45 +1,27 @@
 ---
 title: 'Gewusst wie: Downloaden einer Datei in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- downloading Internet resources, files
-- downloading files
-- remote computers, downloading from
-- files, downloading
-- files, transferring
+- downloading Internet resources [Visual Basic], files
+- downloading files [Visual Basic]
+- remote computers [Visual Basic], downloading from
+- files [Visual Basic], downloading
+- files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc67d28b870f86c6464e86f7682f71e6e36ea9e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Gewusst wie: Downloaden einer Datei in Visual Basic
 Die <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>-Methode kann zum Herunterladen einer Remotedatei und dazu verwendet werden, diese an einem bestimmten Speicherort zu speichern. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Downloads anzeigt und Benutzern erlaubt, den Vorgang abzubrechen. Standardmäßig werden vorhandene Dateien mit demselben Namen nicht überschrieben. Wenn vorhandene Dateien überschrieben werden sollen, legen Sie den `overwrite`-Parameter auf `True` fest.  
@@ -81,8 +63,7 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>-Methode kann zu
     >  Das FTP-Protokoll, das von der `DownLoadFile`-Methode verwendet wird, sendet Informationen in Klartext, einschließlich Kennwörter, und darf nicht für die Übermittlung vertraulicher Informationen verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Network>   
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>   
- [Gewusst wie: Hochladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)   
+ <xref:Microsoft.VisualBasic.Devices.Network>  
+ <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
+ [Gewusst wie: Hochladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-

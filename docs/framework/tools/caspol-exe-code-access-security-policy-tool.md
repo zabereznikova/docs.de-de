@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - permission sets, modifying security policy
 - security policy [.NET Framework], Code Access Security Policy tool
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 71f0a8c8d0e5e09cb6f39e5b8b104c0848c4d8ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53cb4e7ffbac9a149b9b83b92141b7544734683e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Richtlinientool für die Codezugriffssicherheit)
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
@@ -262,6 +255,5 @@ caspol -all -resolveperm testassembly
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
+ [Extras](../../../docs/framework/tools/index.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

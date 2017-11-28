@@ -1,172 +1,174 @@
 ---
-title: "XAML-Ressourcen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wiederverwenden von Ressourcen"
-  - "Wiederverwenden von Ressourcen"
-  - "Wiederverwenden von häufig definierten Objekten"
-  - "XAML-Code wiederverwenden von Ressourcen"
+title: XAML-Ressourcen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reusing resources [WPF]
+- resources [WPF], reusing
+- reusing commonly defined objects [WPF]
+- XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: 33
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 32
+caps.latest.revision: "33"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1f9d0ff535d0784343b36d0b2df48b123ff3beef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# XAML-Ressourcen
-Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in Ihrer Anwendung wiederverwendet werden kann. Ressourcen gehören beispielsweise Pinsel und Stile. In dieser Übersicht wird beschrieben, wie Ressourcen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sie können auch Zugriff auf Ressourcen mithilfe von Code oder im Wechsel zwischen Code und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
+# <a name="xaml-resources"></a>XAML-Ressourcen
+Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. Beispiele für Ressourcen sind Pinsel und Stile. In dieser Übersicht wird beschrieben, wie Ressourcen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sie können auch erstellen und Zugriff auf Ressourcen mithilfe von Code oder im Wechsel zwischen Code und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
   
 > [!NOTE]
->  Die Ressourcendateien, die in diesem Thema beschriebenen unterscheiden die Ressourcendateien in beschriebenen [WPF-Anwendungsressource, Inhalt und Datendateien](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) und unterscheidet sich die eingebetteten oder verknüpften Ressourcen, die in beschriebenen [Verwalten von Ressourcen (.NET)](../Topic/Managing%20Application%20Resources%20\(.NET\).md).  
+>  Die Ressourcendateien, die in diesem Thema beschriebenen unterscheiden, als die Ressourcendateien im beschrieben [Anwendungsressource WPF-Inhalt und Datendateien](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) und anders als die eingebetteten oder verknüpften Ressourcen, die in beschriebenen [ Verwalten von Anwendungsressourcen (.NET)](http://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
   
-   
   
 <a name="usingresources"></a>   
-## <a name="using-resources-in-xaml"></a>Verwenden von Ressourcen in XAML  
- Das folgende Beispiel definiert eine <xref:System.Windows.Media.SolidColorBrush> als Ressource für das Stammelement einer Seite. Anschließend verweist auf die Ressource und zum Festlegen der Eigenschaften von mehreren untergeordneten Elementen, einschließlich verwendet ein <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>, und ein <xref:System.Windows.Controls.Button>.  
+## <a name="using-resources-in-xaml"></a>Verwendung von Ressourcen in XAML  
+ Das folgende Beispiel definiert eine <xref:System.Windows.Media.SolidColorBrush> als Ressource für das Stammelement einer Seite. Das Beispiel verweist auf die Ressource, und zum Festlegen der Eigenschaften von mehreren untergeordneten Elementen, einschließlich verwendet ein <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>, und ein <xref:System.Windows.Controls.Button>.  
   
- [!code-xml[FEResourceSH_snip#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
+ [!code-xaml[FEResourceSH_snip#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
   
- Jedes Element auf Frameworkebene ( <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>) hat eine <xref:System.Windows.FrameworkElement.Resources%2A> -Eigenschaft, die die Eigenschaft ist die Ressourcen enthält (als ein <xref:System.Windows.ResourceDictionary>), die eine Ressource definiert. Sie können Ressourcen für jedes Element definieren. Ressourcen werden jedoch am häufigsten definiert, auf das Root-Element, das <xref:System.Windows.Controls.Page> im Beispiel.  
+ Jedes Element Frameworkebene (<xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>) hat eine <xref:System.Windows.FrameworkElement.Resources%2A> Eigenschaft, die die Eigenschaft darstellt, die die Ressourcen enthält (als eine <xref:System.Windows.ResourceDictionary>), die eine Ressource definiert. Sie können Ressourcen für beliebige Elemente definieren. Ressourcen werden jedoch am häufigsten definiert, auf die Stamm-Elements, d. h. <xref:System.Windows.Controls.Page> im Beispiel.  
   
- Jede Ressource in einem Ressourcenverzeichnis muss einen eindeutigen Schlüssel verfügen. Wenn Sie Ressourcen in Markup definieren, weisen Sie den eindeutigen Schlüssel durch die [X: Key-Direktive](../../../../docs/framework/xaml-services/x-key-directive.md). In der Regel ist der Schlüssel eine Zeichenfolge. Allerdings können Sie auch diese für andere Objekttypen festlegen mithilfe der entsprechenden Markuperweiterungen. Nichtzeichenfolgeschlüssel für Ressourcen werden verwendet, indem bestimmte Funktionsbereiche in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], insbesondere für Formatvorlagen, Ressourcen und Daten formatieren.  
+ Jeder Ressource in einem Ressourcenverzeichnis muss ein eindeutiger Schlüssel zugewiesen werden. Wenn Sie Ressourcen in Markup definieren, weisen Sie den eindeutigen Schlüssel über das [X: Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md). In der Regel ist der Schlüssel eine Zeichenfolge. Sie können jedoch den Schlüssel auch als einen anderen Objekttyp definieren, indem Sie die entsprechenden Markuperweiterungen verwenden. Nichtzeichenfolgeschlüssel für Ressourcen werden in bestimmten Funktionsbereichen verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], insbesondere für Stile, Ressourcen und Daten formatieren.  
   
- Nachdem Sie eine Ressource definiert haben, können Sie die Ressource für einen Eigenschaftswert verwendet werden, mithilfe einer Ressource Markuperweiterungssyntax, die den Schlüsselnamen, z. B. angibt verweisen:  
+ Nachdem Sie eine Ressource definiert haben, können Sie einen Eigenschaftswert auf sie verweisen, indem Sie eine Markuperweiterungssyntax für Ressourcen verwenden, die den Schlüsselnamen angibt, zum Beispiel:  
   
- [!code-xml[FEResourceSH_snip#KeyNameUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
+ [!code-xaml[FEResourceSH_snip#KeyNameUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
   
- Im vorherigen Beispiel bei der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ladeprogramm verarbeitet den Wert `{StaticResource MyBrush}` für die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft auf <xref:System.Windows.Controls.Button>, Suchlogik der Ressource zunächst das Ressourcenwörterbuch auf überprüft die <xref:System.Windows.Controls.Button> Element. Wenn <xref:System.Windows.Controls.Button> keine Definition der Ressourcenschlüssel `MyBrush` (nicht der Fall, der ressourcenauflistung leer ist), die Suche als Nächstes überprüft das übergeordnete Element des <xref:System.Windows.Controls.Button>, also <xref:System.Windows.Controls.Page>. Folglich beim Definieren einer Ressourcenpools auf der <xref:System.Windows.Controls.Page> Root-Element, das alle Elemente in der logischen Struktur der <xref:System.Windows.Controls.Page> darauf zugreifen können, und Sie können die gleiche Ressource wiederverwenden, für den Wert einer Eigenschaft festlegen, akzeptiert der <xref:System.Type> , das die Ressource darstellt. Im vorherigen Beispiel identisch `MyBrush` Ressourcensätze zwei verschiedene Eigenschaften: die <xref:System.Windows.Controls.Control.Background%2A> von einer <xref:System.Windows.Controls.Button>, und die <xref:System.Windows.Shapes.Shape.Fill%2A> von eine <xref:System.Windows.Shapes.Rectangle>.  
+ Im vorherigen Beispiel wenn der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ladeprogramm verarbeitet den Wert `{StaticResource MyBrush}` für die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft auf <xref:System.Windows.Controls.Button>, Suchlogik der Ressource überprüft zunächst das Ressourcenverzeichnis für die <xref:System.Windows.Controls.Button> Element. Wenn <xref:System.Windows.Controls.Button> verfügt nicht über eine Definition der Ressourcenschlüssel `MyBrush` (dies nicht der Fall, seine Ressource-Auflistung leer ist), die Suche weiter überprüft das übergeordnete Element des <xref:System.Windows.Controls.Button>, also <xref:System.Windows.Controls.Page>. Daher beim Definieren einer Ressourcenpools auf der <xref:System.Windows.Controls.Page> Root-Element, alle Elemente in der logischen Struktur des der <xref:System.Windows.Controls.Page> darauf zugreifen können, und Sie können die gleiche Ressource für den Wert einer beliebigen Eigenschaft festlegen, akzeptiert der <xref:System.Type> , die die Ressource darstellt. Im vorherigen Beispiel identisch `MyBrush` Ressourcensätze zwei unterschiedliche Eigenschaften: die <xref:System.Windows.Controls.Control.Background%2A> von einer <xref:System.Windows.Controls.Button>, und die <xref:System.Windows.Shapes.Shape.Fill%2A> des eine <xref:System.Windows.Shapes.Rectangle>.  
   
 <a name="staticdynamic"></a>   
 ## <a name="static-and-dynamic-resources"></a>Statische und dynamische Ressourcen  
- Eine Ressource kann entweder eine statische Ressource oder eine dynamische Ressource verwiesen werden. Dies erfolgt entweder über die [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) oder [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Eine Markuperweiterung ist ein Feature von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bei dem Sie einen Objektverweis angeben können, indem die Markuperweiterung die Attributzeichenfolge verarbeitet und das Objekt zum Zurückgeben einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ladeprogramm. Weitere Informationen zum Verhalten von Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Es kann entweder auf statische oder auf dynamische Ressourcen verwiesen werden. Dazu wird entweder die [StaticResource Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) oder [DynamicResource Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Eine Markuperweiterung ist ein Feature von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bereitgestellter Sie einen Objektverweis angeben können, indem die Markuperweiterung die Attributzeichenfolge verarbeitet und das Objekt zum Zurückgeben einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ladeprogramm. Weitere Informationen zum Verhalten von Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- Wenn Sie eine Markuperweiterung verwenden, geben Sie in der Regel einen oder mehrere Parameter in Form einer Zeichenfolge, die von dieser speziellen Markuperweiterung verarbeitet werden und nicht im Kontext der festzulegenden Eigenschaft ausgewertet wird. Die [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) verarbeitet einen Schlüssel, indem der Wert für diesen Schlüssel in allen verfügbaren Ressourcenwörterbüchern gesucht. Dies geschieht beim Laden, die die Zeit wird bei der Ladeprozess muss den Wert der Eigenschaft zuweisen, der Verweis auf die statische Ressource akzeptiert. Die [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) stattdessen Prozesse ein Schlüssel durch Erstellen eines Ausdrucks, nicht die Anwendung tatsächlich ausgeführt wird, bis zu diesem Zeitpunkt der Ausdruck wird ausgewertet, und stellt einen Wert bereit.  
+ Wenn Sie eine Markuperweiterung verwenden, geben Sie in der Regel einen oder mehrere Parameter im Zeichenfolgenformat an, die von dieser speziellen Markuperweiterung verarbeitet werden, und nicht im Kontext der festzulegenden Eigenschaft ausgewertet werden. Die [StaticResource Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) verarbeitet eine Tastatureingabe, indem der Wert für diesen Schlüssel in allen verfügbaren Ressourcenverzeichnis gesucht. Dies geschieht beim Laden, d.h. zu dem Zeitpunkt, während der Ladeprozess dem statischen Ressourcenverweis einen Eigenschaftswert zuweisen muss. Die [DynamicResource Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) stattdessen Prozesse ein Schlüssel durch Erstellen eines Ausdrucks, nicht die Anwendung tatsächlich ausgeführt wird, bis zu diesem Zeitpunkt der Ausdruck wird ausgewertet, und stellt einen Wert bereit.  
   
- Wenn Sie eine Ressource verweisen, können folgende Aspekte beeinflussen, ob Sie einen statischen Ressourcenverweis oder einen dynamischen Ressourcenverweis verwenden:  
+ Wenn Sie auf eine Ressource verweisen, sind bei der Wahl zwischen einem statischen und einem dynamischen Ressourcenverweis folgende Aspekte zu beachten:  
   
--   Der allgemeine Entwurf dargestellt, wie Sie die Ressourcen für Ihre Anwendung erstellen (pro Seite, in der Anwendung, in loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], in eine einzige Ressourcenassembly).  
+-   Den Gesamtentwurf wie die Ressourcen für Ihre Anwendung zu erstellen (pro Seite, in der Anwendung in loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], in eine einzige Ressourcenassembly).  
   
--   Die Funktionalität der Anwendung: Ressourcen in Echtzeit-Teil der Anforderungen Ihrer Anwendung aktualisiert wird?  
+-   Die Funktionalität der Anwendung: ist das Aktualisieren von Ressourcen in Echtzeit ein Teil der Anforderungen an Ihre Anwendung?  
   
--   Das jeweilige Suchverhalten dieses Ressourcentyps Verweis einbezogen.  
+-   Das Suchverhalten des jeweiligen Ressourcenverweistyps.  
   
--   Die betreffende Eigenschaft oder Ressourcentyp und das systemeigene Verhalten dieser Typen.  
+-   Jeweiliger Eigenschafts- oder Ressourcentyp sowie dessen natives Verhalten.  
   
 ### <a name="static-resources"></a>Statische Ressourcen  
- Verweise auf statische Ressourcen arbeiten am besten für die folgenden Situationen:  
+ Statische Ressourcenverweise funktionieren optimal unter folgenden Bedingungen:  
   
--   Der Anwendungsentwurf konzentriert sich vor allem der Ressourcen in Seiten oder auf Anwendungsebene Wörterbücher. Statische Ressourcenverweise nicht erneut bewertet werden basierend auf der Common Language Runtime-Verhalten wie das erneute Laden einer Seite, und daher werden einige Leistungsvorteil, viele dynamische Verweise zu vermeiden, wenn sie nicht pro Entwurfs Ressource und Anwendung erforderlich sind.  
+-   Der Anwendungsentwurf behandelt die meisten Ressourcen auf der Seiten- oder Anwendungsebene. Statische Ressourcenverweise werden nicht basierend auf dem Laufzeitverhalten neu bewertet, z.B. beim Neuladen einer Seite. Daher kann durch die Verwendung statischer Ressourcenverweise ein Leistungsvorteil erzielt werden, da eine Vielzahl von dynamischen Verweisen vermieden wird, die nicht für Ihren Ressourcen- oder Anwendungsentwurf erforderlich sind.  
   
--   Sie legen den Wert einer Eigenschaft, die nicht in einem <xref:System.Windows.DependencyObject> oder <xref:System.Windows.Freezable>.  
+-   Sie legen den Wert einer Eigenschaft, die nicht in einem <xref:System.Windows.DependencyObject> oder ein <xref:System.Windows.Freezable>.  
   
--   Erstellen Sie ein Ressourcenverzeichnis, die in eine DLL kompiliert und als Teil der Anwendung verpackt oder zwischen Anwendungen freigegeben werden.  
+-   Sie erstellen ein Ressourcenverzeichnis, das in eine DLL kompiliert und als ein Teil der Anwendung verpackt oder von mehreren Anwendungen gemeinsam genutzt wird.  
   
--   Sie erstellen ein Design für ein benutzerdefiniertes Steuerelement und definieren Ressourcen, die in den Designs verwendet werden. Für diesen Fall Sie in der Regel nicht möchten, dass das Suchverhalten des dynamischen Verweis an, stattdessen die statische Ressource Verweis Verhalten, damit die Suche vorhersagbare und das Design des eigenständig ist. Bei einem dynamischen Ressourcenverweis Verweis selbst ein Verweis innerhalb eines Designs gelassen wird erst zur Laufzeit ausgewertet, und besteht die Möglichkeit, dass das Design angewendet wird, ein lokales Element einen Schlüssel, den das Design verweisen möchte definieren und das lokale Element greift auf das Design in der Suche vorherige wird. In diesem Fall wird das Design nicht wie erwartet Verhalten.  
+-   Sie erstellen ein Design für ein benutzerdefiniertes Steuerelement und definieren Ressourcen, die in den Designs verwendet werden. Für diesen Fall ist das Suchverhalten der dynamischen Verweise ungeeignet. Damit das Suchverhalten vorhersagbar und eigenständig für das Design gestaltet werden kann, sind statische Ressourcenverweise vorzuziehen. Dynamische Ressourcenverweise werden bis zur Laufzeit nicht ausgewertet. Es betrifft auch die Verweise innerhalb des Designs. Daher besteht die Möglichkeit, dass bei der Anwendung des Designs ein Schlüssel, auf den das Design zu verweisen versucht, von einem lokalen Element neu definiert wird, und das lokale Element statt des Designs bei der Suche gefunden wird. In diesem Fall wird Ihr Design sich nicht wie erwartet verhalten.  
   
--   Verwenden Sie Ressourcen, um die große Anzahl von Abhängigkeitseigenschaften festzulegen. Abhängigkeitseigenschaften verfügen über effektive Wert Zwischenspeichern von Eigenschaftenwerten aktiviert, sodass, wenn Sie einen Wert für eine Abhängigkeitseigenschaft bereitstellen, die werden können, zur Ladezeit ausgewertet die Abhängigkeitseigenschaft nicht für einen reevaluated Ausdruck überprüfen muss und kann den letzten effektiven Wert zurück. Diese Technik kann einen Leistungsvorteil bieten.  
+-   Ressourcen werden verwendet, um die große Anzahl von Abhängigkeitseigenschaften festzulegen. Abhängigkeitseigenschaften können auf das effektive Zwischenspeichern von Werten des Eigenschaftensystems zugreifen. Wenn Sie einer Abhängigkeitseigenschaft einen Wert bereitstellen, der zur Ladezeit ausgewertet werden kann, ist keine Neuauswertung des Ausdrucks von der Abhängigkeitseigenschaft erforderlich. Sie kann den letzten effektiven Wert zurückgeben. Mit diesem Verfahren kann ein Leistungsvorteil erzielt werden.  
   
--   Sollen die zugrunde liegende Ressource für alle Consumer ändern oder separate Instanzen mit Schreibzugriff für jeden einzelnen Consumer mit beibehalten möchten die [X: Shared-Attribut](../../../../docs/framework/xaml-services/x-shared-attribute.md).  
+-   Die zugrunde liegende Ressource für alle Consumer ändern möchten, oder Sie separate Instanzen mit Schreibzugriff für jeden Consumer mit beibehalten möchten die [X: Shared-Attribut](../../../../docs/framework/xaml-services/x-shared-attribute.md).  
   
 #### <a name="static-resource-lookup-behavior"></a>Suchverhalten von statischen Ressourcen  
   
-1.  Der Suchprozess prüft den angeforderten Schlüssel in dem Ressourcenwörterbuch, definiert durch das Element, das die Eigenschaft festlegt.  
+1.  Der Suchprozess prüft den angeforderten Schlüssel im Ressourcenverzeichnis, das durch das Element definiert wird, das die Eigenschaft festlegt.  
   
-2.  Der Suchprozess durchläuft dann die logische Struktur aufwärts zum übergeordneten Element und seinem Ressourcenwörterbuch. Dies wird fortgesetzt, bis das Stammelement erreicht ist.  
+2.  Der Suchprozess durchläuft anschließend die logische Struktur aufwärts, zum übergeordneten Element und seinem Ressourcenverzeichnis. Die Suche wird fortgesetzt, bis das Stammelement erreicht ist.  
   
-3.  Als Nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind diese Ressourcen in dem Ressourcenwörterbuch, das vom definiert ist die <xref:System.Windows.Application> -Objekt für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
+3.  Als nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind diese Ressourcen in dem Ressourcenwörterbuch, die von definiert ist die <xref:System.Windows.Application> -Objekt für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
   
- Statische Ressourcenverweise aus einem Ressourcenwörterbuch müssen auf eine Ressource verweisen, die bereits vor dem Ressourcenverweis lexikalisch definiert wurde. Vorwärtsverweise können nicht von einem statischen Ressourcenverweis aufgelöst werden. Aus diesem Grund Wenn Sie statische Ressourcenverweise verwenden, müssen Sie Struktur des Ressourcenwörterbuchs so entwerfen, dass Ressourcen, die zur Verwendung durch eine Ressource an oder am Anfang der jeweiligen Ressourcenwörterbuchs definiert werden.  
+ Statische Ressourcenverweise innerhalb eines Ressourcenverzeichnisses müssen auf eine Ressource verweisen, die bereits vor dem Ressourcenverweis lexikalisch definiert worden ist. Vorwärtsverweise können von einem statischen Ressourcenverweis nicht aufgelöst werden. Wenn Sie statische Ressourcenverweise verwenden, müssen Sie daher die Struktur des Ressourcenverzeichnisses so entwerfen, dass Ressourcen, die durch andere Ressourcen verwendet werden können, zu Beginn der jeweiligen Ressourcenverweise definiert werden.  
   
- Statische Ressourcensuche kann auf Designs oder die Systemressourcen ausgedehnt, aber dies wird unterstützt, da die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ladeprogramm verzögert die Anforderung. Die Verzögerung ist erforderlich, damit das Common Language Runtime-Design zu dem Zeitpunkt, den Laden der Seite ordnungsgemäß für die Anwendung gilt. Jedoch Ressourcenverweise statische auf Schlüssel nur vorhanden sein, Designs oder als System sind nicht empfehlenswert. Dies ist, da solche Verweise nicht neu ausgewertet werden, wenn der Benutzer in Echtzeit das Design geändert wird. Ein dynamischen Ressourcenverweis ist zuverlässiger, wenn Sie Designs oder Systemressourcen anfordern. Die Ausnahme ist, wenn ein Designelement selbst eine andere Ressource anfordert. Diese Verweise sollten den oben genannten Gründen statische Ressourcenverweise sein.  
+ Statische Ressourcensuche kann erweitern, in Designs oder in Systemressourcen verfügbar sind, aber dies wird unterstützt, da die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ladeprogramm verzögert die Anforderung. Die Verzögerung ist zwecks einer ordnungsgemäßen Anwendung des Laufzeit-Designs zu dem Zeitpunkt, als die Seite geladen ist, erforderlich. Jedoch ist von statischen Ressourcenverweisen auf Schlüssel abzuraten, die nur in Designs oder als Systemressourcen vorkommen. Der Grund hierfür ist, dass solche Verweise nicht neu ausgewertet werden, falls ein Benutzer das Design in Echtzeit ändert. Dynamische Ressourcenverweise sind zuverlässiger, wenn Sie Designs oder Systemressourcen abfragen. Eine Ausnahme bilden Abfragen, bei denen ein Designelement selbst andere Ressourcen abfragt. Diese Verweise sind aus den oben genannten Gründen als statische Ressourcenverweise zu definieren.  
   
- Variiert in das Ausnahmeverhalten bei ein statischen Ressourcenverweis nicht gefunden wird. Wenn die Ressource zurückgestellt wurde, tritt die Ausnahme zur Laufzeit. Wenn die Ressource nicht zurückgestellt wurde, tritt die Ausnahme beim Laden.  
+ Falls statistische Verweise nicht gefunden werden, sind verschiedene Ausnahmeverhaltensmuster möglich. Falls die Ressource verzögert wurde, tritt die Ausnahme zur Laufzeit ein. Falls die Ressource nicht verzögert wurde, tritt die Ausnahme zur Ladezeit ein.  
   
 ### <a name="dynamic-resources"></a>Dynamische Ressourcen  
- Dynamische Ressourcen sind am besten für die folgenden Situationen:  
+ Dynamische Ressourcenverweise funktionieren optimal unter folgenden Bedingungen:  
   
--   Der Wert der Ressource hängt von Bedingungen, die nicht erst zur Laufzeit bekannt sind. Dies schließt Systemressourcen oder Ressourcen, die andernfalls vom Benutzer festgelegt sind. Sie können z. B. Setter-Werte, die auf Systemeigenschaften verweisen erstellen, wie von verfügbar gemacht <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, oder <xref:System.Windows.SystemParameters>. Diese Werte sind wirklich dynamischen, da sie letztlich von der Common Language Runtime-Umgebung des Benutzers und Betriebssystem stammen. Außerdem müssen Sie möglicherweise auf Anwendungsebene Designs, die sich ändern können, in denen Zugriff auf Seitenebene die Änderung ebenfalls erfassen muss.  
+-   Der Wert der Ressource hängt von Bedingungen ab, die bis zur Laufzeit unbekannt sind. Dies schließt Systemressourcen und Ressourcen ein, die andernfalls vom Benutzer festgelegt werden. Beispielsweise können Sie Setter-Werte, die auf Systemeigenschaften, verweisen erstellen, wie vom <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, oder <xref:System.Windows.SystemParameters>. Diese Werte sind wirklich dynamisch, da sie letztlich von der Laufzeitumgebung des Benutzers und dem Betriebssystem stammen. Möglicherweise haben Sie außerdem Designs auf der Anwendungsebene, die sich ändern können, und deren Veränderungen auch vom Ressourcenzugriff auf der Seitenebene erfasst werden müssen.  
   
--   Sie erstellen oder verweisen auf Designstile für ein benutzerdefiniertes Steuerelement.  
+-   Sie erstellen Designstile für ein benutzerdefiniertes Steuerelement oder verweisen darauf.  
   
--   Sie beabsichtigen, passen Sie den Inhalt einer <xref:System.Windows.ResourceDictionary> während der Anwendungslebensdauer einer.  
+-   Sie beabsichtigen, passen Sie den Inhalt von einem <xref:System.Windows.ResourceDictionary> während der Anwendungslebensdauer einer.  
   
--   Sie haben eine komplizierte Ressource-Struktur, die Abhängigkeiten, aufweist, kann ein Vorwärtsverweis erforderlich sein. Statische Ressourcenverweise unterstützen keine Vorwärtsverweise jedoch dynamische Ressourcenverweise unterstützen, da die Ressource nicht erst zur Laufzeit ausgewertet werden muss, und Vorwärtsverweise sind daher nicht relevante Konzept.  
+-   Sie haben eine komplizierte Ressourcenstruktur mit gegenseitigen Abhängigkeiten, die möglicherweise Vorwärtsverweise erfordert. Statische Ressourcenverweise unterstützen keine Vorwärtsverweise jedoch dynamische Ressourcenverweise unterstützen, da die Ressource nicht bis zur Laufzeit ausgewertet werden muss und Vorwärtsverweisen sind daher nicht relevanten Konzept.  
   
--   Sie verweisen auf eine Ressource, die aus der Perspektive eines kompilieren oder Workingsets besonders groß ist, und die Ressource möglicherweise nicht sofort beim Laden der Seite verwendet werden. Statische Ressourcenverweise werden immer aus [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] beim Laden der Seite, jedoch ein dynamischen Ressourcenverweis wird nicht geladen, bis sie tatsächlich verwendet werden.  
+-   Sie verweisen auf eine Ressource, die aus der Perspektive eines kompilieren oder Arbeitssatzes besonders groß ist, und möglicherweise beim Laden der Seite nicht sofort verwendet wird. Laden Sie statische Ressourcenverweise immer aus [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] beim Laden der Seite; allerdings ein dynamischen Ressourcenverweis wird nicht geladen, bis sie tatsächlich verwendet wird.  
   
--   Sie erstellen eine Formatvorlage Setter-Werte von anderen Werten kommen können, die durch Designs oder anderer benutzereinstellungen beeinflusst werden.  
+-   Sie erstellen einen Stil, bei dem Setter-Werte von anderen Werten stammen könnten, die durch Designs oder andere Benutzereinstellungen beeinflusst werden.  
   
--   Sie wenden Ressourcen auf Elemente, die in der logischen Struktur während der Lebensdauer der Anwendung erneut übergeordnet sein kann. Ändern des übergeordneten Elements möglicherweise auch Suche Ressourcenbereichs ändert, was Sie ggf. die Ressource für einen neuen übergeordneten Element Element erneut ausgewertet werden basierend auf den neuen Bereich immer einen dynamischen Ressourcenverweis.  
+-   Sie ordnen Ressourcen Elementen zu, die in der logischen Struktur während der Lebensdauer der Anwendung neu zugeordnet werden können. Beim erneuten Zuordnen der Elemente wird möglicherweise auch der Ressourcensuchbereich neu definiert. Wenn Sie wollen, dass die Ressource für ein neu zugeordnetes Element entsprechend dem neuen Suchbereich neu ausgewertet wird, verwenden Sie immer einen dynamischen Ressourcenverweis.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>Suchverhalten von dynamischen Ressourcen  
- Verhalten bei der Ressourcensuche für einen dynamischen Ressourcenverweis entspricht dem Suchverhalten im Code, wenn Sie aufrufen <xref:System.Windows.FrameworkElement.FindResource%2A> oder <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
+ Ressource Lookup für einen dynamischen Ressourcenverweis entspricht das Suchverhalten im Code beim Aufrufen <xref:System.Windows.FrameworkElement.FindResource%2A> oder <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
-1.  Der Suchprozess prüft den angeforderten Schlüssel in dem Ressourcenwörterbuch, definiert durch das Element, das die Eigenschaft festlegt.  
+1.  Der Suchprozess prüft den angeforderten Schlüssel im Ressourcenverzeichnis, das durch das Element definiert wird, das die Eigenschaft festlegt.  
   
     -   Wenn das Element definiert eine <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft, die <xref:System.Windows.Style.Resources%2A> Wörterbuch innerhalb der <xref:System.Windows.Style> aktiviert ist.  
   
     -   Wenn das Element definiert eine <xref:System.Windows.Controls.Control.Template%2A> -Eigenschaft, die <xref:System.Windows.FrameworkTemplate.Resources%2A> Wörterbuch innerhalb der <xref:System.Windows.FrameworkTemplate> aktiviert ist.  
   
-2.  Der Suchprozess durchläuft dann die logische Struktur aufwärts zum übergeordneten Element und seinem Ressourcenwörterbuch. Dies wird fortgesetzt, bis das Stammelement erreicht ist.  
+2.  Der Suchprozess durchläuft anschließend die logische Struktur aufwärts, zum übergeordneten Element und dessen Ressourcenverzeichnis. Die Suche wird fortgesetzt, bis das Stammelement erreicht ist.  
   
-3.  Als Nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind diese Ressourcen in dem Ressourcenwörterbuch, das vom definiert ist die <xref:System.Windows.Application> -Objekt für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
+3.  Als nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind diese Ressourcen in dem Ressourcenwörterbuch, die von definiert ist die <xref:System.Windows.Application> -Objekt für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
   
-4.  Design-Ressourcenverzeichnis wird für das aktuell aktive Design überprüft. Wenn das Design zur Laufzeit ändert, wird der Wert neu ausgewertet.  
+4.  Das Ressourcenverzeichnis des Designs wird für das derzeit aktive Design überprüft. Falls das Design zur Laufzeit geändert wird, wird der Wert neu ausgewertet.  
   
-5.  Ressourcen werden überprüft.  
+5.  Systemressourcen werden geprüft.  
   
- Ausnahmeverhalten (sofern vorhanden) variiert:  
+ Es sind verschiedene Ausnahmeverhaltensmuster möglich (sofern sie auftreten):  
   
--   Wenn eine Ressource von angefordert wurde eine <xref:System.Windows.FrameworkElement.FindResource%2A> aufrufen und nicht gefunden wurde, wird eine Ausnahme ausgelöst.  
+-   Wenn eine Ressource, indem angefordert wurde eine <xref:System.Windows.FrameworkElement.FindResource%2A> aufrufen und wurde nicht gefunden, wird eine Ausnahme ausgelöst.  
   
--   Wenn eine Ressource, durch angefordert wurde eine <xref:System.Windows.FrameworkElement.TryFindResource%2A> aufrufen und nicht gefunden wurde, wird keine Ausnahme ausgelöst, aber der zurückgegebene Wert ist `null`. Wenn die Eigenschaft akzeptiert keine `null`, ist es dennoch möglich, dass eine tiefere Ausnahme ausgelöst wird (Dies hängt von der jeweiligen Eigenschaft festgelegt wird).  
+-   Wenn eine Ressource, indem angefordert wurde eine <xref:System.Windows.FrameworkElement.TryFindResource%2A> aufrufen und wurde nicht gefunden, wird keine Ausnahme ausgelöst, aber der zurückgegebene Wert ist `null`. Wenn die festgelegte Eigenschaft wird nicht akzeptiert `null`, ist es weiterhin möglich, dass eine tiefere Ausnahme ausgelöst wird (Dies hängt von der jeweiligen Eigenschaft festgelegt wird).  
   
--   Wenn eine Ressource von einem dynamischen Ressourcenverweis in angefordert wurde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], und nicht gefunden wurde, und klicken Sie dann das Verhalten hängt von der allgemeinen Eigenschaftensystem, aber das allgemeine Verhalten ist, als ob keine Eigenschaft Einstellung auf der Ebene aufgetreten ist, in dem die Ressource vorhanden ist. Z. B. Wenn Sie versuchen, auf den Hintergrund festlegen einer ein einzelnes Schaltflächenelement mit einer Ressource, die nicht ausgewertet werden konnte, klicken Sie dann kein Wert festgelegt, Ergebnisse, aber der tatsächliche Wert kommen immer noch von anderen Teilnehmern in der Priorität von System- und Wert. Beispielsweise kann dem Wert für den weiterhin von einer lokal definierten Schaltflächenstil oder vom Designstil stammen. Für Eigenschaften, die nicht von Designstile definiert werden, kann der tatsächliche Wert nach einer Evaluierung ausgefallene Ressource vom Standardwert in den Metadaten stammen.  
+-   Wenn eine Ressource durch einen dynamischen Ressourcenverweis in angefordert wurde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], und wurde nicht gefunden, und klicken Sie dann das Verhalten hängt vom Eigenschaftensystem allgemeine, aber das allgemeine Verhalten ist, als wäre kein Vorgang der Einstellung auf der Ebene aufgetreten, in dem die Ressource vorhanden ist. Wenn Sie z.B. versuchen, den Hintergrund eines einzelnen Schaltflächenelements mit einer Ressource festzulegen, die nicht ausgewertet werden konnte, wird als Ergebnis kein Wert festgelegt. Ein effektiver Wert kann aber dennoch von anderen Teilnehmern im Eigenschaftssystem und in der Wertrangfolge bereitgestellt werden. Beispielsweise kann der Wert für den Hintergrund von einem lokal definierten Schaltflächenstil oder vom Design-Stil zurückgegeben werden. Für Eigenschaften, die nicht von Design-Stilen definiert werden, kann nach einer fehlgeschlagenen Auswertung der Standardwert aus den Eigenschaftenmetadaten als effektiver Wert übernommen werden.  
   
 #### <a name="restrictions"></a>Beschränkungen  
- Dynamische Verweise müssen einige wichtige Einschränkungen. Mindestens eine der folgenden muss erfüllt sein:  
+ Die Verwendung dynamischer Verweise ist mit einigen wichtigen Beschränkungen verbunden. Mindestens eine der folgenden Bedingungen muss erfüllt sein:  
   
--   Das Festlegen der-Eigenschaft muss eine Eigenschaft auf einen <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Die Eigenschaft von gesichert werden muss ein <xref:System.Windows.DependencyProperty>.  
+-   Die festgelegte Eigenschaft wird muss eine Eigenschaft auf einen <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Dass die Eigenschaft gesichert werden muss, indem Sie eine <xref:System.Windows.DependencyProperty>.  
   
--   Der Verweis ist für einen Wert innerhalb einer <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   Der Verweis ist für einen Wert innerhalb einer <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
--   Eigenschaft muss eine Eigenschaft sein, auf eine <xref:System.Windows.Freezable> , dient als entweder den Wert eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> -Eigenschaft, oder ein <xref:System.Windows.Setter> Wert.  
+-   Die festgelegte Eigenschaft wird muss eine Eigenschaft auf einen <xref:System.Windows.Freezable> , die als Wert bereitgestellt wird eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> -Eigenschaft, oder ein <xref:System.Windows.Setter> Wert.  
   
- Da die-Eigenschaft festgelegt sein muss ein <xref:System.Windows.DependencyProperty> oder <xref:System.Windows.Freezable> -Eigenschaft, die meisten Eigenschaft können weiterleiten an Benutzeroberfläche, da die Änderung einer Eigenschaft (der Wert des geänderten dynamische Ressourcen) vom Eigenschaftensystem bestätigt wird. Die meisten Steuerelemente enthalten Logik, die ein anderes Layout eines Steuerelements erzwungen wird, wenn ein <xref:System.Windows.DependencyProperty> ändert, und diese Eigenschaft Layout auswirken. Allerdings nicht alle Eigenschaften haben eine [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) als Wert garantiert Mehrwert so, dass sie in Echtzeit in der Benutzeroberfläche aktualisieren. Diese Funktionen kann weiterhin variieren, je nach Eigenschaft sowie je nach Typ, der die Eigenschaft oder sogar die logische Struktur Ihrer Anwendung besitzt.  
+ Da die Eigenschaft festgelegt sein muss eine <xref:System.Windows.DependencyProperty> oder <xref:System.Windows.Freezable> -Eigenschaft, die meisten eigenschaftenänderungen können weitergeben an Benutzeroberfläche, da die Änderung einer Eigenschaft (den geänderten dynamische Ressourcenwert) von dem Eigenschaftensystem bestätigt wird. Die meisten Steuerelemente enthalten Logik, die ein anderes Layout eines Steuerelements erzwungen wird, wenn eine <xref:System.Windows.DependencyProperty> ändert, und diese Eigenschaft Layout auswirken. Allerdings nicht alle Eigenschaften müssen einem [DynamicResource Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) als ihren Wert ist sichergestellt, dass den Wert in einer Weise angeben, die in Echtzeit in der Benutzeroberfläche aktualisiert, um. Diese Funktionalität kann dennoch variieren, abhängig sowohl von der Eigenschaft als auch vom Typ, der die Eigenschaft besitzt oder sogar von der logischen Struktur Ihrer Anwendung.  
   
 <a name="stylesimplicitkeys"></a>   
 ## <a name="styles-datatemplates-and-implicit-keys"></a>Stile, Datenvorlagen und implizite Schlüssel  
- Es wurde bereits angemerkt, dass alle Elemente in einem <xref:System.Windows.ResourceDictionary> muss über einen Schlüssel verfügen. Jedoch das bedeutet nicht, dass alle Ressourcen, eine explizite benötigen `x:Key`. Einige Objekttypen unterstützen einen impliziten Schlüssel, wenn als Ressource definiert, wobei der Schlüssel-Wert auf den Wert einer anderen Eigenschaft gebunden ist. Dies wird als impliziter Schlüssel bezeichnet, während ein `x:Key` -Attribut ist ein expliziter Schlüssel. Sie können jeden impliziten Schlüssel durch Angabe eines expliziten Schlüssels überschreiben.  
+ Früher wurde erläutert, dass alle Elemente in einem <xref:System.Windows.ResourceDictionary> muss einen Schlüssel haben. Allerdings Dies bedeutet nicht, dass alle Ressourcen einen expliziten benötigen `x:Key`. Manche Objekttypen unterstützen einen impliziten Schlüssel, wenn sie als Ressourcen definiert sind, wobei der Schlüsselwert an den Wert einer anderen Eigenschaft gebunden ist. Dies wird als einen impliziten Schlüssel bezeichnet, während ein `x:Key` -Attribut ist ein expliziter Schlüssel. Sie können jegliche implizite Schlüssel durch die Angabe eines expliziten Schlüssels überschreiben.  
   
- Ein sehr wichtiges Szenario für Ressourcen stellt das Definieren einer <xref:System.Windows.Style>. In der Tat ein <xref:System.Windows.Style> wird fast immer als Eintrag in einem Ressourcenwörterbuch definiert, weil Stile grundsätzlich zur Wiederverwendung vorgesehen sind. Weitere Informationen zu Stilen finden Sie unter [von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Ein sehr wichtiges Szenario für Ressourcen ist beim Definieren einer <xref:System.Windows.Style>. In der Tat eine <xref:System.Windows.Style> ist fast immer als Eintrag in einem Ressourcenwörterbuch definiert, da Stile grundsätzlich zur Wiederverwendung vorgesehen sind. Weitere Informationen zu Stilen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
- Stile für Steuerelemente können sowohl mit erstellt und mit einem impliziten Schlüssel verwiesen werden. Die Designstile, die die standarddarstellung eines Steuerelements definieren basieren auf diese impliziten Schlüssel. Der implizite Schlüssel aus Sicht der Anforderung, es ist die <xref:System.Type> des Steuerelements selbst. Aus Sicht der Ressource definieren der implizite Schlüssel ist der <xref:System.Windows.Style.TargetType%2A> des Formats. Daher, wenn Sie Designs für benutzerdefinierte Steuerelemente erstellen, Erstellen von Stilen, die Interaktion mit vorhandenen Designstile, nicht müssen Sie an einer [X: Key-Direktive](../../../../docs/framework/xaml-services/x-key-directive.md) , <xref:System.Windows.Style>. Und wenn Sie Designstile verwenden möchten, müssen Sie keines Format angeben. Z. B. die folgenden Formatdefinition funktioniert, obwohl die <xref:System.Windows.Style> Ressource scheint nicht über einen Schlüssel verfügen:  
+ Mit einem impliziten Schlüssel können Stile für Steuerelemente erstellt werden, und es kann damit auf sie verwiesen werden. Die Design-Stile, die die Standarddarstellung eines Steuerelements definieren, basieren auf diesen impliziten Schlüsseln. Der implizite Schlüssel aus Sicht der Anforderung, es ist die <xref:System.Type> des Steuerelements selbst. Der implizite Schlüssel aus Entwicklersicht definieren die Ressource ist der <xref:System.Windows.Style.TargetType%2A> des Formats. Daher, wenn Sie Designs für benutzerdefinierte Steuerelemente erstellen, Stile, die Interaktion mit vorhandenen Designstile erstellen Sie müssen nicht an eine [X: Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md) für diesen <xref:System.Windows.Style>. Und wenn Sie die Design-Stile verwenden möchten, müssen Sie gar keinen Stil angeben. Z. B. die folgenden Formatdefinition verwendet werden kann, obwohl die <xref:System.Windows.Style> Ressource scheint nicht über einen Schlüssel verfügen:  
   
- [!code-xml[FEResourceSH_snip#ImplicitStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
+ [!code-xaml[FEResourceSH_snip#ImplicitStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Dieser Stil verfügt tatsächlich über einen Schlüssel: den impliziten Schlüssel `typeof(` <xref:System.Windows.Controls.Button>`)`. Im Markup können Sie angeben einer <xref:System.Windows.Style.TargetType%2A> direkt als Typ name (oder optional können Sie [{X: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) Zurückgeben einer <xref:System.Type>.  
+ Dieser Stil tatsächlich einen Schlüssel verfügt: den impliziten Schlüssel `typeof(` <xref:System.Windows.Controls.Button> `)`. Im Markup, geben Sie eine <xref:System.Windows.Style.TargetType%2A> benennen Sie direkt mit dem Typ (oder verwenden Sie optional [{X: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) Zurückgeben einer <xref:System.Type>.  
   
- Über die Standardmechanismen für Designstile verwendeten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], wie die Common Language Runtime-Stil der Stil angewendet wird ein <xref:System.Windows.Controls.Button> auf der Seite, obwohl die <xref:System.Windows.Controls.Button> selbst versucht nicht, geben Sie die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft oder einen bestimmten Ressourcenverweis auf den Stil. Auf der Seite definierte Stil befindet sich weiter oben in der Suchsequenz vor dem Wörterbuch Designstil mithilfe desselben Schlüssels, der dem Wörterbuch Designstil verfügt. Geben Sie einfach `<Button>Hello</Button>` überall auf der Seite und die Formatvorlagen, die Sie mit definiert <xref:System.Windows.Style.TargetType%2A> von `Button` auf diese Schaltfläche angewendet. Wenn Sie möchten, können Sie explizit Schlüssel für den Stil mit demselben Typwert als <xref:System.Windows.Style.TargetType%2A>für Klarheit im Markup, aber optional ist.  
+ Durch standardmäßige Design Stil Mechanismen verwendet werden, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], wie die Common Language Runtime-Stil der Stil angewendet wird eine <xref:System.Windows.Controls.Button> auf der Seite, obwohl die <xref:System.Windows.Controls.Button> selbst wird nicht versucht, geben Sie die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft oder eine bestimmte Ressource einen Verweis auf das Format. Ihr auf dieser Seite definierter Stil wird unter der Verwendung des selben Schlüssels in der Suchsequenz früher als der Stil des Designverzeichnisses gefunden. Geben Sie einfach `<Button>Hello</Button>` an einer beliebigen Stelle auf der Seite und den Stil, die Sie mit definierten <xref:System.Windows.Style.TargetType%2A> von `Button` würde auf diese Schaltfläche angewendet werden. Wenn Sie möchten, können Sie immer noch explizit Schlüssel für den Stil mit demselben Typwert als <xref:System.Windows.Style.TargetType%2A>für Klarheit im Markup sich jedoch optional ist.  
   
- Implizite Schlüssel für Stile werden nicht auf ein Steuerelement angewendet, wenn <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> ist `true` (Beachten Sie, dass <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> als Teil des systemeigenen Verhaltens für den Steuerelementtyp und nicht explizit für eine Instanz des Steuerelements festgelegt werden kann). Darüber hinaus um implizite Schlüssel für abgeleitete zu unterstützen, das Steuerelement muss außer Kraft setzen <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (alle vorhandenen Steuerelemente, die als Teil des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dazu). Weitere Informationen über Stile, Designs und Entwurf von Steuerelementen finden Sie unter [Richtlinien zum Entwerfen formatierbarer Steuerelemente](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
+ Implizite Schlüssel für Stile werden nicht auf ein Steuerelement angewendet, wenn <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> ist `true` (Beachten Sie, dass <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> möglicherweise als Teil des systemeigenen Verhaltens für den Steuerelementtyp und nicht explizit auf einer Instanz des Steuerelements festgelegt). Auch, um implizite Schlüssel für die abgeleitete Klassenszenarien zu unterstützen, das Steuerelement muss überschreiben <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (alle vorhandenen Steuerelemente, die im Rahmen des bereitgestellten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dazu). Weitere Informationen zu Stilen, Designs und Entwurf von Steuerelementen finden Sie unter [Richtlinien zum Entwerfen von Stylable Controls](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   
- <xref:System.Windows.DataTemplate> verfügt auch über einen impliziten Schlüssel. Der implizite Schlüssel für eine <xref:System.Windows.DataTemplate> ist die <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaftswert.                  <xref:System.Windows.DataTemplate.DataType%2A> kann auch als Name des Typs angegeben werden, nicht explizit mit [{X: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ <xref:System.Windows.DataTemplate>Außerdem verfügt über einen impliziten Schlüssel ein. Der implizite Schlüssel für eine <xref:System.Windows.DataTemplate> ist die <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaftswert. <xref:System.Windows.DataTemplate.DataType%2A>kann auch als Name des Typs angegeben werden, anstatt explizit mit [{X: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.ResourceDictionary>   
- [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md)   
- [Definieren Sie und verweisen auf eine Ressource](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)   
- [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)   
- [X: Type-Markuperweiterung](../../../../docs/framework/xaml-services/x-type-markup-extension.md)   
- [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)   
+ <xref:System.Windows.ResourceDictionary>  
+ [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
+ [Definieren einer Ressource und Verweisen auf eine Ressource](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [x:Type-Markuperweiterung](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
  [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

@@ -1,36 +1,28 @@
 ---
-title: "Gewusst wie: Überprüfen mit XSD (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c6df61013b0007e5943060f8926b21d189a01519
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 53b4f96e4fe31588c948d8e860be2c3bd3fa372a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Gewusst wie: Überprüfen mit XSD (LINQ to XML) (Visual Basic)
-Der <xref:System.Xml.Schema>-Namespace enthält Erweiterungsmethoden, die eine XML-Struktur mit einer XML-Schema Definition Language (XSD) überprüft erleichtern.</xref:System.Xml.Schema> Weitere Informationen finden Sie unter der <xref:System.Xml.Schema.Extensions.Validate%2A>Dokumentation.</xref:System.Xml.Schema.Extensions.Validate%2A>  
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (Visual Basic)
+Der <xref:System.Xml.Schema>-Namespace enthält Erweiterungsmethoden, die ein einfaches Validieren von XML-Strukturen anhand von XSD-Dateien ermöglichen. Weitere Informationen finden Sie in der Dokumentation zur <xref:System.Xml.Schema.Extensions.Validate%2A>-Methode.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine <xref:System.Xml.Schema.XmlSchemaSet>, überprüft dann zwei <xref:System.Xml.Linq.XDocument>Objekte anhand des Schemasatzes.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Schema.XmlSchemaSet> Eines der Dokumente ist gültig, das andere nicht.  
+ Das folgende Beispiel erstellt ein <xref:System.Xml.Schema.XmlSchemaSet> und validiert dann anhand des Schemasatzes die beiden <xref:System.Xml.Linq.XDocument>-Objekte. Eines der Dokumente ist gültig, das andere nicht.  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -94,11 +86,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird überprüft, dass das XML-Dokument aus [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) ist gemäß dem Schema aus [XSD-Beispieldatei: Customers und Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Anschließend ändert das Beispiel das XML-Quelldokument. Dabei wird das `CustomerID`-Attribut für den ersten Kunden geändert. Nach der Änderung verweisen die Aufträge auf einen Kunden, der nicht existiert, sodass das XML-Dokument nicht mehr als gültig angesehen wird.  
+ In dem folgenden Beispiel wird überprüft, ob das XML-Dokument aus [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) laut dem Schema aus [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) gültig ist. Anschließend ändert das Beispiel das XML-Quelldokument. Dabei wird das `CustomerID`-Attribut für den ersten Kunden geändert. Nach der Änderung verweisen die Aufträge auf einen Kunden, der nicht existiert, sodass das XML-Dokument nicht mehr als gültig angesehen wird.  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- Dieses Beispiel verwendet die folgende XSD-Schema: [XSD-Beispieldatei: Customers und Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ In diesem Beispiel wird das folgende XSD-Schema verwendet: [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -140,5 +132,5 @@ custOrdDoc did not validate
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Schema.Extensions.Validate%2A></xref:System.Xml.Schema.Extensions.Validate%2A>   
+ <xref:System.Xml.Schema.Extensions.Validate%2A>  
  [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

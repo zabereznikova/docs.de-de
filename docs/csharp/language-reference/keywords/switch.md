@@ -18,24 +18,24 @@ ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
 `switch` ist eine Auswahlanweisung, die einen einzelnen *switch-Abschnitt* zum Ausführen aus einer Liste von Kandidaten auswählt, die auf einem Mustertreffer mit dem *Vergleichsausdruck* basiert. 
   
- [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+ [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
 Die Anweisung `switch` wird häufig als Alternative zu einem [if-else](if-else.md)-Konstrukt verwendet, wenn ein einzelner Ausdruck mit drei oder mehr Bedingungen getestet wird. Die folgende Anweisung `switch` bestimmt z.B., ob eine Variable des Typs `Color` einen von drei Werten hat: 
 
-[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
 
 Dies entspricht dem folgenden Beispiel, das ein `if`-`else`-Konstrukt verwendet. 
 
-[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
 
 ## <a name="the-match-expression"></a>Der Vergleichsausdruck
 
@@ -61,9 +61,9 @@ Ab C# 7 kann der Vergleichsausdruck jeder Ausdruck sein, der nicht NULL ist.
  
   Eine `switch`-Anweisung kann eine beliebige Anzahl von switch-Abschnitten enthalten, und jeder Abschnitt kann eine oder mehrere case-Bezeichnungen haben, wie im folgend Beispiel gezeigt wird. Allerdings können zwei case-Bezeichnungen nicht denselben Ausdruck enthalten.  
 
- [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+ [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
 
- Nur ein switch-Abschnitt einer switch-Anweisung wir ausgeführt. C# lässt nicht zu, dass die Ausführung von einem switch-Abschnitt zum nächsten fortgesetzt wird. Aus diesem Grund generiert der folgende Code den Compilerfehler CS0163: „Das Steuerelement kann nicht von einer case-Bezeichnung (<case label>) zur nächsten fortfahren.“   
+ Nur ein switch-Abschnitt einer switch-Anweisung wir ausgeführt. C# lässt nicht zu, dass die Ausführung von einem switch-Abschnitt zum nächsten fortgesetzt wird. Aus diesem Grund generiert der folgende Code den Compilerfehler CS0163: „Das Steuerelement kann nicht von einer case-Bezeichnung (<case label>) zur nächsten fortfahren.“  
 
 ```csharp  
 switch (caseSwitch)  
@@ -79,7 +79,7 @@ switch (caseSwitch)
 ```  
 Diese Anforderung wird normalerweise erfüllt, indem der switch-Abschnitt ausdrücklich durch Verwenden einer Anweisung [break](break.md), [goto](goto.md) oder [return](return.md) beendet wird. Der folgende Code ist jedoch auch gültig, da er sicherstellt, dass die Programmsteuerung nicht im switch-Abschnitt `default` fortfährt.
   
- [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
+ [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
  Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `goto label`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen. Eine `goto`-Anweisung muss bei Nichtverwendung die Steuerung an eine konstante Bezeichnung übergeben. Diese Einschränkung ist notwendig, da der Versuch, die Steuerung an eine nicht konstante Bezeichnung zu übergeben, unerwünschte Nebeneffekte haben kann, z.B. kann die Steuerung an eine nicht beabsichtigte Position im Code übergeben werden, oder es kann eine Endlosschleife entstehen.
 
@@ -95,7 +95,7 @@ Diese Anforderung wird normalerweise erfüllt, indem der switch-Abschnitt ausdr�
 
  Das folgende Beispiel veranschaulicht eine `switch`-Anweisung, die eine Reihe von sich nicht gegenseitig ausschließenden Mustern verwendet. Wenn Sie den switch-Abschnitt `case 0:` verschieben, sodass er nicht länger der erste Abschnitt in der `switch`-Anweisung ist, erzeugt C# einen Compilerfehler, da eine Ganzzahl, deren Wert 0 ist, eine Teilmenge aller Ganzzahlen ist, die das Muster anhand der `case int val`-Anweisung definiert.
 
- [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+ [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
 
 Sie können dieses Problem beheben und die Compilerwarnung auf eine von zwei Arten entfernen:
 
@@ -138,11 +138,11 @@ Der Konstantenausdruck wird wie folgt ausgewertet:
 
 Das folgende Beispiel verwendet das Konstantenmuster, um zu bestimmen, ob ein bestimmtes Datum ein Wochenende, der erste Tag der Arbeitswoche, der letzte Tag der Arbeitswoche oder die Mitte der Arbeitswoche ist. Es bewertet die Eigenschaft <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> des heutigen Tags mit den Membern der <xref:System.DayOfWeek>-Enumeration. 
 
-[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 Im folgenden Beispiel wird das Konstantenmuster verwendet, um Benutzereingaben in einer Konsolenanwendung zu steuern, die eine automatische Kaffeemaschine simuliert.
   
- [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+ [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
 
 ### <a name="type-pattern"></a>Typmuster
 
@@ -173,11 +173,11 @@ case null:
  
 Im folgenden Beispiel wird mithilfe des Typmusters Informationen über die verschiedenen Arten von Auflistungstypen bereitgestellt.
 
-[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Ohne Musterabgleich könnte dieser Code wie folgt geschrieben werden. Die Verwendung des Typmusterabgleichs erzeugt einen kompakteren, lesbaren Code, indem nicht mehr getestet werden muss, ob das Ergebnis einer Umwandlung `null` ist, oder um wiederholte Umwandlungen auszuführen.  
 
-[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="the-case-statement-and-the-when-clause"></a>Die `case`-Anweisung und die `when`-Klausel
 
@@ -185,7 +185,7 @@ Da sich ab C# 7 case-Anweisungen nicht gegenseitig ausschließen müssen, könne
 
  Im folgenden Beispiel wird eine `Shape`-Basisklasse, eine `Rectangle`-Klasse, die von `Shape` abgeleitet wird, und eine `Square`-Klasse, die von `Rectangle` abgeleitet wird, definiert. Die `when`-Klausel wird verwendet, um sicherzustellen, dass `ShowShapeInfo` ein `Rectangle`-Objekt, dem eine gleiche Länge und Breite zugewiesen wurde, wie `Square` behandelt, selbst wenn es nicht als ein `Square`-Objekt instanziiert wurde. Diese Methode versucht weder Informationen über ein Objekt anzuzeigen, das `null` ist, noch über eine Form, deren Bereich NULL ist. 
 
-[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
   
 Beachten Sie, dass in diesem Beispiel die `when`-Klausel, die zu prüfen versucht, ob ein `Shape`-Objekt `null` ist, nicht ausgeführt wird. Das richtige Typmuster, um auf `null` zu testen, ist `case null:`.
 
@@ -194,11 +194,11 @@ Beachten Sie, dass in diesem Beispiel die `when`-Klausel, die zu prüfen versuch
   
 ## <a name="see-also"></a>Siehe auch  
 
- [C#-Referenz](../index.md)   
- [C#-Programmierhandbuch](../../programming-guide/index.md)   
- [C#-Schlüsselwörter](index.md)   
- [if-else](if-else.md)   
- [Mustervergleich](../../pattern-matching.md)   
+ [C#-Referenz](../index.md)  
+ [C#-Programmierhandbuch](../../programming-guide/index.md)  
+ [C#-Schlüsselwörter](index.md)  
+ [if-else](if-else.md)  
+ [Mustervergleich](../../pattern-matching.md)  
  
 
  

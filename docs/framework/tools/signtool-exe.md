@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
@@ -91,7 +84,7 @@ signtool [command] [options] [file_name | ...]
 |`/csp` *CSPName*|Gibt den Kryptografiedienstanbieter (CSP) an, der den privaten Schlüsselcontainer enthält.|  
 |`/d` *Beschr*|Gibt eine Beschreibung des signierten Inhalts an.|  
 |`/du` *URL*|Gibt eine URL (Uniform Resource Locator) für die erweiterte Beschreibung des signierten Inhalts an.|  
-|`/f` *SignZertDatei*|Gibt das Signaturzertifikat in einer Datei an. Wenn die Datei im PFX-Format (Personal Information Exchange) vorliegt und mit einem Kennwort gesichert ist, verwenden Sie zur Angabe des Kennworts die `/p`-Option. Wenn die Datei keine privaten Schlüssel aufweist, verwenden Sie die `/csp`-Option und `/k`-Option, um den CSP-Namen und den Namen des privaten Schlüsselcontainers anzugeben.|  
+|`/f` *SignZertDatei*|Gibt das Signaturzertifikat in einer Datei an. Wenn die Datei im PFX-Format (Personal Information Exchange) vorliegt und mit einem Kennwort gesichert ist, verwenden Sie zur Angabe des Kennworts die `/p`-Option. Wenn die Datei keine privaten Schlüssel aufweist, verwenden Sie die `/csp`-Option und `/kc`-Option, um den CSP-Namen und den Namen des privaten Schlüsselcontainers anzugeben.|  
 |`/fd`|Gibt den Dateihashwertalgorithmus zum Erstellen von Dateisignaturen an. Die Standardeinstellung lautet SHA1.|  
 |`/i` *Ausstellername*|Gibt den Namen des Ausstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Ausstellernamens sein.|  
 |`/kc` *ContainernameprivaterSchlüssel*|Gibt den Namen des privaten Schlüsselcontainers an.|  
@@ -225,6 +218,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
+ [Extras](../../../docs/framework/tools/index.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

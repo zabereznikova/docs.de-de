@@ -1,42 +1,23 @@
 ---
 title: Werttypen (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 Die Werttypen sind in zwei Hauptkategorien unterteilt:  
@@ -62,7 +43,7 @@ Die Werttypen sind in zwei Hauptkategorien unterteilt:
 ## <a name="main-features-of-value-types"></a>Hauptfunktionen von Werttypen  
  Variablen, die auf Werttypen basieren, enthalten Werte direkt. Durch das Zuweisen einer Werttypvariablen zu einer anderen wird der enthaltene Wert kopiert. Dies unterscheidet sich von der Zuweisung von Verweistypvariablen. Dabei wird ein Verweis auf das Objekt, aber nicht das Objekt selbst kopiert.  
   
- Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=fullName> abgeleitet.  
+ Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet.  
   
  Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten. Strukturen können aber wie Verweistypen Schnittstellen implementieren.  
   
@@ -71,7 +52,7 @@ Die Werttypen sind in zwei Hauptkategorien unterteilt:
  Jeder Werttyp hat einen impliziten Standardkonstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
   
 ## <a name="main-features-of-simple-types"></a>Hauptfunktionen von einfachen Typen  
- Alle einfachen Typen, die für C# wesentlichen Typen, sind Aliasse der Systemtypen aus dem .NET Framework. [int](../../../csharp/language-reference/keywords/int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=fullName>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md).  
+ Alle einfachen Typen, die für C# wesentlichen Typen, sind Aliasse der Systemtypen aus dem .NET Framework. [int](../../../csharp/language-reference/keywords/int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md).  
   
  Konstante Ausdrücke, deren Operanden alle einfache Typkonstanten sind, werden zur Kompilierzeit ausgewertet.  
   
@@ -123,10 +104,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
  Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Typen](../../../csharp/language-reference/keywords/types.md)   
- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Typen](../../../csharp/language-reference/keywords/types.md)  
+ [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
-

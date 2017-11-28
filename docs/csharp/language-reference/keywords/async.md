@@ -1,42 +1,23 @@
 ---
 title: async (C#-Referenz)
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
 Mit dem `async`-Modifizierer können Sie angeben, dass eine Methode, ein [Lambdaausdruck](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) oder eine [anonyme Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) asynchron ist. Wenn Sie diesen Modifizierer auf Methoden oder Ausdrücke anwenden, wird dies als *asynchrone Methode* bezeichnet. Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `ExampleMethodAsync` definiert: 
@@ -48,7 +29,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-Wenn Sie mit der asynchronen Programmierung noch nicht vertraut sind oder nicht wissen, wie eine asynchrone Methode das `await`-Schlüsselwort verwendet, um Aufgaben mit potenziell langer Laufzeit auszuführen, ohne den Thread des Aufrufers zu blockieren, können Sie die Einführung unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md) lesen. Der folgende Code befindet sich in einer asynchronen Methode und ruft die <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName>-Methode auf: 
+Wenn Sie mit der asynchronen Programmierung noch nicht vertraut sind oder nicht wissen, wie eine asynchrone Methode das `await`-Schlüsselwort verwendet, um Aufgaben mit potenziell langer Laufzeit auszuführen, ohne den Thread des Aufrufers zu blockieren, können Sie die Einführung unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md) lesen. Der folgende Code befindet sich in einer asynchronen Methode und ruft die <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>-Methode auf: 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -82,7 +63,7 @@ So führen Sie den Code als Windows Store-App aus:
 - Fügen Sie diesen Code in die `MainPage`-Klasse in „MainPage.xaml.cs“ ein.  
 - Fügen Sie using-Anweisungen für „System.Net.Http“ und „System.Threading.Tasks“ hinzu.  
   
-[!code-cs[WPF-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
 >  Weitere Informationen zu Aufgaben und zum Code, der während des Wartens auf eine Aufgabe ausgeführt wird, finden Sie unter [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md). Ein vollständiges Beispiel für WPF, das ähnliche Elemente verwendet, finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
@@ -106,8 +87,7 @@ Ab C# 7 wird ein anderer Typ zurückgegeben, üblicherweise ein Werttyp, der üb
 Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [await](../../../csharp/language-reference/keywords/await.md)  
+ [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)
-

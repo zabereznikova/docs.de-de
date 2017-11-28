@@ -1,49 +1,31 @@
 ---
 title: 'Gewusst wie: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - folders [C#]
 - creating files [C#]
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f7eb2c6386a8433c025a9f2abea4b03f6ab271d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 150190eeef829bd0431eeea7789025b9905553e3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Gewusst wie: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)
 Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.  
   
 ## <a name="example"></a>Beispiel  
- [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
+ [!code-csharp[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- Falls der Ordner bereits vorhanden ist, führt <xref:System.IO.Directory.CreateDirectory%2A> keine Aktion aus, und es wird keine Ausnahme ausgelöst. Allerdings wird mit <xref:System.IO.File.Create%2A?displayProperty=fullName> eine vorhandene Datei durch eine neue Datei ersetzt. Im Beispiel wird eine `if`-`else`-Anweisung verwendet, um zu verhindern, dass eine vorhandene Datei ersetzt wird.  
+ Falls der Ordner bereits vorhanden ist, führt <xref:System.IO.Directory.CreateDirectory%2A> keine Aktion aus, und es wird keine Ausnahme ausgelöst. Allerdings wird mit <xref:System.IO.File.Create%2A?displayProperty=nameWithType> eine vorhandene Datei durch eine neue Datei ersetzt. Im Beispiel wird eine `if`-`else`-Anweisung verwendet, um zu verhindern, dass eine vorhandene Datei ersetzt wird.  
   
  Wenn Sie die folgenden Änderungen im Beispiel vornehmen, können Sie, je nachdem, ob eine Datei mit einem bestimmten Namen bereits vorhanden ist, unterschiedliche Ergebnisse erzeugen. Wenn eine solche Datei nicht vorhanden ist, erstellt der Code sie. Wenn eine solche Datei vorhanden ist, fügt der Code Daten an diese Datei an.  
   
@@ -91,7 +73,6 @@ Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unt
  Wenn Sie keine Berechtigung zum Erstellen des Ordners haben, wird in dem Beispiel eine Instanz der <xref:System.UnauthorizedAccessException>-Klasse ausgelöst.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.IO?displayProperty=fullName>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ <xref:System.IO?displayProperty=nameWithType>  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
+ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 19744773d18f6ea43e4b4a7518405b60e6b53acf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debuggen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
 
 Bisher haben Sie die Schritte unter [Building a C# Hello World Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](.\with-visual-studio.md)) oder [Build a Visual Basic Hallo Welt Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017)](vb-with-visual-studio.md) zum Erstellen und Ausführen einer einfachen Konsolenanwendung befolgt. Sobald Sie Ihre Anwendung kompiliert und geschrieben haben, können Sie beginnen, sie zu testen. Visual Studio enthält einen umfassenden Satz von Debugtools, die Sie beim Testen Ihrer Anwendung und der Problembehandlung verwenden können.
@@ -65,13 +63,13 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Geben Sie `date = new DateTime(2016,11,01,11,59,00)` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
 
-   Im **Direktfenster** werden der Wert der Zeichenfolgenvariablen und die Eigenschaften des @System.DateTime -Werts angezeigt. Darüber hinaus wird der Wert der Variablen in den Fenstern **Auto** und **Lokal** aktualisiert.
+   Im **Direktfenster** werden der Wert der Zeichenfolgenvariablen und die Eigenschaften des <xref:System.DateTime> -Werts angezeigt. Darüber hinaus wird der Wert der Variablen in den Fenstern **Auto** und **Lokal** aktualisiert.
 
    ![Auto-Fenster und Direktfenster](./media/debugging-with-visual-studio/autosimmediate.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Geben Sie `currentDate = new DateTime(2016,11,01,11,59,00)` im **Direktfenster** ein, und drücken Sie die EINGABETASTE.
 
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the @System.DateTime value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
+<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
 
    ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
 -->
@@ -119,9 +117,9 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 
 1. Drücken Sie im Konsolenfenster die EINGABETASTE, wenn Sie zur Eingabe Ihres Namens aufgefordert werden.
 
-1. Da die angegebene Bedingung erfüllt wurde – `name` ist entweder `null` oder <xref:System.String.Empty?displayProperty=fullName> – endet die Ausführung des Programms, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird.
+1. Da die angegebene Bedingung erfüllt wurde – `name` ist entweder `null` oder <xref:System.String.Empty?displayProperty=nameWithType> – endet die Ausführung des Programms, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird.
 
-1. Wählen Sie das Fenster **Lokal**, das die Werte der lokalen Variablen der momentan ausgeführten Methode anzeigt, in diesem Fall der `Main`-Methode in Ihrem Programm. Stellen Sie sicher, dass der Wert der Variablen `name` `""` bzw. <xref:System.String.Empty?displayProperty=fullName> ist.
+1. Wählen Sie das Fenster **Lokal**, das die Werte der lokalen Variablen der momentan ausgeführten Methode anzeigt, in diesem Fall der `Main`-Methode in Ihrem Programm. Stellen Sie sicher, dass der Wert der Variablen `name` `""` bzw. <xref:System.String.Empty?displayProperty=nameWithType> ist.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Bestätigen Sie, dass der Wert eine leere Zeichenfolge ist, indem Sie die folgende Anweisung im **Direktfenster** eingeben. Das Ergebnis ist `true`.
@@ -175,13 +173,13 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 
 1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `name` enthält. Das Fenster **Auto** zeigt, dass `name` `null` (in C#) oder `Nothing` (in Visual Basic) ist, und das Konsolenfenster zeigt die Zeichenfolge „What is your name?“ an.
 
-1. Reagieren Sie auf die Aufforderung, indem Sie eine Zeichenfolge im Konsolenfenster eingeben und die EINGABETASTE drücken. Die Konsole reagieren nicht, und die eingegebene Zeichenfolge wird nicht im Konsolenfenster angezeigt, aber die <xref:System.Console.ReadLine%2A?displayProperty=fullName>-Methode wird dennoch Ihre Eingabe erfassen.
+1. Reagieren Sie auf die Aufforderung, indem Sie eine Zeichenfolge im Konsolenfenster eingeben und die EINGABETASTE drücken. Die Konsole reagieren nicht, und die eingegebene Zeichenfolge wird nicht im Konsolenfenster angezeigt, aber die <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>-Methode wird dennoch Ihre Eingabe erfassen.
 
-1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `date` (in C#) oder `currentDate` (in Visual Basic) enthält. Das Fenster **Auto** zeigt den <xref:System.DateTime.Now?displayProperty=fullName>-Eigenschaftswert und den nach Aufruf der <xref:System.Console.ReadLine%2A?displayProperty=fullName>-Methode zurückgegebenen Wert an. Das Konsolenfenster zeigt auch die Zeichenfolge an, die eingegeben wurde, als die Konsole zur Eingabe aufforderte.
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `date` (in C#) oder `currentDate` (in Visual Basic) enthält. Das Fenster **Auto** zeigt den <xref:System.DateTime.Now?displayProperty=nameWithType>-Eigenschaftswert und den nach Aufruf der <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>-Methode zurückgegebenen Wert an. Das Konsolenfenster zeigt auch die Zeichenfolge an, die eingegeben wurde, als die Konsole zur Eingabe aufforderte.
 
-1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Das Fenster **Auto** zeigt den Wert der Variablen `date` nach der Zuweisung von der <xref:System.DateTime.Now?displayProperty=fullName>-Eigenschaft an. Das Konsolenfenster ist unverändert.
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Das Fenster **Auto** zeigt den Wert der Variablen `date` nach der Zuweisung von der <xref:System.DateTime.Now?displayProperty=nameWithType>-Eigenschaft an. Das Konsolenfenster ist unverändert.
 
-1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio ruft die <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=fullName>-Methode auf. Die Werte der Variablen `date` (oder `currentDate`) und `name` werden im Fenster **Auto** angezeigt, und das Konsolenfenster zeigt die formatierte Zeichenfolge an.
+1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio ruft die <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>-Methode auf. Die Werte der Variablen `date` (oder `currentDate`) und `name` werden im Fenster **Auto** angezeigt, und das Konsolenfenster zeigt die formatierte Zeichenfolge an.
 
 1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung**, oder drücken Sie UMSCHALT+ F11-Taste. Dadurch wird die schrittweise Ausführung beendet. Das Konsolenfenster zeigt eine Meldung an und wartet, bis Sie eine Taste drücken.
 
@@ -198,4 +196,3 @@ Nachdem Sie den Debugbuild der Anwendung getestet haben, sollten Sie auch die en
 Wenn Sie F5 drücken oder **Projektmappe erstellen** im Menü **Build** auswählen, kompiliert Visual Studio die endgültige Releaseversion der Konsolenanwendung zum Testen. Sie können sie dann wie die Debugversion der Anwendung testen.
 
 Nachdem Sie das Debuggen der Anwendung abgeschlossen haben, ist der nächste Schritt das Veröffentlichen einer verteilbare Version der Anwendung. Informationen hierzu finden Sie unter [Publish the Hello World application with Visual Studio 2017 (Veröffentlichen der „Hallo Welt“-Anwendung mit Visual Studio 2017)](./publishing-with-visual-studio.md).
-

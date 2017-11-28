@@ -1,12 +1,9 @@
 ---
 title: "Anweisungen, Ausdrücke und Operatoren (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - expressions [C#]
 - operators [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b7c634cb0c0e5f86e324999360d2bc64a457d5da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 71988a5b9aa59b2655b4fd7b91522fe69c8064b6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Anweisungen, Ausdrücke und Operatoren (C#-Programmierhandbuch)
 Der C#-Code, der eine Anwendung umfasst, besteht aus Anweisungen, die aus Schlüsselwörtern, Ausdrücken und Operatoren bestehen. Dieser Abschnitt enthält Informationen bezüglich dieser wichtigen Elemente eines C#-Programms.  
@@ -70,6 +52,5 @@ Der C#-Code, der eine Anwendung umfasst, besteht aus Anweisungen, die aus Schlü
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
-

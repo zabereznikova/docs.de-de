@@ -1,15 +1,12 @@
 ---
 title: Datentransformationen mit LINQ (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -19,30 +16,14 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f77bd40ea8ec0745dda3d40eee273d9e7338263b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-transformations-with-linq-c"></a>Datentransformationen mit LINQ (C#)
 Bei [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] geht es nicht nur um das Abrufen von Daten. Es ist auch ein leistungsstarkes Tool zur Datentransformation. Mithilfe einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf viele Arten zum Erstellen einer neuen Ausgabesequenz ändern. Sie können die Sequenz selbst durch Sortieren und Gruppieren ändern, ohne die Elemente zu ändern. Aber das vielleicht leistungsstärkste Feature von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen ist die Fähigkeit, neue Typen zu erstellen. Dies erfolgt in der [select](../../../../csharp/language-reference/keywords/select-clause.md)-Klausel. Sie können z. B. folgende Aufgaben ausführen:  
@@ -60,11 +41,11 @@ Bei [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] geht es nicht nur um
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Verknüpfen mehrerer Eingaben in eine Ausgabesequenz  
  Sie können eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage verwenden, um eine Ausgabesequenz zu erstellen, die Elemente von mehr als einer Eingabesequenz enthält. Im folgenden Beispiel wird gezeigt, wie zwei Datenstrukturen im Arbeitsspeicher kombiniert werden können, aber die gleichen Prinzipien können angewendet werden, um Daten von XML- oder SQL- oder DataSet-Quellen zu kombinieren. Nehmen Sie die beiden folgenden Klassentypen an:  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  Das folgende Beispiel gibt die Abfrage an:  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  Weitere Informationen finden Sie unter [join-Klausel](../../../../csharp/language-reference/keywords/join-clause.md) und [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -90,7 +71,7 @@ Bei [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] geht es nicht nur um
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformieren von Objekten im Speicher in XML  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen machen es einfacher, Daten zwischen Datenstrukturen im Speicher, SQL-Datenbanken, [!INCLUDE[vstecado](~/includes/vstecado-md.md)]-Datasets und XML-Streams oder XML-Dokumenten zu transformieren. Im folgenden Beispiel werden Objekte in einer Datenstruktur im Arbeitsspeicher in XML-Elemente transformiert.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  Der Code erzeugt die folgende XML-Ausgabe:  
   
@@ -122,13 +103,12 @@ Bei [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] geht es nicht nur um
 > [!NOTE]
 >  Aufrufen von Methoden in Abfrageausdrücken wird nicht unterstützt, wenn die Abfrage in eine andere Domäne übersetzt wird. Sie können beispielsweise keine normale C#-Methode in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] aufrufen, da SQL Server über keinen Kontext dafür verfügt. Sie können jedoch gespeicherte Prozeduren Methoden zuordnen und diese aufrufen. Weitere Informationen finden Sie unter [Gespeicherte Prozeduren](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
- [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [Language-Integrated Query (LINQ) (C#) (Language-Integrated Query (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)
-

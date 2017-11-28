@@ -1,28 +1,24 @@
 ---
 title: "Vorgehensweise: Ändern des Namespaces für einen gesamten XML-Baum (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 80e3e4d7d352cb479eda66fb6eca1a76748511b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ffebf1bda275eb815ff3e15538fd69de6d3b0c1a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Vorgehensweise: Ändern des Namespaces für einen gesamten XML-Baum (C#)
-Es kann passieren, dass Sie den Namespace für ein Element oder Attribut programmgesteuert ändern müssen. Mit LINQ to XML ist dies ganz einfach. Sie können die <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>-Eigenschaft festlegen. Die <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>-Eigenschaft kann nicht festgelegt werden, Sie können aber problemlos die Attribute in eine <xref:System.Collections.Generic.List%601?displayProperty=fullName> kopieren, die vorhandenen Attribute entfernen und dann neue Attribute hinzufügen, die sich im neuen gewünschten Namespace befinden.  
+Es kann passieren, dass Sie den Namespace für ein Element oder Attribut programmgesteuert ändern müssen. Mit LINQ to XML ist dies ganz einfach. Sie können die <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>-Eigenschaft festlegen. Die <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>-Eigenschaft kann nicht festgelegt werden, Sie können aber problemlos die Attribute in eine <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> kopieren, die vorhandenen Attribute entfernen und dann neue Attribute hinzufügen, die sich im neuen gewünschten Namespace befinden.  
   
  Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
@@ -91,4 +87,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Siehe auch  
  [Modifying XML Trees (LINQ to XML) (C#) (Ändern von XML-Strukturen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

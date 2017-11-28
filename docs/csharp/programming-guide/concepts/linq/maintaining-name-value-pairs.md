@@ -1,25 +1,21 @@
 ---
 title: Warten von Name-Wert-Paaren (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 998cfad22c28248eb22fef5141caa96035d2d0b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9515411123ad800df4e800d698921b76f6590286
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Warten von Name/Wert-Paaren (C#)
 Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden. Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen. Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.  
@@ -131,7 +127,6 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>   
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
  [Modifying XML Trees (LINQ to XML) (C#) (Ändern von XML-Strukturen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

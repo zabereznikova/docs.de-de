@@ -1,28 +1,22 @@
 ---
 title: -refout (C# Compileroptionen)
-ms.date: 2017-08-08
+ms.date: 08/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refout
-dev_langs:
-- CSharp
+f1_keywords: /refout
 helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: b1516356bf7ec8f5716c0c4183148f675f2ffa78
-ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refout-c-compiler-options"></a>/refout (C# Compileroptionen)
 
 Die Option **/refout** gibt einen Dateipfad an, an den die Verweisassembly ausgegeben werden soll. Dies entspricht `metadataPeStream` in der Emit-API.
@@ -54,6 +48,5 @@ Verweisassemblys entfernen außerdem Metadaten (private Member) aus auf Metadate
 Die Optionen `/refout` und [`/refonly`](refonly-compiler-option.md) schließen sich gegenseitig aus.
 
 ## <a name="see-also"></a>Siehe auch
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-

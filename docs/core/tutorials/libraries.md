@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
+ms.openlocfilehash: 21f8a4f4862cabd21ab9017056f3f71706e8e9a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="developing-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 
 Dieser Artikel behandelt, wie man mithilfe von plattformübergreifenden CLI-Tools Bibliotheken für .NET schreibt. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](libraries-with-vs.md).
@@ -260,6 +258,8 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
    dotnet build
    ```
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
     
 Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
@@ -342,4 +342,3 @@ Sie können diesen Abschnitt jeder Projektdatei manuell hinzufügen, wenn Sie ni
 ### <a name="structuring-a-solution"></a>Strukturieren einer Projektmappe
 
 Ein weiterer wichtiger Aspekt bei mehreren Projekten in einer Projektmappe ist es, eine gute allgemeine Projektstruktur einzurichten. Sie können den Code beliebig organisieren, solange Sie jedes Projekt mit Ihrer Projektmappendatei mit `dotnet sln add` verknüpfen. Dadurch können Sie `dotnet restore` und `dotnet build` auf Projektmappenebene ausführen.
-

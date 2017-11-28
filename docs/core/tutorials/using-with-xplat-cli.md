@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
+ms.openlocfilehash: 19622cca1dd28d4d2248d69f1b4081c352a0c4f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile
 
 In diesem Thema erfahren Sie, wie Sie plattformübergreifende Anwendungen mit .NET Core CLI-Tools auf Ihrem Computer erstellen können.
@@ -64,6 +62,8 @@ Hier eine kurze Beschreibung der Schritte:
 
    Wir definieren dann einen Namespace namens `Hello`. Sie können diesen Namen nach Wunsch ändern. Eine Klasse namens `Program` wird in diesem Namespace mit einer `Main`-Methode definiert, welche ein Array von Zeichenfolgen als Argument verwendet. Dieses Array enthält die Liste mit Argumenten, die übergeben werden, wenn das kompilierte Programm aufgerufen wird. Dieses Array wird allerdings nicht verwendet. Die Anwendung gibt lediglich „Hello World!“ auf der Konsole aus. Später werden wir Änderungen am Code vornehmen, die dieses Argument verwenden.
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 2. `$ dotnet restore`
 
    [`dotnet restore`](../tools/dotnet-restore.md) führt einen Aufruf in [NuGet](https://www.nuget.org/) (dem Paket-Manager von .NET) aus, um die Struktur der Abhängigkeiten wiederherzustellen. NuGet analysiert die *Hello.csproj*-Datei, lädt die in der Datei angegebenen Abhängigkeiten herunter (oder ruft diese aus einem Cache auf Ihrem Computer ab) und schreibt die *obj/project.assets.json*-Datei.  Die *project.assets.json*-Datei ist zum Kompilieren und Ausführen erforderlich.
@@ -96,7 +96,7 @@ Hier eine kurze Beschreibung der Schritte:
 
    [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
 
-2. Führen Sie [`dotnet build`](../tools/dotnet-build.md) aus, um die Änderungen zu kompilieren.
+2. Führen Sie [`dotnet build`](../tools/dotnet-build.md) aus, um diese Änderungen zu kompilieren.
 
 3. Führen Sie das Programm aus, das einen Parameter für die App übergibt:
 
@@ -129,11 +129,11 @@ Einzelne Dateien sind für einfache einmalige Programme in Ordnung, aber wenn Si
 
 1. Fügen Sie eine neue Datei im *Hello*-Verzeichnis mit dem Namen *FibonacciGenerator.cs* durch den folgenden Code hinzu:
 
-   [!code-csharp[Fibonacci-Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
 2. Ändern Sie die `Main`-Methode in Ihrer *Program.cs*-Datei, um die neue Klasse zu instanziieren und rufen Sie die Methode wie im folgenden Beispiel auf:
 
-   [!code-csharp[Neues Programm.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Führen Sie [`dotnet build`](../tools/dotnet-build.md) aus, um diese Änderungen zu kompilieren.
 
@@ -164,4 +164,3 @@ Beachten Sie, dass die Befehle und die Schritte in diesem Lernprogramm zum Ausf�
 ## <a name="see-also"></a>Siehe auch
 
 [Organisieren und Testen von Projekten mit .NET Core CLI-Tools](testing-with-cli.md)
-

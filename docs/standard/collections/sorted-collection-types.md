@@ -15,28 +15,27 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0f23a69a8e2493e018b0a37628762247c0e33430
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
-Die <xref:System.Collections.SortedList?displayProperty=fullName>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
+Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
   
--   Alle drei Klassen implementieren die <xref:System.Collections.IDictionary?displayProperty=fullName>-Schnittstelle. Die zwei generischen Klassen implementieren außerdem die generische <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>-Schnittstelle.  
+-   Alle drei Klassen implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die zwei generischen Klassen implementieren außerdem die generische <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>-Schnittstelle.  
   
 -   Jedes Element ist ein Schlüssel-Wert-Paar zu Enumerationszwecken.  
   
     > [!NOTE]
     >  Die nicht-generische <xref:System.Collections.SortedList>-Klasse gibt bei einer Enumeration <xref:System.Collections.DictionaryEntry>-Objekte zurück, obwohl zwei generische Typen <xref:System.Collections.Generic.KeyValuePair%602>-Objekte zurückgeben.  
   
--   Elemente werden nach einer <xref:System.Collections.IComparer?displayProperty=fullName>-Implementierung (für nicht-generische <xref:System.Collections.SortedList>) oder einer <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName>-Implementierung (für die zwei generischen Klassen) sortiert.  
+-   Elemente werden nach einer <xref:System.Collections.IComparer?displayProperty=nameWithType>-Implementierung (für nicht-generische <xref:System.Collections.SortedList>) oder einer <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>-Implementierung (für die zwei generischen Klassen) sortiert.  
   
 -   Jede Klasse enthält Eigenschaften, die Sammlungen zurückgeben, die nur die Schlüssel oder nur die Werte enthalten.  
   
@@ -57,8 +56,7 @@ Die <xref:System.Collections.SortedList?displayProperty=fullName>-Klasse, die ge
  Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.IDictionary?displayProperty=fullName>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
  [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)
-

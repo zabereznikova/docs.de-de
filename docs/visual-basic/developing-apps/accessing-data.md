@@ -1,39 +1,21 @@
 ---
 title: Zugreifen auf Daten in Visual Basic-Anwendungen
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4ff9885f66171ee0454bff058b342d1b5683d3e3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Zugreifen auf Daten in Visual Basic-Anwendungen
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umfasst mehrere neue Features, die bei der Entwicklung von Anwendungen, die auf Daten zugreifen, hilfreich sind. Datengebundene Formulare für Windows-Anwendungen werden erstellt, indem Elemente aus dem [Datenquellenfenster](/visualstudio/data-tools/add-new-data-sources) auf das Formular gezogen werden. Sie können Steuerelemente an Daten binden, indem Sie Elemente aus dem **Datenquellenfenster** auf vorhandene Steuerelemente ziehen.  
@@ -80,4 +62,3 @@ ms.lasthandoff: 07/28/2017
 
  [Daten in Office-Projektmappen](https://msdn.microsoft.com/library/xx069ybh)  
  Enthält Links zu Seiten, die die allgemeine Funktionsweise von Daten in Office-Projektmappen erläutern, und enthält Informationen über die schemaorientierte Programmierung, das Zwischenspeichern von Daten sowie den serverseitigen Datenzugriff.
-

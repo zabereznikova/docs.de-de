@@ -1,39 +1,21 @@
 ---
 title: Typen (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2c7285e237b04c1290391c4bba3e62886dceb83c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2816a5dd86e71641198a340b3a72094dffc93bdf
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="types-c-reference"></a>Typen (C#-Referenz)
 Das C#-Typensystem enthält die folgenden Kategorien:  
@@ -53,10 +35,9 @@ Das C#-Typensystem enthält die folgenden Kategorien:
  Werttypen sind auch NULL-Werte, d.h. sie können einen zusätzlichen Zustand ohne Wert speichern. Weitere Informationen finden Sie unter [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
- [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+ [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
  [Typen](../../../csharp/programming-guide/types/index.md)
-

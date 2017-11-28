@@ -1,25 +1,21 @@
 ---
 title: "Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 03c5ed5ef66db311ade751b5aad21de70b78f063
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3351f88bb27807714b3566992242e72a5d03ac14
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)
 Ein Ansatz für die Verarbeitung einer Textdatei besteht darin, eine Erweiterungsmethode zu schreiben, die die Textdatei mit dem `yield return`-Konstrukt zeilenweise streamt. Anschließend können Sie eine LINQ-Abfrage schreiben, die die Textdatei verzögert verarbeitet. Wenn Sie dann die Ausgabe mit <xref:System.Xml.Linq.XStreamingElement> streamen, erstellen Sie eine Transformation der Textdatei in XML, die, unabhängig von der Größe der ursprünglichen Textdatei, nur einen minimalen Teil des Arbeitsspeichers beansprucht.  
@@ -99,6 +95,5 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XStreamingElement>   
- [Advanced Query Techniques (LINQ to XML) (C#) (Erweiterte Abfragetechniken (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-
+ <xref:System.Xml.Linq.XStreamingElement>  
+ [Erweiterte Abfragetechniken (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

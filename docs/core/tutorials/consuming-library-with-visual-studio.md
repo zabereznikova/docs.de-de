@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
-ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Verarbeiten einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
 Nachdem Sie eine Klassenbibliothek anhand der unter [Building a C# class library with .NET Core in Visual Studio 2017 (Erstellen einer C#-Klassenbibliothek mit .NET Core in Visual Studio 2017)](./library-with-visual-studio.md) oder [Building a Visual Basic class library with .NET Core in Visual Studio 2017 (Erstellen einer Visual Basic-Klassenbibliothek mit .NET Core in Visual Studio 2017)](vb-library-with-visual-studio.md) beschriebenen Schritte erstellt und Sie in [Testing a class library with .NET Core in Visual Studio 2017 (Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017)](testing-library-with-visual-studio.md) getestet und eine Releaseversion der Bibliothek erstellt haben, können Sie sie im nächsten Schritt für Aufrufer verfügbar machen. Dazu gibt es zwei Möglichkeiten:
@@ -104,4 +105,3 @@ Sie können Ihre Klassenbibliothek allgemein verfügbar machen, indem Sie sie al
    > Wenn sich das Verzeichnis, das die Datei *dotnet.exe* enthält, nicht in Ihrem Pfad befindet, können Sie ihren Speicherort ermitteln, indem Sie im Konsolenfenster `where dotnet.exe` eingeben.
 
 Weitere Informationen zum Erstellen von NuGet-Paketen finden Sie unter [Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools](../../core/deploying/creating-nuget-packages.md).
-

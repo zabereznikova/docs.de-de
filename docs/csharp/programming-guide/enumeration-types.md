@@ -2,8 +2,7 @@
 title: Enumerationstypen (C#-Programmierhandbuch)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
 
@@ -68,7 +66,7 @@ Sie können den Elementen in der Enumeratorliste eines Enumerationstyps Werte zu
 
 Sie können einen Enumerationstyp zum Definieren von Bitflags verwenden. Dadurch kann eine Instanz des Enumerationstyps eine beliebige Kombination der Werte speichern, die in der Enumeratorliste definiert sind. (Natürlich können einige Kombinationen nicht sinnvoll oder in Ihrem Programmcode nicht zulässig sein.)
 
-Sie erstellen ein Bitflags-Enum durch Anwenden des Attributs <xref:System.FlagsAttribute?displayProperty=fullName> und definieren die Werte entsprechend, damit die bitweisen Operationen `AND`, `OR`, `NOT` und `XOR` ausgeführt werden können. In einem Bitflag-Enum ist eine benannte Konstante mit dem Wert Null enthalten, das bedeutet, dass „keine Flags festgelegt sind“. Geben Sie einem Flag keinen Wert Null, wenn es nicht bedeutet, dass „keine Flags festgelegt sind“.
+Sie erstellen ein Bitflags-Enum durch Anwenden des Attributs <xref:System.FlagsAttribute?displayProperty=nameWithType> und definieren die Werte entsprechend, damit die bitweisen Operationen `AND`, `OR`, `NOT` und `XOR` ausgeführt werden können. In einem Bitflag-Enum ist eine benannte Konstante mit dem Wert Null enthalten, das bedeutet, dass „keine Flags festgelegt sind“. Geben Sie einem Flag keinen Wert Null, wenn es nicht bedeutet, dass „keine Flags festgelegt sind“.
 
 Im folgenden Beispiel ist eine andere Version der `Day`-Enum mit dem Namen `Days` definiert. `Days` verfügt über das `Flags`-Attribut, und jedem Wert wird die nächste höhere Potenz von 2 zugewiesen. Dies ermöglicht Ihnen die Erstellung einer `Days`-Variable, deren Wert `Days.Tuesday | Days.Thursday` ist.
 
@@ -82,20 +80,19 @@ Verwenden Sie einen bitweisen `AND`-Vorgang, wie im folgenden Beispiel gezeigt, 
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-Weitere Informationen zu den notwendigen Überlegungen beim Definieren von Enumerationstypen mit dem <xref:System.FlagsAttribute?displayProperty=fullName>-Attribut finden Sie unter <xref:System.Enum?displayProperty=fullName>.
+Weitere Informationen zu den notwendigen Überlegungen beim Definieren von Enumerationstypen mit dem <xref:System.FlagsAttribute?displayProperty=nameWithType>-Attribut finden Sie unter <xref:System.Enum?displayProperty=nameWithType>.
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Verwenden der Methoden System.Enum zum Ermitteln und Bearbeiten der Enumerationswerte
 
-Alle Enumerationen sind Instanzen des Typs <xref:System.Enum?displayProperty=fullName>. Sie können keine neuen Klassen von <xref:System.Enum?displayProperty=fullName> ableiten, aber Sie können die zugehörigen Methoden verwenden, um Informationen zu ermitteln und Werte in einer enum-Instanz zu bearbeiten.
+Alle Enumerationen sind Instanzen des Typs <xref:System.Enum?displayProperty=nameWithType>. Sie können keine neuen Klassen von <xref:System.Enum?displayProperty=nameWithType> ableiten, aber Sie können die zugehörigen Methoden verwenden, um Informationen zu ermitteln und Werte in einer enum-Instanz zu bearbeiten.
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Weitere Informationen finden Sie unter <xref:System.Enum?displayProperty=fullName>.
+Weitere Informationen finden Sie unter <xref:System.Enum?displayProperty=nameWithType>.
 
 Sie können auch mithilfe einer Erweiterungsmethode eine neue Methode für ein enum erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer neuen Methode für eine Enumeration (C#-Programmierhandbuch)](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Siehe auch
- <xref:System.Enum?displayProperty=fullName>   
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)   
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
-

@@ -1,43 +1,24 @@
 ---
 title: -target (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /target
-dev_langs:
-- CSharp
+f1_keywords: /target
 helpviewer_keywords:
 - target compiler options [C#]
 - /target compiler options [C#]
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="target-c-compiler-options"></a>/target (C#-Compileroptionen)
 Die Compileroption **/target** kann in einem von vier Formaten angegeben werden:  
@@ -60,7 +41,7 @@ Die Compileroption **/target** kann in einem von vier Formaten angegeben werden:
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  So erstellen Sie eine WINMDOBJ-Zwischendatei.  
   
- Wenn Sie nicht **/target:module** angegeben haben, verursacht **/target**, dass ein .NET Framework-Assemblymanifest in einer Ausgabedatei platziert wird. Weitere Informationen finden Sie unter [Assemblys in der Common Language Runtime](https://msdn.microsoft.com/library/k3677y81) und [Häufige Attribute](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b).  
+ Wenn Sie nicht **/target:module** angegeben haben, verursacht **/target**, dass ein .NET Framework-Assemblymanifest in einer Ausgabedatei platziert wird. Weitere Informationen finden Sie unter [Assemblys in der Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) und [Häufige Attribute](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  Das Assemblymanifest wird in der ersten EXE-Ausgabedatei in der Kompilierung oder in der ersten DLL platziert, falls es keine EXE-Ausgabedatei gibt. In der folgenden Befehlszeile wird das Manifest z.B. in `1.exe` platziert:  
   
@@ -86,7 +67,6 @@ public class TestClass
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [Verwalten von Projekt- und Lösungseigenschaften](/visualstudio/ide/managing-project-and-solution-properties)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)  
  [/subsystemversion (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
-

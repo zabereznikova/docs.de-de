@@ -2,8 +2,7 @@
 title: Migrationsprobleme in .NET Framework 4
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>Migrationsprobleme in .NET Framework 4
 
 In diesem Thema werden Migrationsprobleme zwischen .NET Framework Version 3.5 Servicepack 1 und .NET Framework 4 beschrieben. Dabei werden auch Probleme aufgrund von Programmfehlerbehebungen, Änderungen für die Einhaltung von Standards und Sicherheit sowie Änderungen auf Grundlage von Kundenfeedback besprochen. Für die meisten dieser Änderungen sind keine Programmieränderungen in den Anwendungen erforderlich. In den Fällen, in denen Änderungen erforderlich sind, finden Sie Informationen in der Spalte „Empfohlene Änderungen“ in der Tabelle.
@@ -263,7 +260,7 @@ Namespaces: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.
 | **Binden von Befehlsinstanzen** | Um einen Mechanismus für das Binden von auf dem Ansichtsmodell basierten Befehlsinstanzen an ansichtsbasierte Eingabegesten bereitzustellen, erbt die <xref:System.Windows.Input.InputBinding>-Klasse jetzt von <xref:System.Windows.Freezable> statt von <xref:System.Windows.DependencyObject>. Die folgenden Eigenschaften sind jetzt Abhängigkeitseigenschaften:<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>Diese Änderung hat folgende Auswirkungen:<br><br>* Ein <xref:System.Windows.Input.InputBinding>-Objekt wird jetzt gesperrt, wenn es registriert wird, statt veränderbar zu bleiben.<br>* Sie können aufgrund der Einschränkungen für die <xref:System.Windows.DependencyObject>-Klasse nicht von mehreren Threads aus auf <xref:System.Windows.Input.InputBinding>-Objekte auf Instanzebene zugreifen.<br>* Sie können aufgrund der Einschränkungen der <xref:System.Windows.Freezable>-Klasse keine Eingabebindungen auf Klassenebene nach deren Registrierung mutieren.<br>* Sie können keine Eingabebindungen auf Befehlsinstanzen angeben, die in einem Ansichtsmodell erstellt werden. | Erstellen Sie separate Instanzen einer <xref:System.Windows.Input.InputBinding>-Klasse in separaten Threads, wenn Bindungen mutierbar bleiben sollen. Sperren Sie die sie andernfalls. Mutieren Sie kein statisches <xref:System.Windows.Input.InputBinding> auf Klassenebene, nachdem es registriert wurde. |
 | **Browseranwendungen** | WPF-Webbrowseranwendungen (.XBAP) verarbeiten jetzt Tastenereignisse wie eigenständige WPF-Anwendungen, sodass Objekte geroutete Tastenereignisse in der richtigen Reihenfolge empfangen. | Keine |
 | **Tottastenkombinationen** | WPF verbirgt Tottasten, die kein sichtbares Zeichen erzeugen, und weist stattdessen darauf hin, dass die Taste in Kombination mit der nächsten Buchstabentaste ein Zeichen erzeugt. Tasteneingabeereignisse wie das <xref:System.Windows.Input.Keyboard.KeyDownEvent>-Ereignis melden, wenn eine Taste eine Tottaste ist, indem die <xref:System.Windows.Input.KeyEventArgs.Key>-Eigenschaft auf den <xref:System.Windows.Input.Key>-Wert festgelegt wird. Dieses Verhalten wird erwartet, da Anwendungen in der Regel nicht auf Tastatureingaben zu reagieren, die kombinierte Zeichen erzeugen. | Anwendungen, die erwarten, Tasten zu lesen, die Teil von kombinierten Zeichen waren, können verborgene Tasten jetzt mit der <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey>-Eigenschaft abrufen. |
-| **FocusManager** | Wenn die Methode <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> an ein Element übergeben wird, dessen angefügte [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx)-Eigenschaft auf `true` festgelegt wurde, gibt die Methode ein Element zurück, das das letzte von der Tastatur fokussierte Element innerhalb des Fokusbereichs darstellt, und nur, wenn das zurückgegebene Element zu dem gleichen <xref:System.Windows.PresentationSource>-Objekt gehört wie das Element, das an die Methode übergeben wird. | Keine |
+| **FocusManager** | Wenn die Methode <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> an ein Element übergeben wird, dessen angefügte [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx)-Eigenschaft auf `true` festgelegt wurde, gibt die Methode ein Element zurück, das das letzte von der Tastatur fokussierte Element innerhalb des Fokusbereichs darstellt, und nur, wenn das zurückgegebene Element zu dem gleichen <xref:System.Windows.PresentationSource>-Objekt gehört wie das Element, das an die Methode übergeben wird. | Keine |
 
 ### <a name="ui-automation"></a>Benutzeroberflächenautomatisierung
 
@@ -340,4 +337,3 @@ Namespaces: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.X
 
 [Veraltete Elemente in .NET Framework](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM (Migrationsprobleme in .NET Framework 4-Anwendungen: Beta 2 zu RTM)](http://go.microsoft.com/fwlink/?LinkId=191505)
-

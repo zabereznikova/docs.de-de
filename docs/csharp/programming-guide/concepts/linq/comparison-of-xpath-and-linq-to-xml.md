@@ -1,25 +1,21 @@
 ---
 title: Vergleich zwischen XPath und LINQ to XML2
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0890bd7d8edb19a16c864d0b845558d3302d6139
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a0b24eeeb79651f69178fa4e9c2e4a3359434556
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Vergleich zwischen XPath und LINQ to XML
 XPath und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] haben hinsichtlich ihrer Funktionalität einige Gemeinsamkeiten. Beide können verwendet werden, um Elementauflistungen, Attributauflistungen, Knotenauflistungen oder die Werte von Elementen oder Attributen aus XML-Strukturen abzurufen. Aber es gibt auch einige Unterschiede.  
@@ -103,4 +99,3 @@ customers.Element("Customer").Elements("CompanyName");
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to XML für XPath-Benutzer (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

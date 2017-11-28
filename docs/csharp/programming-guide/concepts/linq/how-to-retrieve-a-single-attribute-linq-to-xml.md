@@ -1,25 +1,21 @@
 ---
 title: 'Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: bcfdae1bd01d54baeac8946af9f2744da9a21bff
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 655ed12b1a5efc0034c4f4ff7cd1bd8d374d2182
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (C#)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen Attributs eines Elements anhand des Attributsnamens erläutert. Diese Vorgehensweise eignet sich für das Schreiben von Abfrageausdrücken, mit denen Sie nach einem Element mit einem bestimmten Attribut suchen möchten.  
@@ -111,4 +107,3 @@ work
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

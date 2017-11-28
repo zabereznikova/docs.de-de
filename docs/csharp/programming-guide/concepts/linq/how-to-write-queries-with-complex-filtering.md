@@ -1,25 +1,21 @@
 ---
 title: 'Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0d663b777b0d1b02462a6557097938831ef870b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5b212796df6e65263b8b35514b6807bcdf5797f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (C#)
 Es kann vorkommen, dass Sie LINQ to XML-Abfragen mit komplexen Filtern schreiben möchten. Vielleicht möchten Sie z. B. auf diese Weise nach allen Elementen suchen, die ein untergeordnetes Element mit einem bestimmten Namen und einem bestimmten Wert besitzen. In diesem Thema finden Sie ein Beispiel für das Schreiben von Fragen mit komplexer Filterung.  
@@ -82,9 +78,8 @@ foreach (XElement el in purchaseOrders)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XElement.Attribute%2A>   
- <xref:System.Xml.Linq.XContainer.Elements%2A>   
- [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [Projektionsvorgänge (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)   
+ <xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A>  
+ [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [Projection Operations (C#) (Projektionsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
  [Quantifizierer-Vorgänge (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
-

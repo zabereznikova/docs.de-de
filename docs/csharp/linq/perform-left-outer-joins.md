@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
+ms.openlocfilehash: 0c28c85bf933a411403aefcb91801d28fe1c268e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-left-outer-joins"></a>Ausführen von Left Outer Joins
 Ein Left Outer Join ist eine Verknüpfung, die jedes Element der ersten Auflistung zurückgibt, unabhängig davon, ob es entsprechende Elemente in der zweiten Auflistung gibt. Sie können LINQ verwenden, um eine linke äußere Verknüpfung auszuführen, indem die Methode <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> bei den Ergebnissen einer Gruppenverknüpfung aufgerufen wird.  
@@ -31,13 +29,12 @@ Ein Left Outer Join ist eine Verknüpfung, die jedes Element der ersten Auflistu
 > [!NOTE]
 >  Der Standardwert für einen Verweistyp ist `null`; deshalb wird im Beispiel nach einem NULL-Verweis gesucht, bevor auf jedes Element jeder `Pet`-Auflistung zugegriffen wird.  
   
- [!code-cs[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
  
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Ausführen innerer Verknüpfungen](perform-inner-joins.md)   
- [Ausführen von Gruppenverknüpfungen](perform-grouped-joins.md)   
- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [Ausführen innerer Verknüpfungen](perform-inner-joins.md)  
+ [Ausführen von Gruppenverknüpfungen](perform-grouped-joins.md)  
+ [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

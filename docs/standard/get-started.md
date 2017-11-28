@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
 ms.openlocfilehash: 29f69cfa5b80f2a73f90e31d58f6b298f3c7ee7b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="get-started"></a>Erste Schritte
 
 Es gibt verschiedene Möglichkeiten für die ersten Schritte mit .NET.  Da .NET eine umfangreiche Plattform ist, enthält diese Dokumentation zahlreiche Artikel, die zeigen, wie Sie mit der .NET-Nutzung beginnen können, jeweils aus einer anderen Perspektive.
@@ -39,4 +37,3 @@ Es gibt verschiedene Möglichkeiten für die ersten Schritte mit .NET.  Da .NET 
 ## <a name="get-started-using-docker-on-net-framework"></a>Erste Schritte bei der Verwendung von Docker in .NET Framework
 
 Der Artikel zu [Docker in .NET Framework](../framework/docker/index.md) zeigt, wie Sie .NET Framework in Windows-Docker-Containern verwenden können.
-

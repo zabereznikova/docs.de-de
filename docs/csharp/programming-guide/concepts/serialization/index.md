@@ -1,30 +1,21 @@
 ---
 title: Serialisierung (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2eefd71abf07a96bb99b256571e6ac4529fb277d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-c-"></a>Serialisierung (C#)
 Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Stream von Bytes zum Speichern des Objekts oder zum Übertragen in den Arbeitsspeicher, eine Datenbank oder eine Datei. Hauptzweck ist es, den Zustand eines Objekts zu speichern, um es bei Bedarf neu erstellen zu können. Der umgekehrte Vorgang wird als Deserialisierung bezeichnet.  
@@ -40,11 +31,11 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Stream v
  Mit der Serialisierung kann der Entwickler den Zustand eines Objekts speichern und das Objekt bei Bedarf neu erstellen. Die Serialisierung stellt sowohl Objektspeicher als auch Datenaustausch bereit. Über die Serialisierung kann ein Entwickler verschiedene Aktionen durchführen, wie z.B.: Senden des Objekts an eine Remoteanwendung mithilfe eines Webdiensts, Übergeben eines Objekts von einer Domäne an eine andere, Übergeben eines Objekts über eine Firewall als XML-Zeichenfolge oder anwendungsübergreifendes Verwalten der Sicherheit oder benutzerspezifischer Informationen.  
   
 ### <a name="making-an-object-serializable"></a>Aktivieren der Serialisierbarkeit eines Objekts  
- Zum Serialisieren eines Objekts benötigen Sie das entsprechende Objekt, einen Stream, der das serialisierte Objekt enthält und einen <xref:System.Runtime.Serialization.Formatter> (Formatierer). <xref:System.Runtime.Serialization> enthält die Klassen, die zum Serialisieren und Deserialisieren von Objekten nötig sind.  
+ Zum Serialisieren eines Objekts benötigen Sie das entsprechende Objekt, einen Stream, der das serialisierte Objekt enthält und einen <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> enthält die Klassen, die zum Serialisieren und Deserialisieren von Objekten nötig sind.  
   
- Wenden Sie das <xref:System.SerializableAttribute>-Attribut auf einen Typ an, um anzugeben, dass Instanzen dieses Typs serialisiert werden können. Eine <xref:System.Runtime.Serialization.SerializationException>-Ausnahme wird ausgelöst, wenn Sie versuchen zu serialisieren, aber der Typ nicht über das <xref:System.SerializableAttribute>-Attribut verfügt.  
+ Wenden Sie das Attribut <xref:System.SerializableAttribute> auf einen Typ an, um anzugeben, dass Instanzen dieses Typs serialisiert werden können. Eine Ausnahme <xref:System.Runtime.Serialization.SerializationException> wird ausgelöst, wenn Sie versuchen zu serialisieren, aber der Typ nicht über das Attribut <xref:System.SerializableAttribute> verfügt.  
   
- Wenn Sie nicht möchten, dass ein Feld innerhalb Ihrer Klasse serialisierbar ist, wenden Sie das <xref:System.NonSerializedAttribute>-Attribut an. Wenn ein Feld eines serialisierbaren Typs einen Zeiger, ein Handle oder eine andere Datenstruktur enthält, der/die für eine bestimmte Umgebung spezifisch ist, und das Feld in keiner anderen Umgebung sinnvoll wiederhergestellt werden kann, sollten Sie den Typ als nicht serialisierbar markieren.  
+ Wenn Sie nicht möchten, dass ein Feld innerhalb Ihrer Klasse serialisierbar ist, wenden Sie das Attribut <xref:System.NonSerializedAttribute> an. Wenn ein Feld eines serialisierbaren Typs einen Zeiger, ein Handle oder eine andere Datenstruktur enthält, der/die für eine bestimmte Umgebung spezifisch ist, und das Feld in keiner anderen Umgebung sinnvoll wiederhergestellt werden kann, sollten Sie den Typ als nicht serialisierbar markieren.  
   
  Wenn eine serialisierte Klasse Verweise auf Objekte anderer Klassen enthält, die mit <xref:System.SerializableAttribute> markiert sind, werden diese Objekte ebenfalls serialisiert.  
   
@@ -63,7 +54,7 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Stream v
  Die Serialisierung kann auf zwei Arten ausgeführt werden: einfach und benutzerdefiniert. Die einfache Serialisierung verwendet .NET Framework, um ein Objekt automatisch zu serialisieren.  
   
 ### <a name="basic-serialization"></a>Einfache Serialisierung  
- Die einzige Anforderung bei der einfachen Serialisierung ist, dass das <xref:System.SerializableAttribute>-Attribut auf das Objekt angewendet wurde. Das <xref:System.NonSerializedAttribute>-Attribut kann verwendet werden, um die Serialisierung bestimmter Felder zu verhindern.  
+ Die einzige Anforderung bei der einfachen Serialisierung ist, dass das Attribut <xref:System.SerializableAttribute> auf das Objekt angewendet wurde. Das Attribut <xref:System.NonSerializedAttribute> kann verwendet werden, um die Serialisierung bestimmter Felder zu verhindern.  
   
  Wenn Sie die einfache Serialisierung verwenden, kann die Versionsverwaltung von Objekten zu Problemen führen. In diesem Fall empfiehlt sich die benutzerdefinierte Serialisierung. Die einfache Serialisierung ist die einfachste Möglichkeit zur Serialisierung, bietet allerdings nicht viel Steuerungsmöglichkeiten für den Prozess.  
   
@@ -84,4 +75,3 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Stream v
   
  [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#))  
  Zeigt, wie ein Objekt aus einer Klasse mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wird.
-

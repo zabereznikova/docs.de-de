@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - global assembly cache, installing assemblies
 - Global Assembly Cache tool
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 23a1d8c638b198c31d7c83aaf3f216b465f01453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c1a0eb5034c10b84b02f493cd21bccd121c8315c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Gewusst wie: Installieren einer Assembly in den globalen Assemblycache
 Es gibt zwei Möglichkeiten, eine Assembly mit starkem Namen im globalen Assemblycache (GAC) zu installieren:  
@@ -88,9 +86,8 @@ gacutil -i hello.dll
     4.  Ziehen Sie die Datei in Schritt c in den Bereich **Dateien des Zielcomputers** (oder verwenden Sie die Befehle **Kopieren** und **Einfügen** im Kontextmenü der Datei).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)   
- [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
- [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
+ [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
+ [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [Windows Installer-Bereitstellung](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
-

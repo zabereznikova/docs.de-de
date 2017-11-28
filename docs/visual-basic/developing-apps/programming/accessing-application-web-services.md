@@ -1,41 +1,23 @@
 ---
 title: Zugreifen auf Anwendungswebdienste (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Web services, My.WebServices object
+- Web services [Visual Basic], My.WebServices object
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f15c0fd761f08f41abc05f7019ce27bc8cf8dff3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1933167db4e42ae1a2d1634573bc824750a792da
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Zugreifen auf Anwendungswebdienste (Visual Basic)
 Das `My.WebServices`-Objekt bietet eine Instanz jedes Webdienstes, auf den vom aktuellen Projekt verwiesen wird. Jede Instanz wird bei Bedarf instanziiert. Sie können über die Eigenschaften des `My.WebServices`-Objekts auf diese Webdienste zugreifen. Der Name der Eigenschaft stimmt mit dem des Webdienstes überein, auf den die Eigenschaft zugreift. Jede Klasse, die von <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> erbt, ist ein Webdienst.  
@@ -50,4 +32,3 @@ Das `My.WebServices`-Objekt bietet eine Instanz jedes Webdienstes, auf den vom a
   
 ## <a name="see-also"></a>Siehe auch  
  [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-

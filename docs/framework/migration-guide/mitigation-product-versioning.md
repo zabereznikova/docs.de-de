@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1b507769ba6868a4cd841ca463900b126cfb5b90
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c69eaefde812d8910ebfc329765d0571701da25
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-product-versioning"></a>Entschärfung: Produktversionsverwaltung
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und höher wurde die Produktversionsverwaltung im Vergleich zu früheren Releases von .NET Framework (.NET Framework 4, 4.5, 4.5.1 und 4.5.2) geändert.  
@@ -33,7 +31,7 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und höher wurde die Pro
   
 -   Die Attribute <xref:System.Reflection.AssemblyFileVersionAttribute> und <xref:System.Reflection.AssemblyInformationalVersionAttribute> für verwaltete Assemblys verfügen über <xref:System.Version>-Werte im Format `4.6.X.0` für .NET Framework 4.6 und die zugehörigen Punktversionen sowie `4.7.X.0` für .NET Framework 4.7.  
   
--   In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 und 4.7, gibt die <xref:System.Environment.Version%2A?displayProperty=fullName>-Eigenschaft die korrigierte Versionszeichenfolge `4.0.30319.42000` zurück. In .NET Framework 4, 4.5, 4.5.1 und 4.5.2 hat die Eigenschaft Versionszeichenfolgen im Format `4.0.30319.xxxxx` zurückgegeben (z. B. „4.0.30319.18010“). Es wird nicht empfohlen, eine neue Abhängigkeit von der <xref:System.Environment.Version%2A?displayProperty=fullName>-Eigenschaft in Anwendungscode zu verwenden.  
+-   In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 und 4.7, gibt die <xref:System.Environment.Version%2A?displayProperty=nameWithType>-Eigenschaft die korrigierte Versionszeichenfolge `4.0.30319.42000` zurück. In .NET Framework 4, 4.5, 4.5.1 und 4.5.2 hat die Eigenschaft Versionszeichenfolgen im Format `4.0.30319.xxxxx` zurückgegeben (z. B. „4.0.30319.18010“). Es wird nicht empfohlen, eine neue Abhängigkeit von der <xref:System.Environment.Version%2A?displayProperty=nameWithType>-Eigenschaft in Anwendungscode zu verwenden.  
   
 ### <a name="handling-the-product-versioning-changes"></a>Behandeln der Änderungen hinsichtlich der Produktversionsverwaltung  
  Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen solcher Faktoren, wie beispielsweise die Laufzeitversion von .NET Framework und das Installationsverzeichnis, abhängen:  
@@ -45,11 +43,10 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und höher wurde die Pro
     > [!IMPORTANT]
     >  Der Name des Unterschlüssels ist `NET Framework Setup` und nicht `.NET Framework Setup`.  
   
--   Um den Verzeichnispfad für die .NET Framework Common Language Runtime zu bestimmen, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=fullName>-Methode auf.  
+-   Um den Verzeichnispfad für die .NET Framework Common Language Runtime zu bestimmen, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType>-Methode auf.  
   
--   Um die CLR-Version zu erhalten, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=fullName>-Methode auf.   Für .NET Framework 4 und die dazugehörigen Punktreleases (.NET Framework 4.5, 4.5.1, 4.5.2 und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] sowie 4.6.1, 4.6.2 und 4.7) wird die Zeichenfolge `v4.0.30319` zurückgegeben.  
+-   Um die CLR-Version zu erhalten, rufen Sie die <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>-Methode auf.   Für .NET Framework 4 und die dazugehörigen Punktreleases (.NET Framework 4.5, 4.5.1, 4.5.2 und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] sowie 4.6.1, 4.6.2 und 4.7) wird die Zeichenfolge `v4.0.30319` zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
  
-

@@ -1,25 +1,21 @@
 ---
 title: 'Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: f66dd689e31fa7688055721b52b30380327a4977
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2f931bf850b094cf35db7c88aaf7aba9910f8c94
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (C#)
 Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer XML-Struktur abrufen. Eine der geeignetsten Methoden dafür besteht darin, eine Erweiterungsmethode zu schreiben, die eine Auflistung von Elementen oder Attributen zurückgibt. Die Grundlage für das Schreiben Ihrer Erweiterungsmethode zum Zurückgeben eines bestimmten Teilsatzes von Elementen oder Attributen bilden die Anforderungen Ihrer Anwendung.  
@@ -305,4 +301,3 @@ class Program
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Abfragetechniken (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

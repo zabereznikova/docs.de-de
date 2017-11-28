@@ -1,39 +1,21 @@
 ---
 title: "Anweisungsschlüsselwörter (C#-Referenz)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0a882d7c0e88f325d4a0bf471b5b38844b2b13f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aae7d08eaca3491754444182ae1cfb82276e0939
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="statement-keywords-c-reference"></a>Anweisungsschlüsselwörter (C#-Referenz)
 Anweisungen sind Instruktionen des Programms. Sie werden nacheinander ausgeführt, mit Ausnahme der Anweisungen, auf die in der folgenden Tabelle verwiesen wird. In der folgenden Tabelle sind die C#-Anweisungsschlüsselwörter aufgeführt. Weitere Informationen zu Anweisungen, die durch kein Schlüsselwort ausgedrückt werden, finden Sie unter [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
@@ -49,7 +31,6 @@ Anweisungen sind Instruktionen des Programms. Sie werden nacheinander ausgeführ
 |[lock-Anweisung](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-

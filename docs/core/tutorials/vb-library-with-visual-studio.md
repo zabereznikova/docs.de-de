@@ -8,15 +8,13 @@ ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
-ms.devlang: vb
+dev_langs: vb
+ms.openlocfilehash: 6572f35b1e2b652c9f2ff5448165ece104f0bdf6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: a933e1eef6e4e9814aeba4206469a64563a7e91d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017
 
 Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt. Wenn Sie die Klassenbibliothek fertig stellen, können Sie entscheiden, ob Sie sie als Drittanbieterkomponente verteilen oder als Komponente mit einer oder mehreren Anwendungen in ein Paket einbeziehen möchten.
@@ -58,9 +56,9 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
   
 1. Ersetzen Sie den Code im Codefenster durch den folgenden Code, und speichern Sie die Datei:
 
-  [!CODE-vb[ClassLib #1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
+  [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   Die Klassenbibliothek, `UtilityLibraries.StringLibrary`, enthält eine Methode namens `StartsWithUpper`, welche einen <xref:System.Boolean> Wert zurückgibt, der angibt, ob die aktuelle Zeichenfolgeninstanz mit einem Großbuchstaben beginnt. Der Unicode-Standard unterscheidet Groß- und Kleinschreibung. Die Methode <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> gibt `true` zurück, wenn ein Zeichen ein Großbuchstabe ist.
+   Die Klassenbibliothek, `UtilityLibraries.StringLibrary`, enthält eine Methode namens `StartsWithUpper`, welche einen <xref:System.Boolean> Wert zurückgibt, der angibt, ob die aktuelle Zeichenfolgeninstanz mit einem Großbuchstaben beginnt. Der Unicode-Standard unterscheidet Groß- und Kleinschreibung. Die Methode <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> gibt `true` zurück, wenn ein Zeichen ein Großbuchstabe ist.
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus. Das Projekt sollte fehlerfrei kompiliert werden.
 
@@ -71,4 +69,3 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 ## <a name="next-step"></a>Nächster Schritt
 
 Sie haben die Bibliothek erfolgreich erstellt. Aber da Sie keine ihrer Methoden aufgerufen haben, wissen Sie nicht, ob sie wie erwartet funktioniert. Der nächste Schritt bei der Entwicklung Ihrer Bibliothek ist ihr Test mithilfe eines [Komponententestprojekts](testing-library-with-visual-studio.md).
-

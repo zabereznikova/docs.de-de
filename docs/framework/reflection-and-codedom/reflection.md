@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +28,18 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf8d583b3e65c80f2c0eef1f6b3e32befe00c3fe
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflektion in .NET Framework
-Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=fullName>, Informationen zu geladenen [Assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [Schnittstellen](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) und [Werttypen](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.  
+Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [Schnittstellen](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) und [Werttypen](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.  
   
  Das [Common Language Runtime](../../../docs/standard/clr.md)-Ladeprogramm verwaltet [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md), bei denen es sich um definierte Begrenzungen um Objekte im gleichen Anwendungsbereich handelt. Diese Verwaltung umfasst das Laden jeder Assembly in die geeignete Anwendungsdomäne und das Steuern des Speicherlayouts der Typenhierarchie in jeder Assembly.  
   
@@ -94,10 +92,9 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
 |[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erläutert, wie dynamische Assemblys und dynamische Methoden generiert werden.|  
   
 ## <a name="reference"></a>Verweis  
- <xref:System.Type?displayProperty=fullName>  
+ <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
-

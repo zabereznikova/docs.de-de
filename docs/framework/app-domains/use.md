@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2dac2238ae9117d3678335748c680d594a8b5c6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-application-domains"></a>Verwenden von Anwendungsdomänen
 Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runtime (CLR) bereit. Sie werden in einem Prozess erstellt und dort ausgeführt. Anwendungsdomänen werden normalerweise von einem Runtimehost erstellt. Dabei handelt es sich um eine Anwendung, die dafür verantwortlich ist, die Runtime in einen Prozess zu laden und Benutzercode innerhalb einer Anwendungsdomäne auszuführen. Der Runtimehost erstellt einen Prozess und eine Standardanwendungsdomäne und führt darin verwalteten Code aus. Runtimehosts sind z.B. ASP.NET, Microsoft Internet Explorer und Windows-Shell.  
@@ -56,7 +54,7 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
  Erläutert, wie Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme abrufen können, bevor die CLR mit dem Suchen nach Ausnahmehandlern beginnt.  
   
  [Auflösen beim Laden von Assemblys](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- Führt Sie in das Verwenden des Ereignisses <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> ein, um fehlgeschlagene Assemblyladevorgänge aufzulösen.  
+ Führt Sie in das Verwenden des Ereignisses <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> ein, um fehlgeschlagene Assemblyladevorgänge aufzulösen.  
   
 ## <a name="reference"></a>Verweis  
  <xref:System.AppDomain>  
@@ -77,4 +75,3 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
   
  [Übersicht über Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Beschreibt, wie die **Reflektion**-Klasse verwendet wird, um Informationen zu einer Assembly abzurufen.
-

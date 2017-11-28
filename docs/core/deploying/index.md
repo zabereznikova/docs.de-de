@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
 Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen:
@@ -82,4 +80,3 @@ Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit 
 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)  (Bereitstellen von .NET Core-Apps mit Visual Studio)  
 [Pakete, Metapakete und Frameworks](../packages.md)   
 [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
-

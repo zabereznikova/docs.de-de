@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resources-in-desktop-apps"></a>Ressourcen in Desktop-Apps
 Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sich um nicht ausführbare Daten, die logisch mit einer App bereitgestellt werden. Eine Ressource kann in einer App als Fehlermeldung oder als Teil der Benutzeroberfläche angezeigt werden. Ressourcen können verschiedene Formen von Daten enthalten, z. B. Zeichenfolgen, Bilder und beibehaltene Objekte. (Objekte, die beibehalten werden, müssen serialisierbar sein, um in eine Ressourcendatei geschrieben werden zu können.) Durch Speichern von Daten in einer Ressourcendatei können Sie die Daten ändern, ohne die gesamte App neu kompilieren zu müssen. Außerdem können Sie dadurch die Daten an einem einzigen Ort speichern und müssen nicht auf hartcodierte Daten zurückgreifen, die an mehreren Orten gespeichert wird.  
@@ -51,17 +49,17 @@ Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sic
  Weitere Informationen finden Sie im Artikel [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Abrufen von Ressourcen  
- Zur Laufzeit werden von einer App die passenden lokalisierten Ressourcen auf Threadbasis entsprechend der Kultur geladen, die von der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>-Eigenschaft angegeben wird. Dieser Eigenschaftswert wird wie folgt abgeleitet:  
+ Zur Laufzeit werden von einer App die passenden lokalisierten Ressourcen auf Threadbasis entsprechend der Kultur geladen, die von der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft angegeben wird. Dieser Eigenschaftswert wird wie folgt abgeleitet:  
   
--   Durch direktes Zuweisen eines <xref:System.Globalization.CultureInfo>-Objekts, das die lokalisierte Kultur darstellt, zur <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>-Eigenschaft.  
+-   Durch direktes Zuweisen eines <xref:System.Globalization.CultureInfo>-Objekts, das die lokalisierte Kultur darstellt, zur <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft.  
   
--   Wenn keine Kultur explizit zugeordnet wurde, durch Abrufen der Benutzeroberflächenkultur des Standardthreads von der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>-Eigenschaft.  
+-   Wenn keine Kultur explizit zugeordnet wurde, durch Abrufen der Benutzeroberflächenkultur des Standardthreads von der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft.  
   
 -   Wenn keine Benutzeroberflächenkultur des Standardthreads explizit zugeordnet wurde, durch Abrufen der Kultur für den aktuellen Benutzer auf dem lokalen Computer durch Aufrufen der `GetUserDefaultUILanguage`-Funktion von Windows.  
   
- Weitere Informationen darüber, wie die aktuelle Benutzeroberflächenkultur festgelegt wird, finden Sie auf den Referenzseiten <xref:System.Globalization.CultureInfo> und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Weitere Informationen darüber, wie die aktuelle Benutzeroberflächenkultur festgelegt wird, finden Sie auf den Referenzseiten <xref:System.Globalization.CultureInfo> und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- Sie können Ressourcen dann für die aktuelle Benutzeroberflächenkultur oder für eine bestimmte Kultur abrufen, indem Sie die <xref:System.Resources.ResourceManager?displayProperty=fullName>-Klasse verwenden. Die <xref:System.Resources.ResourceManager>-Klasse wird zwar am häufigsten zum Abrufen von Ressourcen in Desktop-Apps verwendet, der <xref:System.Resources?displayProperty=fullName>-Namespace enthält jedoch weitere Typen, die Sie zum Abrufen von Ressourcen verwenden können. Dazu gehören:  
+ Sie können Ressourcen dann für die aktuelle Benutzeroberflächenkultur oder für eine bestimmte Kultur abrufen, indem Sie die <xref:System.Resources.ResourceManager?displayProperty=nameWithType>-Klasse verwenden. Die <xref:System.Resources.ResourceManager>-Klasse wird zwar am häufigsten zum Abrufen von Ressourcen in Desktop-Apps verwendet, der <xref:System.Resources?displayProperty=nameWithType>-Namespace enthält jedoch weitere Typen, die Sie zum Abrufen von Ressourcen verwenden können. Dazu gehören:  
   
 -   Die <xref:System.Resources.ResourceReader>-Klasse, mit der Sie Ressourcen auflisten können, die in eine Assembly eingebettet oder in einer eigenständigen binären ".resources"-Datei gespeichert sind. Dies ist nützlich, wenn Sie die genauen Namen der Ressourcen nicht kennen, die zur Laufzeit verfügbar sind.  
   
@@ -72,11 +70,10 @@ Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sic
 -   Die <xref:System.Resources.ResXResourceSet>-Klasse, mit der Sie alle Elemente in einer XML-Ressourcendatei in den Speicher abrufen können.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- [Grundlagen der Anwendung](../../../docs/standard/application-essentials.md)   
- [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
+ [Grundlagen der Anwendung](../../../docs/standard/application-essentials.md)  
+ [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Abrufen von Ressourcen](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
-

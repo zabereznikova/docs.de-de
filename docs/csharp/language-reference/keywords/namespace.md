@@ -1,47 +1,29 @@
 ---
 title: Namespace (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - namespace_CSharpKeyword
 - namespace
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 76cc1adc21f6cfadc93da58250336705e43e333a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2cef3949d9a41db36406db059218f7a204172ea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="namespace-c-reference"></a>Namespace (C#-Referenz)
 Das `namespace`-Schlüsselwort wird verwendet, um einen Gültigkeitsbereich zu deklarieren, der eine Gruppe von verwandten Objekten enthält. Sie können einen Namespace verwenden, um Codeelemente zu organisieren und global eindeutige Typen zu erstellen.  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## <a name="remarks"></a>Hinweise  
  Innerhalb eines Namespace können Sie einen oder mehrere der folgenden Typen deklarieren:  
@@ -64,12 +46,12 @@ Das `namespace`-Schlüsselwort wird verwendet, um einen Gültigkeitsbereich zu d
   
  Es ist möglich, einen Namespace in zwei oder mehr Deklarationen zu definieren. Im folgenden Beispiel werden beispielsweise zwei Klassen als Teil des `MyCompany`-Namespace definiert:  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie eine statische Methode in einem geschachtelten Namespace aufgerufen wird.  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## <a name="for-more-information"></a>Weitere Informationen  
  Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden Themen:  
@@ -84,9 +66,8 @@ Das `namespace`-Schlüsselwort wird verwendet, um einen Gültigkeitsbereich zu d
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
  [using](../../../csharp/language-reference/keywords/using.md)
-

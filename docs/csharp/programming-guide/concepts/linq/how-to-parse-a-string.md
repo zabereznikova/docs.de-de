@@ -1,30 +1,21 @@
 ---
 title: 'Vorgehensweise: Parsen einer Zeichenfolge (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 37e09885b00830f319a829e900f33927498df0e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8aa6e0235a5a9e834167b74897121a1ab003078b
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-parse-a-string-c"></a>Vorgehensweise: Parsen einer Zeichenfolge (C#)
 In diesem Thema wird erläutert, wie Sie in C# eine XML-Struktur erstellen können.  
@@ -64,4 +55,3 @@ Console.WriteLine(contacts);
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
-

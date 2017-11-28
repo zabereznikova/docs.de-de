@@ -1,25 +1,21 @@
 ---
 title: "Abrufen des Texts der Absätze (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 4d43ad0260406edac4920aad5f14c981de210b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0a6e842359ae42be9e00ba35f6878d3a2a4aac4
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Abrufen des Texts der Absätze (C#)
 Dieses Beispiel baut auf dem vorherigen Beispiel [Retrieving the Paragraphs and Their Styles (C#) (Abrufen der Absätze und deren Formate (C#))](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md) auf. Dieses neue Beispiel ruft den Text jedes einzelnen Absatzes als Zeichenfolge ab  
@@ -37,7 +33,7 @@ Dieses Beispiel baut auf dem vorherigen Beispiel [Retrieving the Paragraphs and 
   
  Eine Anleitung zum Erstellen des Quelldokuments für dieses Beispiel finden Sie unter [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=fullName>-Namespace verwendet.  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -155,6 +151,5 @@ StyleName:Code >Hello World<
 -   [Refactoring mit einer Erweiterungsmethode (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Deferred Execution and Lazy Evaluation in LINQ to XML (C#) (Verzögerte Ausführung und Auswertung in LINQ to XML (C#))](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "Einführung in .NET | Microsoft-Dokumentation"
+title: "Einführung in .NET"
 description: "Eine Einführung in einige der wichtigsten Features von .NET"
 keywords: ".NET, .NET Core, Einführung, Programmiersprachen, unsicher, Speicherverwaltung, Typsicherheit, asynchron"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>Einführung in .NET
 
 .NET ist eine Entwicklungsplattform für allgemeine Zwecke. Sie bietet mehrere wichtige Features wie Unterstützung für verschiedene Programmiersprachen, asynchrone und gleichzeitige Programmiermodelle und native Interoperabilität. Dadurch wird auf unterschiedlichen Plattformen eine Vielzahl von Szenarios ermöglicht.
@@ -58,9 +56,9 @@ Im folgenden Beispiel löst die Runtime eine `InvalidIndexException`-Ausnahme au
 
 ## <a name="working-with-unmanaged-resources"></a>Arbeiten mit nicht verwalteten Ressourcen
 
-Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Ressourcen sind Ressourcen, die nicht automatisch von der .NET-Runtime verwaltet werden. Ein Dateihandle ist z.B. eine nicht verwaltete Ressource. Ein <xref:System.IO.FileStream> -Objekt ist ein verwaltetes Objekt, aber es verweist auf ein Dateihandle, das nicht verwaltet ist. Wenn Sie mit <xref:System.IO.FileStream> fertig sind, müssen Sie das Dateihandle freigeben.
+Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Ressourcen sind Ressourcen, die nicht automatisch von der .NET-Runtime verwaltet werden. Ein Dateihandle ist z.B. eine nicht verwaltete Ressource. Ein <xref:System.IO.FileStream>-Objekt ist ein verwaltetes Objekt, aber es verweist auf ein Dateihandle, das nicht verwaltet ist. Wenn Sie mit <xref:System.IO.FileStream> fertig sind, müssen Sie das Dateihandle freigeben.
 
-In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die <xref:System.IDisposable> -Schnittstelle. Wenn Sie mit dem Objekt fertig sind, können Sie die <xref:System.IDisposable.Dispose>-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist. .NET-Sprachen stellen wie im folgenden Beispiel gezeigt eine praktische `using`-Syntax für solche Objekte bereit:
+In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die <xref:System.IDisposable>-Schnittstelle. Wenn Sie mit dem Objekt fertig sind, können Sie die <xref:System.IDisposable.Dispose>-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist. .NET-Sprachen stellen wie im folgenden Beispiel gezeigt eine praktische `using`-Syntax für solche Objekte bereit:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
@@ -149,4 +147,3 @@ Wenn Sie sich für eine Einführung in die F#-Features interessieren, werfen Sie
 Wenn Sie damit beginnen möchten, eigenen Code zu schreiben, lesen Sie [Erste Schritte](get-started.md).
 
 Weitere Informationen zu wichtigen Komponenten von .NET finden Sie unter [.NET-Architekturkomponenten](components.md).
-

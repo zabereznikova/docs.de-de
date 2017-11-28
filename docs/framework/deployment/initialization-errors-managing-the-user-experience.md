@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit
 Das Aktivierungssystem der CLR (Common Language Runtime) bestimmt die Version der CLR, die verwendet wird, um verwalteten Anwendungscode auszuführen. In einigen Fällen ist das Aktivierungssystem eventuell nicht in der Lage, eine Version der CLR zu suchen und zu laden. Diese Situation tritt in der Regel auf, wenn eine Anwendung eine CLR-Version erfordert, die ungültig oder nicht auf einem Computer installiert ist. Wenn die angeforderte Version nicht gefunden wird, gibt das CLR-Aktivierungssystem einen HRESULT-Fehlercode von der aufgerufenen Funktion oder Schnittstelle zurück und zeigt dem Benutzer, der die Anwendung ausführt, eventuell eine Fehlermeldung an. Dieser Artikel enthält eine Liste von HRESULT-Codes und beschreibt, wie Sie die Anzeige der Fehlermeldung verhindern können.  
@@ -102,8 +95,7 @@ Aufforderung zum Installieren von .NET Framework 3.5 bei Bedarf
  Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wurde die CLR-Aktivierungsprotokollierung verbessert. Sie enthält nun auch Protokolleinträge, die aufzeichnen, wann und warum eine Initialisierungsfehlermeldung angezeigt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
- [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
- [Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
+ [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+ [Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  [Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
-

@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 7c884985873679b25831c15ef5c8b6370ecd6460
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
 In [Building a class library with C# and .NET Core in Visual Studio 2017 (Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio2017)](library-with-visual-studio.md) oder [Building a class library with Visual Basic and .NET Core in Visual Studio 2017 (Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017)](vb-library-with-visual-studio.md) haben Sie eine einfache Klassenbibliothek erstellt, die eine Erweiterungsmethode zur Klasse <xref:System.String> hinzufügt. Jetzt erstellen Sie einen Komponententest, um sicherzustellen, dass es wie erwartet funktioniert. Sie fügen Ihr Komponententestprojekt der Projektmappe hinzu, die Sie im vorherigen Thema erstellt haben.
@@ -103,7 +104,7 @@ Sie können auch das Attribut [\[ExpectedException\]](https://msdn.microsoft.com
 
 Beim Testen der `StringLibrary.StartsWithUpper`-Methode möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `true` zurückgibt, also können Sie die [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx)-Methode aufrufen. Außerdem möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die nicht mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `false` zurückgibt, also können Sie die [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx)-Methode aufrufen.
 
-Da Ihre Bibliotheksmethode Zeichenfolgen behandelt, möchten Sie auch sicherstellen, dass sie eine [leere Zeichenfolge (`String.Empty`)](xref:System.String.Empty), eine gültige Zeichenfolge, die keine Zeichen enthält und deren @System.String.Length 0 ist, und eine `null`-Zeichenfolge, die nicht initialisiert wurde, erfolgreich behandelt. Wenn `StartsWithUpper` als eine Erweiterungsmethode für eine @System.String-Instanz aufgerufen wird, kann ihr keine `null`-Zeichenfolge übergeben werden. Allerdings kann sie auch direkt als statische Methode aufgerufen und ihr ein einzelnes @System.String-Argument übergeben werden.
+Da Ihre Bibliotheksmethode Zeichenfolgen behandelt, möchten Sie auch sicherstellen, dass sie eine [leere Zeichenfolge (`String.Empty`)](xref:System.String.Empty), eine gültige Zeichenfolge, die keine Zeichen enthält und deren <xref:System.String.Length> 0 ist, und eine `null`-Zeichenfolge, die nicht initialisiert wurde, erfolgreich behandelt. Wenn `StartsWithUpper` als eine Erweiterungsmethode für eine <xref:System.String>-Instanz aufgerufen wird, kann ihr keine `null`-Zeichenfolge übergeben werden. Allerdings kann sie auch direkt als statische Methode aufgerufen und ihr ein einzelnes <xref:System.String>-Argument übergeben werden.
 
 Sie definieren drei Methoden, von denen jede ihre [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx)-Methode wiederholt für jedes Element in einem Zeichenfolgenarray aufruft. Da die Testmethode nicht fortgesetzt wird, sobald sie auf den ersten Fehler trifft, rufen Sie eine Methodenüberladung auf, mit der Sie eine Zeichenfolge übergeben können, die den Zeichenfolgenwert angibt, der im Methodenaufruf verwendet wird.
 
@@ -185,4 +186,3 @@ So testen Sie die endgültige Produktversion:
 1. Führen Sie den Komponententest aus, indem Sie **Test** > **Ausführen** > **Alle Tests** aus der Menüleiste auswählen. Die Tests sind erfolgreich.
 
 Das Testen Ihrer Bibliothek ist jetzt abgeschlossen, und im nächsten Schritt machen Sie sie für die Aufrufer verfügbar. Sie können sie mit einer oder mehreren Anwendungen bündeln oder sie als NuGet-Paket verteilen. Informationen hierzu finden Sie unter [Consuming a .NET Standard Class Library (Nutzen einer .NET-Standardklassenbibliothek)](./consuming-library-with-visual-studio.md).
-
