@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Übersicht über die .NET Framework-Klassenbibliothek
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] enthält Klassen, Schnittstellen und Werttypen, die den Entwicklungsprozess beschleunigen und optimieren und den Zugriff auf Systemfunktionen ermöglichen. .NET Framework gewährleistet durch überwiegend CLS-kompatible Typen Interoperabilität zwischen verschiedenen Sprachen und kann daher in jeder Programmiersprache verwendet werden, deren Compiler der CLS (Common Language Specification) entspricht.  
@@ -114,7 +113,6 @@ ass-Objekte|<xref:System.Object>|Der Stamm der Objekthierarchie.|**Objekt**|**ob
  Weitere Informationen zu Namespaces finden Sie in der [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195). In der Referenzdokumentation finden Sie eine Kurzübersicht zu jedem Namespace sowie eine formale Beschreibung aller Typen und der zugehörigen Elemente.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)   
- [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)  
+ [.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [Übersicht](../../docs/framework/get-started/overview.md)
-

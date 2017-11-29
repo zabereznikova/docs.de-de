@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern
 
 Der erste Schritt bei der Portierung besteht darin, die Abhängigkeiten von Drittanbietern zu verstehen.  Sie müssen herausfinden, welche gegebenenfalls noch nicht unter .NET Core ausgeführt werden und für diese einen Notfallplan entwickeln.
@@ -97,4 +95,3 @@ Möglicherweise verfügen Sie über eine Abhängigkeit, bei der es sich nicht um
 ## <a name="next-steps"></a>Nächste Schritte
 
 Wenn Sie eine Bibliothek portieren, lesen Sie [Portieren von Bibliotheken](libraries.md).
-

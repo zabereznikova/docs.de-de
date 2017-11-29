@@ -1,42 +1,24 @@
 ---
 title: from-Klausel (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - from_CSharpKeyword
 - from
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f718f50d2b8d6f5c612113414a2106fed37fe0fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0165144acfa8d0928015e8222179f7e69f19644
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="from-clause-c-reference"></a>from-Klausel (C#-Referenz)
 Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen. Darüber hinaus kann ein Abfrageausdruck Unterabfragen enthalten, die auch mit einer `from`-Klausel beginnen. Die `from`-Klausel gibt Folgendes an:  
@@ -49,10 +31,10 @@ Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen. Darüber hinaus kann
   
  Im folgenden Beispiel `numbers` ist die Datenquelle und `num` ist die Bereichsvariable. Beachten Sie, dass beide Variablen stark typisiert sind, obwohl das [var-](../../../csharp/language-reference/keywords/var.md)Schlüsselwort verwendet wird.  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
 ## <a name="the-range-variable"></a>Die Bereichsvariable  
- Der Compiler leitet den Typ der Bereichsvariablen ab, wenn die Datenquelle <xref:System.Collections.Generic.IEnumerable%601> implementiert. Wenn die Quelle beispielsweise vom Typ `IEnumerable<Customer>` ist, wird die Bereichsvariable als `Customer` abgeleitet. Sie müssen den Typ nur explizit angeben, wenn die Quelle ein nicht-generischer `IEnumerable`-Typ wie z.B. <xref:System.Collections.ArrayList> ist. Weitere Informationen finden Sie unter [How to: Query an ArrayList with LINQ (Vorgehensweise: Abfragen von ArrayList mit LINQ)](http://msdn.microsoft.com/library/c318b79a-fa4d-4de3-b62d-c1162beb267e).  
+ Der Compiler leitet den Typ der Bereichsvariablen ab, wenn die Datenquelle <xref:System.Collections.Generic.IEnumerable%601> implementiert. Wenn die Quelle beispielsweise vom Typ `IEnumerable<Customer>` ist, wird die Bereichsvariable als `Customer` abgeleitet. Sie müssen den Typ nur explizit angeben, wenn die Quelle ein nicht-generischer `IEnumerable`-Typ wie z.B. <xref:System.Collections.ArrayList> ist. Weitere Informationen finden Sie unter [How to: Query an ArrayList with LINQ (Vorgehensweise: Abfragen von ArrayList mit LINQ)](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
  Im vorherigen Beispiel wird `num` als Typ `int` abgeleitet. Da die Bereichsvariable stark typisiert ist, können Sie für sie Methoden aufrufen oder sie in anderen Vorgängen verwenden. Anstatt z.B. `select num` zu schreiben, könnten Sie `select num.ToString()` schreiben, sodass der Abfrageausdruck eine Sequenz von Zeichenfolgen anstelle von Ganzzahlen zurückgibt. Sie könnten auch `select n + 10` schreiben, damit der Ausdruck die Sequenz „14, 11, 13, 12, 10“ zurückgibt. Weitere Informationen finden Sie unter [select clause (select-Klausel)](../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -61,18 +43,17 @@ Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen. Darüber hinaus kann
 ## <a name="compound-from-clauses"></a>Zusammengesetzte from-Klauseln  
  In einigen Fällen kann jedes Element in der Quellsequenz selbst eine Sequenz sein oder eine Sequenz enthalten. Ihre Datenquelle kann beispielsweise ein `IEnumerable<Student>` sein, wobei jedes Student-Objekt in der Sequenz eine Liste der Testergebnisse enthält. Sie können zusammengesetzte `from`-Klauseln verwenden, um auf die innere Liste jedes `Student`-Objekts zuzugreifen. Die Technik entspricht dem Verwenden von geschachtelten [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisungen. Sie können die [where](../../../csharp/language-reference/keywords/partial-method.md)-Klausel oder die [orderby](../../../csharp/language-reference/keywords/orderby-clause.md)-Klausel zu einer der `from`-Klauseln hinzufügen, um die Ergebnisse zu filtern. Das folgende Beispiel enthält eine Sequenz von `Student`-Objekten, von denen jedes eine innere `List` mit Ganzzahlen enthält, die die Testergebnisse darstellen. Um auf die innere Liste zuzugreifen, verwenden Sie eine zusammengesetzte `from`-Klausel. Bei Bedarf können Sie Klauseln zwischen den beiden `from`-Klauseln einfügen.  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
 ## <a name="using-multiple-from-clauses-to-perform-joins"></a>Verwenden von mehreren from-Klauseln zum Ausführen von Joins  
  Eine zusammengesetzte `from`-Klausel wird zum Zugriff auf innere Auflistungen in einer einzelnen Datenquelle verwendet. Eine Abfrage kann jedoch auch mehrere `from`-Klauseln enthalten, die ergänzende Abfragen aus unabhängigen Datenquellen generieren. Mit dieser Technik können Sie bestimmte Typen von Verknüpfungsvorgängen durchführen, die beim Einsatz der [join-Klausel](../../../csharp/language-reference/keywords/join-clause.md) nicht möglich sind.  
   
  Das folgende Beispiel veranschaulicht, wie zwei `from`-Klauseln verwendet werden können, um einen vollständigen Cross Join zweier Datenquellen zu bilden.  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
  Weitere Informationen zu Verknüpfungsvorgängen mit mehreren `from`-Klauseln finden Sie unter [How to: Perform Custom Join Operations (Vorgehensweise: Ausführen von benutzerdefinierten Verknüpfungsvorgängen)](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

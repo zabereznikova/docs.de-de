@@ -16,19 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable-Sammlungstyp und Dictionary-Sammlungstyp
-Die Klasse <xref:System.Collections.Hashtable?displayProperty=fullName> und die generischen Klassen <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> implementieren die <xref:System.Collections.IDictionary?displayProperty=fullName>-Schnittstelle. Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> implementiert außerdem die generische <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle. Daher ist jedes Element in diesen Auflistungen ein Schlüssel-Wert-Paar.  
+Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und die generischen Klassen <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> implementiert außerdem die generische <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle. Daher ist jedes Element in diesen Auflistungen ein Schlüssel-Wert-Paar.  
   
  Ein <xref:System.Collections.Hashtable>-Objekt besteht aus Buckets, die die Elemente der Auflistung enthalten. Ein Buckets ist eine virtuelle Untergruppe von Elementen innerhalb der <xref:System.Collections.Hashtable>, der das Suchen und Abrufen schneller und einfacher als in den meisten Auflistungen ermöglicht. Jedem Bucket ist ein Hashcode zugeordnet, der mithilfe einer Hashfunktion generiert wird und auf dem Schlüssel des Elements basiert.  
   
@@ -45,11 +44,10 @@ Die Klasse <xref:System.Collections.Hashtable?displayProperty=fullName> und die 
  Die Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602> weisen die gleiche Funktionalität wie die Klasse <xref:System.Collections.Hashtable> auf. Ein <xref:System.Collections.Generic.Dictionary%602> eines bestimmten Typs (außer <xref:System.Object>) bietet eine bessere Leistung als eine <xref:System.Collections.Hashtable> für Werttypen. Der Grund hierfür ist, dass die Elemente von <xref:System.Collections.Hashtable> vom Typ <xref:System.Object> sind. Daher treten das Boxing und das Unboxing in der Regel beim Speichern oder Abrufen eines Werttyps auf. Die Klasse <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sollte verwendet werden, wenn mehrere Threads möglicherweise gleichzeitig auf die Auflistung zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
  [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)
-

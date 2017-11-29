@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
 ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
 .NET Core ist eine Plattform, die aus NuGet-Paketen besteht. Einige Produkte profitieren von differenzierten Paketdefinitionen während andere von undifferenzierten profitieren. Um dieser Dualität entgegenzukommen, wird dieses Produkt als eine Gruppe von differenzierten Paketen verteilt und dann in undifferenzierteren Blöcken mit einem Pakettyp beschrieben, der informell als „Metapaket“ bekannt ist.
@@ -149,4 +147,3 @@ Das Framework der .NET Core-Anwendung (TFM: `netcoreapp`) stellt die Pakete und 
 Das Metapaket `Microsoft.NETCore.App` hat das Framework `netcoreapp` als Ziel. Es bietet Zugriff auf ~60-Bibliotheken, ~40 werden durch das `NETStandard.Library`-Paket bereitgestellt, und ~20 weitere werden zusätzlich bereitgestellt. Sie können auf zusätzliche Bibliotheken verweisen, die `netcoreapp` oder kompatible Frameworks wie z.B. `netstandard` als Ziel haben, um den Zugriff auf zusätzliche APIs zu erhalten. 
 
 Die meisten der zusätzlichen Bibliotheken, die von `Microsoft.NETCore.App` bereitgestellt werden, haben ebenfalls `netstandard` als Ziel, vorausgesetzt, dass ihre Abhängigkeiten von anderen `netstandard`-Bibliotheken erfüllt werden. Dies bedeutet, dass `netstandard`-Bibliotheken auch auf diese Pakete als Abhängigkeiten verweisen können. 
-

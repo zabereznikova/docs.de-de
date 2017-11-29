@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-inner-joins"></a>Ausführen von inneren Verknüpfungen
 
@@ -37,7 +35,7 @@ Bei relationalen Datenbanken erzeugt eine *innere Verknüpfung* einen Ergebnissa
 ## <a name="simple-key-join-example"></a>Beispiel für eine Verknüpfung mit einfachem Schlüssel  
  Im folgenden Beispiel werden zwei Auflistungen erstellt, die Objekte von zwei benutzerdefinierten Typen (`Person` und `Pet`) enthalten. Die Abfrage verwendet die `join`-Klausel in C#, um `Person`-Objekte mit `Pet`-Objekten übereinzustimmen, dessen `Owner` diese `Person` ist. Die `select`-Klausel in C# definiert, wie die resultierenden Objekte aussehen werden. In diesem Beispiel sind die resultierenden Objekte anonyme Typen, die aus dem Vornamen des Besitzers und dem Haustiernamen bestehen.  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
  Beachten Sie, dass das `Person`-Objekt, dessen `LastName` „Huff“ ist, nicht im Ergebnissatz erscheint, weil es kein `Pet`-Objekt gibt, bei dem `Pet.Owner` gleich `Person` ist.  
   
@@ -48,7 +46,7 @@ Bei relationalen Datenbanken erzeugt eine *innere Verknüpfung* einen Ergebnissa
   
  Im folgenden Beispiel wird eine Liste von `Employee`-Objekten und eine Liste von `Student`-Objekten verwendet, um zu bestimmen, welche Angestellten auch Studenten sind. Diese beiden Typen haben eine `FirstName`- und `LastName`-Eigenschaft vom Typ <xref:System.String>. Die Funktion, die die Verknüpfungsschlüssel aus jedem Element der Liste erstellt, gibt einen anonymen Typ zurück, der aus den Eigenschaften `FirstName` und `LastName` von jedem Element besteht. Der Verknüpfungsvorgang vergleicht diese zusammengesetzten Schlüssel auf Gleichheit und gibt Objektpaare aus jeder Liste zurück, in der der Vor- und Nachname übereinstimmen.  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
 ## <a name="example"></a>Beispiel  
   
@@ -61,7 +59,7 @@ Bei relationalen Datenbanken erzeugt eine *innere Verknüpfung* einen Ergebnissa
   
  Die zweite `join`-Klausel in C# verknüpft die von der ersten Verknüpfung zurückgegebenen anonymen Typen mit `Dog`-Objekten in der bereitgestellten Liste von Hunden anhand eines zusammengesetzten Schlüssels, der aus der `Owner`-Eigenschaft des `Person`-Typs und dem ersten Buchstaben des Tiernamens besteht. Sie gibt eine Sequenz von anonymen Typen zurück, die die Eigenschaft `Cat.Name` und `Dog.Name` von jedem übereinstimmen Paar enthält. Da es sich um eine innere Verknüpfung handelt, werden nur die Elemente aus der ersten Datenquelle zurückgegeben, die eine Übereinstimmung in der zweiten Datenquelle haben.  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
 ## <a name="example"></a>Beispiel  
   
@@ -74,13 +72,12 @@ Bei relationalen Datenbanken erzeugt eine *innere Verknüpfung* einen Ergebnissa
   
  Das Ergebnis von `query1` entspricht dem Ergebnissatz, der mithilfe der `join`-Klausel abgerufen werden würde, ohne dass die `into`-Klausel eine innere Verknüpfung ausführt. Die `query2`-Variable veranschaulicht diese entsprechende Abfrage.  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Perform grouped joins (Ausführen von Gruppenverknüpfungen)](perform-grouped-joins.md)   
- [Perform left outer joins (Ausführen von Left Outer Joins)](perform-left-outer-joins.md)   
- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [Ausführen von Gruppenverknüpfungen](perform-grouped-joins.md)  
+ [Ausführen linker äußerer Verknüpfungen](perform-left-outer-joins.md)  
+ [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

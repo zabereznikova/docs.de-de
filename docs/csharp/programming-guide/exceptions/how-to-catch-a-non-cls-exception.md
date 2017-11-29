@@ -1,38 +1,19 @@
 ---
 title: 'Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], non-CLS
+helpviewer_keywords: exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 473cace033983915c66647d14cae16dc7f5d5b9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18a19fe34b8ec13bd9fc6d25335d0931a22ce4a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Gewusst wie: Abfangen einer Nicht-CLS-Ausnahme
 Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen auszulösen, die nicht aus <xref:System.Exception> stammen. Diese Ausnahmen werden als *Nicht-CLS-Ausnahmen* oder *Nicht-Ausnahmen* bezeichnet. In [!INCLUDE[csprcs](~/includes/csprcs-md.md)] können Sie keine Nicht-CLS-Ausnahmen auslösen. Sie können sie jedoch auf zwei Arten abfangen:  
@@ -52,7 +33,7 @@ Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen ausz
 2.  Greifen Sie über die Eigenschaft <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> auf die ursprüngliche Ausnahme zu.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie eine Nicht-CLS-Ausnahme abfangen, die von einer in C++/CRL geschriebenen Klassenbibliothek ausgelöst wurde. Beachten Sie, dass in diesem Beispiel der [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Clientcode im Voraus weiß, dass der Ausnahmetyp, der ausgelöst wird, eine <xref:System.String?displayProperty=fullName> darstellt. Wandeln Sie die Eigenschaft <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> in den ursprünglichen Typ um, solange dieser Typ über Ihren Code erreicht werden kann.  
+ Das folgende Beispiel zeigt, wie Sie eine Nicht-CLS-Ausnahme abfangen, die von einer in C++/CRL geschriebenen Klassenbibliothek ausgelöst wurde. Beachten Sie, dass in diesem Beispiel der [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Clientcode im Voraus weiß, dass der Ausnahmetyp, der ausgelöst wird, eine <xref:System.String?displayProperty=nameWithType> darstellt. Wandeln Sie die Eigenschaft <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> in den ursprünglichen Typ um, solange dieser Typ über Ihren Code erreicht werden kann.  
   
 ```  
 // Class library written in C++/CLR.  
@@ -84,6 +65,5 @@ Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen ausz
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.RuntimeWrappedException>   
+ <xref:System.Runtime.CompilerServices.RuntimeWrappedException>  
  [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)
-
