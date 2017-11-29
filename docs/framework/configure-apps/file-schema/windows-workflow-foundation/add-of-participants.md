@@ -1,72 +1,76 @@
 ---
-title: "&lt;add&gt; von &lt;participants&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;add&gt; von &lt;participants&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d95c6d3768a26a8db92bf54bb454b350ced03d7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; von &lt;participants&gt;
-Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit ausgegebenen Nachverfolgungsdatensätzen lauscht und sie entsprechend der Weise verarbeitet, wie er konfiguriert wurde.  Dies umfasst das Schreiben in ein bestimmtes Ausgabemedium \(z. B. Datei, Konsole, ETW\), das Verarbeiten\/Aggregieren der Datensätze oder eine beliebige andere Kombination, die erforderlich sein könnte.  
+# <a name="ltaddgt-of-ltparticipantsgt"></a><span data-ttu-id="4dd54-102">&lt;add&gt; von &lt;participants&gt;</span><span class="sxs-lookup"><span data-stu-id="4dd54-102">&lt;add&gt; of &lt;participants&gt;</span></span>
+<span data-ttu-id="4dd54-103">Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit ausgegebenen Nachverfolgungsdatensätzen lauscht und sie entsprechend der Weise verarbeitet, wie er konfiguriert wurde.</span><span class="sxs-lookup"><span data-stu-id="4dd54-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="4dd54-104">Dies umfasst das Schreiben in ein bestimmtes Ausgabemedium (z. B. Datei, Konsole, ETW), das Verarbeiten/Aggregieren der Datensätze oder eine beliebige andere Kombination, die erforderlich sein könnte.</span><span class="sxs-lookup"><span data-stu-id="4dd54-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- Weitere Informationen zur Workflownachverfolgung und zu Nachverfolgungsteilnehmern finden Sie unter [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md) und [Überwachungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md).  
+ <span data-ttu-id="4dd54-105">Weitere Informationen im Workflow-Überwachung und zu nachverfolgungsteilnehmern finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Nachverfolgungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span><span class="sxs-lookup"><span data-stu-id="4dd54-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
   
-## Syntax  
+<span data-ttu-id="4dd54-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="4dd54-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="4dd54-107">\<Nachverfolgen von ></span><span class="sxs-lookup"><span data-stu-id="4dd54-107">\<tracking></span></span>  
+<span data-ttu-id="4dd54-108">\<Teilnehmer ></span><span class="sxs-lookup"><span data-stu-id="4dd54-108">\<participants></span></span>  
+<span data-ttu-id="4dd54-109">\<add></span><span class="sxs-lookup"><span data-stu-id="4dd54-109">\<add></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="4dd54-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="4dd54-110">Syntax</span></span>  
   
-<tracking>   
-   <participants>   
-      <add name="String"   
-           profileName="String"  
-           type="String" />   
-   </participants>   
-</tracking>  
-  
+```xml
+<tracking>
+  <participants>
+    <add name="String" profileName="String" type="String" />
+  </participants>
+</tracking>   
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4dd54-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="4dd54-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="4dd54-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4dd54-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="4dd54-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="4dd54-113">Attributes</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|Name|Eine Zeichenfolge, die den Namen eines Nachverfolgungsteilnehmers angibt.|  
-|profileName|Eine Zeichenfolge, die den Namen des Nachverfolgungsprofils angibt. Dieses Profil definiert die Nachverfolgungsdatensätze, die der Nachverfolgungsteilnehmer abonniert hat.|  
-|Typ|Eine Zeichenfolge, die den Typ eines Nachverfolgungsteilnehmers angibt.|  
+|<span data-ttu-id="4dd54-114">Element</span><span class="sxs-lookup"><span data-stu-id="4dd54-114">Element</span></span>|<span data-ttu-id="4dd54-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4dd54-115">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="4dd54-116">Name</span><span class="sxs-lookup"><span data-stu-id="4dd54-116">name</span></span>|<span data-ttu-id="4dd54-117">Eine Zeichenfolge, die den Namen eines Nachverfolgungsteilnehmers angibt.</span><span class="sxs-lookup"><span data-stu-id="4dd54-117">A string that specifies the name of a tracking participant.</span></span>|  
+|<span data-ttu-id="4dd54-118">profileName</span><span class="sxs-lookup"><span data-stu-id="4dd54-118">profileName</span></span>|<span data-ttu-id="4dd54-119">Eine Zeichenfolge, die den Namen des Nachverfolgungsprofils angibt. Dieses Profil definiert die Nachverfolgungsdatensätze, die der Nachverfolgungsteilnehmer abonniert hat.</span><span class="sxs-lookup"><span data-stu-id="4dd54-119">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
+|<span data-ttu-id="4dd54-120">Typ</span><span class="sxs-lookup"><span data-stu-id="4dd54-120">type</span></span>|<span data-ttu-id="4dd54-121">Eine Zeichenfolge, die den Typ eines Nachverfolgungsteilnehmers angibt.</span><span class="sxs-lookup"><span data-stu-id="4dd54-121">A string that specifies the type of a tracking participant.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="4dd54-122">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4dd54-122">Child Elements</span></span>  
+ <span data-ttu-id="4dd54-123">Keine</span><span class="sxs-lookup"><span data-stu-id="4dd54-123">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="4dd54-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4dd54-124">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<participants\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Eine Liste von Nachverfolgungsteilnehmern|  
+|<span data-ttu-id="4dd54-125">Element</span><span class="sxs-lookup"><span data-stu-id="4dd54-125">Element</span></span>|<span data-ttu-id="4dd54-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4dd54-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4dd54-127">\<Teilnehmer ></span><span class="sxs-lookup"><span data-stu-id="4dd54-127">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="4dd54-128">Eine Liste von Nachverfolgungsteilnehmern</span><span class="sxs-lookup"><span data-stu-id="4dd54-128">A list of tracking participants</span></span>|  
   
-## Hinweise  
- Nachverfolgungsteilnehmer werden verwendet, um die vom Workflow ausgegebenen Nachverfolgungsdaten zu erfassen und in verschiedenen Medien zu speichern.  Außerdem kann jede Nachverarbeitung der Nachverfolgungsdatensätze auch innerhalb des Nachverfolgungsteilnehmers erfolgen.  
+## <a name="remarks"></a><span data-ttu-id="4dd54-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4dd54-129">Remarks</span></span>  
+ <span data-ttu-id="4dd54-130">Nachverfolgungsteilnehmer werden verwendet, um die vom Workflow ausgegebenen Nachverfolgungsdaten zu erfassen und in verschiedenen Medien zu speichern.</span><span class="sxs-lookup"><span data-stu-id="4dd54-130">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="4dd54-131">Außerdem kann jede Nachverarbeitung der Nachverfolgungsdatensätze auch innerhalb des Nachverfolgungsteilnehmers erfolgen.</span><span class="sxs-lookup"><span data-stu-id="4dd54-131">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- Die Nachverfolgungsereignisse können von mehreren Nachverfolgungsteilnehmern gleichzeitig verarbeitet werden.  Jedem Nachverfolgungsteilnehmer kann ein anderes Nachverfolgungsprofil zugeordnet sein.  
+ <span data-ttu-id="4dd54-132">Die Nachverfolgungsereignisse können von mehreren Nachverfolgungsteilnehmern gleichzeitig verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="4dd54-132">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="4dd54-133">Jedem Nachverfolgungsteilnehmer kann ein anderes Nachverfolgungsprofil zugeordnet sein.</span><span class="sxs-lookup"><span data-stu-id="4dd54-133">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- Standardmäßig wird ein Nachverfolgungsteilnehmer bereitgestellt, der die Nachverfolgungsdatensätze in eine ETW\-Sitzung schreibt.  Der Teilnehmer wird für einen Workflowdienst konfiguriert, indem einer Konfigurationsdatei ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.  Durch Aktivierung eines ETW\-Nachverfolgungsteilnehmers können Nachverfolgungsdatensätze in der Ereignisanzeige angezeigt werden.  Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.  
+ <span data-ttu-id="4dd54-134">Standardmäßig wird ein Nachverfolgungsteilnehmer bereitgestellt, der die Nachverfolgungsdatensätze in eine ETW-Sitzung schreibt.</span><span class="sxs-lookup"><span data-stu-id="4dd54-134">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="4dd54-135">Der Teilnehmer wird für einen Workflowdienst konfiguriert, indem einer Konfigurationsdatei ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="4dd54-135">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="4dd54-136">Durch Aktivierung eines ETW-Nachverfolgungsteilnehmers können Nachverfolgungsdatensätze in der Ereignisanzeige angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="4dd54-136">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="4dd54-137">Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.</span><span class="sxs-lookup"><span data-stu-id="4dd54-137">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## Beispiel  
- In der folgenden Beispielkonfiguration wird der standardmäßige ETW\-Nachverfolgungsteilnehmer gezeigt, der in der Datei Web.config konfiguriert ist.  
+## <a name="example"></a><span data-ttu-id="4dd54-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4dd54-138">Example</span></span>  
+ <span data-ttu-id="4dd54-139">In der folgenden Beispielkonfiguration wird der standardmäßige ETW-Nachverfolgungsteilnehmer gezeigt, der in der Datei Web.config konfiguriert ist.</span><span class="sxs-lookup"><span data-stu-id="4dd54-139">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- Die Anbieter\-ID, die der ETW\-Nachverfolgungsteilnehmer verwendet, um die Nachverfolgungsdatensätze an ETW weiterzuleiten, ist im Abschnitt **\<diagnostics\>** definiert.  Dem Nachverfolgungsteilnehmer ist ein Profil zugeordnet, das die Nachverfolgungsdatensätze angibt, die er abonniert hat.  Dieses Profil wird durch das **profileName**\-Attribut des **\<add\>**\-Elements definiert.  Sobald alles definiert ist, wird der Nachverfolgungsteilnehmer dem **\<etwTracking\>**\-Dienstverhalten hinzugefügt.  Dadurch wird der ausgewählte Nachverfolgungsteilnehmer den Erweiterungen der Workflowinstanz hinzugefügt, die daraufhin die Nachverfolgungsdatensätze empfangen.  
+ <span data-ttu-id="4dd54-140">Die Anbieter-Id, die ETW-Nachverfolgungsteilnehmer verwendet, für die Nachverfolgungsdatensätze an ETW wird definiert, der  **\<Diagnose >** Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="4dd54-140">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="4dd54-141">Dem Nachverfolgungsteilnehmer ist ein Profil zugeordnet, das die Nachverfolgungsdatensätze angibt, die er abonniert hat.</span><span class="sxs-lookup"><span data-stu-id="4dd54-141">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="4dd54-142">Dies wird definiert, indem die **ProfileName** Attribut des der  **\<hinzufügen >** Element.</span><span class="sxs-lookup"><span data-stu-id="4dd54-142">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="4dd54-143">Sobald alles definiert ist, wird der Nachverfolgungsteilnehmer hinzugefügt, um die  **\<EtwTracking >** -Dienstverhalten.</span><span class="sxs-lookup"><span data-stu-id="4dd54-143">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="4dd54-144">Dadurch wird der ausgewählte Nachverfolgungsteilnehmer den Erweiterungen der Workflowinstanz hinzugefügt, die daraufhin die Nachverfolgungsdatensätze empfangen.</span><span class="sxs-lookup"><span data-stu-id="4dd54-144">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
-```  
-  
+```xml  
 <configuration>   
   <system.web>   
     <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
@@ -91,9 +95,9 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>   
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehavior>   
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Überwachungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md)
+## <a name="see-also"></a><span data-ttu-id="4dd54-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4dd54-145">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
+ <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
+ [<span data-ttu-id="4dd54-146">Nachverfolgung und Ablaufverfolgung für Workflows</span><span class="sxs-lookup"><span data-stu-id="4dd54-146">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="4dd54-147">Überwachungsteilnehmer</span><span class="sxs-lookup"><span data-stu-id="4dd54-147">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

@@ -1,34 +1,38 @@
 ---
-title: "Optionen zum Hosten von Workflows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Optionen zum Hosten von Workflows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 06d39fc37d40747eef323d83f65426e015099913
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Optionen zum Hosten von Workflows
-Für die meisten [!INCLUDE[wf](../../../includes/wf-md.md)]\-Beispiele werden Workflows verwendet, die in einer Konsolenanwendung gehostet werden. In der Praxis ist dies jedoch kein realistisches Workflowszenario.Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen gehostet – entweder in einem vom Entwickler erstellten Webdienst oder in einer Serveranwendung wie [!INCLUDE[iisver](../../../includes/iisver-md.md)] oder AppFabric.Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
+# <a name="workflow-hosting-options"></a><span data-ttu-id="2781e-102">Optionen zum Hosten von Workflows</span><span class="sxs-lookup"><span data-stu-id="2781e-102">Workflow Hosting Options</span></span>
+<span data-ttu-id="2781e-103">Für die meisten [!INCLUDE[wf](../../../includes/wf-md.md)]-Beispiele werden Workflows verwendet, die in einer Konsolenanwendung gehostet werden. In der Praxis ist dies jedoch kein realistisches Workflowszenario.</span><span class="sxs-lookup"><span data-stu-id="2781e-103">Most of the [!INCLUDE[wf](../../../includes/wf-md.md)] samples use workflows that are hosted in a console application, but this isn't a realistic scenario for real-world workflows.</span></span> <span data-ttu-id="2781e-104">Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen gehostet – entweder in einem vom Entwickler erstellten Webdienst oder in einer Serveranwendung wie [!INCLUDE[iisver](../../../includes/iisver-md.md)] oder AppFabric.</span><span class="sxs-lookup"><span data-stu-id="2781e-104">Workflows in actual business applications will be hosted in persistent processes- either a Windows service authored by the developer, or a server application such as [!INCLUDE[iisver](../../../includes/iisver-md.md)] or AppFabric.</span></span> <span data-ttu-id="2781e-105">Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.</span><span class="sxs-lookup"><span data-stu-id="2781e-105">The differences between these approaches are as follows.</span></span>  
   
-## Hosten von Workflows in IIS mit Windows AppFabric  
- Das Verwenden von IIS mit AppFabric ist die bevorzugte Hostmethode für Workflows.Die Hostanwendung für Workflows mit AppFabric ist Windows Activation Service \(WAS\). Durch diesen Dienst wird nur die Abhängigkeit von "HTTP over IIS" entfernt.  
+## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a><span data-ttu-id="2781e-106">Hosten von Workflows in IIS mit Windows AppFabric</span><span class="sxs-lookup"><span data-stu-id="2781e-106">Hosting workflows in IIS with Windows AppFabric</span></span>  
+ <span data-ttu-id="2781e-107">Das Verwenden von IIS mit AppFabric ist die bevorzugte Hostmethode für Workflows.</span><span class="sxs-lookup"><span data-stu-id="2781e-107">Using IIS with AppFabric is the preferred host for workflows.</span></span> <span data-ttu-id="2781e-108">Die Hostanwendung für Workflows mit AppFabric ist Windows Activation Service (WAS). Durch diesen Dienst wird nur die Abhängigkeit von "HTTP over IIS" entfernt.</span><span class="sxs-lookup"><span data-stu-id="2781e-108">The host application for workflows using AppFabric is Windows Activation Service, which removes the dependency on HTTP over IIS alone.</span></span>  
   
-## Hosten von Workflows nur in IIS  
- Die alleinige Verwendung von [!INCLUDE[iisver](../../../includes/iisver-md.md)] wird nicht empfohlen, da Verwaltungs\- und Überwachungstools mit AppFabric verfügbar sind, die die Wartung ausgeführter Anwendungen erleichtern.Workflows sollten nur alleine in [!INCLUDE[iisver](../../../includes/iisver-md.md)] gehostet werden, wenn der Wechsel zu AppFabric Infrastrukturprobleme mit sich bringen würde.  
+## <a name="hosting-workflows-in-iis-alone"></a><span data-ttu-id="2781e-109">Hosten von Workflows nur in IIS</span><span class="sxs-lookup"><span data-stu-id="2781e-109">Hosting workflows in IIS alone</span></span>  
+ <span data-ttu-id="2781e-110">Die alleinige Verwendung von [!INCLUDE[iisver](../../../includes/iisver-md.md)] wird nicht empfohlen, da Verwaltungs- und Überwachungstools mit AppFabric verfügbar sind, die die Wartung ausgeführter Anwendungen erleichtern.</span><span class="sxs-lookup"><span data-stu-id="2781e-110">Using [!INCLUDE[iisver](../../../includes/iisver-md.md)] alone is not recommended, as there are management and monitoring tools available with AppFabric that facilitate maintenance of running applications.</span></span> <span data-ttu-id="2781e-111">Workflows sollten nur alleine in [!INCLUDE[iisver](../../../includes/iisver-md.md)] gehostet werden, wenn der Wechsel zu AppFabric Infrastrukturprobleme mit sich bringen würde.</span><span class="sxs-lookup"><span data-stu-id="2781e-111">Workflows should only be hosted in [!INCLUDE[iisver](../../../includes/iisver-md.md)] alone if there are infrastructure concerns with moving to AppFabric.</span></span>  
   
 > [!WARNING]
->  Von [!INCLUDE[iisver](../../../includes/iisver-md.md)] werden Anwendungspools regelmäßig aus verschiedenen Gründen wiederverwendet.Wenn ein Anwendungspool wiederverwendet wird, akzeptiert IIS keine an den alten Pool gerichteten Nachrichten und instanziiert einen neuen Anwendungspool, um neue Anforderungen zu akzeptieren.Wenn ein Workflow nach dem Senden einer Antwort weiter ausgeführt wird, hat [!INCLUDE[iisver](../../../includes/iisver-md.md)] davon keine Kenntnis, und der Hostanwendungspool wird möglicherweise wiederverwendet.In diesem Fall wird der Workflow abgebrochen, und die Überwachungsdienste zeichnen eine [1004 \- WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation//1004-workflowinstanceaborted.md)\-Meldung auf, in der kein Grund angegeben ist.  
+>  <span data-ttu-id="2781e-112">Von [!INCLUDE[iisver](../../../includes/iisver-md.md)] werden Anwendungspools regelmäßig aus verschiedenen Gründen wiederverwendet.</span><span class="sxs-lookup"><span data-stu-id="2781e-112">[!INCLUDE[iisver](../../../includes/iisver-md.md)] recycles application pools periodically for various reasons.</span></span> <span data-ttu-id="2781e-113">Wenn ein Anwendungspool wiederverwendet wird, akzeptiert IIS keine an den alten Pool gerichteten Nachrichten und instanziiert einen neuen Anwendungspool, um neue Anforderungen zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="2781e-113">When an application pool is recycled, IIS stops accepting messages to the old pool, and instantiates a new application pool to accept new requests.</span></span> <span data-ttu-id="2781e-114">Wenn ein Workflow nach dem Senden einer Antwort weiter ausgeführt wird, hat [!INCLUDE[iisver](../../../includes/iisver-md.md)] davon keine Kenntnis, und der Hostanwendungspool wird möglicherweise wiederverwendet.</span><span class="sxs-lookup"><span data-stu-id="2781e-114">If a workflow continues working after sending a response, [!INCLUDE[iisver](../../../includes/iisver-md.md)] will not be aware of the work being done, and may recycle the hosting application pool.</span></span> <span data-ttu-id="2781e-115">Wenn dies geschieht, der Workflow abgebrochen wird und Überwachungsdienste aufzeichnen wird eine [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) Nachricht mit einem leeren Feld "Grund".</span><span class="sxs-lookup"><span data-stu-id="2781e-115">If this happens, the workflow will abort, and tracking services will record a [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) message with an empty Reason field.</span></span>  
 >   
->  Wenn Persistenz verwendet wird, müssen die seit dem letzten Persistenzpunkt abgebrochenen Instanzen explizit neu gestartet werden.  
+>  <span data-ttu-id="2781e-116">Wenn Persistenz verwendet wird, müssen die seit dem letzten Persistenzpunkt abgebrochenen Instanzen explizit neu gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="2781e-116">If persistence is used, the host must explicitly restart aborted instances from the last persistence point.</span></span>  
 >   
->  Bei Verwendung von AppFabric setzt der Workflowverwaltungsdienst die Ausführung des Workflows schließlich ab dem letzten erfolgreichen Persistenzpunkt fort, wenn Persistenz verwendet wird.Wenn keine Persistenz verwendet wird und der Workflow Vorgänge außerhalb eines Anforderungs\-\/Wartemusters ausführt, gehen die Daten beim Workflowabbruch verloren.  
+>  <span data-ttu-id="2781e-117">Bei Verwendung von AppFabric setzt der Workflowverwaltungsdienst die Ausführung des Workflows schließlich ab dem letzten erfolgreichen Persistenzpunkt fort, wenn Persistenz verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2781e-117">If AppFabric is used, the workflow management service will eventually resume the workflow from the last successful persistence point if persistence is used.</span></span> <span data-ttu-id="2781e-118">Wenn keine Persistenz verwendet wird und der Workflow Vorgänge außerhalb eines Anforderungs-/Wartemusters ausführt, gehen die Daten beim Workflowabbruch verloren.</span><span class="sxs-lookup"><span data-stu-id="2781e-118">If no persistence is used, and the workflow performs operations outside a Request/Response pattern, data will be lost when the workflow aborts.</span></span>  
   
-## Hosten eines Workflows in einem benutzerdefinierten Windows\-Dienst  
- Wenn ein benutzerdefinierter Workflowdienst zum Hosten des Workflows erstellt wird, muss der Entwickler viele Funktionen, die von AppFabric standardmäßig bereitgestellt werden, duplizieren. Gleichzeitig erhöht dies jedoch auch die Flexibilität bei benutzerdefinierten Funktionen.Diese Möglichkeit sollte nur in Betracht gezogen werden, wenn AppFabric nicht verwendet werden kann.
+## <a name="hosting-a-workflow-in-a-custom-windows-service"></a><span data-ttu-id="2781e-119">Hosten eines Workflows in einem benutzerdefinierten Windows-Dienst</span><span class="sxs-lookup"><span data-stu-id="2781e-119">Hosting a workflow in a custom Windows Service</span></span>  
+ <span data-ttu-id="2781e-120">Wenn ein benutzerdefinierter Workflowdienst zum Hosten des Workflows erstellt wird, muss der Entwickler viele Funktionen, die von AppFabric standardmäßig bereitgestellt werden, duplizieren. Gleichzeitig erhöht dies jedoch auch die Flexibilität bei benutzerdefinierten Funktionen.</span><span class="sxs-lookup"><span data-stu-id="2781e-120">Creating a custom workflow service to host the workflow will require the developer to duplicate a lot of the functionality provided out-of-box by AppFabric, but will allow for more flexibility with custom functionality.</span></span> <span data-ttu-id="2781e-121">Diese Möglichkeit sollte nur in Betracht gezogen werden, wenn AppFabric nicht verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="2781e-121">This option should only be considered if AppFabric proves to not be an option.</span></span>

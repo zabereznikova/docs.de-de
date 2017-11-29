@@ -1,31 +1,34 @@
 ---
-title: "Verbindungspooling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verbindungspooling
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c7398fbea3b59cafed6f9a7f2f4f0440ef29b80a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verbindungspooling
-Das Herstellen einer Verbindung mit einer Datenquelle kann viel Zeit kosten.  Um die Kosten für das Herstellen von Verbindungen zu reduzieren, verwendet ADO.NET eine Optimierungstechnik, die auch als *Verbindungspooling* bezeichnet wird und geeignet ist, die Kosten für das wiederholte Öffnen und Schließen von Verbindungen zu minimieren.  Das Verbindungspooling wird bei den einzelnen .NET Framework\-Datenanbietern unterschiedlich gehandhabt.  
+# <a name="connection-pooling"></a><span data-ttu-id="c13c5-102">Verbindungspooling</span><span class="sxs-lookup"><span data-stu-id="c13c5-102">Connection Pooling</span></span>
+<span data-ttu-id="c13c5-103">Das Herstellen einer Verbindung mit einer Datenquelle kann viel Zeit kosten.</span><span class="sxs-lookup"><span data-stu-id="c13c5-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="c13c5-104">Um die Kosten für das Öffnen von Verbindungen zu minimieren, verwendet ADO.NET eine Optimierungstechnik, die auch aufgerufen *Verbindungspooling*, und die Kosten für das wiederholte öffnen und Schließen von Verbindungen geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="c13c5-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="c13c5-105">Das Verbindungspooling wird bei den einzelnen .NET Framework-Datenanbietern unterschiedlich gehandhabt.</span><span class="sxs-lookup"><span data-stu-id="c13c5-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
   
-## In diesem Abschnitt  
- [SQL Server\-Verbindungspooling \(ADO.NET\)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- Bietet eine Übersicht über das Verbindungspooling und beschreibt, wie das Verbindungspooling in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] funktioniert.  
+## <a name="in-this-section"></a><span data-ttu-id="c13c5-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c13c5-106">In This Section</span></span>  
+ [<span data-ttu-id="c13c5-107">SQL Server-Verbindungspooling (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="c13c5-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+ <span data-ttu-id="c13c5-108">Bietet eine Übersicht über das Verbindungspooling und beschreibt, wie das Verbindungspooling in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] funktioniert.</span><span class="sxs-lookup"><span data-stu-id="c13c5-108">Provides an overview of connection pooling and describes how connection pooling works in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
- [OLE DB\-, ODBC\- und Oracle\-Verbindungspooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- Beschreibt das Verbindungspooling für den .NET Framework\-Datenanbieter für OLE DB, den .NET Framework\-Datenanbieter für ODBC und den .NET Framework\-Datenanbieter für Oracle.  
+ [<span data-ttu-id="c13c5-109">OLE DB, ODBC und Oracle-Verbindungs-Pooling</span><span class="sxs-lookup"><span data-stu-id="c13c5-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ <span data-ttu-id="c13c5-110">Beschreibt das Verbindungspooling für den .NET Framework-Datenanbieter für OLE DB, den .NET Framework-Datenanbieter für ODBC und den .NET Framework-Datenanbieter für Oracle.</span><span class="sxs-lookup"><span data-stu-id="c13c5-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
   
-## Siehe auch  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="c13c5-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c13c5-111">See Also</span></span>  
+ [<span data-ttu-id="c13c5-112">Abrufen und Ändern von Daten in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c13c5-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="c13c5-113">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="c13c5-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

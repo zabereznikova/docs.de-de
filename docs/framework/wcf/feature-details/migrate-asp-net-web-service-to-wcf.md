@@ -1,35 +1,38 @@
 ---
-title: "Vorgehensweise: Migrieren von ASP.NET-Webdienstcode zu Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Migrieren von ASP.NET-Webdienstcode zu Windows Communication Foundation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 94d6cc499caddc8b3cbbf8ba7845e4de5441165c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Migrieren von ASP.NET-Webdienstcode zu Windows Communication Foundation
-Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] migriert wird.  
+# <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a><span data-ttu-id="ecd2e-102">Vorgehensweise: Migrieren von ASP.NET-Webdienstcode zu Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ecd2e-102">How to: Migrate ASP.NET Web Service Code to the Windows Communication Foundation</span></span>
+<span data-ttu-id="ecd2e-103">Die folgende Prozedur beschreibt, wie ein ASP.NET-Webdienst zu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] migriert wird.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-103">The following procedure describes how to migrate an ASP.NET Web Service to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## Verfahren  
+## <a name="procedure"></a><span data-ttu-id="ecd2e-104">Verfahren</span><span class="sxs-lookup"><span data-stu-id="ecd2e-104">Procedure</span></span>  
   
-#### So migrieren Sie ASP.NET\-Webdienstcode zu WCF  
+#### <a name="to-migrate-aspnet-web-service-code-to-wcf"></a><span data-ttu-id="ecd2e-105">So migrieren Sie ASP.NET-Webdienstcode zu WCF</span><span class="sxs-lookup"><span data-stu-id="ecd2e-105">To migrate ASP.NET Web service code to WCF</span></span>  
   
-1.  Stellen Sie sicher, dass für den Dienst ein umfassender Satz von Tests vorhanden ist.  
+1.  <span data-ttu-id="ecd2e-106">Stellen Sie sicher, dass für den Dienst ein umfassender Satz von Tests vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-106">Ensure that a comprehensive set of tests exist for the service.</span></span>  
   
-2.  Generieren Sie die WSDL für den Dienst, und speichern Sie eine Kopie in dem Ordner, in dem sich auch die ASMX\-Datei des Diensts befindet.  
+2.  <span data-ttu-id="ecd2e-107">Generieren Sie die WSDL für den Dienst, und speichern Sie eine Kopie in dem Ordner, in dem sich auch die ASMX-Datei des Diensts befindet.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-107">Generate the WSDL for the service and save a copy in the same folder as the service’s .asmx file.</span></span>  
   
-3.  Aktualisieren Sie den ASP.NET\-Webdienst für die Verwendung von .NET 2.0.  Stellen Sie zunächst .NET Framework 2.0 für die Anwendung in IIS bereit, und automatisieren Sie anschließend mithilfe von Visual Studio 2005 den Codeumwandlungsprozess gemäß den Anweisungen in [Step\-By\-Step Guide to Converting Web Projects from Visual Studio .NET 2002\/2003 to Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).  Führen Sie die Tests aus.  
+3.  <span data-ttu-id="ecd2e-108">Aktualisieren Sie den ASP.NET-Webdienst für die Verwendung von .NET 2.0.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-108">Upgrade the ASP.NET Web service to use .NET 2.0.</span></span> <span data-ttu-id="ecd2e-109">Zuerst .NET Framework 2.0 für die Anwendung in IIS bereitzustellen, und verwenden Sie Visual Studio 2005 den codeumwandlungsprozess automatisieren, wie im [Step Guide to Converting Web Projects aus Visual Studio .NET 2002/2003 to Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).</span><span class="sxs-lookup"><span data-stu-id="ecd2e-109">First deploy the .NET Framework 2.0 to the application in IIS, and then use Visual Studio 2005 to automate the code conversion process, as documented in [Step-By-Step Guide to Converting Web Projects from Visual Studio .NET 2002/2003 to Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).</span></span> <span data-ttu-id="ecd2e-110">Führen Sie die Tests aus.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-110">Run the set of tests.</span></span>  
   
-4.  Geben Sie explizite Werte für den `Namespace` und die `Name`\-Parameter der <xref:System.Web.Services.WebService>\-Attribute an, sofern diese nicht bereits vorhanden sind.  Führen Sie die gleichen Schritte für die `MessageName`\-Parameter von <xref:System.Web.Services.WebMethodAttribute> aus.  Sind für die SOAPAction\-HTTP\-Header, gemäß denen Anforderungen zu Methoden geroutet werden, noch keine expliziten Werte angegeben, geben Sie explizit den Standardwert für den `Action`\-Parameter mit einem <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> an.  
+4.  <span data-ttu-id="ecd2e-111">Geben Sie explizite Werte für den `Namespace` und die `Name`-Parameter der <xref:System.Web.Services.WebService>-Attribute an, sofern diese nicht bereits vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-111">Provide explicit values for the `Namespace` and `Name` parameters of the <xref:System.Web.Services.WebService> attributes if they are not provided already.</span></span> <span data-ttu-id="ecd2e-112">Führen Sie die gleichen Schritte für die `MessageName`-Parameter von <xref:System.Web.Services.WebMethodAttribute> aus.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-112">Do the same for the `MessageName` parameter of the <xref:System.Web.Services.WebMethodAttribute>.</span></span> <span data-ttu-id="ecd2e-113">Sind für die SOAPAction-HTTP-Header, gemäß denen Anforderungen zu Methoden geroutet werden, noch keine expliziten Werte angegeben, geben Sie explizit den Standardwert für den `Action`-Parameter mit einem <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> an.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-113">If explicit values are not already provided for the SOAPAction HTTP headers by which requests are routed to methods, then explicitly specify the default value of the `Action` parameter with a <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span></span>  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -49,9 +52,9 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
     }  
     ```  
   
-5.  Testen Sie die Änderung.  
+5.  <span data-ttu-id="ecd2e-114">Testen Sie die Änderung.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-114">Test the change.</span></span>  
   
-6.  Verschieben Sie sämtlichen substanziellen Code im Textkörper der Methoden der Klasse in eine separate Klasse, die von der ursprünglichen Klasse verwendet wird.  
+6.  <span data-ttu-id="ecd2e-115">Verschieben Sie sämtlichen substanziellen Code im Textkörper der Methoden der Klasse in eine separate Klasse, die von der ursprünglichen Klasse verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-115">Move any substantive code in the bodies of the methods of the class to a separate class that the original class is made to use.</span></span>  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -79,13 +82,13 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
     }  
     ```  
   
-7.  Testen Sie die Änderung.  
+7.  <span data-ttu-id="ecd2e-116">Testen Sie die Änderung.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-116">Test the change.</span></span>  
   
-8.  Fügen Sie dem ASP.NET\-Webdienstprojekt Verweise auf die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Assemblys System.ServiceModel und System.Runtime.Serialization hinzu.  
+8.  <span data-ttu-id="ecd2e-117">Fügen Sie dem ASP.NET-Webdienstprojekt Verweise auf die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Assemblys System.ServiceModel und System.Runtime.Serialization hinzu.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-117">Add references to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assemblies System.ServiceModel and System.Runtime.Serialization to the ASP.NET Web service project.</span></span>  
   
-9. Führen Sie [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus, um eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clientklasse der WSDL zu generieren.  Fügen Sie der Lösung das generierte Klassenmodul hinzu.  
+9. <span data-ttu-id="ecd2e-118">Führen Sie [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aus der WSDL-Client-Klasse.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-118">Run [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class from the WSDL.</span></span> <span data-ttu-id="ecd2e-119">Fügen Sie der Lösung das generierte Klassenmodul hinzu.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-119">Add the generated class module to the solution.</span></span>  
   
-10. Das im vorangehenden Schritt generierte Klassenmodul enthält die Definition einer Schnittstelle.  
+10. <span data-ttu-id="ecd2e-120">Das im vorangehenden Schritt generierte Klassenmodul enthält die Definition einer Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-120">The class module generated in the preceding step contains the definition of an interface.</span></span>  
   
     ```  
     [System.ServiceModel.ServiceContractAttribute()]  
@@ -98,7 +101,7 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
     }  
     ```  
   
-     Passen Sie die Definition der ASP.NET\-Webdienstklasse so an, dass für die Klasse die Implementierung dieser Schnittstelle festgelegt ist. Im Folgenden finden Sie ein entsprechendes Codebeispiel.  
+     <span data-ttu-id="ecd2e-121">Passen Sie die Definition der ASP.NET-Webdienstklasse so an, dass für die Klasse die Implementierung dieser Schnittstelle festgelegt ist. Im Folgenden finden Sie ein entsprechendes Codebeispiel.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-121">Modify the definition of the ASP.NET Web service class so that the class is defined as implementing that interface, as shown in the following sample code.</span></span>  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -120,9 +123,9 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
     }  
     ```  
   
-11. Kompilieren Sie das Projekt.  Aufgrund des in Schritt 9 generierten Codes treten möglicherweise einige Fehler auf, da einige Typdefinitionen dupliziert wurden.  Beheben Sie diese Fehler. In der Regel ist hierzu das Löschen der bereits vorhandenen Typendefinitionen ausreichend.  Testen Sie die Änderung.  
+11. <span data-ttu-id="ecd2e-122">Kompilieren Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-122">Compile the project.</span></span> <span data-ttu-id="ecd2e-123">Aufgrund des in Schritt9 generierten Codes treten möglicherweise einige Fehler auf, da einige Typdefinitionen dupliziert wurden.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-123">There may be some errors due to the code generated in step nine that duplicated some type definitions.</span></span> <span data-ttu-id="ecd2e-124">Beheben Sie diese Fehler. In der Regel ist hierzu das Löschen der bereits vorhandenen Typendefinitionen ausreichend.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-124">Repair those errors, usually by deleting the pre-existing definitions of the types.</span></span> <span data-ttu-id="ecd2e-125">Testen Sie die Änderung.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-125">Test the change.</span></span>  
   
-12. Entfernen Sie die ASP.NET\-spezifischen Attribute. Beispiele: <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> und <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.  
+12. <span data-ttu-id="ecd2e-126">Entfernen Sie die ASP.NET-spezifischen Attribute. Beispiele: <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> und <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-126">Remove the ASP.NET-specific attributes, such as the <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> and <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span></span>  
   
     ```  
     public class Adder: AdderSoap  
@@ -141,19 +144,19 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
     }  
     ```  
   
-13. Konfigurieren Sie die Klasse, bei der es sich nun um eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstklasse handelt, sodass der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-ASP.NET\-Kompatibilitätsmodus verwendet wird, wenn der ASP.NET\-Webdienst auf einem der folgenden Elemente beruht:  
+13. <span data-ttu-id="ecd2e-127">Konfigurieren Sie die Klasse, bei der es sich nun um eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstklasse handelt, sodass der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-ASP.NET-Kompatibilitätsmodus verwendet wird, wenn der ASP.NET-Webdienst auf einem der folgenden Elemente beruht:</span><span class="sxs-lookup"><span data-stu-id="ecd2e-127">Configure the class, which is now a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service type, to require [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET compatibility mode if the ASP.NET Web service relied on any of the following:</span></span>  
   
-    -   Der <xref:System.Web.HttpContext>\-Klasse.  
+    -   <span data-ttu-id="ecd2e-128">Der <xref:System.Web.HttpContext>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-128">The <xref:System.Web.HttpContext> class.</span></span>  
   
-    -   Den ASP.NET\-Profilen.  
+    -   <span data-ttu-id="ecd2e-129">Den ASP.NET-Profilen.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-129">The ASP.NET Profiles.</span></span>  
   
-    -   Den ACLs für ASMX\-Dateien.  
+    -   <span data-ttu-id="ecd2e-130">Den ACLs für ASMX-Dateien.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-130">ACLs on .asmx files.</span></span>  
   
-    -   Den IIS\-Authentifizierungsoptionen.  
+    -   <span data-ttu-id="ecd2e-131">Den IIS-Authentifizierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-131">IIS authentication options.</span></span>  
   
-    -   Den Identitätswechseloptionen von ASP.NET.  
+    -   <span data-ttu-id="ecd2e-132">Den Identitätswechseloptionen von ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-132">ASP.NET impersonation options.</span></span>  
   
-    -   Der ASP.NET\-Globalisierung.  
+    -   <span data-ttu-id="ecd2e-133">Der ASP.NET-Globalisierung.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-133">ASP.NET globalization.</span></span>  
   
     ```  
     [System.ServiceModel.AspNetCompatibilityRequirements(  
@@ -161,18 +164,18 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
     public class Adder: AdderSoap  
     ```  
   
-14. Benennen Sie die ursprüngliche ASMX\-Datei zu .asmx.old um.  
+14. <span data-ttu-id="ecd2e-134">Benennen Sie die ursprüngliche ASMX-Datei zu .asmx.old um.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-134">Rename the original .asmx file to .asmx.old.</span></span>  
   
-15. Erstellen Sie für den Dienst eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstdatei, versehen Sie sie mit der Erweiterung .asmx, und speichern Sie sie im Anwendungsstammverzeichnis der IIS.  
+15. <span data-ttu-id="ecd2e-135">Erstellen Sie für den Dienst eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstdatei, versehen Sie sie mit der Erweiterung .asmx, und speichern Sie sie im Anwendungsstammverzeichnis der IIS.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-135">Create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service file for the service, give it the extension, .asmx, and save it into the application root in IIS.</span></span>  
   
-    ```  
+    ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. Fügen Sie der entsprechenden Web.config\-Datei eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Konfiguration hinzu.  Konfigurieren Sie den Dienst so, dass [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) sowie die im vorangegangenen Schritt erstellte ASMX\-Datei verwendet werden und keine eigene WSDL erstellt, sondern die WSDL aus dem zweiten Schritt verwendet wird.  Konfigurieren Sie den Dienst zudem für die Verwendung des ASP.NET\-Kompatibilitätsmodus \(sofern erforderlich\).  
+16. <span data-ttu-id="ecd2e-136">Fügen Sie der entsprechenden Web.config-Datei eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Konfiguration hinzu.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-136">Add a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration for the service to its Web.config file.</span></span> <span data-ttu-id="ecd2e-137">Konfigurieren Sie den Dienst verwendet die [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), zum Verwenden der Service-Datei mit der Erweiterung .asmx, die in den vorherigen Schritten erstellt und WSDL nicht für sich selbst zu generieren, aber die WSDL-Datei aus Schritt 2 verwendet.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-137">Configure the service to use the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), to use the service file with the .asmx extension created in the preceding steps, and to not generate WSDL for itself, but to use the WSDL from step two.</span></span> <span data-ttu-id="ecd2e-138">Konfigurieren Sie den Dienst zudem für die Verwendung des ASP.NET-Kompatibilitätsmodus (sofern erforderlich).</span><span class="sxs-lookup"><span data-stu-id="ecd2e-138">Also configure it to use ASP.NET compatibility mode if necessary.</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
      <system.web>  
@@ -193,7 +196,7 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
       <service name="MyOrganization.Adder "  
         behaviorConfiguration="AdderBehavior">  
        <endpoint   
-        address="”  
+        address=""  
         binding="basicHttpBinding"  
         contract="AdderSoap "/>  
        </service>  
@@ -212,14 +215,13 @@ Die folgende Prozedur beschreibt, wie ein ASP.NET\-Webdienst zu [!INCLUDE[indigo
        aspNetCompatibilityEnabled ="true"/>  
      </system.serviceModel>  
     </configuration>  
-  
     ```  
   
-17. Speichern Sie die Konfiguration.  
+17. <span data-ttu-id="ecd2e-139">Speichern Sie die Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-139">Save the configuration.</span></span>  
   
-18. Kompilieren Sie das Projekt.  
+18. <span data-ttu-id="ecd2e-140">Kompilieren Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-140">Compile the project.</span></span>  
   
-19. Vergewissern Sie sich durch Ausführen der Tests, dass alle Änderungen ordnungsgemäß funktionieren.  
+19. <span data-ttu-id="ecd2e-141">Vergewissern Sie sich durch Ausführen der Tests, dass alle Änderungen ordnungsgemäß funktionieren.</span><span class="sxs-lookup"><span data-stu-id="ecd2e-141">Run the set of tests to make sure all the changes work.</span></span>  
   
-## Siehe auch  
- [Vorgehensweise: Migrieren von ASP.NET\-Webdienstcode zu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="ecd2e-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ecd2e-142">See Also</span></span>  
+ [<span data-ttu-id="ecd2e-143">Vorgehensweise: Migrieren von ASP.NET Web Service-Clientcode zu Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ecd2e-143">How to: Migrate ASP.NET Web Service Client Code to the Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

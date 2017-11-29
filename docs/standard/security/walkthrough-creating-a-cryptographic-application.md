@@ -1,220 +1,221 @@
 ---
-title: "Walkthrough: Creating a Cryptographic Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "cryptography [NET Framework], example"
-  - "cryptography [NET Framework], cryptographic application example"
-  - "cryptography [NET Framework], application example"
+title: 'Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cryptography [NET Framework], example
+- cryptography [NET Framework], cryptographic application example
+- cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ab596fd10de81e60e6396268cbd5c5b31aa13078
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Walkthrough: Creating a Cryptographic Application
-Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird.  Die Codebeispiele sind für eine Windows Forms\-Anwendung vorgesehen.  Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards.  Stattdessen veranschaulicht sie die Grundlagen der Ver\- und Entschlüsselung.  
+# <a name="walkthrough-creating-a-cryptographic-application"></a><span data-ttu-id="2e08d-102">Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung</span><span class="sxs-lookup"><span data-stu-id="2e08d-102">Walkthrough: Creating a Cryptographic Application</span></span>
+<span data-ttu-id="2e08d-103">Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird.</span><span class="sxs-lookup"><span data-stu-id="2e08d-103">This walkthrough demonstrates how to encrypt and decrypt content.</span></span> <span data-ttu-id="2e08d-104">Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-104">The code examples are designed for a Windows Forms application.</span></span> <span data-ttu-id="2e08d-105">Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards.</span><span class="sxs-lookup"><span data-stu-id="2e08d-105">This application does not demonstrate real world scenarios, such as using smart cards.</span></span> <span data-ttu-id="2e08d-106">Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.</span><span class="sxs-lookup"><span data-stu-id="2e08d-106">Instead, it demonstrates the fundamentals of encryption and decryption.</span></span>  
   
- In dieser exemplarische Vorgehensweise werden die folgenden Richtlinien für Verschlüsselung verwendet:  
+ <span data-ttu-id="2e08d-107">In dieser exemplarische Vorgehensweise werden die folgenden Richtlinien für Verschlüsselung verwendet:</span><span class="sxs-lookup"><span data-stu-id="2e08d-107">This walkthrough uses the following guidelines for encryption:</span></span>  
   
--   Verwenden Sie die <xref:System.Security.Cryptography.RijndaelManaged>\-Klasse \(ein symmetrischer Algorithmus\), um Daten zu ver\- und entschlüsseln, indem Sie den automatisch generierten Schlüssel \(<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>\) und Initialisierungsvektor \(<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>\) verwenden.  
+-   <span data-ttu-id="2e08d-108">Verwenden Sie die <xref:System.Security.Cryptography.RijndaelManaged>-Klasse (ein symmetrischer Algorithmus), um Daten zu ver- und entschlüsseln, indem Sie den automatisch generierten Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) verwenden.</span><span class="sxs-lookup"><span data-stu-id="2e08d-108">Use the <xref:System.Security.Cryptography.RijndaelManaged> class, a symmetric algorithm, to encrypt and decrypt data by using its automatically generated <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> and <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.</span></span>  
   
--   Verwenden Sie den <xref:System.Security.Cryptography.RSACryptoServiceProvider> \(ein asymmetrischer Algorithmus\), um den Schlüssel für die Daten zu ver\- und zu entschlüsseln, die mit <xref:System.Security.Cryptography.RijndaelManaged> verschlüsselt wurden.  Asymmetrische Algorithmen sind am besten für kleinere Datenmengen geeignet, zum Beispiel für einen Schlüssel.  
+-   <span data-ttu-id="2e08d-109">Verwenden Sie den <xref:System.Security.Cryptography.RSACryptoServiceProvider> (ein asymmetrischer Algorithmus), um den Schlüssel für die Daten zu ver- und zu entschlüsseln, die mit <xref:System.Security.Cryptography.RijndaelManaged> verschlüsselt wurden.</span><span class="sxs-lookup"><span data-stu-id="2e08d-109">Use the <xref:System.Security.Cryptography.RSACryptoServiceProvider>, an asymmetric algorithm, to encrypt and decrypt the key to the data encrypted by <xref:System.Security.Cryptography.RijndaelManaged>.</span></span> <span data-ttu-id="2e08d-110">Asymmetrische Algorithmen sind am besten für kleinere Datenmengen geeignet, zum Beispiel für einen Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="2e08d-110">Asymmetric algorithms are best used for smaller amounts of data, such as a key.</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie Daten auf Ihrem Computer schützen möchten, anstatt verschlüsselte Inhalte mit anderen Personen auszutauschen, sollten Sie überlegen, die <xref:System.Security.Cryptography.ProtectedData>\-Klasse oder die <xref:System.Security.Cryptography.ProtectedMemory>\-Klasse zu verwenden.  
+    >  <span data-ttu-id="2e08d-111">Wenn Sie Daten auf Ihrem Computer schützen möchten, anstatt verschlüsselte Inhalte mit anderen Personen auszutauschen, sollten Sie überlegen, die <xref:System.Security.Cryptography.ProtectedData>-Klasse oder die <xref:System.Security.Cryptography.ProtectedMemory>-Klasse zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2e08d-111">If you want to protect data on your computer instead of exchanging encrypted content with other people, consider using the <xref:System.Security.Cryptography.ProtectedData> or <xref:System.Security.Cryptography.ProtectedMemory> classes.</span></span>  
   
- In der folgenden Tabelle sind die kryptografischen Aufgaben in diesem Thema zusammengefasst.  
+ <span data-ttu-id="2e08d-112">In der folgenden Tabelle sind die kryptografischen Aufgaben in diesem Thema zusammengefasst.</span><span class="sxs-lookup"><span data-stu-id="2e08d-112">The following table summarizes the cryptographic tasks in this topic.</span></span>  
   
-|Aufgabe|Beschreibung|  
-|-------------|------------------|  
-|Erstellen einer Windows Forms\-Anwendung|Listet die Steuerelemente auf, die zum Ausführen der Anwendung erforderlich sind.|  
-|Deklarieren von globalen Objekten|Deklariert Zeichenfolgenpfadvariablen, die <xref:System.Security.Cryptography.CspParameters> und den <xref:System.Security.Cryptography.RSACryptoServiceProvider>, um den globalen Kontext der <xref:System.Windows.Forms.Form>\-Klasse zu erhalten.|  
-|Erstellen eines asymmetrischen Schlüssels|Erstellt ein asymmetrisches öffentliches und privates Schlüsselwertpaar und weist ihm einen Schlüsselcontainernamen zu.|  
-|Verschlüsseln einer Datei|Zeigt ein Dialogfeld an, in dem eine Datei für die Verschlüsselung ausgewählt wird, und verschlüsselt die Datei.|  
-|Entschlüsseln einer Datei|Zeigt ein Dialogfeld an, in dem eine verschlüsselte Datei für die Entschlüsselung ausgewählt wird, und entschlüsselt die Datei.|  
-|Abrufen eines privaten Schlüssels|Ruft das volle Schlüsselpaar über den Schlüsselcontainernamen ab.|  
-|Exportieren eines öffentlichen Schlüssels|Speichert den Schlüssel in einer XML\-Datei mit ausschließlich öffentlichen Parametern.|  
-|Importieren eines öffentlichen Schlüssels|Lädt den Schlüssel aus einer XML\-Datei in den Schlüsselcontainer.|  
-|Testen der Anwendung|Listet Verfahren zum Testen dieser Anwendung auf.|  
+|<span data-ttu-id="2e08d-113">Aufgabe</span><span class="sxs-lookup"><span data-stu-id="2e08d-113">Task</span></span>|<span data-ttu-id="2e08d-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e08d-114">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="2e08d-115">Erstellen einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="2e08d-115">Creating a Windows Forms application</span></span>|<span data-ttu-id="2e08d-116">Listet die Steuerelemente auf, die zum Ausführen der Anwendung erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="2e08d-116">Lists the controls that are required to run the application.</span></span>|  
+|<span data-ttu-id="2e08d-117">Deklarieren von globalen Objekten</span><span class="sxs-lookup"><span data-stu-id="2e08d-117">Declaring global objects</span></span>|<span data-ttu-id="2e08d-118">Deklariert Zeichenfolgenpfadvariablen, die <xref:System.Security.Cryptography.CspParameters> und den <xref:System.Security.Cryptography.RSACryptoServiceProvider>, um den globalen Kontext der <xref:System.Windows.Forms.Form>-Klasse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="2e08d-118">Declares string path variables, the <xref:System.Security.Cryptography.CspParameters>, and the <xref:System.Security.Cryptography.RSACryptoServiceProvider> to have global context of the <xref:System.Windows.Forms.Form> class.</span></span>|  
+|<span data-ttu-id="2e08d-119">Erstellen eines asymmetrischen Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-119">Creating an asymmetric key</span></span>|<span data-ttu-id="2e08d-120">Erstellt ein asymmetrisches öffentliches und privates Schlüsselwertpaar und weist ihm einen Schlüsselcontainernamen zu.</span><span class="sxs-lookup"><span data-stu-id="2e08d-120">Creates an asymmetric public and private key value pair and assigns it a key container name.</span></span>|  
+|<span data-ttu-id="2e08d-121">Verschlüsseln einer Datei</span><span class="sxs-lookup"><span data-stu-id="2e08d-121">Encrypting a file</span></span>|<span data-ttu-id="2e08d-122">Zeigt ein Dialogfeld an, in dem eine Datei für die Verschlüsselung ausgewählt wird, und verschlüsselt die Datei.</span><span class="sxs-lookup"><span data-stu-id="2e08d-122">Displays a dialog box to select a file for encryption and encrypts the file.</span></span>|  
+|<span data-ttu-id="2e08d-123">Entschlüsseln einer Datei</span><span class="sxs-lookup"><span data-stu-id="2e08d-123">Decrypting a file</span></span>|<span data-ttu-id="2e08d-124">Zeigt ein Dialogfeld an, in dem eine verschlüsselte Datei für die Entschlüsselung ausgewählt wird, und entschlüsselt die Datei.</span><span class="sxs-lookup"><span data-stu-id="2e08d-124">Displays a dialog box to select an encrypted file for decryption and decrypts the file.</span></span>|  
+|<span data-ttu-id="2e08d-125">Abrufen eines privaten Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-125">Getting a private key</span></span>|<span data-ttu-id="2e08d-126">Ruft das volle Schlüsselpaar über den Schlüsselcontainernamen ab.</span><span class="sxs-lookup"><span data-stu-id="2e08d-126">Gets the full key pair using the key container name.</span></span>|  
+|<span data-ttu-id="2e08d-127">Exportieren eines öffentlichen Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-127">Exporting a public key</span></span>|<span data-ttu-id="2e08d-128">Speichert den Schlüssel in einer XML-Datei mit ausschließlich öffentlichen Parametern.</span><span class="sxs-lookup"><span data-stu-id="2e08d-128">Saves the key to an XML file with only public parameters.</span></span>|  
+|<span data-ttu-id="2e08d-129">Importieren eines öffentlichen Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-129">Importing a public key</span></span>|<span data-ttu-id="2e08d-130">Lädt den Schlüssel aus einer XML-Datei in den Schlüsselcontainer.</span><span class="sxs-lookup"><span data-stu-id="2e08d-130">Loads the key from an XML file into the key container.</span></span>|  
+|<span data-ttu-id="2e08d-131">Testen der Anwendung</span><span class="sxs-lookup"><span data-stu-id="2e08d-131">Testing the application</span></span>|<span data-ttu-id="2e08d-132">Listet Verfahren zum Testen dieser Anwendung auf.</span><span class="sxs-lookup"><span data-stu-id="2e08d-132">Lists procedures for testing this application.</span></span>|  
   
-## Vorbereitungsmaßnahmen  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
+## <a name="prerequisites"></a><span data-ttu-id="2e08d-133">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="2e08d-133">Prerequisites</span></span>  
+ <span data-ttu-id="2e08d-134">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="2e08d-134">You need the following components to complete this walkthrough:</span></span>  
   
--   Verweise auf die Namespaces <xref:System.IO> und <xref:System.Security.Cryptography>.  
+-   <span data-ttu-id="2e08d-135">Verweise auf die Namespaces <xref:System.IO> und <xref:System.Security.Cryptography>.</span><span class="sxs-lookup"><span data-stu-id="2e08d-135">References to the <xref:System.IO> and <xref:System.Security.Cryptography> namespaces.</span></span>  
   
-## Erstellen einer Windows Forms\-Anwendung  
- Die meisten Codebeispiele in dieser exemplarischen Vorgehensweise sind als Ereignishandler für Button\-Steuerelemente konzipiert.  In der folgenden Tabelle sind die Steuerelemente aufgelistet, die für die Beispielanwendung und die erforderlichen Namen benötigt werden, um mit den Codebeispielen übereinzustimmen.  
+## <a name="creating-a-windows-forms-application"></a><span data-ttu-id="2e08d-136">Erstellen einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="2e08d-136">Creating a Windows Forms Application</span></span>  
+ <span data-ttu-id="2e08d-137">Die meisten Codebeispiele in dieser exemplarischen Vorgehensweise sind als Ereignishandler für Button-Steuerelemente konzipiert.</span><span class="sxs-lookup"><span data-stu-id="2e08d-137">Most of the code examples in this walkthrough are designed to be event handlers for button controls.</span></span> <span data-ttu-id="2e08d-138">In der folgenden Tabelle sind die Steuerelemente aufgelistet, die für die Beispielanwendung und die erforderlichen Namen benötigt werden, um mit den Codebeispielen übereinzustimmen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-138">The following table lists the controls required for the sample application and their required names to match the code examples.</span></span>  
   
-|Steuerelement|Name|Texteigenschaft \(nach Bedarf\)|  
-|-------------------|----------|-------------------------------------|  
-|<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Datei verschlüsseln|  
-|<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Datei entschlüsseln|  
-|<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|Schlüssel erstellen|  
-|<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|Öffentlichen Schlüssel exportieren|  
-|<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|Öffentlichen Schlüssel importieren|  
-|<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|Privaten Schlüssel abrufen|  
+|<span data-ttu-id="2e08d-139">Steuerelement</span><span class="sxs-lookup"><span data-stu-id="2e08d-139">Control</span></span>|<span data-ttu-id="2e08d-140">Name</span><span class="sxs-lookup"><span data-stu-id="2e08d-140">Name</span></span>|<span data-ttu-id="2e08d-141">Texteigenschaft (nach Bedarf)</span><span class="sxs-lookup"><span data-stu-id="2e08d-141">Text property (as needed)</span></span>|  
+|-------------|----------|---------------------------------|  
+|<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|<span data-ttu-id="2e08d-142">Datei verschlüsseln</span><span class="sxs-lookup"><span data-stu-id="2e08d-142">Encrypt File</span></span>|  
+|<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|<span data-ttu-id="2e08d-143">Datei entschlüsseln</span><span class="sxs-lookup"><span data-stu-id="2e08d-143">Decrypt File</span></span>|  
+|<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|<span data-ttu-id="2e08d-144">Schlüssel erstellen</span><span class="sxs-lookup"><span data-stu-id="2e08d-144">Create Keys</span></span>|  
+|<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|<span data-ttu-id="2e08d-145">Öffentlichen Schlüssel exportieren</span><span class="sxs-lookup"><span data-stu-id="2e08d-145">Export Public Key</span></span>|  
+|<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|<span data-ttu-id="2e08d-146">Öffentlichen Schlüssel importieren</span><span class="sxs-lookup"><span data-stu-id="2e08d-146">Import Public Key</span></span>|  
+|<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|<span data-ttu-id="2e08d-147">Privaten Schlüssel abrufen</span><span class="sxs-lookup"><span data-stu-id="2e08d-147">Get Private Key</span></span>|  
 |<xref:System.Windows.Forms.Label>|`label1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- Doppelklicken Sie auf die Schaltflächen im Visual Studio\-Designer, um deren Ereignishandler zu erstellen.  
+ <span data-ttu-id="2e08d-148">Doppelklicken Sie auf die Schaltflächen im Visual Studio-Designer, um deren Ereignishandler zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-148">Double-click the buttons in the  Visual Studio designer to create their event handlers.</span></span>  
   
-## Deklarieren von globalen Objekten  
- Fügen Sie dem Konstruktor des Form\-Objekts folgenden Code hinzu.  Bearbeiten Sie die Zeichenfolgenvariablen für Ihre Umgebung und Einstellungen.  
+## <a name="declaring-global-objects"></a><span data-ttu-id="2e08d-149">Deklarieren von globalen Objekten</span><span class="sxs-lookup"><span data-stu-id="2e08d-149">Declaring Global Objects</span></span>  
+ <span data-ttu-id="2e08d-150">Fügen Sie dem Konstruktor des Form-Objekts folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="2e08d-150">Add the following code to the Form's constructor.</span></span> <span data-ttu-id="2e08d-151">Bearbeiten Sie die Zeichenfolgenvariablen für Ihre Umgebung und Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-151">Edit the string variables for your environment and preferences.</span></span>  
   
  [!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
  [!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
   
-## Erstellen eines asymmetrischen Schlüssels  
- Mit dieser Aufgabe wird ein asymmetrischer Schlüssel erstellt, der den <xref:System.Security.Cryptography.RijndaelManaged>\-Schlüssel ver\- und entschlüsselt.  Dieser Schlüssel wurde verwendet, um den Inhalt zu verschlüsseln, und zeigt den Schlüsselcontainernamen auf dem Label\-Steuerelement an.  
+## <a name="creating-an-asymmetric-key"></a><span data-ttu-id="2e08d-152">Erstellen eines asymmetrischen Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-152">Creating an Asymmetric Key</span></span>  
+ <span data-ttu-id="2e08d-153">Mit dieser Aufgabe wird ein asymmetrischer Schlüssel erstellt, der den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel ver- und entschlüsselt.</span><span class="sxs-lookup"><span data-stu-id="2e08d-153">This task creates an asymmetric key that encrypts and decrypts the <xref:System.Security.Cryptography.RijndaelManaged> key.</span></span> <span data-ttu-id="2e08d-154">Dieser Schlüssel wurde verwendet, um den Inhalt zu verschlüsseln, und zeigt den Schlüsselcontainernamen auf dem Label-Steuerelement an.</span><span class="sxs-lookup"><span data-stu-id="2e08d-154">This key was used to encrypt the content and it displays the key container name on the label control.</span></span>  
   
- Fügen Sie folgenden Code als `Click`\-Ereignishandler für die `Create Keys`\-Schaltfläche hinzu \(`buttonCreateAsmKeys_Click`\).  
+ <span data-ttu-id="2e08d-155">Fügen Sie folgenden Code als `Click`-Ereignishandler für die `Create Keys`-Schaltfläche hinzu (`buttonCreateAsmKeys_Click`).</span><span class="sxs-lookup"><span data-stu-id="2e08d-155">Add the following code as the `Click` event handler for the `Create Keys` button (`buttonCreateAsmKeys_Click`).</span></span>  
   
  [!code-csharp[CryptoWalkThru#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#2)]
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
-## Verschlüsseln einer Datei  
- Diese Aufgabe bedingt zwei Methoden: die Ereignishandlermethode für die `Encrypt File`\-Schaltfläche \(`buttonEncryptFile_Click`\) und die `EncryptFile`\-Methode.  Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
+## <a name="encrypting-a-file"></a><span data-ttu-id="2e08d-156">Verschlüsseln einer Datei</span><span class="sxs-lookup"><span data-stu-id="2e08d-156">Encrypting a File</span></span>  
+ <span data-ttu-id="2e08d-157">Diese Aufgabe bedingt zwei Methoden: die Ereignishandlermethode für die `Encrypt File` Schaltfläche (`buttonEncryptFile_Click`) und die `EncryptFile` Methode.</span><span class="sxs-lookup"><span data-stu-id="2e08d-157">This task involves two methods: the event handler method for the `Encrypt File` button (`buttonEncryptFile_Click`) and the `EncryptFile` method.</span></span> <span data-ttu-id="2e08d-158">Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.</span><span class="sxs-lookup"><span data-stu-id="2e08d-158">The first method displays a dialog box for selecting a file and passes the file name to the second method, which performs the encryption.</span></span>  
   
- Der verschlüsselte Inhalt, der Schlüssel und der IV werden zusammen in einem <xref:System.IO.FileStream>\-Objekt gespeichert, das als Verschlüsselungspaket bezeichnet wird.  
+ <span data-ttu-id="2e08d-159">Der verschlüsselte Inhalt, der Schlüssel und der IV werden zusammen in einem <xref:System.IO.FileStream>-Objekt gespeichert, das als Verschlüsselungspaket bezeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="2e08d-159">The encrypted content, key, and IV are all saved to one <xref:System.IO.FileStream>, which is referred to as the encryption package.</span></span>  
   
- Die `EncryptFile`\-Methode führt folgende Schritte aus:  
+ <span data-ttu-id="2e08d-160">Die `EncryptFile`-Methode führt folgende Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="2e08d-160">The `EncryptFile` method does the following:</span></span>  
   
-1.  Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>\-Algorithmus, um den Inhalt zu verschlüsseln.  
+1.  <span data-ttu-id="2e08d-161">Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu verschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="2e08d-161">Creates a <xref:System.Security.Cryptography.RijndaelManaged> symmetric algorithm to encrypt the content.</span></span>  
   
-2.  Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>\-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>\-Schlüssel zu verschlüsseln.  
+2.  <span data-ttu-id="2e08d-162">Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln. </span><span class="sxs-lookup"><span data-stu-id="2e08d-162">Creates an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to encrypt the <xref:System.Security.Cryptography.RijndaelManaged> key.</span></span>  
   
-3.  Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>\-Objekt, um den <xref:System.IO.FileStream> der Quelldatei in Byteblöcken in ein Ziel\-<xref:System.IO.FileStream>\-Objekt für die verschlüsselte Datei zu lesen und zu verschlüsseln.  
+3.  <span data-ttu-id="2e08d-163">Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den <xref:System.IO.FileStream> der Quelldatei in Byteblöcken in ein Ziel-<xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei zu lesen und zu verschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="2e08d-163">Uses a <xref:System.Security.Cryptography.CryptoStream> object to read and encrypt the <xref:System.IO.FileStream> of the source file, in blocks of bytes, into a destination <xref:System.IO.FileStream> object for the encrypted file.</span></span>  
   
-4.  Sie ermittelt die Länge des verschlüsselten Schlüssels und IVs und erstellt Bytearrays mit deren Längenwerten.  
+4.  <span data-ttu-id="2e08d-164">Sie ermittelt die Länge des verschlüsselten Schlüssels und IVs und erstellt Bytearrays mit deren Längenwerten.</span><span class="sxs-lookup"><span data-stu-id="2e08d-164">Determines the lengths of the encrypted key and IV, and creates byte arrays of their length values.</span></span>  
   
-5.  Sie schreibt den Schlüssel, den IV und deren Längenwerte in das verschlüsselte Paket.  
+5.  <span data-ttu-id="2e08d-165">Sie schreibt den Schlüssel, den IV und deren Längenwerte in das verschlüsselte Paket.</span><span class="sxs-lookup"><span data-stu-id="2e08d-165">Writes the Key, IV, and their length values to the encrypted package.</span></span>  
   
- Das Verschlüsselungspaket hat das folgende Format:  
+ <span data-ttu-id="2e08d-166">Das Verschlüsselungspaket hat das folgende Format:</span><span class="sxs-lookup"><span data-stu-id="2e08d-166">The encryption package uses the following format:</span></span>  
   
--   Schlüssellänge, Bytes 0 \- 3  
+-   <span data-ttu-id="2e08d-167">Schlüssellänge, Bytes 0 - 3</span><span class="sxs-lookup"><span data-stu-id="2e08d-167">Key length, bytes 0 - 3</span></span>  
   
--   IV\-Länge, Bytes 4 \- 7  
+-   <span data-ttu-id="2e08d-168">IV-Länge, Bytes 4 - 7</span><span class="sxs-lookup"><span data-stu-id="2e08d-168">IV length, bytes 4 - 7</span></span>  
   
--   Verschlüsselte Schlüssel  
+-   <span data-ttu-id="2e08d-169">Verschlüsselte Schlüssel</span><span class="sxs-lookup"><span data-stu-id="2e08d-169">Encrypted key</span></span>  
   
--   IV  
+-   <span data-ttu-id="2e08d-170">IV</span><span class="sxs-lookup"><span data-stu-id="2e08d-170">IV</span></span>  
   
--   Verschlüsselungsverfahrenstext  
+-   <span data-ttu-id="2e08d-171">Verschlüsselungsverfahrenstext</span><span class="sxs-lookup"><span data-stu-id="2e08d-171">Cipher text</span></span>  
   
- Durch die Längenangaben für den Schlüssel und den IV lassen sich Startpunkte und Längen aller Teile des Verschlüsselungspakets bestimmen. Diese können dann zum Entschlüsseln der Datei verwendet werden.  
+ <span data-ttu-id="2e08d-172">Durch die Längenangaben für den Schlüssel und den IV lassen sich Startpunkte und Längen aller Teile des Verschlüsselungspakets bestimmen. Diese können dann zum Entschlüsseln der Datei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2e08d-172">You can use the lengths of the key and IV to determine the starting points and lengths of all parts of the encryption package, which can then be used to decrypt the file.</span></span>  
   
- Fügen Sie folgenden Code als `Click`\-Ereignishandler für die `Encrypt File`\-Schaltfläche hinzu \(`buttonEncryptFile_Click`\).  
+ <span data-ttu-id="2e08d-173">Fügen Sie folgenden Code als `Click`-Ereignishandler für die `Encrypt File`-Schaltfläche hinzu (`buttonEncryptFile_Click`).</span><span class="sxs-lookup"><span data-stu-id="2e08d-173">Add the following code as the `Click` event handler for the `Encrypt File` button (`buttonEncryptFile_Click`).</span></span>  
   
  [!code-csharp[CryptoWalkThru#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#3)]
  [!code-vb[CryptoWalkThru#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#3)]  
   
- Fügen Sie dem Formular die folgende `EncryptFile`\-Methode hinzu.  
+ <span data-ttu-id="2e08d-174">Fügen Sie dem Form-Objekt die folgende `EncryptFile`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2e08d-174">Add the following `EncryptFile` method to the form.</span></span>  
   
  [!code-csharp[CryptoWalkThru#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#5)]
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
-## Entschlüsseln einer Datei  
- Diese Aufgabe bedingt zwei Methoden: die Ereignishandlermethode für die `Decrypt File`\-Schaltfläche \(`buttonEncryptFile_Click`\) und die `DecryptFile`\-Methode.  Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Entschlüsselung ausführt.  
+## <a name="decrypting-a-file"></a><span data-ttu-id="2e08d-175">Entschlüsseln einer Datei</span><span class="sxs-lookup"><span data-stu-id="2e08d-175">Decrypting a File</span></span>  
+ <span data-ttu-id="2e08d-176">Diese Aufgabe bedingt zwei Methoden: die Ereignishandlermethode für die `Decrypt File`-Schaltfläche (`buttonEncryptFile_Click`) und die `DecryptFile`-Methode.</span><span class="sxs-lookup"><span data-stu-id="2e08d-176">This task involves two methods, the event handler method for the `Decrypt File` button (`buttonEncryptFile_Click`), and the `DecryptFile` method.</span></span> <span data-ttu-id="2e08d-177">Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Entschlüsselung ausführt.</span><span class="sxs-lookup"><span data-stu-id="2e08d-177">The first method displays a dialog box for selecting a file and passes its file name to the second method, which performs the decryption.</span></span>  
   
- Die `Decrypt`\-Methode führt folgende Schritte aus:  
+ <span data-ttu-id="2e08d-178">Die `Decrypt`-Methode führt folgende Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="2e08d-178">The `Decrypt` method does the following:</span></span>  
   
-1.  Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>\-Algorithmus, um den Inhalt zu entschlüsseln.  
+1.  <span data-ttu-id="2e08d-179">Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="2e08d-179">Creates a <xref:System.Security.Cryptography.RijndaelManaged> symmetric algorithm to decrypt the content.</span></span>  
   
-2.  Sie liest die ersten acht Bytes des <xref:System.IO.FileStream>\-Objekts des verschlüsselten Pakets in Bytearrays ein, um die Länge des verschlüsselten Schlüssels und IVs zu erhalten.  
+2.  <span data-ttu-id="2e08d-180">Sie liest die ersten acht Bytes des <xref:System.IO.FileStream>-Objekts des verschlüsselten Pakets in Bytearrays ein, um die Länge des verschlüsselten Schlüssels und IVs zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="2e08d-180">Reads the first eight bytes of the <xref:System.IO.FileStream> of the encrypted package into byte arrays to obtain the lengths of the encrypted key and the IV.</span></span>  
   
-3.  Sie extrahiert den Schlüssel und den IV aus dem Verschlüsselungspaket in Bytearrays hinein.  
+3.  <span data-ttu-id="2e08d-181">Sie extrahiert den Schlüssel und den IV aus dem Verschlüsselungspaket in Bytearrays hinein.</span><span class="sxs-lookup"><span data-stu-id="2e08d-181">Extracts the key and IV from the encryption package into byte arrays.</span></span>  
   
-4.  Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>\-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>\-Schlüssel zu entschlüsseln.  
+4.  <span data-ttu-id="2e08d-182">Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln. </span><span class="sxs-lookup"><span data-stu-id="2e08d-182">Creates an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to decrypt the <xref:System.Security.Cryptography.RijndaelManaged> key.</span></span>  
   
-5.  Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>\-Objekt, um den Verschlüsselungsverfahrenstext\-Abschnitt des <xref:System.IO.FileStream>\-Verschlüsselungspakets als Byteblöcke in das <xref:System.IO.FileStream>\-Objekt für die verschlüsselte Datei einzulesen und zu entschlüsseln.  Nach Beendigung dieses Vorgangs ist die Entschlüsselung abgeschlossen.  
+5.  <span data-ttu-id="2e08d-183">Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den Verschlüsselungsverfahrenstext-Abschnitt des <xref:System.IO.FileStream>-Verschlüsselungspakets als Byteblöcke in das <xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei einzulesen und zu entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="2e08d-183">Uses a <xref:System.Security.Cryptography.CryptoStream> object to read and decrypt the cipher text section of the <xref:System.IO.FileStream> encryption package, in blocks of bytes, into the <xref:System.IO.FileStream> object for the decrypted file.</span></span> <span data-ttu-id="2e08d-184">Nach Beendigung dieses Vorgangs ist die Entschlüsselung abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-184">When this is finished, the decryption is completed.</span></span>  
   
- Fügen Sie folgenden Code als `Click`\-Ereignishandler für die Schaltfläche `Decrypt File` hinzu.  
+ <span data-ttu-id="2e08d-185">Fügen Sie folgenden Code als `Click`-Ereignishandler für die Schaltfläche `Decrypt File` hinzu.</span><span class="sxs-lookup"><span data-stu-id="2e08d-185">Add the following code as the `Click` event handler for the `Decrypt File` button.</span></span>  
   
  [!code-csharp[CryptoWalkThru#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#4)]
  [!code-vb[CryptoWalkThru#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#4)]  
   
- Fügen Sie dem Form\-Objekt die folgende `DecryptFile`\-Methode hinzu.  
+ <span data-ttu-id="2e08d-186">Fügen Sie dem Form-Objekt die folgende `DecryptFile`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2e08d-186">Add the following `DecryptFile` method to the form.</span></span>  
   
  [!code-csharp[CryptoWalkThru#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#6)]
  [!code-vb[CryptoWalkThru#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#6)]  
   
-## Exportieren eines öffentlichen Schlüssels  
- In dieser Aufgabe wird der über die Schaltfläche `Create Keys` erstellte Schlüssel in einer Datei gespeichert.  Es werden nur die öffentlichen Parameter exportiert.  
+## <a name="exporting-a-public-key"></a><span data-ttu-id="2e08d-187">Exportieren eines öffentlichen Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-187">Exporting a Public Key</span></span>  
+ <span data-ttu-id="2e08d-188">In dieser Aufgabe wird der über die Schaltfläche `Create Keys` erstellte Schlüssel in einer Datei gespeichert.</span><span class="sxs-lookup"><span data-stu-id="2e08d-188">This task saves the key created by the `Create Keys` button to a file.</span></span> <span data-ttu-id="2e08d-189">Es werden nur die öffentlichen Parameter exportiert.</span><span class="sxs-lookup"><span data-stu-id="2e08d-189">It exports only the public parameters.</span></span>  
   
- In dieser Aufgabe wird das Szenario simuliert, in dem Alice ihren öffentlichen Schlüssel Bob gibt, sodass er Dateien an sie verschlüsseln kann.  Er und andere, die im Besitz dieses öffentlichen Schlüssels sind, können die Dateien nicht entschlüsseln, da sie nicht das vollständige Schlüsselpaar mit privaten Parametern haben.  
+ <span data-ttu-id="2e08d-190">In dieser Aufgabe wird das Szenario simuliert, in dem Alice ihren öffentlichen Schlüssel Bob gibt, sodass er Dateien an sie verschlüsseln kann.</span><span class="sxs-lookup"><span data-stu-id="2e08d-190">This task simulates the scenario of Alice giving Bob her public key so that he can encrypt files for her.</span></span> <span data-ttu-id="2e08d-191">Er und andere, die im Besitz dieses öffentlichen Schlüssels sind, können die Dateien nicht entschlüsseln, da sie nicht das vollständige Schlüsselpaar mit privaten Parametern haben.</span><span class="sxs-lookup"><span data-stu-id="2e08d-191">He and others who have that public key will not be able to decrypt them because they do not have the full key pair with private parameters.</span></span>  
   
- Fügen Sie folgenden Code als `Click`\-Ereignishandler für die `Export Public Key`\-Schaltfläche hinzu \(`buttonExportPublicKey_Click`\).  
+ <span data-ttu-id="2e08d-192">Fügen Sie folgenden Code als `Click`-Ereignishandler für die `Export Public Key`-Schaltfläche hinzu (`buttonExportPublicKey_Click`).</span><span class="sxs-lookup"><span data-stu-id="2e08d-192">Add the following code as the `Click` event handler for the `Export Public Key` button (`buttonExportPublicKey_Click`).</span></span>  
   
  [!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
  [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
-## Importieren eines öffentlichen Schlüssels  
- In dieser Aufgabe wird der Schlüssel mit ausschließlich öffentlichen Parametern, wie er über die Schaltfläche `Export Public Key` erstellt wurde,geladen und als Schlüsselcontainername festgelegt.  
+## <a name="importing-a-public-key"></a><span data-ttu-id="2e08d-193">Importieren eines öffentlichen Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-193">Importing a Public Key</span></span>  
+ <span data-ttu-id="2e08d-194">In dieser Aufgabe wird der Schlüssel mit ausschließlich öffentlichen Parametern, wie er über die Schaltfläche `Export Public Key` erstellt wurde,geladen und als Schlüsselcontainername festgelegt.</span><span class="sxs-lookup"><span data-stu-id="2e08d-194">This task loads the key with only public parameters, as created by the `Export Public Key` button, and sets it as the key container name.</span></span>  
   
- In dieser Aufgabe wird das Szenario simuliert, in dem Bob den Schlüssel von Alice mit ausschließlich öffentlichen Parametern lädt, sodass er Dateien an sie verschlüsseln kann.  
+ <span data-ttu-id="2e08d-195">In dieser Aufgabe wird das Szenario simuliert, in dem Bob den Schlüssel von Alice mit ausschließlich öffentlichen Parametern lädt, sodass er Dateien an sie verschlüsseln kann.</span><span class="sxs-lookup"><span data-stu-id="2e08d-195">This task simulates the scenario of Bob loading Alice's key with only public parameters so he can encrypt files for her.</span></span>  
   
- Fügen Sie folgenden Code als `Click`\-Ereignishandler für die `Import Public Key`\-Schaltfläche hinzu \(`buttonImportPublicKey_Click`\).  
+ <span data-ttu-id="2e08d-196">Fügen Sie folgenden Code als `Click`-Ereignishandler für die `Import Public Key`-Schaltfläche hinzu (`buttonImportPublicKey_Click`).</span><span class="sxs-lookup"><span data-stu-id="2e08d-196">Add the following code as the `Click` event handler for the `Import Public Key` button (`buttonImportPublicKey_Click`).</span></span>  
   
  [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
  [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
-## Abrufen eines privaten Schlüssels  
- In dieser Aufgabe wird der Schlüsselcontainername auf den Namen des Schlüssels festgelegt, der über die Schaltfläche `Create Keys` erstellt wurde.  Der Schlüsselcontainer enthält das komplette Schlüsselpaar mit privaten Parametern.  
+## <a name="getting-a-private-key"></a><span data-ttu-id="2e08d-197">Abrufen eines privaten Schlüssels</span><span class="sxs-lookup"><span data-stu-id="2e08d-197">Getting a Private Key</span></span>  
+ <span data-ttu-id="2e08d-198">In dieser Aufgabe wird der Schlüsselcontainername auf den Namen des Schlüssels festgelegt, der über die Schaltfläche `Create Keys` erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="2e08d-198">This task sets the key container name to the name of the key created by using the `Create Keys` button.</span></span> <span data-ttu-id="2e08d-199">Der Schlüsselcontainer enthält das komplette Schlüsselpaar mit privaten Parametern.</span><span class="sxs-lookup"><span data-stu-id="2e08d-199">The key container will contain the full key pair with private parameters.</span></span>  
   
- In dieser Aufgabe wird das Szenario simuliert, in dem Alice ihren privaten Schlüssel dazu verwendet, Dateien zu entschlüsseln, die von Bob verschlüsselt wurden.  
+ <span data-ttu-id="2e08d-200">In dieser Aufgabe wird das Szenario simuliert, in dem Alice ihren privaten Schlüssel dazu verwendet, Dateien zu entschlüsseln, die von Bob verschlüsselt wurden.</span><span class="sxs-lookup"><span data-stu-id="2e08d-200">This task simulates the scenario of Alice using her private key to decrypt files encrypted by Bob.</span></span>  
   
- Fügen Sie folgenden Code als `Click`\-Ereignishandler für die `Get Private Key`\-Schaltfläche hinzu \(`buttonGetPrivateKey_Click`\).  
+ <span data-ttu-id="2e08d-201">Fügen Sie folgenden Code als `Click`-Ereignishandler für die `Get Private Key`-Schaltfläche hinzu (`buttonGetPrivateKey_Click`).</span><span class="sxs-lookup"><span data-stu-id="2e08d-201">Add the following code as the `Click` event handler for the `Get Private Key` button (`buttonGetPrivateKey_Click`).</span></span>  
   
  [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
  [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## Testen der Anwendung  
- Nachdem Sie die Anwendung erstellt haben, führen Sie die folgenden Testszenarien aus.  
+## <a name="testing-the-application"></a><span data-ttu-id="2e08d-202">Testen der Anwendung</span><span class="sxs-lookup"><span data-stu-id="2e08d-202">Testing the Application</span></span>  
+ <span data-ttu-id="2e08d-203">Nachdem Sie die Anwendung erstellt haben, führen Sie die folgenden Testszenarien aus.</span><span class="sxs-lookup"><span data-stu-id="2e08d-203">After you have built the application, perform the following testing scenarios.</span></span>  
   
-#### So erstellen Sie Schlüssel, so ver\- und entschlüsseln Sie  
+#### <a name="to-create-keys-encrypt-and-decrypt"></a><span data-ttu-id="2e08d-204">So erstellen Sie Schlüssel, so ver- und entschlüsseln Sie</span><span class="sxs-lookup"><span data-stu-id="2e08d-204">To create keys, encrypt, and decrypt</span></span>  
   
-1.  Klicken Sie auf die Schaltfläche `Create Keys`.  Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass es sich um ein vollständiges Schlüsselpaar handelt.  
+1.  <span data-ttu-id="2e08d-205">Klicken Sie auf die Schaltfläche `Create Keys`.</span><span class="sxs-lookup"><span data-stu-id="2e08d-205">Click the `Create Keys` button.</span></span> <span data-ttu-id="2e08d-206">Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass es sich um ein vollständiges Schlüsselpaar handelt.</span><span class="sxs-lookup"><span data-stu-id="2e08d-206">The label displays the key name and shows that it is a full key pair.</span></span>  
   
-2.  Klicken Sie auf die Schaltfläche `Export Public Key`.  Durch das Exportieren der öffentlichen Schlüsselparameter wird der aktuelle Schlüssel nicht ändert.  
+2.  <span data-ttu-id="2e08d-207">Klicken Sie auf die Schaltfläche `Export Public Key`.</span><span class="sxs-lookup"><span data-stu-id="2e08d-207">Click the `Export Public Key` button.</span></span> <span data-ttu-id="2e08d-208">Durch das Exportieren der öffentlichen Schlüsselparameter wird der aktuelle Schlüssel nicht ändert.</span><span class="sxs-lookup"><span data-stu-id="2e08d-208">Note that exporting the public key parameters does not change the current key.</span></span>  
   
-3.  Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.  
+3.  <span data-ttu-id="2e08d-209">Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.</span><span class="sxs-lookup"><span data-stu-id="2e08d-209">Click the `Encrypt File` button and select a file.</span></span>  
   
-4.  Klicken Sie auf die Schaltfläche `Decrypt File`,und wählen Sie die soeben verschlüsselte Datei aus.  
+4.  <span data-ttu-id="2e08d-210">Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus.</span><span class="sxs-lookup"><span data-stu-id="2e08d-210">Click the `Decrypt File` button and select the file just encrypted.</span></span>  
   
-5.  Sehen Sie sich die nun entschlüsselte Datei an.  
+5.  <span data-ttu-id="2e08d-211">Sehen Sie sich die nun entschlüsselte Datei an.</span><span class="sxs-lookup"><span data-stu-id="2e08d-211">Examine the file just decrypted.</span></span>  
   
-6.  Schließen Sie die Anwendung, und starten Sie sie neu, um das Abrufen von beibehaltenen Schlüsselcontainern im nächsten Szenario zu testen.  
+6.  <span data-ttu-id="2e08d-212">Schließen Sie die Anwendung, und starten Sie sie neu, um das Abrufen von beibehaltenen Schlüsselcontainern im nächsten Szenario zu testen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-212">Close the application and restart it to test retrieving persisted key containers in the next scenario.</span></span>  
   
-#### So verschlüsseln Sie mit dem öffentlichen Schlüssel  
+#### <a name="to-encrypt-using-the-public-key"></a><span data-ttu-id="2e08d-213">So verschlüsseln Sie mit dem öffentlichen Schlüssel</span><span class="sxs-lookup"><span data-stu-id="2e08d-213">To encrypt using the public key</span></span>  
   
-1.  Klicken Sie auf die Schaltfläche `Import Public Key`.  Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass dies nur der öffentliche Schlüssel ist.  
+1.  <span data-ttu-id="2e08d-214">Klicken Sie auf die Schaltfläche `Import Public Key`.</span><span class="sxs-lookup"><span data-stu-id="2e08d-214">Click the `Import Public Key` button.</span></span> <span data-ttu-id="2e08d-215">Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass dies nur der öffentliche Schlüssel ist.</span><span class="sxs-lookup"><span data-stu-id="2e08d-215">The label displays the key name and shows that it is public only.</span></span>  
   
-2.  Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.  
+2.  <span data-ttu-id="2e08d-216">Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.</span><span class="sxs-lookup"><span data-stu-id="2e08d-216">Click the `Encrypt File` button and select a file.</span></span>  
   
-3.  Klicken Sie auf die Schaltfläche `Decrypt File`,und wählen Sie die soeben verschlüsselte Datei aus.  Dieser Schritt schlägt fehl, weil Sie für das Entschlüsseln den privaten Schlüssel haben müssen.  
+3.  <span data-ttu-id="2e08d-217">Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus.</span><span class="sxs-lookup"><span data-stu-id="2e08d-217">Click the `Decrypt File` button and select the file just encrypted.</span></span> <span data-ttu-id="2e08d-218">Dieser Schritt schlägt fehl, weil Sie für das Entschlüsseln den privaten Schlüssel haben müssen.</span><span class="sxs-lookup"><span data-stu-id="2e08d-218">This will fail because you must have the private key to decrypt.</span></span>  
   
- Dieses Szenario veranschaulicht, wie mit ausschließlich dem öffentlichen Schlüssel eine Datei für eine andere Person verschlüsselt wird.  Normalerweise würde diese Person Ihnen nur den öffentlichen Schlüssel geben und den privaten Schlüssel für Entschlüsselung zurückbehalten.  
+ <span data-ttu-id="2e08d-219">Dieses Szenario veranschaulicht, wie mit ausschließlich dem öffentlichen Schlüssel eine Datei für eine andere Person verschlüsselt wird.</span><span class="sxs-lookup"><span data-stu-id="2e08d-219">This scenario demonstrates having only the public key to encrypt a file for another person.</span></span> <span data-ttu-id="2e08d-220">Normalerweise würde diese Person Ihnen nur den öffentlichen Schlüssel geben und den privaten Schlüssel für Entschlüsselung zurückbehalten.</span><span class="sxs-lookup"><span data-stu-id="2e08d-220">Typically that person would give you only the public key and withhold the private key for decryption.</span></span>  
   
-#### So entschlüsseln Sie mit dem privaten Schlüssel  
+#### <a name="to-decrypt-using-the-private-key"></a><span data-ttu-id="2e08d-221">So entschlüsseln Sie mit dem privaten Schlüssel</span><span class="sxs-lookup"><span data-stu-id="2e08d-221">To decrypt using the private key</span></span>  
   
-1.  Klicken Sie auf die Schaltfläche `Get Private Key`.  Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, ob es sich um das vollständige Schlüsselpaar handelt.  
+1.  <span data-ttu-id="2e08d-222">Klicken Sie auf die Schaltfläche `Get Private Key`.</span><span class="sxs-lookup"><span data-stu-id="2e08d-222">Click the `Get Private Key` button.</span></span> <span data-ttu-id="2e08d-223">Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, ob es sich um das vollständige Schlüsselpaar handelt.</span><span class="sxs-lookup"><span data-stu-id="2e08d-223">The label displays the key name and shows whether it is the full key pair.</span></span>  
   
-2.  Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus.  Dies ist erfolgreich, weil Sie das vollständige Schlüsselpaar zum Entschlüsseln haben.  
+2.  <span data-ttu-id="2e08d-224">Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus.</span><span class="sxs-lookup"><span data-stu-id="2e08d-224">Click the `Decrypt File` button and select the file just encrypted.</span></span> <span data-ttu-id="2e08d-225">Dies ist erfolgreich, weil Sie das vollständige Schlüsselpaar zum Entschlüsseln haben.</span><span class="sxs-lookup"><span data-stu-id="2e08d-225">This will be successful because you have the full key pair to decrypt.</span></span>  
   
-## Siehe auch  
- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="2e08d-226">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2e08d-226">See Also</span></span>  
+ [<span data-ttu-id="2e08d-227">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="2e08d-227">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

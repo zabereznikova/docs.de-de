@@ -1,72 +1,75 @@
 ---
-title: "Dienste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Services2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e0aee3550921bf4e15d45ae78150d3301395f0f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Dienste
-Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienste veranschaulicht werden.  
+# <a name="services"></a><span data-ttu-id="357df-102">Dienste</span><span class="sxs-lookup"><span data-stu-id="357df-102">Services</span></span>
+<span data-ttu-id="357df-103">Dieser Abschnitt enthält Beispiele, in denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste veranschaulicht werden.</span><span class="sxs-lookup"><span data-stu-id="357df-103">This section contains samples that demonstrate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services.</span></span>  
   
-## In diesem Abschnitt  
- [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Veranschaulicht das Hosten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensten.  
+## <a name="in-this-section"></a><span data-ttu-id="357df-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="357df-104">In This Section</span></span>  
+ [<span data-ttu-id="357df-105">Hosting</span><span class="sxs-lookup"><span data-stu-id="357df-105">Hosting</span></span>](../../../../docs/framework/wcf/feature-details/hosting.md)  
+ <span data-ttu-id="357df-106">Veranschaulicht das Hosten von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten.</span><span class="sxs-lookup"><span data-stu-id="357df-106">Demonstrates hosting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [Dienst\-Interoperabilität](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- Veranschaulicht die Interaktion zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\- und anderen Diensttechnologien.  
+ [<span data-ttu-id="357df-107">Dienst-Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="357df-107">Service Interoperability</span></span>](../../../../docs/framework/wcf/samples/service-interoperability.md)  
+ <span data-ttu-id="357df-108">Veranschaulicht die Interaktion zwischen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]- und anderen Diensttechnologien.</span><span class="sxs-lookup"><span data-stu-id="357df-108">Demonstrates interaction between [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and other service technologies.</span></span>  
   
- [Verhalten](../../../../docs/framework/wcf/samples/behaviors.md)  
- Veranschaulicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstverhalten.  
+ [<span data-ttu-id="357df-109">Verhalten</span><span class="sxs-lookup"><span data-stu-id="357df-109">Behaviors</span></span>](../../../../docs/framework/wcf/samples/behaviors.md)  
+ <span data-ttu-id="357df-110">Veranschaulicht [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstverhalten.</span><span class="sxs-lookup"><span data-stu-id="357df-110">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service behaviors.</span></span>  
   
- [Dienstsicherheit](../../../../docs/framework/wcf/samples/service-security.md)  
- Veranschaulicht die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienstsicherheit.  
+ [<span data-ttu-id="357df-111">Dienstsicherheit</span><span class="sxs-lookup"><span data-stu-id="357df-111">Service Security</span></span>](../../../../docs/framework/wcf/samples/service-security.md)  
+ <span data-ttu-id="357df-112">Veranschaulicht die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienstsicherheit.</span><span class="sxs-lookup"><span data-stu-id="357df-112">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service security.</span></span>  
   
- [Vereinfachte Konfiguration für WCF\-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Zeigt, wie mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein typischer Dienst und ein typischer Client implementiert und konfiguriert werden.  
+ [<span data-ttu-id="357df-113">Vereinfachte Konfiguration für WCF-Dienste</span><span class="sxs-lookup"><span data-stu-id="357df-113">Simplified Configuration for WCF Services</span></span>](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
+ <span data-ttu-id="357df-114">Zeigt, wie mithilfe von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ein typischer Dienst und ein typischer Client implementiert und konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="357df-114">Demonstrates how to implement and configure a typical service and client using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Verwendung von Standardendpunkten](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- Veranschaulicht, wie Standardendpunkte in Dienstkonfigurationsdateien verwendet werden.  
+ [<span data-ttu-id="357df-115">Verwendung von Standardendpunkten</span><span class="sxs-lookup"><span data-stu-id="357df-115">Usage of Standard Endoints</span></span>](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
+ <span data-ttu-id="357df-116">Veranschaulicht, wie Standardendpunkte in Dienstkonfigurationsdateien verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="357df-116">Demonstrates how to use standard endpoints in service configuration files.</span></span>  
   
- [Hierarchisches Konfigurationsmodell](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- Zeigt, wie eine Hierarchie von Konfigurationsdateien für Dienste implementiert wird.  
+ [<span data-ttu-id="357df-117">Hierarchisches Konfigurationsmodell</span><span class="sxs-lookup"><span data-stu-id="357df-117">Hierarchical Configuration Model</span></span>](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
+ <span data-ttu-id="357df-118">Zeigt, wie eine Hierarchie von Konfigurationsdateien für Dienste implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="357df-118">Demonstrates how to implement a hierarchy of configuration files for services.</span></span>  
   
- [Erweiterte Schutzrichtlinie](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
- Veranschaulicht erweiterten Schutz, eine Sicherheitsinitiative zum Schutz vor Man\-In\-The\-Middle\-Angriffen \(MITM\-Angriff, Janusangriff\).  
+ [<span data-ttu-id="357df-119">Erweiterte Schutzrichtlinie</span><span class="sxs-lookup"><span data-stu-id="357df-119">Extended Protection Policy</span></span>](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
+ <span data-ttu-id="357df-120">Veranschaulicht erweiterten Schutz, eine Sicherheitsinitiative zum Schutz vor Man-In-The-Middle-Angriffen (MITM-Angriff, Janusangriff).</span><span class="sxs-lookup"><span data-stu-id="357df-120">Demonstrates Extended Protection, a security initiative for protecting against man-in-the-middle (MITM) attacks.</span></span>  
   
- [Konfigurationskanalfactory](../../../../docs/framework/wcf/samples/configuration-channel-factory.md)  
- Veranschaulicht die Verwendung von <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.  
+ [<span data-ttu-id="357df-121">Konfigurationskanalfactory</span><span class="sxs-lookup"><span data-stu-id="357df-121">Configuration Channel Factory</span></span>](../../../../docs/framework/wcf/samples/configuration-channel-factory.md)  
+ <span data-ttu-id="357df-122">Veranschaulicht die Verwendung von <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span><span class="sxs-lookup"><span data-stu-id="357df-122">Demonstrates the usage of the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span></span>  
   
- [Adressierung](../../../../docs/framework/wcf/samples/addressing.md)  
- Zeigt verschiedene Aspekte und Funktionen von Endpunktadressen.  
+ [<span data-ttu-id="357df-123">Adressierung</span><span class="sxs-lookup"><span data-stu-id="357df-123">Addressing</span></span>](../../../../docs/framework/wcf/samples/addressing.md)  
+ <span data-ttu-id="357df-124">Zeigt verschiedene Aspekte und Funktionen von Endpunktadressen.</span><span class="sxs-lookup"><span data-stu-id="357df-124">Demonstrates various aspects and features of endpoint addresses.</span></span>  
   
- [Imperativ](../../../../docs/framework/wcf/samples/imperative.md)  
- Zeigt, wie eine <xref:System.ServiceModel.WsHttpBinding> für einen Dienstcode definiert wird, anstatt die `wsHttpBinding`\-Bindung in der Konfiguration zu definieren.  
+ [<span data-ttu-id="357df-125">Imperative</span><span class="sxs-lookup"><span data-stu-id="357df-125">Imperative</span></span>](../../../../docs/framework/wcf/samples/imperative.md)  
+ <span data-ttu-id="357df-126">Veranschaulicht das Definieren einer <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> für einen Dienst mithilfe von Code, anstatt die `wsHttpBinding` -Bindung in der Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="357df-126">Demonstrates how to define a <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> for a service using code, instead of defining the `wsHttpBinding` binding in configuration.</span></span>  
   
- [Mehrere Verträge](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
- Veranschaulicht, wie mehrere Verträge für einen Dienst implementiert werden und wie Endpunkte zur Kommunikation mit den einzelnen implementierten Verträgen konfiguriert werden.  
+ [<span data-ttu-id="357df-127">Mehrere Verträge</span><span class="sxs-lookup"><span data-stu-id="357df-127">Multiple Contracts</span></span>](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
+ <span data-ttu-id="357df-128">Veranschaulicht, wie mehrere Verträge für einen Dienst implementiert werden und wie Endpunkte zur Kommunikation mit den einzelnen implementierten Verträgen konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="357df-128">Demonstrates how to implement more than one contract on a service and how to configure endpoints for communicating with each of the implemented contracts.</span></span>  
   
- [Mehrere Endpunkte](../../../../docs/framework/wcf/samples/multiple-endpoints.md)  
- Zeigt, wie mehrere Endpunkte für einen Dienst konfiguriert werden und wie von einem Client mit jedem Endpunkt kommuniziert wird.  
+ [<span data-ttu-id="357df-129">Mehrere Endpunkte</span><span class="sxs-lookup"><span data-stu-id="357df-129">Multiple Endpoints</span></span>](../../../../docs/framework/wcf/samples/multiple-endpoints.md)  
+ <span data-ttu-id="357df-130">Zeigt, wie mehrere Endpunkte für einen Dienst konfiguriert werden und wie von einem Client mit jedem Endpunkt kommuniziert wird.</span><span class="sxs-lookup"><span data-stu-id="357df-130">Demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span>  
   
- [Mehrere Endpunkte unter einem ListenUri](../../../../docs/framework/wcf/samples/multiple-endpoints-at-a-single-listenuri.md)  
- Zeigt einen Dienst, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet.  
+ [<span data-ttu-id="357df-131">Mehrere Endpunkte unter einem ListenUri</span><span class="sxs-lookup"><span data-stu-id="357df-131">Multiple Endpoints at a Single ListenUri</span></span>](../../../../docs/framework/wcf/samples/multiple-endpoints-at-a-single-listenuri.md)  
+ <span data-ttu-id="357df-132">Zeigt einen Dienst, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet.</span><span class="sxs-lookup"><span data-stu-id="357df-132">Demonstrates a service that hosts multiple endpoints at a single `ListenUri`.</span></span>  
   
- [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Veranschaulicht das Senden von zusätzlichen Informationen über einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Aufruf mit Headern.  
+ [<span data-ttu-id="357df-133">OperationContextScope</span><span class="sxs-lookup"><span data-stu-id="357df-133">OperationContextScope</span></span>](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
+ <span data-ttu-id="357df-134">Veranschaulicht das Senden von zusätzlichen Informationen über einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Aufruf mit Headern.</span><span class="sxs-lookup"><span data-stu-id="357df-134">Demonstrates how to send extra information on a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] call using headers.</span></span>  
   
- [Dienstbeschreibung](../../../../docs/framework/wcf/samples/service-description.md)  
- Veranschaulicht, wie ein Dienst seine Dienstbeschreibungsinformationen zur Laufzeit abrufen kann.  
+ [<span data-ttu-id="357df-135">Dienstbeschreibung</span><span class="sxs-lookup"><span data-stu-id="357df-135">Service Description</span></span>](../../../../docs/framework/wcf/samples/service-description.md)  
+ <span data-ttu-id="357df-136">Veranschaulicht, wie ein Dienst seine Dienstbeschreibungsinformationen zur Laufzeit abrufen kann.</span><span class="sxs-lookup"><span data-stu-id="357df-136">Demonstrates how a service can retrieve its service description information at runtime.</span></span>  
   
- [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)  
- Veranschaulicht, wie der Reentrant\-Parallelitätsmodus in einer Dienstimplementierung verwendet wird.
+ [<span data-ttu-id="357df-137">ConcurrencyMode.Reentrant</span><span class="sxs-lookup"><span data-stu-id="357df-137">ConcurrencyMode.Reentrant</span></span>](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)  
+ <span data-ttu-id="357df-138">Veranschaulicht, wie der Reentrant-Parallelitätsmodus in einer Dienstimplementierung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="357df-138">Demonstrates how to use the Reentrant concurrency mode on a service implementation.</span></span>

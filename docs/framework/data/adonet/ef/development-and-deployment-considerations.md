@@ -1,35 +1,38 @@
 ---
-title: "&#220;berlegungen zur Entwicklung und Bereitstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überlegungen zur Entwicklung und Bereitstellung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;berlegungen zur Entwicklung und Bereitstellung
-In den Themen dieses Abschnitts wird auf Punkte eingegangen, die bei der Entwicklung und Bereitstellung einer auf dem ADO.NET Entity Framework basierenden Anwendung zu berücksichtigen sind.  
+# <a name="development-and-deployment-considerations"></a><span data-ttu-id="6efda-102">Überlegungen zur Entwicklung und Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="6efda-102">Development and Deployment Considerations</span></span>
+<span data-ttu-id="6efda-103">In den Themen dieses Abschnitts wird auf Punkte eingegangen, die bei der Entwicklung und Bereitstellung einer auf dem ADO.NET Entity Framework basierenden Anwendung zu berücksichtigen sind.</span><span class="sxs-lookup"><span data-stu-id="6efda-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  
   
-## In diesem Abschnitt  
- [Sicherheitsüberlegungen](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6efda-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="6efda-104">In This Section</span></span>  
+ [<span data-ttu-id="6efda-105">Überlegungen zur Sicherheit</span><span class="sxs-lookup"><span data-stu-id="6efda-105">Security Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
- [Überlegungen zur Leistung](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [<span data-ttu-id="6efda-106">Überlegungen zur Leistung</span><span class="sxs-lookup"><span data-stu-id="6efda-106">Performance Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
   
- [Migrationsaspekte](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [<span data-ttu-id="6efda-107">Überlegungen zur Migration</span><span class="sxs-lookup"><span data-stu-id="6efda-107">Migration Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
   
- [Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [<span data-ttu-id="6efda-108">Überlegungen zur Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="6efda-108">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
-## Siehe auch  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [Übersicht über das Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)   
- [Erste Schritte](../../../../../docs/framework/data/adonet/ef/getting-started.md)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/de-de/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="6efda-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6efda-109">See Also</span></span>  
+ [<span data-ttu-id="6efda-110">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="6efda-110">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="6efda-111">Übersicht über Entity Framework</span><span class="sxs-lookup"><span data-stu-id="6efda-111">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)  
+ [<span data-ttu-id="6efda-112">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="6efda-112">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [<span data-ttu-id="6efda-113">ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)</span><span class="sxs-lookup"><span data-stu-id="6efda-113">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

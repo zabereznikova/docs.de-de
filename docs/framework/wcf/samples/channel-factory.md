@@ -1,28 +1,31 @@
 ---
-title: "Kanalfactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Kanalfactory
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6962cbbdd632ac9fa15253939ba2dad09eaf00de
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Kanalfactory
-In diesem Beispiel wird veranschaulicht, wie eine Clientanwendung einen Kanal mit der <xref:System.ServiceModel.ChannelFactory>\-Klasse und nicht mit einem generierten Client erstellen kann.Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md), das einen Rechnerdienst implementiert.  
+# <a name="channel-factory"></a><span data-ttu-id="ae4b9-102">Kanalfactory</span><span class="sxs-lookup"><span data-stu-id="ae4b9-102">Channel Factory</span></span>
+<span data-ttu-id="ae4b9-103">In diesem Beispiel wird veranschaulicht, wie eine Clientanwendung einen Kanal mit der <xref:System.ServiceModel.ChannelFactory>-Klasse und nicht mit einem generierten Client erstellen kann.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-103">This sample demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span> <span data-ttu-id="ae4b9-104">Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="ae4b9-105">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In diesem Beispiel wird mithilfe der <xref:System.ServiceModel.ChannelFactory%601>\-Klasse ein Kanal für einen Dienstendpunkt erstellt.Normalerweise generieren Sie zum Erstellen eines Kanals zu einem Dienstendpunkt einen Clienttyp mit dem [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) und erstellen eine Instanz des generierten Typs.Sie können einen Kanal auch mithilfe der <xref:System.ServiceModel.ChannelFactory%601>\-Klasse erstellen, wie in diesem Beispiel dargestellt.Der im folgenden Beispielcode erstellte Dienst stimmt mit dem Dienst in [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md) überein.  
+ <span data-ttu-id="ae4b9-106">In diesem Beispiel wird mithilfe der <xref:System.ServiceModel.ChannelFactory%601>-Klasse ein Kanal für einen Dienstendpunkt erstellt.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-106">This sample uses the <xref:System.ServiceModel.ChannelFactory%601> class to create a channel to a service endpoint.</span></span> <span data-ttu-id="ae4b9-107">Zum Erstellen eines Kanals zu einem Dienstendpunkt generieren Sie in der Regel eine Art von mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) und erstellen Sie eine Instanz des generierten Typs.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-107">Typically, to create a channel to a service endpoint you generate a client type with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) and create an instance of the generated type.</span></span> <span data-ttu-id="ae4b9-108">Sie können einen Kanal auch mithilfe der <xref:System.ServiceModel.ChannelFactory%601>-Klasse erstellen, wie in diesem Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-108">You can also create a channel by using the <xref:System.ServiceModel.ChannelFactory%601> class, as demonstrated in this sample.</span></span> <span data-ttu-id="ae4b9-109">Der Dienst erstellt, indem der folgende Beispielcode ist identisch mit dem Dienst in der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="ae4b9-109">The service created by the following sample code is identical to the service in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 ```  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
@@ -33,9 +36,9 @@ ICalculator channel = factory.CreateChannel();
 ```  
   
 > [!IMPORTANT]
->  Wenn Sie dieses Beispiel in einem Szenario computerübergreifend ausführen, müssen Sie "localhost" im oben stehenden Code durch den vollqualifizierten Namen des Computers ersetzen, auf dem der Dienst ausgeführt wird.Im Beispiel wird die Endpunktadresse nicht in der Konfiguration festgelegt, daher muss dies im Code erfolgen.  
+>  <span data-ttu-id="ae4b9-110">Wenn Sie dieses Beispiel in einem Szenario computerübergreifend ausführen, müssen Sie "localhost" im oben stehenden Code durch den vollqualifizierten Namen des Computers ersetzen, auf dem der Dienst ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-110">If you are running this sample in a cross-machine scenario, you must replace "localhost" in the preceding code with the fully-qualified name of the machine that is running the service.</span></span> <span data-ttu-id="ae4b9-111">Im Beispiel wird die Endpunktadresse nicht in der Konfiguration festgelegt, daher muss dies im Code erfolgen.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-111">This sample does not use configuration to set the endpoint address, so this must be done in code.</span></span>  
   
- Nach dem Erstellen des Kanals können Dienstvorgänge wie bei einem generierten Client aufgerufen werden.  
+ <span data-ttu-id="ae4b9-112">Nach dem Erstellen des Kanals können Dienstvorgänge wie bei einem generierten Client aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-112">Once the channel is created, service operations can be invoked just as with a generated client.</span></span>  
   
 ```  
 // Call the Add service operation.  
@@ -43,18 +46,16 @@ double value1 = 100.00D;
 double value2 = 15.99D;  
 double result = channel.Add(value1, value2);  
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-  
 ```  
   
- Zum Schließen des Kanals muss dieser zunächst in eine <xref:System.ServiceModel.IClientChannel>\-Schnittstelle umgewandelt werden.Dies ist erforderlich, da der Kanal wie generiert in der Clientanwendung mit der `ICalculator`\-Schnittstelle deklariert wird. Diese verfügt über Methoden wie `Add` und `Subtract`, nicht jedoch über `Close`.Die `Close`\-Methode stammt aus der <xref:System.ServiceModel.ICommunicationObject>\-Schnittstelle.  
+ <span data-ttu-id="ae4b9-113">Zum Schließen des Kanals muss dieser zunächst in eine <xref:System.ServiceModel.IClientChannel>-Schnittstelle umgewandelt werden.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-113">To close the channel, it must first be cast to an <xref:System.ServiceModel.IClientChannel> interface.</span></span> <span data-ttu-id="ae4b9-114">Dies ist erforderlich, da der Kanal wie generiert in der Clientanwendung mit der `ICalculator`-Schnittstelle deklariert wird. Diese verfügt über Methoden wie `Add` und `Subtract`, nicht jedoch über `Close`.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-114">This is because the channel as generated is declared in the client application using the `ICalculator` interface, which has methods like `Add` and `Subtract` but not `Close`.</span></span> <span data-ttu-id="ae4b9-115">Die `Close`-Methode stammt aus der <xref:System.ServiceModel.ICommunicationObject>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-115">The `Close` method originates on the <xref:System.ServiceModel.ICommunicationObject> interface.</span></span>  
   
 ```  
 // Close the channel.  
  ((IClientChannel)client).Close();  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.Drücken Sie im Clientfenster die EINGABETASTE, um die Clientanwendung zu schließen.  
+ <span data-ttu-id="ae4b9-116">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="ae4b9-117">Drücken Sie im Clientfenster die EINGABETASTE, um die Clientanwendung zu schließen.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-117">Press ENTER in the client window to shut down the client application.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -65,29 +66,29 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ae4b9-118">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="ae4b9-118">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="ae4b9-119">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ae4b9-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Version der Lösung folgen Sie den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.Beachten Sie, dass das Veröffentlichen von Metadaten in diesem Beispiel nicht aktiviert wird.Sie müssen zuerst das Veröffentlichen von Metadaten aktivieren, damit der Clienttyp in diesem Beispiel erneut generiert wird.  
+2.  <span data-ttu-id="ae4b9-120">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span> <span data-ttu-id="ae4b9-121">Beachten Sie, dass das Veröffentlichen von Metadaten in diesem Beispiel nicht aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-121">Note that this sample does not enable metadata publishing.</span></span> <span data-ttu-id="ae4b9-122">Sie müssen zuerst das Veröffentlichen von Metadaten aktivieren, damit der Clienttyp in diesem Beispiel erneut generiert wird.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-122">You must first enable metadata publishing for this sample to regenerate the client type.</span></span>  
   
-3.  Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder über Computer hinweg ausführen möchten, folgen Sie den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="ae4b9-123">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ae4b9-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### So führen Sie das Beispiel computerübergreifend aus  
+### <a name="to-run-the-sample-cross-machine"></a><span data-ttu-id="ae4b9-124">So führen Sie das Beispiel computerübergreifend aus</span><span class="sxs-lookup"><span data-stu-id="ae4b9-124">To run the sample cross machine</span></span>  
   
-1.  Ersetzen Sie "localhost" im folgenden Code durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird.  
+1.  <span data-ttu-id="ae4b9-125">Ersetzen Sie "localhost" im folgenden Code durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-125">Replace "localhost" in the following code with the fully-qualified name of the machine that is running the service.</span></span>  
   
     ```  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="ae4b9-126">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ae4b9-127">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-127">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="ae4b9-128">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ae4b9-129">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="ae4b9-129">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="ae4b9-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ae4b9-130">See Also</span></span>

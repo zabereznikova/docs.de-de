@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df74599b5f68324540703bce6c5ca8e8805df3e7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 073a526e72f46864b2e08d33ec14a53034c144b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltassemblygt-element-net-native"></a>&lt;Assembly&gt; Element (.NET Native)
-Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.  
+# <a name="ltassemblygt-element-net-native"></a><span data-ttu-id="ef352-102">&lt;Assembly&gt; Element (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="ef352-102">&lt;Assembly&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="ef352-103">Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.</span><span class="sxs-lookup"><span data-stu-id="ef352-103">Applies runtime reflection policy to all the types in a specified assembly.</span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="ef352-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ef352-104">Syntax</span></span>  
   
 ```xml  
 <Assembly Name="assembly_name"   
@@ -40,56 +38,56 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Ass
           MarshalStructure="policy_setting" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ef352-105">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="ef352-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="ef352-106">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="ef352-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a><span data-ttu-id="ef352-107">Attribute</span><span class="sxs-lookup"><span data-stu-id="ef352-107">Attributes</span></span>  
   
-|Attribut|Attributtyp|Beschreibung|  
+|<span data-ttu-id="ef352-108">Attribut</span><span class="sxs-lookup"><span data-stu-id="ef352-108">Attribute</span></span>|<span data-ttu-id="ef352-109">Attributtyp</span><span class="sxs-lookup"><span data-stu-id="ef352-109">Attribute type</span></span>|<span data-ttu-id="ef352-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ef352-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|Allgemein|Erforderliches Attribut. Gibt den einfachen Namen einer Assembly an.|  
-|`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
-|`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über die Typen oder das Auflisten der Typen in der Assembly, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
-|`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.|  
-|`Serialize`|Serialisierung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.|  
-|`DataContractSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>-Klasse verwendet.|  
-|`DataContractJsonSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>-Klasse verwendet.|  
-|`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>-Klasse verwendet.|  
-|`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.|  
-|`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
-|`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.|  
+|`Name`|<span data-ttu-id="ef352-111">Allgemein</span><span class="sxs-lookup"><span data-stu-id="ef352-111">General</span></span>|<span data-ttu-id="ef352-112">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-112">Required attribute.</span></span> <span data-ttu-id="ef352-113">Gibt den einfachen Namen einer Assembly an.</span><span class="sxs-lookup"><span data-stu-id="ef352-113">Specifies the simple name of an assembly.</span></span>|  
+|`Activate`|<span data-ttu-id="ef352-114">Spiegelung</span><span class="sxs-lookup"><span data-stu-id="ef352-114">Reflection</span></span>|<span data-ttu-id="ef352-115">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-115">Optional attribute.</span></span> <span data-ttu-id="ef352-116">Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="ef352-116">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="ef352-117">Spiegelung</span><span class="sxs-lookup"><span data-stu-id="ef352-117">Reflection</span></span>|<span data-ttu-id="ef352-118">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-118">Optional attribute.</span></span> <span data-ttu-id="ef352-119">Steuert das Abfragen nach Informationen über die Typen oder das Auflisten der Typen in der Assembly, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="ef352-119">Controls querying for information about or enumerating the types in the assembly, but does not enable any dynamic access at run time.</span></span>|  
+|`Dynamic`|<span data-ttu-id="ef352-120">Spiegelung</span><span class="sxs-lookup"><span data-stu-id="ef352-120">Reflection</span></span>|<span data-ttu-id="ef352-121">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-121">Optional attribute.</span></span> <span data-ttu-id="ef352-122">Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="ef352-122">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="ef352-123">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="ef352-123">Serialization</span></span>|<span data-ttu-id="ef352-124">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-124">Optional attribute.</span></span> <span data-ttu-id="ef352-125">Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="ef352-125">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="ef352-126">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="ef352-126">Serialization</span></span>|<span data-ttu-id="ef352-127">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-127">Optional attribute.</span></span> <span data-ttu-id="ef352-128">Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="ef352-128">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="ef352-129">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="ef352-129">Serialization</span></span>|<span data-ttu-id="ef352-130">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-130">Optional attribute.</span></span> <span data-ttu-id="ef352-131">Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="ef352-131">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="ef352-132">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="ef352-132">Serialization</span></span>|<span data-ttu-id="ef352-133">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-133">Optional attribute.</span></span> <span data-ttu-id="ef352-134">Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="ef352-134">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="ef352-135">Interop</span><span class="sxs-lookup"><span data-stu-id="ef352-135">Interop</span></span>|<span data-ttu-id="ef352-136">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-136">Optional attribute.</span></span> <span data-ttu-id="ef352-137">Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.</span><span class="sxs-lookup"><span data-stu-id="ef352-137">Controls policy for marshaling reference types to Windows Runtime and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="ef352-138">Interop</span><span class="sxs-lookup"><span data-stu-id="ef352-138">Interop</span></span>|<span data-ttu-id="ef352-139">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-139">Optional attribute.</span></span> <span data-ttu-id="ef352-140">Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.</span><span class="sxs-lookup"><span data-stu-id="ef352-140">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="ef352-141">Interop</span><span class="sxs-lookup"><span data-stu-id="ef352-141">Interop</span></span>|<span data-ttu-id="ef352-142">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="ef352-142">Optional attribute.</span></span> <span data-ttu-id="ef352-143">Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.</span><span class="sxs-lookup"><span data-stu-id="ef352-143">Controls policy for marshaling structures to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Namensattribut  
+## <a name="name-attribute"></a><span data-ttu-id="ef352-144">Namensattribut</span><span class="sxs-lookup"><span data-stu-id="ef352-144">Name attribute</span></span>  
   
-|Wert|Beschreibung|  
+|<span data-ttu-id="ef352-145">Wert</span><span class="sxs-lookup"><span data-stu-id="ef352-145">Value</span></span>|<span data-ttu-id="ef352-146">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ef352-146">Description</span></span>|  
 |-----------|-----------------|  
-|*assembly_name*|Der einfache Name der Assembly ohne Dateierweiterung. Dieses Attribut entspricht der <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=fullName>-Eigenschaft. Der Name einer Assembly namens Extensions.dll lautet beispielsweise "Extensions".<br /><br /> Sie können auch die Literalzeichenfolge `*Application*` angeben, um die Richtlinie auf alle Assemblys im App-Paket anzuwenden, egal, ob diese Assemblys geladen sind oder nicht. `*Application*` wendet die Richtlinie nie auf .NET Framework-Assemblys an.|  
+|<span data-ttu-id="ef352-147">*assembly_name*</span><span class="sxs-lookup"><span data-stu-id="ef352-147">*assembly_name*</span></span>|<span data-ttu-id="ef352-148">Der einfache Name der Assembly ohne Dateierweiterung.</span><span class="sxs-lookup"><span data-stu-id="ef352-148">The simple name of the assembly, without its file extension.</span></span> <span data-ttu-id="ef352-149">Dieses Attribut entspricht der <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ef352-149">This attribute corresponds to the <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="ef352-150">Der Name einer Assembly namens Extensions.dll lautet beispielsweise "Extensions".</span><span class="sxs-lookup"><span data-stu-id="ef352-150">For example, the name of an assembly named Extensions.dll is "Extensions".</span></span><br /><br /> <span data-ttu-id="ef352-151">Sie können auch die Literalzeichenfolge `*Application*` angeben, um die Richtlinie auf alle Assemblys im App-Paket anzuwenden, egal, ob diese Assemblys geladen sind oder nicht.</span><span class="sxs-lookup"><span data-stu-id="ef352-151">You can also specify the literal string `*Application*` to apply policy to all assemblies in your app package, whether those assemblies are loaded or not.</span></span> <span data-ttu-id="ef352-152">`*Application*` wendet die Richtlinie nie auf .NET Framework-Assemblys an.</span><span class="sxs-lookup"><span data-stu-id="ef352-152">`*Application*` never applies policy to .NET Framework assemblies.</span></span>|  
   
-## <a name="all-other-attributes"></a>Alle anderen Attribute  
+## <a name="all-other-attributes"></a><span data-ttu-id="ef352-153">Alle anderen Attribute</span><span class="sxs-lookup"><span data-stu-id="ef352-153">All other attributes</span></span>  
   
-|Wert|Beschreibung|  
+|<span data-ttu-id="ef352-154">Wert</span><span class="sxs-lookup"><span data-stu-id="ef352-154">Value</span></span>|<span data-ttu-id="ef352-155">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ef352-155">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für alle Typen in der Assembly anzuwenden ist. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|<span data-ttu-id="ef352-156">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="ef352-156">*policy_setting*</span></span>|<span data-ttu-id="ef352-157">Die Einstellung, die auf diesen Richtlinientyp für alle Typen in der Assembly anzuwenden ist.</span><span class="sxs-lookup"><span data-stu-id="ef352-157">The setting to apply to this policy type for all types in the assembly.</span></span> <span data-ttu-id="ef352-158">Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`.</span><span class="sxs-lookup"><span data-stu-id="ef352-158">Possible values are `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="ef352-159">Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span><span class="sxs-lookup"><span data-stu-id="ef352-159">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="ef352-160">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ef352-160">Child Elements</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="ef352-161">Element</span><span class="sxs-lookup"><span data-stu-id="ef352-161">Element</span></span>|<span data-ttu-id="ef352-162">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ef352-162">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einem untergeordneten Namespace an.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ an.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.|  
+|[<span data-ttu-id="ef352-163">\<Namespace></span><span class="sxs-lookup"><span data-stu-id="ef352-163">\<Namespace></span></span>](../../../docs/framework/net-native/namespace-element-net-native.md)|<span data-ttu-id="ef352-164">Wendet die Reflektionsrichtlinie auf alle Typen in einem untergeordneten Namespace an.</span><span class="sxs-lookup"><span data-stu-id="ef352-164">Applies reflection policy to all types in a child namespace.</span></span>|  
+|[<span data-ttu-id="ef352-165">\<Type></span><span class="sxs-lookup"><span data-stu-id="ef352-165">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="ef352-166">Wendet die Reflektionsrichtlinie auf einen Typ an.</span><span class="sxs-lookup"><span data-stu-id="ef352-166">Applies reflection policy to a type.</span></span>|  
+|[<span data-ttu-id="ef352-167">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="ef352-167">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="ef352-168">Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.</span><span class="sxs-lookup"><span data-stu-id="ef352-168">Applies reflection policy to a constructed generic type.</span></span>|  
   
-### <a name="parent-elements"></a>Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="ef352-169">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ef352-169">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="ef352-170">Element</span><span class="sxs-lookup"><span data-stu-id="ef352-170">Element</span></span>|<span data-ttu-id="ef352-171">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ef352-171">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)-Element kann null, eins oder mehrere `<Assembly>`-Elemente enthalten.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element kann null oder ein `<Assembly>`-Element enthalten.|  
+|[<span data-ttu-id="ef352-172">\<Application></span><span class="sxs-lookup"><span data-stu-id="ef352-172">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="ef352-173">Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="ef352-173">Serves as a container for application-wide types and type members whose metadata is available for reflection at run time.</span></span> <span data-ttu-id="ef352-174">Das [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)-Element kann null, eins oder mehrere `<Assembly>`-Elemente enthalten.</span><span class="sxs-lookup"><span data-stu-id="ef352-174">The [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) element can have zero, one, or more `<Assembly>` elements.</span></span>|  
+|[<span data-ttu-id="ef352-175">\<Library></span><span class="sxs-lookup"><span data-stu-id="ef352-175">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="ef352-176">Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="ef352-176">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span> <span data-ttu-id="ef352-177">Das [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element kann null oder ein `<Assembly>`-Element enthalten.</span><span class="sxs-lookup"><span data-stu-id="ef352-177">The [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) element can have zero or one `<Assembly>` element.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Das `<Assembly>`-Element definiert eine Laufzeitrichtlinie für alle Typen in einer Assembly. Es unterscheidet sich vom [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element, das eine Bibliothek angibt, aber für die Definition der Laufzeitreflektionsrichtlinie von seinen untergeordneten Elementen abhängt. Das `<Assembly>`-Element gilt für alle Typen in einer Assembly, sofern sie nicht von einem untergeordneten Element überschrieben werden.  
+## <a name="remarks"></a><span data-ttu-id="ef352-178">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ef352-178">Remarks</span></span>  
+ <span data-ttu-id="ef352-179">Das `<Assembly>`-Element definiert eine Laufzeitrichtlinie für alle Typen in einer Assembly.</span><span class="sxs-lookup"><span data-stu-id="ef352-179">The `<Assembly>` element defines runtime policy for all the types in an assembly.</span></span> <span data-ttu-id="ef352-180">Es unterscheidet sich vom [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element, das eine Bibliothek angibt, aber für die Definition der Laufzeitreflektionsrichtlinie von seinen untergeordneten Elementen abhängt.</span><span class="sxs-lookup"><span data-stu-id="ef352-180">It differs from the [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) element, which specifies a library but depends on its child elements to define runtime reflection policy.</span></span> <span data-ttu-id="ef352-181">Das `<Assembly>`-Element gilt für alle Typen in einer Assembly, sofern sie nicht von einem untergeordneten Element überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="ef352-181">The `<Assembly>` element applies to all the types in an assembly unless they are overridden by a child element.</span></span>  
   
- Das folgende Beispiel zeigt, wie Sie eine Laufzeitrichtlinie auf alle Typen in Assemblys in Ihrem App-Paket anwenden, indem Sie dem `Name`-Attribut den Wert "*Anwendung\*" zuweisen. Das `<Assembly>`-Element muss ein untergeordnetes Element des [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)-Elements sein.  
+ <span data-ttu-id="ef352-182">Das folgende Beispiel zeigt, wie Sie eine Laufzeitrichtlinie auf alle Typen in Assemblys in Ihrem App-Paket anwenden, indem Sie dem `Name`-Attribut den Wert "*Anwendung\*" zuweisen.</span><span class="sxs-lookup"><span data-stu-id="ef352-182">The following example shows how you can apply runtime policy to all the types in assemblies within your app package by assigning the `Name` attribute a value of "*Application\*".</span></span> <span data-ttu-id="ef352-183">Das `<Assembly>`-Element muss ein untergeordnetes Element des [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)-Elements sein.</span><span class="sxs-lookup"><span data-stu-id="ef352-183">The `<Assembly>` element must be a child of the [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) element.</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">   
@@ -99,10 +97,9 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Ass
 </Directives>  
 ```  
   
- Die Attribute `Activate`, `Browse`, `Dynamic` und `Serialize` sind optional. Allerdings muss das `<Assembly>`-Element mindestens eines dieser Attribute enthalten.  
+ <span data-ttu-id="ef352-184">Die Attribute `Activate`, `Browse`, `Dynamic` und `Serialize` sind optional.</span><span class="sxs-lookup"><span data-stu-id="ef352-184">The `Activate`, `Browse`, `Dynamic`, and `Serialize` attributes are all optional.</span></span> <span data-ttu-id="ef352-185">Allerdings muss das `<Assembly>`-Element mindestens eines dieser Attribute enthalten.</span><span class="sxs-lookup"><span data-stu-id="ef352-185">However, the `<Assembly>` element must contain at least one of these attributes.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Runtime Directive Elements (Elemente der Laufzeitanweisung)](../../../docs/framework/net-native/runtime-directive-elements.md)
-
+## <a name="see-also"></a><span data-ttu-id="ef352-186">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ef352-186">See Also</span></span>  
+ [<span data-ttu-id="ef352-187">Richtlinieneinstellungen für die Laufzeitanweisung</span><span class="sxs-lookup"><span data-stu-id="ef352-187">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [<span data-ttu-id="ef352-188">Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))</span><span class="sxs-lookup"><span data-stu-id="ef352-188">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="ef352-189">Elemente der Laufzeitanweisung</span><span class="sxs-lookup"><span data-stu-id="ef352-189">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)

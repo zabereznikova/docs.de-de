@@ -1,53 +1,57 @@
 ---
-title: "Erstellen einer DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erstellen einer "DataTable"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 923d19e9539c6d93f3714efcdaa6fe7a5da843ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erstellen einer DataTable
-Eine <xref:System.Data.DataTable>, die eine Tabelle mit relationalen Daten im Speicher darstellt, kann erstellt und unabhängig verwendet werden. Oder sie kann von anderen .NET Framework\-Objekten, am häufigsten als Member von einem <xref:System.Data.DataSet>, verwendet werden.  
+# <a name="creating-a-datatable"></a><span data-ttu-id="e6c69-102">Erstellen einer "DataTable"</span><span class="sxs-lookup"><span data-stu-id="e6c69-102">Creating a DataTable</span></span>
+<span data-ttu-id="e6c69-103">Eine <xref:System.Data.DataTable>, die eine Tabelle mit relationalen Daten im Speicher darstellt, kann erstellt und unabhängig verwendet werden. Oder sie kann von anderen .NET Framework-Objekten, am häufigsten als Member von einem <xref:System.Data.DataSet>, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e6c69-103">A <xref:System.Data.DataTable>, which represents one table of in-memory relational data, can be created and used independently, or can be used by other .NET Framework objects, most commonly as a member of a <xref:System.Data.DataSet>.</span></span>  
   
- Ein **DataTable**\-Objekt kann mit dem entsprechenden **DataTable**\-Konstruktor erstellt werden.  Es kann dem **DataSet** mit der **Add**\-Methode hinzugefügt werden, um es der **Tables**\-Auflistung des **DataTable**\-Objekts hinzuzufügen.  
+ <span data-ttu-id="e6c69-104">Sie erstellen eine **DataTable** Objekt mit der entsprechenden **DataTable** Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="e6c69-104">You can create a **DataTable** object by using the appropriate **DataTable** constructor.</span></span> <span data-ttu-id="e6c69-105">Können Sie ihn zum Hinzufügen der **DataSet** mithilfe der **hinzufügen** Methode zum Hinzufügen der **DataTable** des Objekts **Tabellen** Auflistung.</span><span class="sxs-lookup"><span data-stu-id="e6c69-105">You can add it to the **DataSet** by using the **Add** method to add it to the **DataTable** object's **Tables** collection.</span></span>  
   
- **DataTable**\-Objekte können in einem **DataSet** mithilfe der **Fill**\-Methode oder der **FillSchema**\-Methode des **DataAdapter**\-Objekts erstellt werden. Sie können auch aus einem vordefinierten oder hergeleitetem XML\-Schema mithilfe der Methoden **ReadXml**, **ReadXmlSchema** oder **InferXmlSchema** vom **DataSet** erstellt werden.  Beachten Sie Folgendes: Nachdem eine **DataTable** als ein Member der **Tables**\-Auflistung von einem **DataSet** hinzugefügt wurde, kann dieses nicht mehr zu der Auflistung von Tabellen von einem anderen **DataSet** hinzugefügt werden.  
+ <span data-ttu-id="e6c69-106">Sie können auch erstellen **DataTable** Objekte innerhalb einer **DataSet** mithilfe der **ausfüllen** oder **FillSchema** Methoden der der  **"DataAdapter"** -Objekt, oder aus einem vordefinierten oder abgeleiteten XML-Schema mithilfe der **ReadXml**, **ReadXmlSchema**, oder **InferXmlSchema** Methoden der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="e6c69-106">You can also create **DataTable** objects within a **DataSet** by using the **Fill** or **FillSchema** methods of the **DataAdapter** object, or from a predefined or inferred XML schema using the **ReadXml**, **ReadXmlSchema**, or **InferXmlSchema** methods of the **DataSet**.</span></span> <span data-ttu-id="e6c69-107">Beachten Sie, dass nach dem Hinzufügen einer **DataTable** als Mitglied der **Tabellen** Auflistung von einem **DataSet**, können Sie es auf die Auflistung von Tabellen von jeder anderen Hinzufügen**DataSet**.</span><span class="sxs-lookup"><span data-stu-id="e6c69-107">Note that after you have added a **DataTable** as a member of the **Tables** collection of one **DataSet**, you cannot add it to the collection of tables of any other **DataSet**.</span></span>  
   
- Wenn zuerst eine **DataTable** erstellt wird, verfügt sie nicht über ein Schema \(d. h. eine Struktur\).  Zum Definieren des Schemas einer Tabelle müssen <xref:System.Data.DataColumn>\-Objekte erstellt werden und diese der **Columns**\-Auflistung der Tabelle hinzugefügt werden.  Es kann auch eine Primärschlüsselspalte für die Tabelle definiert werden, und **Constraint**\-Objekte erstellt und diese der **Constraints**\-Auflistung der Tabelle hinzugefügt werden.  Nachdem das Schema für eine **DataTable** definiert wurde, können der Tabelle Zeilen von Daten hinzugefügt werden, indem der **Rows**\-Auflistung der Tabelle **DataRow**\-Objekte hinzugefügt werden.  
+ <span data-ttu-id="e6c69-108">Beim ersten Erstellen einer **DataTable**, er verfügt nicht über ein Schema (d. h. eine Struktur).</span><span class="sxs-lookup"><span data-stu-id="e6c69-108">When you first create a **DataTable**, it does not have a schema (that is, a structure).</span></span> <span data-ttu-id="e6c69-109">Um das Schema der Tabelle zu definieren, müssen Sie erstellen und hinzufügen <xref:System.Data.DataColumn> -Objekte und die **Spalten** -Auflistung der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="e6c69-109">To define the schema of the table, you must create and add <xref:System.Data.DataColumn> objects to the **Columns** collection of the table.</span></span> <span data-ttu-id="e6c69-110">Sie können auch eine Primärschlüsselspalte für die Tabelle definieren, und erstellen, und fügen **Einschränkung** -Objekte und die **Einschränkungen** -Auflistung der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="e6c69-110">You can also define a primary key column for the table, and create and add **Constraint** objects to the **Constraints** collection of the table.</span></span> <span data-ttu-id="e6c69-111">Nachdem Sie das Schema für definiert haben eine **DataTable**, Sie können Zeilen mit Daten zur Tabelle hinzufügen, durch Hinzufügen von **DataRow** -Objekte und die **Zeilen** -Auflistung der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="e6c69-111">After you have defined the schema for a **DataTable**, you can add rows of data to the table by adding **DataRow** objects to the **Rows** collection of the table.</span></span>  
   
- Es ist nicht erforderlich, dass ein Wert für die <xref:System.Data.DataTable.TableName%2A>\-Eigenschaft bereitgestellt wird, wenn Sie eine **DataTable** erstellen. Die Eigenschaft kann zu einem späteren Zeitpunkt angegeben werden oder leer bleiben.  Wenn Sie jedoch einem **DataSet** eine Tabelle ohne einen **TableName**\-Wert hinzufügen, erhält die Tabelle den inkrementellen Standardnamen "Table*N*", beginnend mit "Table" für Table0.  
+ <span data-ttu-id="e6c69-112">Sie müssen nicht zur Bereitstellung eines Werts für die <xref:System.Data.DataTable.TableName%2A> Eigenschaft bei der Erstellung einer **DataTable**; Geben Sie die Eigenschaft zu einem späteren Zeitpunkt, oder Sie können leer bleiben.</span><span class="sxs-lookup"><span data-stu-id="e6c69-112">You are not required to supply a value for the <xref:System.Data.DataTable.TableName%2A> property when you create a **DataTable**; you can specify the property at another time, or you can leave it empty.</span></span> <span data-ttu-id="e6c69-113">Allerdings wird beim Hinzufügen einer Tabelle ohne eine **TableName** -Wert an eine **DataSet**, in der Tabelle erhält einen Standardnamen der Tabelle*N*, beginnend mit "Table" für Table0.</span><span class="sxs-lookup"><span data-stu-id="e6c69-113">However, when you add a table without a **TableName** value to a **DataSet**, the table will be given an incremental default name of Table*N*, starting with "Table" for Table0.</span></span>  
   
 > [!NOTE]
->  Es wird davon abgeraten, die Benennungskonvention "Table*N*" zu verwenden, wenn Sie einen **TableName**\-Wert bereitstellen, da der angegebene Name u. U. einen Konflikt mit einem bereits vorhandenen Standardtabellennamen im **DataSet** verursacht.  Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
+>  <span data-ttu-id="e6c69-114">Sollten Sie vermeiden die "Tabelle*N*" Benennungskonvention, wenn Sie angeben, eine **TableName** Wert, der Namen, die Sie angeben, ein Konflikt mit einem bereits vorhandenen Standardtabellennamen in kann die **DataSet** .</span><span class="sxs-lookup"><span data-stu-id="e6c69-114">We recommend that you avoid the "Table*N*" naming convention when you supply a **TableName** value, because the name you supply may conflict with an existing default table name in the **DataSet**.</span></span> <span data-ttu-id="e6c69-115">Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="e6c69-115">If the supplied name already exists, an exception is thrown.</span></span>  
   
- Im folgenden Beispiel wird eine Instanz des **DataTable**\-Objekts erstellt und dieser der Name "Customers" zugewiesen.  
+ <span data-ttu-id="e6c69-116">Das folgende Beispiel erstellt eine Instanz von einem **DataTable** Objekt, und weist ihm den Namen "Customers".</span><span class="sxs-lookup"><span data-stu-id="e6c69-116">The following example creates an instance of a **DataTable** object and assigns it the name "Customers."</span></span>  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
-  
 ```  
   
 ```csharp  
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- Im folgenden Beispiel wird eine Instanz einer **DataTable** erstellt, indem diese der **Tables**\-Auflistung von einem **DataSet** hinzugefügt wird.  
+ <span data-ttu-id="e6c69-117">Das folgende Beispiel erstellt eine Instanz von einem **DataTable** durch Hinzufügen zu der **Tabellen** Auflistung von einer **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="e6c69-117">The following example creates an instance of a **DataTable** by adding it to the **Tables** collection of a **DataSet**.</span></span>  
   
 ```vb  
 Dim customers As DataSet = New DataSet  
 Dim customersTable As DataTable = _  
    customers.Tables.Add("CustomersTable")  
-  
 ```  
   
 ```csharp  
@@ -55,11 +59,11 @@ DataSet customers = new DataSet();
 DataTable customersTable = customers.Tables.Add("CustomersTable");  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataTableCollection>   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Auffüllen eines "DataSets" durch einen "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)   
- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Laden von DataSet\-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e6c69-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6c69-118">See Also</span></span>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataTableCollection>  
+ [<span data-ttu-id="e6c69-119">DataTables</span><span class="sxs-lookup"><span data-stu-id="e6c69-119">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="e6c69-120">Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)</span><span class="sxs-lookup"><span data-stu-id="e6c69-120">Populating a DataSet from a DataAdapter</span></span>](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [<span data-ttu-id="e6c69-121">Beim Laden eines Datasets aus XML</span><span class="sxs-lookup"><span data-stu-id="e6c69-121">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="e6c69-122">Beim Laden von DataSet-Schemainformationen aus XML</span><span class="sxs-lookup"><span data-stu-id="e6c69-122">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="e6c69-123">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="e6c69-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

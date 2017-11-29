@@ -1,28 +1,31 @@
 ---
-title: "Bekannte Typen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Bekannte Typen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eae1a7971c50372b999678b79be6503885d71f1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Bekannte Typen
-In diesem Beispiel wird veranschaulicht, wie Informationen über abgeleitete Typen in einem Datenvertrag angegeben werden.Datenverträge ermöglichen es Ihnen, strukturierte Daten an Dienste zu übergeben und von ihnen zu empfangen.In objektorientierten Programmierungen kann anstelle des ursprünglichen Typs ein Typ verwendet werden, der von einem anderen Typ erbt.In dienstorientierten Programmierungen werden Schemas und keine Typen kommuniziert, weshalb die Beziehung zwischen Typen nicht beibehalten wird.Das <xref:System.Runtime.Serialization.KnownTypeAttribute>\-Attribut ermöglicht es, Informationen über abgeleitete Typen in den Datenvertrag einzubinden.Wenn dieser Mechanismus nicht verwendet wird, kann ein abgeleiteter Typ nicht gesendet oder empfangen werden, wenn ein Basistyp erwartet wird.  
+# <a name="known-types"></a><span data-ttu-id="a23e7-102">Bekannte Typen</span><span class="sxs-lookup"><span data-stu-id="a23e7-102">Known Types</span></span>
+<span data-ttu-id="a23e7-103">In diesem Beispiel wird veranschaulicht, wie Informationen über abgeleitete Typen in einem Datenvertrag angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="a23e7-103">This sample demonstrates how to specify information about derived types in a data contract.</span></span> <span data-ttu-id="a23e7-104">Datenverträge ermöglichen es Ihnen, strukturierte Daten an Dienste zu übergeben und von ihnen zu empfangen.</span><span class="sxs-lookup"><span data-stu-id="a23e7-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="a23e7-105">In objektorientierten Programmierungen kann anstelle des ursprünglichen Typs ein Typ verwendet werden, der von einem anderen Typ erbt.</span><span class="sxs-lookup"><span data-stu-id="a23e7-105">In object-oriented programming, a type that inherits from another type can be used in place of the original type.</span></span> <span data-ttu-id="a23e7-106">In dienstorientierten Programmierungen werden Schemas und keine Typen kommuniziert, weshalb die Beziehung zwischen Typen nicht beibehalten wird.</span><span class="sxs-lookup"><span data-stu-id="a23e7-106">In service-oriented programming, schemas rather than types are communicated and therefore, the relationship between types is not preserved.</span></span> <span data-ttu-id="a23e7-107">Das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut ermöglicht es, Informationen über abgeleitete Typen in den Datenvertrag einzubinden.</span><span class="sxs-lookup"><span data-stu-id="a23e7-107">The <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute allows information about derived types to be included in the data contract.</span></span> <span data-ttu-id="a23e7-108">Wenn dieser Mechanismus nicht verwendet wird, kann ein abgeleiteter Typ nicht gesendet oder empfangen werden, wenn ein Basistyp erwartet wird.</span><span class="sxs-lookup"><span data-stu-id="a23e7-108">If this mechanism is not used, a derived type cannot be sent or received where a base type is expected.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="a23e7-109">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="a23e7-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Der Dienstvertrag für den Dienst verwendet komplexe Zahlen, wie im folgenden Beispielcode gezeigt.  
+ <span data-ttu-id="a23e7-110">Der Dienstvertrag für den Dienst verwendet komplexe Zahlen, wie im folgenden Beispielcode gezeigt.</span><span class="sxs-lookup"><span data-stu-id="a23e7-110">The service contract for the service uses complex numbers, as shown in the following sample code.</span></span>  
   
 ```  
 // Define a service contract.  
@@ -38,10 +41,9 @@ public interface ICalculator
     [OperationContract]  
     ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2);  
 }  
-  
 ```  
   
- Das <xref:System.Runtime.Serialization.DataContractAttribute> und <xref:System.Runtime.Serialization.DataMemberAttribute> wird auf die `ComplexNumber`\-Klasse angewendet, um anzugeben, welche Felder der Klasse zwischen dem Client und dem Dienst übergeben werden können.Die abgeleitete `ComplexNumberWithMagnitude`\-Klasse kann anstelle von `ComplexNumber` verwendet werden.Dies wird durch das <xref:System.Runtime.Serialization.KnownTypeAttribute>\-Attribut auf dem `ComplexNumber`\-Typ angezeigt.  
+ <span data-ttu-id="a23e7-111">Das <xref:System.Runtime.Serialization.DataContractAttribute> und <xref:System.Runtime.Serialization.DataMemberAttribute> wird auf die `ComplexNumber`-Klasse angewendet, um anzugeben, welche Felder der Klasse zwischen dem Client und dem Dienst übergeben werden können.</span><span class="sxs-lookup"><span data-stu-id="a23e7-111">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> is applied to the `ComplexNumber` class to indicate which fields of the class can be passed between the client and the service.</span></span> <span data-ttu-id="a23e7-112">Die abgeleitete `ComplexNumberWithMagnitude`-Klasse kann anstelle von `ComplexNumber` verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a23e7-112">The derived `ComplexNumberWithMagnitude` class can be used in place of `ComplexNumber`.</span></span> <span data-ttu-id="a23e7-113">Dies wird durch das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut auf dem `ComplexNumber`-Typ angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a23e7-113">The <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute on the `ComplexNumber` type indicates this.</span></span>  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -59,13 +61,11 @@ public class ComplexNumber
         this.Imaginary = imaginary;  
     }  
 }  
-  
 ```  
   
- Der `ComplexNumberWithMagnitude`\-Typ wird von `ComplexNumber` abgeleitet, fügt aber einen zusätzlichen Datenmember, `Magnitude`, hinzu.  
+ <span data-ttu-id="a23e7-114">Der `ComplexNumberWithMagnitude`-Typ wird von `ComplexNumber` abgeleitet, fügt aber einen zusätzlichen Datenmember, `Magnitude`, hinzu.</span><span class="sxs-lookup"><span data-stu-id="a23e7-114">The `ComplexNumberWithMagnitude` type derives from `ComplexNumber` but adds an additional data member, `Magnitude`.</span></span>  
   
 ```  
-  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -81,7 +81,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Zum Veranschaulichen der Funktion Bekannte Typen wird der Dienst so implementiert, dass er einen Typ `ComplexNumberWithMagnitude` für Addition und Subtraktion zurückgibt.\(Obwohl der Vertrag `ComplexNumber` angibt, ist dies aufgrund des `KnownTypeAttribute`\-Attributs zulässig\).Multiplikation und Division geben immer noch den `ComplexNumber` \-Basistyp zurück.  
+ <span data-ttu-id="a23e7-115">Zur Veranschaulichung der Funktion bekannte Typen wird der Dienst so implementiert, bei der Rückgabe eine `ComplexNumberWithMagnitude` für Addition und Subtraktion.</span><span class="sxs-lookup"><span data-stu-id="a23e7-115">To demonstrate the known types feature, the service is implemented in such a way that it returns a `ComplexNumberWithMagnitude` only for addition and subtraction.</span></span> <span data-ttu-id="a23e7-116">(Obwohl der Vertrag `ComplexNumber` angibt, ist dies aufgrund des `KnownTypeAttribute`-Attributs zulässig).</span><span class="sxs-lookup"><span data-stu-id="a23e7-116">(Even though the contract specifies `ComplexNumber`, this is allowed because of the `KnownTypeAttribute` attribute).</span></span> <span data-ttu-id="a23e7-117">Multiplikation und Division weiterhin die Basis zurückgegeben `ComplexNumber` Typ.</span><span class="sxs-lookup"><span data-stu-id="a23e7-117">Multiplication and division still return the base `ComplexNumber` type.</span></span>  
   
 ```  
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -124,7 +124,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- Auf dem Client sind sowohl der Dienstvertrag als auch der Datenvertrag in der Quelldatei generatedClient.cs definiert, die vom [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus Dienstmetadaten generiert wird.Da das <xref:System.Runtime.Serialization.KnownTypeAttribute>\-Attribut im Datenvertrag des Diensts angegeben ist, kann der Client sowohl die `ComplexNumber`\-Klasse als auch die `ComplexNumberWithMagnitude`\-Klasse empfangen, wenn er diesen Dienst verwendet.Der Client erkennt, ob es eine `ComplexNumberWithMagnitude` abgerufen hat und generiert die entsprechende Ausgabe:  
+ <span data-ttu-id="a23e7-118">Auf dem Client in der Quelle Datei "generatedclient.cs", die von generiert wird definiert den Dienstvertrag und den Datenvertrag der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus Dienstmetadaten.</span><span class="sxs-lookup"><span data-stu-id="a23e7-118">On the client, both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span> <span data-ttu-id="a23e7-119">Da das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut im Datenvertrag des Diensts angegeben ist, kann der Client sowohl die `ComplexNumber`-Klasse als auch die `ComplexNumberWithMagnitude`-Klasse empfangen, wenn er diesen Dienst verwendet.</span><span class="sxs-lookup"><span data-stu-id="a23e7-119">Because the <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute is specified in the service's data contract, the client is able to receive both the `ComplexNumber` and `ComplexNumberWithMagnitude` classes when using the service.</span></span> <span data-ttu-id="a23e7-120">Der Client erkennt, ob es eine `ComplexNumberWithMagnitude` abgerufen hat und generiert die entsprechende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a23e7-120">The client detects whether it got a `ComplexNumberWithMagnitude` and generate the appropriate output:</span></span>  
   
 ```  
 // Create a client  
@@ -147,10 +147,9 @@ else
 {  
     Console.WriteLine("No magnitude was sent from the service");  
 }  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten des Vorgangs im Konsolenfenster des Clients angezeigt.Beachten Sie, dass für Addition und Subtraktion ein Betrag angezeigt wird. Für Multiplikation und Division wird aufgrund der Implementierungsart des Diensts kein Betrag angezeigt.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="a23e7-121">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten des Vorgangs im Konsolenfenster des Clients angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a23e7-121">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="a23e7-122">Beachten Sie, dass für Addition und Subtraktion ein Betrag angezeigt wird. Für Multiplikation und Division wird aufgrund der Implementierungsart des Diensts kein Betrag angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a23e7-122">Note that a magnitude is printed for addition and subtraction but not for multiplication and division because of the way the service was implemented.</span></span> <span data-ttu-id="a23e7-123">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="a23e7-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -165,21 +164,21 @@ No magnitude was sent from the service
     Press <ENTER> to terminate client.  
 ```  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a23e7-124">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="a23e7-124">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="a23e7-125">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a23e7-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="a23e7-126">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="a23e7-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="a23e7-127">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a23e7-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="a23e7-128">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="a23e7-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a23e7-129">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="a23e7-129">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="a23e7-130">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="a23e7-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a23e7-131">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="a23e7-131">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="a23e7-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a23e7-132">See Also</span></span>

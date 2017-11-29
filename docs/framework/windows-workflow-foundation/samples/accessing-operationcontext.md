@@ -1,51 +1,55 @@
 ---
-title: "Zugreifen auf OperationContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Zugreifen auf OperationContext
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 861329c3945a53bf6c8ceeb7487aa0ef9902c93a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zugreifen auf OperationContext
-Dieses Beispiel veranschaulicht, wie die Messagingaktivitäten \(<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.Send>\) mit einer benutzerdefinierten Bereichsaktivität verwendet werden können, um auf <xref:System.ServiceModel.OperationContext.Current%2A> zuzugreifen und einen benutzerdefinierten Nachrichtenheader in einer ausgehenden oder eingehenden Nachricht anzufügen oder abzurufen.  
+# <a name="accessing-operationcontext"></a><span data-ttu-id="6e7f3-102">Zugreifen auf OperationContext</span><span class="sxs-lookup"><span data-stu-id="6e7f3-102">Accessing OperationContext</span></span>
+<span data-ttu-id="6e7f3-103">In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.Send>) mit einer benutzerdefinierten bereichsaktivität verwendet werden können, um den Zugriff auf <xref:System.ServiceModel.OperationContext.Current%2A> und anzufügen oder einen benutzerdefinierten Nachrichtenheader in einer ausgehenden oder eingehenden Nachricht abzurufen.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-103">This sample demonstrates how the messaging activities (<xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.Send>) can be used with a custom scope activity to access <xref:System.ServiceModel.OperationContext.Current%2A> and attach or retrieve a custom message header within an outgoing or incoming message.</span></span>  
   
-## Veranschaulicht  
- Messagingaktivitäten, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>  
+## <a name="demonstrates"></a><span data-ttu-id="6e7f3-104">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="6e7f3-104">Demonstrates</span></span>  
+ <span data-ttu-id="6e7f3-105">Messagingaktivitäten, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback></span><span class="sxs-lookup"><span data-stu-id="6e7f3-105">Messaging Activities, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.</span></span>  
   
-## Diskussion  
- In diesem Beispiel wird gezeigt, wie Erweiterungspunkte \(<xref:System.ServiceModel.Activities.ISendMessageCallback>,  <xref:System.ServiceModel.Activities.IReceiveMessageCallback>\) in Messagingaktivitäten verwendet werden, um auf <xref:System.ServiceModel.OperationContext.Current%2A> zuzugreifen.Die Rückrufe werden innerhalb der Workflowlaufzeit als eine Implementierung von <xref:System.Activities.IExecutionProperty> registriert, die von den Messagingaktivitäten nach der Ausführung abgerufen wird.Jede Messagingaktivität im gleichen Bereich wie die <xref:System.Activities.IExecutionProperty>\-Implementierung ist betroffen.Insbesondere erzwingt dieses Beispiel das Rückrufverhalten mithilfe einer benutzerdefinierten Bereichsaktivität.<xref:System.ServiceModel.Activities.ISendMessageCallback> wird im Clientworkflow verwendet, um <xref:System.Activities.WorkflowApplication.Id%2A> des Workflows als ausgehenden <xref:System.ServiceModel.Channels.MessageHeader> einzuschließen.Dieser Header wird dann im Dienst mit <xref:System.ServiceModel.Activities.IReceiveMessageCallback> abgerufen, und der Wert des Headers wird auf der Konsole ausgegeben.  
+## <a name="discussion"></a><span data-ttu-id="6e7f3-106">Diskussion</span><span class="sxs-lookup"><span data-stu-id="6e7f3-106">Discussion</span></span>  
+ <span data-ttu-id="6e7f3-107">In diesem Beispiel wird gezeigt, wie Erweiterungspunkte (<xref:System.ServiceModel.Activities.ISendMessageCallback>,  <xref:System.ServiceModel.Activities.IReceiveMessageCallback>) in Messagingaktivitäten verwendet werden, um auf <xref:System.ServiceModel.OperationContext.Current%2A> zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-107">This sample shows how to use extensibility points (<xref:System.ServiceModel.Activities.ISendMessageCallback>) <xref:System.ServiceModel.Activities.IReceiveMessageCallback>) in the messaging activities to access <xref:System.ServiceModel.OperationContext.Current%2A>.</span></span> <span data-ttu-id="6e7f3-108">Die Rückrufe werden innerhalb der Workflowlaufzeit als eine Implementierung von <xref:System.Activities.IExecutionProperty> registriert, die von den Messagingaktivitäten nach der Ausführung abgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-108">The callbacks are registered within the workflow runtime as an implementation of <xref:System.Activities.IExecutionProperty> that is picked up by the messaging activities upon execution.</span></span> <span data-ttu-id="6e7f3-109">Jede Messagingaktivität im gleichen Bereich wie die <xref:System.Activities.IExecutionProperty>-Implementierung ist betroffen.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-109">Any messaging activity in the same scope as that <xref:System.Activities.IExecutionProperty> implementation is affected.</span></span> <span data-ttu-id="6e7f3-110">Insbesondere erzwingt dieses Beispiel das Rückrufverhalten mithilfe einer benutzerdefinierten Bereichsaktivität.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-110">In particular, this sample uses a custom scope activity to enforce the callback behavior.</span></span> <span data-ttu-id="6e7f3-111"><xref:System.ServiceModel.Activities.ISendMessageCallback> wird im Clientworkflow verwendet, um <xref:System.Activities.WorkflowApplication.Id%2A> des Workflows als ausgehenden <xref:System.ServiceModel.Channels.MessageHeader> einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-111">The <xref:System.ServiceModel.Activities.ISendMessageCallback> is used in the client workflow to include the workflow’s <xref:System.Activities.WorkflowApplication.Id%2A> as an outgoing <xref:System.ServiceModel.Channels.MessageHeader>.</span></span> <span data-ttu-id="6e7f3-112">Dieser Header wird dann im Dienst mit <xref:System.ServiceModel.Activities.IReceiveMessageCallback> abgerufen, und der Wert des Headers wird auf der Konsole ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-112">This header is then picked up in the service using the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> and the value of the header is printed out to the console.</span></span>  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6e7f3-113">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="6e7f3-113">To set up, build, and run the sample</span></span>  
   
-1.  Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP\-Endpunkten verfügbar.Um dieses Beispiel auszuführen, müssen richtige URL\-ACLs hinzugefügt werden \(weitere Informationen finden Sie unter [Konfigurieren von HTTP und HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)\), entweder durch Ausführen von Visual Studio als Administrator oder durch Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten, um die entsprechenden ACLs hinzuzufügen.Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.  
+1.  <span data-ttu-id="6e7f3-114">Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-114">This sample exposes a workflow service using HTTP endpoints.</span></span> <span data-ttu-id="6e7f3-115">Ausführung dieser Beispiele, die richtige URL-ACLs hinzugefügt werden muss (finden Sie unter [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) Details), durch Ausführen von Visual Studio als Administrator oder durch Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten auf die entsprechenden ACLs hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-115">To run this sample, proper URL ACLs must be added (see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details), either by running Visual Studio as Administrator or by executing the following command at an elevated prompt to add the appropriate ACLs.</span></span> <span data-ttu-id="6e7f3-116">Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-116">Ensure that your Domain and Username are substituted.</span></span>  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  Sobald die URL\-ACLs hinzugefügt wurden, führen Sie die folgenden Schritte aus.  
+2.  <span data-ttu-id="6e7f3-117">Sobald die URL-ACLs hinzugefügt wurden, führen Sie die folgenden Schritte aus.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-117">Once the URL ACLs are added, use the following steps.</span></span>  
   
-    1.  Erstellen Sie die Projektmappe.  
+    1.  <span data-ttu-id="6e7f3-118">Erstellen Sie die Projektmappe.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-118">Build the solution.</span></span>  
   
-    2.  Legen Sie mehrere Startprojekte fest, indem Sie mit der rechten Maustaste auf die Projektmappe klicken und **Startprojekte festlegen** auswählen.  
+    2.  <span data-ttu-id="6e7f3-119">Mehrere Startprojekte festlegen, indem Sie die Projektmappe mit der rechten Maustaste und auswählen **Startprojekte festlegen**.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-119">Set multiple start-up projects by right-clicking the solution and selecting **Set Startup Projects**.</span></span>  
   
-    3.  Füge Sie **Dienst** und **Client** \(in dieser Reihenfolge\) als mehrere Startprojekte hinzu.  
+    3.  <span data-ttu-id="6e7f3-120">Hinzufügen **Service** und **Client** (in dieser Reihenfolge) als mehrere Startprojekte.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-120">Add **Service** and **Client** (in that order) as multiple start-up projects.</span></span>  
   
-    4.  Führen Sie die Anwendung aus.Die Clientkonsole zeigt einen Workflow an, der zweimal ausgeführt wird, und das Dienstfenster zeigt die Instanz\-ID dieser Workflows an.  
+    4.  <span data-ttu-id="6e7f3-121">Führen Sie die Anwendung aus.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-121">Run the application.</span></span> <span data-ttu-id="6e7f3-122">Die Clientkonsole zeigt einen Workflow an, der zweimal ausgeführt wird, und das Dienstfenster zeigt die Instanz-ID dieser Workflows an.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-122">The client console shows a workflow running twice and the Service window shows the instance ID of those workflows.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="6e7f3-123">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6e7f3-124">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-124">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="6e7f3-125">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6e7f3-126">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="6e7f3-126">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

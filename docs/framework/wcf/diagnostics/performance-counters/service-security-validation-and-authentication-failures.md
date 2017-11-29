@@ -1,37 +1,40 @@
 ---
-title: "Dienst: Sicherheitsvalidierung und Authentifizierungsfehler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Dienst: Sicherheitsvalidierung und Authentifizierungsfehler'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 808c0d648043df6c5a3dda4646e45ba1492345a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Dienst: Sicherheitsvalidierung und Authentifizierungsfehler
-Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler  
+# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="cc2d1-102">Dienst: Sicherheitsvalidierung und Authentifizierungsfehler</span><span class="sxs-lookup"><span data-stu-id="cc2d1-102">Service: Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="cc2d1-103">Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler</span><span class="sxs-lookup"><span data-stu-id="cc2d1-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## Beschreibung  
- Dieser Zähler wird jedes Mal inkrementiert, wenn eine Nachricht wegen eines Sicherheitsproblems abgelehnt wird, das nicht von dem Indikator "Nicht autorisierte Sicherheitsaufrufe" abgedeckt wird.Zu derartigen Problemen gehören:  
+## <a name="description"></a><span data-ttu-id="cc2d1-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cc2d1-104">Description</span></span>  
+ <span data-ttu-id="cc2d1-105">Dieser Zähler wird jedes Mal inkrementiert, wenn eine Nachricht wegen eines Sicherheitsproblems abgelehnt wird, das nicht von dem Zähler "Nicht autorisierte Sicherheitsanrufe" abgedeckt wird.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="cc2d1-106">Zu derartigen Problemen gehören:</span><span class="sxs-lookup"><span data-stu-id="cc2d1-106">Such problems include:</span></span>  
   
--   Clienttoken kann nicht aus der Nachricht gelesen werden.  
+-   <span data-ttu-id="cc2d1-107">Clienttoken kann nicht aus der Nachricht gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-107">Client token cannot be read from the message.</span></span>  
   
--   Clienttoken hat die Authentifizierung \(z. B. ungültiges Kennwort\) nicht bestanden.  
+-   <span data-ttu-id="cc2d1-108">Clienttoken hat die Authentifizierung (z. B. ungültiges Kennwort) nicht bestanden.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-108">Client token has failed authentication (for example,, bad password).</span></span>  
   
--   Signaturüberprüfung ist fehlgeschlagen \(die Nachricht wurde z. B. manipuliert\).  
+-   <span data-ttu-id="cc2d1-109">Signaturüberprüfung ist fehlgeschlagen (die Nachricht wurde z. B. manipuliert).</span><span class="sxs-lookup"><span data-stu-id="cc2d1-109">Signature verification has failed (for example,, the message has been tampered).</span></span>  
   
--   Die Nachricht ist ein Duplikat von einer vorherigen; dies kann während eines Replay\-Angriffes geschehen.  
+-   <span data-ttu-id="cc2d1-110">Die Nachricht ist ein Duplikat einer vorherigen; dies kann während eines Replay-Angriffs geschehen.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   Ein Entschlüsselungsfehler ist aufgetreten.  
+-   <span data-ttu-id="cc2d1-111">Ein Entschlüsselungsfehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-111">A decryption failure has occurred.</span></span>  
   
--   Einige erforderliche Elemente \(z. B. fehlender Timestamp oder verschlüsselter Datenblock\) fehlen in der Nachricht.  
+-   <span data-ttu-id="cc2d1-112">Einige erforderliche Elemente (z. B. fehlender Timestamp oder verschlüsselter Datenblock) fehlen in der Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-112">Some required elements (for example,, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   Während des TLSNEGO\-\/SPNEGO\-Handshakes sind Fehler aufgetreten.
+-   <span data-ttu-id="cc2d1-113">Während des TLSNEGO-/SPNEGO-Handshakes sind Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="cc2d1-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>

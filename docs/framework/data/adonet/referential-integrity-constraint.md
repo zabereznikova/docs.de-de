@@ -1,45 +1,48 @@
 ---
-title: "Einschr&#228;nkung der referenziellen Integrit&#228;t | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Einschränkung der referenziellen Integrität"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 10e469838073b4cf1faba1704b88b47f30b8b3d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Einschr&#228;nkung der referenziellen Integrit&#228;t
-Eine *Einschränkung der referenziellen Integrität* im Entity Data Model \(EDM\) ähnelt einer Einschränkung der referenziellen Integrität in einer relationalen Datenbank.  So wie eine Spalte \(oder Spalten\) einer Datenbanktabelle auf den Primärschlüssel einer anderen Tabelle verweisen kann, kann eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) \(oder Eigenschaften\) eines [Entitätstyps](../../../../docs/framework/data/adonet/entity-type.md) auf den [Entitätsschlüssel](../../../../docs/framework/data/adonet/entity-key.md) eines anderen Entitätstyps verweisen.  Der Entitätstyp, auf den verwiesen wird, wird als *Prinzipalende* der Einschränkung bezeichnet.  Der Entitätstyp, der auf das Prinzipalende verweist, wird als *abhängiges Ende* der Einschränkung bezeichnet.  
+# <a name="referential-integrity-constraint"></a><span data-ttu-id="77abf-102">Einschränkung der referenziellen Integrität</span><span class="sxs-lookup"><span data-stu-id="77abf-102">referential integrity constraint</span></span>
+<span data-ttu-id="77abf-103">Ein *Einschränkung der referenziellen Integrität* im Entity Data Model (EDM) ähnelt einer Einschränkung der referenziellen Integrität in einer relationalen Datenbank.</span><span class="sxs-lookup"><span data-stu-id="77abf-103">A *referential integrity constraint* in the Entity Data Model (EDM) is similar to a referential integrity constraint in a relational database.</span></span> <span data-ttu-id="77abf-104">Auf die gleiche Weise, dass eine Spalte (oder Spalten) aus einer Datenbanktabelle auf den Primärschlüssel einer anderen Tabelle verweisen können eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) (oder Eigenschaften) von einem [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) verweisen können die [Entitätsschlüssel ](../../../../docs/framework/data/adonet/entity-key.md) eines anderen Entitätstyps.</span><span class="sxs-lookup"><span data-stu-id="77abf-104">In the same way that a column (or columns) from a database table can reference the primary key of another table, a [property](../../../../docs/framework/data/adonet/property.md) (or properties) of an [entity type](../../../../docs/framework/data/adonet/entity-type.md) can reference the [entity key](../../../../docs/framework/data/adonet/entity-key.md) of another entity type.</span></span> <span data-ttu-id="77abf-105">Der Entitätstyp, auf die verwiesen wird, aufgerufen wird die *prinzipalende* der Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="77abf-105">The entity type that is referenced is called the *principal end* of the constraint.</span></span> <span data-ttu-id="77abf-106">Der Entitätstyp, der auf das prinzipalende verweist heißt die *abhängiges Ende* der Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="77abf-106">The entity type that references the principal end is called the *dependent end* of the constraint.</span></span>  
   
- Eine Einschränkung der referenziellen Integrität wird als Teil einer [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) zwischen zwei Entitätstypen definiert.  Die Definition für eine Einschränkung der referenziellen Integrität gibt die folgenden Informationen an:  
+ <span data-ttu-id="77abf-107">Eine Einschränkung der referenziellen Integrität wird definiert als Teil einer [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) zwischen zwei Entitätstypen.</span><span class="sxs-lookup"><span data-stu-id="77abf-107">A referential integrity constraint is defined as part of an [association](../../../../docs/framework/data/adonet/association-type.md) between two entity types.</span></span> <span data-ttu-id="77abf-108">Die Definition für eine Einschränkung der referenziellen Integrität gibt die folgenden Informationen an:</span><span class="sxs-lookup"><span data-stu-id="77abf-108">The definition for a referential integrity constraint specifies the following information:</span></span>  
   
--   Das Prinzipalende der Einschränkung.  \(Ein Entitätstyp, auf dessen Entitätsschlüssel durch das abhängige Ende verwiesen wird.\)  
+-   <span data-ttu-id="77abf-109">Das Prinzipalende der Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="77abf-109">The principal end of the constraint.</span></span> <span data-ttu-id="77abf-110">(Ein Entitätstyp, auf dessen Entitätsschlüssel durch das abhängige Ende verwiesen wird.)</span><span class="sxs-lookup"><span data-stu-id="77abf-110">(An entity type whose entity key is referenced by the dependent end.)</span></span>  
   
--   Den Entitätsschlüssel des Prinzipalendes.  
+-   <span data-ttu-id="77abf-111">Den Entitätsschlüssel des Prinzipalendes.</span><span class="sxs-lookup"><span data-stu-id="77abf-111">The entity key of the principal end.</span></span>  
   
--   Das abhängige Ende der Einschränkung.  \(Ein Entitätstyp, der über eine Eigenschaft oder Eigenschaften verfügt, die auf den Entitätsschlüssel des Prinzipalendes verweisen.\)  
+-   <span data-ttu-id="77abf-112">Das abhängige Ende der Einschränkung.</span><span class="sxs-lookup"><span data-stu-id="77abf-112">The dependent end of the constraint.</span></span> <span data-ttu-id="77abf-113">(Ein Entitätstyp, der über eine Eigenschaft oder Eigenschaften verfügt, die auf den Entitätsschlüssel des Prinzipalendes verweisen.)</span><span class="sxs-lookup"><span data-stu-id="77abf-113">(An entity type that has a property or properties that reference the entity key of the principal end.)</span></span>  
   
--   Die verweisende Eigenschaft oder Eigenschaften des abhängigen Endes.  
+-   <span data-ttu-id="77abf-114">Die verweisende Eigenschaft oder Eigenschaften des abhängigen Endes.</span><span class="sxs-lookup"><span data-stu-id="77abf-114">The referencing property or properties of the dependent end.</span></span>  
   
- Mit Einschränkungen der referenziellen Integrität im EDM soll sichergestellt werden, dass gültige Zuordnungen immer vorhanden sind.  Weitere Informationen finden Sie unter [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ <span data-ttu-id="77abf-115">Mit Einschränkungen der referenziellen Integrität im EDM soll sichergestellt werden, dass gültige Zuordnungen immer vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="77abf-115">The purpose of referential integrity constraints in the EDM is to ensure that valid associations always exist.</span></span> <span data-ttu-id="77abf-116">Weitere Informationen finden Sie unter [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md).</span><span class="sxs-lookup"><span data-stu-id="77abf-116">For more information, see [foreign key property](../../../../docs/framework/data/adonet/foreign-key-property.md).</span></span>  
   
-## Beispiel  
- Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit zwei Zuordnungen: `WrittenBy` und `PublishedBy`.  Der `Book`\-Entitätstyp verfügt über die Eigenschaft `PublisherId`, die auf den Entitätsschlüssel des `Publisher`\-Entitätstyps verweist, wenn Sie eine Einschränkung der referenziellen Integrität für die `PublishedBy`\-Zuordnung definieren.  
+## <a name="example"></a><span data-ttu-id="77abf-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="77abf-117">Example</span></span>  
+ <span data-ttu-id="77abf-118">Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit zwei Zuordnungen: `WrittenBy` und `PublishedBy`.</span><span class="sxs-lookup"><span data-stu-id="77abf-118">The diagram below shows a conceptual model with two associations: `WrittenBy` and `PublishedBy`.</span></span> <span data-ttu-id="77abf-119">Der `Book`-Entitätstyp verfügt über die Eigenschaft `PublisherId`, die auf den Entitätsschlüssel des `Publisher`-Entitätstyps verweist, wenn Sie eine Einschränkung der referenziellen Integrität für die `PublishedBy`-Zuordnung definieren.</span><span class="sxs-lookup"><span data-stu-id="77abf-119">The `Book` entity type has a property, `PublisherId`, that references the entity key of the `Publisher` entity type when you define a referential integrity constraint on the `PublishedBy` association.</span></span>  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ <span data-ttu-id="77abf-120">![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")</span><span class="sxs-lookup"><span data-stu-id="77abf-120">![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")</span></span>  
   
- Das [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache \(DSL\) mit der Bezeichnung konzeptionelle Schemadefinitionssprache \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\), um konzeptionelle Modelle zu definieren.  Die folgende CSDL definiert eine Einschränkung der referenziellen Integrität für die oben im konzeptionellen Modell gezeigte `PublishedBy`\-Zuordnung.  
+ <span data-ttu-id="77abf-121">Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) um konzeptionelle Modelle zu definieren.</span><span class="sxs-lookup"><span data-stu-id="77abf-121">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="77abf-122">Die folgende CSDL definiert eine Einschränkung der referenziellen Integrität für die oben im konzeptionellen Modell gezeigte `PublishedBy`-Zuordnung.</span><span class="sxs-lookup"><span data-stu-id="77abf-122">The following CSDL defines a referential integrity constraint on the `PublishedBy` association shown in the conceptual model above.</span></span>  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## Siehe auch  
- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="77abf-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="77abf-123">See Also</span></span>  
+ [<span data-ttu-id="77abf-124">Schlüsselkonzepte von Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="77abf-124">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="77abf-125">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="77abf-125">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

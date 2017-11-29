@@ -1,49 +1,55 @@
 ---
-title: "Serialisierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Serialization2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 844f206219fed527b73b5125ab82f1c044c59b5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Serialisierung
-In diesem Abschnitt werden die Serialisierungsfähigkeiten von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] beschrieben.  Die folgenden Abschnitte enthalten Informationen zum Hinzufügen von Serialisierung während der Codeerstellung zur Entwicklungszeit sowie zum Serialisierungsverhalten von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Klassen zur Laufzeit.  
+# <a name="serialization"></a><span data-ttu-id="7088a-102">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="7088a-102">Serialization</span></span>
+<span data-ttu-id="7088a-103">In diesem Thema wird beschrieben, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serialisierungsfähigkeiten.</span><span class="sxs-lookup"><span data-stu-id="7088a-103">This topic describes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization capabilities.</span></span> <span data-ttu-id="7088a-104">Die folgenden Abschnitte enthalten Informationen zum Hinzufügen von Serialisierung während der Codeerstellung zur Entwicklungszeit sowie zum Serialisierungsverhalten von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Klassen zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="7088a-104">The paragraphs that follow provide information about how to add serialization during code generation at design time and the run-time serialization behavior of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] classes.</span></span>  
   
- Sie können zur Entwurfszeit durch eine der folgenden Methoden Serialisierungscode hinzufügen:  
+ <span data-ttu-id="7088a-105">Sie können zur Entwurfszeit durch eine der folgenden Methoden Serialisierungscode hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="7088a-105">You can add serialization code at design time by either of the following methods:</span></span>  
   
--   Ändern Sie in [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] die **Serialisierungsmodus**\-Eigenschaft in **Unidirektional**.  
+-   <span data-ttu-id="7088a-106">In der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], ändern Sie die **Serialisierungsmodus** Eigenschaft **unidirektional**.</span><span class="sxs-lookup"><span data-stu-id="7088a-106">In the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], change the **Serialization Mode** property to **Unidirectional**.</span></span>  
   
--   Fügen Sie in der SQLMetal\-Befehlszeile die **\/serialization**\-Option hinzu.  Weitere Informationen finden Sie unter [SqlMetal.exe \(Tool zur Codegenerierung\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+-   <span data-ttu-id="7088a-107">Fügen Sie in der SQLMetal-Befehlszeile den **/serialization** Option.</span><span class="sxs-lookup"><span data-stu-id="7088a-107">On the SQLMetal command line, add the **/serialization** option.</span></span> <span data-ttu-id="7088a-108">Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="7088a-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## Übersicht  
- Der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erzeugte Code bietet standardmäßig die Möglichkeit zum verzögerten Laden.  Verzögertes Laden ist auf der Mittelebene eine komfortable Möglichkeit zum transparenten, bedarfsorientierten Laden der Daten.  Bei der Serialisierung kommt es jedoch zu Problemen, da hierbei das verzögerte Laden auch dann ausgelöst wird, wenn dieses nicht beabsichtigt ist.  Wird ein Objekt serialisiert, wird sein transitiver Abschluss unter allen ausgehenden verzögert geladenen Verweisen serialisiert.  
+## <a name="overview"></a><span data-ttu-id="7088a-109">Übersicht</span><span class="sxs-lookup"><span data-stu-id="7088a-109">Overview</span></span>  
+ <span data-ttu-id="7088a-110">Die vom generierten Code [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verzögertes Laden Funktionen standardmäßig bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="7088a-110">The code generated by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides deferred loading capabilities by default.</span></span> <span data-ttu-id="7088a-111">Verzögertes Laden ist auf der Mittelebene eine komfortable Möglichkeit zum transparenten, bedarfsorientierten Laden der Daten.</span><span class="sxs-lookup"><span data-stu-id="7088a-111">Deferred loading is very convenient on the mid-tier for transparent loading of data on demand.</span></span> <span data-ttu-id="7088a-112">Bei der Serialisierung kommt es jedoch zu Problemen, da hierbei das verzögerte Laden auch dann ausgelöst wird, wenn dieses nicht beabsichtigt ist.</span><span class="sxs-lookup"><span data-stu-id="7088a-112">However, it is problematic for serialization, because the serializer triggers deferred loading whether deferred loading is intended or not.</span></span> <span data-ttu-id="7088a-113">Wird ein Objekt serialisiert, wird sein transitiver Abschluss unter allen ausgehenden verzögert geladenen Verweisen serialisiert.</span><span class="sxs-lookup"><span data-stu-id="7088a-113">In effect, when an object is serialized, its transitive closure under all outbound defer-loaded references is serialized.</span></span>  
   
- Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Serialisierungsfunktion behebt dieses Problem vor allem durch zwei Mechanismen:  
+ <span data-ttu-id="7088a-114">Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serialisierungsfunktion behebt dieses Problem vor allem durch zwei Mechanismen:</span><span class="sxs-lookup"><span data-stu-id="7088a-114">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization feature addresses this problem, primarily through two mechanisms:</span></span>  
   
--   Ein <xref:System.Data.Linq.DataContext>\-Modus für die Deaktivierung des verzögerten Ladens \(<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>\).  Weitere Informationen finden Sie unter <xref:System.Data.Linq.DataContext>.  
+-   <span data-ttu-id="7088a-115">Ein <xref:System.Data.Linq.DataContext>-Modus für die Deaktivierung des verzögerten Ladens (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>).</span><span class="sxs-lookup"><span data-stu-id="7088a-115">A <xref:System.Data.Linq.DataContext> mode for turning off deferred loading (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>).</span></span> <span data-ttu-id="7088a-116">Weitere Informationen finden Sie unter <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="7088a-116">For more information, see <xref:System.Data.Linq.DataContext>.</span></span>  
   
--   Ein Codegenerierungsschalter zum Erzeugen des <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=fullName>\-Attributs und des <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=fullName>\-Attributs für erzeugte Entitäten.  Dieser Aspekt, einschließlich des Verhaltens von Klassen zum verzögerten Laden im Rahmen der Serialisierung, ist das Hauptthema dieses Abschnitts.  
+-   <span data-ttu-id="7088a-117">Ein Codegenerierungsschalter zum Erzeugen des <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>-Attributs und des <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType>-Attributs für erzeugte Entitäten.</span><span class="sxs-lookup"><span data-stu-id="7088a-117">A code-generation switch to generate <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> and <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> attributes on generated entities.</span></span> <span data-ttu-id="7088a-118">Dieser Aspekt, einschließlich des Verhaltens von Klassen zum verzögerten Laden im Rahmen der Serialisierung, ist das Hauptthema dieses Abschnitts.</span><span class="sxs-lookup"><span data-stu-id="7088a-118">This aspect, including the behavior of defer-loading classes under serialization, is the major subject of this topic.</span></span>  
   
-### Definitionen  
+### <a name="definitions"></a><span data-ttu-id="7088a-119">Definitionen</span><span class="sxs-lookup"><span data-stu-id="7088a-119">Definitions</span></span>  
   
--   *DataContract Serializer*: Standard\-Serializer der Windows Communication Framework \(WCF\)\-Komponente von .NET Framework 3.0 oder höher.  
+-   <span data-ttu-id="7088a-120">*DataContract-Serialisierungsprogramm*: Standard-Serializer der Windows Communication Framework (WCF)-Komponente des .NET Framework 3.0 oder höher.</span><span class="sxs-lookup"><span data-stu-id="7088a-120">*DataContract serializer*: Default serializer used by the Windows Communication Framework (WCF) component of the .NET Framework 3.0 or later versions.</span></span>  
   
--   *Unidirektionale Serialisierung*: Die serialisierte Version einer Klasse enthält nur eine Einweg\-Zuordnungseigenschaft \(um einen Zyklus zu vermeiden\).  Laut Konvention wird die Eigenschaft auf der übergeordneten Seite einer primären Fremdschlüsselbeziehung für die Serialisierung markiert.  Die andere Seite in einer bidirektionalen Zuordnung wird nicht serialisiert.  
+-   <span data-ttu-id="7088a-121">*Unidirektionale Serialisierung*: die serialisierte Version einer Klasse, die nur eine Einweg-Zuordnungseigenschaft (um einen Zyklus zu vermeiden) enthält.</span><span class="sxs-lookup"><span data-stu-id="7088a-121">*Unidirectional serialization*: The serialized version of a class that contains only a one-way association property (to avoid a cycle).</span></span> <span data-ttu-id="7088a-122">Laut Konvention wird die Eigenschaft auf der übergeordneten Seite einer primären Fremdschlüsselbeziehung für die Serialisierung markiert.</span><span class="sxs-lookup"><span data-stu-id="7088a-122">By convention, the property on the parent side of a primary-foreign key relationship is marked for serialization.</span></span> <span data-ttu-id="7088a-123">Die andere Seite in einer bidirektionalen Zuordnung wird nicht serialisiert.</span><span class="sxs-lookup"><span data-stu-id="7088a-123">The other side in a bidirectional association is not serialized.</span></span>  
   
-     Unidirektionale Serialisierung ist der einzige Serialisierungstyp, der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt wird.  
+     <span data-ttu-id="7088a-124">Unidirektionale Serialisierung ist der einzige Serialisierungstyp, der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="7088a-124">Unidirectional serialization is the only type of serialization supported by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
-## Codebeispiel  
- Im folgenden Beispiel werden die herkömmlichen Klassen `Customer` und `Order` aus der Beispieldatenbank Northwind verwendet. Es wird gezeigt, wie diese Klassen mit Serialisierungsattributen versehen werden.  
+## <a name="code-example"></a><span data-ttu-id="7088a-125">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="7088a-125">Code Example</span></span>  
+ <span data-ttu-id="7088a-126">Im folgenden Beispiel werden die herkömmlichen Klassen `Customer` und `Order` aus der Beispieldatenbank Northwind verwendet. Es wird gezeigt, wie diese Klassen mit Serialisierungsattributen versehen werden.</span><span class="sxs-lookup"><span data-stu-id="7088a-126">The following code uses the traditional `Customer` and `Order` classes from the Northwind sample database, and shows how these classes are decorated with serialization attributes.</span></span>  
   
  [!code-csharp[DLinqSerialization#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#1)]
  [!code-vb[DLinqSerialization#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#1)]  
@@ -54,7 +60,7 @@ In diesem Abschnitt werden die Serialisierungsfähigkeiten von [!INCLUDE[vbtecdl
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- Für die `Order`\-Klasse im folgenden Beispiel wird aus Gründen der Übersicht nur die umgekehrte Zuordnungseigenschaft entsprechend der `Customer`\-Klasse dargestellt.  Das `DataMember`\-Attribut zur Vermeidung eines Zyklus fehlt.  
+ <span data-ttu-id="7088a-127">Für die `Order`-Klasse im folgenden Beispiel wird aus Gründen der Übersicht nur die umgekehrte Zuordnungseigenschaft entsprechend der `Customer`-Klasse dargestellt.</span><span class="sxs-lookup"><span data-stu-id="7088a-127">For the `Order` class in the following example, only the reverse association property corresponding to the `Customer` class is shown for brevity.</span></span> <span data-ttu-id="7088a-128">Das `DataMember`-Attribut zur Vermeidung eines Zyklus fehlt.</span><span class="sxs-lookup"><span data-stu-id="7088a-128">It does not have a `DataMember` attribute to avoid a cycle.</span></span>  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -62,21 +68,21 @@ In diesem Abschnitt werden die Serialisierungsfähigkeiten von [!INCLUDE[vbtecdl
  [!code-csharp[DLinqSerialization#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#5)]
  [!code-vb[DLinqSerialization#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#5)]  
   
-### So serialisieren Sie die Entitäten  
- Sie können die Entitäten im Code im vorherigen Abschnitt wie folgt serialisieren:  
+### <a name="how-to-serialize-the-entities"></a><span data-ttu-id="7088a-129">So serialisieren Sie die Entitäten</span><span class="sxs-lookup"><span data-stu-id="7088a-129">How to Serialize the Entities</span></span>  
+ <span data-ttu-id="7088a-130">Sie können die Entitäten im Code im vorherigen Abschnitt wie folgt serialisieren:</span><span class="sxs-lookup"><span data-stu-id="7088a-130">You can serialize the entities in the codes shown in the previous section as follows;</span></span>  
   
  [!code-csharp[DLinqSerialization#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/Program.cs#6)]
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
-### Selbstrekursive Beziehungen  
- Selbstrekursive Beziehungen folgen dem gleichen Muster.  Die dem Fremdschlüssel entsprechende Zuordnungseigenschaft weist im Gegensatz zur übergeordneten Eigenschaft kein `DataMember`\-Attribut auf.  
+### <a name="self-recursive-relationships"></a><span data-ttu-id="7088a-131">Selbstrekursive Beziehungen</span><span class="sxs-lookup"><span data-stu-id="7088a-131">Self-Recursive Relationships</span></span>  
+ <span data-ttu-id="7088a-132">Selbstrekursive Beziehungen folgen dem gleichen Muster.</span><span class="sxs-lookup"><span data-stu-id="7088a-132">Self-recursive relationships follow the same pattern.</span></span> <span data-ttu-id="7088a-133">Die dem Fremdschlüssel entsprechende Zuordnungseigenschaft weist im Gegensatz zur übergeordneten Eigenschaft kein `DataMember`-Attribut auf.</span><span class="sxs-lookup"><span data-stu-id="7088a-133">The association property corresponding to the foreign key does not have a `DataMember` attribute, whereas the parent property does.</span></span>  
   
- Beachten Sie die folgende Klasse, die über zwei selbstrekursive Beziehungen verfügt: Employee.Manager\/Reports und Employee.Mentor\/Mentees.  
+ <span data-ttu-id="7088a-134">Beachten Sie die folgende Klasse, die über zwei selbstrekursive Beziehungen verfügt: Employee.Manager/Reports und Employee.Mentor/Mentees.</span><span class="sxs-lookup"><span data-stu-id="7088a-134">Consider the following class that has two self-recursive relationships: Employee.Manager/Reports and Employee.Mentor/Mentees.</span></span>  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [SqlMetal.exe \(Tool zur Codegenerierung\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)   
- [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+## <a name="see-also"></a><span data-ttu-id="7088a-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7088a-135">See Also</span></span>  
+ [<span data-ttu-id="7088a-136">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="7088a-136">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="7088a-137">SqlMetal.exe (Tool zur Codegenerierung)</span><span class="sxs-lookup"><span data-stu-id="7088a-137">SqlMetal.exe (Code Generation Tool)</span></span>](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
+ [<span data-ttu-id="7088a-138">Vorgehensweise: Serialisierbarkeit von Entitäten</span><span class="sxs-lookup"><span data-stu-id="7088a-138">How to: Make Entities Serializable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

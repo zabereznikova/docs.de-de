@@ -1,60 +1,68 @@
 ---
-title: "dataContractSerializer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: dataContractSerializer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4044e81b7c33c7a755678e79586dd4f37cf54ed5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# dataContractSerializer
-Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.  
+# <a name="datacontractserializer"></a><span data-ttu-id="7b928-102">dataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="7b928-102">dataContractSerializer</span></span>
+<span data-ttu-id="7b928-103">Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="7b928-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="7b928-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="7b928-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="7b928-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="7b928-105">\<behaviors></span></span>  
+<span data-ttu-id="7b928-106">\<EndpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="7b928-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="7b928-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="7b928-107">\<behavior></span></span>  
+<span data-ttu-id="7b928-108">\<"DataContractSerializer" ></span><span class="sxs-lookup"><span data-stu-id="7b928-108">\<dataContractSerializer></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7b928-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="7b928-109">Syntax</span></span>  
   
+```xml  
 <dataContractSerializer ignoreExtensionDataObject="Boolean"  
       maxItemsInObjectGraph="Integer" />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7b928-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="7b928-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7b928-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="7b928-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="7b928-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="7b928-112">Attributes</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|IgnoreExtensionDataObject|Ein boolescher Wert ab, der angibt, ob vom Endpunkt bereitgestellte Daten ignoriert werden sollen, wenn dieser serialisiert oder deserialisiert wird.|  
-|maxItemsInObjectGraph|Eine ganze Zahl, die die maximale Anzahl der zu serialisierenden oder zu deserialisierenden Elemente angibt.|  
+|<span data-ttu-id="7b928-113">Element</span><span class="sxs-lookup"><span data-stu-id="7b928-113">Element</span></span>|<span data-ttu-id="7b928-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7b928-114">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="7b928-115">IgnoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="7b928-115">ignoreExtensionDataObject</span></span>|<span data-ttu-id="7b928-116">Ein boolescher Wert ab, der angibt, ob vom Endpunkt bereitgestellte Daten ignoriert werden sollen, wenn dieser serialisiert oder deserialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="7b928-116">A Boolean value that specifies whether to ignore data supplied by the endpoint, when it is being serialized or deserialized.</span></span>|  
+|<span data-ttu-id="7b928-117">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="7b928-117">maxItemsInObjectGraph</span></span>|<span data-ttu-id="7b928-118">Eine ganze Zahl, die die maximale Anzahl der zu serialisierenden oder zu deserialisierenden Elemente angibt.</span><span class="sxs-lookup"><span data-stu-id="7b928-118">An integer that specifies the maximum number of items to serialize or deserialize.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="7b928-119">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="7b928-119">Child Elements</span></span>  
+ <span data-ttu-id="7b928-120">Keine</span><span class="sxs-lookup"><span data-stu-id="7b928-120">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="7b928-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="7b928-121">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Verhalten\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
+|<span data-ttu-id="7b928-122">Element</span><span class="sxs-lookup"><span data-stu-id="7b928-122">Element</span></span>|<span data-ttu-id="7b928-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7b928-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7b928-124">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="7b928-124">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="7b928-125">Gibt ein Endpunktverhalten an.</span><span class="sxs-lookup"><span data-stu-id="7b928-125">Specifies an endpoint behavior.</span></span>|  
   
-## Hinweise  
- Weitere Informationen zu bekannten Typen finden Sie in der <xref:System.Runtime.Serialization.DataContractSerializer>\-Dokumentation.  
+## <a name="remarks"></a><span data-ttu-id="7b928-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7b928-126">Remarks</span></span>  
+ <span data-ttu-id="7b928-127">Weitere Informationen zu bekannten Typen finden Sie in der <xref:System.Runtime.Serialization.DataContractSerializer>-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="7b928-127">See the <xref:System.Runtime.Serialization.DataContractSerializer> documentation for more information about known types.</span></span>  
   
 > [!CAUTION]
->  Das `<dataContractSerializer>`\-Verhaltenselement sollte, wenn vorhanden, in der Konfigurationsdatei immer vor dem `<enableWebScript>`\-Verhaltenselement angegeben werden.  Andernfalls ist das resultierende Verhalten nicht definiert.  
+>  <span data-ttu-id="7b928-128">Das `<dataContractSerializer>`-Verhaltenselement sollte, wenn vorhanden, in der Konfigurationsdatei immer vor dem `<enableWebScript>`-Verhaltenselement angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="7b928-128">The `<dataContractSerializer>` behavior element (if present) should always appear before the `<enableWebScript>` behavior element in the configuration file.</span></span> <span data-ttu-id="7b928-129">Andernfalls ist das resultierende Verhalten nicht definiert.</span><span class="sxs-lookup"><span data-stu-id="7b928-129">Otherwise, the resulting behavior is undefined.</span></span>  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>   
- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>   
- [Bekannte Typen in Datenverträgen](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [Datenübertragung und Serialisierung](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="7b928-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7b928-130">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
+ <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
+ [<span data-ttu-id="7b928-131">Bekannte Typen in Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="7b928-131">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="7b928-132">Die Datenübertragung und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="7b928-132">Data Transfer and Serialization</span></span>](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

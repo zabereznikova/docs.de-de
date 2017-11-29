@@ -1,48 +1,47 @@
 ---
-title: "&lt;paramref&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "paramref XML tag"
-  - "<paramref> XML tag"
+title: '&lt;Paramref&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- paramref XML tag
+- <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3bf3d4f04997a03f442cf7fd2a1586604198d3fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;paramref&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Formatiert ein Wort als Parameter.  
+# <a name="ltparamrefgt-visual-basic"></a><span data-ttu-id="f6ae7-102">&lt;Paramref&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f6ae7-102">&lt;paramref&gt; (Visual Basic)</span></span>
+<span data-ttu-id="f6ae7-103">Formatiert ein Wort als Parameter an.</span><span class="sxs-lookup"><span data-stu-id="f6ae7-103">Formats a word as a parameter.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="f6ae7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f6ae7-104">Syntax</span></span>  
   
-```  
+```xml  
 <paramref name="name"/>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a><span data-ttu-id="f6ae7-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f6ae7-105">Parameters</span></span>  
  `name`  
- der Name des Parameters, auf den verwiesen werden soll.  Der Name muss in doppelte Anführungszeichen \(**" "**\) eingeschlossen werden.  
+ <span data-ttu-id="f6ae7-106">Der Name des Parameters, auf den verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="f6ae7-106">The name of the parameter to refer to.</span></span> <span data-ttu-id="f6ae7-107">Setzen Sie den Namen in doppelte Anführungszeichen (" ").</span><span class="sxs-lookup"><span data-stu-id="f6ae7-107">Enclose the name in double quotation marks (" ").</span></span>  
   
-## Hinweise  
- Mit dem `<paramref>`\-Tag können Sie angeben, dass es sich bei einem Wort um einen Parameter handelt.  Die XML\-Datei kann verarbeitet werden, um den Parameter in besonderer Weise zu formatieren.  
+## <a name="remarks"></a><span data-ttu-id="f6ae7-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f6ae7-108">Remarks</span></span>  
+ <span data-ttu-id="f6ae7-109">Die `<paramref>` Tag bietet Ihnen eine Möglichkeit, um anzugeben, dass ein Wort ein Parameter ist.</span><span class="sxs-lookup"><span data-stu-id="f6ae7-109">The `<paramref>` tag gives you a way to indicate that a word is a parameter.</span></span> <span data-ttu-id="f6ae7-110">Die XML-Datei kann verarbeitet werden, um diesen Parameter auf unterschiedliche Weise zu formatieren.</span><span class="sxs-lookup"><span data-stu-id="f6ae7-110">The XML file can be processed to format this parameter in some distinct way.</span></span>  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ <span data-ttu-id="f6ae7-111">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="f6ae7-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## Beispiel  
- In diesem Beispiel wird mit dem `<paramref>`\-Tag auf den `id`\-Parameter verwiesen.  
+## <a name="example"></a><span data-ttu-id="f6ae7-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f6ae7-112">Example</span></span>  
+ <span data-ttu-id="f6ae7-113">Dieses Beispiel verwendet die `<paramref>` -Tag zum Verweisen auf die `id` Parameter.</span><span class="sxs-lookup"><span data-stu-id="f6ae7-113">This example uses the `<paramref>` tag to refer to the `id` parameter.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
   
-## Siehe auch  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="f6ae7-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6ae7-114">See Also</span></span>  
+ [<span data-ttu-id="f6ae7-115">XML-Kommentartags</span><span class="sxs-lookup"><span data-stu-id="f6ae7-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

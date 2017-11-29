@@ -1,71 +1,74 @@
 ---
-title: "Synchrone Szenarien mit HTTP, TCP oder benannten Pipes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c58998e3fd75d2bdadc029f44cc9927b849ddd9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Synchrone Szenarien mit HTTP, TCP oder benannten Pipes
-In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene synchrone Anforderungs\-\/Antwortszenarien beschrieben. Dabei werden HTTP, TCP oder benannte Pipes mit einem Singlethreadclient verwendet.Unter [Asynchrone Szenarien mit HTTP, TCP oder benannten Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) finden Sie weitere Informationen zu Multithreadanforderungen.  
+# <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="a21d6-102">Synchrone Szenarien mit HTTP, TCP oder benannten Pipes</span><span class="sxs-lookup"><span data-stu-id="a21d6-102">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>
+<span data-ttu-id="a21d6-103">In diesem Thema werden die Aktivitäten und Übertragungen für verschiedene synchrone Anforderungs-/Antwortszenarien beschrieben. Dabei werden HTTP, TCP oder benannte Pipes mit einem Singlethreadclient verwendet.</span><span class="sxs-lookup"><span data-stu-id="a21d6-103">This topic describes the activities and transfers for different synchronous request/reply scenarios, with a single-threaded client, using HTTP, TCP or named pipe.</span></span> <span data-ttu-id="a21d6-104">Finden Sie unter [asynchrone Szenarien mit HTTP, TCP oder Named Pipe-](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) für Weitere Informationen zu Multithread-Anforderungen.</span><span class="sxs-lookup"><span data-stu-id="a21d6-104">See [Asynchronous Scenarios using HTTP, TCP, or Named-Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) for more information on multi-threaded requests.</span></span>  
   
-## Synchrone Anforderung\/Antwort ohne Fehler  
- In diesem Abschnitt werden die Aktivitäten und Übertragungen für ein gültiges synchrones Anforderungs\-\/Antwortszenario mit Singlethreadclient beschrieben.  
+## <a name="synchronous-requestreply-without-errors"></a><span data-ttu-id="a21d6-105">Synchrone Anforderung/Antwort ohne Fehler</span><span class="sxs-lookup"><span data-stu-id="a21d6-105">Synchronous Request/Reply without Errors</span></span>  
+ <span data-ttu-id="a21d6-106">In diesem Abschnitt werden die Aktivitäten und Übertragungen für ein gültiges synchrones Anforderungs-/Antwortszenario mit Singlethreadclient beschrieben.</span><span class="sxs-lookup"><span data-stu-id="a21d6-106">This section describes the activities and transfers for a valid synchronous request/reply scenario, with single-threaded client.</span></span>  
   
-### Client  
+### <a name="client"></a><span data-ttu-id="a21d6-107">Client</span><span class="sxs-lookup"><span data-stu-id="a21d6-107">Client</span></span>  
   
-#### Herstellen einer Verbindung mit Dienstendpunkt  
- Ein Client wird erstellt und geöffnet.Für jeden dieser Schritte wird die Umgebungsaktivität \(A\) jeweils auf eine "Konstruktclient"\-Aktivität \(B\) und eine "Offene Client"\-Aktivität \(C\) übertragen.Für jede Aktivität, auf die übertragen wird, wird die Umgebungsaktivität unterbrochen, bis eine Übertragung zurück erfolgt, d. h. bis ServiceModel\-Code ausgeführt wird.  
+#### <a name="establishing-communication-with-service-endpoint"></a><span data-ttu-id="a21d6-108">Herstellen einer Verbindung mit Dienstendpunkt</span><span class="sxs-lookup"><span data-stu-id="a21d6-108">Establishing Communication with Service Endpoint</span></span>  
+ <span data-ttu-id="a21d6-109">Ein Client wird erstellt und geöffnet.</span><span class="sxs-lookup"><span data-stu-id="a21d6-109">A client is constructed and opened.</span></span> <span data-ttu-id="a21d6-110">Für jeden der folgenden Schritte aus: (A) wird die umgebungsaktivität bzw. an eine "Konstruktclient" (B) und "Offene Client"-Aktivität (C) übertragen.</span><span class="sxs-lookup"><span data-stu-id="a21d6-110">For each of these steps, the ambient activity (A) is transferred to a "Construct Client" (B) and "Open Client" (C) activity respectively.</span></span> <span data-ttu-id="a21d6-111">Für jede Aktivität, auf die übertragen wird, wird die Umgebungsaktivität unterbrochen, bis eine Übertragung zurück erfolgt, d. h. bis ServiceModel-Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a21d6-111">For each activity being transferred to, the ambient activity is suspended until there is a transfer back, that is, until ServiceModel code is executed.</span></span>  
   
-#### Stellen einer Anforderung an einen Dienstendpunkt  
- Die Umgebungsaktivität wird auf eine "ProcessAction"\-Aktivität \(D\) übertragen.Innerhalb dieser Aktivität wird eine Anforderungsnachricht gesendet, und eine Antwortmeldung wird empfangen.Die Aktivität endet, wenn das Steuerelement zum Benutzercode zurückkehrt.Da dies eine asynchrone Anforderung ist, unterbricht die Umgebungsaktivität, bis das Steuerelement einen Wert zurückgibt.  
+#### <a name="making-a-request-to-service-endpoint"></a><span data-ttu-id="a21d6-112">Stellen einer Anforderung an einen Dienstendpunkt</span><span class="sxs-lookup"><span data-stu-id="a21d6-112">Making a Request to Service Endpoint</span></span>  
+ <span data-ttu-id="a21d6-113">Die umgebungsaktivität wird auf eine "ProcessAction" (D)-Aktivität übertragen.</span><span class="sxs-lookup"><span data-stu-id="a21d6-113">The ambient activity is transferred to a "ProcessAction" (D) activity.</span></span> <span data-ttu-id="a21d6-114">Innerhalb dieser Aktivität wird eine Anforderungsnachricht gesendet, und eine Antwortmeldung wird empfangen.</span><span class="sxs-lookup"><span data-stu-id="a21d6-114">Within this activity, a request message is sent, and a response message is received.</span></span> <span data-ttu-id="a21d6-115">Die Aktivität endet, wenn das Steuerelement zum Benutzercode zurückkehrt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-115">The activity ends when control returns to user code.</span></span> <span data-ttu-id="a21d6-116">Da dies eine asynchrone Anforderung ist, unterbricht die Umgebungsaktivität, bis das Steuerelement einen Wert zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-116">Because this is a synchronous request, the ambient activity suspends until control returns.</span></span>  
   
-#### Schließen einer Verbindung mit Dienstendpunkt  
- Die Aktivität "Schließen" \(I\) des Clients wird aus der Umgebungsaktivität erstellt.Dies ist identisch mit "neu" und "geöffnet".  
+#### <a name="closing-communication-with-service-endpoint"></a><span data-ttu-id="a21d6-117">Schließen einer Verbindung mit Dienstendpunkt</span><span class="sxs-lookup"><span data-stu-id="a21d6-117">Closing Communication with Service Endpoint</span></span>  
+ <span data-ttu-id="a21d6-118">Die Aktivität "Schließen" (I) des Clients wird aus der Umgebungsaktivität erstellt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-118">The client's close activity (I) is created from the ambient activity.</span></span> <span data-ttu-id="a21d6-119">Dies ist identisch mit "neu" und "geöffnet".</span><span class="sxs-lookup"><span data-stu-id="a21d6-119">This is identical to new and open.</span></span>  
   
-### Server  
+### <a name="server"></a><span data-ttu-id="a21d6-120">Server</span><span class="sxs-lookup"><span data-stu-id="a21d6-120">Server</span></span>  
   
-#### Einrichten eines Diensthosts  
- Die neuen und geöffneten Aktivitäten \(N und O\) des ServiceHost werden aus der Umgebungsaktivität \(M\) erstellt.  
+#### <a name="setting-up-a-service-host"></a><span data-ttu-id="a21d6-121">Einrichten eines Diensthosts</span><span class="sxs-lookup"><span data-stu-id="a21d6-121">Setting up a Service Host</span></span>  
+ <span data-ttu-id="a21d6-122">Die neuen und geöffneten Aktivitäten (N und O) des ServiceHost werden aus der Umgebungsaktivität (M) erstellt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-122">The ServiceHost’s new and open activities (N and O) are created from the ambient activity (M).</span></span>  
   
- Eine Listeneraktivität \(P\) wird dadurch erstellt, dass ein ServiceHost für jeden Listener geöffnet wird.Die Listeneraktivität wartet darauf, Daten zu empfangen und zu verarbeiten.  
+ <span data-ttu-id="a21d6-123">Eine Listeneraktivität (P) wird dadurch erstellt, dass ein ServiceHost für jeden Listener geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="a21d6-123">A listener activity (P) is created from opening a ServiceHost for each listener.</span></span> <span data-ttu-id="a21d6-124">Die Listeneraktivität wartet darauf, Daten zu empfangen und zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="a21d6-124">The listener activity waits to receive and process data.</span></span>  
   
-#### Empfangen von Daten durch Übertragung  
- Wenn Daten durch Übertragung eintreffen, wird eine "ReceiveBytes"\-Aktivität \(Q\) erstellt, wenn sie nicht bereits vorhanden ist, um die empfangenen Daten zu verarbeiten.Diese Aktivität kann für mehrere Nachrichten in einer Verbindung oder einer Warteschlange wiederverwendet werden.  
+#### <a name="receiving-data-on-the-wire"></a><span data-ttu-id="a21d6-125">Empfangen von Daten durch Übertragung</span><span class="sxs-lookup"><span data-stu-id="a21d6-125">Receiving Data on the Wire</span></span>  
+ <span data-ttu-id="a21d6-126">Wenn Daten durch Übertragung eintreffen, wird eine "ReceiveBytes"-Aktivität erstellt, wenn sie (Q) zum Verarbeiten der empfangenen Daten nicht bereits vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="a21d6-126">When data arrives on the wire, a "ReceiveBytes" activity is created if it does not already exist (Q) to process the received data.</span></span> <span data-ttu-id="a21d6-127">Diese Aktivität kann für mehrere Nachrichten in einer Verbindung oder einer Warteschlange wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a21d6-127">This activity can be reused for multiple messages within a connection or queue.</span></span>  
   
- Die ReceiveBytes\-Aktivität startet eine ProcessMessage\-Aktivität \(R\), wenn ausreichend Daten vorhanden sind, um eine SOAP\-Aktionsnachricht zu erstellen.  
+ <span data-ttu-id="a21d6-128">Die ReceiveBytes-Aktivität startet eine ProcessMessage-Aktivität (R), wenn ausreichend Daten vorhanden sind, um eine SOAP-Aktionsnachricht zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a21d6-128">The ReceiveBytes activity launches a ProcessMessage activity (R) if it has enough data to form a SOAP action message.</span></span>  
   
- Bei der Aktivität R werden die Nachrichtenheader verarbeitet, und der activityID\-Header wird überprüft.Wenn dieser Header vorhanden ist, wird die Aktivitäts\-ID als ProcessAction\-Aktivität festgelegt; andernfalls wird eine neue ID erstellt.  
+ <span data-ttu-id="a21d6-129">Bei der Aktivität R werden die Nachrichtenheader verarbeitet, und der activityID-Header wird überprüft.</span><span class="sxs-lookup"><span data-stu-id="a21d6-129">In activity R, the message headers are processed, and the activityID header is verified.</span></span> <span data-ttu-id="a21d6-130">Wenn dieser Header vorhanden ist, wird die Aktivitäts-ID als ProcessAction-Aktivität festgelegt; andernfalls wird eine neue ID erstellt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-130">If this header is present, the activity ID is set to the ProcessAction activity; otherwise, a new ID is created.</span></span>  
   
- Eine ProcessAction\-Aktivität \(S\) wird erstellt, und es wird auf sie übertragen, wenn der Aufruf verarbeitet wird.Diese Aktivität endet, wenn alle Verarbeitungsschritte bezüglich der eingehenden Nachricht abgeschlossen sind, ggf. einschließlich der Ausführung des Benutzercodes \(T\) und des Sendens der Antwortnachricht.  
+ <span data-ttu-id="a21d6-131">Eine ProcessAction-Aktivität (S) wird erstellt, und es wird auf sie übertragen, wenn der Aufruf verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="a21d6-131">ProcessAction activity (S) is created and being transferred to, when the call is processed.</span></span> <span data-ttu-id="a21d6-132">Diese Aktivität endet, wenn alle Verarbeitungsschritte bezüglich der eingehenden Nachricht abgeschlossen sind, ggf. einschließlich der Ausführung des Benutzercodes (T) und des Sendens der Antwortnachricht.</span><span class="sxs-lookup"><span data-stu-id="a21d6-132">This activity ends when all processing related to the incoming message is completed, including executing user code (T) and sending the response message if applicable.</span></span>  
   
-#### Schließen eines Diensthosts  
- Die Aktivität "Schließen" \(Z\) des ServiceHost wird aus der Umgebungsaktivität erstellt.  
+#### <a name="closing-a-service-host"></a><span data-ttu-id="a21d6-133">Schließen eines Diensthosts</span><span class="sxs-lookup"><span data-stu-id="a21d6-133">Closing a Service Host</span></span>  
+ <span data-ttu-id="a21d6-134">Die Aktivität "Schließen" (Z) des ServiceHost wird aus der Umgebungsaktivität erstellt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-134">The ServiceHost’s close activity (Z) is created from the ambient activity.</span></span>  
   
- ![Synchrone Szenarien mit HTTP&#47;TCP&#47;Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")  
+ <span data-ttu-id="a21d6-135">![Synchrone Szenarien mit HTTP- &#47; TCP &#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")</span><span class="sxs-lookup"><span data-stu-id="a21d6-135">![Synchronous scenarios using HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")</span></span>  
   
- In \<A: Name\> ist `A` ein Shortcutsymbol, das die Aktivität im vorangegangenen Text und in Tabelle 3 beschreibt.`Name` ist ein verkürzter Name der Aktivität.  
+ <span data-ttu-id="a21d6-136">In \<A: Name >, `A` ein shortcutsymbol, das die Aktivität im vorangegangenen Text und in Tabelle 3 beschreibt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-136">In \<A: name>, `A` is a shortcut symbol that describes the activity in the previous text and in table 3.</span></span> <span data-ttu-id="a21d6-137">`Name` ist ein verkürzter Name der Aktivität.</span><span class="sxs-lookup"><span data-stu-id="a21d6-137">`Name` is a shortened name of the activity.</span></span>  
   
- Wenn `propagateActivity`\=`true` ist, haben Prozessaktionen des Clients und des Diensts dieselbe Aktivitäts\-ID.  
+ <span data-ttu-id="a21d6-138">Wenn `propagateActivity` = `true`, Verarbeitungsaktion auf dem Client und Dienst haben die gleichen Aktivitäts-ID.</span><span class="sxs-lookup"><span data-stu-id="a21d6-138">If `propagateActivity`=`true`, Process Action on both the client and service have the same activity ID.</span></span>  
   
-## Synchrone Anforderung\/Antwort mit Fehlern  
- Der einzige Unterschied zu dem vorherigen Szenario besteht darin, dass eine SOAP\-Fehlernachricht als Antwortnachricht zurückgegeben wird.Wenn `propagateActivity`\=`true` ist, wird die Aktivitäts\-ID der Anforderungsnachricht zur SOAP\-Fehlernachricht hinzugefügt.  
+## <a name="synchronous-requestreply-with-errors"></a><span data-ttu-id="a21d6-139">Synchrone Anforderung/Antwort mit Fehlern</span><span class="sxs-lookup"><span data-stu-id="a21d6-139">Synchronous Request/Reply with Errors</span></span>  
+ <span data-ttu-id="a21d6-140">Der einzige Unterschied zu dem vorherigen Szenario besteht darin, dass eine SOAP-Fehlernachricht als Antwortnachricht zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="a21d6-140">The only difference with the previous scenario is that a SOAP fault message is returned as a response message.</span></span> <span data-ttu-id="a21d6-141">Wenn `propagateActivity` = `true`, wird die Aktivitäts-ID der Anforderungsnachricht an die SOAP-Fehlernachricht hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="a21d6-141">If `propagateActivity`=`true`, the activity ID of the request message is added to the SOAP fault message.</span></span>  
   
-## Synchrone unidirektionale Kommunikation ohne Fehler  
- Der einzige Unterschied zu dem ersten Szenario ist, dass keine Nachricht an den Server zurückgegeben wird.Für HTTP\-basierte Protokolle wird immer noch ein Status \(gültig oder Fehler\) an den Client zurückgegeben.Der Grund dafür ist, dass HTTP das einzige Protokoll mit Anforderungs\-Anwort\-Semantik ist, das Teil des [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Protokollstapels ist.Da TCP\-Verarbeitung für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgeblendet wird, wird keine Bestätigung an den Client gesendet.  
+## <a name="synchronous-one-way-without-errors"></a><span data-ttu-id="a21d6-142">Synchrone unidirektionale Kommunikation ohne Fehler</span><span class="sxs-lookup"><span data-stu-id="a21d6-142">Synchronous One-Way without Errors</span></span>  
+ <span data-ttu-id="a21d6-143">Der einzige Unterschied zu dem ersten Szenario ist, dass keine Nachricht an den Server zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="a21d6-143">The only difference with the first scenario is that no message is returned to the server.</span></span> <span data-ttu-id="a21d6-144">Für HTTP-basierte Protokolle wird immer noch ein Status (gültig oder Fehler) an den Client zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a21d6-144">For HTTP-based protocols, a status (valid or error) is still returned to the client.</span></span> <span data-ttu-id="a21d6-145">Der Grund dafür ist, dass HTTP das einzige Protokoll mit Anforderungs-Anwort-Semantik ist, das Teil des [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Protokollstapels ist.</span><span class="sxs-lookup"><span data-stu-id="a21d6-145">This is because HTTP is the only protocol with a request-response semantics that is part of the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] protocol stack.</span></span> <span data-ttu-id="a21d6-146">Da TCP-Verarbeitung für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ausgeblendet wird, wird keine Bestätigung an den Client gesendet.</span><span class="sxs-lookup"><span data-stu-id="a21d6-146">Because TCP processing is hidden from [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], no acknowledgement is sent to the client.</span></span>  
   
-## Synchrone unidirektionale Kommunikation mit Fehlern  
- Wenn während der Verarbeitung der Nachricht ein Fehler auftritt \(Q oder darüber hinaus\), wird keine Benachrichtigung an den Client zurückgegeben.Dies ist identisch mit dem Szenario "Synchrone unidirektionale Kommunikation ohne Fehler".Sie sollten kein unidirektionales Szenario verwenden, wenn Sie eine Fehlermeldung empfangen möchten.  
+## <a name="synchronous-one-way-with-errors"></a><span data-ttu-id="a21d6-147">Synchrone unidirektionale Kommunikation mit Fehlern</span><span class="sxs-lookup"><span data-stu-id="a21d6-147">Synchronous One-Way with Errors</span></span>  
+ <span data-ttu-id="a21d6-148">Wenn während der Verarbeitung der Nachricht ein Fehler auftritt (Q oder darüber hinaus), wird keine Benachrichtigung an den Client zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a21d6-148">If an error occurs while processing the message (Q or beyond), no notification is returned to the client.</span></span> <span data-ttu-id="a21d6-149">Dies ist identisch mit dem Szenario "Synchrone unidirektionale Kommunikation ohne Fehler".</span><span class="sxs-lookup"><span data-stu-id="a21d6-149">This is identical to the "Synchronous One-Way without Errors" scenario.</span></span> <span data-ttu-id="a21d6-150">Sie sollten kein unidirektionales Szenario verwenden, wenn Sie eine Fehlermeldung empfangen möchten.</span><span class="sxs-lookup"><span data-stu-id="a21d6-150">You should not use a One-Way scenario if you want to receive an error message.</span></span>  
   
-## Duplex  
- Der Unterschied zu den vorherigen Szenarien besteht darin, dass der Client als Dienst fungiert, wobei er die ReceiveBytes\- und die ProcessMessage\-Aktivität erstellt, ähnlich wie bei den asynchronen Szenarien.
+## <a name="duplex"></a><span data-ttu-id="a21d6-151">Duplex</span><span class="sxs-lookup"><span data-stu-id="a21d6-151">Duplex</span></span>  
+ <span data-ttu-id="a21d6-152">Der Unterschied zu den vorherigen Szenarien besteht darin, dass der Client als Dienst fungiert, wobei er die ReceiveBytes- und die ProcessMessage-Aktivität erstellt, ähnlich wie bei den asynchronen Szenarien.</span><span class="sxs-lookup"><span data-stu-id="a21d6-152">The difference with the previous scenarios is that the client acts as a service, in which it creates the ReceiveBytes and ProcessMessage activities, similar to the Asynchronous scenarios.</span></span>

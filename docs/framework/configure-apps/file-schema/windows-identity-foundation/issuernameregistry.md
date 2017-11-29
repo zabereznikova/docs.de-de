@@ -1,82 +1,91 @@
 ---
-title: "&lt;issuerNameRegistry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;issuerNameRegistry&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0c0552e06564e09832cf78afeb8f183a0a0dc94c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;issuerNameRegistry&gt;
-Wird die Aussteller Namen Registrierung, mit der Handler in der Auflistung Tokenhandler konfiguriert.  
+# <a name="ltissuernameregistrygt"></a><span data-ttu-id="70e36-102">&lt;issuerNameRegistry&gt;</span><span class="sxs-lookup"><span data-stu-id="70e36-102">&lt;issuerNameRegistry&gt;</span></span>
+<span data-ttu-id="70e36-103">Konfiguriert die ausstellernamenregistration, die vom Handler in der Auflistung Tokenhandler verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="70e36-103">Configures the issuer name registry that is used by handlers in the token handler collection.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="70e36-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="70e36-104">\<system.identityModel></span></span>  
+<span data-ttu-id="70e36-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="70e36-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="70e36-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="70e36-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="70e36-107">\<SecurityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="70e36-107">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="70e36-108">\<IssuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="70e36-108">\<issuerNameRegistry></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="70e36-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="70e36-109">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <issuerNameRegistry type=xs:string>  
-          <optionalCustomConfigurationElements />  
-        </issuerNameRegistry>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <issuerNameRegistry type=xs:string>  
+          <optionalCustomConfigurationElements />  
+        </issuerNameRegistry>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="70e36-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="70e36-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="70e36-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="70e36-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="70e36-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="70e36-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|type|Ein Type, die von der <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse.  Weitere Informationen zum Angeben eines benutzerdefiniertes `type`, finden Sie unter [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|<span data-ttu-id="70e36-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="70e36-113">Attribute</span></span>|<span data-ttu-id="70e36-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="70e36-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="70e36-115">Typ</span><span class="sxs-lookup"><span data-stu-id="70e36-115">type</span></span>|<span data-ttu-id="70e36-116">Ein Typ, der von abgeleitet ist die <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse.</span><span class="sxs-lookup"><span data-stu-id="70e36-116">A type that derives from the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class.</span></span> <span data-ttu-id="70e36-117">Weitere Informationen über das Angeben eines benutzerdefiniertes `type`, finden Sie unter [benutzerdefinierte Typverweise].</span><span class="sxs-lookup"><span data-stu-id="70e36-117">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="70e36-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="70e36-118">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Wenn die `type` \-Attribut gibt die konfigurationsbasierte Aussteller Namen Registrierung \(die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse\), die [\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) \-Element muss angegeben werden.  Die [\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element nehmen `<add>`, `<clear>`, oder `<remove>` Elemente als untergeordnete Elemente.|  
+|<span data-ttu-id="70e36-119">Element</span><span class="sxs-lookup"><span data-stu-id="70e36-119">Element</span></span>|<span data-ttu-id="70e36-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="70e36-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="70e36-121">\<TrustedIssuers ></span><span class="sxs-lookup"><span data-stu-id="70e36-121">\<trustedIssuers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|<span data-ttu-id="70e36-122">Wenn die `type` Attribut gibt an, die konfigurationsbasierte ausstellernamenregistration (die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse), wird die [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element muss angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="70e36-122">When the `type` attribute specifies the configuration-based issuer name registry (the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class), the [\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element must be specified.</span></span> <span data-ttu-id="70e36-123">Die [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element dauert `<add>`, `<clear>`, oder `<remove>` Elemente als untergeordnete Elemente.</span><span class="sxs-lookup"><span data-stu-id="70e36-123">The [\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element can take `<add>`, `<clear>`, or `<remove>` elements as child elements.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="70e36-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="70e36-124">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheit Tokenhandler.|  
+|<span data-ttu-id="70e36-125">Element</span><span class="sxs-lookup"><span data-stu-id="70e36-125">Element</span></span>|<span data-ttu-id="70e36-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="70e36-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="70e36-127">\<SecurityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="70e36-127">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="70e36-128">Ermöglicht die Konfiguration für eine Auflistung der Tokenhandler.</span><span class="sxs-lookup"><span data-stu-id="70e36-128">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## Hinweise  
- Alle Aussteller Token werden mithilfe einer Aussteller Namen Registrierungs überprüft.  Dies ist ein von abgeleitetes Objekt an die <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse.  Die Aussteller Namen Registrierung wird verwendet, um einen mnemonischen Namen kryptografische Material zuzuordnen, die zum Überprüfen der Signaturen von Token, die vom entsprechenden Aussteller produziert benötigt wird.  Die Aussteller Namen Registrierung verwaltet eine Liste der Emittenten, die von der relying Party \(RP\) Anwendung vertrauenswürdig sind.  Der Typ der Aussteller Namen Registrierung wird angegeben, mit der `type` Attribut.  Die `<issuerNameRegistry>` Element untergeordnete Elemente, die Konfiguration für den angegebenen Typ haben kann.  Sie die Logik bereitstellen, die durch Überschreiben dieser untergeordneten Elemente verarbeitet, die <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> Methode.  
+## <a name="remarks"></a><span data-ttu-id="70e36-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="70e36-129">Remarks</span></span>  
+ <span data-ttu-id="70e36-130">Alle ausstellertoken werden mithilfe einer ausstellernamenregistration überprüft.</span><span class="sxs-lookup"><span data-stu-id="70e36-130">All issuer tokens are validated using an issuer name registry.</span></span> <span data-ttu-id="70e36-131">Dies ist ein Objekt, das von abgeleitet ist die <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse.</span><span class="sxs-lookup"><span data-stu-id="70e36-131">This is an object that derives from the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class.</span></span> <span data-ttu-id="70e36-132">Der ausstellernamenregistration wird verwendet, um ein mnemonisches Name, der das kryptografische Material zuordnen, die zum Überprüfen der Signaturen von Token, die von der entsprechenden Aussteller erzeugten erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="70e36-132">The issuer name registry is used to associate a mnemonic name to the cryptographic material that is needed to verify the signatures of tokens produced by the corresponding issuer.</span></span> <span data-ttu-id="70e36-133">Der ausstellernamenregistration verwaltet eine Liste der Zertifikataussteller, die die Anwendung vertrauenden Seite (RP) vertraut.</span><span class="sxs-lookup"><span data-stu-id="70e36-133">The issuer name registry maintains a list of issuers that are trusted by the relying party (RP) application.</span></span> <span data-ttu-id="70e36-134">Der Typ des der ausstellernamenregistration wird angegeben, mit der `type` Attribut.</span><span class="sxs-lookup"><span data-stu-id="70e36-134">The type of the issuer name registry is specified using the `type` attribute.</span></span> <span data-ttu-id="70e36-135">Die `<issuerNameRegistry>` -Element kann eine oder mehrere untergeordnete Elemente, die Konfiguration für den angegebenen Typ aufweisen.</span><span class="sxs-lookup"><span data-stu-id="70e36-135">The `<issuerNameRegistry>` element can have one or more child elements that provide configuration for the specified type.</span></span> <span data-ttu-id="70e36-136">Geben Sie die Logik, die verarbeitet diese untergeordneten Elemente durch Überschreiben der <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="70e36-136">You provide the logic that processes these child elements by overriding the <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> method.</span></span>  
   
- WIF bietet einem einzigen Emittenten Name Registrierungstyp out of the Box, die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse.  Diese Klasse verwendet eine Reihe von Zertifikaten vertrauenswürdiger Aussteller, die in der Konfiguration angegeben werden.  Es muss ein untergeordnetes Element der Konfiguration `<trustedIssuers>`, unter denen die Auflistung von Zertifikaten vertrauenswürdiger Aussteller konfiguriert ist.  Vertrauenswürdige Zertifikate werden angegeben, verwenden die ASN. 1 codiert Form der Fingerabdruck des Zertifikats und hinzugefügt oder entfernt aus der Auflistung mithilfe von `<add>`, `<clear>`, oder `<remove>` Elemente.  
+ <span data-ttu-id="70e36-137">WIF bietet eine einzelne Issuer Name Registrierungstyp ausgegeben, die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse.</span><span class="sxs-lookup"><span data-stu-id="70e36-137">WIF provides a single issuer name registry type out of the box, the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class.</span></span> <span data-ttu-id="70e36-138">Diese Klasse verwendet einen Satz von Zertifikaten vertrauenswürdiger Aussteller, die in der Konfiguration angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="70e36-138">This class uses a set of trusted issuer certificates that are specified in configuration.</span></span> <span data-ttu-id="70e36-139">Es muss ein untergeordnetes Konfigurationselement `<trustedIssuers>`, unter dem die Auflistung von Zertifikaten vertrauenswürdiger Aussteller konfiguriert ist.</span><span class="sxs-lookup"><span data-stu-id="70e36-139">It requires a child configuration element, `<trustedIssuers>`, under which the collection of trusted issuer certificates is configured.</span></span> <span data-ttu-id="70e36-140">Vertrauenswürdige Zertifikate angegeben werden, mithilfe der ASN. 1-codierte Form des Zertifikatfingerabdrucks und hinzugefügt oder entfernt werden aus der Auflistung mithilfe `<add>`, `<clear>`, oder `<remove>` Elemente.</span><span class="sxs-lookup"><span data-stu-id="70e36-140">Trusted certificates are specified using the ASN.1 encoded form of the certificate thumbprint and are added or removed from the collection by using `<add>`, `<clear>`, or `<remove>` elements.</span></span>  
   
- Die `<issuerNameRegistry>` Element dargestellt durch die <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> Klasse.  
+ <span data-ttu-id="70e36-141">Die `<issuerNameRegistry>` Element dargestellt ist, durch die <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> Klasse.</span><span class="sxs-lookup"><span data-stu-id="70e36-141">The `<issuerNameRegistry>` element is represented by the <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> class.</span></span>  
   
 > [!NOTE]
->  Angabe der `<issuerNameRegistry>` Element als untergeordnetes Element von der [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element wurde als veraltet markiert, aber wird aus Kompatibilitätsgründen weiterhin unterstützt.  Einstellungen auf die `<securityTokenHandlerConfiguration>` Element überschreiben die auf die `<identityConfiguration>` Element.  
+>  <span data-ttu-id="70e36-142">Angeben der `<issuerNameRegistry>` Element als untergeordnetes Element von der [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element wurde als veraltet markiert, aber noch für die Abwärtskompatibilität unterstützt.</span><span class="sxs-lookup"><span data-stu-id="70e36-142">Specifying the `<issuerNameRegistry>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="70e36-143">Einstellungen auf der `<securityTokenHandlerConfiguration>` Element, überschreiben Sie die auf die `<identityConfiguration>` Element.</span><span class="sxs-lookup"><span data-stu-id="70e36-143">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## Beispiel  
- Das folgende XML veranschaulicht der Emittent Konfiguration angeben Namen Registrierung.  
+## <a name="example"></a><span data-ttu-id="70e36-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="70e36-144">Example</span></span>  
+ <span data-ttu-id="70e36-145">Das folgende XML zeigt, wie an der Konfiguration auf der Basis-Aussteller Namen Registrierung.</span><span class="sxs-lookup"><span data-stu-id="70e36-145">The following XML shows how to specify the configuration based issuer name registry.</span></span>  
   
-```  
+```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  
   <trustedIssuers>  
     <add thumbprint="9B74CB … 1EF40D0" name="LocalSTS" />  
   </trustedIssuers>  
 </issuerNameRegistry>  
-  
 ```  
   
-## Siehe auch  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>   
+## <a name="see-also"></a><span data-ttu-id="70e36-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70e36-146">See Also</span></span>  
+ <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
  <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

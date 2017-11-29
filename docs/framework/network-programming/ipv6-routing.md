@@ -7,48 +7,41 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5cbd5188bb33fd6d38633ca4670689a94f110a2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 21edbfee91a759b0b48f9dd6c0c9e900cdff93f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ipv6-routing"></a>IPv6-Routing
-Der flexible Routingmechanismus ist ein Vorteil von IPv6. Aufgrund der Art, auf die IPv4-Netzwerk-IDs zugeordnet werden, müssen große Routingtabellen von den Routern verwaltet werden, die sich in den Internetbackbones befinden. Diese Router müssen alle Routen kennen, um Pakete weiterzuleiten, die möglicherweise auf einen beliebigen Knoten im Internet weitergeleitet werden. IPv6 ermöglicht flexiblere Adressen durch seine Fähigkeit zum Aggregieren von Adressen und reduziert die Größe von Routingtabellen drastisch. In dieser neuen Adressarchitektur müssen zwischengeschaltete Router nur den lokalen Teil ihres Netzwerks verfolgen, um eine Nachricht korrekt weiterzuleiten.  
+# <a name="ipv6-routing"></a><span data-ttu-id="daa1c-102">IPv6-Routing</span><span class="sxs-lookup"><span data-stu-id="daa1c-102">IPv6 Routing</span></span>
+<span data-ttu-id="daa1c-103">Der flexible Routingmechanismus ist ein Vorteil von IPv6.</span><span class="sxs-lookup"><span data-stu-id="daa1c-103">A flexible routing mechanism is a benefit of IPv6.</span></span> <span data-ttu-id="daa1c-104">Aufgrund der Art, auf die IPv4-Netzwerk-IDs zugeordnet werden, müssen große Routingtabellen von den Routern verwaltet werden, die sich in den Internetbackbones befinden.</span><span class="sxs-lookup"><span data-stu-id="daa1c-104">Due to the way in which IPv4 network IDs were and are allocated, large routing tables need to be maintained by the routers that are on the Internet backbones.</span></span> <span data-ttu-id="daa1c-105">Diese Router müssen alle Routen kennen, um Pakete weiterzuleiten, die möglicherweise auf einen beliebigen Knoten im Internet weitergeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="daa1c-105">These routers must know all the routes in order to forward packets that are potentially directed to any node on the Internet.</span></span> <span data-ttu-id="daa1c-106">IPv6 ermöglicht flexiblere Adressen durch seine Fähigkeit zum Aggregieren von Adressen und reduziert die Größe von Routingtabellen drastisch.</span><span class="sxs-lookup"><span data-stu-id="daa1c-106">With its ability to aggregate addresses, IPv6 allows flexible addressing and drastically reduces the size of routing tables.</span></span> <span data-ttu-id="daa1c-107">In dieser neuen Adressarchitektur müssen zwischengeschaltete Router nur den lokalen Teil ihres Netzwerks verfolgen, um eine Nachricht korrekt weiterzuleiten.</span><span class="sxs-lookup"><span data-stu-id="daa1c-107">In this new addressing architecture, intermediate routers must keep track only of the local portion of their network in order to forward the messages appropriately.</span></span>  
   
-## <a name="neighbor-discovery"></a>Nachbarsuche  
- Im Folgenden finden Sie einige der Funktionen, die von der Nachbarsuche bereitgestellt werden:  
+## <a name="neighbor-discovery"></a><span data-ttu-id="daa1c-108">Nachbarsuche</span><span class="sxs-lookup"><span data-stu-id="daa1c-108">Neighbor Discovery</span></span>  
+ <span data-ttu-id="daa1c-109">Im Folgenden finden Sie einige der Funktionen, die von der Nachbarsuche bereitgestellt werden:</span><span class="sxs-lookup"><span data-stu-id="daa1c-109">Some of the features provided by Neighbor Discovery are:</span></span>  
   
--   Routersuche. Dadurch können Hosts lokale Router identifizieren.  
+-   <span data-ttu-id="daa1c-110">Routersuche.</span><span class="sxs-lookup"><span data-stu-id="daa1c-110">Router discovery.</span></span> <span data-ttu-id="daa1c-111">Dadurch können Hosts lokale Router identifizieren.</span><span class="sxs-lookup"><span data-stu-id="daa1c-111">This allows hosts to identify local routers.</span></span>  
   
--   Adressauflösung. Dadurch können Knoten eine Verbindungsschichtadresse für eine entsprechende Adresse für den nächsten Hop auflösen (ein Ersatz für das Address Resolution Protocol [ARP]).  
+-   <span data-ttu-id="daa1c-112">Adressauflösung.</span><span class="sxs-lookup"><span data-stu-id="daa1c-112">Address resolution.</span></span> <span data-ttu-id="daa1c-113">Dadurch können Knoten eine Verbindungsschichtadresse für eine entsprechende Adresse für den nächsten Hop auflösen (ein Ersatz für das Address Resolution Protocol [ARP]).</span><span class="sxs-lookup"><span data-stu-id="daa1c-113">This allows nodes to resolve a link-layer address for a corresponding next-hop address (a replacement for Address Resolution Protocol [ARP]).</span></span>  
   
--   Automatische Adresskonfiguration. Dadurch können Hosts automatisch standortlokale und globale Adressen konfigurieren.  
+-   <span data-ttu-id="daa1c-114">Automatische Adresskonfiguration.</span><span class="sxs-lookup"><span data-stu-id="daa1c-114">Address auto-configuration.</span></span> <span data-ttu-id="daa1c-115">Dadurch können Hosts automatisch standortlokale und globale Adressen konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="daa1c-115">This allows hosts to automatically configure site-local and global addresses.</span></span>  
   
- Die Nachbarsuche verwendet das Internet Control Message-Protokoll für folgende IPv6-Nachrichten (ICMPv6):  
+ <span data-ttu-id="daa1c-116">Die Nachbarsuche verwendet das Internet Control Message-Protokoll für folgende IPv6-Nachrichten (ICMPv6):</span><span class="sxs-lookup"><span data-stu-id="daa1c-116">Neighbor Discovery uses Internet Control Message Protocol for IPv6 (ICMPv6) messages that include:</span></span>  
   
--   Routerankündigungen. Werden von einem Router auf pseudo-periodischer Basis versendet oder als Antwort auf eine Routeranfrage. IPv6-Router verwenden Routerankündigungen, um ihre Verfügbarkeit, ihre Adresspräfixe und andere Parameter anzukündigen.  
+-   <span data-ttu-id="daa1c-117">Routerankündigungen.</span><span class="sxs-lookup"><span data-stu-id="daa1c-117">Router advertisement.</span></span> <span data-ttu-id="daa1c-118">Werden von einem Router auf pseudo-periodischer Basis versendet oder als Antwort auf eine Routeranfrage.</span><span class="sxs-lookup"><span data-stu-id="daa1c-118">Sent by a router on a pseudo-periodic basis or in response to a router solicitation.</span></span> <span data-ttu-id="daa1c-119">IPv6-Router verwenden Routerankündigungen, um ihre Verfügbarkeit, ihre Adresspräfixe und andere Parameter anzukündigen.</span><span class="sxs-lookup"><span data-stu-id="daa1c-119">IPv6 routers use router advertisements to advertise their availability, address prefixes, and other parameters.</span></span>  
   
--   Routeranfrage. Werden von einem Host gesendet, um von den Routern auf einem Link eine sofortige Routerankündigung anzufordern.  
+-   <span data-ttu-id="daa1c-120">Routeranfrage.</span><span class="sxs-lookup"><span data-stu-id="daa1c-120">Router solicitation.</span></span> <span data-ttu-id="daa1c-121">Werden von einem Host gesendet, um von den Routern auf einem Link eine sofortige Routerankündigung anzufordern.</span><span class="sxs-lookup"><span data-stu-id="daa1c-121">Sent by a host to request that routers on the link send a router advertisement immediately.</span></span>  
   
--   Nachbaranfrage. Wird von Knoten für die Adressauflösung, die Erkennung doppelter Adressen oder die Überprüfung gesendet, ob ein Nachbar weiterhin erreichbar ist.  
+-   <span data-ttu-id="daa1c-122">Nachbaranfrage.</span><span class="sxs-lookup"><span data-stu-id="daa1c-122">Neighbor solicitation.</span></span> <span data-ttu-id="daa1c-123">Wird von Knoten für die Adressauflösung, die Erkennung doppelter Adressen oder die Überprüfung gesendet, ob ein Nachbar weiterhin erreichbar ist.</span><span class="sxs-lookup"><span data-stu-id="daa1c-123">Sent by nodes for address resolution, duplicate address detection, or to verify that a neighbor is still reachable.</span></span>  
   
--   Nachbarankündigungen. Wird von Knoten gesendet, um auf eine Nachbaranfrage zu reagieren oder um Nachbarn über eine Änderung in der Verbindungsschichtadresse zu benachrichtigen.  
+-   <span data-ttu-id="daa1c-124">Nachbarankündigungen.</span><span class="sxs-lookup"><span data-stu-id="daa1c-124">Neighbor advertisement.</span></span> <span data-ttu-id="daa1c-125">Wird von Knoten gesendet, um auf eine Nachbaranfrage zu reagieren oder um Nachbarn über eine Änderung in der Verbindungsschichtadresse zu benachrichtigen.</span><span class="sxs-lookup"><span data-stu-id="daa1c-125">Sent by nodes to respond to a neighbor solicitation or to notify neighbors of a change in link-layer address.</span></span>  
   
--   Umleiten. Wird von Routern gesendet, um eine bessere Adresse für den nächsten Hop für ein bestimmtes Ziel eines Sendeknotens anzugeben.  
+-   <span data-ttu-id="daa1c-126">Umleiten.</span><span class="sxs-lookup"><span data-stu-id="daa1c-126">Redirect.</span></span> <span data-ttu-id="daa1c-127">Wird von Routern gesendet, um eine bessere Adresse für den nächsten Hop für ein bestimmtes Ziel eines Sendeknotens anzugeben.</span><span class="sxs-lookup"><span data-stu-id="daa1c-127">Sent by routers to indicate a better next-hop address to a particular destination for a sending node.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Internet Protocol Version 6 (Internetprotokoll Version 6)](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [Sockets](../../../docs/framework/network-programming/sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="daa1c-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="daa1c-128">See Also</span></span>  
+ [<span data-ttu-id="daa1c-129">Internetprotokoll Version 6</span><span class="sxs-lookup"><span data-stu-id="daa1c-129">Internet Protocol Version 6</span></span>](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [<span data-ttu-id="daa1c-130">Sockets</span><span class="sxs-lookup"><span data-stu-id="daa1c-130">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)

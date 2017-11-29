@@ -1,35 +1,38 @@
 ---
-title: "606 - DecrementBusyCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 606 - DecrementBusyCount
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3dd6c6ae-1010-415c-82e4-51eaa897f1fa
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d5b25eeebde5968ea471e60c47c86df4205bcf95
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 606 - DecrementBusyCount
-## Eigenschaften  
+# <a name="606---decrementbusycount"></a><span data-ttu-id="01ba0-102">606 - DecrementBusyCount</span><span class="sxs-lookup"><span data-stu-id="01ba0-102">606 - DecrementBusyCount</span></span>
+## <a name="properties"></a><span data-ttu-id="01ba0-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="01ba0-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|606|  
-|Stichwörter|WebHost|  
-|Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="01ba0-104">ID</span><span class="sxs-lookup"><span data-stu-id="01ba0-104">ID</span></span>|<span data-ttu-id="01ba0-105">606</span><span class="sxs-lookup"><span data-stu-id="01ba0-105">606</span></span>|  
+|<span data-ttu-id="01ba0-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="01ba0-106">Keywords</span></span>|<span data-ttu-id="01ba0-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="01ba0-107">WebHost</span></span>|  
+|<span data-ttu-id="01ba0-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="01ba0-108">Level</span></span>|<span data-ttu-id="01ba0-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="01ba0-109">Verbose</span></span>|  
+|<span data-ttu-id="01ba0-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="01ba0-110">Channel</span></span>|<span data-ttu-id="01ba0-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="01ba0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird ausgegeben, wenn DecrementBusyCount aufgerufen wird.  
+## <a name="description"></a><span data-ttu-id="01ba0-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="01ba0-112">Description</span></span>  
+ <span data-ttu-id="01ba0-113">Dieses Ereignis wird ausgegeben, wenn DecrementBusyCount aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="01ba0-113">This event is emitted when DecrementBusyCount is called.</span></span>  
   
-## Meldung  
- DecrementBusyCount aufgerufen.  Quelle: %1  
+## <a name="message"></a><span data-ttu-id="01ba0-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="01ba0-114">Message</span></span>  
+ <span data-ttu-id="01ba0-115">DecrementBusyCount aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="01ba0-115">DecrementBusyCount called.</span></span> <span data-ttu-id="01ba0-116">Quelle: %1</span><span class="sxs-lookup"><span data-stu-id="01ba0-116">Source : %1</span></span>  
   
-## Details
+## <a name="details"></a><span data-ttu-id="01ba0-117">Details</span><span class="sxs-lookup"><span data-stu-id="01ba0-117">Details</span></span>

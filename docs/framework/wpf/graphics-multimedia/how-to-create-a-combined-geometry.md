@@ -1,55 +1,58 @@
 ---
-title: "Gewusst wie: Erstellen von kombinierten Geometrien | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Kombinieren von Geometrien"
-  - "Geometrien, Kombinieren"
-  - "Grafiken, Kombinieren von Geometrien"
+title: 'Gewusst wie: Erstellen von kombinierten Geometrien'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- combining geometries [WPF]
+- graphics [WPF], combining geometries
+- geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2be0471f27d26b145cc29847a08bf3bc3b1d51ff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Erstellen von kombinierten Geometrien
-Dieses Beispiel zeigt, wie Sie Geometrien kombinieren.  Um zwei Geometrien zu kombinieren, verwenden Sie ein <xref:System.Windows.Media.CombinedGeometry>\-Objekt.  Legen Sie die <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>\-Eigenschaft und die <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>\-Eigenschaft des Objekts auf die zu kombinierenden Geometrien fest, und definieren Sie die <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>\-Eigenschaft, um anzugeben, wie die Geometrien kombiniert werden sollen: `Union`, `Intersect`, `Exclude` oder `Xor`.  
+# <a name="how-to-create-a-combined-geometry"></a><span data-ttu-id="0b236-102">Gewusst wie: Erstellen von kombinierten Geometrien</span><span class="sxs-lookup"><span data-stu-id="0b236-102">How to: Create a Combined Geometry</span></span>
+<span data-ttu-id="0b236-103">In diesem Beispiel wird gezeigt, wie Geometrien kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="0b236-103">This example shows how to combine geometries.</span></span> <span data-ttu-id="0b236-104">Zum Kombinieren zweier Geometrien verwenden eine <xref:System.Windows.Media.CombinedGeometry> Objekt.</span><span class="sxs-lookup"><span data-stu-id="0b236-104">To combine two geometries, use a <xref:System.Windows.Media.CombinedGeometry> object.</span></span> <span data-ttu-id="0b236-105">Legen Sie seine <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> und <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> Eigenschaften mit den zwei Geometrien zu kombinieren, und legen Sie die <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> Eigenschaft, die bestimmt, wie die Geometrien kombiniert werden sollen, auf `Union`, `Intersect`, `Exclude`, oder `Xor`.</span><span class="sxs-lookup"><span data-stu-id="0b236-105">Set its <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> properties  with the two geometries to combine, and set the <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> property, which determines how the geometries will be combined together, to `Union`, `Intersect`, `Exclude`, or `Xor`.</span></span>  
   
- Um eine kombinierte Geometrie aus zwei oder mehr Geometrien zu erstellen, verwenden Sie eine <xref:System.Windows.Media.GeometryGroup>.  
+ <span data-ttu-id="0b236-106">Um eine zusammengesetzte Geometrie aus mindestens zwei Geometrien zu erstellen, verwenden Sie eine <xref:System.Windows.Media.GeometryGroup>.</span><span class="sxs-lookup"><span data-stu-id="0b236-106">To create a composite geometry from two or more geometries, use a <xref:System.Windows.Media.GeometryGroup>.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird eine <xref:System.Windows.Media.CombinedGeometry> definiert, wobei der Kombinationsmodus auf `Exclude` festgelegt ist.  Sowohl <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> als auch <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius definiert, deren Mittelpunkte jedoch um den Wert 50 versetzt sind.  
+## <a name="example"></a><span data-ttu-id="0b236-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0b236-107">Example</span></span>  
+ <span data-ttu-id="0b236-108">Im folgenden Beispiel ein <xref:System.Windows.Media.CombinedGeometry> mit einem Kombinationsmodus definiert `Exclude`.</span><span class="sxs-lookup"><span data-stu-id="0b236-108">In the following example, a <xref:System.Windows.Media.CombinedGeometry> is defined with a geometry combine mode of `Exclude`.</span></span>  <span data-ttu-id="0b236-109">Beide <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> und <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius, jedoch mit Rechenzentren Offset von 50 definiert.</span><span class="sxs-lookup"><span data-stu-id="0b236-109">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
+ [!code-xaml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
   
- ![Ergebnisse des Exclude&#45;Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.png "mil\_task\_combined\_geometry\_exclude")  
-Kombinierte Geometrie – Exclude  
+ <span data-ttu-id="0b236-110">![Ergebnisse des Exclude-Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.PNG "Mil_task_combined_geometry_exclude")</span><span class="sxs-lookup"><span data-stu-id="0b236-110">![Results of the Exclude combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.PNG "mil_task_combined_geometry_exclude")</span></span>  
+<span data-ttu-id="0b236-111">Kombinierte Geometrie ausschließen</span><span class="sxs-lookup"><span data-stu-id="0b236-111">Combined Geometry Exclude</span></span>  
   
- Im folgenden Markup wird eine <xref:System.Windows.Media.CombinedGeometry> definiert, wobei der Kombinationsmodus auf `Intersect` festgelegt ist.  Sowohl <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> als auch <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius definiert, deren Mittelpunkte jedoch um den Wert 50 versetzt sind.  
+ <span data-ttu-id="0b236-112">Im folgenden Markup eine <xref:System.Windows.Media.CombinedGeometry> wird definiert, mit der Kombinationsmodus `Intersect`.</span><span class="sxs-lookup"><span data-stu-id="0b236-112">In the following markup, a <xref:System.Windows.Media.CombinedGeometry> is defined with a combine mode of `Intersect`.</span></span>  <span data-ttu-id="0b236-113">Beide <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> und <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius, jedoch mit Rechenzentren Offset von 50 definiert.</span><span class="sxs-lookup"><span data-stu-id="0b236-113">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#22)]  
+ [!code-xaml[GeometrySample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#22)]  
   
- ![Ergebnisse des Intersect&#45;Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.png "mil\_task\_combined\_geometry\_intersect")  
-Kombinierte Geometrie – Intersect  
+ <span data-ttu-id="0b236-114">![Ergebnisse des Intersect-Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.PNG "Mil_task_combined_geometry_intersect")</span><span class="sxs-lookup"><span data-stu-id="0b236-114">![Results of the Intersect combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.PNG "mil_task_combined_geometry_intersect")</span></span>  
+<span data-ttu-id="0b236-115">Intersect-kombinierte Geometrie</span><span class="sxs-lookup"><span data-stu-id="0b236-115">Combined Geometry Intersect</span></span>  
   
- Im folgenden Markup wird eine <xref:System.Windows.Media.CombinedGeometry> definiert, wobei der Kombinationsmodus auf `Union` festgelegt ist.  Sowohl <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> als auch <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius definiert, deren Mittelpunkte jedoch um den Wert 50 versetzt sind.  
+ <span data-ttu-id="0b236-116">Im folgenden Markup eine <xref:System.Windows.Media.CombinedGeometry> wird definiert, mit der Kombinationsmodus `Union`.</span><span class="sxs-lookup"><span data-stu-id="0b236-116">In the following markup, a <xref:System.Windows.Media.CombinedGeometry> is defined with a combine mode of `Union`.</span></span>  <span data-ttu-id="0b236-117">Beide <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> und <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius, jedoch mit Rechenzentren Offset von 50 definiert.</span><span class="sxs-lookup"><span data-stu-id="0b236-117">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
+ [!code-xaml[GeometrySample#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
   
- ![Ergebnisse des Union&#45;Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.png "mil\_task\_combined\_geometry\_union")  
-Kombinierte Geometrie – Union  
+ <span data-ttu-id="0b236-118">![Ergebnisse des Union-Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.PNG "Mil_task_combined_geometry_union")</span><span class="sxs-lookup"><span data-stu-id="0b236-118">![Results of the Union combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")</span></span>  
+<span data-ttu-id="0b236-119">Kombinierte Geomtrievereinigung</span><span class="sxs-lookup"><span data-stu-id="0b236-119">Combined Geometry Union</span></span>  
   
- Im folgenden Markup wird eine <xref:System.Windows.Media.CombinedGeometry> definiert, wobei der Kombinationsmodus auf `Xor` festgelegt ist.  Sowohl <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> als auch <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius definiert, deren Mittelpunkte jedoch um den Wert 50 versetzt sind.  
+ <span data-ttu-id="0b236-120">Im folgenden Markup eine <xref:System.Windows.Media.CombinedGeometry> wird definiert, mit der Kombinationsmodus `Xor`.</span><span class="sxs-lookup"><span data-stu-id="0b236-120">In the following markup, a <xref:System.Windows.Media.CombinedGeometry> is defined with a combine mode of `Xor`.</span></span>  <span data-ttu-id="0b236-121">Beide <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> und <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> werden als Kreise mit identischem Radius, jedoch mit Rechenzentren Offset von 50 definiert.</span><span class="sxs-lookup"><span data-stu-id="0b236-121">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
+ [!code-xaml[GeometrySample#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
   
- ![Ergebnisse des Xor&#45;Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.png "mil\_task\_combined\_geometry\_xor")  
-Kombinierte Geometrie – Xor
+ <span data-ttu-id="0b236-122">![Ergebnisse des Xor-Kombinationsmodus](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.PNG "Mil_task_combined_geometry_xor")</span><span class="sxs-lookup"><span data-stu-id="0b236-122">![Results of the Xor combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.PNG "mil_task_combined_geometry_xor")</span></span>  
+<span data-ttu-id="0b236-123">Kombinierte Geometrie Xor</span><span class="sxs-lookup"><span data-stu-id="0b236-123">Combined Geometry Xor</span></span>

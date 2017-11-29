@@ -1,46 +1,49 @@
 ---
-title: "Datenverschl&#252;sselung in SQL&#160;Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Datenverschlüsselung in SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4428cf8fbfcaa853ca2c877a8cc4902f585b6754
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Datenverschl&#252;sselung in SQL&#160;Server
-Mit den SQL Server\-Funktionen können Sie Daten mithilfe eines Zertifikats, eines asymmetrischen Schlüssels oder eines symmetrischen Schlüssels verschlüsseln und entschlüsseln.  Die Verwaltung der Zertifikate bzw. Schlüssel erfolgt in einem internen Zertifikatspeicher.  Der Speicher verwendet eine Verschlüsselungshierarchie, die Zertifikate und Schlüssel auf einer Ebene zusammen mit der nächsthöheren Ebene in der Hierarchie sichert.  Dieser Funktionsbereich von SQL Server wird als "Speicherung geheimer Schlüssel" bezeichnet.  
+# <a name="data-encryption-in-sql-server"></a><span data-ttu-id="b2886-102">Datenverschlüsselung in SQL Server</span><span class="sxs-lookup"><span data-stu-id="b2886-102">Data Encryption in SQL Server</span></span>
+<span data-ttu-id="b2886-103">Mit den SQL Server-Funktionen können Sie Daten mithilfe eines Zertifikats, eines asymmetrischen Schlüssels oder eines symmetrischen Schlüssels verschlüsseln und entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="b2886-103">SQL Server provides functions to encrypt and decrypt data using a certificate, asymmetric key, or symmetric key.</span></span> <span data-ttu-id="b2886-104">Die Verwaltung der Zertifikate bzw. Schlüssel erfolgt in einem internen Zertifikatspeicher.</span><span class="sxs-lookup"><span data-stu-id="b2886-104">It manages all of these in an internal certificate store.</span></span> <span data-ttu-id="b2886-105">Der Speicher verwendet eine Verschlüsselungshierarchie, die Zertifikate und Schlüssel auf einer Ebene zusammen mit der nächsthöheren Ebene in der Hierarchie sichert.</span><span class="sxs-lookup"><span data-stu-id="b2886-105">The store uses an encryption hierarchy that secures certificates and keys at one level with the layer above it in the hierarchy.</span></span> <span data-ttu-id="b2886-106">Dieser Funktionsbereich von SQL Server wird als "Speicherung geheimer Schlüssel" bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="b2886-106">This feature area of SQL Server is called Secret Storage.</span></span>  
   
- Unter den von den Verschlüsselungsfunktionen unterstützten Verschlüsselungen ist das Verschlüsseln mit einem symmetrischen Schlüssel die schnellste Verschlüsselungsmethode.  Diese Form der Verschlüsselung bietet sich an, wenn große Datenmengen verschlüsselt werden müssen.  Die symmetrischen Schlüssel können durch Zertifikate, Kennwörter oder andere symmetrische Schlüssel verschlüsselt werden.  
+ <span data-ttu-id="b2886-107">Unter den von den Verschlüsselungsfunktionen unterstützten Verschlüsselungen ist das Verschlüsseln mit einem symmetrischen Schlüssel die schnellste Verschlüsselungsmethode.</span><span class="sxs-lookup"><span data-stu-id="b2886-107">The fastest mode of encryption supported by the encryption functions is symmetric key encryption.</span></span> <span data-ttu-id="b2886-108">Diese Form der Verschlüsselung bietet sich an, wenn große Datenmengen verschlüsselt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="b2886-108">This mode is suitable for handling large volumes of data.</span></span> <span data-ttu-id="b2886-109">Die symmetrischen Schlüssel können durch Zertifikate, Kennwörter oder andere symmetrische Schlüssel verschlüsselt werden.</span><span class="sxs-lookup"><span data-stu-id="b2886-109">The symmetric keys can be encrypted by certificates, passwords or other symmetric keys.</span></span>  
   
-## Schlüssel und Algorithmen  
- SQL Server unterstützt verschiedene Verschlüsselungsalgorithmen mit symmetrischen Schlüsseln, darunter DES, Triple DES, RC2, RC4, 128\-Bit RC4, DESX, 128\-Bit AES, 192\-Bit AES und 256\-Bit AES.  Die Algorithmen werden mit der Windows Krypto\-API implementiert.  
+## <a name="keys-and-algorithms"></a><span data-ttu-id="b2886-110">Schlüssel und Algorithmen</span><span class="sxs-lookup"><span data-stu-id="b2886-110">Keys and Algorithms</span></span>  
+ <span data-ttu-id="b2886-111">SQL Server unterstützt verschiedene Verschlüsselungsalgorithmen mit symmetrischen Schlüsseln, darunter DES, Triple DES, RC2, RC4, 128-Bit RC4, DESX, 128-Bit AES, 192-Bit AES und 256-Bit AES.</span><span class="sxs-lookup"><span data-stu-id="b2886-111">SQL Server supports several symmetric key encryption algorithms, including DES, Triple DES, RC2, RC4, 128-bit RC4, DESX, 128-bit AES, 192-bit AES, and 256-bit AES.</span></span> <span data-ttu-id="b2886-112">Die Algorithmen werden mit der Windows Krypto-API implementiert.</span><span class="sxs-lookup"><span data-stu-id="b2886-112">The algorithms are implemented using the Windows Crypto API.</span></span>  
   
- Innerhalb des Bereichs einer Datenbankverbindung kann SQL Server mehrere geöffnete symmetrische Schlüssel verwalten.  Ein geöffneter Schlüssel wird vom Speicher abgerufen und steht zum Entschlüsseln von Daten zur Verfügung.  Zum Entschlüsseln von Daten muss der zu verwendende symmetrische Schlüssel nicht angegeben werden.  Jeder verschlüsselte Wert enthält die Schlüssel\-ID \(Haupt\-GUID\) des Schlüssels, mit dem er verschlüsselt wurde.  Das Modul ordnet den verschlüsselten Datenstream einem geöffneten symmetrischen Schlüssel zu, wenn der richtige Schlüssel entschlüsselt wurde und geöffnet ist.  Dieser Schlüssel wird dann zur Entschlüsselung und zur Rückgabe der Daten verwendet.  Wenn der richtige Schlüssel nicht geöffnet ist, wird NULL zurückgegeben.  
+ <span data-ttu-id="b2886-113">Innerhalb des Bereichs einer Datenbankverbindung kann SQL Server mehrere geöffnete symmetrische Schlüssel verwalten.</span><span class="sxs-lookup"><span data-stu-id="b2886-113">Within the scope of a database connection, SQL Server can maintain multiple open symmetric keys.</span></span> <span data-ttu-id="b2886-114">Ein geöffneter Schlüssel wird vom Speicher abgerufen und steht zum Entschlüsseln von Daten zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="b2886-114">An open key is retrieved from the store and is available for decrypting data.</span></span> <span data-ttu-id="b2886-115">Zum Entschlüsseln von Daten muss der zu verwendende symmetrische Schlüssel nicht angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b2886-115">When a piece of data is decrypted, there is no need to specify the symmetric key to use.</span></span> <span data-ttu-id="b2886-116">Jeder verschlüsselte Wert enthält die Schlüssel-ID (Haupt-GUID) des Schlüssels, mit dem er verschlüsselt wurde.</span><span class="sxs-lookup"><span data-stu-id="b2886-116">Each encrypted value contains the key identifier (key GUID) of the key used to encrypt it.</span></span> <span data-ttu-id="b2886-117">Das Modul ordnet den verschlüsselten Datenstream einem geöffneten symmetrischen Schlüssel zu, wenn der richtige Schlüssel entschlüsselt wurde und geöffnet ist.</span><span class="sxs-lookup"><span data-stu-id="b2886-117">The engine matches the encrypted byte stream to an open symmetric key, if the correct key has been decrypted and is open.</span></span> <span data-ttu-id="b2886-118">Dieser Schlüssel wird dann zur Entschlüsselung und zur Rückgabe der Daten verwendet.</span><span class="sxs-lookup"><span data-stu-id="b2886-118">This key is then used to perform decryption and return the data.</span></span> <span data-ttu-id="b2886-119">Wenn der richtige Schlüssel nicht geöffnet ist, wird NULL zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="b2886-119">If the correct key is not open, NULL is returned.</span></span>  
   
- Ein Beispiel, aus dem hervorgeht, wie in einer Datenbank mit verschlüsselten Daten gearbeitet wird, finden Sie unter [Vorgehensweise: Verschlüsseln einer Datenspalte](http://go.microsoft.com/fwlink/?LinkID=128559) in der SQL Server\-Onlinedokumentation.  
+ <span data-ttu-id="b2886-120">Ein Beispiel, das veranschaulicht, wie mit verschlüsselten Daten in einer Datenbank arbeiten, finden Sie unter [wie: Verschlüsseln einer Datenspalte](http://go.microsoft.com/fwlink/?LinkID=128559) in SQL Server-Onlinedokumentation.</span><span class="sxs-lookup"><span data-stu-id="b2886-120">For an example that shows how to work with encrypted data in a database, see [How to: Encrypt a Column of Data](http://go.microsoft.com/fwlink/?LinkID=128559) in SQL Server Books Online.</span></span>  
   
-## Externe Ressourcen  
- Weitere Informationen zur Datenverschlüsselung finden Sie in den folgenden Ressourcen:  
+## <a name="external-resources"></a><span data-ttu-id="b2886-121">Externe Ressourcen</span><span class="sxs-lookup"><span data-stu-id="b2886-121">External Resources</span></span>  
+ <span data-ttu-id="b2886-122">Weitere Informationen zur Datenverschlüsselung finden Sie in den folgenden Ressourcen:</span><span class="sxs-lookup"><span data-stu-id="b2886-122">For more information on data encryption, see the following resources.</span></span>  
   
 |||  
 |-|-|  
-|[SQL Server\-Verschlüsselung](http://msdn.microsoft.com/library/bb510663.aspx) in der SQL Server\-Onlinedokumentation|Bietet eine Übersicht über die Verschlüsselung in SQL Server.  Dieses Thema enthält außerdem Links zu weiterführenden und Gewusst\-wie\-Themen.|  
-|[Verschlüsselungshierarchie](http://msdn.microsoft.com/library/ms189586.aspx) und [Themen zu Vorgehensweisen für die Verschlüsselung](http://msdn.microsoft.com/library/aa337557.aspx) in der SQL Server\-Onlinedokumentation|Bietet eine Übersicht über die Verschlüsselung in SQL Server.  Dieses Thema enthält Links zu weiterführenden und Gewusst\-wie\-Themen.|  
+|<span data-ttu-id="b2886-123">[SQL Server-Verschlüsselung](http://msdn.microsoft.com/library/bb510663.aspx) in SQL Server-Onlinedokumentation</span><span class="sxs-lookup"><span data-stu-id="b2886-123">[SQL Server Encryption](http://msdn.microsoft.com/library/bb510663.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="b2886-124">Bietet eine Übersicht über die Verschlüsselung in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b2886-124">Provides an overview of encryption in SQL Serve.</span></span> <span data-ttu-id="b2886-125">Dieses Thema enthält außerdem Links zu weiterführenden und Gewusst-wie-Themen.</span><span class="sxs-lookup"><span data-stu-id="b2886-125">This topic includes links to additional topics and how-to's.</span></span>|  
+|<span data-ttu-id="b2886-126">[Verschlüsselungshierarchie](http://msdn.microsoft.com/library/ms189586.aspx) und [Verschlüsselung: Themen zur Vorgehensweise](http://msdn.microsoft.com/library/aa337557.aspx) in SQL Server-Onlinedokumentation</span><span class="sxs-lookup"><span data-stu-id="b2886-126">[Encryption Hierarchy](http://msdn.microsoft.com/library/ms189586.aspx) and [Encryption How-to Topics](http://msdn.microsoft.com/library/aa337557.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="b2886-127">Bietet eine Übersicht über die Verschlüsselung in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b2886-127">Provides an overview of encryption in SQL Server.</span></span> <span data-ttu-id="b2886-128">Dieses Thema enthält Links zu weiterführenden und Gewusst-wie-Themen.</span><span class="sxs-lookup"><span data-stu-id="b2886-128">This topic provides links to additional topics and how-to's.</span></span>|  
   
-## Siehe auch  
- [Sichern von ADO.NET\-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)   
- [Server\- und Datenbankrollen in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)   
- [Objektbesitz und Trennung von Benutzer und Schema in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)   
- [Autorisierung und Berechtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b2886-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b2886-129">See Also</span></span>  
+ [<span data-ttu-id="b2886-130">Sichern von ADO.NET-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="b2886-130">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="b2886-131">Anwendungssicherheitsszenarios in SQLServer</span><span class="sxs-lookup"><span data-stu-id="b2886-131">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="b2886-132">Authentifizierung in SQLServer</span><span class="sxs-lookup"><span data-stu-id="b2886-132">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [<span data-ttu-id="b2886-133">Server- und Datenbankrollen in SQLServer</span><span class="sxs-lookup"><span data-stu-id="b2886-133">Server and Database Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [<span data-ttu-id="b2886-134">Objektbesitz und Trennung von Benutzer und Schema in SQLServer</span><span class="sxs-lookup"><span data-stu-id="b2886-134">Ownership and User-Schema Separation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [<span data-ttu-id="b2886-135">Autorisierung und Berechtigungen in SQLServer</span><span class="sxs-lookup"><span data-stu-id="b2886-135">Authorization and Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [<span data-ttu-id="b2886-136">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="b2886-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

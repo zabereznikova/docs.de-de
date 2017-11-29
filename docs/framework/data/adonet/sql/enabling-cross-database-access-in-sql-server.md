@@ -1,37 +1,40 @@
 ---
-title: "Aktivieren des datenbank&#252;bergreifenden Zugriffs in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aktivieren des datenbankübergreifenden Zugriffs in SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 720c4c8eecc20b971eb9ecf1abb85da1e72e3c54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Aktivieren des datenbank&#252;bergreifenden Zugriffs in SQL Server
-Von einer datenbankübergreifenden Besitzverkettung spricht man, wenn eine Prozedur in einer Datenbank von Objekten in einer anderen Datenbank abhängt.  Eine datenbankübergreifende Besitzkette funktioniert wie die Besitzkette innerhalb einer einzelnen Datenbank – mit dem Unterschied, dass eine durchgängige Besitzkette voraussetzt, dass alle Objektbesitzer demselben Anmeldekonto zugeordnet sind.  Wenn das Quellobjekt in der Quelldatenbank und das Zielobjekt in der Zieldatenbank zu ein und demselben Anmeldekonto gehören, nimmt SQL Server keine Prüfung der Berechtigungen für die Zielobjekte vor.  
+# <a name="enabling-cross-database-access-in-sql-server"></a><span data-ttu-id="57e84-102">Aktivieren des datenbankübergreifenden Zugriffs in SQL Server</span><span class="sxs-lookup"><span data-stu-id="57e84-102">Enabling Cross-Database Access in SQL Server</span></span>
+<span data-ttu-id="57e84-103">Von einer datenbankübergreifenden Besitzverkettung spricht man, wenn eine Prozedur in einer Datenbank von Objekten in einer anderen Datenbank abhängt.</span><span class="sxs-lookup"><span data-stu-id="57e84-103">Cross-database ownership chaining occurs when a procedure in one database depends on objects in another database.</span></span> <span data-ttu-id="57e84-104">Eine datenbankübergreifende Besitzkette funktioniert wie die Besitzkette innerhalb einer einzelnen Datenbank – mit dem Unterschied, dass eine durchgängige Besitzkette voraussetzt, dass alle Objektbesitzer demselben Anmeldekonto zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="57e84-104">A cross-database ownership chain works in the same way as ownership chaining within a single database, except that an unbroken ownership chain requires that all the object owners are mapped to the same login account.</span></span> <span data-ttu-id="57e84-105">Wenn das Quellobjekt in der Quelldatenbank und das Zielobjekt in der Zieldatenbank zu ein und demselben Anmeldekonto gehören, nimmt SQL Server keine Prüfung der Berechtigungen für die Zielobjekte vor.</span><span class="sxs-lookup"><span data-stu-id="57e84-105">If the source object in the source database and the target objects in the target databases are owned by the same login account, SQL Server does not check permissions on the target objects.</span></span>  
   
-## Standardmäßig deaktiviert  
- Die datenbankübergreifende Besitzverkettung ist standardmäßig deaktiviert.  Microsoft empfiehlt, dass Sie die datenbankübergreifende Besitzverkettung deaktivieren, da Sie sich sonst den folgenden Sicherheitsrisiken aussetzen:  
+## <a name="off-by-default"></a><span data-ttu-id="57e84-106">Standardmäßig deaktiviert</span><span class="sxs-lookup"><span data-stu-id="57e84-106">Off By Default</span></span>  
+ <span data-ttu-id="57e84-107">Die datenbankübergreifende Besitzverkettung ist standardmäßig deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="57e84-107">Ownership chaining across databases is turned off by default.</span></span> <span data-ttu-id="57e84-108">Microsoft empfiehlt, dass Sie die datenbankübergreifende Besitzverkettung deaktivieren, da Sie sich sonst den folgenden Sicherheitsrisiken aussetzen:</span><span class="sxs-lookup"><span data-stu-id="57e84-108">Microsoft recommends that you disable cross-database ownership chaining because it exposes you to the following security risks:</span></span>  
   
--   Datenbankbesitzer und Member der `db_ddladmin`\-Datenbankrolle bzw. `db_owners` können Objekte erstellen, deren Besitzer andere Benutzer sind.  Diese Objekte können potenziell auf Objekte in anderen Datenbanken zielen.  Das bedeutet: Wenn Sie die datenbankübergreifende Besitzverkettung aktivieren, müssen Sie sich dessen bewusst sein, dass diese Benutzer auf die Daten in allen verketteten Datenbanken zugreifen können.  
+-   <span data-ttu-id="57e84-109">Datenbankbesitzer und Member der `db_ddladmin`-Datenbankrolle bzw. `db_owners` können Objekte erstellen, deren Besitzer andere Benutzer sind.</span><span class="sxs-lookup"><span data-stu-id="57e84-109">Database owners and members of the `db_ddladmin` or the `db_owners` database roles can create objects that are owned by other users.</span></span> <span data-ttu-id="57e84-110">Diese Objekte können potenziell auf Objekte in anderen Datenbanken zielen.</span><span class="sxs-lookup"><span data-stu-id="57e84-110">These objects can potentially target objects in other databases.</span></span> <span data-ttu-id="57e84-111">Das bedeutet: Wenn Sie die datenbankübergreifende Besitzverkettung aktivieren, müssen Sie sich dessen bewusst sein, dass diese Benutzer auf die Daten in allen verketteten Datenbanken zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="57e84-111">This means that if you enable cross-database ownership chaining, you must fully trust these users with data in all databases.</span></span>  
   
--   Benutzer mit der CREATE DATABASE\-Berechtigung können neue Datenbanken erstellen und vorhandene Datenbanken anfügen.  Wenn die datenbankübergreifende Besitzverkettung aktiviert ist, können diese Benutzer u. U. auf Objekte in anderen Datenbanken zugreifen, auf die sie von den Datenbanken aus, die sie selbst neu erstellen oder anhängen, keinen Zugriff hätten.  
+-   <span data-ttu-id="57e84-112">Benutzer mit der CREATE DATABASE-Berechtigung können neue Datenbanken erstellen und vorhandene Datenbanken anfügen.</span><span class="sxs-lookup"><span data-stu-id="57e84-112">Users with CREATE DATABASE permission can create new databases and attach existing databases.</span></span> <span data-ttu-id="57e84-113">Wenn die datenbankübergreifende Besitzverkettung aktiviert ist, können diese Benutzer u. U. auf Objekte in anderen Datenbanken zugreifen, auf die sie von den Datenbanken aus, die sie selbst neu erstellen oder anhängen, keinen Zugriff hätten.</span><span class="sxs-lookup"><span data-stu-id="57e84-113">If cross-database ownership chaining is enabled, these users can access objects in other databases that they might not have privileges in from the newly created or attached databases that they create.</span></span>  
   
-## Aktivieren der datenbankübergreifenden Besitzverkettung  
- Die datenbankübergreifende Besitzverkettung sollte nur in Umgebungen aktiviert werden, in denen Sie Benutzern mit weitreichenden Berechtigungen voll vertrauen.  Sie kann bei der Einrichtung für alle Datenbanken oder mit den [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]\-Befehlen `sp_configure` und `ALTER DATABASE` nur für bestimmte Datenbanken konfiguriert werden.  
+## <a name="enabling-cross-database-ownership-chaining"></a><span data-ttu-id="57e84-114">Aktivieren der datenbankübergreifenden Besitzverkettung</span><span class="sxs-lookup"><span data-stu-id="57e84-114">Enabling Cross-database Ownership Chaining</span></span>  
+ <span data-ttu-id="57e84-115">Die datenbankübergreifende Besitzverkettung sollte nur in Umgebungen aktiviert werden, in denen Sie Benutzern mit weitreichenden Berechtigungen voll vertrauen.</span><span class="sxs-lookup"><span data-stu-id="57e84-115">Cross-database ownership chaining should only be enabled in environments where you can fully trust highly-privileged users.</span></span> <span data-ttu-id="57e84-116">Sie kann bei der Einrichtung für alle Datenbanken oder mit den [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Befehlen `sp_configure` und `ALTER DATABASE` nur für bestimmte Datenbanken konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="57e84-116">It can be configured during setup for all databases, or selectively for specific databases using the [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] commands `sp_configure` and `ALTER DATABASE`.</span></span>  
   
- Wenn Sie die datenbankübergreifende Besitzverkettung selektiv konfigurieren möchten, deaktivieren Sie sie mithilfe von `sp_configure` für den Server.  Konfigurieren Sie dann mit dem Befehl ALTER DATABASE und mit SET DB\_CHAINING ON die datenbankübergreifende Besitzverkettung für die gewünschten Datenbanken.  
+ <span data-ttu-id="57e84-117">Wenn Sie die datenbankübergreifende Besitzverkettung selektiv konfigurieren möchten, deaktivieren Sie sie mithilfe von `sp_configure` für den Server.</span><span class="sxs-lookup"><span data-stu-id="57e84-117">To selectively configure cross-database ownership chaining, use `sp_configure` to turn it off for the server.</span></span> <span data-ttu-id="57e84-118">Konfigurieren Sie dann mit dem Befehl ALTER DATABASE und mit SET DB_CHAINING ON die datenbankübergreifende Besitzverkettung für die gewünschten Datenbanken.</span><span class="sxs-lookup"><span data-stu-id="57e84-118">Then use the ALTER DATABASE command with SET DB_CHAINING ON to configure cross-database ownership chaining for only the databases that require it.</span></span>  
   
- Im folgenden Beispiel wird die datenbankübergreifende Besitzverkettung für alle Datenbanken aktiviert:  
+ <span data-ttu-id="57e84-119">Im folgenden Beispiel wird die datenbankübergreifende Besitzverkettung für alle Datenbanken aktiviert:</span><span class="sxs-lookup"><span data-stu-id="57e84-119">The following sample turns on cross-database ownership chaining for all databases:</span></span>  
   
 ```  
 EXECUTE sp_configure 'show advanced', 1;  
@@ -40,28 +43,27 @@ EXECUTE sp_configure 'cross db ownership chaining', 1;
 RECONFIGURE;  
 ```  
   
- Im folgenden Beispiel wird die datenbankübergreifende Besitzverkettung für bestimmte Datenbanken aktiviert:  
+ <span data-ttu-id="57e84-120">Im folgenden Beispiel wird die datenbankübergreifende Besitzverkettung für bestimmte Datenbanken aktiviert:</span><span class="sxs-lookup"><span data-stu-id="57e84-120">The following sample turns on cross-database ownership chaining for specific databases:</span></span>  
   
 ```  
 ALTER DATABASE Database1 SET DB_CHAINING ON;  
 ALTER DATABASE Database2 SET DB_CHAINING ON;  
-  
 ```  
   
-### Dynamisch erstellte SQL\-Anweisungen  
- Die datenbankübergreifende Besitzverkettung funktioniert nicht, wenn dynamisch erstellte SQL\-Anweisungen ausgeführt werden, sofern derselbe Benutzer nicht in beiden Datenbanken vorhanden ist.  Dieses Problem können Sie in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] umgehen, indem Sie eine gespeicherte Prozedur erstellen, die auf die Daten in einer anderen Datenbank zugreift, und die Prozedur mit einem Zertifikat signieren, das in beiden Datenbanken vorhanden ist.  Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.  
+### <a name="dynamic-sql"></a><span data-ttu-id="57e84-121">Dynamisch erstellte SQL-Anweisungen</span><span class="sxs-lookup"><span data-stu-id="57e84-121">Dynamic SQL</span></span>  
+ <span data-ttu-id="57e84-122">Die datenbankübergreifende Besitzverkettung funktioniert nicht, wenn dynamisch erstellte SQL-Anweisungen ausgeführt werden, sofern derselbe Benutzer nicht in beiden Datenbanken vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="57e84-122">Cross-database ownership chaining does not work in cases where dynamically created SQL statements are executed unless the same user exists in both databases.</span></span> <span data-ttu-id="57e84-123">Dieses Problem können Sie in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] umgehen, indem Sie eine gespeicherte Prozedur erstellen, die auf die Daten in einer anderen Datenbank zugreift, und die Prozedur mit einem Zertifikat signieren, das in beiden Datenbanken vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="57e84-123">You can work around this in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] by creating a stored procedure that accesses data in another database and signing the procedure with a certificate that exists in both databases.</span></span> <span data-ttu-id="57e84-124">Die Benutzer können dann auf die von der Prozedur verwendeten Datenbankressourcen zugreifen, ohne dass ihnen Zugriffsrechte für die Datenbank oder andere Berechtigungen erteilt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="57e84-124">This gives users access to the database resources used by the procedure without granting them database access or permissions.</span></span>  
   
-## Externe Ressourcen  
- Weitere Informationen finden Sie in den folgenden Ressourcen.  
+## <a name="external-resources"></a><span data-ttu-id="57e84-125">Externe Ressourcen</span><span class="sxs-lookup"><span data-stu-id="57e84-125">External Resources</span></span>  
+ <span data-ttu-id="57e84-126">Weitere Informationen finden Sie in den folgenden Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="57e84-126">For more information, see the following resources.</span></span>  
   
-|Ressource|Beschreibung|  
-|---------------|------------------|  
-|[Erweitern des Identitätswechsels bei Datenbanken durch Verwenden von EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) und [Cross DB Ownership Chaining \(Option\)](http://msdn.microsoft.com/library/ms188694.aspx) in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Onlinedokumentation.|In den Themen wird das Konfigurieren einer datenbankübergreifenden Besitzverkettung für eine [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Instanz beschrieben.|  
+|<span data-ttu-id="57e84-127">Ressource</span><span class="sxs-lookup"><span data-stu-id="57e84-127">Resource</span></span>|<span data-ttu-id="57e84-128">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="57e84-128">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="57e84-129">[Erweitern des Identitätswechsels bei Datenbanken durch Verwenden von EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) und [datenbankübergreifende Besitzverkettung Option](http://msdn.microsoft.com/library/ms188694.aspx) [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.</span><span class="sxs-lookup"><span data-stu-id="57e84-129">[Extending Database Impersonation by Using EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) and [Cross DB Ownership Chaining Option](http://msdn.microsoft.com/library/ms188694.aspx)[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.</span></span>|<span data-ttu-id="57e84-130">In den Themen wird das Konfigurieren einer datenbankübergreifenden Besitzverkettung für eine [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Instanz beschrieben.</span><span class="sxs-lookup"><span data-stu-id="57e84-130">Topics describe how to configure cross-database ownership chaining for an instance of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>|  
   
-## Siehe auch  
- [Sichern von ADO.NET\-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Übersicht über die SQL Server\-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)   
- [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)   
- [Signieren gespeicherter Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)   
- [Verwaltete Anbieter und DataSet Developer Center \(ADO.NET\)](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="57e84-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="57e84-131">See Also</span></span>  
+ [<span data-ttu-id="57e84-132">Sichern von ADO.NET-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="57e84-132">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="57e84-133">Übersicht über SQL Server-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="57e84-133">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="57e84-134">Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQLServer</span><span class="sxs-lookup"><span data-stu-id="57e84-134">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="57e84-135">Schreiben von sicherem dynamisches SQL in SQLServer</span><span class="sxs-lookup"><span data-stu-id="57e84-135">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [<span data-ttu-id="57e84-136">Signieren von gespeicherten Prozeduren in SQLServer</span><span class="sxs-lookup"><span data-stu-id="57e84-136">Signing Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="57e84-137">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="57e84-137">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

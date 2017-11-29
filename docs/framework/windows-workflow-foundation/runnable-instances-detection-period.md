@@ -1,22 +1,26 @@
 ---
-title: "Runnable Instances Detection Period | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Runnable Instances Detection Period
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2a78f8404d5e6b9d63c9455d059dcbb9a76f8c18
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Runnable Instances Detection Period
-Der SQL\-Workflowinstanzspeicher führt eine interne Aufgabe aus, die in regelmäßigen Abständen aktiviert wird und ausführbare oder aktivierbare Instanzen in der Persistenzdatenbank ermittelt.Die **Runnable Instances Detection Period**\-Eigenschaft des SQL\-Workflowinstanzspeichers gibt den Zeitraum an, nach dem der SQL\-Workflowinstanzspeicher eine Ermittlungsaufgabe ausführt, um alle ausführbaren oder aktivierbaren Workflowinstanzen in der Persistenzdatenbank nach dem vorhergehenden Ermittlungslauf zu erkennen.  
+# <a name="runnable-instances-detection-period"></a><span data-ttu-id="ffee2-102">Runnable Instances Detection Period</span><span class="sxs-lookup"><span data-stu-id="ffee2-102">Runnable Instances Detection Period</span></span>
+<span data-ttu-id="ffee2-103">Der SQL-Workflowinstanzspeicher führt eine interne Aufgabe aus, die in regelmäßigen Abständen aktiviert wird und ausführbare oder aktivierbare Instanzen in der Persistenzdatenbank ermittelt.</span><span class="sxs-lookup"><span data-stu-id="ffee2-103">The SQL Workflow Instance Store runs an internal task that periodically wakes up and detects runnable or activatable instances in the persistence database.</span></span> <span data-ttu-id="ffee2-104">Die **Runnable Instances Detection Period** Eigenschaft des SQL-Workflowinstanzspeichers gibt den Zeitraum, nach dem der SQL-Workflowinstanzspeicher eine erkennungsaufgabe, um alle ausführbaren oder aktivierbaren Workflow erkennen ausführt, Instanzen in der Persistenzdatenbank nach dem vorhergehenden ermittlungslauf.</span><span class="sxs-lookup"><span data-stu-id="ffee2-104">The **Runnable Instances Detection Period** property of the SQL Workflow Instance Store specifies the time period after which the SQL Workflow Instance Store runs a detection task to detect any runnable or activatable workflow instances in the persistence database after the previous detection cycle.</span></span>  
   
- Das Festlegen eines kürzeren Intervalls für diese Eigenschaft verringert den Zeitraum zwischen dem Ablauf eines Zeitgebers, der einer Workflowinstanz zugeordnet ist, und dem Signalisieren des Ereignisses sowie dem nachfolgendem Laden der Instanz.Dadurch wird jedoch gleichzeitig die Auslastung eines Hosts erhöht und empfiehlt sich deshalb meist nicht bei Szenarien mit wenig Fehlern auf Seiten von permanenten Zeitgebern und\/oder dem Host.Der Eigenschaftstyp ist TimeSpan, der Wert der Eigenschaft folgt dem Format: hh:mm:ss.Der Mindestwert für diese Eigenschaft ist 00:00:01.Der Standardwert für die Eigenschaft ist 00:00:05.  
+ <span data-ttu-id="ffee2-105">Das Festlegen eines kürzeren Intervalls für diese Eigenschaft verringert den Zeitraum zwischen dem Ablauf eines Timers, der einer Workflowinstanz zugeordnet ist, und dem Signalisieren des Ereignisses sowie dem nachfolgendem Laden der Instanz.</span><span class="sxs-lookup"><span data-stu-id="ffee2-105">Setting a shorter interval for this property reduces the time between the expiration of a timer associated with a workflow instance and the signaling of the event and subsequent loading of the instance.</span></span> <span data-ttu-id="ffee2-106">Dadurch wird jedoch gleichzeitig die Auslastung eines Hosts erhöht und empfiehlt sich deshalb meist nicht bei Szenarien mit wenig Fehlern auf Seiten von permanenten Zeitgebern und/oder dem Host.</span><span class="sxs-lookup"><span data-stu-id="ffee2-106">However, it also increases the processing load on a host and may not be desirable in scenarios where durable timers and/or host failures are rare.</span></span> <span data-ttu-id="ffee2-107">Der Eigenschaftstyp ist TimeSpan, der Wert der Eigenschaft folgt dem Format: hh:mm:ss.</span><span class="sxs-lookup"><span data-stu-id="ffee2-107">The type of the property is TimeSpan and the value of the property follows the format: hh:mm:ss.</span></span> <span data-ttu-id="ffee2-108">Der Mindestwert für diese Eigenschaft ist 00:00:01.</span><span class="sxs-lookup"><span data-stu-id="ffee2-108">The minimum value for this property is 00:00:01.</span></span> <span data-ttu-id="ffee2-109">Der Standardwert für die Eigenschaft ist 00:00:05.</span><span class="sxs-lookup"><span data-stu-id="ffee2-109">The default value for the property is 00:00:05.</span></span>  
   
- Weitere Informationen zum Ermitteln und Aktivieren von ausführbaren und aktivierbaren Workflowinstanzen finden Sie unter [Instanzaktivierung](../../../docs/framework/windows-workflow-foundation//instance-activation.md).
+ <span data-ttu-id="ffee2-110">Weitere Informationen erkennen und Aktivieren von ausführbaren und aktivierbare Workflowinstanzen finden Sie unter [Instanzaktivierung](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span><span class="sxs-lookup"><span data-stu-id="ffee2-110">For more information detecting and activating runnable and activatable workflow instances, see [Instance Activation](../../../docs/framework/windows-workflow-foundation/instance-activation.md).</span></span>

@@ -5,39 +5,36 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53bd8bce147e8939a975f483223db08296707e3d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 27f3ede2967d030d0f85919e658ca6a8dd410743
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="etw-events-in-the-net-framework"></a>ETW-Ereignisse in .NET Framework
-Die Ereignisablaufverfolgung für Windows (ETW) ist ein leistungsstarkes, skalierbares Ablaufverfolgungssystem mit geringem Verwaltungsaufwand, das von den Windows-Betriebssystemen bereitgestellt wird. Es stellt eine Ergänzung zur Unterstützung für die Profilerstellung und das Debuggen dar, die von .NET Framework bereitgestellt werden und kann zur Problembehebung von einer Vielzahl von Szenarios verwendet werden. Allgemeine Informationen zu ETW finden Sie in der MSDN-Bibliothek unter [Improve Debugging and Performance Tuning with ETW (Verbessertes Debugging und Leistungsoptimierung mit ETW)](http://go.microsoft.com/fwlink/?LinkID=161142).  
+# <a name="etw-events-in-the-net-framework"></a><span data-ttu-id="face4-102">ETW-Ereignisse in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="face4-102">ETW Events in the .NET Framework</span></span>
+<span data-ttu-id="face4-103">Die Ereignisablaufverfolgung für Windows (ETW) ist ein leistungsstarkes, skalierbares Ablaufverfolgungssystem mit geringem Verwaltungsaufwand, das von den Windows-Betriebssystemen bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="face4-103">Event tracing for Windows (ETW) is a high-performance, low-overhead, scalable tracing system provided by Windows operating systems.</span></span> <span data-ttu-id="face4-104">Es stellt eine Ergänzung zur Unterstützung für die Profilerstellung und das Debuggen dar, die von .NET Framework bereitgestellt werden und kann zur Problembehebung von einer Vielzahl von Szenarios verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="face4-104">It supplements the profiling and debugging support provided by the .NET Framework and can be used to troubleshoot a variety of scenarios.</span></span>  
   
- In .NET Framework ist die ETW-Ereignisablaufverfolgung für die Common Language Runtime (CLR), die [Task Parallel Library](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) und [Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) verfügbar.  
+ <span data-ttu-id="face4-105">In .NET Framework ist die ETW-Ereignisablaufverfolgung für die Common Language Runtime (CLR), die [Task Parallel Library](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) und [Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="face4-105">In the .NET Framework, ETW event tracing is available for the common language runtime (CLR), the [Task Parallel Library](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md), and [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [ETW Events in Task Parallel Library and PLINQ (ETW-Ereignisse in der Task Parallel Library und PLINQ)](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
- Beschreibt die Profilerstellung für parallelen Anwendungscode.  
+## <a name="in-this-section"></a><span data-ttu-id="face4-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="face4-106">In This Section</span></span>  
+ [<span data-ttu-id="face4-107">ETW Events in Task Parallel Library and PLINQ (ETW-Ereignisse in der Task Parallel Library und PLINQ)</span><span class="sxs-lookup"><span data-stu-id="face4-107">ETW Events in Task Parallel Library and PLINQ</span></span>](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
+ <span data-ttu-id="face4-108">Beschreibt die Profilerstellung für parallelen Anwendungscode.</span><span class="sxs-lookup"><span data-stu-id="face4-108">Describes how to profile parallel application code.</span></span>  
   
- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
- Beschreibt, wie CLR-ETW-Ereignisse die Unterstützung für die Profilerstellung und das Debuggen ergänzen, die von der Common Language Runtime bereitgestellt werden.  
+ [<span data-ttu-id="face4-109">ETW-Ereignisse in der Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="face4-109">ETW Events in the Common Language Runtime</span></span>](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
+ <span data-ttu-id="face4-110">Beschreibt, wie CLR-ETW-Ereignisse die Unterstützung für die Profilerstellung und das Debuggen ergänzen, die von der Common Language Runtime bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="face4-110">Describes how CLR ETW events supplement the profiling and debugging support provided by the common language runtime.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR ETW Events (CLR-ETW-Ereignisse)](../../../docs/framework/performance/clr-etw-events.md)   
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)   
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-
+## <a name="see-also"></a><span data-ttu-id="face4-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="face4-111">See Also</span></span>  
+ [<span data-ttu-id="face4-112">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="face4-112">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)  
+ [<span data-ttu-id="face4-113">Task Parallel Library (TPL)</span><span class="sxs-lookup"><span data-stu-id="face4-113">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [<span data-ttu-id="face4-114">Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))</span><span class="sxs-lookup"><span data-stu-id="face4-114">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

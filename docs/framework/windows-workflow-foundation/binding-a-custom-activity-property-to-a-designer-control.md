@@ -1,29 +1,33 @@
 ---
-title: "Binden einer benutzerdefinierten Aktivit&#228;tseigenschaft an ein Designersteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Binden einer benutzerdefinierten Aktivitätseigenschaft an ein Designersteuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9edc168dc6e4111e5f2d58a62c2b0341f74aa04
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Binden einer benutzerdefinierten Aktivit&#228;tseigenschaft an ein Designersteuerelement
-Das Binden eines Textfeld\-Designersteuerelements an ein Aktivitätsargument ist recht einfach. Das Binden eines komplexes Designersteuerelements \(z. B. ein Kombinationsfeld\) an ein Aktivitätsargument kann jedoch eine besondere Herausforderung darstellen.In diesem Thema wird erläutert, wie ein Aktivitätsargument an ein Kombinationsfeld\-Steuerelement in einem benutzerdefinierten Aktivitätsdesigner gebunden wird.  
+# <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="e1342-102">Binden einer benutzerdefinierten Aktivitätseigenschaft an ein Designersteuerelement</span><span class="sxs-lookup"><span data-stu-id="e1342-102">Binding a custom activity property to a designer control</span></span>
+<span data-ttu-id="e1342-103">Das Binden eines Textfeld-Designersteuerelements an ein Aktivitätsargument ist recht einfach. Das Binden eines komplexes Designersteuerelements (z. B. ein Kombinationsfeld) an ein Aktivitätsargument kann jedoch eine besondere Herausforderung darstellen.</span><span class="sxs-lookup"><span data-stu-id="e1342-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="e1342-104">In diesem Thema wird erläutert, wie ein Aktivitätsargument an ein Kombinationsfeld-Steuerelement in einem benutzerdefinierten Aktivitätsdesigner gebunden wird.</span><span class="sxs-lookup"><span data-stu-id="e1342-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  
   
-#### Erstellen des Kombinationsfeldelement\-Konverters  
+#### <a name="creating-the-combo-box-item-converter"></a><span data-ttu-id="e1342-105">Erstellen des Kombinationsfeldelement-Konverters</span><span class="sxs-lookup"><span data-stu-id="e1342-105">Creating the combo box item converter</span></span>  
   
-1.  Erstellen Sie in Visual Studio eine neue leere Projektmappe mit dem Namen "CustomProperty".  
+1.  <span data-ttu-id="e1342-106">Erstellen Sie in Visual Studio eine neue leere Projektmappe mit dem Namen "CustomProperty".</span><span class="sxs-lookup"><span data-stu-id="e1342-106">Create a new empty solution in Visual Studio called CustomProperty.</span></span>  
   
-2.  Erstellen Sie eine neue Klasse mit dem Namen "ComboBoxItemConverter".Fügen Sie einen Verweis auf System.Windows.Data hinzu, und sorgen Sie dafür, dass die Klasse aus <xref:System.Windows.Data.IValueConverter> abgeleitet wird.Implementieren Sie die Schnittstelle über Visual Studio, um Stubs für <xref:System.Windows.Data.IValueConverter.Convert%2A> und <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> zu generieren.  
+2.  <span data-ttu-id="e1342-107">Erstellen Sie eine neue Klasse mit dem Namen "ComboBoxItemConverter".</span><span class="sxs-lookup"><span data-stu-id="e1342-107">Create a new class called ComboBoxItemConverter.</span></span> <span data-ttu-id="e1342-108">Fügen Sie einen Verweis auf System.Windows.Data hinzu, und sorgen Sie dafür, dass die Klasse aus <xref:System.Windows.Data.IValueConverter> abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="e1342-108">Add a reference to System.Windows.Data, and have the class derive from <xref:System.Windows.Data.IValueConverter>.</span></span> <span data-ttu-id="e1342-109">Implementieren Sie die Schnittstelle über Visual Studio, um Stubs für `Convert` und `ConvertBack` zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e1342-109">Have Visual Studio implement the interface to generate stubs for `Convert` and `ConvertBack`.</span></span>  
   
-3.  Fügen Sie der <xref:System.Windows.Data.IValueConverter.Convert%2A>\-Methode folgenden Code hinzu.In diesem Code wird <xref:System.Activities.InArgument%601> der Aktivität vom Typ <xref:System.String> in den Wert konvertiert, der im Designer platziert werden soll.  
+3.  <span data-ttu-id="e1342-110">Fügen Sie der `Convert`-Methode folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="e1342-110">Add the following code to the `Convert` method.</span></span> <span data-ttu-id="e1342-111">In diesem Code wird <xref:System.Activities.InArgument%601> der Aktivität vom Typ <xref:System.String> in den Wert konvertiert, der im Designer platziert werden soll.</span><span class="sxs-lookup"><span data-stu-id="e1342-111">This code converts the activity's <xref:System.Activities.InArgument%601> of type <xref:System.String> to the value to be placed in the designer.</span></span>  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -48,10 +52,9 @@ Das Binden eines Textfeld\-Designersteuerelements an ein Aktivitätsargument ist
         }  
     }  
     return null;  
-  
     ```  
   
-     Der Ausdruck im oben erwähnten Codeausschnitt kann auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> statt <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.  
+     <span data-ttu-id="e1342-112">Der Ausdruck im vorherigen Codeausschnitt kann auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> anstelle von <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="e1342-112">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -76,10 +79,9 @@ Das Binden eines Textfeld\-Designersteuerelements an ein Aktivitätsargument ist
         }  
     }  
     return null;  
-  
     ```  
   
-4.  Fügen Sie der <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>\-Methode folgenden Code hinzu.Dieser Code konvertiert das eingehende Kombinationsfeldelement wieder zurück in ein <xref:System.Activities.InArgument%601>\-Element.  
+4.  <span data-ttu-id="e1342-113">Fügen Sie der `ConvertBack`-Methode folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="e1342-113">Add the following code to the `ConvertBack` method.</span></span> <span data-ttu-id="e1342-114">Dieser Code konvertiert das eingehende Kombinationsfeldelement wieder zurück in ein <xref:System.Activities.InArgument%601>-Element.</span><span class="sxs-lookup"><span data-stu-id="e1342-114">This code converts the incoming combo box item back to an <xref:System.Activities.InArgument%601>.</span></span>  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -87,10 +89,9 @@ Das Binden eines Textfeld\-Designersteuerelements an ein Aktivitätsargument ist
                 VisualBasicValue<string> vbArgument = new VisualBasicValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(vbArgument);  
                 return inArgument;  
-  
     ```  
   
-     Der Ausdruck im oben erwähnten Codeausschnitt kann auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> statt <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.  
+     <span data-ttu-id="e1342-115">Der Ausdruck im vorherigen Codeausschnitt kann auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> anstelle von <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="e1342-115">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -98,16 +99,15 @@ Das Binden eines Textfeld\-Designersteuerelements an ein Aktivitätsargument ist
                 CSharpValue<string> csArgument = new CSharpValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(csArgument);  
                 return inArgument;  
-  
     ```  
   
-#### Hinzufügen von ComboBoxItemConverter zum benutzerdefinierten Designer einer Aktivität  
+#### <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a><span data-ttu-id="e1342-116">Hinzufügen von ComboBoxItemConverter zum benutzerdefinierten Designer einer Aktivität</span><span class="sxs-lookup"><span data-stu-id="e1342-116">Adding the ComboBoxItemConverter to the custom designer of an activity</span></span>  
   
-1.  Fügen Sie dem Projekt ein neues Element hinzu.Wählen Sie im Dialogfeld "Neues Element" den Knoten "Workflow" aus, und wählen Sie "Aktivitätsdesigner" als Typ des neuen Elements aus.Benennen Sie das CustomPropertyDesigner\-Element.  
+1.  <span data-ttu-id="e1342-117">Fügen Sie dem Projekt ein neues Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="e1342-117">Add a new item to the project.</span></span> <span data-ttu-id="e1342-118">Wählen Sie im Dialogfeld "Neues Element" den Knoten "Workflow" aus, und wählen Sie "Aktivitätsdesigner" als Typ des neuen Elements aus.</span><span class="sxs-lookup"><span data-stu-id="e1342-118">In the New Item dialog, select the Workflow node and select Activity Designer as the type of the new item.</span></span> <span data-ttu-id="e1342-119">Benennen Sie das CustomPropertyDesigner-Element.</span><span class="sxs-lookup"><span data-stu-id="e1342-119">Name the item CustomPropertyDesigner.</span></span>  
   
-2.  Fügen Sie dem neuen Designer ein Kombinationsfeld hinzu.Fügen Sie in der Items\-Eigenschaft dem Kombinationsfeld einige Elemente mit den Content\-Werten "Item1" und 'Item2 hinzu.  
+2.  <span data-ttu-id="e1342-120">Fügen Sie dem neuen Designer ein Kombinationsfeld hinzu.</span><span class="sxs-lookup"><span data-stu-id="e1342-120">Add a Combo Box to the new designer.</span></span> <span data-ttu-id="e1342-121">Fügen Sie in der Items-Eigenschaft dem Kombinationsfeld einige Elemente mit den Content-Werten "Item1" und 'Item2 hinzu.</span><span class="sxs-lookup"><span data-stu-id="e1342-121">In the Items property, add a couple of items to the combo box, with Content values of "Item1" and 'Item2".</span></span>  
   
-3.  Ändern Sie das XAML des Kombinationsfelds, um den neuen Elementkonverter als Elementkonverter hinzuzufügen, der für das Kombinationsfeld verwendet werden soll.Der Konverter wird dem ActivityDesigner.Resources\-Segment als Ressource hinzugefügt und gibt den Konverter im Converter\-Attribut für den <xref:System.Windows.Controls.ComboBox> an.Beachten Sie, dass der Namespace des Projekts in den Namespaceattributen für den Aktivitätsdesigner angegeben wird. Wenn der Designer in einem anderen Projekt verwendet werden soll, muss dieser Namespace geändert werden.  
+3.  <span data-ttu-id="e1342-122">Ändern Sie das XAML des Kombinationsfelds, um den neuen Elementkonverter als Elementkonverter hinzuzufügen, der für das Kombinationsfeld verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="e1342-122">Modify the XAML of the combo box to add the new item converter as the item converter to be used for the combo box.</span></span> <span data-ttu-id="e1342-123">Der Konverter wird dem ActivityDesigner.Resources-Segment als Ressource hinzugefügt und gibt den Konverter im Converter-Attribut für den <xref:System.Windows.Controls.ComboBox> an.</span><span class="sxs-lookup"><span data-stu-id="e1342-123">The converter is added as a resource in the ActivityDesigner.Resources segment, and specifies the converter in the Converter attribute for the <xref:System.Windows.Controls.ComboBox>.</span></span> <span data-ttu-id="e1342-124">Beachten Sie, dass der Namespace des Projekts in den Namespaceattributen für den Aktivitätsdesigner angegeben wird. Wenn der Designer in einem anderen Projekt verwendet werden soll, muss dieser Namespace geändert werden.</span><span class="sxs-lookup"><span data-stu-id="e1342-124">Note that the namespace of the project is specified in the namespaces attributes for the activity designer; if the designer is to be used in a different project, this namespace will need to be changed.</span></span>  
   
     ```  
     <sap:ActivityDesigner x:Class="CustomProperty.CustomPropertyDesigner"  
@@ -129,18 +129,16 @@ Das Binden eines Textfeld\-Designersteuerelements an ein Aktivitätsargument ist
             </ComboBox>  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-4.  Erstellen Sie ein neues Element vom Typ <xref:System.Activities.CodeActivity>.Der von der IDE für die Aktivität erstellte Standardcode ist für dieses Beispiel ausreichend.  
+4.  <span data-ttu-id="e1342-125">Erstellen Sie ein neues Element vom Typ <xref:System.Activities.CodeActivity>.</span><span class="sxs-lookup"><span data-stu-id="e1342-125">Create a new item of type <xref:System.Activities.CodeActivity>.</span></span> <span data-ttu-id="e1342-126">Der von der IDE für die Aktivität erstellte Standardcode ist für dieses Beispiel ausreichend.</span><span class="sxs-lookup"><span data-stu-id="e1342-126">The default code created by the IDE for the activity will be sufficient for this example.</span></span>  
   
-5.  Fügen Sie der Klassendefinition das folgende Attribut hinzu:  
+5.  <span data-ttu-id="e1342-127">Fügen Sie der Klassendefinition das folgende Attribut hinzu:</span><span class="sxs-lookup"><span data-stu-id="e1342-127">Add the following attribute to the class definition:</span></span>  
   
     ```  
     [Designer(typeof(CustomPropertyDesigner))]  
-  
     ```  
   
-     Diese Zeile verknüpft den neuen Designer mit der neuen Klasse.  
+     <span data-ttu-id="e1342-128">Diese Zeile verknüpft den neuen Designer mit der neuen Klasse.</span><span class="sxs-lookup"><span data-stu-id="e1342-128">This line associates the new designer with the new class.</span></span>  
   
- Die neue Aktivität sollte jetzt mit dem Designer verknüpft sein.Sie können die neue Aktivität testen, indem Sie sie einem Workflow hinzufügen und das Kombinationsfeld auf die zwei Werte festlegen.Das Eigenschaftenfenster sollte aktualisiert werden, um den Kombinationsfeldwert widerzuspiegeln.
+ <span data-ttu-id="e1342-129">Die neue Aktivität sollte jetzt mit dem Designer verknüpft sein.</span><span class="sxs-lookup"><span data-stu-id="e1342-129">The new activity should now be associated with the designer.</span></span> <span data-ttu-id="e1342-130">Sie können die neue Aktivität testen, indem Sie sie einem Workflow hinzufügen und das Kombinationsfeld auf die zwei Werte festlegen.</span><span class="sxs-lookup"><span data-stu-id="e1342-130">To test the new activity, add it to a workflow, and set the combo box to the two values.</span></span> <span data-ttu-id="e1342-131">Das Eigenschaftenfenster sollte aktualisiert werden, um den Kombinationsfeldwert widerzuspiegeln.</span><span class="sxs-lookup"><span data-stu-id="e1342-131">The properties window should update to reflect the combo box value.</span></span>

@@ -1,109 +1,101 @@
 ---
-title: "Gültiger Inhalt von XElement- und XDocument-Objekte2 | Microsoft-Dokumentation"
+title: "Gültiger Inhalt von XElement- und XDocument-Objekte2"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f752ae346167709b95e758d15c1785ba7b6fcc5f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5093ef1c2974bcb980d97d4839af35bb69044a90
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
-In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.  
+# <a name="valid-content-of-xelement-and-xdocument-objects"></a><span data-ttu-id="5bee7-102">Gültiger Inhalt von XElement- und XDocument-Objekten</span><span class="sxs-lookup"><span data-stu-id="5bee7-102">Valid Content of XElement and XDocument Objects</span></span>
+<span data-ttu-id="5bee7-103">In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.</span><span class="sxs-lookup"><span data-stu-id="5bee7-103">This topic describes the valid arguments that can be passed to constructors and methods that you use to add content to elements and documents.</span></span>  
   
-## <a name="valid-content"></a>Gültiger Inhalt  
- Abfragen ergeben häufig <xref:System.Collections.Generic.IEnumerable%601>oder <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XAttribute>.</xref:System.Xml.Linq.XAttribute> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> Sie können Sammlungen von übergeben <xref:System.Xml.Linq.XElement>oder <xref:System.Xml.Linq.XAttribute>Objekte, die <xref:System.Xml.Linq.XElement>Konstruktor.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> Aus diesem Grund bietet es sich an, die Ergebnisse einer Abfrage als Inhalt an Methoden und Konstruktoren zu übergeben, mit denen Sie XML-Strukturen auffüllen können.  
+## <a name="valid-content"></a><span data-ttu-id="5bee7-104">Gültiger Inhalt</span><span class="sxs-lookup"><span data-stu-id="5bee7-104">Valid Content</span></span>  
+ <span data-ttu-id="5bee7-105">Abfragen ergeben häufig <xref:System.Collections.Generic.IEnumerable%601> für <xref:System.Xml.Linq.XElement> oder <xref:System.Collections.Generic.IEnumerable%601> für <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="5bee7-105">Queries often evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> or <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XAttribute>.</span></span> <span data-ttu-id="5bee7-106">Sie können Auflistungen mit <xref:System.Xml.Linq.XElement>- oder <xref:System.Xml.Linq.XAttribute>-Objekten an den <xref:System.Xml.Linq.XElement>-Konstruktor übergeben.</span><span class="sxs-lookup"><span data-stu-id="5bee7-106">You can pass collections of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects to the <xref:System.Xml.Linq.XElement> constructor.</span></span> <span data-ttu-id="5bee7-107">Aus diesem Grund bietet es sich an, die Ergebnisse einer Abfrage als Inhalt an Methoden und Konstruktoren zu übergeben, mit denen Sie XML-Strukturen auffüllen können.</span><span class="sxs-lookup"><span data-stu-id="5bee7-107">Therefore, it is convenient to pass the results of a query as content into methods and constructors that you use to populate XML trees.</span></span>  
   
- Beim Hinzufügen einfachen Inhalts können dieser Methode verschiedene Typen übergeben werden. Gültige Typen sind:  
+ <span data-ttu-id="5bee7-108">Beim Hinzufügen einfachen Inhalts können dieser Methode verschiedene Typen übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="5bee7-108">When adding simple content, various types can be passed to this method.</span></span> <span data-ttu-id="5bee7-109">Gültige Typen sind:</span><span class="sxs-lookup"><span data-stu-id="5bee7-109">Valid types include the following:</span></span>  
   
--   <xref:System.String></xref:System.String>  
+-   <xref:System.String>  
   
--   <xref:System.Double></xref:System.Double>  
+-   <xref:System.Double>  
   
--   <xref:System.Single></xref:System.Single>  
+-   <xref:System.Single>  
   
--   <xref:System.Decimal></xref:System.Decimal>  
+-   <xref:System.Decimal>  
   
--   <xref:System.Boolean></xref:System.Boolean>  
+-   <xref:System.Boolean>  
   
--   <xref:System.DateTime></xref:System.DateTime>  
+-   <xref:System.DateTime>  
   
--   <xref:System.TimeSpan></xref:System.TimeSpan>  
+-   <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset></xref:System.DateTimeOffset>  
+-   <xref:System.DateTimeOffset>  
   
--   Alle Typen, die `Object.ToString` implementieren.  
+-   <span data-ttu-id="5bee7-110">Alle Typen, die `Object.ToString` implementieren.</span><span class="sxs-lookup"><span data-stu-id="5bee7-110">Any type that implements `Object.ToString`.</span></span>  
   
--   Jeder Typ, <xref:System.Collections.Generic.IEnumerable%601>.</xref:System.Collections.Generic.IEnumerable%601> implementiert  
+-   <span data-ttu-id="5bee7-111">Alle Typen, die <xref:System.Collections.Generic.IEnumerable%601> implementieren.</span><span class="sxs-lookup"><span data-stu-id="5bee7-111">Any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
   
- Beim Hinzufügen komplexen Inhalts können an diese Methode verschiedene Typen übergeben werden:  
+ <span data-ttu-id="5bee7-112">Beim Hinzufügen komplexen Inhalts können an diese Methode verschiedene Typen übergeben werden:</span><span class="sxs-lookup"><span data-stu-id="5bee7-112">When adding complex content, various types can be passed to this method:</span></span>  
   
--   <xref:System.Xml.Linq.XObject></xref:System.Xml.Linq.XObject>  
+-   <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode></xref:System.Xml.Linq.XNode>  
+-   <xref:System.Xml.Linq.XNode>  
   
 -   <xref:System.Xml.Linq.XAttribute>  
   
--   Jeder Typ, implementiert<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>  
+-   <span data-ttu-id="5bee7-113">alle Typen, die eine <xref:System.Collections.Generic.IEnumerable%601> implementieren</span><span class="sxs-lookup"><span data-stu-id="5bee7-113">Any type that implements <xref:System.Collections.Generic.IEnumerable%601></span></span>  
   
- Wenn ein Objekt implementiert <xref:System.Collections.Generic.IEnumerable%601>, die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung hinzugefügt werden.</xref:System.Collections.Generic.IEnumerable%601> Wenn die Auflistung enthält <xref:System.Xml.Linq.XNode>oder <xref:System.Xml.Linq.XAttribute>Objekte, die jedes Element in der Auflistung getrennt hinzugefügt.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XNode> Wenn die Auflistung Text (oder Objekte, die in Text umgewandelt wurden) enthält, wird der Text in der Auflistung verkettet und als einzelner Textknoten hinzugefügt.  
+ <span data-ttu-id="5bee7-114">Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-114">If an object implements <xref:System.Collections.Generic.IEnumerable%601>, the collection in the object is enumerated, and all items in the collection are added.</span></span> <span data-ttu-id="5bee7-115">Wenn die Auflistung <xref:System.Xml.Linq.XNode>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-115">If the collection contains <xref:System.Xml.Linq.XNode> or <xref:System.Xml.Linq.XAttribute> objects, each item in the collection is added separately.</span></span> <span data-ttu-id="5bee7-116">Wenn die Auflistung Text (oder Objekte, die in Text umgewandelt wurden) enthält, wird der Text in der Auflistung verkettet und als einzelner Textknoten hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-116">If the collection contains text (or objects that are converted to text), the text in the collection is concatenated and added as a single text node.</span></span>  
   
- Wenn der Inhalt `null` ist, wird nichts hinzugefügt. Bei der Übergabe einer Auflistung können Elemente der Auflistung `null` sein. Ein `null`-Element in der Auflistung hat keine Auswirkungen auf die Struktur.  
+ <span data-ttu-id="5bee7-117">Wenn der Inhalt `null` ist, wird nichts hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-117">If content is `null`, nothing is added.</span></span> <span data-ttu-id="5bee7-118">Bei der Übergabe einer Auflistung können Elemente der Auflistung `null` sein.</span><span class="sxs-lookup"><span data-stu-id="5bee7-118">When passing a collection items in the collection can be `null`.</span></span> <span data-ttu-id="5bee7-119">Ein `null`-Element in der Auflistung hat keine Auswirkungen auf die Struktur.</span><span class="sxs-lookup"><span data-stu-id="5bee7-119">A `null` item in the collection has no effect on the tree.</span></span>  
   
- Ein hinzugefügtes Attribut muss innerhalb des Elements, in dem es enthalten ist, einen eindeutigen Namen besitzen.  
+ <span data-ttu-id="5bee7-120">Ein hinzugefügtes Attribut muss innerhalb des Elements, in dem es enthalten ist, einen eindeutigen Namen besitzen.</span><span class="sxs-lookup"><span data-stu-id="5bee7-120">An added attribute must have a unique name within its containing element.</span></span>  
   
- Beim Hinzufügen von <xref:System.Xml.Linq.XNode>oder <xref:System.Xml.Linq.XAttribute>-Objekten der neue Inhalt kein übergeordnetes Element besitzt, klicken Sie dann die Objekte werden einfach angefügt der XML-Struktur.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XNode> Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird der neue Inhalt geklont, und der neu geklonte Inhalt wird an die XML-Struktur angefügt.  
+ <span data-ttu-id="5bee7-121">Wenn der neue Inhalt beim Hinzufügen von <xref:System.Xml.Linq.XNode>-Objekten oder <xref:System.Xml.Linq.XAttribute>-Objekten kein übergeordnetes Element besitzt, werden die Objekte einfach an die XML-Struktur angefügt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-121">When adding <xref:System.Xml.Linq.XNode> or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, then the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="5bee7-122">Wenn der neue Inhalt bereits ein übergeordnetes Element besitzt und Bestandteil einer anderen XML-Struktur ist, wird der neue Inhalt geklont, und der neu geklonte Inhalt wird an die XML-Struktur angefügt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-122">If the new content already is parented and is part of another XML tree, then the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span>  
   
-## <a name="valid-content-for-documents"></a>Gültiger Inhalt für Dokumente  
- Es ist nicht möglich, einem Dokument Attribute und einfachen Inhalt hinzuzufügen.  
+## <a name="valid-content-for-documents"></a><span data-ttu-id="5bee7-123">Gültiger Inhalt für Dokumente</span><span class="sxs-lookup"><span data-stu-id="5bee7-123">Valid Content for Documents</span></span>  
+ <span data-ttu-id="5bee7-124">Es ist nicht möglich, einem Dokument Attribute und einfachen Inhalt hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="5bee7-124">Attributes and simple content cannot be added to a document.</span></span>  
   
- Es gibt nicht viele Szenarios, die Sie erstellen eine <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> erfordern Sie können in der Regel erstellen Sie stattdessen die XML-Strukturen mit einem <xref:System.Xml.Linq.XElement>Stammknoten.</xref:System.Xml.Linq.XElement> Es sei denn, Sie haben eine bestimmte Anforderung zum Erstellen eines Dokuments (z. B., weil Sie verarbeitungsanweisungen und Kommentare auf der obersten Ebene zu erstellen, oder Sie Dokumenttypen unterstützen müssen), ist es oft hilfreich, <xref:System.Xml.Linq.XElement>als Stammknoten.</xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="5bee7-125">Die Anzahl der Szenarios, in denen Sie ein <xref:System.Xml.Linq.XDocument> erstellen müssen, ist sehr begrenzt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-125">There are not many scenarios that require you to create an <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="5bee7-126">Stattdessen können Sie i. d. R. die XML-Strukturen mit einem <xref:System.Xml.Linq.XElement>-Stammknoten erstellen.</span><span class="sxs-lookup"><span data-stu-id="5bee7-126">Instead, you can usually create your XML trees with an <xref:System.Xml.Linq.XElement> root node.</span></span> <span data-ttu-id="5bee7-127">Sofern es keine bestimmte Anforderung für das Erstellen eines Dokuments gibt (z. B., weil Sie Verarbeitungsanweisungen und Kommentare auf der obersten Ebene erstellen oder Dokumenttypen unterstützen müssen), ist es oft bequemer, <xref:System.Xml.Linq.XElement> als Stammknoten zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="5bee7-127">Unless you have a specific requirement to create a document (for example, because you have to create processing instructions and comments at the top level, or you have to support document types), it is often more convenient to use <xref:System.Xml.Linq.XElement> as your root node.</span></span>  
   
- Als gültiger Inhalt für Dokumente gilt z. B.:  
+ <span data-ttu-id="5bee7-128">Als gültiger Inhalt für Dokumente gilt z. B.:</span><span class="sxs-lookup"><span data-stu-id="5bee7-128">Valid content for a document includes the following:</span></span>  
   
--   NULL oder eins <xref:System.Xml.Linq.XDocumentType>Objekte.</xref:System.Xml.Linq.XDocumentType> Die Dokumenttypen müssen vor dem Element kommen.  
+-   <span data-ttu-id="5bee7-129">kein oder ein <xref:System.Xml.Linq.XDocumentType>-Objekt:</span><span class="sxs-lookup"><span data-stu-id="5bee7-129">Zero or one <xref:System.Xml.Linq.XDocumentType> objects.</span></span> <span data-ttu-id="5bee7-130">Die Dokumenttypen müssen vor dem Element kommen.</span><span class="sxs-lookup"><span data-stu-id="5bee7-130">The document types must come before the element.</span></span>  
   
--   kein oder ein Element  
+-   <span data-ttu-id="5bee7-131">kein oder ein Element</span><span class="sxs-lookup"><span data-stu-id="5bee7-131">Zero or one element.</span></span>  
   
--   keine oder mehrere Kommentare  
+-   <span data-ttu-id="5bee7-132">keine oder mehrere Kommentare</span><span class="sxs-lookup"><span data-stu-id="5bee7-132">Zero or more comments.</span></span>  
   
--   keine oder mehrere Verarbeitungsanweisungen  
+-   <span data-ttu-id="5bee7-133">keine oder mehrere Verarbeitungsanweisungen</span><span class="sxs-lookup"><span data-stu-id="5bee7-133">Zero or more processing instructions.</span></span>  
   
--   keine oder mehrere Textknoten, die nur Leerraum enthalten  
+-   <span data-ttu-id="5bee7-134">keine oder mehrere Textknoten, die nur Leerraum enthalten</span><span class="sxs-lookup"><span data-stu-id="5bee7-134">Zero or more text nodes that contain only white space.</span></span>  
   
-## <a name="constructors-and-functions-that-allow-adding-content"></a>Konstruktoren und Funktionen, die das Hinzufügen von Inhalt erlauben  
- Die folgenden Methoden können Sie das untergeordnete Element ein <xref:System.Xml.Linq.XElement>oder ein <xref:System.Xml.Linq.XDocument>:</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> hinzugefügt.  
+## <a name="constructors-and-functions-that-allow-adding-content"></a><span data-ttu-id="5bee7-135">Konstruktoren und Funktionen, die das Hinzufügen von Inhalt erlauben</span><span class="sxs-lookup"><span data-stu-id="5bee7-135">Constructors and Functions that Allow Adding Content</span></span>  
+ <span data-ttu-id="5bee7-136">Die folgenden Methoden ermöglichen es Ihnen, einem <xref:System.Xml.Linq.XElement>-Objekt oder <xref:System.Xml.Linq.XDocument>-Objekt untergeordneten Inhalt hinzuzufügen:</span><span class="sxs-lookup"><span data-stu-id="5bee7-136">The following methods allow you to add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|Methode|Beschreibung|  
+|<span data-ttu-id="5bee7-137">Methode</span><span class="sxs-lookup"><span data-stu-id="5bee7-137">Method</span></span>|<span data-ttu-id="5bee7-138">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5bee7-138">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.%23ctor%2A></xref:System.Xml.Linq.XElement.%23ctor%2A>|Erstellt eine <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>|  
-|<xref:System.Xml.Linq.XDocument.%23ctor%2A></xref:System.Xml.Linq.XDocument.%23ctor%2A>|Erstellt eine <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument>|  
-|<xref:System.Xml.Linq.XContainer.Add%2A></xref:System.Xml.Linq.XContainer.Add%2A>|Fügt am Ende des untergeordneten Inhalts des <xref:System.Xml.Linq.XElement>oder <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> hinzu|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A></xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Fügt Inhalt nach dem <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Fügt Inhalt vor dem <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A></xref:System.Xml.Linq.XContainer.AddFirst%2A>|Fügt Inhalt am Anfang des untergeordneten Inhalts des <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>|  
-|<xref:System.Xml.Linq.XElement.ReplaceAll%2A></xref:System.Xml.Linq.XElement.ReplaceAll%2A>|Ersetzt den gesamten Inhalt (untergeordnete Knoten und Attribute) eine <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>|  
-|<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A></xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|Ersetzt die Attribute einer <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>|  
-|<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A></xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Ersetzt die untergeordneten Knoten durch neuen Inhalt.|  
-|<xref:System.Xml.Linq.XNode.ReplaceWith%2A></xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Ersetzt einen Knoten durch neuen Inhalt.|  
+|<xref:System.Xml.Linq.XElement.%23ctor%2A>|<span data-ttu-id="5bee7-139">Konstruiert ein <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5bee7-139">Constructs an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XDocument.%23ctor%2A>|<span data-ttu-id="5bee7-140">Erstellt ein Objekt vom Typ <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="5bee7-140">Constructs a <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="5bee7-141">Fügt Inhalt am Ende des untergeordneten Inhalts des <xref:System.Xml.Linq.XElement>- oder <xref:System.Xml.Linq.XDocument>-Objekts hinzu.</span><span class="sxs-lookup"><span data-stu-id="5bee7-141">Adds to the end of the child content of the <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="5bee7-142">Fügt Inhalt nach dem <xref:System.Xml.Linq.XNode> hinzu.</span><span class="sxs-lookup"><span data-stu-id="5bee7-142">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="5bee7-143">Fügt Inhalt vor dem <xref:System.Xml.Linq.XNode> hinzu.</span><span class="sxs-lookup"><span data-stu-id="5bee7-143">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="5bee7-144">Fügt Inhalt vor dem untergeordneten Inhalt des <xref:System.Xml.Linq.XContainer> hinzu.</span><span class="sxs-lookup"><span data-stu-id="5bee7-144">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|<span data-ttu-id="5bee7-145">Ersetzt den gesamten Inhalt (untergeordnete Knoten und Attribute) eines <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5bee7-145">Replaces all content (child nodes and attributes) of an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|<span data-ttu-id="5bee7-146">Ersetzt die Attribute eines <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5bee7-146">Replaces the attributes of an <xref:System.Xml.Linq.XElement>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|<span data-ttu-id="5bee7-147">Ersetzt die untergeordneten Knoten durch neuen Inhalt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-147">Replaces the children nodes with new content.</span></span>|  
+|<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|<span data-ttu-id="5bee7-148">Ersetzt einen Knoten durch neuen Inhalt.</span><span class="sxs-lookup"><span data-stu-id="5bee7-148">Replaces a node with new content.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="5bee7-149">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5bee7-149">See Also</span></span>  
+ [<span data-ttu-id="5bee7-150">Erstellen von XML-Strukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5bee7-150">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

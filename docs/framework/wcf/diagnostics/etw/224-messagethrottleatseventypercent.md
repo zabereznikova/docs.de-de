@@ -1,42 +1,45 @@
 ---
-title: "224 - MessageThrottleAtSeventyPercent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 224 - MessageThrottleAtSeventyPercent
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82bbbfd7-10d2-41fd-805d-2443b0c1b96b
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dd985e3986548938f06e86c1f49d23c43307d17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 224 - MessageThrottleAtSeventyPercent
-## Eigenschaften  
+# <a name="224---messagethrottleatseventypercent"></a><span data-ttu-id="68b0c-102">224 - MessageThrottleAtSeventyPercent</span><span class="sxs-lookup"><span data-stu-id="68b0c-102">224 - MessageThrottleAtSeventyPercent</span></span>
+## <a name="properties"></a><span data-ttu-id="68b0c-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="68b0c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|224|  
-|Schlüsselwörter|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
-|Grad|Warning|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="68b0c-104">ID</span><span class="sxs-lookup"><span data-stu-id="68b0c-104">ID</span></span>|<span data-ttu-id="68b0c-105">224</span><span class="sxs-lookup"><span data-stu-id="68b0c-105">224</span></span>|  
+|<span data-ttu-id="68b0c-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="68b0c-106">Keywords</span></span>|<span data-ttu-id="68b0c-107">EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel</span><span class="sxs-lookup"><span data-stu-id="68b0c-107">EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="68b0c-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="68b0c-108">Level</span></span>|<span data-ttu-id="68b0c-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="68b0c-109">Warning</span></span>|  
+|<span data-ttu-id="68b0c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="68b0c-110">Channel</span></span>|<span data-ttu-id="68b0c-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="68b0c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Beschreibung  
- Wenn eine der Hauptdienstdrosselungen überschritten wurde, wird das `MessageThrottleExceeded`\-Ereignis ausgegeben.Wenn die Aktivitätsauslastung zurückgeht und der aktuelle Wert der Drosselung bei 70 Prozent der aktuellen Grenze liegt, wird dieses Ereignis ausgegeben.Beachten Sie, dass dieses Ereignis erst ausgegeben wird, nachdem sich die Aktivitätsauslastung abgeschwächt hat.Wenn sich der aktuelle Wert um die 70\-Prozent\-Marke bewegt \(z. B. 70,69,70,71,70,69\), führt nur das erste Erreichen von 70 Prozent zu einem Ereignis.Nachdem dieses Ereignis ausgegeben wurde, führt das nachfolgende Erreichen der Drosselungsgrenze zu einem `MessageThrottleExceeded`\-Ereignis.  
+## <a name="description"></a><span data-ttu-id="68b0c-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="68b0c-112">Description</span></span>  
+ <span data-ttu-id="68b0c-113">Wenn eine der Hauptdienstdrosselungen überschritten wurde, wird das `MessageThrottleExceeded`-Ereignis ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="68b0c-113">When one of the main service throttles has been exceeded, the `MessageThrottleExceeded` event is emitted.</span></span> <span data-ttu-id="68b0c-114">Wenn die Aktivitätsauslastung zurückgeht und der aktuelle Wert der Drosselung bei 70 Prozent der aktuellen Grenze liegt, wird dieses Ereignis ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="68b0c-114">When the spike of activity slows and the current value of the throttle is at 70 percent of the current limit then this event is emitted.</span></span> <span data-ttu-id="68b0c-115">Beachten Sie, dass dieses Ereignis erst ausgegeben wird, nachdem sich die Aktivitätsauslastung abgeschwächt hat.</span><span class="sxs-lookup"><span data-stu-id="68b0c-115">Note that this event is only emitted once as the activity is slowing.</span></span> <span data-ttu-id="68b0c-116">Wenn sich der aktuelle Wert um die 70-Prozent-Marke bewegt (z. B. 70,69,70,71,70,69), führt nur das erste Erreichen von 70 Prozent zu einem Ereignis.</span><span class="sxs-lookup"><span data-stu-id="68b0c-116">If the current value hovers at the 70 percent mark, (for example, 70,69,70,71,70,69), only the first occurrence of 70 percent results in an event.</span></span> <span data-ttu-id="68b0c-117">Nachdem dieses Ereignis ausgegeben wurde, führt das nachfolgende Erreichen der Drosselungsgrenze zu einem `MessageThrottleExceeded`-Ereignis.</span><span class="sxs-lookup"><span data-stu-id="68b0c-117">After this event is emitted, future occurrences of exceeding the throttle's limit result in a `MessageThrottleExceeded` event.</span></span>  
   
-## Meldung  
- Die '%1'\-Drosselungsgrenze von '%2' liegt bei 70%%.  
+## <a name="message"></a><span data-ttu-id="68b0c-118">Meldung</span><span class="sxs-lookup"><span data-stu-id="68b0c-118">Message</span></span>  
+ <span data-ttu-id="68b0c-119">Die '%1'-Drosselungsgrenze von '%2' liegt bei 70%%.</span><span class="sxs-lookup"><span data-stu-id="68b0c-119">The '%1' throttle limit of '%2' is at 70%%.</span></span>  
   
-## Details  
+## <a name="details"></a><span data-ttu-id="68b0c-120">Details</span><span class="sxs-lookup"><span data-stu-id="68b0c-120">Details</span></span>  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|Throttle Name|`xs:string`|Der Name der Drosselung, die überschritten wurde.Dies ist entweder `MaxConcurrentCalls`, `MaxConcurrentInstances` oder `MaxConcurrentSessions`.|  
-|Limit|`xs:long`|Die momentan konfigurierte Grenze der Drosselung.|  
-|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.Das Format ist als 'Websitename Virtueller Pfad der Anwendung&#124;Virtueller Pfad des Diensts&#124;ServiceName' definiert.Beispiel: 'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|`xs:string`|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
+|<span data-ttu-id="68b0c-121">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="68b0c-121">Data Item Name</span></span>|<span data-ttu-id="68b0c-122">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="68b0c-122">Data Item Type</span></span>|<span data-ttu-id="68b0c-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="68b0c-123">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="68b0c-124">Throttle Name</span><span class="sxs-lookup"><span data-stu-id="68b0c-124">Throttle Name</span></span>|`xs:string`|<span data-ttu-id="68b0c-125">Der Name der Drosselung, die überschritten wurde.</span><span class="sxs-lookup"><span data-stu-id="68b0c-125">The name of the throttle that has been exceeded.</span></span> <span data-ttu-id="68b0c-126">Dies ist entweder `MaxConcurrentCalls`, `MaxConcurrentInstances` oder `MaxConcurrentSessions`.</span><span class="sxs-lookup"><span data-stu-id="68b0c-126">Either `MaxConcurrentCalls`, `MaxConcurrentInstances`, or `MaxConcurrentSessions`,</span></span>|  
+|<span data-ttu-id="68b0c-127">Limit</span><span class="sxs-lookup"><span data-stu-id="68b0c-127">Limit</span></span>|`xs:long`|<span data-ttu-id="68b0c-128">Die momentan konfigurierte Grenze der Drosselung.</span><span class="sxs-lookup"><span data-stu-id="68b0c-128">The currently configured limit of the throttle.</span></span>|  
+|<span data-ttu-id="68b0c-129">HostReference</span><span class="sxs-lookup"><span data-stu-id="68b0c-129">HostReference</span></span>|`xs:string`|<span data-ttu-id="68b0c-130">Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.</span><span class="sxs-lookup"><span data-stu-id="68b0c-130">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="68b0c-131">Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ".</span><span class="sxs-lookup"><span data-stu-id="68b0c-131">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="68b0c-132">Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="68b0c-132">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="68b0c-133">AppDomain</span><span class="sxs-lookup"><span data-stu-id="68b0c-133">AppDomain</span></span>|`xs:string`|<span data-ttu-id="68b0c-134">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="68b0c-134">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

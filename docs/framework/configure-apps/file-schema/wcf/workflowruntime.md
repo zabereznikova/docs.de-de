@@ -1,28 +1,36 @@
 ---
-title: "&lt;workflowRuntime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;workflowRuntime&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ad33eee445e04d1e43fa8b15e92c08cd48c11b11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;workflowRuntime&gt;
-Legt Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowRuntime> zum Hosten workflowbasierter [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Dienste fest.  
+# <a name="ltworkflowruntimegt"></a><span data-ttu-id="d6907-102">&lt;workflowRuntime&gt;</span><span class="sxs-lookup"><span data-stu-id="d6907-102">&lt;workflowRuntime&gt;</span></span>
+<span data-ttu-id="d6907-103">Legt Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowRuntime> zum Hosten workflowbasierter [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienste fest.</span><span class="sxs-lookup"><span data-stu-id="d6907-103">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="d6907-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d6907-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d6907-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="d6907-105">\<behaviors></span></span>  
+<span data-ttu-id="d6907-106">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="d6907-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="d6907-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="d6907-107">\<behavior></span></span>  
+<span data-ttu-id="d6907-108">\<WorkflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="d6907-108">\<workflowRuntime></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d6907-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="d6907-109">Syntax</span></span>  
   
+```xml  
 <workflowRuntime cachedInstanceExpiration="TimeSpan"  
                                   enablePerformanceCounters="Boolean"  
                                   name="String"  
@@ -36,37 +44,37 @@ Legt Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowR
 </workflowRuntime>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d6907-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="d6907-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="d6907-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d6907-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="d6907-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="d6907-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|cachedInstanceExpiration|Ein optionaler <xref:System.Timespan>\-Wert, der die maximale Dauer angibt, die eine Workflowinstanz im Arbeitsspeicher im Leerlaufzustand verbleiben kann, bevor ihre Entladung oder ihr Abbruch erzwungen wird.  Wenn die Workflow\-Laufzeit über `PersistenceService` verfügt, der unloadOnIdle ausführt, wird dieses Attribut ignoriert.|  
-|enablePerformanceCounters|Ein optionaler boolescher Wert, der angibt, ob Leistungsindikatoren aktiviert sind.  Leistungsindikatoren liefern Informationen zu verschiedenen workflowbezogenen Statistiken, verursachen jedoch eine Leistungseinbuße, wenn das Workflow\-Laufzeitmodul gestartet wird und Workflowinstanzen ausgeführt werden.  Der Standardwert ist `true`.|  
-|Name|Eine Zeichenfolge, die den Namen der Workflow\-Laufzeitengine enthält.  Der Name wird in der Ausgabe verwendet, um diese Laufzeit von anderen Laufzeiten zu unterscheiden, die unter Umständen im System ausgeführt werden, beispielsweise in Leistungsindikatoren.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
-|validateOnCreate|Ein optionaler boolescher Wert, der angibt, ob eine Überprüfung der Workflowdefinition auftritt, wenn WorkflowServiceHost geöffnet wird.  Wenn dieses Attribut auf `true` festgelegt ist, wird die Workflowüberprüfung jedes Mal ausgeführt, wenn `WorkflowServiceHost.Open` aufgerufen wird.  Wenn Überprüfungsfehler gefunden werden, wird ein <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException>\-Fehler ausgelöst.<br /><br /> Wenn diese Eigenschaft auf `false` festgelegt wird, findet keine Workflow\-Definitionsüberprüfung statt.<br /><br /> Der Standardwert für diese Eigenschaft ist `true`.|  
+|<span data-ttu-id="d6907-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="d6907-113">Attribute</span></span>|<span data-ttu-id="d6907-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6907-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="d6907-115">cachedInstanceExpiration</span><span class="sxs-lookup"><span data-stu-id="d6907-115">cachedInstanceExpiration</span></span>|<span data-ttu-id="d6907-116">Ein optionaler <xref:System.TimeSpan>-Wert, der die maximale Dauer angibt, die eine Workflowinstanz im Arbeitsspeicher im Leerlaufzustand verbleiben kann, bevor ihre Entladung oder ihr Abbruch erzwungen wird.</span><span class="sxs-lookup"><span data-stu-id="d6907-116">An optional <xref:System.TimeSpan> value that specifies the maximum duration a workflow instance can stay in-memory in idle state before it is forcefully unloaded or aborted.</span></span> <span data-ttu-id="d6907-117">Wenn die Workflow-Laufzeit über `PersistenceService` verfügt, der unloadOnIdle ausführt, wird dieses Attribut ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d6907-117">If the workflowruntime has `PersistenceService` which performs unloadOnIdle, this attribute is ignored.</span></span>|  
+|<span data-ttu-id="d6907-118">enablePerformanceCounters</span><span class="sxs-lookup"><span data-stu-id="d6907-118">enablePerformanceCounters</span></span>|<span data-ttu-id="d6907-119">Ein optionaler boolescher Wert, der angibt, ob Leistungsindikatoren aktiviert sind.</span><span class="sxs-lookup"><span data-stu-id="d6907-119">An optional Boolean value that specifies whether performance counters are enabled.</span></span> <span data-ttu-id="d6907-120">Leistungsindikatoren liefern Informationen zu verschiedenen workflowbezogenen Statistiken, verursachen jedoch eine Leistungseinbuße, wenn das Workflow-Laufzeitmodul gestartet wird und Workflowinstanzen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="d6907-120">Performance counters provide information on various workflow-related statistics, but they cause a performance penalty when the workflow runtime engine starts, and when workflow instances are running.</span></span> <span data-ttu-id="d6907-121">Der Standardwert ist `true`.</span><span class="sxs-lookup"><span data-stu-id="d6907-121">The default value is `true`.</span></span>|  
+|<span data-ttu-id="d6907-122">Name</span><span class="sxs-lookup"><span data-stu-id="d6907-122">name</span></span>|<span data-ttu-id="d6907-123">Eine Zeichenfolge, die den Namen der Workflow-Laufzeitengine enthält.</span><span class="sxs-lookup"><span data-stu-id="d6907-123">A string containing the name of the workflow runtime engine.</span></span> <span data-ttu-id="d6907-124">Der Name wird in der Ausgabe verwendet, um diese Laufzeit von anderen Laufzeiten zu unterscheiden, die unter Umständen im System ausgeführt werden, beispielsweise in Leistungsindikatoren.</span><span class="sxs-lookup"><span data-stu-id="d6907-124">The name is used in output to distinguish this runtime from other runtimes that may be running on the system, for example, in performance counters.</span></span><br /><br /> <span data-ttu-id="d6907-125">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="d6907-125">The default is an empty string.</span></span>|  
+|<span data-ttu-id="d6907-126">validateOnCreate</span><span class="sxs-lookup"><span data-stu-id="d6907-126">validateOnCreate</span></span>|<span data-ttu-id="d6907-127">Ein optionaler boolescher Wert, der angibt, ob eine Überprüfung der Workflowdefinition auftritt, wenn WorkflowServiceHost geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="d6907-127">An optional Boolean value that specifies whether validation of workflow definition will occur when the WorkflowServiceHost is opened.</span></span>  <span data-ttu-id="d6907-128">Wenn dieses Attribut auf `true` festgelegt ist, wird die Workflowüberprüfung jedes Mal ausgeführt, wenn `WorkflowServiceHost.Open` aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="d6907-128">When this attribute is set to `true`, the workflow validation is executed every time `WorkflowServiceHost.Open` is called.</span></span> <span data-ttu-id="d6907-129">Wenn Überprüfungsfehler gefunden werden, wird ein <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException>-Fehler ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="d6907-129">If validation errors are found, a <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> error is thrown.</span></span><br /><br /> <span data-ttu-id="d6907-130">Wenn diese Eigenschaft auf `false` festgelegt wird, findet keine Workflow-Definitionsüberprüfung statt.</span><span class="sxs-lookup"><span data-stu-id="d6907-130">When this property is set to `false`, no Workflow definition validation will happen.</span></span><br /><br /> <span data-ttu-id="d6907-131">Der Standardwert für diese Eigenschaft ist `true`.</span><span class="sxs-lookup"><span data-stu-id="d6907-131">The default value for this property is `true`.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="d6907-132">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d6907-132">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|commonParameters|Eine Auflistung der allgemeinen, von Diensten verwendeten Parameter.  Diese Auflistung schließt in der Regel die Datenbankverbindungszeichenfolge ein, die ggf. von permanenten Diensten gemeinsam genutzt wird.|  
-|Dienste|Eine Auflistung von Diensten, die dem <xref:System.Workflow.Runtime.WorkflowRuntime>\-Modul hinzugefügt werden.  Die Elemente sind vom Typ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Die in der Auflistung angegebenen Dienste werden vom Workflow\-Laufzeitmodul initialisiert und den Diensten hinzugefügt, wenn der entsprechende <xref:System.Workflow.Runtime.WorkflowRuntime>\-Konstruktor aufgerufen wird.  Aus diesem Grund müssen die in der Auflistung angegebenen Dienste bestimmte Regeln bezüglich der Signaturen ihrer Konstruktoren erfüllen.  Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
+|<span data-ttu-id="d6907-133">Element</span><span class="sxs-lookup"><span data-stu-id="d6907-133">Element</span></span>|<span data-ttu-id="d6907-134">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6907-134">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="d6907-135">commonParameters</span><span class="sxs-lookup"><span data-stu-id="d6907-135">commonParameters</span></span>|<span data-ttu-id="d6907-136">Eine Auflistung der allgemeinen, von Diensten verwendeten Parameter.</span><span class="sxs-lookup"><span data-stu-id="d6907-136">A collection of common parameters used by services.</span></span> <span data-ttu-id="d6907-137">Diese Auflistung schließt in der Regel die Datenbankverbindungszeichenfolge ein, die ggf. von permanenten Diensten gemeinsam genutzt wird.</span><span class="sxs-lookup"><span data-stu-id="d6907-137">This collection will typically include the database connection string that might be shared by durable services.</span></span>|  
+|<span data-ttu-id="d6907-138">Dienste</span><span class="sxs-lookup"><span data-stu-id="d6907-138">services</span></span>|<span data-ttu-id="d6907-139">Eine Auflistung von Diensten, die dem <xref:System.Workflow.Runtime.WorkflowRuntime>-Modul hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="d6907-139">A collection of services that will be added to the <xref:System.Workflow.Runtime.WorkflowRuntime> engine.</span></span> <span data-ttu-id="d6907-140">Die Elemente sind vom Typ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="d6907-140">The elements are of type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span></span>  <span data-ttu-id="d6907-141">Die in der Auflistung angegebenen Dienste werden vom Workflow-Laufzeitmodul initialisiert und den Diensten hinzugefügt, wenn der entsprechende <xref:System.Workflow.Runtime.WorkflowRuntime>-Konstruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="d6907-141">The services specified in the collection will be initialized by the workflow runtime engine and added to its services when the appropriate <xref:System.Workflow.Runtime.WorkflowRuntime> constructor is called.</span></span> <span data-ttu-id="d6907-142">Aus diesem Grund müssen die in der Auflistung angegebenen Dienste bestimmte Regeln bezüglich der Signaturen ihrer Konstruktoren erfüllen.</span><span class="sxs-lookup"><span data-stu-id="d6907-142">Therefore, the services specified in the collection must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="d6907-143">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="d6907-143">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="d6907-144">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d6907-144">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Verhalten\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
+|<span data-ttu-id="d6907-145">Element</span><span class="sxs-lookup"><span data-stu-id="d6907-145">Element</span></span>|<span data-ttu-id="d6907-146">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6907-146">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d6907-147">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="d6907-147">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="d6907-148">Gibt ein Verhaltenselement an.</span><span class="sxs-lookup"><span data-stu-id="d6907-148">Specifies a behavior element.</span></span>|  
   
-## Hinweise  
- Weitere Informationen über die Verwendung einer Konfigurationsdatei zum Steuern des Verhaltens eines <xref:System.Workflow.Runtime.WorkflowRuntime>\-Objekts einer Hostanwendung von Windows Workflow Foundation finden Sie unter [Workflow Configuration Files](http://msdn.microsoft.com/de-de/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+## <a name="remarks"></a><span data-ttu-id="d6907-149">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d6907-149">Remarks</span></span>  
+ <span data-ttu-id="d6907-150">Weitere Informationen zur Verwendung einer Konfigurationsdatei zum Steuern des Verhaltens von einer <xref:System.Workflow.Runtime.WorkflowRuntime> Objekt einer Windows Workflow Foundation-Host-Anwendung finden Sie unter [Workflow-Konfigurationsdateien](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span><span class="sxs-lookup"><span data-stu-id="d6907-150">For more information on using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="d6907-151">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d6907-151">Example</span></span>  
   
-```  
+```xml  
 <serviceBehaviors>  
    <behavior name="ServiceBehavior">  
       <workflowRuntime name="WorkflowServiceHostRuntime"  
@@ -84,8 +92,8 @@ Legt Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowR
 </serviceBehaviors>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>   
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>   
- <xref:System.Workflow.Runtime.WorkflowRuntime>   
- [Workflow Configuration Files](http://msdn.microsoft.com/de-de/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)
+## <a name="see-also"></a><span data-ttu-id="d6907-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6907-152">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
+ <xref:System.Workflow.Runtime.WorkflowRuntime>  
+ [<span data-ttu-id="d6907-153">Workflow-Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="d6907-153">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)

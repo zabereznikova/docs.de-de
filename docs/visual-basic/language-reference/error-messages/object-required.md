@@ -1,36 +1,34 @@
 ---
-title: "Object required (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID424"
-dev_langs: 
-  - "VB"
+title: Objekt erforderlich (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3aa972d52b355cb8dc43d884d8797f5e2bac9e7a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Object required (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Für Verweise auf Eigenschaften und Methoden ist oftmals ein expliziter Objektqualifizierer erforderlich.  Dies ist ein solcher Fall.  
+# <a name="object-required-visual-basic"></a><span data-ttu-id="a89f0-102">Objekt erforderlich (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a89f0-102">Object required (Visual Basic)</span></span>
+<span data-ttu-id="a89f0-103">Verweise auf Eigenschaften und Methoden erfordern häufig eine explizite Objektqualifizierers.</span><span class="sxs-lookup"><span data-stu-id="a89f0-103">References to properties and methods often require an explicit object qualifier.</span></span> <span data-ttu-id="a89f0-104">Dies ist der Fall.</span><span class="sxs-lookup"><span data-stu-id="a89f0-104">This is such a case.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a89f0-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a89f0-105">To correct this error</span></span>  
   
-1.  Prüfen Sie, ob Verweise auf eine Objekteigenschaft oder \-methode über einen gültigen Objektqualifizierer verfügen.  Falls kein Qualifizierer angegeben wurde, legen Sie einen Objektqualifizierer fest.  
+1.  <span data-ttu-id="a89f0-106">Überprüfen Sie, dass Verweise auf eine Objekteigenschaft oder-Methode über einen gültigen Objektnamen Qualifizierer verfügen.</span><span class="sxs-lookup"><span data-stu-id="a89f0-106">Check that references to an object property or method have valid object qualifier.</span></span> <span data-ttu-id="a89f0-107">Geben Sie einen Objektbezeichner, wenn Sie eine bereitgestellt haben.</span><span class="sxs-lookup"><span data-stu-id="a89f0-107">Specify an object qualifier if you didn't provide one.</span></span>  
   
-2.  Überprüfen Sie die Schreibweise des Objektqualifizierers, und stellen Sie sicher, dass das Objekt in dem Programmbereich, in dem darauf verwiesen wird, sichtbar ist.  
+2.  <span data-ttu-id="a89f0-108">Überprüfen Sie die Schreibweise des Objektqualifizierers, und stellen Sie sicher, dass das Objekt in der Teil des Programms angezeigt wird, sie verweisen.</span><span class="sxs-lookup"><span data-stu-id="a89f0-108">Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.</span></span>  
   
-3.  Wenn ein Pfad zum Befehl **Datei öffnen** einer Hostanwendung angegeben wurde, überprüfen Sie die darin enthaltenen Argumente auf ihre Richtigkeit.  
+3.  <span data-ttu-id="a89f0-109">Wenn ein Pfad, um einer hostanwendung angegeben wird **Datei öffnen** Befehl, überprüfen Sie, dass die Argumente richtig sind.</span><span class="sxs-lookup"><span data-stu-id="a89f0-109">If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.</span></span>  
   
-4.  Sehen Sie in der Dokumentation des Objekts nach und stellen Sie sicher, dass die Aktion gültig ist.  
+4.  <span data-ttu-id="a89f0-110">Das Objekt in der Dokumentation, und stellen Sie sicher, dass die Aktion gültig ist.</span><span class="sxs-lookup"><span data-stu-id="a89f0-110">Check the object's documentation and make sure the action is valid.</span></span>  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="a89f0-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a89f0-111">See Also</span></span>  
+ [<span data-ttu-id="a89f0-112">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="a89f0-112">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,93 +1,94 @@
 ---
-title: "MenuStrip-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Menüs"
-  - "MenuStrip-Steuerelement [Windows Forms]"
+title: "MenuStrip-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip control [Windows Forms]
+- menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 570ddd3981593922fecd90700cdaf19bf7eff2f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# MenuStrip-Steuerelement (Windows&#160;Forms)
-Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglich.  
+# <a name="menustrip-control-windows-forms"></a><span data-ttu-id="c59ed-102">MenuStrip-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c59ed-102">MenuStrip Control (Windows Forms)</span></span>
+<span data-ttu-id="c59ed-103">Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglich.</span><span class="sxs-lookup"><span data-stu-id="c59ed-103">This control groups application commands and makes them easily accessible.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über das MenuStrip\-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
- Erläutert die wichtigsten Funktionen und Eigenschaften des Steuerelements.  
+## <a name="in-this-section"></a><span data-ttu-id="c59ed-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c59ed-104">In This Section</span></span>  
+ [<span data-ttu-id="c59ed-105">Übersicht über das MenuStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c59ed-105">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
+ <span data-ttu-id="c59ed-106">Erläutert die wichtigsten Funktionen und Eigenschaften des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="c59ed-106">Explains what the control is and its key features and properties.</span></span>  
   
- [Gewusst wie: Hinzufügen von Erweiterungen zu ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
- Beschreibt das Hinzufügen von Häkchen, Bildern, Tastenkombinationen, Zugriffstasten und Trennlinien zu Menüs und Menübefehlen.  
+ [<span data-ttu-id="c59ed-107">Gewusst wie: Hinzufügen von Erweiterungen zu ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="c59ed-107">How to: Add Enhancements to ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
+ <span data-ttu-id="c59ed-108">Beschreibt das Hinzufügen von Häkchen, Bildern, Tastenkombinationen, Zugriffstasten und Trennlinien zu Menüs und Menübefehlen.</span><span class="sxs-lookup"><span data-stu-id="c59ed-108">Describes how to add check marks, images, shortcut keys, access keys, and separator bars to menus and menu commands.</span></span>  
   
- [Gewusst wie: Anhängen eines MenuStrip an ein übergeordnetes MDI\-Fenster](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
- Beschreibt das Festlegen verschiedener Eigenschaften zum Anfügen des untergeordneten MDI\-Menüs \(Multiple Document Interface\) an das übergeordnete MDI\-Menü.  
+ [<span data-ttu-id="c59ed-109">Gewusst wie: Anhängen eines MenuStrip an ein übergeordnetes MDI-Fenster</span><span class="sxs-lookup"><span data-stu-id="c59ed-109">How to: Append a MenuStrip to an MDI Parent Window</span></span>](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
+ <span data-ttu-id="c59ed-110">Beschreibt das Festlegen verschiedener Eigenschaften zum Anfügen des untergeordneten MDI-Menüs (Multiple Document Interface) an das übergeordnete MDI-Menü.</span><span class="sxs-lookup"><span data-stu-id="c59ed-110">Describes how to set several properties to append the multiple-document interface (MDI) child menu to the MDI parent menu.</span></span>  
   
- [Gewusst wie: Erstellen einer MDI\-Fensterliste mithilfe von MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
- Veranschaulicht die Erstellung einer Liste aller aktiven untergeordneten Formulare für das Fenstermenü des übergeordneten Objekts.  
+ [<span data-ttu-id="c59ed-111">Gewusst wie: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip</span><span class="sxs-lookup"><span data-stu-id="c59ed-111">How to: Create an MDI Window List with MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ <span data-ttu-id="c59ed-112">Veranschaulicht die Erstellung einer Liste aller aktiven untergeordneten Formulare für das Fenstermenü des übergeordneten Objekts.</span><span class="sxs-lookup"><span data-stu-id="c59ed-112">Demonstrates how to create a list of all the active child forms on the parent's Window menu.</span></span>  
   
- [Gewusst wie: Deaktivieren von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
- Beschreibt das Deaktivieren von vollständigen Menüs oder einzelnen Menübefehlen.  
+ [<span data-ttu-id="c59ed-113">Gewusst wie: Deaktivieren von ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="c59ed-113">How to: Disable ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
+ <span data-ttu-id="c59ed-114">Beschreibt das Deaktivieren von vollständigen Menüs oder einzelnen Menübefehlen.</span><span class="sxs-lookup"><span data-stu-id="c59ed-114">Describes how to disable both entire menus and individual menu commands.</span></span>  
   
- [Gewusst wie: Ausblenden von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
- Beschreibt das Ausblenden von vollständigen Menüs oder einzelnen Menübefehlen.  
+ [<span data-ttu-id="c59ed-115">Gewusst wie: Ausblenden von ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="c59ed-115">How to: Hide ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ <span data-ttu-id="c59ed-116">Beschreibt das Ausblenden von vollständigen Menüs oder einzelnen Menübefehlen.</span><span class="sxs-lookup"><span data-stu-id="c59ed-116">Describes how to hide both entire menus and individual menu commands.</span></span>  
   
- [Gewusst wie: Einfügen eines MenuStrip in ein MDI\-Dropdownmenü](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
- Beschreibt das Festlegen verschiedener Eigenschaften zum Einfügen einer Gruppe von Menüelementen aus dem untergeordneten MDI\-Menü in den Dropdownbereich des übergeordneten MDI\-Menüs.  
+ [<span data-ttu-id="c59ed-117">Gewusst wie: Einfügen eines MenuStrip in ein MDI-Dropdownmenü</span><span class="sxs-lookup"><span data-stu-id="c59ed-117">How to: Insert a MenuStrip into an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ <span data-ttu-id="c59ed-118">Beschreibt das Festlegen verschiedener Eigenschaften zum Einfügen einer Gruppe von Menüelementen aus dem untergeordneten MDI-Menü in den Dropdownbereich des übergeordneten MDI-Menüs.</span><span class="sxs-lookup"><span data-stu-id="c59ed-118">Describes how to set several properties to insert a group of menu items from the MDI child menu into the drop-down part of the MDI parent menu.</span></span>  
   
- [Gewusst wie: Entfernen eines ToolStripMenuItem aus einem MDI\-Dropdownmenü](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
- Beschreibt das Festlegen verschiedener Eigenschaften zum Entfernen eines Menüelements aus dem Dropdownbereich des übergeordneten MDI\-Menüs.  
+ [<span data-ttu-id="c59ed-119">Gewusst wie: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü</span><span class="sxs-lookup"><span data-stu-id="c59ed-119">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ <span data-ttu-id="c59ed-120">Beschreibt das Festlegen verschiedener Eigenschaften zum Entfernen eines Menüelements aus dem Dropdownbereich des übergeordneten MDI-Menüs.</span><span class="sxs-lookup"><span data-stu-id="c59ed-120">Describes how to set several properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span>  
   
- [Gewusst wie: Konfigurieren des Aktivierungs\- und Bildrands von MenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
- Beschreibt das Anpassen eines <xref:System.Windows.Forms.MenuStrip> durch Festlegen von Aktivierungs\- und Bildrandeigenschaften auf verschiedene Weise.  
+ [<span data-ttu-id="c59ed-121">Gewusst wie: Konfigurieren des Aktivierungs- und Bildrands von MenuStrip</span><span class="sxs-lookup"><span data-stu-id="c59ed-121">How to: Configure MenuStrip Check Margins and Image Margins</span></span>](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
+ <span data-ttu-id="c59ed-122">Beschreibt das Anpassen eines <xref:System.Windows.Forms.MenuStrip> durch Festlegen von Aktivierungs- und Bildrandeigenschaften auf verschiedene Weise.</span><span class="sxs-lookup"><span data-stu-id="c59ed-122">Describes how to customize a <xref:System.Windows.Forms.MenuStrip> by setting check and image margin properties in various ways.</span></span>  
   
- [Gewusst wie: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
- Beschreibt das Erstellen eines Formulars mit Standardmenü mithilfe des <xref:System.Windows.Forms.MenuStrip>\-Steuerelements.  
+ [<span data-ttu-id="c59ed-123">Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular</span><span class="sxs-lookup"><span data-stu-id="c59ed-123">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
+ <span data-ttu-id="c59ed-124">Beschreibt das Erstellen eines Formulars mit Standardmenü mithilfe des <xref:System.Windows.Forms.MenuStrip>-Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="c59ed-124">Describes how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span>  
   
- [Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
- Beschreibt das Implementieren des Verhaltens von Optionsfeldern in einem <xref:System.Windows.Forms.ToolStripMenuItem>.  
+ [<span data-ttu-id="c59ed-125">Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip</span><span class="sxs-lookup"><span data-stu-id="c59ed-125">How to: Display Option Buttons in a MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
+ <span data-ttu-id="c59ed-126">Beschreibt das Implementieren des Verhaltens von Optionsfeldern in einem <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="c59ed-126">Describes how to implement option-button (or radio-button) behavior in a <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
- [Zusammenführen von Menüelementen im MenuStrip\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
- Beschreibt allgemeine Konzepte und Methoden für das Zusammenführen von Menüs.  
+ [<span data-ttu-id="c59ed-127">Zusammenführen von Menüelementen im MenuStrip-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c59ed-127">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
+ <span data-ttu-id="c59ed-128">Beschreibt allgemeine Konzepte und Methoden für das Zusammenführen von Menüs.</span><span class="sxs-lookup"><span data-stu-id="c59ed-128">Describes general concepts and methods for menu merging.</span></span>  
   
- [Gewusst wie: Einrichten des automatischem Zusammenführens von Menüs für MDI\-Anwendungen \(Multiple Document Interface\)](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
- Beschreibt das automatische Zusammenführen von Menüelementen zur Laufzeit.  
+ [<span data-ttu-id="c59ed-129">Gewusst wie: Einrichten des automatischem Zusammenführens von Menüs für MDI-Anwendungen (Multiple Document Interface)</span><span class="sxs-lookup"><span data-stu-id="c59ed-129">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
+ <span data-ttu-id="c59ed-130">Beschreibt das automatische Zusammenführen von Menüelementen zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="c59ed-130">Describes how to merge menu items automatically at run time.</span></span>  
   
--   [MenuStrip\-Elementauflistungs\-Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-131">[MenuStrip-Elementauflistungs-Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-131">[MenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span></span>  
   
--   [Gewusst wie: Kopieren von ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-132">[Gewusst wie: Kopieren von ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-132">[How to: Copy ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))</span></span>  
   
--   [Gewusst wie: Ausblenden von ToolStripMenuItems mithilfe des Designers](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-133">[Gewusst wie: Ausblenden von ToolStripMenuItems mithilfe des Designers](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-133">[How to: Hide ToolStripMenuItems Using the Designer](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))</span></span>  
   
--   [Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-134">[Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-134">[How to: Disable ToolStripMenuItems Using the Designer](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))</span></span>  
   
--   [Gewusst wie: Verschieben von ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-135">[Gewusst wie: Verschieben von ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-135">[How to: Move ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))</span></span>  
   
--   [Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-136">[Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-136">[Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))</span></span>  
   
--   [Dialogfeld "MenuStrip\-Aufgaben"](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   <span data-ttu-id="c59ed-137">[MenuStrip-Aufgaben (Dialogfeld)](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="c59ed-137">[MenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="c59ed-138">Verweis</span><span class="sxs-lookup"><span data-stu-id="c59ed-138">Reference</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
- Beschreibt die Funktionen der <xref:System.Windows.Forms.MenuStrip>\-Klasse, die ein Menüsystem für ein Formular bereitstellt.  
+ <span data-ttu-id="c59ed-139">Beschreibt die Funktionen der <xref:System.Windows.Forms.MenuStrip>-Klasse, die ein Menüsystem für ein Formular bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="c59ed-139">Describes the features of the <xref:System.Windows.Forms.MenuStrip> class, which provides a menu system for a form.</span></span>  
   
  <xref:System.Windows.Forms.ContextMenuStrip>  
- Beschreibt die Funktionen der <xref:System.Windows.Forms.ContextMenuStrip>\-Klasse, die ein Kontextmenü darstellt.  
+ <span data-ttu-id="c59ed-140">Beschreibt die Funktionen der <xref:System.Windows.Forms.ContextMenuStrip>-Klasse, die ein Kontextmenü darstellt.</span><span class="sxs-lookup"><span data-stu-id="c59ed-140">Describes the features of the <xref:System.Windows.Forms.ContextMenuStrip>, which represents a shortcut menu.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- Beschreibt die Funktionen der <xref:System.Windows.Forms.ToolStripMenuItem>\-Klasse, die eine auswählbare Option darstellt, die für ein <xref:System.Windows.Forms.MenuStrip> oder <xref:System.Windows.Forms.ContextMenuStrip> angezeigt wird.  
+ <span data-ttu-id="c59ed-141">Beschreibt die Funktionen der <xref:System.Windows.Forms.ToolStripMenuItem>-Klasse, die eine auswählbare Option darstellt, die für ein <xref:System.Windows.Forms.MenuStrip> oder <xref:System.Windows.Forms.ContextMenuStrip> angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="c59ed-141">Describes the features of the <xref:System.Windows.Forms.ToolStripMenuItem> class, which represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.
+## <a name="related-sections"></a><span data-ttu-id="c59ed-142">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="c59ed-142">Related Sections</span></span>  
+ [<span data-ttu-id="c59ed-143">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="c59ed-143">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="c59ed-144">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="c59ed-144">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

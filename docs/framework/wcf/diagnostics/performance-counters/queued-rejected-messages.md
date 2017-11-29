@@ -1,25 +1,28 @@
 ---
-title: "In die Warteschlange gestellte abgelehnte Meldungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: In die Warteschlange gestellte abgelehnte Meldungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb75a76-4fb3-4d33-bd9f-6d91e09c5843
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 65ecc6bb231063c2d23d8a2572bd5ed688393cfc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# In die Warteschlange gestellte abgelehnte Meldungen
-Zählername: In der Warteschlange stehende abgelehnte Meldungen.  
+# <a name="queued-rejected-messages"></a><span data-ttu-id="b877d-102">In die Warteschlange gestellte abgelehnte Meldungen</span><span class="sxs-lookup"><span data-stu-id="b877d-102">Queued Rejected Messages</span></span>
+<span data-ttu-id="b877d-103">Zählername: In der Warteschlange stehende abgelehnte Meldungen.</span><span class="sxs-lookup"><span data-stu-id="b877d-103">Counter Name: Queued Messages Rejected.</span></span>  
   
-## Beschreibung  
- Anzahl von Meldungen, die vom Warteschlangentransport in diesem Dienst abgelehnt werden.  
+## <a name="description"></a><span data-ttu-id="b877d-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b877d-104">Description</span></span>  
+ <span data-ttu-id="b877d-105">Anzahl von Meldungen, die vom Warteschlangentransport in diesem Dienst abgelehnt werden.</span><span class="sxs-lookup"><span data-stu-id="b877d-105">Number of messages that are rejected by the queued transport at this service.</span></span>  
   
- Weitere Informationen zur Ablehnung von Meldungen finden Sie unter [Behandlung nicht verarbeitbarer Nachrichten](http://go.microsoft.com/fwlink/?LinkID=96233) \(möglicherweise in englischer Sprache\).
+ <span data-ttu-id="b877d-106">Finden Sie unter [verarbeitbarer Behandlung von](http://go.microsoft.com/fwlink/?LinkID=96233) Informationen auf, wenn Nachrichten abgelehnt werden.</span><span class="sxs-lookup"><span data-stu-id="b877d-106">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkID=96233) for more information on when messages are rejected.</span></span>

@@ -1,61 +1,53 @@
 ---
-title: LINQ und Dateiverzeichnisse (Visual Basic) | Microsoft-Dokumentation
+title: LINQ und Dateiverzeichnisse (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5536ae95b42cdaddda2c4cae97a114681e94b0ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 470ad8e783eb05cc56949982b2d2d79d5aaefdc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-and-file-directories-visual-basic"></a>LINQ und Dateiverzeichnisse (Visual Basic)
-Viele Dateisystemvorgänge sind im Wesentlichen Abfragen und sind daher für die LINQ-Ansatz gut geeignet.  
+# <a name="linq-and-file-directories-visual-basic"></a><span data-ttu-id="729ba-102">LINQ und Dateiverzeichnisse (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-102">LINQ and File Directories (Visual Basic)</span></span>
+<span data-ttu-id="729ba-103">Viele Dateisystemvorgänge sind im Wesentlichen Abfragen und sind deshalb für die LINQ-Vorgehensweise gut geeignet.</span><span class="sxs-lookup"><span data-stu-id="729ba-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  
   
- Beachten Sie, dass die Abfragen in diesem Abschnitt nicht destruktiv sind. Sie werden nicht verwendet, um den Inhalt der ursprünglichen Dateien oder Ordner ändern. Dies entspricht die Regel, dass Abfragen keine Nebeneffekte auftreten soll. Im Allgemeinen sollten Code (einschließlich Abfragen, erstellen, Update- und delete-Operatoren), der Quelldaten modifiziert getrennt vom Code beibehalten werden, die die Daten lediglich Abfragen.  
+ <span data-ttu-id="729ba-104">Bitte beachten Sie, das die Abfragen in diesem Abschnitt nichtdestruktiv sind.</span><span class="sxs-lookup"><span data-stu-id="729ba-104">Note that the queries in this section are non-destructive.</span></span> <span data-ttu-id="729ba-105">Sie werden nicht verwendet, um den Inhalt der ursprünglichen Dateien und Ordner zu ändern.</span><span class="sxs-lookup"><span data-stu-id="729ba-105">They are not used to change the contents of the original files or folders.</span></span> <span data-ttu-id="729ba-106">Dies entspricht der Regel, nach der Abfragen keine Nebeneffekte haben sollen.</span><span class="sxs-lookup"><span data-stu-id="729ba-106">This follows the rule that queries should not cause any side-effects.</span></span> <span data-ttu-id="729ba-107">Allgemein gilt, dass jeder Code (einschließlich Abfragen, die Operatoren zum Erstellen/Aktualisieren/Löschen ausführen), der Quelldaten modifiziert, von Code getrennt sein sollte, der Daten lediglich abfragt.</span><span class="sxs-lookup"><span data-stu-id="729ba-107">In general, any code (including queries that perform create / update / delete operators) that modifies source data should be kept separate from the code that just queries the data.</span></span>  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ <span data-ttu-id="729ba-108">Dieser Abschnitt enthält die folgenden Themen:</span><span class="sxs-lookup"><span data-stu-id="729ba-108">This section contains the following topics:</span></span>  
   
- [Gewusst wie: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- Veranschaulicht, wie zur Suche nach Dateien anhand einer oder mehrerer Eigenschaften seiner <xref:System.IO.FileInfo>Objekt.</xref:System.IO.FileInfo>  
+ [<span data-ttu-id="729ba-109">Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-109">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ <span data-ttu-id="729ba-110">Hier erfahren Sie, wie Sie nach Dateien suchen, indem Sie eine oder mehrere Eigenschaften des Objekts <xref:System.IO.FileInfo> betrachten.</span><span class="sxs-lookup"><span data-stu-id="729ba-110">Shows how to search for files by examining one or more properties of its <xref:System.IO.FileInfo> object.</span></span>  
   
- [Gewusst wie: Gruppieren von Dateien nach Erweiterung (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- Zeigt, wie Gruppen zurückzugeben <xref:System.IO.FileInfo>-Objekt auf Grundlage ihrer Erweiterung.</xref:System.IO.FileInfo>  
+ [<span data-ttu-id="729ba-111">Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-111">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ <span data-ttu-id="729ba-112">Hier erfahren Sie, wie Sie Gruppen des Objekts <xref:System.IO.FileInfo> nach deren Dateinamenerweiterung zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="729ba-112">Shows how to return groups of <xref:System.IO.FileInfo> object based on their file name extension.</span></span>  
   
- [Gewusst wie: Abfragen der Gesamtzahl von Bytes in einem Ordnersatz (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
- Zeigt, wie die Gesamtanzahl der Bytes in allen Dateien in einer angegebenen Verzeichnisstruktur zurückgegeben.  
+ [<span data-ttu-id="729ba-113">Vorgehensweise: Abfragen der Gesamtzahl der Bytes in einem Ordnersatz (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-113">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ <span data-ttu-id="729ba-114">Hier erfahren Sie, wie Sie die Gesamtzahl von Bytes in allen Dateien einer angegebenen Verzeichnisstruktur zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="729ba-114">Shows how to return the total number of bytes in all the files in a specified directory tree.</span></span>  
   
- [Gewusst wie: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
- Zeigt, wie alle Dateien, die in zwei angegebenen Ordnern vorhanden sind, und auch alle Dateien, die in einem Ordner, aber nicht in der anderen vorhanden sind.  
+ <span data-ttu-id="729ba-115">[Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span><span class="sxs-lookup"><span data-stu-id="729ba-115">[How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span></span>  
+ <span data-ttu-id="729ba-116">Hier erfahren Sie, wie Sie alle Dateien, die sich ein zwei angegebenen Ordnern befinden, zurückgeben können; ebenso erfahren Sie, wie Sie die Dateien, die sich nur in einem der zwei Ordner befinden, zurückgeben können.</span><span class="sxs-lookup"><span data-stu-id="729ba-116">Shows how to return all the files that are present in two specified folders, and also all the files that are present in one folder but not the other.</span></span>  
   
- [Gewusst wie: Abfragen der größten Datei oder Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- Zeigt, wie die größten oder kleinsten Datei oder eine angegebene Anzahl von Dateien in einer Verzeichnisstruktur zurückgegeben.  
+ [<span data-ttu-id="729ba-117">Vorgehensweise: Abfragen der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-117">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ <span data-ttu-id="729ba-118">Hier erfahren Sie, wie Sie die größte oder kleinste Datei oder eine angegebene Anzahl von Dateien in einer Verzeichnisstruktur zurückgeben können.</span><span class="sxs-lookup"><span data-stu-id="729ba-118">Shows how to return the largest or smallest file, or a specified number of files, in a directory tree.</span></span>  
   
- [Gewusst wie: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
- Zeigt, wie alle Dateinamen gruppiert, die in mehr als einer Position in einer angegebenen Verzeichnisstruktur auftreten. Außerdem veranschaulicht, wie komplexere Vergleiche basierend auf einem benutzerdefinierten Vergleich ausgeführt.  
+ [<span data-ttu-id="729ba-119">Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-119">How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ <span data-ttu-id="729ba-120">Hier erfahren Sie, wie Sie die Dateien nach Dateinamen gruppieren können, die an mehr als einer Stelle in einer angegebenen Verzeichnisstruktur vorkommen.</span><span class="sxs-lookup"><span data-stu-id="729ba-120">Shows how to group for all file names that occur in more than one location in a specified directory tree.</span></span> <span data-ttu-id="729ba-121">Ebenfalls lernen Sie, wie sie komplexere Vergleiche mit einer benutzerdefinierten Vergleichsfunktion durchführen können.</span><span class="sxs-lookup"><span data-stu-id="729ba-121">Also shows how to perform more complex comparisons based on a custom comparer.</span></span>  
   
- [Gewusst wie: Abfragen des Inhalts von Dateien in einem Ordner (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
- Zeigt, wie Ordner in einer Struktur durchlaufen, öffnen jede Datei und Inhalt der Datei abgefragt.  
+ [<span data-ttu-id="729ba-122">Vorgehensweise: Abfragen des Inhalts von Dateien in einem Ordner (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-122">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
+ <span data-ttu-id="729ba-123">Hier erfahren Sie, wie Sie Ordner in einer Struktur durchlaufen, jede Datei öffnen und die Inhalte der Datei abfragen können.</span><span class="sxs-lookup"><span data-stu-id="729ba-123">Shows how to iterate through folders in a tree, open each file, and query the file's contents.</span></span>  
   
-## <a name="comments"></a>Kommentare  
- Es ist recht aufwändig in Erstellen einer Datenquelle, die genau stellt den Inhalt des Dateisystems und Ausnahmen ordnungsgemäß behandelt. In den Beispielen in diesem Abschnitt erstellen Sie eine Snapshot-Auflistung von <xref:System.IO.FileInfo>-Objekten, die alle Dateien in einem angegebenen Stammordner und allen Unterordnern darstellt.</xref:System.IO.FileInfo> Der aktuelle Status der einzelnen <xref:System.IO.FileInfo>ändert sich die Zeit zwischen den Sie starten und Beenden einer Abfrage möglicherweise.</xref:System.IO.FileInfo> Sie können z. B. eine Liste der erstellen <xref:System.IO.FileInfo>Objekte, die als Datenquelle verwendet.</xref:System.IO.FileInfo> Wenn Sie versuchen, Zugriff auf die `Length` Eigenschaft in einer Abfrage, die <xref:System.IO.FileInfo>Objekt versucht, Zugriff auf das Dateisystem, um den Wert der aktualisieren `Length`.</xref:System.IO.FileInfo> Wenn die Datei nicht mehr vorhanden ist, erhalten Sie eine <xref:System.IO.FileNotFoundException>in einer Abfrage, auch wenn nicht abgefragt werden das Dateisystem direkt.</xref:System.IO.FileNotFoundException> Einige Abfragen in diesem Abschnitt verwenden Sie eine separate Methode, die diese bestimmten Ausnahmen in bestimmten Fällen nutzt. Eine weitere Option ist die Datenquelle dynamisch aktualisiert werden, mithilfe der <xref:System.IO.FileSystemWatcher>.</xref:System.IO.FileSystemWatcher> beizubehalten  
+## <a name="comments"></a><span data-ttu-id="729ba-124">Kommentare</span><span class="sxs-lookup"><span data-stu-id="729ba-124">Comments</span></span>  
+ <span data-ttu-id="729ba-125">Das Erstellen einer Datenquelle, die die Inhalte des Dateisystems angemessen repräsentieren, kommt mit einer gewissen Komplexität.</span><span class="sxs-lookup"><span data-stu-id="729ba-125">There is some complexity involved in creating a data source that accurately represents the contents of the file system and handles exceptions gracefully.</span></span> <span data-ttu-id="729ba-126">Die Beispiele in diesem Abschnitt geben Ihnen einen ersten Überblick über <xref:System.IO.FileInfo>-Objekte, der alle Dateien in einem angegebenen Stammordner mit all seinen Unterordnern repräsentiert.</span><span class="sxs-lookup"><span data-stu-id="729ba-126">The examples in this section create a snapshot collection of <xref:System.IO.FileInfo> objects that represents all the files under a specified root folder and all its subfolders.</span></span> <span data-ttu-id="729ba-127">Der tatsächliche Zustand jedes <xref:System.IO.FileInfo> verändert sich möglicherweise in der Zeit zwischen Beginn und Ende der Ausführung einer Abfrage.</span><span class="sxs-lookup"><span data-stu-id="729ba-127">The actual state of each <xref:System.IO.FileInfo> may change in the time between when you begin and end executing a query.</span></span> <span data-ttu-id="729ba-128">Sie können beispielsweise eine Liste von <xref:System.IO.FileInfo>-Objekten erstellen, um diese als Datenquelle zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="729ba-128">For example, you can create a list of <xref:System.IO.FileInfo> objects to use as a data source.</span></span> <span data-ttu-id="729ba-129">Wenn Sie versuchen, auf die Eigenschaft `Length` einer Abfrage zuzugreifen, versucht das <xref:System.IO.FileInfo>-Objekt, auf das Dateisystem zuzugreifen, um den Wert von `Length` zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="729ba-129">If you try to access the `Length` property in a query, the <xref:System.IO.FileInfo> object will try to access the file system to update the value of `Length`.</span></span> <span data-ttu-id="729ba-130">Wenn die Datei nicht mehr existiert, erhalten Sie eine <xref:System.IO.FileNotFoundException> in Ihrer Abfrage, obwohl Sie keine direkte Abfrage an das Dateisystem vornehmen.</span><span class="sxs-lookup"><span data-stu-id="729ba-130">If the file no longer exists, you will get a <xref:System.IO.FileNotFoundException> in your query, even though you are not querying the file system directly.</span></span> <span data-ttu-id="729ba-131">Einige Abfragen in diesem Bereich verwenden eine getrennte Methode, die diese bestimmten Ausnahmen in gewissen Fällen verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="729ba-131">Some queries in this section use a separate method that consumes these particular exceptions in certain cases.</span></span> <span data-ttu-id="729ba-132">Des Weiteren können Sie Ihre Datenquelle auf dem neuesten Stand halten, indem Sie den <xref:System.IO.FileSystemWatcher> verwenden.</span><span class="sxs-lookup"><span data-stu-id="729ba-132">Another option is to keep your data source updated dynamically by using the <xref:System.IO.FileSystemWatcher>.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="729ba-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="729ba-133">See Also</span></span>  
+ [<span data-ttu-id="729ba-134">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="729ba-134">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

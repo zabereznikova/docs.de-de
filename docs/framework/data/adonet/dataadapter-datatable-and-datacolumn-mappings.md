@@ -1,23 +1,29 @@
 ---
-title: "DataAdapter DataTable- und DataColumn-Zuordnungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "\"DataTable\" und \"DataColumn\"-Zuordnungen mit \"DataAdapter\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e96eb8e48b5787db5296458af650133747687295
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# DataAdapter DataTable- und DataColumn-Zuordnungen
-Ein **DataAdapter** enthält eine Auflistung von 0 \(null\) oder mehr <xref:System.Data.Common.DataTableMapping>\-Objekten in der zugehörigen **TableMappings**\-Eigenschaft.  Eine **DataTableMapping** stellt eine Masterzuordnung zwischen den nach einer Abfrage einer Datenquelle zurückgegebenen Daten und einer <xref:System.Data.DataTable> bereit.  Der **DataTableMapping**\-Name kann anstelle des **DataTable**\-Namens an die **Fill**\-Methode des **DataAdapter** übergeben werden.  Im folgenden Beispiel wird eine **DataTableMapping** mit dem Namen **AuthorsMapping** für die **Authors**\-Tabelle erstellt.  
+# <a name="dataadapter-datatable-and-datacolumn-mappings"></a><span data-ttu-id="45113-102">"DataTable" und "DataColumn"-Zuordnungen mit "DataAdapter"</span><span class="sxs-lookup"><span data-stu-id="45113-102">DataAdapter DataTable and DataColumn Mappings</span></span>
+<span data-ttu-id="45113-103">Ein **"DataAdapter"** enthält eine Auflistung von NULL oder mehr <xref:System.Data.Common.DataTableMapping> Objekte in seiner **TableMappings** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="45113-103">A **DataAdapter** contains a collection of zero or more <xref:System.Data.Common.DataTableMapping> objects in its **TableMappings** property.</span></span> <span data-ttu-id="45113-104">Ein **DataTableMapping** bietet eine master-Zuordnung zwischen den Daten aus einer Abfrage für eine Datenquelle zurückgegeben und ein <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="45113-104">A **DataTableMapping** provides a master mapping between the data returned from a query against a data source, and a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="45113-105">Die **DataTableMapping** Namen anstelle von übergeben werden kann die **DataTable** -Namens an die **füllen** Methode der **"DataAdapter"**.</span><span class="sxs-lookup"><span data-stu-id="45113-105">The **DataTableMapping** name can be passed in place of the **DataTable** name to the **Fill** method of the **DataAdapter**.</span></span> <span data-ttu-id="45113-106">Das folgende Beispiel erstellt eine **DataTableMapping** mit dem Namen **AuthorsMapping** für die **Autoren** Tabelle.</span><span class="sxs-lookup"><span data-stu-id="45113-106">The following example creates a **DataTableMapping** named **AuthorsMapping** for the **Authors** table.</span></span>  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,11 +33,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- Mithilfe von **DataTableMapping** können Sie in einer **DataTable** andere Spaltennamen als in der Datenbank verwenden.  Der **DataAdapter** gleicht beim Update der Tabelle mithilfe der Zuordnung die Spalten miteinander ab.  
+ <span data-ttu-id="45113-107">Ein **DataTableMapping** ermöglicht es Ihnen, verwenden Sie die Spaltennamen in einer **DataTable** , die unterscheiden sich von denen in der Datenbank.</span><span class="sxs-lookup"><span data-stu-id="45113-107">A **DataTableMapping** enables you to use column names in a **DataTable** that are different from those in the database.</span></span> <span data-ttu-id="45113-108">Die **"DataAdapter"** mithilfe der Zuordnung der Spalten entsprechen, wenn die Tabelle aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="45113-108">The **DataAdapter** uses the mapping to match the columns when the table is updated.</span></span>  
   
- Wenn Sie beim Aufruf der **Fill**\-Methode oder der **Update**\-Methode des **DataAdapter** keinen **TableName** oder **DataTableMapping**\-Namen angeben, sucht der **DataAdapter** nach einer **DataTableMapping** mit dem Namen "Table".  Wenn **DataTableMapping** nicht vorhanden ist, lautet der **TableName** von **DataTable** "Table".  Sie können eine Standard\-**DataTableMapping** angeben, indem Sie eine **DataTableMapping** mit dem Namen "Table" erstellen.  
+ <span data-ttu-id="45113-109">Wenn Sie nicht angeben eine **TableName** oder ein **DataTableMapping** Namen beim Aufrufen der **füllen** oder **Update** Methode der  **"DataAdapter"**, **"DataAdapter"** sucht nach einem **DataTableMapping** mit dem Namen "Table".</span><span class="sxs-lookup"><span data-stu-id="45113-109">If you do not specify a **TableName** or a **DataTableMapping** name when calling the **Fill** or **Update** method of the **DataAdapter**, the **DataAdapter** looks for a **DataTableMapping** named "Table".</span></span> <span data-ttu-id="45113-110">Wenn für das **DataTableMapping** ist nicht vorhanden, die **TableName** von der **DataTable** "Table".</span><span class="sxs-lookup"><span data-stu-id="45113-110">If that **DataTableMapping** does not exist, the **TableName** of the **DataTable** is "Table".</span></span> <span data-ttu-id="45113-111">Sie können einen Standardwert angeben **DataTableMapping** durch das Erstellen einer **DataTableMapping** mit dem Namen "Table".</span><span class="sxs-lookup"><span data-stu-id="45113-111">You can specify a default **DataTableMapping** by creating a **DataTableMapping** with the name of "Table".</span></span>  
   
- Im folgenden Beispiel wird eine **DataTableMapping** \(aus dem <xref:System.Data.Common>\-Namespace\) erstellt und zur Standardzuordnung für den angegebenen **DataAdapter** erklärt, indem sie als "Table" benannt wird.  Das Beispiel ordnet anschließend die Spalten in der ersten Tabelle des Abfrageergebnisses \(die **Customers**\-Tabelle der **Northwind**\-Datenbank\) einer Gruppe von benutzerfreundlicheren Namen in der **Northwind Customers**\-Tabelle im <xref:System.Data.DataSet> zu.  Für Spalten, die nicht zugeordnet werden, wird der Name der Spalte in der Datenquelle verwendet.  
+ <span data-ttu-id="45113-112">Das folgende Codebeispiel erstellt eine **DataTableMapping** (aus der <xref:System.Data.Common> Namespace) und erleichtert die standardzuordnung für den angegebenen **"DataAdapter"** durch benennen "Table".</span><span class="sxs-lookup"><span data-stu-id="45113-112">The following code example creates a **DataTableMapping** (from the <xref:System.Data.Common> namespace) and makes it the default mapping for the specified **DataAdapter** by naming it "Table".</span></span> <span data-ttu-id="45113-113">Das Beispiel ordnet anschließend die Spalten aus der ersten Tabelle in den Abfrageergebnissen (die **Kunden** Tabelle mit den **Northwind** Datenbank) auf eine Gruppe von benutzerfreundlicheren Namen in der **Northwind-Kunden**  -Tabelle in der <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="45113-113">The example then maps the columns from the first table in the query result (the **Customers** table of the **Northwind** database) to a set of more user-friendly names in the **Northwind Customers** table in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="45113-114">Für Spalten, die nicht zugeordnet werden, wird der Name der Spalte in der Datenquelle verwendet.</span><span class="sxs-lookup"><span data-stu-id="45113-114">For columns that are not mapped, the name of the column from the data source is used.</span></span>  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -41,7 +47,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIPCode")  
   
 adapter.Fill(custDS)  
-  
 ```  
   
 ```csharp  
@@ -54,11 +59,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- In komplexeren Situationen können Sie mit demselben **DataAdapter** das Laden verschiedener Tabellen mit verschiedenen Zuordnungen unterstützen.  Hierfür fügen Sie einfach weitere **DataTableMapping**\-Objekte hinzu.  
+ <span data-ttu-id="45113-115">In komplexeren Situationen können Sie entscheiden, dass dem gewünschten **"DataAdapter"** das Laden verschiedener Tabellen mit verschiedenen Zuordnungen unterstützen.</span><span class="sxs-lookup"><span data-stu-id="45113-115">In more advanced situations, you may decide that you want the same **DataAdapter** to support loading different tables with different mappings.</span></span> <span data-ttu-id="45113-116">Zu diesem Zweck fügen Sie einfach zusätzliche **DataTableMapping** Objekte.</span><span class="sxs-lookup"><span data-stu-id="45113-116">To do this, simply add additional **DataTableMapping** objects.</span></span>  
   
- Wenn der **Fill**\-Methode eine Instanz des **DataSet** und ein **DataTableMapping**\-Name übergeben wird, wird dieser verwendet, sofern eine Zuordnung mit diesem Namen vorhanden ist. Andernfalls wird eine **DataTable** mit diesem Namen verwendet.  
+ <span data-ttu-id="45113-117">Wenn der **ausfüllen** Methode wird eine Instanz von übergeben eine **DataSet** und eine **DataTableMapping** Namen, sofern eine Zuordnung mit diesem Namen vorhanden ist, andernfalls eine  **DataTable** mit diesem Namen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="45113-117">When the **Fill** method is passed an instance of a **DataSet** and a **DataTableMapping** name, if a mapping with that name exists it is used; otherwise, a **DataTable** with that name is used.</span></span>  
   
- Im folgenden Beispiel werden eine **DataTableMapping** mit dem Namen **Customers** und die **DataTable** mit dem Namen **BizTalkSchema** erstellt.  Das Beispiel ordnet dann die von der SELECT\-Anweisung zurückgegebenen Zeilen der **BizTalkSchema**\-**DataTable** zu.  
+ <span data-ttu-id="45113-118">Erstellen Sie in den folgenden Beispielen ein **DataTableMapping** mit dem Namen **Kunden** und ein **DataTable** Name des **BizTalkSchema**.</span><span class="sxs-lookup"><span data-stu-id="45113-118">The following examples create a **DataTableMapping** with a name of **Customers** and a **DataTable** name of **BizTalkSchema**.</span></span> <span data-ttu-id="45113-119">Das Beispiel ordnet dann die von der SELECT-Anweisung zurückgegebenen Zeilen der **BizTalkSchema** **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="45113-119">The example then maps the rows returned by the SELECT statement to the **BizTalkSchema** **DataTable**.</span></span>  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -69,7 +74,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIP")  
   
 adapter.Fill(custDS, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -84,26 +88,26 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  Wenn für eine Spaltenzuordnung kein Quellspaltenname bzw. für eine Tabellenzuordnung kein Quelltabellenname angegeben wird, werden automatisch Standardnamen generiert.  Fehlt der Quellspaltenname einer Spaltenzuordnung, so erhält die Spaltenzuordnung den Standardnamen **SourceColumn** *N,* beginnend mit **SourceColumn1**, der jeweils um eins erhöht wird.  Fehlt der Quelltabellenname einer Tabellenzuordnung, so erhält die Tabellenzuordnung den Standardnamen **SourceTable** *N,* beginnend mit **SourceTable1**, der jeweils um eins erhöht wird.  
+>  <span data-ttu-id="45113-120">Wenn für eine Spaltenzuordnung kein Quellspaltenname bzw. für eine Tabellenzuordnung kein Quelltabellenname angegeben wird, werden automatisch Standardnamen generiert.</span><span class="sxs-lookup"><span data-stu-id="45113-120">If a source column name is not supplied for a column mapping or a source table name is not supplied for a table mapping, default names will be automatically generated.</span></span> <span data-ttu-id="45113-121">Wenn keine Quellspalte für eine spaltenzuordnung angegeben wird, erhält die spaltenzuordnung einen Standardnamen der **SourceColumn** *N,* ab **SourceColumn1**.</span><span class="sxs-lookup"><span data-stu-id="45113-121">If no source column is supplied for a column mapping, the column mapping is given an incremental default name of **SourceColumn** *N,* starting with **SourceColumn1**.</span></span> <span data-ttu-id="45113-122">Wenn für eine tabellenzuordnung kein Quelltabellenname angegeben wird, erhält die tabellenzuordnung einen Standardnamen der **SourceTable** *N*, beginnend mit **SourceTable1**.</span><span class="sxs-lookup"><span data-stu-id="45113-122">If no source table name is supplied for a table mapping, the table mapping is given an incremental default name of **SourceTable** *N*, starting with **SourceTable1**.</span></span>  
   
 > [!NOTE]
->  Es wird davon abgeraten, die Benennungskonvention **SourceColumn** *N* für eine Spaltenzuordnung oder **SourceTable** *N* für eine Tabellenzuordnung zu verwenden, da dieser Name u. U. einen Konflikt mit einem bereits vorhandenen Standardspaltennamen in der **ColumnMappingCollection** oder mit einem bereits vorhandenen Standardtabellennamen in der **DataTableMappingCollection** verursacht.  Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
+>  <span data-ttu-id="45113-123">Es wird empfohlen, dass Sie die Benennungskonvention **SourceColumn** *N* für eine spaltenzuordnung oder **SourceTable** *N* für eine Tabelle zuordnen, der Namen, die Sie angeben, ein Konflikt mit einer vorhandenen Zuordnung Standardspaltennamen in kann die **ColumnMappingCollection** oder Zuordnung Tabellennamen in der **DataTableMappingCollection** .</span><span class="sxs-lookup"><span data-stu-id="45113-123">We recommend that you avoid the naming convention of **SourceColumn** *N* for a column mapping, or **SourceTable** *N* for a table mapping, because the name you supply may conflict with an existing default column mapping name in the **ColumnMappingCollection** or table mapping name in the **DataTableMappingCollection**.</span></span> <span data-ttu-id="45113-124">Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="45113-124">If the supplied name already exists, an exception will be thrown.</span></span>  
   
-## Umgang mit mehreren Resultsets  
- Wenn mit **SelectCommand** mehrere Tabellen zurückgegeben werden, werden mit der **Fill**\-Methode automatisch Tabellennamen mit inkrementellen Werten für die Tabellen im **DataSet** generiert. Der angegebene Tabellenname kommt zuerst, und die folgenden Tabellen werden nach dem Schema **TableName** *N* benannt, wobei mit **TableName1** begonnen wird.  Mit Tabellenzuordnungen können Sie den automatisch generierten Tabellennamen einem Namen zuordnen, der für die Tabelle im **DataSet** angegeben werden soll.  Rufen Sie beispielsweise für eine **SelectCommand**\-Eigenschaft, die die beiden Tabellen **Customers** und **Orders** zurückgibt, die **Fill**\-Methode folgendermaßen auf.  
+## <a name="handling-multiple-result-sets"></a><span data-ttu-id="45113-125">Umgang mit mehreren Resultsets</span><span class="sxs-lookup"><span data-stu-id="45113-125">Handling Multiple Result Sets</span></span>  
+ <span data-ttu-id="45113-126">Wenn Ihre **SelectCommand** mehrere Tabellen zurück, die **füllen** generiert automatisch Tabellennamen mit inkrementellen Werten für die Tabellen in der **DataSet**, beginnend mit der Tabellen- und Fortfahren für in der Form angegeben **TableName** *N*, beginnend mit **TableName1**.</span><span class="sxs-lookup"><span data-stu-id="45113-126">If your **SelectCommand** returns multiple tables, **Fill** automatically generates table names with incremental values for the tables in the **DataSet**, starting with the specified table name and continuing on in the form **TableName** *N*, starting with **TableName1**.</span></span> <span data-ttu-id="45113-127">Sie können tabellenzuordnungen können Sie den automatisch generierten Tabellennamen einem Namen zuordnen für die Tabelle im angegebenen soll der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="45113-127">You can use table mappings to map the automatically generated table name to a name you want specified for the table in the **DataSet**.</span></span> <span data-ttu-id="45113-128">Z. B. für eine **SelectCommand** , die zwei Tabellen zurückgibt **Kunden** und **Aufträge**, geben Sie den folgenden Aufruf von **füllen**.</span><span class="sxs-lookup"><span data-stu-id="45113-128">For example, for a **SelectCommand** that returns two tables, **Customers** and **Orders**, issue the following call to **Fill**.</span></span>  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- Im **DataSet** werden zwei Tabellen erstellt: **Customers** und **Customers1**.  Mit Tabellenzuordnungen können Sie sicherstellen, dass die zweite Tabelle den Namen **Orders** und nicht **Customers1** erhält.  Zu diesem Zweck ordnen Sie der Quelltabelle **Customers1** die **DataSet**\-Tabelle **Orders** zu, wie es im folgenden Beispiel gezeigt wird.  
+ <span data-ttu-id="45113-129">Werden zwei Tabellen erstellt, der **DataSet**: **Kunden** und **Customers1**.</span><span class="sxs-lookup"><span data-stu-id="45113-129">Two tables are created in the **DataSet**: **Customers** and **Customers1**.</span></span> <span data-ttu-id="45113-130">Sie können tabellenzuordnungen verwenden, um sicherzustellen, dass die zweite Tabelle den Namen **Aufträge** anstelle von **Customers1**.</span><span class="sxs-lookup"><span data-stu-id="45113-130">You can use table mappings to ensure that the second table is named **Orders** instead of **Customers1**.</span></span> <span data-ttu-id="45113-131">Zu diesem Zweck ordnen Sie die Quelltabelle **Customers1** auf die **DataSet** Tabelle **Aufträge**, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="45113-131">To do this, map the source table of **Customers1** to the **DataSet** table **Orders**, as shown in the following example.</span></span>  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## Siehe auch  
- [DataAdapter und DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="45113-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="45113-132">See Also</span></span>  
+ [<span data-ttu-id="45113-133">"DataAdapters" und "DataReaders"</span><span class="sxs-lookup"><span data-stu-id="45113-133">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="45113-134">Abrufen und Ändern von Daten in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="45113-134">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="45113-135">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="45113-135">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

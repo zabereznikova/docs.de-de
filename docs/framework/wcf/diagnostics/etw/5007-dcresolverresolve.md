@@ -1,35 +1,38 @@
 ---
-title: "5007 - DCResolverResolve | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 5007 - DCResolverResolve
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 156d92a9-1de5-4ba8-a7a3-e8bf487c5523
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 429678db11623098a956324238016bced31becef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 5007 - DCResolverResolve
-## Eigenschaften  
+# <a name="5007---dcresolverresolve"></a><span data-ttu-id="3aae9-102">5007 - DCResolverResolve</span><span class="sxs-lookup"><span data-stu-id="3aae9-102">5007 - DCResolverResolve</span></span>
+## <a name="properties"></a><span data-ttu-id="3aae9-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="3aae9-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|5007|  
-|Stichwörter|Serialisierung|  
-|Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="3aae9-104">ID</span><span class="sxs-lookup"><span data-stu-id="3aae9-104">ID</span></span>|<span data-ttu-id="3aae9-105">5007</span><span class="sxs-lookup"><span data-stu-id="3aae9-105">5007</span></span>|  
+|<span data-ttu-id="3aae9-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="3aae9-106">Keywords</span></span>|<span data-ttu-id="3aae9-107">Serialisierung</span><span class="sxs-lookup"><span data-stu-id="3aae9-107">Serialization</span></span>|  
+|<span data-ttu-id="3aae9-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="3aae9-108">Level</span></span>|<span data-ttu-id="3aae9-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="3aae9-109">Verbose</span></span>|  
+|<span data-ttu-id="3aae9-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="3aae9-110">Channel</span></span>|<span data-ttu-id="3aae9-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="3aae9-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird ausgegeben, wenn der DataContract\-Resolver mit der Auflösung beginnt.  
+## <a name="description"></a><span data-ttu-id="3aae9-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3aae9-112">Description</span></span>  
+ <span data-ttu-id="3aae9-113">Dieses Ereignis wird ausgegeben, wenn der DataContract-Resolver mit der Auflösung beginnt.</span><span class="sxs-lookup"><span data-stu-id="3aae9-113">This event is emitted when the DataContract resolver starts resolving .</span></span>  
   
-## Meldung  
- DataContract\-Resolver für "%1" starten.  
+## <a name="message"></a><span data-ttu-id="3aae9-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="3aae9-114">Message</span></span>  
+ <span data-ttu-id="3aae9-115">DataContract-Resolver für "%1" starten.</span><span class="sxs-lookup"><span data-stu-id="3aae9-115">DataContract resolver resolving %1 start.</span></span>  
   
-## Details
+## <a name="details"></a><span data-ttu-id="3aae9-116">Details</span><span class="sxs-lookup"><span data-stu-id="3aae9-116">Details</span></span>

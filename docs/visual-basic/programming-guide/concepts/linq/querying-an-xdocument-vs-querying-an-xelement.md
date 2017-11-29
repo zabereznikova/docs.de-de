@@ -1,34 +1,30 @@
 ---
-title: Vergleich zwischen dem Abfragen eines &quot;XDocument&quot; und dem Abfragen ein &quot;XElement&quot; (Visual Basic) | Microsoft-Dokumentation
+title: Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen ein "XElement" (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29044cd118bfd8ecc12bddca722ee3656d455e0f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ee3c0c1cda12a74f50b4937263d80f526b5d7ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen ein "XElement" (Visual Basic)
-Wenn Sie ein Dokument über <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, werden Sie feststellen, dass Sie etwas anders als beim Laden über <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> Abfragen schreiben müssen,</xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> laden  
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a><span data-ttu-id="cb5b4-102">Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen ein "XElement" (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb5b4-102">Querying an XDocument vs. Querying an XElement (Visual Basic)</span></span>
+<span data-ttu-id="cb5b4-103">Das Schreiben von Abfragen für Dokumente, die über <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> geladen werden, unterscheidet sich geringfügig vom Schreiben von Abfragen für Dokumente, die über <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> geladen werden.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="comparison-of-xdocumentload-and-xelementload"></a>Vergleich zwischen "XDocument.Load" und "XElement.Load"  
- Beim Laden eines XML-Dokuments in ein <xref:System.Xml.Linq.XElement>über <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, die <xref:System.Xml.Linq.XElement>am Stamm der XML-Struktur das Stammelement des geladenen Dokuments enthält.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement> Allerdings laden Wenn Sie dasselbe XML-Dokument in eine <xref:System.Xml.Linq.XDocument>über <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>den Stamm der Struktur ist ein <xref:System.Xml.Linq.XDocument>Knoten, und das Stammelement des geladenen Dokuments ist der einen zulässigen untergeordneten <xref:System.Xml.Linq.XElement>Knoten des <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XDocument> Die [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Achsen agieren relativ zum Stammknoten.  
+## <a name="comparison-of-xdocumentload-and-xelementload"></a><span data-ttu-id="cb5b4-104">Vergleich zwischen "XDocument.Load" und "XElement.Load"</span><span class="sxs-lookup"><span data-stu-id="cb5b4-104">Comparison of XDocument.Load and XElement.Load</span></span>  
+ <span data-ttu-id="cb5b4-105">Beim Laden eines XML-Dokuments in ein <xref:System.Xml.Linq.XElement> über <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> enthält das <xref:System.Xml.Linq.XElement> am Stamm der XML-Struktur das Stammelement des geladenen Dokuments.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-105">When you load an XML document into an <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, the <xref:System.Xml.Linq.XElement> at the root of the XML tree contains the root element of the loaded document.</span></span> <span data-ttu-id="cb5b4-106">Wenn Sie jedoch dasselbe XML-Dokument über <xref:System.Xml.Linq.XDocument> in ein <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> laden, ist der Stamm der Struktur ein <xref:System.Xml.Linq.XDocument>-Knoten, und das Stammelement des geladenen Dokuments ist der einzige zulässige untergeordnete <xref:System.Xml.Linq.XElement>-Knoten des <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-106">However, when you load the same XML document into an <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, the root of the tree is an <xref:System.Xml.Linq.XDocument> node, and the root element of the loaded document is the one allowed child <xref:System.Xml.Linq.XElement> node of the <xref:System.Xml.Linq.XDocument>.</span></span> <span data-ttu-id="cb5b4-107">Die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Achsen agieren relativ zum Stammknoten.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-107">The [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes operate relative to the root node.</span></span>  
   
- Dieses erstes Beispiel lädt eine XML-Struktur mithilfe von <xref:System.Xml.Linq.XElement.Load%2A>.</xref:System.Xml.Linq.XElement.Load%2A> Anschließend fragt es die untergeordneten Elemente des Stamms der Struktur ab:  
+ <span data-ttu-id="cb5b4-108">Dieses erstes Beispiel lädt eine XML-Struktur mit <xref:System.Xml.Linq.XElement.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-108">This first example loads an XML tree using <xref:System.Xml.Linq.XElement.Load%2A>.</span></span> <span data-ttu-id="cb5b4-109">Anschließend fragt es die untergeordneten Elemente des Stamms der Struktur ab:</span><span class="sxs-lookup"><span data-stu-id="cb5b4-109">It then queries for the child elements of the root of the tree.</span></span>  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -49,7 +45,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Wie zu erwarten, erzeugt dieses Beispiel die folgende Ausgabe:  
+ <span data-ttu-id="cb5b4-110">Wie zu erwarten, erzeugt dieses Beispiel die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="cb5b4-110">As expected, this example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XElement.Load  
@@ -59,7 +55,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- Im folgende Beispiel wird der gleiche wie der oben mit der Ausnahme, dass die XML-Struktur in eine <xref:System.Xml.Linq.XDocument>anstelle einer <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> geladen wird  
+ <span data-ttu-id="cb5b4-111">Das folgende Beispiel entspricht dem vorhergehenden Beispiel, wobei hier die XML-Struktur nicht in ein <xref:System.Xml.Linq.XDocument>, sondern in ein <xref:System.Xml.Linq.XElement> geladen wird:</span><span class="sxs-lookup"><span data-stu-id="cb5b4-111">The following example is the same as the one above, with the exception that the XML tree is loaded into an <xref:System.Xml.Linq.XDocument> instead of an <xref:System.Xml.Linq.XElement>.</span></span>  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -80,7 +76,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="cb5b4-112">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="cb5b4-112">This example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -92,9 +88,9 @@ Querying tree loaded with XDocument.Load
 </Root>  
 ```  
   
- Dieselbe Abfrage hat also diesmal nicht die drei untergeordneten Knoten, sondern den einen `Root`-Knoten zurückgegeben.  
+ <span data-ttu-id="cb5b4-113">Dieselbe Abfrage hat also diesmal nicht die drei untergeordneten Knoten, sondern den einen `Root`-Knoten zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-113">Notice that the same query returned the one `Root` node instead of the three child nodes.</span></span>  
   
- Ein Ansatz für den Umgang mit diesem Verhalten ist die Verwendung der <xref:System.Xml.Linq.XDocument.Root%2A>Eigenschaft vor dem Zugriff auf die Achsenmethoden wie folgt:</xref:System.Xml.Linq.XDocument.Root%2A>  
+ <span data-ttu-id="cb5b4-114">Ein Ansatz für den Umgang mit diesem Verhalten besteht darin, vor dem Zugreifen auf die Achsenmethoden die <xref:System.Xml.Linq.XDocument.Root%2A>-Eigenschaft zu verwenden, wie im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="cb5b4-114">One approach to dealing with this is to use the <xref:System.Xml.Linq.XDocument.Root%2A> property before accessing the axes methods, as follows:</span></span>  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -115,7 +111,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Diese Abfrage führt jetzt in der gleichen Weise wie die Abfrage für die Struktur als Stamm <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> Das Beispiel führt zur folgenden Ausgabe:  
+ <span data-ttu-id="cb5b4-115">Diese Abfrage ist jetzt genauso schnell wie die Abfrage für die Struktur mit dem <xref:System.Xml.Linq.XElement> als Stammelement.</span><span class="sxs-lookup"><span data-stu-id="cb5b4-115">This query now performs in the same way as the query on the tree rooted in <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="cb5b4-116">Das Beispiel führt zur folgenden Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="cb5b4-116">The example produces the following output:</span></span>  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -125,5 +121,5 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cb5b4-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb5b4-117">See Also</span></span>  
+ [<span data-ttu-id="cb5b4-118">Standardabfragen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb5b4-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

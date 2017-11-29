@@ -1,45 +1,49 @@
 ---
-title: "Verfahrensworkflows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verfahrensworkflows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e8f517b68695457c2819612bbd092b5ea03c5f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verfahrensworkflows
-Verfahrensworkflows verwenden Flusssteuerungsmethoden ähnlich jenen, die in verfahrensorientierten Sprachen verwendet werden.Hierzu zählen u. a. `While` und `If`.Diese Workflows können mit anderen Flusssteuerungsaktivitäten wie <xref:System.Activities.Statements.Flowchart> und <xref:System.Activities.Statements.Sequence> frei zusammengefasst werden.  
+# <a name="procedural-workflows"></a><span data-ttu-id="cb1a7-102">Verfahrensworkflows</span><span class="sxs-lookup"><span data-stu-id="cb1a7-102">Procedural Workflows</span></span>
+<span data-ttu-id="cb1a7-103">Verfahrensworkflows verwenden Flusssteuerungsmethoden ähnlich jenen, die in verfahrensorientierten Sprachen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-103">Procedural workflows use flow-control methods similar to those found in procedural languages.</span></span> <span data-ttu-id="cb1a7-104">Hierzu zählen u. a. `While` und `If`.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-104">These constructs include `While` and `If`.</span></span> <span data-ttu-id="cb1a7-105">Diese Workflows können mit anderen Flusssteuerungsaktivitäten wie <xref:System.Activities.Statements.Flowchart> und <xref:System.Activities.Statements.Sequence> frei zusammengefasst werden.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-105">These workflows can be freely composed using other flow control activities such as <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Sequence>.</span></span>  
   
-## Steuern des Ausführungsflusses  
- Die Workflowaktivitätsbibliothek verfügt über Aktivitäten zum Modellieren der meisten Flusssteuerungsmethoden, die in verfahrensorientierten Sprachen verwendet werden.Dazu gehören:  
+## <a name="controlling-execution-flow"></a><span data-ttu-id="cb1a7-106">Steuern des Ausführungsflusses</span><span class="sxs-lookup"><span data-stu-id="cb1a7-106">Controlling Execution Flow</span></span>  
+ <span data-ttu-id="cb1a7-107">Die Workflowaktivitätsbibliothek verfügt über Aktivitäten zum Modellieren der meisten Flusssteuerungsmethoden, die in verfahrensorientierten Sprachen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-107">The workflow activity library has activities for modeling most flow-control methods used in procedural languages.</span></span> <span data-ttu-id="cb1a7-108">Dazu gehören:</span><span class="sxs-lookup"><span data-stu-id="cb1a7-108">These include:</span></span>  
   
 -   <xref:System.Activities.Statements.While>  
   
 -   <xref:System.Activities.Statements.DoWhile>  
   
--   <xref:System.Activities.Statements.ForEach>  
+-   <xref:System.Activities.Statements.ForEach%601>  
   
 -   <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.ParallelForEach>  
+-   <xref:System.Activities.Statements.ParallelForEach%601>  
   
 -   <xref:System.Activities.Statements.If>  
   
--   <xref:System.Activities.Statements.Switch>  
+-   <xref:System.Activities.Statements.Switch%601>  
   
 -   <xref:System.Activities.Statements.Pick>  
   
- Um Flusssteuerungsaktivitäten zu verwenden, ziehen sie diese aus der Toolbox **Aktivitäten** in eine zusammengesetzte Aktivität im Fenster des Designers, und legen Sie sie dort ab.  
+ <span data-ttu-id="cb1a7-109">Um Flusssteuerungsaktivitäten zu verwenden, Drag & drop aus der **Aktivität** Toolbox in eine zusammengesetzte Aktivität im Fenster Designers.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-109">To use flow control activities, drag and drop them from the **Activity** toolbox into a composite activity inside the designer window.</span></span>  
   
 > [!NOTE]
->  Wenn [!INCLUDE[dublin](../../../includes/dublin-md.md)] zum Hosten von Workflow in einer Webfarm verwendet wird, verschiebt AppFabric Instanzen zwischen unterschiedlichen AppFabric\-Servern.Dies erfordert, dass die Ressourcen von allen Knoten gemeinsam genutzt werden können.Keine der standardmäßigen .NET 4\-Workflowaktivitäten enthalten Vorgänge, die auf lokale Ressourcen zugreifen.Da AppFabric keinen Mechanismus bietet, um einen Workflow als "nicht verschiebbar" zu markieren, darf ein Entwickler keine benutzerdefinierten Aktivitäten erstellen, die fehlschlagen, wenn ein Workflow verschoben wird.  
+>  <span data-ttu-id="cb1a7-110">Wenn [!INCLUDE[dublin](../../../includes/dublin-md.md)] zum Hosten von Workflows in einer Webfarm verwendet wird, verschiebt AppFabric Instanzen zwischen unterschiedlichen AppFabric-Servern.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-110">If using the [!INCLUDE[dublin](../../../includes/dublin-md.md)] to host workflows on a Web farm, AppFabric will move instances between different AppFabric servers.</span></span> <span data-ttu-id="cb1a7-111">Dies erfordert, dass die Ressourcen von allen Knoten gemeinsam genutzt werden können.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-111">This requires that the resources are able to be shared between all nodes.</span></span>  <span data-ttu-id="cb1a7-112">Keine der standardmäßigen .NET 4-Workflowaktivitäten enthalten Vorgänge, die auf lokale Ressourcen zugreifen.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-112">None of the default NET 4 workflow activities contain any operations that access local resources.</span></span> <span data-ttu-id="cb1a7-113">Da AppFabric keinen Mechanismus bietet, um einen Workflow als "nicht verschiebbar" zu markieren, darf ein Entwickler keine benutzerdefinierten Aktivitäten erstellen, die fehlschlagen, wenn ein Workflow verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="cb1a7-113">Since AppFabric does not offer any mechanism to mark a workflow as immovable, a developer must not create custom activities that fail when a workflow is moved.</span></span>  
   
-## Siehe auch  
- [Flussdiagrammworkflows](../../../docs/framework/windows-workflow-foundation//flowchart-workflows.md)
+## <a name="see-also"></a><span data-ttu-id="cb1a7-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb1a7-114">See Also</span></span>  
+ [<span data-ttu-id="cb1a7-115">Flussdiagrammworkflows</span><span class="sxs-lookup"><span data-stu-id="cb1a7-115">Flowchart Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

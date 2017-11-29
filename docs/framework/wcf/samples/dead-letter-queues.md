@@ -1,51 +1,54 @@
 ---
-title: "Warteschlangen f&#252;r unzustellbare Meldungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Warteschlangen für unzustellbare Meldungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a16ed3d0f60ea4b7acc483ce543bad0459dd2f3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Warteschlangen f&#252;r unzustellbare Meldungen
-Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung.  Es basiert auf dem Beispiel [Abgewickelte MSMQ\-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  In diesem Beispiel wird die `netMsmqBinding`\-Bindung verwendet.  Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
+# <a name="dead-letter-queues"></a><span data-ttu-id="3cf0a-102">Warteschlangen für unzustellbare Meldungen</span><span class="sxs-lookup"><span data-stu-id="3cf0a-102">Dead Letter Queues</span></span>
+<span data-ttu-id="3cf0a-103">Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="3cf0a-104">Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="3cf0a-105">In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="3cf0a-106">Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="3cf0a-107">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!NOTE]
->  In diesem Beispiel werden alle Anwendungswarteschlangen für unzustellbare Nachrichten veranschaulicht, die nur auf [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar sind.  Das Beispiel kann für die Verwendung der systemweiten Standardwarteschlangen für MSMQ 3.0 unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] geändert werden.  
+>  <span data-ttu-id="3cf0a-108">In diesem Beispiel werden alle Anwendungswarteschlangen für unzustellbare Nachrichten veranschaulicht, die nur auf [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-108">This sample demonstrates each application dead letter queue that is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="3cf0a-109">Das Beispiel kann für die Verwendung der systemweiten Standardwarteschlangen für MSMQ 3.0 unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] geändert werden.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-109">The sample can be modified to use the default system-wide queues for MSMQ 3.0 on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
- In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst.  Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet.  Der Dienst empfängt Nachrichten aus der Warteschlange.  Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
+ <span data-ttu-id="3cf0a-110">In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-110">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="3cf0a-111">Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-111">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="3cf0a-112">Der Dienst empfängt Nachrichten aus der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-112">The service receives messages from the queue.</span></span> <span data-ttu-id="3cf0a-113">Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-113">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- Da die Kommunikation über Warteschlangen zu einer gewissen Verzögerung führen kann, können Sie der Nachricht eine Gültigkeitsdauer zuweisen, um sicherzustellen, dass die Nachricht nach Ablauf der Gültigkeit nicht mehr an die Anwendung gesendet wird.  Es gibt auch Fälle, in denen eine Anwendung informiert werden muss, wenn eine Nachricht nicht zugestellt werden konnte.  In derartigen Fällen, wenn beispielsweise die Gültigkeitsdauer der Nachricht abgelaufen ist, oder wenn die Nachricht nicht zugestellt werden konnte, werden die Nachrichten in der Warteschlange für unzustellbare Nachrichten abgelegt.  Die sendende Anwendung kann die Nachricht daraufhin in der Warteschlange für unzustellbare Nachrichten lesen und Gegenmaßnahmen ergreifen. Diese reichen von keiner Maßnahme bis zur Behebung der Ursache für die Unzustellbarkeit der Nachricht und erneuter Sendung.  
+ <span data-ttu-id="3cf0a-114">Da die Kommunikation über Warteschlangen zu einer gewissen Verzögerung führen kann, können Sie der Nachricht eine Gültigkeitsdauer zuweisen, um sicherzustellen, dass die Nachricht nach Ablauf der Gültigkeit nicht mehr an die Anwendung gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-114">Because queued communication can involve a certain amount of dormancy, you may want to associate a time-to-live value on the message to ensure that the message does not get delivered to the application if it has gone past the time.</span></span> <span data-ttu-id="3cf0a-115">Es gibt auch Fälle, in denen eine Anwendung informiert werden muss, wenn eine Nachricht nicht zugestellt werden konnte.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-115">There are also cases, where an application must be informed whether a message failed delivery.</span></span> <span data-ttu-id="3cf0a-116">In derartigen Fällen, wenn beispielsweise die Gültigkeitsdauer der Nachricht abgelaufen ist, oder wenn die Nachricht nicht zugestellt werden konnte, werden die Nachrichten in der Warteschlange für unzustellbare Nachrichten abgelegt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-116">In all of these cases, such as when the time-to-live on the message has expired or the message failed delivery, the message is put in a dead letter queue.</span></span> <span data-ttu-id="3cf0a-117">Die sendende Anwendung kann die Nachricht daraufhin in der Warteschlange für unzustellbare Nachrichten lesen und Gegenmaßnahmen ergreifen. Diese reichen von keiner Maßnahme bis zur Behebung der Ursache für die Unzustellbarkeit der Nachricht und erneuter Sendung.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-117">The sending application can then read the messages in the dead-letter queue and take corrective actions that range from no action to correcting the reasons for failed delivery and resending the message.</span></span>  
   
- Die Warteschlange für unzustellbare Nachrichten in der `NetMsmqBinding`\-Bindung wird in den folgenden Eigenschaften ausgedrückt:  
+ <span data-ttu-id="3cf0a-118">Die Warteschlange für unzustellbare Nachrichten in der `NetMsmqBinding`-Bindung wird in den folgenden Eigenschaften ausgedrückt:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-118">The dead-letter queue in the `NetMsmqBinding` binding is expressed in the following properties:</span></span>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>\-Eigenschaft, um die vom Client benötigte Art der Warteschlange für unzustellbare Nachrichten auszudrücken.  Diese Enumeration verfügt über folgende Werte:  
+-   <span data-ttu-id="3cf0a-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft, um die vom Client benötigte Art der Warteschlange für unzustellbare Nachrichten auszudrücken.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> property to express the kind of dead-letter queue required by the client.</span></span> <span data-ttu-id="3cf0a-120">Diese Enumeration verfügt über folgende Werte:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-120">This enumeration has the following values:</span></span>  
   
--   `None`: Für den Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.  
+-   <span data-ttu-id="3cf0a-121">`None`: Für den Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-121">`None`: No dead-letter queue is required by the client.</span></span>  
   
--   `System`: Die Systemwarteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern.  Die Systemwarteschlange für unzustellbare Nachrichten wird von allen Anwendungen verwendet, die auf dem Computer ausgeführt werden.  
+-   <span data-ttu-id="3cf0a-122">`System`: Die Systemwarteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-122">`System`: The system dead-letter queue is used to store dead messages.</span></span> <span data-ttu-id="3cf0a-123">Die Systemwarteschlange für unzustellbare Nachrichten wird von allen Anwendungen verwendet, die auf dem Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-123">The system dead-letter queue is shared by all applications running on the computer.</span></span>  
   
--   `Custom`: Die in der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>\-Eigenschaft angegebene benutzerdefinierte Warteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern.  Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.  Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.  
+-   <span data-ttu-id="3cf0a-124">`Custom`: Die in der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft angegebene benutzerdefinierte Warteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-124">`Custom`: A custom dead-letter queue specified using the <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property is used to store dead messages.</span></span> <span data-ttu-id="3cf0a-125">Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-125">This feature is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="3cf0a-126">Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-126">This is used when the application must use its own dead letter queue instead of sharing it with other applications running on the same computer.</span></span>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>\-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben.  Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.  
+-   <span data-ttu-id="3cf0a-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property to express the specific queue to use as a dead-letter queue.</span></span> <span data-ttu-id="3cf0a-128">Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-128">This is available only in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
   
- In diesem Beispiel sendet der Client einen Stapel von Nachrichten aus dem Bereich der Transaktion an den Dienst und legt einen willkürlichen niedrigen Wert für die Gültigkeitsdauer für diese Nachrichten fest \(ca. 2 Sekunden\).  Der Client gibt auch eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten an, in der abgelaufene Nachrichten abgelegt werden.  
+ <span data-ttu-id="3cf0a-129">In diesem Beispiel sendet der Client einen Stapel von Nachrichten aus dem Bereich der Transaktion an den Dienst und legt einen willkürlichen niedrigen Wert für die Gültigkeitsdauer für diese Nachrichten fest (ca. 2 Sekunden).</span><span class="sxs-lookup"><span data-stu-id="3cf0a-129">In this sample, the client sends a batch of messages to the service from within the scope of a transaction and specifies an arbitrarily low value for "time-to-live" for these messages (about 2 seconds).</span></span> <span data-ttu-id="3cf0a-130">Der Client gibt auch eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten an, in der abgelaufene Nachrichten abgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-130">The client also specifies a custom dead-letter queue to use to enqueue the messages that have expired.</span></span>  
   
- Die Clientanwendung kann die Nachrichten in der Warteschlange für unzustellbare Nachrichten lesen und entweder versuchen, diese erneut zu senden, oder den Fehler beheben, der dazu führte, dass die Nachricht in der Warteschlange für unzustellbare Nachrichten abgelegt wurde, und die Nachricht dann senden.  Im Beispiel zeigt der Client eine Fehlermeldung an.  
+ <span data-ttu-id="3cf0a-131">Die Clientanwendung kann die Nachrichten in der Warteschlange für unzustellbare Nachrichten lesen und entweder versuchen, diese erneut zu senden, oder den Fehler beheben, der dazu führte, dass die Nachricht in der Warteschlange für unzustellbare Nachrichten abgelegt wurde, und die Nachricht dann senden.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-131">The client application can read the messages in the dead-letter queue and either retry sending the message or correct the error that caused the original message to be placed in the dead-letter queue and send the message.</span></span> <span data-ttu-id="3cf0a-132">Im Beispiel zeigt der Client eine Fehlermeldung an.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-132">In the sample, the client displays an error message.</span></span>  
   
- Der Dienstvertrag lautet `IOrderProcessor`, wie im folgenden Beispielcode gezeigt.  
+ <span data-ttu-id="3cf0a-133">Der Dienstvertrag lautet `IOrderProcessor`, wie im folgenden Beispielcode gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-133">The service contract is `IOrderProcessor`, as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -54,12 +57,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-  
 ```  
   
- Der Dienstcode im Beispiel ist der des [Abgewickelte MSMQ\-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ <span data-ttu-id="3cf0a-134">Der Dienstcode in diesem Beispiel wird mit der die [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span><span class="sxs-lookup"><span data-stu-id="3cf0a-134">The service code in the sample is that of the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
   
- Die Kommunikation mit dem Dienst findet innerhalb des Bereichs der Transaktion statt.  Der Dienst liest die Nachrichten in der Warteschlange, führt den Vorgang aus und zeigt anschließend die Ergebnisse des Vorgangs an.  Die Anwendung erstellt auch eine Warteschlange für unzustellbare Nachrichten.  
+ <span data-ttu-id="3cf0a-135">Die Kommunikation mit dem Dienst findet innerhalb des Bereichs der Transaktion statt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-135">Communication with the service takes place within the scope of a transaction.</span></span> <span data-ttu-id="3cf0a-136">Der Dienst liest die Nachrichten in der Warteschlange, führt den Vorgang aus und zeigt anschließend die Ergebnisse des Vorgangs an.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-136">The service reads messages from the queue, performs the operation and then displays the results of the operation.</span></span> <span data-ttu-id="3cf0a-137">Die Anwendung erstellt auch eine Warteschlange für unzustellbare Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-137">The application also creates a dead-letter queue for dead-letter messages.</span></span>  
   
 ```  
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
@@ -116,14 +118,14 @@ class Client
 }  
 ```  
   
- Die Konfiguration des Clients gibt eine kurze Zeitspanne an, während derer die Nachricht den Dienst erreichen muss.  Wenn die Nachricht innerhalb der festgelegten Zeitspanne nicht übermittelt werden kann, läuft die Nachricht ab und wird in die Warteschlange für unzustellbare Nachrichten verschoben.  
+ <span data-ttu-id="3cf0a-138">Die Konfiguration des Clients gibt eine kurze Zeitspanne an, während derer die Nachricht den Dienst erreichen muss.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-138">The client's configuration specifies a short duration for the message to reach the service.</span></span> <span data-ttu-id="3cf0a-139">Wenn die Nachricht innerhalb der festgelegten Zeitspanne nicht übermittelt werden kann, läuft die Nachricht ab und wird in die Warteschlange für unzustellbare Nachrichten verschoben.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-139">If the message cannot be transmitted within the duration specified, the message expires and is moved to the dead-letter queue.</span></span>  
   
 > [!NOTE]
->  Der Client kann die Nachricht innerhalb der angegebenen Zeitspanne an die Dienstwarteschlange übermitteln.  Um sicherzustellen, dass Sie die Ausführung des Diensts für unzustellbare Nachrichten beobachten können, sollten Sie den Client vor dem Start des Diensts ausführen.  Die Nachricht überschreitet das Zeitlimit und wird an den Dienst für unzustellbaren Nachrichten übermittelt.  
+>  <span data-ttu-id="3cf0a-140">Der Client kann die Nachricht innerhalb der angegebenen Zeitspanne an die Dienstwarteschlange übermitteln.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-140">It is possible for the client to deliver the message to the service queue within the specified time.</span></span> <span data-ttu-id="3cf0a-141">Um sicherzustellen, dass Sie die Ausführung des Diensts für unzustellbare Nachrichten beobachten können, sollten Sie den Client vor dem Start des Diensts ausführen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-141">To ensure you see the dead-letter service in action, you should run the client before starting the service.</span></span> <span data-ttu-id="3cf0a-142">Die Nachricht überschreitet das Zeitlimit und wird an den Dienst für unzustellbaren Nachrichten übermittelt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-142">The message times out and is delivered to the dead-letter service.</span></span>  
   
- Die Anwendung muss definieren, welche der Warteschlangen als Warteschlange für unzustellbare Nachrichten verwendet werden soll.  Wenn keine Warteschlange angegeben wird, wird die systemweite Standardtransaktionswarteschlange für unzustellbare Nachrichten verwendet.  In diesem Beispiel gibt die Clientanwendung ihre eigene Anwendungswarteschlange für unzustellbare Nachrichten an.  
+ <span data-ttu-id="3cf0a-143">Die Anwendung muss definieren, welche der Warteschlangen als Warteschlange für unzustellbare Nachrichten verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-143">The application must define which queue to use as its dead-letter queue.</span></span> <span data-ttu-id="3cf0a-144">Wenn keine Warteschlange angegeben wird, wird die systemweite Standardtransaktionswarteschlange für unzustellbare Nachrichten verwendet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-144">If no queue is specified, the default system-wide transactional dead-letter queue is used to queue dead messages.</span></span> <span data-ttu-id="3cf0a-145">In diesem Beispiel gibt die Clientanwendung ihre eigene Anwendungswarteschlange für unzustellbare Nachrichten an.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-145">In this example, the client application specifies its own application dead-letter queue.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -152,15 +154,14 @@ class Client
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
- Der Dienst für unzustellbare Nachrichten liest Nachrichten aus der Warteschlange für unzustellbare Nachrichten.  Der Dienst für unzustellbare Nachrichten implementiert den `IOrderProcessor`\-Vertrag.  Seine Implementierung dient jedoch nicht der Verarbeitung von Aufträgen.  Der Dienst für unzustellbare Nachrichten ist ein Clientdienst und besitzt keine Funktion für die Verarbeitung von Aufträgen.  
+ <span data-ttu-id="3cf0a-146">Der Dienst für unzustellbare Nachrichten liest Nachrichten aus der Warteschlange für unzustellbare Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-146">The dead-letter message service reads messages from the dead-letter queue.</span></span> <span data-ttu-id="3cf0a-147">Der Dienst für unzustellbare Nachrichten implementiert den `IOrderProcessor`-Vertrag.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-147">The dead-letter message service implements the `IOrderProcessor` contract.</span></span> <span data-ttu-id="3cf0a-148">Seine Implementierung dient jedoch nicht der Verarbeitung von Aufträgen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-148">Its implementation however is not to process orders.</span></span> <span data-ttu-id="3cf0a-149">Der Dienst für unzustellbare Nachrichten ist ein Clientdienst und besitzt keine Funktion für die Verarbeitung von Aufträgen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-149">The dead-letter message service is a client service and does not have the facility to process orders.</span></span>  
   
 > [!NOTE]
->  Die Warteschlange für unzustellbare Nachrichten ist eine Clientwarteschlange und befindet sich lokal zum Clientwarteschlangen\-Manager.  
+>  <span data-ttu-id="3cf0a-150">Die Warteschlange für unzustellbare Nachrichten ist eine Clientwarteschlange und befindet sich lokal zum Clientwarteschlangen-Manager.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-150">The dead-letter queue is a client queue and is local to the client queue manager.</span></span>  
   
- Die Implementierung des Dienst für unzustellbare Nachrichten überprüft die Ursache für die fehlgeschlagene Zustellung und ergreift Abhilfemaßnahmen.  Die Ursache für die fehlgeschlagene Zustellung wird in zwei Enumerationen, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> und <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>, aufgezeichnet.  Sie können die <xref:System.ServiceModel.Channels.MsmqMessageProperty> vom <xref:System.ServiceModel.OperationContext> abrufen, wie im folgenden Beispiel dargestellt:  
+ <span data-ttu-id="3cf0a-151">Die Implementierung des Dienst für unzustellbare Nachrichten überprüft die Ursache für die fehlgeschlagene Zustellung und ergreift Abhilfemaßnahmen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-151">The dead-letter message service implementation checks for the reason a message failed delivery and takes corrective measures.</span></span> <span data-ttu-id="3cf0a-152">Die Ursache für die fehlgeschlagene Zustellung wird in zwei Enumerationen, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> und <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>, aufgezeichnet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-152">The reason for a message failure is captured in two enumerations, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> and <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>.</span></span> <span data-ttu-id="3cf0a-153">Sie können die <xref:System.ServiceModel.Channels.MsmqMessageProperty> vom <xref:System.ServiceModel.OperationContext> abrufen, wie im folgenden Beispiel dargestellt:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-153">You can retrieve the <xref:System.ServiceModel.Channels.MsmqMessageProperty> from the <xref:System.ServiceModel.OperationContext> as shown in the following sample code:</span></span>  
   
 ```  
 public void SubmitPurchaseOrder(PurchaseOrder po)  
@@ -176,12 +177,11 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine();  
     ….  
 }  
-  
 ```  
   
- Nachrichten in der Warteschlange für unzustellbare Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet.  Wenn der Dienst für unzustellbare Nachrichten Nachrichten aus der Warteschlange liest, findet daher die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Kanalebene die fehlende Übereinstimmung bei den Endpunkten und verteilt die Nachricht nicht.  In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für unzustellbare Nachrichten empfangen.  Um Nachrichten zu empfangen, die an einen anderen Endpunkt adressiert sind, wird im `ServiceBehavior` ein Adressfilter für alle Adressen angegeben.  Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für unzustellbare Nachrichten gelesen werden, erfolgreich zu verarbeiten.  
+ <span data-ttu-id="3cf0a-154">Nachrichten in der Warteschlange für unzustellbare Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-154">Messages in the dead-letter queue are messages that are addressed to the service that is processing the message.</span></span> <span data-ttu-id="3cf0a-155">Wenn der Dienst für unzustellbare Nachrichten Nachrichten aus der Warteschlange liest, findet daher die [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Kanalebene die fehlende Übereinstimmung bei den Endpunkten und verteilt die Nachricht nicht.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-155">Therefore, when the dead-letter message service reads messages from the queue, the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message.</span></span> <span data-ttu-id="3cf0a-156">In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für unzustellbare Nachrichten empfangen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-156">In this case, the message is addressed to the order processing service but is received by the dead-letter message service.</span></span> <span data-ttu-id="3cf0a-157">Um Nachrichten zu empfangen, die an einen anderen Endpunkt adressiert sind, wird im `ServiceBehavior` ein Adressfilter für alle Adressen angegeben.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-157">To receive a message that is addressed to a different endpoint, an address filter to match any address is specified in the `ServiceBehavior`.</span></span> <span data-ttu-id="3cf0a-158">Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für unzustellbare Nachrichten gelesen werden, erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-158">This is required to successfully process messages that are read from the dead-letter queue.</span></span>  
   
- In diesem Beispiel sendet der Dienst für unzustellbare Nachrichten die Nachricht erneut, wenn die Ursache für die Unzustellbarkeit eine Überschreitung des Zeitlimits war.  Bei allen anderen Ursachen wird ein Zustellungsfehler angezeigt, wie im folgenden Beispielcode dargestellt:  
+ <span data-ttu-id="3cf0a-159">In diesem Beispiel sendet der Dienst für unzustellbare Nachrichten die Nachricht erneut, wenn die Ursache für die Unzustellbarkeit eine Überschreitung des Zeitlimits war. Bei allen anderen Ursachen wird ein Zustellungsfehler angezeigt, wie im folgenden Beispielcode dargestellt:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-159">In this sample, the dead-letter message service resends the message if the reason for failure is that the message timed out. For all other reasons, it displays the delivery failure, as shown in the following sample code:</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -238,9 +238,9 @@ public class PurchaseOrderDLQService : IOrderProcessor
 }   
 ```  
   
- Im folgenden Beispiel wird die Konfiguration für eine unzustellbare Nachricht veranschaulicht:  
+ <span data-ttu-id="3cf0a-160">Im folgenden Beispiel wird die Konfiguration für eine unzustellbare Nachricht veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-160">The following sample shows the configuration for a dead-letter message:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -273,23 +273,22 @@ public class PurchaseOrderDLQService : IOrderProcessor
     </bindings>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- Wenn das Beispiel ausgeführt wird, müssen drei Programmdateien ausgeführt werden, um zu beobachten, wie die Warteschlange für unzustellbare Nachrichten für jede Anwendung funktioniert. Der Client, der Dienst und ein Dienst für unzustellbare Nachrichten, der in allen Anwendungen in der Warteschlange für unzustellbare Nachrichten liest und die Nachricht erneut an den Dienst sendet.  Alle sind Konsolenanwendungen mit Ausgabe in Konsolenfenster.  
+ <span data-ttu-id="3cf0a-161">Wenn das Beispiel ausgeführt wird, müssen drei Programmdateien ausgeführt werden, um zu beobachten, wie die Warteschlange für unzustellbare Nachrichten für jede Anwendung funktioniert. Der Client, der Dienst und ein Dienst für unzustellbare Nachrichten, der in allen Anwendungen in der Warteschlange für unzustellbare Nachrichten liest und die Nachricht erneut an den Dienst sendet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-161">In running the sample, there are 3 executables to run to see how the dead-letter queue works for each application; the client, service and a dead-letter service that reads from the dead-letter queue for each application and resends the message to the service.</span></span> <span data-ttu-id="3cf0a-162">Alle sind Konsolenanwendungen mit Ausgabe in Konsolenfenster.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-162">All are console applications with output in console windows.</span></span>  
   
 > [!NOTE]
->  Aufgrund der Verwendung einer Warteschlange müssen der Client und der Dienst nicht gleichzeitig ausgeführt werden.  Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.  Sie sollten den Dienst starten und wieder schließen, damit die Warteschlange erstellt werden kann.  
+>  <span data-ttu-id="3cf0a-163">Aufgrund der Verwendung einer Warteschlange müssen der Client und der Dienst nicht gleichzeitig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-163">Because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="3cf0a-164">Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-164">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span> <span data-ttu-id="3cf0a-165">Sie sollten den Dienst starten und wieder schließen, damit die Warteschlange erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-165">You should start the service and shut it down so that the queue can be created.</span></span>  
   
- Wenn der Client ausgeführt wird, zeigt er die folgende Nachricht an:  
+ <span data-ttu-id="3cf0a-166">Wenn der Client ausgeführt wird, zeigt er die folgende Nachricht an:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-166">When running the client, the client displays the message:</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
 ```  
   
- Der Client hat versucht, die Nachricht zu senden, aufgrund des kurzen Zeitlimits ist die Nachricht jedoch abgelaufen und befindet sich jetzt in der Warteschlange für unzustellbare Nachrichten für jede Anwendung.  
+ <span data-ttu-id="3cf0a-167">Der Client hat versucht, die Nachricht zu senden, aufgrund des kurzen Zeitlimits ist die Nachricht jedoch abgelaufen und befindet sich jetzt in der Warteschlange für unzustellbare Nachrichten für jede Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-167">The client attempted to send the message but with a short timeout, the message expired and is now queued in the dead-letter queue for each application.</span></span>  
   
- Anschließend führen Sie den Dienst für unzustellbare Nachrichten aus, der die Nachrichten liest, den Fehlercode anzeigt und die Nachricht zurück an den Dienst sendet.  
+ <span data-ttu-id="3cf0a-168">Anschließend führen Sie den Dienst für unzustellbare Nachrichten aus, der die Nachrichten liest, den Fehlercode anzeigt und die Nachricht zurück an den Dienst sendet.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-168">You then run the dead-letter service, which reads the message and displays the error code and resends the message back to the service.</span></span>  
   
 ```  
 The dead letter service is ready.  
@@ -302,13 +301,11 @@ Message Delivery Failure: ReachQueueTimeout
 Purchase order Time To Live expired  
 Trying to resend the message  
 Purchase order resent  
-  
 ```  
   
- Der Dienst startet, liest dann die erneut gesendeten Nachrichten und verarbeitet sie.  
+ <span data-ttu-id="3cf0a-169">Der Dienst startet, liest dann die erneut gesendeten Nachrichten und verarbeitet sie.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-169">The service starts and then reads the resent message and processes it.</span></span>  
   
 ```  
-  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -319,34 +316,33 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
                 Order LineItem: 890 of Red Widget @unit price: $45.89  
         Total cost of this order: $42461.56  
         Order status: Pending  
-  
 ```  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3cf0a-170">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="3cf0a-170">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="3cf0a-171">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3cf0a-171">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist.  Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt.  Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ\-Warteschlangen\-Manager erstellen.  Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
+2.  <span data-ttu-id="3cf0a-172">Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-172">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="3cf0a-173">Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-173">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="3cf0a-174">Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-174">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="3cf0a-175">Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="3cf0a-175">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Öffnen Sie Server\-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="3cf0a-176">Öffnen Sie Server-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3cf0a-176">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Erweitern Sie die Registerkarte **Features**.  
+    2.  <span data-ttu-id="3cf0a-177">Erweitern Sie die **Funktionen** Registerkarte.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-177">Expand the **Features** tab.</span></span>  
   
-    3.  Klicken Sie mit der rechten Maustaste auf **Private Meldungswarteschlangen**, und klicken Sie anschließend auf **Neu** und **Private Warteschlange**.  
+    3.  <span data-ttu-id="3cf0a-178">Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-178">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Aktivieren Sie das Kontrollkästchen **Transaktional**.  
+    4.  <span data-ttu-id="3cf0a-179">Überprüfen Sie die **transaktional** Feld.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-179">Check the **Transactional** box.</span></span>  
   
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen der neuen Warteschlange ein.  
+    5.  <span data-ttu-id="3cf0a-180">Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-180">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+3.  <span data-ttu-id="3cf0a-181">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-181">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend auszuführen, ändern Sie die Warteschlangennamen entsprechend, indem Sie localhost durch den vollständigen Namen des Computers ersetzen, und befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="3cf0a-182">Führen Sie das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ändern Warteschlange Namen entsprechend, und Ersetzen Sie "localhost" durch den vollständigen Namen des Computers, und befolgen die Anweisungen in [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3cf0a-182">To run the sample in a single- or cross-computer configuration change queue names appropriately, replacing localhost with full name of the computer and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### So führen Sie das Beispiel auf einem Computer aus, der zu einer Arbeitsgruppe gehört  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="3cf0a-183">So führen Sie das Beispiel auf einem Computer aus, der zu einer Arbeitsgruppe gehört</span><span class="sxs-lookup"><span data-stu-id="3cf0a-183">To run the sample on a computer joined to a workgroup</span></span>  
   
-1.  Wenn Ihr Computer nicht zu einer Domäne gehört, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` festlegen, wie in der folgenden Beispielkonfiguration gezeigt.  
+1.  <span data-ttu-id="3cf0a-184">Wenn Ihr Computer nicht zu einer Domäne gehört, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` festlegen, wie in der folgenden Beispielkonfiguration gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-184">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
         <netMsmqBinding>  
             <binding name="TransactedBinding">  
@@ -356,23 +352,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>  
     ```  
   
-     Stellen Sie sicher, dass der Endpunkt der Bindung zugeordnet ist, indem Sie das `bindingConfiguration`\-Attribut des Endpunkts festlegen.  
+     <span data-ttu-id="3cf0a-185">Stellen Sie sicher, dass der Endpunkt der Bindung zugeordnet ist, indem Sie das `bindingConfiguration`-Attribut des Endpunkts festlegen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-185">Ensure the endpoint is associated with the binding by setting the endpoint's `bindingConfiguration` attribute.</span></span>  
   
-2.  Ändern Sie die Konfiguration auf dem DeadLetterService, dem Server und dem Client, bevor Sie das Beispiel ausführen.  
+2.  <span data-ttu-id="3cf0a-186">Ändern Sie die Konfiguration auf dem DeadLetterService, dem Server und dem Client, bevor Sie das Beispiel ausführen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-186">Ensure that you change the configuration on the DeadLetterService, server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`\-Sicherheit auf `None`.  
+    >  <span data-ttu-id="3cf0a-187">Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-187">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>  
   
-## Kommentare  
- Standardmäßig wird mit der `netMsmqBinding`\-Bindung die Transportsicherheit aktiviert.  Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`.  Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt.  Damit MSMQ die Authentifizierungs\- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein.  Wenn Sie dieses Beispiel auf einem Computer ausführen, der nicht Teil einer Domäne ist, wird folgende Fehlermeldung ausgegeben: "Das interne Message Queuing\-Zertifikat für diesen Benutzer ist nicht vorhanden".  
+## <a name="comments"></a><span data-ttu-id="3cf0a-188">Kommentare</span><span class="sxs-lookup"><span data-stu-id="3cf0a-188">Comments</span></span>  
+ <span data-ttu-id="3cf0a-189">Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-189">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="3cf0a-190">Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-190">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="3cf0a-191">Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-191">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="3cf0a-192">Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-192">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="3cf0a-193">Wenn Sie dieses Beispiel auf einem Computer ausführen, der nicht Teil einer Domäne ist, wird folgende Fehlermeldung ausgegeben: "Das interne Message Queuing-Zertifikat für diesen Benutzer ist nicht vorhanden".</span><span class="sxs-lookup"><span data-stu-id="3cf0a-193">If you run this sample on a computer that is not part of a domain, you receive the following error: "User's internal message queuing certificate does not exist".</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="3cf0a-194">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-194">The samples may already be installed on your computer.</span></span> <span data-ttu-id="3cf0a-195">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-195">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="3cf0a-196">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-196">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3cf0a-197">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="3cf0a-197">This sample is located in the following directory.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="3cf0a-198">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3cf0a-198">See Also</span></span>

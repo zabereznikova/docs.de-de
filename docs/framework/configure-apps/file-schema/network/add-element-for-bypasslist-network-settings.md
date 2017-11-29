@@ -1,80 +1,83 @@
 ---
-title: "&lt;add&gt;-Element f&#252;r bypasslist (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add>-Element, bypasslist"
-  - "<bypasslist>, add-Element"
-  - "add-Element, bypasslist"
-  - "bypasslist, add-Element"
+title: "&lt;Hinzufügen&gt; Bypasslist (Network Settings)-Element"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <bypasslist>, add element
+- bypasslist, add element
+- <add> element, bypasslist
+- add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt;-Element f&#252;r bypasslist (Netzwerkeinstellungen)
-Fügt der Proxyumgehungsliste eine IP\-Adresse oder einen DNS\-Namen hinzu.  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="4149a-102">&lt;Hinzufügen&gt; Bypasslist (Network Settings)-Element</span><span class="sxs-lookup"><span data-stu-id="4149a-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="4149a-103">Fügt eine IP-Adresse oder einen DNS-Namen, die Proxyumgehungsliste.</span><span class="sxs-lookup"><span data-stu-id="4149a-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="4149a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4149a-104">\<configuration></span></span>  
+<span data-ttu-id="4149a-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="4149a-105">\<system.net></span></span>  
+<span data-ttu-id="4149a-106">\<DefaultProxy ></span><span class="sxs-lookup"><span data-stu-id="4149a-106">\<defaultProxy></span></span>  
+<span data-ttu-id="4149a-107">\<BypassList ></span><span class="sxs-lookup"><span data-stu-id="4149a-107">\<bypasslist></span></span>  
+<span data-ttu-id="4149a-108">\<add></span><span class="sxs-lookup"><span data-stu-id="4149a-108">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4149a-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="4149a-109">Syntax</span></span>  
   
-      <add   
-   address = "regular expression"   
+```xml  
+<add   
+  address="regular expression"   
 />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4149a-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="4149a-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4149a-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4149a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="4149a-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="4149a-112">Attributes</span></span>  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|**address**|Ein regulärer Ausdruck, der eine IP\-Adresse oder einen DNS\-Namen beschreibt.|  
+|<span data-ttu-id="4149a-113">**Attribut**</span><span class="sxs-lookup"><span data-stu-id="4149a-113">**Attribute**</span></span>|<span data-ttu-id="4149a-114">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="4149a-114">**Description**</span></span>|  
+|-------------------|---------------------|  
+|<span data-ttu-id="4149a-115">**address**</span><span class="sxs-lookup"><span data-stu-id="4149a-115">**address**</span></span>|<span data-ttu-id="4149a-116">Ein regulärer Ausdruck, die eine IP-Adresse oder einen DNS-Namen beschreibt.</span><span class="sxs-lookup"><span data-stu-id="4149a-116">A regular expression describing an IP address or DNS name.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="4149a-117">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4149a-117">Child Elements</span></span>  
+ <span data-ttu-id="4149a-118">Keine</span><span class="sxs-lookup"><span data-stu-id="4149a-118">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="4149a-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4149a-119">Parent Elements</span></span>  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
+|<span data-ttu-id="4149a-120">**Element**</span><span class="sxs-lookup"><span data-stu-id="4149a-120">**Element**</span></span>|<span data-ttu-id="4149a-121">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="4149a-121">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="4149a-122">BypassList</span><span class="sxs-lookup"><span data-stu-id="4149a-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="4149a-123">Stellt einen Satz von regulären Ausdrücken, die Beschreibung der Adressen, die keinen Proxy verwenden.</span><span class="sxs-lookup"><span data-stu-id="4149a-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## Hinweise  
- Das `add`\-Element fügt der Liste der Adressen, die einen Proxyserver umgehen, reguläre Ausdrücke hinzu, die IP\-Adressen oder DNS\-Servernamen beschreiben.  
+## <a name="remarks"></a><span data-ttu-id="4149a-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4149a-124">Remarks</span></span>  
+ <span data-ttu-id="4149a-125">Die `add` -Element fügt reguläre Ausdrücke, die IP-Adressen oder DNS-Servernamen, um die Liste der Adressen, die einen Proxyserver umgehen beschreibt.</span><span class="sxs-lookup"><span data-stu-id="4149a-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
   
- Der Wert des `address`\-Attributs sollte ein regulärer Ausdruck sein, der eine Gruppe von IP\-Adressen oder Hostnamen beschreibt.  
+ <span data-ttu-id="4149a-126">Der Wert, der die `address` Attribut muss ein regulärer Ausdruck, der einen Satz von IP-Adressen oder Hostnamen beschreibt.</span><span class="sxs-lookup"><span data-stu-id="4149a-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- Lassen Sie beim Angeben eines regulären Ausdrucks für dieses Element Vorsicht walten.  Der reguläre Ausdruck "\[a\-z\]\+\\.contoso\\.com" entspricht jedem Host in der contoso.com\-Domäne und auch in der contoso.com.cpandl.com\-Domäne.  Verwenden Sie einen Anker \("$"\), damit der Ausdruck nur mit einem Host in der contoso.com\-Domäne übereinstimmt: "\[a\-z\]\+\\.contoso\\.com$".  
+ <span data-ttu-id="4149a-127">Sie sollten Vorsicht walten, wenn Sie für dieses Element einen regulären Ausdruck angeben.</span><span class="sxs-lookup"><span data-stu-id="4149a-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="4149a-128">Der reguläre Ausdruck "[a-Z] +\\.contoso\\.com" entspricht, die jedem host in der Domäne "contoso.com", sondern auch mit jedem Host in der Domäne contoso.com.cpandl.com überein.</span><span class="sxs-lookup"><span data-stu-id="4149a-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="4149a-129">Um nur einen Host in der Domäne "contoso.com" zu vergleichen, verwenden Sie einen Anker ("$"): "[a-Z] +\\.contoso\\".com "$".</span><span class="sxs-lookup"><span data-stu-id="4149a-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
   
- Weitere Informationen zu regulären Ausdrücken finden Sie unter [Reguläre Ausdrücke von .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ <span data-ttu-id="4149a-130">Weitere Informationen zu regulären Ausdrücken finden Sie unter. [Reguläre Ausdrücke von .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="4149a-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a><span data-ttu-id="4149a-131">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="4149a-131">Configuration Files</span></span>  
+ <span data-ttu-id="4149a-132">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4149a-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel werden der Umgehungsliste zwei Adressen hinzugefügt.  Im ersten Beispiel wird der Proxy für alle Server in der **contoso.com**\-Domäne umgangen. Im zweiten Beispiel wird der Proxy für alle Server umgangen, deren IP\-Adressen mit 192.168 beginnen.  
+## <a name="example"></a><span data-ttu-id="4149a-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4149a-133">Example</span></span>  
+ <span data-ttu-id="4149a-134">Im folgende Beispiel wird die Umgehungsliste zwei Adressen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="4149a-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="4149a-135">Die erste umgeht den Proxy für alle Server in der Domäne "contoso.com"; die zweite umgeht den Proxy für alle Server, dessen IP-Adresse beginnt, mit 192.168.</span><span class="sxs-lookup"><span data-stu-id="4149a-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -87,6 +90,6 @@ Fügt der Proxyumgehungsliste eine IP\-Adresse oder einen DNS\-Namen hinzu.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="4149a-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4149a-136">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="4149a-137">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="4149a-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

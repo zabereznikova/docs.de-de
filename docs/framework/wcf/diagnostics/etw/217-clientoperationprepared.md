@@ -1,43 +1,46 @@
 ---
-title: "217 - ClientOperationPrepared | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 217 - ClientOperationPrepared
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad207f04-b038-4f33-95e9-27a361df8ecd
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5062d2c2146dae8b22165cfbea0c6a78241d17b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 217 - ClientOperationPrepared
-## Eigenschaften  
+# <a name="217---clientoperationprepared"></a><span data-ttu-id="36d3c-102">217 - ClientOperationPrepared</span><span class="sxs-lookup"><span data-stu-id="36d3c-102">217 - ClientOperationPrepared</span></span>
+## <a name="properties"></a><span data-ttu-id="36d3c-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="36d3c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|217|  
-|Schlüsselwörter|Troubleshooting, ServiceModel|  
-|Grad|Informationen|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="36d3c-104">ID</span><span class="sxs-lookup"><span data-stu-id="36d3c-104">ID</span></span>|<span data-ttu-id="36d3c-105">217</span><span class="sxs-lookup"><span data-stu-id="36d3c-105">217</span></span>|  
+|<span data-ttu-id="36d3c-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="36d3c-106">Keywords</span></span>|<span data-ttu-id="36d3c-107">Troubleshooting, ServiceModel</span><span class="sxs-lookup"><span data-stu-id="36d3c-107">Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="36d3c-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="36d3c-108">Level</span></span>|<span data-ttu-id="36d3c-109">Information</span><span class="sxs-lookup"><span data-stu-id="36d3c-109">Information</span></span>|  
+|<span data-ttu-id="36d3c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="36d3c-110">Channel</span></span>|<span data-ttu-id="36d3c-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="36d3c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird von Clients direkt vor dem Senden eines Vorgangs an einen Dienst ausgegeben.  
+## <a name="description"></a><span data-ttu-id="36d3c-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="36d3c-112">Description</span></span>  
+ <span data-ttu-id="36d3c-113">Dieses Ereignis wird von Clients direkt vor dem Senden eines Vorgangs an einen Dienst ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="36d3c-113">This event is emitted by clients just before an operation is sent to the service.</span></span>  
   
-## Meldung  
- Der Client führt die Aktion aus '%1' aus, die dem Vertrag '%2' zugeordnet ist.Die Nachricht wird an '%3' gesendet.  
+## <a name="message"></a><span data-ttu-id="36d3c-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="36d3c-114">Message</span></span>  
+ <span data-ttu-id="36d3c-115">Der Client führt die Aktion aus '%1' aus, die dem Vertrag '%2' zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="36d3c-115">The Client is executing Action '%1' associated with the '%2' contract.</span></span> <span data-ttu-id="36d3c-116">Die Nachricht wird an '%3' gesendet.</span><span class="sxs-lookup"><span data-stu-id="36d3c-116">The message will be sent to '%3'.</span></span>  
   
-## Details  
+## <a name="details"></a><span data-ttu-id="36d3c-117">Details</span><span class="sxs-lookup"><span data-stu-id="36d3c-117">Details</span></span>  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|Action|`xs:string`|Der SOAP\-Aktionsheader der ausgehenden Nachricht.|  
-|Contract Name|`xs:string`|Der Name des Vertrags.Beispiel: ICalculator.|  
-|Destination|`xs:string`|Die Adresse des Dienstendpunkts, an den die Nachricht gesendet wird.|  
-|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.Das Format ist als 'Websitename Virtueller Pfad der Anwendung&#124;Virtueller Pfad des Diensts&#124;ServiceName' definiert.Beispiel: 'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|`xs:string`|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
+|<span data-ttu-id="36d3c-118">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="36d3c-118">Data Item Name</span></span>|<span data-ttu-id="36d3c-119">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="36d3c-119">Data Item Type</span></span>|<span data-ttu-id="36d3c-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="36d3c-120">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="36d3c-121">Aktion</span><span class="sxs-lookup"><span data-stu-id="36d3c-121">Action</span></span>|`xs:string`|<span data-ttu-id="36d3c-122">Der SOAP-Aktionsheader der ausgehenden Nachricht.</span><span class="sxs-lookup"><span data-stu-id="36d3c-122">The SOAP action header of the outgoing message.</span></span>|  
+|<span data-ttu-id="36d3c-123">Contract Name</span><span class="sxs-lookup"><span data-stu-id="36d3c-123">Contract Name</span></span>|`xs:string`|<span data-ttu-id="36d3c-124">Der Name des Vertrags.</span><span class="sxs-lookup"><span data-stu-id="36d3c-124">The name of the contract.</span></span> <span data-ttu-id="36d3c-125">Beispiel: ICalculator.</span><span class="sxs-lookup"><span data-stu-id="36d3c-125">Example: ICalculator.</span></span>|  
+|<span data-ttu-id="36d3c-126">Ziel</span><span class="sxs-lookup"><span data-stu-id="36d3c-126">Destination</span></span>|`xs:string`|<span data-ttu-id="36d3c-127">Die Adresse des Dienstendpunkts, an den die Nachricht gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="36d3c-127">The address of the service endpoint that the message is sent to.</span></span>|  
+|<span data-ttu-id="36d3c-128">HostReference</span><span class="sxs-lookup"><span data-stu-id="36d3c-128">HostReference</span></span>|`xs:string`|<span data-ttu-id="36d3c-129">Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.</span><span class="sxs-lookup"><span data-stu-id="36d3c-129">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="36d3c-130">Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ".</span><span class="sxs-lookup"><span data-stu-id="36d3c-130">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="36d3c-131">Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="36d3c-131">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="36d3c-132">AppDomain</span><span class="sxs-lookup"><span data-stu-id="36d3c-132">AppDomain</span></span>|`xs:string`|<span data-ttu-id="36d3c-133">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="36d3c-133">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
